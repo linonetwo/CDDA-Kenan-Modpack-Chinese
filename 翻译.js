@@ -18,7 +18,17 @@ const cddaWikiFolder = path.join(__dirname, 'wiki', 'tiddlers', 'cdda');
  */
 const highQualityMods = ['nocts_cata_mod_DDA', 'secronom', 'Arcana'];
 
-const getContext = (sourceModName, type, id) => `${sourceModName}→${type}→${id}`;
+const getFakeId = (item, index) =>
+  typeof item?.id === 'string'
+    ? item.id
+    : item?.type === 'recipe' && item.result && item.difficulty
+    ? `${item.result}(difficulty${item.difficulty})`
+    : item?.type === 'speech' && item.speaker
+    ? `${Array.isArray(item.speaker) ? item.speaker[0] : item.speaker}→${index}`
+    : item?.type === 'AMMO' || item?.type === 'COMESTIBLE'
+    ? item.abstract
+    : `[${index}]`;
+const getContext = (sourceModName, item, index) => `${sourceModName}→${item.type}→${getFakeId(item, index)}`;
 
 let logCounter = 0;
 let logs = [];
@@ -418,12 +428,12 @@ async function translateWithCache(value, modTranslationCache, context) {
   const hasNotTranslatedTag =
     typeof translatedValue === 'string' &&
     Object.keys(tags).some((key) => value.includes(key) && !translatedValue.includes(key));
-  if (translatedValue !== undefined && !hasNotTranslatedTag) {
+  if (hasNotTranslatedTag) {
+    logger.error(`之前的翻译有问题，没有 tag：\n${value}\n${translatedValue}\n`);
+  }
+  if (translatedValue !== undefined /*  && !hasNotTranslatedTag */) {
     logger.log(`Use Cached version ${translatedValue}\n--\n`);
   } else {
-    if (hasNotTranslatedTag) {
-      logger.error(`之前的翻译有问题，没有 tag：\n${value}\n${translatedValue}\n`);
-    }
     // 没有缓存，就更新缓存
     logger.log(`No Cached Translation for ${value}\n`);
     translatedValue = await tryTranslation(value);
@@ -492,6 +502,26 @@ function writeToCNMod(foldersWithContent) {
   }
 }
 
+async function writeTiddlerToWikiAndTranslate(sourceModName, jsonName, item, translator) {
+  // 把内容写到 wiki 里
+  fs.write(
+    path.join(cddaWikiFolder, jsonName),
+    `tags: ${item.type} ${sourceModName} ${getFakeId(item.id)}
+creator: 林一二
+title: ${jsonName.replace('.tid', '')}
+type: text/vnd.tiddlywiki
+`
+  );
+  fs.append(path.join(cddaWikiFolder, jsonName), '\n\n!! 原文\n\n```json\n');
+  fs.append(path.join(cddaWikiFolder, jsonName), JSON.stringify(item, undefined, '  '));
+  fs.append(path.join(cddaWikiFolder, jsonName), '\n```\n\n');
+  translator(item);
+  // 把翻译后的内容写到 wiki 里
+  fs.append(path.join(cddaWikiFolder, jsonName), '\n\n!! 汉化\n\n```json\n');
+  fs.append(path.join(cddaWikiFolder, jsonName), JSON.stringify(item, undefined, '  '));
+  fs.append(path.join(cddaWikiFolder, jsonName), '\n```\n\n');
+}
+
 /**
  *
  * @param {Object} fileItem 基本类似于 inspectData https://www.npmjs.com/package/fs-jetpack#inspecttreepath-options ，但是多了 content 包含 JSON parse 过的文件内容
@@ -500,64 +530,28 @@ function writeToCNMod(foldersWithContent) {
 async function translateStringsInContent(fileItem, modTranslationCache, sourceModName) {
   if (Array.isArray(fileItem.content)) {
     // 文件的内容一般是一维数组
-    for (const item of fileItem.content) {
-      const translators = getCDDATranslator(modTranslationCache, sourceModName, item.type, item.id);
+    for (let index = 0; index < fileItem.content.length; index++) {
+      const item = fileItem.content[index];
+      const translators = getCDDATranslator(modTranslationCache, sourceModName, item, index);
       const translator = translators[item.type];
       if (!translator) {
         logger.error(`没有 ${item.type} 的翻译器`);
       } else {
-        const jsonName = `${getContext(sourceModName, item.type, item.id)}.tid`;
-        // 把内容写到 wiki 里
-        fs.write(
-          path.join(cddaWikiFolder, jsonName),
-          `tags: ${item.type} ${sourceModName}
-  creator: 林一二
-  title: ${jsonName.replace('.tid', '')}
-  type: text/vnd.tiddlywiki
-  `
-        );
-        fs.append(path.join(cddaWikiFolder, jsonName), '\n\n!! 原文\n\n```json\n');
-        fs.append(path.join(cddaWikiFolder, jsonName), JSON.stringify(item, undefined, '  '));
-        fs.append(path.join(cddaWikiFolder, jsonName), '\n```\n\n');
-        await translator(item);
-        // 把翻译后的内容写到 wiki 里
-        fs.append(path.join(cddaWikiFolder, jsonName), '\n\n!! 汉化\n\n```json\n');
-        fs.append(path.join(cddaWikiFolder, jsonName), JSON.stringify(item, undefined, '  '));
-        fs.append(path.join(cddaWikiFolder, jsonName), '\n```\n\n');
+        const jsonName = `${getContext(sourceModName, item, index)}.tid`;
+        await writeTiddlerToWikiAndTranslate(sourceModName, jsonName, item, translator);
       }
     }
     return fileItem;
   } else if (fileItem.rawContent) {
     return fileItem;
   } else {
-    const translators = getCDDATranslator(
-      modTranslationCache,
-      sourceModName,
-      fileItem.content.type,
-      fileItem.content.id
-    );
+    const translators = getCDDATranslator(modTranslationCache, sourceModName, fileItem.content, 0);
     const translator = translators[fileItem.content?.type];
     if (!translator) {
       logger.error(`没有 ${fileItem.content?.type ?? fileItem.content?.type} 的翻译器`);
     } else {
-      const jsonName = `${getContext(sourceModName, item.type, item.id)}.tid`;
-      // 把内容写到 wiki 里
-      fs.write(
-        path.join(cddaWikiFolder, jsonName),
-        `tags: ${item.type} ${sourceModName}
-creator: 林一二
-title: ${jsonName.replace('.tid', '')}
-type: text/vnd.tiddlywiki
-`
-      );
-      fs.append(path.join(cddaWikiFolder, jsonName), '\n\n!! 原文\n\n```json\n');
-      fs.append(path.join(cddaWikiFolder, jsonName), JSON.stringify(fileItem, undefined, '  '));
-      fs.append(path.join(cddaWikiFolder, jsonName), '\n```\n\n');
-      await translator(fileItem.content);
-      // 把翻译后的内容写到 wiki 里
-      fs.append(path.join(cddaWikiFolder, jsonName), '\n\n!! 汉化\n\n```json\n');
-      fs.append(path.join(cddaWikiFolder, jsonName), JSON.stringify(fileItem, undefined, '  '));
-      fs.append(path.join(cddaWikiFolder, jsonName), '\n```\n\n');
+      const jsonName = `${getContext(sourceModName, fileItem.content, 0)}.tid`;
+      await writeTiddlerToWikiAndTranslate(sourceModName, jsonName, fileItem.content, translator);
     }
     return fileItem;
   }
@@ -567,16 +561,16 @@ type: text/vnd.tiddlywiki
  * 获取 translator 对象，内含从各种 CDDA JSON 里提取待翻译字段的翻译器
  * @param {ModCache} modTranslationCache 此mod的翻译缓存文件
  */
-function getCDDATranslator(modTranslationCache, sourceModName, type, id) {
+function getCDDATranslator(modTranslationCache, sourceModName, fullItem, index) {
   const translators = {};
   const translateFunction = (value) =>
     translateWithCache(
       value,
       modTranslationCache,
-      `ID: ${id}\n位于 ${sourceModName}.json\n类型为 ${type}\n\nWIKI:\n${wikiSiteBase}${getContext(
+      `ID: ${fullItem.id}\n位于 ${sourceModName}.json\n类型为 ${fullItem.type}\n\nWIKI:\n${wikiSiteBase}${getContext(
         sourceModName,
-        type,
-        id
+        fullItem,
+        index
       )}`
     );
   const noop = () => {};
@@ -726,6 +720,15 @@ function getCDDATranslator(modTranslationCache, sourceModName, type, id) {
     }
   };
 
+  const clothingMod = async (item) => {
+    if (item.implement_prompt) {
+      item.implement_prompt = await translateFunction(item.implement_prompt);
+    }
+    if (item.destroy_prompt) {
+      item.destroy_prompt = await translateFunction(item.destroy_prompt);
+    }
+  };
+
   const dynamicLine = async (line) => {
     if (typeof line.yes === 'string') {
       line.yes = await translateFunction(line.yes);
@@ -758,6 +761,11 @@ function getCDDATranslator(modTranslationCache, sourceModName, type, id) {
     item.info = await translateFunction(item.info);
   };
 
+  const npc = async (item) => {
+    item.name_unique = await translateFunction(item.name_unique);
+    item.name_suffix = await translateFunction(item.name_suffix);
+  };
+
   // 注册各种类型数据的翻译器
   translators.profession = nameDesc;
   translators.scenario = async (item) => {
@@ -765,7 +773,7 @@ function getCDDATranslator(modTranslationCache, sourceModName, type, id) {
     item.description = await translateFunction(item.description);
     item.start_name = await translateFunction(item.start_name);
   };
-  translators.start_location = noop;
+  translators.start_location = namePlDesc;
   translators.furniture = nameDesc;
   translators.gate = async (item) => {
     for (const key of Object.keys(item.messages)) {
@@ -831,7 +839,7 @@ function getCDDATranslator(modTranslationCache, sourceModName, type, id) {
     }
   };
   translators.npc_class = noop;
-  translators.npc = noop;
+  translators.npc = npc;
   translators.trait_group = noop;
   translators.mapgen = noop;
   translators.ter_furn_transform = async (item) => {
@@ -864,7 +872,7 @@ function getCDDATranslator(modTranslationCache, sourceModName, type, id) {
   };
   translators.ammo_effect = noop;
   translators.bionic = namePlDesc;
-  translators.clothing_mod = noop;
+  translators.clothing_mod = clothingMod;
   translators.effect_type = async (item) => {
     if (Array.isArray(item.name)) {
       item.name = await Promise.all(item.name.map((msg) => translateFunction(msg)));
