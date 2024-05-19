@@ -67,68 +67,60 @@ const sourceModDirs = _.sortedUniq(
   fs.list(path.resolve(__dirname, 'Kenan-Structured-Modpack')).filter((name) => name !== '.DS_Store')
 );
 
-// 读取环境变量
-dotenv.config();
+const fetch = require('node-fetch');
+require('dotenv').config();
 
-async function caiyunTranslate(value) {
-  const endpointUrl = 'http://api.interpreter.caiyunai.com/v1/translator';
-  const token = process.env.CAIYUN_TRANSLATION_SECRET;
-  const payload = {
-    source: value,
-    trans_type: 'en2zh',
-    request_id: 'cdda-kenan-modpack',
+// 修改为使用通义千问API进行翻译尝试
+async function qwenTranslate(value) {
+  const apiKey = process.env.QWEN_API_KEY; // 新的API Key变量
+  const endpointUrl = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
+
+  // 为了适配通义千问的接口，我们构造一个请求正文，提示模型进行翻译
+  const prompt = `你是一名专业翻译员，擅长使用AI工具翻译我输入的内容。请根据要求优化翻译：目标语言：中文
+  优化要点：语法纠正、符合正常中文表达、适应中国文化
+  要求：尽量使用我上传的文件中专业术语的表达，但在意思严重冲突下不需要符合文件中的翻译
+  特别注意：保持原意，优化语言流畅性和准确性，这是CDDA大灾变中的游戏内容，确保它符合一个丧尸病毒爆发后的世界，直接输出内容，不用跟我解释为什么要那样翻译，除了有非常特殊的情况，比如运用了俚语或者典故之类的,请将以下英文翻译成中文:\n${value}\n\n翻译:`;
+  const requestBody = {
+    model: 'qwen-max', // 选择合适的模型版本，具体请参考API文档
+    prompt,
+    max_tokens: 100, // 根据需要调整生成的最大token数
+    temperature: 0.7, // 控制生成文本的创造性，接近0更确定性，更高则更随机
   };
 
   const headers = {
-    'content-type': 'application/json',
-    'x-authorization': `token ${token}`,
+    'Content-Type': 'application/json',
+    Authorization: `Bearer ${apiKey}`,
   };
-  const result = await fetch(endpointUrl, {
-    method: 'POST',
-    body: JSON.stringify(payload),
-    headers,
-  });
-  const json = await result.json();
-  return json.target;
+
+  try {
+    const response = await fetch(endpointUrl, {
+      method: 'POST',
+      headers,
+      body: JSON.stringify(requestBody),
+    });
+
+    if (!response.ok) {
+      throw new Error(`API请求失败，状态码：${response.status}`);
+    }
+
+    const data = await response.json();
+    // 假设data.text包含了翻译的结果
+    return data.text.trim();
+  } catch (error) {
+    console.error('翻译请求失败:', error);
+    throw error;
+  }
 }
 
-const sougouTranslate = async (value) => {
-  const random = Math.floor(Math.random() * 1000000);
-  const toHash = `${process.env.SOUGOU_TRANSLATION_APP_ID}${value}${random}${process.env.SOUGOU_TRANSLATION_SECRET}`;
-  const body = new URLSearchParams();
-  body.append('q', value);
-  body.append('from', 'en');
-  body.append('to', 'zh-CHS');
-  body.append('pid', process.env.SOUGOU_TRANSLATION_APP_ID);
-  body.append('salt', String(random));
-  body.append('sign', crypto.createHash('md5').update(toHash).digest('hex'));
-  const response = await fetch('http://fanyi.sogou.com/reventondc/api/sogouTranslate', {
-    method: 'post',
-    headers: {
-      'Content-Type': 'application/x-www-form-urlencoded',
-      Accept: 'application/json',
-    },
-    body,
-  }).then(function (response) {
-    return response.json();
-  });
-  if (response.errorCode === '0') {
-    return response.translation;
+// 调用修改后的翻译函数
+(async () => {
+  try {
+    const translation = await qwenTranslate('Hello, how are you?');
+    console.log('翻译结果:', translation);
+  } catch (error) {
+    console.error('翻译过程中遇到错误:', error.message);
   }
-  throw new Error(response?.errorCode + response?.message);
-};
-
-/**
- * 尝试使用不同的翻译服务进行翻译，优先顺序：彩云、搜狗
- * @param {string} value 待翻译的值
- * @returns {Promise<string>} 翻译后的字符串
- */
-const unionTranslate = (value) =>
-  caiyunTranslate(value).catch((error) =>
-    sougouTranslate(value).catch((error2) => {
-      throw new Error(error.message + error2.message);
-    })
-  );
+})();
 
 const tags = {
   '</color>': '2222',
