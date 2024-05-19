@@ -67,32 +67,37 @@ const sourceModDirs = _.sortedUniq(
   fs.list(path.resolve(__dirname, 'Kenan-Structured-Modpack')).filter((name) => name !== '.DS_Store')
 );
 
-// 使用通义千问API进行文本生成尝试
+
+// 尝试用qwen翻译
+const apiKey = 'sk-475512e59a004a6da4c0cdff518cf97a'; 
+const endpointUrl = 'https://dashscope.aliyuncs.com/api/v1/services/qwen/text-generation/generation';
+
+/**
+ * 使用Qwen API进行文本生成
+ * @param {string} promptValue - 需要翻译或生成的文本提示
+ * @returns {Promise<string>} - 生成的文本内容
+ */
 async function qwenTextGenerate(promptValue) {
-  const apiKey = 'sk-475512e59a004a6da4c0cdff518cf97a'; // API Key
-  const endpointUrl = 'https://dashscope.aliyuncs.com/api/v1/services/qwen/text-generation/generation'; // 文本生成API端点
-
-  // 构造请求正文，提示模型生成指定主题的文本内容
-  const prompt = `你是一名专业翻译员，擅长使用AI工具翻译我输入的内容。
-  请根据要求优化翻译：
-  目标语言：中文
-  优化要点：语法纠正、符合正常中文表达、适应中国文化
-  要求：尽量使用我上传的文件中专业术语的表达，但在意思严重冲突下不需要符合文件中的翻译
-  特别注意：保持原意，优化语言流畅性和准确性，这是CDDA大灾变中的游戏内容，确保它符合一个丧尸病毒爆发后的世界，直接输出内容，不用跟我解释为什么要那样翻译，除了有非常特殊的情况，比如运用了俚语或者典故之类的,${promptValue}\n\n翻译:`;
-
+  // 构建请求体
   const requestBody = {
-    model: 'qwen-max', // 选择合适的模型版本
-    prompt,
-    max_tokens: 100, // 根据需要调整生成的最大token数
-    temperature: 0.7, // 控制生成文本的创造性
+    model: 'qwen-max',
+    prompt: `你是一名专业翻译员，擅长使用AI工具翻译我输入的内容。
+目标语言：中文
+优化要点：语法纠正、符合正常中文表达、适应中国文化
+要求：尽量使用我上传的文件中专业术语的表达，但在意思严重冲突下不需要符合文件中的翻译
+特别注意：保持原意，优化语言流畅性和准确性，这是CDDA大灾变中的游戏内容，确保它符合一个丧尸病毒爆发后的世界，直接输出内容，不用跟我解释为什么要那样翻译，除了有非常特殊的情况，比如运用了俚语或者典故之类的,${promptValue}\n\n翻译:`,
+    max_tokens: 100,
+    temperature: 0.7,
   };
 
+  // 设置请求头
   const headers = {
     'Content-Type': 'application/json',
     Authorization: `Bearer ${apiKey}`,
   };
 
   try {
+    // 发起POST请求
     const response = await fetch(endpointUrl, {
       method: 'POST',
       headers,
@@ -103,17 +108,9 @@ async function qwenTextGenerate(promptValue) {
       throw new Error(`API请求失败，状态码：${response.status}`);
     }
 
+    // 解析响应数据
     const data = await response.json();
-    const generatedText = data.text.trim(); // 获取生成的文本内容
-
-    // 将生成的文本写入到文件中
-    fs.writeFile('generated_text.txt', generatedText, (err) => {
-      if (err) {
-        console.error('写入文件时出错:', err);
-      } else {
-        console.log('文本已成功生成并保存到 generated_text.txt');
-      }
-    });
+    const generatedText = data.text.trim();
 
     return generatedText;
   } catch (error) {
@@ -122,6 +119,34 @@ async function qwenTextGenerate(promptValue) {
   }
 }
 
+/**
+ * 将文本内容写入到指定的文件中
+ * @param {string} text - 要写入的文本内容
+ * @param {string} fileName - 输出文件名
+ */
+async function writeTextToFile(text, fileName) {
+  try {
+    await fs.writeFile(fileName, text, 'utf-8');
+    console.log(`内容已成功写入到文件：${fileName}`);
+  } catch (err) {
+    console.error(`写入文件时发生错误: ${err}`);
+    throw err;
+  }
+}
+
+// 主程序：调用函数并处理结果
+(async () => {
+  const promptValue = "This is the English text to be translated."; // 待翻译的文本
+  try {
+    const translatedText = await qwenTextGenerate(promptValue);
+    console.log('生成的翻译内容:', translatedText);
+
+    // 将翻译结果写入文件
+    await writeTextToFile(translatedText, '翻译结果.txt');
+  } catch (error) {
+    console.error('处理过程中出错:', error);
+  }
+})();
 // 调用修改后的文本生成函数
 (async () => {
   try {
