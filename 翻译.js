@@ -71,7 +71,7 @@ require('dotenv').config();
 
 // 修改为使用通义千问API进行翻译尝试
 async function qwenTranslate(value) {
-  const apiKey = process.env.QWEN_API_KEY; // 新的API Key变量
+  const apiKey = 'sk-475512e59a004a6da4c0cdff518cf97a'; // 新的API Key变量
   const endpointUrl = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
 
   // 为了适配通义千问的接口，我们构造一个请求正文，提示模型进行翻译
