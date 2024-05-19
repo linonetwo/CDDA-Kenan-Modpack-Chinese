@@ -68,8 +68,6 @@ const sourceModDirs = _.sortedUniq(
 );
 
 // 使用通义千问API进行文本生成尝试
-const fs = require('fs'); // 引入Node.js的文件系统模块
-
 async function qwenTextGenerate(promptValue) {
   const apiKey = 'sk-475512e59a004a6da4c0cdff518cf97a'; // API Key
   const endpointUrl = 'https://dashscope.aliyuncs.com/api/v1/services/qwen/text-generation/generation'; // 文本生成API端点
