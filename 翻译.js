@@ -67,23 +67,26 @@ const sourceModDirs = _.sortedUniq(
   fs.list(path.resolve(__dirname, 'Kenan-Structured-Modpack')).filter((name) => name !== '.DS_Store')
 );
 
-require('dotenv').config();
+// 使用通义千问API进行文本生成尝试
+const fs = require('fs'); // 引入Node.js的文件系统模块
 
-// 修改为使用通义千问API进行翻译尝试
-async function qwenTranslate(value) {
-  const apiKey = 'sk-475512e59a004a6da4c0cdff518cf97a'; // 新的API Key变量
-  const endpointUrl = 'https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation';
+async function qwenTextGenerate(promptValue) {
+  const apiKey = 'sk-475512e59a004a6da4c0cdff518cf97a'; // API Key
+  const endpointUrl = 'https://dashscope.aliyuncs.com/api/v1/services/qwen/text-generation/generation'; // 文本生成API端点
 
-  // 为了适配通义千问的接口，我们构造一个请求正文，提示模型进行翻译
-  const prompt = `你是一名专业翻译员，擅长使用AI工具翻译我输入的内容。请根据要求优化翻译：目标语言：中文
+  // 构造请求正文，提示模型生成指定主题的文本内容
+  const prompt = `你是一名专业翻译员，擅长使用AI工具翻译我输入的内容。
+  请根据要求优化翻译：
+  目标语言：中文
   优化要点：语法纠正、符合正常中文表达、适应中国文化
   要求：尽量使用我上传的文件中专业术语的表达，但在意思严重冲突下不需要符合文件中的翻译
-  特别注意：保持原意，优化语言流畅性和准确性，这是CDDA大灾变中的游戏内容，确保它符合一个丧尸病毒爆发后的世界，直接输出内容，不用跟我解释为什么要那样翻译，除了有非常特殊的情况，比如运用了俚语或者典故之类的,请将以下英文翻译成中文:\n${value}\n\n翻译:`;
+  特别注意：保持原意，优化语言流畅性和准确性，这是CDDA大灾变中的游戏内容，确保它符合一个丧尸病毒爆发后的世界，直接输出内容，不用跟我解释为什么要那样翻译，除了有非常特殊的情况，比如运用了俚语或者典故之类的,${promptValue}\n\n翻译:`;
+
   const requestBody = {
-    model: 'qwen-max', // 选择合适的模型版本，具体请参考API文档
+    model: 'qwen-max', // 选择合适的模型版本
     prompt,
     max_tokens: 100, // 根据需要调整生成的最大token数
-    temperature: 0.7, // 控制生成文本的创造性，接近0更确定性，更高则更随机
+    temperature: 0.7, // 控制生成文本的创造性
   };
 
   const headers = {
@@ -103,21 +106,32 @@ async function qwenTranslate(value) {
     }
 
     const data = await response.json();
-    // 假设data.text包含了翻译的结果
-    return data.text.trim();
+    const generatedText = data.text.trim(); // 获取生成的文本内容
+
+    // 将生成的文本写入到文件中
+    fs.writeFile('generated_text.txt', generatedText, (err) => {
+      if (err) {
+        console.error('写入文件时出错:', err);
+      } else {
+        console.log('文本已成功生成并保存到 generated_text.txt');
+      }
+    });
+
+    return generatedText;
   } catch (error) {
-    console.error('翻译请求失败:', error);
+    console.error('文本生成请求失败:', error);
     throw error;
   }
 }
 
-// 调用修改后的翻译函数
+// 调用修改后的文本生成函数
 (async () => {
   try {
-    const translation = await qwenTranslate('Hello, how are you?');
-    console.log('翻译结果:', translation);
+    const promptContent = "创造一个关于未来科技城市的短篇故事，强调可持续发展和人工智能的作用。";
+    const generatedText = await qwenTextGenerate(promptContent);
+    console.log('生成的文本内容:', generatedText);
   } catch (error) {
-    console.error('翻译过程中遇到错误:', error.message);
+    console.error('文本生成过程中遇到错误:', error.message);
   }
 })();
 
