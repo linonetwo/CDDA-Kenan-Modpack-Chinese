@@ -67,7 +67,6 @@ const sourceModDirs = _.sortedUniq(
   fs.list(path.resolve(__dirname, 'Kenan-Structured-Modpack')).filter((name) => name !== '.DS_Store')
 );
 
-const fetch = require('node-fetch');
 require('dotenv').config();
 
 // 修改为使用通义千问API进行翻译尝试
