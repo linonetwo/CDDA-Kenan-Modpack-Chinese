@@ -69,7 +69,7 @@ const sourceModDirs = _.sortedUniq(
 
 
 // 尝试用qwen翻译
-const apiKey = 'sk-475512e59a004a6da4c0cdff518cf97a'; 
+const apiKey = process.env.QWEN;
 const endpointUrl = 'https://dashscope.aliyuncs.com/api/v1/services/qwen/text-generation/generation';
 
 /**
