@@ -120,43 +120,11 @@ async function qwenTextGenerate(promptValue) {
 }
 
 /**
- * 将文本内容写入到指定的文件中
- * @param {string} text - 要写入的文本内容
- * @param {string} fileName - 输出文件名
- */
-async function writeTextToFile(text, fileName) {
-  try {
-    await fs.writeFile(fileName, text, 'utf-8');
-    console.log(`内容已成功写入到文件：${fileName}`);
-  } catch (err) {
-    console.error(`写入文件时发生错误: ${err}`);
-    throw err;
-  }
-}
-
-// 主程序：调用函数并处理结果
-(async () => {
-  const promptValue = "This is the English text to be translated."; // 待翻译的文本
-  try {
-    const translatedText = await qwenTextGenerate(promptValue);
-    console.log('生成的翻译内容:', translatedText);
-
-    // 将翻译结果写入文件
-    await writeTextToFile(translatedText, '翻译结果.txt');
-  } catch (error) {
-    console.error('处理过程中出错:', error);
-  }
-})();
-// 调用修改后的文本生成函数
-(async () => {
-  try {
-    const promptContent = "创造一个关于未来科技城市的短篇故事，强调可持续发展和人工智能的作用。";
-    const generatedText = await qwenTextGenerate(promptContent);
-    console.log('生成的文本内容:', generatedText);
-  } catch (error) {
-    console.error('文本生成过程中遇到错误:', error.message);
-  }
-})();
+ * 尝试使用不同的翻译服务进行翻译，目前彩云、搜狗都删掉了，只剩下 通义千问LLM
+ * @param {string} value 待翻译的值
+ * @returns {Promise<string>} 翻译后的字符串
+*/
+const unionTranslate = (value) => qwenTextGenerate(value)
 
 const tags = {
   '</color>': '2222',
