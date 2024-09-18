@@ -11,10 +11,18 @@
     ]
   },
   {
-    "id": "freezeknife_dismiss_ter",
+    "id": "freezeknife_dismiss_terfur",
     "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_frozen_knife" ], 
+        "result": "f_null", 
+        "message": "Frozen knives around you disappear!", 
+        "message_good": true 
+      }
+    ],
     "terrain": [
-      { 
+      {
         "valid_terrain": [ "t_frozen_knife" ], 
         "result": "t_open_air", 
         "message": "Frozen knives around you disappear!", 
@@ -23,11 +31,17 @@
     ]
   },
   {
-    "id": "freezeknife_ter",
+    "id": "freezeknife_terfur",
     "type": "ter_furn_transform",
+    "furniture": [ 
+      { 
+        "valid_furniture": [ "f_null" ],
+        "result": "f_frozen_knife"
+      } 
+    ],
     "terrain": [ 
       { 
-        "valid_flags": [ "NO_FLOOR", "TRANSPARENT" ], 
+        "valid_flags": [ "NO_FLOOR", "EMPTY_SPACE" ], 
         "result": "t_frozen_knife"
       } 
     ]
@@ -59,7 +73,7 @@
     "type": "ter_furn_transform",
     "furniture": [
       {
-        "valid_flags": [ "EASY_DECONSTRUCT", "FLAMMABLE", "FLAMMABLE_ASH", "FLAMMABLE_HARD", "MINEABLE", "TRANSPARENT" ], 
+        "valid_flags": [ "DIGGABLE", "EASY_DECONSTRUCT", "FLAMMABLE", "FLAMMABLE_ASH", "FLAMMABLE_HARD", "MINEABLE", "TRANSPARENT" ], 
         "result": "f_keystone", 
         "message": "A keystone materializes and crashes down!" 
       }
@@ -179,23 +193,23 @@
       { 
         "valid_field": [ "fd_web", "fd_web2", "fd_web3" ], 
         "result": "fd_null", 
-        "message": "Webs around you disintegrate.", 
+        "message": "The webs disintegrate.", 
         "message_good": true 
       }
     ],
     "furniture": [ 
       { 
-        "valid_furniture": [ "f_web_up" ],
+        "valid_furniture": [ "f_web_rappel", "f_web_up" ],
         "result": "f_null",
-        "message": "Webs around you disintegrate.", 
+        "message": "The webs disintegrate.", 
         "message_good": true 
       } 
     ],
     "terrain": [
       { 
-        "valid_terrain": [ "t_web_bridge", "t_web_rappel" ], 
+        "valid_terrain": [ "t_web_bridge" ], 
         "result": "t_open_air", 
-        "message": "Webs around you disintegrate.", 
+        "message": "The webs disintegrate.", 
         "message_good": true 
       }
     ]
@@ -205,18 +219,18 @@
     "type": "ter_furn_transform",
     "terrain": [ 
       { 
-        "valid_flags": [ "NO_FLOOR", "TRANSPARENT" ], 
+        "valid_flags": [ "NO_FLOOR", "EMPTY_SPACE" ], 
         "result": "t_web_bridge"
       } 
     ]
   },
   {
-    "id": "web_rappel_ter",
+    "id": "web_rappel_fur",
     "type": "ter_furn_transform",
-    "terrain": [ 
+    "furniture": [ 
       { 
-        "valid_flags": [ "NO_FLOOR", "TRANSPARENT" ], 
-        "result": "t_web_rappel"
+        "valid_furniture": [ "f_null" ], 
+        "result": "f_web_rappel"
       } 
     ]
   }

@@ -1,0 +1,108 @@
+[
+  {
+    "id": "ench_autumn_melancholy",
+    "type": "enchantment",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "METABOLISM", "multiply": -0.333 }
+    ]
+  },
+  {
+    "id": "ench_death_coin",
+    "type": "enchantment",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "ATTACK_SPEED", "multiply": 0.05 },
+      { "value": "MOVE_COST", "multiply": 0.05 },
+      { "value": "SLEEPINESS", "multiply": 0.1 }
+    ]
+  },
+  {
+    "id": "ench_esper_cloak",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "MAX_MANA", "multiply": 0.33 }, 
+      { "value": "REGEN_MANA", "multiply": 0.33 } 
+    ]
+  },
+  {
+    "id": "ench_lampad_torch",
+    "type": "enchantment",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "INTELLIGENCE", "multiply": -0.05 },
+      { "value": "PERCEPTION", "multiply": -0.05 },
+      { "value": "ATTACK_SPEED", "multiply": -0.1 },
+      { "value": "MOVE_COST", "multiply": -0.05 }
+    ]
+  },
+  {
+    "id": "ench_lampad_torch_lit",
+    "type": "enchantment",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "INTELLIGENCE", "multiply": -0.1 },
+      { "value": "PERCEPTION", "multiply": -0.15 },
+      { "value": "STRENGTH", "multiply": 0.2 },
+      { "value": "ATTACK_SPEED", "multiply": -0.2 },
+      { "value": "BONUS_DODGE", "add": -1 },
+      { "value": "MOVE_COST", "multiply": -0.1 }
+    ]
+  },
+  {
+    "id": "ench_lucky_charm",
+    "type": "enchantment",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "EVASION", "add": 0.01 }
+    ]
+  },
+  {
+    "id": "ench_skinwalker_pelt",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "DEXTERITY", "add": 1 },
+      { "value": "INTELLIGENCE", "add": -2 },
+      { "value": "PERCEPTION", "add": 4 },
+      { "value": "STRENGTH", "add": 2 }
+    ]
+  },
+  {
+    "id": "ench_strong_ice",
+    "type": "enchantment",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "INTELLIGENCE", "add": -3 },
+      { "value": "STRENGTH", "add": 9 }
+    ]
+  },
+  {
+    "id": "ench_surprising_umbrella",
+    "type": "enchantment",
+    "has": "HELD",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "ATTACK_NOISE", "multiply": -0.66 },
+      { "value": "FOOTSTEP_NOISE", "multiply": -0.66 },
+      { "value": "SOCIAL_INTIMIDATE", "add": -4 },
+      { "value": "SCENT_MASK", "multiply": -0.66 },
+      { "value": "STEALTH_MODIFIER", "add": 60 }
+    ]
+  },
+  {
+    "id": "ench_wind_priestess_charm",
+    "type": "enchantment",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "values": [ 
+      { "value": "DEXTERITY", "add": { "math": [ "1 + var_wind_blessing_dex " ] } },
+      { "value": "INTELLIGENCE", "add": { "math": [ "1 + var_wind_blessing_int " ] } },
+      { "value": "PERCEPTION", "add": { "math": [ "1 + var_wind_blessing_per " ] } },
+      { "value": "STRENGTH", "add": { "math": [ "1 + var_wind_blessing_str " ] } }
+    ]
+  }
+]

@@ -513,7 +513,8 @@
     "base_energy_cost": { "math": [ "( - (u_skill('speech') * 3.35 ) - (u_skill('dodge') * 3.35 ) + 120.1 )" ] },
     "energy_source": "MANA",
     "flags": [ "IGNORE_WALLS", "NO_LEGS", "NO_PROJECTILE", "SILENT", "SOMATIC", "TARGET_TELEPORT" ],
-    "//2": "cast time and mana cost 100 - 33, scales down with higher skill"
+    "//": "Cast time and mana cost 100 - 33, scales down with higher skill",
+    "//WIP": "This should be possible with revert_location or alter_timed_events or u_transform_radius + time_in_future / key "
   },
   {
     "id": "seiga_yoshika_summon",

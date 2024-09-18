@@ -1,0 +1,284 @@
+[
+  {
+    "id": "autumn_melancholy",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_autumn_melancholy" } ],
+    "passive_mult_procgen_values": [
+      { "weight": 100, "min_value": 0.25, "max_value": 0.65, "type": "METABOLISM", "increment": 0.1, "power_per_increment": 100 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "passive_enchantment_mult" }
+    ]
+  },
+  {
+    "id": "cricket_pin",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_cricket_pin" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 1, 6 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 1, 6 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "15 m", "45 m" ]
+      }
+    ],
+    "active_procgen_values": [ { "weight": 100, "spell_id": "AEA_cricketpin_charm" } ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" }
+    ]
+  },
+  {
+    "id": "death_coin",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_death_coin" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 1, 3 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 1, 3 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "10 s", "30 s" ]
+      }
+    ],
+    "active_procgen_values": [ { "weight": 100, "spell_id": "AEA_death_blink" } ],
+    "passive_mult_procgen_values": [
+      { "weight": 100, "min_value": 0.05, "max_value": 0.2, "type": "ATTACK_SPEED", "increment": 0.05, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 0.05, "max_value": 0.2, "type": "MOVE_COST", "increment": 0.05, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 0.05, "max_value": 0.2, "type": "SLEEPINESS", "increment": 0.05, "power_per_increment": 100 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" },
+      { "weight": 100, "value": "passive_enchantment_mult" }
+    ]
+  },
+  {
+    "id": "esper_cloak",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_lampad_torch" } ],
+    "passive_mult_procgen_values": [
+      { "weight": 100, "min_value": 0.1, "max_value": 0.65, "type": "MAX_MANA", "increment": 0.05, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 0.1, "max_value": 0.65, "type": "REGEN_MANA", "increment": 0.05, "power_per_increment": 100 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "passive_enchantment_mult" }
+    ]
+  },
+  {
+    "id": "death_fan",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_esper_cloak" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 1, 2 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 1, 2 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "30 m", "2 h" ]
+      }
+    ],
+    "active_procgen_values": [ { "weight": 100, "spell_id": "AEA_fan_instakill" } ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" }
+    ]
+  },
+  {
+    "id": "lampad_torch",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_lampad_torch" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 10, 30 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 10, 30 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "1 m", "6 m" ]
+      }
+    ],
+    "passive_add_procgen_values": [
+      { "weight": 100, "min_value": -3, "max_value": 0, "type": "INTELLIGENCE", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": -3, "max_value": 0, "type": "PERCEPTION", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 0, "max_value": 3, "type": "STRENGTH", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": -1, "max_value": 0, "type": "BONUS_DODGE", "increment": 1, "power_per_increment": 100 }
+    ],
+    "passive_mult_procgen_values": [
+      { "weight": 100, "min_value": -0.35, "max_value": -0.05, "type": "ATTACK_SPEED", "increment": 0.05, "power_per_increment": 100 },
+      { "weight": 100, "min_value": -0.1, "max_value": 0, "type": "MOVE_COST", "increment": 0.01, "power_per_increment": 100 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" },
+      { "weight": 100, "value": "passive_enchantment_add" },
+      { "weight": 100, "value": "passive_enchantment_mult" }
+    ]
+  },
+  {
+    "id": "lucky_charm",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_lucky_charm" } ],
+    "passive_add_procgen_values": [
+      { "weight": 100, "min_value": 0, "max_value": 1, "type": "EVASION", "increment": 0.001, "power_per_increment": 10 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "passive_enchantment_add" }
+    ]
+  },
+  {
+    "id": "oni_gourd",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_oni_gourd" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 1, 2 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 1, 2 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "30 m", "2 h" ]
+      }
+    ],
+    "active_procgen_values": [ { "weight": 100, "spell_id": "AEA_possessed_trumpet" } ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" }
+    ]
+  },
+  {
+    "id": "possessed_trumpet",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_possessed_trumpet" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 1, 2 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 1, 2 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "30 m", "2 h" ]
+      }
+    ],
+    "active_procgen_values": [ { "weight": 100, "spell_id": "AEA_possessed_trumpet" } ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" }
+    ]
+  },
+  {
+    "id": "prankster_shovel",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_prankster_shovel" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 1, 2 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 1, 2 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "1 m", "10 m" ]
+      }
+    ],
+    "active_procgen_values": [ { "weight": 100, "spell_id": "AEA_prankster_pit" } ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" }
+    ]
+  },
+  {
+    "id": "skinwalker_pelt",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_skinwalker_pelt" } ],
+    "passive_add_procgen_values": [
+      { "weight": 100, "min_value": 0, "max_value": 2, "type": "DEXTERITY", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": -4, "max_value": 0, "type": "INTELLIGENCE", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 0, "max_value": 6, "type": "PERCEPTION", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 0, "max_value": 4, "type": "STRENGTH", "increment": 1, "power_per_increment": 100 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "passive_enchantment_add" }
+    ]
+  },
+  {
+    "id": "sphere_of_darkness",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_sphere_of_darkness" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 1, 6 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 1, 6 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "10 m", "20 m" ]
+      }
+    ],
+    "active_procgen_values": [ { "weight": 100, "spell_id": "AEA_darkness_spam" } ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" }
+    ]
+  },
+  {
+    "id": "spider_charm",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_spider_charm" } ],
+    "passive_add_procgen_values": [
+      { "weight": 100, "min_value": -8, "max_value": -1, "type": "ARMOR_ACID", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 8, "max_value": 1, "type": "EFFECTIVE_HEALTH_MOD", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": -8, "max_value": -1, "type": "FALL_DAMAGE", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": -8, "max_value": -1, "type": "FOOTSTEP_NOISE", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 1, "max_value": 1, "type": "HEALTHY_RATE", "increment": 0.1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": -1, "max_value": 0, "type": "MOVECOST_OBSTACLE_MOD", "increment": 0.1, "power_per_increment": 10 }
+    ],
+    "passive_mult_procgen_values": [
+      { "weight": 100, "min_value": -8, "max_value": -1, "type": "VOMIT_MUL", "increment": 0.1, "power_per_increment": 100 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "passive_enchantment_add" },
+      { "weight": 100, "value": "passive_enchantment_mult" }
+    ]
+  },
+  {
+    "id": "strong_ice",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_strong_ice" } ],
+    "passive_add_procgen_values": [
+      { "weight": 100, "min_value": -9, "max_value": -1, "type": "INTELLIGENCE", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 9, "max_value": 9, "type": "STRENGTH", "increment": 1, "power_per_increment": 100 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "passive_enchantment_add" }
+    ]
+  },
+  {
+    "id": "sunflower_pin",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_sunflower_pin" } ],
+    "charge_types": [
+      {
+        "weight": 100,
+        "charges": { "range": [ 1, 6 ], "power": 0 },
+        "charges_per_use":{ "range": [ 1, 1 ], "power": 0 },
+        "max_charges": { "range": [ 1, 6 ], "power": 0 },
+        "recharge_type": "periodic",
+        "time": [ "5 m", "15 m" ]
+      }
+    ],
+    "active_procgen_values": [ { "weight": 100, "spell_id": "AEA_sunflower_spam" } ],
+    "type_weights": [
+      { "weight": 100, "value": "active_enchantment" }
+    ]
+  },
+  {
+    "id": "wind_priestess_charm",
+    "type": "relic_procgen_data",
+    "items": [ { "weight": 100, "item": "art_wind_priestess_charm" } ],
+    "passive_add_procgen_values": [
+      { "weight": 100, "min_value": 1, "max_value": 4, "type": "DEXTERITY", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 1, "max_value": 4, "type": "INTELLIGENCE", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 1, "max_value": 4, "type": "PERCEPTION", "increment": 1, "power_per_increment": 100 },
+      { "weight": 100, "min_value": 1, "max_value": 4, "type": "STRENGTH", "increment": 1, "power_per_increment": 100 }
+    ],
+    "type_weights": [
+      { "weight": 100, "value": "passive_enchantment_add" }
+    ]
+  }
+]

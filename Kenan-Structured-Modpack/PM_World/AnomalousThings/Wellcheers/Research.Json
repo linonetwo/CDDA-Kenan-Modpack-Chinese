@@ -1,3 +1,496 @@
 [
-    
+  {
+    "type": "effect_on_condition",
+    "id": "soda_a_activity",
+    "condition": {
+      "and": [
+        { "not": { "u_has_var": "soda_ego_a_1", "value": "true" } },
+        { "not": { "u_has_var": "soda_ego_a_2", "value": "true" } },
+        { "not": { "u_has_var": "soda_ego_a_3", "value": "true" } }
+      ]
+    },
+    "effect": { "u_assign_activity": "soda_study_armor", "duration": "2 h" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_w_activity",
+    "condition": {
+      "and": [
+        { "not": { "u_has_var": "soda_ego_w_1", "value": "true" } },
+        { "not": { "u_has_var": "soda_ego_w_2", "value": "true" } },
+        { "not": { "u_has_var": "soda_ego_w_3", "value": "true" } }
+      ]
+    },
+    "effect": { "u_assign_activity": "soda_study_weapon", "duration": "2 h" }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_g_activity",
+    "condition": {
+      "and": [
+        { "not": { "u_has_var": "soda_ego_g_1", "value": "true" } },
+        { "not": { "u_has_var": "soda_ego_g_2", "value": "true" } },
+        { "not": { "u_has_var": "soda_ego_g_3", "value": "true" } }
+      ]
+    },
+    "effect": { "u_assign_activity": "soda_study_gift", "duration": "2 h" }
+  },
+  {
+    "id": "soda_study_armor",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "researching",
+    "interruptable": false,
+    "interruptable_with_kb": false,
+    "refuel_fires": true,
+    "auto_needs": true,
+    "rooted": true,
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "id": "soda_study_weapon",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "researching",
+    "interruptable": false,
+    "interruptable_with_kb": false,
+    "refuel_fires": true,
+    "auto_needs": true,
+    "rooted": true,
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "id": "soda_study_gift",
+    "type": "activity_type",
+    "activity_level": "NO_EXERCISE",
+    "verb": "researching",
+    "interruptable": false,
+    "interruptable_with_kb": false,
+    "refuel_fires": true,
+    "auto_needs": true,
+    "rooted": true,
+    "based_on": "time",
+    "can_resume": false
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_on_activity_complete_soda_armor",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "and": [ { "compare_string": [ "soda_study_armor", { "context_val": "activity" } ] } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "ego_study_fail", 12 ],
+        [ "soda_ego_a_1_success", 1 ],
+        [ "soda_ego_a_2_success", 1 ],
+        [ "soda_ego_a_3_success", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_on_activity_complete_soda_weapon",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "compare_string": [ "soda_study_weapon", { "context_val": "activity" } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "ego_study_fail", 12 ],
+        [ "soda_ego_w_1_success", 1 ],
+        [ "soda_ego_w_2_success", 1 ],
+        [ "soda_ego_w_3_success", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_on_activity_complete_soda_gift",
+    "eoc_type": "EVENT",
+    "required_event": "character_finished_activity",
+    "condition": { "compare_string": [ "soda_study_gift", { "context_val": "activity" } ] },
+    "effect": {
+      "weighted_list_eocs": [
+        [ "ego_study_fail", 12 ],
+        [ "soda_ego_g_1_success", 1 ],
+        [ "soda_ego_g_2_success", 1 ],
+        [ "soda_ego_g_3_success", 1 ]
+      ]
+    }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "ego_study_fail",
+    "effect": [ { "message": "You didn't learn anything new", "popup": true } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_a_1_success",
+    "condition": { "not": { "u_has_var": "soda_ego_a_1", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_a_note_1" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_a_1", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_armor" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_a_2_success",
+    "condition": { "not": { "u_has_var": "soda_ego_a_2", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_a_note_2" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_a_2", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_armor" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_a_3_success",
+    "condition": { "not": { "u_has_var": "soda_ego_a_3", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_a_note_3" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_a_3", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_armor" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_w_1_success",
+    "condition": { "not": { "u_has_var": "soda_ego_w_1", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_w_note_1" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_w_1", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_weapon" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_w_2_success",
+    "condition": { "not": { "u_has_var": "soda_ego_w_2", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_w_note_2" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_w_2", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_weapon" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_w_3_success",
+    "condition": { "not": { "u_has_var": "soda_ego_w_3", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_w_note_3" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_w_3", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_weapon" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_g_1_success",
+    "condition": { "not": { "u_has_var": "soda_ego_g_1", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_g_note_1" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_g_1", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_gift" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_g_2_success",
+    "condition": { "not": { "u_has_var": "soda_ego_g_2", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_g_note_2" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_g_2", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_gift" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "soda_ego_g_3_success",
+    "condition": { "not": { "u_has_var": "soda_ego_g_3", "value": "true" } },
+    "effect": [
+      { "u_spawn_item": "soda_ego_g_note_3" },
+      { "message": "<color_green>Success!</color>", "popup": true },
+      { "u_add_var": "soda_ego_g_3", "value": "true" }
+    ],
+    "false_effect": [ { "run_eocs": "EOC_on_activity_complete_soda_gift" } ]
+  },
+  {
+    "id": "soda_ego_a_note_1",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda armor research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO armor.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_a_1",
+          "effect": [
+            { "u_add_var": "soda_ego_a_1_unlocked", "value": "true" },
+            {
+              "message": "Unlocked EGO passive: Enhance strength for every 100 cheers, also armor smell more.",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "soda_ego_a_note_2",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda armor research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO armor.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_a_2",
+          "effect": [
+            { "u_add_var": "soda_ego_a_2_unlocked", "value": "true" },
+            {
+              "message": "Unlocked EGO passive: it better protect from electricity and acid, scales with cheers. ",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "soda_ego_a_note_3",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda armor research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO armor.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_a_3",
+          "effect": [
+            { "u_add_var": "soda_ego_a_3_unlocked", "value": "true" },
+            {
+              "message": "Unlocked EGO passive: increase stamina and perception with moree cheers drinked.",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "soda_ego_w_note_1",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda weapon research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO weapon.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_w_1",
+          "effect": [
+            { "u_add_var": "soda_ego_w_1_unlocked", "value": "true" },
+            { "message": "Unlocked EGO passive: decrease recoil with moree cheers.", "popup": true }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "soda_ego_w_note_2",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda weapon research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO weapon.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_w_2",
+          "effect": [
+            { "u_add_var": "soda_ego_w_2_unlocked", "value": "true" },
+            { "message": "Unlocked EGO passive: decrease dispersion with moree cheers.", "popup": true }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "soda_ego_w_note_3",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda weapon research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO weapon.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_w_3",
+          "effect": [
+            { "u_add_var": "soda_ego_w_3_unlocked", "value": "true" },
+            {
+              "message": "Unlocked EGO passive: Increase pistol handling skill and increase max range of fire with more cheers",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "soda_ego_g_note_1",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda gift research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO gift.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_g_1",
+          "effect": [
+            { "u_add_var": "soda_ego_g_1_unlocked", "value": "true" },
+            { "message": "Unlocked EGO passive: Increase max hp with nore cheers.", "popup": true }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "soda_ego_g_note_2",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda gift research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO gift.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_g_2",
+          "effect": [
+            { "u_add_var": "soda_ego_g_2_unlocked", "value": "true" },
+            {
+              "message": "Unlocked EGO passive: Your digestive system can process food more efficently with more cheers.",
+              "popup": true
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "soda_ego_g_note_3",
+    "type": "GENERIC",
+    "name": { "str": "F-05-52 EGO soda gift research notes" },
+    "description": "These are the results of your research on F-05-52, detailing the features of the EGO gift.",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "looks_like": "file",
+    "symbol": "#",
+    "color": "white",
+    "material": [ "paper" ],
+    "use_action": {
+      "type": "effect_on_conditions",
+      "effect_on_conditions": [
+        {
+          "id": "EOC_read_note_soda_g_3",
+          "effect": [
+            { "u_add_var": "soda_ego_g_3_unlocked", "value": "true" },
+            { "message": "Unlocked EGO passive: You became gourmand and can eat more.", "popup": true }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "recipe",
+    "category": "CC_PM",
+    "name": "Research of soda EGO",
+    "id": "soda_study_selector",
+    "description": "Research the Extracted EGO \"soda\" and explore its secrets and potential applications.",
+    "subcategory": "CSC_PM_EGO",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "activity_level": "NO_EXERCISE",
+    "time": "5 m",
+    "autolearn": true,
+    "tools": [
+      [ [ "pen", 10 ], [ "pencil", 10 ], [ "blue_pen", 10 ], [ "green_pen", 10 ], [ "black_pen", 10 ], [ "red_pen", 10 ] ],
+      [ [ "soda_book", -1 ] ]
+    ],
+    "components": [ [ [ "paper", 10 ] ] ],
+    "book_learn": [ [ "soda_book", 0 ] ],
+    "result_eocs": [
+      {
+        "id": "soda_choose",
+        "effect": [
+          {
+            "run_eoc_selector": [ "soda_a_activity", "soda_w_activity", "soda_g_activity" ],
+            "names": [ "EGO armor soda", "EGO weapon soda", "EGO gift soda" ],
+            "keys": [ "a", "b", "c" ],
+            "hide_failing": true,
+            "allow_cancel": true,
+            "title": "Please select research topic:",
+            "descriptions": [
+              "Research the EGO armor and unlock its potential.\n!!!IMPOSSIBLE TO INTERRUPT!!!",
+              "Research the EGO weapon and unlock its potential.\n!!!IMPOSSIBLE TO INTERRUPT!!!",
+              "Research the EGO gift and unlock its potential.\n!!!IMPOSSIBLE TO INTERRUPT!!!"
+            ]
+          }
+        ]
+      }
+    ]
+  }
 ]

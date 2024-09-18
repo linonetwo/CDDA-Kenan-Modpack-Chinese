@@ -9,7 +9,7 @@
     "longest_side": "25 cm",
     "price_postapoc": 25000,
     "to_hit": { "balance": "neutral", "grip": "solid", "length": "short", "surface": "any" },
-    "melee_damage": { "bash": 7 },
+    "melee_damage": { "bash": 6 },
     "material": [ "wood" ],
     "symbol": "/",
     "looks_like": "torch",
@@ -18,53 +18,84 @@
     "techniques": [ "WBLOCK_1" ],
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 20 } } ],
     "relic_data": {
-      "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "mutations": [ "lampad_torch_off_mut" ] } ],
-      "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "3 m" }
+      "passive_effects": [ 
+        { 
+          "condition": "ALWAYS", 
+          "mutations": [ "lampad_torch_off_mut" ]
+        },
+        { "id": "ench_lampad_torch" }
+      ],
+      "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "4 m" }
     },
     "use_action": [
       {
-        "target": "lampad_torch_lit",
         "type": "transform",
+        "target": "lampad_torch_lit",
         "msg": "You light the torch. ",
         "menu_text": "Light torch",
         "active": true,
-        "need_fire": 1
+        "need_fire": 0
       }
     ],
-    "flags": [ "BURNOUT", "NO_RELOAD", "NO_UNLOAD" ]
+    "flags": [ "BELT_CLIP", "BURNOUT", "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ],
+    "//note": "Recharge time is bugged atm (#48019) so the actual recharge time is (4 * 60)/2 = 120 s ingame. The torches lasts for ~30 min or so"
   },
   {
     "id": "lampad_torch_lit",
     "type": "TOOL",
     "name": { "str": "lampad torch (lit)", "str_pl": "lampad torches (lit)" },
-    "description": "A stick made from some kind of eiree wood , you feel angry just by holding it.  It is currently lit, the dancing flames! Something in your headd, concen;trate least darkness   BACK˙ ",
+    "description": "A stick made from some kind of eiree wood , you feel excited just by holding it.  It is currently lit, the dancing flames! Something in your headd, concen;trate least darkness   BACK˙ ",
     "volume": "500 ml",
     "weight": "500 g",
     "longest_side": "25 cm",
     "price_postapoc": 25000,
     "to_hit": { "balance": "neutral", "grip": "solid", "length": "short", "surface": "any" },
-    "melee_damage": { "bash": 7, "heat": 7 },
+    "melee_damage": { "heat": 6, "soul": 6 },
     "material": [ "wood" ],
     "symbol": "/",
     "looks_like": "torch",
     "color": "brown",
-    "max_charges": 20,
-    "turns_per_charge": 300,
+    "turns_per_charge": 60,
     "revert_to": "lampad_torch",
     "techniques": [ "WBLOCK_1" ],
     "charges_per_use": 1,
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 20 } } ],
-    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "mutations": [ "lampad_torch_lit_mut" ] } ] },
+    "relic_data": { 
+      "passive_effects": [ 
+        { 
+          "condition": "ALWAYS", 
+          "mutations": [ "lampad_torch_lit_mut" ] 
+        },
+        { "id": "ench_lampad_torch_lit" }
+      ] 
+    },
     "use_action": [
       { "type": "firestarter", "moves": 100 },
       {
-        "target": "lampad_torch",
         "type": "transform",
+        "target": "lampad_torch",
         "msg": "THE torch is extinguished…",
         "menu_text": "Extinguish",
         "active": false
       }
     ],
-    "flags": [ "BURNOUT", "FIRE", "FLAMING", "LIGHT_40", "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID" ]
+    "flags": [ "BELT_CLIP", "BURNOUT", "FIRE", "LIGHT_40", "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
+  },
+  {
+    "id": "lampad_insanity",
+    "type": "SPELL",
+    "name": "Lampad insanity",
+    "description": "Monster infight enabler.",
+    "spell_class": "NONE",
+    "valid_targets": [ "ally", "hostile" ],
+    "effect": "attack",
+    "effect_str": "attackmon_effect",
+    "shape": "blast",
+    "min_aoe": 16,
+    "max_aoe": 16,
+    "min_duration": 3100,
+    "max_duration": 3100,
+    "flags": [ "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "SILENT" ],
+    "//WIP": "Sadly, this is not working atm. Either the effect does not add the flag, or the monsters don't lose the player's aggro"
   }
 ]

@@ -24,10 +24,9 @@
       { "x": -1, "y": 0, "parts": [ "frame_corpsecart", "wheel_corpsecart", "seat_corpsecart", "controls_corpsecart" ] }
     ],
     "items": [ { "x": 0, "y": 0, "chance": 50, "items": [ "corpse_ash" ] } ],
-    "//": "This is almost working almost as intended. If touhou_corpse_ammo is set to corpse_generic_human , and those are set to type: `AMMO`, the engine consumes corpses",
+    "//": "Just discovered the undocumented ammo_data field lol corpses can be loaded again, and revival shouldn't break",
     "//2": "However I cannot limit the engine accepting only human or human-derived corpses",
-    "//3": "Additionally, doing that causes the corpses stop reviving, which is definitely not intended",
-    "//4": "The fun thing is that this works with no fuel_data set in either flesh or hflesh . Which is not supposed to happen"
+    "//3": "The fun thing is that this works with no fuel_data set in either flesh or hflesh . Which is not supposed to happen"
   },
   {
     "id": "keystone_floating",

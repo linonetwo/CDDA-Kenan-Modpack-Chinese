@@ -1,16 +1,123 @@
 [
   {
-    "id": "f_gap",
+    "id": "f_earthbarrier",
+    "type": "furniture",
+    "name": "smoothed rock",
+    "description": "A towering, smooth rock.",
+    "symbol": "1",
+    "looks_like": "t_rock_smooth",
+    "color": "green",
+    "coverage": 100,
+    "move_cost_mod": -1,
+    "required_str": -1,
+    "bash": { "str_min": 120, "str_max": 400, "sound": "crash!", "sound_fail": "whump!" },
+    "flags": [ "ALLOW_ON_OPEN_AIR", "BLOCK_WIND", "NOITEM", "NO_SCENT", "MINEABLE", "SEEN_FROM_ABOVE", "WALL" ]
+  },
+  {
+    "abstract": "f_gap",
     "type": "furniture",
     "name": "gap",
     "description": "A gash in the fabric of space.",
     "symbol": "u",
-    "looks_like": "fd_reality_tear",
+    "looks_like": "fd_fatigue",
+    "color": "black",
+    "bash": { "str_min": 200, "str_max": 400, "sound": "whoosh.", "sound_fail": "whoosh." },
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_1",
+    "type": "furniture",
+    "name": "gap",
+    "copy-from": "f_gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "color": "black",
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_2",
+    "type": "furniture",
+    "name": "gap",
+    "copy-from": "f_gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "color": "black",
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_3",
+    "type": "furniture",
+    "name": "gap",
+    "copy-from": "f_gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "color": "black",
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_4",
+    "type": "furniture",
+    "name": "gap",
+    "copy-from": "f_gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "color": "black",
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_5",
+    "type": "furniture",
+    "name": "gap",
+    "copy-from": "f_gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "color": "black",
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_6",
+    "type": "furniture",
+    "name": "gap",
+    "copy-from": "f_gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "color": "black",
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_7",
+    "type": "furniture",
+    "name": "gap",
+    "copy-from": "f_gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "color": "black",
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_8",
+    "type": "furniture",
+    "name": "gap",
+    "copy-from": "f_gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "color": "black",
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT", "GAP_FLAG" ]
+  },
+  {
+    "id": "f_gap_OLD",
+    "type": "furniture",
+    "name": "gap",
+    "description": "A gash in the fabric of space.",
+    "symbol": "u",
+    "looks_like": "fd_fatigue",
     "color": "black",
     "bash": { "str_min": 200, "str_max": 400, "sound": "whoosh.", "sound_fail": "whoosh." },
     "examine_action": "translocator",
     "move_cost_mod": 0,
     "required_str": -1,
-    "flags": [ "ALLOW_FIELD_EFFECT", "TRANSLOCATOR", "TRANSPARENT" ]
+    "flags": [ "ALLOW_ON_OPEN_AIR", "ALLOW_FIELD_EFFECT", "BRIDGE", "FLOATS_IN_AIR", "SEEN_FROM_ABOVE", "TRANSLOCATOR", "TRANSPARENT", "Z_TRANSPARENT" ]
   }
 ]

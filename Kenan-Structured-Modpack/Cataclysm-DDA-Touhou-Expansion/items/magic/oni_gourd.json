@@ -2,7 +2,7 @@
   {
     "id": "oni_gourd",
     "type": "TOOL",
-    "name": { "str": "oni gourd", "str_pl": "oni gourds" },
+    "name": { "str": "<color_pink>oni gourd</color>", "str_pl": "<color_pink>oni gourds</color>" },
     "description": "A small, purple colored gourd, reeking of alcohol.  It keeps sloshing, no matter how hard you try to empty it.",
     "volume": "500 ml",
     "weight": "200 g",
@@ -12,24 +12,41 @@
     "melee_damage": { "bash": 1 },
     "material": [ "wood" ],
     "symbol": ")",
-    "looks_like": "bottle_plastic",
+    "looks_like": "bottle_gourd",
     "color": "magenta",
     "charges_per_use": 1,
-    "pocket_data": [
-      {
-        "pocket_type": "CONTAINER",
-        "item_restriction": [ "sake_filtered" ],
+    "pocket_data": [ 
+      { 
+        "pocket_type": "MAGAZINE", 
+        "ammo_restriction": { "touhou_sake_ammo": 1 }, 
         "airtight": true,
-        "watertight": true,
-        "rigid": true,
-        "max_contains_volume": "500 ml",
-        "max_item_volume": "17 ml",
-        "max_contains_weight": "1000 g",
-        "sealed_data": { "spoil_multiplier": 0.0 },
-        "moves": 400
+        "watertight": true
       }
     ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "1 h" } },
-    "flags": [ "DURABLE_MELEE", "NO_RELOAD", "TARDIS" ]
+    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "2 h" } },
+    "use_action": [ { "type": "cast_spell", "spell_id": "oni_gourd_spell", "no_fail": true, "level": 1 } ],
+    "flags": [ "NO_RELOAD", "TARDIS", "TRADER_AVOID", "UNBREAKABLE" ],
+    "//": "MAGAZINE cannot be drinked from, it has to be a CONTAINER, but charge_info requires MAGAZINE to work"
+  },
+  {
+    "id": "oni_gourd_spell",
+    "type": "SPELL",
+    "name": { "str": "Pour sake" },
+    "description": "Pour some sake.",
+    "spell_class": "NONE",
+    "valid_targets": [ "ground", "self" ],
+    "effect": "spawn_item",
+    "effect_str": "sake_filtered",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 1,
+    "difficulty": -20,
+    "message": "",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [ "NO_LEGS", "PERMANENT_ALL_LEVELS" ],
+    "//": "lol"
   }
 ]

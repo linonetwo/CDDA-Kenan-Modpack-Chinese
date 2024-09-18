@@ -1,32 +1,282 @@
 [
   {
-    "id": "wind_blessing_eoc",
+    "id": "baku_plushie_eoc",
     "type": "effect_on_condition",
-    "recurrence": "30 m",
-    "condition": { "u_has_trait": "wind_priestess_charm_mut" },
-    "deactivate_condition": { "not": { "u_has_trait": "wind_priestess_charm_mut" } },
+    "eoc_type": "EVENT",
+    "required_event": "character_falls_asleep",
+    "effect": [
+      { "math": [ "var_baku_plushie_active", "=", "1" ] },
+      { "u_location_variable": { "global_val": "var_baku_plushie" } }
+    ]
+  },
+  {
+    "id": "baku_plushie_return_eoc",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "var_baku_plushie_active", ">=", "1" ] },
+    "effect": [ 
+      { "math": [ "var_baku_plushie_active", "=", "0" ] },
+      { "u_teleport": { "global_val": "var_baku_plushie" } },
+      { "u_message": "You just… woke up?", "type": "mixed" }
+    ],
+    "false_effect": [ 
+      { "u_message": "Something's missing… You may want to count again sheep.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "lavender_grimoire_eoc",
+    "type": "effect_on_condition",
     "effect": [
       {
-        "queue_eocs": [
+        "if": {
+          "message": "Select target", 
+          "range": 16,
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_lavender_grimoire_loc" }
+        },
+        "then": [ { "run_eocs": [ "lavender_grimoire_cast_eoc" ] } ],
+        "else": { "u_message": "Canceled" }
+      }
+    ],
+    "//": "This is so the player can select a target without knowing which spell will be casted"
+  },
+  {
+    "id": "lavender_grimoire_cast_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "var_lavender_grimoire", "=", "rand(12) + 1" ] },
+      {
+        "switch": { "math": [ "var_lavender_grimoire" ] },
+        "cases": [
+          { 
+            "case": 1, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_laser" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "The book shoots a laser!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 2, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_laser_fat" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "The book shoots a laser!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 3, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_firebolt" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "The book shoots a fire bolt!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 4, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_firebolt_big" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "The book shoots a fire bolt!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 5, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_fireball" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "The book shoots a fire ball!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 6, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_bubble" } },
+              { "u_message": "", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 7, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_waterjet" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "The book shoots a water jet!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 8, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_airbarrier" } },
+              { "u_message": "", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 9, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_airpush" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "A strong gust shoots forward!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 10, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_crystalshard" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "Crystal shards materialize and fly in front of you!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 11, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_bullet" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "The book shoots a bullet!", "type": "mixed" }
+            ]
+          },
+          { 
+            "case": 12, "effect": [ 
+              { "u_cast_spell": { "id": "lavender_grimoire_saw" }, "loc": { "global_val": "var_lavender_grimoire_loc" } },
+              { "u_message": "A saw blade materializes and shoots forward!", "type": "mixed" }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "lavender_grimoire_case_11_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "u_location_variable": { "global_val": "var_lavender_grimoire_earthbarrier_loc" }, "min_radius": 0, "max_radius": 9 },
+      { "u_cast_spell": { "id": "lavender_grimoire_earthbarrier" } },
+      { 
+        "revert_location": { "global_val": "var_lavender_grimoire_earthbarrier_loc" },
+        "time_in_future": [ "16 s", "32 s" ],
+        "key": "var_lavender_grimoire_earthbarrier_key"
+      },
+      { "queue_eocs": [ "lavender_grimoire_earthbarrier_restore_eoc" ], "time_in_future": [ "16 s", "32 s" ] },
+      { "u_message": "Green slabs rise from the ground!", "type": "mixed" }
+  ],
+  "//WIP": "Disabled as this is not reverting the location"
+  },
+  {
+    "id": "lavender_grimoire_earthbarrier_restore_eoc",
+    "type": "effect_on_condition",
+    "effect": [ { "alter_timed_events": "var_lavender_grimoire_earthbarrier_key" }, { "u_message": "333", "type": "mixed" } ]
+  },
+  {
+    "id": "mini_hakkero_replica_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "mini_hakkero_replica_cast_mspark_eoc",
+          "mini_hakkero_replica_cast_mmissile_eoc"
+        ],
+        "title": "Cast spell.",
+        "names": [
+          "Cast Master Spark (replica).",
+          "Cast Magic missile (replica)."
+        ],
+        "keys": [ "1", "2" ],
+        "descriptions": [
+          "Shoot a very large, very strong laser.  At least that's how it should work.",
+          "Shoot several magic proyectiles that look like missiles.  At least that's how it should work."
+        ],
+        "hide_failing": true,
+        "allow_cancel": true
+      }
+    ],
+    "false_effect": [ { "u_message": " ", "type": "mixed" } ]
+  },
+  {
+    "id": "mini_hakkero_replica_cast_mspark_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "if": {
+          "message": "Select target", 
+          "range": 32,
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_mini_hakkero_replica_loc" }
+        },
+        "then": [
+          { "math": [ "var_mini_hakkero_replica_rand", "=", "rand(19) + 1" ] },
           {
-            "id": "wind_blessing_randomization_eoc",
-            "condition": { "u_has_trait": "wind_priestess_charm_mut" },
-            "effect": [
-              { "math": [ "var_wind_blessing_dex", "=", "rand(3)" ] },
-              { "math": [ "var_wind_blessing_int", "=", "rand(3)" ] },
-              { "math": [ "var_wind_blessing_per", "=", "rand(3)" ] },
-              { "math": [ "var_wind_blessing_str", "=", "rand(3)" ] }
-            ],
-            "false_effect": [
-              { "math": [ "var_wind_blessing_dex", "=", "0" ] },
-              { "math": [ "var_wind_blessing_int", "=", "0" ] },
-              { "math": [ "var_wind_blessing_per", "=", "0" ] },
-              { "math": [ "var_wind_blessing_str", "=", "0" ] }
+            "switch": { "math": [ "var_mini_hakkero_replica_rand" ] },
+            "cases": [
+              { 
+                "case": 0, "effect": [ 
+                  { "u_cast_spell": { "id": "mspark_electric" }, "loc": { "global_val": "var_mini_hakkero_replica_loc" } },
+                  { "u_message": "The mini hakkero shoots a master spark replica!", "type": "mixed" }
+                ]
+              },
+              { 
+                "case": 16, "effect": [ 
+                  { "u_cast_spell": { "id": "mspark_cold" }, "loc": { "global_val": "var_mini_hakkero_replica_loc" } },
+                  { "u_message": "The mini hakkero shoots a cold spark!", "type": "mixed" }
+                ]
+              },
+              { 
+                "case": 18, "effect": [ 
+                  { "u_cast_spell": { "id": "minispark_replica" }, "loc": { "global_val": "var_mini_hakkero_replica_loc" } },
+                  { "u_message": "The mini hakkero fizzles, and shoots…  a strong light.", "type": "mixed" }
+                ]
+              },
+              { 
+                "case": 20, "effect": [ 
+                  { "u_cast_spell": { "id": "mspark_misfire" } },
+                  { "u_message": "The mini hakkero fizzles.", "type": "mixed" }
+                ]
+              }
             ]
           }
         ],
-        "time_in_future": "30 m"
+        "else": { "u_message": "Canceled" }
       }
-    ]
+    ],
+    "false_effect": [ { "u_message": " ", "type": "mixed" } ],
+    "//": "75% to shoot an electric master spark, 10% for a cold master spark, 10% for a mini master spark, 5% to misfire"
+  },
+  {
+    "id": "mini_hakkero_replica_cast_mmissile_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "if": {
+          "message": "Select target", 
+          "range": 32,
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_mini_hakkero_replica_loc" }
+        },
+        "then": [
+          { "math": [ "var_mini_hakkero_replica_rand", "=", "rand(19) + 1" ] },
+          {
+            "switch": { "math": [ "var_mini_hakkero_replica_rand" ] },
+            "cases": [
+              { 
+                "case": 0, "effect": [ 
+                  { "u_cast_spell": { "id": "mmissile_electric" }, "loc": { "global_val": "var_mini_hakkero_replica_loc" } },
+                  { "u_message": "The mini hakkero shoots electric missiles!", "type": "mixed" }
+                ]
+              },
+              { 
+                "case": 16, "effect": [ 
+                  { "u_cast_spell": { "id": "mmissile_flame" }, "loc": { "global_val": "var_mini_hakkero_replica_loc" } },
+                  { "u_message": "The mini hakkero shoots fire missiles!", "type": "mixed" }
+                ]
+              },
+              { 
+                "case": 18, "effect": [ 
+                  { "u_cast_spell": { "id": "mmissile_cold" }, "loc": { "global_val": "var_mini_hakkero_replica_loc" } },
+                  { "u_message": "The mini hakkero shoots ice missiles!", "type": "mixed" }
+                ]
+              },
+              { 
+                "case": 19, "effect": [ 
+                  { "u_cast_spell": { "id": "mmissile_misfire" } },
+                  { "u_message": "The mini hakkero shoots… little trees?", "type": "mixed" }
+                ]
+              }
+            ]
+          }
+        ],
+        "else": { "u_message": "Canceled" }
+      }
+    ],
+    "false_effect": [ { "u_message": " ", "type": "mixed" } ],
+    "//": "65% chance to shoot electric missiles, 15% to shoot flaming missiles, 10% to shoot cold missiles, 10% to misfire"
+  },
+  {
+    "id": "wind_blessing_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "var_wind_blessing_dex", "=", "rand(6)" ] },
+      { "math": [ "var_wind_blessing_int", "=", "rand(6)" ] },
+      { "math": [ "var_wind_blessing_per", "=", "rand(6)" ] },
+      { "math": [ "var_wind_blessing_str", "=", "rand(6)" ] },
+      { "queue_eocs": [ "wind_blessing_eoc" ], "time_in_future": "30 m" }
+    ],
+    "//note": "Adding a condition doesn't work as it never returns TRUE. Other than that, this grants the random stats every 30 min or so. The condition is required only to disable it from self-queueing all the time"
   }
 ]

@@ -3,7 +3,7 @@
     "id": "strong_ice",
     "type": "TOOL",
     "name": { "str": "strong ice", "str_pl": "strong ices" },
-    "description": "A chunk of ice that doesn't seem to melt.  You feel different by just having it around.",
+    "description": "A chunk of ice that doesn't seem to melt.  You feel the strongest by just having it around.",
     "volume": "500 ml",
     "weight": "500 g",
     "longest_side": "10 cm",
@@ -15,7 +15,15 @@
     "looks_like": "rock",
     "color": "white",
     "techniques": [ "BRUTAL" ],
-    "relic_data": { "passive_effects": [ { "has": "WIELD", "condition": "ALWAYS", "mutations": [ "strong_ice_mut" ] } ] },
-    "flags": [ "DURABLE_MELEE" ]
+    "relic_data": { 
+      "passive_effects": [ 
+        { 
+          "condition": "ALWAYS", 
+          "mutations": [ "strong_ice_mut" ] 
+        },
+        { "id": "ench_strong_ice" }
+      ] 
+    },
+    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ]
   }
 ]

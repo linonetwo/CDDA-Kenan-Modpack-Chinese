@@ -1,0 +1,196 @@
+[
+  {
+    "type": "mutation",
+    "id": "EGO_92",
+    "name": "EGO 9:2",
+    "points": 0,
+    "description": "EGO trait 9:2 desc",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false
+  },
+  {
+    "id": "EGO_92_stage_1",
+    "type": "SPELL",
+    "name": "9:2 stage 1 activation",
+    "description": "Разжигает внутреннее пламя, на короткое время даруя силу и стойкость к огню.",
+    "valid_targets": [ "self" ],
+    "effect": "effect_on_condition",
+    "effect_str": "92_stage_1_activation",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 600,
+    "base_casting_time": 200,
+    "final_casting_time": 50,
+    "casting_time_increment": -15,
+    "spell_class": "EGO_92",
+    "base_energy_cost": 3000,
+    "final_energy_cost": 500,
+    "energy_increment": -50,
+    "energy_source": "STAMINA",
+    "difficulty": 3,
+    "max_level": 10,
+    "flags": [ "SILENT" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "92_stage_1_activation",
+    "condition": { "not": { "u_has_effect": "EGO_CD" } },
+    "effect": [
+      { "u_add_effect": "EGO_CD", "duration": "5 minutes" },
+      {
+        "u_cast_spell": { "id": "EGO_92_stage_1_succes", "hit_self": true, "min_level": { "math": [ "u_spell_level('EGO_92_stage_1')" ] } }
+      },
+      { "u_mod_healthy": -5, "cap": -200 },
+      {
+        "u_add_morale": "ego_morale",
+        "bonus": -10,
+        "max_bonus": -200,
+        "duration": "15 minutes",
+        "decay_start": "5 minutes"
+      }
+    ],
+    "false_effect": [
+      { "u_message": "EGO on cooldown!", "type": "bad" },
+      { "u_mod_healthy": -5, "cap": -200 },
+      {
+        "u_add_morale": "ego_morale",
+        "bonus": -6,
+        "max_bonus": -200,
+        "duration": "15 minutes",
+        "decay_start": "5 minutes"
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "EGO_CD",
+    "name": [ "Cool down of EGO" ],
+    "desc": [ "Your EGO is in cooldown" ],
+    "max_intensity": 1,
+    "show_in_info": true,
+    "base_mods": {  },
+    "scaling_mods": {  }
+  },
+  {
+    "id": "EGO_92_stage_1_succes",
+    "type": "SPELL",
+    "name": "9:2 stage 1 activation",
+    "description": "Разжигает внутреннее пламя, на короткое время даруя силу и стойкость к огню.",
+    "valid_targets": [ "self" ],
+    "effect": "spawn_item",
+    "effect_str": "EGO_92_stage_1_aura",
+    "shape": "blast",
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 600,
+    "base_casting_time": 0,
+    "final_casting_time": 0,
+    "spell_class": "EGO_92",
+    "base_energy_cost": 0,
+    "final_energy_cost": 0,
+    "energy_source": "NONE",
+    "difficulty": 3,
+    "max_level": 10,
+    "flags": [ "SILENT" ]
+  },
+  {
+    "id": "EGO_92_stage_1_aura",
+    "type": "ARMOR",
+    "name": "EGO 9:2 activated s1",
+    "description": "desc",
+    "weight": "0 g",
+    "volume": "0 ml",
+    "material": [ "wind" ],
+    "symbol": "0",
+    "color": "white",
+    "armor": [
+      {
+        "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r", "head" ],
+        "encumbrance": 0,
+        "coverage": 100,
+        "rigid_layer_only": true,
+        "layers": [ "AURA" ]
+      }
+    ],
+    "flags": [ "ZERO_WEIGHT", "NO_TAKEOFF" ],
+    "relic_data": { "passive_effects": [ { "id": "EGo_92_stage_1_ench" } ] }
+  },
+  {
+    "type": "enchantment",
+    "id": "EGo_92_stage_1_ench",
+    "has": "WORN",
+    "condition": "ALWAYS",
+    "hit_you_effect": [ { "id": "92_strike_hook", "once_in": 4 } ],
+    "values": [ { "value": "ARMOR_HEAT", "add": { "math": [ "u_spell_level('EGO_92_stage_1') * 1.2" ] } } ]
+  },
+  {
+    "id": "92_strike_hook",
+    "type": "SPELL",
+    "name": "9:2 strike hook",
+    "description": "Hook to use levels of 9:2 ego in strike",
+    "valid_targets": [ "ally", "hostile", "ground" ],
+    "effect": "effect_on_condition",
+    "effect_str": "92_hook_1",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "min_duration": 600,
+    "max_duration": 6000,
+    "duration_increment": 600,
+    "base_casting_time": 200,
+    "final_casting_time": 50,
+    "casting_time_increment": -15,
+    "spell_class": "EGO_92",
+    "base_energy_cost": 3000,
+    "final_energy_cost": 500,
+    "energy_increment": -50,
+    "energy_source": "STAMINA",
+    "difficulty": 3,
+    "max_level": 10,
+    "flags": [ "SILENT" ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "92_hook_1",
+    "effect": [
+      { "u_cast_spell": { "id": "92_weak_strike", "min_level": { "math": [ "u_spell_level('EGO_92_stage_1')" ] } } },
+      { "message": "Fush!", "type": "bad" }
+    ]
+  },
+  {
+    "id": "92_weak_strike",
+    "type": "SPELL",
+    "name": "9:2 strike stage 1",
+    "description": " desc",
+    "effect": "attack",
+    "shape": "blast",
+    "valid_targets": [ "ally", "hostile", "ground" ],
+    "flags": [ "LOUD", "SOMATIC", "NO_LEGS", "NO_HANDS" ],
+    "max_level": 10,
+    "min_damage": 2,
+    "max_damage": 5,
+    "damage_increment": 0.3,
+    "min_range": 1,
+    "max_range": 1,
+    "range_increment": 0,
+    "difficulty": 0,
+    "min_aoe": 0,
+    "max_aoe": 0,
+    "spell_class": "EGO_92",
+    "base_casting_time": 200,
+    "final_casting_time": 100,
+    "casting_time_increment": -5,
+    "base_energy_cost": 140,
+    "damage_type": "heat",
+    "sound_description": "fush",
+    "energy_source": "NONE"
+  }
+]

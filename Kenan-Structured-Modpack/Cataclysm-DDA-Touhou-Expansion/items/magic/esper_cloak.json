@@ -8,13 +8,22 @@
     "weight": "1175 g",
     "price_postapoc": 25000,
     "to_hit": { "balance": "neutral", "grip": "none", "length": "hand", "surface": "any" },
-    "melee_damage": { "bash": 2 },
+    "melee_damage": { "soul": 2 },
     "material": [ "cotton" ],
     "symbol": "ᚠ",
     "looks_like": "cloak",
     "color": "black",
-    "armor": [ { "covers": [ "torso", "arm_l", "arm_r", "leg_l", "leg_r" ], "coverage": 65, "encumbrance": 4 } ],
-    "relic_data": { "passive_effects": [ { "has": "WORN", "condition": "ALWAYS", "mutations": [ "esper_cloak_mut" ] } ] },
-    "flags": [ "FANCY", "HOOD", "ONLY_ONE", "OUTER", "OVERSIZE" ]
+    "armor": [ { "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ], "coverage": 100, "encumbrance": [ 0, 4 ] } ],
+    "relic_data": { 
+      "passive_effects": [ 
+        { 
+          "has": "WORN", 
+          "condition": "ALWAYS", 
+          "mutations": [ "esper_cloak_mut" ] 
+        },
+        { "id": "ench_esper_cloak" }
+      ] 
+    },
+    "flags": [ "BELTED", "FANCY", "ONLY_ONE", "OUTER", "OVERSIZE", "UNBREAKABLE" ]
   }
 ]

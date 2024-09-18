@@ -50,7 +50,7 @@
     "id": "ambush_effect1",
     "type": "effect_type",
     "name": [ "Ambush effect" ],
-    "desc": [ "Greatly increases movement speed for a short duration" ],
+    "desc": [ "Greatly increases movement speed for a short duration." ],
     "remove_message": "You move normally again.",
     "max_duration": "3 s",
     "rating": "good",
@@ -68,7 +68,7 @@
     "id": "ambush_effect2",
     "type": "effect_type",
     "name": [ "Ambush effect" ],
-    "desc": [ "Greatly increases movement speed for a short duration" ],
+    "desc": [ "Greatly increases movement speed for a short duration." ],
     "remove_message": "You move normally again.",
     "max_duration": "2 s",
     "rating": "good",
@@ -86,7 +86,7 @@
     "id": "ambush_effect3",
     "type": "effect_type",
     "name": [ "Ambush effect" ],
-    "desc": [ "Greatly increases movement speed for a short duration" ],
+    "desc": [ "Greatly increases movement speed for a short duration." ],
     "remove_message": "You move normally again.",
     "max_duration": "1 s",
     "rating": "good",
@@ -99,6 +99,16 @@
         ] 
       } 
     ]
+  },
+  {
+    "id": "attackmon_effect",
+    "type": "effect_type",
+    "name": [ "ATTACKMON effect" ],
+    "show_in_info": false,
+    "desc": [ "" ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "flags": [ "ATTACKMON" ]
   },
   {
     "id": "entangle_effect",
@@ -124,6 +134,77 @@
     "base_mods": { "speed_mod": [ -15 ] },
     "max_intensity": 1,
     "//": "This is to prevent mon_gevaudan from casting its self-healing spell"
+  },
+  {
+    "id": "history_book_effect",
+    "type": "effect_type",
+    "name": [ "History buff" ],
+    "desc": [ "You feel as if you just had class.  About everything." ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "rating": "good",
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "INTELLIGENCE", "add": 4 },
+          { "value": "LEARNING_FOCUS", "add": { "math": [ "rand(15) + 1" ] } },
+          { "value": "READING_EXP", "add": { "math": [ "rand(8) + 1" ] } }
+        ]
+      }
+    ],
+    "//": "Should raise INT to 9, and provide no benefit after that"
+  },
+  {
+    "id": "lavender_grimoire_bubble_effect",
+    "type": "effect_type",
+    "name": [ "Water bubble" ],
+    "desc": [ "A bubble of water is surrounding you." ],
+    "show_in_info": false,
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "rating": "good",
+    "apply_message": "A bubble of water surrounds you.",
+    "remove_message": "The bubble surrounding you fades away.",
+    "enchantments": [ 
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "ARMOR_ACID", "multiply": -1 },
+          { "value": "ARMOR_BIO", "multiply": -1 },
+          { "value": "ARMOR_COLD", "multiply": -1 },
+          { "value": "ARMOR_ELEC", "multiply": -1 },
+          { "value": "ARMOR_HEAT", "multiply": -1 },
+          { "value": "ARMOR_ALL", "add": -1 }
+        ],
+        "//": "ARMOR_X add -n ADDS armor for n value"
+      }
+    ]
+  },
+  {
+    "id": "lavender_grimoire_airbarrier_effect",
+    "type": "effect_type",
+    "name": [ "Air barrier" ],
+    "desc": [ "A barrier of air is surrounding you." ],
+    "show_in_info": false,
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "rating": "good",
+    "apply_message": "Strong winds surround you.",
+    "remove_message": "The air calms down around you.",
+    "enchantments": [ 
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "ARMOR_BULLET", "multiply": -1 },
+          { "value": "ARMOR_BASH", "multiply": -1 },
+          { "value": "ARMOR_CUT", "multiply": -1 },
+          { "value": "ARMOR_STAB", "multiply": 1 },
+          { "value": "ARMOR_ALL", "add": -1 }
+        ],
+        "//": "ARMOR_X add -n ADDS armor for n value"
+      }
+    ]
   },
   {
     "id": "monster_vanish_delay_effect",
@@ -188,7 +269,7 @@
     "id": "sprint_effect",
     "type": "effect_type",
     "name": [ "Sprint" ],
-    "desc": [ "Increases movement speed for a short duration" ],
+    "desc": [ "Increases movement speed for a short duration." ],
     "remove_message": "You move normally again.",
     "rating": "good",
     "max_intensity": 1,
@@ -207,7 +288,7 @@
     "id": "sprint_effect_f",
     "type": "effect_type",
     "name": [ "Sprint" ],
-    "desc": [ "Increases movement speed for a short duration" ],
+    "desc": [ "Increases movement speed for a short duration." ],
     "remove_message": "You move normally again.",
     "rating": "good",
     "max_intensity": 1,
@@ -225,7 +306,7 @@
     "id": "sprint_effect_s",
     "type": "effect_type",
     "name": [ "Sprint" ],
-    "desc": [ "Increases movement speed for a short duration" ],
+    "desc": [ "Increases movement speed for a short duration." ],
     "remove_message": "You move normally again.",
     "rating": "good",
     "max_intensity": 1,
@@ -237,6 +318,25 @@
           { "value": "SPEED", "multiply": 3.5 }
         ] 
       } 
+    ]
+  },
+  {
+    "id": "thorny_box_effect",
+    "type": "effect_type",
+    "name": [ "One hundred medicines." ],
+    "desc": [ "Healing." ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "intermittent_activation": 
+          { 
+            "effects": [ 
+              { "spell_effects": [ { "id": "thorny_box_spell2" } ], "frequency": "36 s" }
+          ] 
+        }
+      }
     ]
   }
 ]

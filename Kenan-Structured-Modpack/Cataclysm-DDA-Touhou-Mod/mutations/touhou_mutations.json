@@ -206,7 +206,7 @@
       { 
         "condition": "ALWAYS", 
         "values": [ 
-          { "value": "CLIMATE_CONTROL_HEAT", "add": 35 }
+          { "value": "CLIMATE_CONTROL_HEAT", "add": 15 }
         ] 
       } 
     ],
@@ -253,8 +253,8 @@
       {
         "condition": "ALWAYS",
         "values": [
-          { "value": "CLIMATE_CONTROL_CHILL", "add": 50 },
-          { "value": "CLIMATE_CONTROL_HEAT", "add": 50 },
+          { "value": "CLIMATE_CONTROL_CHILL", "add": 20 },
+          { "value": "CLIMATE_CONTROL_HEAT", "add": 20 },
           { "value": "METABOLISM", "multiply": -0.66 }
         ],
         "mutations": [ "HERMIT_CONSTITUTION" ]
@@ -283,8 +283,8 @@
       {
         "condition": "ALWAYS",
         "values": [
-          { "value": "CLIMATE_CONTROL_CHILL", "add": 50 },
-          { "value": "CLIMATE_CONTROL_HEAT", "add": 50 },
+          { "value": "CLIMATE_CONTROL_CHILL", "add": 20 },
+          { "value": "CLIMATE_CONTROL_HEAT", "add": 20 },
           { "value": "METABOLISM", "multiply": -0.66 }
         ],
         "mutations": [ "HERMIT_CONSTITUTION", "SPIRITUAL", "LIAR" ]
@@ -1026,8 +1026,8 @@
       { 
         "condition": "ALWAYS", 
         "values": [ 
-          { "value": "CLIMATE_CONTROL_CHILL", "add": 15 },
-          { "value": "CLIMATE_CONTROL_HEAT", "add": 20 }
+          { "value": "CLIMATE_CONTROL_CHILL", "add": 25 },
+          { "value": "CLIMATE_CONTROL_HEAT", "add": 500 }
         ] 
       } 
     ],

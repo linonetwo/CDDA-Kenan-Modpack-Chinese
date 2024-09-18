@@ -1,0 +1,32 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_location_test",
+    "effect": [
+      { "set_string_var": { "mutator": "u_loc_relative", "target": "(0,0,0)" }, "target_var": { "context_val": "u_loc" } },
+      { "u_location_variable": { "context_val": "u_search_loc" }, "field": "fd_fire", "target_max_radius": 1 }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_fire_stamina_regen",
+    "recurrence": 5000,
+    "effect": [
+      { "u_location_variable": { "context_val": "test" }, "field": "fd_fire", "target_max_radius": 15 },
+      { "math": [ "u_fire_stamina_boost", "=", "field_strength('fd_fire', 'location': test)" ] },
+      {
+        "if": { "map_field_id": "fd_fire", "loc": { "context_val": "test" } },
+        "then": { "u_add_effect": "stamina_regen_boost_small", "duration": "1 s", "intensity": "u_fire_stamina_boost" }
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "stamina_regen_boost_small",
+    "name": [ "Warmth" ],
+    "desc": [ "You feel invigorated by the warmth." ],
+    "rating": "good",
+    "show_in_info": true,
+    "base_mods": { "stamina_amount": [ 20 ] }
+  }
+]

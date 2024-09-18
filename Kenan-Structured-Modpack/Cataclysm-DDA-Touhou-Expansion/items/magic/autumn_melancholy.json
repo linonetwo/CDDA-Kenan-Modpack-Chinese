@@ -9,12 +9,20 @@
     "longest_side": "10 cm",
     "price_postapoc": 25000,
     "to_hit": { "balance": "neutral", "grip": "none", "length": "hand", "surface": "any" },
-    "melee_damage": { "bash": 1 },
+    "melee_damage": { "soul": 1 },
     "material": [ "wood" ],
     "symbol": "🍁",
     "looks_like": "coin_dollar",
     "color": "red",
-    "relic_data": { "passive_effects": [ { "has": "HELD", "condition": "ALWAYS", "mutations": [ "autumn_melancholy_mut" ] } ] },
-    "flags": [ "DURABLE_MELEE" ]
+    "relic_data": {
+      "passive_effects": [
+        {
+          "condition": "ALWAYS",
+          "mutations": [ "autumn_melancholy_mut" ]
+        },
+        { "id": "ench_autumn_melancholy" }
+      ]
+    },
+    "flags": [ "UNBREAKABLE"]
   }
 ]

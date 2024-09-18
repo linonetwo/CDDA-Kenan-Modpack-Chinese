@@ -262,12 +262,12 @@
     "armor": { "bash": 12, "cut": 12, "bullet": 16, "stab": 12, "cold": 12 },
     "vision_night": 8,
     "weakpoint_sets": [ "wps_turret" ],
-    "starting_ammo": { "watershot_ammo_1": 99 },
+    "starting_ammo": { "water": 99 },
     "special_attacks": [
       {
         "gun_type": "water_mp5",
         "type": "gun",
-        "ammo_type": "watershot_ammo_1",
+        "ammo_type": "water",
         "cooldown": 2,
         "fake_dex": 10,
         "fake_skills": [ [ "gun", 4 ], [ "smg", 4 ] ],
@@ -284,7 +284,8 @@
       "effect": { "id": "death_smoke", "hit_self": true },
       "message": ""
     },
-    "flags": [ "BIOLOGICALPROOF", "COLDPROOF", "ELECTRONIC", "IMMOBILE", "NO_BREATHE", "NOHEAD", "NOT_HALLUCINATION", "SEES" ]
+    "flags": [ "BIOLOGICALPROOF", "COLDPROOF", "ELECTRONIC", "IMMOBILE", "NO_BREATHE", "NOHEAD", "NOT_HALLUCINATION", "SEES" ],
+    "//WIP": "Test its gun_type and stuff"
   },
   {
     "id": "mon_disgrace_seiga",
@@ -612,7 +613,7 @@
     "volume": "14000 ml",
     "weight": "100 g",
     "default_faction": "touhou_summon",
-    "//WIP": "Change faction when the related spells are finished",
+    "//WIP": "Change faction when the related spells are finished. I do not remember what I meant by this...",
     "bodytype": "blob",
     "species": [ "PHANTOM_TOUHOU" ],
     "harvest": "exempt",

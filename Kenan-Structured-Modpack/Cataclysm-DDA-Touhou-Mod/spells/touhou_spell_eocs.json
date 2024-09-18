@@ -555,20 +555,20 @@
     "effect": [
       {
         "run_eoc_selector": [
-          "kasen_fangshu_set_eoc",
           "kasen_fangshu_move_eoc",
+          "kasen_fangshu_set_eoc",
           "kasen_fangshu_delete_eoc"
         ],
         "title": "Fangshu: Path",
         "names": [
-          "Set exit point.",
           "Traverse through exit point.",
+          "Set exit point.",
           "Delete all exit points."
         ],
         "keys": [ "1", "2", "3" ],
         "descriptions": [
-          "Set one of three exit points to traverse through.  Costs 133 mana.",
           "Traverse through any previously placed exit points.",
+          "Set one of three exit points to traverse through.  Costs 133 mana.",
           "Delete all placed exit points."
         ],
         "hide_failing": true,
@@ -579,6 +579,79 @@
     "//2": "The second cast allows Kasen to set point/tp to point/delete all points",
     "//3": "If Kasen sets tp it just overwrites it; the other two options are self-explanatory",
     "//4": "Do note that the move_eoc and the delete_eoc won't be available unless their conditions are met. Which is pretty nice, and disables their false_effects from running"
+  },
+  {
+    "id": "kasen_fangshu_move_eoc",
+    "type": "effect_on_condition",
+    "condition": {
+      "or": [
+        { "math": [ "u_var_kasen_fangshu_placed_1", ">=", "1" ] },
+        { "math": [ "u_var_kasen_fangshu_placed_2", ">=", "1" ] },
+        { "math": [ "u_var_kasen_fangshu_placed_3", ">=", "1" ] }
+      ]
+    },
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "kasen_fangshu_move_1",
+          "kasen_fangshu_move_2",
+          "kasen_fangshu_move_3"
+        ],
+        "title": "Traverse through:",
+        "names": [
+          "Exit point 1, <u_val:u_var_kasen_fangshu_1_name>.",
+          "Exit point 2, <u_val:u_var_kasen_fangshu_2_name>.",
+          "Exit point 3, <u_val:u_var_kasen_fangshu_3_name>."
+        ],
+        "keys": [ "1", "2", "3" ],
+        "descriptions": [
+          "Open and traverse through exit point 1.",
+          "Open and traverse through exit point 2.",
+          "Open and traverse through exit point 3."
+        ],
+        "hide_failing": true,
+        "allow_cancel": true
+      }
+    ],
+    "false_effect": [ 
+      { "u_message": "There are no active exit points.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "kasen_fangshu_move_1",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "u_var_kasen_fangshu_placed_1", ">=", "1" ] },
+    "effect": [ 
+      { "u_teleport": { "global_val": "var_kasen_fangshu_1" } },
+      { "u_message": "You open a crack in space time, and walk through the exit point.", "type": "mixed" }
+    ],
+    "false_effect": [ 
+      { "u_message": "You haven't placed that exit point yet.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "kasen_fangshu_move_2",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "u_var_kasen_fangshu_placed_2", ">=", "1" ] },
+    "effect": [ 
+      { "u_teleport": { "global_val": "var_kasen_fangshu_2" } },
+      { "u_message": "You open a crack in space time, and walk through the exit point.", "type": "mixed" }
+    ],
+    "false_effect": [ 
+      { "u_message": "You haven't placed that exit point yet.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "kasen_fangshu_move_3",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "u_var_kasen_fangshu_placed_3", ">=", "1" ] },
+    "effect": [ 
+      { "u_teleport": { "global_val": "var_kasen_fangshu_3" } },
+      { "u_message": "You open a crack in space time, and walk through the exit point.", "type": "mixed" }
+    ],
+    "false_effect": [ 
+      { "u_message": "You haven't placed that exit point yet.", "type": "mixed" }
+    ]
   },
   {
     "id": "kasen_fangshu_set_eoc",
@@ -672,79 +745,6 @@
     ]
   },
   {
-    "id": "kasen_fangshu_move_eoc",
-    "type": "effect_on_condition",
-    "condition": {
-      "or": [
-        { "math": [ "u_var_kasen_fangshu_placed_1", ">=", "1" ] },
-        { "math": [ "u_var_kasen_fangshu_placed_2", ">=", "1" ] },
-        { "math": [ "u_var_kasen_fangshu_placed_3", ">=", "1" ] }
-      ]
-    },
-    "effect": [
-      {
-        "run_eoc_selector": [
-          "kasen_fangshu_move_1",
-          "kasen_fangshu_move_2",
-          "kasen_fangshu_move_3"
-        ],
-        "title": "Traverse through:",
-        "names": [
-          "Exit point 1, <u_val:u_var_kasen_fangshu_1_name>.",
-          "Exit point 2, <u_val:u_var_kasen_fangshu_2_name>.",
-          "Exit point 3, <u_val:u_var_kasen_fangshu_3_name>."
-        ],
-        "keys": [ "1", "2", "3" ],
-        "descriptions": [
-          "Open and traverse through exit point 1.",
-          "Open and traverse through exit point 2.",
-          "Open and traverse through exit point 3."
-        ],
-        "hide_failing": true,
-        "allow_cancel": true
-      }
-    ],
-    "false_effect": [ 
-      { "u_message": "There are no active exit points.", "type": "mixed" }
-    ]
-  },
-  {
-    "id": "kasen_fangshu_move_1",
-    "type": "effect_on_condition",
-    "condition": { "math": [ "u_var_kasen_fangshu_placed_1", ">=", "1" ] },
-    "effect": [ 
-      { "u_teleport": { "global_val": "var_kasen_fangshu_1" } },
-      { "u_message": "You open a crack in space time, and walk through the exit point.", "type": "mixed" }
-    ],
-    "false_effect": [ 
-      { "u_message": "You haven't placed that exit point yet.", "type": "mixed" }
-    ]
-  },
-  {
-    "id": "kasen_fangshu_move_2",
-    "type": "effect_on_condition",
-    "condition": { "math": [ "u_var_kasen_fangshu_placed_2", ">=", "1" ] },
-    "effect": [ 
-      { "u_teleport": { "global_val": "var_kasen_fangshu_2" } },
-      { "u_message": "You open a crack in space time, and walk through the exit point.", "type": "mixed" }
-    ],
-    "false_effect": [ 
-      { "u_message": "You haven't placed that exit point yet.", "type": "mixed" }
-    ]
-  },
-  {
-    "id": "kasen_fangshu_move_3",
-    "type": "effect_on_condition",
-    "condition": { "math": [ "u_var_kasen_fangshu_placed_3", ">=", "1" ] },
-    "effect": [ 
-      { "u_teleport": { "global_val": "var_kasen_fangshu_3" } },
-      { "u_message": "You open a crack in space time, and walk through the exit point.", "type": "mixed" }
-    ],
-    "false_effect": [ 
-      { "u_message": "You haven't placed that exit point yet.", "type": "mixed" }
-    ]
-  },
-  {
     "id": "kasen_fangshu_delete_eoc",
     "type": "effect_on_condition",
     "condition": {
@@ -757,7 +757,7 @@
     "effect": [
       {
         "run_eoc_selector": [
-          "kasen_fangshu_delete_1"
+          "kasen_fangshu_delete_confirmed"
         ],
         "title": "Delete all exit points",
         "names": [
@@ -773,7 +773,7 @@
     ]
   },
   {
-    "id": "kasen_fangshu_delete_1",
+    "id": "kasen_fangshu_delete_confirmed",
     "type": "effect_on_condition",
     "effect": [
       { "math": [ "u_var_kasen_fangshu_placed_1", "=", "0" ] },
@@ -1045,6 +1045,27 @@
     "effect": [
       { "u_cast_spell": { "id": "kokoro_quick_attack2_stab" }, "targeted": true }
     ]
+  },
+  {
+    "id": "kokoro_spirit_naginata_eoc",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "var_spirit_naginata", "<", "1" ] },
+    "effect": [ 
+      { "math": [ "var_spirit_naginata", "+=", "1" ] },
+      { "u_message": "You materialize your spirit naginata.", "type": "good" },
+      { "u_cast_spell": { "id": "kokoro_spirit_naginata2" } },
+      { "queue_eocs": [ "kokoro_spirit_naginata_timer_eoc" ], "time_in_future": { "math": [ "( ( ( (u_skill('stabbing') * 90 ) + (u_skill('melee') * 90 ) + 240 ) * var_kokoro_melancholy_mod ) / 100 ) - 1" ] } }
+    ],
+    "false_effect": [ 
+      { "u_message": "Your naginata is already materialized.", "type": "mixed" }
+    ],
+    "//": "Simplified version of remilia_gungnir_eoc , to prevent Kokoro from summoning more than one spirit naginata",
+    "//2": "No dismiss spell as it lasts for very short and costs very little anyways"
+  },
+  {
+    "id": "kokoro_spirit_naginata_timer_eoc",
+    "type": "effect_on_condition",
+    "effect": [ { "math": [ "var_spirit_naginata", "=", "0" ] } ]
   },
   {
     "id": "kokoro_unleash_emotion_eoc",
@@ -1805,15 +1826,52 @@
     ]
   },
   {
-    "id": "remilia_gungnir_dismiss_eoc",
+    "id": "remilia_gungnir_eoc",
     "type": "effect_on_condition",
-    "condition": { "u_has_wielded_with_flag": "REMI_GUNGNIR_FLAG" },
-    "effect": [
-      { "math": [ "u_val('mana')", "+=", "100" ] },
-      { "u_message": "You dismiss your Gungnir.", "type": "good" }
+    "condition": { "math": [ "var_gungnir", "<", "1" ] },
+    "effect": [ 
+      { "math": [ "var_gungnir", "+=", "1" ] },
+      { "u_message": "You summon the Gungnir!", "type": "good" },
+      { "u_cast_spell": { "id": "remilia_gungnir2" } },
+      { "queue_eocs": [ "remilia_gungnir_timer_eoc" ], "time_in_future": { "math": [ "( (u_skill('stabbing') * 21 ) + (u_skill('melee') * 21 ) + 12 ) - 1" ] } }
     ],
     "false_effect": [ 
-      { "u_message": "You can't dismiss your Gungnir if you don't have it in your hand.", "type": "mixed" }
+      { "u_message": "Your Gungnir is already summoned.", "type": "mixed" }
+    ],
+    "//": "Internal timer to prevent Remi from summoning more than one Gungnir"
+  },
+  {
+    "id": "remilia_gungnir_timer_eoc",
+    "type": "effect_on_condition",
+    "effect": [ { "math": [ "var_gungnir", "=", "0" ] } ]
+  },
+  {
+    "id": "remilia_gungnir_dismiss_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "if": { "u_has_wielded_with_flag": "REMI_GUNGNIR_FLAG" },
+        "then": [
+          {
+            "u_run_inv_eocs": "all",
+            "search_data": [ { "flags":  [ "REMI_GUNGNIR_FLAG" ], "wielded_only": true } ],
+            "true_eocs": [
+              {
+                "id": "remilia_gungnir_dismiss_dismiss",
+                "effect": [
+                  "npc_die",
+                  { "math": [ "u_val('mana')", "+=", "100" ] },
+                  { "math": [ "var_gungnir", "=", "0" ] },
+                  { "u_message": "You dismiss the Gungnir.", "type": "good" }
+                ]
+              }
+            ]
+          }
+        ],
+        "else": [ 
+          { "u_message": "You can't dismiss your Gungnir if you don't have it in your hand.", "type": "mixed" }
+        ]
+      }
     ]
   },
   {

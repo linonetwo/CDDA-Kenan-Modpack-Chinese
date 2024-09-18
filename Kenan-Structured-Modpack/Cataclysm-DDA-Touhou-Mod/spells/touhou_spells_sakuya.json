@@ -58,7 +58,7 @@
     "teachable": false,
     "valid_targets": [ "field", "ground", "item", "self" ],
     "effect": "ter_transform",
-    "effect_str": "freezeknife_dismiss_ter",
+    "effect_str": "freezeknife_dismiss_terfur",
     "shape": "blast",
     "min_aoe": 32,
     "max_aoe": 32,
@@ -79,7 +79,7 @@
     "valid_targets": [ "ground" ],
     "components": "spell_components_knives",
     "effect": "ter_transform",
-    "effect_str": "freezeknife_ter",
+    "effect_str": "freezeknife_terfur",
     "shape": "blast",
     "min_damage": 1,
     "max_damage": 1,
@@ -92,8 +92,7 @@
     "base_casting_time": 66,
     "base_energy_cost": 33,
     "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "SOMATIC" ],
-    "//note": "This should also be castable on solid terrain, spawning a furniture that can be used to climb up. The problem is that by using the same flags as keystone_crash_fur it will destroy any existing furniture beneath, instead of just removing the knife and leaving the previous furniture"
+    "flags": [ "NO_HANDS", "NO_LEGS", "SOMATIC" ]
   },
   {
     "id": "sakuya_jackknife",

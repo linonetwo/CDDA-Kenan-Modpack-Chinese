@@ -8,8 +8,7 @@
     "profession": false,
     "purifiable": false,
     "starting_trait": false,
-    "valid": true,
-    "enchantments": [ { "values": [ { "value": "METABOLISM", "multiply": -0.333 } ] } ]
+    "valid": true
   },
   {
     "id": "death_coin_mut",
@@ -20,17 +19,7 @@
     "profession": false,
     "purifiable": false,
     "starting_trait": false,
-    "valid": true,
-    "enchantments": [
-      {
-        "condition": "ALWAYS",
-        "values": [
-          { "value": "ATTACK_SPEED", "multiply": 0.05 },
-          { "value": "SLEEPINESS", "multiply": 0.1 },
-          { "value": "MOVE_COST", "multiply": 0.05 }
-        ]
-      }
-    ]
+    "valid": true
   },
   {
     "id": "esper_cloak_mut",
@@ -41,16 +30,7 @@
     "profession": false,
     "purifiable": false,
     "starting_trait": false,
-    "valid": true,
-    "enchantments": [
-      {
-        "condition": "ALWAYS",
-        "values": [ 
-          { "value": "MAX_MANA", "multiply": 0.33 }, 
-          { "value": "REGEN_MANA", "multiply": 0.33 } 
-        ]
-      }
-    ]
+    "valid": true
   },
   {
     "id": "lampad_torch_off_mut",
@@ -61,24 +41,13 @@
     "profession": false,
     "purifiable": false,
     "starting_trait": false,
-    "valid": true,
-    "enchantments": [
-      {
-        "condition": "ALWAYS",
-        "values": [
-          { "value": "INTELLIGENCE", "multiply": -0.05 },
-          { "value": "PERCEPTION", "multiply": -0.05 },
-          { "value": "ATTACK_SPEED", "multiply": -0.1 },
-          { "value": "MOVE_COST", "multiply": -0.05 }
-        ]
-      }
-    ]
+    "valid": true
   },
   {
     "id": "lampad_torch_lit_mut",
     "type": "mutation",
     "name": "Madness",
-    "description": "Your head feels heavy , your steps light, can't stay still.",
+    "description": "Your head feels heavy , your steps light, can't stay still .",
     "points": 0,
     "profession": false,
     "purifiable": false,
@@ -87,44 +56,13 @@
     "enchantments": [
       {
         "condition": "ALWAYS",
-        "values": [
-          { "value": "INTELLIGENCE", "multiply": -0.1 },
-          { "value": "PERCEPTION", "multiply": -0.15 },
-          { "value": "STRENGTH", "multiply": 0.1 },
-          { "value": "ATTACK_SPEED", "multiply": -0.2 },
-          { "value": "BONUS_DODGE", "add": -1 },
-          { "value": "MOVE_COST", "multiply": -0.1 }
-        ],
         "intermittent_activation": {
           "effects": [
-            {
-              "frequency": "10 s",
-              "spell_effects": [
-                { "id": "lampad_insanity" }
-              ]
-            }
+            { "spell_effects": [ { "id": "lampad_insanity" } ], "frequency": "30 s" }
           ]
         }
       }
     ]
-  },
-  {
-    "id": "lampad_insanity",
-    "type": "SPELL",
-    "name": "Lampad insanity",
-    "description": "Monster infight enabler.",
-    "spell_class": "NONE",
-    "valid_targets": [ "ally", "hostile" ],
-    "effect": "mutate",
-    "effect_str": "ATTACKMON",
-    "shape": "blast",
-    "min_damage": 3333,
-    "max_damage": 3333,
-    "min_aoe": 16,
-    "max_aoe": 16,
-    "min_duration": 1100,
-    "max_duration": 1100,
-    "flags": [ "MUTATE_TRAIT", "NO_PROJECTILE", "SILENT" ]
   },
   {
     "id": "lucky_charm_mut",
@@ -135,15 +73,7 @@
     "profession": false,
     "purifiable": false,
     "starting_trait": false,
-    "valid": true,
-    "enchantments": [
-      {
-        "condition": "ALWAYS",
-        "values": [ 
-          { "value": "EVASION", "add": 0.01 }
-        ]
-      }
-    ]
+    "valid": true
   },
   {
     "id": "skinwalker_pelt_mut",
@@ -156,18 +86,7 @@
     "starting_trait": false,
     "valid": true,
     "vitamins_absorb_multi": [ [ "veggy", [ [ "vitA", 0.33 ], [ "vitB", 0.33 ], [ "vitC", 0.33 ], [ "calcium", 0.33 ], [ "iron", 0.33 ] ] ] ],
-    "ugliness": 4,
-    "enchantments": [
-      {
-        "condition": "ALWAYS",
-        "values": [
-          { "value": "DEXTERITY", "add": 1 },
-          { "value": "INTELLIGENCE", "add": -2 },
-          { "value": "PERCEPTION", "add": 4 },
-          { "value": "STRENGTH", "add": 2 }
-        ]
-      }
-    ]
+    "ugliness": 4
   },
   {
     "id": "spider_charm_mut",
@@ -190,16 +109,18 @@
     "profession": false,
     "purifiable": false,
     "starting_trait": false,
-    "valid": true,
-    "enchantments": [
-      {
-        "condition": "ALWAYS",
-        "values": [ 
-          { "value": "INTELLIGENCE", "add": -3 },
-          { "value": "STRENGTH", "add": 9 }
-        ]
-      }
-    ]
+    "valid": true
+  },
+  {
+    "id": "surprising_umbrella_mut",
+    "type": "mutation",
+    "name": "Element of surprise",
+    "description": "You feel mischievous.",
+    "points": 0,
+    "profession": false,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": true
   },
   {
     "id": "wind_priestess_charm_mut",
@@ -210,17 +131,6 @@
     "profession": false,
     "purifiable": false,
     "starting_trait": false,
-    "valid": true,
-    "enchantments": [
-      {
-        "condition": "ALWAYS",
-        "values": [
-          { "value": "DEXTERITY", "add": { "math": [ "1 + var_wind_blessing_dex * 3" ] } },
-          { "value": "INTELLIGENCE", "add": { "math": [ "1 + var_wind_blessing_dex * 3" ] } },
-          { "value": "PERCEPTION", "add": { "math": [ "1 + var_wind_blessing_per * 3" ] } },
-          { "value": "STRENGTH", "add": { "math": [ "1 + var_wind_blessing_str * 3" ] } }
-        ]
-      }
-    ]
+    "valid": true
   }
 ]

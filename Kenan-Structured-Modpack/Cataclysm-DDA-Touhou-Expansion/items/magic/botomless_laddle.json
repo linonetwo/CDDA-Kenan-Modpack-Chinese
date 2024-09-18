@@ -1,0 +1,51 @@
+[
+  {
+    "id": "botomless_laddle",
+    "type": "TOOL",
+    "name": { "str": "<color_pink>bottomless laddle</color>", "str_pl": "<color_pink>bottomless laddle</color>" },
+    "description": "A wooden laddle, with no bottom.  Despite that, it keeps dripping water.",
+    "volume": "350 ml",
+    "weight": "233 g",
+    "longest_side": "40 cm",
+    "price_postapoc": 25000,
+    "to_hit": { "balance": "neutral", "grip": "solid", "length": "short", "surface": "any" },
+    "melee_damage": { "bash": 4 },
+    "material": [ "wood" ],
+    "symbol": ";",
+    "looks_like": "spoon",
+    "color": "brown",
+    "charges_per_use": 1,
+    "pocket_data": [ 
+      { 
+        "pocket_type": "MAGAZINE", 
+        "ammo_restriction": { "water": 2 }, 
+        "airtight": true,
+        "watertight": true  
+      }
+    ],
+    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "1 m" } },
+    "use_action": [ { "type": "cast_spell", "spell_id": "botomless_laddle_spell", "no_fail": true, "level": 1 } ],
+    "flags": [ "NO_RELOAD", "TARDIS", "TRADER_AVOID", "UNBREAKABLE" ],
+    "//": "Based on oni_gourd "
+  },
+  {
+    "id": "botomless_laddle_spell",
+    "type": "SPELL",
+    "name": { "str": "Pour water" },
+    "description": "Pour water.",
+    "spell_class": "NONE",
+    "valid_targets": [ "ground", "self" ],
+    "effect": "spawn_item",
+    "effect_str": "water",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1,
+    "max_level": 1,
+    "difficulty": -20,
+    "message": "",
+    "base_casting_time": 0,
+    "base_energy_cost": 0,
+    "energy_source": "MANA",
+    "flags": [ "NO_LEGS", "PERMANENT_ALL_LEVELS" ]
+  }
+]

@@ -10,7 +10,21 @@
     "coverage": 40,
     "move_cost_mod": 3,
     "required_str": -1,
-    "flags": [ "CAN_SIT", "FLAT_SURF", "NOITEM", "TRANSPARENT" ]
+    "flags": [ "ALLOW_ON_OPEN_AIR", "CAN_SIT", "FLAT_SURF", "NOITEM", "TRANSPARENT" ]
+  },
+  {
+    "id": "f_frozen_knife",
+    "type": "furniture",
+    "name": "frozen knife",
+    "description": "A knife, frozen in time and space.  It can be used as platform.",
+    "symbol": "x",
+    "looks_like": "silver_knife",
+    "color": "light_gray",
+    "bash": { "str_min": 2, "str_max": 16, "sound": "", "sound_fail": "tink!" },
+    "coverage": 0,
+    "move_cost_mod": 0,
+    "required_str": 1,
+    "flags": [ "ALLOW_ON_OPEN_AIR", "BRIDGE", "CLIMBABLE", "DIFFICULT_Z", "NOITEM", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT" ]
   },
   {
     "id": "f_keystone",
@@ -51,6 +65,21 @@
     "examine_action": "chainfence",
     "move_cost_mod": -1,
     "required_str": 20,
-    "flags": [ "BLOCK_WIND", "CLIMBABLE", "FLAT_SURF", "NOITEM", "WALL" ]
+    "flags": [ "BLOCK_WIND", "CLIMBABLE", "FLAT_SURF", "NOITEM", "SEEN_FROM_ABOVE", "WALL" ]
+  },
+  {
+    "id": "f_web_rappel",
+    "type": "furniture",
+    "name": "web rappel",
+    "description": "A long, silver, thin strand of web.  It can be used to climb up or down.",
+    "symbol": ">",
+    "looks_like": "f_web_up",
+    "color": "white",
+    "bash": { "str_min": 6, "str_max": 24, "sound": "rrrrip!", "sound_fail": "twang." },
+    "coverage": 0,
+    "move_cost_mod": 0,
+    "required_str": -1,
+    "flags": [ "ALLOW_ON_OPEN_AIR", "BRIDGE", "CLIMBABLE", "DIFFICULT_Z", "NOITEM", "RAMP", "SEEN_FROM_ABOVE", "THIN_OBSTACLE", "TRANSPARENT", "Z_TRANSPARENT" ],
+    "//": "Modified f_web_up "
   }
 ]

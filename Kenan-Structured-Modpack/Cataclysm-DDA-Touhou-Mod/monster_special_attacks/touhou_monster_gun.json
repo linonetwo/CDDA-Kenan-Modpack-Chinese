@@ -110,15 +110,25 @@
     "symbol": "(",
     "looks_like": "hk_mp5",
     "color": "white",
-    "ammo": [ "watershot_ammo" ],
-    "ammo_effects": [ "LASER" ],
+    "ammo": [ "water" ],
+    "ammo_effects": [ "CASELESS_ROUNDS", "NEVER_MISFIRES", "NOGIB" ],
     "skill": "smg",
     "dispersion": 240,
     "durability": 8,
     "min_cycle_recoil": 450,
     "modes": [ [ "DEFAULT", "burst", 4 ] ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "watershot_ammo": 99 } } ],
+    "ranged_damage": { "damage_type": "cold", "amount": 22 },
+    "pocket_data": [ 
+      { 
+        "pocket_type": "MAGAZINE", 
+        "rigid": true, 
+        "ammo_restriction": { "water": 99 }, 
+        "airtight": true, 
+        "watertight": true 
+      } 
+    ],
     "weapon_category": [ "AUTOMATIC_PISTOLS" ],
-    "flags": [ "NEEDS_NO_LUBE", "NEVER_JAMS", "NO_RELOAD", "NO_UNLOAD", "STURDY", "TRADER_AVOID", "WATERPROOF_GUN" ]
+    "flags": [ "NEEDS_NO_LUBE", "NEVER_JAMS", "NO_RELOAD", "NO_UNLOAD", "STURDY", "TRADER_AVOID", "WATERPROOF_GUN" ],
+    "//": "Arbitrary dmg"
   }
 ]

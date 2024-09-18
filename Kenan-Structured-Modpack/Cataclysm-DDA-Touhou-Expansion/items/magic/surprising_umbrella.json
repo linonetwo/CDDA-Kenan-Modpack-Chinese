@@ -1,0 +1,30 @@
+[
+  {
+    "id": "surprising_umbrella",
+    "type": "GENERIC",
+    "name": { "str": "old umbrella" },
+    "description": "An old umbrella.  It uses wood instead of metal for the stretchers and ribs.  When opened, the outer canopy shows an interesting triangular pattern, somewhat reminiscent of teeth.",
+    "volume": "1500 ml",
+    "weight": "1000 g",
+    "longest_side": "101 cm",
+    "price_postapoc": 25000,
+    "to_hit": { "balance": "neutral", "grip": "solid", "length": "long", "surface": "any" },
+    "melee_damage": { "bash": 8 },
+    "material": [ "cotton", "wood" ],
+    "symbol": "/",
+    "looks_like": "umbrella",
+    "color": "light_blue",
+    "techniques": [ "WBLOCK_1" ],
+    "relic_data": { 
+      "passive_effects": [ 
+        { 
+          "has": "HELD", 
+          "condition": "ALWAYS", 
+          "mutations": [ "surprising_umbrella_mut" ] 
+        },
+        { "id": "ench_surprising_umbrella" }
+      ] 
+    },
+    "flags": [ "RAIN_PROTECT", "SHEATH_SWORD", "TRADER_AVOID", "UNBREAKABLE" ]
+  } 
+]

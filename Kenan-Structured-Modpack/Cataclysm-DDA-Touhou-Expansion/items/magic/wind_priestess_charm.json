@@ -15,9 +15,16 @@
     "looks_like": "mon_bullfrog_frog",
     "color": "green",
     "armor": [ { "covers": [ "head" ], "specifically_covers": [ "head_crown" ], "coverage": 0, "encumbrance": 0 } ],
-    "relic_data": { "passive_effects": [ { "condition": "ALWAYS", "mutations": [ "wind_priestess_charm_mut" ] } ] },
-    "flags": [ "DURABLE_MELEE", "FANCY", "ONLY_ONE", "SEMITANGIBLE", "SKINTIGHT" ],
-    "//": "This item grants the visible mutation which grants the enchantment. The mutation is a visible tag for the player and allows to detect it via EOC. The enchantment grants extra stats according to the formula 1 + ( 3 * var_wind_blessing_X ). Each var_X value is set by the EOC wind_blessing_eoc , that runs every 1 h and queues the independent randomization of each stat",
-    "//2": "Seems enchantments from items are broken again. The mutation is being granted, but the enchantment inside is not giving any stats. Moving *both* the mutation plus the enchantment values to HOURAI_SPECIES works (it grants the +1 to all stats and it fluctuates every hour, according to the EOC), yet moving only the mutation doesn't work (does not grant the +1 to all stats nor fluctuate every hour)"
+    "relic_data": { 
+      "passive_effects": [ 
+        { 
+          "has": "WORN",
+          "condition": "ALWAYS", 
+          "mutations": [ "wind_priestess_charm_mut" ]
+        },
+        { "id": "ench_wind_priestess_charm" }
+      ] 
+    },
+    "flags": [ "FANCY", "ONLY_ONE", "SEMITANGIBLE", "SKINTIGHT", "TRADER_AVOID", "UNBREAKABLE" ]
   }
 ]

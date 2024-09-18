@@ -17,9 +17,9 @@
     "color": "yellow",
     "charges_per_use": 1,
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 1 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "1 h" } },
+    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "2 h" } },
     "use_action": [ { "type": "cast_spell", "spell_id": "possessed_trumpet_buffs", "no_fail": true, "level": 1 } ],
-    "flags": [ "DURABLE_MELEE", "NO_RELOAD", "NO_UNLOAD" ]
+    "flags": [ "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
   },
   {
     "id": "possessed_trumpet_buffs",

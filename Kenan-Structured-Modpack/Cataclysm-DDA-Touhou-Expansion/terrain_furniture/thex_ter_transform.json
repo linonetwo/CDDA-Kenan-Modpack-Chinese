@@ -1,14 +1,232 @@
 [
   {
+    "id": "gap_dismiss_fur",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_gap_1", "f_gap_2", "f_gap_3", "f_gap_4", "f_gap_5", "f_gap_6", "f_gap_7", "f_gap_8" ], 
+        "result": "f_null", 
+        "message": "The gap closes.", 
+        "message_good": true 
+      }
+    ]
+  },
+  {
     "id": "gap_fur",
     "type": "ter_furn_transform",
     "furniture": [
       {
-        "valid_flags": [ "EASY_DECONSTRUCT", "FLAMMABLE", "FLAMMABLE_ASH", "FLAMMABLE_HARD", "MINEABLE", "TRANSPARENT" ], 
+        "valid_furniture": [ "f_null" ],
         "result": "f_gap", 
         "message": "A gap opens up!" 
       }
     ]
+  },
+  {
+    "id": "gap_fur_1",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_null" ],
+        "result": "f_gap_1", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "gap_fur_2",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_null" ],
+        "result": "f_gap_2", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "gap_fur_3",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_null" ],
+        "result": "f_gap_3", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "gap_fur_4",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_null" ],
+        "result": "f_gap_4", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "gap_fur_5",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_null" ],
+        "result": "f_gap_5", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "gap_fur_6",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_null" ],
+        "result": "f_gap_6", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "gap_fur_7",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_null" ],
+        "result": "f_gap_7", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "gap_fur_8",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [ "f_null" ],
+        "result": "f_gap_8", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "gap_fur_OLD",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_flags": [ "DIGGABLE", "EASY_DECONSTRUCT", "FLAMMABLE", "FLAMMABLE_ASH", "FLAMMABLE_HARD", "MINEABLE", "NO_FLOOR", "TRANSPARENT" ], 
+        "result": "f_gap_OLD", 
+        "message": "A gap opens up!" 
+      }
+    ]
+  },
+  {
+    "id": "lavender_grimoire_earthbarrier_fur",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_flags": [ "DIGGABLE", "EASY_DECONSTRUCT", "FLAMMABLE", "FLAMMABLE_ASH", "FLAMMABLE_HARD", "MINEABLE", "TRANSPARENT" ], 
+        "result": [ [ "f_earthbarrier", 1 ], [ "f_null", 6 ] ], 
+        "message": "Large rocks emerge from the ground!" 
+      }
+    ],
+    "//": "This can't be terrain, as I don't know how to add 'blank' terrain with ter_furn_transform . t_null is a black unpassable square"
+  },
+  {
+    "id": "poisonous_doll_terfur",
+    "type": "ter_furn_transform",
+    "furniture": [
+      {
+        "valid_furniture": [
+          "f_mutpoppy",
+          "f_dandelion",
+          "f_burdock",
+          "f_carrot_wild",
+          "f_maianthemum_stellatum",
+          "f_salsify",
+          "f_chamomile",
+          "f_flower_tulip",
+          "f_flower_spurge",
+          "f_cattails",
+          "f_lily",
+          "f_lotus",
+          "f_jerusalem_artichoke",
+          "f_lilypad",
+          "f_bluebell",
+          "f_dahlia",
+          "f_chicory",
+          "f_mustard",
+          "f_wild_sarsaparilla",
+          "f_wintergreen",
+          "f_japanese_knotweed",
+          "f_fireweed",
+          "f_selfheal",
+          "f_thistle",
+          "f_purple_loosestrife",
+          "f_wild_rice",
+          "f_hedge_short",
+          "f_hedge_tall",
+          "f_topiary_animal",
+          "f_topiary_dragon"
+        ],
+        "result": [ [ "f_null", 1 ] ]
+      },
+      {
+        "valid_furniture": [ "f_sunflower" ],
+        "result": [ [ "f_null", 1 ] ]
+      }
+    ],
+    "terrain": [
+      {
+        "valid_terrain": [
+          "t_grass",
+          "t_grass_alien",
+          "t_bamboo_long",
+          "t_grass_long",
+          "t_bamboo_tall",
+          "t_grass_tall",
+          "t_shrub",
+          "t_shrub_rose",
+          "t_shrub_lilac",
+          "t_shrub_grape",
+          "t_shrub_peanut",
+          "t_shrub_blueberry",
+          "t_shrub_hydrangea",
+          "t_shrub_raspberry",
+          "t_shrub_strawberry",
+          "t_shrub_blackberry",
+          "t_shrub_huckleberry",
+          "t_shrub_rose_harvested",
+          "t_shrub_grape_harvested",
+          "t_shrub_lilac_harvested",
+          "t_shrub_peanut_harvested",
+          "t_shrub_raspberry_harvested",
+          "t_shrub_blueberry_harvested",
+          "t_shrub_hydrangea_harvested",
+          "t_shrub_blackberry_harvested",
+          "t_shrub_strawberry_harvested",
+          "t_shrub_huckleberry_harvested",
+          "t_forestfloor",
+          "t_moss",
+          "t_underbrush",
+          "t_underbrush_harvested_spring",
+          "t_underbrush_harvested_summer",
+          "t_underbrush_harvested_autumn",
+          "t_underbrush_harvested_winter",
+          "t_fern",
+          "t_fern_harvested",
+          "t_tree_young"
+        ],
+        "result": [ [ "t_grass_dead", 2 ], [ "t_dirt", 1 ] ]
+      },
+      {
+        "valid_terrain": [ "t_bamboo", "t_bamboo_harvested" ],
+        "result": [ [ "t_bamboo_dead", 1 ], [ "t_dirt", 2 ] ]
+      }
+    ],
+    "//": "List from Magiclysm's ter_druid_cause_rot_terrain ",
+    "//2": "The furniture replacement should leave dead plants or something, but there isn't any atm"
   },
   {
     "id": "prankster_pit_ter",

@@ -4,7 +4,8 @@
     "type": "effect_on_condition",
     "eoc_type": "SCENARIO_SPECIFIC",
     "effect": [
-      { "run_eocs": [ "daily_randomization_eoc" ] }
+      { "run_eocs": [ "daily_randomization_eoc" ] },
+      { "run_eocs": [ "wind_blessing_eoc" ] }
     ]
   },
   {
@@ -21,7 +22,8 @@
       { "queue_eocs": [ "daily_randomization_eoc" ], "time_in_future": { "math": [ "86400 - time_since('midnight', 'unit': 'seconds')" ] } }
     ],
     "//": "Re-rolls daily at 00:00:00, for use in special events",
-    "//WIP": "Carnian weather is disabled, it requires weather_carnian_active >= 1"
+    "//WIP": "Carnian weather is disabled, it requires weather_carnian_active >= 1",
+    "//WIP2": "Confirm the daily_randomization_eoc won't break !!!"
   },
   {
     "id": "guevaudan_attacked_melee_eoc",

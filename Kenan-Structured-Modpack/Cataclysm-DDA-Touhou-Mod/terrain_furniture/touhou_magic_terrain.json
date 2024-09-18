@@ -9,20 +9,7 @@
     "color": "light_gray",
     "bash": { "str_min": 2, "str_max": 16, "sound": "", "sound_fail": "tink!", "ter_set": "t_open_air" },
     "move_cost": 2,
-    "flags": [ "ALLOW_ON_OPEN_AIR", "TRANSPARENT", "SEEN_FROM_ABOVE", "Z_TRANSPARENT" ]
-  },
-  {
-    "id": "t_web_bridge",
-    "type": "terrain",
-    "name": "web bridge",
-    "description": "A long, silver, thick rope of web.  It can be used to cross gaps.",
-    "symbol": "x",
-    "looks_like": "fd_web",
-    "color": "white",
-    "bash": { "str_min": 6, "str_max": 24, "sound": "rrrrip!", "sound_fail": "twang.", "ter_set": "t_open_air" },
-    "move_cost": 2,
-    "flags": [ "ALLOW_ON_OPEN_AIR", "TRANSPARENT", "SEEN_FROM_ABOVE", "Z_TRANSPARENT" ],
-    "//": "Modified f_web_up "
+    "flags": [ "ALLOW_ON_OPEN_AIR", "BRIDGE", "CLIMBABLE", "DIFFICULT_Z", "NOITEM", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT" ]
   },
   {
     "id": "t_wall_hole",
@@ -37,16 +24,16 @@
     "flags": [ "INDOORS", "NOITEM", "SUPPORTS_ROOF", "TRANSPARENT" ]
   },
   {
-    "id": "t_web_rappel",
+    "id": "t_web_bridge",
     "type": "terrain",
-    "name": "web rappel",
-    "description": "A long, silver, thin strand of web.  It can be used to climb up or down.",
-    "symbol": ">",
-    "looks_like": "f_web_up",
+    "name": "web bridge",
+    "description": "A long, silver, thick rope of web.  It can be used to cross gaps.",
+    "symbol": "x",
+    "looks_like": "fd_web",
     "color": "white",
     "bash": { "str_min": 6, "str_max": 24, "sound": "rrrrip!", "sound_fail": "twang.", "ter_set": "t_open_air" },
     "move_cost": 2,
-    "flags": [ "ALLOW_ON_OPEN_AIR", "DIFFICULT_Z", "RAMP", "SEEN_FROM_ABOVE", "THIN_OBSTACLE", "TRANSPARENT", "Z_TRANSPARENT" ],
+    "flags": [ "ALLOW_ON_OPEN_AIR", "BRIDGE", "NOITEM", "SEEN_FROM_ABOVE", "TRANSPARENT", "Z_TRANSPARENT" ],
     "//": "Modified f_web_up "
   }
 ]
