@@ -80,6 +80,7 @@
     "eoc_type": "EVENT",
     "required_event": "character_wields_item",
     "effect": [
+      { "set_string_var": { "context_val": "itype" }, "target_var": { "global_val": "var_wield_weapon_id" } },
       {
         "u_run_inv_eocs": "all",
         "search_data": [ { "wielded_only": true } ],
@@ -92,7 +93,8 @@
               { "math": [ "var_melee_stab_dmg", "=", "n_melee_damage('stab')" ] },
               { "math": [ "var_melee_all_dmg", "=", "n_melee_damage('ALL')" ] },
               { "math": [ "var_melee_phys_dmg", "=", "var_melee_bash_dmg + var_melee_cut_dmg + var_melee_stab_dmg" ] },
-              { "math": [ "var_gun_dmg", "=", "n_gun_damage('ALL')" ] }
+              { "math": [ "var_gun_dmg", "=", "n_gun_damage('ALL')" ] },
+              { "math": [ "var_weapon_weight_kg", "=", "( n_val('weight') / 1000000 )" ] }
             ]
           }
         ]
@@ -110,7 +112,8 @@
     "effect": [
       { "math": [ "var_immolate_duration", "=", "( (u_skill('speech') * 120 ) + 720 )" ] }
     ],
-    "//": "This automatically sets the vars each time Kaenbyou opens the 'cast spell' window"
+    "//": "This automatically sets the vars each time Kaenbyou opens the 'cast spell' window",
+    "//note": "Move all the opens_spellbook formulas to jmath when possible"
   },
   {
     "id": "kasen_opens_spellbook_eoc",
@@ -132,12 +135,14 @@
     "effect": [
       { "math": [ "var_kokoro_anger_mod", "=", "( 1 + var_kokoro_anger * rng( -0.2, 0.4 ) + var_kokoro_anger_boost * rng( -0.1, 0.8 ) )" ] },
       { "math": [ "var_kokoro_deter_aoe_mod", "=", "( 1 + ( var_kokoro_melancholy * ( 1/5 ) ) + ( var_kokoro_melancholy_boost * ( 1/3 ) ) )" ] },
+      { "math": [ "var_kokoro_happiness_mod", "=", "( 1 - var_kokoro_happiness * rng( 0, 1/3 ) - var_kokoro_happiness_boost * rng( 0, 2/3 ) )" ] },
       { "math": [ "var_kokoro_melancholy_mod", "=", "( 1 + ( var_kokoro_melancholy * ( 1/3 ) ) + ( var_kokoro_melancholy_boost * ( 2/3 ) ) )" ] }
     ],
     "//": "This automatically sets the vars each time Kokoro opens the 'cast spell' window. The vars are set here because they're awful to work with manually",
-    "//2": "The anger mod is thus ~1.2 for the base anger stance and ~1.35 for the boosted anger stance (used for dmg)",
-    "//3": "The deter mod (for aoe) is thus +20% or +33%",
-    "//4": "The melancholy mod is thus +33% or +66% (used for duration)"
+    "//2": "The anger mod is thus ~1.2 for the base anger stance and ~1.35 for the boosted anger stance (used as dmg mod)",
+    "//3": "The deter mod is thus +20% or +33% (used as aoe only). ",
+    "//4": "The happiness goes thus from 1 to 66% or 33% (used as casting time and cost mod)",
+    "//5": "The melancholy mod is thus +33% or +66% (used as duration mod)"
   },
   {
     "id": "seiga_opens_spellbook_eoc",
@@ -178,7 +183,8 @@
       { "math": [ "var_scarletplague_dmg", "=", "( (u_skill('speech') * 0.15 ) + (u_skill('dodge') * 0.15 ) + 0.95 )" ] },
       { "math": [ "var_volatilerot_dmg", "=", "( (u_skill('speech') * 0.15 ) + (u_skill('dodge') * 0.15 ) + 0.95 )" ] },
       { "math": [ "var_disease_dur", "=", "( (u_skill('speech') * 30 ) + (u_skill('dodge') * 30 ) + 1290 )" ] },
-      { "math": [ "var_miasmar_bonus", "=", "( (u_skill('speech') * 1.3 ) + (u_skill('dodge') * 1.3 ) + 7.9 )" ] }
+      { "math": [ "var_miasmar_bonus", "=", "( (u_skill('speech') * 1.3 ) + (u_skill('dodge') * 1.3 ) + 7.9 )" ] },
+      { "math": [ "var_damnedrope_range", "=", "( (u_skill('speech') * 0.6 ) + (u_skill('dodge') * 0.6 ) + 3.8 )" ] }
     ],
     "//": "This automatically sets the vars each time Yamame opens the 'cast spell' window",
     "//2": "Note: also tried chaining a subpsell for yamame_miasmaepidemic with 'self' EOC but it didn't trigger (for her)"
@@ -548,7 +554,8 @@
           }
         ]
       }
-    ]
+    ],
+    "//WIP": ""
   },
   {
     "id": "sakuya_maidsecret_hit",
@@ -941,8 +948,8 @@
       { "u_cast_spell": { "id": "vampiric_drain_spell" } }
     ],
     "//": "This checks how much dmg has Remi done, sets the var_HEAL to 66% of that and casts the healing spell",
-    "//2": "Optimally, this would heal proportionally to the dmg done, but there's no way to track that without a custom dmg type",
-    "//3": "And to track it by custom dmg an ITEM_DAMAGE_X enchant is required"
+    "//note": "Optimally, this would heal proportionally to the dmg done, but there's no way to track that without a custom dmg type",
+    "//note2": "And to track it by custom dmg an ITEM_DAMAGE_X enchant is required"
   },
   {
     "id": "youmu_insightfulsword_hit_eoc",

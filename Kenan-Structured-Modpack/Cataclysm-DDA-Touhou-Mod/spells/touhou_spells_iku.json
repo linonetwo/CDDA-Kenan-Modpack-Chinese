@@ -110,6 +110,7 @@
     "shape": "blast",
     "max_level": 1,
     "difficulty": -11,
+    "message": "",
     "base_casting_time": 1000,
     "base_energy_cost": 0,
     "energy_source": "MANA",
@@ -191,6 +192,25 @@
     "energy_source": "MANA",
     "flags": [ "LOUD", "NO_LEGS", "RANDOM_TARGET", "SOMATIC" ],
     "//": "min dmg 15"
+  },
+  {
+    "id": "iku_readweather",
+    "type": "SPELL",
+    "name": { "str": "Read the atmosphere" },
+    "description": "Use your <color_light_cyan>ability</color> to read the atmosphere.",
+    "spell_class": "NONE",
+    "teachable": false,
+    "valid_targets": [ "self" ],
+    "effect": "effect_on_condition",
+    "effect_str": "iku_readweather_eoc",
+    "shape": "blast",
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "base_casting_time": 0,
+    "base_energy_cost": 33,
+    "energy_source": "MANA",
+    "flags": [ "NO_HANDS", "NO_LEGS", "SOMATIC" ]
   },
   {
     "id": "iku_staticfield",

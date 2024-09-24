@@ -18,13 +18,7 @@
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 3 } } ],
     "relic_data": {
       "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "40 s" },
-      "passive_effects": [ 
-        { 
-          "condition": "ALWAYS", 
-          "mutations": [ "death_coin_mut" ] 
-        },
-        { "id": "ench_death_coin" }
-      ]
+      "passive_effects": [ { "id": "ench_death_coin" } ]
     },
     "use_action": [ { "type": "cast_spell", "spell_id": "death_blink", "no_fail": true, "level": 1 } ],
     "flags": [ "NO_RELOAD", "NO_UNLOAD", "UNBREAKABLE" ]

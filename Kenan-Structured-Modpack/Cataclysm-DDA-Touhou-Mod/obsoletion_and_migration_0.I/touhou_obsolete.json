@@ -1,0 +1,25 @@
+[
+  {
+    "id": "damnedrope_strength_effect",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "rating": "good",
+    "base_mods": { "str_mod": [ 72 ] },
+    "enchantments": [ 
+      { 
+        "condition": "ALWAYS",
+        "values": [ 
+         { "value": "STRENGTH", "add": 72 } 
+       ] 
+     }
+    ],
+    "//": "This effect is used for yamame_damnedrope , so she can have extra STR to pull enemies, otherwise her default STR only allows pulling small/light stuff",
+    "//2": "The formula at #52155 is y = (10/3)*x - (20/3), where y is the weight in kg of the target and x is the STR of the caster. 8 + 72 str equals 260 kg"
+  },
+  {
+    "id": "damnedrope_strength_mut",
+    "type": "TRAIT_MIGRATION",
+    "remove": true
+  }
+]

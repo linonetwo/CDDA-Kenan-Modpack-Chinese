@@ -82,7 +82,10 @@
         "decay_start": "4 hours",
         "capped": true
       },
-      { "u_message": "\"But... I shouldn't. No, I can't. The truth lies bare to me, and it can't change.\"", "type": "bad" },
+      {
+        "u_message": "\"But... I shouldn't. No, I can't. The truth lies bare to me, and it can't change.\"",
+        "type": "bad"
+      },
       { "queue_eocs": "skin_down2", "time_in_future": "3 hours" }
     ]
   },
@@ -98,7 +101,10 @@
         "decay_start": "3 hours",
         "capped": true
       },
-      { "u_message": "\"Does... Does that mean the truth is meaningless? No, it can't be. It can't be all for nothing. Otherwise what would even be the point?\"", "type": "bad" },
+      {
+        "u_message": "\"Does... Does that mean the truth is meaningless? No, it can't be. It can't be all for nothing. Otherwise what would even be the point?\"",
+        "type": "bad"
+      },
       { "queue_eocs": "skin_down3", "time_in_future": "3 hours" }
     ]
   },
@@ -114,7 +120,10 @@
         "decay_start": "2 hours",
         "capped": true
       },
-      { "u_message": "\"I REFUSE! I REFUSE THE TRUTH! IT CAN'T END LIKE THIS! I WON'T LET IT! I'LL MAKE MY OWN TRUTH! MY LIFE MUST HAVE MEANING!\"", "type": "bad" },
+      {
+        "u_message": "\"I REFUSE! I REFUSE THE TRUTH! IT CAN'T END LIKE THIS! I WON'T LET IT! I'LL MAKE MY OWN TRUTH! MY LIFE MUST HAVE MEANING!\"",
+        "type": "bad"
+      },
       { "queue_eocs": "skin_down4", "time_in_future": "3 hours" }
     ]
   },
@@ -212,5 +221,287 @@
     "id": "fire_sphere_1_explosion_spell_eoc_2",
     "type": "effect_on_condition",
     "effect": [ { "u_cast_spell": { "id": "death_fire_sphere_1" } } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "92_ego_evolve",
+    "effect": [
+      { "u_consume_item": "skin_prophecy_evo_page", "count": 1 },
+      {
+        "if": {
+          "and": [
+            { "math": [ "u_spell_level('EGO_92_stage_1')", "<", "10" ] },
+            { "math": [ "u_spell_level('EGO_92_stage_2')", "==", "-1" ] },
+            { "math": [ "u_spell_level('EGO_92_stage_3')", "==", "-1" ] },
+            { "math": [ "u_spell_level('EGO_92_stage_4')", "==", "-1" ] }
+          ]
+        },
+        "then": [
+          { "math": [ "u_spell_level('EGO_92_stage_1')", "+=", "1" ] },
+          {
+            "u_message": "You feel a slight tickling somewhere in the back of your head, which gradually goes somewhere deeper into the brain"
+          }
+        ],
+        "else": {
+          "if": {
+            "and": [
+              { "math": [ "u_spell_level('EGO_92_stage_2')", "<", "10" ] },
+              { "math": [ "u_spell_level('EGO_92_stage_3')", "==", "-1" ] },
+              { "math": [ "u_spell_level('EGO_92_stage_4')", "==", "-1" ] }
+            ]
+          },
+          "then": [
+            { "math": [ "u_spell_level('EGO_92_stage_2')", "+=", "1" ] },
+            { "u_message": "Your thoughts are clear but at the same time as if they don't belong to you" },
+            { "math": [ "u_spell_level('EGO_92_stage_1')", "=", "-1" ] }
+          ],
+          "else": {
+            "if": {
+              "and": [
+                { "math": [ "u_spell_level('EGO_92_stage_3')", "<", "10" ] },
+                { "math": [ "u_spell_level('EGO_92_stage_4')", "==", "-1" ] }
+              ]
+            },
+            "then": [
+              { "math": [ "u_spell_level('EGO_92_stage_3')", "+=", "1" ] },
+              {
+                "u_message": "you feel the blood in your veins heating up and it almost hurts, but everything abruptly subsides, replaced by a cold inside your stomach"
+              },
+              { "math": [ "u_spell_level('EGO_92_stage_2')", "=", "-1" ] }
+            ],
+            "else": [
+              { "math": [ "u_spell_level('EGO_92_stage_4')", "+=", "1" ] },
+              { "u_message": "You feel your understanding of EGO_92_stage_4 deepen! Its power grows." },
+              { "math": [ "u_spell_level('EGO_92_stage_3')", "=", "-1" ] }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "skin_book_eoc_evoked",
+    "condition": { "not": { "compare_string": [ "yes", { "u_val": "prophecy" } ] } },
+    "effect": [
+      {
+        "weighted_list_eocs": [
+          [
+            { "id": "skin_book_main_effect_1", "effect": { "u_add_effect": "unnatural_str", "intensity": 5, "duration": "24h" } },
+            10
+          ],
+          [
+            { "id": "skin_book_main_effect_2", "effect": { "u_add_effect": "unnatural_agi", "intensity": 5, "duration": "24h" } },
+            10
+          ],
+          [
+            { "id": "skin_book_main_effect_3", "effect": { "u_add_effect": "unnatural_per", "intensity": 5, "duration": "24h" } },
+            10
+          ],
+          [
+            { "id": "skin_book_main_effect_4", "effect": { "u_add_effect": "unnatural_int", "intensity": 5, "duration": "24h" } },
+            10
+          ],
+          [
+            {
+              "id": "skin_book_main_effect_5",
+              "effect": [ { "custom_light_level": 0, "length": "24 h" }, { "u_add_effect": "blind", "duration": "13 s" } ]
+            },
+            5
+          ],
+          [ { "id": "skin_book_main_effect_6", "effect": { "custom_light_level": 100, "length": "24 h" } }, 4 ],
+          [
+            { "id": "skin_book_main_effect_7", "effect": { "u_spawn_item": "skin_prophecy_evo_page", "count": 1 } },
+            3
+          ],
+          [
+            {
+              "id": "skin_book_main_effect_8",
+              "effect": [
+                {
+                  "u_spawn_npc": "portal_person",
+                  "hallucination_count": 12,
+                  "outdoor_only": true,
+                  "min_radius": 4,
+                  "max_radius": 12,
+                  "lifespan": [ "1 minutes", "15 minutes" ]
+                }
+              ]
+            },
+            3
+          ],
+          [
+            {
+              "id": "skin_book_main_effect_9",
+              "effect": [
+                { "u_add_effect": "blind", "duration": "13 s" },
+                { "custom_light_level": 0, "length": "24 h" },
+                {
+                  "u_spawn_monster": "mon_meat_cocoon_tiny",
+                  "real_count": [ 1, 24 ],
+                  "hallucination_count": [ 1, 24 ],
+                  "outdoor_only": true,
+                  "min_radius": [ 4, 11 ],
+                  "max_radius": [ 11, 60 ]
+                },
+                {
+                  "u_spawn_monster": "mon_meat_cocoon_small",
+                  "real_count": [ 1, 6 ],
+                  "hallucination_count": [ 1, 12 ],
+                  "outdoor_only": true,
+                  "min_radius": [ 4, 11 ],
+                  "max_radius": [ 11, 60 ]
+                },
+                {
+                  "u_spawn_monster": "mon_amalgamation_swarmer",
+                  "real_count": [ 1, 6 ],
+                  "hallucination_count": [ 1, 18 ],
+                  "outdoor_only": true,
+                  "min_radius": [ 4, 11 ],
+                  "max_radius": [ 11, 60 ]
+                },
+                {
+                  "u_spawn_monster": "mon_amalgamation_jumper",
+                  "real_count": [ 1, 2 ],
+                  "hallucination_count": [ 1, 6 ],
+                  "outdoor_only": true,
+                  "min_radius": [ 4, 11 ],
+                  "max_radius": [ 11, 60 ]
+                },
+                { "math": [ "cause_portal_storm", "=", "1" ] },
+                { "run_eocs": [ "EOC_CAUSE_EARLY_PORTAL_STORM" ] }
+              ]
+            },
+            1
+          ],
+          [
+            { "id": "skin_book_main_effect_10", "effect": { "u_spawn_item": "skin_prophecy_evo_page", "count": [ 1, 2 ] } },
+            1
+          ]
+        ]
+      },
+      {
+        "weighted_list_eocs": [
+          [ { "id": "skin_book_secondary_effect_1", "effect": { "u_set_field": "fd_blood", "radius": [ 1, 5 ] } }, 3 ],
+          [
+            { "id": "skin_book_secondary_effect_2", "effect": { "u_set_field": "fd_gibs_flesh", "radius": [ 1, 5 ] } },
+            2
+          ],
+          [
+            { "id": "skin_book_secondary_effect_3", "effect": { "u_set_field": "fd_hot_air4", "radius": [ 1, 5 ] } },
+            5
+          ],
+          [ { "id": "skin_book_secondary_effect_4", "effect": { "u_add_effect": "blind", "duration": "13 s" } }, 2 ],
+          [
+            { "id": "skin_book_secondary_effect_5", "effect": { "u_add_effect": "deaf", "duration": "13 s", "intensity": 3 } },
+            2
+          ],
+          [
+            {
+              "id": "skin_book_secondary_effect_6",
+              "effect": [
+                { "u_add_effect": "blind", "duration": "13 s" },
+                {
+                  "u_spawn_monster": "mon_civilian_icu",
+                  "real_count": [ 0, 1 ],
+                  "hallucination_count": [ 0, 1 ],
+                  "min_radius": [ 4, 11 ],
+                  "max_radius": [ 11, 35 ]
+                }
+              ]
+            },
+            1
+          ],
+          [
+            {
+              "id": "skin_book_secondary_effect_7",
+              "effect": [
+                { "u_add_effect": "deaf", "duration": "13 s" },
+                { "u_make_sound": "a high-pitched squeal.", "volume": 60, "type": "alert" }
+              ]
+            },
+            3
+          ],
+          [ { "id": "skin_book_secondary_effect_8", "effect": { "u_mod_healthy": 20, "cap": 100 } }, 4 ],
+          [ { "id": "skin_book_secondary_effect_9", "effect": { "u_mod_healthy": -10, "cap": -50 } }, 4 ],
+          [
+            {
+              "id": "skin_book_secondary_effect_10",
+              "effect": [ { "math": [ "u_val('focus')", "=", "200" ] }, { "math": [ "u_val('stamina')", "=", "0" ] } ]
+            },
+            3
+          ],
+          [
+            {
+              "id": "skin_book_secondary_effect_11",
+              "effect": [
+                { "math": [ "u_val('focus')", "=", "0" ] },
+                { "math": [ "u_val('stim')", "=", "50" ] },
+                { "math": [ "u_val('thirst')", "=", "100" ] }
+              ]
+            },
+            3
+          ],
+          [
+            {
+              "id": "skin_book_secondary_effect_12",
+              "effect": [
+                { "u_spawn_item": "corpse_scorched", "count": 1, "suppress_message": true },
+                { "u_spawn_item": "book_fict_soft_pulp_nogod", "count": 1, "suppress_message": true }
+              ]
+            },
+            1
+          ],
+          [
+            {
+              "id": "skin_book_secondary_effect_13",
+              "effect": [
+                { "u_spawn_item": "corpse_ash", "count": [ 20, 380 ], "suppress_message": true },
+                { "u_spawn_item": "ash", "count": [ 20, 380 ], "suppress_message": true },
+                { "u_spawn_item": "chem_saltpetre", "count": [ 1, 22 ], "suppress_message": true },
+                { "u_spawn_item": "coal_lump", "count": [ 1, 3 ], "suppress_message": true }
+              ]
+            },
+            1
+          ],
+          [
+            {
+              "id": "skin_book_secondary_effect_14",
+              "effect": [ { "math": [ "weather('pressure')", "=", "550" ] }, "next_weather" ]
+            },
+            4
+          ],
+          [
+            { "id": "skin_book_secondary_effect_15", "effect": [ { "math": [ "u_vitamin('blood')", "=", "-5500" ] } ] },
+            1
+          ]
+        ]
+      },
+      { "u_message": "\"I have seen the truth...\"", "type": "bad" },
+      { "u_add_var": "prophecy", "value": "yes" },
+      { "queue_eocs": "prophecy_clear", "time_in_future": "24 hours" }
+    ],
+    "false_effect": [
+      {
+        "u_message": "Your eyes can't seem to focus on the text, and when you try to look at it, strange and surreal images appear in your head that disappears as soon as you look away"
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "prophecy_clear",
+    "effect": [ { "u_lose_var": "prophecy", "type": "temp_var", "context": "skin_book_readed" } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "book_upgrade",
+    "condition": { "and": [ { "u_has_item": "firefeather_item" }, { "u_has_item": "skin_prophecy" } ] },
+    "effect": [
+      { "u_remove_item_with": "firefeather_item" },
+      { "u_remove_item_with": "skin_prophecy" },
+      { "u_spawn_item": "skin_prophecy_evoked" },
+      { "u_message": "You evoked Skin Prophecy" }
+    ],
+    "false_effect": [ { "u_message": "You need Skin Prophecy for this" } ]
   }
 ]

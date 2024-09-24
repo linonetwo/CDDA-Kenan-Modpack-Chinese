@@ -10,13 +10,15 @@
   {
     "type": "effect_on_condition",
     "id": "EOC_fire_stamina_regen",
-    "recurrence": 5000,
+    "recurrence": [ 100, 200 ],
+    "condition": { "u_has_trait": "EGO_92_mutation_stage_3" },
+    "deactivate_condition": { "not": { "u_has_trait": "EGO_92_mutation_stage_3" } },
     "effect": [
-      { "u_location_variable": { "context_val": "test" }, "field": "fd_fire", "target_max_radius": 15 },
-      { "math": [ "u_fire_stamina_boost", "=", "field_strength('fd_fire', 'location': test)" ] },
+      { "u_location_variable": { "context_val": "fire_place" }, "field": "fd_fire", "target_max_radius": 25 },
+      { "math": [ "u_fire_stamina_boost", "=", "field_strength('fd_fire', 'location': fire_place)" ] },
       {
-        "if": { "map_field_id": "fd_fire", "loc": { "context_val": "test" } },
-        "then": { "u_add_effect": "stamina_regen_boost_small", "duration": "1 s", "intensity": "u_fire_stamina_boost" }
+        "if": { "map_field_id": "fd_fire", "loc": { "context_val": "fire_place" } },
+        "then": { "u_add_effect": "stamina_regen_boost_small", "duration": "2 s", "intensity": "u_fire_stamina_boost" }
       }
     ]
   },
@@ -27,6 +29,187 @@
     "desc": [ "You feel invigorated by the warmth." ],
     "rating": "good",
     "show_in_info": true,
-    "base_mods": { "stamina_amount": [ 20 ] }
+    "max_intensity": 10,
+    "int_add_val": 1,
+    "base_mods": { "stamina_amount": [ 200, 2000 ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_fire_stamina_regen_2",
+    "recurrence": [ 100, 200 ],
+    "condition": { "u_has_trait": "EGO_92_mutation_stage_4" },
+    "deactivate_condition": { "not": { "u_has_trait": "EGO_92_mutation_stage_4" } },
+    "effect": [
+      { "u_location_variable": { "context_val": "fire_place" }, "field": "fd_fire", "target_max_radius": 25 },
+      { "math": [ "u_fire_stamina_boost", "=", "field_strength('fd_fire', 'location': fire_place)" ] },
+      {
+        "if": { "map_field_id": "fd_fire", "loc": { "context_val": "fire_place" } },
+        "then": { "u_add_effect": "stamina_regen_boost_big", "duration": "2 s", "intensity": "u_fire_stamina_boost" }
+      }
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "stamina_regen_boost_big",
+    "name": [ "Warmth" ],
+    "desc": [ "You feel invigorated by the warmth." ],
+    "rating": "good",
+    "show_in_info": true,
+    "max_intensity": 10,
+    "int_add_val": 1,
+    "base_mods": { "stamina_amount": [ 350, 3500 ] }
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "clear_spell_92",
+    "effect": [
+      { "math": [ "u_spell_level('92_sword_weak_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_sword_normal_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_armor_normal_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_sword_empower_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_armor_empower_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_sword_empower_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_small_summon')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_binding_flame')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_line_strike')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_medium_summon')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_flame_manifestation')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_reignite')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_fluidity')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_big_summon')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_evaporize')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_live_flame_togle')", "=", "-1" ] },
+      { "math": [ "u_spell_level('92_gaze_hook_4')", "=", "-1" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HOOK_92_SPELLBOOK_0",
+    "eoc_type": "EVENT",
+    "required_event": "gains_mutation",
+    "condition": { "compare_string": [ "EGO_92_sword_spellbook_0_mutation", { "context_val": "trait" } ] },
+    "effect": [
+      { "math": [ "u_spell_level('92_small_summon')", "=", "1" ] },
+      { "math": [ "u_spell_level('92_binding_flame')", "=", "1" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HOOK_92_SPELLBOOK_1",
+    "eoc_type": "EVENT",
+    "required_event": "gains_mutation",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_1_mutation" },
+    "effect": [
+      { "math": [ "u_spell_level('92_line_strike')", "=", "1" ] },
+      { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "1" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HOOK_92_SPELLBOOK_2",
+    "eoc_type": "EVENT",
+    "required_event": "gains_mutation",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_2_mutation" },
+    "effect": [
+      { "math": [ "u_spell_level('92_medium_summon')", "=", "1" ] },
+      { "math": [ "u_spell_level('92_flame_manifestation')", "=", "1" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HOOK_92_SPELLBOOK_3",
+    "eoc_type": "EVENT",
+    "required_event": "gains_mutation",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_3_mutation" },
+    "effect": [ { "math": [ "u_spell_level('92_reignite')", "=", "1" ] }, { "math": [ "u_spell_level('92_fluidity')", "=", "1" ] } ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_HOOK_92_SPELLBOOK_4",
+    "eoc_type": "EVENT",
+    "required_event": "gains_mutation",
+    "condition": { "u_has_trait": "EGO_92_sword_spellbook_4_mutation" },
+    "effect": [
+      { "math": [ "u_spell_level('92_big_summon')", "=", "1" ] },
+      { "math": [ "u_spell_level('92_evaporize')", "=", "1" ] }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_spellbook_wield_test_0",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "effect": [
+      {
+        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "0" ] },
+        "then": [
+          { "math": [ "u_spell_level('92_small_summon')", "=", "1" ] },
+          { "math": [ "u_spell_level('92_binding_flame')", "=", "1" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_spellbook_wield_test_1",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "effect": [
+      {
+        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "1" ] },
+        "then": [
+          { "math": [ "u_spell_level('92_line_strike')", "=", "1" ] },
+          { "math": [ "u_spell_level('92_gaze_explode_hook')", "=", "1" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_spellbook_wield_test_2",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "effect": [
+      {
+        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "2" ] },
+        "then": [
+          { "math": [ "u_spell_level('92_medium_summon')", "=", "1" ] },
+          { "math": [ "u_spell_level('92_flame_manifestation')", "=", "1" ] }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_spellbook_wield_test_3",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "effect": [
+      {
+        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "3" ] },
+        "then": [ { "math": [ "u_spell_level('92_reignite')", "=", "1" ] }, { "math": [ "u_spell_level('92_fluidity')", "=", "1" ] } ]
+      }
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_spellbook_wield_test_4",
+    "eoc_type": "EVENT",
+    "required_event": "character_wields_item",
+    "condition": { "compare_string": [ "92_sword_item_empower", { "context_val": "itype" } ] },
+    "effect": [
+      {
+        "if": { "math": [ "u_monsters_nearby('mon_candle_allied', 'radius': 60)", "==", "4" ] },
+        "then": [
+          { "math": [ "u_spell_level('92_big_summon')", "=", "1" ] },
+          { "math": [ "u_spell_level('92_evaporize')", "=", "1" ] }
+        ]
+      }
+    ]
   }
 ]

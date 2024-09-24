@@ -94,27 +94,12 @@
       "spores",
       "tapeworm",
       "tetanus",
-      "toxin_buildup"
+      "toxin_buildup",
+      "icy_pyrexia",
+      "scarlet_plague",
+      "volatile_rot"      
     ],
     "//": "Mostly infectious diseases, not sure if 'non-living' things like poison (proteins) should go here"
-  },
-  {
-    "id": "damnedrope_strength_effect",
-    "type": "effect_type",
-    "name": [ "" ],
-    "desc": [ "" ],
-    "rating": "good",
-    "base_mods": { "str_mod": [ 72 ] },
-    "enchantments": [ 
-      { 
-        "condition": "ALWAYS",
-        "values": [ 
-         { "value": "STRENGTH", "add": 72 } 
-       ] 
-     }
-    ],
-    "//": "This effect is used for yamame_damnedrope , so she can have extra STR to pull enemies, otherwise her default STR only allows pulling small/light stuff",
-    "//2": "The formula at #52155 is y = (10/3)*x - (20/3), where y is the weight in kg of the target and x is the STR of the caster. 8 + 72 str equals 260 kg"
   },
   {
     "id": "darksphere_speed_effect",
@@ -132,8 +117,17 @@
     "name": [ "" ],
     "desc": [ "" ],
     "rating": "good",
-    "flags": [ "ITEM_WATERPROOFING", "LEVITATION", "WATERWALKING" ],
+    "flags": [ "FEATHER_FALL", "ITEM_WATERPROOFING", "LEVITATION", "WATERWALKING" ],
     "//": "This effect is used in dashes, so the caster can 'jump' between z-level falls without dropping, breaking some bones, and moving to the end position"
+  },
+  {
+    "id": "dash_meiling_tag_effect",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "//": "Dummy effect, used by dash_meiling_eoc "
   },
   {
     "id": "icy_pyrexia",

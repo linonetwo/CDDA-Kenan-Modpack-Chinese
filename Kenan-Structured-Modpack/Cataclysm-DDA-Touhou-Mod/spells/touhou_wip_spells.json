@@ -206,7 +206,7 @@
     "id": "seiga_wallwalk2",
     "type": "SPELL",
     "name": { "str": "TEST Pass through wall TEST" },
-    "description": "Use your ability to cut through walls.",
+    "description": "Use your <color_light_cyan>ability</color> to cut through walls.",
     "spell_class": "NONE",
     "teachable": false,
     "valid_targets": [ "self" ],
@@ -633,91 +633,6 @@
           }
         ]
       }
-    ]
-  },
-  {
-    "id": "yamame_damnedrope_UPDATED",
-    "type": "SPELL",
-    "name": { "str": "Damned's rope" },
-    "description": "Entangle a target and pull it towards your position, stunning it for a short time.",
-    "spell_class": "NONE",
-    "teachable": false,
-    "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "yamame_damnedrope_eoc_UPDATED",
-    "shape": "blast",
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 66,
-    "base_energy_cost": 100,
-    "energy_source": "MANA",
-    "flags": [ "NO_EXPLOSION_SFX", "NO_HANDS", "NO_PROJECTILE", "SILENT" ],
-    "//": "Updated version of yamame_damnedrope. Adapted from dash_kokoro. The old 'pull (+ damnedrope_strength_effect)' spell doesn't work, the STR buff is granted after the spell casts, so the pull fails due using the base STR. This 'spell_EOC -> EOC -> effect, mutation, pull -> EOC' version works, with a caveat",
-    "//2": "The pull works (it behaves with the STR bonus) if and only if yamame_damnedrope_eoc_UPDATED grants both the effect and mutation simultaneously. Removing any causes the pull to use base STR (and thus not work)",
-    "//3": "The problem with leaving it like this is that Yamame is granted the total STR from both sources (152) for 2 - 3 turns after the spell is cast",
-    "//4": "An alternative version of the spell uses the description 'Gather your strength to entangle and pull a target' so the STR buff can ramp up before casting the pull, and lasts for less"
-  },
-  {
-    "id": "yamame_damnedrope2_UPDATED",
-    "type": "SPELL",
-    "name": { "str": "Damned's rope (pull)" },
-    "description": "Entangle a target and pull it towards your position, stunning it for a short time.",
-    "spell_class": "NONE",
-    "valid_targets": [ "ally", "hostile" ],
-    "effect": "pull_target",
-    "extra_effects": [ { "id": "yamame_damnedrope3_UPDATED" } ],
-    "shape": "line",
-    "min_range": { "math": [ "( (u_skill('speech') * 0.7 ) + (u_skill('dodge') * 0.7 ) + 4.1 )" ] },
-    "max_range": 23,
-    "field_id": "fd_web2",
-    "field_chance": 1,
-    "min_field_intensity": 2,
-    "max_field_intensity": 3,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "EXTRA_EFFECTS_FIRST", "NO_LEGS", "SOMATIC" ],
-    "//": "min range 9"
-  },
-  {
-    "id": "yamame_damnedrope3_UPDATED",
-    "type": "SPELL",
-    "name": { "str": "Damned's rope (stun)" },
-    "description": "Stun component of yamame_damnedrope ",
-    "spell_class": "NONE",
-    "valid_targets": [ "ally", "hostile" ],
-    "effect": "mod_moves",
-    "shape": "blast",
-    "damage_type": "pure",
-    "min_damage": -300,
-    "max_damage": -600,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "SILENT" ]
-  },
-  {
-    "id": "yamame_damnedrope_eoc_UPDATED",
-    "type": "effect_on_condition",
-    "effect": [ 
-      { "u_message": "yamame_damnedrope_eoc_1", "type": "mixed" },
-      { "u_add_effect": "damnedrope_strength_effect", "duration": "1 s" },
-      { "u_add_trait": "damnedrope_strength_mut" },
-      { "u_cast_spell": { "id": "yamame_damnedrope2_UPDATED" }, "targeted": true },
-      { "queue_eocs": [ "yamame_damnedrope_end_UPDATED" ], "time_in_future": "1 s" }
-    ]
-  },
-  {
-    "id": "yamame_damnedrope_end_UPDATED",
-    "type": "effect_on_condition",
-    "effect": [ 
-      { "u_message": "yamame_damnedrope_eoc_2", "type": "mixed" },
-      { "u_lose_effect": "damnedrope_strength_effect" },
-      { "u_lose_trait": "damnedrope_strength_mut" }
     ]
   },
   {

@@ -1,0 +1,166 @@
+[
+  {
+    "id": "iku_readweather_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "if": { 
+          "and": [ 
+            { "not": { "is_weather": "sunny" } },
+            { "not": { "is_weather": "cloudy" } },
+            { "not": { "is_weather": "cloudy_scarlet" } },
+            { "not": { "is_weather": "light_drizzle" } },
+            { "not": { "is_weather": "drizzle" } },
+            { "not": { "is_weather": "rain" } },
+            { "not": { "is_weather": "rain_blood" } },
+            { "not": { "is_weather": "rain_carnian" } },
+            { "not": { "is_weather": "rain_purifying" } },
+            { "not": { "is_weather": "rainstorm" } },
+            { "not": { "is_weather": "rainstorm_blood" } },
+            { "not": { "is_weather": "rainstorm_carnian" } },
+            { "not": { "is_weather": "thunder" } },
+            { "not": { "is_weather": "thunder_blood" } },
+            { "not": { "is_weather": "thunder_carnian" } },
+            { "not": { "is_weather": "lightning" } },
+            { "not": { "is_weather": "lightning_blood" } },
+            { "not": { "is_weather": "lightning_carnian" } },
+            { "not": { "is_weather": "flurries" } },
+            { "not": { "is_weather": "snowstorm" } },
+            { "not": { "is_weather": "mist" } },
+            { "not": { "is_weather": "mist_scarlet" } },
+            { "not": { "is_weather": "fog" } },
+            { "not": { "is_weather": "fog_scarlet" } },
+            { "not": { "is_weather": "night_parade" } },
+            { "not": { "is_weather": "silence_hour" } },
+            { "not": { "is_weather": "early_portal_storm" } },
+            { "not": { "is_weather": "portal_storm" } },
+            { "not": { "is_weather": "close_portal_storm" } },
+            { "not": { "is_weather": "distant_portal_storm" } }
+          ] 
+        }, 
+        "then": { "u_message": "It is clear.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "sunny" },
+        "then": { "u_message": "It is sunny.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "cloudy" },
+        "then": { "u_message": "It is cloudy.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "cloudy_scarlet" },
+        "then": { "u_message": "There are scarlet clouds.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "light_drizzle" },
+        "then": { "u_message": "There is a light drizzle.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "drizzle" },
+        "then": { "u_message": "There is a drizzle.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "rain" },
+        "then": { "u_message": "It is raining.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "rain_blood" },
+        "then": { "u_message": "It is raining blood.", "type": "mixed" }
+      },
+      {
+        "if": { "is_weather": "rain_carnian" },
+        "then": { "u_message": "It is raining.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "rain_purifying" },
+        "then": { "u_message": "This is bad.", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "rainstorm" },
+        "then": { "u_message": "There is a rainstorm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "rainstorm_blood" },
+        "then": { "u_message": "This rainstorm is abnormal.", "type": "mixed" }
+      },
+      {
+        "if": { "is_weather": "rainstorm_carnian" },
+        "then": { "u_message": "There is a rainstorm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "thunder" },
+        "then": { "u_message": "There is a thunderstorm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "thunder_blood" },
+        "then": { "u_message": "This thunderstorm is abnormal.", "type": "mixed" }
+      },
+      {
+        "if": { "is_weather": "thunder_carnian" },
+        "then": { "u_message": "There is a thunderstorm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "lightning" },
+        "then": { "u_message": "There is a lightning storm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "lightning_blood" },
+        "then": { "u_message": "This lightning storm is abnormal.", "type": "mixed" }
+      },
+      {
+        "if": { "is_weather": "flurries" },
+        "then": { "u_message": "There are flurries.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "snowing" },
+        "then": { "u_message": "It is snowing.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "snowstorm" },
+        "then": { "u_message": "There is a snowstorm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "mist" },
+        "then": { "u_message": "There is mist.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "mist_scarlet" },
+        "then": { "u_message": "There is scarlet mist.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "fog" },
+        "then": { "u_message": "There is fog.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "fog_scarlet" },
+        "then": { "u_message": "There is scarlet fog.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "night_parade" },
+        "then": { "u_message": "Uh oh…", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "silence_hour" },
+        "then": { "u_message": "Uh oh…", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "early_portal_storm" },
+        "then": { "u_message": "Something's wrong.", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "distant_portal_storm" },
+        "then": { "u_message": "Something's wrong.", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "close_portal_storm" },
+        "then": { "u_message": "Something's wrong.", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "portal_storm" },
+        "then": { "u_message": "Something's wrong.", "type": "bad" }
+      }
+    ],
+    "//thex": "Same as iku_readweather_eoc from the base mod, except this adds the mod's custom weather"
+  }
+]

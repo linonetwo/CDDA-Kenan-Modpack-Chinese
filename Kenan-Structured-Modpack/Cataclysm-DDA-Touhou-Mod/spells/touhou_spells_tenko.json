@@ -82,8 +82,8 @@
   {
     "id": "tenko_keystonedismiss",
     "type": "SPELL",
-    "name": { "str": "Dismiss keystones" },
-    "description": "Dismiss all summoned keystones and rubble.",
+    "name": { "str": "Dismiss <color_dark_gray>keystones</color>" },
+    "description": "Dismiss all summoned <color_dark_gray>keystones</color> and rubble.",
     "spell_class": "NONE",
     "teachable": false,
     "valid_targets": [ "ground", "item", "self" ],
@@ -103,8 +103,8 @@
   {
     "id": "tenko_keystonecrash",
     "type": "SPELL",
-    "name": { "str": "Keystone crash" },
-    "description": "Call upon a Keystone crashing down.  Deals bonus damage to the main target.  Must be outside to cast.",
+    "name": { "str": "<color_dark_gray>Keystone</color> crash" },
+    "description": "Call upon a <color_dark_gray>keystone</color> crashing down.  \nDeals bonus damage to the main target.  Must be outside to cast.",
     "spell_class": "NONE",
     "teachable": false,
     "valid_targets": [ "self" ],
@@ -121,8 +121,8 @@
   {
     "id": "tenko_keystonecrash2",
     "type": "SPELL",
-    "name": { "str": "Keystone crash" },
-    "description": "Call upon a Keystone crashing down.  Deals bonus damage to the main target.",
+    "name": { "str": "<color_dark_gray>Keystone</color> crash" },
+    "description": "Call upon a <color_dark_gray>keystone</color> crashing down.  Deals bonus damage to the main target.",
     "spell_class": "NONE",
     "valid_targets": [ "ground", "hostile", "item" ],
     "effect": "attack",
@@ -218,8 +218,8 @@
   {
     "id": "tenko_keystonefloating",
     "type": "SPELL",
-    "name": { "str": "Summon: floating keystone" },
-    "description": "Call upon a floating keystone to carry yourself around.",
+    "name": { "str": "Summon: Floating <color_dark_gray>keystone</color>" },
+    "description": "Call upon a <color_dark_gray>floating keystone</color> to carry yourself around.",
     "spell_class": "NONE",
     "teachable": false,
     "valid_targets": [ "ground" ],
@@ -243,7 +243,7 @@
     "id": "tenko_keystonepillar",
     "type": "SPELL",
     "name": { "str": "Pillar of earthen punishment" },
-    "description": "Draw a nearby keystone from underground, acting as a temporary, solid wall.",
+    "description": "Draw a nearby <color_dark_gray>keystone</color> from underground, acting as a temporary, solid wall.",
     "spell_class": "NONE",
     "teachable": false,
     "valid_targets": [ "ground", "hostile" ],
@@ -290,7 +290,7 @@
     "id": "tenko_scarletperception",
     "type": "SPELL",
     "name": { "str": "Sky of Scarlet perception" },
-    "description": "Concentrate and focus surrounding temperaments on the Sword of Hisou, releasing them in form of a big laser, damaging anything in the path.  Because this relies on overwhelming the target's own temperament, it just moves them closer, but never pushes them completely, to Nirvana.",
+    "description": "Concentrate and focus surrounding temperaments on the Sword of Hisou, releasing them in form of a big laser, damaging anything in the path.  Because this relies on overwhelming the target's own temperament, it just moves them closer, but never pushes them fully, to Nirvana.",
     "spell_class": "NONE",
     "teachable": false,
     "valid_targets": [ "ally", "ground", "hostile" ],
@@ -346,7 +346,8 @@
     "energy_source": "MANA",
     "flags": [ "NO_LEGS", "SOMATIC" ],
     "//": "Shouldn't hit flying targets or be activated without ground. Should also be a line centered on Tenko, instead of starting from her position",
-    "//2": "min dmg 31, min range 5"
+    "//2": "min dmg 31, min range 5",
+    "//note": "Tried to set an eoc to cast the spell at the location, and multiply the coordinates by -1 so it could cast the other side, but it didn't work as location variables can't be used with math"
   },
   {
     "id": "tenko_unletting_soil2",

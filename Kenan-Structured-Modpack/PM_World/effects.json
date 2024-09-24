@@ -1,5 +1,5 @@
 [
-{
+  {
     "type": "effect_type",
     "id": "red_acid",
     "name": [ "Wrath" ],
@@ -13,8 +13,8 @@
     "scaling_mods": { "hurt_chance": [ 2 ] },
     "show_in_info": true
   },
-    {
-   "type": "effect_type",
+  {
+    "type": "effect_type",
     "id": "accel",
     "name": [ "accelerating" ],
     "desc": [ "You hit something and now regain your speed" ],
@@ -22,10 +22,81 @@
     "rating": "neutral",
     "max_duration": "10 s",
     "max_intensity": 10,
-	"int_decay_remove": true,
-	"int_decay_tick": 1,
+    "int_decay_remove": true,
+    "int_decay_tick": 1,
     "base_mods": { "speed_mod": [ 25 ], "dodge_mod": [ 3 ] },
-	"scaling_mods": { "speed_mod": [ -8 ], "dodge_mod": [ -0.7 ] },
+    "scaling_mods": { "speed_mod": [ -8 ], "dodge_mod": [ -0.7 ] },
     "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "unnatural_str",
+    "name": [ "Unnatural Strenght" ],
+    "desc": [ "You feel a new power, but for how long?" ],
+    "apply_message": " ",
+    "rating": "good",
+    "max_duration": "24 h",
+    "max_intensity": 5,
+    "int_decay_remove": true,
+    "int_decay_tick": 21600,
+    "base_mods": { "str_mod": [ 1 ] },
+    "scaling_mods": { "str_mod": [ 1.5 ] },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "unnatural_agi",
+    "name": [ "Unnatural Agility" ],
+    "desc": [ "You feel a new power, but for how long?" ],
+    "apply_message": " ",
+    "rating": "good",
+    "max_duration": "24 h",
+    "max_intensity": 5,
+    "int_decay_remove": true,
+    "int_decay_tick": 21600,
+    "base_mods": { "dex_mod": [ 1 ] },
+    "scaling_mods": { "dex_mod": [ 1.5 ] },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "unnatural_per",
+    "name": [ "Unnatural Perception" ],
+    "desc": [ "You feel a new power, but for how long?" ],
+    "apply_message": " ",
+    "rating": "good",
+    "max_duration": "24 h",
+    "max_intensity": 5,
+    "int_decay_remove": true,
+    "int_decay_tick": 21600,
+    "base_mods": { "per_mod": [ 1 ] },
+    "scaling_mods": { "per_mod": [ 1.5 ] },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "unnatural_int",
+    "name": [ "Unnatural Intellect" ],
+    "desc": [ "You feel a new power, but for how long?" ],
+    "apply_message": " ",
+    "rating": "good",
+    "max_duration": "24 h",
+    "max_intensity": 5,
+    "int_decay_remove": true,
+    "int_decay_tick": 21600,
+    "base_mods": { "int_mod": [ 1 ] },
+    "scaling_mods": { "int_mod": [ 1.5 ] },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "EGO_CD",
+    "name": [ "Cool down of EGO" ],
+    "desc": [ "Your EGO is on cooldown!" ],
+    "max_intensity": 1,
+    "rating": "bad",
+    "show_in_info": true,
+    "base_mods": {  },
+    "scaling_mods": {  }
   }
-  ]
+]

@@ -3,29 +3,84 @@
     "id": "dash_kokoro_eoc",
     "type": "effect_on_condition",
     "effect": [
-      { "u_cast_spell": { "id": "dash_kokoro2" }, "targeted": true },
-      { "run_eocs": [ "dash_kokoro_aoe_eoc" ] }
+      {
+        "if": {
+          "message": "Set target", 
+          "range": 4,
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_dash_kokoro_loc" }
+        },
+        "then": [
+          { "u_cast_spell": { "id": "dash_basic_levitate", "hit_self": true } },
+          { "u_cast_spell": { "id": "dash_kokoro2" }, "loc": { "global_val": "var_dash_kokoro_loc" } },
+          { "u_cast_spell": { "id": "dash_kokoro3" } }
+        ],
+        "else": [
+          { "math": [ "u_val('stamina')", "+=", "2000" ] },
+          { "u_message": "Canceled" }
+        ]
+      }
     ]
   },
   {
-    "id": "dash_kokoro_aoe_eoc",
+    "id": "dash_meiling_eoc",
     "type": "effect_on_condition",
-    "effect": [ 
-      { "u_cast_spell": { "id": "dash_kokoro3" }, "targeted": false }
-    ]
+    "effect": [
+      {
+        "if": {
+          "message": "Set target", 
+          "range": 5,
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_dash_meiling_loc" }
+        },
+        "then": [
+          { "math": [ "var_dash_meiling_distance", "=", "( distance('u', var_dash_meiling_loc) )"] },
+          { "u_cast_spell": { "id": "dash_basic_levitate", "hit_self": true } },
+          { "u_cast_spell": { "id": "dash_meiling3" }, "loc": { "global_val": "var_dash_meiling_loc" } },
+          { "u_cast_spell": { "id": "dash_meiling4" }, "loc": { "global_val": "var_dash_meiling_loc" } },
+          { "u_cast_spell": { "id": "dash_meiling5" }, "loc": { "global_val": "var_dash_meiling_loc" } },
+          { "u_cast_spell": { "id": "dash_meiling2" }, "loc": { "global_val": "var_dash_meiling_loc" } },
+          { "u_cast_spell": { "id": "dash_meiling6" } }
+        ],
+        "else": [
+          { "math": [ "u_val('stamina')", "+=", "2000" ] },
+          { "u_message": "Canceled" }
+        ]
+      }
+    ],
+    "//": "This dash marks a location, and then does the following: sets distance to the location, adds the LEVITATION effect for Meiling (by the spell)",
+    "//2": "Then, tags the target with a TAG_effect , stuns it target (qol), pushes it back, Meiling casts the dash spell to the location, and an aoe that forces the EOC below on any target under the aoe"
+  },
+  {
+    "id": "dash_meiling_knockin_eoc",
+    "type": "effect_on_condition",
+    "condition": { "u_has_effect": "dash_meiling_tag_effect" },
+    "effect": [ { "u_cast_spell": { "id": "dash_meiling7", "hit_self": true }, "loc": { "global_val": "var_dash_meiling_loc" } } ],
+    "//": "This EOC checks if any creature under the aoe has the TAG_effect , and if so it forces it to cast the self-push towards the marked location",
+    "//2": "Because Meiling is already there, the target is placed to the tile next to her",
+    "//3": "This succesfully (?) emulates Meiling dashing to a location while pushing the target with her"
   },
   {
     "id": "dash_mokou_eoc",
     "type": "effect_on_condition",
     "effect": [
-      { "run_eocs": [ "dash_mokou_dash_eoc" ] }
-    ]
-  },
-  {
-    "id": "dash_mokou_dash_eoc",
-    "type": "effect_on_condition",
-    "effect": [ 
-      { "u_cast_spell": { "id": "dash_mokou3" }, "targeted": true }
+      {
+        "if": {
+          "message": "Set target", 
+          "range": 5,
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_dash_mokou_loc" }
+        },
+        "then": [
+          { "u_cast_spell": { "id": "dash_basic_levitate", "hit_self": true } },
+          { "u_cast_spell": { "id": "dash_mokou3" } },
+          { "u_cast_spell": { "id": "dash_mokou2" }, "loc": { "global_val": "var_dash_mokou_loc" } }
+        ],
+        "else": [
+          { "math": [ "u_val('stamina')", "+=", "2000" ] },
+          { "u_message": "Canceled" }
+        ]
+      }
     ]
   },
   {
@@ -49,11 +104,11 @@
           "message": "Set target", 
           "range": 4,
           "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_youmu_dash_end_loc" }
+          "target_var": { "global_val": "var_dash_youmu_end_loc" }
         },
         "then": [
-          { "u_teleport": { "global_val": "var_youmu_dash_end_loc" } },
-          { "u_cast_spell": { "id": "dash_youmu2" }, "loc": { "global_val": "var_youmu_dash_start_loc" } }
+          { "u_teleport": { "global_val": "var_dash_youmu_end_loc" } },
+          { "u_cast_spell": { "id": "dash_youmu2" }, "loc": { "global_val": "var_dash_youmu_end_loc" } }
         ],
         "else": [
           { "math": [ "u_val('stamina')", "+=", "2000" ] },
@@ -67,10 +122,10 @@
           "message": "Set target", 
           "range": 4,
           "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_youmu_dash_end_loc" }
+          "target_var": { "global_val": "var_dash_youmu_end_loc" }
         },
         "then": [
-          { "u_cast_spell": { "id": "dash_youmu3" }, "loc": { "global_val": "var_youmu_dash_end_loc" } }
+          { "u_cast_spell": { "id": "dash_youmu3" }, "loc": { "global_val": "var_dash_youmu_end_loc" } }
         ],
         "else": [
           { "math": [ "u_val('stamina')", "+=", "2000" ] },
@@ -236,6 +291,105 @@
     "//note2": "Could be simplified by #74748"
   },
   {
+    "id": "iku_readweather_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "if": { 
+          "and": [ 
+            { "not": { "is_weather": "sunny" } },
+            { "not": { "is_weather": "cloudy" } },
+            { "not": { "is_weather": "light_drizzle" } },
+            { "not": { "is_weather": "drizzle" } },
+            { "not": { "is_weather": "rain" } },
+            { "not": { "is_weather": "rainstorm" } },
+            { "not": { "is_weather": "thunder" } },
+            { "not": { "is_weather": "lightning" } },
+            { "not": { "is_weather": "flurries" } },
+            { "not": { "is_weather": "snowstorm" } },
+            { "not": { "is_weather": "mist" } },
+            { "not": { "is_weather": "fog" } },
+            { "not": { "is_weather": "early_portal_storm" } },
+            { "not": { "is_weather": "portal_storm" } },
+            { "not": { "is_weather": "close_portal_storm" } },
+            { "not": { "is_weather": "distant_portal_storm" } }
+          ] 
+        }, 
+        "then": { "u_message": "It is clear.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "sunny" },
+        "then": { "u_message": "It is sunny.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "cloudy" },
+        "then": { "u_message": "It is cloudy.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "light_drizzle" },
+        "then": { "u_message": "There is a light drizzle.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "drizzle" },
+        "then": { "u_message": "There is a drizzle.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "rain" },
+        "then": { "u_message": "It is raining.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "rainstorm" },
+        "then": { "u_message": "There is a rainstorm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "thunder" },
+        "then": { "u_message": "There is a thunderstorm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "lightning" },
+        "then": { "u_message": "There is a lightning storm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "flurries" },
+        "then": { "u_message": "There are flurries.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "snowing" },
+        "then": { "u_message": "It is snowing.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "snowstorm" },
+        "then": { "u_message": "There is a snowstorm.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "mist" },
+        "then": { "u_message": "There is mist.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "fog" },
+        "then": { "u_message": "There is fog.", "type": "good" }
+      },
+      {
+        "if": { "is_weather": "early_portal_storm" },
+        "then": { "u_message": "Something's wrong.", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "distant_portal_storm" },
+        "then": { "u_message": "Something's wrong.", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "close_portal_storm" },
+        "then": { "u_message": "Something's wrong.", "type": "bad" }
+      },
+      {
+        "if": { "is_weather": "portal_storm" },
+        "then": { "u_message": "Something's wrong.", "type": "bad" }
+      }
+    ],
+    "//": "Tried to make it predict the next weather, asuming that atmospheric values can update before the weather",
+    "//2": "However, weather_types have priorities, so even if the weathers above are ordered by priorities, a premature stop is required to not print 'weather A and B and C are coming next'. And then weather D happens"
+  },
+  {
     "id": "iku_batteryrestore_check",
     "type": "effect_on_condition",
     "effect": [
@@ -249,7 +403,8 @@
             "effect": [
               { "math": [ "u_val('mana')", "-=", "25" ] },
               { "u_consume_item": "light_minus_battery_cell", "count": 1 },
-              { "u_spawn_item": "light_minus_battery_cell", "force_equip": true, "suppress_message": true }
+              { "u_spawn_item": "light_minus_battery_cell", "force_equip": true, "suppress_message": true },
+              { "u_message": "You recharge the battery.", "type": "mixed" }
             ],
             "false_effect": [ { "u_message": "You don't have enough energy.", "type": "mixed" } ]
           }
@@ -265,7 +420,8 @@
             "effect": [
               { "math": [ "u_val('mana')", "-=", "50" ] },
               { "u_consume_item": "light_battery_cell", "count": 1 },
-              { "u_spawn_item": "light_battery_cell", "force_equip": true, "suppress_message": true }
+              { "u_spawn_item": "light_battery_cell", "force_equip": true, "suppress_message": true },
+              { "u_message": "You recharge the battery.", "type": "mixed" }
             ],
             "false_effect": [ { "u_message": "You don't have enough energy.", "type": "mixed" } ]
           }
@@ -281,7 +437,8 @@
             "effect": [
               { "math": [ "u_val('mana')", "-=", "50" ] },
               { "u_consume_item": "light_cell_rechargeable", "count": 1 },
-              { "u_spawn_item": "light_cell_rechargeable", "force_equip": true, "suppress_message": true }
+              { "u_spawn_item": "light_cell_rechargeable", "force_equip": true, "suppress_message": true },
+              { "u_message": "You recharge the battery.", "type": "mixed" }
             ],
             "false_effect": [ { "u_message": "You don't have enough energy.", "type": "mixed" } ]
           }
@@ -297,7 +454,8 @@
             "effect": [
               { "math": [ "u_val('mana')", "-=", "200" ] },
               { "u_consume_item": "medium_battery_cell", "count": 1 },
-              { "u_spawn_item": "medium_battery_cell", "force_equip": true, "suppress_message": true }
+              { "u_spawn_item": "medium_battery_cell", "force_equip": true, "suppress_message": true },
+              { "u_message": "You recharge the battery.", "type": "mixed" }
             ],
             "false_effect": [ { "u_message": "You don't have enough energy.", "type": "mixed" } ]
           }
@@ -313,7 +471,8 @@
             "effect": [
               { "math": [ "u_val('mana')", "-=", "500" ] },
               { "u_consume_item": "heavy_battery_cell", "count": 1 },
-              { "u_spawn_item": "heavy_battery_cell", "force_equip": true, "suppress_message": true }
+              { "u_spawn_item": "heavy_battery_cell", "force_equip": true, "suppress_message": true },
+              { "u_message": "You recharge the battery.", "type": "mixed" }
             ],
             "false_effect": [ { "u_message": "You don't have enough energy.", "type": "mixed" } ]
           }
@@ -329,7 +488,8 @@
             "effect": [
               { "math": [ "u_val('mana')", "-=", "625" ] },
               { "u_consume_item": "heavy_plus_battery_cell", "count": 1 },
-              { "u_spawn_item": "heavy_plus_battery_cell", "force_equip": true, "suppress_message": true }
+              { "u_spawn_item": "heavy_plus_battery_cell", "force_equip": true, "suppress_message": true },
+              { "u_message": "You recharge the battery.", "type": "mixed" }
             ],
             "false_effect": [ { "u_message": "You don't have enough energy.", "type": "mixed" } ]
           }
@@ -405,7 +565,7 @@
               { 
                 "id": "kaenbyou_corpseexplosion_explode", 
                 "effect": [ 
-                  { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_val('weight') / 100000 ) / 2 ) * rng( 0.75, 1.25 ) )" ] },
+                  { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_val('weight') / 1000000 ) / 2 ) * 100 * rng( 0.75, 1.25 ) )" ] },
                   "npc_die",
                   { "math": [ "var_corpseexplosion_aoe", "=", "1 + rand(1)" ] },
                   { "u_cast_spell": { "id": "kaenbyou_corpseexplosion2" }, "loc": { "global_val": "var_corpseexplosion_loc" } },
@@ -432,8 +592,9 @@
       }
     ],
     "//": "This asks for the player to select a location, checks if there's any corpse (fresh-ish)",
-    "//2": "If true, it saves the location, sets dmg as ( corpse_weight_kg * 0.5 * ( 75 - 125% ) ), divided by two as the spell deals two instances of dmg, heat + bash",
-    "//3": "It then removes the corpse item, sets a random aoe, and casts the spells plus the vfx at the location. If there's no corpse or Kaenbyou cancels the cast, some mana is refunded"
+    "//2": "If true, it saves the location, sets dmg as ( corpse_weight * 0.5 * ( 75 - 125% ) ), divided by two as the spell deals two instances of dmg, heat + bash",
+    "//3": "It then removes the corpse item, sets a random aoe, and casts the spells plus the vfx at the location. If there's no corpse or Kaenbyou cancels the cast, some mana is refunded",
+    "//4": "The corpse actual weight is not the monster's weight. After testing at bit, it goes from 0.5 - 1.2, up to 3 kg for common zombies. The formula above is adjusted to deal ~100x times that amount"
   },
   {
     "id": "kaenbyou_infernoburst_eoc",
@@ -765,7 +926,7 @@
         ],
         "keys": [ "1" ],
         "descriptions": [
-          "Warning: this cannot be undone."
+          "<color_yellow>Warning:</color> this cannot be undone."
         ],
         "hide_failing": true,
         "allow_cancel": true
@@ -950,7 +1111,8 @@
     "effect": [
       { "u_cast_spell": { "id": "kokoro_backsweep2_bash" }, "targeted": true }
     ],
-    "false_effect": [ { "run_eocs": [ "kokoro_backsweep_check2" ] } ]
+    "false_effect": [ { "run_eocs": [ "kokoro_backsweep_check2" ] } ],
+    "//": "These chained EOCs check which of bash, cut or stab is higher, and casts a different spell accordingly"
   },
   {
     "id": "kokoro_backsweep_check2",
@@ -1003,7 +1165,7 @@
       { "u_message": "You're not using any compatible weapons.", "type": "mixed" },
       { "math": [ "u_val('mana')", "+=", "75" ] }
     ],
-    "//": "Simple EOC just checks if Kokoro is wielding any weapon allowed by her MA, if she isn't the cast fails"
+    "//": "Based on kokoro_backsweep_eoc . Checks if Kokoro is wielding any weapon allowed by her MA, if she isn't the cast fails"
   },
   {
     "id": "kokoro_quick_attack_check",
@@ -1066,6 +1228,95 @@
     "id": "kokoro_spirit_naginata_timer_eoc",
     "type": "effect_on_condition",
     "effect": [ { "math": [ "var_spirit_naginata", "=", "0" ] } ]
+  },
+  {
+    "id": "kokoro_throw_weapon_eoc",
+    "type": "effect_on_condition",
+    "condition": "u_has_weapon",
+    "effect": [
+      {
+        "if": {
+          "message": "Set target", 
+          "range": { "math": [ "( min( ( max( u_skill('melee'), u_skill('dodge'), u_skill('throw') ) * 2 ), 24 ) * var_kokoro_deter_aoe_mod )" ] },
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_kokoro_throw_weapon_loc" }
+        },
+        "then": { "run_eocs": [ "kokoro_throw_weapon_check_eoc" ] },
+        "else": [
+          { "math": [ "u_val('mana')", "+=", "75" ] },
+          { "u_message": "Canceled" }
+        ]
+      }
+    ],
+    "false_effect": [ 
+      { "u_message": "You're not wielding any weapon.", "type": "mixed" },
+      { "math": [ "u_val('mana')", "+=", "75" ] }
+    ],
+    "//": "Based on kokoro_backsweep_eoc . Checks if Kokoro is wielding anything, as u_has_weapon applies to anything, not just weapons. This is a fortuitous coincidence",
+    "//2": "Then it sets the target's location, and runs the dmg type checks",
+    "//3": "After the dmg check and spell cast, the teleport EOC is run, to simulate Kokoro throwing the weapon"
+  },
+  {
+    "id": "kokoro_throw_weapon_check_eoc",
+    "type": "effect_on_condition",
+    "condition": {
+      "and": [
+        { "math": [ "var_melee_bash_dmg", ">=", "var_melee_cut_dmg" ] },
+        { "math": [ "var_melee_bash_dmg", ">=", "var_melee_stab_dmg" ] }
+      ]
+    },
+    "effect": [
+      { "u_cast_spell": { "id": "kokoro_throw_weapon2_bash" }, "loc": { "global_val": "var_kokoro_throw_weapon_loc" } },
+      { "run_eocs": [ "kokoro_throw_weapon_teleport_eoc" ] }
+    ],
+    "false_effect": [ { "run_eocs": [ "kokoro_throw_weapon_check2_eoc" ] } ]
+  },
+  {
+    "id": "kokoro_throw_weapon_check2_eoc",
+    "type": "effect_on_condition",
+    "condition": {
+      "and": [
+        { "math": [ "var_melee_cut_dmg", ">=", "var_melee_bash_dmg" ] },
+        { "math": [ "var_melee_cut_dmg", ">=", "var_melee_stab_dmg" ] }
+      ]
+    },
+    "effect": [
+      { "u_cast_spell": { "id": "kokoro_throw_weapon2_cut" }, "loc": { "global_val": "var_kokoro_throw_weapon_loc" } },
+      { "run_eocs": [ "kokoro_throw_weapon_teleport_eoc" ] }
+    ],
+    "false_effect": [ { "run_eocs": [ "kokoro_throw_weapon_check3_eoc" ] } ]
+  },
+  {
+    "id": "kokoro_throw_weapon_check3_eoc",
+    "type": "effect_on_condition",
+    "condition": {
+      "and": [
+        { "math": [ "var_melee_stab_dmg", ">=", "var_melee_bash_dmg" ] },
+        { "math": [ "var_melee_stab_dmg", ">=", "var_melee_cut_dmg" ] }
+      ]
+    },
+    "effect": [
+      { "u_cast_spell": { "id": "kokoro_throw_weapon2_stab" }, "loc": { "global_val": "var_kokoro_throw_weapon_loc" } },
+      { "run_eocs": [ "kokoro_throw_weapon_teleport_eoc" ] }
+    ]
+  },
+  {
+    "id": "kokoro_throw_weapon_teleport_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "u_run_inv_eocs": "all",
+        "search_data": [ { "wielded_only": true } ],
+        "true_eocs": [ 
+          { 
+            "id": "kokoro_throw_weapon_teleport_2_eoc", 
+            "effect": [ { "npc_teleport": { "global_val": "var_kokoro_throw_weapon_loc" } } ]
+          }
+        ]
+      }
+    ],
+    "//": "This takes the weapon from her hands and places it at the location",
+    "//2": "Should be stopped by the first monster in the line. Kokoro is just that good as a weaponmaster"
   },
   {
     "id": "kokoro_unleash_emotion_eoc",
@@ -1373,100 +1624,14 @@
       {
         "if": {
           "message": "Set target", 
-          "range": { "math": [ "u_skill('mechanics')" ] },
+          "range": { "math": [ "( u_skill('mechanics') + 1 )" ] },
           "u_query_tile": "line_of_sight",
           "target_var": { "global_val": "var_extendo_arm_loc" }
         },
         "then": [
-          { 
-            "u_location_variable": { "global_val": "var_extendo_arm_loc" }, 
-            "min_radius": 15, 
-            "max_radius": 15,
-            "monster": "", "target_min_radius": 15, "target_max_radius": 15,
-            "true_eocs": [
-              {
-                "id": "nitori_extendo_arm_check_1",
-                "condition": { "math": [ "u_val('weight')", ">=", "n_val('weight')" ] },
-                "effect": [ 
-                  { "u_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
-                  { "u_message": "AAA", "type": "mixed" }
-                ],
-                "false_effect": [ 
-                  {
-                    "run_eocs": [
-                      {
-                        "id": "nitori_extendo_arm_check_2",
-                        "condition": { "math": [ "u_val('weight')", "<", "n_val('weight')" ] },
-                        "effect": [ 
-                          { "u_cast_spell": { "id": "nitori_extendo_arm_self_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
-                          { "u_message": "BBB", "type": "mixed" }
-                        ],
-                        "false_effect": [ 
-                          { "math": [ "u_val('mana')", "+=", "75" ] },
-                          { "u_message": "CCC", "type": "mixed" }
-                        ]
-                      }
-                    ]
-                  },
-                  { "u_message": "DDD", "type": "mixed" }
-                ]
-              }
-            ],
-            "false_eocs": [ 
-              {
-                "id": "nitori_extendo_arm_fail2",
-                "effect": [ 
-                  { "math": [ "u_val('mana')", "+=", "75" ] },
-                  { "u_message": "EEE", "type": "mixed" }
-                ]
-              }
-            ]
-          },
-          {
-            "u_map_run_item_eocs": "all",
-            "//search_data": [  ],
-            "loc": { "global_val": "var_extendo_arm_loc" },
-            "min_radius": 0,
-            "max_radius": 0,
-            "true_eocs": [ 
-              {
-                "id": "nitori_extendo_arm_check_3",
-                "condition": { "math": [ "u_val('weight')", ">=", "n_val('weight')" ] },
-                "effect": [ 
-                  { "u_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
-                  { "u_message": "FFF", "type": "mixed" }
-                ],
-                "false_effect": [ 
-                  {
-                    "run_eocs": [
-                      {
-                        "id": "nitori_extendo_arm_check_4",
-                        "condition": { "math": [ "u_val('weight')", "<", "n_val('weight')" ] },
-                        "effect": [ 
-                          { "u_cast_spell": { "id": "nitori_extendo_arm_self_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
-                          { "u_message": "GGG", "type": "mixed" }
-                        ],
-                        "false_effect": [ 
-                          { "math": [ "u_val('mana')", "+=", "75" ] },
-                          { "u_message": "HHH", "type": "mixed" }
-                        ]
-                      }
-                    ]
-                  },
-                  { "u_message": "III", "type": "mixed" }
-                ]
-              } 
-            ],
-            "false_eocs": [ 
-              {
-                "id": "nitori_extendo_arm_fail",
-                "effect": [ 
-                  { "math": [ "u_val('mana')", "+=", "75" ] },
-                  { "u_message": "JJJ", "type": "mixed" }
-                ]
-              }
-            ]
-          }
+          { "run_eocs": [ "nitori_extendo_arm_creature_check" ] },
+          { "run_eocs": [ "nitori_extendo_arm_item_check" ] },
+          { "run_eocs": [ "nitori_extendo_arm_refund_check" ] }
         ],
         "else": [
           { "math": [ "u_val('mana')", "+=", "75" ] },
@@ -1474,8 +1639,90 @@
         ]
       }
     ],
-    "//WIP": "It's not pulling monsters",
-    "//WIP2": "Add NPC pull after fixing the monsters"
+    "//": "This first saves the target's location, then sequentially checks for creatures (NPCs, monsters), and then another to check for items"
+  },
+  {
+    "id": "nitori_extendo_arm_creature_check",
+    "type": "effect_on_condition",
+    "effect": [ 
+      { "u_cast_spell": { "id": "nitori_extendo_arm_creature_spell" }, "loc": { "global_val": "var_extendo_arm_loc" } }
+    ],
+    "//": "If there's a creature at the location, Nitori casts this spell on them, which forces to run the next EOC",
+    "//2": "(This is because I couldn't figure out how to identify monsters at the location with EOCs instead. Last version with the (non-functional) attempt is 0.9.7.6)"
+  },
+  {
+    "id": "nitori_extendo_arm_creature_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "u_location_variable": { "global_val": "var_extendo_arm_creature_loc" } },
+      { 
+        "run_eocs": [ 
+          {
+            "id": "nitori_extendo_arm_pulling_1",
+            "condition": { "math": [ "n_val('weight')", ">=", "u_val('weight')" ] },
+            "effect": [ 
+              { "u_cast_spell": { "id": "nitori_extendo_arm2" } },
+              { "npc_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_creature_loc" } },
+              { "npc_message": "You pull your target towards you!", "type": "good" }
+            ],
+            "false_effect": [ 
+              { "u_cast_spell": { "id": "nitori_extendo_arm2" } },
+              { "npc_cast_spell": { "id": "nitori_extendo_arm_self_pull" }, "loc": { "global_val": "var_extendo_arm_creature_loc" } },
+              { "npc_message": "You pull yourself towards your target!", "type": "mixed" }
+            ]
+          }
+        ] 
+      },
+      { "math": [ "nitori_extendo_arm_pulledsomething", "+=", "1" ] }
+    ],
+    "//": "If there's no creature at the location, the previous EOC -> spell is not cast and this EOC is not run. This is run by the target, so n/npc_ here is Nitori",
+    "//2": "This checks if Nitori is heavier than the targeted creature, and either pulls it or pulls herself",
+    "//3": "It also forces the target to cast the qol self stun",
+    "//4": "Then, it adds the var_PULLEDSOMETHING , used further downstream"
+  },
+  {
+    "id": "nitori_extendo_arm_item_check",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "u_map_run_item_eocs": "all",
+        "//search_data": [  ],
+        "loc": { "global_val": "var_extendo_arm_loc" },
+        "min_radius": 0,
+        "max_radius": 0,
+        "true_eocs": [ 
+          {
+            "id": "nitori_extendo_arm_pulling_2",
+            "condition": { "math": [ "u_val('weight')", ">=", "n_val('weight')" ] },
+            "effect": [ 
+              { "u_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
+              { "u_message": "You pull your target towards you!", "type": "good" },
+              { "math": [ "nitori_extendo_arm_pulledsomething", "+=", "1" ] }
+            ],
+            "false_effect": [ 
+              { "u_cast_spell": { "id": "nitori_extendo_arm_self_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
+              { "u_message": "You pull yourself towards your target!", "type": "mixed" },
+              { "math": [ "nitori_extendo_arm_pulledsomething", "+=", "1" ] }
+            ]
+          } 
+        ]
+      }
+    ],
+    "//2": "This checks for any items at the location, then checks if Nitori is heavier than the (heaviest) item, and either pulls herself or the items",
+    "//": "Unlike the previous EOC, this is run by Nitori, so u_ is her",
+    "//3": "It pulls anything in the stack. If there's a single heavier item, it runs for every item but ultimately only pulls herself. It doesn't pull items out of furniture or containers"
+  },
+  {
+    "id": "nitori_extendo_arm_refund_check",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "nitori_extendo_arm_pulledsomething", "==", "0" ] },
+    "effect": [
+      { "math": [ "u_val('mana')", "+=", "75" ] },
+      { "u_message": "There's nothing to be pulled at the location.", "type": "mixed" },
+      { "math": [ "nitori_extendo_arm_pulledsomething", "=", "0" ] }
+    ],
+    "false_effect": [ { "math": [ "nitori_extendo_arm_pulledsomething", "=", "0" ] } ],
+    "//": "If there was no creature and no item at the location, Nitori refunds some cost"
   },
   {
     "id": "nitori_opticalcamouflage_eoc",
@@ -2992,16 +3239,195 @@
     "id": "yamame_damnedrope_eoc",
     "type": "effect_on_condition",
     "effect": [ 
-      { "u_add_trait": "damnedrope_strength_mut" },
-      { "queue_eocs": [ "yamame_damnedrope_end" ], "time_in_future": "1 s" }
-    ]
+      {
+        "if": {
+          "message": "Set target", 
+          "range": { "math": [ "var_damnedrope_range" ] },
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_damnedrope_loc" }
+        },
+        "then": [ 
+          {
+            "if": { "u_has_trait": "TSUCHIGUMO_SPECIES_active" },
+            "then": [
+              { "math": [ "var_yamame_as_youkai", "=", "1" ] },
+              { "math": [ "var_yamame_as_human", "=", "0" ] }
+            ],
+            "else": [
+              { "math": [ "var_yamame_as_youkai", "=", "0" ] },
+              { "math": [ "var_yamame_as_human", "=", "1" ] }
+            ]
+          },
+          { "run_eocs": [ "yamame_damnedrope_check_creature_eoc" ] },
+          { "run_eocs": [ "yamame_damnedrope_check_item_eoc" ] },
+          { "run_eocs": [ "yamame_damnedrope_self_pull_to_location_eoc" ] }
+        ],
+        "else": [
+          { "math": [ "u_val('mana')", "+=", "75" ] },
+          { "u_message": "Canceled" }
+        ]
+      }
+    ],
+    "//": "Based on nitori_extendo_arm_eoc ",
+    "//2": "This first saves the target's location, then checks if Yamame is in human or youkai form, then sequentially checks for creature > item > location, in order of priority",
+    "//3": "range 8 - 20"
   },
   {
-    "id": "yamame_damnedrope_end",
+    "id": "yamame_damnedrope_check_creature_eoc",
     "type": "effect_on_condition",
     "effect": [ 
-      { "u_cast_spell": { "id": "yamame_damnedrope2" }, "targeted": true },
-      { "u_lose_trait": "damnedrope_strength_mut" }
+      { "u_cast_spell": { "id": "yamame_damnedrope_creature_spell" }, "loc": { "global_val": "var_damnedrope_loc" } }
+    ],
+    "//": "If there's a creature at the location, Yamame casts this spell on them, which forces to run the next EOC"
+  },
+  {
+    "id": "yamame_damnedrope_creature_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "u_location_variable": { "global_val": "var_damnedrope_creature_loc" } },
+      { 
+        "run_eocs": [ 
+          {
+            "id": "yamame_damnedrope_pulling_creature_as_human",
+            "condition": { "math": [ "var_yamame_as_human", ">=", "1" ] },
+            "effect": [ 
+              { 
+                "run_eocs": [ 
+                  {
+                    "id": "yamame_damnedrope_pulling_1",
+                    "condition": { "math": [ "( n_val('weight') * 2 )", ">=", "u_val('weight')" ] },
+                    "effect": [ 
+                      { "u_cast_spell": { "id": "yamame_damnedrope3" } },
+                      { "npc_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_creature_loc" } },
+                      { "npc_message": "You pull your target towards you!", "type": "good" }
+                    ],
+                    "false_effect": [ 
+                      { "u_cast_spell": { "id": "yamame_damnedrope3" } },
+                      { "npc_cast_spell": { "id": "yamame_damnedrope_self_pull" }, "loc": { "global_val": "var_damnedrope_creature_loc" } },
+                      { "npc_message": "You pull yourself towards your target!", "type": "mixed" }
+                    ]
+                  }
+                ] 
+              }
+            ]
+          },
+          {
+            "id": "yamame_damnedrope_pulling_creature_as_youkai",
+            "condition": { "math": [ "var_yamame_as_youkai", ">=", "1" ] },
+            "effect": [ 
+              { "u_cast_spell": { "id": "yamame_damnedrope3" } },
+              { "npc_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_creature_loc" } },
+              { "npc_message": "You pull your target towards you!", "type": "good" }
+            ]
+          }
+        ] 
+      },
+      { "math": [ "yamame_damnedrope_creature", "+=", "1" ] }
+    ],
+    "//": "If there's no creature at the location, the previous EOC -> spell is not cast and this EOC is not run. This is run by the target, so n/npc_ here is Yamame",
+    "//2": "This checks if Yamame is in human form, then checks if the targeted creature's weight is less or equal than x2 Yamame's weight, and she either pulls it or pulls herself accordingly",
+    "//3": "If Yamame is in youkai form, she can only pull the target towards her",
+    "//4": "It also forces the target to cast the self stun",
+    "//5": "Then, it adds the var_CREATUREFOUND that stops the checks below"
+  },
+  {
+    "id": "yamame_damnedrope_check_item_eoc",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "yamame_damnedrope_creature", "==", "0" ] },
+    "effect": [
+      {
+        "u_map_run_item_eocs": "all",
+        "//search_data": [  ],
+        "loc": { "global_val": "var_damnedrope_loc" },
+        "min_radius": 0,
+        "max_radius": 0,
+        "true_eocs": [ 
+          {
+            "id": "yamame_damnedrope_pulling_item_as_human",
+            "condition": { "math": [ "var_yamame_as_human", ">=", "1" ] },
+            "effect": [ 
+              { 
+                "run_eocs": [ 
+                  {
+                    "id": "yamame_damnedrope_pulling_2",
+                    "condition": { "math": [ "( u_val('weight') * 2 )", ">=", "n_val('weight')" ] },
+                    "effect": [ 
+                      { "u_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_loc" } },
+                      { "u_message": "You pull your target towards you!", "type": "good" },
+                      { "math": [ "yamame_damnedrope_item", "+=", "1" ] }
+                    ],
+                    "false_effect": [ 
+                      { "u_cast_spell": { "id": "yamame_damnedrope_self_pull" }, "loc": { "global_val": "var_damnedrope_loc" } },
+                      { "u_message": "You pull yourself towards your target!", "type": "mixed" },
+                      { "math": [ "yamame_damnedrope_item", "+=", "1" ] }
+                    ]
+                  } 
+                ] 
+              }
+            ]
+          },
+          {
+            "id": "yamame_damnedrope_pulling_item_as_youkai",
+            "condition": { "math": [ "var_yamame_as_youkai", ">=", "1" ] },
+            "effect": [ 
+              { "u_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_loc" } },
+              { "u_message": "You pull your target towards you!", "type": "good" },
+              { "math": [ "yamame_damnedrope_item", "+=", "1" ] }
+            ]
+          }
+        ]
+      }
+    ],
+    "//": "Unlike the previous EOC, this is run by Yamame, so u_ is her",
+    "//2": "This only runs if there was no targeted creature",
+    "//3": "If that's the case, it first checks if Yamame is in human form, then checks for if Yamame is heavier than the (heaviest) item, and either pulls herself or the items",
+    "//4": "It pulls anything in the stack. If there's a single heavier item, it runs for every item but ultimately only pulls herself. It doesn't pull items out of furniture or containers",
+    "//5": "If Yamame is in youkai form, she can only pull the items towards her",
+    "//6": "Then, it adds the var_ITEMFOUND that stops the location check below"
+  },
+  {
+    "id": "yamame_damnedrope_self_pull_to_location_eoc",
+    "type": "effect_on_condition",
+    "condition": {
+      "and": [
+        { "math": [ "yamame_damnedrope_creature", "==", "0" ] },
+        { "math": [ "yamame_damnedrope_item", "==", "0" ] }
+      ]
+    },
+    "effect": [
+      {
+        "if": { "map_terrain_with_flag": "EMPTY_SPACE", "loc": { "global_val": "var_damnedrope_loc" } },
+        "then": { "math": [ "yamame_damnedrope_loc_noground", "+=", "1" ] }
+      },
+      {
+        "if": { "map_terrain_with_flag": "LIQUID", "loc": { "global_val": "var_damnedrope_loc" } },
+        "then": { "math": [ "yamame_damnedrope_loc_noground", "+=", "1" ] }
+      },
+      {
+        "if": { "math": [ "yamame_damnedrope_loc_noground", "==", "0" ] },
+        "then": [ 
+          { "u_cast_spell": { "id": "yamame_damnedrope_self_pull" }, "loc": { "global_val": "var_damnedrope_loc" } },
+          { "u_message": "You pull yourself!", "type": "good" },
+          { "run_eocs": [ "yamame_damnedrope_reset_eoc" ] }
+        ],
+        "else": [
+          { "math": [ "u_val('mana')", "+=", "75" ] },
+          { "u_message": "You can't pull yourself without solid ground.", "type": "mixed" },
+          { "run_eocs": [ "yamame_damnedrope_reset_eoc" ] }
+        ]
+      }
+    ],
+    "false_effect": [ { "run_eocs": [ "yamame_damnedrope_reset_eoc" ] } ],
+    "//": "If there was no creature and no item at the location, Yamame checks if there's solid ground to pull herself to the location, and pulls herself accordingly",
+    "//2": "It runs the RESET_VARS EOC regardless of that"
+  },
+  {
+    "id": "yamame_damnedrope_reset_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "yamame_damnedrope_creature", "=", "0" ] },
+      { "math": [ "yamame_damnedrope_item", "=", "0" ] },
+      { "math": [ "yamame_damnedrope_loc_noground", "=", "0" ] }
     ]
   },
   {

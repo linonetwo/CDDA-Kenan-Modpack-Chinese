@@ -115,7 +115,7 @@
     "values": [
       { "value": "KNOCKBACK_RESIST", "add": { "math": [ "100 - u_vitamin('SIN') * 10" ] } },
       { "value": "KNOCKDOWN_RESIST", "add": { "math": [ "100 - u_vitamin('SIN') * 10" ] } },
-      { "value": "ARMOR_ALL", "multiply": { "math": [ " u_vitamin('SIN') / 20" ] } }
+      { "value": "ARMOR_ALL", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } }
     ],
     "hit_me_effect": [ { "id": "sin_strike" } ]
   },

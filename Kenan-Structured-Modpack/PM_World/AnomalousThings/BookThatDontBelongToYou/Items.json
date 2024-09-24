@@ -24,7 +24,22 @@
     "longest_side": "28 cm",
     "looks_like": "story_book",
     "material": [ "flesh" ],
-    "color": "red"
+    "color": "red",
+    "use_action": { "type": "effect_on_conditions", "effect_on_conditions": [ "skin_book_eoc_evoked" ] }
+  },
+  {
+    "id": "skin_prophecy_evo_page",
+    "type": "GENERIC",
+    "name": { "str": "<color_blue>charred page</color>" },
+    "description": "One of a page from Skin Prophecy book, it's a charred flesh with some blood writing on it. You feel ominous power holding it.",
+    "symbol": "?",
+    "weight": "6 g",
+    "volume": "3 ml",
+    "longest_side": "28 cm",
+    "looks_like": "note",
+    "material": [ "flesh" ],
+    "color": "red",
+    "use_action": { "type": "effect_on_conditions", "effect_on_conditions": [ "92_ego_evolve" ] }
   },
   {
     "type": "furniture",

@@ -13,7 +13,7 @@
     "to_hit": { "balance": "good", "grip": "weapon", "length": "long", "surface": "any" },
     "melee_damage": { "bash": 16 },
     "material": [ "steel" ],
-    "//": "Add lunarian_steel or something",
+    "//note": "Add lunarian_steel or something",
     "material_thickness": 8,
     "symbol": "[",
     "color": "white",
@@ -26,7 +26,7 @@
     "//3": "I have no idea if this is enough to emulate a shield's coverage",
     "weapon_category": [ "SHIELDS" ],
     "flags": [ "DURABLE_MELEE", "OUTER", "OVERSIZE" ],
-    "//2": "Don't know if this should be TOOL_ARMOR, ARMOR or WEAPON. Ideally one should shield bash with it while using it, independently of any actual weapons on the 'main hand', because good shields are used to shield bash faces"
+    "//2": "Can be either ARMOR or TOOL_ARMOR. No weapon to allow free hand(s). Ideally one should shield bash with it while using it, independently of any actual weapons on the 'main hand', because good shields are used to shield bash faces"
   },
   {
     "id": "tengu_mask",
@@ -82,7 +82,7 @@
     "to_hit": { "balance": "good", "grip": "weapon", "length": "short", "surface": "any" },
     "melee_damage": { "bash": 16 },
     "material": [ "iron", "steel" ],
-    "//": "Add tengu_steel or something",
+    "//note": "Add tengu_steel or something",
     "material_thickness": 6,
     "symbol": "[",
     "color": "white",
@@ -94,7 +94,6 @@
     ],
     "//3": "I have no idea if this is enough to emulate a shield's coverage",
     "weapon_category": [ "SHIELDS" ],
-    "flags": [ "DURABLE_MELEE", "OUTER", "OVERSIZE" ],
-    "//2": "Don't know if this should be TOOL_ARMOR, ARMOR or WEAPON. Ideally one should shield bash with it while using it, independently of any actual weapons on the 'main hand', because good shields are used to shield bash faces"
+    "flags": [ "DURABLE_MELEE", "OUTER", "OVERSIZE" ]
   }
 ]

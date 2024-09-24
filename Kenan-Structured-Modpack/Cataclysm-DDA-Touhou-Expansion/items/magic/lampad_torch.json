@@ -17,15 +17,9 @@
     "charges_per_use": 1,
     "techniques": [ "WBLOCK_1" ],
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 20 } } ],
-    "relic_data": {
-      "passive_effects": [ 
-        { 
-          "condition": "ALWAYS", 
-          "mutations": [ "lampad_torch_off_mut" ]
-        },
-        { "id": "ench_lampad_torch" }
-      ],
-      "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "4 m" }
+    "relic_data": { 
+      "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "4 m" },
+      "passive_effects": [ { "id": "ench_lampad_torch" } ]
     },
     "use_action": [
       {

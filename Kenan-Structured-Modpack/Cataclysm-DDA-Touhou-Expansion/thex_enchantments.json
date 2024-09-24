@@ -2,6 +2,8 @@
   {
     "id": "ench_autumn_melancholy",
     "type": "enchantment",
+    "name": { "str": "Autumn melancholy" },
+    "description": "Food feels more filling.",
     "condition": "ALWAYS",
     "values": [ 
       { "value": "METABOLISM", "multiply": -0.333 }
@@ -10,6 +12,8 @@
   {
     "id": "ench_death_coin",
     "type": "enchantment",
+    "name": { "str": "Shinigami work ethic" },
+    "description": "Taking it easy.",
     "condition": "ALWAYS",
     "values": [ 
       { "value": "ATTACK_SPEED", "multiply": 0.05 },
@@ -20,6 +24,8 @@
   {
     "id": "ench_esper_cloak",
     "type": "enchantment",
+    "name": { "str": "Chuuni enlightenment" },
+    "description": "Doing magic feels easier.",
     "has": "WORN",
     "condition": "ALWAYS",
     "values": [ 
@@ -30,6 +36,8 @@
   {
     "id": "ench_lampad_torch",
     "type": "enchantment",
+    "name": { "str": "Light Madness" },
+    "description": "Your head feels light, your steps heavy, you're not more tired.",
     "condition": "ALWAYS",
     "values": [ 
       { "value": "INTELLIGENCE", "multiply": -0.05 },
@@ -41,6 +49,8 @@
   {
     "id": "ench_lampad_torch_lit",
     "type": "enchantment",
+    "name": { "str": "Madness" },
+    "description": "Your head feels heavy , your steps light, can't stay still .",
     "condition": "ALWAYS",
     "values": [ 
       { "value": "INTELLIGENCE", "multiply": -0.1 },
@@ -49,11 +59,18 @@
       { "value": "ATTACK_SPEED", "multiply": -0.2 },
       { "value": "BONUS_DODGE", "add": -1 },
       { "value": "MOVE_COST", "multiply": -0.1 }
-    ]
+    ],
+    "intermittent_activation": {
+      "effects": [
+        { "spell_effects": [ { "id": "lampad_insanity" } ], "frequency": "30 s" }
+      ]
+    }
   },
   {
     "id": "ench_lucky_charm",
     "type": "enchantment",
+    "name": { "str": "Lucky" },
+    "description": "You feel lucky!",
     "condition": "ALWAYS",
     "values": [ 
       { "value": "EVASION", "add": 0.01 }
@@ -62,6 +79,8 @@
   {
     "id": "ench_skinwalker_pelt",
     "type": "enchantment",
+    "name": { "str": "Skinwalker pelt" },
+    "description": "You feel strange… suddenly craving meat and hating anyone too close around you.",
     "has": "WORN",
     "condition": "ALWAYS",
     "values": [ 
@@ -74,6 +93,8 @@
   {
     "id": "ench_strong_ice",
     "type": "enchantment",
+    "name": { "str": "Strongness" },
+    "description": "You feel strong.",
     "condition": "ALWAYS",
     "values": [ 
       { "value": "INTELLIGENCE", "add": -3 },
@@ -83,6 +104,8 @@
   {
     "id": "ench_surprising_umbrella",
     "type": "enchantment",
+    "name": { "str": "Element of surprise" },
+    "description": "You feel mischievous.",
     "has": "HELD",
     "condition": "ALWAYS",
     "values": [ 
@@ -96,6 +119,8 @@
   {
     "id": "ench_wind_priestess_charm",
     "type": "enchantment",
+    "name": { "str": "Wind blessing" },
+    "description": "You feel blessed.",
     "has": "WORN",
     "condition": "ALWAYS",
     "values": [ 

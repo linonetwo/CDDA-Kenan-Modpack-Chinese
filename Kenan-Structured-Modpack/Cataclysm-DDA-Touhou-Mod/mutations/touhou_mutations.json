@@ -80,24 +80,6 @@
     "//": "Should always deactivate if Tenko is not using her custom MA. Also I'm not sure the deactivate_condition is actually working, it's there to prevent this run all the time"
   },
   {
-    "id": "damnedrope_strength_mut",
-    "type": "mutation",
-    "name": { "str": "Spider strength (mutation)" },
-    "description": "Grants bonus str for the pull_target spell effect of yamame_damnedrope . Used at yamame_damnedrope_eoc ",
-    "points": 0,
-    "player_display": false,
-    "purifiable": false,
-    "valid": false,
-    "enchantments": [ 
-      { 
-        "condition": "ALWAYS", 
-        "values": [ 
-          { "value": "STRENGTH", "add": 72 }
-        ] 
-      } 
-    ]
-  },
-  {
     "id": "GYOKUTO_SPECIES",
     "type": "mutation",
     "name": { "str": "Gyokuto" },

@@ -73,7 +73,7 @@
     "id": "sakuya_freezeknife",
     "type": "SPELL",
     "name": { "str": "Freeze knife" },
-    "description": "Throw a knife and freeze it in space and time, allowing its use as solid platform.  \nWarning: this permanently consumes the item.",
+    "description": "Throw a knife and freeze it in space and time, allowing its use as solid platform.  \n<color_yellow>Warning:</color> This permanently consumes the item.",
     "spell_class": "NONE",
     "teachable": false,
     "valid_targets": [ "ground" ],
@@ -266,13 +266,13 @@
     "base_energy_cost": 0,
     "energy_source": "MANA",
     "flags": [ "IGNORE_WALLS", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "//": "Definitely should invert colors under the aoe"
+    "//note": "Definitely should invert colors under the aoe"
   },
   {
     "id": "sakuya_vanishingeverything",
     "type": "SPELL",
     "name": { "str": "Vanishing everything" },
-    "description": "Manipulate spacetime, teleporting a short distance.  Cast again in the next 3 s to teleport back.",
+    "description": "Manipulate spacetime, teleporting a short distance.  Cast again in the <color_light_blue>next 3 s</color> to teleport back.",
     "spell_class": "NONE",
     "teachable": false,
     "valid_targets": [ "self" ],
@@ -289,8 +289,8 @@
   {
     "id": "sakuya_vanishingeverything2",
     "type": "SPELL",
-    "name": { "str": "Vanishing everything" },
-    "description": "Manipulate spacetime, teleporting a short distance.  Cast again in the next 3 s to teleport back.",
+    "name": { "str": "Vanishing everything (tp)" },
+    "description": "Self teleport effect of sakuya_vanishingeverything ",
     "spell_class": "NONE",
     "valid_targets": [ "ground" ],
     "effect": "short_range_teleport",
@@ -299,6 +299,7 @@
     "max_range": 4,
     "max_level": 1,
     "difficulty": -11,
+    "message": "",
     "base_casting_time": 0,
     "base_energy_cost": 0,
     "energy_source": "STAMINA",

@@ -1,92 +1,17 @@
 [
   {
-    "id": "autumn_melancholy_mut",
-    "type": "mutation",
-    "name": "Autumn melancholy",
-    "description": "Food feels more filling.",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true
-  },
-  {
-    "id": "death_coin_mut",
-    "type": "mutation",
-    "name": "Shinigami work ethic",
-    "description": "Taking it easy.",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true
-  },
-  {
-    "id": "esper_cloak_mut",
-    "type": "mutation",
-    "name": "Chuuni enlightenment",
-    "description": "Doing magic feels easier.",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true
-  },
-  {
-    "id": "lampad_torch_off_mut",
-    "type": "mutation",
-    "name": "Light Madness",
-    "description": "Your head feels light, your steps heavy, you're not more tired.",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true
-  },
-  {
-    "id": "lampad_torch_lit_mut",
-    "type": "mutation",
-    "name": "Madness",
-    "description": "Your head feels heavy , your steps light, can't stay still .",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true,
-    "enchantments": [
-      {
-        "condition": "ALWAYS",
-        "intermittent_activation": {
-          "effects": [
-            { "spell_effects": [ { "id": "lampad_insanity" } ], "frequency": "30 s" }
-          ]
-        }
-      }
-    ]
-  },
-  {
-    "id": "lucky_charm_mut",
-    "type": "mutation",
-    "name": "Lucky",
-    "description": "You feel lucky!",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true
-  },
-  {
     "id": "skinwalker_pelt_mut",
     "type": "mutation",
-    "name": "Skinwalker pelt",
-    "description": "You feel strange… suddenly craving meat and hating anyone too close around you.",
+    "name": "",
+    "description": "",
     "points": 0,
     "profession": false,
     "purifiable": false,
     "starting_trait": false,
     "valid": true,
     "vitamins_absorb_multi": [ [ "veggy", [ [ "vitA", 0.33 ], [ "vitB", 0.33 ], [ "vitC", 0.33 ], [ "calcium", 0.33 ], [ "iron", 0.33 ] ] ] ],
-    "ugliness": 4
+    "ugliness": 4,
+    "//": "Description is displayed by the enchantment"
   },
   {
     "id": "spider_charm_mut",
@@ -99,38 +24,5 @@
     "starting_trait": false,
     "valid": true,
     "flags": [ "NO_DISEASE" ]
-  },
-  {
-    "id": "strong_ice_mut",
-    "type": "mutation",
-    "name": "Strongness",
-    "description": "You feel strong.",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true
-  },
-  {
-    "id": "surprising_umbrella_mut",
-    "type": "mutation",
-    "name": "Element of surprise",
-    "description": "You feel mischievous.",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true
-  },
-  {
-    "id": "wind_priestess_charm_mut",
-    "type": "mutation",
-    "name": "Wind blessing",
-    "description": "You feel blessed.",
-    "points": 0,
-    "profession": false,
-    "purifiable": false,
-    "starting_trait": false,
-    "valid": true
   }
 ]
