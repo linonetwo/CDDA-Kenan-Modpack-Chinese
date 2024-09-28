@@ -75,7 +75,7 @@
     "symbol": "#",
     "bgcolor": "brown",
     "looks_like": "t_wall_log_half",
-    "description": "A waist-high barricade made of stout saplings, held in place by poles hammered into the ground.  Primarily used to keep the wind out, but also works to fence in  a campsite.",
+    "description": "A waist-high barricade made of stout saplings, held in place by poles hammered into the ground.  Primarily used to keep the wind out, but also works to fence in a campsite.",
     "move_cost_mod": -1,
     "coverage": 60,
     "required_str": -1,
@@ -92,7 +92,7 @@
       "BLOCK_WIND"
     ],
     "examine_action": "chainfence",
-    "deconstruct": { "items": [ { "item": "stick", "count": 8 }, { "item": "pointy_stick", "count": 4 } ] },
+    "deconstruct": { "items": [ { "item": "stick", "count": 8 }, { "item": "pointy_stick", "count": 2 } ] },
     "bash": {
       "str_min": 6,
       "str_max": 36,
@@ -102,18 +102,18 @@
     }
   },
   {
-    "id": "t_tarptent_leather",
-    "type": "terrain",
+    "id": "f_tarptent_leather",
+    "type": "furniture",
     "name": "leather tarp lean-to",
     "description": "A makeshift shelter made from a lather tarp and stakes driven into the ground.",
     "symbol": ";",
-    "looks_like": "t_tarptent",
+    "looks_like": "f_skin_door",
     "color": [ "brown" ],
-    "move_cost": 2,
+    "move_cost_mod": 0,
+    "required_str": -1,
     "bash": {
       "str_min": 6,
       "str_max": 12,
-      "ter_set": "t_dirt",
       "sound": "crash!",
       "sound_fail": "whack!",
       "items": [
@@ -123,10 +123,9 @@
       ]
     },
     "deconstruct": {
-      "ter_set": "t_dirt",
-      "items": [ { "item": "pointy_stick", "count": 4 }, { "item": "withered", "count": 8 }, { "item": "leather_tarp", "count": 1 } ]
+      "items": [ { "item": "pointy_stick", "count": 4 }, { "item": "cordage_6", "count": 6 }, { "item": "leather_tarp", "count": 1 } ]
     },
-    "flags": [ "TRANSPARENT", "FLAMMABLE", "THIN_OBSTACLE", "INDOORS", "MOUNTABLE", "EASY_DECONSTRUCT" ]
+    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "BLOCK_WIND", "INDOORS", "NOCOLLIDE", "SUN_ROOF_ABOVE", "EASY_DECONSTRUCT" ]
   },
   {
     "type": "furniture",

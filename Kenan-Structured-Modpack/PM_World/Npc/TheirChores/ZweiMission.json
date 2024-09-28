@@ -75,17 +75,11 @@
     "item": "lc_documents",
     "invisible_on_complete": false,
     "start": {
-      "assign_mission_target": {
-        "om_terrain": "lc_surface",
-        "om_special": "Lob_corp",
-        "reveal_radius": 0,
-        "random": false,
-        "search_range": 2400
-      },
+      "assign_mission_target": { "om_terrain": "lc_surface", "om_special": "Lob_corp", "reveal_radius": 0, "random": false, "search_range": 2400 },
       "update_mapgen": {
         "place_monster": [
-          { "group": "PECCA_GENERAL", "x": [ 3, 20 ], "y": [ 3, 20 ], "repeat": [ 12, 25 ] },
-          { "monster": "mon_luxuriae_zwei_mission", "x": [ 5, 10 ], "y": [ 5, 10 ], "name": "Zwei fixer?" }
+          { "group": "PECCA_GENERAL", "x": [ 5, 20 ], "y": [ 13, 21 ], "repeat": [ 12, 28 ] },
+          { "monster": "mon_luxuriae_zwei_mission", "x": 9, "y": 4, "name": "Zwei fixer?" }
         ]
       }
     },
@@ -100,7 +94,6 @@
       ]
     },
     "origins": [ "ORIGIN_SECONDARY" ],
-    "followup": "MISSION_NONE",
     "dialogue": {
       "describe": "It seems we have found those who may know what is happening in this world, we sent one of our people there but he still hasn't returned.",
       "offer": " The last we know is that he found interesting papers that could be useful to us. Your task is to get our fixer out of there or at least take the papers and bring them to me.",
