@@ -16,40 +16,23 @@
     "color": "brown",
     "charges_per_use": 1,
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 1 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "16 h" } },
-    "use_action": [ { "type": "cast_spell", "spell_id": "thorny_box_spell", "no_fail": true, "level": 1 } ],
+    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "24 h" } },
+    "use_action": [ 
+      {
+        "type": "effect_on_conditions",
+        "description": "Drink",
+        "effect_on_conditions": [ "thorny_box_eoc" ]
+      } 
+    ],
     "flags": [ "NO_RELOAD", "TARDIS", "TRADER_AVOID", "UNBREAKABLE" ],
     "//": "Should always have the same recharge time as oni_gourd ",
-    "//2": "MAGAZINE cannot be drinked from, it has to be a CONTAINER, but charge_info requires MAGAZINE to work. The spell should be replaced by a custom sake that adds the healing effect",
-    "//WIP": "This needs some negative effects, that go away over 1 - 2 days or so, to prevent spamming it",
-    "//WIP2": "Missing: cure illnesses, healing broken limbs, etc"
+    "//2": "MAGAZINE cannot be drinked from, it has to be a CONTAINER, but charge_info requires MAGAZINE to work. The spell should be replaced by a custom sake that adds the healing effect"
   },
   {
     "id": "thorny_box_spell",
     "type": "SPELL",
-    "name": { "str": "Drink" },
-    "description": "Drink the contents of the box.",
-    "spell_class": "NONE",
-    "valid_targets": [ "ground", "self" ],
-    "effect": "attack",
-    "effect_str": "thorny_box_effect",
-    "shape": "blast",
-    "min_duration": 360000,
-    "max_duration": 360000,
-    "max_level": 1,
-    "difficulty": -20,
-    "message": "You drink from the box",
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_LEGS" ],
-    "//": "Total time is 1 h"
-  },
-  {
-    "id": "thorny_box_spell2",
-    "type": "SPELL",
-    "name": { "str": " " },
-    "description": " ",
+    "name": { "str": "" },
+    "description": "",
     "spell_class": "NONE",
     "valid_targets": [ "self" ],
     "affected_body_parts": [ "arm_l", "arm_r", "head", "leg_l", "leg_r", "torso" ],
@@ -60,10 +43,10 @@
     "max_damage": -1,
     "max_level": 1,
     "difficulty": -50,
+    "message": "",
     "base_casting_time": 0,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "SILENT" ],
-    "//": "Heals 100 hp, over 3600 s (1 hp / 36 s)"
+    "flags": [ "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "SILENT" ]
   }
 ]

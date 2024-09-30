@@ -1,0 +1,25 @@
+[
+  {
+    "type": "item_group",
+    "subtype": "collection",
+    "id": "conversion_kits",
+    "//": "An item group for a randomly selected conversion kit to spawn, regardless of type. Intended for use in gun stores and other sensible locations.",
+    "copy-from": "conversion_kits",
+    "extend": {
+      "entries": [
+        { "item": "retool_308_dmr", "prob": 16 },
+        { "group": "nested_retool_308_rifle", "prob": 16 },
+        { "item": "retool_3006_dmr", "prob": 16 },
+        { "item": "retool_50_anzio20mm", "prob": 16 },
+        { "item": "retool_30carbine_ceamm1", "prob": 16 },
+        { "item": "retool_762R_dmr", "prob": 16 },
+        { "item": "retool_792x33_rifle_bolt", "prob": 16 },
+        { "item": "retool_792x33_fn_fal_semi", "prob": 16 },
+        { "item": "retool_792x57_rifle_bolt", "prob": 16 },
+        { "item": "retool_792x57_rifle_revolver", "prob": 16 },
+        { "group": "nested_retool_thompson_contender", "prob": 16 }
+      ]
+    },
+    "//2": "Total weight 65 / 4 = 16.25 ~ 16"
+  }
+]

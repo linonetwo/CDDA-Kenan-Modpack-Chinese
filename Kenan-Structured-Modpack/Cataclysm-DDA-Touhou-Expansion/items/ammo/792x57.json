@@ -11,7 +11,9 @@
     "material": [ "brass", "copper", "lead", "powder" ],
     "color": "yellow",
     "casing": "792x57_casing_brass",
-    "damage": { "damage_type": "bullet", "amount": 58, "armor_penetration": 7 }
+    "damage": { "damage_type": "bullet", "amount": 57, "armor_penetration": 7 },
+    "recoil": 3301,
+    "//": "720 m/s and 12.85 g proyectile"
   },
   {
     "id": "792x57_sme",
@@ -33,7 +35,7 @@
     "damage": { "damage_type": "bullet", "amount": 60, "armor_penetration": 10 },
     "dispersion": 15,
     "range": 100,
-    "recoil": 2600,
+    "recoil": 3604,
     "effects": [ "COOKOFF", "NEVER_MISFIRES" ],
     "flags": [ "IRREPLACEABLE_CONSUMABLE" ]
   },
@@ -48,8 +50,7 @@
       "price": 0.7,
       "damage": { "damage_type": "bullet", "amount": 0.9, "armor_penetration": 1.2 },
       "dispersion": 1.1
-    },
-    "recoil": 2550
+    }
   },
   {
     "id": "reloaded_792x57_sme",
@@ -62,8 +63,7 @@
       "price": 0.7,
       "damage": { "damage_type": "bullet", "amount": 0.9 },
       "dispersion": 1.1
-    },
-    "recoil": 2550
+    }
   },
   {
     "id": "bp_792x57_m75",
@@ -72,8 +72,8 @@
     "copy-from": "792x57_m75",
     "proportional": {
       "price": 0.33,
-      "damage": { "damage_type": "bullet", "amount": 0.66, "armor_penetration": 0.66 },
-      "recoil": 0.66,
+      "damage": { "damage_type": "bullet", "amount": 0.77, "armor_penetration": 0.66 },
+      "recoil": 0.77,
       "dispersion": 1.2
     },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE", "RECYCLED" ] },
@@ -86,8 +86,8 @@
     "copy-from": "792x57_sme",
     "proportional": {
       "price": 0.33,
-      "damage": { "damage_type": "bullet", "amount": 0.66, "armor_penetration": 0.66 },
-      "recoil": 0.66,
+      "damage": { "damage_type": "bullet", "amount": 0.77, "armor_penetration": 0.66 },
+      "recoil": 0.77,
       "dispersion": 1.2
     },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE", "RECYCLED" ] },

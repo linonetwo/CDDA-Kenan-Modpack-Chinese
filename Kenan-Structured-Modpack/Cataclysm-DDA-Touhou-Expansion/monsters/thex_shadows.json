@@ -46,7 +46,7 @@
       "WEBWALK" 
     ],
     "//": "Template only",
-    "//WIP": "Add spawn data, remove the name after finishing testing"
+    "//WIP": "Add spawn data, remove the names after finishing testing"
   },
   {
     "id": "mon_shadow_th_person_1",
@@ -166,7 +166,7 @@
     "description": "A shadow, the size of a child?"
   },
   {
-    "id": "mon_shadow_th_fume",
+    "id": "mon_shadow_th_fume_1",
     "type": "MONSTER",
     "name": { "str": "AAA" },
     "copy-from": "mon_shadow_th",
@@ -182,13 +182,12 @@
     "dodge": 10,
     "families": [ "prof_wp_shadow" ],
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "SOUND" ],
-    "vision_day": 12,
-    "vision_night": 12,
-    "path_settings": { "max_dist": 12 },
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
+    "vision_day": 24,
+    "vision_night": 24,
+    "path_settings": { "max_dist": 24 },
     "special_attacks": [
       { 
-        "id": "mon_shadow_th_fume_1", 
+        "id": "mon_shadow_th_fume_1_1", 
         "type": "spell", 
         "spell_data": { "id": "monster_vanish", "hit_self": true }, 
         "condition": { "u_has_effect": "monster_vanish_delay_effect" }, 
@@ -197,7 +196,7 @@
         "//": "This has to be before the spell that grants the effect, so the monster doesn't cast it immediately after"
       },
       { 
-        "id": "mon_shadow_th_fume_2", 
+        "id": "mon_shadow_th_fume_1_2", 
         "type": "spell", 
         "spell_data": { "id": "monster_vanish_delay", "hit_self": true }, 
         "condition": "player_see_u",
@@ -205,8 +204,70 @@
         "monster_message": "" 
       }
     ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "delete": { "looks_like": "mon_shadow" },
     "extend": { "flags": [ "CAMOUFLAGE", "IMMOBILE", "NIGHT_INVISIBILITY", "PACIFIST" ] }
+  },
+  {
+    "id": "mon_shadow_th_fume_2",
+    "type": "MONSTER",
+    "name": { "str": "BBB" },
+    "copy-from": "mon_shadow_th",
+    "description": "A fume?  You're sure you notice it there before.",
+    "default_faction": "touhou_youkai_neutral",
+    "bodytype": "blob",
+    "species": [ "YOUKAI_NEUTRAL_TOUHOU" ],
+    "hp": 1,
+    "symbol": "?",
+    "color": "black",
+    "aggression": 99,
+    "morale": 99,
+    "dodge": 10,
+    "families": [ "prof_wp_shadow" ],
+    "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "SOUND" ],
+    "vision_day": 24,
+    "vision_night": 24,
+    "path_settings": { "max_dist": 24 },
+    "special_attacks": [
+      { 
+        "id": "mon_shadow_th_fume_2_1", 
+        "type": "spell", 
+        "spell_data": { "id": "monster_vanish", "hit_self": true }, 
+        "condition": { "u_has_effect": "monster_vanish_delay_effect" }, 
+        "cooldown": 1, 
+        "monster_message": "", 
+        "//": "This has to be before the spell that grants the effect, so the monster doesn't cast it immediately after"
+      },
+      { 
+        "id": "mon_shadow_th_fume_2_2", 
+        "type": "spell", 
+        "spell_data": { "id": "monster_vanish_delay", "hit_self": true }, 
+        "condition": "player_see_u",
+        "cooldown": 1, 
+        "monster_message": "" 
+      },
+      { 
+        "id": "mon_shadow_th_fume_2_3", 
+        "type": "spell", 
+        "spell_data": { "id": "monster_invisibility_touhou", "hit_self": true }, 
+        "condition": { "not": { "u_has_effect": "invisibility" } }, 
+        "cooldown": 2, 
+        "allow_no_target": true, 
+        "monster_message": "" 
+      },
+      { 
+        "id": "mon_shadow_th_fume_2_4", 
+        "type": "spell", 
+        "spell_data": { "id": "monster_invisibility_touhou", "hit_self": true }, 
+        "cooldown": { "math": [ "11 + rand(4)" ] }, 
+        "allow_no_target": true, 
+        "monster_message": "" 
+      }
+    ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
+    "delete": { "looks_like": "mon_shadow" },
+    "extend": { "flags": [ "CAMOUFLAGE", "IMMOBILE", "PACIFIST" ] },
+    "//": "Similar as mon_shadow_th_fume_1 , except this can only be seen when you're next to it regardless of light level"
   },
   {
     "id": "mon_shadow_th_hatman",
@@ -256,7 +317,6 @@
     "vision_day": 16,
     "vision_night": 32,
     "path_settings": { "max_dist": 32 },
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "special_attacks": [
       { 
         "id": "mon_shadow_th_sphere_1", 
@@ -267,6 +327,7 @@
         "monster_message": "" 
       }
     ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "delete": { "looks_like": "mon_shadow" },
     "extend": { "flags": [ "PACIFIST", "SWARMS" ] }
   }

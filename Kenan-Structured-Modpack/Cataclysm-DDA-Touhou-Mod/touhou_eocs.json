@@ -270,7 +270,8 @@
       }
     ],
     "//": "If Kaenbyou kills a monster, and the monster was tagged by kaenbyou_vspossess , and there are nearby vss, she spawns one of two monsters depending on the number of nearby vss",
-    "//2": "This can't be just copied for character_kills_character as there's some beta talker issue"
+    "//2": "This can't be just copied for character_kills_character as there's some beta talker issue",
+    "//3": "Seems dots from spells are not proccing character_kills_monster events (#71408)"
   },
   {
     "id": "kappa_diet_eoc",
@@ -849,6 +850,7 @@
     "type": "effect_on_condition",
     "recurrence": "30 m",
     "condition": { "u_has_trait": "VAMPIRE_SPECIES" },
+    "deactivate_condition": { "not": { "u_has_trait": "VAMPIRE_SPECIES" } },
     "effect": [
       {
         "run_eocs": [
@@ -940,7 +942,8 @@
     "condition": {
       "and": [
         { "u_has_trait": "PROF_REMI" },
-        { "u_has_effect": "aura_vampiric" }
+        { "u_has_effect": "aura_vampiric" },
+        { "math": [ "_hits", "!=", "0" ] }
       ]
     },
     "effect": [ 

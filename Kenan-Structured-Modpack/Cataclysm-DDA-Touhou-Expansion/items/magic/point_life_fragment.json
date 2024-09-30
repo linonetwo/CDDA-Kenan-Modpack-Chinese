@@ -1,0 +1,26 @@
+[
+  {
+    "id": "point_life_fragment",
+    "type": "TOOL",
+    "name": { "str": "life fragment" },
+    "description": "A piece of what looks like a portion of the heart symbol.  Hopefully this isn't anyone's.",
+    "volume": "216 ml",
+    "weight": "143 g",
+    "longest_side": "6 cm",
+    "price_postapoc": 25000,
+    "to_hit": { "balance": "neutral", "grip": "none", "length": "hand", "surface": "any" },
+    "melee_damage": { "bash": 1 },
+    "material": [ "glass" ],
+    "symbol": "💔",
+    "//looks_like": "adobe_brick",
+    "color": "pink",
+    "use_action": [
+      {
+        "type": "effect_on_conditions",
+        "description": "Use life fragment.",
+        "effect_on_conditions": [ "point_life_fragment_eoc" ]
+      }
+    ],
+    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ]
+  }
+]

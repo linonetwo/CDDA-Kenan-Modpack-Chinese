@@ -1,6 +1,6 @@
 [
   {
-    "id": "touhou_rspirited",
+    "id": "thex_rspirited",
     "type": "item_group",
     "subtype": "distribution",
     "entries": [
@@ -18,7 +18,7 @@
     "//": "All items considered for reverse-spiriting away on generic mystery spots"
   },
   {
-    "id": "touhou_magical_items",
+    "id": "thex_magical_items",
     "type": "item_group",
     "subtype": "distribution",
     "container-item": "occult_sphere",
@@ -37,6 +37,8 @@
       { "item": "lucky_charm", "prob": 100 },
       { "item": "mini_hakkero_replica", "prob": 100 },
       { "item": "oni_gourd", "prob": 100 },
+      { "item": "point_life_fragment", "prob": 100 },
+      { "item": "point_skill", "prob": 100 },
       { "item": "poisonous_doll", "prob": 100 },
       { "item": "possessed_trumpet", "prob": 100 },
       { "item": "prankster_shovel", "prob": 100 },
@@ -56,15 +58,30 @@
     "entries": [
       {
         "distribution": [
-          { "collection": [ { "item": "792x33_me", "count": [ 1, 1 ] }, { "item": "box_kurz" } ], "prob": 50 },
-          {
-            "collection": [ { "item": "792x57_sme", "count": 3 }, { "item": "792x57_clip", "count": 3 }, { "item": "box_mauser" } ],
-            "prob": 50
+          { 
+            "collection": [ 
+              { "item": "765x53_arg", "charges": 10 }
+            ], 
+            "prob": 100 
+          },
+          { 
+            "collection": [ 
+              { "item": "792x33_me", "count": 15 }, 
+              { "item": "box_kurz" } 
+            ], 
+            "prob": 100 
+          },
+          { 
+            "collection": [ 
+              { "item": "792x57_clip", "count": 3 }, 
+              { "item": "box_mauser" } 
+            ], 
+            "prob": 100
           }
         ]
       }
     ],
-    "//": "WWII era boxes containing ammo"
+    "//": "Old ammo"
   },
   {
     "id": "forgotten_weapons",
@@ -73,11 +90,13 @@
     "entries": [
       { "item": "aresfmg_folded", "prob": 100 },
       { "item": "ceamm1", "prob": 100 },
+      { "item": "hk_g11", "prob": 100 },
       { "item": "idw", "prob": 100 },
-      { "item": "m1941_johnson", "prob": 100 },
+      { "item": "johnson_m1941", "prob": 100 },
       { "item": "pieper_m1893", "prob": 100 },
       { "item": "stg44", "prob": 100 },
-      { "group": "nested_tkb002_items", "prob": 100 },
+      { "group": "nested_svt_gun_only", "prob": 100 },
+      { "group": "nested_tkb002_gun_only", "prob": 100 },
       { "item": "wa2000", "prob": 100 }
     ]
   },
@@ -88,8 +107,8 @@
     "entries": [
       { "group": "forgotten_weapons", "prob": 100 },
       { "group": "forgotten_ammo", "prob": 100 },
-      { "group": "touhou_magical_items", "prob": 100 },
-      { "group": "touhou_rspirited", "prob": 100 }
+      { "group": "thex_magical_items", "prob": 100 },
+      { "group": "thex_rspirited", "prob": 100 }
     ],
 	"//WIP": "Placeholder. This is so the mod's items can show up in the world, until I think of a better (thematically) way to get these items"
   }

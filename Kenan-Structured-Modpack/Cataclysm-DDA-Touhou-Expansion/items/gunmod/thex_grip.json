@@ -13,15 +13,28 @@
     "symbol": ":",
     "color": "dark_gray",
     "melee_damage": { "bash": 14 },
+    "is_bayonet": true,
     "dispersion_modifier": -45,
+    "handling_modifier": 12,
     "location": "grip",
+    "blacklist_slot": [ "barrel", "magnifier", "sights", "stock", "stock accessory", "stock mount" ],
     "min_skills": [ [ "weapon", 3 ] ],
     "mod_targets": [ "pistol", "smg" ],
     "mode_modifier": [ [ "REACH", "knuckle_steel", 1, [ "MELEE", "REACH_ATTACK" ] ] ],
     "techniques": [ "BRUTAL", "WBLOCK_1", "WIDE" ],
     "flags": [ "DURABLE_MELEE" ],
-    "//": "This abomination doesn't or shouldn't exist, but it's too good to let it pass",
-    "//2": "Ideally, this would be exclusive with with barrel, stock and sight attachments",
-    "//3": "Rejected values: durability +3"
+    "//": "This abomination doesn't or shouldn't exist, but it's too good to let it pass"
+  },
+  {
+    "id": "ots48k_grip",
+    "type": "GUNMOD",
+    "name": { "str": "ergonomic grip" },
+    "copy-from": "pistol_grip",
+    "description": "An integrated, custom pistol grip for the OTs-48K.",
+    "material": [ "steel", "wood" ],
+    "color": "brown",
+    "location": "grip",
+    "mod_targets": [ "rifle" ],
+    "flags": [ "IRREMOVABLE" ]
   }
 ]

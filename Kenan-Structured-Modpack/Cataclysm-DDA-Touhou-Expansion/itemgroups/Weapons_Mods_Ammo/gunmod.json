@@ -1,5 +1,26 @@
 [
   {
+    "id": "nested_retool_308_rifle",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "retool_308_rifle_semi", "prob": 100 },
+      { "item": "retool_308_rifle_bolt", "prob": 100 }
+    ]
+  },
+  {
+    "id": "nested_retool_thompson_contender",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [
+      { "item": "retool_thompson_contender_22", "prob": 100 },
+      { "item": "retool_thompson_contender_357", "prob": 100 },
+      { "item": "retool_thompson_contender_44", "prob": 100 },
+      { "item": "retool_thompson_contender_45", "prob": 100 },
+      { "item": "retool_thompson_contender_4570", "prob": 100 }
+    ]
+  },
+  {
     "id": "gunmod_common",
     "type": "item_group",
     "//": "Common gunmods typically owned by citizens and found in many locations.",
@@ -7,13 +28,18 @@
     "copy-from": "gunmod_common",
     "extend": {
       "entries": [
-        { "item": "barrel_elongated_small", "prob": 35 },
-        { "item": "barrel_elongated_small2", "prob": 20 },
-        { "item": "grip_melee", "prob": 25 },
-        { "item": "susat_scope", "prob": 50 },
-        { "item": "vertical_foregrip", "prob": 35 }
+        { "item": "barrel_elongated_small", "prob": 40 },
+        { "item": "barrel_elongated_small2", "prob": 40 },
+        { "item": "grip_melee", "prob": 40 },
+        { "group": "nested_retool_308_rifle", "prob": 40 },
+        { "item": "retool_792x33_rifle_bolt", "prob": 40 },
+        { "group": "nested_retool_thompson_contender", "prob": 40 },
+        { "item": "pu_scope", "prob": 40 },
+        { "item": "susat_scope", "prob": 40 },
+        { "item": "vertical_foregrip", "prob": 40 }
       ]
-    }
+    },
+    "//2": "Total weight 785 / 20 = 39.25 ~ 40"
   },
   {
     "id": "gunmod_rare",
@@ -23,25 +49,23 @@
     "copy-from": "gunmod_rare",
     "extend": {
       "entries": [
-        { "item": "barrel_elongated_small2", "prob": 25 },
-        { "item": "bipod_idw", "prob": 16 },
-        { "item": "onm76_scope", "prob": 16 },
-        { "item": "pso1_scope", "prob": 12 },
-        { "item": "retool_anzio20mm_50", "prob": 35 },
-        { "item": "retool_ceamm1_30carbine", "prob": 35 },
-        { "item": "retool_fn_fal_semi_792x33", "prob": 35 },
-        { "item": "retool_kar98_792x33", "prob": 35 },
-        { "group": "nested_retool_m76", "prob": 35 },
-        { "item": "retool_pieper_m1893_792x57", "prob": 35 },
-        { "group": "nested_retool_spanish_m1893", "prob": 35 },
-        { "group": "nested_retool_svd", "prob": 35 },
-        { "group": "nested_retool_thompson_contender", "prob": 35 },
-        { "item": "scrome_scope", "prob": 12 },
-        { "item": "stock_idw_unfolded", "prob": 50 },
-        { "item": "susat_scope", "prob": 25 },
-        { "item": "vertical_foregrip", "prob": 65 }
+        { "item": "barrel_elongated_small2", "prob": 32 },
+        { "item": "bipod_idw", "prob": 32 },
+        { "item": "retool_308_dmr", "prob": 32 },
+        { "item": "retool_3006_dmr", "prob": 32 },
+        { "item": "retool_762R_dmr", "prob": 32 },
+        { "item": "retool_792x57_rifle_revolver", "prob": 32 },
+        { "item": "retool_792x57_rifle_bolt", "prob": 32 },
+        { "item": "onm76_scope", "prob": 32 },
+        { "item": "pso1_scope", "prob": 32 },
+        { "item": "pu_scope", "prob": 32 },
+        { "item": "scrome_scope", "prob": 32 },
+        { "item": "susat_scope", "prob": 32 },
+        { "item": "stock_idw_unfolded", "prob": 32 },
+        { "item": "vertical_foregrip", "prob": 32 }
       ]
-    }
+    },
+    "//2": "Total weight 1005 / 31 = 32.41 ~ 32"
   },
   {
     "id": "gunmod_milspec",
@@ -50,34 +74,26 @@
     "copy-from": "gunmod_milspec",
     "extend": {
       "items": [
-        [ "onm76_scope", 85 ],
-        [ "pso1_scope", 85 ],
-        [ "scrome_scope", 85 ],
-        [ "suppressor_vss", 85 ],
-        [ "susat_scope", 85 ],
-        [ "retool_m76_308", 85 ],
-        [ "retool_m76_762", 85 ],
-        [ "retool_svd_308", 85 ],
-        [ "retool_svd_3006", 85 ],
-        [ "retool_wa2000_308", 85 ],
-        [ "vertical_foregrip", 50 ]
+        [ "retool_308_dmr", 60 ],
+        [ "retool_3006_dmr", 60 ],
+        [ "retool_762R_dmr", 60 ],
+        [ "onm76_scope", 60 ],
+        [ "pso1_scope", 60 ],
+        [ "pu_scope", 60 ],
+        [ "scrome_scope", 60 ],
+        [ "susat_scope", 60 ],
+        [ "suppressor_vss", 60 ],
+        [ "vertical_foregrip", 60 ]
       ]
-    }
+    },
+    "//2": "Total weight 595 / 10 = 59.5 ~ 60"
   },
   {
-    "id": "sights_all",
     "type": "item_group",
-    "//": "All aftermarket sights.",
-    "subtype": "distribution",
-    "copy-from": "sights_all",
-    "extend": { "items": [ [ "onm76_scope", 12 ], [ "pso1_scope", 10 ], [ "scrome_scope", 5 ], [ "susat_scope", 25 ] ] }
-  },
-  {
     "id": "sights_rifle",
-    "type": "item_group",
     "//": "Aftermarket sights that are for rifles.",
-    "subtype": "distribution",
     "copy-from": "sights_rifle",
-    "extend": { "items": [ [ "onm76_scope", 12 ], [ "pso1_scope", 10 ], [ "scrome_scope", 5 ], [ "susat_scope", 25 ] ] }
+    "extend": { "items": [ [ "onm76_scope", 24 ], [ "pso1_scope", 24 ], [ "pu_scope", 24 ], [ "scrome_scope", 24 ], [ "susat_scope", 24 ] ] },
+    "//2": "Total weight 242 / 10 = 24.2 ~ 24"
   }
 ]

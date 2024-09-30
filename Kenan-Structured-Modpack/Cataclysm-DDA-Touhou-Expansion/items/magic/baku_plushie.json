@@ -16,25 +16,13 @@
     "charges_per_use": 1,
     "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 1 } } ],
     "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "8 h" } },
-    "use_action": [ { "type": "cast_spell", "spell_id": "baku_plushie_return", "no_fail": true, "level": 1 } ],
+    "use_action": [ 
+      {
+        "type": "effect_on_conditions",
+        "description": "Wake up",
+        "effect_on_conditions": [ "baku_plushie_return_eoc" ]
+      } 
+    ],
     "flags": [ "BELT_CLIP", "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
-  },
-  {
-    "id": "baku_plushie_return",
-    "type": "SPELL",
-    "name": { "str": "Wake up" },
-    "description": " ",
-    "spell_class": "NONE",
-    "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "baku_plushie_return_eoc",
-    "shape": "blast",
-    "max_level": 1,
-    "difficulty": -20,
-    "message": "",
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "SILENT" ]
   }
 ]

@@ -1,30 +1,9 @@
 [
   {
-    "id": "retool_anzio20mm_50",
+    "id": "retool_308_dmr",
     "type": "GUNMOD",
-    "name": { "str": ".50 BMG conversion kit for the Anzio 20mm rifle" },
-    "description": "A complete Anzio 20mm rifle assembly and barrel, designed to fit .50 BMG ammo.",
-    "volume": "500 ml",
-    "weight": "1000 g",
-    "integral_volume": "0 ml",
-    "integral_weight": "0 g",
-    "price": 50000,
-    "price_postapoc": 1000,
-    "install_time": "30 m",
-    "material": [ "steel" ],
-    "symbol": ":",
-    "color": "dark_gray",
-    "location": "bore",
-    "min_skills": [ [ "weapon", 5 ] ],
-    "ammo_modifier": [ "50" ],
-    "magazine_adaptor": [ [ "50", [ "m107a1mag" ] ] ],
-    "mod_targets": [ "anzio20mm" ]
-  },
-  {
-    "id": "retool_ceamm1_30carbine",
-    "type": "GUNMOD",
-    "name": { "str": ".30 Carbine conversion kit for the CEAM Mòdele 1" },
-    "description": "A complete CEAM Mòdele 1 assembly and barrel, designed to fit .30 Carbine ammo.",
+    "name": { "str": ".308 Winchester conversion kit (DMR)" },
+    "description": "A complete assembly and barrel, designed to fit .308 Winchester ammo.",
     "volume": "500 ml",
     "weight": "1000 g",
     "integral_volume": "0 ml",
@@ -36,16 +15,65 @@
     "symbol": ":",
     "color": "dark_gray",
     "location": "bore",
-    "min_skills": [ [ "weapon", 3 ] ],
-    "ammo_modifier": [ "30carbine" ],
-    "magazine_adaptor": [ [ "30carbine", [ "m1carbinebigmag", "m1carbinemag" ] ] ],
-    "mod_targets": [ "ceamm1", "ceamm_49", "ceamm_ii", "ceamm_50" ]
+    "min_skills": [ [ "weapon", 4 ] ],
+    "ammo_modifier": [ "308" ],
+    "magazine_adaptor": [
+      [
+        "308",
+        [
+          "falbigmag",
+          "falmag",
+          "fal_makeshiftmag",
+          "g3bigmag",
+          "g3mag",
+          "g3_makeshiftmag",
+          "m14mag",
+          "m14smallmag",
+          "m14_makeshiftmag",
+          "scarhbigmag",
+          "scarhmag_30rd",
+          "scarhmag",
+          "scarh_makeshiftmag",
+          "hk417mag_20rd",
+          "hk417mag_10rd",
+          "hk417_makeshiftmag",
+          "ar10mag_20rd",
+          "ar10_makeshiftmag"
+        ]
+      ]
+    ],
+    "pocket_mods": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ 
+          "falbigmag",
+          "falmag",
+          "fal_makeshiftmag",
+          "g3bigmag",
+          "g3mag",
+          "g3_makeshiftmag",
+          "m14mag",
+          "m14smallmag",
+          "m14_makeshiftmag",
+          "scarhbigmag",
+          "scarhmag_30rd",
+          "scarhmag",
+          "scarh_makeshiftmag",
+          "hk417mag_20rd",
+          "hk417mag_10rd",
+          "hk417_makeshiftmag",
+          "ar10mag_20rd",
+          "ar10_makeshiftmag"
+        ]
+      }
+    ],
+    "mod_targets": [ "m76", "svd", "wa2000", "wa2000_2" ]
   },
   {
-    "id": "retool_kar98_792x33",
+    "id": "retool_308_rifle_bolt",
     "type": "GUNMOD",
-    "name": { "str": "7.92x33mm Kurz conversion kit for the Kar98k" },
-    "description": "A Kar98k action, designed to fit 7.92x33mm Kurz ammo.",
+    "name": { "str": ".308 Winchester conversion kit (rifle, bolt-action)" },
+    "description": "A complete assembly and barrel, designed to fit .308 Winchester ammo.",
     "volume": "500 ml",
     "weight": "1000 g",
     "integral_volume": "0 ml",
@@ -57,12 +85,160 @@
     "symbol": ":",
     "color": "dark_gray",
     "location": "bore",
-    "min_skills": [ [ "weapon", 2 ] ],
+    "min_skills": [ [ "weapon", 4 ] ],
+    "ammo_modifier": [ "308" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "308": 5 } 
+      } 
+    ],
+    "mod_targets": [ "spanish_m1893" ]
+  },
+  {
+    "id": "retool_308_rifle_semi",
+    "type": "GUNMOD",
+    "name": { "str": ".308 Winchester conversion kit (rifle, semi-auto)" },
+    "description": "A complete assembly and barrel, designed to fit .308 Winchester ammo.",
+    "volume": "500 ml",
+    "weight": "1000 g",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": 50000,
+    "price_postapoc": 1000,
+    "install_time": "15 m",
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "bore",
+    "min_skills": [ [ "weapon", 4 ] ],
+    "ammo_modifier": [ "308" ],
+    "magazine_adaptor": [
+      [
+        "308",
+        [
+          "falmag",
+          "fal_makeshiftmag",
+          "g3mag",
+          "g3_makeshiftmag",
+          "m14mag",
+          "m14smallmag",
+          "m14_makeshiftmag",
+          "scarhmag",
+          "scarh_makeshiftmag",
+          "hk417mag_20rd",
+          "hk417mag_10rd",
+          "hk417_makeshiftmag",
+          "ar10mag_20rd",
+          "ar10_makeshiftmag"
+        ]
+      ]
+    ],
+    "pocket_mods": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ 
+          "falmag",
+          "fal_makeshiftmag",
+          "g3mag",
+          "g3_makeshiftmag",
+          "m14mag",
+          "m14smallmag",
+          "m14_makeshiftmag",
+          "scarhmag",
+          "scarh_makeshiftmag",
+          "hk417mag_20rd",
+          "hk417mag_10rd",
+          "hk417_makeshiftmag",
+          "ar10mag_20rd",
+          "ar10_makeshiftmag"
+        ]
+      }
+    ],
+    "mod_targets": [ "mondragon_m1908" ]
+  },
+  {
+    "id": "retool_3006_dmr",
+    "type": "GUNMOD",
+    "name": { "str": ".30-06 Springfield conversion kit (DMR)" },
+    "description": "A complete assembly and barrel, designed to fit .30-06 Springfield ammo.",
+    "volume": "500 ml",
+    "weight": "1000 g",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": 50000,
+    "price_postapoc": 1000,
+    "install_time": "15 m",
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "bore",
+    "min_skills": [ [ "weapon", 4 ] ],
+    "ammo_modifier": [ "3006" ],
+    "magazine_adaptor": [ [ "3006", [ "blrmag", "m1918bigmag", "m1918mag" ] ] ],
+    "pocket_mods": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ "blrmag", "m1918bigmag", "m1918mag" ]
+      }
+    ],
+    "mod_targets": [ "m76", "svd" ]
+  },
+  {
+    "id": "retool_762R_dmr",
+    "type": "GUNMOD",
+    "name": { "str": "7.62x54mmR conversion kit (DMR)" },
+    "description": "A complete assembly and barrel, designed to fit 7.62x54mmR ammo.",
+    "volume": "500 ml",
+    "weight": "1000 g",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": 50000,
+    "price_postapoc": 1000,
+    "install_time": "15 m",
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "bore",
+    "min_skills": [ [ "weapon", 4 ] ],
+    "ammo_modifier": [ "762R" ],
+    "magazine_adaptor": [ [ "762R", [ "pslmag5", "pslmag10" ] ] ],
+    "pocket_mods": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ "pslmag5", "pslmag10" ]
+      }
+    ],
+    "mod_targets": [ "m76" ]
+  },
+  {
+    "id": "retool_792x33_rifle_bolt",
+    "type": "GUNMOD",
+    "name": { "str": "7.92x33mm Kurz conversion kit (rifle, bolt-action)" },
+    "description": "A complete action, designed to fit 7.92x33mm Kurz ammo.",
+    "volume": "500 ml",
+    "weight": "1000 g",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": 50000,
+    "price_postapoc": 1000,
+    "install_time": "15 m",
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "bore",
+    "min_skills": [ [ "weapon", 4 ] ],
     "ammo_modifier": [ "792x33" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "792x33": 5 } 
+      } 
+    ],
     "mod_targets": [ "kar98" ]
   },
   {
-    "id": "retool_fn_fal_semi_792x33",
+    "id": "retool_792x33_fn_fal_semi",
     "type": "GUNMOD",
     "name": { "str": "7.92x33mm Kurz conversion kit for the FN FAL" },
     "description": "An old, complete FN FAL assembly and barrel, designed to fit 7.92x33mm Kurz ammo.",
@@ -77,16 +253,22 @@
     "symbol": ":",
     "color": "dark_gray",
     "location": "bore",
-    "min_skills": [ [ "weapon", 3 ] ],
+    "min_skills": [ [ "weapon", 4 ] ],
     "ammo_modifier": [ "792x33" ],
     "magazine_adaptor": [ [ "792x33", [ "stg44mag25", "stg44mag30" ] ] ],
+    "pocket_mods": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ "stg44mag25", "stg44mag30" ]
+      }
+    ],
     "mod_targets": [ "fn_fal_semi" ]
   },
   {
-    "id": "retool_m76_308",
+    "id": "retool_792x57_rifle_bolt",
     "type": "GUNMOD",
-    "name": { "str": ".308 Winchester conversion kit for the M76 Zastava" },
-    "description": "A complete M76 Zastava assembly and barrel, designed to fit .308 Winchester ammo.",
+    "name": { "str": "7.92x57mm Mauser conversion kit (rifle, bolt-action)" },
+    "description": "A complete assembly and barrel, designed to fit 7.92x57mm Mauser ammo.",
     "volume": "500 ml",
     "weight": "1000 g",
     "integral_volume": "0 ml",
@@ -99,141 +281,47 @@
     "color": "dark_gray",
     "location": "bore",
     "min_skills": [ [ "weapon", 4 ] ],
-    "ammo_modifier": [ "308" ],
-    "magazine_adaptor": [
-      [
-        "308",
-        [
-          "falbigmag",
-          "falmag",
-          "fal_makeshiftmag",
-          "g3bigmag",
-          "g3mag",
-          "g3_makeshiftmag",
-          "m14mag",
-          "m14smallmag",
-          "m14_makeshiftmag",
-          "scarhbigmag",
-          "scarhmag_30rd",
-          "scarhmag",
-          "scarh_makeshiftmag",
-          "hk417mag_20rd",
-          "hk417mag_10rd",
-          "hk417_makeshiftmag",
-          "ar10mag_20rd",
-          "ar10_makeshiftmag"
-        ]
-      ]
-    ],
-    "mod_targets": [ "m76" ]
-  },
-  {
-    "id": "retool_m76_3006",
-    "type": "GUNMOD",
-    "name": { "str": ".30-06 Springfield conversion kit for the M76 Zastava" },
-    "description": "A complete M76 Zastava assembly and barrel, designed to fit .30-06 Springfield ammo.",
-    "volume": "500 ml",
-    "weight": "1000 g",
-    "integral_volume": "0 ml",
-    "integral_weight": "0 g",
-    "price": 50000,
-    "price_postapoc": 1000,
-    "install_time": "15 m",
-    "material": [ "steel" ],
-    "symbol": ":",
-    "color": "dark_gray",
-    "location": "bore",
-    "min_skills": [ [ "weapon", 4 ] ],
-    "ammo_modifier": [ "3006" ],
-    "magazine_adaptor": [ [ "3006", [ "blrmag", "m1918bigmag", "m1918mag" ] ] ],
-    "mod_targets": [ "m76" ]
-  },
-  {
-    "id": "retool_m76_762",
-    "type": "GUNMOD",
-    "name": { "str": "7.62x39mm conversion kit for the M76 Zastava" },
-    "description": "A complete M76 Zastava assembly and barrel, designed to fit 7.62x39mm ammo.",
-    "volume": "500 ml",
-    "weight": "1000 g",
-    "integral_volume": "0 ml",
-    "integral_weight": "0 g",
-    "price": 50000,
-    "price_postapoc": 1000,
-    "install_time": "15 m",
-    "material": [ "steel" ],
-    "symbol": ":",
-    "color": "dark_gray",
-    "location": "bore",
-    "min_skills": [ [ "weapon", 4 ] ],
-    "ammo_modifier": [ "762" ],
-    "magazine_adaptor": [ [ "762", [ "akmag10", "akmag20", "akmag30", "akmag40" ] ] ],
-    "mod_targets": [ "m76" ]
-  },
-  {
-    "id": "retool_pieper_m1893_792x57",
-    "type": "GUNMOD",
-    "name": { "str": "7.92x57mm Mauser conversion kit for the Pieper M1893" },
-    "description": "A complete Pieper M1893 assembly and barrel, designed to fit 7.92x57mm Mauser ammo.",
-    "volume": "500 ml",
-    "weight": "1000 g",
-    "integral_volume": "0 ml",
-    "integral_weight": "0 g",
-    "price": 50000,
-    "price_postapoc": 1000,
-    "install_time": "15 m",
-    "material": [ "steel" ],
-    "symbol": ":",
-    "color": "dark_gray",
-    "location": "bore",
-    "min_skills": [ [ "weapon", 2 ] ],
     "ammo_modifier": [ "792x57" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "792x57": 5 }, 
+        "allowed_speedloaders": [ "792x57_clip" ]
+      } 
+    ],
+    "mod_targets": [ "mosin44", "mosin91_30", "ots48", "ots48k", "spanish_m1893" ]
+  },
+  {
+    "id": "retool_792x57_rifle_revolver",
+    "type": "GUNMOD",
+    "name": { "str": "7.92x57mm Mauser conversion (rifle, revolver)" },
+    "description": "A complete assembly and barrel, designed to fit 7.92x57mm Mauser ammo.",
+    "volume": "500 ml",
+    "weight": "1000 g",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": 50000,
+    "price_postapoc": 1000,
+    "install_time": "15 m",
+    "material": [ "steel" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "bore",
+    "min_skills": [ [ "weapon", 4 ] ],
+    "ammo_modifier": [ "792x57" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "792x57": 9 } 
+      } 
+    ],
     "mod_targets": [ "pieper_m1893" ]
   },
   {
-    "id": "retool_spanish_m1893_308",
+    "id": "retool_30carbine_ceamm1",
     "type": "GUNMOD",
-    "name": { "str": ".308 Winchester conversion kit for the Spanish Model 1983" },
-    "description": "A Spanish Model 1983 assembly and barrel, designed to fit .308 Winchester ammo.",
-    "volume": "500 ml",
-    "weight": "1000 g",
-    "integral_volume": "0 ml",
-    "integral_weight": "0 g",
-    "price": 50000,
-    "price_postapoc": 1000,
-    "install_time": "15 m",
-    "material": [ "steel" ],
-    "symbol": ":",
-    "color": "dark_gray",
-    "location": "bore",
-    "min_skills": [ [ "weapon", 3 ] ],
-    "ammo_modifier": [ "308" ],
-    "mod_targets": [ "spanish_m1893" ]
-  },
-  {
-    "id": "retool_spanish_m1893_792x57",
-    "type": "GUNMOD",
-    "name": { "str": "7.92x57mm Mauser conversion kit for the Spanish Model 1983" },
-    "description": "A Spanish Model 1983 assembly and barrel, designed to fit 7.92x33mm Kurz ammo.",
-    "volume": "500 ml",
-    "weight": "1000 g",
-    "integral_volume": "0 ml",
-    "integral_weight": "0 g",
-    "price": 50000,
-    "price_postapoc": 1000,
-    "install_time": "15 m",
-    "material": [ "steel" ],
-    "symbol": ":",
-    "color": "dark_gray",
-    "location": "bore",
-    "min_skills": [ [ "weapon", 3 ] ],
-    "ammo_modifier": [ "792x57" ],
-    "mod_targets": [ "spanish_m1893" ]
-  },
-  {
-    "id": "retool_svd_308",
-    "type": "GUNMOD",
-    "name": { "str": ".308 Winchester conversion kit for the SVD-63" },
-    "description": "A complete SVD assembly and barrel, designed to fit .308 Winchester ammo.",
+    "name": { "str": ".30 Carbine conversion kit for the CEAM Mòdele 1" },
+    "description": "A complete CEAM Mòdele 1 assembly and barrel, designed to fit .30 Carbine ammo.",
     "volume": "500 ml",
     "weight": "1000 g",
     "integral_volume": "0 ml",
@@ -246,54 +334,42 @@
     "color": "dark_gray",
     "location": "bore",
     "min_skills": [ [ "weapon", 4 ] ],
-    "ammo_modifier": [ "308" ],
-    "magazine_adaptor": [
-      [
-        "308",
-        [
-          "falbigmag",
-          "falmag",
-          "fal_makeshiftmag",
-          "g3bigmag",
-          "g3mag",
-          "g3_makeshiftmag",
-          "m14mag",
-          "m14smallmag",
-          "m14_makeshiftmag",
-          "scarhbigmag",
-          "scarhmag_30rd",
-          "scarhmag",
-          "scarh_makeshiftmag",
-          "hk417mag_20rd",
-          "hk417mag_10rd",
-          "hk417_makeshiftmag",
-          "ar10mag_20rd",
-          "ar10_makeshiftmag"
-        ]
-      ]
+    "ammo_modifier": [ "30carbine" ],
+    "magazine_adaptor": [ [ "30carbine", [ "m1carbinebigmag", "m1carbinemag" ] ] ],
+    "pocket_mods": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ "m1carbinebigmag", "m1carbinemag" ]
+      }
     ],
-    "mod_targets": [ "svd" ]
+    "mod_targets": [ "ceamm1" ]
   },
   {
-    "id": "retool_svd_3006",
+    "id": "retool_50_anzio20mm",
     "type": "GUNMOD",
-    "name": { "str": ".30-06 Springfield conversion kit for the SVD-63" },
-    "description": "A complete SVD assembly and barrel, designed to fit .30-06 Springfield ammo.",
+    "name": { "str": ".50 BMG conversion kit for the Anzio 20mm rifle" },
+    "description": "A complete Anzio 20mm rifle assembly and barrel, designed to fit .50 BMG ammo.",
     "volume": "500 ml",
     "weight": "1000 g",
     "integral_volume": "0 ml",
     "integral_weight": "0 g",
     "price": 50000,
     "price_postapoc": 1000,
-    "install_time": "15 m",
+    "install_time": "20 m",
     "material": [ "steel" ],
     "symbol": ":",
     "color": "dark_gray",
     "location": "bore",
     "min_skills": [ [ "weapon", 4 ] ],
-    "ammo_modifier": [ "3006" ],
-    "magazine_adaptor": [ [ "3006", [ "blrmag", "m1918bigmag", "m1918mag" ] ] ],
-    "mod_targets": [ "svd" ]
+    "ammo_modifier": [ "50" ],
+    "magazine_adaptor": [ [ "50", [ "m107a1mag" ] ] ],
+    "pocket_mods": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "item_restriction": [ "m107a1mag" ]
+      }
+    ],
+    "mod_targets": [ "anzio20mm" ]
   },
   {
     "id": "retool_thompson_contender_22",
@@ -306,13 +382,19 @@
     "integral_weight": "0 g",
     "price": 50000,
     "price_postapoc": 1000,
-    "install_time": "10 s",
+    "install_time": "2 m",
     "material": [ "steel" ],
     "symbol": ":",
     "color": "dark_gray",
     "location": "barrel",
-    "min_skills": [ [ "weapon", 1 ] ],
+    "min_skills": [ [ "weapon", 3 ] ],
     "ammo_modifier": [ "22" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "22": 1 } 
+      } 
+    ],
     "mod_targets": [ "thompson_contender" ]
   },
   {
@@ -326,13 +408,19 @@
     "integral_weight": "0 g",
     "price": 50000,
     "price_postapoc": 1000,
-    "install_time": "10 s",
+    "install_time": "2 m",
     "material": [ "steel" ],
     "symbol": ":",
     "color": "dark_gray",
     "location": "barrel",
-    "min_skills": [ [ "weapon", 1 ] ],
+    "min_skills": [ [ "weapon", 3 ] ],
     "ammo_modifier": [ "3006" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "3006": 1 } 
+      } 
+    ],
     "mod_targets": [ "thompson_contender" ]
   },
   {
@@ -346,13 +434,19 @@
     "integral_weight": "0 g",
     "price": 50000,
     "price_postapoc": 1000,
-    "install_time": "10 s",
+    "install_time": "2 m",
     "material": [ "steel" ],
     "symbol": ":",
     "color": "dark_gray",
     "location": "barrel",
-    "min_skills": [ [ "weapon", 1 ] ],
+    "min_skills": [ [ "weapon", 3 ] ],
     "ammo_modifier": [ "357mag" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "357mag": 1 } 
+      } 
+    ],
     "mod_targets": [ "thompson_contender" ]
   },
   {
@@ -366,13 +460,19 @@
     "integral_weight": "0 g",
     "price": 50000,
     "price_postapoc": 1000,
-    "install_time": "10 s",
+    "install_time": "2 m",
     "material": [ "steel" ],
     "symbol": ":",
     "color": "dark_gray",
     "location": "barrel",
-    "min_skills": [ [ "weapon", 1 ] ],
+    "min_skills": [ [ "weapon", 3 ] ],
     "ammo_modifier": [ "44" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "44": 1 } 
+      } 
+    ],
     "mod_targets": [ "thompson_contender" ]
   },
   {
@@ -386,13 +486,19 @@
     "integral_weight": "0 g",
     "price": 50000,
     "price_postapoc": 1000,
-    "install_time": "10 s",
+    "install_time": "2 m",
     "material": [ "steel" ],
     "symbol": ":",
     "color": "dark_gray",
     "location": "barrel",
-    "min_skills": [ [ "weapon", 1 ] ],
+    "min_skills": [ [ "weapon", 3 ] ],
     "ammo_modifier": [ "45colt" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "45colt": 1 } 
+      } 
+    ],
     "mod_targets": [ "thompson_contender" ]
   },
   {
@@ -406,58 +512,19 @@
     "integral_weight": "0 g",
     "price": 50000,
     "price_postapoc": 1000,
-    "install_time": "10 s",
+    "install_time": "2 m",
     "material": [ "steel" ],
     "symbol": ":",
     "color": "dark_gray",
     "location": "barrel",
-    "min_skills": [ [ "weapon", 1 ] ],
-    "ammo_modifier": [ "4570" ],
-    "mod_targets": [ "thompson_contender" ]
-  },
-  {
-    "id": "retool_wa2000_308",
-    "type": "GUNMOD",
-    "name": { "str": ".308 Winchester conversion kit for the Walther WA 2000" },
-    "description": "A complete Walther WA 2000 assembly and barrel, designed to fit .308 Winchester ammo.",
-    "volume": "500 ml",
-    "weight": "1000 g",
-    "integral_volume": "0 ml",
-    "integral_weight": "0 g",
-    "price": 50000,
-    "price_postapoc": 1000,
-    "install_time": "15 m",
-    "material": [ "steel" ],
-    "symbol": ":",
-    "color": "dark_gray",
-    "location": "bore",
     "min_skills": [ [ "weapon", 3 ] ],
-    "ammo_modifier": [ "308" ],
-    "magazine_adaptor": [
-      [
-        "308",
-        [
-          "falbigmag",
-          "falmag",
-          "fal_makeshiftmag",
-          "g3bigmag",
-          "g3mag",
-          "g3_makeshiftmag",
-          "m14mag",
-          "m14smallmag",
-          "m14_makeshiftmag",
-          "scarhbigmag",
-          "scarhmag_30rd",
-          "scarhmag",
-          "scarh_makeshiftmag",
-          "hk417mag_20rd",
-          "hk417mag_10rd",
-          "hk417_makeshiftmag",
-          "ar10mag_20rd",
-          "ar10_makeshiftmag"
-        ]
-      ]
+    "ammo_modifier": [ "4570" ],
+    "pocket_mods": [ 
+      { 
+        "pocket_type": "MAGAZINE", "rigid": true, 
+        "ammo_restriction": { "4570": 1 } 
+      } 
     ],
-    "mod_targets": [ "wa2000", "wa2000_2" ]
+    "mod_targets": [ "thompson_contender" ]
   }
 ]

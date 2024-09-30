@@ -19,7 +19,15 @@
       { "u_message": "You just… woke up?", "type": "mixed" }
     ],
     "false_effect": [ 
-      { "u_message": "Something's missing… You may want to count again sheep.", "type": "mixed" }
+      { "u_message": "Something's missing… You may want to count sheep again.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "history_book_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "var_history_book_int", "=", "max( 0, 9 - ( u_val('intelligence_base') + u_val('intelligence_bonus') ) )" ] },
+      { "u_add_effect": "history_book_effect", "duration": "24 h" }
     ]
   },
   {
@@ -79,7 +87,7 @@
           },
           { 
             "case": 6, "effect": [ 
-              { "u_cast_spell": { "id": "lavender_grimoire_bubble" } },
+              { "u_add_effect": "lavender_grimoire_bubble_effect", "duration": "10 m" },
               { "u_message": "", "type": "mixed" }
             ]
           },
@@ -91,7 +99,7 @@
           },
           { 
             "case": 8, "effect": [ 
-              { "u_cast_spell": { "id": "lavender_grimoire_airbarrier" } },
+              { "u_add_effect": "lavender_grimoire_airbarrier_effect", "duration": "10 m" },
               { "u_message": "", "type": "mixed" }
             ]
           },
@@ -127,22 +135,16 @@
     "id": "lavender_grimoire_case_11_eoc",
     "type": "effect_on_condition",
     "effect": [
-      { "u_location_variable": { "global_val": "var_lavender_grimoire_earthbarrier_loc" }, "min_radius": 0, "max_radius": 9 },
-      { "u_cast_spell": { "id": "lavender_grimoire_earthbarrier" } },
+      { "u_location_variable": { "global_val": "var_lavender_grimoire_earthbarrier_loc" }, "max_radius": 9 },
       { 
         "revert_location": { "global_val": "var_lavender_grimoire_earthbarrier_loc" },
         "time_in_future": [ "16 s", "32 s" ],
         "key": "var_lavender_grimoire_earthbarrier_key"
       },
-      { "queue_eocs": [ "lavender_grimoire_earthbarrier_restore_eoc" ], "time_in_future": [ "16 s", "32 s" ] },
+      { "u_cast_spell": { "id": "lavender_grimoire_earthbarrier" } },
       { "u_message": "Green slabs rise from the ground!", "type": "mixed" }
-  ],
-  "//WIP": "Disabled as this is not reverting the location"
-  },
-  {
-    "id": "lavender_grimoire_earthbarrier_restore_eoc",
-    "type": "effect_on_condition",
-    "effect": [ { "alter_timed_events": "var_lavender_grimoire_earthbarrier_key" }, { "u_message": "333", "type": "mixed" } ]
+    ],
+    "//WIP": "Disabled as this is not fully not reverting the location, sometimes the slabs fail to be removed"
   },
   {
     "id": "mini_hakkero_replica_eoc",
@@ -266,6 +268,197 @@
     ],
     "false_effect": [ { "u_message": " ", "type": "mixed" } ],
     "//": "65% chance to shoot electric missiles, 15% to shoot flaming missiles, 10% to shoot cold missiles, 10% to misfire"
+  },
+  {
+    "id": "point_life_fragment_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "u_run_inv_eocs": "all",
+        "search_data": [ { "id": "point_life_fragment", "wielded_only": true } ],
+        "true_eocs": [ "point_life_fragment_confirm_eoc" ],
+        "false_eocs": [ 
+          {
+            "id": "point_life_fragment_no",
+            "effect": [ { "u_message": "You need to wield the life fragment.", "type": "mixed" } ]
+          }
+        ]
+      }
+    ],
+    "//": "Based on point_skill_eoc "
+  },
+  {
+    "id": "point_life_fragment_confirm_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "run_eoc_selector": [ "point_life_fragment_link_eoc" ],
+        "title": "Use life fragment",
+        "names": [ "Consume life fragment?" ],
+        "keys": [ "1" ],
+        "descriptions": [ "Consume the life fragment to increase your HP by 30." ],
+        "hide_failing": true,
+        "allow_cancel": true
+      }
+    ],
+    "//": "This is based on LoLK's 3 life fragments = +1 live. However, default starting hp is 85, and 85 / 3 = 28.333, which is ugly, so this rounds up to 30 instead"
+  },
+  {
+    "id": "point_life_fragment_link_eoc",
+    "type": "effect_on_condition",
+    "effect": [ { "run_eocs": [ "point_life_fragment_select_eoc" ] } ],
+    "//": "Link required as directly running the next EOC will never be TRUE (and throw a warning) unless it's run at least once"
+  },
+  {
+    "id": "point_life_fragment_select_eoc",
+    "type": "effect_on_condition",
+    "condition": { "u_has_trait": "point_life_fragment_mut" },
+    "effect": [
+      { "math": [ "var_point_life_fragment", "+=", "30" ] },
+      { "u_consume_item": "point_life_fragment", "count": 1 },
+      { "u_message": "Your HP has increased.", "type": "good" }
+    ],
+    "false_effect": [ 
+      { "math": [ "var_point_life_fragment", "+=", "30" ] },
+      { "u_consume_item": "point_life_fragment", "count": 1 },
+      { "u_add_trait": "point_life_fragment_mut" },
+      { "u_message": "Your HP has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "possessed_trumpet_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "var_posessed_trumpet_stat", "=", "rand(8) + 1" ] },
+      { "math": [ "var_posessed_trumpet_dex", "=", "0" ] },
+      { "math": [ "var_posessed_trumpet_int", "=", "0" ] },
+      { "math": [ "var_posessed_trumpet_per", "=", "0" ] },
+      { "math": [ "var_posessed_trumpet_str", "=", "0" ] },
+      { "math": [ "var_posessed_trumpet_morale", "=", "rand(4) + 1" ] },
+      {
+        "switch": { "math": [ "var_posessed_trumpet_stat" ] },
+        "cases": [
+          { 
+            "case": 1, "effect": [ 
+              { "math": [ "var_posessed_trumpet_dex", "=", "1 + rand(2)" ] },
+              { "u_add_effect": "possessed_trumpet_stat_effect", "duration": "12 h" },
+              { "u_message": "You feel more dextrous!", "type": "good" }
+            ]
+          },
+          { 
+            "case": 2, "effect": [ 
+              { "math": [ "var_posessed_trumpet_dex", "=", " - ( 1 + rand(2) )" ] },
+              { "u_add_effect": "possessed_trumpet_stat_effect", "duration": "12 h" },
+              { "u_message": "You feel sluggish…", "type": "bad" }
+            ]
+          },
+          { 
+            "case": 3, "effect": [ 
+              { "math": [ "var_posessed_trumpet_int", "=", "1 + rand(2)" ] },
+              { "u_add_effect": "possessed_trumpet_stat_effect", "duration": "12 h" },
+              { "u_message": "Your head feels clear!", "type": "good" }
+            ]
+          },
+          { 
+            "case": 4, "effect": [ 
+              { "math": [ "var_posessed_trumpet_int", "=", " - ( 1 + rand(2) )" ] },
+              { "u_add_effect": "possessed_trumpet_stat_effect", "duration": "12 h" },
+              { "u_message": "You feel smarter!", "type": "good" }
+            ]
+          },
+          { 
+            "case": 5, "effect": [ 
+              { "math": [ "var_posessed_trumpet_per", "=", "1 + rand(2)" ] },
+              { "u_add_effect": "possessed_trumpet_stat_effect", "duration": "12 h" },
+              { "u_message": "You feel more sensitive to your surroundings.", "type": "good" }
+            ]
+          },
+          { 
+            "case": 6, "effect": [ 
+              { "math": [ "var_posessed_trumpet_per", "=", " - ( 1 + rand(2) )" ] },
+              { "u_add_effect": "possessed_trumpet_stat_effect", "duration": "12 h" },
+              { "u_message": "You feel numb, deafened.", "type": "bad" }
+            ]
+          },
+          { 
+            "case": 7, "effect": [ 
+              { "math": [ "var_posessed_trumpet_str", "=", "1 + rand(2)" ] },
+              { "u_add_effect": "possessed_trumpet_stat_effect", "duration": "12 h" },
+              { "u_message": "You feel stronger!", "type": "bad" }
+            ]
+          },
+          { 
+            "case": 8, "effect": [ 
+              { "math": [ "var_posessed_trumpet_str", "=", " - ( 1 + rand(2) )" ] },
+              { "u_add_effect": "possessed_trumpet_stat_effect", "duration": "12 h" },
+              { "u_message": "You feel weaker.", "type": "bad" }
+            ]
+          }
+        ]
+      },
+      {
+        "switch": { "math": [ "var_posessed_trumpet_morale" ] },
+        "cases": [
+          { 
+            "case": 1, "effect": [ 
+              { "math": [ "var_posessed_trumpet_morale_bonus", "=", "11 + rand(6)" ] },
+              { "u_cast_spell": { "id": "possessed_trumpet_morale_spell" } }
+            ]
+          },
+          { 
+            "case": 2, "effect": [ 
+              { "math": [ "var_posessed_trumpet_morale_bonus", "=", " - ( 11 + rand(6) )" ] },
+              { "u_cast_spell": { "id": "possessed_trumpet_morale_spell" } }
+            ]
+          },
+          { 
+            "case": 3, "effect": [ 
+              { "math": [ "var_posessed_trumpet_morale_bonus", "=", "22 + rand(11)" ] },
+              { "u_cast_spell": { "id": "possessed_trumpet_morale_spell" } }
+            ]
+          },
+          { 
+            "case": 4, "effect": [ 
+              { "math": [ "var_posessed_trumpet_morale_bonus", "=", " - ( 22 + rand(11) )" ] },
+              { "u_cast_spell": { "id": "possessed_trumpet_morale_spell" } }
+            ]
+          }
+        ]
+      }
+    ],
+    "//": "The morale is given by a spell instead of EOC, so it isn't limited to the player"
+  },
+  {
+    "id": "thorny_box_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "u_add_effect": "thorny_box_effect", "duration": "1440 m" },
+      { "math": [ "u_var_thorny_box", "+=", "1" ] },
+      { "math": [ "u_var_thorny_box_timer", "+=", "120" ] }, 
+      { "run_eocs": [ "thorny_box_timer_eoc" ] },
+      { "u_message": "You drink from the box.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "thorny_box_timer_eoc",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "u_var_thorny_box_timer", ">=", "1" ] },
+    "effect": [
+      { "u_add_effect": "thorny_box_demerit_effect", "duration": "2880 m" },
+      { "queue_eocs": [ "thorny_box_timer2_eoc" ], "time_in_future": "60 m" }
+    ],
+    "false_effect": [ 
+      { "math": [ "u_var_thorny_box", "=", "0" ] },
+      { "u_lose_effect": "thorny_box_demerit_effect" }
+    ]
+  },
+  {
+    "id": "thorny_box_timer2_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_var_thorny_box_timer", "-=", "1" ] },
+      { "run_eocs": [ "thorny_box_timer_eoc" ] }
+    ]
   },
   {
     "id": "wind_blessing_eoc",

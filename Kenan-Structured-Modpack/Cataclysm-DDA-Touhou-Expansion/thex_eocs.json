@@ -5,6 +5,7 @@
     "eoc_type": "SCENARIO_SPECIFIC",
     "effect": [
       { "run_eocs": [ "daily_randomization_eoc" ] },
+      { "run_eocs": [ "impurity_start_eoc" ] },
       { "run_eocs": [ "wind_blessing_eoc" ] }
     ]
   },
@@ -26,38 +27,71 @@
     "//WIP2": "Confirm the daily_randomization_eoc won't break !!!"
   },
   {
-    "id": "guevaudan_attacked_melee_eoc",
+    "id": "gevaudan_attacked_melee_eoc",
     "type": "effect_on_condition",
     "eoc_type": "EVENT",
     "required_event": "character_melee_attacks_monster",
-    "condition": { "compare_string": [ "mon_gevaudan", { "context_val": "victim_type" } ] },
+    "condition": {
+      "and": [
+        { "compare_string": [ "mon_gevaudan", { "context_val": "victim_type" } ] },
+        { "math": [ "_hits", "!=", "0" ] }
+      ]
+    },
     "effect": [ 
       { "npc_location_variable": { "global_val": "var_gevaudan_loc" } },
-      { "run_eoc_with": "guevaudan_attacked_check_eoc", "beta_loc": { "global_val": "var_gevaudan_loc" } }
+      { "run_eoc_with": "gevaudan_attacked_check_eoc", "beta_loc": { "global_val": "var_gevaudan_loc" } }
     ],
-    "//": "These are WIP eocs, given I don't know how to track the dmg mon_gevaudan receives with silver-based materials",
+    "//note": "I don't know how to track the dmg mon_gevaudan receives with silver-based materials",
     "//2": "This alternative instead prevents it from self-healing if damaged by a silver-based weapon",
-    "//3": "Probably keep still after I figure out"
+    "//3": "Probably keep still after I figure out",
+    "//4": "Do note that while the beta_talker is detected (because the run_eoc_with is true), the CHECK_eoc cannot be used with npc_cast_spell "
   },
   {
-    "id": "guevaudan_attacked_ranged_eoc",
+    "id": "gevaudan_attacked_ranged_eoc",
     "type": "effect_on_condition",
     "eoc_type": "EVENT",
     "required_event": "character_ranged_attacks_character",
     "condition": { "compare_string": [ "mon_gevaudan", { "context_val": "victim_type" } ] },
     "effect": [ 
       { "npc_location_variable": { "global_val": "var_gevaudan_loc" } },
-      { "run_eoc_with": "guevaudan_attacked_check_eoc", "beta_loc": { "global_val": "var_gevaudan_loc" } }
+      { "run_eoc_with": "gevaudan_attacked_check_eoc", "beta_loc": { "global_val": "var_gevaudan_loc" } }
     ]
   },
   {
-    "id": "guevaudan_attacked_check_eoc",
+    "id": "gevaudan_attacked_check_eoc",
     "type": "effect_on_condition",
     "effect": [
-      { "npc_add_effect": "gevaudan_noregen", "duration": "31 s" }
+      {
+        "u_run_inv_eocs": "all",
+        "search_data": [ { "material": "silver", "wielded_only": true } ],
+        "true_eocs": [
+          {
+            "id": "gevaudan_attacked_silver",
+            "effect": [
+              { "u_cast_spell": { "id": "gevaudan_attacked_silver_spell" }, "loc": { "global_val": "var_gevaudan_loc" } }
+            ]
+          }
+        ]
+      }
     ]
   },
-  
+  {
+    "id": "gevaudan_attacked_silver_spell",
+    "type": "SPELL",
+    "name": { "str": "" },
+    "description": "",
+    "spell_class": "NONE",
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "effect": "attack",
+    "effect_str": "gevaudan_noregen",
+    "shape": "blast",
+    "min_duration": 3100,
+    "max_duration": 3100,
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "SILENT" ]
+  },
   {
     "id": "impurity_eoc",
     "type": "effect_on_condition",
@@ -68,7 +102,7 @@
           {
             "id": "impurity_extremelylow",
             "condition": { "math": [ "u_vitamin('impurity')", "<", "0" ] },
-            "effect": [ { "math": [ "var_impurity", "=", "0" ] } ]
+            "effect": [ { "math": [ "u_var_impurity", "=", "0" ] } ]
           },
           {
             "id": "impurity_verylow",
@@ -78,7 +112,7 @@
                 { "math": [ "u_vitamin('impurity')", "<=", "144" ] }
               ]
             },
-            "effect": [ { "math": [ "var_impurity", "=", "1" ] } ]
+            "effect": [ { "math": [ "u_var_impurity", "=", "1" ] } ]
           },
           {
             "id": "impurity_low",
@@ -88,12 +122,12 @@
                 { "math": [ "u_vitamin('impurity')", "<=", "504" ] }
               ]
             },
-            "effect": [ { "math": [ "var_impurity", "=", "2" ] } ]
+            "effect": [ { "math": [ "u_var_impurity", "=", "2" ] } ]
           },
           {
             "id": "impurity_high",
             "condition": { "math": [ "u_vitamin('impurity')", ">=", "505" ] },
-            "effect": [ { "math": [ "var_impurity", "=", "3" ] } ]
+            "effect": [ { "math": [ "u_var_impurity", "=", "3" ] } ]
           }
         ]
       }
@@ -101,5 +135,104 @@
     "//": "1 impurity every 20 min equals 72 impurity per day or 504 in 7 days, and that's not considering consuming Earthly stuff during that period of time",
     "//2": "Boundaries for each impure tier: -48 - 0 h (extremely low), 0 - 48 h (verylow), 2 - 7 days (low), >7 days (high)",
     "//3": "Impurity tiers are named: Pure, Slight impurity, Impure, Impure (2) "
+  },
+  {
+    "id": "impurity_kills_character_eoc",
+    "type": "effect_on_condition",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_character",
+    "effect": [ { "math": [ "u_vitamin('impurity')", "+=", "10" ] } ]
+  },
+  {
+    "id": "impurity_kills_monster_eoc",
+    "type": "effect_on_condition",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_monster",
+    "effect": [ { "math": [ "u_vitamin('impurity')", "+=", "1" ] } ]
+  },
+  {
+    "id": "impurity_start_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "run_eocs": [
+          {
+            "id": "impurity_earth_eoc",
+            "condition": {
+              "or": [
+                { "u_has_trait": "YOUKAI_SPECIES" },
+                { "u_has_trait": "HOURAI_SPECIES" },
+                { "u_has_trait": "MENREIKI_SPECIES" },
+                { "u_has_trait": "VAMPIRE_SPECIES" },
+                {
+                  "and": [
+                    { "u_has_trait": "HUMAN_SPECIES" },
+                    { "not": { "u_has_trait": "HALF_PHANTOM_SPECIES" } }
+                  ]
+                },
+                { "u_has_trait": "WICKED_HERMIT" }
+              ]
+            },
+            "effect": [ { "math": [ "u_vitamin('impurity')", "=", "999" ] } ]
+          },
+          {
+            "id": "impurity_heaven_eoc",
+            "condition": {
+              "or": [
+                { "u_has_trait": "OARFISH_SPECIES" },
+                { "u_has_trait": "HERMIT_SPECIES" },
+                { "u_has_trait": "CELESTIAL_SPECIES" }
+              ]
+            },
+            "effect": [ { "math": [ "u_vitamin('impurity')", "=", "1" ] } ]
+          },
+          {
+            "id": "impurity_moon_eoc",
+            "condition": {
+              "or": [
+                { "u_has_trait": "GYOKUTO_SPECIES" }
+              ]
+            },
+            "effect": [ { "math": [ "u_vitamin('impurity')", "=", "-144" ] } ]
+          }
+        ]
+      }
+    ],
+    "//": "Seems impurity_eoc is run before this, regardless if this is placed after, which could cause minor problems in the future"
+  },
+  {
+    "id": "kill_drops_eoc",
+    "type": "effect_on_condition",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_monster",
+    "condition": {
+      "and": [
+        { 
+          "or": [ 
+            { "npc_has_species": "GHOST_TOUHOU" },
+            { "npc_has_species": "JIANGSHI_TOUHOU" },
+            { "npc_has_species": "ONI_TOUHOU" },
+            { "npc_has_species": "PHANTOM_TOUHOU" },
+            { "npc_has_species": "TSUKUMOGAMI_TOUHOU" },
+            { "npc_has_species": "YOUKAI_BEAST_TOUHOU" },
+            { "npc_has_species": "YOUKAI_FEMALE_TOUHOU" },
+            { "npc_has_species": "YOUKAI_HOSTILE_TOUHOU" },
+            { "npc_has_species": "YOUKAI_NEUTRAL_TOUHOU" },
+            { "npc_has_species": "YOUKAI_PSEUDO_TOUHOU" },
+            { "npc_has_species": "YOUKAI_SKINWALKER_TOUHOU" },
+            { "npc_has_species": "FAIRY_TOUHOU" },
+            { "npc_has_species": "SASQUATCH_TOUHOU" },
+            { "npc_has_species": "VAMPIRE_TOUHOU" }
+          ]
+        },
+        { "not": { "npc_has_species": "SUMMONED_TOUHOU" } },
+        { "x_in_y_chance": { "x": 4, "y": 100 } }
+      ]
+    },
+    "effect": [
+      { "npc_location_variable": { "global_val": "var_kill_drops_loc" } },
+      { "map_spawn_item": "thex_drops_placeholder", "loc": { "context_val": "var_kill_drops_loc" }, "use_item_group": true },
+      { "message": "<color_light_cyan>!</color>" }
+    ]
   }
 ]

@@ -24,7 +24,7 @@
     "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
     "dodge": 5,
     "armor": { "bash": 2, "cut": 2, "stab": 2, "bullet": 4, "acid": 2, "biological": 4, "cold": 4, "electric": 4, "heat": 4 },
-    "families": [ "prof_intro_biology", "prof_physiology", "prof_wp_youkai" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_canine", "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_doglike_body" ],
     "stomach_size": 1000,
     "vision_night": 12,
@@ -86,7 +86,7 @@
     "melee_dice_sides": 3,
     "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
     "dodge": 6,
-    "families": [ "prof_physiology", "prof_wp_youkai" ],
+    "families": [ "prof_gross_anatomy", "prof_physiology", "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_doglike_body" ],
     "stomach_size": 350,
     "vision_night": 16,
@@ -129,7 +129,7 @@
     "dodge": 3,
     "armor": { "bash": 2, "cut": 2, "stab": 2, "bullet": 16, "acid": 2, "biological": 2, "cold": 2, "electric": 2, "heat": 2 },
     "bleed_rate": 125,
-    "families": [ "prof_wp_youkai" ],
+    "families": [ "prof_gross_anatomy", "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_enfield_body" ],
     "vision_day": 20,
     "vision_night": 24,
@@ -178,7 +178,7 @@
     "dodge": 4,
     "armor": { "bash": 4, "cut": 4, "stab": -4, "bullet": -4, "acid": 4, "biological": 4, "cold": 4, "electric": 4, "heat": 4 },
     "bleed_rate": 166,
-    "families": [ "prof_wp_youkai" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_canine", "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_doglike_body" ],
     "stomach_size": 68000,
     "vision_night": 32,
@@ -223,7 +223,7 @@
       "armor": 0.5,
       "stomach_size": 2
     },
-    "families": [ "prof_wp_youkai" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_youkai" ],
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "special_attacks": [ 
       [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
@@ -257,7 +257,7 @@
     "melee_dice_sides": 3,
     "melee_damage": [ { "damage_type": "soul", "amount": 2 } ],
     "dodge": 2,
-    "families": [ "prof_wp_youkai" ],
+    "families": [ "prof_gross_anatomy", "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_youkai_doglike_body" ],
     "stomach_size": 3000,
     "vision_night": 8,
@@ -331,7 +331,7 @@
       { "id": "mon_kunekune_1", "type": "spell", "spell_data": { "id": "fear_paralyze" }, "cooldown": { "math": [ "25 + rand(20)" ] }, "monster_message": "" },
       { "id": "mon_kunekune_2", "type": "spell", "spell_data": { "id": "stare" }, "cooldown": { "math": [ "25 + rand(10)" ] }, "monster_message": "" }
     ],
-    "death_function": { "message": "The %s dissipates into air.", "corpse_type": "NO_CORPSE" },
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s dissipates into air." },
     "flags": [ "HEARS", "IMMOBILE", "KEENNOSE", "SEES" ]
   },
   {
@@ -418,7 +418,7 @@
     "melee_damage": [ { "damage_type": "electric", "amount": 7 } ],
     "dodge": 2,
     "armor": { "bash": 2, "cut": 2, "stab": 2, "bullet": 16, "acid": 4, "biological": 4, "cold": 4, "electric": 16, "heat": 16 },
-    "families": [ "prof_wp_youkai", "prof_wp_basic_bug" ],
+    "families": [ "prof_wp_basic_bug", "prof_wp_youkai" ],
     "stomach_size": 15000,
     "bleed_rate": 133,
     "emit_fields": [ { "emit_id": "emit_shock_burst", "delay": "13 s" } ],
@@ -443,7 +443,7 @@
         "monster_message": "" 
       }
     ],
-    "death_function": { "message": "The %s squirms, twitches, and finally dies.", "corpse_type": "NORMAL" },
+    "death_function": { "corpse_type": "NORMAL", "message": "The %s squirms, twitches, and finally dies." },
     "flags": [ "ACIDPROOF", "ATTACK_LOWER", "DIGS", "EATS", "ELECTRIC", "HEARS", "NOHEAD", "SLUDGEPROOF", "VENOM" ],
     "//": "Mongolian death worm, bigger than 'official' reports"
   },
@@ -473,7 +473,7 @@
     "melee_damage": [ { "damage_type": "bash", "amount": 3 } ],
     "dodge": 3,
     "armor": { "bash": 2, "cut": 2, "stab": 2, "bullet": 2, "acid": 4, "biological": 4, "cold": 4, "electric": 4, "heat": 4 },
-    "families": [ "prof_intro_biology", "prof_physiology", "prof_wp_youkai" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_humanoid_body" ],
     "vision_night": 28,
     "path_settings": { "max_dist": 32 },
@@ -507,7 +507,7 @@
     "melee_damage": [ { "damage_type": "bash", "amount": 3 } ],
     "dodge": 4,
     "armor": { "bash": 2, "cut": 4, "stab": 2, "bullet": 0 },
-    "families": [ "prof_intro_biology", "prof_physiology", "prof_wp_youkai" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_humanoid_body" ],
     "vision_night": 32,
     "path_settings": { "max_dist": 32 },
@@ -566,7 +566,7 @@
     "melee_damage": [ { "damage_type": "soul", "amount": 4 } ],
     "dodge": 4,
     "armor": { "bash": 2, "cut": 2, "stab": 2, "bullet": 2, "acid": 4, "biological": 4, "cold": 4, "electric": 4, "heat": 4 },
-    "families": [ "prof_physiology", "prof_wp_youkai" ],
+    "families": [ "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_humanoid_body" ],
     "stomach_size": 10000,
     "vision_day": 20,
@@ -601,13 +601,11 @@
     "melee_dice": 2,
     "melee_dice_sides": 2,
     "dodge": 2,
-    "families": [ "prof_physiology", "prof_wp_youkai" ],
+    "families": [ "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_youkai_doglike_body" ],
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE" ],
     "fear_triggers": [ "FRIEND_ATTACKED" ],
-    "death_function": { "message": "The %s dissolves in its own tears!", "corpse_type": "NO_CORPSE" },
-    "death_drops": "squonk_drops",
     "special_attacks": [ 
       [ "ABSORB_MEAT", { "math": [ "80 + rand(40)" ] } ], 
       { 
@@ -619,6 +617,8 @@
         "monster_message": "The %s dissolves in its own tears!" 
       }
     ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s dissolves in its own tears!" },
+    "death_drops": "squonk_drops",
     "biosignature": { "biosig_item": "water", "biosig_timer": 4 },
     "flags": [ "HEARS", "PATH_AVOID_DANGER", "PACIFIST", "SEES", "SMALL_HIDER", "SMELLS", "WARM" ],
     "//": "The squonk should go around, and dissolve itself if it gets any of the anger_triggers or if the player gets too close",
@@ -652,11 +652,11 @@
     "path_settings": { "max_dist": 20, "avoid_traps": true, "avoid_dangerous_fields": true },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
     "special_attacks": [ [ "PARROT_AT_DANGER", 33 ], [ "SEARCHLIGHT", 50 ] ],
+    "death_function": { "corpse_type": "NORMAL", "message": "The %s dies!" },
     "death_drops": {
       "subtype": "collection",
       "groups": [ [ "subway", 40 ], [ "sewer", 20 ], [ "trash", 5 ], [ "bedroom", 1 ], [ "dresser", 5 ], [ "ammo", 18 ] ]
     },
-    "death_function": { "corpse_type": "NORMAL", "message": "The %s dies!" },
     "flags": [
       "BASHES",
       "CAN_OPEN_DOORS",

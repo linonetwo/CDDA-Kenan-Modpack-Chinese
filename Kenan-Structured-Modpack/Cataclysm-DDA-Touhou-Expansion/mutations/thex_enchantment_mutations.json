@@ -1,5 +1,24 @@
 [
   {
+    "id": "point_life_fragment_mut",
+    "type": "mutation",
+    "name": "",
+    "description": "",
+    "points": 0,
+    "profession": false,
+    "purifiable": false,
+    "starting_trait": false,
+    "valid": true,
+    "enchantments": [ 
+      { 
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "MAX_HP", "add": { "math": [ "var_point_life_fragment" ] } }
+        ]
+      }
+    ]
+  },
+  {
     "id": "skinwalker_pelt_mut",
     "type": "mutation",
     "name": "",

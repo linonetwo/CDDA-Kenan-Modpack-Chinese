@@ -194,7 +194,13 @@
     "symbol": "-",
     "looks_like": "trumpet",
     "color": "yellow",
-    "use_action": [ { "type": "cast_spell", "spell_id": "possessed_trumpet_buffs", "no_fail": true, "level": 1 } ],
+    "use_action": [
+      {
+        "type": "effect_on_conditions",
+        "description": "Play the trumpet.",
+        "effect_on_conditions": [ "possessed_trumpet_eoc" ]
+      }
+    ],
     "flags": [ "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
   },
   {

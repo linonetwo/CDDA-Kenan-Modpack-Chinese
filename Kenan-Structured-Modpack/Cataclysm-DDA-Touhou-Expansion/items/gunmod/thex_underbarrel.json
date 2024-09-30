@@ -16,10 +16,12 @@
     "material": [ "steel" ],
     "symbol": ":",
     "color": "light_gray",
-    "location": "underbarrel",
+    "location": "underbarrel mount",
+    "add_mod": [ [ "underbarrel", 1 ] ],
     "mod_targets": [ "rifle" ],
     "handling_modifier": 6,
-    "min_skills": [ [ "weapon", 2 ] ]
+    "min_skills": [ [ "weapon", 2 ] ],
+    "flags": [ "BIPOD", "IRREMOVABLE", "SLOW_WIELD" ]
   },
   {
     "id": "bipod_idw",

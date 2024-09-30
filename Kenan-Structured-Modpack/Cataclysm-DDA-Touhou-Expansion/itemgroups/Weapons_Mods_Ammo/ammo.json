@@ -1,53 +1,129 @@
 [
   {
+    "id": "thex_ammo_20mm50",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [ { "item": "20mm50", "prob": 100 }, { "item": "20mm_v", "prob": 100 } ]
+  },
+  {
+    "id": "thex_ammo_792x33",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [ { "item": "792x33_me", "prob": 100 }, { "item": "792x33_prvi", "prob": 200 } ]
+  },
+  {
+    "id": "thex_ammo_792x57",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [ { "item": "792x57_m75", "prob": 200 }, { "item": "792x57_sme", "prob": 100 } ]
+  },
+  {
+    "id": "thex_ammo_9x39",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [ { "item": "9x39_sp5", "prob": 200 }, { "item": "9x39_sp6", "prob": 100 } ]
+  },
+  {
+    "id": "thex_ammo_792x33_reloaded",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [ { "item": "reloaded_792x33_me", "prob": 100 }, { "item": "reloaded_792x33_prvi", "prob": 100 } ]
+  },
+  {
+    "id": "thex_ammo_792x57_reloaded",
+    "type": "item_group",
+    "subtype": "collection",
+    "entries": [ { "item": "reloaded_792x57_m75", "prob": 100 }, { "item": "reloaded_792x57_sme", "prob": 100 } ]
+  },
+  {
+    "id": "thex_ammo_9x39_reloaded",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [ { "item": "reloaded_9x39_sp5", "prob": 100 }, { "item": "reloaded_9x39_sp6", "prob": 100 } ]
+  },
+  {
+    "type": "item_group",
+    "id": "ammo_rifle_common",
+    "//": "Rifle ammo commonly owned by citizens and found in many locations.",
+    "subtype": "distribution",
+    "copy-from": "ammo_rifle_common",
+    "extend": { 
+      "entries": [ 
+        { "group": "thex_ammo_792x57", "prob": 28 } 
+      ] 
+    },
+    "//2": "Total weight 395 / 14 = 28.21 ~ 28"
+  },
+  {
+    "type": "item_group",
+    "id": "ammo_rifle_common_collection",
+    "//": "Rifle ammo commonly owned by citizens and found in many locations.",
+    "subtype": "collection",
+    "copy-from": "ammo_rifle_common_collection",
+    "extend": { 
+      "entries": [ 
+        { "group": "thex_ammo_792x57", "prob": 29 } 
+      ] 
+    },
+    "//2": "Total weight 286 / 10 = 28.6 ~ 29"
+  },
+  {
+    "type": "item_group",
+    "id": "ammo_rifle_common_loose",
+    "//": "Loose rifle ammo commonly owned by citizens and found in many locations.",
+    "subtype": "collection",
+    "copy-from": "ammo_rifle_common_loose",
+    "extend": { 
+      "entries": [ 
+        { "group": "thex_ammo_792x57", "prob": 9, "charges": [ 0, 5 ] } 
+      ] 
+    },
+    "//2": "Total weight 99 / 11 = 9"
+  },
+  {
     "id": "ammo_rifle_rare",
     "type": "item_group",
     "//": "Less common rifle ammo including that only used by police/paramilitary forces.",
     "subtype": "distribution",
     "copy-from": "ammo_rifle_rare",
-    "extend": { "entries": [ { "group": "touhou_ammo_9x39", "prob": 20 }, { "group": "touhou_ammo_kurz", "prob": 20 } ] }
+    "extend": { 
+      "entries": [ 
+        { "item": "765x53_arg", "prob": 22 }, 
+        { "group": "thex_ammo_792x57", "prob": 22 }, 
+        { "group": "thex_ammo_9x39", "prob": 22 } 
+      ] 
+    },
+    "//2": "Total weight 564 / 26 = 21.69 ~ 22"
   },
   {
-    "id": "touhou_ammo_9x39",
     "type": "item_group",
-    "//": "To spawn 9x39",
-    "subtype": "distribution",
-    "entries": [ { "item": "9x39_sp5", "prob": 66 }, { "item": "9x39_sp6", "prob": 33 } ]
-  },
-  {
-    "id": "touhou_ammo_kurz",
-    "type": "item_group",
-    "//": "To spawn 7.92x33",
-    "subtype": "distribution",
-    "entries": [
-      { "item": "792x33_me", "prob": 33 },
-      { "item": "reloaded_792x33_me", "prob": 33 },
-      { "item": "792x33_prvi", "prob": 66 },
-      { "item": "reloaded_792x33_prvi", "prob": 66 }
-    ]
-  },
-  {
-    "id": "touhou_ammo_mauser",
-    "type": "item_group",
-    "//": "To spawn Mauser ammo",
-    "subtype": "distribution",
-    "entries": [
-      { "item": "792x57_m75", "prob": 75 },
-      { "item": "reloaded_792x57_m75", "prob": 75 },
-      { "item": "792x57_sme", "prob": 25 },
-      { "item": "reloaded_792x57_sme", "prob": 25 },
-      { "item": "765x53_arg", "prob": 35 },
-      { "item": "reloaded_765x53_arg", "prob": 35 }
-    ]
-  },
-  {
     "id": "ammo_rifle_rare_collection",
-    "type": "item_group",
     "//": "Less common rifle ammo including that only used by police/paramilitary forces.",
     "subtype": "collection",
     "copy-from": "ammo_rifle_rare_collection",
-    "extend": { "entries": [ { "group": "touhou_ammo_9x39", "prob": 40 }, { "group": "touhou_ammo_mauser", "prob": 50 } ] },
-    "//2": "Mauser has double probability than it should be as it encompasses both 7.92x53 and 7.65x53"
+    "extend": { 
+      "entries": [ 
+        { "item": "765x53_arg", "prob": 28 }, 
+        { "group": "thex_ammo_792x57", "prob": 28 }, 
+        { "group": "thex_ammo_9x39", "prob": 28 } 
+      ] 
+    },
+    "//2": "Total weight 735 / 26 = 28.27 ~ 28"
+  },
+  {
+    "type": "item_group",
+    "id": "ammo_rifle_hunting",
+    "//": "Ammo for hunting rifles found within hunting supply stores and related locations.",
+    "subtype": "distribution",
+    "copy-from": "ammo_rifle_hunting",
+    "extend": { 
+      "entries": [ 
+        { "item": "765x53_arg", "prob": 25 }, 
+        { "group": "thex_ammo_792x33", "prob": 25 }, 
+        { "group": "thex_ammo_792x57", "prob": 25 } 
+      ] 
+    },
+    "//2": "Total weight 425 / 17 = 25"
   },
   {
     "id": "ammo_rifle_milspec",
@@ -55,7 +131,14 @@
     "//": "Military specification rifle ammo found at military sites.",
     "subtype": "distribution",
     "copy-from": "ammo_rifle_milspec",
-    "extend": { "entries": [ { "group": "touhou_ammo_9x39", "prob": 25 }, { "item": "792x57_m75", "prob": 25 } ] }
+    "extend": { 
+      "entries": [ 
+        { "item": "473x33_dm11", "prob": 28 }, 
+        { "group": "thex_ammo_792x57", "prob": 28 }, 
+        { "group": "thex_ammo_9x39", "prob": 28 } 
+      ] 
+    },
+    "//2": "Total weight 735 / 26 = 28.27 ~ 28"
   },
   {
     "id": "ammo_rifle_obscure",
@@ -65,11 +148,14 @@
     "copy-from": "ammo_rifle_obscure",
     "extend": {
       "entries": [
-        { "group": "touhou_ammo_kurz", "prob": 35 },
-        { "group": "touhou_ammo_9x39", "prob": 20 },
-        { "group": "touhou_ammo_mauser", "prob": 35 }
+        { "item": "473x33_dm11", "prob": 107 },
+        { "item": "765x53_arg", "prob": 107 },
+        { "group": "thex_ammo_792x33", "prob": 107 },
+        { "group": "thex_ammo_792x57", "prob": 107 },
+        { "group": "thex_ammo_9x39", "prob": 107 }
       ]
-    }
+    },
+    "//2": "Total weight 320 / 3 = 106.66 ~ 107"
   },
   {
     "id": "ammo_rifle_obscure_collection",
@@ -79,11 +165,14 @@
     "copy-from": "ammo_rifle_obscure_collection",
     "extend": {
       "entries": [
-        { "group": "touhou_ammo_kurz", "prob": 35 },
-        { "group": "touhou_ammo_9x39", "prob": 20 },
-        { "group": "touhou_ammo_mauser", "prob": 35 }
+        { "item": "473x33_dm11", "prob": 53 },
+        { "item": "765x53_arg", "prob": 53 },
+        { "group": "thex_ammo_792x33", "prob": 53 },
+        { "group": "thex_ammo_792x57", "prob": 53 },
+        { "group": "thex_ammo_9x39", "prob": 53 }
       ]
-    }
+    },
+    "//2": "Total weight 160 / 3 = 53.33 ~ 53"
   },
   {
     "id": "ammo_rifle_reloaded",
@@ -93,30 +182,14 @@
     "copy-from": "ammo_rifle_reloaded",
     "extend": {
       "entries": [
-        { "group": "touhou_ammo_9x39_reloaded", "prob": 25 },
-        { "item": "reloaded_765x53_arg", "prob": 25 },
-        { "group": "touhou_ammo_792x33_reloaded", "prob": 25 },
-        { "group": "touhou_ammo_792x57_reloaded", "prob": 25 }
+        { "item": "bootleg_473x33_dm11", "prob": 18 },
+        { "item": "reloaded_765x53_arg", "prob": 18 },
+        { "group": "thex_ammo_792x33_reloaded", "prob": 18 },
+        { "group": "thex_ammo_792x57_reloaded", "prob": 18 },
+        { "group": "thex_ammo_9x39_reloaded", "prob": 18 }
       ]
-    }
-  },
-  {
-    "id": "touhou_ammo_9x39_reloaded",
-    "type": "item_group",
-    "subtype": "distribution",
-    "entries": [ { "item": "reloaded_9x39_sp5", "prob": 100 }, { "item": "reloaded_9x39_sp6", "prob": 100 } ]
-  },
-  {
-    "id": "touhou_ammo_792x33_reloaded",
-    "type": "item_group",
-    "subtype": "collection",
-    "entries": [ { "item": "reloaded_792x33_me", "prob": 100 }, { "item": "reloaded_792x33_prvi", "prob": 100 } ]
-  },
-  {
-    "id": "touhou_ammo_792x57_reloaded",
-    "type": "item_group",
-    "subtype": "collection",
-    "entries": [ { "item": "reloaded_792x57_m75", "prob": 66 }, { "item": "reloaded_792x57_sme", "prob": 33 } ]
+    },
+    "//2": "Total weight 527 / 29 = 18.17 ~ 18"
   },
   {
     "id": "ammo_obscure_collection",
@@ -125,8 +198,37 @@
     "subtype": "collection",
     "entries": [
       { "group": "ammo_pistol_obscure_collection", "prob": 65 },
-      { "group": "ammo_rifle_obscure_collection", "prob": 35 },
+      { "group": "ammo_rifle_obscure_collection", "prob": 45 },
       { "group": "ammo_launcher_grenade_adapter", "prob": 1 }
-    ]
+    ],
+    "//2": "Modified probabilities. This is the only modified 'ammo_X_collection' to sliiightly skew the ammo ratios toward rifle"
+  },
+  {
+    "id": "ammo_casings",
+    "type": "item_group",
+    "subtype": "distribution",
+    "copy-from": "ammo_casings",
+    "extend": {
+      "entries": [
+        { "item": "20mm_casing", "prob": 68 },
+        { "item": "765x53_casing", "prob": 68 },
+        { "group": "touhou_792x33_casing", "prob": 68 },
+        { "group": "touhou_792x57_casing", "prob": 68 },
+        { "item": "9x39_casing", "prob": 68 }
+      ]
+    },
+    "//2": "Total weight 2805 / 41 = 68.41 ~ 68"
+  },
+  {
+    "id": "touhou_792x33_casing",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [ { "item": "792x33_casing_brass", "prob": 100 }, { "item": "792x33_casing_steel", "prob": 100 } ]
+  },
+  {
+    "id": "touhou_792x57_casing",
+    "type": "item_group",
+    "subtype": "distribution",
+    "entries": [ { "item": "792x57_casing_brass", "prob": 100 }, { "item": "792x57_casing_steel", "prob": 100 } ]
   }
 ]

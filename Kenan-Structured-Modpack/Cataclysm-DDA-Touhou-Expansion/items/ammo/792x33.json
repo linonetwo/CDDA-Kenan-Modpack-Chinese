@@ -19,7 +19,7 @@
     "damage": { "damage_type": "bullet", "amount": 43, "armor_penetration": 5 },
     "dispersion": 30,
     "range": 50,
-    "recoil": 1900,
+    "recoil": 1909,
     "effects": [ "COOKOFF", "NEVER_MISFIRES" ],
     "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
     "//2": "Assuming this used a lead core"
@@ -37,7 +37,7 @@
     "casing": "792x33_casing_brass",
     "damage": { "damage_type": "bullet", "amount": 43, "armor_penetration": 4 },
     "dispersion": 20,
-    "recoil": 1700
+    "recoil": 1909
   },
   {
     "id": "reloaded_792x33_me",
@@ -51,7 +51,6 @@
       "damage": { "damage_type": "bullet", "amount": 0.9, "armor_penetration": 1.5 },
       "dispersion": 1.1
     },
-    "recoil": 1850,
     "//": "According to Cartridges of the world 8th ed., this wouldn't work as the steel casing and Berdan primer make it non reloadable"
   },
   {
@@ -66,7 +65,6 @@
       "damage": { "damage_type": "bullet", "amount": 0.9, "armor_penetration": 1.5 },
       "dispersion": 1.1
     },
-    "recoil": 1850,
     "//": "According to Cartridges of the world 8th ed., this wouldn't work as the steel casing and Berdan primer make it non reloadable"
   },
   {
@@ -76,8 +74,8 @@
     "copy-from": "792x33_me",
     "proportional": {
       "price": 0.33,
-      "damage": { "damage_type": "bullet", "amount": 0.66, "armor_penetration": 0.66 },
-      "recoil": 0.66,
+      "damage": { "damage_type": "bullet", "amount": 0.77, "armor_penetration": 0.66 },
+      "recoil": 0.77,
       "dispersion": 1.2
     },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE", "RECYCLED" ] },
@@ -90,8 +88,8 @@
     "copy-from": "792x33_prvi",
     "proportional": {
       "price": 0.33,
-      "damage": { "damage_type": "bullet", "amount": 0.66, "armor_penetration": 0.66 },
-      "recoil": 0.66,
+      "damage": { "damage_type": "bullet", "amount": 0.77, "armor_penetration": 0.66 },
+      "recoil": 0.77,
       "dispersion": 1.2
     },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE", "RECYCLED" ] },

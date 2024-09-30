@@ -29,12 +29,12 @@
     "path_settings": { "allow_climb_stairs": true, "allow_open_doors": true },
     "vision_day": 24,
     "vision_night": 12,
-    "death_drops": {
-      "subtype": "collection",
-      "groups": [ [ "fairy_drops", 100 ], [ "thex_drops_placeholder", 1 ] ]
-    },
     "upgrades": { "half_life": 42, "into_group": "GROUP_FAIRY_UPGRADE" },
     "death_function": { "effect": { "id": "death_fairy", "hit_self": true }, "message": "pichun!" },
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [ [ "fairy_drops", 100 ] ]
+    },
     "flags": [ "CLIMBS", "FLIES", "GROUP_MORALE", "HAS_MIND", "HEARS", "HIT_AND_RUN", "NOGIB", "PATH_AVOID_FIRE", "SEES", "SMALL_HIDER", "SWARMS", "WARM" ],
 	"//": "Template only"
   },

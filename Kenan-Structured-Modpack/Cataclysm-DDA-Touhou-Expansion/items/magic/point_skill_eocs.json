@@ -1,0 +1,386 @@
+[
+  {
+    "id": "point_skill_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "u_run_inv_eocs": "all",
+        "search_data": [ { "id": "point_skill", "wielded_only": true } ],
+        "true_eocs": [ "point_skill_confirm_eoc" ],
+        "false_eocs": [ 
+          {
+            "id": "point_skill_no",
+            "effect": [ { "u_message": "You need to wield the skill point.", "type": "mixed" } ]
+          }
+        ]
+      }
+    ],
+    "//": "Based on iku_batteryrestore_eoc and kasen_fangshu_selector_eoc "
+  },
+  {
+    "id": "point_skill_confirm_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "run_eoc_selector": [ "point_skill_select_eoc" ],
+        "title": "Use skill point",
+        "names": [ "Consume skill point?" ],
+        "keys": [ "1" ],
+        "descriptions": [ "Consume the skill point to increase any of your skills by +1." ],
+        "hide_failing": true,
+        "allow_cancel": true
+      }
+    ]
+  },
+  {
+    "id": "point_skill_select_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "run_eoc_selector": [
+          "point_skill_select_bashing",
+          "point_skill_select_cutting",
+          "point_skill_select_dodge",
+          "point_skill_select_melee",
+          "point_skill_select_stabbing",
+          "point_skill_select_unarmed",
+          
+          "point_skill_select_archery",
+          "point_skill_select_pistol",
+          "point_skill_select_launcher",
+          "point_skill_select_gun",
+          "point_skill_select_rifle",
+          "point_skill_select_shotgun",
+          "point_skill_select_smg",
+          "point_skill_select_throw",
+          
+          "point_skill_select_chemistry",
+          "point_skill_select_electronics",
+          "point_skill_select_fabrication",
+          "point_skill_select_cooking",
+          "point_skill_select_survival",
+          "point_skill_select_tailor",
+
+          "point_skill_select_swimming",
+          "point_skill_select_computer",
+          "point_skill_select_traps",
+          "point_skill_select_firstaid",
+          "point_skill_select_mechanics",
+          "point_skill_select_speech",
+          "point_skill_select_driving"
+        ],
+        "title": "Select skill to raise:",
+        "names": [
+          "bashing weapons",
+          "cutting weapons",
+          "dodging",
+          "melee",
+          "piercing weapons",
+          "unarmed combat",
+          
+          "archery",
+          "handguns",
+          "launchers",
+          "marksmanship",
+          "rifles",
+          "shotguns",
+          "submachine guns",
+          "throwing",
+          
+          "applied science",
+          "electronics",
+          "fabrication",
+          "food handling",
+          "survival",
+          "tailoring",
+          
+          "athletics",
+          "computers",
+          "devices",
+          "health care",
+          "mechanics",
+          "social",
+          "vehicles"
+        ],
+        "keys": [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "q", "w", "e", "r", "t", "y", "a", "s", "d", "f", "g", "h", "z", "x", "c", "v", "b", "n" ],
+        "descriptions": [
+          "Your skill in fighting with blunt weaponry, from rocks and sticks to baseball bats and the butts of rifles.  Skill increases damage, and higher levels will improve the accuracy of an attack.",
+          "Your skill in fighting with weaponry designed to cut, hack and slash an opponent.  Lower levels of skill increase accuracy and damage, while higher levels will help to bypass heavy armor and thick hides.",
+          "Your ability to dodge an oncoming threat, be it an enemy's attack, a triggered trap, or a falling rock.  This skill is also used in attempts to fall gracefully, and for other acrobatic feats.  The first number shown includes modifiers, and the second does not.",
+          "Your skill and finesse in personal combat, both with and without a weapon.  Higher levels can significantly increase the accuracy and effectiveness of your physical attacks.",
+          "Your skill in fighting with knives, spears and other such stabbing implements.  Skill increases attack accuracy as well as the chance of inflicting a deadly and critical blow.",
+          "Your skill in hand-to-hand fighting.  For the unskilled, it's a good way to get hurt, but those with enough practice can perform special blows and techniques to quickly dispatch enemies.",
+          
+          "Your skill in using bow weapons, from hand-carved self bows to complex compound bows.  Quiet and effective, they require strength of body and sight to wield, and are not terribly accurate over a long distance.",
+          "Handguns have poor accuracy compared to rifles, but are usually quick to fire and reload faster than other guns.  They are very effective at close quarters, though unsuited for long range engagement.",
+          "Your skill in using heavy weapons like rocket, grenade or missile launchers.  These weapons have a variety of applications and may carry immense destructive power, but they are cumbersome and hard to manage.",
+          "Your overall skill in using bows and firearms.  With higher levels, this general experience increases accuracy with any bows or firearms, but is secondary to practice with the type of ranged weapon in question.",
+          "Classic rifles have terrific range and accuracy compared to other firearms, but may be slow to fire and reload, and can prove difficult to use in in close combat.  Short-barreled rifles and carbines are more like SMGs and performs well in close combat.",
+          "Shotguns are easy to shoot and can inflict massive damage, but their effectiveness and accuracy decline rapidly with range.  Slugs can be loaded into shotguns to provide greater range, though they are somewhat inaccurate.",
+          "Comprised of an automatic rifle carbine designed to fire a pistol cartridge, submachine guns can reload and fire quickly, sometimes in bursts, but they are relatively inaccurate and may be prone to mechanical failures.",
+          "Your skill in throwing objects over a distance.  Skill increases accuracy, and at higher levels, the range of a throw.",
+          
+          "Your skill in general 'bench science', applying any of a wide range of precision techniques based on your overall understanding of scientific principles.  This is not a research skill, but about using the results of others' research.",
+          "Your skill in dealing with electrical systems, used in the craft and repair of objects with electrical components.  This skill is an important part of installing and managing bionic implants.",
+          "Your skill in working with raw materials and shaping them into useful objects.  This skill plays an important role in the crafting of many objects.",
+          "Your skill in combining food ingredients to make other, tastier food items.  Also includes food preservation and safety, brewing, butchery, and more.",
+          "Your skill in surviving the wilderness, and in crafting various basic survival items.  This also covers your ability to skin and butcher animals for meat and hides.",
+          "Your skill in the craft and repair of clothing, bags, blankets and other textiles.  Affects knitting, sewing, stitching, weaving, and nearly anything else involving a needle and thread.",
+          
+          "Your athletic ability, including swimming endurance and ability to swim with weight.  Athletic skill also improves your overall cardio fitness and stamina.",
+          "Your skill in accessing and manipulating computers.  Higher levels can allow a user to navigate complex software systems and even bypass their security.",
+          "Your skill in manipulating fine devices like security systems, traps, locks and other precision tasks.  This skill does not affect the evasion of traps that are triggered.",
+          "Your skill in effecting medical treatment.  Higher levels allow better use of medicines and items like bandages and first aid kits, and reduce the failure and complication rates of medical procedures.",
+          "Your skill in engineering, maintaining and repairing vehicles and other mechanical systems.  This skill covers the craft of items with complex parts, and plays a role in the installation of bionic equipment.",
+          "Your skill in speaking to other people.  Covers ability in boasting, flattery, threats, persuasion, lies, bartering, and other facets of interpersonal communication.  Works best in conjunction with a high level of intelligence.",
+          "Your skill in operating and steering a vehicle in motion, from cars and boats to helicopters and hot air balloons.  A higher level allows greater control over vehicles at higher speeds, and reduces the penalty of shooting while driving."
+        ],
+        "hide_failing": true,
+        "allow_cancel": true
+      }
+    ]
+  },
+  {
+    "id": "point_skill_select_bashing",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('bashing')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill in bashing weapons has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_cutting",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('cutting')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill in cutting weapons has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_dodge",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('dodge')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your dodging skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_melee",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('melee')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your melee skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_stabbing",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('stabbing')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill in piercing weapons has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_unarmed",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('unarmed')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill in unarmed combat has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_archery",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('archery')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill in archery has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_pistol",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('pistol')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with handguns has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_launcher",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('launcher')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with launchers has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_gun",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('gun')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your marksmanship skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_rifle",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('rifle')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with rifles has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_shotgun",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('shotgun')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with shotguns has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_smg",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('smg')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with submachine guns has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_throw",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('throw')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your throwing skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_chemistry",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('chemistry')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill in applied science has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_electronics",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('electronics')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with electronics has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_fabrication",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('fabrication')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your fabrication skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_cooking",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('cooking')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your food handling skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_survival",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('survival')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your survival skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_tailor",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('tailor')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your tailoring skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_swimming",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('swimming')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your athletics skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_computer",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('computer')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with computers has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_traps",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('traps')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with devices has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_firstaid",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('firstaid')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your first aid skills have increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_mechanics",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('mechanics')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill in mechanics have increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_speech",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('speech')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your social skill has increased.", "type": "good" }
+    ]
+  },
+  {
+    "id": "point_skill_select_driving",
+    "type": "effect_on_condition",
+    "effect": [
+      { "math": [ "u_skill('driving')", "++" ] },
+      { "u_consume_item": "point_skill", "count": 1 },
+      { "u_message": "Your skill with vehicles has increased.", "type": "good" }
+    ]
+  }
+]

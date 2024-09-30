@@ -1,5 +1,15 @@
 [
   {
+    "id": "onm76_scope",
+    "type": "GUNMOD",
+    "name": { "str": "ON-M76 scope" },
+    "copy-from": "pso1_scope",
+    "description": "A x4 scope, designed for the M76 Zastava.  Based on the PSO-1, it's capable of providing support for both day and night conditions.",
+    "color": "black",
+    "field_of_view": 255,
+    "flags": [ "DISABLE_SIGHTS", "ZOOM" ]
+  },
+  {
     "id": "pso1_scope",
     "type": "GUNMOD",
     "name": { "str": "PSO-1 scope" },
@@ -16,32 +26,31 @@
     "symbol": ":",
     "color": "dark_gray",
     "aim_speed_modifier": 0,
-    "field_of_view": 270,
-    "install_time": "5 m",
-    "location": "sights",
-    "min_skills": [ [ "weapon", 2 ], [ "gun", 4 ] ],
     "mod_targets": [ "rifle" ],
     "sight_dispersion": 0,
     "flags": [ "ZOOM" ],
     "//": "No idea what these values do"
   },
   {
-    "id": "pso1_scope2",
+    "id": "pu_scope",
     "type": "GUNMOD",
-    "name": { "str": "PSO-1 scope (fixed)" },
-    "copy-from": "pso1_scope",
-    "description": "A x4 scope, designed for the SVD-63.  It's side mounted, which does not interfer with the weapon's iron sights, sealed with nitrogen which prevents foggy sight, and has a characteristic reticle that helps compensate for bullet drop up to 1000 m.  It's somewhat bulky however, relative to other scopes.  This is fixed to the weapon, so it can't be removed.",
-    "flags": [ "IRREMOVABLE", "ZOOM" ]
-  },
-  {
-    "id": "onm76_scope",
-    "type": "GUNMOD",
-    "name": { "str": "ON-M76 scope" },
-    "copy-from": "pso1_scope",
-    "description": "A x4 scope, designed for the M76 Zastava.  Based on the PSO-1, it's capable of providing support for both day and night conditions.",
-    "color": "black",
-    "field_of_view": 255,
-    "flags": [ "DISABLE_SIGHTS", "ZOOM" ]
+    "name": { "str": "PU scope" },
+    "copy-from": "rifle_scope",
+    "description": "The PU (for scope short-cut) telescopic sight is a x3.5 Soviet scope, originally designed for the SVT-40, although later produced for use with the Mosin–Nagant.  Its original intent was to replace the bigger PE (for scope standard) sight.  It was so sucessful in this regard, that it was later adopted for use in smaller weapons.",
+    "volume": "120 ml",
+    "//2": "Calculated from radius 15 mm",
+    "weight": "270 g",
+    "integral_volume": "169 ml",
+    "integral_longest_side": "0 cm",
+    "price": 68000,
+    "price_postapoc": "156 USD",
+    "material": [ "steel", "glass" ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "aim_speed_modifier": 0,
+    "mod_targets": [ "rifle", "smg" ],
+    "sight_dispersion": 0,
+    "flags": [ "ZOOM" ]
   },
   {
     "id": "scrome_scope",
@@ -57,10 +66,6 @@
     "symbol": ":",
     "color": "black",
     "aim_speed_modifier": 0,
-    "field_of_view": 270,
-    "install_time": "5 m",
-    "location": "sights",
-    "min_skills": [ [ "weapon", 2 ], [ "gun", 4 ] ],
     "mod_targets": [ "rifle" ],
     "sight_dispersion": 0,
     "flags": [ "DISABLE_SIGHTS", "ZOOM" ],
@@ -79,22 +84,9 @@
     "material": [ "aluminum", "glass" ],
     "symbol": ":",
     "color": "dark_gray",
-    "aim_speed_modifier": -1,
-    "field_of_view": 270,
-    "install_time": "5 m",
-    "location": "sights",
-    "min_skills": [ [ "weapon", 2 ], [ "gun", 4 ] ],
     "mod_targets": [ "rifle" ],
     "sight_dispersion": 0,
     "flags": [ "DISABLE_SIGHTS", "ZOOM" ],
     "//": "No idea what these values do, but the SIG550 uses this so I'm going with it"
-  },
-  {
-    "id": "susat_scope2",
-    "type": "GUNMOD",
-    "name": { "str": "SUSAT scope (fixed)" },
-    "copy-from": "susat_scope",
-    "description": "A x4 scope, designed for medium-range engagements.  Thanks to the tritium painting on the reticle, it can be used in low light conditions.  This is fixed to the weapon, so it can't be removed.",
-    "flags": [ "DISABLE_SIGHTS", "IRREMOVABLE", "ZOOM" ]
   }
 ]

@@ -1091,7 +1091,6 @@
     "//2": "Maybe change it to moriya_wood or something",
     "symbol": "☢",
     "color": "brown",
-    "techniques": [ "WBLOCK_1" ],
     "use_action": 
     {
       "type": "effect_on_conditions",
@@ -1103,8 +1102,8 @@
       { "covers": [ "arm_r" ], "specifically_covers": [ "arm_elbow_l" ], "coverage": 20, "encumbrance": [ 0, 6 ] },
       { "covers": [ "hand_r" ], "coverage": 100, "encumbrance": [ 0, 6 ] }
     ],
-    "flags": [ "ONLY_ONE", "OUTER", "PADDED", "RAINPROOF", "RESTRICT_HANDS", "STURDY", "TRADER_AVOID", "UNBREAKABLE_MELEE", "WATERPROOF", "UTSUHO_ROD_FLAG" ],
-    "//3": "Should use slings so the player doesn't have to drop the rod every time Utsuho crafts something"
+    "flags": [ "BLOCK_WHILE_WORN",  "ONLY_ONE", "OUTER", "PADDED", "RAINPROOF", "RESTRICT_HANDS", "STURDY", "TRADER_AVOID", "UNBREAKABLE_MELEE", "WATERPROOF", "UTSUHO_ROD_FLAG" ],
+    "//note": "Should use slings so the player doesn't have to drop the rod every time Utsuho crafts something"
   },
   {
     "id": "utsuho_shirt",

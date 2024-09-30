@@ -2,8 +2,8 @@
   {
     "id": "mon_ball_lightning",
     "type": "MONSTER",
-    "name": { "str": "ball lightning" },
-    "description": "WIP",
+    "name": { "str": "ball lightning", "str_pl": "ball lightning" },
+    "description": "A floating, vaguely spherical blob of electricity.",
     "volume": "11132 ml",
     "weight": "1000 g",
     "default_faction": "touhou_fortean",
@@ -11,13 +11,13 @@
     "categories": [ "NULL" ],
     "species": [ "UNKNOWN" ],
     "harvest": "exempt",
-    "hp": 80,
-    "speed": 115,
+    "hp": 60,
+    "speed": 90,
     "material": [ "magic_electricity" ],
     "symbol": "ʘ",
     "looks_like": "fd_electricity",
     "color": "white",
-    "aggression": 35,
+    "aggression": 25,
     "morale": 99,
     "melee_skill": 4,
     "melee_dice": 3,
@@ -28,9 +28,8 @@
     "luminance": 12,
     "vision_night": 32,
     "path_settings": { "max_dist": 32 },
-    "tracking_distance": 5,
+    "tracking_distance": 4,
     "anger_triggers": [ "HURT" ],
-    "death_function": { "effect": { "id": "death_ball_lightning", "hit_self": true }, "message": "The ball lightning explodes!" },
     "special_attacks": [ 
       { 
         "id": "mon_ball_lightning_1", 
@@ -43,7 +42,7 @@
       { 
         "id": "mon_ball_lightning_2", 
         "type": "spell", 
-        "spell_data": { "id": "ball_lightning_aoe", "hit_self": true }, 
+        "spell_data": { "id": "ball_lightning_aoe" }, 
         "condition": { "math": [ "distance('u', 'npc')", "<", "2" ] },
         "cooldown": { "math": [ "3 + rand(5)" ] }, 
         "monster_message": "The ball lightning flares!" 
@@ -51,12 +50,18 @@
       { 
         "id": "mon_ball_lightning_3", 
         "type": "spell", 
-        "spell_data": { "id": "ball_lightning_BLAST", "hit_self": true }, 
+        "spell_data": { "id": "ball_lightning_BLAST" }, 
         "condition": { "math": [ "distance('u', 'npc')", ">=", "3" ] },
         "cooldown": { "math": [ "3 + rand(5)" ] }, 
         "monster_message": "The ball lightning discharges!" 
       }
     ],
+    "//2": "Yes, there's a 1 tile gap between their second and third attack",
+    "death_function": { 
+      "corpse_type": "NO_CORPSE", 
+      "effect": { "id": "death_ball_lightning", "hit_self": true }, 
+      "message": "The ball lightning explodes!" 
+    },
     "flags": [
       "CLIMBS",
       "FLIES",
@@ -71,14 +76,13 @@
       "SWARMS",
       "WEBWALK"
     ],
-    "//": "Has a 5% to just explode randomly every ~1 min of existing",
-    "//2": "Yes, there's a 1 tile gap between their second and third attack"
+    "//": "Has a 5% to just explode randomly every ~1 min of existing"
   },
   {
     "abstract": "mon_rod_th",
     "type": "MONSTER",
-    "name": { "str": "rod" },
-    "description": "WIP",
+    "name": { "str": "rod", "str_pl": "rods" },
+    "description": "A floating entity.  Small \"legs\" or stubs grow perpendicular to the otherwise featurless main body. It seems to vibrate and shift to propel itself through air.",
     "volume": "50 ml",
     "weight": "25 g",
     "default_faction": "touhou_fortean",
@@ -104,7 +108,6 @@
     "vision_night": 32,
     "path_settings": { "max_dist": 1 },
     "anger_triggers": [ "SOUND" ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "special_attacks": [ 
       { 
         "id": "mon_rod_th_1", 
@@ -124,6 +127,7 @@
         "monster_message": "" 
       }
     ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "flags": [
       "CAMOUFLAGE",
       "CLIMBS",
@@ -148,28 +152,28 @@
   {
     "id": "mon_rod_th_1",
     "type": "MONSTER",
-    "name": { "str": "rod" },
+    "name": { "str": "rod", "str_pl": "rods" },
     "copy-from": "mon_rod_th",
     "symbol": "-"
   },
   {
     "id": "mon_rod_th_2",
     "type": "MONSTER",
-    "name": { "str": "rod" },
+    "name": { "str": "rod", "str_pl": "rods" },
     "copy-from": "mon_rod_th",
     "symbol": "|"
   },
   {
     "id": "mon_rod_th_3",
     "type": "MONSTER",
-    "name": { "str": "rod" },
+    "name": { "str": "rod", "str_pl": "rods" },
     "copy-from": "mon_rod_th",
     "symbol": "="
   },
   {
     "id": "mon_rod_th_4",
     "type": "MONSTER",
-    "name": { "str": "rod" },
+    "name": { "str": "rod", "str_pl": "rods" },
     "copy-from": "mon_rod_th",
     "symbol": "/"
   }

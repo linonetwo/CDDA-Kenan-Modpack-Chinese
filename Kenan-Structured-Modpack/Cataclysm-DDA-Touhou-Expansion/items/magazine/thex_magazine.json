@@ -1,5 +1,40 @@
 [
   {
+    "id": "473x33mag45",
+    "type": "MAGAZINE",
+    "name": { "str": "4.73x33mm 45-round magazine" },
+    "description": "A 45-round box magazine for use with 4.73x33mm DM11 caseless ammo.",
+    "volume": "333 ml",
+    "weight": "73 g",
+    "price": 6000,
+    "price_postapoc": 400,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "looks_like": "8x40_50_mag",
+    "color": "dark_gray",
+    "ammo_type": [ "473x33" ],
+    "flags": [ "MAG_COMPACT" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "473x33": 45 } } ]
+  },
+  {
+    "id": "473x33mag50",
+    "type": "MAGAZINE",
+    "name": { "str": "4.73x33mm 50-round magazine" },
+    "description": "A 50-round box magazine for use with 4.73x33mm DM11 caseless ammo.",
+    "volume": "333 ml",
+    "weight": "73 g",
+    "price": 6000,
+    "price_postapoc": 400,
+    "material": [ "plastic" ],
+    "symbol": "#",
+    "looks_like": "8x40_50_mag",
+    "color": "dark_gray",
+    "ammo_type": [ "473x33" ],
+    "flags": [ "MAG_COMPACT" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "473x33": 50 } } ],
+    "//": "Based and scaled from 8x40_50_mag . Arbitrary price"
+  },
+  {
     "id": "792x57_clip",
     "type": "MAGAZINE",
     "name": { "str": "7.92x57mm 5-round clip" },
@@ -102,7 +137,7 @@
     "color": "black",
     "ammo_type": [ "20mm" ],
     "reload_time": 260,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "20mm": 3 } } ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "20mm": 5 } } ],
     "flags": [ "MAG_BULKY" ]
   },
   {
@@ -165,6 +200,19 @@
     "ammo_type": [ "792x57" ],
     "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "792x57": 10 } } ],
     "flags": [ "MAG_COMPACT" ]
+  },
+  {
+    "id": "mondragon_m1908_mag",
+    "type": "MAGAZINE",
+    "name": { "str": "Mondragón M1908 10-round magazine" },
+    "copy-from": "792x57_clip",
+    "material": [ "steel" ],
+    "looks_like": "792x57_clip",
+    "color": "dark_gray",
+    "ammo_type": [ "792x57" ],
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "792x57": 10 } } ],
+    "flags": [ "SPEEDLOADER" ],
+    "//": "Called mag but it's a SPEEDLOADER json-wise"
   },
   {
     "id": "pgmmag7",
@@ -339,6 +387,15 @@
     "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "762R": 20 } } ],
     "flags": [ "MAG_COMPACT" ],
     "//": "Stats from akmag20, but it looks closer to a akmag10"
+  },
+  {
+    "id": "svt40mag10",
+    "type": "MAGAZINE",
+    "name": { "str": "SVT-40 10-round magazine" },
+    "copy-from": "pslmag10",
+    "description": "A compact 10-round magazine for the SVT-40, made of steel.",
+    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "762R": 10 } } ],
+    "flags": [ "MAG_COMPACT" ]
   },
   {
     "id": "wa2000mag6",

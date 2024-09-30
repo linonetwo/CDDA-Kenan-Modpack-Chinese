@@ -1,9 +1,12 @@
 [
   {
-    "id": "guns_mib",
     "type": "item_group",
-    "subtype": "distribution",
-    "items": [ [ "mib_pistol_sidearm", 50 ], [ "mib_smg_7", 35 ], [ "mib_rifle_4", 15 ] ]
+    "id": "guns_pistol_common",
+    "//": "Pistols that are reasonably prolific amongst civilians, commonly owned and reliably obtainable by citizens and that are found in many locations.",
+    "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
+    "copy-from": "guns_pistol_common",
+    "extend": { "items": [ { "item": "thompson_contender", "prob": 23 } ] },
+    "//3": "Total weight 297 / 13 = 22.84 ~ 23"
   },
   {
     "id": "guns_pistol_common_display",
@@ -11,15 +14,75 @@
     "subtype": "distribution",
     "//": "Empty and reasonably common pistols found exclusively in gun stores.",
     "copy-from": "guns_pistol_common_display",
-    "extend": { "items": [ { "item": "thompson_contender", "prob": 20, "charges-min": 0, "charges-max": 0 } ] }
+    "extend": { "items": [ { "item": "thompson_contender", "prob": 22 } ] },
+    "//2": "Total weight 314 / 14 = 22.43 ~ 22"
   },
   {
-    "id": "guns_pistol_rare",
     "type": "item_group",
-    "//": "Less common or prolific pistols that are still normally acquirable by civilians or that may need an NFA permit, i.e. integrally supressed or stocked handguns. This includes those weapons used by police and paramilitary forces, and older handguns which are no longer in production but that are still reasonably common to find.",
+    "subtype": "distribution",
+    "id": "guns_pistol_hunting_display",
+    "//": "Empty high-caliber pistols and revolvers found within hunting supply stores and related locations.",
+    "copy-from": "guns_pistol_hunting_display",
+    "extend": { "items": [ { "item": "thompson_contender", "prob": 12 } ] },
+    "//2": "Total weight 189 / 16 = 11.8 ~ 12"
+  },
+  {
+    "type": "item_group",
+    "id": "guns_smg_rare",
+    "//": "Less common SMGs including those only used by police/paramilitary forces.",
     "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
-    "copy-from": "guns_pistol_rare",
-    "extend": { "items": [ { "group": "nested_thompson_contender", "prob": 20, "charges-min": 0, "charges-max": 0 } ] }
+    "copy-from": "guns_smg_rare",
+    "extend": { 
+      "items": [ 
+        { "item": "aresfmg_folded", "prob": 47 }, 
+        { "item": "idw", "prob": 47 }, 
+        { "item": "pp19v", "prob": 47 } 
+      ] 
+    },
+    "//3": "Total weight 755 / 16 = 47.19 ~ 47"
+  },
+  {
+    "type": "item_group",
+    "id": "guns_smg_rare_display",
+    "subtype": "distribution",
+    "//": "Less common full-auto SMGS which are illegal to sell.",
+    "copy-from": "guns_smg_rare_display",
+    "extend": { 
+      "items": [ 
+        { "item": "aresfmg_folded", "prob": 47 }, 
+        { "item": "idw", "prob": 47 }, 
+        { "item": "pp19v", "prob": 47 } 
+      ] 
+    },
+    "//2": "Total weight 755 / 16 = 47.19 ~ 47"
+  },
+  {
+    "type": "item_group",
+    "id": "guns_smg_milspec",
+    "//": "Military specification SMGs only ever found at military sites.",
+    "copy-from": "guns_smg_milspec",
+    "extend": { 
+      "items": [ 
+        { "group": "nested_idw", "prob": 24 }, 
+        { "group": "nested_pp19v", "prob": 24 } 
+      ] 
+    },
+    "//2": "Total weight 121 / 5 = 24.2 ~ 24"
+  },
+  {
+    "type": "item_group",
+    "id": "guns_smg_obscure",
+    "subtype": "distribution",
+    "//": "Imported or otherwise very obscure SMGs.",
+    "copy-from": "guns_smg_obscure",
+    "extend": { 
+      "items": [ 
+        { "item": "aresfmg_folded", "prob": 76 }, 
+        { "item": "idw", "prob": 76 }, 
+        { "item": "pp19v", "prob": 76 }
+      ] 
+    },
+    "//2": "Total weight 151 / 2 = 75.5 ~ 76"
   },
   {
     "id": "guns_rifle_common",
@@ -27,7 +90,29 @@
     "//": "Rifles commonly owned by citizens and found in many locations.",
     "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
     "copy-from": "guns_rifle_common",
-    "extend": { "items": [ { "group": "nested_kar98", "prob": 1 }, { "group": "nested_sig550", "prob": 1 } ] }
+    "extend": { 
+      "items": [ 
+        { "group": "nested_kar98", "prob": 10 }, 
+        { "group": "nested_sig550", "prob": 10 }, 
+        { "group": "nested_spanish_m1893", "prob": 10 } 
+      ] 
+    },
+    "//3": "Total weight 94 / 9 = 10.4 ~ 10"
+  },
+  {
+    "type": "item_group",
+    "id": "guns_rifle_common_worn",
+    "//": "Rifles commonly owned by citizens and found in many locations.",
+    "//2": "This is for worn items so ammo should be handled elsewhere so that mods can be added directly.",
+    "copy-from": "guns_rifle_common_worn",
+    "extend": { 
+      "items": [ 
+        { "group": "nested_kar98", "prob": 10 }, 
+        { "group": "nested_sig550", "prob": 10 }, 
+        { "group": "nested_spanish_m1893", "prob": 10 } 
+      ] 
+    },
+    "//3": "Total weight 86 / 9 = 9.55 ~ 10"
   },
   {
     "id": "guns_rifle_common_display",
@@ -37,24 +122,60 @@
     "copy-from": "guns_rifle_common_display",
     "extend": {
       "items": [
-        { "item": "kar98", "prob": 20, "charges-min": 0, "charges-max": 0 },
-        { "item": "sig550", "prob": 20, "charges-min": 0, "charges-max": 0 }
+        { "item": "kar98", "prob": 82 },
+        { "item": "sig550", "prob": 82 },
+        { "item": "spanish_m1893", "prob": 82 } 
       ]
-    }
+    },
+    "//3": "Total weight 654 / 8 = 81.75 ~ 82"
   },
   {
-    "id": "guns_rifle_common_worn",
     "type": "item_group",
-    "//": "Rifles commonly owned by citizens and found in many locations.",
-    "//2": "This is for worn items so ammo should be handled elsewhere so that mods can be added directly.",
-    "copy-from": "guns_rifle_common_worn",
+    "id": "guns_rifle_rare",
+    "//": "Less common rifles including those only used by police/paramilitary forces.",
+    "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
+    "copy-from": "guns_rifle_rare",
     "extend": {
       "items": [
-        { "item": "kar98", "prob": 1, "charges-min": 0, "charges-max": 5 },
-        { "item": "m1941_johnson", "prob": 1, "charges-min": 0, "charges-max": 10 },
-        { "item": "sig550", "prob": 1, "charges-min": 0, "charges-max": 20 }
+        { "group": "nested_anzio20mm", "prob": 68 },
+        { "group": "nested_johnson_m1941", "prob": 68 },
+        { "group": "nested_m76", "prob": 68 },
+        { "group": "nested_mondragon_m1908", "prob": 68 },
+        { "group": "nested_ots48", "prob": 68 },
+        { "group": "nested_pgm_hecate", "prob": 68 },
+        { "group": "nested_pieper_m1893", "prob": 68 }, 
+        { "group": "nested_stg44", "prob": 68 },
+        { "group": "nested_svd", "prob": 68 },
+        { "group": "nested_svt", "prob": 68 },
+        { "group": "nested_vss", "prob": 68 },
+        { "group": "nested_wa2000", "prob": 68 }
       ]
-    }
+    },
+    "//3": "Total weight 616 / 9 = 68.44 ~ 68"
+  },
+  {
+    "type": "item_group",
+    "subtype": "distribution",
+    "id": "guns_rifle_rare_display",
+    "//": "Less common rifles found exclusively in gun stores.",
+    "copy-from": "guns_rifle_rare_display",
+    "extend": {
+      "items": [
+        { "group": "nested_anzio20mm", "prob": 30 },
+        { "group": "nested_johnson_m1941", "prob": 30 },
+        { "group": "nested_m76", "prob": 30 },
+        { "group": "nested_mondragon_m1908", "prob": 30 },
+        { "group": "nested_ots48", "prob": 30 },
+        { "group": "nested_pgm_hecate", "prob": 30 },
+        { "group": "nested_pieper_m1893", "prob": 30 }, 
+        { "group": "nested_stg44", "prob": 30 },
+        { "group": "nested_svd", "prob": 30 },
+        { "group": "nested_svt", "prob": 30 },
+        { "group": "nested_vss", "prob": 30 },
+        { "group": "nested_wa2000", "prob": 30 }
+      ]
+    },
+    "//3": "Total weight 299 / 10 = 29.9 ~ 30"
   },
   {
     "id": "guns_rifle_milspec",
@@ -63,20 +184,23 @@
     "copy-from": "guns_rifle_milspec",
     "extend": {
       "items": [
-        { "group": "nested_anzio20mm", "prob": 16 },
-        { "group": "nested_m76", "prob": 20 },
-        { "group": "nested_pgm_hecate", "prob": 20 },
-        { "group": "nested_pp19v", "prob": 20 },
-        { "group": "nested_ots48k", "prob": 16 },
-        { "group": "nested_sig550", "prob": 20 },
-        { "group": "nested_sig550_sniper", "prob": 20 },
-        { "group": "nested_sr3mp", "prob": 20 },
-        { "group": "nested_svd", "prob": 20 },
-        { "group": "nested_vsk94", "prob": 20 },
-        { "group": "nested_vss", "prob": 20 },
-        { "group": "nested_wa2000", "prob": 20 }
+        { "group": "nested_anzio20mm", "prob": 30 },
+        { "group": "nested_ceamm1", "prob": 30 },
+        { "group": "nested_hk_g11", "prob": 30 },
+        { "group": "nested_m76", "prob": 30 },
+        { "group": "nested_ots48k", "prob": 30 },
+        { "group": "nested_pgm_hecate", "prob": 30 },
+        { "group": "nested_sig550", "prob": 30 },
+        { "group": "nested_sig550_sniper", "prob": 30 },
+        { "group": "nested_sr3mp", "prob": 30 },
+        { "group": "nested_svd", "prob": 30 },
+        { "group": "nested_tkb002", "prob": 30 },
+        { "group": "nested_vsk94", "prob": 30 },
+        { "group": "nested_vss", "prob": 30 },
+        { "group": "nested_wa2000", "prob": 30 }
       ]
-    }
+    },
+    "//3": "Total weight 299 / 10 = 29.9 ~ 30"
   },
   {
     "id": "guns_rifle_obscure",
@@ -84,16 +208,23 @@
     "subtype": "distribution",
     "//": "Imported or otherwise very obscure rifles.",
     "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
+    "copy-from": "guns_rifle_obscure",
     "extend": {
       "items": [
-        { "group": "nested_ceamm1", "prob": 35 },
-        { "group": "nested_pieper_m1893", "prob": 25 },
-        { "group": "nested_spanish_m1893", "prob": 25 },
-        { "group": "nested_stg44", "prob": 65 },
-        { "group": "nested_tkb002_nested", "prob": 35 },
-        { "group": "nested_wa2000", "prob": 1 }
+        { "group": "nested_ceamm1", "prob": 45 },
+        { "group": "nested_hk_g11", "prob": 45 },
+        { "group": "nested_johnson_m1941", "prob": 45 },
+        { "group": "nested_mondragon_m1908", "prob": 45 },
+        { "group": "nested_ots48", "prob": 45 },
+        { "group": "nested_pieper_m1893", "prob": 45 },
+        { "group": "nested_spanish_m1893", "prob": 45 },
+        { "group": "nested_stg44", "prob": 45 },
+        { "group": "nested_svt", "prob": 45 },
+        { "group": "nested_tkb002", "prob": 45 },
+        { "group": "nested_wa2000", "prob": 45 }
       ]
-    }
+    },
+    "//3": "Total weight 670 / 15 = 44.66 ~ 45"
   },
   {
     "id": "guns_rifle_obscure_display",
@@ -103,95 +234,20 @@
     "copy-from": "guns_rifle_obscure_display",
     "extend": {
       "items": [
-        { "item": "ceamm1", "prob": 15, "charges-min": 0, "charges-max": 0 },
-        { "item": "m76", "prob": 20, "charges-min": 0, "charges-max": 0 },
-        { "item": "pieper_m1893", "prob": 5, "charges-min": 0, "charges-max": 0 },
-        { "item": "pp19v", "prob": 25, "charges-min": 0, "charges-max": 0 },
-        { "item": "spanish_m1893", "prob": 15, "charges-min": 0, "charges-max": 0 },
-        { "item": "sr3mp", "prob": 25, "charges-min": 0, "charges-max": 0 },
-        { "item": "stg44", "prob": 35, "charges-min": 0, "charges-max": 0 },
-        { "item": "svd", "prob": 15, "charges-min": 0, "charges-max": 0 },
-        { "group": "nested_tkb002_items", "prob": 10, "charges-min": 0, "charges-max": 0 },
-        { "item": "vsk94", "prob": 25, "charges-min": 0, "charges-max": 0 },
-        { "item": "vss", "prob": 25, "charges-min": 0, "charges-max": 0 },
-        { "group": "nested_wa2000_variants", "prob": 5, "charges-min": 0, "charges-max": 0 }
+        { "item": "ceamm1", "prob": 16 },
+        { "item": "hk_g11", "prob": 16 },
+        { "item": "johnson_m1941", "prob": 16 },
+        { "item": "mondragon_m1908", "prob": 16 },
+        { "item": "ots48", "prob": 16 },
+        { "item": "pieper_m1893", "prob": 16 },
+        { "item": "spanish_m1893", "prob": 16 },
+        { "item": "stg44", "prob": 16 },
+        { "group": "nested_svt_gun_only", "prob": 16 },
+        { "group": "nested_tkb002", "prob": 16 },
+        { "group": "nested_wa2000", "prob": 16 }
       ]
-    }
-  },
-  {
-    "id": "guns_rifle_rare",
-    "type": "item_group",
-    "//": "Less common rifles including those only used by police/paramilitary forces.",
-    "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
-    "copy-from": "guns_rifle_rare",
-    "extend": {
-      "items": [
-        { "group": "nested_anzio20mm", "prob": 16 },
-        { "group": "nested_ceamm1", "prob": 20 },
-        { "group": "nested_kar98", "prob": 20 },
-        { "group": "nested_m76", "prob": 16 },
-        { "group": "nested_ots48", "prob": 16 },
-        { "group": "nested_pieper_m1893", "prob": 12 },
-        { "group": "nested_pp19v", "prob": 20 },
-        { "group": "nested_spanish_m1893", "prob": 16 },
-        { "group": "nested_stg44", "prob": 25 },
-        { "group": "nested_svd", "prob": 20 },
-        { "group": "nested_tkb002_nested", "prob": 20 },
-        { "group": "nested_vsk94", "prob": 20 },
-        { "group": "nested_vss", "prob": 20 }
-      ]
-    }
-  },
-  {
-    "id": "guns_rifle_rare_display",
-    "type": "item_group",
-    "subtype": "distribution",
-    "//": "Less common rifles found exclusively in gun stores.",
-    "copy-from": "guns_rifle_rare_display",
-    "extend": {
-      "items": [
-        { "item": "ceamm1", "prob": 5, "charges-min": 0, "charges-max": 0 },
-        { "item": "kar98", "prob": 10, "charges-min": 0, "charges-max": 0 },
-        { "item": "m1941_johnson", "prob": 10, "charges-min": 0, "charges-max": 10 },
-        { "item": "m76", "prob": 10, "charges-min": 0, "charges-max": 0 },
-        { "item": "ots48", "prob": 5, "charges-min": 0, "charges-max": 0 },
-        { "item": "pieper_m1893", "prob": 1, "charges-min": 0, "charges-max": 0 },
-        { "item": "pp19v", "prob": 20, "charges-min": 0, "charges-max": 0 },
-        { "item": "spanish_m1893", "prob": 8, "charges-min": 0, "charges-max": 0 },
-        { "item": "stg44", "prob": 25, "charges-min": 0, "charges-max": 0 },
-        { "item": "svd", "prob": 15, "charges-min": 0, "charges-max": 0 },
-        { "item": "vsk94", "prob": 20, "charges-min": 0, "charges-max": 0 },
-        { "item": "vss", "prob": 20, "charges-min": 0, "charges-max": 0 },
-        { "group": "nested_tkb002_items", "prob": 1, "charges-min": 0, "charges-max": 0 },
-        { "group": "nested_wa2000_variants", "prob": 1, "charges-min": 0, "charges-max": 0 }
-      ]
-    }
-  },
-  {
-    "id": "guns_smg_obscure",
-    "type": "item_group",
-    "subtype": "distribution",
-    "//": "Imported or otherwise very obscure SMGs.",
-    "copy-from": "guns_smg_obscure",
-    "extend": {
-      "items": [
-        { "item": "aresfmg_folded", "prob": 100, "charges-min": 0, "charges-max": 0 },
-        { "item": "idw", "prob": 100, "charges-min": 0, "charges-max": 0 }
-      ]
-    }
-  },
-  {
-    "id": "guns_smg_rare",
-    "type": "item_group",
-    "//": "Less common SMGs including those only used by police/paramilitary forces.",
-    "//2": "Making the assumption any loaded gun will have additional ammo and mags with it.",
-    "copy-from": "guns_smg_rare",
-    "extend": {
-      "items": [
-        { "group": "nested_aresfmg_folded", "prob": 33, "charges-min": 0, "charges-max": 0 },
-        { "group": "nested_idw", "prob": 66, "charges-min": 0, "charges-max": 0 }
-      ]
-    }
+    },
+    "//3": "Total weight 300 / 19 = 15.79 ~ 16"
   },
   {
     "id": "guns_survival",
@@ -200,15 +256,19 @@
     "copy-from": "guns_survival",
     "extend": {
       "items": [
-        { "item": "kar98", "prob": 5, "charges-min": 5, "charges-max": 20 },
-        { "item": "pp19v", "prob": 5, "charges-min": 0, "charges-max": 30 },
-        { "item": "sig550", "prob": 10, "charges-min": 20, "charges-max": 40 },
-        { "item": "sig550_sniper", "prob": 5, "charges-min": 20, "charges-max": 40 },
-        { "item": "svd", "prob": 5, "charges-min": 10, "charges-max": 20 },
-        { "item": "thompson_contender", "prob": 5, "charges-min": 10, "charges-max": 20 },
-        { "item": "vsk94", "prob": 5, "charges-min": 0, "charges-max": 20 },
-        { "item": "vss", "prob": 5, "charges-min": 10, "charges-max": 20 }
+        { "item": "kar98", "charges-min": 5, "charges-max": 20, "prob": 4 },
+        { "item": "mondragon_m1908", "charges-min": 10, "charges-max": 40, "prob": 4 },
+        { "item": "pp19v", "charges-min": 30, "charges-max": 90, "prob": 4 },
+        { "item": "sig550", "charges-min": 20, "charges-max": 60, "prob": 10 },
+        { "item": "sig550_sniper", "charges-min": 20, "charges-max": 60, "prob": 4 },
+        { "item": "spanish_m1893", "charges-min": 5, "charges-max": 20, "prob": 4 },
+        { "item": "svd", "charges-min": 10, "charges-max": 40, "prob": 4 },
+        { "group": "nested_svt_gun_only", "charges-min": 10, "charges-max": 40, "prob": 4 },
+        { "item": "thompson_contender", "charges-min": 10, "charges-max": 40, "prob": 4 },
+        { "item": "vsk94", "charges-min": 20, "charges-max": 60, "prob": 4 },
+        { "item": "vss", "charges-min": 20, "charges-max": 60, "prob": 4 }
       ]
-    }
+    },
+    "//3": "Total weight 118 / 29 = 4.07 ~ 4"
   }
 ]
