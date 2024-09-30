@@ -123,6 +123,7 @@
     "weakpoint_sets": [ "wps_posessed_body", "wps_posessed_head" ],
     "vision_day": 6,
     "vision_night": 16,
+    "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "special_attacks": [ 
       { 
         "id": "mon_scarecrow_inactive_1", 
@@ -134,7 +135,6 @@
     ],
     "death_drops": "scarecrow_drops",
     "burn_into": "mon_scarecrow_scorched",
-    "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "flags": [ "BASHES", "CAMOUFLAGE", "HEARS", "IMMOBILE", "NOGIB", "NO_BREATHE", "PATH_AVOID_FALL", "PATH_AVOID_FIRE", "SEES" ]
   },
   {
@@ -181,10 +181,10 @@
     "weakpoint_sets": [ "wps_posessed_body", "wps_posessed_head" ],
     "vision_day": 24,
     "vision_night": 24,
+    "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "path_settings": { "max_dist": 32 },
     "special_attacks": [ [ "claw_17_heat", { "math": [ "1 + rand(2)" ] } ] ],
     "death_drops": "scarecrow_drops_burnt",
-    "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "flags": [ "BASHES", "HEARS", "NOGIB", "NO_BREATHE", "PATH_AVOID_FALL", "SEES" ]
   },
   {

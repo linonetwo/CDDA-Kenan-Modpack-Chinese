@@ -96,6 +96,558 @@
     "flags": [ "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ]
   },
   {
+    "id": "nitori_weathermissile",
+    "type": "SPELL",
+    "name": { "str": "Launch weather missile" },
+    "description": "Send a weather missile to the upper atmosphere to make it rain.  The effect is temporary, so the weather reverts back to its previous state after the effect ends.  Must be outdoors to use.",
+    "spell_class": "NONE",
+    "teachable": false,
+    "valid_targets": [ "self" ],
+    "effect": "effect_on_condition",
+    "effect_str": "nitori_weathermissile_eoc",
+    "shape": "blast",
+    "max_level": 1,
+    "difficulty": -11,
+    "base_casting_time": 200,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "flags": [ "NO_HANDS", "NO_LEGS", "SOMATIC" ],
+    "//": "This doesn't work: the weather() values are changing, but seems to be a 'visual' change only, as every time next_weather runs it resets to what the values should be, so the weather doesn't change",
+    "//2": "If next_weather is not used, the weather behaves as normal, i.e. it goes from clear to sunny even when the custom weather() are set for rain, so it also does nothing",
+    "//3": "I tried debugging it with custom weather, but it's pointless as the objective is for Nitori to just make it rain natively, not force a custom weather. And that also may break with other mods or just the Expansion, which already uses custom weather"
+  },
+  {
+    "id": "nitori_weathermissile_vfx",
+    "type": "SPELL",
+    "name": { "str": "Launch weather missile (vfx)" },
+    "description": "Dummy spell to simulate the nitori_weathermissile launch",
+    "spell_class": "NONE",
+    "valid_targets": [ "self" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_aoe": 3,
+    "max_aoe": 3,
+    "max_level": 1,
+    "difficulty": -50,
+    "base_casting_time": 200,
+    "base_energy_cost": 100,
+    "energy_source": "MANA",
+    "flags": [ "NO_HANDS", "NO_LEGS", "LOUD" ]
+  },
+  {
+    "id": "nitori_weathermissile_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": "u_is_outside",
+    "effect": [
+      { "run_eocs": [ "nitori_weathermissile_check_ps_eoc" ] }
+    ],
+    "false_effect": [ 
+      { "u_message": "You need to be outside to launch the weather missile.", "type": "mixed" },
+      { "math": [ "u_val('mana')", "+=", "66" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_check_ps_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": { 
+      "or": [
+        { "not": { "is_weather": "early_portal_storm" } },
+        { "not": { "is_weather": "distant_portal_storm" } },
+        { "not": { "is_weather": "close_portal_storm" } },
+        { "not": { "is_weather": "portal_storm" } }
+      ]
+    },
+    "effect": [
+      { "math": [ "var_nitoriweather_h", "=", "weather('humidity')" ] },
+      { "math": [ "var_nitoriweather_p", "=", "weather('pressure')" ] },
+      { "math": [ "var_nitoriweather_t", "=", "weather('temperature')" ] },
+      { "math": [ "var_nitoriweather_w", "=", "weather('windpower')" ] },
+      { "queue_eocs": [ "nitori_weathermissile_launch_eoc" ], "time_in_future": "2 s" }
+    ],
+    "false_effect": [ 
+      { "queue_eocs": [ "nitori_weathermissile_ps_eoc" ], "time_in_future": "2 s" }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_launch_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [
+      { "u_cast_spell": { "id": "nitori_weathermissile_vfx" }, "targeted": false },
+      { "queue_eocs": [ "nitori_weathermissile_cloudy_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_cloudy_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": {
+      "and": [
+        { "math": [ "var_nitori_weather", "<=", "1" ] },
+        {
+          "or": [
+            { "is_weather": "cloudy" },
+            { "is_weather": "cloudy_nitori" }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      { "u_message": "CLOUDY_EFFECT", "type": "mixed" },
+      { "run_eocs": [ "nitori_weathermissile_ldrizzle_eoc" ] }
+    ],
+    "false_effect": [ 
+      { "u_message": "CLOUDY_FALSE", "type": "mixed" },
+      { "math": [ "var_nitori_weather", "=", "1" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc" ] },
+      { "queue_eocs": [ "nitori_weathermissile_cloudy_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_ldrizzle_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": {
+      "and": [
+        { "math": [ "var_nitori_weather", "<=", "2" ] },
+        {
+          "or": [
+            { "is_weather": "light_drizzle" },
+            { "is_weather": "light_drizzle_nitori" }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      { "u_message": "L_DRIZZLE_EFFECT", "type": "mixed" },
+      { "run_eocs": [ "nitori_weathermissile_drizzle_eoc" ] }
+    ],
+    "false_effect": [ 
+      { "u_message": "L_DRIZZLE_FALSE", "type": "mixed" },
+      { "math": [ "var_nitori_weather", "=", "2" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc" ] },
+      { "queue_eocs": [ "nitori_weathermissile_ldrizzle_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_drizzle_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": {
+      "and": [
+        { "math": [ "var_nitori_weather", "<=", "3" ] },
+        {
+          "or": [
+            { "is_weather": "drizzle" },
+            { "is_weather": "drizzle_nitori" }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      { "u_message": "DRIZZLE_EFFECT", "type": "mixed" },
+      { "run_eocs": [ "nitori_weathermissile_rain_eoc" ] }
+    ],
+    "false_effect": [ 
+      { "u_message": "DRIZZLE_FALSE", "type": "mixed" },
+      { "math": [ "var_nitori_weather", "=", "3" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc" ] },
+      { "queue_eocs": [ "nitori_weathermissile_drizzle_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_rain_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": {
+      "and": [
+        { "math": [ "var_nitori_weather", "<=", "4" ] },
+        {
+          "or": [
+            { "is_weather": "rain" },
+            { "is_weather": "rain_nitori" },
+            { "is_weather": "rainstorm" },
+            { "is_weather": "rainstorm_nitori" },
+            { "is_weather": "thunder" },
+            { "is_weather": "thunder_nitori" },
+            { "is_weather": "lightning" },
+            { "is_weather": "lightning_nitori" }
+          ]
+        }
+      ]
+    },
+    "effect": [
+      { "u_message": "RAIN_EFFECT", "type": "mixed" },
+      { "queue_eocs": [ "nitori_weathermissile_end_eoc" ], "time_in_future": [ "10 m", "10 m" ] }
+    ],
+    "false_effect": [ 
+      { "u_message": "RAIN_FALSE", "type": "mixed" },
+      { "math": [ "var_nitori_weather", "=", "4" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc" ] },
+      { "queue_eocs": [ "nitori_weathermissile_rain_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_end_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [
+      { "math": [ "weather('humidity')", "=", "var_nitoriweather_h" ] },
+      { "math": [ "weather('pressure')", "=", "var_nitoriweather_p" ] },
+      { "math": [ "weather('temperature')", "=", "var_nitoriweather_t" ] },
+      { "math": [ "weather('windpower')", "=", "var_nitoriweather_w" ] },
+      { "math": [ "var_nitori_weather", "=", "0" ] },
+      { "u_message": "The weather is now returning to its previous state.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_ps_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [
+      { "u_cast_spell": { "id": "nitori_weathermissile_vfx" }, "targeted": false },
+      { "queue_eocs": [ "nitori_weathermissile_ps_cancel_eoc" ], "time_in_future": [ "25 s", "55 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_ps_cancel_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [
+      { "u_message": "Something went wrong with the weather missile.  The signal… stopped.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "touhou_next_weather_eoc",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [ "next_weather" ]
+  },
+  {
+    "id": "nitori_weathermissile_launch_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [
+      { "u_cast_spell": { "id": "nitori_weathermissile_vfx" }, "targeted": false },
+      { "queue_eocs": [ "nitori_weathermissile_cloudy_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_cloudy_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": { "is_weather": "cloudy" },
+    "effect": [
+      { "u_message": "CLOUDY_EFFECT", "type": "mixed" },
+      { "run_eocs": [ "nitori_weathermissile_ldrizzle_eoc_WIP" ] }
+    ],
+    "false_effect": [ 
+      { "math": [ "var_H", "=", "weather('humidity')" ] },
+      { "math": [ "var_P", "=", "weather('pressure')" ] },
+      { "math": [ "var_W", "=", "weather('windpower')" ] },
+      { "math": [ "var_T", "=", "weather('temperature')" ] },
+      { "u_message": "<global_val:var_H> var_H 1", "type": "mixed" },
+      { "u_message": "<global_val:var_P> var_P 1", "type": "mixed" },
+      { "u_message": "<global_val:var_W> var_W 1", "type": "mixed" },
+      { "u_message": "<global_val:var_T> var_T 1", "type": "mixed" },
+      
+      { "u_message": "CLOUDY_FALSE", "type": "mixed" },
+      { "math": [ "weather('humidity')", "=", "95" ] },
+      { "math": [ "weather('pressure')", "=", "1009" ] },
+      { "math": [ "weather('windpower')", "=", "15" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc_WIP" ] },
+      
+      { "math": [ "var_H", "=", "weather('humidity')" ] },
+      { "math": [ "var_P", "=", "weather('pressure')" ] },
+      { "math": [ "var_W", "=", "weather('windpower')" ] },
+      { "math": [ "var_T", "=", "weather('temperature')" ] },
+      { "u_message": "<global_val:var_H> var_H 2", "type": "mixed" },
+      { "u_message": "<global_val:var_P> var_P 2", "type": "mixed" },
+      { "u_message": "<global_val:var_W> var_W 2", "type": "mixed" },
+      { "u_message": "<global_val:var_T> var_T 2", "type": "mixed" },
+      
+      { "queue_eocs": [ "nitori_weathermissile_cloudy_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
+    ],
+    "//": "This does not work with base weather, but it partially does with custom weather. Use a var_CUSTOM to force it instead",
+    "//2": "Read the comment at nitori_weathermissile_eoc "
+  },
+  {
+    "id": "nitori_weathermissile_ldrizzle_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": { "is_weather": "light_drizzle" },
+    "effect": [
+      { "u_message": "L_DRIZZLE_EFFECT", "type": "mixed" },
+      { "run_eocs": [ "nitori_weathermissile_drizzle_eoc_WIP" ] }
+    ],
+    "false_effect": [ 
+      { "u_message": "L_DRIZZLE_FALSE", "type": "mixed" },
+      { "math": [ "weather('humidity')", "=", "96" ] },
+      { "math": [ "weather('pressure')", "=", "1002" ] },
+      { "math": [ "weather('windpower')", "=", "15" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc_WIP" ] },
+      
+      { "math": [ "var_H", "=", "weather('humidity')" ] },
+      { "math": [ "var_P", "=", "weather('pressure')" ] },
+      { "math": [ "var_W", "=", "weather('windpower')" ] },
+      { "math": [ "var_T", "=", "weather('temperature')" ] },
+      { "u_message": "<global_val:var_H> var_H", "type": "mixed" },
+      { "u_message": "<global_val:var_P> var_P", "type": "mixed" },
+      { "u_message": "<global_val:var_W> var_W", "type": "mixed" },
+      { "u_message": "<global_val:var_T> var_T", "type": "mixed" },
+      
+      { "queue_eocs": [ "nitori_weathermissile_ldrizzle_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_drizzle_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": { "is_weather": "drizzle" },
+    "effect": [
+      { "u_message": "DRIZZLE_EFFECT", "type": "mixed" },
+      { "run_eocs": [ "nitori_weathermissile_rain_eoc_WIP" ] }
+    ],
+    "false_effect": [ 
+      { "u_message": "DRIZZLE_FALSE", "type": "mixed" },
+      { "math": [ "weather('humidity')", "=", "97" ] },
+      { "math": [ "weather('pressure')", "=", "999" ] },
+      { "math": [ "weather('windpower')", "=", "15" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc_WIP" ] },
+      
+      { "math": [ "var_H", "=", "weather('humidity')" ] },
+      { "math": [ "var_P", "=", "weather('pressure')" ] },
+      { "math": [ "var_W", "=", "weather('windpower')" ] },
+      { "math": [ "var_T", "=", "weather('temperature')" ] },
+      { "u_message": "<global_val:var_H> var_H", "type": "mixed" },
+      { "u_message": "<global_val:var_P> var_P", "type": "mixed" },
+      { "u_message": "<global_val:var_W> var_W", "type": "mixed" },
+      { "u_message": "<global_val:var_T> var_T", "type": "mixed" },
+      
+      { "queue_eocs": [ "nitori_weathermissile_drizzle_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_rain_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "condition": { "is_weather": "rain" },
+    "effect": [
+      { "u_message": "RAIN_EFFECT", "type": "mixed" },
+      { "queue_eocs": [ "nitori_weathermissile_end_eoc_WIP" ], "time_in_future": [ "4 m", "4 m" ] }
+    ],
+    "false_effect": [ 
+      { "u_message": "RAIN_FALSE", "type": "mixed" },
+      { "math": [ "weather('humidity')", "=", "98" ] },
+      { "math": [ "weather('pressure')", "=", "992" ] },
+      { "math": [ "weather('windpower')", "=", "15" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc_WIP" ] },
+      
+      { "math": [ "var_H", "=", "weather('humidity')" ] },
+      { "math": [ "var_P", "=", "weather('pressure')" ] },
+      { "math": [ "var_W", "=", "weather('windpower')" ] },
+      { "math": [ "var_T", "=", "weather('temperature')" ] },
+      { "u_message": "<global_val:var_H> var_H", "type": "mixed" },
+      { "u_message": "<global_val:var_P> var_P", "type": "mixed" },
+      { "u_message": "<global_val:var_W> var_W", "type": "mixed" },
+      { "u_message": "<global_val:var_T> var_T", "type": "mixed" },
+      
+      { "queue_eocs": [ "nitori_weathermissile_end_eoc_WIP" ], "time_in_future": [ "60 m", "120 m" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_end_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [
+      { "math": [ "weather('humidity')", "=", "var_nitoriweather_h" ] },
+      { "math": [ "weather('pressure')", "=", "var_nitoriweather_p" ] },
+      { "math": [ "weather('temperature')", "=", "var_nitoriweather_t" ] },
+      { "math": [ "weather('windpower')", "=", "var_nitoriweather_w" ] },
+      { "math": [ "var_nitori_weather", "=", "0" ] },
+      { "run_eocs": [ "touhou_next_weather_eoc_WIP" ] },
+      { "u_message": "The weather is now returning to its previous state.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_ps_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [
+      { "u_cast_spell": { "id": "nitori_weathermissile_vfx" }, "targeted": false },
+      { "queue_eocs": [ "nitori_weathermissile_ps_cancel_eoc_WIP" ], "time_in_future": [ "25 s", "55 s" ] }
+    ]
+  },
+  {
+    "id": "nitori_weathermissile_ps_cancel_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [
+      { "u_message": "Something went wrong with the weather missile.  The signal… stopped.", "type": "mixed" }
+    ]
+  },
+  {
+    "id": "touhou_next_weather_eoc_WIP",
+    "type": "effect_on_condition",
+    "global": true,
+    "effect": [ "next_weather" ]
+  },
+  {
+    "id": "cloudy_nitori",
+    "type": "weather_type",
+    "name": "Cloudy XXX",
+    "color": "light_gray",
+    "map_color": "dark_gray_white",
+    "sym": "~",
+    "ranged_penalty": 0,
+    "sight_penalty": 1.0,
+    "light_modifier": -20,
+    "sun_multiplier": 0.3,
+    "sound_attn": 0,
+    "dangerous": false,
+    "precip": "none",
+    "rains": false,
+    "sound_category": "cloudy",
+    "required_weathers": [ "cloudy", "clear", "sunny", "fog", "mist" ],
+    "priority": 21,
+    "condition": { "math": [ "var_nitori_weather", "==", "1" ] }
+  },
+  {
+    "id": "light_drizzle_nitori",
+    "type": "weather_type",
+    "name": "Light Drizzle XXX",
+    "color": "light_blue",
+    "map_color": "h_light_blue",
+    "sym": ".",
+    "ranged_penalty": 0,
+    "sight_penalty": 1.01,
+    "light_modifier": -10,
+    "sun_multiplier": 0.2,
+    "sound_attn": 0,
+    "dangerous": false,
+    "precip": "very_light",
+    "rains": true,
+    "tiles_animation": "weather_rain_drop",
+    "weather_animation": { "factor": 0.01, "color": "light_blue", "sym": "," },
+    "sound_category": "drizzle",
+    "required_weathers": [ "cloudy", "light_drizzle", "cloudy_nitori" ],
+    "priority": 31,
+    "condition": { "math": [ "var_nitori_weather", "==", "2" ] }
+  },
+  {
+    "id": "drizzle_nitori",
+    "type": "weather_type",
+    "name": "Drizzle XXX",
+    "color": "light_blue",
+    "map_color": "h_light_blue",
+    "sym": ".",
+    "ranged_penalty": 1,
+    "sight_penalty": 1.03,
+    "light_modifier": -20,
+    "sun_multiplier": 0.1,
+    "sound_attn": 1,
+    "dangerous": false,
+    "precip": "light",
+    "rains": true,
+    "tiles_animation": "weather_rain_drop",
+    "weather_animation": { "factor": 0.01, "color": "light_blue", "sym": "." },
+    "sound_category": "drizzle",
+    "required_weathers": [ "light_drizzle", "drizzle", "light_drizzle_nitori" ],
+    "priority": 41,
+    "condition": { "math": [ "var_nitori_weather", "==", "3" ] }
+  },
+  {
+    "id": "rain_nitori",
+    "type": "weather_type",
+    "name": "Rain XXX",
+    "color": "blue",
+    "map_color": "h_blue",
+    "sym": "o",
+    "ranged_penalty": 3,
+    "sight_penalty": 1.1,
+    "light_modifier": -30,
+    "sun_multiplier": 0.03,
+    "sound_attn": 4,
+    "dangerous": false,
+    "precip": "heavy",
+    "rains": true,
+    "tiles_animation": "weather_rain_drop",
+    "weather_animation": { "factor": 0.02, "color": "light_blue", "sym": "," },
+    "sound_category": "rainy",
+    "required_weathers": [ "light_drizzle", "drizzle", "rain", "light_drizzle_nitori", "drizzle_nitori" ],
+    "priority": 51,
+    "condition": { "math": [ "var_nitori_weather", "==", "4" ] }
+  },
+  {
+    "id": "rainstorm_nitori",
+    "type": "weather_type",
+    "name": "Rain Storm XXX",
+    "color": "blue",
+    "map_color": "i_blue",
+    "sym": "%",
+    "ranged_penalty": 6,
+    "sight_penalty": 1.2,
+    "light_modifier": -35,
+    "sun_multiplier": 0.01,
+    "sound_attn": 8,
+    "dangerous": false,
+    "precip": "heavy",
+    "rains": true,
+    "tiles_animation": "weather_rain_drop",
+    "weather_animation": { "factor": 0.04, "color": "blue", "sym": ";" },
+    "sound_category": "rainstorm",
+    "required_weathers": [ "rain", "rainstorm", "rain_nitori" ],
+    "priority": 61,
+    "condition": { "math": [ "var_nitori_weather", "==", "4" ] }
+  },
+  {
+    "id": "thunder_nitori",
+    "type": "weather_type",
+    "name": "Thunder Storm XXX",
+    "color": "dark_gray",
+    "map_color": "i_blue",
+    "sym": "%",
+    "ranged_penalty": 4,
+    "sight_penalty": 1.2,
+    "light_modifier": -40,
+    "sun_multiplier": 0.01,
+    "sound_attn": 8,
+    "dangerous": false,
+    "precip": "heavy",
+    "rains": true,
+    "tiles_animation": "weather_rain_drop",
+    "weather_animation": { "factor": 0.02, "color": "light_blue", "sym": "." },
+    "sound_category": "thunder",
+    "required_weathers": [ "rain", "thunder", "rain_nitori" ],
+    "priority": 71,
+    "condition": { "math": [ "var_nitori_weather", "==", "4" ] }
+  },
+  {
+    "id": "lightning_nitori",
+    "type": "weather_type",
+    "name": "Lightning Storm XXX",
+    "color": "yellow",
+    "map_color": "h_yellow",
+    "sym": "%",
+    "ranged_penalty": 4,
+    "sight_penalty": 1.25,
+    "light_modifier": -45,
+    "sun_multiplier": 0.01,
+    "sound_attn": 8,
+    "dangerous": false,
+    "precip": "heavy",
+    "rains": true,
+    "tiles_animation": "weather_rain_drop",
+    "weather_animation": { "factor": 0.04, "color": "light_blue", "sym": "," },
+    "sound_category": "thunder",
+    "required_weathers": [ "thunder", "lightning", "thunder_nitori" ],
+    "priority": 81,
+    "condition": { "math": [ "var_nitori_weather", "==", "4" ] }
+  },
+  {
     "id": "sakuya_timestop_wip",
     "type": "SPELL",
     "name": { "str": "Time manipulation (Time stop)" },
@@ -203,101 +755,6 @@
     "//": "Messages can be handled by EOCs once I fix the double-stop requirement of the base aura..."
   },
   {
-    "id": "seiga_wallwalk2",
-    "type": "SPELL",
-    "name": { "str": "TEST Pass through wall TEST" },
-    "description": "Use your <color_light_cyan>ability</color> to cut through walls.",
-    "spell_class": "NONE",
-    "teachable": false,
-    "valid_targets": [ "self" ],
-    "effect": "effect_on_condition",
-    "effect_str": "seiga_wallwalk_eoc",
-    "shape": "blast",
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": { "math": [ "( - (u_skill('speech') * 3.35 ) - (u_skill('dodge') * 3.35 ) + 120.1 )" ] },
-    "base_energy_cost": { "math": [ "( - (u_skill('speech') * 3.35 ) - (u_skill('dodge') * 3.35 ) + 120.1 )" ] },
-    "energy_source": "MANA",
-    "flags": [ "NO_LEGS", "SILENT", "SOMATIC" ],
-    "//": "cast time and mana cost 100 - 33, scales down with higher skill",
-    "//2": "This doesn't work. I need some way to pull the terrain's ID to restore it after casting the spell"
-  },
-  {
-    "id": "seiga_wallwalk3",
-    "type": "SPELL",
-    "name": { "str": "Pass through wall (effect)" },
-    "description": "Terrain transform component of seiga_wallwalk ",
-    "spell_class": "NONE",
-    "valid_targets": [ "ground" ],
-    "effect": "ter_transform",
-    "effect_str": "seiga_wallwalk_ter",
-    "shape": "blast",
-    "min_range": 1,
-    "max_range": 1,
-    "max_level": 1,
-    "difficulty": -11,
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "IGNORE_WALLS", "NO_LEGS", "NO_PROJECTILE", "SILENT", "SOMATIC" ]
-  },
-  {
-    "id": "seiga_wallwalk_eoc",
-    "type": "effect_on_condition",
-    "effect": [
-      {
-        "if": {
-          "message": "Select wall", 
-          "u_query_tile": "around",
-          "target_var": { "global_val": "var_wallwalk_loc" }
-        },
-        "then": [
-          {
-            "if": { "map_terrain_with_flag": "WALL", "loc": { "global_val": "var_wallwalk_loc" } },
-            "then": [
-              {
-                "u_location_variable": { "global_val": "var_wallwalk_loc" }, "terrain": "<ter_id>", "target_min_radius": 0, "target_max_radius": 0, 
-                "true_eocs": [ 
-                  {
-                    "id": "seiga_wallwalk_linker",
-                    "effect": [
-                      { "run_eocs": "seiga_wallwalk_store" } 
-                    ]
-                  } 
-                ]
-              }
-            ],
-            "else": [ 
-              { "run_eocs": [ "seiga_wallwalk_fail" ] }
-            ]
-          }
-        ],
-        "else": [ 
-          { "math": [ "u_val('mana')", "+=", "( - (u_skill('speech') * 3.3 ) - (u_skill('dodge') * 3.3 ) + 85.8 ) + rand(33)" ] },
-          { "u_message": "Canceled" }
-        ]
-      }
-    ],
-    "//": "This asks for the player to select a location, checks if there's any wall",
-    "//2": "If true, it saves the location, AAA"
-  },
-  {
-    "id": "seiga_wallwalk_store",
-    "type": "effect_on_condition",
-    "effect": [
-      { "u_message": "WALLWALK_SUCCESS", "type": "mixed" }
-    ]
-  },
-  {
-    "id": "seiga_wallwalk_fail",
-    "type": "effect_on_condition",
-    "effect": [
-      { "math": [ "u_val('mana')", "+=", "( - (u_skill('speech') * 3.3 ) - (u_skill('dodge') * 3.3 ) + 85.8 ) + rand(33)" ] },
-      { "u_message": "There's no suitable wall at the location.", "type": "mixed" }
-    ],
-    "//": "If this runs, Seiga is refunded ( ( 66 to 0 ) + rand(33) ) amount of mana"
-  },
-  {
     "id": "seiga_corpsecurse3",
     "type": "SPELL",
     "name": { "str": "Curse of corpses (EOC) (2)" },
@@ -365,6 +822,64 @@
     ],
     "false_effect": [ 
       { "queue_eocs": [ "seiga_corpsecurse_rezzed_timer_1" ], "time_in_future": "1 s" }
+    ]
+  },
+  {
+    "id": "tenko_keystonecrash_eoc_WIP",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "if": {
+          "message": "Set target", 
+          "range": 6,
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_keystonecrash_loc" }
+        },
+        "then": [
+          { 
+            "revert_location": { "global_val": "var_keystonecrash_loc" },
+            "time_in_future": { "math": [ "( ( (u_skill('melee') * 240 ) + 960 ) / 100 )" ] },
+            "key": "var_keystone_key"
+          },
+          { "u_cast_spell": { "id": "tenko_keystonecrash2" }, "loc": { "global_val": "var_keystonecrash_loc" } }
+        ],
+        "else": [ 
+          { "math": [ "u_val('mana')", "+=", "100" ] },
+          { "u_message": "Canceled" }
+        ]
+      }
+    ],
+    "false_effect": [ 
+      { "u_message": "You need a direct connection to the Heavens to summon a crashing keystone.", "type": "mixed" },
+      { "math": [ "u_val('mana')", "+=", "100" ] }
+    ],
+    "//": "Based on seiga_wallwalk_eoc , only checks if Tenko is outside to cast the spell",
+    "//2": "This almost works, but because the spell can be casted more than once, the revert_location overwrite themselves or something, and the first keystones despawn and respawn"
+  },
+  {
+    "id": "tenko_keystonepillar_eoc_WIP",
+    "type": "effect_on_condition",
+    "effect": [
+      {
+        "if": {
+          "message": "Set target", 
+          "range": 4,
+          "u_query_tile": "line_of_sight",
+          "target_var": { "global_val": "var_keystonepillar_loc" }
+        },
+        "then": [
+          { 
+            "revert_location": { "global_val": "var_keystonepillar_loc" },
+            "time_in_future": { "math": [ "( ( (u_skill('melee') * 240 ) + 960 ) / 100 )" ] },
+            "key": "var_keystone_key"
+          },
+          { "u_cast_spell": { "id": "tenko_keystonepillar2" }, "loc": { "global_val": "var_keystonepillar_loc" } }
+        ],
+        "else": [ 
+          { "math": [ "u_val('mana')", "+=", "100" ] },
+          { "u_message": "Canceled" }
+        ]
+      }
     ]
   },
   {
@@ -653,7 +1168,7 @@
     "//": "This is the base disease timer. It checks if the target has u_DISEASE and the u_DISEASE_timer is less than the intended duration at that skill level (set at yamame_opens_spellbook_eoc )",
     "//2": "It adds 1 s to u_DISEASE_timer and queues the second step, which adds u_MIASMA (equivalent of var_DISEASE dmg) and stores it, it also cycles back to this step",
     "//3": "The u_DISEASE var is removed when the u_DISEASE_timer ends, or when consumed by Yamame's spells",
-    "//note": "Currently non-functional, due queue_eocs not working when used by monsters. It was working around 2024-01-26, and right until the last version I updated from (2024-03-03-1927) for what I can tell"
+    "//4": "This is not working because: queue_eocs not working when used by monsters. It was working around 2024-01-26, and right until the last version I updated from (2024-03-03-1927) for what I can tell"
   },
   {
     "id": "yamame_disease_timer_1_2_OLD",

@@ -19,7 +19,7 @@
     "damage": { "damage_type": "bullet", "amount": 56, "armor_penetration": 6 },
     "dispersion": 15,
     "range": 100,
-    "recoil": 2600,
+    "recoil": 3144,
     "effects": [ "COOKOFF" ],
     "flags": [ "IRREPLACEABLE_CONSUMABLE" ]
   },
@@ -34,7 +34,7 @@
     "price_postapoc": 1200,
     "material": [ "brass", "powder", "steel" ],
     "damage": { "damage_type": "bullet", "amount": 54, "armor_penetration": 10 },
-    "recoil": 2400
+    "recoil": 3360
   },
   {
     "id": "reloaded_77x58a",
@@ -48,7 +48,6 @@
       "damage": { "damage_type": "bullet", "amount": 0.9, "armor_penetration": 1.2 },
       "dispersion": 1.1
     },
-    "recoil": 2500,
     "//": "This should not exist in reality. It's just a 77x58a but has the brass-steel bullet replaced for copper-steel custom, because I assume that when you reload these like that if given the chance"
   },
   {
@@ -58,8 +57,8 @@
     "copy-from": "77x58a",
     "proportional": {
       "price": 0.33,
-      "damage": { "damage_type": "bullet", "amount": 0.66, "armor_penetration": 0.66 },
-      "recoil": 0.66,
+      "damage": { "damage_type": "bullet", "amount": 0.77, "armor_penetration": 0.66 },
+      "recoil": 0.77,
       "dispersion": 1.2
     },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE", "RECYCLED" ] },

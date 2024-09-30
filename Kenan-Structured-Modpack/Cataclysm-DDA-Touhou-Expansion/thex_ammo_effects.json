@@ -1,0 +1,44 @@
+[
+  {
+    "id": "473x33_TEST",
+    "type": "ammo_effect",
+    "spell_data": { "id": "473x33_TEST_spell" },
+    "always_cast_spell": true,
+    "//": "This works as intended: bullet + spell dmg x2. Do not test this with the debug monster! It works properly with default zombies and deals the expected dmg"
+  },
+  {
+    "id": "473x33_TEST_spell",
+    "type": "SPELL",
+    "name": { "str": " " },
+    "description": " ",
+    "spell_class": "NONE",
+    "valid_targets": [ "ally", "hostile" ],
+    "effect": "attack",
+    "extra_effects": [ { "id": "473x33_TEST_spell2" } ],
+    "shape": "blast",
+    "damage_type": "bullet",
+    "min_damage": 20,
+    "max_damage": 20,
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "flags": [ "NO_FAIL" ]
+  },
+  {
+    "id": "473x33_TEST_spell2",
+    "type": "SPELL",
+    "name": { "str": " " },
+    "description": " ",
+    "spell_class": "NONE",
+    "valid_targets": [ "ally", "hostile" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "bullet",
+    "min_damage": 20,
+    "max_damage": 20,
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "flags": [ "NO_FAIL" ]
+  }
+]

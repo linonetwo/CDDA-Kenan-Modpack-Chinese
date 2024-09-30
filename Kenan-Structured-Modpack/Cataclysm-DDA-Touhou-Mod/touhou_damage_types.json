@@ -29,80 +29,83 @@
       {
         "run_eocs": [
           {
-            "id": "soul_dmg_bonus",
-            "condition": {
-              "and": [ 
-                { "npc_has_flag": "SOULDMG_EXTRA" },
-                { "math": [ "_total_damage", ">", "0" ] }
-              ]
-            },
+            "id": "soul_dmg_check_monster_eoc",
+            "condition": "npc_is_monster",
             "effect": [ 
-              { "math": [ "var_soul_dmg", "=", "( _total_damage * rng( 1.8, 2.2 ) )" ] },
-              { "npc_cast_spell": { "id": "souldmg_spell" } }
+              {
+                "run_eocs": [
+                  {
+                    "id": "soul_dmg_bonus_monster",
+                    "condition": {
+                      "and": [ 
+                        { "npc_has_flag": "SOULDMG_EXTRA" },
+                        { "math": [ "_total_damage", ">", "0" ] }
+                      ]
+                    },
+                    "effect": [ 
+                      { "math": [ "var_soul_dmg", "=", "( _total_damage * rng( 1.8, 2.2 ) )" ] },
+                      { "math": [ "n_hp('ALL')", "-=", "var_soul_dmg" ] }
+                    ]
+                  },
+                  {
+                    "id": "soul_dmg_rnd_monster",
+                    "condition": {
+                      "and": [ 
+                        { "npc_has_flag": "SOUL_XDIMEN" },
+                        { "math": [ "_total_damage", ">", "0" ] }
+                      ]
+                    },
+                    "effect": [ 
+                      { "math": [ "var_soul_dmg", "=", " - ( _total_damage * rng( 0.2, 0.8 ) )" ] },
+                      { "math": [ "n_hp('ALL')", "-=", "var_soul_dmg" ] }
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
-            "id": "soul_dmg_rnd",
-            "condition": {
-              "and": [ 
-                { "npc_has_flag": "SOUL_XDIMEN" },
-                { "math": [ "_total_damage", ">", "0" ] }
-              ]
-            },
+            "id": "soul_dmg_check_character_eoc",
+            "condition": "npc_is_character",
             "effect": [ 
-              { "math": [ "var_soul_dmg", "=", "( - ( _total_damage * rng( 0.2, 0.8 ) ) )" ] },
-              { "npc_cast_spell": { "id": "souldmg_spell2" } }
+              {
+                "run_eocs": [
+                  {
+                    "id": "soul_dmg_bonus_character",
+                    "condition": {
+                      "and": [ 
+                        { "npc_has_flag": "SOULDMG_EXTRA" },
+                        { "math": [ "_total_damage", ">", "0" ] }
+                      ]
+                    },
+                    "effect": [ 
+                      { "math": [ "var_soul_dmg", "=", "( _total_damage * rng( 1.8, 2.2 ) )" ] },
+                      { "math": [ "n_hp('ALL_MAJOR')", "-=", "var_soul_dmg" ] }
+                    ]
+                  },
+                  {
+                    "id": "soul_dmg_rnd_character",
+                    "condition": {
+                      "and": [ 
+                        { "npc_has_flag": "SOUL_XDIMEN" },
+                        { "math": [ "_total_damage", ">", "0" ] }
+                      ]
+                    },
+                    "effect": [ 
+                      { "math": [ "var_soul_dmg", "=", " - ( _total_damage * rng( 0.2, 0.8 ) )" ] },
+                      { "math": [ "n_hp('ALL_MAJOR')", "-=", "var_soul_dmg" ] }
+                    ]
+                  }
+                ]
+              }
             ]
           }
         ]
       }
     ],
-    "//": "This EOC runs every time soul dmg is dealt. It checks if the target receives double dmg, or reduced dmg, depending on the flags",
-    "//2": "The target is forced to run the following spell on themselves, which deals dmg according to their flag, in pure dmg",
-    "//note": "The random dmg is not working like I supposed, as the _total_damage is already applied when the event_EOC is running",
-    "//note2": "A workaround for this is to instead turn the total soul dmg into a *negative* value, so the target heals for a random % of the received dmg",
-    "//note3": "Remove the spell component of this whenever possible"
-  },
-  {
-    "id": "souldmg_spell",
-    "type": "SPELL",
-    "name": { "str": "Soul dmg (extra)" },
-    "description": "Bonus dmg for soul-type attacks",
-    "valid_targets": [ "self" ],
-    "shape": "blast",
-    "effect": "attack",
-    "damage_type": "pure",
-    "min_damage": { "math": [ "var_soul_dmg" ] },
-    "max_damage": { "math": [ "var_soul_dmg" ] },
-    "min_pierce": 999,
-    "max_pierce": 999,
-    "max_level": 1,
-    "difficulty": -50,
-    "message": "",
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "SILENT" ]
-  },
-  {
-    "id": "souldmg_spell2",
-    "type": "SPELL",
-    "name": { "str": "Soul dmg (extra) (no vfx)" },
-    "description": "Bonus dmg for soul-type attacks, without the vfx",
-    "valid_targets": [ "self" ],
-    "shape": "blast",
-    "effect": "attack",
-    "damage_type": "pure",
-    "min_damage": { "math": [ "var_soul_dmg" ] },
-    "max_damage": { "math": [ "var_soul_dmg" ] },
-    "min_pierce": 999,
-    "max_pierce": 999,
-    "max_level": 1,
-    "difficulty": -50,
-    "message": "",
-    "base_casting_time": 0,
-    "base_energy_cost": 0,
-    "energy_source": "MANA",
-    "flags": [ "NO_EXPLOSION_SFX", "NO_FAIL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "SILENT" ]
+    "//": "This EOC runs every time soul dmg is dealt. It checks if the target is a monster or character, then checks if it receives bonus or reduced dmg, according to their flags",
+    "//2": "The target's hp is then re-adjusted. No spells required",
+    "//note": "As _total_damage is already applied when the event_EOC is running, not at the same time, dmg already taken cannot be adjusted",
+    "//note2": "A workaround is to instead add *negative* dmg, so the target is healed a % of the total dmg done"
   }
 ]

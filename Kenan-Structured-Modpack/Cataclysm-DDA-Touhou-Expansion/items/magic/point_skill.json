@@ -1,0 +1,28 @@
+[
+  {
+    "id": "point_skill",
+    "type": "TOOL",
+    "name": { "str": "skill point" },
+    "description": "A small, light blue cube of wood, with white lowercase \"s\" written on each side.",
+    "volume": "216 ml",
+    "weight": "143 g",
+    "longest_side": "6 cm",
+    "price_postapoc": 25000,
+    "to_hit": { "balance": "neutral", "grip": "solid", "length": "hand", "surface": "any" },
+    "melee_damage": { "bash": 1 },
+    "material": [ "steel" ],
+    "symbol": "s",
+    "//looks_like": "adobe_brick",
+    "color": "cyan",
+    "use_action": [
+      {
+        "type": "effect_on_conditions",
+        "description": "Use skill point.",
+        "effect_on_conditions": [ "point_skill_eoc" ]
+      }
+    ],
+    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ],
+    "//": "No looks_like, as there's no 'cube' toy in game, which is the closest thing",
+    "//2": "Should be made of wood but wood can burn, so it's the default and trusty steel"
+  }
+]

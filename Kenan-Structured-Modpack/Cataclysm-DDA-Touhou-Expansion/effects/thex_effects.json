@@ -147,13 +147,12 @@
       {
         "condition": "ALWAYS",
         "values": [
-          { "value": "INTELLIGENCE", "add": 4 },
+          { "value": "INTELLIGENCE", "add": { "math": [ "var_history_book_int" ] } },
           { "value": "LEARNING_FOCUS", "add": { "math": [ "rand(15) + 1" ] } },
           { "value": "READING_EXP", "add": { "math": [ "rand(8) + 1" ] } }
         ]
       }
-    ],
-    "//WIP": "Should raise INT to 9, and provide no benefit after that"
+    ]
   },
   {
     "id": "lavender_grimoire_bubble_effect",
@@ -199,7 +198,7 @@
           { "value": "ARMOR_BULLET", "multiply": -1 },
           { "value": "ARMOR_BASH", "multiply": -1 },
           { "value": "ARMOR_CUT", "multiply": -1 },
-          { "value": "ARMOR_STAB", "multiply": 1 },
+          { "value": "ARMOR_STAB", "multiply": -1 },
           { "value": "ARMOR_ALL", "add": -1 }
         ],
         "//": "ARMOR_X add -n ADDS armor for n value"
@@ -223,6 +222,27 @@
     "apply_message": "You're sudden ",
     "remove_message": " ly frozen!",
     "rating": "bad"
+  },
+  {
+    "id": "possessed_trumpet_stat_effect",
+    "type": "effect_type",
+    "name": [ "Mania" ],
+    "desc": [ "" ],
+    "apply_message": "",
+    "remove_message": "",
+    "rating": "mixed",
+    "max_duration": "12 h",
+    "enchantments": [ 
+      {
+        "condition": "ALWAYS",
+        "values": [
+          { "value": "DEXTERITY", "add": { "math": [ "var_posessed_trumpet_dex" ] } },
+          { "value": "INTELLIGENCE", "add": { "math": [ "var_posessed_trumpet_int" ] } },
+          { "value": "PERCEPTION", "add": { "math": [ "var_posessed_trumpet_per" ] } },
+          { "value": "STRENGTH", "add": { "math": [ "var_posessed_trumpet_str" ] } }
+        ]
+      }
+    ]
   },
   {
     "id": "shrieking_slow_effect",
@@ -333,9 +353,65 @@
         "intermittent_activation": 
           { 
             "effects": [ 
-              { "spell_effects": [ { "id": "thorny_box_spell2" } ], "frequency": "36 s" }
-          ] 
-        }
+              { "spell_effects": [ { "id": "thorny_box_spell" } ], "frequency": "1016 s" }
+            ] 
+          },
+        "values": [ 
+          { "value": "MENDING_MODIFIER", "multiply": 10 }
+        ] 
+      }
+    ],
+    "removes_effects": [
+      "bloodworms",
+      "brainworms",
+      "common_cold",
+      "dermatik",
+      "flu",
+      "foodpoison",
+      "fungus",
+      "infected",
+      "paincysts",
+      "rat_bite_fever",
+      "rat",
+      "spores",
+      "tapeworm",
+      "tetanus",
+      "toxin_buildup",
+      "icy_pyrexia",
+      "scarlet_plague",
+      "volatile_rot"      
+    ],
+    "//": "Heals 85 hp, over 24 h = 1440 m = 86400 s (1 hp / 1016 s). PD: when you're not sitting or anything",
+    "//2": "Tried using REGEN_HP between 35 and 50 to restore full hp over 24 h, but seems it's not lineal, it relies on another external variable (sitting? thirst? hunger?)"
+  },
+  {
+    "id": "thorny_box_demerit_effect",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "enchantments": [
+      {
+        "condition": "ALWAYS",
+        "values": [ 
+          { "value": "BONUS_BLOCK", "add": { "math": [ " - ( u_var_thorny_box )" ] } },
+          { "value": "BONUS_DODGE", "add": { "math": [ " - ( u_var_thorny_box )" ] } },
+          { "value": "DEXTERITY", "add": { "math": [ " - ( u_var_thorny_box )" ] } },
+          { "value": "EQUIPMENT_DAMAGE_CHANCE", "multiply": { "math": [ "( u_var_thorny_box * 5 )" ] } },
+          { "value": "FOOTSTEP_NOISE", "multiply": { "math": [ "( u_var_thorny_box / 2 )" ] } },
+          { "value": "HUNGER", "multiply": { "math": [ "( u_var_thorny_box / 3 )" ] } },
+          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "( u_var_thorny_box * 3 )" ] } },
+          { "value": "NIGHT_VIS", "add": { "math": [ "( u_var_thorny_box * 2 )" ] } },
+          { "value": "OVERKILL_DAMAGE", "multiply": { "math": [ " - ( u_var_thorny_box )" ] } },
+          { "value": "SOCIAL_INTIMIDATE", "add": { "math": [ " ( u_var_thorny_box * 5 )" ] } },
+          { "value": "SOCIAL_LIE", "add": -99 },
+          { "value": "SOCIAL_PERSUADE", "multiply": { "math": [ " - ( u_var_thorny_box * 5 )" ] } },
+          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": { "math": [ "( u_var_thorny_box / 3 )" ] } },
+          { "value": "WEAPON_DISPERSION", "add": { "math": [ "( u_var_thorny_box * 5 )" ] } },
+          { "value": "STRENGTH", "add": { "math": [ " ( u_var_thorny_box )" ] } },
+          { "value": "INTELLIGENCE", "add": { "math": [ " - ( u_var_thorny_box )" ] } }
+        ] 
       }
     ]
   }

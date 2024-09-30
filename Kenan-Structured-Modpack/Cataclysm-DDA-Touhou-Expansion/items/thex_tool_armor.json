@@ -25,7 +25,7 @@
     ],
     "//3": "I have no idea if this is enough to emulate a shield's coverage",
     "weapon_category": [ "SHIELDS" ],
-    "flags": [ "DURABLE_MELEE", "OUTER", "OVERSIZE" ],
+    "flags": [ "BLOCK_WHILE_WORN", "DURABLE_MELEE", "OUTER", "OVERSIZE" ],
     "//2": "Can be either ARMOR or TOOL_ARMOR. No weapon to allow free hand(s). Ideally one should shield bash with it while using it, independently of any actual weapons on the 'main hand', because good shields are used to shield bash faces"
   },
   {
@@ -66,7 +66,7 @@
     },
     "armor": [ { "covers": [ "head" ], "coverage": 45, "encumbrance": [ 4, 8 ] } ],
     "techniques": [ "WBLOCK_1" ],
-    "flags": [ "OUTER" ]
+    "flags": [ "BLOCK_WHILE_WORN", "OUTER" ]
   },
   {
     "id": "tengu_shield",
@@ -94,6 +94,6 @@
     ],
     "//3": "I have no idea if this is enough to emulate a shield's coverage",
     "weapon_category": [ "SHIELDS" ],
-    "flags": [ "DURABLE_MELEE", "OUTER", "OVERSIZE" ]
+    "flags": [ "BLOCK_WHILE_WORN", "DURABLE_MELEE", "OUTER", "OVERSIZE" ]
   }
 ]

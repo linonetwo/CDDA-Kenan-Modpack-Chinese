@@ -5,6 +5,8 @@
     "copy-from": "mags_milspec",
     "extend": {
       "items": [
+        { "item": "473x33mag45", "prob": 11 },
+        { "item": "473x33mag50", "prob": 11 },
         { "item": "9x39mag20", "prob": 11 },
         { "item": "9x39mag30", "prob": 11 },
         { "item": "svdmag10", "prob": 11 },
@@ -20,6 +22,8 @@
     "//": "Obsolete military magazines no longer in common use.",
     "extend": {
       "items": [
+        { "item": "473x33mag45", "prob": 5 },
+        { "item": "473x33mag50", "prob": 5 },
         { "group": "nested_sig550mag", "prob": 5 },
         { "item": "stg44mag25", "prob": 5 },
         { "item": "stg44mag30", "prob": 5 },
@@ -40,6 +44,8 @@
     "copy-from": "mags_common",
     "extend": {
       "items": [
+        { "item": "473x33mag45", "prob": 16 },
+        { "item": "473x33mag50", "prob": 16 },
         { "item": "792x57_clip", "prob": 16 },
         { "group": "nested_sig550mag", "prob": 16 },
         { "item": "762R_clip", "prob": 16 },
@@ -59,17 +65,6 @@
     "//2": "Chance for any of the mod's mags at ( 916 / 4 )"
   },
   {
-    "id": "nested_sig550mag",
-    "type": "item_group",
-    "subtype": "collection",
-    "entries": [
-      { "item": "sig550mag5", "prob": 66, "charges": [ 0, 5 ] },
-      { "item": "sig550mag10", "prob": 66, "charges": [ 0, 10 ] },
-      { "item": "sig550mag20", "prob": 100, "charges": [ 0, 20 ] },
-      { "item": "sig550mag30", "prob": 33, "charges": [ 0, 30 ] }
-    ]
-  },
-  {
     "type": "item_group",
     "subtype": "distribution",
     "id": "mags_collector",
@@ -77,6 +72,8 @@
     "copy-from": "mags_collector",
     "extend": {
       "items": [
+        { "item": "473x33mag45", "prob": 5 },
+        { "item": "473x33mag50", "prob": 5 },
         { "item": "792x57_clip", "prob": 5 },
         { "item": "762R_clip", "prob": 5 },
         { "item": "9x39mag20", "prob": 5 },

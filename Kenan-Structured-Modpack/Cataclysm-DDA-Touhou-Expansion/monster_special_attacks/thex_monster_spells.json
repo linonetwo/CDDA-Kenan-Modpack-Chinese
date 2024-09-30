@@ -4,8 +4,9 @@
     "type": "SPELL",
     "name": { "str": "ball lightning death" },
     "description": "Death for mon_ball_lightning ",
-    "valid_targets": [ "ground", "hostile", "self" ],
+    "valid_targets": [ "ground", "hostile" ],
     "effect": "attack",
+    "extra_effects": [ { "id": "death_ball_lightning2", "hit_self": true } ],
     "shape": "blast",
     "damage_type": "electric",
     "min_damage": 6,
@@ -14,14 +15,31 @@
     "max_aoe": 2,
     "field_id": "fd_electricity",
     "field_chance": 3,
-    "min_field_intensity": 4,
-    "max_field_intensity": 7,
+    "min_field_intensity": 2,
+    "max_field_intensity": 5,
+    "message": "",
     "flags": [ "LOUD", "RANDOM_DAMAGE" ]
+  },
+  {
+    "id": "death_ball_lightning2",
+    "type": "SPELL",
+    "name": { "str": "ball lightning death" },
+    "description": "Death for mon_ball_lightning ",
+    "spell_class": "NONE",
+    "valid_targets": [ "self" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": 99,
+    "max_damage": 99,
+    "max_level": 1,
+    "message": "",
+    "flags": [ "NO_EXPLOSION_SFX", "NO_FAIL", "NO_PROJECTILE", "SILENT" ]
   },
   {
     "id": "death_fairy",
     "type": "SPELL",
-    "name": "fairy death",
+    "name": { "str": "fairy death" },
     "description": "Default fairy death",
     "valid_targets": [ "ground", "self" ],
     "effect": "attack",
@@ -34,6 +52,62 @@
     "sound_variant": "defaul",
     "message": "Pichun!",
     "flags": [  ]
+  },
+  {
+    "id": "death_impurity_mine",
+    "type": "SPELL",
+    "name": { "str": "impurity mine attack" },
+    "description": "Death for mon_impurity_mine ",
+    "spell_class": "NONE",
+    "valid_targets": [ "hostile" ],
+    "effect": "effect_on_condition",
+    "effect_str": "death_impurity_mine_eoc",
+    "extra_effects": [ { "id": "death_impurity_mine2", "hit_self": true } ],
+    "shape": "blast",
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "max_level": 1,
+    "message": "",
+    "flags": [ "NO_FAIL", "NO_PROJECTILE" ]
+  },
+  {
+    "id": "death_impurity_mine_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "u_cast_spell": { "id": "death_impurity_mine3", "message": "" } }
+    ]
+  },
+  {
+    "id": "death_impurity_mine2",
+    "type": "SPELL",
+    "name": { "str": "impurity mine death" },
+    "description": "Death for mon_impurity_mine ",
+    "spell_class": "NONE",
+    "valid_targets": [ "self" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": 99,
+    "max_damage": 99,
+    "max_level": 1,
+    "message": "",
+    "flags": [ "NO_EXPLOSION_SFX", "NO_FAIL", "NO_PROJECTILE", "SILENT" ]
+  },
+  {
+    "id": "death_impurity_mine3",
+    "type": "SPELL",
+    "name": { "str": "impurity mine attack (dmg)" },
+    "description": "Actual attack component of impurity_mine_attack . The target is forced to cast this by death_impurity_mine_eoc ",
+    "spell_class": "NONE",
+    "valid_targets": [ "self" ],
+    "effect": "attack",
+    "shape": "blast",
+    "damage_type": "pure",
+    "min_damage": { "math": [ "( 0 + u_var_impurity * 5 )" ] },
+    "max_damage": { "math": [ "( 0 + u_var_impurity * 10 )" ] },
+    "max_level": 1,
+    "message": "",
+    "flags": [ "NO_EXPLOSION_SFX", "NO_FAIL", "NO_PROJECTILE", "RANDOM_DAMAGE" ]
   },
   {
     "id": "death_mib",
@@ -153,6 +227,7 @@
     "shape": "blast",
     "min_aoe": 1,
     "max_aoe": 1,
+    "message": "",
     "flags": [ "NO_EXPLOSION_SFX", "SILENT" ]
   },
   {
@@ -225,8 +300,8 @@
     "effect": "attack",
     "shape": "blast",
     "damage_type": "electric",
-    "min_damage": 15,
-    "max_damage": 21,
+    "min_damage": 9,
+    "max_damage": 17,
     "min_aoe": 3,
     "max_aoe": 3,
     "field_id": "fd_electricity",
@@ -245,8 +320,8 @@
     "effect": "attack",
     "shape": "blast",
     "damage_type": "electric",
-    "min_damage": 15,
-    "max_damage": 21,
+    "min_damage": 7,
+    "max_damage": 11,
     "min_range": 6,
     "max_range": 6,
     "field_id": "fd_electricity",
@@ -285,6 +360,7 @@
     "max_damage": 25,
     "min_aoe": 1,
     "max_aoe": 1,
+    "message": "",
     "flags": [ "RANDOM_DAMAGE" ]
   },
   {
@@ -403,6 +479,20 @@
     "flags": [ "IGNITE_FLAMMABLE", "RANDOM_DAMAGE", "SILENT" ]
   },
   {
+    "id": "monster_invisibility_touhou",
+    "type": "SPELL",
+    "name": { "str": "Monster invisibility" },
+    "description": "Makes the target invisible",
+    "valid_targets": [ "self" ],
+    "effect": "attack",
+    "effect_str": "invisibility",
+    "shape": "blast",
+    "min_duration": 1200,
+    "max_duration": 1200,
+    "message": "",
+    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ]
+  },
+  {
     "id": "monster_vanish",
     "type": "SPELL",
     "name": { "str": "Monster vanish" },
@@ -518,6 +608,7 @@
     "max_damage": -300,
     "min_aoe": 1,
     "max_aoe": 1,
+    "message": "",
     "flags": [ "IGNORE_WALLS", "NO_EXPLOSION_SFX", "NO_PROJECTILE", "RANDOM_DAMAGE", "SILENT" ]
   },
   {
@@ -871,6 +962,7 @@
     "max_aoe": 24,
     "min_duration": 60000,
     "max_duration": 120000,
+    "message": "",
     "flags": [ "IGNORE_WALLS", "NO_EXPLOSION_SFX", "RANDOM_DAMAGE", "RANDOM_DURATION" ]
   },
   {

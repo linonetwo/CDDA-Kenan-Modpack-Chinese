@@ -26,7 +26,7 @@
     "dodge": 2,
     "armor": { "bash": 2, "cut": 2, "stab": 2, "bullet": 8, "acid": 2, "biological": 2, "cold": 2, "electric": 2, "heat": 2 },
     "luminance": 1,
-    "families": [ "prof_intro_biology", "prof_physiology" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology" ],
     "weakpoint_sets": [ "wps_humanoid_body", "wps_mib_body" ],
     "vision_night": 12,
     "path_settings": { "max_dist": 32, "avoid_traps": true, "avoid_dangerous_fields": true },
@@ -50,8 +50,8 @@
         "ranges": [ [ 2, 12, "BURST" ], [ 13, 18, "SEMI_AUTO" ] ]
       }
     ],
-    "death_drops": "mib_drops",
     "death_function": { "effect": { "id": "death_monster_touhou_none", "hit_self": true }, "message": "The %s dies!" },
+    "death_drops": "mib_drops",
     "flags": [ "BASHES", "CAN_OPEN_DOORS", "DROPS_AMMO", "HEARS", "PATH_AVOID_DANGER", "SEES", "WARM" ],
     "//": "Base (human) MIB",
     "//2": "Add 'weird' harvest",
@@ -65,9 +65,9 @@
     "vision_night": 32,
     "weakpoint_sets": [ "wps_humanoid_head_big", "wps_mib_body" ],
     "death_function": {
+      "corpse_type": "NORMAL",
       "effect": { "id": "death_mib_shadowspawn", "hit_self": true },
-      "message": "The %s falls dead.  Immediately after, a jet black shadow emerges from the \"corpse\"!",
-      "corpse_type": "NORMAL"
+      "message": "The %s falls dead.  Immediately after, a jet black shadow emerges from the \"corpse\"!"
     },
     "flags": [ "BASHES", "CAN_OPEN_DOORS", "DROPS_AMMO", "HEARS", "PATH_AVOID_DANGER", "SEES" ],
     "//": " 'Demon' type MIB"
@@ -79,9 +79,9 @@
     "copy-from": "mon_mib_1",
     "vision_night": 16,
     "death_function": {
+      "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_mib_alienspawn", "hit_self": true },
-      "message": "The %s stops on its tracks, the flesh starts to melt and something comes out from the body!",
-      "corpse_type": "NO_CORPSE"
+      "message": "The %s stops on its tracks, the flesh starts to melt and something comes out from the body!"
     },
     "flags": [ "BASHES", "CAN_OPEN_DOORS", "DROPS_AMMO", "HEARS", "PATH_AVOID_DANGER", "SEES" ],
     "//": "Alien type MIB, add pile-of-flesh corpse"
@@ -93,12 +93,12 @@
     "copy-from": "mon_mib_1",
     "vision_night": 24,
     "path_settings": { "max_dist": 24 },
-    "families": [ "prof_intro_biology", "prof_physiology", "prof_wp_cyborg" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_cyborg" ],
     "weakpoint_sets": [ "wps_cyborg_body" ],
     "death_function": {
+      "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_mib_terminatorspawn", "hit_self": true },
-      "message": "The %s falls dead.  Shortly after, the operative stands up again, with a red glow on their eyes!",
-      "corpse_type": "NO_CORPSE"
+      "message": "The %s falls dead.  Shortly after, the operative stands up again, with a red glow on their eyes!"
     },
     "flags": [ "BASHES", "CAN_OPEN_DOORS", "DROPS_AMMO", "HEARS", "NO_BREATHE", "PATH_AVOID_DANGER", "SEES", "WARM" ],
     "//": "Terminator-like MIB"
@@ -109,9 +109,9 @@
     "name": { "str": "Man in Black", "str_pl": "Men in Black" },
     "copy-from": "mon_mib_1",
     "death_function": {
+      "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_mib_agentspawn", "hit_self": true },
-      "message": "The %s staggers, their face becomes blurry and countoured as in pain, taken over by a stern figure!",
-      "corpse_type": "NO_CORPSE"
+      "message": "The %s staggers, their face becomes blurry and countoured as in pain, taken over by a stern figure!"
     },
     "flags": [ "BASHES", "CAN_OPEN_DOORS", "DROPS_AMMO", "HEARS", "PATH_AVOID_DANGER", "SEES", "WARM" ],
     "//": "Agent-like MIB"
@@ -207,7 +207,7 @@
     "melee_damage": [ { "damage_type": "bash", "amount": 5 } ],
     "dodge": 2,
     "armor": { "bash": 16, "cut": 16, "stab": 16, "bullet": 16, "acid": 2, "biological": 2, "cold": 2, "electric": 2, "heat": 2 },
-    "families": [ "prof_wp_youkai", "prof_wp_cyborg" ],
+    "families": [ "prof_wp_cyborg", "prof_wp_youkai" ],
     "weakpoint_sets": [ "wps_terminator_body" ],
     "vision_night": 24,
     "path_settings": { "max_dist": 32 },
@@ -241,7 +241,7 @@
     "dodge": 6,
     "armor": { "bash": 8, "cut": 8, "stab": 8, "bullet": 8, "acid": 4, "biological": 4, "cold": 4, "electric": 4, "heat": 4 },
     "luminance": 1,
-    "families": [ "prof_intro_biology", "prof_physiology" ],
+    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology" ],
     "weakpoint_sets": [ "wps_humanoid_body", "wps_mib_body" ],
     "vision_night": 12,
     "path_settings": { "max_dist": 32, "avoid_traps": true, "avoid_dangerous_fields": true },

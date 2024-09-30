@@ -1,0 +1,55 @@
+[
+  {
+    "id": "mon_impurity_mine",
+    "type": "MONSTER",
+    "name": { "str": "impurity mine", "str_pl": "impurity mines" },
+    "description": "A roughly spherical element, surrounded by smaller spheres.  The main body is a Yin-Yang object, covered by a transparent shell that bends light around it.  The encircling spheres rotate over the outer surface in an ordered fashion, independently, yet never bumping between the others.",
+    "volume": "11132 ml",
+    "weight": "1000 g",
+    "default_faction": "touhou_fortean",
+    "bodytype": "blob",
+    "categories": [ "NULL" ],
+    "species": [ "UNKNOWN" ],
+    "harvest": "exempt",
+    "hp": 20,
+    "speed": 100,
+    "material": [ "steel" ],
+    "symbol": "☯",
+    "color": "white",
+    "aggression": 99,
+    "morale": 99,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "dodge": 0,
+    "armor": { "soul": 22 },
+    "luminance": 12,
+    "vision_night": 32,
+    "path_settings": { "max_dist": 32 },
+    "anger_triggers": [ "HURT" ],
+    "special_attacks": [
+      {
+        "id": "mon_impurity_mine_1",
+        "type": "spell",
+        "spell_data": { "id": "death_impurity_mine", "hit_self": true },
+        "condition": { "math": [ "distance('u', 'npc')", "<", "2" ] },
+        "cooldown": 1, 
+        "monster_message": "" 
+      }
+    ],
+    "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
+    "flags": [
+      "CLIMBS",
+      "FLIES",
+      "NOGIB",
+      "NOHEAD",
+      "NO_BREATHE",
+      "PACIFIST",
+      "QUIETMOVES",
+      "SEES",
+      "STUN_IMMUNE",
+      "SWARMS",
+      "WEBWALK"
+    ]
+  }
+]

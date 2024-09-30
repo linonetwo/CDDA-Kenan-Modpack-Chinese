@@ -1,0 +1,49 @@
+[
+  {
+    "id": "473x33_dm11",
+    "type": "AMMO",
+    "name": { "str_sp": "4.73x33mm DM11" },
+    "description": "4.73x33mm DM11 caseless cartridge, shaped like a rectangular prism, housing a jacketed 51 gr bullet inside of an advanced propellant body.  Upon firing, the body will be consumed, leaving nothing behind in the chamber.",
+    "volume": "97 ml",
+    "weight": "7 g",
+    "//": "The 4.73 mm round is half the weight and 40% the size by volume of the 5.56×45mm NATO round",
+    "price": 120,
+    "price_postapoc": 900,
+    "material": [ "plastic", "powder", "steel" ],
+    "symbol": "=",
+    "color": "white",
+    "ammo_type": "473x33",
+    "count": 50,
+    "stack_size": 50,
+    "damage": { "damage_type": "bullet", "amount": 38, "armor_penetration": 6 },
+    "dispersion": 7,
+    "range": 42,
+    "recoil": 2200,
+    "effects": [ "NEVER_MISFIRES" ],
+    "flags": [ "IRREPLACEABLE_CONSUMABLE", "CASELESS_ROUNDS" ],
+    "//2": "Based and scaled from 8mm_caseless . Arbitrary price. Dispersion set so hk_g11 + 473x33_dm11 = ( hk_g3 with 762_51 ) / 2 "
+  },
+  {
+    "id": "bootleg_473x33_dm11",
+    "type": "AMMO",
+    "name": { "str_sp": "4.73x33mm DM11 (bootleg)" },
+    "copy-from": "473x33_dm11",
+    "description": "A bootleg duplicate of the 4.73x33mm DM11 caseless round.",
+    "proportional": {
+      "price": 0.7,
+      "damage": { "damage_type": "bullet", "amount": 0.9 },
+      "dispersion": 1.1
+    },
+    "extend": { "effects": [ "RECYCLED" ] },
+    "delete": { "effects": [ "NEVER_MISFIRES" ], "flags": [ "IRREPLACEABLE_CONSUMABLE" ] }
+  },
+  {
+    "id": "473x33_dm11_test",
+    "type": "AMMO",
+    "name": { "str_sp": "4.73x33mm DM11 (TEST)" },
+    "copy-from": "473x33_dm11",
+    "description": "4.73x33mm DM11 caseless cartridge, shaped like a rectangular prism, housing a jacketed 51 gr bullet inside of an advanced propellant body.  Upon firing, the body will be consumed, leaving nothing behind in the chamber.",
+    "damage": { "damage_type": "bullet", "amount": 20, "armor_penetration": 20 },
+    "effects": [ "NEVER_MISFIRES", "473x33_TEST" ]
+  }
+]
