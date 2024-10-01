@@ -331,6 +331,45 @@
     "obsolete": true
   },
   {
+    "type": "recipe",
+    "result": "cured_hide",
+    "id_suffix": "drying",
+    "obsolete": true
+  },
+  {
+    "type": "recipe",
+    "result": "cured_pelt",
+    "id_suffix": "drying",
+    "obsolete": true
+  },
+  {
+    "id": "tar_oil",
+    "type": "MIGRATION",
+    "replace": "pitch_wood"
+  },
+  {
+    "type": "recipe",
+    "result": "tar_oil",
+    "obsolete": true
+  },
+  {
+    "id": "beehive_empty",
+    "type": "GENERIC",
+    "name": { "str": "empty beehive" },
+    "description": "A large, enclosed wooden box with multiple sliding frames in it.  With something to attract bees, it can be used to grow a hive.",
+    "weight": "10000 g",
+    "volume": "20 L",
+    "price": "92 USD",
+    "material": [ "wood" ],
+    "symbol": "-",
+    "color": "brown"
+  },
+  {
+    "type": "recipe",
+    "result": "beehive_empty",
+    "obsolete": true
+  },
+  {
     "type": "terrain",
     "id": "t_hive_young",
     "name": "empty beehive",
@@ -470,8 +509,9 @@
         { "item": "nail", "charges": [ 4, 8 ] },
         { "item": "splinter", "count": [ 2, 6 ] }
       ]
-    },
-    {
+    }
+  },
+  {
     "id": "t_tarptent_leather",
     "type": "terrain",
     "name": "leather tarp lean-to",

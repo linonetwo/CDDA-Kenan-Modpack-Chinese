@@ -23,38 +23,6 @@
   },
   {
     "type": "recipe",
-    "result": "cured_hide",
-    "activity_level": "NO_EXERCISE",
-    "id_suffix": "drying",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_MATERIALS",
-    "skill_used": "survival",
-    "difficulty": 3,
-    "time": "10 m",
-    "autolearn": true,
-    "batch_time_factors": [ 83, 5 ],
-    "qualities": [ { "id": "CUT", "level": 1 } ],
-    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
-    "components": [ [ [ "raw_leather", 1 ], [ "raw_tainted_leather", 1 ], [ "raw_hleather", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
-    "result": "cured_pelt",
-    "activity_level": "NO_EXERCISE",
-    "id_suffix": "drying",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_MATERIALS",
-    "skill_used": "survival",
-    "difficulty": 3,
-    "time": "10 m",
-    "autolearn": true,
-    "batch_time_factors": [ 83, 5 ],
-    "qualities": [ { "id": "CUT", "level": 1 } ],
-    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
-    "components": [ [ [ "raw_fur", 1 ], [ "raw_tainted_fur", 1 ], [ "raw_hfur", 1 ] ] ]
-  },
-  {
-    "type": "recipe",
     "result": "sharp_rock",
     "activity_level": "MODERATE_EXERCISE",
     "category": "CC_OTHER",
@@ -184,22 +152,6 @@
     "components": [ [ [ "2x4", 2 ], [ "stick", 2 ] ], [ [ "cordage_short", 2, "LIST" ] ] ]
   },
   {
-    "result": "tar_oil",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_MEDICAL",
-    "skill_used": "chemistry",
-    "difficulty": 1,
-    "skills_required": [ "survival", 1 ],
-    "time": "60 m",
-    "batch_time_factors": [ 80, 4 ],
-    "autolearn": true,
-    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "CONTAIN", "level": 1 } ],
-    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
-    "components": [ [ [ "pine_bough", 5 ], [ "birchbark", 5 ] ] ]
-  },
-  {
     "type": "recipe",
     "result": "primitive_hoe",
     "activity_level": "MODERATE_EXERCISE",
@@ -297,21 +249,6 @@
       [ [ "makeshift_sled_basket_item", 1 ] ],
       [ [ "vehicle_sled", 2, "LIST" ] ]
     ]
-  },
-  {
-    "type": "recipe",
-    "result": "beehive_empty",
-    "activity_level": "MODERATE_EXERCISE",
-    "category": "CC_OTHER",
-    "subcategory": "CSC_OTHER_TOOLS",
-    "skill_used": "fabrication",
-    "difficulty": 4,
-    "skills_required": [ "survival", 3 ],
-    "time": "10 m",
-    "autolearn": true,
-    "book_learn": [ [ "textbook_fabrication", 4 ], [ "atomic_survival", 3 ], [ "survival_book", 3 ] ],
-    "qualities": [ { "id": "HAMMER", "level": 2 }, { "id": "SAW_W", "level": 1 } ],
-    "components": [ [ [ "2x4", 4 ], [ "stick", 8 ] ], [ [ "nail", 10 ], [ "pointy_stick", 5 ], [ "spike", 5 ] ] ]
   },
   {
     "type": "recipe",
@@ -418,7 +355,6 @@
         [ "garlic_clove", 6 ],
         [ "oil_garlic", 6 ],
         [ "raw_dandelion", 8 ],
-        [ "tar_oil", 1 ],
         [ "honey_glassed", 5 ],
         [ "honey_bottled", 5 ]
       ]
