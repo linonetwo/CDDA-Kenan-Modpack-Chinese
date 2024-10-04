@@ -1,0 +1,966 @@
+[
+  {
+    "id": "ninja_katana",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "骑士武士刀"
+    },
+    "description": "这是日本忍者对付的剑。这是一把没有翘曲的直剑，剑和凿子之间有一段长度。我也可以用它爬墙壁，腿放在边缘上。",
+    "weight": "1000 g",
+    "volume": "1 L",
+    "price": "950 USD",
+    "to_hit": 2,
+    "bashing": 2,
+    "cutting": 22,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": [
+      "PRECISE",
+      "WBLOCK_2",
+      "VORPAL"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        18
+      ]
+    ],
+    "looks_like": "katana",
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "ninja_kusari_gama",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "锁镰"
+    },
+    "description": "它是一种用长链把重物连接到割草镰刀上的武器。主要用作暗器。通过像吊索一样投掷重物，你可以击中远处的敌人",
+    "weight": "1050 g",
+    "volume": "1250 ml",
+    "price": "500 USD",
+    "to_hit": 1,
+    "bashing": 10,
+    "cutting": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "&",
+    "color": "dark_gray",
+    "techniques": [
+      "WIDE",
+      "WRAP",
+      "WHIP_DISARM",
+      "VORPAL"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        7
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "REACH3",
+      "BELT_CLIP"
+    ]
+  },
+  {
+    "id": "ninja_nunchuk",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "日式双节棍（Nunchuku）"
+    },
+    "description": "它是一种中国古代流传下来的奇门武器。与赤手空拳交织作战，既能打出各种拳，又能让对手眼花缭乱。你要是能成为李小龙就好了。",
+    "weight": "520 g",
+    "volume": "1 L",
+    "price": "300 USD",
+    "to_hit": 3,
+    "bashing": 20,
+    "cutting": 1,
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "symbol": "v",
+    "color": "black",
+    "techniques": [
+      "BRUTAL",
+      "RAPID",
+      "SPIN",
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "UNARMED_WEAPON",
+      "REACH_ATTACK",
+      "BELT_CLIP"
+    ]
+  },
+  {
+    "id": "ninja_scroll_lightning",
+    "type": "GUN",
+    "name": {
+      "str": "雷霆艺术卷轴",
+      "str_pl": "雷霆艺术卷轴"
+    },
+    "description": "它是一个放电装置伪装成一个卷轴…写雷霆释放技术的地方。它通过UPS供电来运行。愤怒是一种逃避的技巧。趁丧尸不动的时候离他远点。",
+    "weight": "600 g",
+    "volume": "500 ml",
+    "price": "1000 USD",
+    "to_hit": -2,
+    "bashing": 1,
+    "cutting": 1,
+    "material": [
+      "paper",
+      "steel",
+      "plastic"
+    ],
+    "symbol": "?",
+    "color": "light_blue",
+    "skill": "rifle",
+    "range": 10,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 30,
+      "armor_penetration": 15
+    },
+    "dispersion": 10,
+    "sight_dispersion": 150,
+    "recoil": 0,
+    "durability": 10,
+    "loudness": 150,
+    "energy_drain": "100 kJ",
+    "ammo_effects": [
+      "LIGHTNING",
+      "BOUNCE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MODE_BURST"
+    ]
+  },
+  {
+    "id": "ninja_scroll_fire",
+    "copy-from": "flamethrower_base",
+    "type": "GUN",
+    "name": {
+      "str": "火焰艺术卷轴",
+      "str_pl": "火焰艺术卷轴"
+    },
+    "description": "它是一个伪装成卷轴的火焰喷射器…那里写着禁火的艺术。加注汽油或凝固汽油弹并使用。愤怒是一种逃避的技巧。让我们摆脱丧尸燃烧。",
+    "weight": "600 g",
+    "volume": "500 ml",
+    "price": "1000 USD",
+    "to_hit": -2,
+    "bashing": 1,
+    "cutting": 1,
+    "material": [
+      "paper",
+      "steel",
+      "plastic"
+    ],
+    "symbol": "?",
+    "color": "red",
+    "range": 8,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 15,
+      "armor_penetration": 25
+    },
+    "dispersion": 240,
+    "sight_dispersion": 150,
+    "recoil": 0,
+    "durability": 8,
+    "loudness": 150,
+    "clip_size": 10,
+    "extend": {
+      "flags": [
+        "MODE_BURST",
+        "PRIMITIVE_RANGED_WEAPON"
+      ]
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "flammable": 10
+        },
+        "watertight": true
+      }
+    ]
+  },
+  {
+    "id": "ninja_decoy",
+    "type": "TOOL",
+    "category": "tools",
+    "name": {
+      "str": "诱饵人偶"
+    },
+    "description": "我在树上穿上衬衫，系上绳子，这样我就能产生运动。如果你头脑不好，你会把这个娃娃误认为是你，炫耀你的滑雪板。它通过使用它来安装它。",
+    "weight": "5000 g",
+    "volume": "3750 ml",
+    "price": "10 USD",
+    "bashing": 1,
+    "material": [
+      "wood",
+      "cotton"
+    ],
+    "symbol": "@",
+    "color": "brown",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_ninja_decoy",
+      "friendly_msg": "诱饵娃娃似乎在跳舞。",
+      "hostile_msg": "设置了一个玩偶作为诱饵，但操控线用完了。",
+      "difficulty": 1,
+      "moves": 30,
+      "place_randomly": false,
+      "skills": [
+        "survival"
+      ]
+    }
+  },
+  {
+    "id": "ninja_suit",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "黑色盔甲套装"
+    },
+    "description": "这些是忍者的衣服。它是黑色的，以便能与黑夜融为一体。在现实中，真正的忍者穿着树叶色的护目镜。",
+    "weight": "2500 g",
+    "volume": "5 L",
+    "price": "700 USD",
+    "material": [
+      "cotton",
+      "leather"
+    ],
+    "symbol": "[",
+    "color": "black",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "4 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 105
+      }
+    ],
+    "warmth": 8,
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 14,
+        "coverage": 100,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 2
+  },
+  {
+    "id": "ninja_suit_survivor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "幸存者忍者套装"
+    },
+    "description": "我们用现代材料加固了黑色护套。自古以来，主人公的服装就被定为红色。",
+    "weight": "4800 g",
+    "volume": "5 L",
+    "price": "1400 USD",
+    "material": [
+      "kevlar",
+      "cotton",
+      "leather",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "red",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 175
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 175
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 10
+      }
+    ],
+    "warmth": 8,
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "VARSIZE",
+      "RAINPROOF",
+      "STURDY",
+      "POCKETS",
+      "FANCY",
+      "TARDIS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 18,
+        "coverage": 100,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 4
+  },
+  {
+    "id": "ninja_hood",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "忍者兜帽"
+    },
+    "description": "这是一套忍者的帽子，碗和脸脸颊。",
+    "weight": "600 g",
+    "volume": "2 L",
+    "price": "300 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "cotton",
+      "leather",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "black",
+    "warmth": 8,
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 14,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "mouth"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 1
+  },
+  {
+    "id": "ninja_hood_survivor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "幸存者忍者帽"
+    },
+    "description": "用现代材料加固的忍者风帽。一个紧凑的防毒面具，双重结构的护目镜，可以遮光附加。脸上刻着两个石诺比杀手的字。",
+    "weight": "700 g",
+    "volume": "2 L",
+    "price": "600 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar",
+      "cotton",
+      "leather",
+      "steel",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "red",
+    "warmth": 8,
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "RAINPROOF",
+      "SUN_GLASSES",
+      "FLASH_PROTECTION",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 18,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "eyes",
+          "mouth"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 15
+  },
+  {
+    "id": "ninja_chainmail",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "忍者锁子甲"
+    },
+    "description": "穿在衣服下面，用忍者在战斗中穿的钢链做的。它很重，很难处理，但它有出色的尖端性能。",
+    "weight": "4800 g",
+    "volume": "3 L",
+    "price": "500 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "SKINTIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 26,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 0
+  },
+  {
+    "id": "ninja_chainmail_survivor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "幸存者忍者锁子甲"
+    },
+    "description": "它是一种由凯夫拉板和高温合金制成的轻型防弹衣。它是为了不干扰忍者的光和光的行动。",
+    "weight": "3200 g",
+    "volume": "3 L",
+    "price": "1000 USD",
+    "material": [
+      "kevlar",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "SKINTIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 16,
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 0
+  },
+  {
+    "id": "ninja_gloves",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "忍者手套"
+    },
+    "description": "忍者在战斗中戴的手套。它用铁板加固，坚固耐用。它不会干扰指尖的移动。",
+    "weight": "300 g",
+    "volume": "1250 ml",
+    "price": "300 USD",
+    "material": [
+      "cotton",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "black",
+    "warmth": 8,
+    "flags": [
+      "VARSIZE",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 14,
+        "coverage": 100,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 0
+  },
+  {
+    "id": "ninja_gloves_survivor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "幸存者忍者手套"
+    },
+    "description": "这些忍者手套用现代材料加固",
+    "weight": "320 g",
+    "volume": "1250 ml",
+    "price": "600 USD",
+    "material": [
+      "kevlar",
+      "cotton",
+      "leather",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "red",
+    "warmth": 8,
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "RAINPROOF",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 18,
+        "coverage": 100,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 4
+  },
+  {
+    "id": "ninja_shoes",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "塔比鞋"
+    },
+    "description": "Tabi是一种在袜子上有鞋底的日本鞋，是忍者使用的复制品。",
+    "weight": "300 g",
+    "volume": "2 L",
+    "price": "200 USD",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "black",
+    "warmth": 8,
+    "flags": [
+      "VARSIZE",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 14,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 0
+  },
+  {
+    "id": "ninja_boots_survivor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "幸存者忍者靴"
+    },
+    "description": "这些塔壁用现代材料加固。我们设计了在任何环境中保持光的运动。在这种程度上，牺牲了叶片的预防性能。",
+    "weight": "780 g",
+    "volume": "2 L",
+    "price": "900 USD",
+    "material": [
+      "kevlar",
+      "cotton",
+      "leather",
+      "steel",
+      "plastic",
+      "nomex"
+    ],
+    "symbol": "[",
+    "color": "red",
+    "warmth": 8,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80,
+        "flag_restriction": [
+          "SHEATH_KNIFE"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "插入刀鞘",
+      "holster_msg": "你将%s收鞘"
+    },
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "RAINPROOF",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 18
+  },
+  {
+    "id": "ninja_ration",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": {
+      "str": "饥饿圈",
+      "str_pl": "饥饿圈"
+    },
+    "description": "忍者配给。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": 100,
+    "material": [
+      "veggy",
+      "wheat",
+      "egg",
+      "flesh"
+    ],
+    "symbol": "%",
+    "color": "black",
+    "charges": 5,
+    "nutrition": 56,
+    "quench": -2,
+    "healthy": 2,
+    "fun": -30
+  },
+  {
+    "id": "ninja_tengu_mask",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "忍者天狗面具"
+    },
+    "//": "no covers.",
+    "description": "天古在日本是一个虚构的生物，与山岳信仰有着深厚的渊源。这是一件仿天狗脸的手工艺品，看起来年代相当久远。",
+    "weight": "500 g",
+    "volume": "2 L",
+    "price": "3000 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "wood"
+    ],
+    "symbol": "[",
+    "color": "red",
+    "warmth": 0,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 3
+            },
+            {
+              "value": "INTELLIGENCE",
+              "add": -2
+            }
+          ],
+          "mutations": [
+            "HUNGER2",
+            "THIRST2"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "FANCY"
+    ],
+    "material_thickness": 0,
+    "environmental_protection": 0
+  },
+  {
+    "id": "ninja_jetpack",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "忍者喷气包"
+    },
+    "description": "这是一个背包式喷气背包。火箭燃料是必要的，但高速运动是可能的飞行。如果产量太大，它就不会到达房子的二楼，因为它烧伤了臀部。",
+    "weight": "6400 g",
+    "volume": "3750 ml",
+    "price": "2000 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "ammo": [
+      "ammo_type_ninja_jet_fuel"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ammo_type_ninja_jet_fuel": 50
+        }
+      }
+    ],
+    "charges_per_use": 0,
+    "warmth": 0,
+    "use_action": {
+      "target": "ninja_jetpack_on",
+      "msg": "你用喷气背包向前推进。",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "你的喷气背包需要火箭燃料。",
+      "type": "transform"
+    },
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "BELTED",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 50,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1,
+    "environmental_protection": 0
+  },
+  {
+    "id": "ninja_jetpack_on",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "忍者喷气包。（开）"
+    },
+    "description": "这是一个背包式喷气背包。火箭燃料是必要的，但高速运动是可能的飞行。如果产量太大，它就不会到达房子的二楼，因为它烧伤了臀部。它是开着的。",
+    "weight": "6400 g",
+    "volume": "3750 ml",
+    "price": "2000 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "ammo": [
+      "ammo_type_ninja_jet_fuel"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ammo_type_ninja_jet_fuel": 50
+        }
+      }
+    ],
+    "turns_per_charge": 30,
+    "revert_to": "ninja_jetpack",
+    "warmth": 0,
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [
+            {
+              "value": "SPEED",
+              "multiply": 0.5
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": {
+      "target": "ninja_jetpack",
+      "msg": "你停止了喷气背包",
+      "active": false,
+      "type": "transform"
+    },
+    "flags": [
+      "STURDY",
+      "RAINPROOF",
+      "BELTED",
+      "FANCY",
+      "TRADER_AVOID"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 50,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1,
+    "environmental_protection": 0
+  },
+  {
+    "id": "ninja_gun_ay893",
+    "copy-from": "pistol_base",
+    "type": "GUN",
+    "name": {
+      "str": "手枪/AY89-3"
+    },
+    "description": "这是一把编号为AY（自动黑帮）的机关枪。与它吓人的大小和重量相对应，看起来很吓人。如安装生物部件联锁接口等设计奇特，特别是8发、9发、3发的不规则射击方式含义不明而受到批评。使用格洛克的9毫米弹匣。",
+    "weight": "2893 g",
+    "volume": "1 L",
+    "price": "893 USD",
+    "to_hit": -2,
+    "bashing": 8,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "red",
+    "ammo": [
+      "9mm"
+    ],
+    "range": 2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1,
+      "armor_penetration": 1
+    },
+    "dispersion": 255,
+    "sight_dispersion": 105,
+    "recoil": 60,
+    "durability": 9,
+    "modes": [
+      [
+        "AUTO",
+        "8 shots",
+        8
+      ],
+      [
+        "BURST",
+        "9 shots",
+        9
+      ],
+      [
+        "DEFAULT",
+        "3 shots",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "glockbigmag",
+          "glockmag"
+        ]
+      }
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ]
+  }
+]

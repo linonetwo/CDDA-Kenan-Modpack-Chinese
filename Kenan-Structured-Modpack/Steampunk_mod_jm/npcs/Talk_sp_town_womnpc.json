@@ -1,0 +1,36 @@
+[
+  {
+    "id": "TALK_SPWOMAN",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "啊，又一位好心的女士来到我们的社区参观。请不要客气，我们欢迎您的到来。",
+      "no": "您好，绅士，欢迎来到我们卑微的小镇。这镇子相当不错，不是吗？在这乱世，也许是一个安身立命的好地方……"
+    },
+    "responses": [
+      {
+        "text": "所以你是这个镇上的人？你在这附近做什么？",
+        "topic": "TALK_SPWOMAN_INFO"
+      },
+      {
+        "text": "再见，谢谢你的时间。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SPWOMAN_INFO",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "哦，都是老一套：做饭、清洁、园艺等等。一开始可能很乏味，但最终你会习惯的。既然你也是女人，我猜你也有同样的理解。",
+      "no": "哦，都是老一套：做饭、清洁、园艺等等。一开始可能很乏味，但最终你会习惯的。不过你是个男人，所以我想你更适合参与到更有威严的生活中。"
+    },
+    "responses": [
+      {
+        "text": "知道了。",
+        "topic": "TALK_SPWOMAN"
+      }
+    ]
+  }
+]

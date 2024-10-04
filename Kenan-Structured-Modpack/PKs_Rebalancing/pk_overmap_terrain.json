@@ -1,0 +1,1591 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": "field",
+    "copy-from": "field",
+    "spawns": {
+      "group": "GROUP_FIELD",
+      "population": [
+        0,
+        1
+      ],
+      "chance": 20
+    }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "forest",
+    "copy-from": "forest",
+    "spawns": {
+      "group": "GROUP_FOREST",
+      "population": [
+        0,
+        2
+      ],
+      "chance": 45
+    }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "crater",
+    "copy-from": "crater",
+    "extras": "field"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "ants",
+    "copy-from": "ants",
+    "extras": "subway"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "ants_food",
+    "copy-from": "ants_food",
+    "extras": "subway"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "pit_topside",
+    "name": "洞穴",
+    "sym": "C",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "subway"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "pit_dusk_horror",
+    "name": "洞穴",
+    "sym": "C",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "subway"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_entranceNW",
+    "name": "地狱堡垒塔楼",
+    "sym": "I",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_entranceSW",
+    "name": "地狱堡垒塔楼",
+    "sym": "I",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_entranceNE",
+    "name": "地狱堡垒塔楼",
+    "sym": "I",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_entranceSE",
+    "name": "地狱堡垒塔楼",
+    "sym": "I",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_tunnel_B1W",
+    "name": "地狱堡垒塔楼",
+    "sym": "I",
+    "color": "red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_tunnel_B1E",
+    "name": "地狱堡垒塔楼",
+    "sym": "I",
+    "color": "red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_tunnel_prison_N",
+    "name": "地狱堡垒塔楼牢房",
+    "sym": "I",
+    "color": "i_magenta",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_tunnel_prison_S",
+    "name": "地狱堡垒塔楼牢房",
+    "sym": "I",
+    "color": "i_magenta",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_tunnel_B2E",
+    "name": "地狱堡垒塔楼",
+    "sym": "I",
+    "color": "red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_B3N",
+    "name": "地狱堡垒塔楼竞技场",
+    "sym": "I",
+    "color": "red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_city_B3S",
+    "name": "地狱堡垒塔楼竞技场",
+    "sym": "I",
+    "color": "red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_NW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_N",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_NE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_CW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_C",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "field",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_CE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_SW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_S",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_SE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "field",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_NW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_N",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_NE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_CW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_C",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_CE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_SW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_S",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B1_SE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_NW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_N",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_NE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_CW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_C",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_CE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_SW",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_S",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hell_castle_B2_SE",
+    "name": "地狱城堡",
+    "sym": "O",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "trapdoor_pit",
+    "name": "旷野",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "mondensity": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "trapdoor_pit_b1",
+    "name": "蜘蛛巢穴",
+    "sym": "O",
+    "color": "light_gray",
+    "see_cost": "none",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_00",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_10",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_20",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_30",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_40",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_50",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_01",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_11",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_21",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_31",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_41",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_51",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_02",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_12",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_22",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_32",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_42",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_52",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_03",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_13",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_23",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_33",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_43",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_53",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_04",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_14",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_24",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_34",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_44",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cemetery_large_54",
+    "name": "大型坟地",
+    "sym": "n",
+    "color": "light_gray",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "pond_swamp",
+    "name": "沼泽",
+    "sym": "F",
+    "color": "blue",
+    "see_cost": "none",
+    "extras": "none",
+    "mondensity": 2,
+    "spawns": {
+      "group": "GROUP_BOG",
+      "population": [
+        6,
+        30
+      ],
+      "chance": 60
+    }
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_barn",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_barn_f2",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_house",
+    "name": "农场",
+    "sym": "^",
+    "color": "i_brown",
+    "see_cost": "spaced_high",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_topright",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_centerleft",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_centercenter",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_centerright",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_bottomleft",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_bottomcenter",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_unsettled_bottomright",
+    "name": "农田",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "orchard_tree_apple",
+    "name": "苹果园",
+    "sym": "T",
+    "color": "light_green",
+    "see_cost": "spaced_high",
+    "extras": "field",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "orchard_processing",
+    "name": "果园加工厂",
+    "sym": "T",
+    "color": "i_light_green",
+    "see_cost": "high",
+    "extras": "field",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "orchard_stall",
+    "name": "果园摊位",
+    "sym": "T",
+    "color": "i_light_green",
+    "see_cost": "spaced_high",
+    "extras": "field",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "wasp_center",
+    "name": "黄蜂巢",
+    "sym": "a",
+    "color": "white",
+    "see_cost": "spaced_high",
+    "extras": "none",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "beehive_center",
+    "name": "蜂巢",
+    "sym": "8",
+    "color": "yellow",
+    "see_cost": "spaced_high",
+    "extras": "none",
+    "mondensity": 4
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "barn",
+    "name": "谷仓",
+    "sym": "O",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_house",
+    "name": "种植园住宅",
+    "sym": "^",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "none",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_house_e",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "none",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_garden",
+    "name": "种植园",
+    "sym": "│",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_garden_e",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_lot",
+    "name": "筒仓",
+    "sym": "O",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "none",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops_n",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops_ne",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops_e",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops_nw",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops_s",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops_se",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops_w",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_pasture_nw",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_pasture_n",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_pasture_ne",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_pasture_w",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_pasture_sw",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_pasture_e",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_pasture_se",
+    "name": "种植园",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "barn_drive",
+    "name": "种植园",
+    "sym": "└",
+    "color": "brown",
+    "see_cost": "none"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_drive_n",
+    "name": "种植园",
+    "sym": "┴",
+    "color": "brown",
+    "see_cost": "none"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_drive",
+    "name": "种植园",
+    "sym": "┴",
+    "color": "brown",
+    "see_cost": "none"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_17",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_drive_s",
+    "name": "种植园",
+    "sym": "┴",
+    "color": "brown",
+    "see_cost": "none"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_drive_sw",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_crops_sw",
+    "name": "种植园",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_wine_cellar",
+    "name": "地下室",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "field",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_31",
+    "name": "公路",
+    "sym": "─",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "road"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_32",
+    "name": "公路",
+    "sym": "─",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "road"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "farm_33",
+    "name": "公路",
+    "sym": "─",
+    "color": "i_brown",
+    "see_cost": "none",
+    "extras": "road"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_f00_20",
+    "name": "实验室",
+    "sym": "L",
+    "color": "blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_f01_20",
+    "name": "实验室",
+    "sym": "L",
+    "color": "light_blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_comms",
+    "name": "实验室",
+    "sym": "L",
+    "color": "light_blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_office",
+    "name": "实验室",
+    "sym": "L",
+    "color": "blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_dorm",
+    "name": "实验室",
+    "sym": "L",
+    "color": "blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_lab_open",
+    "name": "实验室",
+    "sym": "L",
+    "color": "blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_lab_prm",
+    "name": "实验室",
+    "sym": "L",
+    "color": "blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_redacted",
+    "name": "实验室",
+    "sym": "L",
+    "color": "cyan",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_finale",
+    "name": "实验室",
+    "sym": "L",
+    "color": "red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_finale_II",
+    "name": "实验室",
+    "sym": "L",
+    "color": "red",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_stairs",
+    "name": "实验室",
+    "sym": "L",
+    "color": "light_blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "doomlab_stairs_II",
+    "name": "实验室",
+    "sym": "L",
+    "color": "light_blue",
+    "see_cost": "high",
+    "extras": "doom",
+    "mondensity": 2
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "hunter_shack",
+    "name": "沼泽小屋",
+    "sym": "#",
+    "color": "light_blue",
+    "see_cost": "none",
+    "extras": "field"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "triffid_grove_swamp",
+    "name": "三尖树之林",
+    "sym": "T",
+    "color": "light_red",
+    "see_cost": "spaced_high"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "sludge_pit",
+    "name": "泥油坑",
+    "sym": "~",
+    "color": "light_gray",
+    "see_cost": "none",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "sludge_pit_under",
+    "name": "泥油坑",
+    "sym": "~",
+    "color": "light_gray",
+    "see_cost": "none",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "sky_vortex",
+    "name": "虚幻气体",
+    "sym": ".",
+    "color": "blue",
+    "see_cost": "none",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "sky_vortex_ground",
+    "name": "旷野",
+    "sym": ".",
+    "color": "brown",
+    "see_cost": "none",
+    "extras": "field"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "barn_old",
+    "name": "废弃谷仓",
+    "sym": "#",
+    "color": "i_brown",
+    "see_cost": "high",
+    "extras": "field",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_00",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_01",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_02",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_10",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_11",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_12",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_20",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_21",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "police_hub_22",
+    "name": "警察警署",
+    "sym": "^",
+    "color": "h_yellow",
+    "see_cost": "high",
+    "extras": "build",
+    "mondensity": 3
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange",
+    "name": "森林",
+    "sym": "F",
+    "color": "green",
+    "see_cost": "spaced_high",
+    "extras": "field"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange_100",
+    "name": "森林",
+    "sym": "F",
+    "color": "green",
+    "see_cost": "spaced_high",
+    "extras": "field"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange_010",
+    "name": "森林",
+    "sym": "F",
+    "color": "green",
+    "see_cost": "spaced_high",
+    "extras": "field"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange_110",
+    "name": "森林",
+    "sym": "F",
+    "color": "green",
+    "see_cost": "spaced_high",
+    "extras": "field"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange_b",
+    "name": "小屋地下室",
+    "sym": "C",
+    "color": "i_green",
+    "see_cost": "high",
+    "extras": "build"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange_b_101",
+    "name": "小屋地下室",
+    "sym": "C",
+    "color": "i_green",
+    "see_cost": "high",
+    "extras": "build"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange_b_011",
+    "name": "小屋地下室",
+    "sym": "C",
+    "color": "i_green",
+    "see_cost": "high",
+    "extras": "build"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange_b_111",
+    "name": "小屋地下室",
+    "sym": "C",
+    "color": "i_green",
+    "see_cost": "high",
+    "extras": "build"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_strange_b2",
+    "name": "小屋地下室",
+    "sym": "C",
+    "color": "i_red",
+    "see_cost": "high",
+    "extras": "build"
+  }
+]

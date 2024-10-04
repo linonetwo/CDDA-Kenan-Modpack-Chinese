@@ -1,0 +1,45 @@
+[
+  {
+    "id": "vipere",
+    "copy-from": "pistol_base",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "name": {
+      "str_sp": "毒蛇-E"
+    },
+    "description": "这是一把威力巨大的手枪，最著名的是由加利亚备受尊敬的军事学院的学员使用的。以内部弹匣为特色。",
+    "weight": "970 g",
+    "volume": "650 ml",
+    "price": "680 USD",
+    "price_postapoc": "25 USD",
+    "to_hit": -2,
+    "bashing": 8,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "eur9mm"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -3
+    },
+    "dispersion": 400,
+    "durability": 6,
+    "blackpowder_tolerance": 48,
+    "min_cycle_recoil": 550,
+    "clip_size": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "eur9mm": 7
+        }
+      }
+    ]
+  }
+]

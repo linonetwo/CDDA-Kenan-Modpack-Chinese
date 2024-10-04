@@ -1,0 +1,909 @@
+[
+  {
+    "id": "cddaxp_bfclosed",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "蝴蝶刀（折叠）",
+      "str_pl": "蝴蝶刀（折叠）"
+    },
+    "description": "蝴蝶刀是一种折叠小刀，有两个手柄，围绕柄脚反向旋转。这样，当关闭时，刀片就会隐藏在手柄的凹槽内。激活它来将它展开。",
+    "weight": "500 g",
+    "volume": "250 ml",
+    "price": "95 USD",
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "use_action": {
+      "target": "cddaxp_bfopen",
+      "msg": "随着一式\"Latch Drop\"，你甩开你的蝴蝶刀。",
+      "type": "transform"
+    },
+    "flags": [
+      "DURABLE_MELEE"
+    ]
+  },
+  {
+    "id": "cddaxp_bfopen",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "蝴蝶刀（展开）",
+      "str_pl": "蝴蝶刀（展开）"
+    },
+    "description": "蝴蝶刀是一种折叠小刀，有两个手柄，围绕柄脚反向旋转。这样，当关闭时，刀片就会隐藏在手柄的凹槽内。激活它来将它折叠。",
+    "weight": "500 g",
+    "volume": "500 ml",
+    "price": "95 USD",
+    "to_hit": 1,
+    "bashing": 2,
+    "cutting": 17,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "Y",
+    "color": "dark_gray",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "techniques": "RAPID",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        18
+      ]
+    ],
+    "use_action": [
+      {
+        "target": "cddaxp_bfclosed",
+        "msg": "随着一式炫酷的\"Knuckle Duster\"，你合上了你的蝴蝶刀。",
+        "menu_text": "花式蝴蝶刀：折叠",
+        "type": "transform"
+      }
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE"
+    ]
+  },
+  {
+    "id": "cddaxp_kusarigama",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "锁镰",
+      "str_pl": "锁镰"
+    },
+    "description": "锁镰是一种传统的日本武器，一条金属链，一头连着镰刀，一头连着一个沉重的铁球。它可以用来屠宰尸体。",
+    "weight": "800 g",
+    "volume": "1 L",
+    "price": "250 USD",
+    "to_hit": 2,
+    "bashing": 6,
+    "cutting": 22,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "techniques": [
+      "WBLOCK_2",
+      "SPIN"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
+    "flags": [
+      "CHOP",
+      "DURABLE_MELEE"
+    ]
+  },
+  {
+    "id": "cddaxp_happo",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "哈波蛋",
+      "str_pl": "哈波蛋"
+    },
+    "description": "一个装满可燃烟雾粉末的小蛋壳，通常用于帮助逃跑。激活以点燃引线。当然，你的背包里需要有一个打火机或一根火柴。",
+    "weight": "90 g",
+    "volume": "250 ml",
+    "price": "175 USD",
+    "to_hit": 0,
+    "bashing": 1,
+    "cutting": 0,
+    "material": [
+      "egg",
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "white",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "use_action": {
+      "target": "cddaxp_happo_lit",
+      "msg": "你点燃了哈波蛋。",
+      "target_charges": 10,
+      "active": true,
+      "need_fire": 1,
+      "need_fire_msg": "You need a source of fire!",
+      "type": "transform"
+    }
+  },
+  {
+    "id": "cddaxp_happo_lit",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "哈波蛋（点燃）",
+      "str_pl": "哈波蛋（点燃）"
+    },
+    "description": "这个哈波蛋上的导火索燃烧着并发出嘶嘶声。",
+    "weight": "90 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "to_hit": 0,
+    "bashing": 1,
+    "cutting": 0,
+    "material": [
+      "egg",
+      "powder"
+    ],
+    "symbol": "o",
+    "color": "white",
+    "initial_charges": 10,
+    "max_charges": 10,
+    "charges_per_use": 0,
+    "turns_per_charge": 1,
+    "countdown_action": {
+      "type": "explosion",
+      "fields_type": "fd_smoke",
+      "fields_radius": 2,
+      "fields_min_intensity": 1,
+      "fields_max_intensity": 3
+    }
+  },
+  {
+    "id": "cddaxp_argoogles",
+    "type": "TOOL",
+    "name": {
+      "str": "Miltech “AR” 投影仪"
+    },
+    "description": "Miltech出品的“增强现实”小型激光投影仪。使用后可以在短时间内增强您对周围环境的感知。充满后最多使用三次。",
+    "weight": "85 g",
+    "volume": "250 ml",
+    "price": "90 USD",
+    "to_hit": 0,
+    "bashing": 1,
+    "cutting": 0,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": ",",
+    "color": "light_gray",
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 50,
+    "turns_per_charge": 0,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你按下激活按钮。‘现实增强设备’正改善你对周围环境的认知。",
+      "effects": [
+        {
+          "id": "cddaxp_buff_per",
+          "duration": 50
+        }
+      ]
+    }
+  },
+  {
+    "id": "cddaxp_patablet",
+    "type": "TOOL",
+    "name": {
+      "str": "AppleSoft 便携式个人助理"
+    },
+    "description": "以平板电脑的形式出现的AppleSoft便携式个人助理。连接是无用的，但是“Sirana”（设备“AI”）和他的内部多用途数据库仍然可以帮助你。使用传统电池。当你拿着这个平板电脑的时候，Sirana的智力可以提高你的智力。",
+    "weight": "300 g",
+    "volume": "250 ml",
+    "price": "3500 USD",
+    "to_hit": -1,
+    "bashing": 1,
+    "cutting": 0,
+    "material": [
+      "plastic"
+    ],
+    "symbol": ";",
+    "color": "white",
+    "charges_per_use": 2,
+    "ammo": "battery",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_plus_battery_cell",
+          "light_battery_cell",
+          "light_minus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell",
+          "light_minus_disposable_cell",
+          "light_disposable_cell"
+        ]
+      }
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ACTIVE",
+          "values": [
+            {
+              "value": "INTELLIGENCE",
+              "add": 3
+            }
+          ]
+        }
+      ]
+    },
+    "use_action": [
+      {
+        "target": "cddaxp_patablet_on",
+        "msg": "你激活你的 %s 。",
+        "active": true,
+        "need_charges": 2,
+        "need_charges_msg": "%s没电了。",
+        "menu_text": "激活苹果软件助手",
+        "type": "transform"
+      }
+    ],
+    "extend": {
+      "flags": [
+        "NO_SALVAGE",
+        "TRADER_KEEP_EQUIPPED"
+      ]
+    }
+  },
+  {
+    "id": "cddaxp_patablet_on",
+    "copy-from": "cddaxp_patablet",
+    "type": "TOOL",
+    "name": {
+      "str": "AppleSoft 便携式个人助理（on）"
+    },
+    "description": "以平板电脑的形式出现的AppleSoft便携式个人助理。连接是无用的，但是“Sirana”（设备“AI”）和他的内部多用途数据库仍然可以帮助你。使用传统电池。当你拿着这个平板电脑的时候，Sirana的智力可以提高你的智力。",
+    "turns_per_charge": 4,
+    "revert_to": "cddaxp_patablet",
+    "revert_msg": "Your tablet shuts down",
+    "use_action": [
+      {
+        "target": "cddaxp_patablet",
+        "msg": "你的平板电脑关闭了",
+        "menu_text": "关闭",
+        "type": "transform"
+      }
+    ]
+  },
+  {
+    "id": "cddaxp_tbomb",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "尖叫炸弹",
+      "str_pl": "尖叫炸弹"
+    },
+    "description": "这曾是一个说话玩偶，但现在它是一个尖叫…嗯…炸弹！它脸上带着疯狂的笑容。小丑会以你骄傲！激活以启动计时器。",
+    "weight": "550 g",
+    "volume": "750 ml",
+    "price": "65 USD",
+    "to_hit": -3,
+    "bashing": 4,
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "red",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "explode_in_fire": true,
+    "explosion": {
+      "power": 15,
+      "shrapnel": 15
+    },
+    "use_action": {
+      "target": "cddaxp_tbomb_act",
+      "msg": "炸弹叫到:‘小心！我是活的！！!'。",
+      "target_charges": 20,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "BOMB"
+    ]
+  },
+  {
+    "id": "cddaxp_tbomb_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "“活体”尖叫炸弹",
+      "str_pl": "“活体”尖叫炸弹"
+    },
+    "description": "尖叫炸弹是“活体”。现在随时可能爆炸。",
+    "weight": "550 g",
+    "volume": "750 ml",
+    "price": "0 cent",
+    "to_hit": -3,
+    "bashing": 4,
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "red",
+    "initial_charges": 20,
+    "max_charges": 20,
+    "charges_per_use": 0,
+    "turns_per_charge": 1,
+    "explode_in_fire": true,
+    "explosion": {
+      "power": 15,
+      "shrapnel": 15
+    },
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {
+        "power": 15,
+        "shrapnel": 15
+      }
+    }
+  },
+  {
+    "id": "cddaxp_ialamp",
+    "type": "GENERIC",
+    "category": "tools",
+    "name": {
+      "str": "室内原子灯"
+    },
+    "description": "享受定制原子室内灯的永恒日光，确信它将提供至少4000万年的忠实服务而不必担心能源耗光。",
+    "weight": "19325 g",
+    "volume": "6250 ml",
+    "price": "2500 USD",
+    "to_hit": -2,
+    "bashing": 15,
+    "material": [
+      "glass",
+      "iron"
+    ],
+    "symbol": "+",
+    "color": "white",
+    "flags": [
+      "LIGHT_600",
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "DURABLE_MELEE"
+    ]
+  },
+  {
+    "id": "cddaxp_vptmeats",
+    "type": "GENERIC",
+    "category": "food",
+    "name": {
+      "str": "真空转化肉片",
+      "str_pl": "真空转化肉片"
+    },
+    "description": "一袋真空包装的感染肉，它正在进行一种奇怪的化学过程，使它重新能够食用。是逆丧尸化工艺吗？可惜的是，这只适用于肉片…完成后激活它。",
+    "weight": "240 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "bashing": 8,
+    "material": [
+      "plastic",
+      "flesh"
+    ],
+    "symbol": "%",
+    "color": "light_green",
+    "use_action": {
+      "target": "meat_salted",
+      "msg": "你检查并摇晃袋子。肉已经准备好了",
+      "moves": 150,
+      "type": "delayed_transform",
+      "transform_age": 28800,
+      "not_ready_msg": "You must wait.  The turning meat isn't done yet.",
+      "//": "2 days"
+    },
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "cddaxp_ckatana",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷武士刀"
+    },
+    "description": "这把武士刀的刀刃由非常坚硬的高科技陶瓷制成。现在它比村正曾梦想的更轻、更强、更锋利。",
+    "weight": "733 g",
+    "volume": "2 L",
+    "price": "1550 USD",
+    "to_hit": 1,
+    "bashing": 2,
+    "cutting": 40,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": [
+      "RAPID",
+      "PRECISE",
+      "WBLOCK_2",
+      "VORPAL"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        16
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "cddaxp_cmachete",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷弯刀"
+    },
+    "description": "这把弯刀锋利、轻量、几乎坚不可摧，能轻易地砍断植物和亡灵。",
+    "weight": "340 g",
+    "volume": "1 L",
+    "price": "90 USD",
+    "to_hit": 2,
+    "bashing": 2,
+    "cutting": 34,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": "WBLOCK_1",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
+    "flags": [
+      "CHOP",
+      "NON_STUCK",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "cddaxp_cknife",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷匕首",
+      "str_pl": "陶瓷匕首"
+    },
+    "description": "这把战斗匕首的刀刃由非常坚硬、轻质和坚韧的高科技陶瓷制成。",
+    "weight": "353 g",
+    "volume": "500 ml",
+    "price": "60 USD",
+    "to_hit": 2,
+    "bashing": 1,
+    "cutting": 24,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": "RAPID",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        24
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE"
+    ]
+  },
+  {
+    "id": "cddaxp_ckukri",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷库克利弯刀"
+    },
+    "description": "刀刃材料为合成陶瓷的库克利弯刀。非常轻便而耐用，比任何钢制刀刃都要锋利，是一件可怕的武器。",
+    "weight": "300 g",
+    "volume": "750 ml",
+    "price": "160 USD",
+    "to_hit": 1,
+    "bashing": 1,
+    "cutting": 30,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": "WBLOCK_1",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
+    "flags": [
+      "CHOP",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE"
+    ]
+  },
+  {
+    "id": "cddaxp_crapier",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷迅捷剑"
+    },
+    "description": "这把迅捷剑的剑刃由非常坚硬、轻质而坚韧的高科技陶瓷制成，更为致命。",
+    "weight": "647 g",
+    "volume": "1500 ml",
+    "price": "1500 USD",
+    "to_hit": 2,
+    "bashing": 1,
+    "cutting": 37,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "PRECISE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        16
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "cddaxp_cbroadsword",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷阔剑"
+    },
+    "description": "这把阔剑的剑刃由一块非常坚硬、轻质而锋利的高科技陶瓷片制成，使你成为这片领域里最致命的骑士。你的剑术师傅会为此感到自豪的。",
+    "weight": "733 g",
+    "volume": "1750 ml",
+    "price": "1850 USD",
+    "to_hit": 2,
+    "bashing": 6,
+    "cutting": 46,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": [
+      "WBLOCK_2",
+      "VORPAL"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        16
+      ]
+    ],
+    "flags": [
+      "CHOP",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "cddaxp_czweihander",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷双手剑"
+    },
+    "description": "这把双手剑的剑刃由非常坚硬、轻量和锋利的高科技陶瓷片制成，效果极佳。",
+    "weight": "2055 g",
+    "volume": "3250 ml",
+    "price": "2500 USD",
+    "to_hit": 1,
+    "bashing": 15,
+    "cutting": 52,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "BRUTAL",
+      "VORPAL"
+    ],
+    "flags": [
+      "CHOP",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "cddaxp_cwakizashi",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷胁差"
+    },
+    "description": "这把胁差的刀刃由一块非常坚硬，轻质和锋利的高科技陶瓷片制成，使它和，嗯，高科技陶瓷一样强…",
+    "weight": "541 g",
+    "volume": "1500 ml",
+    "price": "280 USD",
+    "to_hit": 1,
+    "bashing": 1,
+    "cutting": 36,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": [
+      "RAPID",
+      "WBLOCK_1",
+      "PRECISE",
+      "VORPAL"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        23
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "cddaxp_cnodachi",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷野太刀"
+    },
+    "description": "这把野太刀的巨大刀刃由高科技陶瓷制成，更为致命。",
+    "weight": "1827 g",
+    "volume": "3250 ml",
+    "price": "1850 USD",
+    "to_hit": 1,
+    "bashing": 3,
+    "cutting": 58,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "white",
+    "techniques": [
+      "RAPID",
+      "WIDE",
+      "BRUTAL",
+      "VORPAL"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        10
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "cddaxp_dkusarigama",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "钻石锁镰"
+    },
+    "description": "这把锁镰的刃口被涂上了一层类金刚石碳，更为致命。",
+    "weight": "700 g",
+    "volume": "1 L",
+    "price": "800 USD",
+    "to_hit": 2,
+    "bashing": 6,
+    "cutting": 29,
+    "material": [
+      "diamond",
+      "wood"
+    ],
+    "symbol": ";",
+    "color": "cyan",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "techniques": [
+      "WBLOCK_2",
+      "SPIN"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
+    "flags": [
+      "CHOP",
+      "DURABLE_MELEE"
+    ]
+  },
+  {
+    "id": "cddaxp_ckusarigama",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "陶瓷锁镰"
+    },
+    "description": "这把锁镰由极其坚硬的高科技陶瓷制成，更为致命。",
+    "weight": "467 g",
+    "volume": "1 L",
+    "price": "800 USD",
+    "to_hit": 2,
+    "bashing": 4,
+    "cutting": 31,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": ";",
+    "color": "white",
+    "initial_charges": 0,
+    "max_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "techniques": [
+      "WBLOCK_2",
+      "SPIN"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
+    "flags": [
+      "CHOP",
+      "DURABLE_MELEE"
+    ]
+  }
+]

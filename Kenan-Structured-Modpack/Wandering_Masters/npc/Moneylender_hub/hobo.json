@@ -1,0 +1,116 @@
+[
+  {
+    "type": "npc",
+    "id": "NPC_moneylender_hub_hobo",
+    "class": "NC_CYBORG",
+    "gender": "male",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_ML_HUB_HOBO",
+    "faction": "no_faction"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ML_HUB_HOBO",
+    "dynamic_line": "你好。能不能给我点喝的？",
+    "responses": [
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_ML_HUB_HOBO_STORY"
+      },
+      {
+        "text": "当然？",
+        "topic": "TALK_ML_HUB_HOBO_DRINK"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ML_HUB_HOBO_DRINK",
+    "dynamic_line": {
+      "npc_has_effect": "beggar_has_eaten",
+      "yes": "谢谢你。",
+      "no": "所以呢？。"
+    },
+    "responses": [
+      {
+        "text": "我能问你点别的事吗？",
+        "topic": "TALK_NONE"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ],
+    "repeat_responses": [
+      {
+        "for_category": [
+          "food"
+        ],
+        "response": {
+          "text": "Here, you can have this <topic_item>.",
+          "topic": "TALK_ML_HUB_HOBO_GAVE_DRINK",
+          "opinion": {
+            "trust": 1,
+            "value": 1,
+            "fear": -1,
+            "anger": -1,
+            "owed": 2
+          }
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ML_HUB_HOBO_GAVE_DRINK",
+    "dynamic_line": "谢谢您！。",
+    "speaker_effect": [
+      {
+        "effect": {
+          "npc_add_effect": "beggar_has_eaten",
+          "duration": 3600
+        }
+      }
+    ],
+    "responses": [
+      {
+        "text": "你在忙什么呢？",
+        "topic": "TALK_ML_HUB_HOBO",
+        "effect": "u_bulk_trade_accept"
+      },
+      {
+        "text": "没问题。",
+        "topic": "TALK_DONE",
+        "effect": "u_bulk_trade_accept"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ML_HUB_HOBO_STORY",
+    "dynamic_line": "是。",
+    "responses": [
+      {
+        "text": "也许你该走了？",
+        "topic": "TALK_ML_HUB_HOBO_LEAVE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_ML_HUB_HOBO_LEAVE",
+    "dynamic_line": "从未！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "end_conversation"
+      }
+    ]
+  }
+]

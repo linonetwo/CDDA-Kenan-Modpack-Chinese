@@ -1,0 +1,94 @@
+[
+  {
+    "id": "ria_50",
+    "type": "GUN",
+    "copy-from": "rifle_semi",
+    "symbol": "(",
+    "color": "dark_gray",
+    "name": {
+      "str": "RIA 50 狙击步枪",
+      "str_pl": "RIA 50 狙击步枪"
+    },
+    "description": "RIA 50是一款狙击步枪，由<info> Rubicon industries </info> \n生产。RIA 50似乎是一款基于Sako TRG-42的未来狙击步枪，带有一个合适的枪口开口。然而，RIA 50没有一个螺栓像它可能的现实生活中的对应，最有可能是因为事实上，步枪是<good>全自动</good>。\n\n这种武器是<good>好的</good>和<good>可能不会故障</good>和<good>会处理相当的打击。</good> \n\n <info> Xeno的SAS4武器包改装内容</info>",
+    "material": [
+      "steel"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "3006"
+    ],
+    "weight": "850 g",
+    "volume": "2250 ml",
+    "longest_side": "1187 mm",
+    "barrel_volume": "500 ml",
+    "price": "254 USD",
+    "bashing": 7,
+    "to_hit": -2,
+    "dispersion": 70,
+    "sight_dispersion": 40,
+    "min_cycle_recoil": 500,
+    "durability": 6,
+    "loudness": 300,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 3
+    },
+    "range": 0,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        3
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "1 L",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "5ria3006",
+          "8ria3006",
+          "12ria3006",
+          "15ria3006"
+        ]
+      }
+    ]
+  }
+]

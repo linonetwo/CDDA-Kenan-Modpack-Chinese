@@ -1,0 +1,941 @@
+[
+  {
+    "type": "GUNMOD",
+    "id": "rebel_sup",
+    "name": {
+      "str": "“叛逆者”消音器"
+    },
+    "dispersion_modifier": 5,
+    "description": "这种改进的消音器允许气体逸出，同时将声音降至最低。你觉得这个消音器可能有魔法。毕竟，谁能仅仅依靠工具箱和商誉就做出它呢？",
+    "location": "muzzle",
+    "weight": "410 g",
+    "to_hit": 1,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "mod_targets": [
+      "pistol",
+      "smg",
+      "rifle"
+    ],
+    "volume": "750 ml",
+    "melee_damage": { "bash": 3},
+    "price": "480 USD",
+    "install_time": "1 m",
+    "loudness_modifier": -130
+  },
+  {
+    "type": "GUNMOD",
+    "id": "hybrid_sight",
+    "name": {
+      "str": "EOTech EXPS3-4 全息混合瞄准具"
+    },
+    "location": "sights",
+    "sight_dispersion": 60,
+    "field_of_view": 420,
+    "description": "一种用于远距和短距作战的混合式瞄准镜。",
+    "weight": "450 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        6
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "reflex_sight",
+    "name": {
+      "str": "EOTech EXP-729 SSS 瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 60,
+    "field_of_view": 420,
+    "description": "EXP-729 SSS是一种短距瞄准镜，用于小型近距离作战。",
+    "weight": "360 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "reflex_sight2",
+    "name": {
+      "str": "Trijicon 激光瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 80,
+    "field_of_view": 420,
+    "description": "一种适用于冲锋枪和霰弹枪近距离/贴脸作战的瞄准镜。",
+    "weight": "250 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "pistol",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "reflex_sight3",
+    "name": {
+      "str": "Trijicon 1x24 瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 80,
+    "field_of_view": 420,
+    "description": "一种允许快速改变目标的中距反射式瞄准镜。",
+    "weight": "310 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "pistol",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "reflex_sight4",
+    "name": {
+      "str": "Sightmark 微镜反射式瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 100,
+    "field_of_view": 420,
+    "description": "一个超小的瞄准器，只适合小武器。",
+    "weight": "310 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "shotgun",
+      "pistol",
+      "smg"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "20 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "reflex_sight5",
+    "name": {
+      "str": "Trijicon 1x42 瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 80,
+    "field_of_view": 420,
+    "description": "一种允许快速改变目标的远距反射式瞄准镜。",
+    "weight": "490 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "pistol",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "reflex_sight6",
+    "name": {
+      "str": "\"极端斗争\"专业夜视瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 60,
+    "field_of_view": 420,
+    "description": "一个瞄准器，有短程夜视功能，以提高夜间作战的可行性。",
+    "weight": "590 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "pistol",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "reflex_sight7",
+    "name": {
+      "str": "激光双镜反射式瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 50,
+    "field_of_view": 420,
+    "description": "一种内置激光瞄准镜的反射式瞄准镜。",
+    "weight": "790 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "pistol",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "scope",
+    "name": {
+      "str": "ACOG 4x32mm 步枪瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 80,
+    "field_of_view": 420,
+    "description": "一种适用于所有枪械的长/中距瞄准镜…好吧，是几乎所有。",
+    "weight": "450 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "scope2",
+    "name": {
+      "str": "VX-3 步枪瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 50,
+    "field_of_view": 420,
+    "description": "一种用于猎枪的远距瞄准镜。",
+    "weight": "450 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "scope3",
+    "name": {
+      "str": "SpecterDR 光学瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 75,
+    "field_of_view": 390,
+    "description": "北约国家使用的一种酷毙了的类似ACOG的瞄准镜。",
+    "weight": "450 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "scope4",
+    "name": {
+      "str": "P-223 步枪瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 60,
+    "field_of_view": 420,
+    "description": "用于猎枪的短程瞄准镜。",
+    "weight": "450 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "scope5",
+    "name": {
+      "str": "V-XR 巡逻步枪瞄准镜"
+    },
+    "location": "sights",
+    "sight_dispersion": 65,
+    "field_of_view": 420,
+    "description": "一种用于猎枪的中距瞄准镜。",
+    "weight": "450 g",
+    "to_hit": -3,
+    "color": "dark_gray",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "glass"
+    ],
+    "mod_targets": [
+      "rifle",
+      "shotgun",
+      "smg",
+      "crossbow",
+      "launcher"
+    ],
+    "volume": "500 ml",
+    "price": "680 USD",
+    "install_time": "30 m",
+    "min_skills": [
+      [
+        "gun",
+        5
+      ]
+    ]
+  },
+  {
+    "id": "retool_460",
+    "type": "GUNMOD",
+    "name": {
+      "str": ".460 罗德兰 口径转换器"
+    },
+    "description": "M1911手枪的转换套件，使其能够发射.460 罗德兰手枪弹。别忘了制退器！",
+    "weight": "226 g",
+    "volume": "250 ml",
+    "integral_volume": "0 ml",
+    "price": "480 USD",
+    "install_time": "20 m",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "green",
+    "location": "bore",
+    "mod_targets": [
+      "pistol"
+    ],
+    "acceptable_ammo": [
+      "45"
+    ],
+    "min_skills": [
+      [
+        "gun",
+        3
+      ],
+      [
+        "mechanics",
+        2
+      ]
+    ],
+    "dispersion_modifier": 30,
+    "ammo_modifier": ".460",
+    "flags": [
+      "INSTALL_DIFFICULT",
+      "IRREMOVABLE"
+    ]
+  },
+  {
+    "id": "460_muzzle_brake",
+    "type": "GUNMOD",
+    "name": {
+      "str": ".460 罗德兰 枪口制退器"
+    },
+    "description": "专为M1911改装设计的枪口制退器。在你当地的Artyoms的枪械商店的 .460 罗德兰转换套件里都能找到。",
+    "weight": "380 g",
+    "volume": "250 ml",
+    "price": "840 USD",
+    "install_time": "5 m",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray",
+    "location": "muzzle",
+    "mod_targets": [
+      "pistol"
+    ],
+    "min_skills": [
+      [
+        "gun",
+        2
+      ]
+    ],
+    "dispersion_modifier": -30
+  },
+  {
+    "id": "460_conversion",
+    "type": "TOOL",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "Artyom的定制 .460 罗德兰转换套件",
+      "str_pl": "Artyom的定制.460 罗德兰转换套件"
+    },
+    "description": "M1911的转换套件，使其能够发射.460 罗德兰弹。拆解以获得你想要的东西！",
+    "price": "180 USD",
+    "material": [
+      "steel"
+    ],
+    "weight": "1084 g",
+    "volume": "1 L",
+    "melee_damage": { "bash": 1,"cut": 1},
+    "to_hit": -2
+  },
+  {
+    "id": "gp-25",
+    "type": "GUNMOD",
+    "location": "rail",
+    "symbol": ":",
+    "color": "dark_gray",
+    "name": {
+      "str": "GP-25",
+      "str_pl": "GP-25"
+    },
+    "description": "兼容华约武器的俄罗斯榴弹发射器。但这一款是GP-15的重制版，同时兼容华沙和北约的武器。发射M203使用的40mm 榴弹。",
+    "price": "840 USD",
+    "install_time": "15 m",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "40x46mm": 1
+        }
+      }
+    ],
+    "material": [
+      "steel"
+    ],
+    "gun_data": {
+      "skill": "launcher",
+      "ammo": [
+        "40x46mm"
+      ],
+      "clip_size": 1,
+      "dispersion": 20,
+      "//": "just a place holder, TODO: fill in the correct value",
+      "sight_dispersion": 15,
+      "durability": 9,
+      "reload": 125
+    },
+    "mod_targets": [
+      "rifle",
+      "crossbow"
+    ],
+    "weight": "2500 g",
+    "volume": "750 ml",
+    "melee_damage": { "bash": 4},
+    "to_hit": -3,
+    "dispersion_modifier": 80,
+    "min_skills": [
+      [
+        "gun",
+        2
+      ]
+    ]
+  },
+  {
+    "id": "gp-30",
+    "type": "GUNMOD",
+    "location": "rail",
+    "symbol": ":",
+    "color": "dark_gray",
+    "name": {
+      "str": "GP-30",
+      "str_pl": "GP-30"
+    },
+    "description": "兼容华约武器的俄罗斯榴弹发射器。但这一款是GP-30的重制版，同时兼容华沙和北约的武器。发射M203使用的40mm 榴弹。GP-25的更精准版本",
+    "price": "840 USD",
+    "install_time": "15 m",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "40x46mm": 1
+        }
+      }
+    ],
+    "material": [
+      "steel"
+    ],
+    "gun_data": {
+      "skill": "launcher",
+      "ammo": [
+        "40x46mm"
+      ],
+      "clip_size": 1,
+      "dispersion": 15,
+      "//": "just a place holder, TODO: fill in the correct value",
+      "sight_dispersion": 15,
+      "durability": 9,
+      "reload": 125
+    },
+    "mod_targets": [
+      "rifle",
+      "crossbow"
+    ],
+    "weight": "2600 g",
+    "volume": "750 ml",
+    "melee_damage": { "bash": 4},
+    "to_hit": -3,
+    "dispersion_modifier": 70,
+    "min_skills": [
+      [
+        "gun",
+        2
+      ]
+    ]
+  },
+  {
+    "id": "bg-15",
+    "type": "GUNMOD",
+    "location": "rail",
+    "symbol": ":",
+    "color": "dark_gray",
+    "name": {
+      "str": "BG-15",
+      "str_pl": "BG-15"
+    },
+    "description": "兼容华约武器的俄罗斯榴弹发射器。但这一款是BG-15的重制版，同时兼容华沙和北约的武器。发射M203使用的40mm 榴弹。俄罗斯最优良的榴弹发射器。",
+    "price": "840 USD",
+    "install_time": "15 m",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "40x46mm": 1
+        }
+      }
+    ],
+    "material": [
+      "steel"
+    ],
+    "gun_data": {
+      "skill": "launcher",
+      "ammo": [
+        "40x46mm"
+      ],
+      "clip_size": 1,
+      "dispersion": 35,
+      "//": "just a place holder, TODO: fill in the correct value",
+      "sight_dispersion": 15,
+      "durability": 9,
+      "reload": 125
+    },
+    "mod_targets": [
+      "rifle",
+      "crossbow"
+    ],
+    "weight": "2400 g",
+    "volume": "750 ml",
+    "melee_damage": { "bash": 4},
+    "to_hit": -3,
+    "dispersion_modifier": 90,
+    "min_skills": [
+      [
+        "gun",
+        2
+      ]
+    ]
+  },
+  {
+    "type": "GUNMOD",
+    "id": "spgun_shotgun",
+    "name": {
+      "str": "太空枪霰弹发射器"
+    },
+    "location": "underbarrel",
+    "weight": "1500 g",
+    "color": "light_red",
+    "to_hit": -1,
+    "dispersion_modifier": 10,
+    "price": "650 USD",
+    "install_time": "30 m",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 1
+        }
+      }
+    ],
+    "description": "一种用于太空炮的改装件。",
+    "symbol": ":",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "volume": "750 ml",
+    "mod_targets": [
+      "pistol"
+    ],
+    "melee_damage": { "bash": 2},
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "gun_data": {
+      "skill": "shotgun",
+      "ammo": [
+        "shot"
+      ],
+      "clip_size": 1,
+      "dispersion": 75,
+      "//": "just a place holder, TODO: fill in the correct value",
+      "durability": 9,
+      "reload": 100
+    },
+    "min_skills": [
+      [
+        "gun",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "scarl_uk_bigboys",
+    "type": "GUNMOD",
+    "location": "rail",
+    "symbol": ":",
+    "color": "dark_gray",
+    "name": {
+      "str": "格伦特 “大男孩” 榴弹发射器",
+      "str_pl": "格伦特 “大男孩” 榴弹发射器"
+    },
+    "description": "两个M203 榴弹发射器被用防水胶带粘在格伦特的两侧，这种奇怪的设置使它看起来很滑稽。但实际上，制造这种武器的士兵变成了一个人的迫击炮小队，将巨大的爆炸弹扔向毫无防备的丧尸，或者其他什么东西。天才的改造！",
+    "price": "840 USD",
+    "install_time": "15 m",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "40x46mm": 2
+        }
+      }
+    ],
+    "material": [
+      "steel"
+    ],
+    "gun_data": {
+      "skill": "launcher",
+      "ammo": [
+        "40x46mm"
+      ],
+      "clip_size": 2,
+      "dispersion": 20,
+      "//": "just a place holder, TODO: fill in the correct value",
+      "sight_dispersion": 15,
+      "durability": 9,
+      "reload": 150
+    },
+    "mod_targets": [
+      "rifle",
+      "crossbow"
+    ],
+    "weight": "3000 g",
+    "volume": "1250 ml",
+    "melee_damage": { "bash": 4},
+    "to_hit": -3,
+    "dispersion_modifier": 80,
+    "min_skills": [
+      [
+        "gun",
+        2
+      ]
+    ]
+  },
+  {
+    "id": "pedersen_device",
+    "type": "GUNMOD",
+    "name": {
+      "str": "佩德森转换装置"
+    },
+    "description": "更换 .30-06、.308、7.62x54R、.303或7.62x39mm枪支的几个关键部件，将其转换为短程、半自动卡宾枪。比原来的步枪更加精确和可控，它应该是为第一次世界大战协约国准备的神奇武器…在1919年。原件非常罕见，然而这个复制品包含了转换套件，适用于 .32 ACP口径，并准备好用于所有一战的主要武器。",
+    "weight": "114 g",
+    "volume": "250 ml",
+    "integral_volume": "0 ml",
+    "price": "320 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "dark_gray",
+    "location": "bore",
+    "mod_targets": [
+      "rifle"
+    ],
+    "acceptable_ammo": [
+      "308",
+      ".303",
+      "3006",
+      "762R",
+      "762"
+    ],
+    "install_time": "20 m",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "32": 40
+        }
+      }
+    ],
+    "dispersion_modifier": 15,
+    "gun_data": {
+      "skill": "rifle",
+      "ammo": [
+        "32"
+      ],
+      "clip_size": 40,
+      "dispersion": 50,
+      "//": "just a place holder, TODO: fill in the correct value",
+      "durability": 9,
+      "reload": 60
+    },
+    "min_skills": [
+      [
+        "gun",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "retool_mauser",
+    "type": "GUNMOD",
+    "name": {
+      "str": "8mm 毛瑟口径转换器"
+    },
+    "description": "此套件用于将霰弹枪或7.62x39mm、.303、7.62x54R、308或.30-06步枪转换为著名且威力强大的.308口径。转换后将减少弹药容量并略微降低精度。",
+    "weight": "114 g",
+    "volume": "500 ml",
+    "integral_volume": "0 ml",
+    "price": "520 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "brown",
+    "location": "bore",
+    "mod_targets": [
+      "rifle"
+    ],
+    "acceptable_ammo": [
+      "762",
+      "308",
+      "3006",
+      ".303",
+      "762R"
+    ],
+    "install_time": "20 m",
+    "dispersion_modifier": 30,
+    "ammo_modifier": "7.92mm",
+    "min_skills": [
+      [
+        "weapon",
+        3
+      ],
+      [
+        "mechanics",
+        2
+      ]
+    ],
+    "flags": [
+      "INSTALL_DIFFICULT",
+      "IRREMOVABLE"
+    ]
+  }
+]

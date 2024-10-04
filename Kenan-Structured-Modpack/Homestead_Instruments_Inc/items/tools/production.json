@@ -1,0 +1,124 @@
+[
+  {
+    "type": "TOOL",
+    "id": "3d_printer",
+    "name": {
+      "str": "3D打印机"
+    },
+    "description": "相对紧凑的消费级3D打印机，用于简单的聚合物项目。这是一个便携式版本，制造工作将消耗一个中型电池的电量。",
+    "symbol": ",",
+    "color": "light_gray",
+    "//": "based on Makerbot Replicator+, mostly because it looks cool and was regarded well in the reviews",
+    "volume": "95 L",
+    "weight": "18 kg",
+    "qualities": [
+      [
+        "POLYMER_PRINTING",
+        1
+      ]
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "magazine_well": "250 ml",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "3d_factory",
+    "name": {
+      "str": "3D工厂"
+    },
+    "description": "巨大的沉重的工业级3D工厂，可生产以聚合物、陶瓷、生物分子、金属为原料的中等大小产品。这是便携版，使用一枚的大电池驱动。",
+    "symbol": ",",
+    "color": "light_gray",
+    "//": "based on Ultimaker S5: seems large enough to fit the idea",
+    "volume": "255 L",
+    "weight": "30 kg",
+    "qualities": [
+      [
+        "POLYMER_PRINTING",
+        3
+      ],
+      [
+        "CERAMIC_PRINTING",
+        2
+      ],
+      [
+        "BIOMEDICAL_PRINTING",
+        2
+      ]
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 1,
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "cnc_workstation",
+    "name": {
+      "str": "数控火器工作站"
+    },
+    "description": "电池驱动的数控工具，用于用80%的零件或原材料制造火器零件。",
+    "symbol": ",",
+    "color": "light_gray",
+    "//": "based roughly on Ghost Gunner 3",
+    "volume": "220 L",
+    "weight": "19 kg",
+    "qualities": [
+      [
+        "CNC_MANUFACTURE",
+        1
+      ]
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 1,
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ]
+  }
+]

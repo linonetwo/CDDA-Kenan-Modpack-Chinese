@@ -1,0 +1,177 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "meat",
+    "id_suffix": "from_recall_ration",
+    "byproducts": [
+      [
+        "water_clean"
+      ]
+    ],
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "3 m",
+    "reversible": false,
+    "autolearn": true,
+    "tools": [
+      [
+        [
+          "recall_ration",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "maid_point",
+          100
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "little_maid_meat_smoked",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "skills_required": [
+      "cooking",
+      3
+    ],
+    "time": "0 m",
+    "reversible": false,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "COOK",
+        "level": 1,
+        "amount": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "char_smoker",
+          40
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "meat",
+          6
+        ]
+      ],
+      [
+        [
+          "little_maid_R18",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "little_maid_fish_smoked",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "skills_required": [
+      "cooking",
+      3
+    ],
+    "time": "0 m",
+    "reversible": false,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "COOK",
+        "level": 1,
+        "amount": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "char_smoker",
+          40
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "fish",
+          12
+        ]
+      ],
+      [
+        [
+          "little_maid_R18",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "little_maid_human_smoked",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "skills_required": [
+      "cooking",
+      3
+    ],
+    "time": "0 m",
+    "reversible": false,
+    "autolearn": false,
+    "book_learn": [
+      [
+        "cookbook_human",
+        4
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "COOK",
+        "level": 1,
+        "amount": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "char_smoker",
+          40
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "human_flesh",
+          6
+        ]
+      ],
+      [
+        [
+          "little_maid_R18",
+          1
+        ]
+      ]
+    ]
+  }
+]

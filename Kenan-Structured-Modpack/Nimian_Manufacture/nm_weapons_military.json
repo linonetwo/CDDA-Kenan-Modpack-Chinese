@@ -1,0 +1,648 @@
+[
+  {
+    "id": "nm223rifle",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM112 .223 狙击步枪",
+      "str_pl": "NM112 .223 狙击步枪"
+    },
+    "description": "尼米安公司制造的.223口径射手步枪，在开发时着重考虑了准确性，重量轻，性能好。总的来说是一把好武器，但弹夹很小。",
+    "price": "1250 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [],
+    "skill": "rifle",
+    "ammo": [
+      "223"
+    ],
+    "weight": "1700 g",
+    "volume": "3 L",
+    "longest_side": "1020 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 7
+    },
+    "dispersion": -10,
+    "range": 2,
+    "sight_dispersion": 45,
+    "recoil": 350,
+    "durability": 8,
+    "clip_size": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "223": 6
+        }
+      }
+    ],
+    "reload": 650,
+    "loudness": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm223riflebattle",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM113 .223 战斗步枪",
+      "str_pl": "NM113 .223 战斗步枪"
+    },
+    "description": "尼米安公司生产的.223口径战斗步枪，该武器是为军事设计的，因此比大多数尼米安公司生产的武器要重，但其有一个不小的弹夹，并且拥有三连发开火模式。",
+    "price": "1000 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "MODE_BURST"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "223"
+    ],
+    "weight": "2550 g",
+    "volume": "3 L",
+    "longest_side": "1020 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4
+    },
+    "dispersion": 0,
+    "range": 0,
+    "sight_dispersion": 75,
+    "recoil": 100,
+    "durability": 7,
+    "clip_size": 15,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "223": 15
+        }
+      }
+    ],
+    "reload": 750,
+    "loudness": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "conversion",
+        1
+      ],
+      [
+        "magazine",
+        2
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nmlasrifle",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM-185型激光步枪",
+      "str_pl": "NM185型激光步枪"
+    },
+    "description": "尼米安工业激光步枪，设计用于军事，不依赖UPS供能，相反，它使用可充电电池包来进行射击。每次装载可射击7次。",
+    "price": "10000 USD",
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "las"
+    ],
+    "weight": "1850 g",
+    "volume": "2500 ml",
+    "longest_side": "1020 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -8,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 0,
+    "range": 5,
+    "sight_dispersion": 60,
+    "recoil": 0,
+    "durability": 8,
+    "clip_size": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "las": 7
+        }
+      }
+    ],
+    "reload": 600,
+    "loudness": 0,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nmhvlasrifle",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM-192型激光重炮",
+      "str_pl": "NM192型激光重炮"
+    },
+    "description": "尼米安工业重型激光步枪，设计用于军事的反器材步枪，无论这意味着什么。传闻它被采用只是因为激光对目标造成了某种影响...无论是什么目标。使用过充能电池包来工作。可以容纳2个。",
+    "price": "20000 USD",
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY",
+      "EXPLOSIVE"
+    ],
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "hvlas"
+    ],
+    "weight": "5250 g",
+    "volume": "5 L",
+    "longest_side": "1230 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -8,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": -60,
+    "range": 10,
+    "sight_dispersion": 0,
+    "recoil": 0,
+    "durability": 8,
+    "clip_size": 2,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "hvlas": 2
+        }
+      }
+    ],
+    "reload": 900,
+    "loudness": 0,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm3006rifle",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM150 .30-06 狩猎步枪",
+      "str_pl": "NM150 .30-06 狩猎步枪"
+    },
+    "description": "尼米安工业的.30-06狙击步枪，只能装两发子弹，但可以而且会非常精准地射击。具有内置瞄准镜。",
+    "price": "5000 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "3006"
+    ],
+    "weight": "2300 g",
+    "volume": "3 L",
+    "longest_side": "1020 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
+    "dispersion": -60,
+    "range": 2,
+    "sight_dispersion": 0,
+    "recoil": 500,
+    "durability": 8,
+    "clip_size": 2,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "3006": 2
+        }
+      }
+    ],
+    "reload": 250,
+    "loudness": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nmheavyshotgun",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM221 霰弹枪",
+      "str_pl": "NM221 霰弹枪"
+    },
+    "description": "尼米安工业重型霰弹枪，容纳5枚霰弹，能在快速爆发射击中一次性全部发射。",
+    "price": "900 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "RELOAD_ONE",
+      "MODE_BURST"
+    ],
+    "skill": "shotgun",
+    "ammo": [
+      "shot"
+    ],
+    "weight": "2750 g",
+    "volume": "2 L",
+    "longest_side": "920 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 50,
+    "range": 6,
+    "sight_dispersion": 75,
+    "recoil": 450,
+    "durability": 8,
+    "clip_size": 5,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 5
+        }
+      }
+    ],
+    "reload": 250,
+    "loudness": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm32mmlauncher",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM456 32mm 弹",
+      "str_pl": "NM456 32mm 弹"
+    },
+    "description": "尼米安公司制造的 \"信号枪\"，正如他们所称，实际上看起来像一个榴弹发射器，有一个枪托和铁制瞄准器来瞄准并发射你的32mm口径 \"信号弹\"。",
+    "price": "900 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "skill": "launcher",
+    "ammo": [
+      "32mm"
+    ],
+    "weight": "1675 g",
+    "volume": "1250 ml",
+    "longest_side": "680 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 25,
+    "range": 6,
+    "sight_dispersion": 75,
+    "recoil": 400,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "32mm": 1
+        }
+      }
+    ],
+    "reload": 300,
+    "loudness": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm25mmrifle",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM100 25mm 反器材步枪",
+      "str_pl": "NM100s 25mm 反器材步枪"
+    },
+    "description": "尼米安公司制造的反器材步枪。作为老式反器材步枪的替代品，这种重型武器发射强大的25mm口径子弹。对一个幸存者可能遇到的几乎所有东西都有巨大的杀伤力，但每次射击后都必须重新装弹，而且弹药很稀有。",
+    "price": "2500 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "RELOAD_ONE",
+      "RELOAD_EJECT"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "25mm"
+    ],
+    "weight": "23250 g",
+    "//": "Even superalloy isn't enough...",
+    "volume": "5 L",
+    "longest_side": "1500 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 25,
+    "range": 0,
+    "sight_dispersion": 15,
+    "recoil": 400,
+    "durability": 9,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "25mm": 1
+        }
+      }
+    ],
+    "reload": 400,
+    "loudness": 400,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ]
+    ]
+  }
+]

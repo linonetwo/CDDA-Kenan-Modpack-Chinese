@@ -1,0 +1,36 @@
+[
+  {
+    "id": "BGSS_Barrett_Hartley_STORY1",
+    "type": "talk_topic",
+    "dynamic_line": "我不想谈这个，拜托…",
+    "responses": [
+      {
+        "text": "我为你女儿难过…我辜负了你…",
+        "topic": "BGSS_Barrett_Hartley_STORY2"
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "BGSS_Barrett_Hartley_STORY2",
+    "type": "talk_topic",
+    "dynamic_line": "*哭声",
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

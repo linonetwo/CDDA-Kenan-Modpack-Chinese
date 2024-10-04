@@ -1,0 +1,80 @@
+[
+  {
+    "id": "mon_antifungal_egg",
+    "type": "TOOL",
+    "category": "other",
+    "name": {
+      "str": "脉动绿蛋"
+    },
+    "description": "一个神秘的绿色蚁卵。激活来孵化它。",
+    "weight": "30618 g",
+    "volume": "6250 ml",
+    "price": "100 USD",
+    "to_hit": -3,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "light_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_ant_antifungal_queen",
+      "friendly_msg": "蛋孵成了皇后！它似乎喜欢你。",
+      "difficulty": 0,
+      "moves": 100,
+      "place_randomly": true
+    }
+  },
+  {
+    "id": "mon_acid_egg",
+    "type": "TOOL",
+    "category": "other",
+    "name": {
+      "str": "脉动褐蛋"
+    },
+    "description": "一个神秘的棕色蚁卵。激活来孵化它。",
+    "weight": "30618 g",
+    "volume": "6250 ml",
+    "price": "100 USD",
+    "to_hit": -3,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "light_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_ant_acid_queen",
+      "friendly_msg": "蛋孵成了皇后！它似乎喜欢你。",
+      "difficulty": 0,
+      "moves": 100,
+      "place_randomly": true
+    }
+  },
+  {
+    "id": "mon_ant_egg",
+    "type": "TOOL",
+    "category": "other",
+    "name": {
+      "str": "脉动红蛋"
+    },
+    "description": "一个神秘的红色蚁卵。激活来孵化它。",
+    "weight": "30618 g",
+    "volume": "6250 ml",
+    "price": "100 USD",
+    "to_hit": -3,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "light_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_ant_queen",
+      "friendly_msg": "蛋孵成了皇后！它似乎喜欢你。",
+      "difficulty": 0,
+      "moves": 100,
+      "place_randomly": true
+    }
+  }
+]

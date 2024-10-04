@@ -1,0 +1,44 @@
+[
+  {
+    "id": "iv_mutagen_necromancy",
+    "copy-from": "iv_mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "坏死突变引物"
+    },
+    "description": "一种非常像熔岩灯的超浓缩诱变剂。你需要一个注射器来注射它，为你的身体准备突变。",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射了坏死突变引物。",
+      "tools_needed": {
+        "syringe": -1
+      },
+      "vitamins": [
+        [
+          "mutagen_necromantic",
+          450,
+          550
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mutagen_necromancy",
+    "copy-from": "mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "死灵诱变剂"
+    },
+    "vitamins": [
+      [
+        "mutagen_necromantic",
+        175
+      ],
+      [
+        "mutagen",
+        125
+      ]
+    ]
+  }
+]

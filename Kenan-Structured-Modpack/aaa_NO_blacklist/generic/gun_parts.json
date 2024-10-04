@@ -1,0 +1,513 @@
+[
+  {
+    "id": "gun_parts",
+    "description": "你不应该看到这个。",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "Components for a rifle"
+    },
+    "volume": "1 ml",
+    "weight": "1 g",
+    "stackable": false,
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "base_gun_part_1",
+    "description": "你不应该看到这个。",
+    "//": "added to remove repetition in volume, weight, and materials.",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "Gun part 1"
+    },
+    "weight": "1816 g",
+    "volume": "1 L",
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a1_lower_receiver",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "M16A1 下机匣"
+    },
+    "description": "一个完整的M16a1 下机匣。任何带有此下机匣的AR系列步枪都拥有半自动和全自动射击模式。",
+    "volume": "750 ml",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a1_upper_receiver",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "M16A1 上机匣"
+    },
+    "description": "一个完整的M16a1 上机匣。它并不十分可靠，很容易积累残渣。",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a1_upper_receiver_300blk",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": ".300BLK M16A1上机匣"
+    },
+    "description": "一个完整的M16a1 上机匣。它并不十分可靠，很容易积累残渣。这个机匣的口径是.300BLK。",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a2_lower_receiver",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "M16A2 下机匣"
+    },
+    "description": "一个完整的M16A2下机匣。任何装有此机匣的AR平台步枪将同时拥有半自动和爆发开火两种射击模式。",
+    "volume": "750 ml",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a2_upper_receiver",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "M16A2 上机匣"
+    },
+    "description": "一个完整的M16A2上机匣。它比M16A1上机匣更可靠，而且是为承受更多的恶劣环境而设计的。",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a2_upper_receiver_300blk",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": ".300BLK M16A2上机匣"
+    },
+    "description": "完好的M16A2上机匣。它比M16A1上机匣更可靠，而且是为承受更多的恶劣环境而设计的。这个机匣的口径是.300BLK。",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a3_lower_receiver",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "M16A3 下机匣"
+    },
+    "description": "一个完整的M16A3 下机匣。任何装有此机匣的AR系列步枪将同时拥有半自动和爆发开火两种射击模式。",
+    "volume": "750 ml",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a3_upper_receiver",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "M16A3 上机匣"
+    },
+    "description": "一个完整的M16a3 上机匣。它比以往任何一款m16 上机匣都更具可定制性。",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "a3_upper_receiver_300blk",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": ".300BLK M16A3上机匣"
+    },
+    "description": "一个完好的M16a3 上机匣。它比以往任何一款m16 上机匣都更具可定制性。这个机匣的口径是.300BLK。",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "ar15_lower_receiver",
+    "copy-from": "base_gun_part_1",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "AR-15 下机匣"
+    },
+    "description": "一个完整的民用ar-15 下机匣。任何带有此下机匣的AR系列步枪只能半自动射击。",
+    "volume": "750 ml",
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stgbarrelkit_7.92x33",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 7.92x33k枪管套件"
+    },
+    "description": "复制品STG-44s用的原装枪管套件。这套枪管更换件的口径是7.92x33k。拆卸步枪上的旧枪管，然后用枪管套件重新组装。",
+    "weight": "908 g",
+    "volume": "1 L",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stgbarrelkit_762",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 7.62x39枪管套件"
+    },
+    "description": "复制品STG-44s用的原装枪管套件。这套枪管更换件的口径是7.62x39。拆卸步枪上的旧枪管，然后用枪管套件重新组装。",
+    "weight": "908 g",
+    "volume": "1 L",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stgbarrelkit_223",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 5.56x45枪管套件"
+    },
+    "description": "复制品STG-44s用的原装枪管套件。这套枪管更换件的口径是5.56x45。拆卸步枪上的旧枪管，然后用枪管套件重新组装。",
+    "weight": "908 g",
+    "volume": "1 L",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stgbarrelkit_300blk",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 .300枪管套件"
+    },
+    "description": "复制品STG-44s用的原装枪管套件。这套枪管更换件的口径是.300BLK。拆卸步枪上的旧枪管，然后用枪管套件重新组装。",
+    "weight": "908 g",
+    "volume": "1 L",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stglower_new",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 下机匣"
+    },
+    "description": "STG-44下机匣。只能半自动射击。",
+    "weight": "681 g",
+    "volume": "1 L",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stglower",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 下机匣"
+    },
+    "description": "STG-44下机匣。这是一个原装品，因此可以切换成半自动或全自动。",
+    "weight": "681 g",
+    "volume": "1 L",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stg_upper",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 上机匣"
+    },
+    "description": "STG-44上机匣。这是一个原装品。",
+    "weight": "681 g",
+    "volume": "1 L",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stg_upper_new",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 上机匣"
+    },
+    "description": "STG-44上机匣。这是一个复制品。",
+    "weight": "681 g",
+    "volume": "1 L",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stg_upper_sbr_new",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 短管式上机匣"
+    },
+    "description": "STG-44短管步枪的上机匣。这是一个复制品。",
+    "weight": "681 g",
+    "volume": "750 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stgstock",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 枪托与机匣盖"
+    },
+    "description": "原装的STG-44枪托和机匣盖。",
+    "weight": "681 g",
+    "volume": "500 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stgstock_new",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 枪托与机匣盖"
+    },
+    "description": "复制品STG-44枪托和机匣盖。",
+    "weight": "681 g",
+    "volume": "500 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "stgreceivercap",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "STG-44 机匣盖"
+    },
+    "description": "一个机匣盖的复制品。用于制作手枪。",
+    "weight": "681 g",
+    "volume": "250 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "calico_bolt",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "卡利科 M960 枪栓"
+    },
+    "description": "9mm口径卡利科卡宾枪的枪栓。",
+    "weight": "113 g",
+    "volume": "30 ml",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "calico_lower_receiver",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "卡利科 M960 下机匣"
+    },
+    "description": "用于卡利科卡宾枪的下机匣。",
+    "weight": "840 g",
+    "volume": "500 ml",
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "calico_upper_receiver",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "卡利科 M960 上机匣"
+    },
+    "description": "用于卡利科卡宾枪的上机匣",
+    "weight": "641 g",
+    "volume": "500 ml",
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "light_gray"
+  },
+  {
+    "id": "glock_receiver",
+    "type": "GENERIC",
+    "name": {
+      "str": "格洛克19 机匣"
+    },
+    "description": "格洛克 19 手枪的机匣。它完全由聚合物制成。",
+    "weight": "132 g",
+    "volume": "250 ml",
+    "material": [
+      "plastic"
+    ],
+    "color": "light_gray",
+    "symbol": ":"
+  },
+  {
+    "id": "glock_barrel",
+    "type": "GENERIC",
+    "name": {
+      "str": "格洛克19 枪管"
+    },
+    "description": "从格洛克 19 手枪上拆下的枪管。",
+    "weight": "200 g",
+    "volume": "250 ml",
+    "material": [
+      "steel"
+    ],
+    "color": "light_gray",
+    "symbol": ":"
+  },
+  {
+    "id": "glock_slide",
+    "type": "GENERIC",
+    "name": {
+      "str": "格洛克19 导轨"
+    },
+    "description": "用于格洛克 19 手枪的导轨。",
+    "weight": "223 g",
+    "volume": "250 ml",
+    "material": [
+      "steel"
+    ],
+    "color": "light_gray",
+    "symbol": ":"
+  },
+  {
+    "id": "glock_recoil_spring",
+    "type": "GENERIC",
+    "name": {
+      "str": "格洛克19 反冲弹簧"
+    },
+    "description": "拆自格洛克 19 手枪的反冲弹簧。",
+    "weight": "40 g",
+    "volume": "50 ml",
+    "material": [
+      "steel"
+    ],
+    "color": "light_gray",
+    "symbol": ":"
+  },
+  {
+    "id": "cx4_bolt",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "伯莱塔 CX4 枪栓"
+    },
+    "description": "用于cx4 卡宾枪的枪栓",
+    "weight": "454 g",
+    "volume": "500 ml",
+    "material": [
+      "steel"
+    ],
+    "color": "light_gray",
+    "symbol": ":"
+  },
+  {
+    "id": "cx4_upper",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "伯莱塔 CX4 上机匣"
+    },
+    "description": "用于cx4 卡宾枪的上机匣",
+    "weight": "923 g",
+    "volume": "750 ml",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "color": "light_gray",
+    "symbol": ":"
+  },
+  {
+    "id": "cx4_lower",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "伯莱塔 CX4 下机匣"
+    },
+    "description": "用于cx4 卡宾枪的下机匣。",
+    "weight": "923 g",
+    "volume": "750 ml",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "color": "light_gray",
+    "symbol": ":"
+  }
+]

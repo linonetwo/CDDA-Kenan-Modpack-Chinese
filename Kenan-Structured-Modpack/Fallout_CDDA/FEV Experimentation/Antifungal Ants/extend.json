@@ -1,0 +1,589 @@
+[
+  {
+    "id": "mon_fish_lobster",
+    "type": "MONSTER",
+    "name": {
+      "str": "龙虾"
+    },
+    "copy-from": "mon_fish_lobster",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its pincers while you pat their head."
+    }
+  },
+  {
+    "id": "mon_fish_crayfish",
+    "type": "MONSTER",
+    "name": {
+      "str": "螯虾"
+    },
+    "copy-from": "mon_fish_crayfish",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    }
+  },
+  {
+    "id": "mon_giant_cockroach",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蟑螂"
+    },
+    "copy-from": "mon_giant_cockroach",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_giant_cockroach_nymph",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蟑螂幼虫"
+    },
+    "copy-from": "mon_giant_cockroach_nymph",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_pregnant_giant_cockroach",
+    "type": "MONSTER",
+    "name": {
+      "str": "怀孕的巨型蟑螂"
+    },
+    "copy-from": "mon_pregnant_giant_cockroach",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_bee",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蜜蜂"
+    },
+    "copy-from": "mon_bee",
+    "petfood": {
+      "food": [
+        "BIRDFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily flaps its wings while you pat their head."
+    }
+  },
+  {
+    "id": "mon_centipede_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蜈蚣"
+    },
+    "copy-from": "mon_centipede_giant",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with it's multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_dragonfly_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蜻蜓",
+      "str_pl": "巨型蜻蜓"
+    },
+    "copy-from": "mon_dragonfly_giant",
+    "petfood": {
+      "food": [
+        "BIRDFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily flaps its wings while you pat their head."
+    }
+  },
+  {
+    "id": "mon_fly",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型苍蝇",
+      "str_pl": "巨型苍蝇"
+    },
+    "copy-from": "mon_fly",
+    "petfood": {
+      "food": [
+        "BIRDFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily flaps its wings while you pat their head."
+    }
+  },
+  {
+    "id": "mon_mosquito_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蚊怪"
+    },
+    "copy-from": "mon_mosquito_giant",
+    "petfood": {
+      "food": [
+        "BIRDFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily flaps its wings while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_cellar_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型地窖蛛"
+    },
+    "copy-from": "mon_spider_cellar_giant",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_cellar_giant_s",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型地窖蛛幼体"
+    },
+    "copy-from": "mon_spider_cellar_giant_s",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_jumping_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型跳蛛"
+    },
+    "copy-from": "mon_spider_jumping_giant",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_trapdoor_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型螲蟷蛛"
+    },
+    "copy-from": "mon_spider_trapdoor_giant",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_web",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型网蛛"
+    },
+    "copy-from": "mon_spider_web",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_web_s",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型网蛛幼体"
+    },
+    "copy-from": "mon_spider_web_s",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_widow_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型黑寡妇蜘蛛"
+    },
+    "copy-from": "mon_spider_widow_giant",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_widow_giant_s",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型黑寡妇蜘蛛幼体"
+    },
+    "copy-from": "mon_spider_widow_giant_s",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_spider_wolf_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型狼蛛"
+    },
+    "copy-from": "mon_spider_wolf_giant",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    }
+  },
+  {
+    "id": "mon_wasp",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型黄蜂"
+    },
+    "copy-from": "mon_wasp",
+    "petfood": {
+      "food": [
+        "BIRDFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily flaps its wings while you pat their head."
+    }
+  },
+  {
+    "id": "mon_dermatik",
+    "type": "MONSTER",
+    "name": {
+      "str": "寄生蜂"
+    },
+    "copy-from": "mon_dermatik",
+    "petfood": {
+      "food": [
+        "BIRDFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily flaps its wings while you pat their head."
+    }
+  },
+  {
+    "id": "mon_dermatik_larva",
+    "type": "MONSTER",
+    "name": {
+      "str": "寄生蜂幼体"
+    },
+    "copy-from": "mon_dermatik_larva",
+    "petfood": {
+      "food": [
+        "BIRDFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    }
+  },
+  {
+    "id": "mon_ant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蚂蚁"
+    },
+    "copy-from": "mon_ant",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_ant_acid",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型酸蚁"
+    },
+    "copy-from": "mon_ant_acid",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_ant_acid_larva",
+    "type": "MONSTER",
+    "name": {
+      "str": "酸蚁幼虫"
+    },
+    "copy-from": "mon_ant_acid_larva",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    }
+  },
+  {
+    "id": "mon_ant_acid_queen",
+    "type": "MONSTER",
+    "name": {
+      "str": "酸蚁蚁后"
+    },
+    "copy-from": "mon_ant_acid_queen",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_ant_acid_soldier",
+    "type": "MONSTER",
+    "name": {
+      "str": "酸蚁士兵"
+    },
+    "copy-from": "mon_ant_acid_soldier",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_ant_larva",
+    "type": "MONSTER",
+    "name": {
+      "str": "蚂蚁幼虫"
+    },
+    "copy-from": "mon_ant_larva",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    }
+  },
+  {
+    "id": "mon_ant_queen",
+    "type": "MONSTER",
+    "name": {
+      "str": "蚁后"
+    },
+    "copy-from": "mon_ant_queen",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_ant_soldier",
+    "type": "MONSTER",
+    "name": {
+      "str": "兵蚁"
+    },
+    "copy-from": "mon_ant_soldier",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_locust",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蝗虫"
+    },
+    "copy-from": "mon_locust",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_locust_nymph",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蝗虫幼体"
+    },
+    "copy-from": "mon_locust_nymph",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its antennaes while you pat their head."
+    }
+  },
+  {
+    "id": "mon_slug_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蛞蝓"
+    },
+    "copy-from": "mon_slug_giant",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    }
+  },
+  {
+    "id": "mon_alpha_razorclaw",
+    "type": "MONSTER",
+    "name": {
+      "str": "利爪怪首领"
+    },
+    "copy-from": "mon_alpha_razorclaw",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its pincers while you pat their head."
+    }
+  },
+  {
+    "id": "mon_giant_crayfish",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型螯虾"
+    },
+    "copy-from": "mon_giant_crayfish",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    }
+  },
+  {
+    "id": "mon_graboid",
+    "type": "MONSTER",
+    "name": {
+      "str": "地魔虫"
+    },
+    "copy-from": "mon_graboid",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    }
+  },
+  {
+    "id": "mon_halfworm",
+    "type": "MONSTER",
+    "name": {
+      "str": "半截巨蠕虫"
+    },
+    "copy-from": "mon_halfworm",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    }
+  },
+  {
+    "id": "mon_razorclaw",
+    "type": "MONSTER",
+    "name": {
+      "str": "利爪怪"
+    },
+    "copy-from": "mon_razorclaw",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles its pincers while you pat their head."
+    }
+  },
+  {
+    "id": "mon_worm",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蠕虫"
+    },
+    "copy-from": "mon_worm",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    }
+  }
+]

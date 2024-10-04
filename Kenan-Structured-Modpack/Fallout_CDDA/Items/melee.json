@@ -1,0 +1,507 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "spear_fallout_replica",
+    "name": {
+      "str": "锯齿矛"
+    },
+    "description": "一种粗壮的木杆，上面有一把锯齿刀。这件感觉既便宜又脆弱。",
+    "weight": "1498 g",
+    "to_hit": 1,
+    "color": "light_gray",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "IMPALE"
+    ],
+    "volume": "3 L",
+    "bashing": 5,
+    "cutting": 19,
+    "looks_like": "pike",
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR"
+    ],
+    "price": "160 USD",
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "spear_fallout",
+    "name": {
+      "str": "锯齿矛"
+    },
+    "description": "一种粗壮的木杆，上面有一把锯齿刀。它似乎是精心制作的。",
+    "weight": "1498 g",
+    "to_hit": 1,
+    "color": "light_gray",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "IMPALE"
+    ],
+    "volume": "3 L",
+    "bashing": 5,
+    "cutting": 39,
+    "looks_like": "pike",
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR"
+    ],
+    "price": "160 USD",
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "vault_knife",
+    "name": {
+      "str": "避难所居民刀",
+      "str_pl": "避难所居民刀"
+    },
+    "description": "这是一把锋利的刀，供金库居民日常使用。这是体面的战斗，虽然只针对害虫，以及削减东西。",
+    "weight": "453 g",
+    "volume": "250 ml",
+    "price": 250,
+    "to_hit": 1,
+    "bashing": 2,
+    "cutting": 9,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "looks_like": "knife_combat",
+    "qualities": [
+      [
+        "CUT",
+        5
+      ],
+      [
+        "CUT_FINE",
+        5
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "SHEATH_KNIFE",
+      "DURABLE_MELEE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "super_sledge",
+    "name": {
+      "str": "超级动力锤"
+    },
+    "description": "一种超级大锤，由军火贩子制造，采用最先进的武器技术。包括一个动能储存装置，以增加伤害和击退。",
+    "weight": "4500 g",
+    "color": "green",
+    "symbol": "/",
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "flags": "NONCONDUCTIVE",
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL",
+      "WIDE",
+      "SWEEP"
+    ],
+    "volume": "2500 ml",
+    "bashing": 180,
+    "looks_like": "hammer_sledge",
+    "price": "1200 USD",
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "machete_gladius",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "大砍刀"
+    },
+    "description": "在这一点上，这把巨大的钢刀基本上是一把短剑。它的手显然是用爱锻造的。",
+    "weight": "538 g",
+    "volume": "1 L",
+    "price": "28 USD",
+    "to_hit": 2,
+    "bashing": 6,
+    "cutting": 30,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": "WBLOCK_2",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        15
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "flagstaff",
+    "symbol": "/",
+    "color": "yellow",
+    "name": {
+      "str": "旗杆",
+      "str_pl": "旗杆"
+    },
+    "description": "一根旗杆被改造成一根棍棒。末端的金鹰被适当加固，这样黄金就可以在继续使用时不会断裂或变形了。",
+    "price": "60 USD",
+    "material": [
+      "wood",
+      "iron",
+      "gold"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "SWEEP"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR",
+      "ALWAYS_TWOHAND"
+    ],
+    "weight": "2200 g",
+    "volume": "3 L",
+    "bashing": 25,
+    "cutting": 20,
+    "category": "weapons",
+    "to_hit": 3,
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "sword_revolutionary",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "革命之剑"
+    },
+    "description": "革命战争中的一把单刀。你觉得它能像割红衣兵一样割丧尸。",
+    "price": "1350 USD",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "PRECISE"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ],
+    "weight": "1814 g",
+    "volume": "2750 ml",
+    "bashing": 4,
+    "cutting": 38,
+    "to_hit": 2,
+    "category": "weapons",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ]
+  },
+  {
+    "id": "sword_chinese",
+    "type": "TOOL",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "中国官刀"
+    },
+    "description": "这是一把从中国进口的轻型剑，高级军官不得已而为之。它是如何到达美国的还不得而知。",
+    "price": "1000 USD",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ],
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "weight": "1360 g",
+    "volume": "2 L",
+    "bashing": 14,
+    "cutting": 31,
+    "to_hit": 1,
+    "category": "weapons",
+    "looks_like": "katana",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ]
+  },
+  {
+    "id": "sword_chinese_shock",
+    "type": "TOOL",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "中国军官的防震剑"
+    },
+    "description": "这是一把从中国进口的轻型剑，高级军官不得已而为之。它是如何到达美国的还不得而知，但是有人定制了这个，这样刀片就可以通电了。他们还定制了手柄，这样你使用时不会感到震惊。",
+    "price": "1000 USD",
+    "material": [
+      "steel"
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 100,
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD",
+      "NONCONDUCTIVE"
+    ],
+    "use_action": "TAZER",
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "weight": "1360 g",
+    "volume": "2 L",
+    "bashing": 14,
+    "cutting": 31,
+    "to_hit": 1,
+    "category": "weapons",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "500 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "meat_hook_claws",
+    "name": {
+      "str": "肉钩手套",
+      "str_pl": "肉钩护手"
+    },
+    "description": "一对用破旧的肉钩特制成的护腕，一种残忍且有效的武器。你可以用钩子的曲线来招架攻击。",
+    "weight": "600 g",
+    "volume": "375 ml",
+    "to_hit": 3,
+    "color": "dark_gray",
+    "symbol": "{",
+    "material": [
+      "steel"
+    ],
+    "bashing": 1,
+    "cutting": 16,
+    "techniques": [
+      "BRUTAL",
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "UNARMED_WEAPON",
+      "DURABLE_MELEE"
+    ],
+    "price": "200 USD",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        14
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "gloves_boxing",
+    "symbol": ";",
+    "color": "red",
+    "name": {
+      "str": "拳击手套",
+      "str_pl": "拳击手套"
+    },
+    "description": "一副简单的拳击手套，用来垫击，这样你就不会杀人，也不会伤到你的拳头。现在有点没用了。",
+    "flags": [
+      "UNARMED_WEAPON"
+    ],
+    "price": "10 USD",
+    "price_postapoc": 300,
+    "material": [
+      "cotton"
+    ],
+    "weight": "1000 g",
+    "volume": "500 ml",
+    "bashing": 1,
+    "to_hit": 1
+  },
+  {
+    "type": "GENERIC",
+    "id": "gloves_boxing_plated",
+    "symbol": ";",
+    "color": "red",
+    "name": {
+      "str": "钢板拳击手套",
+      "str_pl": "钢板拳击手套"
+    },
+    "description": "一副简单的拳击手套，用来垫攻击，这样你就不会杀人或伤害自己。与这个最初的目的相反，这些有钢板插入其中，允许一些相当残酷的拳。",
+    "flags": [
+      "UNARMED_WEAPON",
+      "DURABLE_MELEE"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL"
+    ],
+    "price": "10 USD",
+    "price_postapoc": 300,
+    "material": [
+      "cotton",
+      "steel"
+    ],
+    "weight": "2000 g",
+    "volume": "500 ml",
+    "bashing": 20,
+    "to_hit": 1
+  },
+  {
+    "type": "GENERIC",
+    "id": "gloves_boxing_goldplated",
+    "symbol": ";",
+    "color": "red",
+    "name": {
+      "str": "镀金拳击手套",
+      "str_pl": "双镀金拳击手套"
+    },
+    "description": "一副镀金的拳击手套。它们是一种仪式上的奖品，从来没有真正的用途，但它们是难以置信的沉重。",
+    "flags": [
+      "UNARMED_WEAPON"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL"
+    ],
+    "price": "10 USD",
+    "price_postapoc": 300,
+    "material": [
+      "cotton",
+      "gold"
+    ],
+    "weight": "4000 g",
+    "volume": "500 ml",
+    "bashing": 30,
+    "to_hit": 1
+  },
+  {
+    "type": "GENERIC",
+    "id": "gloves_boxing_doubleplated",
+    "symbol": ";",
+    "color": "red",
+    "name": {
+      "str": "双层镀拳击手套",
+      "str_pl": "双镀拳击手套"
+    },
+    "description": "一副镀金的拳击手套。它们是一种仪式上的奖品，从来没有真正的用途，但它们是难以置信的沉重。最重要的是，有人增加了钢插入，使他们更重。",
+    "flags": [
+      "UNARMED_WEAPON",
+      "DURABLE_MELEE"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL"
+    ],
+    "price": "10 USD",
+    "price_postapoc": 300,
+    "material": [
+      "cotton",
+      "gold",
+      "steel"
+    ],
+    "weight": "6000 g",
+    "volume": "500 ml",
+    "bashing": 45,
+    "to_hit": 1
+  }
+]

@@ -1,0 +1,202 @@
+[
+  {
+    "id": "TALK_OLD_GUARD_REP",
+    "type": "talk_topic",
+    "speaker_effect": {
+      "sentinel": "met",
+      "effect": {
+        "add_mission": "MISSION_OLD_GUARD_status"
+      }
+    }
+  },
+  {
+    "id": "TALK_SCIENCE_REP",
+    "type": "talk_topic",
+    "speaker_effect": {
+      "sentinel": "met",
+      "effect": {
+        "add_mission": "MISSION_SCIENCE_REP_status"
+      }
+    }
+  },
+  {
+    "id": "TALK_EVAC_MERCHANT",
+    "type": "talk_topic",
+    "speaker_effect": {
+      "sentinel": "met",
+      "effect": {
+        "add_mission": "MISSION_EVAC_SHOPKEEP_status"
+      }
+    }
+  },
+  {
+    "id": "TALK_FREE_MERCHANT_STOCKS",
+    "type": "talk_topic",
+    "speaker_effect": {
+      "sentinel": "met",
+      "effect": {
+        "add_mission": "MISSION_FREE_MERCHANT_STOCKS_status"
+      }
+    }
+  },
+  {
+    "id": "MISSION_EVAC_SHOPKEEP_status",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "见过自由商会的商人"
+    },
+    "description": "这个人还活着。如果这次任务失败，就意味着这个人已经死了。",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "npc_has_var": "-",
+      "type": "-",
+      "context": "-",
+      "value": "-"
+    },
+    "difficulty": 0,
+    "value": 0,
+    "fail": {
+      "effect": {
+        "u_add_var": "fm_merchant",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "*要求您忽略此任务：）",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_FREE_MERCHANT_STOCKS_status",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "见过自由商会的经纪人"
+    },
+    "description": "这个人还活着。如果这次任务失败，就意味着这个人已经死了。",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "npc_has_var": "-",
+      "type": "-",
+      "context": "-",
+      "value": "-"
+    },
+    "difficulty": 0,
+    "value": 0,
+    "fail": {
+      "effect": {
+        "u_add_var": "fm_food",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "*要求您忽略此任务：）",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_SCIENCE_REP_status",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "见过自由商会的医生"
+    },
+    "description": "这个人还活着。如果这次任务失败，就意味着这个人已经死了。",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "npc_has_var": "-",
+      "type": "-",
+      "context": "-",
+      "value": "-"
+    },
+    "difficulty": 0,
+    "value": 0,
+    "fail": {
+      "effect": {
+        "u_add_var": "fm_doctor",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "*要求您忽略此任务：）",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_OLD_GUARD_status",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "见过旧世守护者联络官"
+    },
+    "description": "这个人还活着。如果这次任务失败，就意味着这个人已经死了。",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "npc_has_var": "-",
+      "type": "-",
+      "context": "-",
+      "value": "-"
+    },
+    "difficulty": 0,
+    "value": 0,
+    "fail": {
+      "effect": {
+        "u_add_var": "og_rep",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "*要求您忽略此任务：）",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  }
+]

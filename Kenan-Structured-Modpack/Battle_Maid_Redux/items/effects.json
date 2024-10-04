@@ -1,0 +1,107 @@
+[
+  {
+    "type": "SPELL",
+    "id": "master_doll_spell",
+    "effect": "effect_on_condition",
+    "effect_str": "master_doll_eoc",
+    "name": "主人玩偶",
+    "description": "测试",
+    "shape": "blast",
+    "valid_targets": [
+      "self"
+    ]
+  },
+  {
+    "type": "effect_on_condition",
+    "id": "master_doll_eoc",
+    "condition": {
+      "u_has_item": "master_doll"
+    },
+    "effect": [
+      {
+        "u_spawn_item": "maid_point",
+        "count": 1
+      }
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "master_doll_vibe_spell",
+    "effect": "effect_on_condition",
+    "effect_str": "master_doll_vibe_eoc",
+    "name": "测试效果名称",
+    "description": "测试",
+    "shape": "blast",
+    "eocs": [
+      "EOC_SHILLS_BRANCH"
+    ],
+    "chat_topics": [
+      "TALK_VIBE1"
+    ],
+    "valid_targets": [
+      "self"
+    ]
+  },
+  {
+    "id": "TALK_VIBE1",
+    "type": "talk_topic",
+    "dynamic_line": "你无法抑制内心的感情，开始亲密地挤压主人的娃娃...",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_VIBE2"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VIBE2",
+    "type": "talk_topic",
+    "condition": {
+      "u_has_item": "master_doll_vibe",
+      "charges": 25
+    },
+    "dynamic_line": "你到达高潮，感觉体内充满了洪荒之力！",
+    "responses": [
+      {
+        "text": "♂♀",
+        "topic": "TALK_VIBE2",
+        "effect": [
+          {
+            "u_consume_item": "master_doll_vibe",
+            "charges": 25
+          },
+          {
+            "u_spawn_item": "maid_point",
+            "count": 1
+          }
+        ]
+      },
+      {
+        "text": "关闭",
+        "topic": "TALK_VIBE3",
+        "effect": [
+          {
+            "u_spawn_item": "maid_point",
+            "count": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_VIBE3",
+    "type": "talk_topic",
+    "dynamic_line": "最终，你绷紧身体达到高潮，然后带着高兴而疲惫的微笑瘫倒在娃娃上…",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": {
+          "u_cast_spell": {
+            "id": "bmd_pleasure"
+          }
+        }
+      }
+    ]
+  }
+]

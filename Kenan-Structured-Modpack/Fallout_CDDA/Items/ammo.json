@@ -1,0 +1,361 @@
+[
+  {
+    "id": "10mm",
+    "type": "AMMO",
+    "name": {
+      "str": "10mm Auto弹"
+    },
+    "description": "一种相当罕见和强大的手枪子弹，在柯尔特6250被推广开后被军队和警察部队普及。",
+    "weight": "13 g",
+    "volume": "250 ml",
+    "price": "29 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 24,
+    "stack_size": 24,
+    "ammo_type": "40",
+    "casing": "10mm_casing",
+    "range": 16,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 35,
+      "armor_penetration": 4
+    },
+    "dispersion": 30,
+    "recoil": 1570,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "10mm_incendiary",
+    "copy-from": "10mm",
+    "type": "AMMO",
+    "name": {
+      "str": "10mm 燃烧弹"
+    },
+    "description": "一种相当罕见和强大的手枪子弹，在柯尔特6250被推广开后被军队和警察部队普及。这中特殊子弹来源于一个被击倒的中国士兵。由军火贩子们通过逆向工程获得。也是一个不错的点火器，就是烟有点大。",
+    "weight": "13 g",
+    "volume": "250 ml",
+    "price": "29 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 24,
+    "stack_size": 24,
+    "ammo_type": "40",
+    "casing": "10mm_casing",
+    "range": 16,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 35,
+      "armor_penetration": 4
+    },
+    "dispersion": 30,
+    "recoil": 1570,
+    "effects": [
+      "COOKOFF",
+      "INCENDIARY",
+      "MUZZLE_SMOKE"
+    ]
+  },
+  {
+    "id": "10mmhp",
+    "copy-from": "10mm",
+    "type": "AMMO",
+    "name": {
+      "str": "10mm 空尖弹"
+    },
+    "description": "一种相当罕见和强大的手枪子弹，在柯尔特6250被推广开后被军队和警察部队普及。空尖弹对较软的目标能造成更大的伤害。",
+    "weight": "13 g",
+    "volume": "250 ml",
+    "price": "29 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 24,
+    "stack_size": 24,
+    "ammo_type": "40",
+    "casing": "10mm_casing",
+    "range": 16,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 55,
+      "armor_penetration": 2
+    },
+    "dispersion": 30,
+    "recoil": 1570,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "10mmap",
+    "copy-from": "10mm",
+    "type": "AMMO",
+    "name": {
+      "str": "10mm 穿甲弹"
+    },
+    "description": "一种相当罕见和强大的手枪子弹，在柯尔特6250被推广开后被军队和警察部队普及。这些子弹是穿甲弹，尽管它们造成的伤害微乎其微。",
+    "weight": "13 g",
+    "volume": "250 ml",
+    "price": "29 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 24,
+    "stack_size": 24,
+    "ammo_type": "40",
+    "casing": "10mm_casing",
+    "range": 16,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 30,
+      "armor_penetration": 8
+    },
+    "dispersion": 30,
+    "recoil": 1570,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "10mmjhp",
+    "copy-from": "10mm",
+    "type": "AMMO",
+    "name": {
+      "str": "10mm 空尖弹"
+    },
+    "description": "一种相当罕见和强大的手枪子弹，在柯尔特6250被推广开后被军队和警察部队普及。全金属包覆空尖弹，昂贵而致命。",
+    "weight": "13 g",
+    "volume": "250 ml",
+    "price": "29 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 24,
+    "stack_size": 24,
+    "ammo_type": "40",
+    "casing": "10mm_casing",
+    "range": 16,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 60,
+      "armor_penetration": 8
+    },
+    "dispersion": 30,
+    "recoil": 1570,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "5mm",
+    "type": "AMMO",
+    "name": {
+      "str": "5mm 圆形弹"
+    },
+    "description": "一种5mm子弹，通常用于加特林和精选步枪。",
+    "weight": "12 g",
+    "volume": "250 ml",
+    "price": "65 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 50,
+    "stack_size": 50,
+    "ammo_type": "5mm",
+    "casing": "5mm_casing",
+    "range": 30,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 44,
+      "armor_penetration": 2
+    },
+    "dispersion": 30,
+    "recoil": 1500,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "5mm_bulk",
+    "type": "AMMO",
+    "name": {
+      "str": "5mm 散装弹"
+    },
+    "description": "一种5mm子弹，通常用于加特林机枪和选射步枪。这些子弹很便宜，火药含量很低。这意味着它拥有很小的后坐力，但穿透性和伤害也有所不足。尽管如此，它能保证火力不会中断。",
+    "weight": "12 g",
+    "volume": "250 ml",
+    "price": "65 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 200,
+    "stack_size": 200,
+    "ammo_type": "5mm",
+    "casing": "5mm_casing",
+    "range": 30,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 22,
+      "armor_penetration": 1
+    },
+    "dispersion": 90,
+    "recoil": 500,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "5mmjhp",
+    "type": "AMMO",
+    "name": {
+      "str": "5mm 空尖弹"
+    },
+    "description": "一种 5mm 空尖弹，通常用于加特林和精选步枪。",
+    "weight": "12 g",
+    "volume": "250 ml",
+    "price": "65 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 50,
+    "stack_size": 50,
+    "ammo_type": "5mm",
+    "casing": "5mm_casing",
+    "range": 30,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 68,
+      "armor_penetration": 1
+    },
+    "dispersion": 30,
+    "recoil": 1500,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "5mmap",
+    "type": "AMMO",
+    "name": {
+      "str": "5mm 穿甲弹"
+    },
+    "description": "一种 5mm 穿甲弹，通常用于加特林和精选步枪。",
+    "weight": "12 g",
+    "volume": "250 ml",
+    "price": "65 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 50,
+    "stack_size": 50,
+    "ammo_type": "5mm",
+    "casing": "5mm_casing",
+    "range": 30,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 34,
+      "armor_penetration": 6
+    },
+    "dispersion": 30,
+    "recoil": 1500,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "5mmincendiary",
+    "type": "AMMO",
+    "name": {
+      "str": "5mm 燃烧弹"
+    },
+    "description": "5mm燃烧弹。星星之火，可以燎原。",
+    "weight": "12 g",
+    "volume": "250 ml",
+    "price": "65 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 50,
+    "stack_size": 50,
+    "ammo_type": "5mm",
+    "casing": "5mm_casing",
+    "range": 30,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 44,
+      "armor_penetration": 2
+    },
+    "dispersion": 30,
+    "recoil": 1500,
+    "effects": [
+      "COOKOFF",
+      "INCENDIARY"
+    ]
+  },
+  {
+    "id": "14mm",
+    "type": "AMMO",
+    "name": {
+      "str": "14mm Auto弹"
+    },
+    "description": "一种相当罕见且威力强大的手枪子弹，专门用于破甲。",
+    "weight": "13 g",
+    "volume": "250 ml",
+    "price": "29 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 20,
+    "stack_size": 20,
+    "ammo_type": "14mm",
+    "casing": "14mm_casing",
+    "range": 20,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 45,
+      "armor_penetration": 12
+    },
+    "dispersion": 30,
+    "recoil": 1570,
+    "effects": [
+      "COOKOFF"
+    ]
+  }
+]

@@ -1,0 +1,1224 @@
+[
+  {
+    "//": "TODO check text, change prem items and text for it, add trade",
+    "type": "npc",
+    "id": "NPC_moneylender",
+    "name_suffix": "放债人",
+    "gender": "male",
+    "class": "NC_moneylender",
+    "attitude": 1,
+    "mission": 3,
+    "chat": "TALK_moneylender_1",
+    "faction": "moneylender_gang"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_moneylender",
+    "name": {
+      "str": "moneylender"
+    },
+    "job_description": "moneylender.",
+    "common": false,
+    "bonus_str": {
+      "rng": [
+        0,
+        2
+      ]
+    },
+    "bonus_dex": {
+      "rng": [
+        0,
+        3
+      ]
+    },
+    "bonus_int": {
+      "rng": [
+        3,
+        5
+      ]
+    },
+    "bonus_per": {
+      "rng": [
+        1,
+        5
+      ]
+    },
+    "worn_override": "NC_moneylender_worn",
+    "weapon_override": "NC_moneylender_weapon",
+    "shopkeeper_item_group": "NC_moneylender_shop",
+    "traits": [
+      {
+        "group": "NPC_starting_traits"
+      },
+      {
+        "group": "Appearance_demographics"
+      },
+      {
+        "trait": "PAINRESIST"
+      }
+    ],
+    "skills": [
+      {
+        "skill": "melee",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "dodge",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "unarmed",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_moneylender_worn",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "suit"
+      },
+      {
+        "item": "tieclip"
+      },
+      {
+        "item": "socks_wool"
+      },
+      {
+        "item": "dress_shoes"
+      },
+      {
+        "item": "gold_watch"
+      },
+      {
+        "item": "tie_skinny"
+      },
+      {
+        "item": "cigar"
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_moneylender_weapon",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "cigar"
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_moneylender_shop",
+    "subtype": "collection",
+    "items": [
+      [
+        "FMCNote",
+        100
+      ]
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_moneylender_1"
+    ],
+    "dynamic_line": "你是谁，你想要什么？！",
+    "speaker_effect": [
+      {
+        "effect": [
+          {
+            "npc_add_var": "moneylender_met",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "moneylender_job",
+            "type": "flag",
+            "context": "meeting",
+            "value": "0"
+          },
+          {
+            "npc_add_var": "moneylender_job_turret",
+            "type": "flag",
+            "context": "meeting",
+            "value": "0"
+          }
+        ]
+      },
+      {
+        "sentinel": "met",
+        "effect": {
+          "add_mission": "MISSION_moneylender_0"
+        }
+      }
+    ],
+    "responses": [
+      {
+        "text": "我是来谈约翰尼的债务的。",
+        "topic": "TALK_moneylender_johnny",
+        "condition": {
+          "u_has_var": "bj_debt",
+          "type": "flag",
+          "context": "meeting",
+          "value": "yes"
+        }
+      },
+      {
+        "text": "我是来交易的。",
+        "topic": "TALK_moneylender_passing"
+      },
+      {
+        "text": "我是来收拾你的！",
+        "topic": "TALK_moneylender_nope"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_passing",
+    "dynamic_line": "所以，你想交易，嗯？帮我做些事来证明你是个好人，我会考虑的。我是个收藏家。如果你在旅行中发现一些珍贵的书籍，把它们带给我，也许我会考虑相信你。",
+    "responses": [
+      {
+        "text": "我会考虑的。",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_first_topic": "TALK_moneylender_2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_johnny",
+    "dynamic_line": "约翰尼派你来的？好吧，那就这么定了。约翰尼在<the_cataclysm>前欠我很多钱，我得要回来。你有两个选择：帮<name_g>付你的钱，1200个FMCNotes就够了，或者你可以帮我满足我的一些小癖好，我就忘了那个傻瓜的债务。我是个收藏家。如果你在旅行中发现一些珍贵的书籍，把它们带给我，也许我会考虑相信你。选择权在你。但是不要太久，否则你的<name_g>会失去他的脑袋，呵呵，你也可以选择帮助我让他失去他的脑袋…我会付钱给你，甚至可能让你买我的高档商品。",
+    "speaker_effect": {
+      "effect": [
+        {
+          "npc_add_var": "bj_debt_asked",
+          "type": "flag",
+          "context": "meeting",
+          "value": "yes"
+        },
+        {
+          "npc_add_var": "moneylender_job",
+          "type": "flag",
+          "context": "meeting",
+          "value": "0"
+        },
+        {
+          "npc_lose_var": "moneylender_job_done",
+          "type": "flag",
+          "context": "meeting"
+        }
+      ]
+    },
+    "responses": [
+      {
+        "text": "也许我只是踢你屁股？",
+        "topic": "TALK_moneylender_nope"
+      },
+      {
+        "text": "我会考虑的。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_first_topic": "TALK_moneylender_2"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_nope",
+    "dynamic_line": "你觉得自己很幽默？卫兵，修理他！",
+    "responses": [
+      {
+        "text": "让我们摇滚吧！",
+        "topic": "TALK_DONE",
+        "effect": [
+          "end_conversation",
+          {
+            "u_faction_rep": -100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_2",
+    "dynamic_line": {
+      "npc_has_var": "ml_crazy",
+      "type": "flag",
+      "context": "meeting",
+      "value": "yes",
+      "yes": {
+        "u_male": true,
+        "yes": "妈的，总算不是那个混蛋疯子了。你想要什么？",
+        "no": "妈的，总算不是那个疯婆子了。你想要什么？"
+      },
+      "no": {
+        "npc_has_var": "moneylender_job_done",
+        "type": "flag",
+        "context": "meeting",
+        "value": "yes",
+        "yes": "啊，我最喜欢的顾客。什么风把你吹来了？",
+        "no": "快点。我没时间闲聊了！"
+      }
+    },
+    "responses": [
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_moneylender_Background"
+      },
+      {
+        "text": "我是来谈约翰尼的债务的。",
+        "topic": "TALK_moneylender_johnny",
+        "condition": {
+          "and": [
+            {
+              "u_has_var": "bj_debt",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "bj_debt_asked",
+                "type": "flag",
+                "context": "meeting",
+                "value": "yes"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "我拿到你的钱了。[1200张商会币]",
+        "topic": "TALK_moneylender_debt",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "FMCNote",
+                "count": 1200
+              }
+            },
+            {
+              "u_has_var": "bj_debt",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            },
+            {
+              "npc_has_var": "bj_debt_asked",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_sell_item": "FMCNote",
+            "count": 1200
+          }
+        ]
+      },
+      {
+        "text": "我想卖点东西。",
+        "topic": "TALK_moneylender_2",
+        "condition": {
+          "or": [
+            {
+              "u_has_var": "bj_debt_repaid",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            },
+            {
+              "npc_has_var": "moneylender_job_done",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ]
+        },
+        "effect": "start_trade"
+      },
+      {
+        "text": "我想买点东西。",
+        "topic": "TALK_moneylender_trade",
+        "condition": {
+          "or": [
+            {
+              "u_has_var": "bj_debt_repaid",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            },
+            {
+              "npc_has_var": "moneylender_job_done",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ]
+        }
+      },
+      {
+        "text": "那么，我们结束了？",
+        "topic": "TALK_moneylender_debt1",
+        "condition": {
+          "and": [
+            {
+              "npc_has_var": "moneylender_job",
+              "type": "flag",
+              "context": "meeting",
+              "value": "2"
+            },
+            {
+              "u_has_var": "bj_debt",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            },
+            {
+              "npc_has_var": "bj_debt_asked",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ]
+        }
+      },
+      {
+        "text": "这是他的头。",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "boxer_johnny_head"
+            },
+            {
+              "npc_has_var": "bj_debt_asked",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ]
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "u_has_var": "bj_debt",
+            "type": "flag",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "success": {
+          "effect": [
+            {
+              "u_consume_item": "boxer_johnny_head"
+            },
+            {
+              "u_spawn_item": "FMCNote",
+              "count": 75
+            },
+            {
+              "npc_add_var": "moneylender_premium",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ],
+          "topic": "TALK_moneylender_debt"
+        },
+        "failure": {
+          "topic": "TALK_moneylender_bj_head",
+          "effect": [
+            {
+              "u_consume_item": "boxer_johnny_head"
+            }
+          ]
+        }
+      },
+      {
+        "text": "我有本书给你。",
+        "condition": {
+          "u_has_item": "collector_book"
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "or": [
+              {
+                "u_has_var": "bj_debt_repaid",
+                "type": "flag",
+                "context": "meeting",
+                "value": "yes"
+              },
+              {
+                "npc_has_var": "moneylender_job_done",
+                "type": "flag",
+                "context": "meeting",
+                "value": "yes"
+              }
+            ]
+          }
+        },
+        "success": {
+          "topic": "TALK_moneylender_share",
+          "effect": {
+            "u_consume_item": "collector_book"
+          }
+        },
+        "failure": {
+          "topic": "TALK_moneylender_book_more",
+          "effect": [
+            {
+              "u_consume_item": "collector_book"
+            },
+            {
+              "npc_adjust_var": "moneylender_job",
+              "type": "flag",
+              "context": "meeting",
+              "adjustment": 1
+            }
+          ]
+        }
+      },
+      {
+        "text": "我给你准备了一个炮塔。",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "bot_crows_m240"
+            },
+            {
+              "npc_compare_var": "moneylender_job_turret",
+              "type": "flag",
+              "context": "meeting",
+              "op": ">=",
+              "value": 0
+            }
+          ]
+        },
+        "topic": "TALK_moneylender_turret",
+        "effect": [
+          {
+            "u_consume_item": "bot_crows_m240"
+          },
+          {
+            "npc_adjust_var": "moneylender_job_turret",
+            "type": "flag",
+            "context": "meeting",
+            "adjustment": 1
+          }
+        ]
+      },
+      {
+        "text": "那高档货呢？",
+        "condition": {
+          "and": [
+            {
+              "npc_has_var": "moneylender_job_done",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            },
+            {
+              "or": [
+                {
+                  "npc_has_var": "moneylender_premium",
+                  "type": "flag",
+                  "context": "meeting",
+                  "value": "yes"
+                },
+                {
+                  "u_has_var": "bj_debt_repaid",
+                  "type": "flag",
+                  "context": "meeting",
+                  "value": "yes"
+                }
+              ]
+            }
+          ]
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "not": {
+              "npc_compare_time_since_var": "moneylender_premium_wait",
+              "type": "flag",
+              "context": "meeting",
+              "op": "<",
+              "time": "2 days"
+            }
+          }
+        },
+        "success": {
+          "topic": "TALK_moneylender_premium"
+        },
+        "failure": {
+          "topic": "TALK_moneylender_later"
+        }
+      },
+      {
+        "text": "你能再说一次你需要什么吗？",
+        "topic": "TALK_moneylender_open_store"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_bj_head",
+    "dynamic_line": "该死，你帮了你的<name_g>然后砍了他的头？你真是个疯子！来，拿着这个，拜托，滚出去！",
+    "responses": [
+      {
+        "text": "*露出最可怕的微笑*",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_add_var": "ml_crazy",
+            "type": "flag",
+            "context": "meeting",
+            "value": "yes"
+          },
+          {
+            "u_spawn_item": "FMCNote",
+            "count": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_debt",
+    "dynamic_line": "不错。他说，把自己从朋友的债务中解脱出来吧。如果你想赚更多的钱，或者花更多的钱，跟我说。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "u_lose_var": "bj_debt",
+            "type": "flag",
+            "context": "meeting"
+          },
+          {
+            "npc_lose_var": "moneylender_job",
+            "type": "flag",
+            "context": "meeting"
+          },
+          {
+            "u_add_var": "bj_debt_repaid",
+            "type": "flag",
+            "context": "meeting",
+            "value": "yes"
+          },
+          {
+            "npc_lose_var": "bj_debt_asked",
+            "type": "flag",
+            "context": "meeting"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_debt1",
+    "dynamic_line": "不错。他说，把自己从朋友的债务中解脱出来吧。如果你想交易，跟我说。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "u_lose_var": "bj_debt",
+            "type": "flag",
+            "context": "meeting"
+          },
+          {
+            "npc_lose_var": "moneylender_job",
+            "type": "flag",
+            "context": "meeting"
+          },
+          {
+            "u_add_var": "bj_debt_repaid",
+            "type": "flag",
+            "context": "meeting",
+            "value": "yes"
+          },
+          {
+            "npc_lose_var": "bj_debt_asked",
+            "type": "flag",
+            "context": "meeting"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_open_store",
+    "dynamic_line": "我是个收集书籍的收藏家。另外，我需要保护我的财产。为此，我需要自动炮塔。M240机枪炮塔就可以。你给我带足够多的书，我就给你开门。给我带足够多的书和炮塔，那我就会为你开放高级商店。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_Background",
+    "dynamic_line": {
+      "npc_has_var": "moneylender_job_done",
+      "type": "flag",
+      "context": "meeting",
+      "value": "yes",
+      "yes": "好吧，怎么说呢，我对数字一向很在行，尤其是在数钱的时候，他说。当丧尸开始崛起的时候，我和我信任的人在这里，在我可爱的庇护所里，远离外界。不知何故，这场瘟疫没有抓住我，所以现在我只能继续做我知道的，我擅长的。",
+      "no": "我说过我没时间闲聊！"
+    },
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_share",
+    "dynamic_line": "很好，很好。拿着这个，这是你应得的。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_NONE",
+        "effect": [
+          {
+            "mapgen_update": "moneylender_share",
+            "origin_npc": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "TODO change spawn point when make him unique building",
+    "type": "talk_topic",
+    "id": "TALK_moneylender_book_more",
+    "dynamic_line": "好吧，我接受。",
+    "responses": [
+      {
+        "text": "…",
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "npc_has_var": "moneylender_job",
+            "type": "flag",
+            "context": "meeting",
+            "value": "2"
+          }
+        },
+        "success": {
+          "topic": "TALK_NONE",
+          "effect": [
+            {
+              "npc_add_var": "moneylender_job_done",
+              "type": "flag",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ]
+        },
+        "failure": {
+          "topic": "TALK_NONE"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_turret",
+    "dynamic_line": "好吧，我接受。这是你的钱。",
+    "responses": [
+      {
+        "text": "不错。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "npc_compare_var": "moneylender_job_turret",
+          "type": "flag",
+          "context": "meeting",
+          "op": ">=",
+          "value": 6
+        },
+        "effect": {
+          "mapgen_update": "moneylender_share_turret",
+          "origin_npc": true
+        }
+      },
+      {
+        "text": "不错。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "npc_has_var": "moneylender_job_turret",
+          "type": "flag",
+          "context": "meeting",
+          "value": "5"
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_share_turret",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "不错。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "npc_has_var": "moneylender_job_turret",
+          "type": "flag",
+          "context": "meeting",
+          "value": "4"
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_share_turret",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "不错。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "npc_has_var": "moneylender_job_turret",
+          "type": "flag",
+          "context": "meeting",
+          "value": "3"
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_share_turret",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "不错。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "npc_has_var": "moneylender_job_turret",
+          "type": "flag",
+          "context": "meeting",
+          "value": "2"
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_share_turret",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "不错。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "npc_has_var": "moneylender_job_turret",
+          "type": "flag",
+          "context": "meeting",
+          "value": "1"
+        },
+        "effect": [
+          {
+            "npc_add_var": "moneylender_premium",
+            "type": "flag",
+            "context": "meeting",
+            "value": "yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "TODO add items",
+    "type": "talk_topic",
+    "id": "TALK_moneylender_premium",
+    "dynamic_line": {
+      "npc_has_var": "moneylender_premium_item",
+      "type": "flag",
+      "context": "meeting",
+      "value": "3",
+      "yes": "对不起，<name_g>，我现在没有东西给你。",
+      "no": {
+        "npc_has_var": "moneylender_premium_item",
+        "type": "flag",
+        "context": "meeting",
+        "value": "2",
+        "yes": "我这有本很厉害的武术书，卖1200商会币。你有兴趣吗？",
+        "no": {
+          "npc_has_var": "moneylender_premium_item",
+          "type": "flag",
+          "context": "meeting",
+          "value": "1",
+          "yes": "我这里有一把很酷的猎枪。价格是400商会币。你有兴趣吗？",
+          "no": "我这儿有个很牛的警察机器人。200商会币。你有兴趣吗？"
+        }
+      }
+    },
+    "speaker_effect": [
+      {
+        "sentinel": "moneylender_item_premium"
+      },
+      {
+        "effect": {
+          "npc_add_var": "moneylender_premium_item",
+          "type": "flag",
+          "context": "meeting",
+          "value": "0"
+        }
+      }
+    ],
+    "responses": [
+      {
+        "text": "这是买机器人的钱。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 200
+          }
+        },
+        "effect": [
+          {
+            "npc_add_var": "moneylender_premium_wait",
+            "type": "flag",
+            "context": "meeting",
+            "time": true
+          },
+          {
+            "npc_add_var": "moneylender_premium_item",
+            "type": "flag",
+            "context": "meeting",
+            "value": "1"
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 200
+          },
+          {
+            "u_spawn_item": "bot_copbot"
+          }
+        ]
+      },
+      {
+        "text": "这是买猎枪的钱。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "and": [
+            {
+              "npc_has_var": "moneylender_premium_item",
+              "type": "flag",
+              "context": "meeting",
+              "value": "1"
+            },
+            {
+              "u_has_items": {
+                "item": "FMCNote",
+                "count": 400
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "npc_add_var": "moneylender_premium_wait",
+            "type": "flag",
+            "context": "meeting",
+            "time": true
+          },
+          {
+            "npc_adjust_var": "moneylender_premium_item",
+            "type": "flag",
+            "context": "meeting",
+            "adjustment": 1
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 400
+          },
+          {
+            "u_spawn_item": "bio_shotgun"
+          }
+        ]
+      },
+      {
+        "text": "这是买书的钱。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "and": [
+            {
+              "npc_has_var": "moneylender_premium_item",
+              "type": "flag",
+              "context": "meeting",
+              "value": "2"
+            },
+            {
+              "u_has_items": {
+                "item": "FMCNote",
+                "count": 1200
+              }
+            }
+          ]
+        },
+        "effect": [
+          {
+            "npc_add_var": "moneylender_premium_wait",
+            "type": "flag",
+            "context": "meeting",
+            "time": true
+          },
+          {
+            "npc_adjust_var": "moneylender_premium_item",
+            "type": "flag",
+            "context": "meeting",
+            "adjustment": 1
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 1200
+          },
+          {
+            "u_spawn_item": "manual_silat"
+          }
+        ]
+      },
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_later",
+    "dynamic_line": "我现在没时间。过几天再来。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_moneylender_trade",
+    "dynamic_line": "所以，我有\n件225美元的军需品",
+    "responses": [
+      {
+        "text": "给我军用补给吧。",
+        "topic": "TALK_moneylender_trade",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 225
+          }
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_loot_army",
+            "origin_npc": true
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 225
+          }
+        ]
+      },
+      {
+        "text": "罐头食品。",
+        "topic": "TALK_moneylender_trade",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 20
+          }
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_loot_food",
+            "origin_npc": true
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 20
+          }
+        ]
+      },
+      {
+        "text": "中世纪的东西。",
+        "topic": "TALK_moneylender_trade",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 280
+          }
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_loot_antique_rare",
+            "origin_npc": true
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 280
+          }
+        ]
+      },
+      {
+        "text": "药房。",
+        "topic": "TALK_moneylender_trade",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 600
+          }
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_loot_drugs",
+            "origin_npc": true
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 600
+          }
+        ]
+      },
+      {
+        "text": "稀有武器。",
+        "topic": "TALK_moneylender_trade",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 600
+          }
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_loot_guns_police_rare",
+            "origin_npc": true
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 600
+          }
+        ]
+      },
+      {
+        "text": "近战武器。",
+        "topic": "TALK_moneylender_trade",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 140
+          }
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_loot_weapons",
+            "origin_npc": true
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 140
+          }
+        ]
+      },
+      {
+        "text": "武器。",
+        "topic": "TALK_moneylender_trade",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 350
+          }
+        },
+        "effect": [
+          {
+            "mapgen_update": "moneylender_loot_swat_gear",
+            "origin_npc": true
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 350
+          }
+        ]
+      },
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_moneylender_0",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "你见过放债人吗"
+    },
+    "goal": "MGOAL_CONDITION",
+    "difficulty": 0,
+    "value": 0,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    },
+    "fail": {
+      "effect": {
+        "u_spawn_item": "moneylender_head"
+      }
+    }
+  }
+]

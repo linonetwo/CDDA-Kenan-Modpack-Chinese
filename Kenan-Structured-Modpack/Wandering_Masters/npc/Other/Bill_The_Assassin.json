@@ -1,0 +1,360 @@
+[
+  {
+    "//": "TODO do all, write something not that lame please",
+    "type": "npc",
+    "id": "NPC_bill_the_assassin",
+    "name_unique": "账单",
+    "gender": "male",
+    "name_suffix": "刺客",
+    "class": "NC_bill_the_assassin",
+    "attitude": 0,
+    "mission": 10,
+    "chat": "bill_the_assassin_start",
+    "faction": "no_faction"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_bill_the_assassin",
+    "name": {
+      "str": "The Assassin"
+    },
+    "job_description": "The Assassin.",
+    "common": false,
+    "traits": [
+      {
+        "group": "NPC_starting_traits"
+      },
+      {
+        "group": "Appearance_demographics"
+      }
+    ],
+    "bonus_str": {
+      "rng": [
+        2,
+        5
+      ]
+    },
+    "bonus_dex": {
+      "rng": [
+        2,
+        6
+      ]
+    },
+    "bonus_int": {
+      "rng": [
+        3,
+        5
+      ]
+    },
+    "bonus_per": {
+      "rng": [
+        4,
+        5
+      ]
+    },
+    "worn_override": "NC_bill_the_assassin_worn",
+    "carry_override": "NC_bill_the_assassin_carried",
+    "skills": [
+      {
+        "skill": "melee",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "unarmed",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "stabbing",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "gun",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "pistol",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "shotgun",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "driving",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      }
+    ],
+    "bionics": [
+      {
+        "id": "bio_targeting",
+        "chance": 100
+      },
+      {
+        "id": "bio_shotgun",
+        "chance": 100
+      },
+      {
+        "id": "bio_carbon",
+        "chance": 100
+      },
+      {
+        "id": "bio_adrenaline",
+        "chance": 100
+      },
+      {
+        "id": "bio_night_vision",
+        "chance": 100
+      },
+      {
+        "id": "bio_face_mask",
+        "chance": 100
+      },
+      {
+        "id": "bio_metabolics",
+        "chance": 100
+      },
+      {
+        "id": "bio_power_storage_mkII",
+        "chance": 100
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_bill_the_assassin_worn",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "suit"
+      },
+      {
+        "item": "bowhat"
+      },
+      {
+        "item": "socks"
+      },
+      {
+        "item": "dress_shoes"
+      },
+      {
+        "item": "boxer_shorts"
+      },
+      {
+        "item": "knit_scarf"
+      },
+      {
+        "item": "kevlar"
+      },
+      {
+        "item": "boxer_shorts"
+      },
+      {
+        "item": "sunglasses"
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_bill_the_assassin_carried",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "glock_19",
+        "ammo-item": "9mm",
+        "container-item": "holster",
+        "charges": 15
+      },
+      {
+        "item": "glockmag",
+        "ammo-item": "9mm",
+        "charges": 15
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bill_the_assassin_bad"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "回答错误。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bill_the_assassin_start"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "所以，你偶然发现了我。我建议你离开这个地方，尽快逃走，除非你想在你的头上再钻一个洞。",
+    "responses": [
+      {
+        "text": "我是来收拾你的！",
+        "topic": "TALK_bill_the_assassin_bad"
+      },
+      {
+        "text": "我想跟你谈谈，比尔。",
+        "topic": "TALK_bill_the_assassin_talk"
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bill_the_assassin_talk"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "所以，你知道我的名字和怎么找到我。很有趣。我在听，但如果你说些我不喜欢的话，你马上就死定了。说吧。",
+    "responses": [
+      {
+        "text": "你准备受死吧！",
+        "topic": "TALK_bill_the_assassin_bad"
+      },
+      {
+        "text": "我来这里是因为有个警官想要你死。但他看起来不太可信，所以我想了解整个情况。",
+        "topic": "TALK_bill_the_assassin_talk1"
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bill_the_assassin_talk1"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "我为什么要告诉你？不如杀了你，做我自己的事情。",
+    "responses": [
+      {
+        "text": "真没礼貌，我要好好收拾你！",
+        "topic": "TALK_bill_the_assassin_bad"
+      },
+      {
+        "text": "因为，嗯，求你了？",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 8
+        },
+        "success": {
+          "topic": "TALK_bill_the_assassin_talk2"
+        },
+        "failure": {
+          "topic": "TALK_bill_the_assassin_bad"
+        }
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bill_the_assassin_talk2"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "嗯，如果你这么说的话，我会告诉你一些有趣的事情。我猜<name_g>让你把我的头拿回去。你问我怎么知道？那个警察<name_b>只想干掉你，把我的地下室洗劫一空！我在那里有一个秘密储藏室，只通过视网膜扫描才能打开，他为了能进去不择手段。我跟你讲，如果你杀了那个<name_b>，我就帮你打开门。我拿走我需要的，剩下都是你的。你怎么说，<name_g>？",
+    "responses": [
+      {
+        "text": "不，我要踢你的屁股！",
+        "topic": "TALK_bill_the_assassin_bad"
+      },
+      {
+        "text": "我会考虑的。",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_first_topic": "TALK_bill_the_assassin_talk3"
+          },
+          {
+            "u_add_var": "bill_the_assassin_basement",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bill_the_assassin_talk3"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "别浪费我的时间。",
+    "responses": [
+      {
+        "text": "我还是想收拾你一顿！",
+        "topic": "TALK_bill_the_assassin_bad"
+      },
+      {
+        "text": "警官死了。",
+        "topic": "TALK_bill_the_assassin_truth",
+        "condition": {
+          "and": [
+            {
+              "u_has_var": "police_teacher_dead",
+              "type": "general",
+              "context": "meeting",
+              "value": "yes"
+            },
+            {
+              "u_has_item": "pt_head"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bill_the_assassin_talk2"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "那很好。事实上，我在密室的事上撒了谎，我只是不想被任何人跟踪，特别是被一些痴迷的特工跟踪。但你拖延了你的协议，我尊重协议。拿着这本书。你会发现它很有用。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          "end_conversation",
+          {
+            "u_spawn_item": "manual_centipede"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TALK_ROBOFAC_FREE_MERCHANT_DOING",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "你怎么避开异种？",
+        "effect": {
+          "u_add_var": "u_Talk_To_Hub_Shopkeep_about_Xenoids",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "condition": {
+          "not": {
+            "u_has_var": "u_Talk_To_Hub_Shopkeep_about_Xenoids",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_ROBOFAC_FREE_MERCHANT_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_ROBOFAC_FREE_MERCHANT_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": "当你这些天在路上的时候，尽可能快地前进，不要让任何人或任何事阻止你到达你所在的地方，记住哪里可能有汽油。",
+    "responses": [
+      {
+        "text": "很好的建议。谢谢。",
+        "topic": "TALK_ROBOFAC_FREE_MERCHANT"
+      }
+    ]
+  }
+]

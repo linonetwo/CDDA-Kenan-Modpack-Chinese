@@ -1,0 +1,128 @@
+[
+  {
+    "id": "iv_mutagen_crab",
+    "copy-from": "iv_mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "蟹血清"
+    },
+    "color": "red",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射了坏死突变引物。",
+      "tools_needed": {
+        "syringe": -1
+      },
+      "vitamins": [
+        [
+          "mutagen_crab",
+          450,
+          550
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mutagen_crab",
+    "copy-from": "mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "蟹诱变剂"
+    },
+    "color": "red",
+    "vitamins": [
+      [
+        "mutagen_crab",
+        175
+      ],
+      [
+        "mutagen",
+        125
+      ]
+    ]
+  },
+  {
+    "id": "iv_mutagen_snake",
+    "copy-from": "iv_mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "蛇血清"
+    },
+    "color": "dark_gray",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射毒蛇突变引物。",
+      "tools_needed": {
+        "syringe": -1
+      },
+      "vitamins": [
+        [
+          "mutagen_snake",
+          450,
+          550
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mutagen_snake",
+    "copy-from": "mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "蛇诱变剂"
+    },
+    "color": "dark_gray",
+    "vitamins": [
+      [
+        "mutagen_snake",
+        175
+      ],
+      [
+        "mutagen",
+        125
+      ]
+    ]
+  },
+  {
+    "id": "iv_mutagen_rabbit",
+    "copy-from": "iv_mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "兔血清"
+    },
+    "color": "light_red",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射兔子突变引物。",
+      "tools_needed": {
+        "syringe": -1
+      },
+      "vitamins": [
+        [
+          "mutagen_rabbit",
+          450,
+          550
+        ]
+      ]
+    }
+  },
+  {
+    "id": "mutagen_rabbit",
+    "copy-from": "mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "兔诱变剂"
+    },
+    "color": "light_red",
+    "vitamins": [
+      [
+        "mutagen_rabbit",
+        175
+      ],
+      [
+        "mutagen",
+        125
+      ]
+    ]
+  }
+]

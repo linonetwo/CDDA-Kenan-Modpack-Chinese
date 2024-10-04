@@ -1,0 +1,103 @@
+[
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_REFUGEE_Alonso_1",
+      "TALK_REFUGEE_Boris_1",
+      "TALK_REFUGEE_Aleesha_1",
+      "TALK_REFUGEE_Draco_1",
+      "TALK_REFUGEE_Fatima_1",
+      "TALK_REFUGEE_Garry_1",
+      "TALK_REFUGEE_Guneet_1",
+      "TALK_REFUGEE_JENNY_1",
+      "TALK_REFUGEE_John_1",
+      "TALK_REFUGEE_Rhyzaea_1",
+      "TALK_REFUGEE_Stan_1",
+      "TALK_REFUGEE_Uyen_1",
+      "TALK_REFUGEE_Vanessa_1"
+    ],
+    "responses": [
+      {
+        "text": "想照顾这个女孩吗？她一个人在这个世界上，没有家人。",
+        "topic": "TALK_REFUGEE_Rosalyn_Hartley_NO",
+        "condition": {
+          "u_has_var": "Rosalyn_Hartley_alone",
+          "type": "flag",
+          "context": "alone",
+          "value": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_REFUGEE_Pablo_1",
+      "TALK_REFUGEE_Dana_1",
+      "TALK_REFUGEE_Mandeep_1",
+      "TALK_REFUGEE_Mangalpreet_1"
+    ],
+    "responses": [
+      {
+        "text": "想照顾这个女孩吗？她一个人在这个世界上，没有家人。",
+        "topic": "TALK_REFUGEE_Rosalyn_Hartley_YES",
+        "condition": {
+          "u_has_var": "Rosalyn_Hartley_alone",
+          "type": "flag",
+          "context": "alone",
+          "value": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Rosalyn_Hartley_NO",
+    "dynamic_line": "我在这里努力照顾自己，我不能照顾别人。我很抱歉。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_REFUGEE_Rosalyn_Hartley_YES",
+    "dynamic_line": "好吧，我们可以试试。",
+    "responses": [
+      {
+        "text": "谢谢你。给，拿着这个。它可以支付你一段时间的费用。",
+        "topic": "TALK_DONE",
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 35
+          }
+        },
+        "effect": [
+          {
+            "u_add_var": "Rosalyn_Hartley_alone",
+            "type": "flag",
+            "context": "alone",
+            "value": "no"
+          },
+          {
+            "u_sell_item": "FMCNote",
+            "count": 35
+          }
+        ]
+      },
+      {
+        "text": "谢谢你。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "u_add_var": "Rosalyn_Hartley_alone",
+          "type": "flag",
+          "context": "alone",
+          "value": "no"
+        }
+      }
+    ]
+  }
+]

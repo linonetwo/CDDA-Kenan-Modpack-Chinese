@@ -1,0 +1,493 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "gal792",
+    "name": "7.92x53mm 加利亚弹",
+    "default": "gal792_b"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "eur9mm",
+    "name": "9x 31毫米Euorpan",
+    "default": "9x31mm"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "imp762",
+    "name": "7.62x50mm帝国制步枪弹",
+    "default": "imp762_b"
+  },
+  {
+    "id": "gal792_b",
+    "looks_like": "308",
+    "type": "AMMO",
+    "name": {
+      "str": "7.92x53mm 加利亚弹"
+    },
+    "description": "加利亚军方专用的7.92x53弹壳。7.92口径的子弹在二手市场上很受欢迎，是克洛登森林猎人的武器。",
+    "weight": "15 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "price_postapoc": "8 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 25,
+    "stack_size": 25,
+    "ammo_type": "gal792",
+    "casing": "gal792_casing",
+    "range": 40,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 50,
+      "armor_penetration": 2
+    },
+    "dispersion": 20,
+    "recoil": 2000,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "reloaded_gal792_b",
+    "copy-from": "gal792_b",
+    "type": "AMMO",
+    "name": {
+      "str": "7.92x53mm 加利亚弹（复装）"
+    },
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.9
+      },
+      "dispersion": 1.1
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ],
+      "flags": [
+        "IRREPLACEABLE_CONSUMABLE"
+      ]
+    }
+  },
+  {
+    "id": "bp_gal792_b",
+    "copy-from": "gal792_b",
+    "type": "AMMO",
+    "name": {
+      "str": "7.92x53mm 加利亚弹（黑火药）"
+    },
+    "proportional": {
+      "price": 0.3,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.57,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.57,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ],
+      "flags": [
+        "IRREPLACEABLE_CONSUMABLE"
+      ]
+    }
+  },
+  {
+    "id": "gal792_b_ap",
+    "looks_like": "308",
+    "type": "AMMO",
+    "name": {
+      "str": "7.92x53mm 加利亚穿甲弹"
+    },
+    "description": "一种7.92x53弹夹，专为加利亚军方使用。7.92子弹在二手市场上很受欢迎，被用作克洛登荒野猎人的武器。这种特殊的变体有一个钢芯，赋予它额外的穿透能力。",
+    "weight": "15 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "price_postapoc": "14 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 25,
+    "stack_size": 25,
+    "ammo_type": "gal792",
+    "casing": "gal792_casing",
+    "range": 40,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 50,
+      "armor_penetration": 5
+    },
+    "dispersion": 20,
+    "recoil": 2000,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "gal792_casing",
+    "looks_like": "223_casing",
+    "copy-from": "casing",
+    "type": "GENERIC",
+    "name": {
+      "str": "7.92x53mm 加利亚弹壳"
+    },
+    "description": "一个7.92x53mm毫米加利亚弹的空弹壳。",
+    "weight": "6 g",
+    "volume": "7ml"
+  },
+  {
+    "id": "imp762_b",
+    "looks_like": "308",
+    "type": "AMMO",
+    "name": {
+      "str": "7.62x50mm帝国制步枪弹"
+    },
+    "description": "东欧帝国联盟专用的7.62x50mm毫米弹夹。7.62子弹以其停止能力而闻名，但比加里安弹稍不准确。",
+    "weight": "16 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "price_postapoc": "8 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 25,
+    "stack_size": 25,
+    "ammo_type": "imp762",
+    "casing": "imp762_casing",
+    "range": 40,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 53,
+      "armor_penetration": 3
+    },
+    "dispersion": 40,
+    "recoil": 2400,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "reloaded_imp762_b",
+    "copy-from": "imp762_b",
+    "type": "AMMO",
+    "name": {
+      "str": "7.62x50mm帝国制步枪弹（复装）"
+    },
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.9
+      },
+      "dispersion": 1.1
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ],
+      "flags": [
+        "IRREPLACEABLE_CONSUMABLE"
+      ]
+    }
+  },
+  {
+    "id": "bp_imp762_b",
+    "copy-from": "imp762_b",
+    "type": "AMMO",
+    "name": {
+      "str": "7.62x50mm帝国制步枪弹（黑火药）"
+    },
+    "proportional": {
+      "price": 0.3,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.57,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.57,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ],
+      "flags": [
+        "IRREPLACEABLE_CONSUMABLE"
+      ]
+    }
+  },
+  {
+    "id": "imp762_b_ap",
+    "looks_like": "308",
+    "type": "AMMO",
+    "name": {
+      "str": "7.62x50mm帝国制穿甲弹"
+    },
+    "description": "东欧帝国联盟专用的7.62x50mm毫米弹夹。7.62子弹以其停止能力而闻名，但比加里安弹稍不准确。这个变体有一个钢芯，以增加穿透效果。",
+    "weight": "16 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "price_postapoc": "14 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 25,
+    "stack_size": 25,
+    "ammo_type": "imp762",
+    "casing": "imp762_casing",
+    "range": 40,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 53,
+      "armor_penetration": 6
+    },
+    "dispersion": 40,
+    "recoil": 2400,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "imp762_casing",
+    "looks_like": "223_casing",
+    "copy-from": "casing",
+    "type": "GENERIC",
+    "name": {
+      "str": "7.62x50mm帝国制弹壳"
+    },
+    "description": "7.62x50mm毫米帝国弹的空弹壳。",
+    "weight": "6 g",
+    "volume": "7ml"
+  },
+  {
+    "id": "9x31mm",
+    "looks_like": "9mm",
+    "type": "AMMO",
+    "name": {
+      "str": "9x31mm 球形弹"
+    },
+    "description": "9x31mm球形弹，带有116克球形子弹。9x31mm弹药筒主要用于小型机枪和机枪，是整个欧罗巴地区唯一使用的弹药筒之一。",
+    "weight": "9 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "price_postapoc": "10 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 40,
+    "stack_size": 40,
+    "ammo_type": "eur9mm",
+    "casing": "9x31mm_casing",
+    "range": 24,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 30,
+      "armor_penetration": 2
+    },
+    "dispersion": 60,
+    "recoil": 1000,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "reloaded_9x31mm",
+    "copy-from": "9x31mm",
+    "type": "AMMO",
+    "name": {
+      "str": "9x31mm球形弹（复装）"
+    },
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.9
+      },
+      "dispersion": 1.1
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ],
+      "flags": [
+        "IRREPLACEABLE_CONSUMABLE"
+      ]
+    }
+  },
+  {
+    "id": "bp_9x31mm",
+    "copy-from": "9x31mm",
+    "type": "AMMO",
+    "name": {
+      "str": "9x31mm 球形弹（黑火药）"
+    },
+    "proportional": {
+      "price": 0.3,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ],
+      "flags": [
+        "IRREPLACEABLE_CONSUMABLE"
+      ]
+    }
+  },
+  {
+    "id": "9x31mm_casing",
+    "copy-from": "casing",
+    "looks_like": "9mm_casing",
+    "type": "GENERIC",
+    "name": {
+      "str": "9x31mm 弹壳"
+    },
+    "description": "9x31mm子弹的空弹壳。",
+    "weight": "4 g",
+    "volume": "5ml"
+  },
+  {
+    "id": "gal792_clip",
+    "looks_like": "mp5mag",
+    "//": "Tileset whitelist for speedloaders.",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "加利亚 7.92x53mm五发弹匣"
+    },
+    "description": "此夹可容纳5发7.92x53mm加利安枪。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "price_postapoc": "1 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "gal792"
+    ],
+    "capacity": 5,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "gal792": 5
+        }
+      }
+    ],
+    "flags": [
+      "SPEEDLOADER"
+    ]
+  },
+  {
+    "id": "imp762_clip",
+    "looks_like": "mp5mag",
+    "//": "Tileset whitelist for speedloaders.",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "英制7.62x50mm五圆夹"
+    },
+    "description": "此夹可容纳5发7.62x50mm英制子弹。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "price_postapoc": "1 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "imp762"
+    ],
+    "capacity": 5,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "imp762": 5
+        }
+      }
+    ],
+    "flags": [
+      "SPEEDLOADER"
+    ]
+  }
+]

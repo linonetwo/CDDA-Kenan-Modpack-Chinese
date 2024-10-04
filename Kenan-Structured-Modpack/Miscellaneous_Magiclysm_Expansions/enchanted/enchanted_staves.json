@@ -1,0 +1,1170 @@
+[
+  {
+    "type": "TOOL",
+    "abstract": "staff_magic",
+    "name": {
+      "str": "魔法短杖"
+    },
+    "price": "40 USD",
+    "material": [
+      "wood"
+    ],
+    "symbol": "/",
+    "color": "brown",
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "SWEEP"
+    ],
+    "flags": [
+      "BELT_CLIP",
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR",
+      "ALWAYS_TWOHAND",
+      "MAGIC_FOCUS"
+    ],
+    "weight": "1400 g",
+    "description": "A fake item for all staves.",
+    "volume": "3 L",
+    "melee_damage": { "bash": 19},
+    "category": "weapons",
+    "to_hit": 3,
+    "charges_per_use": 1,
+    "ammo": [
+      "crystallized_mana"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "small_mana_crystal"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_magic_missile",
+    "name": {
+      "str": "魔法飞弹短杖",
+      "str_pl": "魔法飞弹短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是魔法飞弹。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "magic_missile",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_magic_missile",
+    "name": {
+      "str": "高级魔法飞弹短杖",
+      "str_pl": "高级魔法飞弹短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是魔法飞弹。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "magic_missile",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_gravity_well",
+    "name": {
+      "str": "重力井短杖",
+      "str_pl": "重力井短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是重力井。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "gravity_well",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_gravity_well",
+    "name": {
+      "str": "高级重力井短杖",
+      "str_pl": "高级重力井短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是重力井。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "gravity_well",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_mana_blast",
+    "name": {
+      "str": "魔力冲击短杖",
+      "str_pl": "魔力冲击短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是魔力冲击。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "magus_mana_blast",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_mana_blast",
+    "name": {
+      "str": "高级魔力冲击短杖",
+      "str_pl": "高级魔力冲击短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一根木棍棒，头部有法力水晶套，激活后可以施法。这根棍棒可以施放魔力冲击。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "magus_mana_blast",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_fireball",
+    "name": {
+      "str": "火球术短杖",
+      "str_pl": "火球术短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一根细长的木制法杖，头部有一个魔力水晶插槽，激活可以施放一次火球术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "fireball",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_fireball",
+    "name": {
+      "str": "高级火球术短杖",
+      "str_pl": "高级火球术短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是火球术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "fireball",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_point_flare",
+    "name": {
+      "str": "定点炎爆短杖",
+      "str_pl": "定点炎爆短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是定点炎爆。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "point_flare",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_point_flare",
+    "name": {
+      "str": "高级定点炎爆短杖",
+      "str_pl": "高级定点炎爆短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是定点炎爆。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "point_flare",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_ice_spike",
+    "name": {
+      "str": "冰刺短杖",
+      "str_pl": "冰刺短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是冰刺。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "ice_spike",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_ice_spike",
+    "name": {
+      "str": "高级冰刺短杖",
+      "str_pl": "高级冰刺短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是冰刺。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "ice_spike",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_hoaryblast",
+    "name": {
+      "str": "白霜冲击短杖",
+      "str_pl": "白霜冲击短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是白霜冲击。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "hoary_blast",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_hoaryblast",
+    "name": {
+      "str": "高级白霜冲击短杖",
+      "str_pl": "高级白霜冲击短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是白霜冲击。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "hoary_blast",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_summon_zombie",
+    "name": {
+      "str": "召唤丧尸短杖",
+      "str_pl": "召唤丧尸短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤丧尸。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "summon_zombie",
+      "no_fail": true,
+      "level": 15,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_summon_zombie",
+    "name": {
+      "str": "高级召唤丧尸短杖",
+      "str_pl": "高级召唤丧尸短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤丧尸。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "summon_zombie",
+      "no_fail": true,
+      "level": 30,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_summon_skeleton",
+    "name": {
+      "str": "召唤骷髅短杖",
+      "str_pl": "召唤骷髅短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤骷髅。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "summon_skeleton",
+      "no_fail": true,
+      "level": 15,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_summon_skeleton",
+    "name": {
+      "str": "高级召唤骷髅短杖",
+      "str_pl": "高级召唤骷髅短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤骷髅。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "summon_skeleton",
+      "no_fail": true,
+      "level": 30,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_decayed_pouncer",
+    "name": {
+      "str": "召唤腐朽突袭兽短杖",
+      "str_pl": "召唤腐朽突袭兽短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤腐朽突袭兽。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "summon_decayed_pouncer",
+      "no_fail": true,
+      "level": 15,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_decayed_pouncer",
+    "name": {
+      "str": "高级召唤腐朽突袭兽短杖",
+      "str_pl": "高级召唤腐朽突袭兽短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤腐朽突袭兽。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "summon_decayed_pouncer",
+      "no_fail": true,
+      "level": 30,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_summon_wisps",
+    "name": {
+      "str": "召唤鬼火短杖",
+      "str_pl": "召唤鬼火短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤鬼火。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "summon_wisps",
+      "no_fail": true,
+      "level": 15,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_summon_wisps",
+    "name": {
+      "str": "高级召唤鬼火短杖",
+      "str_pl": "高级召唤鬼火短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤鬼火。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "summon_wisps",
+      "no_fail": true,
+      "level": 30,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_veggrasp",
+    "name": {
+      "str": "藤蔓缠绕短杖",
+      "str_pl": "藤蔓缠绕短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是藤蔓缠绕。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "druid_veggrasp",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_veggrasp",
+    "name": {
+      "str": "高级藤蔓缠绕短杖",
+      "str_pl": "高级藤蔓缠绕短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是藤蔓缠绕。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "druid_veggrasp",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_rootstrike",
+    "name": {
+      "str": "树根穿刺短杖",
+      "str_pl": "树根穿刺短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是树根穿刺。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "druid_rootstrike",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_rootstrike",
+    "name": {
+      "str": "高级树根穿刺短杖",
+      "str_pl": "高级树根穿刺短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是树根穿刺。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "druid_rootstrike",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_fungicide",
+    "name": {
+      "str": "真菌杀手短杖",
+      "str_pl": "真菌杀手短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是真菌杀手。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "fungicide",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_fungicide",
+    "name": {
+      "str": "高级真菌杀手短杖",
+      "str_pl": "高级真菌杀手短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是真菌杀手。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "fungicide",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_regrowth",
+    "name": {
+      "str": "沃血重萌短杖",
+      "str_pl": "沃血重萌短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是沃血重萌。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "druidic_regrowth",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_regrowth",
+    "name": {
+      "str": "高级沃血重萌短杖",
+      "str_pl": "高级沃血重萌短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是沃血重萌。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "druidic_regrowth",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_druidic_healing",
+    "name": {
+      "str": "舍己济人短杖",
+      "str_pl": "舍己济人短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是舍己济人。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "druidic_healing",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_druidic_healing",
+    "name": {
+      "str": "高级舍己济人短杖",
+      "str_pl": "高级舍己济人短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是舍己济人。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "druidic_healing",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_shardspray",
+    "name": {
+      "str": "碎片喷射短杖",
+      "str_pl": "碎片喷射短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是碎片喷射。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "eshaper_shardspray",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_shardspray",
+    "name": {
+      "str": "高级碎片喷射短杖",
+      "str_pl": "高级碎片喷射短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是碎片喷射。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "eshaper_shardspray",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_piercing_bolt",
+    "name": {
+      "str": "穿刺箭短杖",
+      "str_pl": "穿刺箭短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是穿刺箭。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "eshaper_piercing_bolt",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_piercing_bolt",
+    "name": {
+      "str": "高级穿刺箭短杖",
+      "str_pl": "高级穿刺箭短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是穿刺箭。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "eshaper_piercing_bolt",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_move_earth",
+    "name": {
+      "str": "移土术短杖",
+      "str_pl": "移土术短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是移土术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "move_earth",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_move_earth",
+    "name": {
+      "str": "高级移土术短杖",
+      "str_pl": "高级移土术短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是移土术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "move_earth",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "//": "This stave's recipe shall be of greater difficulty and material requirement in ratio to others of it's kind, due to the spell's potency. Place within a seperate recipe book.",
+    "id": "stave_lava_bomb",
+    "name": {
+      "str": "熔岩炸弹短杖",
+      "str_pl": "熔岩炸弹短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是熔岩炸弹。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "lava_bomb_main",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "//": "This stave's recipe shall be of greater difficulty and material requirement in ratio to others of it's kind, due to the spell's potency. Place within a seperate recipe book.",
+    "id": "gstave_lava_bomb",
+    "name": {
+      "str": "高级熔岩炸弹短杖",
+      "str_pl": "高级熔岩炸弹短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一个头部有魔法水晶插座的木制冷却壁，启动时会施放一个咒语。这个冷却壁铸造熔岩炸弹。当一个人被要求毁灭世界时，那是多么美妙。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "lava_bomb_main",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_lightning_bolt",
+    "name": {
+      "str": "闪电束短杖",
+      "str_pl": "闪电束短杖"
+    },
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是闪电术。",
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "lightning_bolt",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_lightning_bolt",
+    "name": {
+      "str": "高级闪电束短杖",
+      "str_pl": "高级闪电束短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是闪电术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "lightning_bolt",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_lightning_blast",
+    "name": {
+      "str": "闪电冲击短杖",
+      "str_pl": "闪电冲击短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是闪电冲击。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "lightning_blast",
+      "no_fail": true,
+      "level": 15,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_lightning_blast",
+    "name": {
+      "str": "高级闪电冲击短杖",
+      "str_pl": "高级闪电冲击短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是闪电冲击。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "lightning_blast",
+      "no_fail": true,
+      "level": 30,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_lightning_storm",
+    "name": {
+      "str": "闪电风暴短杖",
+      "str_pl": "闪电风暴短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是闪电风暴。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "lightning_storm",
+      "no_fail": true,
+      "level": 15,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_lightning_storm",
+    "name": {
+      "str": "高级闪电风暴短杖",
+      "str_pl": "高级闪电风暴短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是闪电风暴。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "lightning_storm",
+      "no_fail": true,
+      "level": 30,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_wall_of_fog",
+    "name": {
+      "str": "雾墙术短杖",
+      "str_pl": "雾墙术短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是雾墙术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "stormshaper_wall_of_fog",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_wall_of_fog",
+    "name": {
+      "str": "高级雾墙术短杖",
+      "str_pl": "高级雾墙术短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是雾墙术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "stormshaper_wall_of_fog",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_laze",
+    "name": {
+      "str": "激光术短杖",
+      "str_pl": "激光术短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是激光术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "laze",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_laze",
+    "name": {
+      "str": "高级激光术短杖",
+      "str_pl": "高级激光术短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是激光术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "laze",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_quantum_tunnel_lesser",
+    "name": {
+      "str": "次级隧穿术短杖",
+      "str_pl": "次级隧穿术短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是次级隧穿术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "quantum_tunnel_lesser",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_quantum_tunnel_lesser",
+    "name": {
+      "str": "高级次级隧穿术短杖",
+      "str_pl": "高级次级隧穿术短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是次级隧穿术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "quantum_tunnel_lesser",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_animated_blade",
+    "name": {
+      "str": "魔剑苏生短杖",
+      "str_pl": "魔剑苏生短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是魔剑苏生。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "animated_blade",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_animated_blade",
+    "name": {
+      "str": "高级魔剑苏生短杖",
+      "str_pl": "高级魔剑苏生短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是魔剑苏生。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "animated_blade",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_overcharge_eyes",
+    "name": {
+      "str": "喷嚏激光术短杖",
+      "str_pl": "喷嚏激光术短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是喷嚏激光术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "overcharge_eyes",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_overcharge_eyes",
+    "name": {
+      "str": "高级喷嚏激光术短杖",
+      "str_pl": "高级喷嚏激光术短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是喷嚏激光术。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "overcharge_eyes",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_bio_acidicspray",
+    "name": {
+      "str": "酸液喷射短杖",
+      "str_pl": "酸液喷射短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是酸液喷射。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "bio_acidicspray",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_bio_acidicspray",
+    "name": {
+      "str": "高级酸液喷射短杖",
+      "str_pl": "高级酸液喷射短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是酸液喷射。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "bio_acidicspray",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_visceral_projection",
+    "name": {
+      "str": "脏腑四射短杖 ",
+      "str_pl": "脏腑四射短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是脏腑四射。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "biomancer_visceral_projection",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_visceral_projection",
+    "name": {
+      "str": "高级脏腑四射短杖",
+      "str_pl": "高级脏腑四射短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是脏腑四射。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "biomancer_visceral_projection",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_paralytic_dart",
+    "name": {
+      "str": "麻痹毒刺短杖",
+      "str_pl": "麻痹毒刺短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是麻痹毒刺。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "biomancer_paralytic_dart",
+      "no_fail": true,
+      "level": 10,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_paralytic_dart",
+    "name": {
+      "str": "高级麻痹毒刺短杖",
+      "str_pl": "高级麻痹毒刺短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是麻痹毒刺。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "biomancer_paralytic_dart",
+      "no_fail": true,
+      "level": 20,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "stave_zompack",
+    "name": {
+      "str": "召唤丧尸群短杖",
+      "str_pl": "召唤丧尸群短杖"
+    },
+    "copy-from": "staff_magic",
+    "description": "一种细木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤丧尸群。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "mass_summon_zombie",
+      "no_fail": true,
+      "level": 12,
+      "need_wielding": true
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "gstave_zompack",
+    "name": {
+      "str": "高级召唤丧尸群短杖",
+      "str_pl": "高级召唤丧尸群短杖"
+    },
+    "copy-from": "staff_magic",
+    "price": "200 USD",
+    "description": "一种木杖，头部有魔力水晶插槽，激活时施放一次法术。这一根施放的是召唤丧尸群。",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "mass_summon_zombie",
+      "no_fail": true,
+      "level": 25,
+      "need_wielding": true
+    }
+  }
+]

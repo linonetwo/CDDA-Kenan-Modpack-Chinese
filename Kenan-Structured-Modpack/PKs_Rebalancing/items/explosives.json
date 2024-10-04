@@ -1,0 +1,127 @@
+[
+  {
+    "id": "manhack_firebomb",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "曼哈克燃烧弹"
+    },
+    "description": "这是一个安装在检修孔内的燃烧弹，并被操纵，以便检修孔能自动激活它。这个是活动的。",
+    "weight": "180 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "*",
+    "color": "red",
+    "use_action": {
+      "target": "manhack_firebomb_act",
+      "target_charges": 1,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "BOMB"
+    ]
+  },
+  {
+    "id": "manhack_firebomb_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "曼哈克燃烧弹"
+    },
+    "description": "这是一个酸弹安装在一个检修孔和操纵，使检修孔可以自我激活它。由于人孔爆炸，有效半径稍大。",
+    "weight": "180 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "glass",
+      "plastic"
+    ],
+    "symbol": "*",
+    "color": "red",
+    "initial_charges": 1,
+    "max_charges": 1,
+    "turns_per_charge": 1,
+    "countdown_action": {
+      "type": "explosion",
+      "fields_type": "fd_fire",
+      "fields_radius": 3,
+      "fields_min_intensity": 1,
+      "fields_max_intensity": 3
+      },
+    "flags": [
+      "BOMB"
+    ]
+  },
+  {
+    "id": "soulbomb",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "灵魂之躯"
+    },
+    "description": "哈哈哈！",
+    "weight": "236 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [
+      "diamond"
+    ],
+    "symbol": "*",
+    "color": "white",
+    "use_action": {
+      "target": "soulbomb_on",
+      "msg": "一台电脑显示器以极快的速度向你飞来！",
+      "target_charges": 3,
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "BOMB"
+    ]
+  },
+  {
+    "id": "soulbomb_on",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "活跃的灵魂世界"
+    },
+    "description": "哈哈哈！",
+    "weight": "236 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [
+      "diamond"
+    ],
+    "symbol": "*",
+    "color": "white",
+    "initial_charges": 1,
+    "max_charges": 1,
+    "turns_per_charge": 1,
+    "countdown_action": {
+      "type": "explosion",
+      "fields_type": "fd_laser",
+      "fields_radius": 2,
+      "fields_min_intensity": 3,
+      "fields_max_intensity": 3,
+      "explosion": {
+        "power": 20,
+        "distance_factor": 0.2,
+        "shrapnel": 40
+      }
+    }
+  }
+]

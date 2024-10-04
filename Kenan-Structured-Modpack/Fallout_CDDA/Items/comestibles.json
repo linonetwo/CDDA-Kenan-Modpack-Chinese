@@ -1,0 +1,1843 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka",
+    "name": {
+      "str": "核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 18,
+    "healthy": -1,
+    "addiction_potential": 2,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝点努卡可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "calories": 26,
+    "description": "核子可乐，是废土人的首选饮料。这是好东西，再搭配番铃薯就更好了！",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 7
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_newka",
+    "name": {
+      "str": "纽卡可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 7,
+    "stim": 3,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 28,
+    "healthy": -1,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "核子可乐，废土人的首选饮料。这东西很恶心，因为在番铃薯大饥荒期间食谱发生了变化。只是淡化了。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": -7
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_quantum",
+    "name": {
+      "str": "量子核子可乐"
+    },
+    "weight": "260 g",
+    "color": "blue",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 142,
+    "stim": 54,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 18,
+    "healthy": -6,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝点Nuka可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 7,
+    "calories": 52,
+    "description": "量子核子可乐。这些东西在大灾变前刚刚发布，据说非常有活力。副作用可能包括蓝尿、轻度放射性发光和成瘾。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 14
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "stick_iguana",
+    "name": {
+      "str": "棍子上的鬣蜥"
+    },
+    "weight": "56 g",
+    "color": "red",
+    "spoils_in": "720 days",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -3,
+    "calories": 174,
+    "description": "鬣蜥做的肉干。鲍勃的专长！和Nuka可乐搭配很好。（注：并非由实际鬣蜥制成）",
+    "price": 900,
+    "material": [
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "flags": [
+      "EDIBLE_FROZEN"
+    ],
+    "charges": 2,
+    "fun": 10
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "stick_iguana_premiumh",
+    "name": {
+      "str": "高级剪裁“鬣蜥”"
+    },
+    "weight": "56 g",
+    "color": "red",
+    "spoils_in": "720 days",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -3,
+    "calories": 174,
+    "container": "box_small",
+    "description": "优质鬣蜥肉干，调味后与一些腌制蔬菜混合。好像有点不对劲…但味道真的很好！。（注：并非由实际鬣蜥制成）",
+    "price": 900,
+    "material": [
+      "hflesh",
+      "veggy"
+    ],
+    "volume": "250 ml",
+    "flags": [
+      "EDIBLE_FROZEN"
+    ],
+    "charges": 2,
+    "fun": 40
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "stick_iguana_premium",
+    "name": {
+      "str": "优质鬣蜥"
+    },
+    "weight": "56 g",
+    "color": "red",
+    "spoils_in": "720 days",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -3,
+    "calories": 174,
+    "container": "box_small",
+    "description": "优质鬣蜥肉干，用腌制蔬菜调味。味道真不错！。（注：并非由实际鬣蜥制成）",
+    "price": 900,
+    "material": [
+      "flesh",
+      "veggy"
+    ],
+    "volume": "250 ml",
+    "flags": [
+      "EDIBLE_FROZEN"
+    ],
+    "charges": 2,
+    "fun": 40
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival",
+    "name": {
+      "str": "生存蛋卷"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 386,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。一顿丰盛的早餐。",
+    "price": 500,
+    "material": [
+      "egg",
+      "fruit",
+      "veggy",
+      "milk",
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 40,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival_cheese",
+    "name": {
+      "str": "芝士生存蛋卷"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 450,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。一顿丰盛的早餐。现在是奶酪。",
+    "price": 500,
+    "material": [
+      "egg",
+      "fruit",
+      "veggy",
+      "milk",
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 50,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival_spicy",
+    "name": {
+      "str": "麻辣生存蛋卷"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 450,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。一顿丰盛的早餐。现在有了更多的热量。",
+    "price": 500,
+    "material": [
+      "egg",
+      "fruit",
+      "veggy",
+      "milk",
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 50,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival_deluxe",
+    "name": {
+      "str": "豪华生存煎蛋"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 550,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。一顿丰盛的早餐。现在加上热和奶酪。现在不算是一顿丰盛的饭了，但它太棒了。",
+    "price": 500,
+    "material": [
+      "egg",
+      "fruit",
+      "veggy",
+      "milk",
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 80,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival_milkless",
+    "name": {
+      "str": "无奶生存煎蛋"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 386,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。这个用水代替牛奶。因为这样，鸡蛋有点淡，但是你能做什么呢？",
+    "price": 500,
+    "material": [
+      "egg",
+      "fruit",
+      "veggy",
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 35,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival_meatless",
+    "name": {
+      "str": "素食生存蛋卷"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 386,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。如果你喜欢这种东西的话，这个缺肉。",
+    "price": 500,
+    "material": [
+      "egg",
+      "fruit",
+      "veggy",
+      "milk"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 35,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival_fruitless",
+    "name": {
+      "str": "无果生存煎蛋"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 386,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。这个缺水果。它不太好吃，但在无果季节更容易制作",
+    "price": 500,
+    "material": [
+      "egg",
+      "veggy",
+      "milk",
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 35,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival_vegan",
+    "name": {
+      "str": "半素食生存蛋卷"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 286,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。这个缺肉缺奶。如果不是为了鸡蛋，那就是一顿素食。不过，它更平淡。",
+    "price": 500,
+    "material": [
+      "egg",
+      "veggy",
+      "fruit"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 25,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "omelette_survival_vegan_nofruit",
+    "name": {
+      "str": "无果半素食生存煎蛋"
+    },
+    "weight": "116 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "container": "wrapper",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 186,
+    "description": "一种大的煎蛋卷，由容易觅食的食物制成。这个缺肉缺奶。如果不是为了鸡蛋，那就是一顿素食。水果也被拿了出来。现在更平淡了。至少它更容易制作。",
+    "price": 500,
+    "material": [
+      "egg",
+      "veggy"
+    ],
+    "volume": "250 ml",
+    "charges": 6,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 5,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_orange",
+    "name": {
+      "str": "柳橙可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 25,
+    "healthy": -7,
+    "addiction_potential": 2,
+    "calories": 24,
+    "description": "核子可乐，废土居民旅途中的首选饮料，现已推出浓郁柳橙味，一口飞赴佛罗里达！",
+    "price": 123,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了些纽卡可乐橙汁。",
+      "effects": [
+        {
+          "id": "badpoison",
+          "duration": 100
+        },
+        {
+          "id": "drunk",
+          "duration": 100
+        }
+      ]
+    },
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -78,
+    "fun": 13
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_cherry",
+    "name": {
+      "str": "樱桃可乐"
+    },
+    "weight": "260 g",
+    "color": "red",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 21,
+    "healthy": -1,
+    "addiction_potential": 4,
+    "calories": 34,
+    "description": "核子可乐，废土居民旅途中的首选饮料，现已推出樱桃味！",
+    "price": 110,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 10
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_grape",
+    "name": {
+      "str": "葡萄可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 42,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 23,
+    "healthy": -4,
+    "addiction_potential": 4,
+    "calories": 26,
+    "description": "核子可乐，废土居民旅途中的首选饮料，现已推出葡萄味，百香果和葡萄的结合真的是美味爽口！",
+    "price": 140,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 12
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_cranberry",
+    "name": {
+      "str": "蔓越莓核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 42,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 15,
+    "healthy": -9,
+    "addiction_potential": 1,
+    "calories": 26,
+    "description": "核子可乐，废土居民旅途中的首选饮料，现已推出蔓越莓味，这种口味原本专供阿巴拉契亚，但很快就来到了新英格兰！",
+    "price": 160,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 5
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_dark",
+    "name": {
+      "str": "黑暗核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "alchohol",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_plastic_nukadark",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 27,
+    "healthy": -5,
+    "addiction_potential": 6,
+    "use_action": [
+      "ALCOHOL_STRONG"
+    ],
+    "calories": 42,
+    "description": "核子可乐，废土居民旅途中的首选饮料，这种口味是朗姆酒和核子可乐的混合，公司希望借此吸引更多的成年人。",
+    "price": 140,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 9
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_quartz",
+    "name": {
+      "str": "石英可乐"
+    },
+    "weight": "260 g",
+    "color": "yellow",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 32,
+    "healthy": -7,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝点努卡可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 7,
+    "calories": 53,
+    "description": "核子可乐，废土居民旅途中的首选饮料，本口味外观呈现石英状，实际则由多达17种水果调和而成！",
+    "price": 176,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 17
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_victory",
+    "name": {
+      "str": "胜利可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 45,
+    "healthy": -4,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了一些Nuka可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 5,
+    "calories": 42,
+    "description": "核子可乐，废土居民旅途中的首选饮料，如果让美国爱国者来尝一尝，那就是一瓶胜利型核子可乐！",
+    "price": 194,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 25
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_wild",
+    "name": {
+      "str": "荒野可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 26,
+    "healthy": -3,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝点野可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 4,
+    "calories": 34,
+    "description": "这种口味是努卡可乐公司试图与日落萨萨帕里拉竞争，但由于日落萨萨帕里拉在西方更受欢迎，它未能做到这一点。",
+    "price": 99,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 16
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_black",
+    "name": {
+      "str": "黑暗可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 19,
+    "healthy": -6,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了一些努卡可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 6,
+    "calories": 36,
+    "description": "核子可乐，废土居民旅途中的首选饮料，这种口味是咖啡和核子可乐的混合，官方并未发售，但有一名男子从新英格兰窃取了配方，并开始大规模生产。",
+    "price": 124,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 16
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_clear",
+    "name": {
+      "str": "清爽核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": -21,
+    "healthy": -8,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了些无糖可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 2,
+    "calories": 65,
+    "description": "核子可乐，废土居民旅途中的首选饮料，柠檬酸橙口味，尚未正式发售，但有一名男子从新英格兰窃取了配方，并开始大规模生产。",
+    "price": 156,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 23
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_berry",
+    "name": {
+      "str": "核子可乐浆果口味"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 28,
+    "healthy": 2,
+    "addiction_potential": 8,
+    "calories": 16,
+    "description": "这种口味的努卡可乐是由努卡可乐樱桃和努卡葡萄混合而成，非常可口。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 17
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_fusion",
+    "name": {
+      "str": "聚变可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 24,
+    "healthy": -8,
+    "addiction_potential": 4,
+    "calories": 62,
+    "description": "聚变可乐是一种奇怪的混合物，由一个叫Phil的家伙发明，他在废土里给所有的Nuka Cola机器补货，尝起来是只有Phil自己知道的未知味道。",
+    "price": 134,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 12
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cherry_nuka_cola",
+    "name": {
+      "str": "核子可乐 樱桃味"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 7,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 17,
+    "healthy": -6,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝些樱桃可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 1,
+    "calories": 62,
+    "description": "樱桃味核子可乐是核子可乐公司第一次创造樱桃口味核子可乐的尝试，这无疑是一个巨大的失败, 事实证明樱桃口味直到核子可乐-樱桃推出前都不会成功。",
+    "price": 134,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": -7
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_classic",
+    "name": {
+      "str": "经典核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 18,
+    "healthy": -1,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了一些经典的努卡可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "这是在纽卡可乐（newka-cola）在商业上失败后，重新回到原来的配方，现在装在一个新瓶子里。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 12
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_bombdrop",
+    "name": {
+      "str": "爆炸可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "alcohol",
+    "fatigue_mod": 32,
+    "stim": 5,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 56,
+    "healthy": -9,
+    "addiction_potential": 10,
+    "use_action": [
+      "ALCOHOL_STRONG"
+    ],
+    "calories": 26,
+    "description": "Nuka Bombdrop 是将酒精饮料与 黑暗核子可乐 和普通 核子可乐 混合的结果。",
+    "price": 23,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 19
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_love",
+    "name": {
+      "str": "恋爱可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 10,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 26,
+    "healthy": -5,
+    "addiction_potential": 4,
+    "calories": 26,
+    "description": "Nuka Love是将Nuka Cola石英和Nuka Cola樱桃结合在一起的结果，创造出非常可口的风味组合。",
+    "price": 12,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 16
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_buzz",
+    "name": {
+      "str": "骚动可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 12,
+    "stim": 17,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 35,
+    "healthy": -2,
+    "addiction_potential": 6,
+    "calories": 26,
+    "description": "Nuka Buzz是用两种核子可乐原汁混合而成的，闻起来像是另一种常见的混合饮料，双料沙士。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 16
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_cide",
+    "name": {
+      "str": "超杀可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 76,
+    "healthy": -17,
+    "addiction_potential": 12,
+    "calories": 26,
+    "description": "Nuka Cide是市售核子可乐所有口味的混合而成的。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 23
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_cooler",
+    "name": {
+      "str": "凉爽型核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 18,
+    "healthy": -1,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "凉爽型核子可乐是胜利型、石英、量子三种核子可乐混合而成，非常美味。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 34
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_fancy",
+    "name": {
+      "str": "幻想可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 42,
+    "healthy": -1,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "这是野可乐和樱桃可乐的混合物。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 15
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_free",
+    "name": {
+      "str": "自由可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 12,
+    "healthy": -8,
+    "addiction_potential": 1,
+    "calories": 26,
+    "description": "这是努卡可乐和脏水的混合物，味道糟透了。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "use_action": [
+      "BLECH_BECAUSE_UNCLEAN"
+    ],
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": -10
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_wild_concentrated",
+    "name": {
+      "str": "浓缩核子可乐荒野口味"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 18,
+    "healthy": -1,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了一些浓缩的努卡可乐。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 6,
+    "calories": 32,
+    "description": "这是3种努卡可乐野味的组合，高度浓缩，非常美味",
+    "price": 99,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD",
+      "RADIOACTIVE"
+    ],
+    "freezing_point": -50,
+    "fun": 16
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_frutti",
+    "name": {
+      "str": "香果可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 32,
+    "healthy": 2,
+    "addiction_potential": 4,
+    "calories": 13,
+    "description": "果味核子可乐是将核子可乐的三大水果口味混合而成，味道鲜美。",
+    "price": 84,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 9
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_hearty",
+    "name": {
+      "str": "爽朗可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 23,
+    "healthy": 3,
+    "addiction_potential": 7,
+    "calories": 56,
+    "description": "Nuka Hearty是一种由塔托、胡萝卜花和两种Nuka可乐混合而成的饮料，如果没有其他东西的话，它可以作为一顿丰盛的晚餐。",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 12
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_lixir",
+    "name": {
+      "str": "万灵可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 25,
+    "healthy": 95,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "Nuka Lixir最初是作为一种药物设计的，非常具有治疗作用。",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝点努卡烈酒。",
+      "effects": [
+        {
+          "id": "pkill1",
+          "duration": 720
+        }
+      ]
+    },
+    "price": 123,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 13
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_power",
+    "name": {
+      "str": "动力可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 32,
+    "healthy": -3,
+    "addiction_potential": 5,
+    "calories": 24,
+    "description": "Nuka Power是一种普通的Nuka可乐和2种Nuka可乐混合在一起，非常强悍爽口。",
+    "use_action": [
+      "ALCOHOL_STRONG"
+    ],
+    "price": 128,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 29
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_punch",
+    "name": {
+      "str": "重击可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 27,
+    "healthy": 46,
+    "addiction_potential": 4,
+    "calories": 26,
+    "description": "Nuka Punch是Nuka可乐的3种主要水果口味和一种Nuka可乐石英，非常美味健康。",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝点努卡酒。",
+      "effects": [
+        {
+          "id": "pkill1",
+          "duration": 900
+        }
+      ]
+    },
+    "price": 123,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 26
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_ray",
+    "name": {
+      "str": "光明可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 25,
+    "healthy": 76,
+    "addiction_potential": 5,
+    "calories": 42,
+    "description": "Nuka Ray是胜利和Nuka可乐橙的混合，非常美味健康。",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了一些光明可乐。",
+      "effects": [
+        {
+          "id": "pkill1",
+          "duration": 800
+        }
+      ]
+    },
+    "price": 123,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 16
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_rush",
+    "name": {
+      "str": "冲刺可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 25,
+    "healthy": -4,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "Nuka Rush是一款介于Nuka Cola Wild和Nuka Cola Victory之间的混搭产品，它尝起来像是美国的爱国主义和狂野的西方，发布后立刻获得了成功。",
+    "price": 125,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 17
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_sunrise",
+    "name": {
+      "str": "日出可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 38,
+    "healthy": 1,
+    "addiction_potential": 6,
+    "calories": 26,
+    "description": "Nuka Sunrise是Nuka Cola Orange和Nuka Cola Cherry的混合物，非常美味。",
+    "price": 176,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 24
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_twin",
+    "name": {
+      "str": "双胞胎可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 28,
+    "healthy": 4,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "Nuka Twin是普通Nuka可乐和野生Nuka可乐的混合，它有一种独特的味道，被形容为日落萨萨帕里拉和Nuka可乐的融合。",
+    "price": 123,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 17
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_void",
+    "name": {
+      "str": "空虚可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 29,
+    "healthy": -2,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "Nuka Void是Nuka Cola Dark和Nuka Cola Quantum的混合物，两种口味相互稳定，创造完美平衡。",
+    "use_action": [
+      "ALCOHOL_WEAK"
+    ],
+    "price": 132,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 18
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_xtreme",
+    "name": {
+      "str": "至尊可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 36,
+    "healthy": -3,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "Nuka Xtreme是由Nuka葡萄、Nuka可乐和Nuka Cola Quantum混合而成，其风味独特，深受许多人喜爱。",
+    "price": 123,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 15
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_dc",
+    "name": {
+      "str": "双樱桃核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 28,
+    "healthy": 4,
+    "addiction_potential": 5,
+    "calories": 42,
+    "description": "双料樱桃核子可乐是樱桃核子可乐和核子可乐樱桃味的混合物，双份樱桃，双份风味。",
+    "price": 125,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 18
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_rad",
+    "name": {
+      "str": "辐射可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 23,
+    "healthy": -10,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "Nuka Rad最初是作为一种清洁产品设计的，Nuka Cola公司试图将其产品扩展到苏打水之外，然后人们开始饮用它。",
+    "use_action": [
+      "SEWAGE"
+    ],
+    "price": 123,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 15
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_lime",
+    "name": {
+      "str": "酸橙核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": -12,
+    "healthy": 0,
+    "addiction_potential": 4,
+    "calories": 28,
+    "description": "核子可乐，废土居民旅途中的首选饮料，现已推出酸橙味！",
+    "price": 95,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 9
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "sunset_sarsaparilla",
+    "name": {
+      "str": "日落沙士"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_sarsaparilla",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 35,
+    "healthy": -2,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了一些夕阳沙士。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 5
+        }
+      ]
+    },
+    "addiction_potential": 6,
+    "calories": 21,
+    "description": "核子可乐在西部的主要竞争对手，其沙士风味独当一面，也是其成功的巨大因素之一。",
+    "price": 76,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 14
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "sunset_sarsaparilla_double",
+    "name": {
+      "str": "双重沙士"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 12,
+    "container": "bottle_glass_sarsaparilla",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 60,
+    "healthy": -4,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了双份萨萨帕里拉。",
+      "effects": [
+        {
+          "id": "irradiated",
+          "duration": 10
+        }
+      ]
+    },
+    "addiction_potential": 9,
+    "calories": 42,
+    "description": "双重沙士是由两种日落沙士混合而成的自制饮料，在西部很受欢迎。",
+    "price": 76,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 28
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cola_nuka_qv",
+    "name": {
+      "str": "量子虚空核子可乐"
+    },
+    "weight": "260 g",
+    "color": "brown",
+    "addiction_type": "caffeine",
+    "fatigue_mod": 32,
+    "stim": 13,
+    "container": "bottle_glass_nuka",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 46,
+    "healthy": -8,
+    "addiction_potential": 2,
+    "calories": 26,
+    "description": "量子虚空核子可乐是虚空核子可乐和量子核子可乐的混合物，非常可口，令人耳目一新。",
+    "price": 187,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "freezing_point": -50,
+    "fun": 19
+  }
+]

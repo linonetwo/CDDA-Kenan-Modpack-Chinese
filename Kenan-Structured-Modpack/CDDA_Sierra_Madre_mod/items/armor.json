@@ -1,0 +1,405 @@
+[
+  {
+    "id": "assassin_suit",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "潜行服"
+    },
+    "description": "在大山脉研究所设计的轻便、坚固的战斗服。这是中国在战争中使用的反工程隐形装甲的第一个工作原型。虽然还远没有达到完美的程度，但它以低廉的负担成本为佩戴者提供了一个像样的保护，允许快速而精确的行动。包含捆绑，耐用袋，可以存储相当多的东西，以及3个弹匣袋。",
+    "weight": "3895 g",
+    "volume": "14500 ml",
+    "price": "10000 USD",
+    "price_postapoc": "500 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar_layered",
+      "steel",
+      "plastic"
+    ],
+    "symbol": "A",
+    "looks_like": "lsurvivor_suit",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": true,
+        "max_contains_volume": "6 L",
+        "max_contains_weight": "4 kg",
+        "moves": 100
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 40,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "warmth": 20,
+    "flags": [
+      "POCKETS",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 100,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 9
+  },
+  {
+    "id": "sierra_armor",
+    "repairs_like": "survivor_suit",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "马德雷赌场警卫护甲"
+    },
+    "description": "马德雷安保人员穿的防护服。类似于特警装甲或防暴装甲，但更轻。在它的背面有一个“安全”大字，上面印着黄色的字母。",
+    "weight": "5600 g",
+    "volume": "12 L",
+    "price": "5000 USD",
+    "price_postapoc": "300 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar_layered",
+      "leather"
+    ],
+    "symbol": "[",
+    "looks_like": "swat_armor",
+    "color": "light_gray",
+    "armor": [
+      {
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          10,
+          20
+        ]
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 35,
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "STURDY"
+    ],
+    "material_thickness": 10,
+    "environmental_protection": 4
+  },
+  {
+    "id": "sierra_helmet",
+    "repairs_like": "xlkevlar",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "马德雷警卫头盔"
+    },
+    "description": "一顶黑色头盔，它覆盖这整个头部和颈部，保护佩戴者免受各种伤害。它提供的保护非常轻。最初是马德雷赌场安保人员穿戴的。",
+    "weight": "754 g",
+    "volume": "2 L",
+    "price": "1000 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar_rigid",
+      "plastic"
+    ],
+    "symbol": "[",
+    "looks_like": "tac_fullhelmet",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 100,
+        "encumbrance": 15
+      },
+      {
+        "covers": [
+          "eyes"
+        ],
+        "coverage": 100,
+        "encumbrance": 5
+      },
+      {
+        "covers": [
+          "mouth"
+        ],
+        "coverage": 100,
+        "encumbrance": 10
+      }
+    ],
+    "warmth": 15,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "SUN_GLASSES"
+    ],
+    "material_thickness": 5,
+    "environmental_protection": 2
+  },
+  {
+    "id": "sierra_armor_reinforced",
+    "repairs_like": "survivor_suit",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "强化马德雷警卫装甲"
+    },
+    "description": "一个标准的马德雷山盔甲加固版，为最重要的警卫负责保护赌场本身。在它的背面有一个“安全”字，上面印着黄色的字母。",
+    "weight": "6750 g",
+    "volume": "13 L",
+    "price": "6000 USD",
+    "price_postapoc": "400 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar_layered",
+      "leather"
+    ],
+    "symbol": "[",
+    "looks_like": "swat_armor",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          12,
+          24
+        ]
+      }
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 35,
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "STURDY"
+    ],
+    "material_thickness": 11,
+    "environmental_protection": 4
+  },
+  {
+    "id": "sierra_helmet_reinforced",
+    "repairs_like": "xlkevlar",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "强化马德雷警卫头盔"
+    },
+    "description": "标准Sierra Madre安全头盔的加固版，专为负责保护赌场本身的最重要警卫而设计。",
+    "weight": "865 g",
+    "volume": "2 L",
+    "price": "1500 USD",
+    "price_postapoc": "200 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar_rigid",
+      "plastic"
+    ],
+    "symbol": "[",
+    "looks_like": "tac_fullhelmet",
+    "color": "dark_gray",
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ],
+        "coverage": 100,
+        "encumbrance": 20
+      },
+      {
+        "covers": [
+          "eyes"
+        ],
+        "coverage": 100,
+        "encumbrance": 5
+      },
+      {
+        "covers": [
+          "mouth"
+        ],
+        "coverage": 100,
+        "encumbrance": 10
+      }
+    ],
+    "warmth": 15,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "SUN_GLASSES"
+    ],
+    "material_thickness": 6,
+    "environmental_protection": 2
+  },
+  {
+    "id": "ghost_suit",
+    "repairs_like": "hazmat_suit",
+    "type": "ARMOR",
+    "name": {
+      "str": "鬼人防护服"
+    },
+    "description": "鬼人穿的一种防护服。虽然坚固有效，但它无法抵御红雾，这种红雾根本无解。仅仅死的快或慢罢了，所有人都会死。",
+    "weight": "6500 g",
+    "volume": "17 L",
+    "price": "1850 USD",
+    "price_postapoc": "30 USD",
+    "material": [
+      "plastic",
+      "leather"
+    ],
+    "symbol": "[",
+    "looks_like": "anbc_suit",
+    "color": "light_green",
+    "warmth": 45,
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "RAINPROOF",
+      "GAS_PROOF",
+      "RAD_PROOF",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 42,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 6,
+    "environmental_protection": 25
+  }
+]

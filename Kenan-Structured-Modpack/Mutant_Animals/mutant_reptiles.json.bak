@@ -1,0 +1,334 @@
+[
+  {
+    "abstract": "mon_snake_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "变异蛇"
+    },
+    "description": "一条变异的蛇类。",
+    "default_faction": "small_animal",
+    "species": [
+      "MUTANT"
+    ],
+    "diff": 1,
+    "volume": "750 ml",
+    "weight": "1000 g",
+    "hp": 12,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "s",
+    "color": "brown",
+    "aggression": -50,
+    "morale": 60,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 1,
+    "vision_day": 30,
+    "vision_night": 5,
+    "harvest": "animal_noskin",
+    "anger_triggers": [
+      "HURT"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_snake_sick_molting",
+    "copy-from": "mon_snake_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "蜕皮蛇"
+    },
+    "description": "一条真在蜕下老皮的变异蛇。虽然它现在又虚弱又容易受伤，但这条蛇仍然可以造成剧毒咬伤。",
+    "color": "light_green",
+    "upgrades": {
+      "half_life": 30,
+      "into_group": "GROUP_SNAKE_MUTANT"
+    },
+    "extend": {
+      "flags": [
+        "VENOM"
+      ]
+    }
+  },
+  {
+    "id": "mon_snake_mutant_jaculus",
+    "copy-from": "mon_snake_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "枪蛇",
+      "str_pl": "枪蛇"
+    },
+    "description": "一条长成蟒蛇大小的变异蛇。它可以像一个巨大的弹簧一样展开身体，向猎物发起攻击。",
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 40,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 6,
+    "dodge": 4,
+    "speed": 200,
+    "color": "blue",
+    "aggression": 50,
+    "morale": 50,
+    "vision_night": 5,
+    "anger_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "attack_effs": [
+      {
+        "id": "grabbed",
+        "duration": 1000,
+        "bp": "torso"
+      }
+    ],
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 20,
+        "max_range": 15
+      },
+      {
+        "type": "monster_attack",
+        "attack_type": "melee",
+        "cooldown": 15,
+        "move_cost": 100,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 25,
+            "armor_multiplier": 0.5
+          }
+        ],
+        "hit_dmg_u": "The %1$s strangles you with it's body!",
+        "hit_dmg_npc": "The %1$s strangles <npcname> with it's body!",
+        "miss_msg_u": "The %s tries to strangle you, but you dodge!",
+        "miss_msg_npc": "The %s tries to strangle <npcname>, but they dodge!"
+      }
+    ]
+  },
+  {
+    "id": "mon_snake_mutant_bone",
+    "copy-from": "mon_snake_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "骨蛇"
+    },
+    "description": "一条长成蟒蛇大小的变异蛇。骨板覆盖在它的身体上，它同时用坚硬的喙状嘴和毒牙噬咬猎物。",
+    "harvest": "animal_boneplate",
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 80,
+    "armor_bash": 8,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 10,
+    "dodge": 4,
+    "speed": 100,
+    "color": "white",
+    "aggression": 30,
+    "morale": 50,
+    "anger_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE",
+      "SOUND",
+      "HURT"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 25,
+        "duration": 100
+      }
+    ]
+  },
+  {
+    "id": "mon_snake_mutant_frostbite",
+    "copy-from": "mon_snake_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "寒牙蛇"
+    },
+    "description": "一条变异的蛇，携带强力毒液。它的咬伤会导致组织萎缩和坏死，类似于冻伤。",
+    "hp": 20,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 4,
+    "dodge": 4,
+    "speed": 300,
+    "color": "cyan",
+    "aggression": 50,
+    "morale": 10,
+    "attack_effs": [
+      {
+        "id": "frostbite",
+        "chance": 50,
+        "duration": 100
+      }
+    ]
+  },
+  {
+    "id": "mon_frog_devil",
+    "copy-from": "mon_frog_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "恶魔蛙"
+    },
+    "description": "一只变异牛蛙，长着锯齿状的牙齿和角。据说它鲜红的皮肤会产生致幻毒素。",
+    "species": [
+      "ABERRATION"
+    ],
+    "hp": 200,
+    "speed": 100,
+    "symbol": "D",
+    "color": "dark_gray_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 4,
+    "melee_dice_sides": 8,
+    "melee_cut": 3,
+    "dodge": 3,
+    "armor_bash": 12,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 50,
+    "vision_night": 10,
+    "upgrades": {
+      "half_life": 364,
+      "into": "mon_gamma_toad"
+    },
+    "special_attacks": [
+      [
+        "SMASH",
+        100
+      ],
+      [
+        "RANGED_PULL",
+        10
+      ],
+      { "id": "grab_drag", "cooldown":10
+      },
+      {
+        "type": "leap",
+        "cooldown": 10,
+        "max_range": 10,
+        "allow_no_target": false
+      }
+    ],
+    "flags": [
+      "BASHES",
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_gamma_toad",
+    "type": "MONSTER",
+    "copy-from": "mon_frog_giant",
+    "name": {
+      "str": "伽玛蟾蜍"
+    },
+    "description": "一只已经变异成放射性巨型怪物的普通蟾蜍。它充满了高温、不稳定能量以及恶意。",
+    "species": [
+      "ABERRATION"
+    ],
+    "diff": 8,
+    "volume": "875000 ml",
+    "weight": "200000 g",
+    "hp": 350,
+    "luminance": 4,
+    "speed": 110,
+    "attack_cost": 50,
+    "symbol": "G",
+    "color": "dark_gray_red",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 4,
+    "melee_dice_sides": 8,
+    "melee_cut": 3,
+    "dodge": 3,
+    "armor_bash": 12,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 50,
+    "vision_night": 10,
+    "emit_fields": [
+      "emit_nuclear_trail"
+    ],
+    "special_attacks": [
+      [
+        "SHOCKSTORM",
+        300
+      ],
+      [
+        "SMASH",
+        30
+      ],
+      [
+        "RANGED_PULL",
+        10
+      ],
+      { "id": "grab_drag", "cooldown":10
+      },
+      {
+        "type": "leap",
+        "cooldown": 10,
+        "max_range": 10,
+        "allow_no_target": false
+      }
+    ],
+    "death_drops": "gamma_toad_death_drops",
+    "flags": [
+      "SEES",
+      "SLUDGEPROOF",
+      "ACID_BLOOD",
+      "ACIDPROOF",
+      "NO_BREATHE",
+      "PRIORITIZE_TARGETS",
+      "HEARS",
+      "FIREPROOF",
+      "ELECTRIC",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "DESTROYS",
+      "ATTACKMON",
+      "POISON",
+      "PATH_AVOID_DANGER_2"
+    ]
+  }
+]

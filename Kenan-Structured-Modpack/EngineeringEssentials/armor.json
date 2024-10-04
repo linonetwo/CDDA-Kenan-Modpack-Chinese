@@ -1,0 +1,173 @@
+[
+  {
+    "id": "bandolier_rifle",
+    "type": "ARMOR",
+    "name": {
+      "str": "步枪子弹带"
+    },
+    "description": "一个皮革子弹带，保证步枪子弹随手可得。",
+    "weight": "140 g",
+    "volume": "250 ml",
+    "price": "19 USD",
+    "price_postapoc": "15 USD",
+    "material": [
+      "leather"
+    ],
+    "symbol": "[",
+    "looks_like": "leather_belt",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "ammo_restriction": {
+          "22": 16,
+          "50": 16,
+          "223": 16,
+          "300": 16,
+          "308": 16,
+          "762": 16,
+          "3006": 16,
+          "4570": 16,
+          "270win": 16,
+          "300blk": 16,
+          "5x50": 16,
+          "545x39": 16,
+          "762R": 16,
+          "8x40mm": 16,
+          "700nx": 16,
+          "metal_rail": 16
+        },
+        "moves": 20
+      }
+    ],
+    "flags": [
+      "WATER_FRIENDLY",
+      "WAIST",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 10,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "id": "bandolier_wrist",
+    "type": "ARMOR",
+    "name": {
+      "str": "步枪子弹腕带"
+    },
+    "description": "一个小型皮革子弹带，保证步枪子弹随手可得。设计穿在手腕上。",
+    "weight": "30 g",
+    "volume": "250 ml",
+    "price": "29 USD",
+    "price_postapoc": 500,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "leather_belt",
+    "color": "dark_gray",
+    "sided": true,
+    "pocket_data": [
+      {
+        "ammo_restriction": {
+          "22": 4,
+          "50": 4,
+          "223": 4,
+          "300": 4,
+          "308": 4,
+          "762": 4,
+          "3006": 4,
+          "4570": 4,
+          "270win": 4,
+          "300blk": 4,
+          "5x50": 4,
+          "545x39": 4,
+          "762R": 4,
+          "8x40mm": 4,
+          "700nx": 4,
+          "metal_rail": 4
+        },
+        "moves": 20
+      }
+    ],
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED",
+      "ALLOWS_NATURAL_ATTACKS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 5,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "id": "goggles_welding",
+    "type": "ARMOR",
+    "name": {
+      "str": "电焊护目镜",
+      "str_pl": "电焊护目镜"
+    },
+    "copy-from": "goggles_welding",
+    "description": "一副深色护目镜。让你看不太清四周，但能够保护你免受眩光影响。激活以升起。",
+    "use_action": {
+      "type": "transform",
+      "msg": "你将你的%s移到额头上。",
+      "target": "goggles_welding_forehead",
+      "menu_text": "移至前额"
+    }
+  },
+  {
+    "id": "goggles_welding_forehead",
+    "type": "ARMOR",
+    "name": {
+      "str": "电焊护目镜（升起）",
+      "str_pl": "电焊护目镜（升起）"
+    },
+    "description": "一副戴在前额的深色护目镜。目前状态无法保护你免受眩光影响，激活以遮住眼睛。",
+    "weight": "153 g",
+    "volume": "250 ml",
+    "price": "14 USD",
+    "to_hit": -3,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 5,
+    "use_action": {
+      "type": "transform",
+      "msg": "你移动你的%s以护住眼睛。",
+      "target": "goggles_welding",
+      "menu_text": "护住眼睛"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE",
+      "ALLOWS_NATURAL_ATTACKS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 15,
+        "covers": [
+          "head"
+        ]
+      }
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 6
+  }
+]

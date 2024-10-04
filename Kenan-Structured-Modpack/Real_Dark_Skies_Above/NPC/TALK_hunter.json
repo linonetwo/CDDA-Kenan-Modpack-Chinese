@@ -1,0 +1,34 @@
+[
+  {
+    "id": "TALK_EVAC_HUNTER",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "topic": "TALK_EVAC_HUNTER_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_EVAC_HUNTER_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": "我遇到过一些“护林员”和“执法者”类型的人，但我通常一听到他们就朝另一个方向走，因为他们可能也能听到我的声音。我看到他们更多的是把手放在周围，好像他们在施某种魔法，我知道这可能是魔法。我可不想留下来看看。",
+    "responses": [
+      {
+        "text": "流浪狗呢？",
+        "topic": "TALK_EVAC_HUNTER_STRAYS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_EVAC_HUNTER_STRAYS",
+    "type": "talk_topic",
+    "dynamic_line": "和丧尸没什么区别，不过他们在晚上的视力似乎比普通丧尸好一点。",
+    "responses": [
+      {
+        "text": "有意思。",
+        "topic": "TALK_EVAC_HUNTER"
+      }
+    ]
+  }
+]

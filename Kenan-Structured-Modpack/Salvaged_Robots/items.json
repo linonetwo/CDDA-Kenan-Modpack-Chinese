@@ -1,0 +1,1658 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "necro_head",
+    "category": "other",
+    "name": {
+      "str": "坏死之颅"
+    },
+    "weight": "760 g",
+    "color": "dark_gray",
+    "looks_like": "etched_skull",
+    "spoils_in": "24 hours",
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": -50,
+    "nutrition": 1,
+    "description": "死灵法尸被砍下的头颅。它的眼睛仍旧在头颅中四处张望，它的大口仍旧呲牙咧嘴四处攀咬。",
+    "material": [
+      "hflesh"
+    ],
+    "volume": "2500 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "fun": -150
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "elixir",
+    "name": {
+      "str": "诱变胶"
+    },
+    "description": "一团胶状的诱变剂。",
+    "category": "mutagen",
+    "comestible_type": "FOOD",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "weight": "250 g",
+    "volume": "250 ml",
+    "symbol": "%",
+    "color": "light_green",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "注入诱变催化剂。",
+      "tools_needed": {
+        "syringe": -1
+      },
+      "vitamins": [
+        [
+          "mutagen",
+          750,
+          850
+        ]
+      ]
+    },
+    "healthy": 1,
+    "addiction_potential": 6,
+    "addiction_type": "mutagen"
+  },
+  {
+    "id": "honey",
+    "type": "COMESTIBLE",
+    "//": "uncontained so it can bleed to the ground.",
+    "symbol": "~",
+    "color": "yellow",
+    "name": {
+      "str_sp": "蜂蜜"
+    },
+    "description": "一些蜂蜜，蜜蜂酿制的蜜。",
+    "price": 800,
+    "material": [
+      "honey"
+    ],
+    "weight": "63 g",
+    "volume": "250 ml",
+    "comestible_type": "DRINK",
+    "quench": 2,
+    "calories": 61,
+    "charges": 5,
+    "healthy": 1,
+    "fun": 3,
+    "phase": "liquid"
+  },
+  {
+    "id": "schematics_tripod",
+    "type": "BOOK",
+    "name": {
+      "str_sp": "三足机器人原理图"
+    },
+    "description": "印有本田标志的三足机器人组合施工图、设计规范以及技术图纸。其中大部分没什么用了，但是可以根据组合施工图回收零部件重新组装机器人。",
+    "copy-from": "schematics_generic"
+  },
+  {
+    "id": "schematics_chickenbot",
+    "type": "BOOK",
+    "name": {
+      "str_sp": "双足机器人原理图"
+    },
+    "description": "印有诺斯罗普标志的双足机器人组合施工图、设计规范以及技术图纸。其中大部分没什么用了，但是可以根据组合施工图回收零部件重新组装机器人。",
+    "copy-from": "schematics_generic"
+  },
+  {
+    "id": "schematics_tankbot",
+    "type": "BOOK",
+    "name": {
+      "str_sp": "坦克无人机原理图"
+    },
+    "description": "印有诺斯罗普标志的坦克无人机组合施工图、设计规范以及技术图纸。其中大部分没什么用了，但是可以根据组合施工图回收零部件重新组装机器人。",
+    "copy-from": "schematics_generic"
+  },
+  {
+    "id": "textbook_robots",
+    "type": "BOOK",
+    "name": {
+      "str": "入侵无人机简单学",
+      "str_pl": "入侵无人机手册简单学"
+    },
+    "description": "一本关于非法入侵、重新编程和改装机器人的书。它有很多有用的步骤指南和示例蓝图。",
+    "weight": "2063 g",
+    "volume": "2 L",
+    "price": "10 USD",
+    "price_postapoc": "10 USD",
+    "bashing": 8,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "color": "blue",
+    "skill": "electronics",
+    "required_level": 6,
+    "max_level": 10,
+    "intelligence": 13,
+    "time": 55,
+    "fun": 0
+  },
+  {
+    "id": "mag_robotics",
+    "type": "BOOK",
+    "name": {
+      "str": "大众机器人杂志",
+      "str_pl": "大众机器人杂志"
+    },
+    "description": "一本关于制造和改装机器人的杂志。",
+    "weight": "45 g",
+    "volume": "250 ml",
+    "price": 450,
+    "price_postapoc": 100,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "color": "pink",
+    "skill": "electronics",
+    "max_level": 1,
+    "intelligence": 5,
+    "time": 8,
+    "fun": 1
+  },
+  {
+    "id": "robopart_ai_core",
+    "type": "GENERIC",
+    "copy-from": "robopart_base",
+    "name": {
+      "str": "AI核心"
+    },
+    "description": "一个用来控制机器人的计算机模块。",
+    "color": "white"
+  },
+  {
+    "id": "robopart_surgery",
+    "type": "GENERIC",
+    "copy-from": "robopart_base",
+    "name": {
+      "str": "手术模块"
+    },
+    "description": "一个医疗机器人进行微创手术的内置模块。",
+    "color": "light_blue"
+  },
+  {
+    "id": "robopart_pharma",
+    "type": "GENERIC",
+    "copy-from": "robopart_base",
+    "name": {
+      "str": "制药模块"
+    },
+    "description": "一个医疗机器人制造麻醉药品的内置模块。",
+    "color": "pink"
+  },
+  {
+    "id": "robopart_paintball",
+    "type": "GENERIC",
+    "copy-from": "robopart_base",
+    "name": {
+      "str": "内置彩弹枪"
+    },
+    "description": "一把用于安全测试机器人或训练士兵的高性能彩弹模块。",
+    "color": "light_gray"
+  },
+  {
+    "type": "TOOL",
+    "id": "bot_craftbuddy",
+    "symbol": ";",
+    "color": "light_gray",
+    "name": {
+      "str": "制造小帮手（关）",
+      "str_pl": "制造小帮手（关）"
+    },
+    "category": "other",
+    "description": "一台机械制造小帮手。在现在这个状态能够当作可移动的工作台使用，激活它将其变为一个能够随你旅行的同伴。",
+    "price": "10000 USD",
+    "price_postapoc": "10000 USD",
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
+    "weight": "19310 g",
+    "volume": "55 L",
+    "bashing": 8,
+    "to_hit": -3,
+    "ammo": [
+      "battery"
+    ],
+    "qualities": [
+      [
+        "CONTAIN",
+        1
+      ],
+      [
+        "BUTCHER",
+        10
+      ],
+      [
+        "BOIL",
+        2
+      ],
+      [
+        "COOK",
+        3
+      ],
+      [
+        "CHEM",
+        3
+      ],
+      [
+        "DISTILL",
+        1
+      ],
+      [
+        "WELD",
+        2
+      ],
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "SMOOTH",
+        1
+      ],
+      [
+        "SAW_W",
+        2
+      ],
+      [
+        "SAW_M",
+        2
+      ],
+      [
+        "SAW_M_FINE",
+        1
+      ],
+      [
+        "HAMMER",
+        3
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ],
+      [
+        "WRENCH",
+        2
+      ],
+      [
+        "WRENCH_FINE",
+        1
+      ],
+      [
+        "SCREW",
+        1
+      ],
+      [
+        "SCREW_FINE",
+        1
+      ],
+      [
+        "DRILL",
+        3
+      ],
+      [
+        "CHISEL",
+        3
+      ],
+      [
+        "PULL",
+        1
+      ],
+      [
+        "PRY",
+        2
+      ],
+      [
+        "ANVIL",
+        3
+      ]
+    ],
+    "use_action": [
+      {
+        "type": "HAMMER"
+      },
+      {
+        "type": "BOLTCUTTERS"
+      },
+      {
+        "type": "HOTPLATE"
+      },
+      {
+        "type": "WATER_PURIFIER"
+      },
+      {
+        "type": "GUN_REPAIR"
+      },
+      {
+        "type": "firestarter"
+      },
+      {
+        "type": "repair_item",
+        "item_action_type": "repair_metal",
+        "materials": [
+          "kevlar",
+          "plastic",
+          "iron",
+          "steel",
+          "qt_steel",
+          "aluminum",
+          "copper",
+          "silver",
+          "gold"
+        ],
+        "skill": "mechanics",
+        "tool_quality": 10,
+        "cost_scaling": 0.1,
+        "move_cost": 1000
+      },
+      {
+        "type": "place_monster",
+        "monster_id": "mon_craftbuddy",
+        "moves": 100
+      }
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "bot_autoarmor_light",
+    "symbol": ";",
+    "color": "light_gray",
+    "looks_like": "power_armor_light",
+    "name": {
+      "str": "自动化轻型动力装甲"
+    },
+    "category": "other",
+    "description": "一套安装了人工智能核心，能够自主行动的动力装甲。你可以激活它作为机器人使用，也可以拆卸它作为装甲使用。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
+    "weight": "9310 g",
+    "volume": "55 L",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_autoarmor_light",
+      "moves": 100
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "bot_autoarmor_basic",
+    "copy-from": "bot_autoarmor_light",
+    "looks_like": "power_armor_basic",
+    "name": {
+      "str": "自动化基础动力装甲"
+    },
+    "description": "一套安装了人工智能核心，能够自主行动的动力装甲。你可以激活它作为机器人使用，也可以拆卸它作为装甲使用。",
+    "weight": "28010 g",
+    "volume": "75 L",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_autoarmor_basic",
+      "moves": 100
+    }
+  },
+  {
+    "type": "TOOL",
+    "id": "bot_autoarmor_heavy",
+    "copy-from": "bot_autoarmor_light",
+    "looks_like": "power_armor_heavy",
+    "name": {
+      "str": "自动化重型动力装甲"
+    },
+    "category": "other",
+    "description": "一套安装了人工智能核心，能够自主行动的动力装甲。你可以激活它作为机器人使用，也可以拆卸它作为装甲使用。",
+    "weight": "30650 g",
+    "volume": "87500 ml",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_autoarmor_light",
+      "moves": 100
+    }
+  },
+  {
+    "abstract": "bot_hack_base",
+    "type": "TOOL",
+    "name": {
+      "str": "无人机（关）"
+    },
+    "description": "一个未激活的飞锯无人机，只有拳头大，能在空中旋转飞行。表面全是呼呼作响的刀刃，通过撞击目标处来攻击。使用它以激活。电子学和计算机学等级决定了你将其重新编程的成功几率。",
+    "weight": "5400 g",
+    "volume": "750 ml",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 4,
+    "cutting": 4,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": ";",
+    "color": "light_green"
+  },
+  {
+    "id": "bot_light_hack",
+    "type": "TOOL",
+    "copy-from": "bot_hack_base",
+    "name": {
+      "str": "浮灯无人机（关）"
+    },
+    "description": "一台未激活的浮灯无人机。这台无人机有拳头大小，能在空中飞行并使用明亮的LED照亮周围。浮灯无人机没有武器，而且不会攻击敌人。激活以部署该无人机。",
+    "color": "yellow",
+    "looks_like": "bot_manhack",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_light_hack",
+      "friendly_msg": "这台浮灯无人机从你手上飞起，照亮了这个区域！",
+      "hostile_msg": "你没设好这台浮灯无人机的程序。",
+      "difficulty": 1,
+      "moves": 60,
+      "place_randomly": true,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_distract_hack",
+    "type": "TOOL",
+    "copy-from": "bot_hack_base",
+    "name": {
+      "str": "吵吵无人机（关）"
+    },
+    "description": "一台未激活的吵吵无人机，有拳头大小，激活后在空中飞行，发出噪音、烟雾和火花。这个无人机没有携带武器，但会骚扰敌方目标以引起他们的注意。激活以部署该无人机，但是一旦激活将无法回收。",
+    "color": "magenta",
+    "looks_like": "bot_manhack",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_distract_hack",
+      "friendly_msg": "吵吵无人机从你手上飞起，发出吵闹的噪音！",
+      "hostile_msg": "你没设好这台吵吵无人机的程序。",
+      "difficulty": 1,
+      "moves": 60,
+      "place_randomly": true,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_arson_hack",
+    "type": "TOOL",
+    "copy-from": "bot_hack_base",
+    "name": {
+      "str": "放火无人机（关）"
+    },
+    "description": "一台未激活的放火无人机，有拳头大小，在空中四处乱飞并散播致命火焰。这个无人机没有内置武器，但在接近敌对目标时会不时喷射出火焰。激活以部署该无人机，但是一旦激活将无法回收。",
+    "color": "red",
+    "looks_like": "bot_manhack",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_arson_hack",
+      "friendly_msg": "放火无人机从你手上飞起，快离开它远点！",
+      "hostile_msg": "你错误设置了这台放火无人机的程序！快跑！",
+      "difficulty": 1,
+      "moves": 60,
+      "place_randomly": true,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_spore_hack",
+    "type": "TOOL",
+    "copy-from": "bot_hack_base",
+    "name": {
+      "str": "孢子无人机（关）"
+    },
+    "description": "一台未激活的孢子无人机，有拳头大小，能够在空中飞行并散播来自异界的孢子感染。这台无人机会用孢子沾染敌对目标，并不时喷出真菌孢子覆盖地表。激活以部署该无人机。",
+    "color": "light_gray",
+    "looks_like": "bot_manhack",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_spore_hack",
+      "friendly_msg": "孢子无人机从你手上飞起！",
+      "hostile_msg": "你没设好这台孢子无人机的程序。",
+      "difficulty": 1,
+      "moves": 60,
+      "place_randomly": true,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_turret_water",
+    "type": "TOOL",
+    "copy-from": "bot_turret_base",
+    "name": {
+      "str": "水炮炮塔（关）"
+    },
+    "description": "一座未激活的水炮防御炮塔。激活时，最多1000单位的水会被自动装填至该炮塔中。放置该炮塔后，它的先进敌我识别软件会将你识别为友军。这家伙可没有安全手册。",
+    "color": "light_blue",
+    "price": "100 USD",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_turret_water",
+      "difficulty": 4,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_eyebot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "眼球无人机（关）"
+    },
+    "looks_like": "broken_eyebot",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "62650 g",
+    "volume": "30 L",
+    "bashing": 4,
+    "cutting": 4,
+    "to_hit": -3,
+    "symbol": ";",
+    "color": "light_green",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_eyebot_heater",
+    "type": "TOOL",
+    "copy-from": "bot_eyebot_base",
+    "name": {
+      "str": "浮空加热器（关）"
+    },
+    "description": "一台改装的眼球无人机，被用作悬浮的加热器。这台机器人用一束持续的暖流对封闭空间进行加热。它没有武器，也不会攻击敌人。激活以部署该机器人。",
+    "color": "pink",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_eyebot_heater",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_eyebot_furnace",
+    "type": "TOOL",
+    "copy-from": "bot_eyebot_base",
+    "name": {
+      "str": "悬浮炉（关）"
+    },
+    "description": "一台改装的眼球无人机，被用作悬浮的加热器。这台机器人持续地用一束危险的热流对封闭空间进行加热。它没有武器，也不会攻击敌人。激活以部署该机器人。",
+    "color": "red",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_eyebot_furnace",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_eyebot_burn",
+    "type": "TOOL",
+    "copy-from": "bot_eyebot_base",
+    "name": {
+      "str": "机械燃烧之眼（关）"
+    },
+    "description": "一台改装的眼球无人机，装上了一把激光武器用于攻击敌对目标。激活以部署该机器人。",
+    "color": "yellow",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_eyebot_burn",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_utilibot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "通用机器人（关）"
+    },
+    "looks_like": "mon_cleanerbot",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [
+      "steel",
+      "aluminum"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_utilibot_blob",
+    "type": "TOOL",
+    "copy-from": "bot_utilibot_base",
+    "name": {
+      "str": "变形怪培育机（关）"
+    },
+    "description": "一台改装的通用机器人，被用作异界变形怪的移动孵化器。它没有武器系统，也不会攻击敌人。你可以激活以部署该机器人并开始孵化程序，但也许你不该这么做。",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_utilibot_blob",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_utilibot_slimespring",
+    "type": "TOOL",
+    "copy-from": "bot_utilibot_base",
+    "name": {
+      "str": "变形怪培育器（关）"
+    },
+    "description": "一台改装的通用机器人，被用作异界变形怪的升级版移动孵化器，只会产生友好的变形怪。它没有武器系统，也不会攻击敌人。你可以激活以部署该机器人并开始孵化程序。",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_utilibot_slimespring",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_utilibot_digester",
+    "type": "TOOL",
+    "copy-from": "bot_utilibot_base",
+    "name": {
+      "str": "消化机器人（关）"
+    },
+    "description": "一台改装的通用机器人，用来当作一台全自动真空吸尘器。它会把地上四散的物品吸入，然后用内部储存的酸液溶解它们。它没有武器，也不会攻击敌人。激活它来部署机器人。",
+    "color": "light_green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_utilibot_digester",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_utilibot_beehive",
+    "type": "TOOL",
+    "copy-from": "bot_utilibot_base",
+    "name": {
+      "str": "蜂巢机器人（关）"
+    },
+    "description": "一台改装的通用机器人，被用作移动蜂箱，每隔一段时间会产出一些新鲜的蜂巢。它使用一把安装在外壳上的机械弩保护体内的蜂群。当你物品栏中有木制弩矢时，你可以激活以装填并部署该机器人。",
+    "color": "yellow",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_utilibot_beehive",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_medibot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "医疗机器人（关）"
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "70 kg",
+    "volume": "50 L",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "symbol": ";",
+    "color": "dark_gray",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_medibot_assassin",
+    "type": "TOOL",
+    "copy-from": "bot_medibot_base",
+    "name": {
+      "str": "刺客机器人（关）"
+    },
+    "description": "一台改装的医疗机器人，现在成了一台杀人机器。它使用一组刀片和一根毒针攻击敌对目标。激活以部署该机器人。",
+    "color": "red",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_medibot_assassin",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_medibot_elixir",
+    "type": "TOOL",
+    "copy-from": "bot_medibot_base",
+    "name": {
+      "str": "灵药机器人（关）"
+    },
+    "description": "* 这台机器人目前无法正常工作，不要建造。\n一台改装的医疗机器人，内部制药器经过重新编程能够产生诱变剂。激活以部署该机器人。",
+    "color": "light_green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_medibot_elixir",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_medibot_party",
+    "type": "TOOL",
+    "copy-from": "bot_medibot_base",
+    "name": {
+      "str": "派对机器人（关）"
+    },
+    "description": "一台改装的医疗机器人，内部填满了大麻，机身上下覆盖满了闪闪发光的彩灯，而且经过重新编程会不断跳舞。启动它来开始派对！",
+    "color": "yellow",
+    "qualities": [
+      [
+        "SMOKE_PIPE",
+        1
+      ]
+    ],
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_medibot_party",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_skitterbot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "掠行机器人（关）"
+    },
+    "looks_like": "broken_skitterbot",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "62650 g",
+    "volume": "30 L",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "symbol": ";",
+    "color": "dark_gray",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_skitterbot_rat",
+    "type": "TOOL",
+    "copy-from": "bot_skitterbot_base",
+    "name": {
+      "str": "捕鼠机器人（关）"
+    },
+    "description": "一台改装的掠行机器人，用来捕猎小型猎物。它使用一对螯和一把内置的电击枪来攻击目标。激活以部署该机器人。",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_skitterbot_rat",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_skitterbot_grab",
+    "type": "TOOL",
+    "copy-from": "bot_skitterbot_base",
+    "name": {
+      "str": "擒拿机器人（关）"
+    },
+    "description": "一台改装的掠行机器人，用于擒拿敌人使其无法移动。激活以部署该机器人。",
+    "color": "green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_skitterbot_grab",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_skitterbot_hunter",
+    "type": "TOOL",
+    "copy-from": "bot_skitterbot_base",
+    "name": {
+      "str": "灭害机器人（关）"
+    },
+    "description": "一台改装的掠行机器人，装上了一把内置8mm无壳弹枪械。当你物品栏中有弹药时，你可以激活以装填并部署该机器人。",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_skitterbot_hunter",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_cyborg_base",
+    "type": "TOOL",
+    "name": {
+      "str": "改造人（关）"
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "symbol": ";",
+    "color": "dark_gray",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_cyborg_necro",
+    "type": "TOOL",
+    "copy-from": "bot_cyborg_base",
+    "name": {
+      "str": "死灵改造人（关）"
+    },
+    "description": "一台改装的报废改造人，头部被替换成了死灵法尸的头颅。死而复生的头部保留了一些复活丧尸的能力。激活以部署该改造人。",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_cyborg_necro",
+      "difficulty": 7,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_defbot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "防御机器人（关）"
+    },
+    "looks_like": "mon_riotbot",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "symbol": ";",
+    "color": "light_gray",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_defbot_cowboy",
+    "type": "TOOL",
+    "copy-from": "bot_defbot_base",
+    "name": {
+      "str": "机器废料牛仔（关）"
+    },
+    "description": "一台改装的防御机器人，装上了霰弹枪和两把圆锯。当你的物品栏中有弹药时，你可以激活以装填并部署该机器人。",
+    "color": "brown",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_defbot_cowboy",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_defbot_samurai",
+    "type": "TOOL",
+    "copy-from": "bot_defbot_base",
+    "name": {
+      "str": "机器短路武士（关）"
+    },
+    "description": "一台改装的防御机器人，装上了一把内置电击枪和两把带电长刀。激活以部署该机器人。",
+    "color": "cyan",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_defbot_samurai",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_defbot_paladin",
+    "type": "TOOL",
+    "copy-from": "bot_defbot_base",
+    "name": {
+      "str": "机器瞎搭圣骑（关）"
+    },
+    "description": "一台改装的防御机器人，装上了自制的火焰喷射器和两把烧红的刀刃。当你的物品栏中有汽油时，你可以激活以装填并部署该机器人……但是最好离可燃物远一点。",
+    "color": "red",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_defbot_paladin",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_milbot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "军用机器人（关）"
+    },
+    "looks_like": "mon_secubot",
+    "material": [
+      "steel",
+      "kevlar"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "symbol": ";",
+    "color": "light_gray",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_milbot_308",
+    "type": "TOOL",
+    "copy-from": "bot_milbot_base",
+    "name": {
+      "str": "军用机器人（关）"
+    },
+    "description": "一台动力耗尽的军用机器人，装上了一把内置7.62mm口径步枪及一把电击枪。当你的物品栏中有弹药时，你可以激活以装填并部署该机器人。",
+    "color": "green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_milbot_308",
+      "difficulty": 0,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_milbot_gaurdian",
+    "type": "TOOL",
+    "copy-from": "bot_milbot_base",
+    "name": {
+      "str": "守护者机器人（关）"
+    },
+    "description": "一台改装的军用机器人，装上了一对内置9mm口径枪械。当你的物品栏中有弹药时，你可以激活以装填并部署该机器人。",
+    "color": "green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_milbot_gaurdian",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_milbot_deluxe",
+    "type": "TOOL",
+    "copy-from": "bot_milbot_base",
+    "name": {
+      "str": "豪华机器人（关）"
+    },
+    "//": "the extra E makes it European.",
+    "description": "一台镶钻贴金的机器人，装有一对内置9mm口径枪械。土豪用奢侈品，适合那些即便在末日生存中也追求时尚的人。当你的物品栏中有弹药时，你可以激活以装填并部署该机器人。",
+    "color": "yellow",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_milbot_deluxe",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_milbot_protector",
+    "type": "TOOL",
+    "copy-from": "bot_milbot_base",
+    "name": {
+      "str": "保卫者机器人（关）"
+    },
+    "description": "一台改装的军用机器人，装上了一把内置5.56mm口径步枪。当你的物品栏中有弹药时，你可以激活以装填并部署该机器人。",
+    "color": "green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_milbot_protector",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_milbot_defender",
+    "type": "TOOL",
+    "copy-from": "bot_milbot_base",
+    "name": {
+      "str": "防卫者机器人（关）"
+    },
+    "description": "一台改装的军用机器人，装上了一把内置 .50 口径步枪。当你的物品栏中有弹药时，你可以激活以装填并部署该机器人。",
+    "color": "green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_milbot_defender",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_advbot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "先进机器人（关）"
+    },
+    "looks_like": "mon_copbot",
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
+    "weight": "120 kg",
+    "volume": "62500 ml",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "symbol": ";",
+    "color": "light_gray"
+  },
+  {
+    "id": "bot_advbot_glitter",
+    "type": "TOOL",
+    "copy-from": "bot_advbot_base",
+    "name": {
+      "str": "机器闪光女士（关）",
+      "str_pl": "机器闪光女士（关）"
+    },
+    "description": "一台改装的高级机器人，现在是一座耀眼的毁灭灯塔。它使用两只内置激光武器和致盲闪光攻击敌对目标。激活以部署该机器人。",
+    "color": "yellow",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_advbot_glitter",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_advbot_bitter",
+    "type": "TOOL",
+    "copy-from": "bot_advbot_base",
+    "name": {
+      "str": "机器辛辣阿姨（关）"
+    },
+    "description": "一台改装的军用机器人，现在是一只能腐蚀血肉的怪兽。一个内置酸液生成器连接着一个远射喷头。激活以部署该机器人。",
+    "color": "light_green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_advbot_bitter",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "abstract": "bot_ckickenbot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "双足机器人（关）"
+    },
+    "looks_like": "mon_chickenbot",
+    "material": [
+      "steel",
+      "kevlar"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "symbol": ";",
+    "color": "red",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_chickenbot_horror",
+    "type": "TOOL",
+    "copy-from": "bot_ckickenbot_base",
+    "name": {
+      "str": "机器电锯狂人（关）"
+    },
+    "description": "一台改装的双足机器人，现在是一架装点着骷髅和尖刺的恐怖怪兽。它使用一对呼呼作响的电锯和震耳欲聋的音响系统攻击敌对目标。激活以部署该机器人。",
+    "color": "red",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_chickenbot_horror",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_chickenbot_terror",
+    "type": "TOOL",
+    "copy-from": "bot_ckickenbot_base",
+    "name": {
+      "str": "机器尖啸恐魔（关）"
+    },
+    "description": "一台改装的双足机器人，现在是一架装点着骷髅和尖刺的恐怖怪兽。它使用一对活塞驱动的长枪和震耳欲聋的音响系统攻击敌对目标。激活以部署该机器人。",
+    "color": "red",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_chickenbot_terror",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_chickenbot_nightmare",
+    "type": "TOOL",
+    "copy-from": "bot_ckickenbot_base",
+    "name": {
+      "str": "机器钩心梦魇（关）"
+    },
+    "description": "一台改装的双足机器人，现在是一架装点着骷髅和尖刺的恐怖怪兽。它使用一对带着利钩的旋转铁链和震耳欲聋的音响系统攻击敌对目标。激活以部署该机器人。",
+    "color": "red",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_chickenbot_nightmare",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_tripod",
+    "symbol": ",",
+    "color": "green",
+    "name": {
+      "str": "三足机器人（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的三足机器人。现在它的腿断了一地，世界又多了一份和平。可以拆解得到部件。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "430000 g",
+    "volume": "187500 ml",
+    "bashing": 10,
+    "cutting": 6,
+    "to_hit": -2,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_chickenbot",
+    "symbol": ",",
+    "color": "green",
+    "name": {
+      "str": "双足机器人（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的双足机器人。可能因为巨大的体积和质量的缘故，就算已经永久无法继续运作依旧看起来可怕无比。可以拆解得到部件。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "1023850 g",
+    "volume": "1100 L",
+    "bashing": 20,
+    "cutting": 15,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_tankbot",
+    "symbol": ",",
+    "color": "green",
+    "name": {
+      "str": "坦克无人机（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的坦克无人机。可能因为巨大的体积和质量的缘故，就算已经永久无法继续运作依旧看起来可怕无比。可以拆解得到部件。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "1223850 g",
+    "volume": "875 L",
+    "bashing": 20,
+    "cutting": 15,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
+  },
+  {
+    "id": "bot_tripod",
+    "looks_like": "broken_tripod",
+    "type": "TOOL",
+    "name": {
+      "str": "三足机器人（关）"
+    },
+    "description": "一台未激活的三足机器人。使用该物品以将它放置在地上并打开它，你无法知道它是怎么为火焰喷射器提供燃料。如果重新编程和布线成功，它会将你识别为友军，开始四处游荡并跟随你，用其带刺的电缆武器刺穿敌人。",
+    "weight": "120000 g",
+    "volume": "92500 ml",
+    "price": "1000000 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_tripod",
+      "friendly_msg": "三足机器人开始移动并扫描该地区的污染物。",
+      "hostile_msg": "三足机器人锁定了你，点燃的喷火器直接瞄准了你。看来你并不喜欢凝固汽油的味道。",
+      "//": "No observed open deployment, likely a prototype or secret project",
+      "difficulty": 15,
+      "moves": 500,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_chickenbot",
+    "looks_like": "broken_tripod",
+    "type": "TOOL",
+    "name": {
+      "str": "双足机器人（关）"
+    },
+    "description": "一台未激活的双足机器人。使用该物品以将它放置在地上并打开它，并装填你物品栏内的原装 5.56mm 口径子弹和 40mm 口径榴弹（如果你只想装填部分弹药，请先把不需装填的弹药移出物品栏）。如果重新编程成功，双足机器人会将你识别为友军，自主行动或跟随你，并攻击所有在其步枪和榴弹发射器攻击范围内的敌人。",
+    "weight": "190000 g",
+    "//": "cheating a bit with the volume due to lack of proper vehicle storage options",
+    "volume": "250 L",
+    "price": "1000000 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_chickenbot",
+      "friendly_msg": "双足机器人展开并开始寻找目标。",
+      "hostile_msg": "双足机器人旋转炮塔，直接瞄准了你。穿上裤子快跑！",
+      "//": "Milspec, clearly designed with little concern for collateral damage.  What did you expect of a chicken walker?",
+      "difficulty": 10,
+      "moves": 500,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_tankbot",
+    "looks_like": "broken_tankbot",
+    "type": "TOOL",
+    "name": {
+      "str": "坦克无人机（关）"
+    },
+    "description": "一台未激活的“猎兔犬”型无人坦克车。使用该物品以将它放置在地上并打开它，并装填你物品栏内的原装 5.56mm 口径子弹和 40mm 口径榴弹（如果你只想装填部分弹药，请先把不需装填的弹药移出物品栏）。如果重新编程成功，无人车会将你识别为友军，自主行动或跟随你，并攻击所有在其步枪和榴弹发射器攻击范围内的敌人。",
+    "weight": "200000 g",
+    "//": "cheating a bit with the volume due to lack of proper vehicle storage options",
+    "volume": "250 L",
+    "price": "1000000 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "light_green",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_tankbot",
+      "friendly_msg": "坦克无人机展开并开始寻找目标。",
+      "hostile_msg": "坦克无人机旋转炮塔，直接瞄准了你。穿上裤子快跑！",
+      "//": "Milspec, clearly designed with little concern for collateral damage. What did you expect of a robo-tank?",
+      "difficulty": 10,
+      "moves": 500,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "spidery_legs_big",
+    "name": {
+      "str": "蜘蛛机械腿",
+      "str_pl": "一组蜘蛛腿"
+    },
+    "description": "一组大而尖的腿，就像在三脚机器人用的那种。",
+    "symbol": "W",
+    "color": "light_gray",
+    "weight": "40000 g",
+    "volume": "20 L",
+    "price": "2000 USD",
+    "material": [
+      "steel"
+    ],
+    "category": "spare_parts"
+  },
+  {
+    "type": "GENERIC",
+    "id": "tripod_chassis",
+    "name": {
+      "str_sp": "三足机器人底盘"
+    },
+    "description": "移除所有可动部件和电子设备时剩下的，是三足机器人的骨架和装甲。",
+    "symbol": "c",
+    "color": "light_gray",
+    "weight": "40000 g",
+    "volume": "70000 ml",
+    "price": "2000 USD",
+    "material": [
+      "steel"
+    ],
+    "category": "spare_parts"
+  },
+  {
+    "type": "GENERIC",
+    "id": "chickenbot_chassis",
+    "name": {
+      "str_sp": "开拓者型机器人底盘"
+    },
+    "description": "移除所有可动部件和电子设备时剩下的，是“开拓者”型机器人的骨架和装甲。",
+    "symbol": "c",
+    "color": "light_gray",
+    "weight": "60000 g",
+    "volume": "80000 ml",
+    "price": "3000 USD",
+    "material": [
+      "steel"
+    ],
+    "category": "spare_parts"
+  },
+  {
+    "type": "GENERIC",
+    "id": "tankbot_chassis",
+    "name": {
+      "str_sp": "监管者型机器人底盘"
+    },
+    "description": "移除所有可动部件和电子设备时剩下的，是“监管者”型无人坦克的骨架和装甲。",
+    "symbol": "c",
+    "color": "light_gray",
+    "weight": "150000 g",
+    "volume": "575000 ml",
+    "price": "10000 USD",
+    "material": [
+      "steel"
+    ],
+    "category": "spare_parts"
+  },
+  {
+    "abstract": "bot_tankbot_base",
+    "type": "TOOL",
+    "name": {
+      "str": "坦克机器人（关）"
+    },
+    "looks_like": "mon_tankbot",
+    "material": [
+      "steel",
+      "kevlar"
+    ],
+    "weight": "120 kg",
+    "volume": "62500 ml",
+    "price": "100 USD",
+    "price_postapoc": "100 USD",
+    "to_hit": -3,
+    "bashing": 8,
+    "symbol": ";",
+    "color": "light_gray",
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "bot_tankbot_king",
+    "type": "TOOL",
+    "copy-from": "bot_tankbot_base",
+    "name": {
+      "str": "机器铁拳国王（关）"
+    },
+    "description": "一台改装的坦克机器人，装有一对强大的气动锤。它使用这对锤子摧毁它行进路线上的一切障碍，包括建筑物。激活以部署该机器人。",
+    "color": "pink",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_tankbot_king",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  },
+  {
+    "id": "bot_tankbot_sultan",
+    "type": "TOOL",
+    "copy-from": "bot_tankbot_base",
+    "name": {
+      "str": "机器核子苏丹（关）"
+    },
+    "description": "一台改装的坦克机器人，装有一对强大的气动锤。它使用这对锤子摧毁它行进路线上的一切障碍，包括建筑物。激活以部署该机器人。",
+    "color": "pink",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_tankbot_sultan",
+      "difficulty": 1,
+      "moves": 100,
+      "skills": [
+        "electronics",
+        "computer"
+      ]
+    }
+  }
+]

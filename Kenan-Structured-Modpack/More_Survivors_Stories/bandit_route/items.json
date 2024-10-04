@@ -1,0 +1,122 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "bandit_item_1",
+    "name": {
+      "str_sp": "强盗物品1"
+    },
+    "weight": "0 g",
+    "color": "light_red",
+    "symbol": "O",
+    "description": "强盗物品1",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT",
+      "TRADER_AVOID",
+      "TRADER_KEEP"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "bandit_item_2",
+    "name": {
+      "str_sp": "奇怪的包裹"
+    },
+    "weight": "0 g",
+    "color": "light_blue",
+    "symbol": "O",
+    "description": "奇怪的包裹。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT",
+      "TRADER_AVOID",
+      "TRADER_KEEP"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "bandit_item_3",
+    "name": {
+      "str_sp": "奇怪的针管"
+    },
+    "weight": "0 g",
+    "color": "light_blue",
+    "symbol": "O",
+    "description": "装有奇怪液体的医用注射器。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT",
+      "TRADER_AVOID",
+      "TRADER_KEEP"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "bandit_item_4",
+    "name": {
+      "str_sp": "收据"
+    },
+    "weight": "0 g",
+    "color": "light_blue",
+    "symbol": "O",
+    "description": "买牛的收据。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT",
+      "TRADER_AVOID",
+      "TRADER_KEEP"
+    ]
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "rs_scientist_notes",
+    "copy-from": "record_patient",
+    "name": {
+      "str_sp": "实验室笔记"
+    },
+    "description": "一个大文件夹，里面装满了不同的实验笔记。",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "//": "TODO write normal text?",
+    "type": "GENERIC",
+    "id": "gs_cook_foodpack",
+    "name": {
+      "str_sp": "袋装食品"
+    },
+    "weight": "500 g",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你打开了食物包。里面装满了一些香喷喷的熟肉。你注意到一个奇怪的东西看起来像…人类的手指？！你厌恶地丢下了背包。",
+      "effects": [
+        {
+          "id": "gs_cook_opened_present",
+          "duration": 1,
+          "permanent": true
+        }
+      ],
+      "moves": 200
+    },
+    "symbol": ")",
+    "description": "小菜包，内有菜，专为您精心烹制。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": "plastic",
+    "volume": "1000 ml",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  }
+]

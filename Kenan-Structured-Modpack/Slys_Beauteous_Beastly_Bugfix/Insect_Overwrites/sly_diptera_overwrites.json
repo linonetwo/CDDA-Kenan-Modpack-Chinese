@@ -1,0 +1,98 @@
+[
+  {
+    "id": "mon_fly_small",
+    "type": "MONSTER",
+    "name": {
+      "str": "大型苍蝇",
+      "str_pl": "大型苍蝇"
+    },
+    "description": "一只体型和小狗一般大小的变异苍蝇。它发出高亢的嗡嗡声，看上去让人莫名悲伤。",
+    "default_faction": "small_animal",
+    "bodytype": "flying insect",
+    "species": [
+      "INSECT"
+    ],
+    "volume": "15 L",
+    "weight": "20 kg",
+    "hp": 12,
+    "speed": 130,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "a",
+    "color": "light_green",
+    "aggression": -50,
+    "morale": 17,
+    "melee_skill": 3,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 0,
+    "dodge": 5,
+    "vision_day": 5,
+    "vision_night": 5,
+    "harvest": "arachnid",
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_fly"
+    },
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "FLIES",
+      "STUMBLES",
+      "HIT_AND_RUN",
+      "CANPLAY",
+      "PATH_AVOID_FIRE"
+    ]
+  },
+  {
+    "id": "mon_mosquito_small",
+    "type": "MONSTER",
+    "name": {
+      "str": "大型蚊怪"
+    },
+    "description": "一只巨大的蚊子，脸上长着一个又长又尖的细管，飞的飘忽不定。",
+    "default_faction": "mosquito",
+    "bodytype": "flying insect",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 2,
+    "volume": "30 L",
+    "weight": "20 kg",
+    "hp": 10,
+    "speed": 133,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "y",
+    "color": "brown",
+    "aggression": 20,
+    "morale": 12,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 1,
+    "dodge": 8,
+    "vision_day": 5,
+    "vision_night": 5,
+    "harvest": "arachnid",
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_mosquito_giant"
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "STUMBLES",
+      "VENOM",
+      "FLIES",
+      "HIT_AND_RUN",
+      "PATH_AVOID_FIRE"
+    ]
+  }
+]

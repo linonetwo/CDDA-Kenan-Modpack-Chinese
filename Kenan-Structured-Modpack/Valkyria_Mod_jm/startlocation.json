@@ -1,0 +1,55 @@
+[
+  {
+    "type": "start_location",
+    "id": "Vgal_town",
+    "name": "加利亚城镇",
+    "terrain": [
+      "GALLIAN_TOWN1_2"
+    ]
+  },
+  {
+    "type": "start_location",
+    "id": "Vfarm",
+    "name": "加里安农场",
+    "terrain": [
+      "GAL_FARM1_3"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "val_town_start",
+    "name": "加利亚镇市民",
+    "points": 0,
+    "description": "大灾难后，你在加利亚的众多聚居点中的一个城镇出生长大。生活有起有落，但总体来说还是平静的。当帝国进攻加利亚，你的生活陷入混乱时，这一切都改变了。",
+    "allowed_locs": [
+      "Vgal_town"
+    ],
+    "start_name": "加里安镇",
+    "professions": [
+      "val_galscout",
+      "val_miltia",
+      "val_galshock",
+      "val_galsniper",
+      "val_gallancer",
+      "val_galengineer",
+      "gal_farmer",
+      "gal_citizen"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "val_farm_start",
+    "name": "加利亚农民",
+    "points": 0,
+    "description": "你是在乡下长大的，在加利亚郊区的一个农场里长大。与欧罗巴的战争颠覆了你的整个生活，整个农场和几代人的工作都被入侵的军队点燃。",
+    "allowed_locs": [
+      "Vfarm"
+    ],
+    "start_name": "加里安农场",
+    "professions": [
+      "gal_farmer",
+      "val_miltia",
+      "gal_citizen"
+    ]
+  }
+]

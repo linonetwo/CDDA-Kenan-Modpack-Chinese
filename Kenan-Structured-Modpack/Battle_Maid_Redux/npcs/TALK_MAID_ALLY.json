@@ -1,0 +1,1026 @@
+[
+  {
+    "id": [
+      "TALK_MAID_ALLY"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": {
+      "is_by_radio": " *pshhhttt* I'm reading you master, over.",
+      "no": {
+        "has_reason": {
+          "use_reason": true
+        },
+        "no": "怎么了，主人？"
+      }
+    },
+    "speaker_effect": {
+      "sentinel": "maid_init",
+      "opinion": {
+        "trust": 5,
+        "value": 5,
+        "anger": -5,
+        "fear": -5
+      },
+      "condition": {
+        "npc_rule": "allow_pick_up"
+      },
+      "effect": {
+        "toggle_npc_rule": "allow_pick_up"
+      }
+    },
+    "responses": [
+      {
+        "text": "[战斗]我想给你一些作战指令。",
+        "topic": "TALK_COMBAT_COMMANDS"
+      },
+      {
+        "text": "[其他]我想设定一些其他规则。",
+        "topic": "TALK_MISC_RULES_MAID"
+      },
+      {
+        "text": "[查看]我想更多地了解你的能力。",
+        "topic": "TALK_MAID_ALLY",
+        "effect": "reveal_stats"
+      },
+      {
+        "text": "[交互]我有些事情想让你做。",
+        "topic": "TALK_MAID_ORDERS"
+      },
+      {
+        "text": "我只想聊聊天。",
+        "topic": "TALK_MAID_SOCIAL"
+      },
+      {
+        "text": "你该挤奶了。",
+        "topic": "TALK_MAID_MILK",
+        "condition": {
+          "and": [
+            {
+              "npc_has_trait": "BOUNTIFUL"
+            },
+            {
+              "not": {
+                "npc_has_effect": "maid_milked"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "[解散]我们就此分开吧。",
+        "topic": "TALK_LEAVE"
+      },
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_MAID_SOCIAL"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": {
+      "is_by_radio": " *tshk* Whatever you desire, master. Though perhaps we should meet up first?",
+      "no": "主人，您有什么需要帮忙的吗？"
+    },
+    "responses": [
+      {
+        "text": "可以和我聊聊你的经历吗？",
+        "topic": "TALK_MAID_CONVERSATION",
+        "condition": {
+          "and": [
+            "at_safe_space",
+            {
+              "or": [
+                {
+                  "npc_has_flag": "BG_SURVIVAL_STORY"
+                },
+                {
+                  "npc_has_trait": "NPC_STATIC_NPC"
+                }
+              ]
+            }
+          ]
+        },
+        "//": "If the NPC already has a BG story, or started out as a static NPC (and so probably doesn't need a random bg story), then go on.",
+        "switch": true
+      },
+      {
+        "text": "可以和我聊聊你的经历吗？",
+        "topic": "TALK_MAID_CONVERSATION",
+        "condition": "at_safe_space",
+        "switch": true,
+        "effect": {
+          "npc_add_trait": "BGSS_Confused_1"
+        },
+        "//": "If the NPC doesn't have a BG survival story flagged trait, and didn't start the game as a static NPC, give them a BG story.",
+        "//2": "This is a stand-in for some kind of better system to add a random trait."
+      },
+      {
+        "text": "可以和我聊聊你的经历吗？",
+        "topic": "TALK_CONVERSATION_DANGER_MAID",
+        "condition": {
+          "not": "at_safe_space"
+        },
+        "switch": true
+      },
+      {
+        "text": "可以和我聊聊你的经历吗？",
+        "topic": "TALK_MAID_CONVERSATION",
+        "condition": {
+          "not": "is_by_radio"
+        },
+        "switch": true
+      },
+      {
+        "text": "让我们聊会儿天吧，我需要放松一下。",
+        "topic": "TALK_FRIEND_CHAT",
+        "condition": {
+          "not": {
+            "or": [
+              {
+                "npc_has_effect": "asked_to_socialize"
+              },
+              {
+                "npc_has_trait": "THRESH_SHOGGOTH"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "text": "让我们聊会儿天吧，我需要放松一下。",
+        "topic": "TALK_SHOGGOTH_CHAT",
+        "condition": {
+          "not": {
+            "or": [
+              {
+                "npc_has_effect": "asked_to_socialize"
+              },
+              {
+                "not": {
+                  "npc_has_trait": "THRESH_SHOGGOTH"
+                }
+              }
+            ]
+          }
+        }
+      },
+      {
+        "text": "[任务]我能为你做些什么？",
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "我永远都不想和你分开了。",
+        "topic": "TALK_SHOGGOTH_HEART",
+        "condition": {
+          "npc_has_trait": "THRESH_SHOGGOTH"
+        }
+      },
+      {
+        "text": "我改变主意了，问点别的吧。",
+        "topic": "TALK_MAID_ALLY"
+      },
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MAID_MILK",
+    "type": "talk_topic",
+    "dynamic_line": "挤奶时间到♪~请对我温柔一点哦，主人！",
+    "responses": [
+      {
+        "text": "以后再说吧。",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "那就来吧。",
+        "topic": "TALK_MAID_MILK2"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MAID_MILK2",
+    "type": "talk_topic",
+    "dynamic_line": "啊…啊~哦，主人，感觉太…棒了…",
+    "speaker_effect": {
+      "effect": [
+        {
+          "u_consume_item": "bottle_glass",
+          "count": 0
+        },
+        {
+          "u_spawn_item": "milk",
+          "container": "bottle_glass",
+          "count": 3
+        },
+        {
+          "npc_add_effect": "maid_milked",
+          "duration": 21000
+        }
+      ]
+    },
+    "responses": [
+      {
+        "text": "还没弄完呢。我也想尝尝你下面的“牛奶”。",
+        "topic": "TALK_MAID_MILK3",
+        "condition": {
+          "npc_has_trait": "futanari"
+        }
+      },
+      {
+        "text": "那就到此为止吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MAID_MILK3",
+    "type": "talk_topic",
+    "dynamic_line": "这..这里也要？不不不，等等，我快要...！主人，求你了，我停不下来-唔，求你了，让我休息一下...！",
+    "speaker_effect": {
+      "effect": [
+        {
+          "u_spawn_item": "protein_milk",
+          "container": "bottle_glass",
+          "count": 1
+        }
+      ]
+    },
+    "responses": [
+      {
+        "text": "那就到此为止吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHOGGOTH_HEART",
+    "type": "talk_topic",
+    "dynamic_line": "哦，主人……♪我也有同感！但是你知道，有一种方法我们可以永远在一起，不管这个世界有多冷或残酷…",
+    "responses": [
+      {
+        "text": "告诉我更多。",
+        "topic": "TALK_SHOGGOTH_HEART2"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHOGGOTH_HEART2",
+    "type": "talk_topic",
+    "dynamic_line": "把我的心捡起来，然后吃掉吧~。啊，别担心♪~，我是不会死的。我的力量就会变成我们的力量，再没有人能把我们分开了！主人~",
+    "responses": [
+      {
+        "text": "这…那立刻我们开始吧。",
+        "topic": "TALK_SHOGGOTH_HEART3"
+      },
+      {
+        "text": "你说什么？算了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHOGGOTH_HEART3",
+    "type": "talk_topic",
+    "dynamic_line": "为了我亲爱的主人，我愿意做任何事！哦，如果你改变主意，就把我的心放回烧瓶里-我马上就会变回来得！",
+    "speaker_effect": {
+      "effect": [
+        {
+          "u_spawn_item": "shoggoth_heart",
+          "count": 2
+        },
+        "npc_die"
+      ]
+    },
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_MAID_ORDERS"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": [
+      "遵从您的指令，我的主人。",
+      "你要给我下什么指令吗？",
+      "我能为您服务吗？",
+      "只要你开口。"
+    ],
+    "responses": [
+      {
+        "text": "[求教]现在你能教我点东西吗？",
+        "condition": {
+          "not": "is_by_radio"
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "or": [
+              {
+                "npc_need": "thirst",
+                "amount": 80
+              },
+              {
+                "npc_need": "hunger",
+                "amount": 160
+              },
+              {
+                "npc_need": "fatigue",
+                "level": "TIRED"
+              },
+              {
+                "npc_has_effect": "asked_to_train"
+              },
+              "u_driving",
+              "npc_driving"
+            ]
+          }
+        },
+        "success": {
+          "topic": "TALK_DENY_TRAIN"
+        },
+        "failure": {
+          "topic": "TALK_TRAIN_PERSUADE_MAID"
+        }
+      },
+      {
+        "text": "[交易]做些交易吧，怎样？",
+        "condition": {
+          "not": "is_by_radio",
+          "npc_has_trait": "MAID_RESTRICT"
+        },
+        "topic": "TALK_MAID_ALLY",
+        "effect": "start_trade",
+        "switch": true,
+        "default": true
+      },
+      {
+        "text": "[使用]我想让你用这个物品。",
+        "condition": {
+          "not": "is_by_radio",
+          "npc_has_trait": "MAID_RESTRICT"
+        },
+        "topic": "TALK_MAID_ALLY",
+        "effect": "npc_gets_item_to_use"
+      },
+      {
+        "text": "[给予]你拿着这个物品吧。",
+        "condition": {
+          "not": "is_by_radio",
+          "npc_has_trait": "MAID_RESTRICT"
+        },
+        "topic": "TALK_MAID_ALLY",
+        "effect": "npc_gets_item"
+      },
+      {
+        "text": "[交易]做些交易吧，怎样？",
+        "topic": "TRADE_HALLU",
+        "condition": {
+          "npc_has_trait": "HALLUCINATION"
+        },
+        "switch": true,
+        "default": false
+      },
+      {
+        "text": "[站岗]守在这里。",
+        "condition": {
+          "not": "is_by_radio"
+        },
+        "topic": "TALK_MAID_GUARD",
+        "effect": "assign_guard"
+      },
+      {
+        "text": "[指派]我想派你去这个营地工作。",
+        "condition": {
+          "npc_at_om_location": "FACTION_CAMP_ANY"
+        },
+        "topic": "TALK_MAID_GUARD",
+        "effect": "assign_camp"
+      },
+      {
+        "text": "找一匹马，然后骑上去！",
+        "condition": {
+          "not": "npc_is_riding"
+        },
+        "topic": "TALK_DONE",
+        "effect": "find_mount"
+      },
+      {
+        "text": "请下马。",
+        "condition": "npc_is_riding",
+        "topic": "TALK_DONE",
+        "effect": "dismount"
+      },
+      {
+        "text": "请到这个地方。",
+        "topic": "TALK_GOTO_LOCATION",
+        "condition": {
+          "or": [
+            "is_by_radio",
+            "u_has_camp"
+          ]
+        },
+        "effect": "goto_location"
+      },
+      {
+        "text": "我想让你在这里建立营地。",
+        "topic": "TALK_HALLU_CAMP",
+        "condition": {
+          "npc_has_trait": "HALLUCINATION"
+        },
+        "switch": true
+      },
+      {
+        "text": "我想让你在这里建立营地。",
+        "topic": "TALK_DONE",
+        "effect": "start_camp",
+        "condition": {
+          "npc_at_om_location": "FACTION_CAMP_START"
+        },
+        "switch": true,
+        "default": true
+      },
+      {
+        "text": "既然我们不能在这里建立营地，你告诉我在哪里可以建？",
+        "topic": "TALK_CAMP_SITES",
+        "condition": {
+          "not": {
+            "npc_at_om_location": "FACTION_CAMP_START"
+          }
+        },
+        "switch": true,
+        "default": true
+      },
+      {
+        "text": "[营地]我们得废弃这个营地了。",
+        "condition": {
+          "npc_at_om_location": "FACTION_CAMP_ANY"
+        },
+        "topic": "TALK_DONE",
+        "effect": "abandon_camp"
+      },
+      {
+        "text": "告诉我营地还需要些什么。",
+        "topic": "TALK_DONE",
+        "effect": "basecamp_mission",
+        "condition": {
+          "npc_at_om_location": "FACTION_CAMP_ANY"
+        }
+      },
+      {
+        "text": "我们来谈谈你当前干的活。",
+        "topic": "TALK_ACTIVITIES"
+      },
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MAID_GUARD",
+    "type": "talk_topic",
+    "dynamic_line": "我会拼尽一切保护您，主人！",
+    "responses": [
+      {
+        "text": "[归队]我需要你和我一起走。",
+        "topic": "TALK_MAID_ALLY",
+        "effect": "follow_only"
+      },
+      {
+        "text": "[取消]嗯，保重吧，回头见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_TRAIN_PERSUADE_MAID",
+    "type": "talk_topic",
+    "dynamic_line": "但是主人…把一切都交给我就可以了！",
+    "responses": [
+      {
+        "text": "得了吧，我们可是朋友。",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 0,
+          "mod": [
+            [
+              "TRUST",
+              6
+            ],
+            [
+              "VALUE",
+              2
+            ],
+            [
+              "ANGER",
+              -6
+            ]
+          ]
+        },
+        "success": {
+          "topic": "TALK_TRAIN"
+        },
+        "failure": {
+          "topic": "TALK_DENY_PERSONAL",
+          "effect": {
+            "npc_add_effect": "asked_to_train",
+            "duration": 3600
+          }
+        }
+      },
+      {
+        "text": "算了。我们该走了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_CONVERSATION_DANGER_MAID",
+    "type": "talk_topic",
+    "dynamic_line": "你是认真的吗？这里看上去可不是可以安全闲聊的地方……",
+    "responses": [
+      {
+        "text": "没事的，我们能抽出点空来。",
+        "topic": "TALK_MAID_CONVERSATION"
+      },
+      {
+        "text": "你是对的，忘了我刚刚所说的，我们走吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MAID_CONVERSATION",
+    "type": "talk_topic",
+    "dynamic_line": "我的过去？你是说在我服侍你之前…对不起，但是…",
+    "responses": [
+      {
+        "text": "呃，其实没什么。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SHOGGOTH_CHAT",
+    "type": "talk_topic",
+    "dynamic_line": "<shoggoth_chat>",
+    "responses": [
+      {
+        "text": "<chitchat_player_responses>",
+        "topic": "TALK_DONE",
+        "switch": true,
+        "effect": [
+          "morale_chat_activity",
+          {
+            "npc_add_effect": "asked_to_socialize",
+            "duration": 7000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_MISC_RULES_MAID",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "concatenate": [
+        {
+          "concatenate": [
+            {
+              "npc_override": "allow_pick_up",
+              "yes": "OVERRIDE: "
+            },
+            {
+              "npc_rule": "allow_pick_up",
+              "yes": {
+                "has_pickup_list": "<ally_rule_allow_pick_up_true_list_text>",
+                "no": "<ally_rule_allow_pick_up_true_text>"
+              },
+              "no": "<ally_rule_allow_pick_up_false_text>"
+            }
+          ]
+        },
+        {
+          "concatenate": [
+            {
+              "npc_override": "allow_bash",
+              "yes": "  OVERRIDE: ",
+              "no": "  "
+            },
+            {
+              "npc_rule": "allow_bash",
+              "yes": "<ally_rule_allow_bash_true_text>",
+              "no": "<ally_rule_allow_bash_false_text>"
+            }
+          ]
+        },
+        {
+          "concatenate": [
+            {
+              "npc_override": "allow_sleep",
+              "yes": "  OVERRIDE: ",
+              "no": "  "
+            },
+            {
+              "npc_rule": "allow_sleep",
+              "yes": "<ally_rule_allow_sleep_true_text>",
+              "no": "<ally_rule_allow_sleep_false_text>"
+            }
+          ]
+        },
+        {
+          "concatenate": [
+            {
+              "npc_override": "allow_complain",
+              "yes": "  OVERRIDE: ",
+              "no": "  "
+            },
+            {
+              "npc_rule": "allow_complain",
+              "yes": "<ally_rule_allow_complain_true_text>",
+              "no": "<ally_rule_allow_complain_false_text>"
+            }
+          ]
+        },
+        {
+          "concatenate": [
+            {
+              "npc_override": "allow_pulp",
+              "yes": "  OVERRIDE: ",
+              "no": "  "
+            },
+            {
+              "npc_rule": "allow_pulp",
+              "yes": "<ally_rule_allow_pulp_true_text>",
+              "no": "<ally_rule_allow_pulp_false_text>"
+            }
+          ]
+        },
+        {
+          "concatenate": [
+            {
+              "npc_override": "close_doors",
+              "yes": "  OVERRIDE: ",
+              "no": "  "
+            },
+            {
+              "npc_rule": "close_doors",
+              "yes": "<ally_rule_close_doors_true_text>",
+              "no": "<ally_rule_close_doors_false_text>"
+            }
+          ]
+        },
+        {
+          "concatenate": [
+            {
+              "npc_override": "ignore_noise",
+              "yes": "  OVERRIDE: ",
+              "no": "  "
+            },
+            {
+              "npc_rule": "ignore_noise",
+              "yes": "<ally_rule_ignore_noise_true_text>",
+              "no": "<ally_rule_ignore_noise_false_text>"
+            }
+          ]
+        },
+        {
+          "concatenate": [
+            {
+              "npc_override": "avoid_doors",
+              "yes": "  OVERRIDE: ",
+              "no": "  "
+            },
+            {
+              "npc_rule": "avoid_doors",
+              "yes": "<ally_rule_avoid_doors_true_text>",
+              "no": "<ally_rule_avoid_doors_false_text>"
+            }
+          ]
+        },
+        {
+          "concatenate": [
+            {
+              "npc_override": "forbid_engage",
+              "yes": "  OVERRIDE: ",
+              "no": "  "
+            },
+            {
+              "npc_rule": "forbid_engage",
+              "yes": "<ally_rule_forbid_engage_true_text>",
+              "no": "<ally_rule_forbid_engage_false_text>"
+            }
+          ]
+        }
+      ]
+    },
+    "responses": [
+      {
+        "truefalsetext": {
+          "condition": {
+            "npc_rule": "allow_pick_up"
+          },
+          "true": "Don't pick up items.",
+          "false": "You can pick up items now."
+        },
+        "topic": "TALK_MISC_RULES_MAID",
+        "condition": {
+          "not": {
+            "npc_has_trait": "MAID_RESTRICT"
+          }
+        },
+        "effect": {
+          "toggle_npc_rule": "allow_pick_up"
+        }
+      },
+      {
+        "truefalsetext": {
+          "condition": {
+            "npc_rule": "allow_bash"
+          },
+          "true": "Don't bash obstacles.",
+          "false": "You can bash obstacles."
+        },
+        "topic": "TALK_MISC_RULES_MAID",
+        "effect": {
+          "toggle_npc_rule": "allow_bash"
+        }
+      },
+      {
+        "truefalsetext": {
+          "condition": {
+            "npc_rule": "allow_sleep"
+          },
+          "true": "Stay awake.",
+          "false": "Sleep when you feel tired."
+        },
+        "topic": "TALK_MISC_RULES_MAID",
+        "effect": {
+          "toggle_npc_rule": "allow_sleep"
+        }
+      },
+      {
+        "truefalsetext": {
+          "condition": {
+            "npc_rule": "allow_complain"
+          },
+          "true": "Stay quiet.",
+          "false": "Tell me when you need something."
+        },
+        "topic": "TALK_MISC_RULES_MAID",
+        "effect": {
+          "toggle_npc_rule": "allow_complain"
+        }
+      },
+      {
+        "truefalsetext": {
+          "condition": {
+            "npc_rule": "allow_pulp"
+          },
+          "true": "Leave corpses alone.",
+          "false": "Smash zombie corpses."
+        },
+        "topic": "TALK_MISC_RULES_MAID",
+        "effect": {
+          "toggle_npc_rule": "allow_pulp"
+        }
+      },
+      {
+        "truefalsetext": {
+          "condition": {
+            "npc_rule": "close_doors"
+          },
+          "true": "Leave doors open.",
+          "false": "Close the doors."
+        },
+        "topic": "TALK_MISC_RULES_MAID",
+        "effect": {
+          "toggle_npc_rule": "close_doors"
+        }
+      },
+      {
+        "truefalsetext": {
+          "condition": {
+            "npc_rule": "avoid_doors"
+          },
+          "true": "Open doors to get where you're going.",
+          "false": "Don't walk through closed doors."
+        },
+        "topic": "TALK_MISC_RULES_MAID",
+        "effect": {
+          "toggle_npc_rule": "avoid_doors"
+        }
+      },
+      {
+        "truefalsetext": {
+          "condition": {
+            "npc_rule": "ignore_noise"
+          },
+          "true": "If you hear a noise but can't see the source, move to investigate it.",
+          "false": "Don't investigate noises that you can't see."
+        },
+        "topic": "TALK_MISC_RULES_MAID",
+        "effect": {
+          "toggle_npc_rule": "ignore_noise"
+        }
+      },
+      {
+        "text": "设置捡起物品的规则。",
+        "topic": "TALK_MISC_RULES_MAID",
+        "condition": {
+          "not": {
+            "npc_has_trait": "MAID_RESTRICT"
+          }
+        },
+        "effect": "set_npc_pickup"
+      },
+      {
+        "text": "清除所有临时指令。",
+        "topic": "TALK_MISC_RULES_MAID",
+        "effect": "clear_overrides"
+      },
+      {
+        "text": "算了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_FRIEND",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "给，用这个血清。",
+        "topic": "TALK_MILKIFY",
+        "condition": {
+          "u_has_item": "milk_serum"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_MILKIFY",
+    "dynamic_line": "为什么要这么对我？",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "它能让我们活下来。",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 0,
+          "mod": [
+            [
+              "TRUST",
+              6
+            ],
+            [
+              "VALUE",
+              3
+            ],
+            [
+              "ANGER",
+              -3
+            ]
+          ]
+        },
+        "success": {
+          "topic": "TALK_MILKIFY2"
+        },
+        "failure": {
+          "topic": "TALK_DONE"
+        }
+      },
+      {
+        "text": "没有它你就会死。你必须接受。",
+        "trial": {
+          "type": "INTIMIDATE",
+          "difficulty": 0,
+          "mod": [
+            [
+              "FEAR",
+              8
+            ],
+            [
+              "VALUE",
+              3
+            ],
+            [
+              "BRAVERY",
+              -2
+            ]
+          ]
+        },
+        "success": {
+          "topic": "TALK_MILKIFY2"
+        },
+        "failure": {
+          "topic": "TALK_DONE"
+        }
+      },
+      {
+        "text": "算了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MILKIFY2",
+    "type": "talk_topic",
+    "dynamic_line": "呃？我的身体怎么…了…主人？",
+    "speaker_effect": {
+      "effect": [
+        {
+          "npc_add_trait": "THRESH_MILK"
+        },
+        {
+          "npc_add_trait": "GRAZER"
+        },
+        {
+          "npc_add_trait": "BOUNTIFUL"
+        },
+        {
+          "npc_add_trait": "MILK_PRECURSOR"
+        },
+        {
+          "npc_add_trait": "TAIL_CATTLE"
+        },
+        {
+          "npc_add_trait": "FELINE_EARS"
+        },
+        {
+          "npc_add_trait": "THRESH_MILK"
+        },
+        {
+          "npc_add_trait": "HORNS"
+        },
+        "leave",
+        {
+          "u_consume_item": "milk_serum"
+        },
+        "follow_only",
+        {
+          "npc_first_topic": "TALK_MAID_ALLY"
+        }
+      ]
+    },
+    "responses": [
+      {
+        "text": "你现在是我的女仆了。懂了吗？",
+        "topic": "TALK_MILKIFY3"
+      },
+      {
+        "text": "看来血清让你比女人还多了根什么…好吧，不管怎样，你都是我的女仆。（扶她）",
+        "condition": "npc_female",
+        "topic": "TALK_MILKIFY4"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MILKIFY3",
+    "type": "talk_topic",
+    "dynamic_line": "为什么我不记得…我-我懂了。请好好待我…主人。",
+    "speaker_effect": {
+      "condition": "npc_male",
+      "effect": [
+        {
+          "npc_add_trait": "futanari"
+        }
+      ]
+    },
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MILKIFY4",
+    "type": "talk_topic",
+    "dynamic_line": "为什么我不记得…我-我懂了。请好好待我…主人。",
+    "speaker_effect": {
+      "effect": [
+        {
+          "npc_add_trait": "futanari"
+        }
+      ]
+    },
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

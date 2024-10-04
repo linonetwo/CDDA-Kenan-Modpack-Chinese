@@ -1,0 +1,804 @@
+[
+  {
+    "type": "effect_type",
+    "id": "dazed",
+    "name": [
+      "被震晕"
+    ],
+    "desc": [
+      "你明显被震晕了，很难集中精神注意到发生在你身边的事情。"
+    ],
+    "apply_message": "你头脑一片茫然！",
+    "rating": "bad",
+    "max_intensity": 10,
+    "int_add_val": 2,
+    "base_mods": {
+      "per_mod": [
+        -5
+      ],
+      "dex_mod": [
+        -2
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -3
+      ]
+    },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "fear",
+    "name": [
+      "紧张",
+      "紧张",
+      "紧张",
+      "紧张",
+      "畏惧",
+      "畏惧",
+      "畏惧",
+      "畏惧",
+      "十分惊恐",
+      "十分惊恐",
+      "十分惊恐",
+      "十分惊恐",
+      "蝼蚁的恐惧",
+      "蝼蚁的恐惧！",
+      "蝼蚁的恐惧！！",
+      "蝼蚁的恐惧！！！"
+    ],
+    "desc": [
+      "你的灵魂被麻痹的恐惧所控制。"
+    ],
+    "reduced_desc": [
+      "You bravely attempt to resist the fear."
+    ],
+    "apply_message": "恐惧擒住了你。",
+    "remove_message": "恐惧消失了。",
+    "miss_messages": [
+      [
+        "世间的恐怖冲刷着你。",
+        5
+      ],
+      [
+        "对异族的恐惧塞满了你的心灵",
+        5
+      ],
+      [
+        "无以名状的恐惧冲击着你的意识。",
+        5
+      ],
+      [
+        "恐惧在心中蔓延。",
+        5
+      ],
+      [
+        "“你得离开这里。”",
+        1
+      ],
+      [
+        "“快跑。”",
+        1
+      ],
+      [
+        "“该逃了！”\n“不，已经太晚了，逃不掉了。”",
+        1
+      ],
+      [
+        "你感觉血管里流的是冰块。",
+        10
+      ],
+      [
+        "你的心脏咚咚作响。",
+        10
+      ],
+      [
+        "一阵寒意爬上你的脊柱。",
+        10
+      ],
+      [
+        "你的视野模糊了。",
+        10
+      ],
+      [
+        "你紧张地吞下口水。",
+        10
+      ],
+      [
+        "你的膝盖在发抖。",
+        10
+      ],
+      [
+        "你的手出汗了。",
+        10
+      ]
+    ],
+    "blocks_effects": [
+      "happy"
+    ],
+    "rating": "bad",
+    "max_intensity": 16,
+    "resist_traits": [
+      "FEARLESS",
+      "RESISTFEAR"
+    ],
+    "resist_effects": [
+      "resist_fear"
+    ],
+    "int_decay_tick": 300,
+    "base_mods": {
+      "int_mod": [
+        -1,
+        0
+      ],
+      "per_mod": [
+        -1,
+        0
+      ],
+      "speed_mod": [
+        -2,
+        -1
+      ],
+      "vomit_tick": [
+        30
+      ],
+      "vomit_chance": [
+        -55,
+        -70
+      ]
+    },
+    "scaling_mods": {
+      "int_mod": [
+        -0.5,
+        -0.25
+      ],
+      "per_mod": [
+        -0.5,
+        -0.25
+      ],
+      "str_mod": [
+        -0.125,
+        0
+      ],
+      "dex_mod": [
+        -0.125,
+        0
+      ],
+      "speed_mod": [
+        -2,
+        -1
+      ],
+      "vomit_chance": [
+        5,
+        5
+      ]
+    },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "psychic_stress",
+    "name": [
+      "忐忑不安",
+      "忐忑不安",
+      "忐忑不安",
+      "忐忑不安",
+      "强调",
+      "强调",
+      "强调",
+      "强调",
+      "精神受创",
+      "精神受创",
+      "精神受创",
+      "精神受创",
+      "精神崩溃",
+      "精神崩溃！",
+      "精神崩溃！！",
+      "精神崩溃！！！"
+    ],
+    "desc": [
+      "你的大脑在直接精神攻击的压力下变得疯狂。"
+    ],
+    "reduced_desc": [
+      "Your psychic shields strain under the stress of a direct psychic assault."
+    ],
+    "apply_message": "你的意识因精神压力而动摇。",
+    "remove_message": "你冷静下来。",
+    "miss_messages": [
+      [
+        "黑暗的思绪拷打着你的精神。",
+        5
+      ],
+      [
+        "异族的幻象袭入你的视界",
+        5
+      ],
+      [
+        "一阵阵恶意淹没了你的脑海。",
+        5
+      ],
+      [
+        "邪恶的存在缠绕着你。",
+        5
+      ],
+      [
+        "奇怪的光晕笼罩了你的眼睛。",
+        5
+      ],
+      [
+        "所有颜色变得模糊，化作了一团。",
+        5
+      ],
+      [
+        "“门口有奇怪的家伙。”\n“他们想要进来。”",
+        1
+      ],
+      [
+        "“你还忍得了多久？”",
+        1
+      ],
+      [
+        "“你没法赢，已经没有希望了。”",
+        1
+      ],
+      [
+        "“你感到这一切好像不是发生在自己身上。”",
+        1
+      ],
+      [
+        "“就让那些怪物们胜利吧。”",
+        1
+      ],
+      [
+        "你咬紧牙关。",
+        10
+      ],
+      [
+        "你的手感到刺痛。",
+        10
+      ],
+      [
+        "你感到四肢麻木。",
+        10
+      ],
+      [
+        "你的眼球不停抽搐。",
+        10
+      ],
+      [
+        "你的耳朵在鸣响。",
+        10
+      ],
+      [
+        "你在流汗和颤抖。",
+        10
+      ],
+      [
+        "你的心跳越来越快。",
+        10
+      ],
+      [
+        "你的手出汗了。",
+        10
+      ],
+      [
+        "好像跌入洞穴一般。\n你的视野变得狭窄。",
+        10
+      ]
+    ],
+    "removes_effects": [
+      "happy"
+    ],
+    "rating": "bad",
+    "max_intensity": 16,
+    "resist_traits": [
+      "WILLPOWER"
+    ],
+    "resist_effects": [
+      "resist_psychic_stress"
+    ],
+    "int_decay_tick": 300,
+    "base_mods": {
+      "dex_mod": [
+        0
+      ],
+      "int_mod": [
+        0
+      ],
+      "per_mod": [
+        -1,
+        0
+      ],
+      "fatigue_tick": [
+        60,
+        120
+      ],
+      "fatigue_min": [
+        1
+      ]
+    },
+    "scaling_mods": {
+      "dex_mod": [
+        -0.25,
+        -0.125
+      ],
+      "int_mod": [
+        -0.5,
+        -0.25
+      ],
+      "per_mod": [
+        -0.5,
+        -0.25
+      ],
+      "fatigue_min": [
+        1
+      ]
+    },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "psychic_feedback",
+    "name": [
+      "心理反馈"
+    ],
+    "desc": [
+      "你的身体对直接的精神攻击有同情的反应。"
+    ],
+    "show_in_info": true,
+    "rating": "bad",
+    "apply_message": "你被心理反应所折磨。",
+    "max_duration": "30 s",
+    "resist_traits": [
+      "WILLPOWER"
+    ],
+    "resist_effects": [
+      "resist_psychic_feedback"
+    ],
+    "base_mods": {
+      "hurt_chance": [
+        10,
+        20
+      ],
+      "hurt_amount": [
+        2
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "madness",
+    "name": [
+      "疯狂"
+    ],
+    "desc": [
+      "你的心灵被巨大的精神创伤打断了。"
+    ],
+    "apply_message": "你的精神彻底粉碎，坠入癫狂。",
+    "remove_message": "你的思想又一次完整了。",
+    "apply_memorial_log": "Went Insane.",
+    "remove_memorial_log": "Recovered from Insanity.",
+    "rating": "bad",
+    "resist_traits": [
+      "WILLPOWER",
+      "FEARLESS"
+    ],
+    "blocks_effects": [
+      "block_psychic"
+    ],
+    "base_mods": {
+      "per_mod": [
+        -2,
+        -1
+      ],
+      "int_mod": [
+        -1,
+        -1
+      ]
+    },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "resist_fear",
+    "name": [
+      "抵制恐惧"
+    ],
+    "desc": [
+      "你的大脑对恐惧有更大的抵抗力。"
+    ],
+    "apply_message": "你抵抗着恐惧。",
+    "remove_message": "你的抵抗结束了。",
+    "rating": "good",
+    "//": "resist traits flipped to enhance.",
+    "resist_traits": [
+      "THRESH_ALPHA",
+      "THRESH_SLIME",
+      "THRESH_CEPHALOPOD"
+    ],
+    "max_duration": "1 d",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "resist_psychic_feedback",
+    "name": [
+      "抵制心理反馈"
+    ],
+    "desc": [
+      "你的大脑对有害的心理反馈有更大的抵抗力。"
+    ],
+    "apply_message": "你抵抗着心理反应。",
+    "remove_message": "你的抵抗结束了。",
+    "rating": "good",
+    "max_duration": "1 d",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "resist_psychic_stress",
+    "name": [
+      "抵抗精神压力"
+    ],
+    "desc": [
+      "你的大脑对精神压力有更大的抵抗力。"
+    ],
+    "apply_message": "你抵抗着精神压力。",
+    "remove_message": "你的抵抗结束了。",
+    "rating": "good",
+    "max_duration": "1 d",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "block_psychic",
+    "name": [
+      "阻挡灵能攻击"
+    ],
+    "desc": [
+      "你的大脑暂时对精神攻击免疫。"
+    ],
+    "apply_message": "你正在反抗精神攻击。",
+    "remove_message": "你的抵抗结束了。",
+    "rating": "good",
+    "removes_effects": [
+      "fear",
+      "psychic_feedback",
+      "psychic_stress"
+    ],
+    "max_duration": "1 d",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "remove_madness",
+    "name": [
+      "阻挡灵能攻击"
+    ],
+    "desc": [
+      "你的头脑已经摆脱了疯狂"
+    ],
+    "rating": "good",
+    "removes_effects": [
+      "madness"
+    ],
+    "max_duration": 6,
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "id": "boost_int_per",
+    "name": [
+      "属性增强"
+    ],
+    "desc": [
+      "你的智力和感知暂时提高了。"
+    ],
+    "rating": "good",
+    "resist_traits": [
+      "THRESH_ALPHA",
+      "THRESH_SLIME",
+      "THRESH_CEPHALOPOD"
+    ],
+    "max_duration": "1 d",
+    "show_in_info": true,
+    "apply_message": "你的心理状态得到了提升。",
+    "remove_message": "你介意昏暗。",
+    "max_intensity": 4,
+    "int_add_val": 1,
+    "int_decay_tick": 36000,
+    "base_mods": {
+      "int_mod": [
+        2,
+        3
+      ],
+      "per_mod": [
+        2,
+        3
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "boost_speed",
+    "name": [
+      "加速"
+    ],
+    "desc": [
+      "你的速度暂时提高了。"
+    ],
+    "rating": "good",
+    "resist_traits": [
+      "THRESH_ALPHA",
+      "THRESH_SLIME",
+      "THRESH_CEPHALOPOD"
+    ],
+    "max_duration": "1 d",
+    "show_in_info": true,
+    "apply_message": "你的速度得到了提升。",
+    "remove_message": "你慢了下来。",
+    "max_intensity": 6,
+    "int_add_val": 1,
+    "int_decay_tick": 600,
+    "base_mods": {
+      "speed_mod": [
+        25,
+        35
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "block_mesmer",
+    "name": [
+      "阻挡催眠术"
+    ],
+    "desc": [
+      "这个角色已经克服了催眠的企图，并且在一段时间内对进一步的企图免疫。"
+    ],
+    "rating": "good",
+    "max_duration": "1 d",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "hypno_suggest",
+    "name": [
+      "催眠暗示"
+    ],
+    "desc": [
+      "这个角色被置于催眠暗示之下。"
+    ],
+    "rating": "good",
+    "max_duration": "1 d",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "thrall_drain",
+    "name": [
+      "吸取心灵"
+    ],
+    "desc": [
+      "这个人暂时失去了生命的精华。他们表现得又累又困惑。"
+    ],
+    "rating": "bad",
+    "max_duration": "1 d",
+    "show_in_info": true,
+    "base_mods": {
+      "int_mod": [
+        -4
+      ],
+      "per_mod": [
+        -4
+      ],
+      "speed_mod": [
+        -20
+      ],
+      "fatigue_tick": [
+        300
+      ],
+      "fatigue_min": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "thrall_boost",
+    "name": [
+      "通灵吸血鬼"
+    ],
+    "desc": [
+      "你已经从你的一个精神奴隶身上吸取了生命的精华，给予你少许精神增强。"
+    ],
+    "apply_message": "你吸干了你的奴隶！",
+    "rating": "good",
+    "max_duration": "1 d",
+    "show_in_info": true,
+    "max_intensity": 3,
+    "base_mods": {
+      "per_mod": [
+        1
+      ],
+      "speed_mod": [
+        5
+      ],
+      "sleepiness_amount": [
+        -500
+      ]
+    },
+    "scaling_mods": {
+      "per_mod": [
+        1
+      ],
+      "int_mod": [
+        0.34
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "thrall_victory",
+    "//": "just for memorial",
+    "name": [
+      "成功地迷住了"
+    ],
+    "apply_memorial_log": "Enthralled another person.",
+    "apply_message": "你又俘获了一个人！",
+    "desc": [
+      "你奴役了又一个人。"
+    ],
+    "max_duration": 1,
+    "rating": "good",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "thrall_defeat",
+    "name": [
+      "奴役失败"
+    ],
+    "apply_memorial_log": "Failed to enthrall another person.",
+    "apply_message": "你没能成功俘获别人！",
+    "desc": [
+      "你没能奴役又一个人。"
+    ],
+    "max_duration": 1,
+    "rating": "bad",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "psychic_duel_victory",
+    "//": "just for memorial",
+    "name": [
+      "心灵决斗胜利"
+    ],
+    "apply_message": "你在一场精神对决里胜利了！",
+    "apply_memorial_log": "Bested another in a psychic duel.",
+    "desc": [
+      "你在心灵决斗中打败了又一个人。"
+    ],
+    "max_duration": 1,
+    "rating": "good",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "psychic_duel_defeat",
+    "name": [
+      "心灵决斗胜利"
+    ],
+    "apply_message": "你输掉了一场心灵对决！",
+    "apply_memorial_log": "Defeated in a psychic duel.",
+    "desc": [
+      "你在灵能决斗中被打败了。"
+    ],
+    "max_duration": 1,
+    "rating": "bad",
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "psychic_duelist",
+    "name": [
+      "精神胜利"
+    ],
+    "desc": [
+      "这个人在心灵决斗中打败了你。你不能再挑战他们一段时间。"
+    ],
+    "max_duration": "180 d",
+    "show_in_info": true,
+    "rating": "good"
+  },
+  {
+    "type": "effect_type",
+    "id": "psychic_shackles",
+    "name": [
+      "精神枷锁"
+    ],
+    "desc": [
+      "你被暂时切断了你的灵力。"
+    ],
+    "show_in_info": true,
+    "max_duration": "90 d",
+    "rating": "bad",
+    "removes_effects": [
+      "boost_int_per",
+      "boost_speed",
+      "block_psychic",
+      "thrall_boost",
+      "resist_fear",
+      "resist_psychic_feedback",
+      "resist_psychic_stress"
+    ],
+    "apply_message": "你的精神被束缚住了！",
+    "base_mods": {
+      "per_mod": [
+        -1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "psychic_death",
+    "name": [
+      "致命性脑外伤"
+    ],
+    "desc": [
+      "失控的心理反馈正在炸毁你大脑中的突触。你只能活几分钟。"
+    ],
+    "show_in_info": true,
+    "rating": "bad",
+    "apply_message": "你的大脑正在融化。\n你的\n大脑\n正在融化\n你的\n大脑\n正在融化\n你的\n大脑\n正在融化\n",
+    "apply_memorial_log": "Suffered a melted brain",
+    "base_mods": {
+      "int_mod": [
+        -10
+      ],
+      "per_mod": [
+        -100
+      ],
+      "pain_tick": [
+        1
+      ],
+      "pain_min": [
+        2
+      ],
+      "hurt_chance": [
+        1
+      ],
+      "hurt_min": [
+        999
+      ],
+      "hurt_max": [
+        999
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "psychic_shock",
+    "name": [
+      "精神休克"
+    ],
+    "desc": [
+      "你被一次强大的灵能突袭眩晕了。"
+    ],
+    "apply_message": "你被震住了。",
+    "rating": "bad",
+    "max_duration": "10 s",
+    "dur_add_perc": 20,
+    "base_mods": {
+      "speed_mod": [
+        -1000
+      ],
+      "dex_mod": [
+        -100
+      ]
+    },
+    "show_in_info": true
+  }
+]

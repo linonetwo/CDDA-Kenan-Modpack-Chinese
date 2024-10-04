@@ -1,0 +1,93 @@
+[
+  {
+    "id": "xm8",
+    "copy-from": "rifle_auto",
+    "reload_noise_volume": 10,
+    "looks_like": "m16a4",
+    "type": "GUN",
+    "name": {
+      "str": "H&K XM8型"
+    },
+    "description": "XM8 由H&K公司制造，最初它被设计成智能榴弹发射器系统，带有一个下挂式卡宾枪。人们发现这种设计效果不佳，后来发射器和卡宾枪被分成两部分，于是XM8诞生了！它重量极轻，弹药容量却相当大。生存者渴望之枪！",
+    "weight": "3403 g",
+    "volume": "3 L",
+    "price": "2500 USD",
+    "to_hit": -2,
+    "bashing": 8,
+    "durability": 8,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "~",
+    "ammo": [
+      "545x39"
+    ],
+    "skill": "rifle",
+    "range": 37,
+    "dispersion": 100,
+    "barrel_volume": "44 ml",
+    "longest_side": "840 mm",
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        12
+      ]
+    ],
+    "built_in_mods": [
+      "acog_scope"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "XM8_mag",
+          "bigXM8_mag"
+        ]
+      }
+    ]
+  }
+]

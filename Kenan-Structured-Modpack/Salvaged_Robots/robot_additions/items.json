@@ -1,0 +1,60 @@
+[
+  {
+    "id": "robot_carrier",
+    "type": "GENERIC",
+    "name": {
+      "str": "机器人托架"
+    },
+    "description": "一个有着运载货物用的绳索和附着点的重型框架，额外安装了用于固定大型机器人的栏杆，可以用来运输大型机器人。激活它后选择需要装载的机器人，或者选择空地卸载机器人。",
+    "weight": "96 kg",
+    "volume": "62500 ml",
+    "price": "480 USD",
+    "category": "veh_parts",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "]",
+    "color": "light_gray",
+    "looks_like": "cargo_rack",
+    "properties": {
+        "monster_size_capacity":"LARGE"
+      },
+    "use_action": "CAPTURE_MONSTER_VEH",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "TOOL",
+    "category": "weapons",
+    "id": "glowball_act",
+    "price": "0 cent",
+    "name": {
+      "str": "发光彩弹（无保险）"
+    },
+    "symbol": "*",
+    "color": "pink",
+    "description": "充满发光化学物质的小塑料球。",
+    "material": [
+      "plastic"
+    ],
+    "volume": "250 ml",
+    "weight": "1 g",
+    "to_hit": -3,
+    "bashing": 1,
+    "initial_charges": 40,
+    "max_charges": 40,
+    "turns_per_charge": 1,
+    "revert_to": "plastic_chunk",
+    "use_action": {
+      "target": "plastic_chunk",
+      "msg": "发光彩弹发出黯淡的光。",
+      "type": "transform"
+    },
+    "flags": [
+      "LIGHT_10",
+      "TRADER_AVOID"
+    ]
+  }
+]

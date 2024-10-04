@@ -1,0 +1,2451 @@
+[
+  {
+    "abstract": "tiny_bird",
+    "type": "MONSTER",
+    "name": {
+      "str": "小鸟"
+    },
+    "description": "只是一只小鸟，很可爱",
+    "default_faction": "small_animal",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "BIRD"
+    ],
+    "diff": 1,
+    "harvest": "bird_tiny",
+    "hp": 4,
+    "volume": "750 ml",
+    "weight": "1 kg",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "v",
+    "morale": 15,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 1,
+    "dodge": 5,
+    "vision_day": 40,
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "STALK",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "HURT",
+      "FRIEND_DIED",
+      "FIRE"
+    ],
+    "placate_triggers": [
+      "SOUND",
+      "PLAYER_WEAK"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_bird",
+      "biosig_timer": 8
+    }
+  },
+  {
+    "id": "mon_frog_giant",
+    "type": "MONSTER",
+    "copy-from": "mon_frog_giant",
+    "diff": 15,
+    "hp": 70,
+    "speed": 80,
+    "aggression": 1,
+    "morale": 99,
+    "melee_skill": 5,
+    "melee_dice": 5,
+    "melee_dice_sides": 4,
+    "melee_cut": 0,
+    "dodge": 3,
+    "armor_bash": 4,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "special_attacks": [
+      { "id": "ranged_pull", "cooldown":60
+      },
+      {
+        "type": "leap",
+        "cooldown": 10,
+        "move_cost": 0,
+        "max_range": 10,
+        "min_consider_range": 2
+      },
+      {
+        "type": "bite",
+        "cooldown": 30,
+        "infection_chance": 2,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 15,
+            "armor_multiplier": 1.35
+          }
+        ],
+        "effects": [
+          {
+            "id": "stunned",
+            "duration": 5,
+            "chance": 33
+          },
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "torso"
+          },
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "head"
+          },
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "leg_l"
+          },
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "leg_r"
+          },
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "arm_l"
+          },
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "arm_r"
+          }
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_rattlesnake",
+    "type": "MONSTER",
+    "name": {
+      "str": "响尾蛇"
+    },
+    "description": "木材响尾蛇是最有毒的毒蛇原产于新英格兰。气候的变化已经把范围扩大到了北方。",
+    "default_faction": "small_animal",
+    "bodytype": "snake",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "REPTILE"
+    ],
+    "diff": 2,
+    "volume": "750 ml",
+    "weight": "1 kg",
+    "hp": 12,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "s",
+    "color": "brown",
+    "aggression": -50,
+    "morale": 60,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 1,
+    "vision_day": 30,
+    "vision_night": 5,
+    "harvest": "mammal_tiny",
+    "special_attacks": [
+      [
+        "RATTLE",
+        6
+      ]
+    ],
+    "attack_effs": [
+      {
+        "id": "badpoison",
+        "duration": 700
+      },
+      {
+        "id": "infection_minor",
+        "duration": 14400,
+        "chance": 5
+      }
+    ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_rattlesnake_giant"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "HARDTOSHOOT",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_rattlesnake_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型响尾蛇"
+    },
+    "description": "一条变异的这种林响蛇，约有普通响尾蛇的三倍体积，虽然体型并没有大到可以将人类当作猎物，但相比普通的响尾蛇更具有侵略性且更危险。",
+    "default_faction": "animal",
+    "bodytype": "snake",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "REPTILE"
+    ],
+    "diff": 2,
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 48,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "s",
+    "color": "brown",
+    "aggression": -10,
+    "morale": 60,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_cut": 8,
+    "dodge": 1,
+    "armor_bash": 2,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "harvest": "mutant_animal_large_noskin",
+    "special_attacks": [
+      [
+        "RATTLE",
+        6
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 10,
+            "armor_multiplier": 0.7
+          }
+        ]
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "badpoison",
+        "duration": 1200
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 3
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      },
+      {
+        "id": "infection_minor",
+        "duration": 5200,
+        "chance": 10
+      }
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "reproduction": {
+      "baby_egg": "egg_reptile",
+      "baby_count": 3,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "HARDTOSHOOT",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_gator",
+    "type": "MONSTER",
+    "name": {
+      "str": "下水道鳄"
+    },
+    "copy-from": "mon_gator",
+    "description": "一直在充满废料的下水道长大的鳄鱼，在二十世纪末经常有关于宠物短吻鳄被冲下马桶，在下水道长到成年的都市传说，这巨大的生物看起来习惯于把人当作食物。",
+    "default_faction": "gator",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "REPTILE"
+    ],
+    "diff": 23,
+    "hp": 90,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "A",
+    "color": "light_green",
+    "aggression": 35,
+    "morale": 60,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 10,
+    "melee_cut": 12,
+    "dodge": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 2
+      }
+    ],
+    "armor_bash": 6,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 5,
+    "vision_night": 35,
+    "path_settings": {
+      "max_dist": 8
+    },
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 20,
+        "accuracy": 6,
+        "infection_chance": 50,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 14,
+            "armor_multiplier": 0.5
+          },
+          {
+            "damage_type": "bash",
+            "amount": 31,
+            "armor_multiplier": 0.5
+          }
+        ],
+        "effects": [
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "torso"
+          },
+          {
+            "id": "infection_minor",
+            "duration": 28800
+          }
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "FIRE",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "ATTACKMON",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_hallu_mannequin",
+    "type": "MONSTER",
+    "name": {
+      "str": "人体模型"
+    },
+    "description": "当你眨眼时，它会瞬间移动，或至少你认为它会。",
+    "default_faction": "factionless",
+    "species": [
+      "HALLUCINATION"
+    ],
+    "diff": 1,
+    "hp": 80,
+    "speed": 100,
+    "material": [
+      "plastic"
+    ],
+    "harvest": "exempt",
+    "symbol": "@",
+    "color": "light_gray",
+    "aggression": 50,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "dodge": 1,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ],
+    "armor_bash": 2,
+    "armor_cut": 4,
+    "armor_bullet": 2,
+    "armor_acid": 6,
+    "vision_day": 35,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 35
+    },
+    "special_attacks": [
+      { "id": "grab", "cooldown": 30
+      }
+    ],
+    "death_function": {
+      "message": "The %s disappears.",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "PATH_AVOID_DANGER_1",
+      "NO_BREATHE",
+      "PLASTIC"
+    ]
+  },
+  {
+    "id": "mon_pig",
+    "type": "MONSTER",
+    "copy-from": "mon_pig",
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 10,
+    "melee_cut": 4,
+    "dodge": 2,
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 12
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED",
+      "SOUND"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "HURT"
+    ],
+    "placate_triggers": [
+      "PLAYER_CLOSE"
+    ]
+  },
+  {
+    "id": "mon_sewer_rat",
+    "type": "MONSTER",
+    "copy-from": "mon_sewer_rat",
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "special_attacks": [
+      [
+        "wound_minor",
+        7
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "infection_chance": 5
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "doom_unhealth",
+        "duration": 1
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 3
+      },
+      {
+        "id": "infection_minor",
+        "duration": 2400
+      }
+    ],
+    "vision_day": 3,
+    "vision_night": 20,
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "SWARMS"
+    ]
+  },
+  {
+    "id": "mon_black_rat",
+    "type": "MONSTER",
+    "copy-from": "mon_black_rat",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "diff": 3,
+    "hp": 8,
+    "speed": 100,
+    "aggression": 5,
+    "morale": 10,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_cut": 1,
+    "dodge": 3,
+    "armor_bash": 0,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 25,
+    "vision_night": 10,
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "infection_chance": 12
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "SWARMS",
+      "GROUP_MORALE"
+    ]
+  },
+  {
+    "id": "mon_rat_king",
+    "type": "MONSTER",
+    "copy-from": "mon_rat_king",
+    "diff": 18,
+    "hp": 250,
+    "speed": 40,
+    "aggression": 0,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 9,
+    "melee_dice_sides": 2,
+    "melee_cut": 5,
+    "dodge": 0,
+    "armor_bash": 2,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "vision_day": 5,
+    "vision_night": 25,
+    "starting_ammo": {
+      "bot_rat": 25
+    },
+    "attack_effs": [
+      {
+        "id": "doom_unhealth",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "infection_minor",
+        "duration": 3600
+      }
+    ],
+    "special_attacks": [
+      [
+        "wound_minor",
+        60
+      ],
+      [
+        "RATKING",
+        3
+      ],
+      [
+        "GRENADIER",
+        10
+      ]
+    ],
+    "anger_triggers": [
+      "STALK",
+      "HURT",
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "SWIMS",
+      "BONES"
+    ]
+  },
+  {
+    "id": "mon_cow",
+    "type": "MONSTER",
+    "copy-from": "mon_cow",
+    "aggression": -10,
+    "morale": 65,
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "SOUND",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK",
+      "SOUND",
+      "FIRE"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "HURT"
+    ]
+  },
+  {
+    "id": "mon_horse",
+    "type": "MONSTER",
+    "copy-from": "mon_horse",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "hp": 110,
+    "speed": 210,
+    "aggression": -5,
+    "morale": 20,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 8
+      }
+    ],
+    "melee_cut": 0,
+    "dodge": 2,
+    "armor_bash": 4,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_acid": 2,
+    "vision_day": 40,
+    "special_attacks": [
+      [
+        "hammer",
+        15
+      ],
+      [
+        "wound_minor",
+        30
+      ]
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ]
+  },
+  {
+    "id": "mon_bear",
+    "type": "MONSTER",
+    "copy-from": "mon_bear",
+    "diff": 18,
+    "hp": 140,
+    "speed": 170,
+    "aggression": -10,
+    "morale": 60,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 12,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "melee_cut": 8,
+    "dodge": 3,
+    "armor_bash": 1,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "special_attacks": [
+      [
+        "hammer",
+        30
+      ],
+      [
+        "EAT_FOOD",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 15,
+        "infection_chance": 5,
+        "//": "strong jaws",
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 20,
+            "armor_multiplier": 0.75
+          }
+        ],
+        "effects": [
+          {
+            "id": "infection_minor",
+            "duration": 5200
+          }
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_NEAR_BABY"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ]
+  },
+  {
+    "id": "mon_bear_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "熊"
+    },
+    "copy-from": "mon_bear",
+    "description": "美国黑熊，一种大型杂食性动物，有强有力的爪子和下颚，而且是一名出色的伏击捕食者。尽管有着强壮的身躯，大多数个体一般会避开人类生存，但是幼崽保护欲很强。这头熊看起来自信满满。",
+    "hp": 165,
+    "speed": 160,
+    "aggression": -10,
+    "morale": 65,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 16,
+    "melee_cut": 8,
+    "dodge": 3,
+    "armor_bash": 1,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 15
+  },
+  {
+    "id": "mon_bear_weak",
+    "type": "MONSTER",
+    "name": {
+      "str": "熊"
+    },
+    "copy-from": "mon_bear",
+    "description": "美国黑熊，一种大型杂食性动物，有强有力的爪子和下颚，而且是一名出色的伏击捕食者。尽管有着强壮的身躯，大多数个体一般会避开人类生存，但是幼崽保护欲很强。这头熊有着斑驳的皮毛和绝望而饥渴的眼睛。",
+    "hp": 120,
+    "speed": 140,
+    "aggression": -6,
+    "morale": 30,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 4,
+    "dodge": 2,
+    "armor_bash": 1,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 25,
+    "vision_night": 10,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_NEAR_BABY",
+      "PLAYER_WEAK"
+    ]
+  },
+  {
+    "id": "mon_cougar",
+    "type": "MONSTER",
+    "copy-from": "mon_cougar",
+    "diff": 20,
+    "hp": 80,
+    "speed": 190,
+    "aggression": 0,
+    "morale": 40,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_cut": 8,
+    "dodge": 6,
+    "vision_day": 40,
+    "vision_night": 15,
+    "path_settings": {
+      "max_dist": 40
+    },
+    "special_attacks": [
+      [
+        "scratch",
+        50
+      ],
+      {
+        "type": "leap",
+        "cooldown": 5,
+        "max_range": 5
+      },
+      [
+        "LUNGE",
+        40
+      ]
+    ]
+  },
+  {
+    "id": "mon_cougar_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "美洲狮"
+    },
+    "copy-from": "mon_cougar",
+    "description": "东部美洲狮，大型猫科食肉动物。一度在这个地区被认为是已灭绝的物种，但是经过保育，在大灾变之后，成功的恢复了往日的荣光。行动安静迅捷，捕猎者能够远距离跳扑，用爪子和獠牙给敌人致命一击。这头美洲狮充满了活力。",
+    "hp": 125,
+    "speed": 205,
+    "aggression": 0,
+    "morale": 60,
+    "melee_skill": 8,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_cut": 8,
+    "dodge": 6,
+    "armor_bash": 2,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 40,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "LUNGE",
+        30
+      ],
+      [
+        "scratch",
+        40
+      ],
+      {
+        "type": "leap",
+        "cooldown": 5,
+        "max_range": 5
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "HURT",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ]
+  },
+  {
+    "id": "mon_cougar_weak",
+    "type": "MONSTER",
+    "name": {
+      "str": "美洲狮"
+    },
+    "copy-from": "mon_cougar",
+    "description": "东部美洲狮，大型猫科食肉动物。一度在这个地区被认为是已灭绝的物种，但是经过保育，在大灾变之后，成功的恢复了往日的荣光。行动安静迅捷，捕猎者能够远距离跳扑，用爪子和獠牙给敌人致命一击。它的眼睛有一种浑浊的光泽。",
+    "hp": 60,
+    "speed": 180,
+    "aggression": 0,
+    "morale": 40,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 6,
+    "dodge": 7,
+    "armor_bash": 1,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "vision_day": 40,
+    "vision_night": 10,
+    "special_attacks": [
+      [
+        "LUNGE",
+        50
+      ],
+      [
+        "scratch",
+        60
+      ],
+      {
+        "type": "leap",
+        "cooldown": 5,
+        "max_range": 5
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "placate_triggers": [
+      "SOUND"
+    ]
+  },
+  {
+    "id": "mon_dog",
+    "type": "MONSTER",
+    "copy-from": "mon_dog",
+    "hp": 35,
+    "speed": 170,
+    "aggression": -10,
+    "morale": 15,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 3,
+    "dodge": 3,
+    "armor_bash": 0,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "vision_day": 45,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "GROUP_MORALE"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "PLAYER_WEAK"
+    ],
+    "placate_triggers": [
+      "SOUND"
+    ]
+  },
+  {
+    "id": "mon_dog_large",
+    "type": "MONSTER",
+    "name": {
+      "str": "大狗"
+    },
+    "copy-from": "mon_dog",
+    "description": "一种大型野狗，有着令人印象深刻的下颚，下颚上有不断流落的白色唾液。",
+    "diff": 14,
+    "hp": 60,
+    "speed": 140,
+    "symbol": "D",
+    "color": "light_gray",
+    "aggression": -5,
+    "morale": 25,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 3,
+    "armor_bash": 0,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "vision_day": 40,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "special_attacks": [
+      [
+        "wound_minor",
+        60
+      ],
+      {
+        "type": "bite",
+        "cooldown": 20,
+        "min_mul": 0.4,
+        "infection_chance": 6
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "HURT",
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED"
+    ],
+    "placate_triggers": [
+      "SOUND"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "KEENNOSE",
+      "GROUP_MORALE"
+    ]
+  },
+  {
+    "id": "mon_moose",
+    "type": "MONSTER",
+    "copy-from": "mon_moose",
+    "diff": 15,
+    "hp": 170,
+    "speed": 200,
+    "aggression": -15,
+    "morale": 80,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_cut": 2,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 6
+      },
+      {
+        "damage_type": "stab",
+        "amount": 2
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 4,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_acid": 2,
+    "path_settings": {
+      "max_dist": 25
+    },
+    "special_attacks": [
+      [
+        "SMASH",
+        50
+      ]
+    ],
+    "anger_triggers": [
+      "HURT",
+      "MATING_SEASON",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "BASHES",
+      "WARM",
+      "ATTACKMON"
+    ]
+  },
+  {
+    "id": "mon_moose_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "驼鹿"
+    },
+    "copy-from": "mon_moose",
+    "description": "东部驼鹿，当今世界上种族数量最多的鹿类。虽然不被激怒时不会攻击别人，但是发情的季节会使得雄性驼鹿脾气火爆。这头驼鹿的皮毛非常华丽。",
+    "diff": 22,
+    "hp": 190,
+    "speed": 200,
+    "aggression": -15,
+    "morale": 80,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_cut": 3,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 12
+      },
+      {
+        "damage_type": "stab",
+        "amount": 3
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 5,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "armor_acid": 2,
+    "vision_day": 40,
+    "vision_night": 8,
+    "special_attacks": [
+      [
+        "SMASH",
+        50
+      ]
+    ],
+    "anger_triggers": [
+      "HURT",
+      "MATING_SEASON",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "BASHES",
+      "WARM",
+      "ATTACKMON"
+    ]
+  },
+  {
+    "id": "mon_moose_weak",
+    "type": "MONSTER",
+    "name": {
+      "str": "驼鹿"
+    },
+    "copy-from": "mon_moose",
+    "description": "东部驼鹿，当今世界上种族数量最多的鹿类。虽然不被激怒时不会攻击别人，但是发情的季节会使得雄性驼鹿脾气火爆。这头驼鹿看起来腹中空无一物。",
+    "hp": 140,
+    "speed": 170,
+    "aggression": -15,
+    "morale": 70,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 2,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 5
+      },
+      {
+        "damage_type": "stab",
+        "amount": 2
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 3,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_acid": 2,
+    "vision_day": 40,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "SMASH",
+        90
+      ]
+    ],
+    "anger_triggers": [
+      "HURT",
+      "MATING_SEASON",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "BASHES",
+      "WARM",
+      "ATTACKMON"
+    ]
+  },
+  {
+    "id": "mon_wolf",
+    "type": "MONSTER",
+    "copy-from": "mon_wolf",
+    "diff": 15,
+    "hp": 55,
+    "speed": 165,
+    "aggression": -1,
+    "morale": 25,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 3
+      }
+    ],
+    "melee_cut": 5,
+    "dodge": 4,
+    "armor_bash": 2,
+    "vision_day": 40,
+    "vision_night": 7,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "special_attacks": [
+      [
+        "wound_minor",
+        40
+      ],
+      {
+        "type": "bite",
+        "cooldown": 7,
+        "min_mul": 0.5,
+        "infection_chance": 5,
+        "//": "strong jaws"
+      }
+    ],
+    "biosignature": {
+      "biosig_item": "feces_dog",
+      "biosig_timer": 6
+    },
+    "anger_triggers": [
+      "STALK",
+      "FRIEND_DIED",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "FRIEND_ATTACKED"
+    ]
+  },
+  {
+    "id": "mon_coyote",
+    "type": "MONSTER",
+    "name": {
+      "str": "郊狼"
+    },
+    "description": "东部郊狼，也被称作花呢狼，是一种由灰狼和土狼杂交而成的后代。它面对人类或其他食肉动物时会胆怯，但一旦受到威胁，它仍然会战斗，而且大灾变使它的胆子比以往更大了些。",
+    "default_faction": "dog",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "13250 ml",
+    "weight": "13250 g",
+    "hp": 28,
+    "speed": 155,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "brown",
+    "morale": 20,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 2,
+    "dodge": 3,
+    "armor_bash": 1,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "anger_triggers": [
+      "STALK",
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "harvest": "mammal_fur",
+    "upgrades": {
+      "half_life": 17,
+      "into": "mon_coyote_small"
+    },
+    "biosignature": {
+      "biosig_item": "feces_dog",
+      "biosig_timer": 6
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_skunk",
+    "type": "MONSTER",
+    "name": {
+      "str": "臭鼬"
+    },
+    "description": "以昆虫、水果、树根和种子为食的一种小哺乳动物，长有白色的尖尖的黑色皮毛。如果受到惊吓的话，会从尾部喷射出一种极其难闻的液体来赶走捕食者。",
+    "default_faction": "small_animal",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 5,
+    "harvest": "mammal_small_fur",
+    "hp": 12,
+    "speed": 85,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "dark_gray",
+    "aggression": -10,
+    "morale": 20,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 2,
+    "dodge": 2,
+    "vision_day": 35,
+    "vision_night": 3,
+    "attack_effs": [
+      {
+        "id": "skunk_spray",
+        "duration": 12000
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "KEENNOSE"
+    ]
+  },
+  {
+    "id": "mon_goat",
+    "type": "MONSTER",
+    "name": {
+      "str": "山羊"
+    },
+    "copy-from": "mon_moose",
+    "description": "一种毛茸茸的哺乳动物，有优雅的缓慢和安静的天性。它灰白色的毛发外观斑驳，它的角更多的是用于发情和求爱，而不是防御。",
+    "default_faction": "herbivore",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 8,
+    "hp": 65,
+    "speed": 105,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_large_wool",
+    "symbol": "g",
+    "color": "light_gray",
+    "aggression": 0,
+    "morale": 5,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 3,
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "path_settings": {
+      "max_dist": 40
+    },
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ],
+      [
+        "hammer",
+        40
+      ],
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 2
+      }
+    ],
+    "anger_triggers": [
+      "HURT",
+      "STALK",
+      "FRIEND_DIED"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_robin",
+    "type": "MONSTER",
+    "copy-from": "tiny_bird",
+    "name": {
+      "str": "罗宾"
+    },
+    "description": "一只红知更鸟，叽叽喳喳地叫个不停。它的羽毛使它脱颖而出，尽管它在大灾变开始时被死神忽视了。",
+    "speed": 145,
+    "color": "red",
+    "aggression": -99,
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "FLIES"
+    ]
+  },
+  {
+    "id": "mon_bjay",
+    "type": "MONSTER",
+    "copy-from": "tiny_bird",
+    "name": {
+      "str": "红嘴蓝鹊"
+    },
+    "description": "一只保护自己的蓝松鸦，唧唧喳喳地叫个不停。它的羽毛使它脱颖而出，尽管它在大灾变开始时被死神忽视了。",
+    "speed": 145,
+    "color": "light_blue",
+    "aggression": -20,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "FLIES",
+      "HARDTOSHOOT",
+      "HIT_AND_RUN"
+    ]
+  },
+  {
+    "id": "mon_pidgeon",
+    "type": "MONSTER",
+    "copy-from": "tiny_bird",
+    "name": {
+      "str": "鸽子"
+    },
+    "description": "一只跳来跳去、身上带着灰色斑点的鸽子，在世界末日来临之前，像大灾变前的日常一样，从那些衰败的城市中寻找食物。",
+    "speed": 125,
+    "color": "light_gray",
+    "aggression": -25,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "FLIES",
+      "SWARMS"
+    ]
+  },
+  {
+    "id": "mon_gull",
+    "type": "MONSTER",
+    "copy-from": "tiny_bird",
+    "name": {
+      "str": "海鸥"
+    },
+    "description": "一种普通的海鸥，有白色和灰色的羽毛和钝黄色的喙。随着垃圾箱的存在变得普遍起来，它的祖先向内陆迁移。在罗布麻出现之前，许多人以给这些生物喂食面包、大米和偶尔出现的土豆条为乐。",
+    "speed": 130,
+    "symbol": "b",
+    "color": "white",
+    "vision_day": 35,
+    "fear_triggers": [
+      "PLAYER_CLOSE",
+      "FRIEND_DIED"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "FLIES"
+    ]
+  },
+  {
+    "id": "mon_bear_mega",
+    "type": "MONSTER",
+    "name": {
+      "str": "象熊"
+    },
+    "description": "一头非常巨大的，熊一样的生物，它的爪子比你的头颅还大。 作为一种较为专注的杂食动物，它有时会寻找或攻击较小的动物;它有着十分厚实的皮毛来保护自己。",
+    "default_faction": "bear",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 28,
+    "hp": 320,
+    "speed": 140,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_large_fur",
+    "symbol": "B",
+    "color": "brown_white",
+    "aggression": -10,
+    "morale": 80,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 10,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 16
+      }
+    ],
+    "melee_cut": 6,
+    "dodge": 5,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      }
+    ],
+    "armor_bash": 14,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 35,
+    "vision_night": 10,
+    "special_attacks": [
+      [
+        "FLESH_GOLEM",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 30,
+        "accuracy": 7,
+        "infection_chance": 5
+      },
+      {
+        "id": "hammer",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 12,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 28,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "id": "slash",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 12,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 28,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_DIED"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "WARM",
+      "BASHES",
+      "DESTROYS",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_bear_mega_mating",
+    "type": "MONSTER",
+    "name": {
+      "str": "象熊"
+    },
+    "description": "这只巨大的象熊似乎正在发情期之中，最好不要打扰他们或尝试接近它们。",
+    "default_faction": "bear_mating",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 30,
+    "hp": 320,
+    "speed": 135,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_large_fur",
+    "symbol": "B",
+    "color": "brown_white",
+    "aggression": -10,
+    "morale": 120,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 18,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 8
+      }
+    ],
+    "melee_cut": 4,
+    "dodge": 3,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      }
+    ],
+    "armor_bash": 14,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 30,
+    "vision_night": 10,
+    "special_attacks": [
+      [
+        "FLESH_GOLEM",
+        20
+      ],
+      [
+        "SMASH",
+        60
+      ],
+      {
+        "type": "bite",
+        "cooldown": 30,
+        "accuracy": 8,
+        "infection_chance": 5
+      },
+      {
+        "id": "hammer",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 12,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 28,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "id": "slash",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 12,
+            "armor_multiplier": 0.75
+          },
+          {
+            "damage_type": "bash",
+            "amount": 28,
+            "armor_multiplier": 0.75
+          }
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "SOUND",
+      "STALK",
+      "FIRE",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "WARM",
+      "BASHES",
+      "DESTROYS",
+      "ATTACKMON",
+      "SWARMS"
+    ]
+  },
+  {
+    "id": "mon_bear_mega_kid",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼象熊"
+    },
+    "description": "这只年轻的象熊还没有发育到成年象熊的肌肉和大小，但如果你认为脆弱无比，那你就错了。且它的母亲可能还在周围保护它。",
+    "default_faction": "bear",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 20,
+    "hp": 240,
+    "speed": 120,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "B",
+    "color": "brown_white",
+    "aggression": -15,
+    "morale": 60,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 12
+      }
+    ],
+    "melee_cut": 6,
+    "dodge": 3,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      }
+    ],
+    "armor_bash": 10,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 30,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "hammer",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 20,
+        "accuracy": 6,
+        "infection_chance": 5
+      },
+      {
+        "id": "slash",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 10,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 20,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED",
+      "FIRE"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_DIED",
+      "FIRE"
+    ],
+    "harvest": "megabear_head",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "WARM",
+      "BASHES",
+      "PUSH_MON",
+      "SWARMS",
+      "GROUP_MORALE"
+    ]
+  },
+  {
+    "id": "mon_bear_mega_baby",
+    "type": "MONSTER",
+    "copy-from": "mon_bear_cub",
+    "name": {
+      "str": "小象熊"
+    },
+    "description": "一只相比之下非常小的象熊，走路还不太协调。汽车大小的它有着大大的眼睛和咩咩的叫声，这是最可爱的的东西，然后它会吃掉你。",
+    "default_faction": "bear",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 16,
+    "hp": 180,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_large_fur",
+    "symbol": "B",
+    "color": "brown_white",
+    "aggression": -15,
+    "morale": 60,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 16,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 6
+      }
+    ],
+    "melee_cut": 4,
+    "dodge": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      }
+    ],
+    "armor_bash": 10,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 30,
+    "vision_night": 7,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 20,
+        "accuracy": 5,
+        "infection_chance": 5
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED",
+      "FIRE"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_DIED",
+      "FIRE",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "FRIEND_ATTACKED"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "WARM",
+      "BASHES",
+      "PUSH_MON",
+      "SWARMS",
+      "GROUP_MORALE",
+      "STUMBLES"
+    ]
+  },
+  {
+    "id": "mon_coyote_small",
+    "type": "MONSTER",
+    "copy-from": "mon_coyote",
+    "name": {
+      "str": "矮郊狼"
+    },
+    "description": "这些郊狼在环境压力下产生了更小，更灵活的种类。它们会集体生活在社会群体中，通常会去四处顽强地寻找鼹鼠;用爪子和长牙把它们从隧道里拖出来吃掉。它还以袭击露营地而闻名。",
+    "default_faction": "small_animal",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 12,
+    "hp": 22,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "brown",
+    "aggression": -2,
+    "morale": 12,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 3
+      }
+    ],
+    "melee_cut": 4,
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 15
+      }
+    ],
+    "armor_bash": 1,
+    "vision_day": 40,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "special_attacks": [
+      { "id": "grab", "cooldown": 40
+      },
+      {
+        "type": "bite",
+        "cooldown": 30,
+        "accuracy": 9,
+        "infection_chance": 8
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK",
+      "MEAT",
+      "FIRE"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "FRIEND_DIED",
+      "SOUND"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_dog",
+      "biosig_timer": 6
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "WARM",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "SWARMS",
+      "GROUP_MORALE"
+    ]
+  },
+  {
+    "id": "mon_pig_saber",
+    "type": "MONSTER",
+    "copy-from": "mon_pig",
+    "name": {
+      "str": "剑齿猪"
+    },
+    "description": "一种野猪，长着从嘴里伸出来的巨大牙齿;用它来有着纤细四肢的猎物。比如人类细长的四肢，或者穴居蜘蛛的四肢。大量的脂肪堆积在它那肌肉发达的身体上，在达不到你的高度的动物里是极为强悍的存在。",
+    "default_faction": "pig",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 16,
+    "hp": 70,
+    "speed": 130,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "color": "light_red",
+    "aggression": -1,
+    "morale": 75,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 12,
+    "melee_cut": 2,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 6
+      }
+    ],
+    "dodge": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 5
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 15
+      }
+    ],
+    "armor_bash": 5,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 35,
+    "vision_night": 10,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "special_attacks": [
+      [
+        "hammer",
+        60
+      ],
+      {
+        "type": "bite",
+        "cooldown": 25,
+        "min_mul": 0.5,
+        "infection_chance": 5
+      },
+      {
+        "id": "slash",
+        "cooldown": 40,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 16,
+            "armor_multiplier": 0.85
+          }
+        ]
+      }
+    ],
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 12
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM"
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "HURT",
+      "FIRE"
+    ],
+    "placate_triggers": [
+      "FRIEND_ATTACKED"
+    ]
+  },
+  {
+    "id": "mon_mole_large",
+    "type": "MONSTER",
+    "name": {
+      "str": "大鼹鼠"
+    },
+    "description": "一个相当大的，但看起来十分普通的鼹鼠，在泥土周围挖洞寻找根和小昆虫吃。虽然以破坏地基而闻名，但这只和一只猫差不多大小的鼹鼠对人类并没有真正的威胁。",
+    "default_faction": "wildlife",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 8,
+    "harvest": "mammal_small_fur",
+    "hp": 12,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "e",
+    "color": "brown",
+    "aggression": 10,
+    "morale": 15,
+    "melee_skill": 3,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 2
+      }
+    ],
+    "melee_cut": 1,
+    "dodge": 1,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ],
+    "vision_day": 20,
+    "vision_night": 7,
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "SOUND",
+      "FIRE"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 15
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "WARM",
+      "KEENNOSE",
+      "SWARMS",
+      "GROUP_MORALE",
+      "CAN_DIG"
+    ]
+  },
+  {
+    "id": "mon_deer_small",
+    "type": "MONSTER",
+    "copy-from": "mon_deer",
+    "name": {
+      "str": "袖珍鹿"
+    },
+    "description": "一头中等大小的草食动物。口袋鹿行动敏捷，有蹄，是它的成年祖先的后代，是那些从灭绝中幸存下来的生物最喜欢的猎物。它的头上长有一对鹿角。",
+    "default_faction": "wildlife",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 1,
+    "hp": 35,
+    "speed": 280,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "D",
+    "color": "brown",
+    "aggression": -20,
+    "morale": 25,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_cut": 6,
+    "dodge": 4,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 12
+    },
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE"
+    ],
+    "anger_triggers": [
+      "PLAYER_NEAR_BABY"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_deer_rutting",
+    "type": "MONSTER",
+    "copy-from": "mon_deer",
+    "name": {
+      "str": "袖珍鹿"
+    },
+    "description": "与其他同类不同的是，这只鹿处于发情期，正试图吸引配偶，并通过求爱来保护它。其中包括挑起斗争和清除威胁区域。",
+    "default_faction": "wildlife",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 1,
+    "hp": 35,
+    "speed": 280,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "D",
+    "color": "brown",
+    "aggression": 0,
+    "morale": 50,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_cut": 6,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 4
+      }
+    ],
+    "dodge": 3,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 12
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "PLAYER_CLOSE",
+      "PLAYER_NEAR_BABY"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED"
+    ],
+    "placate_triggers": [
+      "SOUND"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM"
+    ]
+  }
+]

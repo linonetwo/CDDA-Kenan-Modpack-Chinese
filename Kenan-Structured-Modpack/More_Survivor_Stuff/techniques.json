@@ -1,0 +1,859 @@
+[
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_tap",
+    "name": "“爱抚”",
+    "messages": [
+      "你在%s把你的武器",
+      "<npcname>拿着武器朝着%s挥过去"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 0
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": false,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.5
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.66
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0.66
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.66
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_jab",
+    "name": "猛刺",
+    "messages": [
+      "你用武器猛刺%s",
+      "<npcname>用武器猛刺%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 1
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": false,
+    "stun_dur": 1
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_gutbuster",
+    "name": "腹部重锤",
+    "messages": [
+      "你把你的武器扔进%s，然后把他们赶回去",
+      "<npcname>用锤头猛击%s，将它砸开一段距离"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 1
+      }
+    ],
+    "weighting": 4,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 2,
+    "knockback_dist": 1,
+    "knockback_follow": true
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_counter",
+    "name": "格挡反击",
+    "messages": [
+      "你招架和头撞%s",
+      "<npcname>躲开攻击，并且给了%s一记头槌"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "melee_allowed": true,
+    "block_counter": true,
+    "crit_ok": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.3
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_shove",
+    "name": "猛推",
+    "messages": [
+      "你在%s号公路上猛推，让他们摇摇晃晃",
+      "<npcname>猛地推开%s，它差点没有站稳"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 2
+      }
+    ],
+    "melee_allowed": true,
+    "required_buffs_all": "mss_buff_sledge_onblock",
+    "crit_ok": true,
+    "weighting": 8,
+    "stun_dur": 3,
+    "knockback_dist": 3,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.5
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_shoveonmiss",
+    "name": "猛推",
+    "messages": [
+      "你在%s号公路上猛推，让他们摇摇晃晃",
+      "<npcname>猛地推开%s，它差点没有站稳"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 2
+      }
+    ],
+    "melee_allowed": true,
+    "required_buffs_all": "mss_buff_sledge_onmiss",
+    "crit_ok": true,
+    "weighting": 2,
+    "stun_dur": 3,
+    "knockback_dist": 2,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.5
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_deathblow",
+    "name": "击飞",
+    "messages": [
+      "你直接挥向%s，让它们在空中翱翔",
+      "<npcname>直直抡向%s，让它顿时起飞"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 5
+      }
+    ],
+    "melee_allowed": true,
+    "required_buffs_all": "mss_buff_sledge_onmiss",
+    "crit_tec": true,
+    "weighting": 10,
+    "stun_dur": 2,
+    "down_dur": 2,
+    "knockback_dist": 5,
+    "knockback_spread": 1,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.8
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_deathblowstun",
+    "name": "击飞",
+    "messages": [
+      "你直接挥向%s，让它们在空中翱翔",
+      "<npcname>直直抡向%s，让它顿时起飞"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 4
+      }
+    ],
+    "melee_allowed": true,
+    "stunned_target": true,
+    "crit_tec": true,
+    "weighting": 10,
+    "stun_dur": 2,
+    "down_dur": 2,
+    "knockback_dist": 5,
+    "knockback_spread": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.3
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.8
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_break",
+    "name": "反擒拿",
+    "messages": [
+      "%s试图抓住你，但你却一把把它推开了！",
+      "%s试图抓住<npcname>，但他却一把推开了！"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "melee_allowed": true,
+    "defensive": true,
+    "grab_break": true
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_sledge_feint",
+    "name": "全垒打",
+    "messages": [
+      "你没有命中%s，但力气没有被卸掉。",
+      "<npcname>没有命中%s，但力气没有被卸掉。"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 2
+      }
+    ],
+    "melee_allowed": true,
+    "defensive": true,
+    "miss_recovery": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.3
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_direct",
+    "name": "定向力",
+    "messages": [
+      "你将连枷对准%s",
+      "<npcname>将连枷对准%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "bashing",
+        "level": 6
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": false
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_stunningblow",
+    "name": "眩晕一击",
+    "messages": [
+      "你用灵巧的一击击昏了%s",
+      "<npcname>用灵巧的一击打晕了%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "bashing",
+        "level": 6
+      }
+    ],
+    "required_buffs_all": "mss_buff_flail_ondodge",
+    "melee_allowed": true,
+    "weighting": 4,
+    "crit_ok": false,
+    "stun_dur": 2
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_heavyblow",
+    "name": "沉重一击",
+    "messages": [
+      "你用一个沉重的打击压倒并震荡%s",
+      "<npcname>重创了%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "bashing",
+        "level": 6
+      }
+    ],
+    "required_buffs_all": "mss_buff_flail_ondodge",
+    "melee_allowed": true,
+    "weighting": 8,
+    "crit_tec": true,
+    "stun_dur": 4
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_swingaround",
+    "name": "大风车抛投",
+    "messages": [
+      "你把%s包起来，自己绕着它转",
+      "<npcname>缠住%s，拉着它晃来晃去"
+    ],
+    "skill_requirements": [
+      {
+        "name": "bashing",
+        "level": 6
+      }
+    ],
+    "melee_allowed": true,
+    "stunned_target": true,
+    "crit_ok": false,
+    "side_switch": true,
+    "weighting": 2,
+    "stun_dur": 3,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.6
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_swingandfling",
+    "name": "大风车抛投",
+    "messages": [
+      "你用力绕过%s，把它们甩出去",
+      "<npcname>缠住%s，再把它甩了出去"
+    ],
+    "skill_requirements": [
+      {
+        "name": "bashing",
+        "level": 7
+      }
+    ],
+    "melee_allowed": true,
+    "stunned_target": true,
+    "crit_tec": true,
+    "side_switch": true,
+    "weighting": 10,
+    "stun_dur": 4,
+    "down_dur": 2,
+    "knockback_dist": 2,
+    "knockback_spread": 1,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.6
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_kickover",
+    "name": "连推带打",
+    "messages": [
+      "你越过%s号公路，攻击他们裸露的背部",
+      "<npcname>推开%s，然后抡了一锤"
+    ],
+    "skill_requirements": [
+      {
+        "name": "bashing",
+        "level": 7
+      }
+    ],
+    "melee_allowed": true,
+    "downed_target": true,
+    "crit_ok": true,
+    "weighting": 15,
+    "stun_dur": 5,
+    "knockback_dist": 1,
+    "knockback_follow": true,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 2.5
+      },
+      {
+        "stat": "movecost",
+        "scale": 1
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_wrappedtrip",
+    "name": "打包旅行",
+    "messages": [
+      "你绕过%s，把它们拉到地上",
+      "<npcname>缠住%s将它拉倒在地"
+    ],
+    "skill_requirements": [
+      {
+        "name": "bashing",
+        "level": 6
+      }
+    ],
+    "melee_allowed": true,
+    "stunned_target": true,
+    "crit_ok": false,
+    "weighting": 2,
+    "down_dur": 5,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.6
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_feint",
+    "name": "维持惯性",
+    "messages": [
+      "你没有命中%s，但连枷丝毫不受影响，依然在旋转。",
+      "<npcname>没有命中%s，但连枷依然在旋转。"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 0
+      }
+    ],
+    "melee_allowed": true,
+    "defensive": true,
+    "miss_recovery": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.6
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_flail_break",
+    "name": "反擒拿",
+    "messages": [
+      "%s试图抓住你，但你硬把爪子掰了下去！",
+      "%s试图抓住<npcname>，但他硬把爪子掰了下去！"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 2
+      }
+    ],
+    "melee_allowed": true,
+    "defensive": true,
+    "grab_break": true
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_counter",
+    "name": "格挡反拳",
+    "messages": [
+      "你挡住了%s的攻击，然后砂锅大的拳头招呼了过去",
+      "<npcname>挡住了%s的攻击，然后砂锅大的拳头招呼了过去"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "unarmed_allowed": true,
+    "block_counter": true,
+    "crit_ok": false,
+    "weighting": 2,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.8
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0.8
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.4
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_superiorcounter",
+    "name": "格挡重拳",
+    "messages": [
+      "你停止%s的攻击，把他们打到下周",
+      "<npcname>挡住了%s的攻击，然后一拳打得它眼冒金星"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 4
+      }
+    ],
+    "required_buffs_all": "mss_buff_glove_onpause",
+    "unarmed_allowed": true,
+    "block_counter": true,
+    "crit_ok": true,
+    "weighting": 1,
+    "stun_dur": 2,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0.8
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.4
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_bodyshotknock",
+    "name": "重击躯干-击退",
+    "messages": [
+      "你对着%s的身体出了一记恐怖重拳，并且追身连打几拳",
+      "<npcname>对着%s的身体出了一记恐怖重拳，并且追身连打几拳"
+    ],
+    "required_buffs_all": "mss_buff_glove_onblock",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 2
+      }
+    ],
+    "weighting": 2,
+    "unarmed_allowed": true,
+    "crit_ok": false,
+    "knockback_dist": 1,
+    "knockback_follow": true
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_superiorbodyshotknock",
+    "name": "重击躯干-虚弱击退",
+    "messages": [
+      "你对着%s的身体出了一记恐怖重拳，趁着踉跄又连打几拳",
+      "<npcname>对着%s的身体出了一记恐怖重拳，趁着踉跄又连打几拳"
+    ],
+    "required_buffs_all": "mss_buff_glove_onblock",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "weighting": 4,
+    "unarmed_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 1,
+    "knockback_dist": 2,
+    "knockback_follow": true,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.1
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.1
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.1
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_bodyshot",
+    "name": "重击躯干",
+    "messages": [
+      "你对着%s的身体出了一记重拳，几乎要把肋骨打碎",
+      "<npcname>>对着%s的身体出了一记重拳，几乎要把肋骨打碎"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 2
+      }
+    ],
+    "weighting": 1,
+    "unarmed_allowed": true,
+    "crit_ok": false
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_superiorbodyshot",
+    "name": "重击躯干-虚弱连击",
+    "messages": [
+      "你对着%s的身体出了一记重拳，几乎要把肋骨打碎，紧接着又是轰碎脑壳的一击",
+      "<npcname>>对着%s的身体出了一记重拳，几乎要把肋骨打碎，紧接着又是轰碎脑壳的一击"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "weighting": 2,
+    "unarmed_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 2,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.3
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.3
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.3
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_knockout",
+    "name": "击倒",
+    "messages": [
+      "你把%s直接打到地上，让他们更加眼花缭乱",
+      "<npcname>一拳将%s打倒在地，使其眩晕"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "weighting": 4,
+    "stunned_target": true,
+    "unarmed_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 1,
+    "down_dur": 2
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_smackdown",
+    "name": "猛撞头部",
+    "messages": [
+      "你用迅速的攻击将%s的头砸进地下",
+      "<npcname>用迅速的攻击将%s的头砸进地下"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "weighting": 6,
+    "downed_target": true,
+    "unarmed_allowed": true,
+    "crit_ok": false,
+    "stun_dur": 1
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_superiorsmackdown",
+    "name": "殒命撞击",
+    "messages": [
+      "你用尽全力将%s的头撞向地面",
+      "<npcname>用尽全力将%s的头撞向地面"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "weighting": 10,
+    "downed_target": true,
+    "stunned_target": true,
+    "unarmed_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 2,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.3
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.8
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.8
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.8
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_wallbash",
+    "name": "沃尔巴什",
+    "messages": [
+      "你抓住了%s，把它砸到附近的墙上",
+      "<npcname>抓住了%s，把它砸到附近的墙上"
+    ],
+    "unarmed_allowed": true,
+    "wall_adjacent": true,
+    "crit_tec": true,
+    "stun_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.5
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_feint",
+    "name": "蹒跚",
+    "messages": [
+      "你紧盯着%s。",
+      "<npcname>时态上升到%s。"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "unarmed_allowed": true,
+    "defensive": true,
+    "miss_recovery": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.6
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "mss_tec_glove_break",
+    "name": "反擒拿",
+    "messages": [
+      "%s试图抓住你，但你却一把把它推开了！",
+      "%s试图抓住<npcname>，但他却一把推开了！"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 2
+      }
+    ],
+    "unarmed_allowed": true,
+    "defensive": true,
+    "grab_break": true
+  }
+]

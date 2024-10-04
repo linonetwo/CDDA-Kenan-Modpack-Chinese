@@ -1,0 +1,224 @@
+[
+  {
+    "id": "pistol_duck",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "鸭脚手枪"
+    },
+    "description": "这把手枪原本是用来防御海盗袭击的，它是一把令人憎恶的手枪，它有四个枪管，每个枪管瞄准不同的方向，没有一个朝前。它有四发子弹，一次发射。跟你的手腕说再见。",
+    "weight": "3012 g",
+    "volume": "1250 ml",
+    "price": "350 USD",
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "flintlock"
+    ],
+    "skill": "pistol",
+    "range": 2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 2080,
+    "durability": 6,
+    "modes": [
+      [
+        "DEFAULT",
+        "fire",
+        4
+      ]
+    ],
+    "clip_size": 4,
+    "reload": 600,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "flintlock": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "pistol_duck_survivor",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "幸存者鸭掌枪"
+    },
+    "description": "为了纪念历史上的一个错误，这把手枪是为了试图改善失败的改进鸭掌枪，通过去除一个枪管，使一个面向前方，并略有改善的角度侧枪。",
+    "weight": "2012 g",
+    "volume": "1250 ml",
+    "price": "350 USD",
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "flintlock"
+    ],
+    "skill": "pistol",
+    "range": 2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 520,
+    "durability": 5,
+    "modes": [
+      [
+        "DEFAULT",
+        "fire",
+        3
+      ]
+    ],
+    "clip_size": 3,
+    "reload": 600,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "grip",
+        1
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "flintlock": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "pistol_flintlock_quad",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "四发手枪"
+    },
+    "description": "手工制作的四连燧发手枪。非常简单，就是不太耐用。",
+    "weight": "2012 g",
+    "volume": "750 ml",
+    "price": "350 USD",
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "flintlock"
+    ],
+    "skill": "pistol",
+    "range": 2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 520,
+    "durability": 3,
+    "clip_size": 4,
+    "reload": 600,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "flintlock": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "pistol_flintlock_handmade",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "自制燧发手枪"
+    },
+    "description": "一把手工制作且引人注目的现代燧发手枪。被匆忙地从废料中拼凑起来，它并不怎么耐用，但不管怎么说，它还是可以发射的。",
+    "weight": "753 g",
+    "volume": "750 ml",
+    "price": "350 USD",
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "flintlock"
+    ],
+    "skill": "pistol",
+    "range": 2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 520,
+    "durability": 5,
+    "clip_size": 1,
+    "reload": 600,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "flintlock": 1
+        }
+      }
+    ]
+  }
+]

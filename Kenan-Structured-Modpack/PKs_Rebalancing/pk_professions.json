@@ -1,0 +1,370 @@
+[
+  {
+    "type": "profession",
+    "id": "doomguy",
+    "name": "毁灭战士",
+    "description": "你刚刚在地狱里摧毁了一个洞穴，当你走进一个传送器后，发现自己……在这里。现在你的收音机坏了，你也没有剩余的补给了，你就快半截入土了。即使这是一个全新的世界，但你会看到一些昔日里在地狱的混蛋在这里。",
+    "points": 7,
+    "skills": [
+      {
+        "name": "gun",
+        "level": 4
+      },
+      {
+        "name": "dodge",
+        "level": 5
+      },
+      {
+        "name": "melee",
+        "level": 3
+      },
+      {
+        "name": "shotgun",
+        "level": 4
+      },
+      {
+        "name": "firstaid",
+        "level": 3
+      }
+    ],
+    "traits": [
+      "PSYCHOPATH",
+      "TERRIFYING"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "socks",
+          "megaarmor_boots_1",
+          "megaarmor_leggings_1",
+          "megaarmor_torso_2",
+          "megaarmor_armguards_1",
+          "megaarmor_gloves_1",
+          "megaarmor_head_1",
+          "legrig",
+          "knife_rambo",
+          "flashlight",
+          "shot_00",
+          "berserker_drug",
+          "medikit",
+          "stamina_vial"
+        ],
+        "entries": [
+          {
+            "item": "m1911",
+            "ammo-item": "45_jhp",
+            "charges": 7,
+            "container-item": "holster"
+          },
+          {
+            "item": "45_jhp",
+            "charges": 7,
+            "container-item": "m1911mag"
+          },
+          {
+            "item": "45_jhp",
+            "charges": 16
+          },
+          {
+            "item": "ithaca_doom",
+            "ammo-item": "shot_00",
+            "charges": 12,
+            "container-item": "megaarmor_torso_1"
+          },
+          {
+            "item": "shot_00",
+            "charges": 8
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "profession",
+    "id": "riot_cop",
+    "name": "SWAT特遣指挥官",
+    "description": "你是SWAT全州特种部队的精英。为了一场政治家想要处理的暴动，你被派到特遣队之中去解决政客们希望以更“人性化”的方式处理的争议，以展现和平。但有什么东西在你的盔甲和面具上吐了一身黏糊糊的热酸，不过你还有你的盾牌和仲裁者。",
+    "points": 5,
+    "skills": [
+      {
+        "name": "gun",
+        "level": 3
+      },
+      {
+        "name": "launcher",
+        "level": 2
+      },
+      {
+        "name": "melee",
+        "level": 2
+      },
+      {
+        "name": "unarmed",
+        "level": 2
+      },
+      {
+        "name": "bashing",
+        "level": 1
+      }
+    ],
+    "traits": [
+      "PROF_SWAT"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "badge_swat",
+          "socks",
+          "boots_combat",
+          "gloves_tactical",
+          "technician_pants_gray",
+          "knee_pads",
+          "legrig",
+          "technician_shirt_gray",
+          "armguard_hard",
+          "fanny",
+          "fanny",
+          "tac_helmet",
+          "swat_shield",
+          "PR24-retracted",
+          "bomblet_stun",
+          "bomblet_stun",
+          "bomblet_explosive",
+          "stamina_vial"
+        ],
+        "entries": [
+          {
+            "item": "bomblet_launcher_dualshot",
+            "ammo-item": "bomblet_stun",
+            "charges": 6
+          }
+        ]
+      },
+      "male": [
+        "boxer_briefs"
+      ],
+      "female": [
+        "bra",
+        "boxer_shorts"
+      ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "huntsman",
+    "name": "狩猎者",
+    "description": "在森林里独自狩猎了很长一段时间，与你们这一代的其他人相比，你们对科技的依赖较少。除了你的装备，你还带着打猎用的弓和保护用的短左轮手枪。",
+    "points": 5,
+    "skills": [
+      {
+        "name": "survival",
+        "level": 3
+      },
+      {
+        "name": "archery",
+        "level": 3
+      },
+      {
+        "name": "fabrication",
+        "level": 2
+      },
+      {
+        "name": "gun",
+        "level": 2
+      },
+      {
+        "name": "traps",
+        "level": 2
+      }
+    ],
+    "traits": [
+      "LIGHTSTEP",
+      "OUTDOORSMAN"
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "mocassins",
+          "gloves_fingerless",
+          "union_suit",
+          "pants",
+          "longshirt",
+          "vest",
+          "vest_leather",
+          "armguard_soft",
+          "vambrace_larmor",
+          "leather_pouch",
+          "leather_pouch",
+          "hat_fur",
+          "quiver",
+          "sheath",
+          "knife_hunting",
+          "shortbow",
+          "arrow_wood",
+          "arrow_wood",
+          "arrow_wood",
+          "arrow_wood",
+          "mil_mess_kit",
+          "multitool",
+          "ref_lighter_dare",
+          "canteen",
+          "salt",
+          "stamina_vial",
+          "beartrap",
+          "beartrap"
+        ],
+        "entries": [
+          {
+            "item": "ruger_lcr_38",
+            "ammo-item": "38_special",
+            "charges": 6
+          },
+          {
+            "group": "full_1st_aid"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "profession",
+    "id": "mutant_crafter",
+    "name": "MuCo实验研究员",
+    "description": "炸弹落下之时，你是一个负责新产品“诱变剂”的临床试验工作人员。在一片混乱中，你抓起一些装备离开逃出来了。",
+    "points": 4,
+    "skills": [
+      {
+        "name": "computer",
+        "level": 3
+      },
+      {
+        "name": "cooking",
+        "level": 2
+      },
+      {
+        "name": "firstaid",
+        "level": 2
+      },
+      {
+        "name": "survival",
+        "level": 1
+      },
+      {
+        "name": "speech",
+        "level": 1
+      }
+    ],
+    "items": {
+      "male": [
+        "briefs"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ],
+      "both": {
+        "items": [
+          "dress_shirt",
+          "pants",
+          "socks",
+          "boots",
+          "coat_lab",
+          "mbag",
+          "gloves_rubber",
+          "glasses_safety",
+          "recipe_labchem",
+          "battery",
+          "scalpel",
+          "syringe",
+          "syringe",
+          "oxy_powder",
+          "lye_powder",
+          "tallow_tainted",
+          "tallow_tainted",
+          "tallow_tainted",
+          "tallow_tainted",
+          "tallow_tainted",
+          "tallow_tainted"
+        ],
+        "entries": [
+          {
+            "item": "chemistry_set",
+            "ammo-item": "battery",
+            "charges": 100
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "profession",
+    "id": "a pisskop",
+    "name": "Xer初代",
+    "description": "你是一个英俊的年轻人，20岁准备快30岁。身体状况良好，喜欢收藏一些情感物品，你就像在其他任何一天那样出现在灾变日.....",
+    "points": 4,
+    "//": "gotta keep in mind balance . . .",
+    "skills": [
+      {
+        "name": "swimming",
+        "level": 2
+      },
+      {
+        "name": "speech",
+        "level": 2
+      },
+      {
+        "name": "computer",
+        "level": 2
+      },
+      {
+        "name": "firstaid",
+        "level": 1
+      },
+      {
+        "name": "gun",
+        "level": 1
+      }
+    ],
+    "traits": [
+      "PRETTY",
+      "FORGETFUL"
+    ],
+    "items": {
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "sports_bra",
+        "boy_shorts"
+      ],
+      "both": {
+        "items": [
+          "sneakers",
+          "socks",
+          "pants",
+          "leather_belt",
+          "tshirt",
+          "dress_shirt",
+          "turtleneck",
+          "hat_cotton",
+          "gloves_leather",
+          "cell_phone",
+          "matches",
+          "permanent_marker",
+          "cash_card",
+          "diveknife",
+          "banana",
+          "maple_candy",
+          "newest_newspaper"
+        ],
+        "entries": [
+          {
+            "item": "protein_drink",
+            "charges": 1,
+            "container-item": "flask_hip"
+          }
+        ]
+      }
+    }
+  }
+]

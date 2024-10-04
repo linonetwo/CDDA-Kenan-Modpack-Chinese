@@ -1,0 +1,296 @@
+[
+  {
+    "id": "TALK_INTER",
+    "type": "talk_topic",
+    "dynamic_line": "所以你进入了马德雷赌场，可以看到旧世界的所有荣耀，甚至在它的尽头。在你之前很少有人看到它…没有人会…我跟邮差说了同样的话，但不知怎的你来了…不管怎样，我们还是谈正事吧，好吗？这起劫案仍需要大量工作。",
+    "responses": [
+      {
+        "text": "这个“信使”是谁？",
+        "topic": "COURIER2",
+        "effect": {
+          "u_add_trait": "entered_casino"
+        }
+      },
+      {
+        "text": "好吧，我需要做什么才能进入金库？",
+        "topic": "QUEST",
+        "effect": {
+          "u_add_trait": "entered_casino"
+        }
+      },
+      {
+        "text": "就是这样…真的是这样…玛德是我的！",
+        "topic": "GREED",
+        "effect": {
+          "u_add_trait": "entered_casino"
+        }
+      },
+      {
+        "text": "好了，好了，够了。不要躲在全息图和扬声器后面，赶快现身吧！",
+        "topic": "CONFRONT",
+        "effect": {
+          "u_add_trait": "entered_casino"
+        }
+      },
+      {
+        "text": "我终于知道你是谁了吗？",
+        "condition": {
+          "not": {
+            "u_has_item": "martini_recipe"
+          }
+        },
+        "topic": "WHO2",
+        "effect": {
+          "u_add_trait": "entered_casino"
+        }
+      }
+    ]
+  },
+  {
+    "id": "COURIER2",
+    "type": "talk_topic",
+    "dynamic_line": "信使…信使…我…我们…我们一起策划并执行了这次抢劫。还有其他三个幸存者，但是其他三个…他们缺乏技能，没那么有用，你知道吗？但是快递员…信使本可以把马德雷山和我一起带走，但是贪婪…哦，贪婪吞噬了信使的灵魂…我几乎没能从背叛中幸存…但够了！快递员不见了，我们把注意力集中在抢劫上，我们太近了！",
+    "responses": [
+      {
+        "text": "别骗我。另外三个“无用”的幸存者之一，迪恩·多米诺本人，把日记留在了别墅里。邮差救了他的命，而你却一直是这里的恶魔，伊利亚长老！",
+        "condition": {
+          "u_has_item": "martini_recipe"
+        },
+        "topic": "TRUTH"
+      },
+      {
+        "text": "其他幸存者怎么了？",
+        "topic": "OTHER"
+      },
+      {
+        "text": "当然可以。",
+        "topic": "INTERCOM_MAIN"
+      }
+    ]
+  },
+  {
+    "id": "OTHER",
+    "type": "talk_topic",
+    "dynamic_line": "够了，够了，他们是不好的候选人…都是被贪婪、饥饿、对权力的渴望、嫉妒、复仇所驱使…所有人都活了下来，所有人都离开了马德雷赌场，尽管没有一个人能够放手。再说一次，够了，让我们专注于你的任务，好吗？",
+    "responses": [
+      {
+        "text": "好吧，让我们打开马德雷赌场！",
+        "topic": "QUEST"
+      },
+      {
+        "text": "别骗我。另外三个“坏候选人”中的一个，迪恩·多米诺本人，把日记忘在别墅里了。信使救了他的命，而你却一直是这里的恶魔，伊利亚长老！在这一切之后，你敢说是他们“没能放手？”",
+        "condition": {
+          "u_has_item": "martini_recipe"
+        },
+        "topic": "TRUTH"
+      }
+    ]
+  },
+  {
+    "id": "TRUTH",
+    "type": "talk_topic",
+    "dynamic_line": "啊，我明白了…是迪恩·多米诺，演员，歌唱家…小偷、骗子、操控者、强盗。你不知道在马德雷赌场发生了什么，那晚开业庆典，死亡的玫瑰与炸弹落下，不是吗？然后我建议你四处看看，证据还在这个赌场里，你自己去看看迪恩·多米诺到底究竟是什么人。毕竟，那次抢劫也是他自己策划的。他希望马德雷赌场是属于他的，他一个人…但即使是它的宝藏本身也不行。他想要它仅仅是因为辛克莱比他快乐。",
+    "responses": [
+      {
+        "text": "是的，我也注意到他日记里的那些部分…还是不相信你。他做他自己不会突然让你成为一个“好人”。",
+        "topic": "INTERCOM_MAIN"
+      }
+    ]
+  },
+  {
+    "id": "GREED",
+    "type": "talk_topic",
+    "dynamic_line": "对这种说法要小心。你见过马德雷赌场别墅区。你知道那些以你的方式思考的人发生了什么。他们的尸骨和绝望的墙壁铭文与笔记仍然布满在街道和建筑物周围…有些人被杀是因为他们没有在别墅区里生存的能力…不过，大多数人出于贪婪而互相残杀。你什么都不用说。好好想想。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "INTERCOM_MAIN"
+      }
+    ]
+  },
+  {
+    "id": "CONFRONT",
+    "type": "talk_topic",
+    "dynamic_line": "哈哈哈，你真的认为我那么笨吗？你会遇见我…当时机成熟的时候。看见别墅周围的人了吗？或者更确切地说，他们还剩下什么？充满贪婪和仇恨的信息，他们互相残杀的证据…还有他们的尸体。所有这些，没有例外。你可能会说，有些人保留了他们的人性，因为他们在墙上为其他人留下了大量的物资和有用的小费，但每当人性的黑暗面占据他们的同伴时，他们都是第一批死去的人。",
+    "responses": [
+      {
+        "text": "你欠我一个解释。记住这个。我不笨，所以我也不相信你。",
+        "topic": "INTERCOM_MAIN"
+      }
+    ]
+  },
+  {
+    "id": "WHO2",
+    "type": "talk_topic",
+    "dynamic_line": "所以你还是不知道？好吧，就这样吧！我们谈谈…如果你成功地完成了你的任务，那就是。",
+    "responses": [
+      {
+        "text": "去你妈的…",
+        "topic": "INTERCOM_MAIN"
+      }
+    ]
+  },
+  {
+    "id": "INTERCOM_MAIN",
+    "type": "talk_topic",
+    "dynamic_line": "好吧，还有什么你想浪费时间要问的吗？或者你准备好继续抢劫了吗？",
+    "responses": [
+      {
+        "text": "这个“信使”是谁？",
+        "topic": "COURIER2"
+      },
+      {
+        "text": "好吧，我需要做什么才能进入金库？",
+        "topic": "QUEST"
+      },
+      {
+        "text": "就是这样…真的是这样…玛德是我的！",
+        "topic": "GREED"
+      },
+      {
+        "text": "好了，好了，够了。不要躲在全息图和扬声器后面，赶快现身吧！",
+        "topic": "CONFRONT"
+      },
+      {
+        "text": "我终于知道你是谁了吗？",
+        "condition": {
+          "not": {
+            "u_has_item": "martini_recipe"
+          }
+        },
+        "topic": "WHO2"
+      }
+    ]
+  },
+  {
+    "id": "QUEST",
+    "type": "talk_topic",
+    "dynamic_line": "接下来是：保险库有密码保护…当然是，但问题是，必须用薇拉·凯斯的声音，辛克莱的真爱…维拉的歌有三张唱片散落在赌场里——一张在坦皮科，一张在马德里小酒馆，最后一张在她自己的顶层套房里。把它们结合在一起会使她讲话的样本能够打开门…我在你的导航设备上用青色的“S”标记了这三个录音的位置。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "QUEST2"
+      }
+    ]
+  },
+  {
+    "id": "QUEST2",
+    "type": "talk_topic",
+    "dynamic_line": "关键是，到目前为止，这三个地点都锁在门后，就像你刚刚打开并穿过的入口一样坚固。那是因为赌场的封锁状态切断了门的电源。要打开它们，你需要到电源控制室手动恢复电源，唤醒赌场。只需穿过大厅到通往赌场区域的门，穿过大厅，直到到达另一边的储藏室，然后穿过它到达电源控制室…我用蓝色的“S”作了标记。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "QUEST3"
+      }
+    ]
+  },
+  {
+    "id": "QUEST3",
+    "type": "talk_topic",
+    "dynamic_line": "完成后，把这三首曲子带到这里，通过对讲机讲话。小心全息保安…马德雷赌场里到处都是这些玩意，他们被安置在关键位置。",
+    "responses": [
+      {
+        "text": "明白了。维拉·凯斯的三首歌。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_first_topic": "MIDQUEST"
+        }
+      }
+    ]
+  },
+  {
+    "id": "MIDQUEST",
+    "type": "talk_topic",
+    "dynamic_line": "你已经找到歌曲录音带了吗？",
+    "responses": [
+      {
+        "text": "是的，找到了，找到了，三个都找到了。",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "tomorrow_in"
+            },
+            {
+              "u_has_item": "go_faraway"
+            },
+            {
+              "u_has_item": "begin_again"
+            }
+          ]
+        },
+        "topic": "QUEST_END"
+      },
+      {
+        "text": "不，还在挣扎。",
+        "condition": {
+          "or": [
+            {
+              "not": {
+                "u_has_item": "tomorrow_in"
+              }
+            },
+            {
+              "not": {
+                "u_has_item": "go_faraway"
+              }
+            },
+            {
+              "not": {
+                "u_has_item": "begin_again"
+              }
+            }
+          ]
+        },
+        "topic": "HURRY"
+      }
+    ]
+  },
+  {
+    "id": "QUEST_END",
+    "type": "talk_topic",
+    "dynamic_line": "很好，你继续让我惊讶…现在把这些录音按正确的顺序组合起来，我马上就要向你们描述，然后用它进入保险库…不知道你是否搜遍了薇拉和辛克莱的公寓，但金库的入口在他们的一个房间里。一旦你到了那里…然后…然后你会发现所有的东西并打开马德雷赌场…别让我失望，幸存者。你已经走了这么远…祝你好运，我不会再在对讲机上回应了。",
+    "responses": [
+      {
+        "text": "好吧，我们开始吧…跨越世纪的黄金大劫案…",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_first_topic": "HURRY3"
+          },
+          {
+            "u_sell_item": "tomorrow_in"
+          },
+          {
+            "u_sell_item": "go_faraway"
+          },
+          {
+            "u_sell_item": "begin_again"
+          },
+          {
+            "npc_consume_item": "tomorrow_in"
+          },
+          {
+            "npc_consume_item": "go_faraway"
+          },
+          {
+            "npc_consume_item": "begin_again"
+          },
+          {
+            "u_spawn_item": "vera_voice"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HURRY3",
+    "type": "talk_topic",
+    "dynamic_line": "[对讲机异常安静…没有人接你的电话。]",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

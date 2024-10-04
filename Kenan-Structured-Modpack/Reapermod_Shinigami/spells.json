@@ -1,0 +1,25 @@
+[
+  {
+    "id": "rs_healing",
+    "type": "SPELL",
+    "name": "攫取之镰",
+    "description": "治疗角色所受的少许伤害。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_FAIL",
+      "NO_PROJECTILE"
+    ],
+    "min_damage": -3,
+    "max_damage": -8,
+    "damage_increment": -1,
+    "effect": "attack",
+    "shape": "blast",
+    "message": "你感到自己从目标体内吸取了一股活力！",
+    "damage_type": "biological"
+  }
+]

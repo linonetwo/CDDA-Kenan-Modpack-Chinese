@@ -1,0 +1,1206 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_fountain",
+    "name": "干涸的喷泉",
+    "description": "干涸喷泉的河床，由于缺乏维护而缓慢但不可避免地被侵蚀。",
+    "symbol": "*",
+    "color": "dark_gray",
+    "looks_like": "t_concrete",
+    "move_cost": 2,
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "ROAD",
+      "MINEABLE"
+    ],
+    "bash": {
+      "ter_set": "t_null",
+      "str_min": 50,
+      "str_max": 400,
+      "str_min_supported": 100,
+      "items": [
+        {
+          "item": "rock",
+          "count": [
+            2,
+            10
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "t_sierra_wall",
+    "type": "terrain",
+    "name": "马德雷赌场墙壁",
+    "looks_like": "t_wall_y",
+    "description": "马德雷赌场建筑使用的外墙。真正的固诺金汤——能在核弹头几乎未被拦截的情况下经受几次直接打击。",
+    "symbol": "LINE_OXOX",
+    "color": "dark_gray",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "BLOCK_WIND"
+    ]
+  },
+  {
+    "id": "t_sierra_roof",
+    "type": "terrain",
+    "name": "马德雷赌场屋顶",
+    "description": "马德雷山赌场的屋顶，和它的墙壁用同样的材料制成，使它坚不可摧。",
+    "symbol": ".",
+    "looks_like": "t_flat_roof",
+    "color": "dark_gray",
+    "move_cost": 2,
+    "flags": [
+      "TRANSPARENT",
+      "FLAT"
+    ]
+  },
+  {
+    "id": "sierra_air",
+    "type": "terrain",
+    "name": "露天",
+    "description": "这是露天的。",
+    "symbol": " ",
+    "color": "i_cyan",
+    "move_cost": 2,
+    "trap": "tr_ledge",
+    "roof": "t_sierra_roof",
+    "examine_action": "ledge",
+    "flags": [
+      "TRANSPARENT",
+      "NO_FLOOR",
+      "INDOORS"
+    ]
+  },
+  {
+    "id": "t_STORMSIERRAMADRE_fl_casino_red",
+    "type": "terrain",
+    "looks_like": "t_floor_red",
+    "name": "马德雷赌场地板",
+    "description": "马德雷山赌场内的红色瓷砖。",
+    "symbol": ".",
+    "color": "light_red",
+    "move_cost": 2,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "FLAT",
+      "ROAD"
+    ],
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_null",
+      "str_min": 200,
+      "str_max": 500,
+      "str_min_supported": 200,
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            8
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "sierra_floor_noroof",
+    "type": "terrain",
+    "looks_like": "t_STORMSIERRAMADRE_fl_casino_red",
+    "name": "马德雷赌场地板",
+    "description": "马德雷山赌场内的红色瓷砖。",
+    "symbol": ".",
+    "color": "light_red",
+    "move_cost": 2,
+    "flags": [
+      "TRANSPARENT",
+      "COLLAPSES",
+      "FLAT",
+      "ROAD"
+    ],
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_null",
+      "str_min": 200,
+      "str_max": 500,
+      "str_min_supported": 200,
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            8
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_floor_light",
+    "looks_like": "t_STORMSIERRAMADRE_fl_casino_red",
+    "name": "马德雷赌场地板（顶灯）",
+    "description": "马德雷赌场内的地板，它是用红砖砌成的，上面的天花板上还挂着一盏仍能正常工作的灯。",
+    "symbol": ".",
+    "color": "light_red",
+    "move_cost": 2,
+    "light_emitted": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "INDOORS",
+      "FLAT",
+      "ROAD"
+    ],
+    "bash": {
+      "sound": "thump",
+      "ter_set": "t_null",
+      "str_min": 200,
+      "str_max": 500,
+      "str_min_supported": 200,
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            4,
+            12
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_floor_light_noroof",
+    "looks_like": "t_STORMSIERRAMADRE_fl_casino_red",
+    "name": "马德雷赌场地板（顶灯）",
+    "description": "马德雷赌场内的地板，它是用红砖砌成的，上面的天花板上还挂着一盏仍能正常工作的灯。",
+    "symbol": ".",
+    "color": "light_red",
+    "move_cost": 2,
+    "light_emitted": 100,
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "ROAD"
+    ],
+    "bash": {
+      "sound": "thump",
+      "ter_set": "t_null",
+      "str_min": 200,
+      "str_max": 500,
+      "str_min_supported": 200,
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            4,
+            12
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_carpet",
+    "name": "马德雷赌场红地毯",
+    "symbol": ".",
+    "color": "red",
+    "move_cost": 2,
+    "looks_like": "t_carpet_red",
+    "description": "华丽而耐用的红地毯，用来装饰马德雷赌场的内部。",
+    "flags": [
+      "TRANSPARENT",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "FLAT",
+      "RUG",
+      "EASY_DECONSTRUCT"
+    ],
+    "roof": "t_sierra_roof",
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "t_STORMSIERRAMADRE_fl_casino_red",
+      "str_min": 5,
+      "str_max": 15,
+      "str_min_supported": 100,
+      "items": [
+        {
+          "item": "rag",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "nail",
+          "charges": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "r_carpet",
+          "charges": 1
+        },
+        {
+          "item": "nail",
+          "charges": 5
+        }
+      ],
+      "ter_set": "t_STORMSIERRAMADRE_fl_casino_red"
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_carpet_noroof",
+    "name": "马德雷赌场红地毯",
+    "symbol": ".",
+    "color": "red",
+    "move_cost": 2,
+    "looks_like": "t_carpet_red",
+    "description": "华丽而耐用的红地毯，用来装饰马德雷赌场的内部。",
+    "flags": [
+      "TRANSPARENT",
+      "COLLAPSES",
+      "FLAT",
+      "RUG",
+      "EASY_DECONSTRUCT",
+      "FLAMMABLE_HARD"
+    ],
+    "bash": {
+      "sound": "SMASH!",
+      "ter_set": "sierra_floor_noroof",
+      "str_min": 5,
+      "str_max": 15,
+      "str_min_supported": 100,
+      "items": [
+        {
+          "item": "rag",
+          "count": [
+            10,
+            20
+          ]
+        },
+        {
+          "item": "nail",
+          "charges": [
+            1,
+            3
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "r_carpet",
+          "charges": 1
+        },
+        {
+          "item": "nail",
+          "charges": 5
+        }
+      ],
+      "ter_set": "sierra_floor_noroof"
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_door_locked",
+    "name": "马德雷赌场大门（紧锁）",
+    "description": "马德雷赌场入口，大门紧锁，坚不可摧。",
+    "symbol": "+",
+    "looks_like": "t_door_metal_locked",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "LOCKED",
+      "BLOCK_WIND"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_entrance_c",
+    "name": "马德雷赌场入口门",
+    "description": "马德雷赌场入口，没有上锁，但仍然坚不可摧。",
+    "symbol": "'",
+    "looks_like": "t_door_metal_c",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "DOOR",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND"
+    ],
+    "open": "sierra_entrance"
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_entrance",
+    "name": "马德雷赌场入口大门（开）",
+    "description": "马德雷赌场的入口，现在已经开放，但仍然坚不可摧。",
+    "symbol": "'",
+    "looks_like": "t_door_metal_o",
+    "color": "red",
+    "move_cost": 2,
+    "coverage": 50,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "CONNECT_TO_WALL",
+      "ROAD"
+    ],
+    "close": "sierra_entrance_c"
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_door_l",
+    "name": "马德雷赌场大门（紧锁）",
+    "description": "通往马德雷赌场内部的更重要的内门。和大门一样紧锁，坚不可摧。",
+    "symbol": "+",
+    "looks_like": "t_door_metal_locked",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "LOCKED",
+      "BLOCK_WIND"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_door",
+    "name": "马德雷赌场大门",
+    "description": "通往马德雷赌场内部的更重要的内门。和大门一样坚不可摧。",
+    "symbol": "+",
+    "looks_like": "t_door_metal_c",
+    "open": "sierra_door_o",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "DOOR",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_door_o",
+    "name": "马德雷赌场大门（开）",
+    "description": "马德雷赌场内门，目前敞开，依然坚不可摧。",
+    "symbol": "'",
+    "looks_like": "t_door_metal_o",
+    "color": "red",
+    "move_cost": 2,
+    "coverage": 50,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "CONNECT_TO_WALL",
+      "ROAD"
+    ],
+    "close": "sierra_door"
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_door_vault",
+    "name": "马德雷避难所大门（紧锁）",
+    "description": "通往传说中的马德雷避难所的门，大门紧锁，坚不可摧。",
+    "symbol": "+",
+    "looks_like": "t_door_metal_locked",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "LOCKED",
+      "BLOCK_WIND"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_door_vault_c",
+    "name": "马德雷避难所门",
+    "description": "通往传说中的马德雷避难所的防爆门，没有上锁，但仍然坚不可摧。",
+    "symbol": "+",
+    "looks_like": "t_door_metal_c",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND"
+    ],
+    "open": "sierra_door_vault_o"
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_door_vault_o",
+    "name": "马德雷避难所大门（开）",
+    "description": "通往传说中的马德雷避难所的防爆门，虽然坚不可摧，但还是在你面前打开了，等待你进入，并破解马德雷的神秘宝藏…",
+    "symbol": "'",
+    "looks_like": "t_door_metal_o",
+    "color": "red",
+    "move_cost": 2,
+    "coverage": 50,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "CONNECT_TO_WALL",
+      "ROAD"
+    ],
+    "close": "sierra_door_vault_c"
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_vault_opener",
+    "looks_like": "t_intercom",
+    "name": "马德雷避难所对讲机",
+    "description": "位于马德雷保险库旁的对讲机，用语音密码保护。",
+    "symbol": "6",
+    "color": "pink",
+    "move_cost": 0,
+    "flags": [
+      "NOITEM",
+      "CONNECT_TO_WALL"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_wall_interior",
+    "name": "马德雷赌场墙壁",
+    "description": "马德雷山赌场内使用的实心砖墙。多年积累的泥土使这堵曾经洁白的墙变成了黄色。有时你可以在上面看到金色的字母“SM”，这是马德雷赌场的标志。",
+    "symbol": "LINE_OXOX",
+    "color": "yellow",
+    "looks_like": "t_sierra_wall",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
+    "connects_to": "WALL",
+    "bash": {
+      "str_min": 60,
+      "str_max": 160,
+      "sound": "crash!",
+      "sound_fail": "bash!",
+      "ter_set": "t_null",
+      "items": [
+        {
+          "item": "rock",
+          "count": [
+            8,
+            15
+          ]
+        },
+        {
+          "item": "brick",
+          "count": [
+            2,
+            6
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_slot_machine_sm",
+    "name": "老虎机",
+    "looks_like": "t_slot_machine",
+    "description": "一台屏幕明亮的机器，闪烁着诱人的财富承诺。如果每天赌命都还不能让你满足的话，可以来试试赌这个。",
+    "symbol": "6",
+    "color": "green",
+    "move_cost": 0,
+    "coverage": 50,
+    "flags": [
+      "NOITEM"
+    ],
+    "examine_action": "slot_machine",
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "sierra_floor_noroof",
+      "items": [
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "small_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_guardrail_sm",
+    "name": "黄金护栏",
+    "description": "在马德雷赌场内发现的金色护栏。",
+    "symbol": "#",
+    "color": "yellow",
+    "move_cost": 3,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "REDUCE_SCENT",
+      "MOUNTABLE",
+      "SHORT",
+      "THIN_OBSTACLE",
+      "ROAD",
+      "BURROWABLE"
+    ],
+    "looks_like": "t_guardrail_bg_dp",
+    "bash": {
+      "str_min": 8,
+      "str_max": 150,
+      "sound": "crunch!",
+      "sound_fail": "clang!",
+      "ter_set": "t_STORMSIERRAMADRE_fl_casino_red",
+      "items": [
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "gold_small",
+          "count": [
+            3,
+            6
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "window_sierra",
+    "looks_like": "t_window_domestic",
+    "name": "马德雷装甲窗户",
+    "description": "马德雷山套房的一扇窗户。虽然它看起来像任何其他花哨的窗口，但它应该能够承受核弹头的直接打击，就像整个马德雷山赌场一样。设计这个科技奇迹当然来自于大山脉研究中心。",
+    "symbol": "\"",
+    "color": "light_gray",
+    "move_cost": 0,
+    "coverage": 60,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BARRICADABLE_WINDOW_CURTAINS",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND",
+      "WINDOW"
+    ],
+    "curtain_transform": "window_sierra_no_curtains",
+    "examine_action": "curtains",
+    "close": "sierra_curtains"
+  },
+  {
+    "type": "terrain",
+    "id": "window_sierra_no_curtains",
+    "looks_like": "t_window_no_curtains",
+    "name": "马德雷赌场装甲窗户（无窗帘）",
+    "description": "马德雷赌场套房的一扇窗户。虽然它看起来像任何其他花哨的窗户（除了没有窗帘），但它应该能承受核弹头的直接打击，就像整个马德雷赌场一样。设计这个科技奇迹当然来自于大山脉研究中心。",
+    "symbol": "\"",
+    "color": "white",
+    "move_cost": 0,
+    "coverage": 60,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "BARRICADABLE_WINDOW",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND",
+      "WINDOW"
+    ],
+    "examine_action": "locked_object"
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_curtains",
+    "looks_like": "t_curtains",
+    "name": "马德雷赌场装甲窗户（窗帘紧闭）",
+    "description": "马德雷山套房的一扇窗户。虽然它看起来像其他任何一扇紧闭窗帘的华丽窗户，但它应该能承受核弹头的直接打击，就像整个马德雷山赌场一样。设计这个科技奇迹当然来自于大山脉研究中心。",
+    "symbol": "\"",
+    "color": "dark_gray",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "OPENCLOSE_INSIDE",
+      "REDUCE_SCENT",
+      "BARRICADABLE_WINDOW_CURTAINS",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND",
+      "WINDOW"
+    ],
+    "curtain_transform": "window_sierra_no_curtains",
+    "open": "window_sierra",
+    "examine_action": "curtains"
+  },
+  {
+    "type": "terrain",
+    "id": "t_fence_sierra",
+    "looks_like": "t_fence",
+    "alias": [
+      "t_fence_h",
+      "t_fence_v"
+    ],
+    "name": "尖桩围栏",
+    "description": "一扇木制的栅栏，并不复杂。和善地提醒你此路不通。",
+    "symbol": "LINE_OXOX",
+    "color": "brown",
+    "move_cost": 3,
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "THIN_OBSTACLE",
+      "REDUCE_SCENT",
+      "MOUNTABLE",
+      "SHORT",
+      "AUTO_WALL_SYMBOL"
+    ],
+    "connects_to": "WOODFENCE",
+    "deconstruct": {
+      "ter_set": "t_fence_post_sierra",
+      "items": [
+        {
+          "item": "2x4",
+          "count": 5
+        },
+        {
+          "item": "nail",
+          "charges": 8
+        }
+      ]
+    },
+    "bash": {
+      "str_min": 4,
+      "str_max": 20,
+      "sound": "crack.",
+      "sound_fail": "wham.",
+      "ter_set": "t_flat_roof",
+      "items": [
+        {
+          "item": "2x4",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "nail",
+          "charges": [
+            2,
+            6
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": 1
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_fence_post_sierra",
+    "looks_like": "t_fence_post",
+    "name": "围栏桩",
+    "description": "一根用于支撑栅栏的柱子。没有栅栏时就孤零零的立在那里。",
+    "symbol": "#",
+    "color": "brown",
+    "move_cost": 2,
+    "flags": [
+      "TRANSPARENT",
+      "THIN_OBSTACLE",
+      "SHORT"
+    ],
+    "deconstruct": {
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "pointy_stick",
+          "count": 2
+        }
+      ]
+    },
+    "bash": {
+      "str_min": 8,
+      "str_max": 20,
+      "sound": "crack.",
+      "sound_fail": "whump.",
+      "ter_set": "t_flat_roof",
+      "items": [
+        {
+          "item": "pointy_stick",
+          "count": [
+            0,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "sierra_gas",
+    "type": "field_type",
+    "looks_like": "fd_fatigue",
+    "intensity_levels": [
+      {
+        "name": "Sierra Madre toxic gas",
+        "color": "red",
+        "sym": "8",
+        "translucency": 25,
+        "transparent": false,
+        "effects": [
+          {
+            "effect_id": "sierra_poison",
+            "intensity": 20,
+            "body_part": "head",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false,
+            "message": "Sierra Madre toxic gas burns through your entire body",
+            "message_type": "bad"
+          },
+          {
+            "effect_id": "sierra_poison_display",
+            "intensity": 20,
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false,
+            "message": "Sierra Madre toxic gas burns through your entire body",
+            "message_type": "bad"
+          },
+          {
+            "effect_id": "sierra_poison",
+            "intensity": 20,
+            "body_part": "leg_r",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false,
+            "message": "Sierra Madre toxic gas burns through your entire body",
+            "message_type": "bad"
+          },
+          {
+            "effect_id": "sierra_poison",
+            "intensity": 20,
+            "body_part": "leg_l",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false,
+            "message": "Sierra Madre toxic gas burns through your entire body",
+            "message_type": "bad"
+          },
+          {
+            "effect_id": "sierra_poison",
+            "intensity": 20,
+            "body_part": "arm_l",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false,
+            "message": "Sierra Madre toxic gas burns through your entire body",
+            "message_type": "bad"
+          },
+          {
+            "effect_id": "sierra_poison",
+            "intensity": 20,
+            "body_part": "arm_r",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false,
+            "message": "Sierra Madre toxic gas burns through your entire body",
+            "message_type": "bad"
+          }
+        ]
+      }
+    ],
+    "decay_amount_factor": 0,
+    "gas_absorption_factor": 20,
+    "percent_spread": 50,
+    "dirty_transparency_cache": true,
+    "has_fume": true,
+    "priority": 2,
+    "phase": "gas",
+    "display_items": false,
+    "display_field": true
+  },
+  {
+    "id": "cloud",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "Sierra Madre Cloud",
+        "color": "light_red",
+        "sym": "O",
+        "translucency": 0,
+        "transparent": true,
+        "effects": [
+          {
+            "effect_id": "sierra_cloud",
+            "intensity": 10,
+            "body_part": "head",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false
+          },
+          {
+            "effect_id": "sierra_cloud_display",
+            "intensity": 10,
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false
+          },
+          {
+            "effect_id": "sierra_cloud",
+            "intensity": 10,
+            "body_part": "leg_r",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false
+          },
+          {
+            "effect_id": "sierra_cloud",
+            "intensity": 10,
+            "body_part": "leg_l",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false
+          },
+          {
+            "effect_id": "sierra_cloud",
+            "intensity": 10,
+            "body_part": "arm_r",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false
+          },
+          {
+            "effect_id": "sierra_cloud",
+            "intensity": 10,
+            "body_part": "arm_l",
+            "min_duration": "5 seconds",
+            "max_duration": "5 seconds",
+            "immune_inside_vehicle": false
+          }
+        ]
+      }
+    ],
+    "decay_amount_factor": 0,
+    "gas_absorption_factor": 15,
+    "percent_spread": 50,
+    "dirty_transparency_cache": true,
+    "has_fume": false,
+    "priority": 1,
+    "phase": "gas",
+    "display_items": true,
+    "display_field": false
+  },
+  {
+    "type": "terrain",
+    "id": "vault_floor",
+    "name": "马德雷避难所地板",
+    "looks_like": "t_metal_floor",
+    "description": "用来覆盖马德雷山传奇拱顶地面的地板，由人类生产的最坚固的金属合金制成。",
+    "symbol": ".",
+    "color": "light_cyan",
+    "move_cost": 2,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "INDOORS",
+      "FLAT",
+      "ROAD"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "vault_floor_light",
+    "name": "马德雷避难所地板",
+    "looks_like": "t_metal_floor_olight",
+    "description": "马德雷赌场传奇拱顶的地面被用来覆盖，由人类生产的最坚固的金属合金制成，上面的天花板上连接着一盏仍能正常工作的灯。",
+    "symbol": ".",
+    "color": "light_cyan",
+    "move_cost": 2,
+    "roof": "t_sierra_roof",
+    "light_emitted": 40,
+    "flags": [
+      "TRANSPARENT",
+      "INDOORS",
+      "FLAT",
+      "ROAD"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "vault_floor_noroof",
+    "name": "马德雷避难所地板",
+    "looks_like": "t_metal_floor",
+    "description": "用来覆盖马德雷山传奇拱顶地面的地板，由人类生产的最坚固的金属合金制成。",
+    "symbol": ".",
+    "color": "light_cyan",
+    "move_cost": 2,
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "ROAD"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "vault_wall",
+    "looks_like": "t_wall_metal",
+    "name": "马德雷避难所墙",
+    "description": "厚厚的，几乎坚不可摧的墙用来保护马德雷山拱顶。甚至比赌场的外墙更坚固，这一个可以承受至少12个核弹头的直接打击。",
+    "symbol": "LINE_OXOX",
+    "color": "cyan",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "BLOCK_WIND"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "vault_inter_door",
+    "name": "马德雷避难所内门",
+    "description": "关闭的坚不可摧的门将Sierra Madre拱顶的内部分隔开来。",
+    "symbol": "+",
+    "looks_like": "t_door_metal_c",
+    "open": "vault_inter_door_o",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "DOOR",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "vault_inter_door_o",
+    "name": "马德雷避难所内门（开）",
+    "description": "打开了一扇坚不可摧的门，隔开了马德雷山拱顶的内部。",
+    "symbol": "'",
+    "looks_like": "t_door_metal_o",
+    "color": "red",
+    "move_cost": 2,
+    "coverage": 50,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "CONNECT_TO_WALL",
+      "ROAD"
+    ],
+    "close": "vault_inter_door"
+  },
+  {
+    "type": "terrain",
+    "id": "vault_glass",
+    "name": "马德雷避难所玻璃墙",
+    "looks_like": "t_reinforced_glass",
+    "description": "在大山研究所开发的超抗弹道玻璃。就像其他用来建造马德雷山赌场的东西一样，特别是它的地下室，它的设计是为了抵御核弹头的直接打击。",
+    "symbol": "LINE_OXOX",
+    "color": "light_cyan",
+    "move_cost": 0,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "BLOCK_WIND"
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_pipe",
+    "looks_like": "t_sewage_pipe",
+    "name": "高压管",
+    "description": "一段高压管道。",
+    "symbol": "1",
+    "color": "light_gray",
+    "move_cost": 5,
+    "coverage": 50,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "TRANSPARENT",
+      "MOUNTABLE",
+      "PERMEABLE",
+      "THIN_OBSTACLE",
+      "MINEABLE"
+    ],
+    "bash": {
+      "str_min": 30,
+      "str_max": 210,
+      "sound": "metal screeching!",
+      "sound_fail": "clang!",
+      "ter_set": "vault_floor",
+      "items": [
+        {
+          "item": "scrap",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "steel_plate",
+          "count": [
+            0,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "sierra_trap",
+    "name": "马德雷避难所大门（紧锁）",
+    "description": "通往传说中的马德雷避难所的门，由于避难所的陷阱激活而永远锁定，从避难所变成了棺材。你的棺材…",
+    "symbol": "+",
+    "looks_like": "t_door_metal_locked",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 100,
+    "roof": "t_sierra_roof",
+    "flags": [
+      "NOITEM",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "LOCKED",
+      "BLOCK_WIND"
+    ]
+  }
+]

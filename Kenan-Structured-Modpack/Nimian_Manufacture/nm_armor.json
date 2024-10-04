@@ -1,0 +1,61 @@
+[
+  {
+    "id": "nm_eye_watch",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "name": {
+      "str": "NM1001眼表"
+    },
+    "description": "尼米安公司研制的一种小型装置。固定在眼睛附近时，能准确显示时间和温度，激活后能提供更多天气信息。",
+    "weight": "44 g",
+    "volume": "50 ml",
+    "color": "blue",
+    "symbol": "[",
+    "material": [
+      "plastic"
+    ],
+    "price": "375 USD",
+    "cutting": 0,
+    "phase": "solid",
+    "to_hit": 1,
+    "warmth": 0,
+    "bashing": 0,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 100
+        }
+      }
+    ],
+    "charges_per_use": 1,
+    "turns_per_charge": 0,
+    "ammo": [
+      "battery"
+    ],
+    "use_action": "WEATHER_TOOL",
+    "flags": [
+      "WATCH",
+      "WATERPROOF",
+      "STURDY",
+      "THERMOMETER",
+      "SUPER_FANCY",
+      "SKINTIGHT",
+      "OVERSIZE",
+      "HYGROMETER",
+      "BAROMETER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 1,
+        "covers": [
+          "eyes"
+        ]
+      }
+    ],
+    "material_thickness": 9,
+    "environmental_protection": 8
+  }
+]

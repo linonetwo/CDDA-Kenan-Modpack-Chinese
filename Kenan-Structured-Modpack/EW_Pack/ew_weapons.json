@@ -1,0 +1,647 @@
+[
+  {
+    "id": "svs-24",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "symbol": "(",
+    "color": "dark_gray",
+    "name": {
+      "str": "SVS-24 突击步枪"
+    },
+    "description": "这款Sarafanov突击步枪曾代替著名的AK系列步枪成为了俄罗斯陆军标准装备。采用6.54x42mm弹药。",
+    "price": "4500 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "545x39",
+      "762",
+      "654"
+    ],
+    "weight": "3900 g",
+    "volume": "2 L",
+    "longest_side": "1225 mm",
+    "bashing": 12,
+    "to_hit": -1,
+    "dispersion": 75,
+    "durability": 9,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        12
+      ]
+    ],
+    "default_mods": [
+      "red_dot_sight"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "ak74mag",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "svs24_robomag",
+          "svs24_robodrum",
+          "cw24_robomag",
+          "cw24_bigrobomag",
+          "akdrum75"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "svs-24c",
+    "copy-from": "svs-24",
+    "type": "GUN",
+    "name": {
+      "str": "SVS-24C 突击步枪"
+    },
+    "description": "这是标准SVS-24突击步枪的紧凑版本，由于体型小巧，它通常被坦克兵或者特种部队所使用。较短的枪管降低了射击准确度。",
+    "price": "4400 USD",
+    "weight": "3 kg",
+    "volume": "1250 ml",
+    "longest_side": "900 mm",
+    "range": -2,
+    "default_mods": [
+      "red_dot_sight"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "ak74mag",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "svs24_robomag",
+          "svs24_robodrum",
+          "cw24_robomag",
+          "cw24_bigrobomag",
+          "akdrum75"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cw-24",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "color": "dark_gray",
+    "name": {
+      "str": "CW-24 突击步枪"
+    },
+    "description": "这是标准SVS-24的民用版。产自乔治亚州的“净水”军工厂，专供美国市场。该枪纯半自动，使用威力稍弱的5.45x39mm弹药。",
+    "price": "2100 USD",
+    "//": "Civvie version is cheaper.",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ammo": [
+      "545x39",
+      "762",
+      "654"
+    ],
+    "weight": "3900 g",
+    "volume": "2 L",
+    "longest_side": "1225 mm",
+    "bashing": 12,
+    "to_hit": -1,
+    "dispersion": 75,
+    "durability": 9,
+    "default_mods": [
+      "red_dot_sight"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "svs24_robomag",
+          "svs24_robodrum",
+          "cw24_robomag",
+          "cw24_bigrobomag",
+          "akdrum75"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cw-24m",
+    "copy-from": "cw-24",
+    "type": "GUN",
+    "color": "light_gray",
+    "name": {
+      "str": "CW-24M 突击步枪"
+    },
+    "description": "这是标准SVS-24的民用版。该枪使用和标准版相同的6.54x42mm弹药。",
+    "price": "2000 USD",
+    "ammo": [
+      "654"
+    ],
+    "default_mods": [
+      "red_dot_sight"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "svs24_robomag",
+          "svs24_robodrum"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cw-24k",
+    "copy-from": "cw-24",
+    "type": "GUN",
+    "color": "light_gray",
+    "name": {
+      "str": "CW-24K 突击步枪"
+    },
+    "description": "这是标准SVS-24的民用版。该枪使用更便宜而仍有威力的7.62x39mm弹药。",
+    "price": "1600 USD",
+    "ammo": [
+      "545x39",
+      "762",
+      "654"
+    ],
+    "default_mods": [
+      "red_dot_sight"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "svs24_robomag",
+          "svs24_robodrum",
+          "cw24_robomag",
+          "cw24_bigrobomag",
+          "akdrum75"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cw-24hack",
+    "copy-from": "cw-24",
+    "type": "GUN",
+    "name": {
+      "str": "CW-24 突击步枪改装型"
+    },
+    "description": "这是标准SVS-24的民用版。该枪有一个经过改装的复进机以及一个粗糙的自制全自动发射器。别指望它能有原来的可靠性。",
+    "price": "4200 USD",
+    "dispersion": 120,
+    "durability": 6,
+    "ammo": [
+      "545x39",
+      "762",
+      "654"
+    ],
+    "default_mods": [
+      "red_dot_sight"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        8
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "svs24_robomag",
+          "svs24_robodrum",
+          "cw24_robomag",
+          "cw24_bigrobomag",
+          "akdrum75"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cw-24m_hack",
+    "copy-from": "cw-24m",
+    "type": "GUN",
+    "name": {
+      "str": "CW-24M 突击步枪改装型"
+    },
+    "description": "这是标准SVS-24的民用版。该枪有一个经过改装的复进机以及一个粗糙的自制全自动发射器。别指望它能有原来的可靠性。",
+    "price": "4200 USD",
+    "dispersion": 120,
+    "durability": 6,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        8
+      ]
+    ],
+    "ammo": [
+      "654"
+    ],
+    "default_mods": [
+      "red_dot_sight"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "svs24_robomag",
+          "svs24_robodrum"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cwd-63",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "color": "brown",
+    "name": {
+      "str": "CWD-63 狙击步枪"
+    },
+    "description": "著名的SVD-63 Dragunov“净水”军工版。这把枪经过改装，使用.308弹药。",
+    "price": "1700 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "ammo": [
+      "308",
+      "223"
+    ],
+    "weight": "4300 g",
+    "volume": "2750 ml",
+    "bashing": 12,
+    "to_hit": -1,
+    "dispersion": 75,
+    "durability": 9,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag10",
+          "cwd_63mag",
+          "cwd_63bigmag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wrist_dread",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "symbol": "(",
+    "color": "dark_gray",
+    "name": {
+      "str": "手腕 “恐惧” 钢珠枪"
+    },
+    "description": "安装在使用者手臂上的缩小版“恐惧”IX型电磁钢珠枪。能够以超高速发射.20金属球弹，没有任何火花或者噪声。主要用于自我防卫。",
+    "price": "1600 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "skill": "smg",
+    "ammo": [
+      "wr_dread"
+    ],
+    "weight": "1 kg",
+    "volume": "1 L",
+    "longest_side": "150 mm",
+    "bashing": 8,
+    "to_hit": -1,
+    "dispersion": 150,
+    "sight_dispersion": 150,
+    "durability": 8,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        30
+      ]
+    ],
+    "clip_size": 90,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "wr_dread": 90
+        }
+      }
+    ],
+    "reload": 300,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "magazine",
+        2
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "flags": [
+      "NON-FOULING"
+    ]
+  }
+]

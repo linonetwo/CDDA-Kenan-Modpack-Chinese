@@ -1,0 +1,546 @@
+[
+  {
+    "id": "power_armor_t51",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "T-51动力装甲"
+    },
+    "description": "以T-51b为动力的步兵装甲设计了最新的被动防御功能，以应对民用和军事干扰。它需要力量。",
+    "weight": "15 kg",
+    "volume": "18 L",
+    "price": "70000 USD",
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 80
+      }
+    ],
+    "warmth": 90,
+    "power_armor": true,
+    "ammo": [
+      "battery"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "%s 启动了。",
+      "target": "power_armor_t51_on",
+      "active": true
+    },
+    "flags": [
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 100,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 15,
+    "environmental_protection": 15
+  },
+  {
+    "id": "power_armor_t51_on",
+    "copy-from": "power_armor_t51",
+    "repairs_like": "power_armor_basic",
+    "looks_like": "power_armor_t51",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "T-51动力装甲（开）",
+      "str_pl": "T-51电源铠装（开）"
+    },
+    "description": "以T-51b为动力的步兵装甲设计了最新的被动防御功能，以应对民用和军事干扰。它需要力量。它被打开并不断地吸取能量。用它来关掉它。",
+    "flags": [
+      "USE_UPS",
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "TRADER_AVOID"
+    ],
+    "power_draw": 4000000,
+    "revert_to": "power_armor_t51",
+    "use_action": {
+      "type": "transform",
+      "menu_text": "关闭",
+      "msg": "%s 断电了。",
+      "target": "power_armor_t51"
+    },
+    "armor": [
+      {
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material": [
+      "steel"
+    ],
+    "material_thickness": 15,
+    "environmental_protection": 15
+  },
+  {
+    "id": "power_armor_helmet_t51",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "T-51b电动头盔"
+    },
+    "description": "一种基本头盔，设计用于T-51b动力头盔。提供出色的保护，免受攻击和环境危害。像所有DoubleTech公司出品的动力装甲一样，控制和温度调节系统需要直接与皮肤接触。",
+    "weight": "4 kg",
+    "volume": "5 L",
+    "price": "25000 USD",
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 90,
+    "power_armor": true,
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "flags": [
+      "WATCH",
+      "WATERPROOF",
+      "STURDY",
+      "PARTIAL_DEAF",
+      "THERMOMETER",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "eyes",
+          "mouth"
+        ]
+      }
+    ],
+    "material_thickness": 15,
+    "environmental_protection": 15
+  },
+  {
+    "id": "power_armor_t45",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "T-45动力装甲"
+    },
+    "description": "一套T-45D动力装甲，T-51较弱的表亲，T-45笨重，但仍然有效。",
+    "weight": "17 kg",
+    "volume": "21 L",
+    "price": "115000 USD",
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "qt_steel",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "5 kg",
+        "moves": 80
+      }
+    ],
+    "warmth": 60,
+    "power_armor": true,
+    "use_action": {
+      "type": "transform",
+      "msg": "%s 启动了。",
+      "target": "power_armor_t45_on",
+      "active": true
+    },
+    "flags": [
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 80,
+        "coverage": 100,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 10,
+    "environmental_protection": 16
+  },
+  {
+    "id": "power_armor_t45_on",
+    "copy-from": "power_armor_t45",
+    "repairs_like": "power_armor_light",
+    "looks_like": "power_armor_t45",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "T-45动力装甲（开）",
+      "str_pl": "T-45动力装甲（开）"
+    },
+    "description": "一套T-45D动力装甲，T-51较弱的表亲，T-45笨重，但仍然有效。它需要力量。它被打开并不断地吸取能量。用它来关掉它。",
+    "flags": [
+      "USE_UPS",
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "TRADER_AVOID"
+    ],
+    "power_draw": 4000000,
+    "revert_to": "power_armor_t45",
+    "use_action": {
+      "type": "transform",
+      "menu_text": "关闭",
+      "msg": "%s 断电了。",
+      "target": "power_armor_t45"
+    },
+    "armor": [
+      {
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material": [
+      "qt_steel",
+      "steel"
+    ],
+    "material_thickness": 10,
+    "environmental_protection": 16
+  },
+  {
+    "id": "power_armor_helmet_t45",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "T-45电动头盔"
+    },
+    "description": "T-45动力头盔。笨重，但能用",
+    "weight": "5 kg",
+    "volume": "5775 ml",
+    "price": "37500 USD",
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "qt_steel",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 60,
+    "power_armor": true,
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "flags": [
+      "WATCH",
+      "WATERPROOF",
+      "STURDY",
+      "PARTIAL_DEAF",
+      "THERMOMETER",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "encumbrance": 80,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "eyes",
+          "mouth"
+        ]
+      }
+    ],
+    "material_thickness": 10,
+    "environmental_protection": 16
+  },
+  {
+    "id": "power_armor_x01",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "Enclave X-01动力装甲"
+    },
+    "description": "作为enclave众多的动力装甲型号之一，X-01是enclave精英使用的第一款型号",
+    "weight": "20 kg",
+    "volume": "24 L",
+    "price": "70000 USD",
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "ceramic",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "4 kg",
+        "moves": 80
+      }
+    ],
+    "warmth": 90,
+    "power_armor": true,
+    "use_action": {
+      "type": "transform",
+      "msg": "%s 启动了。",
+      "target": "power_armor_x01_on",
+      "active": true
+    },
+    "flags": [
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 100,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 15,
+    "environmental_protection": 35
+  },
+  {
+    "id": "power_armor_x01_on",
+    "copy-from": "power_armor_t45",
+    "repairs_like": "power_armor_heavy",
+    "looks_like": "power_armor_x01",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "Enclave X-01动力装甲（开启）",
+      "str_pl": "Enclave X-01电源铠装（开）"
+    },
+    "description": "作为enclave无数的动力装甲模型之一，X-01是enclave精英使用的第一个模型。它需要力量。它被打开并不断地吸取能量。用它来关掉它。",
+    "flags": [
+      "USE_UPS",
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "TRADER_AVOID"
+    ],
+    "power_draw": 4000000,
+    "revert_to": "power_armor_x01",
+    "use_action": {
+      "type": "transform",
+      "menu_text": "关闭",
+      "msg": "%s 断电了。",
+      "target": "power_armor_x01"
+    },
+    "armor": [
+      {
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material": [
+      "qt_steel",
+      "steel"
+    ],
+    "material_thickness": 10,
+    "environmental_protection": 16
+  },
+  {
+    "id": "power_armor_helmet_x01",
+    "type": "TOOL_ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "enclave X-01电动头盔"
+    },
+    "description": "英克雷动力装甲。眼睛会发出威胁的光芒。这种眼睛发光由传统电池供电。",
+    "weight": "6 kg",
+    "volume": "6700 ml",
+    "price": "25000 USD",
+    "to_hit": 1,
+    "bashing": 1,
+    "material": [
+      "ceramic",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 90,
+    "power_armor": true,
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 1,
+    "use_action": {
+      "type": "transform",
+      "msg": "你打开了头盔灯。",
+      "target": "power_armor_helmet_x01_on",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "头盔的电池耗尽了。"
+    },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "flags": [
+      "WATCH",
+      "WATERPROOF",
+      "STURDY",
+      "PARTIAL_DEAF",
+      "THERMOMETER",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "eyes",
+          "mouth"
+        ]
+      }
+    ],
+    "material_thickness": 15,
+    "environmental_protection": 15
+  },
+  {
+    "id": "power_armor_helmet_x01_on",
+    "copy-from": "power_armor_helmet_x01",
+    "repairs_like": "power_armor_helmet_x01",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "enclave x-01电动护甲头盔（开启）",
+      "str_pl": "enclave x-01电动装甲头盔（开启）"
+    },
+    "description": "英克雷动力头盔，眼睛发出威胁的光芒。",
+    "flags": [
+      "LIGHT_450",
+      "CHARGEDIM",
+      "WATERPROOF",
+      "TRADER_AVOID",
+      "WATCH",
+      "STURDY",
+      "PARTIAL_DEAF",
+      "THERMOMETER",
+      "SUN_GLASSES"
+    ],
+    "turns_per_charge": 2,
+    "revert_to": "power_armor_helmet_x01",
+    "use_action": {
+      "menu_text": "关闭",
+      "type": "transform",
+      "msg": "%s关闭了。",
+      "target": "power_armor_helmet_x01"
+    },
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "head"
+        ]
+      }
+    ],
+    "material": [
+      "ceramic",
+      "superalloy"
+    ],
+    "material_thickness": 15,
+    "environmental_protection": 15
+  }
+]

@@ -1,0 +1,439 @@
+[
+  {
+    "//": "TODO potom",
+    "type": "npc",
+    "id": "NPC_hobo_victoria",
+    "gender": "female",
+    "class": "NC_NONE",
+    "name_unique": "维多利亚",
+    "name_suffix": "流浪汉",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_hobo_victoria_1",
+    "faction": "no_faction",
+    "mission_offered": "MISSION_hobo_victoria_1"
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_hobo_victoria_1"
+    ],
+    "dynamic_line": "<greet>",
+    "responses": [
+      {
+        "text": "关于那个任务……",
+        "condition": {
+          "and": [
+            "has_assigned_mission",
+            "mission_complete"
+          ]
+        },
+        "topic": "TALK_MISSION_INQUIRE"
+      },
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_hobo_victoria_Background"
+      },
+      {
+        "text": "需要帮忙么？",
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "你能教我点什么吗？",
+        "topic": "TALK_hobo_victoria_teach_ask"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_hobo_victoria_Background",
+    "dynamic_line": "我只是个普通的流浪汉。就这样。",
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_hobo_victoria_teach_ask",
+    "dynamic_line": "我像个能教你东西的人吗？别烦我了。",
+    "responses": [
+      {
+        "text": "是的，你看起来很像一个能教我东西的人！",
+        "condition": {
+          "npc_has_var": "u_helped_hobo_victoria",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "npc_has_var": "hobo_victoria_teach",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "success": {
+          "topic": "TALK_hobo_victoria_teach_check"
+        },
+        "failure": {
+          "topic": "TALK_hobo_victoria_teach_done"
+        }
+      },
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_hobo_victoria_teach_check",
+    "dynamic_line": "离我远点，你这个混蛋。该死的孩子，总是取笑年老体弱的女人…",
+    "responses": [
+      {
+        "text": "听着，我第一次见到你，我注意到你的立场，你对危险的反应…",
+        "condition": {
+          "and": [
+            {
+              "u_has_skill": {
+                "skill": "dodge",
+                "level": 3
+              }
+            },
+            {
+              "u_has_skill": {
+                "skill": "unarmed",
+                "level": 3
+              }
+            },
+            {
+              "not": {
+                "npc_has_effect": "confronted_hobo_victoria"
+              }
+            },
+            {
+              "not": {
+                "u_has_mission": "MISSION_hobo_victoria_6"
+              }
+            }
+          ]
+        },
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 40
+        },
+        "success": {
+          "topic": "TALK_hobo_victoria_teach"
+        },
+        "failure": {
+          "topic": "TALK_hobo_victoria_teach_refuse",
+          "effect": {
+            "npc_add_effect": "confronted_hobo_victoria",
+            "duration": 600
+          }
+        }
+      },
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_hobo_victoria_teach_refuse",
+    "dynamic_line": "你总是挑最弱者来嘲笑。来啊，嘲笑我这个孱弱的老太太吧。现在的孩子，真是不尊重长辈…",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "//": "TODO add content",
+    "id": "TALK_hobo_victoria_teach",
+    "dynamic_line": "好吧，好吧…你说动我了，但我需要你帮我一个小忙。我需要几块只有在地底<very>深处才能找到的稀有石头。给我找8块螺旋石，你就可以接受训练了。",
+    "responses": [
+      {
+        "text": "太好了！",
+        "topic": "TALK_DONE",
+        "effect": {
+          "add_mission": "MISSION_hobo_victoria_6"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_hobo_victoria_teach_done",
+    "dynamic_line": "我已经把我知道的都教给你了。",
+    "responses": [
+      {
+        "text": "再次感谢老师。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_hobo_victoria_1",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "营火用木材"
+    },
+    "description": "找到30块木板。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "2x4",
+    "count": 30,
+    "difficulty": 0,
+    "value": 100,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_hobo_victoria_2",
+    "dialogue": {
+      "describe": "-",
+      "offer": "我得暖暖身子。给我找至少30块木板。",
+      "accepted": "谢谢你，亲爱的。",
+      "rejected": "现在的孩子，不尊重长辈…",
+      "advice": "<yawn>",
+      "inquire": "哦，是你吗，亲爱的？",
+      "success": "哦，亲爱的，谢谢你。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_hobo_victoria_2",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "温暖的营火"
+    },
+    "description": "找到大号油罐。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "55gal_drum",
+    "count": 1,
+    "difficulty": 0,
+    "value": 100,
+    "end": {
+      "effect": {
+        "mapgen_update": "hobo_victoria_heat",
+        "origin_npc": true
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_hobo_victoria_3",
+    "dialogue": {
+      "describe": "-",
+      "offer": "找个大号的油罐过来，这样我就有地方烧木头了。",
+      "accepted": "谢谢你，亲爱的。",
+      "rejected": "现在的孩子，不尊重长辈…",
+      "advice": "<yawn>",
+      "inquire": "哦，是你吗，亲爱的？",
+      "success": "哦，亲爱的，谢谢你。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_hobo_victoria_3",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "宠物食品"
+    },
+    "description": "找到20块奶酪。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "cheese",
+    "count": 20,
+    "difficulty": 0,
+    "value": 100,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_hobo_victoria_4",
+    "dialogue": {
+      "describe": "-",
+      "offer": "给宠物老鼠找20块奶酪。",
+      "accepted": "谢谢你，亲爱的。",
+      "rejected": "现在的孩子，不尊重长辈…",
+      "advice": "<yawn>",
+      "inquire": "哦，是你吗，亲爱的？",
+      "success": "哦，亲爱的，谢谢你。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_hobo_victoria_4",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "丢失的宠物"
+    },
+    "description": "找到丢失的宠物老鼠。",
+    "goal": "MGOAL_FIND_MONSTER",
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "subway",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "random": true,
+        "search_range": 40,
+        "min_distance": 5
+      },
+      "update_mapgen": {
+        "place_monster": [
+          {
+            "monster": "mon_black_rat",
+            "x": 14,
+            "y": 14,
+            "target": true,
+            "friendly": true
+          }
+        ]
+      }
+    },
+    "fail": {
+      "effect": "end_conversation"
+    },
+    "difficulty": 0,
+    "value": 100,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_hobo_victoria_5",
+    "dialogue": {
+      "describe": "-",
+      "offer": "请找到我的宠物老鼠。应该没有离开多远。",
+      "accepted": "谢谢你，亲爱的。",
+      "rejected": "现在的孩子，不尊重长辈…",
+      "advice": "<yawn>",
+      "inquire": "哦，是你吗，亲爱的？",
+      "success": "哈，那不是我的老鼠！我的老鼠几分钟前又回来了！",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_hobo_victoria_5",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "老鼠王"
+    },
+    "description": "杀了老鼠王。",
+    "goal": "MGOAL_KILL_MONSTER",
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "subway",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "random": true,
+        "search_range": 40,
+        "min_distance": 15
+      },
+      "update_mapgen": {
+        "place_monster": [
+          {
+            "monster": "mon_black_rat",
+            "pack_size": [
+              8,
+              16
+            ],
+            "x": 14,
+            "y": 14,
+            "target": true
+          },
+          {
+            "monster": "mon_rat_king",
+            "x": 14,
+            "y": 14,
+            "target": true
+          }
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        {
+          "npc_add_var": "u_helped_hobo_victoria",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        {
+          "npc_add_var": "hobo_victoria_teach",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        }
+      ]
+    },
+    "difficulty": 0,
+    "value": 100,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "杀了老鼠王和他的手下，这样我就可以在这里正常睡觉了。",
+      "accepted": "谢谢你，亲爱的。",
+      "rejected": "现在的孩子，不尊重长辈…",
+      "advice": "<yawn>",
+      "inquire": "哦，是你吗，亲爱的？",
+      "success": "哦，亲爱的，谢谢你。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_hobo_victoria_6",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "奇怪的石头"
+    },
+    "description": "为维多利亚找到8个螺旋石。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "spiral_stone",
+    "count": 8,
+    "difficulty": 0,
+    "value": 100,
+    "end": {
+      "effect": [
+        {
+          "u_spawn_item": "manual_dragon"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "哦，是你吗，亲爱的？",
+      "success": "很好，我的学生，很好。给，把这本书拿去吧。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  }
+]

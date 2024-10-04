@@ -1,0 +1,85 @@
+[
+  {
+    "id": "sp_mechlockpick",
+    "type": "TOOL",
+    "name": {
+      "str": "自动万能钥匙"
+    },
+    "description": "这是一套工匠手工制作的拨子和扭力扳手，由优质钢材制成。配备弹簧式挑揿针装置，降低撬锁难度。",
+    "weight": "23 g",
+    "volume": "5 ml",
+    "price": "80 USD",
+    "price_postapoc": "80 USD",
+    "material": "steel",
+    "symbol": ";",
+    "color": "light_gray",
+    "qualities": [
+      [
+        "LOCKPICK",
+        12
+      ]
+    ],
+    "use_action": [
+      "PICK_LOCK"
+    ]
+  },
+  {
+    "id": "sp_text_devices",
+    "type": "BOOK",
+    "name": {
+      "str": "机械知识指南",
+      "str_pl": "机械知识指南"
+    },
+    "description": "机械工程、电气工程和化学相关主题的高级指南书。通常用19世纪的生硬笔法写就。",
+    "weight": "2000 g",
+    "volume": "1500 ml",
+    "price": "30 USD",
+    "price_postapoc": "30 USD",
+    "bashing": 4,
+    "material": [
+      "paper"
+    ],
+    "symbol": "?",
+    "color": "blue",
+    "skill": "mechanics",
+    "required_level": 4,
+    "max_level": 7,
+    "intelligence": 7,
+    "time": "30 m",
+    "fun": -1
+  },
+  {
+    "id": "sp_safecracker",
+    "type": "TOOL",
+    "name": {
+      "str": "保险箱自动破解装置"
+    },
+    "description": "这是一个借助机械振动膜的撬窃保险箱装置。放在保险箱上尽情使用吧！仅支持合法用途",
+    "weight": "350 g",
+    "volume": "125 ml",
+    "price": "15 USD",
+    "price_postapoc": "31 USD",
+    "material": "steel",
+    "symbol": ";",
+    "color": "light_gray",
+    "flags": [
+      "SAFECRACK"
+    ]
+  },
+  {
+    "id": "sp_mini_steam_engine",
+    "type": "GENERIC",
+    "name": {
+      "str": "小型蒸汽机"
+    },
+    "looks_like": "1cyl_combustion",
+    "description": "一台微型蒸汽机。一体式锅炉通过燃烧煤将水加热成蒸汽，来驱动往复轴。冷凝器回收水，形成封闭循环系统。常用于机械动力装甲或机械化自动机。",
+    "weight": "30050 g",
+    "volume": "4250 ml",
+    "price": "301 USD",
+    "price_postapoc": "301 USD",
+    "material": "steel",
+    "symbol": ";",
+    "color": "light_gray"
+  }
+]

@@ -1,0 +1,398 @@
+[
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "mutagen_maid",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "chemistry",
+    "skills_required": [
+      "firstaid",
+      1
+    ],
+    "difficulty": 8,
+    "time": "1 h",
+    "batch_time_factors": [
+      20,
+      5
+    ],
+    "book_learn": [
+      [
+        "recipe_serum",
+        6
+      ]
+    ],
+    "reversible": false,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "maid_point",
+          1000
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "iv_mutagen_maid",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "chemistry",
+    "skills_required": [
+      "firstaid",
+      3
+    ],
+    "difficulty": 8,
+    "time": "2 h",
+    "batch_time_factors": [
+      20,
+      5
+    ],
+    "book_learn": [
+      [
+        "recipe_serum",
+        6
+      ]
+    ],
+    "using": [
+      [
+        "serum_production_standard",
+        37
+      ]
+    ],
+    "components": [
+      [
+        [
+          "mutagen_maid",
+          1
+        ]
+      ],
+      [
+        [
+          "maid_point",
+          500
+        ],
+        [
+          "maid_dress",
+          1
+        ],
+        [
+          "maid_dress_french",
+          1
+        ],
+        [
+          "jokyu_fuku",
+          1
+        ],
+        [
+          "maid_hat",
+          1
+        ],
+        [
+          "stockings_lace",
+          1
+        ],
+        [
+          "petticoat",
+          1
+        ],
+        [
+          "maid_cap",
+          1
+        ],
+        [
+          "cat_maid_cap",
+          1
+        ],
+        [
+          "panties_kemo",
+          1
+        ],
+        [
+          "briefs_kemo",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "mutagen_milk",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "chemistry",
+    "skills_required": [
+      "firstaid",
+      1
+    ],
+    "difficulty": 7,
+    "time": "2 h",
+    "batch_time_factors": [
+      20,
+      5
+    ],
+    "book_learn": [
+      [
+        "recipe_serum",
+        6
+      ],
+      [
+        "recipe_animal",
+        6
+      ]
+    ],
+    "using": [
+      [
+        "serum_production_standard",
+        37
+      ]
+    ],
+    "components": [
+      [
+        [
+          "mutagen_cattle",
+          1
+        ]
+      ],
+      [
+        [
+          "milk",
+          1
+        ]
+      ]
+    ],
+    "flags": [
+      "SECRET"
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "iv_mutagen_milk",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "chemistry",
+    "skills_required": [
+      "firstaid",
+      3
+    ],
+    "difficulty": 7,
+    "time": "2 h",
+    "batch_time_factors": [
+      20,
+      5
+    ],
+    "book_learn": [
+      [
+        "recipe_serum",
+        6
+      ],
+      [
+        "recipe_animal",
+        6
+      ]
+    ],
+    "using": [
+      [
+        "serum_production_standard",
+        37
+      ]
+    ],
+    "components": [
+      [
+        [
+          "mutagen_milk",
+          2
+        ]
+      ],
+      [
+        [
+          "milk",
+          1
+        ]
+      ]
+    ],
+    "flags": [
+      "SECRET"
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "milk_serum",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "chemistry",
+    "skills_required": [
+      "firstaid",
+      3
+    ],
+    "difficulty": 7,
+    "time": "2 h",
+    "batch_time_factors": [
+      20,
+      5
+    ],
+    "book_learn": [
+      [
+        "recipe_serum",
+        6
+      ],
+      [
+        "recipe_animal",
+        6
+      ]
+    ],
+    "using": [
+      [
+        "serum_production_standard",
+        37
+      ]
+    ],
+    "components": [
+      [
+        [
+          "mutagen_milk",
+          2
+        ]
+      ],
+      [
+        [
+          "milk",
+          1
+        ]
+      ]
+    ],
+    "flags": [
+      "SECRET"
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "mutagen_shoggothblood",
+    "byproducts": [
+      [
+        "shoggoth_heart_desiccated"
+      ]
+    ],
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "survival",
+    "difficulty": 2,
+    "time": "5 m",
+    "charges": 5,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 2
+      }
+    ],
+    "components": [
+      [
+        [
+          "shoggoth_heart",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "mutagen_shoggoth",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "chemistry",
+    "skills_required": [
+      "firstaid",
+      1
+    ],
+    "difficulty": 8,
+    "time": "1 h",
+    "batch_time_factors": [
+      20,
+      5
+    ],
+    "book_learn": [
+      [
+        "recipe_serum",
+        6
+      ]
+    ],
+    "reversible": false,
+    "autolearn": true,
+    "using": [
+      [
+        "serum_production_standard",
+        37
+      ]
+    ],
+    "components": [
+      [
+        [
+          "mutagen_shoggothblood",
+          1
+        ]
+      ],
+      [
+        [
+          "mutagen_shoggothblood",
+          1
+        ],
+        [
+          "maid_point",
+          500
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
+    "result": "iv_mutagen_shoggoth",
+    "category": "CC_CHEM",
+    "subcategory": "CSC_CHEM_MUTAGEN",
+    "skill_used": "chemistry",
+    "skills_required": [
+      "firstaid",
+      3
+    ],
+    "difficulty": 8,
+    "time": "2 h",
+    "batch_time_factors": [
+      20,
+      5
+    ],
+    "book_learn": [
+      [
+        "recipe_serum",
+        6
+      ]
+    ],
+    "using": [
+      [
+        "serum_production_standard",
+        37
+      ]
+    ],
+    "components": [
+      [
+        [
+          "mutagen_shoggoth",
+          1
+        ]
+      ],
+      [
+        [
+          "maid_point",
+          500
+        ]
+      ]
+    ]
+  }
+]

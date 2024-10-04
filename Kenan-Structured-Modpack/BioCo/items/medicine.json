@@ -1,0 +1,85 @@
+[
+  {
+    "id": "Emergency_Trauma_Foam",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "急救泡沫",
+      "str_pl": "急救泡沫"
+    },
+    "description": "装满水溶性ETF(急救泡沫)的罐子。当被喷在伤口上时，ETF会迅速扩展，进行止血，起到局部止痛药的作用，同时还能对伤口进行消毒。",
+    "weight": "135 g",
+    "volume": "1 L",
+    "price": "15 USD",
+    "charges": 5,
+    "symbol": "~",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "heal",
+      "effects": [
+        {
+          "id": "pkill1",
+          "duration": 180
+        }
+      ],
+      "disinfectant_power": 5,
+      "bite": 0.95,
+      "bandages_power": 5,
+      "bleed": 1,
+      "move_cost": 250
+    }
+  },
+  {
+    "id": "XE037_Emergency_Injection",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "XE037 紧急注射物",
+      "str_pl": "XE037 紧急注射物"
+    },
+    "description": "在大灾变前公开提供的药物中的尖端产品。在其的外壳上写着[警告！快速大剂量服用可能导致疼痛、恶心、饥饿、口渴以及死亡]",
+    "weight": "50 g",
+    "volume": "250 ml",
+    "price": "100 USD",
+    "charges": 5,
+    "symbol": "!",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "heal",
+      "effects": [
+        {
+          "id": "XE037",
+          "duration": 450
+        }
+      ],
+      "limb_power": 10,
+      "torso_power": 10,
+      "head_power": 10,
+      "move_cost": 100
+    }
+  },
+  {
+    "id": "Nausea_Medication",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "止吐药"
+    },
+    "description": "一瓶用来缓解鼻塞和防止呕吐的药丸。",
+    "weight": "50 g",
+    "volume": "250 ml",
+    "price": "100 USD",
+    "charges": 5,
+    "symbol": "!",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "consume_drug",
+      "effects": [
+        {
+          "id": "Nausea_Medicine",
+          "duration": 300
+        }
+      ]
+    }
+  }
+]

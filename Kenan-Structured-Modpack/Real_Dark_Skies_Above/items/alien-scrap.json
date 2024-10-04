@@ -1,0 +1,187 @@
+[
+  {
+    "id": "dkz_blend_scrap",
+    "type": "AMMO",
+    "category": "spare_parts",
+    "name": {
+      "str": "外星金属废料"
+    },
+    "description": "一些大小不一的外来金属碎片，轻而坚韧。它看起来相当漂亮，银色，带着淡淡的蓝色和浅绿色底色。在紧要关头做一件像样的武器。",
+    "weight": "450 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "melee_damage": { "bash": 8 },
+    "to_hit": { "grip": "bad", "length": "short", "surface": "any", "balance": "clumsy" },
+    "stack_size": 4,
+    "material": [
+      "dkz_blend_mat"
+    ],
+    "symbol": ",",
+    "color": "light_cyan",
+    "looks_like": "steel_lump",
+    "ammo_type": "components",
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "dkz_weave_scrap",
+    "type": "TOOL",
+    "category": "spare_parts",
+    "name": {
+      "str": "外星织物废料"
+    },
+    "description": "这是一个相当大的部分纤维伪合成布，灵活和抵抗，但不愉快的触摸。",
+    "weight": "80 g",
+    "volume": "300 ml",
+    "price": "0 cent",
+    "material": [
+      "dkz_weave_mat"
+    ],
+    "symbol": ",",
+    "color": "white",
+    "looks_like": "scrap_faux_fur",
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "id": "dkz_polymer_scrap",
+    "type": "TOOL",
+    "category": "spare_parts",
+    "name": {
+      "str": "外星聚合物废料"
+    },
+    "description": "这是一个奇怪的，象牙色的塑料收集是令人不安的温暖的触摸。",
+    "weight": "50 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "material": [
+      "dkz_biopoly_mat"
+    ],
+    "symbol": ",",
+    "color": "light_gray",
+    "looks_like": "scrap",
+    "flags": [
+      "NO_SALVAGE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "dkz_elecscrap",
+    "symbol": ",",
+    "color": "light_green",
+    "looks_like": "circuit",
+    "name": {
+      "str": "外星电子废料"
+    },
+    "category": "spare_parts",
+    "description": "一系列令人眼花缭乱的外星电子元件，远远超出了地球所能制造的范畴。",
+    "price": "0 cent",
+    "material": [
+      "dkz_biopoly_mat"
+    ],
+    "weight": "26 g",
+    "volume": "150 ml",
+    "to_hit": 2
+  },
+  {
+    "type": "GENERIC",
+    "id": "dkz_biotech",
+    "symbol": ",",
+    "color": "light_red",
+    "looks_like": "seed_strawberries",
+    "name": {
+      "str": "外星生化零件"
+    },
+    "category": "spare_parts",
+    "description": "一团会分泌出粘性凝胶的缓慢蠕动的零件。",
+    "price": "0 cent",
+    "material": [
+      "dkz_biopoly_mat",
+      "dkz_biogel_mat"
+    ],
+    "weight": "26 g",
+    "volume": "150 ml",
+    "to_hit": 2
+  },
+  {
+    "type": "GENERIC",
+    "id": "dkz_powercell",
+    "category": "spare_parts",
+    "name": {
+      "str": "外星能量电池"
+    },
+    "description": "一个拳头大小的圆柱形容器，当你拿着它时会感觉有点刺痛。它的中心有一个微微发光的绿色核心。虽然本质上在地球上找不到类似的物品，但它可能用来制造某些外星物品。",
+    "weight": "80 g",
+    "volume": "30 ml",
+    "price": "150 USD",
+    "material": [
+      "dkz_blend_mat",
+      "dkz_biopoly_mat"
+    ],
+    "symbol": "=",
+    "color": "green",
+    "looks_like": "battery",
+    "flags": [
+      "NO_SALVAGE",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "dkz_biogel",
+    "name": {
+      "str": "外星水凝胶"
+    },
+    "weight": "140 g",
+    "color": "cyan",
+    "container": "flask_glass",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": -3,
+    "stim": 13,
+    "addiction_potential": 77,
+    "addiction_type": "opiate",
+    "description": "一种小的蓝色外星液体凝胶，里面有小的扭动的灰色斑点。你想吃的话可以吃。考虑到你是如何获得它的，你不确定这将是一个好主意，所以你可能应该先保存你的游戏。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "dkz_biogel_mat"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "category": "chems",
+    "fun": -13,
+    "flags": [
+      "USE_EAT_VERB",
+      "IRREPLACEABLE_CONSUMABLE",
+      "RADIOACTIVE"
+    ],
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你吞下外星水凝胶，它似乎高兴地滑落你的喉咙。你觉得有点奇怪。",
+      "effects": [
+        {
+          "id": "hallu",
+          "duration": 8192
+        },
+        {
+          "id": "pkill3",
+          "duration": 128
+        },
+        {
+          "id": "pkill2",
+          "duration": 256
+        },
+        {
+          "id": "pkill1",
+          "duration": 4092
+        }
+      ]
+    }
+  }
+]

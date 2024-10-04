@@ -1,0 +1,56 @@
+[
+  {
+    "id": "3840",
+    "type": "AMMO",
+    "name": {
+      "str": ".38-40弹"
+    },
+    "description": ".38-40温彻斯特弹是子弹界的谜，它与.44-40弹非常相似，但性能要差一点。它的优点是既可以装手枪也可以装步枪，因此只需要携带一种弹药。",
+    "weight": "13 g",
+    "volume": "200 ml",
+    "price": "30 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "-",
+    "color": "white",
+    "count": 40,
+    "stack_size": 30,
+    "ammo_type": "3840",
+    "casing": "4440_casing",
+    "range": 27,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 28,
+      "armor_penetration": 2
+    },
+    "dispersion": 120,
+    "recoil": 150
+  },
+  {
+    "id": "bp_3840",
+    "copy-from": "3840",
+    "type": "AMMO",
+    "name": {
+      "str": ".38-40弹（黑火药）"
+    },
+    "proportional": {
+      "price": 0.3,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
+  }
+]

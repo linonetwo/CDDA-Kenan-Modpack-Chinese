@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TALK_ISHERWOOD_CLAIRE_TOPICS",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "effect": {
+          "u_add_var": "u_Talk_To_ClaireIsherwood_about_Xenoids",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "condition": {
+          "not": {
+            "u_has_var": "u_Talk_To_ClaireIsherwood_about_Xenoids",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_ISHERWOOD_CLAIRE_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_ISHERWOOD_CLAIRE_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": "那些家伙是从《世界大战》里跑出来的反派吗？",
+    "responses": [
+      {
+        "text": "这次他们可着陆了。",
+        "topic": "TALK_ISHERWOOD_CLAIRE_TOPICS"
+      }
+    ]
+  }
+]

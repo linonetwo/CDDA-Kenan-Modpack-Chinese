@@ -1,0 +1,92 @@
+[
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_test",
+    "name": "小屋（测试）",
+    "sym": "C",
+    "color": "i_green",
+    "see_cost": 5,
+    "extras": "build",
+    "mondensity": 2,
+    "flags": [
+      "RISK_LOW",
+      "SOURCE_SAFETY",
+      "SOURCE_FOOD"
+    ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_roof_test",
+    "name": "小屋（屋顶）（测试）",
+    "sym": "C",
+    "color": "i_green",
+    "see_cost": 5,
+    "extras": "build"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "cabin_basement_test",
+    "name": "小屋（地下室）（测试）",
+    "sym": "C",
+    "color": "i_green",
+    "see_cost": 5,
+    "extras": "build"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [
+      "fk_base_1",
+      "fk_base_2"
+    ],
+    "name": "火焰关节底座",
+    "sym": "F",
+    "color": "i_red",
+    "see_cost": 5,
+    "flags": [
+      "SOURCE_SAFETY",
+      "SOURCE_PEOPLE"
+    ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": [
+      "fk_base_roof_1",
+      "fk_base_roof_2"
+    ],
+    "name": "火焰关节底座",
+    "sym": "F",
+    "color": "i_red",
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "fk_base_stash",
+    "copy-from": "generic_city_house_basement"
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "moneylender_hub",
+    "name": "佣兵酒馆",
+    "sym": "M",
+    "color": "i_yellow",
+    "see_cost": 5,
+    "flags": [
+      "SOURCE_SAFETY",
+      "SOURCE_PEOPLE"
+    ]
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "moneylender_hub_roof",
+    "name": "佣兵酒馆",
+    "sym": "M",
+    "color": "i_yellow",
+    "see_cost": 5
+  },
+  {
+    "type": "overmap_terrain",
+    "id": "moneylender_hub_basement",
+    "name": "佣兵酒馆",
+    "copy-from": "generic_city_house_basement"
+  }
+]

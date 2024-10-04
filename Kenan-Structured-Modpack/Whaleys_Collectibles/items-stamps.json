@@ -1,0 +1,228 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "stamp_river",
+    "category": "other",
+    "symbol": "-",
+    "color": "white",
+    "name": {
+      "str": "河流邮票"
+    },
+    "description": "一张印有河流图像的邮票。",
+    "price": 10,
+    "material": [
+      "paper"
+    ],
+    "weight": "1 g",
+    "volume": "3 ml"
+  },
+  {
+    "type": "GENERIC",
+    "id": "stamp_snow",
+    "category": "other",
+    "symbol": "-",
+    "color": "white",
+    "name": {
+      "str": "雪山邮票"
+    },
+    "description": "一张印有雪山图案的邮票。",
+    "price": 10,
+    "material": [
+      "paper"
+    ],
+    "weight": "1 g",
+    "volume": "3 ml"
+  },
+  {
+    "type": "GENERIC",
+    "id": "stamp_forest",
+    "category": "other",
+    "symbol": "-",
+    "color": "white",
+    "name": {
+      "str": "森林邮票"
+    },
+    "description": "一张印有森林图案的邮票。",
+    "price": 10,
+    "material": [
+      "paper"
+    ],
+    "weight": "1 g",
+    "volume": "3 ml"
+  },
+  {
+    "type": "GENERIC",
+    "id": "stamp_desert",
+    "category": "other",
+    "symbol": "-",
+    "color": "white",
+    "name": {
+      "str": "沙漠邮票"
+    },
+    "description": "一张印有沙漠图案的邮票。",
+    "price": 10,
+    "material": [
+      "paper"
+    ],
+    "weight": "1 g",
+    "volume": "3 ml"
+  },
+  {
+    "type": "GENERIC",
+    "id": "stamp_stars",
+    "category": "other",
+    "symbol": "-",
+    "color": "white",
+    "name": {
+      "str": "星星邮票"
+    },
+    "description": "一张印有星星图案的邮票。",
+    "price": 10,
+    "material": [
+      "paper"
+    ],
+    "flags": "TRADER_AVOID",
+    "weight": "1 g",
+    "volume": "3 ml"
+  },
+  {
+    "type": "GENERIC",
+    "id": "stamp_truck",
+    "category": "other",
+    "symbol": "-",
+    "color": "white",
+    "name": {
+      "str": "卡车邮票"
+    },
+    "description": "一张印有一辆旧红色卡车图像的邮票。",
+    "price": 10,
+    "material": [
+      "paper"
+    ],
+    "flags": "TRADER_AVOID",
+    "weight": "1 g",
+    "volume": "3 ml"
+  },
+  {
+    "type": "GENERIC",
+    "id": "stamp_toxic",
+    "category": "other",
+    "symbol": "-",
+    "color": "white",
+    "name": {
+      "str": "有毒废物邮票"
+    },
+    "description": "一张印有有毒废物图像的邮票。",
+    "price": 10,
+    "material": [
+      "paper"
+    ],
+    "flags": "TRADER_AVOID",
+    "weight": "1 g",
+    "volume": "3 ml"
+  },
+  {
+    "type": "GENERIC",
+    "id": "stamp_swimming",
+    "category": "other",
+    "symbol": "-",
+    "color": "white",
+    "name": {
+      "str": "游泳邮票"
+    },
+    "description": "一张印有人在游泳的图像的邮票。",
+    "price": 10,
+    "material": [
+      "paper"
+    ],
+    "flags": "TRADER_AVOID",
+    "weight": "1 g",
+    "volume": "3 ml"
+  },
+  {
+    "id": "stamp_book",
+    "type": "BOOK",
+    "name": {
+      "str": "邮票图册"
+    },
+    "looks_like": "photo_album",
+    "description": "一本装满你收集交易卡的皮制相册，里面集齐的全套卡片收藏让你感到非常满意。",
+    "weight": "180 g",
+    "volume": "500 ml",
+    "price": "50 USD",
+    "price_postapoc": "50 USD",
+    "material": [
+      "paper",
+      "leather"
+    ],
+    "symbol": "?",
+    "color": "brown",
+    "time": "15 m",
+    "chapters": 6,
+    "fun": 6,
+    "flags": [
+      "INSPIRATIONAL"
+    ]
+  },
+  {
+    "type": "recipe",
+    "activity_level": "NO_EXERCISE",
+    "result": "stamp_book",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "fabrication",
+    "difficulty": 0,
+    "time": "2 m",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "stamp_river",
+          1
+        ]
+      ],
+      [
+        [
+          "stamp_snow",
+          1
+        ]
+      ],
+      [
+        [
+          "stamp_forest",
+          1
+        ]
+      ],
+      [
+        [
+          "stamp_desert",
+          1
+        ]
+      ],
+      [
+        [
+          "stamp_stars",
+          1
+        ]
+      ],
+      [
+        [
+          "stamp_truck",
+          1
+        ]
+      ],
+      [
+        [
+          "stamp_toxic",
+          1
+        ]
+      ],
+      [
+        [
+          "stamp_swimming",
+          1
+        ]
+      ]
+    ]
+  }
+]

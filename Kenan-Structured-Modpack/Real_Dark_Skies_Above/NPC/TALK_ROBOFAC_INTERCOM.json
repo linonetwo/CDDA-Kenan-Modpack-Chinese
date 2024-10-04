@@ -1,0 +1,48 @@
+[
+  {
+    "id": "TALK_ROBOFAC_INTERCOM",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "你知道外边有外星人吗。？",
+        "effect": {
+          "u_add_var": "u_Talk_To_Intercom_about_Xenoids",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "condition": {
+          "not": {
+            "u_has_var": "u_Talk_To_Intercom_about_Xenoids",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_ROBOFAC_INTERCOM_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_ROBOFAC_INTERCOM_XENOIDS_1",
+    "type": "talk_topic",
+    "dynamic_line": "我们了解他们，在这方面不需要任何帮助。",
+    "responses": [
+      {
+        "text": "你说‘你们了解他们’是什么意思？",
+        "topic": "TALK_ROBOFAC_INTERCOM_XENOIDS_2"
+      }
+    ]
+  },
+  {
+    "id": "TALK_ROBOFAC_INTERCOM_XENOIDS_2",
+    "type": "talk_topic",
+    "dynamic_line": "就是这个意思。我们了解他们，在这方面不需要任何帮助。再见。",
+    "responses": [
+      {
+        "text": "别挂我电话！",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

@@ -1,0 +1,447 @@
+[
+  {
+    "id": "cordage_pouch",
+    "type": "ARMOR",
+    "name": {
+      "str": "绳编袋"
+    },
+    "description": "用天然绳索小心翼翼编制而成的网袋，用带子系在你的躯干上。很合身，不会影响到你的行动。",
+    "weight": "500 g",
+    "volume": "750 ml",
+    "price": "119 USD",
+    "material": [
+      "veggy"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "7 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "7 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 150
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 150
+      }
+    ],
+    "warmth": 0,
+    "armor": [
+      {
+        "encumbrance": [
+          5,
+          15
+        ],
+        "coverage": 15,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "result": "cordage_pouch",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "survival",
+    "difficulty": 2,
+    "time": 120000,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "cordage",
+          15,
+          "LIST"
+        ],
+        [
+          "rope_natural",
+          1,
+          "LIST"
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "birchbark_pouch",
+    "type": "ARMOR",
+    "name": {
+      "str": "桦树皮袋"
+    },
+    "description": "一个由桦树皮切割和编织而成的袋子，不太合身。它有一个用来固定它的骨栓，和一条可以套在你的躯干上带子。",
+    "weight": "1000 g",
+    "volume": "750 ml",
+    "price": "119 USD",
+    "material": [
+      "veggy"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "7 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "7 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 150
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 150
+      }
+    ],
+    "warmth": 0,
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 10,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "result": "birchbark_pouch",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "survival",
+    "difficulty": 2,
+    "time": 60000,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "cordage",
+          3,
+          "LIST"
+        ],
+        [
+          "rope_natural_short",
+          1,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "bone",
+          1
+        ]
+      ],
+      [
+        [
+          "birchbark",
+          16
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "backpack_aframe",
+    "type": "ARMOR",
+    "name": {
+      "str": "A形双肩背包"
+    },
+    "description": "一个用粗木棍制成的A形架背包。这只是个框架",
+    "weight": "1500 g",
+    "volume": "2000 ml",
+    "price": "119 USD",
+    "material": [
+      "wood"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 0,
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 20,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "result": "backpack_aframe",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "survival",
+    "difficulty": 2,
+    "time": 60000,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "cordage",
+          3,
+          "LIST"
+        ],
+        [
+          "rope_natural_short",
+          1,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "stick",
+          4
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "backpack_aframe_birchbark",
+    "type": "ARMOR",
+    "name": {
+      "str": "A字形桦皮背包"
+    },
+    "description": "一个A形架背包，上面系着桦树皮袋用以存放物品，有几个用来固定装备的环扣",
+    "weight": "2000 g",
+    "volume": "2000 ml",
+    "price": "119 USD",
+    "material": [
+      "wood"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 0,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "7 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "7 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 150
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 150
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "5 kg",
+        "moves": 200,
+        "flag_restriction": [
+          "BELT_CLIP"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "在背包环上附加什么？",
+      "holster_msg": "你把你的%s连到你的%s上"
+    },
+    "flags": [
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 20,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "result": "backpack_aframe_birchbark",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "survival",
+    "difficulty": 1,
+    "time": 15000,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "backpack_aframe",
+          1
+        ]
+      ],
+      [
+        [
+          "birchbark_pouch",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "backpack_aframe_cordage",
+    "type": "ARMOR",
+    "name": {
+      "str": "A字型绳索背包"
+    },
+    "description": "一个A形架背包，上面系着绳编袋用以存放物品，有几个用来固定装备的环扣",
+    "weight": "2000 g",
+    "volume": "2000 ml",
+    "price": "119 USD",
+    "material": [
+      "wood"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 0,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "7 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "4 L",
+        "max_contains_weight": "7 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 150
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 150
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "250 ml",
+        "max_contains_volume": "3 L",
+        "max_contains_weight": "5 kg",
+        "moves": 200,
+        "flag_restriction": [
+          "BELT_CLIP"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "在背包环上附加什么？",
+      "holster_msg": "你把你的%s连到你的%s上"
+    },
+    "flags": [
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 20,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "result": "backpack_aframe_cordage",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "survival",
+    "difficulty": 1,
+    "time": 15000,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "backpack_aframe",
+          1
+        ]
+      ],
+      [
+        [
+          "cordage_pouch",
+          1
+        ]
+      ]
+    ]
+  }
+]

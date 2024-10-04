@@ -1,0 +1,779 @@
+[
+  {
+    "type": "effect_type",
+    "id": "sierra_poison",
+    "rating": "bad",
+    "max_duration": "5 seconds",
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        4
+      ],
+      "hurt_chance": [
+        4
+      ]
+    },
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "id": "sierra_poison_display",
+    "name": [
+      "红雾中毒"
+    ],
+    "desc": [
+      "你已经暴露在一个密密麻麻的马德雷山脉有毒气体口袋里了！"
+    ],
+    "miss_messages": [
+      [
+        "你感到身体内部烧了起来！",
+        2
+      ]
+    ],
+    "apply_message": "高浓度的红雾毒气包围着你。。。",
+    "remove_message": "你已经设法及时摆脱了集中的气穴…",
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "5 seconds",
+    "base_mods": {
+      "per_mod": [
+        -5
+      ],
+      "dex_mod": [
+        -1
+      ],
+      "str_mod": [
+        -2
+      ],
+      "pain_min": [
+        5
+      ],
+      "pain_max": [
+        15
+      ],
+      "pain_chance": [
+        25
+      ],
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        4
+      ],
+      "hurt_chance": [
+        4
+      ],
+      "health_min": [
+        -3
+      ],
+      "health_max": [
+        -10
+      ],
+      "health_chance": [
+        5
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Z-43 toxic gas, high concentration"
+  },
+  {
+    "type": "effect_type",
+    "id": "sierra_cloud",
+    "rating": "bad",
+    "max_duration": "10 seconds",
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        1
+      ],
+      "hurt_chance": [
+        90
+      ]
+    },
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "id": "sierra_cloud_display",
+    "name": [
+      "红雾侵蚀"
+    ],
+    "desc": [
+      "红色的有毒气体云吞噬着马德雷山脉，慢慢腐蚀着你的身体。"
+    ],
+    "miss_messages": [
+      [
+        "你感到皮肤下有一种不愉快的烧灼感...",
+        90
+      ],
+      [
+        "你的肺感到疼痛，你极力挣扎着呼吸..",
+        90
+      ]
+    ],
+    "apply_message": "你发现自己来到了马德雷赌场。天空是红色的，空气里弥漫着铜币和旧世黄金的味道，这表明空气也受到了致命气体的污染...",
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "10 seconds",
+    "base_mods": {
+      "pain_min": [
+        1
+      ],
+      "pain_max": [
+        1
+      ],
+      "pain_chance": [
+        50
+      ],
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        1
+      ],
+      "hurt_chance": [
+        90
+      ],
+      "health_min": [
+        -1
+      ],
+      "health_max": [
+        -2
+      ],
+      "health_chance": [
+        45
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Z-43 toxic gas, low concentration"
+  },
+  {
+    "type": "effect_type",
+    "id": "cloud_weak",
+    "name": [
+      "云吻效果（弱效）"
+    ],
+    "desc": [
+      "云吻毒液已经进入你的身体。虽然剂量很小，但还是会让你很痛苦。"
+    ],
+    "miss_messages": [
+      [
+        "你感到喉咙烧了起来！",
+        1
+      ],
+      [
+        "你觉得肚子里好像有燃烧的凝固汽油弹！",
+        1
+      ]
+    ],
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "1 minute",
+    "base_mods": {
+      "pain_min": [
+        2
+      ],
+      "pain_max": [
+        4
+      ],
+      "pain_chance": [
+        5
+      ],
+      "hurt_min": [
+        2
+      ],
+      "hurt_max": [
+        4
+      ],
+      "hurt_chance": [
+        5
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Z-43 liquified poison, low concentration"
+  },
+  {
+    "type": "effect_type",
+    "id": "cloud_potent",
+    "name": [
+      "云吻效果（强效）"
+    ],
+    "desc": [
+      "云吻毒液已经进入你的身体。它的浓度足以让你感觉像死了，如果你太虚弱而无法处理它，它可能会杀死你。"
+    ],
+    "miss_messages": [
+      [
+        "你感到喉咙烧了起来！",
+        1
+      ],
+      [
+        "你觉得肚子里好像有燃烧的凝固汽油弹！",
+        1
+      ]
+    ],
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "1 minute",
+    "base_mods": {
+      "dex_mod": [
+        -1
+      ],
+      "str_mod": [
+        -2
+      ],
+      "pain_min": [
+        3
+      ],
+      "pain_max": [
+        6
+      ],
+      "pain_chance": [
+        5
+      ],
+      "hurt_min": [
+        4
+      ],
+      "hurt_max": [
+        5
+      ],
+      "hurt_chance": [
+        5
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Z-43 liquified poison, medium concentration"
+  },
+  {
+    "type": "effect_type",
+    "id": "cloud_lethal",
+    "name": [
+      "云吻效果（致命）"
+    ],
+    "desc": [
+      "云吻毒液已经进入你的身体。它的浓度足以直接杀死你。向这个残酷的世界说再见吧…"
+    ],
+    "miss_messages": [
+      [
+        "你感到喉咙烧了起来！",
+        1
+      ],
+      [
+        "你觉得肚子里好像有燃烧的凝固汽油弹！",
+        1
+      ]
+    ],
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "2 minutes",
+    "base_mods": {
+      "per_mod": [
+        -3
+      ],
+      "dex_mod": [
+        -2
+      ],
+      "str_mod": [
+        -3
+      ],
+      "int_mod": [
+        -5
+      ],
+      "pain_min": [
+        5
+      ],
+      "pain_max": [
+        10
+      ],
+      "pain_chance": [
+        5
+      ],
+      "hurt_min": [
+        7
+      ],
+      "hurt_max": [
+        12
+      ],
+      "hurt_chance": [
+        2
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Z-43 liquified poison, high concentration"
+  },
+  {
+    "type": "effect_type",
+    "id": "ghost_meat_raw",
+    "name": [
+      "食用生鬼人肉"
+    ],
+    "desc": [
+      "饥饿和绝望把你带到吃鬼人的肉直接从他们的身体，生的。你感觉到马德雷山的毒素在你的血管里流淌…"
+    ],
+    "miss_messages": [
+      [
+        "你感觉好像有人在活生生地掏空你的内脏！",
+        2
+      ]
+    ],
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "1 minute",
+    "base_mods": {
+      "int_mod": [
+        -2
+      ],
+      "dex_mod": [
+        -2
+      ],
+      "pain_min": [
+        3
+      ],
+      "pain_max": [
+        8
+      ],
+      "pain_chance": [
+        5
+      ],
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        5
+      ],
+      "hurt_chance": [
+        5
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Traces of Z-43 toxins in the digestive system"
+  },
+  {
+    "type": "effect_type",
+    "id": "ghost_meat_cooked",
+    "name": [
+      "食用熟鬼人肉"
+    ],
+    "desc": [
+      "饥饿和绝望把你带到吃鬼人肉的地方。你已经准备好了，但仍然感觉到马德雷山的毒素在你的血管里流淌…"
+    ],
+    "miss_messages": [
+      [
+        "你感觉好像有人在活生生地掏空你的内脏！",
+        3
+      ]
+    ],
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "1 minute",
+    "base_mods": {
+      "int_mod": [
+        -2
+      ],
+      "dex_mod": [
+        -2
+      ],
+      "pain_min": [
+        2
+      ],
+      "pain_max": [
+        6
+      ],
+      "pain_chance": [
+        5
+      ],
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        3
+      ],
+      "hurt_chance": [
+        5
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Traces of Z-43 toxins in the digestive system"
+  },
+  {
+    "type": "effect_type",
+    "id": "sierra_martini_effect",
+    "name": [
+      "喝了马德雷马提尼酒"
+    ],
+    "desc": [
+      "这马提尼尝起来糟透了，但似乎能增强你的力量，帮助你的身体组织再生。显然，云既可以退化，也可以再生，后者你可以很容易地观察到幽灵的人。正确的成分组合可以让你利用自己的再生潜力。"
+    ],
+    "miss_messages": [
+      [
+        "你感到一股神秘的力量注入了你的全身，身体的自愈能力大大增强。",
+        10
+      ]
+    ],
+    "rating": "good",
+    "main_parts_only": true,
+    "max_duration": "5 minutes",
+    "base_mods": {
+      "str_mod": [
+        3
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Traces of Z-43 toxins in the digestive system"
+  },
+  {
+    "type": "effect_type",
+    "id": "stimpack_used",
+    "name": [
+      "你注射了兴奋剂"
+    ],
+    "desc": [
+      "与世界末日后的荒原相反，注入兴奋剂后，你会感觉回到生活中，闪耀着真正幸存者的荣耀。"
+    ],
+    "miss_messages": [
+      [
+        "你觉得自己充满活力，活力无比...那感觉太棒了。",
+        10
+      ]
+    ],
+    "rating": "good",
+    "main_parts_only": true,
+    "max_duration": "5 minutes",
+    "removes_effects": [
+      "bleed",
+      "hypovolemia"
+    ],
+    "base_mods": {
+      "str_mod": [
+        1
+      ],
+      "int_mod": [
+        1
+      ],
+      "dex_mod": [
+        1
+      ],
+      "per_mod": [
+        1
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "STIM-RX35-A2 Big_Mt class 2 healing stimulant"
+  },
+  {
+    "type": "effect_type",
+    "id": "stimpack_used2",
+    "rating": "good",
+    "main_parts_only": true,
+    "max_duration": "1 second",
+    "base_mods": {
+      "sleepiness_amount": [
+        -25
+      ],
+      "stamina_amount": [
+        7000
+      ]
+    },
+    "show_in_info": false
+  },
+  {
+    "type": "effect_type",
+    "id": "mentats_used",
+    "name": [
+      "吃了薄荷糖"
+    ],
+    "desc": [
+      "你的思维清晰，思维能力增强，视野锐利。现在你看到真相了…"
+    ],
+    "rating": "good",
+    "main_parts_only": false,
+    "max_duration": "4 minutes",
+    "base_mods": {
+      "int_mod": [
+        2
+      ],
+      "per_mod": [
+        2
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Mentats stimulants"
+  },
+  {
+    "type": "effect_type",
+    "id": "medx_used",
+    "name": [
+      "你注射了注射器-X"
+    ],
+    "desc": [
+      "你的痛苦正在被冲走，你感觉更强大，更有免疫力。"
+    ],
+    "rating": "good",
+    "main_parts_only": false,
+    "max_duration": "4 minutes",
+    "base_mods": {
+      "health_amount": [
+        20
+      ],
+      "pkill_tick": [
+        12
+      ],
+      "pkill_min": [
+        1
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Med-X stimulants"
+  },
+  {
+    "type": "effect_type",
+    "id": "stealth_boy_activated",
+    "name": [
+      "隐身场"
+    ],
+    "desc": [
+      "光线在你周围弯曲和反射，你从观察者的眼睛里消失了。"
+    ],
+    "rating": "good",
+    "apply_message": "你激活隐身小子，隐藏在了隐形场中。",
+    "remove_message": "隐蔽场的屏障已经消失了",
+    "flags": [
+      "EFFECT_INVISIBLE"
+    ]
+  },
+  {
+    "type": "effect_type",
+    "id": "ghost_sight_activated",
+    "name": [
+      "鬼人视觉试剂"
+    ],
+    "desc": [
+      "你的喉咙在喝了幻觉后灼痛，但现在你可以透过黑暗清晰地看到。"
+    ],
+    "rating": "good",
+    "apply_message": "你喝下了鬼人视觉试剂，你的眼睛很快就会适应黑暗。",
+    "remove_message": "鬼人视觉的效果消失了，你恢复了你正常的夜间视力。",
+    "flags": [
+      "EFFECT_NIGHT_VISION"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SIERRA_HUNTER",
+    "name": {
+      "str": "马德雷山寻宝者"
+    },
+    "points": 0,
+    "description": "你是众多幸存者中的一员，他们打开了马德雷赌场，发现了埋藏在地下保险库深处的旧世界宝藏。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true
+  },
+  {
+    "type": "mutation",
+    "id": "entered_casino",
+    "name": {
+      "str": "马德雷赌场客人"
+    },
+    "points": 0,
+    "description": "你是在世界末日到来后来到马德雷赌场的幸存者之一…现在你只需要到金库去认领旧世界的宝藏。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true
+  },
+  {
+    "type": "mutation",
+    "id": "win",
+    "name": {
+      "str": "马德雷赌场征服者"
+    },
+    "points": 0,
+    "description": "所以你破解了马德雷赌场的大门，终于，在你经历了这么多之后，你揭开了它最深暗的秘密。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true
+  },
+  {
+    "type": "mutation",
+    "id": "gala_trait",
+    "name": {
+      "str": "马德雷庆典主持人"
+    },
+    "points": 0,
+    "description": "你成功地触发了庆祝活动，打开了马德雷山赌场的大门。现在是时候进入这个传奇胜地了。",
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "effect_type",
+    "id": "collar_boom",
+    "rating": "bad",
+    "apply_message": "你脖子上的项圈爆炸了，你的头被炸成了碎片！",
+    "max_duration": "5 seconds",
+    "base_mods": {
+      "hurt_min": [
+        999
+      ],
+      "hurt_max": [
+        999
+      ]
+    },
+    "show_in_info": true
+  },
+  {
+    "type": "effect_type",
+    "id": "venom_weak",
+    "name": [
+      "云吻中毒（弱效）"
+    ],
+    "desc": [
+      "马德雷山脉的毒液流过尤鲁人的血管，从内部燃烧着你。剂量似乎不是致命的，但你还是感觉糟透了。"
+    ],
+    "miss_messages": [
+      [
+        "你感到喉咙烧了起来！",
+        1
+      ],
+      [
+        "你觉得肚子里好像有燃烧的凝固汽油弹！",
+        1
+      ]
+    ],
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "1 minute",
+    "base_mods": {
+      "pain_min": [
+        2
+      ],
+      "pain_max": [
+        4
+      ],
+      "pain_chance": [
+        5
+      ],
+      "hurt_min": [
+        2
+      ],
+      "hurt_max": [
+        5
+      ],
+      "hurt_chance": [
+        2
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Z-43 liquified poison, low concentration"
+  },
+  {
+    "type": "effect_type",
+    "id": "venom_potent",
+    "name": [
+      "云吻中毒（强效）"
+    ],
+    "desc": [
+      "马德雷山脉的毒液流过尤鲁人的血管，从内部燃烧着你。这种剂量很有效，如果你的机体太弱而无法控制，它可能会严重损害你的健康，甚至杀死你。"
+    ],
+    "miss_messages": [
+      [
+        "你感到喉咙烧了起来！",
+        1
+      ],
+      [
+        "你觉得肚子里好像有燃烧的凝固汽油弹！",
+        1
+      ]
+    ],
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "1 minute",
+    "base_mods": {
+      "dex_mod": [
+        -1
+      ],
+      "str_mod": [
+        -2
+      ],
+      "pain_min": [
+        3
+      ],
+      "pain_max": [
+        6
+      ],
+      "pain_chance": [
+        5
+      ],
+      "hurt_min": [
+        2
+      ],
+      "hurt_max": [
+        7
+      ],
+      "hurt_chance": [
+        2
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Z-43 liquified poison, medium concentration"
+  },
+  {
+    "type": "effect_type",
+    "id": "venom_lethal",
+    "name": [
+      "云吻中毒（致死）"
+    ],
+    "desc": [
+      "马德雷山脉的毒液流过尤鲁人的血管，从内部燃烧着你。你在内心深处感觉到它不会给你带来好的结局…"
+    ],
+    "miss_messages": [
+      [
+        "你感到喉咙烧了起来！",
+        1
+      ],
+      [
+        "你觉得肚子里好像有燃烧的凝固汽油弹！",
+        1
+      ]
+    ],
+    "rating": "bad",
+    "main_parts_only": true,
+    "max_duration": "2 minutes",
+    "base_mods": {
+      "per_mod": [
+        -3
+      ],
+      "dex_mod": [
+        -2
+      ],
+      "str_mod": [
+        -3
+      ],
+      "int_mod": [
+        -5
+      ],
+      "pain_min": [
+        5
+      ],
+      "pain_max": [
+        10
+      ],
+      "pain_chance": [
+        5
+      ],
+      "hurt_min": [
+        4
+      ],
+      "hurt_max": [
+        9
+      ],
+      "hurt_chance": [
+        2
+      ]
+    },
+    "show_in_info": true,
+    "blood_analysis_description": "Z-43 liquified poison, high concentration"
+  }
+]

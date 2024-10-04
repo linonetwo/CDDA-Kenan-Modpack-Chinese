@@ -1,0 +1,166 @@
+[
+  {
+    "type": "martial_art",
+    "id": "style_nec_kung_fu",
+    "name": {
+      "str": "功夫"
+    },
+    "description": "功夫是一种武术，但在中国传统文化中，它也是一种手段——通过努力获得的技能。它的特点是硬打击和灵活的身体处理，它是在击倒你的对手的脚好。",
+    "initiate": [
+      "你站起来，对攻击保持警惕*",
+      "%s站告诉安第斯提高警惕"
+    ],
+    "arm_block": 2,
+    "leg_block": 2,
+    "static_buffs": [
+      {
+        "id": "nec_kung_fu_breath",
+        "name": "功夫吐息",
+        "description": "你可以用一种独特的吐息法来保持镇定。给予闪避和打击加成。",
+        "unarmed_allowed": true,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.1
+          }
+        ],
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "onmove_buffs": [
+      {
+        "id": "nec_kung_fu_move",
+        "name": "武功招式",
+        "description": "用步法你总是可以转身攻击和躲避。击中并避免的奖励",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "unarmed",
+            "level": 1
+          }
+        ],
+        "buff_duration": 2,
+        "mult_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": 2
+          },
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 2
+          }
+        ]
+      }
+    ],
+    "ondodge_buffs": [
+      {
+        "id": "nec_kung_fu_dodge",
+        "name": "功夫道奇",
+        "description": "避免攻击的时刻不一定是机会。总是听到反击的间隙。避免和打击奖励。可能重复",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "unarmed",
+            "level": 1
+          }
+        ],
+        "buff_duration": 2,
+        "max_stacks": 3,
+        "mult_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": 2
+          },
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.3
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "tec_nec_hakkei",
+      "tec_nec_senpukyaku",
+      "tec_nec_tetsuzanko"
+    ]
+  },
+  {
+    "id": "style_niten",
+    "copy-from": "style_niten",
+    "type": "martial_art",
+    "name": {
+      "str": "二天一流"
+    },
+    "extend": {
+      "weapons": [
+        "nec_fine_katana",
+        "bio_lightsaber_fake"
+      ]
+    }
+  },
+  {
+    "id": "style_krav_maga",
+    "copy-from": "style_krav_maga",
+    "type": "martial_art",
+    "name": {
+      "str": "马伽术"
+    },
+    "extend": {
+      "weapons": [
+        "nec_fiber"
+      ]
+    }
+  },
+  {
+    "id": "style_fencing",
+    "copy-from": "style_fencing",
+    "type": "martial_art",
+    "name": {
+      "str": "击剑"
+    },
+    "extend": {
+      "weapons": [
+        "bio_lightsaber_fake"
+      ]
+    }
+  },
+  {
+    "id": "style_swordsmanship",
+    "copy-from": "style_swordsmanship",
+    "type": "martial_art",
+    "name": {
+      "str": "中世纪剑术"
+    },
+    "extend": {
+      "weapons": [
+        "nec_jogiri",
+        "bio_lightsaber_fake"
+      ]
+    }
+  },
+  {
+    "id": "style_ninjutsu",
+    "copy-from": "style_ninjutsu",
+    "type": "martial_art",
+    "name": {
+      "str": "忍术"
+    },
+    "extend": {
+      "weapons": [
+        "nec_fiber",
+        "nec_fine_katana",
+        "bio_lightsaber_fake"
+      ]
+    }
+  }
+]

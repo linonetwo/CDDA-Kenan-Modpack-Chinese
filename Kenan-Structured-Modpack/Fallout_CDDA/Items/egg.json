@@ -1,0 +1,131 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "egg_radscorpion",
+    "name": {
+      "str": "蝎子蛋"
+    },
+    "weight": "220 g",
+    "color": "white",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 10,
+    "calories": 174,
+    "description": "蝎子拳头般大小的蛋，太恶心了。",
+    "price": 80,
+    "material": [
+      "egg"
+    ],
+    "volume": "250 ml",
+    "spoils_in": "1 day",
+    "fun": -20,
+    "rot_spawn": "GROUP_EGG_RADSCORPION",
+    "rot_spawn_chance": 70
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "egg_gecko",
+    "name": {
+      "str": "壁虎卵"
+    },
+    "weight": "220 g",
+    "color": "white",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 10,
+    "calories": 174,
+    "description": "壁虎拳头般大小的蛋。",
+    "price": 80,
+    "material": [
+      "egg"
+    ],
+    "volume": "250 ml",
+    "spoils_in": "1 day",
+    "fun": 3,
+    "rot_spawn": "GROUP_EGG_GECKO",
+    "rot_spawn_chance": 70
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "egg_deathclaw",
+    "name": {
+      "str": "死亡爪蛋"
+    },
+    "weight": "220 g",
+    "color": "white",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 10,
+    "calories": 174,
+    "description": "一颗死亡爪的蛋。",
+    "price": 80,
+    "material": [
+      "egg"
+    ],
+    "volume": "250 ml",
+    "spoils_in": "1 day",
+    "fun": 3,
+    "rot_spawn": "GROUP_EGG_DEATHCLAW",
+    "rot_spawn_chance": 70
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "egg_mantis",
+    "name": {
+      "str": "螳螂"
+    },
+    "weight": "60 g",
+    "color": "white",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_giant_mantis_nymph",
+      "friendly_msg": "你打碎了木屋。出现了一个可爱的小螳螂仙女！它开始跟随你。",
+      "difficulty": 0,
+      "moves": 100,
+      "place_randomly": true
+    },
+    "spoils_in": "1 day",
+    "healthy": -1,
+    "quench": 3,
+    "calories": 69,
+    "description": "大螳螂狗一般大小的卵囊。真恶心。它摇晃着，好像要孵化似的！",
+    "price": 80,
+    "material": [
+      "egg"
+    ],
+    "volume": "250 ml",
+    "fun": -20,
+    "rot_spawn": "GROUP_EGG_MANTIS",
+    "rot_spawn_chance": 70
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "mirelurk_egg",
+    "name": {
+      "str": "泥沼蟹蛋"
+    },
+    "weight": "220 g",
+    "color": "white",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_mirelurk_baby",
+      "friendly_msg": "你打碎了一个蛋。里面钻出来一个幼年泥沼蟹！它开始尾随你。",
+      "difficulty": 0,
+      "moves": 100,
+      "place_randomly": true
+    },
+    "quench": 10,
+    "calories": 174,
+    "description": "一个泥沼蟹蛋。因其独特的口味而被许多人珍视。",
+    "price": 80,
+    "material": [
+      "egg"
+    ],
+    "volume": "250 ml",
+    "fun": 5
+  }
+]

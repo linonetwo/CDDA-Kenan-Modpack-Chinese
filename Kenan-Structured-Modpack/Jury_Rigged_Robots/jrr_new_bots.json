@@ -1,0 +1,296 @@
+[
+  {
+    "type": "MONSTER",
+    "id": "mon_pursuer_bot",
+    "name": {
+      "str": "追击无人机"
+    },
+    "species": "ROBOT",
+    "default_faction": "military",
+    "symbol": "P",
+    "color": "white_green",
+    "material": [
+      "steel"
+    ],
+    "diff": 15,
+    "aggression": 100,
+    "morale": 100,
+    "speed": 100,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 2,
+    "armor_bash": 10,
+    "armor_cut": 12,
+    "armor_bullet": 9,
+    "vision_day": 50,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "GRENADIER",
+        20
+      ]
+    ],
+    "starting_ammo": {
+      "bot_manhack": 10
+    },
+    "hp": 80,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          4
+        ]
+      ]
+    },
+    "description": "一种轮式无人机，用于追捕和消灭敌方战斗人员。它能在船上给哈利分配搜捕并削弱它的猎物。",
+    "flags": [
+      "SEES",
+      "FLIES",
+      "ELECTRONIC",
+      "NO_BREATHE",
+      "NOHEAD",
+      "HIT_AND_RUN"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_seeker_bot",
+    "name": {
+      "str": "探索者无人机"
+    },
+    "species": "ROBOT",
+    "default_faction": "military",
+    "symbol": "s",
+    "color": "white_green",
+    "material": [
+      "steel"
+    ],
+    "diff": 15,
+    "aggression": 100,
+    "morale": 100,
+    "speed": 130,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 2,
+    "armor_bash": 10,
+    "armor_cut": 12,
+    "armor_bullet": 9,
+    "vision_day": 50,
+    "vision_night": 5,
+    "revert_to_itype": "bot_seeker",
+    "starting_ammo": {
+      "9mm": 100
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 6,
+        "move_cost": 150,
+        "gun_type": "hk_mp5",
+        "ammo_type": "9mm",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "smg",
+            5
+          ]
+        ],
+        "fake_dex": 12,
+        "ranges": [
+          [
+            0,
+            14,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "laser_lock": false,
+        "targeting_cost": 400,
+        "targeting_timeout_extend": -10,
+        "targeting_sound": "\"Hostile detected.\"",
+        "targeting_volume": 20,
+        "no_ammo_sound": "叮！"
+      }
+    ],
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          4
+        ]
+      ]
+    },
+    "hp": 20,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一种自动悬停的无人机，设计用来寻找和消灭敌方战斗人员。它能在接近猎物前发射一发9毫米子弹。",
+    "flags": [
+      "SEES",
+      "FLIES",
+      "ELECTRONIC",
+      "NO_BREATHE",
+      "NOHEAD",
+      "HIT_AND_RUN"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_hunter_bot",
+    "name": {
+      "str": "猎手无人机"
+    },
+    "species": "ROBOT",
+    "default_faction": "military",
+    "symbol": "h",
+    "color": "white_green",
+    "material": [
+      "steel"
+    ],
+    "diff": 15,
+    "aggression": 100,
+    "morale": 100,
+    "speed": 110,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 2,
+    "armor_bash": 10,
+    "armor_cut": 20,
+    "armor_bullet": 16,
+    "vision_day": 50,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          4
+        ]
+      ]
+    },
+    "hp": 60,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "revert_to_itype": "bot_hunter",
+    "special_attacks": [
+      { "id": "grab", "cooldown": 4
+      }
+    ],
+    "description": "一台狗一般大小的军用无人机，用于追捕和消灭敌方战斗人员。它有一对带刺的颚，可以防止猎物逃跑。",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "BASHES",
+      "ATTACKMON",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_chaser_bot",
+    "name": {
+      "str": "猎杀无人机"
+    },
+    "species": "ROBOT",
+    "default_faction": "military",
+    "symbol": "c",
+    "color": "red_green",
+    "material": [
+      "steel"
+    ],
+    "diff": 20,
+    "aggression": 100,
+    "morale": 100,
+    "speed": 130,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 2,
+    "armor_bash": 10,
+    "armor_cut": 12,
+    "armor_bullet": 9,
+    "vision_day": 50,
+    "vision_night": 5,
+    "revert_to_itype": "bot_chaser",
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          4
+        ]
+      ]
+    },
+    "hp": 30,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "starting_ammo": {
+      "50bmg": 9
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 3,
+        "move_cost": 150,
+        "gun_type": "m2browning",
+        "ammo_type": "50bmg",
+        "fake_skills": [
+          [
+            "gun",
+            8
+          ],
+          [
+            "rifle",
+            8
+          ]
+        ],
+        "fake_dex": 12,
+        "ranges": [
+          [
+            0,
+            40,
+            "AUTO"
+          ],
+          [
+            41,
+            110,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "laser_lock": false,
+        "targeting_cost": 200,
+        "targeting_timeout_extend": -10,
+        "targeting_sound": "\"Hostile detected.\"",
+        "targeting_volume": 50,
+        "no_ammo_sound": "叮！"
+      }
+    ],
+    "description": "一种无情的悬停无人驾驶飞机，旨在追击和消灭敌人的机器人。它能发射9发0.50bmg的子弹，然后接近目标消灭猎物。",
+    "flags": [
+      "FLIES",
+      "SEES",
+      "HEARS",
+      "BASHES",
+      "NO_BREATHE",
+      "ELECTRONIC",
+      "HIT_AND_RUN"
+    ]
+  }
+]

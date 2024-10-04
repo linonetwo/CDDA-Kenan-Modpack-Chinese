@@ -1,0 +1,764 @@
+[
+  {
+    "//": "TODO write something place him in cool basement, prob 5-20%(?), add dialogues, check code",
+    "type": "npc",
+    "id": "NPC_lead_scientist_22ch",
+    "name_unique": "Marinam 'Adu' Obmazov",
+    "gender": "male",
+    "name_suffix": "教授",
+    "class": "NC_lead_scientist_22ch",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_lead_scientist_22ch_1",
+    "faction": "no_faction",
+    "mission_offered": "MISSION_lead_scientist_22ch_1"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_lead_scientist_22ch",
+    "name": {
+      "str": "Professor Adu"
+    },
+    "job_description": "Professor Adu.",
+    "common": false,
+    "bonus_str": {
+      "rng": [
+        2,
+        4
+      ]
+    },
+    "bonus_dex": {
+      "rng": [
+        2,
+        4
+      ]
+    },
+    "bonus_int": {
+      "rng": [
+        1,
+        2
+      ]
+    },
+    "bonus_per": {
+      "rng": [
+        1,
+        2
+      ]
+    },
+    "worn_override": "NC_lead_scientist_22ch_worn",
+    "weapon_override": "EMPTY_GROUP",
+    "traits": [
+      {
+        "group": "Appearance_SouthAsian"
+      },
+      {
+        "trait": "BGSS_lead_scientist_22ch"
+      },
+      {
+        "group": "NPC_starting_traits"
+      }
+    ],
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": {
+          "mul": [
+            {
+              "one_in": 3
+            },
+            {
+              "sum": [
+                {
+                  "dice": [
+                    4,
+                    2
+                  ]
+                },
+                {
+                  "rng": [
+                    -4,
+                    -1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "skill": "melee",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "unarmed",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "dodge",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_lead_scientist_22ch_worn",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "briefs"
+      },
+      {
+        "item": "coat_lab"
+      },
+      {
+        "item": "dress_shirt"
+      },
+      {
+        "item": "pants"
+      },
+      {
+        "item": "socks"
+      },
+      {
+        "item": "boots"
+      },
+      {
+        "item": "gloves_rubber"
+      },
+      {
+        "item": "wristwatch"
+      },
+      {
+        "item": "glasses_safety"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_1",
+    "dynamic_line": "啊哈！",
+    "responses": [
+      {
+        "text": "关于那个任务……",
+        "topic": "TALK_MISSION_INQUIRE",
+        "condition": "has_assigned_mission"
+      },
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_lead_scientist_22ch_Background"
+      },
+      {
+        "text": "需要帮忙么？",
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "你能教我点什么吗？",
+        "topic": "TALK_lead_scientist_22ch_teach_check"
+      },
+      {
+        "text": "你现在知道如何使用仿生学了吗？",
+        "topic": "TALK_lead_scientist_22ch_bionics",
+        "condition": {
+          "npc_has_var": "u_helped_lead_scientist_22ch",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        }
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_lead_scientist_22ch_bionics",
+    "type": "talk_topic",
+    "dynamic_line": "当然，你需要什么？",
+    "responses": [
+      {
+        "text": "我想知道你能否安装一个控制植入物。",
+        "topic": "TALK_DONE",
+        "effect": "bionic_install"
+      },
+      {
+        "text": "我需要帮助移除植入物。",
+        "topic": "TALK_DONE",
+        "effect": "bionic_remove"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_teach_check",
+    "dynamic_line": "我现在有点忙。晚点再来。",
+    "responses": [
+      {
+        "text": "现在呢？",
+        "condition": {
+          "npc_has_var": "u_helped_lead_scientist_22ch",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "npc_has_var": "lead_scientist_22ch_teach",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "success": {
+          "effect": [
+            {
+              "u_spawn_item": "iv_mutagen_medical"
+            },
+            {
+              "npc_add_var": "lead_scientist_22ch_teach",
+              "type": "general",
+              "context": "meeting",
+              "value": "no"
+            }
+          ],
+          "topic": "TALK_lead_scientist_22ch_teach"
+        },
+        "failure": {
+          "topic": "TALK_lead_scientist_22ch_teach_done"
+        }
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_teach",
+    "dynamic_line": "我不知道该教你什么，但是拿着这个。我不知道是什么，也不记得在哪儿找到的。",
+    "responses": [
+      {
+        "text": "谢了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_teach_done",
+    "dynamic_line": "不行。",
+    "responses": [
+      {
+        "text": "再次感谢老师。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_Background",
+    "dynamic_line": "我从阿塞拜疆来建造机器人desu，并发射Cloudnet，这样我就可以重新编程所有剩余的机器人来清除我们<very>国家的 <zombies>",
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_panic",
+    "dynamic_line": "我们要死了！！！",
+    "responses": [
+      {
+        "text": "一切都结束了，伙计。",
+        "condition": "mission_complete",
+        "topic": "TALK_MISSION_INQUIRE"
+      },
+      {
+        "text": "别紧张，我正在努力。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_transmitters",
+    "dynamic_line": "有结果吗？",
+    "responses": [
+      {
+        "text": "我们都做到了。",
+        "topic": "TALK_MISSION_SUCCESS",
+        "condition": {
+          "and": [
+            {
+              "not": "mission_complete"
+            },
+            {
+              "u_has_var": "lead_scientist_22ch_finished",
+              "type": "general",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ]
+        },
+        "effect": [
+          "mission_success",
+          {
+            "npc_first_topic": "TALK_lead_scientist_22ch_1"
+          }
+        ]
+      },
+      {
+        "text": "我们做到了，我在这里，他死了。",
+        "topic": "TALK_MISSION_SUCCESS",
+        "condition": {
+          "and": [
+            "mission_complete",
+            {
+              "u_has_var": "lead_scientist_22ch_finished",
+              "type": "general",
+              "context": "meeting",
+              "value": "yes"
+            }
+          ]
+        },
+        "effect": [
+          "mission_success",
+          {
+            "npc_first_topic": "TALK_lead_scientist_22ch_1"
+          }
+        ]
+      },
+      {
+        "text": "我们失败了，我帮不了他。对不起的。",
+        "topic": "TALK_lead_scientist_22ch_fail",
+        "condition": {
+          "and": [
+            "mission_complete",
+            {
+              "not": {
+                "u_has_var": "lead_scientist_22ch_finished",
+                "type": "general",
+                "context": "meeting",
+                "value": "yes"
+              }
+            }
+          ]
+        },
+        "effect": [
+          "mission_failure",
+          "clear_mission"
+        ]
+      },
+      {
+        "text": "我该走了。",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_fail",
+    "dynamic_line": "所以，你失败了，哈。那我们就没有希望了。10年之后…",
+    "responses": [
+      {
+        "text": "也许可以做点什么？",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 15
+        },
+        "success": {
+          "topic": "TALK_lead_scientist_22ch_fail1"
+        },
+        "failure": {
+          "topic": "TALK_lead_scientist_22ch_fail_lost"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_fail1",
+    "dynamic_line": "怎么办，我的<name_g>？我失去了所有的希望。",
+    "responses": [
+      {
+        "text": "也许我们可以试着做点别的。跟我来。",
+        "trial": {
+          "type": "INTIMIDATE",
+          "difficulty": 15
+        },
+        "success": {
+          "topic": "TALK_lead_scientist_22ch_follow"
+        },
+        "failure": {
+          "topic": "TALK_lead_scientist_22ch_fail_lost"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_follow",
+    "dynamic_line": "嗯，也许你是对的。我和你一起去。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_lead_scientist_22ch_fail_lost",
+    "dynamic_line": "不，我的<name_g>。我们失去了最后的机会。我们失去了一切，我也失去了一切……[*他从口袋里掏出了手枪*]",
+    "responses": [
+      {
+        "text": "等等，不…",
+        "topic": "TALK_DONE",
+        "effect": "npc_die"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_lead_scientist_22ch_1",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "找到钚电池20"
+    },
+    "description": "找到钚电池20",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "plut_cell",
+    "count": 20,
+    "difficulty": 0,
+    "value": 100,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_lead_scientist_22ch_2",
+    "dialogue": {
+      "describe": "-",
+      "offer": "我需要点亮这个地方，为此我需要发电机。首先，给我找20号钚电池。",
+      "accepted": "很好。我会等你。",
+      "rejected": "你在怕什么？！",
+      "advice": "杂",
+      "inquire": "我会一直在这里等你。",
+      "success": "很好！",
+      "success_lie": "杂",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_lead_scientist_22ch_2",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "找到微型反应堆1"
+    },
+    "description": "找到微型反应堆1",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "minireactor",
+    "count": 1,
+    "difficulty": 0,
+    "value": 1000,
+    "end": {
+      "update_mapgen": {
+        "om_terrain": "22ch_bunker_z-1",
+        "place_terrain": [
+          {
+            "ter": "t_thconc_floor_olight",
+            "x": 5,
+            "y": 5
+          },
+          {
+            "ter": "t_thconc_floor_olight",
+            "x": 7,
+            "y": 7
+          },
+          {
+            "ter": "t_thconc_floor_olight",
+            "x": 9,
+            "y": 9
+          },
+          {
+            "ter": "t_thconc_floor_olight",
+            "x": 11,
+            "y": 11
+          }
+        ]
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_lead_scientist_22ch_3",
+    "dialogue": {
+      "describe": "-",
+      "offer": "好，让我们继续发电机。找到微型反应堆1",
+      "accepted": "很好。我会等你。",
+      "rejected": "你害怕吗？",
+      "advice": "杂",
+      "inquire": "我会一直在这里等你。",
+      "success": "很好！",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_lead_scientist_22ch_3",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "查找ai模块\\U basic 20"
+    },
+    "description": "结束火焰指节！",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "ai_module_basic",
+    "count": 20,
+    "difficulty": 0,
+    "value": 100,
+    "end": {
+      "effect": [
+        {
+          "u_buy_monster": "mon_robofac_prototype",
+          "pacified": true
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_lead_scientist_22ch_4",
+    "dialogue": {
+      "describe": "-",
+      "offer": "现在我们开始研究人工智能。查找ai模块\\U basic 20",
+      "accepted": "很好。我会等你。",
+      "rejected": "隐马尔可夫模型。",
+      "advice": "-",
+      "inquire": "所以呢？",
+      "success": "很好。带上这个宠物机器人。",
+      "success_lie": "杂",
+      "failure": "-"
+    }
+  },
+  {
+    "//": "TODO add AI when talk to fur will be a thing",
+    "id": "MISSION_lead_scientist_22ch_4",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "查找ai\\模块\\高级10"
+    },
+    "description": "查找ai\\模块\\高级10",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "ai_module_advanced",
+    "count": 10,
+    "difficulty": 0,
+    "value": 1000,
+    "end": {
+      "effect": {
+        "u_add_var": "22ch_ai",
+        "type": "flag",
+        "context": "ai",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_lead_scientist_22ch_5",
+    "dialogue": {
+      "describe": "-",
+      "offer": "我们的人工智能还需要更多的材料。查找ai\\模块\\高级10",
+      "accepted": "很好。我会等你。",
+      "rejected": "怕了吗？",
+      "advice": "动身吧。",
+      "inquire": "我会一直在这里等你。",
+      "success": "很好！如果你愿意，你可以和我们的人工智能谈谈。",
+      "success_lie": "杂",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_lead_scientist_22ch_5",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "寻找一个笔记本电脑"
+    },
+    "description": "寻找一个笔记本电脑",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "laptop",
+    "difficulty": 0,
+    "value": 1000,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_lead_scientist_22ch_6",
+    "dialogue": {
+      "describe": "-",
+      "offer": "我如果想启动我的人工智能来控制剩余所有的机器人，我需要为我自己做一台用于操控的笔记本电脑。找到一台笔记本电脑",
+      "accepted": "很好。我会等你。",
+      "rejected": "怕了吗？",
+      "advice": "动身吧。",
+      "inquire": "我会一直在这里等你。",
+      "success": "很好！",
+      "success_lie": "杂",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_lead_scientist_22ch_6",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "帮助我的科学家同伴"
+    },
+    "description": "帮助我的科学家同伴",
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 0,
+    "value": 1000,
+    "start": {
+      "update_mapgen": {
+        "om_terrain": "22ch_bunker_z-1",
+        "place_npcs": [
+          {
+            "class": "NPC_scientist_22ch",
+            "x": 15,
+            "y": 1,
+            "target": true
+          }
+        ]
+      },
+      "effect": [
+        {
+          "npc_first_topic": "TALK_lead_scientist_22ch_transmitters"
+        },
+        {
+          "u_add_var": "lead_scientist_22ch_need_time",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        }
+      ]
+    },
+    "end": {
+      "effect": {
+        "npc_first_topic": "TALK_lead_scientist_22ch_1"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_lead_scientist_22ch_7",
+    "dialogue": {
+      "describe": "-",
+      "offer": "在我使用控制笔记本电脑之前，我需要在5个高点放置5个发射器，比如无线电发射塔。我的科学家同伴将帮助你完成这项任务。哦，他来了。和他谈谈。",
+      "accepted": "很好。和我的科学家同伴谈谈，帮他完成任务。",
+      "rejected": "怕了吗？",
+      "advice": "动身吧。",
+      "inquire": "我会一直在这里等你。",
+      "success": "很好。超级的。现在我们需要启动这个东西。如果你想在这里的话跟我谈谈。",
+      "success_lie": "杂",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_lead_scientist_22ch_7",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "请救救我！"
+    },
+    "description": "请救救我！杀了那些机器人！",
+    "goal": "MGOAL_KILL_MONSTER",
+    "difficulty": 0,
+    "value": 1000,
+    "start": {
+      "effect": [
+        {
+          "u_add_var": "22ch_ai",
+          "type": "flag",
+          "context": "ai",
+          "value": "no"
+        },
+        {
+          "npc_first_topic": "TALK_lead_scientist_22ch_panic"
+        }
+      ],
+      "update_mapgen": {
+        "om_terrain": "22ch_bunker_z0",
+        "place_monster": [
+          {
+            "monster": "mon_secubot",
+            "x": [
+              5,
+              20
+            ],
+            "y": [
+              5,
+              20
+            ],
+            "repeat": [
+              3,
+              5
+            ],
+            "target": true
+          }
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        {
+          "npc_first_topic": "TALK_lead_scientist_22ch_1"
+        },
+        {
+          "npc_add_var": "u_helped_lead_scientist_22ch",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        {
+          "npc_add_var": "lead_scientist_22ch_teach",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "所以，现在我们启动我们的云网！你准备好了吗？",
+      "accepted": "很好。那么，现在我们有了…那是什么？！机器人攻击我们的基地？请救救我！杀了那些机器人！",
+      "rejected": "怕了吗？",
+      "advice": "动身吧。",
+      "inquire": "我会一直在这里等你。",
+      "success": "很好。你救了我。谢谢您！现在我可以帮你了。",
+      "success_lie": "杂",
+      "failure": "-"
+    }
+  }
+]

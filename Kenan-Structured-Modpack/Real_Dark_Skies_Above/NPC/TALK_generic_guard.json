@@ -1,0 +1,42 @@
+[
+  {
+    "id": "TALK_GUARD",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "topic": "TALK_GUARD_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_GUARD_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "我想知道他们戴着面具的样子。",
+      "不久前，我被他们的一枚弗莱切射弹击中，如果我没有绷带，我会流血的。",
+      "如果你听到他们奇怪的收音机，朝相反的方向走。",
+      "不要看着他们的眼睛！"
+    ],
+    "responses": [
+      {
+        "text": "流浪狗呢？",
+        "topic": "TALK_GUARD_STRAYS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_GUARD_STRAYS",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "当蓝色水晶型僵尸攻击黑色软泥型僵尸时，我总是大笑。",
+      "我试着迅速把它们取下来，因为如果你不做任何损坏，你会在几分钟内，有时几秒钟内结痂。"
+    ],
+    "responses": [
+      {
+        "text": "我也是。",
+        "topic": "TALK_GUARD"
+      }
+    ]
+  }
+]

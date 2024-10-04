@@ -1,0 +1,1439 @@
+[
+  {
+    "type": "mutation",
+    "id": "ECDYSIS",
+    "name": {
+      "str": "蜕皮"
+    },
+    "points": 3,
+    "description": "如果你觉得你的外骨骼太紧，你可以选则脱去它。这样做会产生甲壳块，可用于制造。激活以脱落甲壳。",
+    "threshreq": [
+      "THRESH_SPIDER",
+      "THRESH_CRAB",
+      "THRESH_INSECT"
+    ],
+    "category": [
+      "SPIDER",
+      "INSECT",
+      "CRAB"
+    ],
+    "active": true,
+    "cost": 100,
+    "kcal": true,
+    "thirst": false,
+    "prereqs": [
+      "CHITIN2",
+      "CHITIN3",
+      "CHITIN4",
+      "CHITIN_FUR",
+      "CHITIN_FUR2",
+      "CHITIN_FUR3"
+    ],
+    "spawn_item": {
+      "type": "chitin_piece",
+      "message": "You shed your old exoskeleton. You are feeling fresh."
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_FIN",
+    "copy-from": "TAIL_FIN",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_LONG",
+    "copy-from": "TAIL_LONG",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_CATTLE",
+    "copy-from": "TAIL_CATTLE",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_RAT",
+    "copy-from": "TAIL_RAT",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_THICK",
+    "copy-from": "TAIL_THICK",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_RAPTOR",
+    "copy-from": "TAIL_RAPTOR",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_FLUFFY",
+    "copy-from": "TAIL_FLUFFY",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_STING",
+    "copy-from": "TAIL_STING",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_CLUB",
+    "copy-from": "TAIL_CLUB",
+    "extend": {
+      "cancels": [
+        "TAIL_SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "EYEBULGE",
+    "copy-from": "EYEBULGE",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "SMELLY2",
+    "copy-from": "SMELLY2",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "COLDBLOOD",
+    "copy-from": "COLDBLOOD",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "DEFORMED2",
+    "copy-from": "DEFORMED2",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FASTHEALER",
+    "copy-from": "FASTHEALER",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TERRIFYING",
+    "copy-from": "TERRIFYING",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "THIRST2",
+    "copy-from": "THIRST2",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "GILLS",
+    "copy-from": "GILLS",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CLUMSY",
+    "copy-from": "CLUMSY",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN3",
+    "copy-from": "CHITIN3",
+    "extend": {
+      "category": [
+        "CRAB"
+      ],
+      "changes_to": [
+        "CHITIN4"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN4",
+    "name": {
+      "str": "甲壳层"
+    },
+    "points": 8,
+    "visibility": 10,
+    "ugliness": 8,
+    "description": "你的身体覆盖着一层厚重的，难以穿透的红色甲壳。它提供了极佳的物理防护，以及少量酸性防护，不过大大降低了你的灵活性（-3）并严重拖累除了眼部的身体各部分。显著减少湿身心情惩罚。",
+    "types": [
+      "SKIN"
+    ],
+    "prereqs": [
+      "CHITIN3"
+    ],
+    "category": [
+      "CRAB"
+    ],
+    "leads_to": [
+      "CRAB_CLAW"
+    ],
+    "wet_protection": [
+      {
+        "part": "head",
+        "ignored": 8
+      },
+      {
+        "part": "leg_l",
+        "ignored": 16
+      },
+      {
+        "part": "leg_r",
+        "ignored": 16
+      },
+      {
+        "part": "foot_l",
+        "ignored": 6
+      },
+      {
+        "part": "foot_r",
+        "ignored": 6
+      },
+      {
+        "part": "arm_l",
+        "ignored": 16
+      },
+      {
+        "part": "arm_r",
+        "ignored": 16
+      },
+      {
+        "part": "hand_l",
+        "ignored": 6
+      },
+      {
+        "part": "hand_r",
+        "ignored": 6
+      },
+      {
+        "part": "torso",
+        "ignored": 20
+      }
+    ],
+    "encumbrance_always": [
+      [
+        "torso",
+        40
+      ],
+      [
+        "head",
+        40
+      ],
+      [
+        "arm_l",
+        30
+      ],
+      [
+        "arm_r",
+        30
+      ],
+      [
+        "hand_l",
+        30
+      ],
+      [
+        "hand_r",
+        30
+      ],
+      [
+        "leg_l",
+        30
+      ],
+      [
+        "leg_r",
+        30
+      ],
+      [
+        "foot_l",
+        30
+      ],
+      [
+        "mouth",
+        10
+      ],
+      [
+        "foot_r",
+        30
+      ]
+    ],
+    "restricts_gear": [
+      "head"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 11,
+        "cut": 13,
+        "stab": 3,
+        "acid": 2
+      }
+    ],
+    "passive_mods": {
+      "dex_mod": -3
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "STR_UP_3",
+    "copy-from": "STR_UP_3",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "EATPOISON",
+    "copy-from": "EATPOISON",
+    "extend": {
+      "threshreq": [
+        "THRESH_CRAB"
+      ],
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "EATDEAD",
+    "copy-from": "EATDEAD",
+    "extend": {
+      "threshreq": [
+        "THRESH_CRAB"
+      ],
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "MUT_TOUGH",
+    "copy-from": "MUT_TOUGH",
+    "extend": {
+      "threshreq": [
+        "THRESH_CRAB"
+      ],
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "MUT_TOUGH2",
+    "copy-from": "MUT_TOUGH2",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "HUGE_OK",
+    "copy-from": "HUGE_OK",
+    "extend": {
+      "threshreq": [
+        "THRESH_CRAB"
+      ],
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CRAB_CLAW",
+    "name": {
+      "str": "巨钳"
+    },
+    "points": 0,
+    "visibility": 10,
+    "ugliness": 8,
+    "mixed_effect": true,
+    "description": "你的右手变成了一只巨大的螯。这会给你带来严重的累赘，但是在近战中你可以偶尔用它来造成巨大的伤害。",
+    "encumbrance_always": [
+      [
+        "hand_r",
+        40
+      ]
+    ],
+    "valid": false,
+    "cancels": [
+      "NAILS",
+      "CLAWS",
+      "TALONS",
+      "WEBBED",
+      "ARM_TENTACLES",
+      "ARM_TENTACLES_4",
+      "ARM_TENTACLES_8"
+    ],
+    "threshreq": [
+      "THRESH_CRAB"
+    ],
+    "category": [
+      "CRAB"
+    ],
+    "restricts_gear": [
+      "hand_r"
+    ],
+    "types": [
+      "HANDS"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "hand_r"
+        ],
+        "bash": 2,
+        "cut": 2
+      }
+    ],
+    "attacks": {
+      "attack_text_u": "你用巨螯夹住了%s",
+      "attack_text_npc": "%1$s用他们的巨螯夹住了%2$s",
+      "chance": 22,
+      "strength_damage": [
+        {
+          "damage_type": "cut",
+          "amount": 3
+        },
+        {
+          "damage_type": "bash",
+          "amount": 3
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LARGE",
+    "copy-from": "LARGE",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LARGE_OK",
+    "copy-from": "LARGE_OK",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "HUGE",
+    "copy-from": "HUGE",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_CRAB",
+    "name": {
+      "str": "蟹人"
+    },
+    "points": 1,
+    "description": "当你可以拥有甲壳时，谁还需要皮肤呢？",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_SNAKE",
+    "name": {
+      "str": "蛇形拳"
+    },
+    "points": 1,
+    "description": "谁还需 要嘶 腿嘶？",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_RABBIT",
+    "name": {
+      "str": "兔人"
+    },
+    "points": 1,
+    "description": "你真可爱！",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "SCALES",
+    "copy-from": "SCALES",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "SLIT_NOSTRILS",
+    "copy-from": "SLIT_NOSTRILS",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LIZ_EYE",
+    "copy-from": "LIZ_EYE",
+    "extend": {
+      "cancels": [
+        "SPIDER_EYE"
+      ],
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "SPIDER_EYE",
+    "name": "蜘蛛复眼",
+    "points": 2,
+    "visibility": 8,
+    "ugliness": 8,
+    "description": "你的额头上多长了两只眼睛。感知+2，不过其他幸存者的反应可能很糟糕。",
+    "cancels": [
+      "ELFAEYES",
+      "LIZ_EYE",
+      "BIRD_EYE",
+      "URSINE_EYE",
+      "COMPOUND_EYES",
+      "FEL_EYE"
+    ],
+    "category": [
+      "SPIDER"
+    ],
+    "passive_mods": {
+      "per_mod": 2
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LIAR",
+    "copy-from": "LIAR",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "COLDBLOOD3",
+    "copy-from": "COLDBLOOD3",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "COLDBLOOD4",
+    "copy-from": "COLDBLOOD4",
+    "extend": {
+      "threshreq": [
+        "THRESH_SNAKE"
+      ],
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_STUB",
+    "copy-from": "TAIL_STUB",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BADHEARING",
+    "copy-from": "BADHEARING",
+    "extend": {
+      "category": [
+        "CRAB"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BADBACK",
+    "copy-from": "BADBACK",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LIZ_IR",
+    "copy-from": "LIZ_IR",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "HISS",
+    "copy-from": "HISS",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "SLEEK_SCALES",
+    "copy-from": "SLEEK_SCALES",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FANGS",
+    "copy-from": "FANGS",
+    "extend": {
+      "changes_to": [
+        "FANGS_SNAKE"
+      ],
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CARNIVORE",
+    "copy-from": "CARNIVORE",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "POISRESIST",
+    "copy-from": "POISRESIST",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "POISONOUS",
+    "copy-from": "POISONOUS",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "POISONOUS2",
+    "copy-from": "POISONOUS2",
+    "extend": {
+      "threshreq": [
+        "THRESH_SNAKE"
+      ],
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FORKED_TONGUE",
+    "copy-from": "FORKED_TONGUE",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "STR_DOWN",
+    "copy-from": "STR_DOWN",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "STR_DOWN_2",
+    "copy-from": "STR_DOWN2",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "DEX_UP_2",
+    "copy-from": "DEX_UP_2",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "DEX_UP_3",
+    "copy-from": "DEX_UP_3",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FANGS_SNAKE",
+    "name": {
+      "str": "毒蛇尖牙"
+    },
+    "points": 3,
+    "visibility": 2,
+    "ugliness": 2,
+    "description": "你的牙齿已经长成两英寸长的尖牙，非常适合注入毒液。当你的嘴没有被覆盖时，它们允许你进行额外的攻击。",
+    "cancels": [
+      "BEAK",
+      "BEAK_HUM",
+      "BEAK_PECK"
+    ],
+    "prereqs": [
+      "FANGS"
+    ],
+    "prereqs2": [
+      "POISONOUS"
+    ],
+    "category": [
+      "SNAKE"
+    ],
+    "threshreq": [
+      "THRESH_SNAKE"
+    ],
+    "valid": false,
+    "attacks": [
+      {
+        "attack_text_u": "You sink your fangs into %s",
+        "attack_text_npc": "%1$s sinks their fangs into %2$s",
+        "blocker_mutations": [
+          "MUZZLE",
+          "MUZZLE_LONG",
+          "MUZZLE_RAT"
+        ],
+        "body_part": "mouth",
+        "chance": 20,
+        "base_damage": {
+          "damage_type": "stab",
+          "amount": 15
+        }
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "DEFORMED_LEGS",
+    "name": {
+      "str": "畸形腿"
+    },
+    "points": -3,
+    "mixed_effect": true,
+    "visibility": 10,
+    "ugliness": 6,
+    "description": "你的腿严重变形，造成了永久腿部累赘。",
+    "category": [
+      "SNAKE"
+    ],
+    "changes_to": [
+      "TAIL_SNAKE"
+    ],
+    "encumbrance_always": [
+      [
+        "leg_l",
+        40
+      ],
+      [
+        "leg_r",
+        40
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_SNAKE",
+    "name": {
+      "str": "蛇尾"
+    },
+    "points": 2,
+    "mixed_effect": true,
+    "visibility": 10,
+    "ugliness": 8,
+    "description": "一条有原先身高几倍巨大的蛇形尾巴从你背后长了出来，你的腿和脚变成了无用的残肢，悬挂在你的身体两侧。当情况允许的时候，你可以利用你的尾部压碎你的敌人。让你无法穿上鞋和裤子。",
+    "valid": false,
+    "purifiable": false,
+    "prereqs2": [
+      "DEFORMED_LEGS"
+    ],
+    "cancels": [
+      "TAIL_FIN",
+      "TAIL_FLUFFY",
+      "TAIL_STING",
+      "TAIL_CLUB",
+      "TAIL_RAPTOR",
+      "TAIL_CATTLE",
+      "TAIL_RAT",
+      "TAIL_THICK"
+    ],
+    "threshreq": [
+      "THRESH_SNAKE"
+    ],
+    "category": [
+      "SNAKE"
+    ],
+    "restricts_gear": [
+      "leg_l",
+      "leg_r",
+      "foot_l",
+      "foot_r"
+    ],
+    "allow_soft_gear": false,
+    "encumbrance_always": [
+      [
+        "leg_l",
+        50
+      ],
+      [
+        "leg_r",
+        50
+      ],
+      [
+        "foot_l",
+        30
+      ],
+      [
+        "foot_r",
+        30
+      ]
+    ],
+    "attacks": {
+      "attack_text_u": "你的缠绕使%s变形了",
+      "attack_text_npc": "%1$s的缠绕使%2$s变形了",
+      "chance": 10,
+      "strength_damage": [
+        {
+          "damage_type": "bash",
+          "amount": 2
+        }
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "DEBUG_SILENT",
+    "copy-from": "DEBUG_SILENT",
+    "name": {
+      "str": "静步"
+    },
+    "points": 6,
+    "valid": false,
+    "description": "你知道如何绝对安静地移动。",
+    "threshreq": [
+      "THRESH_SNAKE"
+    ],
+    "prereqs": [
+      "TAIL_SNAKE"
+    ],
+    "category": [
+      "SNAKE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PRED1",
+    "copy-from": "PRED1",
+    "extend": {
+      "threshreq": [
+        "THRESH_SNAKE"
+      ],
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PRED2",
+    "copy-from": "PRED2",
+    "extend": {
+      "threshreq": [
+        "THRESH_SNAKE"
+      ],
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PRED3",
+    "copy-from": "PRED3",
+    "extend": {
+      "threshreq": [
+        "THRESH_SNAKE"
+      ],
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "SAPIOVORE",
+    "copy-from": "SAPIOVORE",
+    "extend": {
+      "threshreq": [
+        "THRESH_SNAKE"
+      ],
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LONG_NECK",
+    "name": "长颈",
+    "points": 0,
+    "visibility": 3,
+    "ugliness": 3,
+    "description": "你的脖子不寻常的长。对你没有任何影响。",
+    "category": [
+      "SNAKE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "GLASSJAW",
+    "copy-from": "GLASSJAW",
+    "extend": {
+      "category": [
+        "SNAKE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "SNAKE_HOOD",
+    "name": {
+      "str": "眼镜蛇扁颈"
+    },
+    "points": 0,
+    "visibility": 5,
+    "ugliness": 3,
+    "prereqs": [
+      "LONG_NECK"
+    ],
+    "description": "你的颈部膨胀起来，就像眼镜蛇的扁颈一样。它看上去很突出，但让你更擅长恐吓。稍微增加了头部的累赘。",
+    "category": [
+      "SNAKE"
+    ],
+    "encumbrance_always": [
+      [
+        "head",
+        5
+      ]
+    ],
+    "social_modifiers": {
+      "intimidate": 15
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "GOODHEARING",
+    "copy-from": "GOODHEARING",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "QUICK",
+    "copy-from": "QUICK",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LIGHTSTEP",
+    "copy-from": "LIGHTSTEP",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "MOUSE_EARS",
+    "copy-from": "MOUSE_EARS",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "SKIN_ROUGH",
+    "copy-from": "SKIN_ROUGH",
+    "extend": {
+      "leads_to": [
+        "RABBIT_FUR"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "RABBIT_FUR",
+    "name": {
+      "str": "柔软皮毛"
+    },
+    "points": 1,
+    "visibility": 6,
+    "ugliness": 0,
+    "bodytemp_modifiers": [
+      300,
+      600
+    ],
+    "bodytemp_sleep": 200,
+    "description": "你的身上长出了异常柔软的毛，摸起来很舒服。它提供了一些保暖度，也使说服其他幸存者更容易。",
+    "category": [
+      "RABBIT"
+    ],
+    "types": [
+      "SKIN"
+    ],
+    "cancels": [
+      "FUR",
+      "FELINE_FUR",
+      "LUPINE_FUR",
+      "URSINE_FUR",
+      "CHITIN_FUR"
+    ],
+    "prereqs": [
+      "SKIN_ROUGH"
+    ],
+    "social_modifiers": {
+      "persuade": 20
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "WHISKERS_RAT",
+    "copy-from": "WHISKERS_RAT",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL",
+    "copy-from": "BEAUTIFUL",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "HUNGER2",
+    "copy-from": "HUNGER2",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "ANIMALDISCORD2",
+    "copy-from": "ANIMALDISCORD2",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "GOODCARDIO",
+    "copy-from": "GOODCARDIO",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FORGETFUL",
+    "copy-from": "FORGETFUL",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PADDED_FEET",
+    "copy-from": "PADDED_FEET",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ],
+      "leads_to": [
+        "RABBIT_FEET"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "RABBIT_FEET",
+    "name": {
+      "str": "兔脚"
+    },
+    "points": -2,
+    "visibility": 2,
+    "ugliness": 2,
+    "description": "你的脚变得非常巨大，看起来像只兔子。阻碍穿着鞋子。",
+    "cancels": [
+      "HOOVES",
+      "LEG_TENTACLES",
+      "RAP_TALONS",
+      "ROOTS1",
+      "ROOTS2",
+      "ROOTS3"
+    ],
+    "category": [
+      "RABBIT"
+    ],
+    "destroys_gear": true,
+    "allow_soft_gear": false,
+    "restricts_gear": [
+      "foot_l",
+      "foot_r"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "RAP_TALONS",
+    "copy-from": "RAP_TALONS",
+    "extend": {
+      "cancels": [
+        "RABBIT_FEET"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "HOOVES",
+    "copy-from": "HOOVES",
+    "extend": {
+      "cancels": [
+        "RABBIT_FEET"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "ROOTS1",
+    "copy-from": "ROOTS1",
+    "extend": {
+      "cancels": [
+        "RABBIT_FEET"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "ROOTS2",
+    "copy-from": "ROOTS2",
+    "extend": {
+      "cancels": [
+        "RABBIT_FEET"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "ROOTS3",
+    "copy-from": "ROOTS3",
+    "extend": {
+      "cancels": [
+        "RABBIT_FEET"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LEG_TENTACLES",
+    "copy-from": "LEG_TENTACLES",
+    "extend": {
+      "cancels": [
+        "RABBIT_FEET"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PER_UP_2",
+    "copy-from": "PER_UP_2",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "RABBIT_INT",
+    "name": {
+      "str": "心不在焉"
+    },
+    "points": -2,
+    "description": "你不太聪明，而且很容易分心。智力-2",
+    "category": [
+      "RABBIT"
+    ],
+    "passive_mods": {
+      "int_mod": -2
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "INCISORS",
+    "copy-from": "INCISORS",
+    "extend": {
+      "threshreq": [
+        "THRESH_RABBIT"
+      ],
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "RUMINANT",
+    "copy-from": "RUMINANT",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "GRAZER",
+    "copy-from": "GRAZER",
+    "extend": {
+      "threshreq": [
+        "THRESH_RABBIT"
+      ],
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "OPTIMISTIC",
+    "copy-from": "OPTIMISTIC",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FLEET2",
+    "copy-from": "FLEET2",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "GOODCARDIO2",
+    "copy-from": "GOODCARDIO2",
+    "extend": {
+      "threshreq": [
+        "THRESH_RABBIT"
+      ],
+      "category": [
+        "RABBIT"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "JITTERY",
+    "copy-from": "JITTERY",
+    "extend": {
+      "category": [
+        "RABBIT"
+      ]
+    }
+  }
+]

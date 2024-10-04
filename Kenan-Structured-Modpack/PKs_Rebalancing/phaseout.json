@@ -1,0 +1,90 @@
+[
+  {
+    "id": "mon_ant_queen_firebug",
+    "type": "MONSTER",
+    "//": "Obsolete, kept for savegame compatibility.",
+    "copy-from": "mon_ant_queen",
+    "name": {
+      "str": "蚁后"
+    },
+    "description": "一只巨大的红色蚂蚁，腹部看起来十分肿胀。它移动缓慢而从容，照顾着周围卵的同时继续产下更多的蚂蚁卵。它的触须几乎是艺术品，或者至少不是用来感知的……"
+  },
+  {
+    "id": "acidbomb_micro",
+    "type": "AMMO",
+    "category": "weapons",
+    "name": {
+      "str": "微酸弹"
+    },
+    "description": "一小瓶装满腐蚀性化学物质的玻璃罐或者是烧杯，当暴露在空气中时，它们会向四面八方喷射，形成一小块充满酸液的区域。",
+    "weight": "285 g",
+    "volume": "250 ml",
+    "price": "45 USD",
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [
+      "glass"
+    ],
+    "symbol": "*",
+    "color": "light_green",
+    "ammo_type": "thrown",
+    "effects": [
+      "RECOVER_9"
+    ],
+    "flags": [
+      "ACT_ON_RANGED_HIT"
+    ],
+    "emits": [
+      "emit_acid_trail_slow"
+    ],
+    "countdown_interval": 18,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {}
+    }
+  },
+  {
+    "id": "acidbomb_medium",
+    "type": "AMMO",
+    "category": "weapons",
+    "name": {
+      "str": "大酸弹"
+    },
+    "description": "这个由两个装着酸液的瓶子捆在一起的酸液炸弹内部有够多的酸性液体，可以在一个区域内倾洒大量酸液。",
+    "weight": "1640 g",
+    "volume": "500 ml",
+    "price": "100 USD",
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [
+      "glass"
+    ],
+    "symbol": "*",
+    "color": "i_green",
+    "ammo_type": "thrown",
+    "effects": [
+      "RECOVER_9"
+    ],
+    "flags": [
+      "ACT_ON_RANGED_HIT"
+    ],
+    "emits": [
+      "emit_acid_large"
+    ],
+    "countdown_interval": 8,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {}
+    }
+  },
+  {
+    "id": "emit_acid_medium",
+    "type": "emit",
+    "//": "A medium spray of acid. (example: acidbomb medium)",
+    "field": "fd_acid",
+    "intensity": 2,
+    "qty": 9
+  }
+]

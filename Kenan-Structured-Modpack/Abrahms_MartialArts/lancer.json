@@ -1,0 +1,1296 @@
+[
+  {
+    "type": "martial_art",
+    "id": "style_spearfighting",
+    "name": {
+      "str": ""
+    },
+    "description": "",
+    "initiate": [
+      "",
+      ""
+    ],
+    "autolearn": [
+      [
+        "stabbing",
+        1
+      ]
+    ],
+    "primary_skill": "stabbing",
+    "allow_all_weapons": true,
+    "static_buffs": [
+      {
+        "id": "buff_spearwielding_static",
+        "name": "",
+        "description": "",
+        "melee_allowed": true,
+        "bonus_dodges": 2,
+        "mult_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 3
+          }
+        ],
+        "flat_bonuses": [
+          {
+            "stat": "block",
+            "scaling-stat": "str",
+            "scale": 0.5
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv1_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 1
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv2_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 2
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv3_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 3
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv4_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 4
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv5_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 5
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv6_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 6
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv7_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 7
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv8_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 8
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv9_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 9
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv10_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 10
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv11_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 11
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_speartraininglv12_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 12
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0.5
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 2
+          }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_speartraining_onhit",
+        "name": "",
+        "description": "",
+        "unarmed_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "stabbing",
+            "level": 3
+          }
+        ],
+        "max_stacks": 99999,
+        "buff_duration": 3,
+        "flat_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 0.01
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 0.01
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 0.01
+          },
+          {
+            "stat": "dodge",
+            "scale": 0.05
+          },
+          {
+            "stat": "hit",
+            "scale": 0.05
+          }
+        ]
+      }
+    ],
+    "onmove_buffs": [
+      {
+        "id": "buff_charge_onmove",
+        "name": "",
+        "description": "",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 5
+          },
+          {
+            "stat": "movecost",
+            "scale": 0.5
+          }
+        ],
+        "buff_duration": 1
+      }
+    ],
+    "onkill_buffs": [
+      {
+        "id": "buff_onthemark_onkill",
+        "name": "",
+        "description": "",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "flat_bonuses": [
+          {
+            "stat": "hit",
+            "scale": 1
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1
+          },
+          {
+            "stat": "arpen",
+            "type": "stab",
+            "scale": 1
+          }
+        ],
+        "max_stacks": 99999,
+        "buff_duration": 5
+      }
+    ],
+    "onmiss_buffs": [
+      {
+        "id": "buff_dairyfarmer_onmiss",
+        "name": "You Fight Like A Dairy Farmer",
+        "description": "You fight like a dairy farmer!",
+        "unarmed_allowed": true,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0
+          }
+        ],
+        "flat_bonuses": [
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scale": 1.5
+          }
+        ],
+        "bonus_dodges": 1,
+        "buff_duration": 2
+      }
+    ],
+    "techniques": [
+      "abspear_cow",
+      "abspear_annihilated",
+      "abspear_charge",
+      "abspear_kebab",
+      "abspear_clothesline",
+      "abspear_block",
+      "abspear_spinlvl1",
+      "abspear_spinlvl2",
+      "abspear_spinlvl3",
+      "abspear_spinlvl4",
+      "abspear_spinlvl5",
+      "abspear_spinlvl6",
+      "abspear_knockdown",
+      "abspear_impale",
+      "abspear_brutal",
+      "abspear_criticalblow",
+      "abspear_feint",
+      "abspear_break",
+      "abspear_stomp",
+      "abspear_kneesweep",
+      "abspear_lunge",
+      "abspear_jab",
+      "abspear_stab",
+      "abspear_poke",
+      "abspear_riposte",
+      "abspear_butt",
+      "abspear_elbow",
+      "abspear_counter"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_cow",
+    "name": "",
+    "melee_allowed": true,
+    "required_buffs_all": [
+      "buff_dairyfarmer_onmiss"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "hit",
+        "scale": 1.2
+      }
+    ],
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_annihilated",
+    "name": "",
+    "required_buffs_all": [
+      "buff_dairyfarmer_onmiss"
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 10
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 99
+      },
+      {
+        "stat": "hit",
+        "scale": 99
+      }
+    ],
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_charge",
+    "name": "",
+    "melee_allowed": true,
+    "required_buffs_all": [
+      "buff_charge_onmove"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 5
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 2
+      }
+    ],
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_kebab",
+    "name": "",
+    "melee_allowed": true,
+    "required_buffs_all": [
+      "buff_charge_onmove"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 5
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 2
+      }
+    ],
+    "aoe": "impale",
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_clothesline",
+    "name": "",
+    "melee_allowed": true,
+    "required_buffs_all": [
+      "buff_charge_onmove"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "arpen",
+        "type": "bash",
+        "scale": 5
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 2
+      }
+    ],
+    "aoe": "spin",
+    "down_dur": 2,
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_block",
+    "name": "格挡",
+    "dummy": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      }
+    ],
+    "messages": [
+      "你格挡了%s的攻击",
+      "<npcname>格挡了%s的攻击"
+    ],
+    "description": "中级格挡技能"
+  },
+  {
+    "type": "technique",
+    "id": "abspear_spinlvl1",
+    "name": "",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 1
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.8
+      },
+      {
+        "stat": "hit",
+        "scale": 0.8
+      }
+    ],
+    "messages": [
+      "你旋转攻击%s和周围所有人",
+      "<npcname>旋转攻击%s和周围所有人"
+    ],
+    "aoe": "spin",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_spinlvl2",
+    "name": "",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 3
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.1
+      },
+      {
+        "stat": "hit",
+        "scale": 1.1
+      }
+    ],
+    "messages": [
+      "你旋转攻击%s和周围所有人",
+      "<npcname>旋转攻击%s和周围所有人"
+    ],
+    "knockback_dist": 2,
+    "aoe": "spin",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_spinlvl3",
+    "name": "",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 5
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.5
+      },
+      {
+        "stat": "hit",
+        "scale": 1.5
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 1.5
+      }
+    ],
+    "messages": [
+      "你旋转攻击%s和周围所有人",
+      "<npcname>旋转攻击%s和周围所有人"
+    ],
+    "knockback_dist": 2,
+    "aoe": "spin",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_spinlvl4",
+    "name": "",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 7
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 2
+      },
+      {
+        "stat": "hit",
+        "scale": 2
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 2
+      }
+    ],
+    "messages": [
+      "你旋转攻击%s和周围所有人",
+      "<npcname>旋转攻击%s和周围所有人"
+    ],
+    "knockback_dist": 2,
+    "stun_dur": 1,
+    "aoe": "spin",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_spinlvl5",
+    "name": "",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 9
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 2.5
+      },
+      {
+        "stat": "hit",
+        "scale": 2.5
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 2.5
+      }
+    ],
+    "messages": [
+      "你旋转攻击%s和周围所有人",
+      "<npcname>旋转攻击%s和周围所有人"
+    ],
+    "knockback_dist": 2,
+    "stun_dur": 2,
+    "aoe": "spin",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_spinlvl6",
+    "name": "",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 11
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.1
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 10
+      },
+      {
+        "stat": "hit",
+        "scale": 10
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 10
+      }
+    ],
+    "messages": [
+      "你旋转攻击%s和周围所有人",
+      "<npcname>旋转攻击%s和周围所有人"
+    ],
+    "knockback_dist": 2,
+    "stun_dur": 2,
+    "aoe": "spin",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_knockdown",
+    "name": "群体控制",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 1
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.5
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.1
+      },
+      {
+        "stat": "hit",
+        "scale": 10
+      }
+    ],
+    "messages": [
+      "",
+      ""
+    ],
+    "knockback_dist": 2,
+    "stun_dur": 2,
+    "down_dur": 2,
+    "aoe": "spin",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_impale",
+    "name": "刺穿攻击",
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 3
+      }
+    ],
+    "crit_tec": true,
+    "messages": [
+      "你直直穿刺%s",
+      "<npcname>刺穿%s"
+    ],
+    "aoe": "impale",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_brutal",
+    "name": "残暴打击",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 5
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 2.5
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 2.5
+      }
+    ],
+    "crit_tec": true,
+    "stun_dur": 1,
+    "knockback_dist": 1,
+    "down_dur": 1,
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_criticalblow",
+    "name": "",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 99
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 99
+      },
+      {
+        "stat": "hit",
+        "scale": 99
+      }
+    ],
+    "crit_tec": true,
+    "weighting": -250,
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "abspear_feint",
+    "name": "佯攻",
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 2
+      }
+    ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "defensive": true,
+    "miss_recovery": true,
+    "messages": [
+      "你佯攻%s。",
+      "<npcname>佯攻%s。"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_break",
+    "name": "反擒拿",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "defensive": true,
+    "grab_break": true,
+    "messages": [
+      "%s 试着抓住你，但你挣脱了！",
+      "%s 试着抓住 <npcname>，但被挣脱了！"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_stomp",
+    "name": "",
+    "messages": [
+      "",
+      ""
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 2
+      },
+      {
+        "name": "melee",
+        "level": 1
+      }
+    ],
+    "unarmed_allowed": true,
+    "down_dur": 1
+  },
+  {
+    "type": "technique",
+    "id": "abspear_kneesweep",
+    "name": "",
+    "messages": [
+      "",
+      ""
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 2
+      }
+    ],
+    "unarmed_allowed": true,
+    "weighting": 2,
+    "down_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.75
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_lunge",
+    "name": "",
+    "messages": [
+      "你弓步突进，对准剑尖，刺向%s",
+      "<npcname>弓步刺击%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 2
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.8
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.2
+      },
+      {
+        "stat": "dodge",
+        "scale": 1.2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_jab",
+    "name": "",
+    "messages": [
+      "",
+      "<npcname> 戳击 %s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 1
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.6
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.9
+      },
+      {
+        "stat": "dodge",
+        "scale": 2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_stab",
+    "name": "",
+    "messages": [
+      "",
+      "<npcname> 突刺 %s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 3
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.8
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.5
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 1.5
+      },
+      {
+        "stat": "dodge",
+        "scale": 1.2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_poke",
+    "name": "",
+    "messages": [
+      "",
+      "<npcname> 扎刺 %s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 1
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": true,
+    "knockback_dist": 2,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.8
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.25
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 1.5
+      },
+      {
+        "stat": "dodge",
+        "scale": 1.2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_riposte",
+    "name": "",
+    "messages": [
+      "你对%s递出一剑完美的抢攻。",
+      "<npcname>对%s递出一剑完美的抢攻。"
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 8
+      }
+    ],
+    "melee_allowed": true,
+    "block_counter": true,
+    "crit_ok": true,
+    "stun_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_butt",
+    "name": "",
+    "messages": [
+      "",
+      ""
+    ],
+    "skill_requirements": [
+      {
+        "name": "stabbing",
+        "level": 3
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": true,
+    "dodge_counter": true,
+    "down_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_elbow",
+    "name": "肘击",
+    "messages": [
+      "你猛冲一步，手肘上挑，肘击了 %s",
+      "<npcname> 猛冲一步，手肘上挑，肘击了 %s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "unarmed",
+        "level": 1
+      }
+    ],
+    "unarmed_allowed": true,
+    "crit_tec": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.5
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "abspear_counter",
+    "name": "反击",
+    "messages": [
+      "",
+      ""
+    ],
+    "unarmed_allowed": true,
+    "dodge_counter": true,
+    "crit_ok": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 5
+      },
+      {
+        "stat": "hit",
+        "scale": 0.5
+      }
+    ]
+  }
+]

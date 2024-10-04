@@ -1,0 +1,32 @@
+[
+  {
+    "id": "TALK_Merc_guard_gate",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_is_wearing": "badge_marshal",
+      "yes": "站在那里别动！我看到你了，速度亮出你的身份！",
+      "no": "站在那里别动！我看到你了，速度亮出你的身份！"
+    },
+    "responses": [
+      {
+        "text": "我只是路过的。这木围墙后面是什么地方？",
+        "topic": "TALK_Merc_guard_gate_Exp"
+      }
+    ]
+  },
+  {
+    "id": "TALK_Merc_guard_gate_Exp",
+    "type": "talk_topic",
+    "dynamic_line": "又一个幸存者？<greet>。这里是……一个聚集点；也可以说是个幸存者们的贸易中心吧。如果你想交换一些有用的东西，那就请进去看看；另外，如果你正在考虑如何抢劫我们的话…还是趁早打消这个想法吧，除非你能脸接7.62哦。",
+    "responses": [
+      {
+        "text": "知道了，谢谢。",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "我会回来的。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

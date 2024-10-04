@@ -1,0 +1,73 @@
+[
+  {
+    "type": "GENERIC",
+    "copy-from": "mobile_memory_card",
+    "id": "sd_card",
+    "//": "local copy of the native SD card sans all the random data flags",
+    "name": {
+      "str": "SD存储卡"
+    },
+    "flags": []
+  },
+  {
+    "type": "GENERIC",
+    "copy-from": "software",
+    "abstract": "file",
+    "name": {
+      "str": "a file",
+      "str_pl": "files"
+    },
+    "description": "一堆文件和文档，其中包含有关各种主题的技术信息，但在其当前状态下无法破译",
+    "symbol": "#",
+    "container": "sd_card",
+    "flags": [
+      "IRREMOVABLE",
+      "NO_DROP"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "abstract": "cad",
+    "copy-from": "file",
+    "name": {
+      "str": "CAD文件"
+    },
+    "description": "一堆文件和文档，其中包含有关各种主题的技术信息，这一份似乎被用于三维打印，但在其当前状态下无法破译",
+    "//": "to be used for 3D printing recipes",
+    "symbol": "#"
+  },
+  {
+    "type": "GENERIC",
+    "abstract": "gcode",
+    "copy-from": "file",
+    "name": {
+      "str": "GCODE文件"
+    },
+    "description": "一堆文件和文档，其中包含有关各种主题的技术信息，这一份似乎被用于数控加工，但在其当前状态下无法破译",
+    "//": "to be used for CNC machining recipes",
+    "symbol": "#"
+  },
+  {
+    "type": "GENERIC",
+    "abstract": "qsar",
+    "copy-from": "file",
+    "name": {
+      "str": "QSAR文件"
+    },
+    "description": "一堆文件和文档，其中包含有关各种主题的技术信息，这一份似乎被用于生物医学和特定药物打印，但在其当前状态下无法破译",
+    "//": "to be used for biomedical printing, particular drug printing",
+    "symbol": "#"
+  },
+  {
+    "type": "GENERIC",
+    "abstract": "xler",
+    "copy-from": "file",
+    "name": {
+      "str": "XLER文件"
+    },
+    "description": "一堆文件和文档，其中包含有关各种主题的技术信息，这一份似乎被用于分子组装，但在其当前状态下无法破译",
+    "//": "to be used in molecular assembly; named after K. Eric Drexler, an early pioneer of the root nanoassembly technology",
+    "container": "usb_drive",
+    "symbol": "#"
+  }
+]

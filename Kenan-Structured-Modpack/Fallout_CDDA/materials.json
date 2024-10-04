@@ -1,0 +1,164 @@
+[
+  {
+    "type": "material",
+    "id": "alloy_zetan",
+    "name": "异形合金",
+    "density": 6,
+    "bash_resist": 100,
+    "cut_resist": 100,
+    "acid_resist": 100,
+    "fire_resist": 100,
+    "elec_resist": 100,
+    "chip_resist": 100,
+    "bullet_resist": 80,
+    "repaired_with": "zetan_scrap",
+    "dmg_adj": [
+      "划伤",
+      "凹损",
+      "砸扁",
+      "破碎"
+    ],
+    "bash_dmg_verb": "凹损",
+    "cut_dmg_verb": "刮花"
+  },
+  {
+    "type": "material",
+    "id": "leather_gecko",
+    "name": "壁虎皮",
+    "density": 6,
+    "specific_heat_liquid": 1.5,
+    "specific_heat_solid": 1.5,
+    "latent_heat": 273,
+    "soft": true,
+    "reinforces": true,
+    "bash_resist": 2,
+    "cut_resist": 4,
+    "acid_resist": 4,
+    "fire_resist": 3,
+    "elec_resist": 6,
+    "chip_resist": 10,
+    "bullet_resist": 3,
+    "repaired_with": "leather_gecko",
+    "salvaged_into": "leather_gecko",
+    "dmg_adj": [
+      "刮花",
+      "斩击",
+      "碎裂",
+      "破烂"
+    ],
+    "bash_dmg_verb": "撕裂",
+    "cut_dmg_verb": "割裂",
+    "burn_data": [
+      {
+        "fuel": 0,
+        "smoke": 0,
+        "burn": 0
+      },
+      {
+        "fuel": 1,
+        "smoke": 3,
+        "burn": 2,
+        "volume_per_turn": "500 ml"
+      },
+      {
+        "fuel": 1,
+        "smoke": 3,
+        "burn": 2
+      }
+    ]
+  },
+  {
+    "type": "material",
+    "id": "leather_gecko_gold",
+    "name": "金壁虎皮",
+    "density": 6,
+    "specific_heat_liquid": 1.5,
+    "specific_heat_solid": 1.5,
+    "latent_heat": 273,
+    "soft": true,
+    "reinforces": true,
+    "bash_resist": 2,
+    "cut_resist": 4,
+    "acid_resist": 100,
+    "fire_resist": 3,
+    "elec_resist": 6,
+    "chip_resist": 10,
+    "bullet_resist": 3,
+    "repaired_with": "leather_gecko_gold",
+    "salvaged_into": "leather_gecko_gold",
+    "dmg_adj": [
+      "刮花",
+      "斩击",
+      "碎裂",
+      "破烂"
+    ],
+    "bash_dmg_verb": "撕裂",
+    "cut_dmg_verb": "割裂",
+    "burn_data": [
+      {
+        "fuel": 0,
+        "smoke": 0,
+        "burn": 0
+      },
+      {
+        "fuel": 1,
+        "smoke": 3,
+        "burn": 2,
+        "volume_per_turn": "500 ml"
+      },
+      {
+        "fuel": 1,
+        "smoke": 3,
+        "burn": 2
+      }
+    ]
+  },
+  {
+    "type": "material",
+    "id": "cola_nuka_fuel",
+    "copy-from": "hydrocarbons",
+    "name": "核子可乐燃料",
+    "fuel_data": {
+      "energy": 34,
+      "explosion_data": {
+        "chance_hot": 20,
+        "chance_cold": 1000,
+        "factor": 0.2,
+        "fiery": false,
+        "size_factor": 0.1
+      }
+    }
+  },
+  {
+    "type": "material",
+    "id": "cola_newka_fuel",
+    "copy-from": "hydrocarbons",
+    "name": "纽卡可乐燃料",
+    "fuel_data": {
+      "energy": 68,
+      "explosion_data": {
+        "chance_hot": 20,
+        "chance_cold": 1000,
+        "factor": 0.2,
+        "fiery": false,
+        "size_factor": 0.1
+      }
+    }
+  },
+  {
+    "type": "material",
+    "id": "cola_nuka_quantum_fuel",
+    "copy-from": "hydrocarbons",
+    "name": "Nuka-Cola量子燃料",
+    "fuel_data": {
+      "energy": 136,
+      "explosion_data": {
+        "chance_hot": 20,
+        "chance_cold": 1000,
+        "factor": 0.2,
+        "fiery": false,
+        "size_factor": 0.1
+      }
+    }
+  }
+]

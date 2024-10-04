@@ -1,0 +1,561 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "rokushakubo",
+    "name": {
+      "str": "六尺杖"
+    },
+    "description": "一根结实的橡木棍，长6尺（180厘米）。",
+    "weight": "500 g",
+    "to_hit": 3,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "ALWAYS_TWOHAND"
+    ],
+    "volume": "1272 ml",
+    "melee_damage": { "bash": 15},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "jyo",
+    "name": {
+      "str": "合气杖"
+    },
+    "description": "一根结实的橡木棍，长4尺（120厘米）。",
+    "weight": "350 g",
+    "to_hit": 3,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "ALWAYS_TWOHAND"
+    ],
+    "volume": "848 ml",
+    "melee_damage": { "bash": 12},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "hanbo",
+    "name": {
+      "str": "半杖"
+    },
+    "description": "一根结实的橡木棍，长3尺（90厘米）。",
+    "weight": "250 g",
+    "to_hit": 4,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ],
+    "volume": "636 ml",
+    "melee_damage": { "bash": 9},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "tanbo",
+    "name": {
+      "str": "日式短棒"
+    },
+    "description": "一根结实的橡木棍，长1尺（30厘米）。",
+    "weight": "100 g",
+    "to_hit": 5,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ],
+    "volume": "212 ml",
+    "melee_damage": { "bash": 7},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "dumbar",
+    "name": {
+      "str": "哑铃杆"
+    },
+    "description": "一根从哑铃中拆出的沉重的实心钢棒，长20厘米。",
+    "weight": "1000 g",
+    "to_hit": 2,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "volume": "141 ml",
+    "melee_damage": { "bash": 20},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "barbar",
+    "name": {
+      "str": "杠铃杆"
+    },
+    "description": "一根从哑铃中拆出的沉重的实心钢棒。",
+    "weight": "4540 g",
+    "to_hit": 1,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "ALWAYS_TWOHAND"
+    ],
+    "volume": "1272 ml",
+    "melee_damage": { "bash": 30},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "barbar_hollow",
+    "name": {
+      "str": "空心杠铃杆"
+    },
+    "description": "一种用廉价杠铃制成的轻质空心钢筋，用坚固的塑料加固过。虽然作为武器的伤害很低，但它非常坚固，轻便，快捷，并且有较长的攻击距离。",
+    "weight": "100 g",
+    "to_hit": 5,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "ALWAYS_TWOHAND"
+    ],
+    "volume": "1272 ml",
+    "melee_damage": { "bash": 5},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "putting_trainer",
+    "name": {
+      "str": "推杆练习器"
+    },
+    "description": "一把末端有配有重物的推杆，往往用于训练高尔夫球技术。基本上可以当作一个坚固的狼牙棒使用。",
+    "weight": "1000 g",
+    "to_hit": 3,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "lead"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ],
+    "volume": "212 ml",
+    "melee_damage": { "bash": 7},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "jitte",
+    "name": {
+      "str": "十手"
+    },
+    "description": "一种在护手处带有支钩的金属棒，用法类似铁尺但能用支钩格挡住刀剑的劈击，是用于解除对手武装的武器。中文名为“十手”（又称“实手”），在日本江户时期被警察广泛使用。",
+    "weight": "800 g",
+    "to_hit": 3,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "DEF_DISARM",
+      "RAPID",
+      "SWEEP",
+      "PRECISE"
+    ],
+    "//": "GRAB would be more accurate than SWEEP, but GRAB is not implemented",
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "volume": "141 ml",
+    "melee_damage": { "bash": 20},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "tokushukeibo",
+    "category": "weapons",
+    "name": {
+      "str": "日式甩棍"
+    },
+    "description": "一种能够收缩起来便于存放的钢制警棍。尖端经过加重，是一种很好的近战武器。激活以展开。",
+    "weight": "325 g",
+    "to_hit": 4,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "lead"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP"
+    ],
+    "use_action": {
+      "menu_text": "展开",
+      "type": "transform",
+      "target": "tokushukeibo-extended",
+      "msg": "你打开你的德川幕府。"
+    },
+    "volume": "250 ml",
+    "melee_damage": { "bash": 4},
+    "price": 17500
+  },
+  {
+    "type": "GENERIC",
+    "id": "tokushukeibo-extended",
+    "category": "weapons",
+    "name": {
+      "str": "日式甩棍（展开）",
+      "str_pl": "日式甩棍（展开）"
+    },
+    "description": "一种能够收缩起来以便存放的钢制警棍，是一种很好的近战武器。激活以收缩。",
+    "weight": "325 g",
+    "to_hit": 3,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "lead"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP"
+    ],
+    "use_action": {
+      "menu_text": "折叠",
+      "type": "transform",
+      "target": "tokushukeibo",
+      "msg": "你崩溃了。"
+    },
+    "volume": "750 ml",
+    "melee_damage": { "bash": 12},
+    "price": 17500
+  },
+  {
+    "type": "GENERIC",
+    "id": "tokushukeibo-jitte",
+    "category": "weapons",
+    "name": {
+      "str": "十手甩棍"
+    },
+    "description": "一种能够收缩起来便于存放的钢制警棍，带有一个用于缴械的支钩。尖端经过加重，是一种很好的近战武器。激活以展开。",
+    "weight": "350 g",
+    "to_hit": 4,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "lead"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP"
+    ],
+    "use_action": {
+      "menu_text": "展开",
+      "type": "transform",
+      "target": "tokushukeibo-jitte-extended",
+      "msg": "你打开你的德川幕府。"
+    },
+    "volume": "250 ml",
+    "melee_damage": { "bash": 4},
+    "price": 17500
+  },
+  {
+    "type": "GENERIC",
+    "id": "tokushukeibo-jitte-extended",
+    "category": "weapons",
+    "name": {
+      "str": "十手甩棍（展开）",
+      "str_pl": "十手甩棍（展开）"
+    },
+    "description": "一种能够收缩起来以便存放的钢制警棍，带有一个用于缴械的支钩。是一种很好的近战武器。激活以收缩。",
+    "weight": "350 g",
+    "to_hit": 3,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "lead"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "DEF_DISARM",
+      "SWEEP",
+      "PRECISE"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP"
+    ],
+    "use_action": {
+      "menu_text": "折叠",
+      "type": "transform",
+      "target": "tokushukeibo-jitte",
+      "msg": "你崩溃了。"
+    },
+    "volume": "750 ml",
+    "melee_damage": { "bash": 12},
+    "price": 17500
+  },
+  {
+    "type": "GENERIC",
+    "id": "tessen-fake",
+    "name": {
+      "str": "伪军配"
+    },
+    "description": "一种折扇，有着坚固的钢架或竹肋，过去的武士在不被允许佩剑的情况下会随身携带。但这一个并不具有扇风的功能，而是彻头彻尾的武器。",
+    "weight": "800 g",
+    "to_hit": 1,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "PRECISE"
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "volume": "141 ml",
+    "melee_damage": { "bash": 10},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "tessen",
+    "name": {
+      "str": "军配团扇"
+    },
+    "description": "一种折扇，有着坚固的钢架或竹肋，过去的武士在不被允许佩剑的情况下会随身携带。具有扇风的功能，也能作为临时的武器。",
+    "weight": "400 g",
+    "to_hit": 1,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "PRECISE"
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "volume": "141 ml",
+    "melee_damage": { "bash": 5},
+    "price": 16000
+  },
+  {
+    "type": "GENERIC",
+    "id": "bonker",
+    "name": {
+      "str": "打鱼棒"
+    },
+    "description": "一根用来打鱼的小木棍。",
+    "weight": "400 g",
+    "to_hit": 4,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ],
+    "volume": "212 ml",
+    "melee_damage": { "bash": 5},
+    "price": 16000
+  },
+  {
+    "id": "manriki",
+    "type": "GENERIC",
+    "category": "weapons",
+    "name": {
+      "str": "分铜锁"
+    },
+    "description": "一种两端各有一个加重把手的重型钢链。“分铜锁（ふんどうさ），又有锁分铜、万力锁、锁十手、玉锁、锁玉、袖锁、怀锁、正木锁等称呼，是一种日本的传统武具，形态为一条铁链两端各系一个球型铁锤或把手。”",
+    "weight": "2000 g",
+    "volume": "1000 ml",
+    "price": "250 USD",
+    "melee_damage": { "bash": 25},
+    "material": [
+      "steel"
+    ],
+    "symbol": "\\",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL",
+      "WRAP",
+      "WHIP_DISARM"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK"
+    ]
+  },
+  {
+    "id": "keychain",
+    "type": "GENERIC",
+    "category": "weapons",
+    "name": {
+      "str": "“钥匙链”"
+    },
+    "description": "一条末端有许多“钥匙”的钢链，可以当做一个相当有效的链枷。",
+    "weight": "2000 g",
+    "volume": "1000 ml",
+    "price": "250 USD",
+    "melee_damage": { "bash": 12,"cut": 2 },
+    "material": [
+      "steel"
+    ],
+    "symbol": "\\",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "WRAP",
+      "WHIP_DISARM"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK"
+    ]
+  },
+  {
+    "id": "blackthorn",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "brown",
+    "name": {
+      "str": "黑刺手杖"
+    },
+    "description": "这种手杖通常由黑刺木（刺李）制成，顶部装有把手。这种传统的爱尔兰武器起源于希勒拉格，人们将木头涂抹油脂后放入烟囱，通过烟熏达到固化的目的",
+    "price": "250 USD",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "weight": "610 g",
+    "volume": "900 ml",
+    "melee_damage": { "bash": 18},
+    "to_hit": 2,
+    "category": "weapons"
+  },
+  {
+    "id": "blackthorn-synthetic",
+    "type": "GENERIC",
+    "symbol": "/",
+    "color": "brown",
+    "name": {
+      "str": "现代合成黑刺手杖"
+    },
+    "description": "这种手杖通常由黑刺木（刺李）制成，顶部装有把手。这种传统的爱尔兰武器起源于希勒拉格，人们将木头涂抹油脂后放入烟囱，通过烟熏达到固化的目的。不过这一根是由人造合成材料制成的。它比木制的更便宜耐用，但作为武器效果较差。",
+    "price": "250 USD",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "weight": "410 g",
+    "volume": "900 ml",
+    "melee_damage": { "bash": 12},
+    "to_hit": 2,
+    "category": "weapons"
+  }
+]

@@ -1,0 +1,1525 @@
+[
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_fox_old",
+    "name": {
+      "str": "老旧模型狐狸",
+      "str_pl": "老旧模型狐狸"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "F",
+    "color": "red",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "speed": 140,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 10,
+    "dodge": 6,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 100,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一只双足站立的机械电动模型狐狸，体型大约是你的两倍。它的爪牙都很锋利，虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_fox_new",
+    "name": {
+      "str": "新型模型狐狸",
+      "str_pl": "新型模型狐狸"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "F",
+    "color": "white",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 6,
+    "armor_bash": 12,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 50,
+    "vision_night": 50,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          75
+        ],
+        [
+          "default_zombie_clothes",
+          10
+        ],
+        [
+          "child_items",
+          25
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 160,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一只双足站立的机械电动模型狐狸，体型大约是你的两倍。它的爪牙都很锋利，外层是强化塑胶，看得出是高科技产物，且处于良好状态。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_fox_wreck",
+    "name": {
+      "str": "模型狐狸残骸",
+      "str_pl": "模型狐狸残骸"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "F",
+    "color": "white",
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 80,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 8,
+    "dodge": 6,
+    "armor_bash": 12,
+    "armor_cut": 12,
+    "armor_bullet": 9,
+    "vision_day": 50,
+    "vision_night": 50,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          75
+        ],
+        [
+          "default_zombie_clothes",
+          10
+        ],
+        [
+          "child_items",
+          25
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 100,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一架模型狐狸残骸，烂成一堆散在地上。它的爪牙都很锋利，能夠抓住周围的东西爬到天花板上。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_bunny_new",
+    "name": {
+      "str": "新型模型兔子",
+      "str_pl": "新型模型兔子"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "B",
+    "color": "light_blue",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 6,
+    "armor_bash": 12,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 50,
+    "vision_night": 50,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          75
+        ],
+        [
+          "default_zombie_clothes",
+          10
+        ],
+        [
+          "child_items",
+          25
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 160,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一只双足站立的机械电动模型兔子，体型大约是你的两倍。它其实挺可爱的，虽然它试图要杀了你。外层是强化塑胶，看得出是高科技产物，且处于良好状态。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_bunny_old",
+    "name": {
+      "str": "老旧模型兔子",
+      "str_pl": "老旧模型兔子"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "B",
+    "color": "blue",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "speed": 110,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 100,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一只双足站立的机械电动模型兔子，体型大约是你的两倍。它的脸部已经被撕的干干净净，只有两个眼珠吊在那儿甩来甩去。虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_chicken_old",
+    "name": {
+      "str": "老旧模型鸡"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "C",
+    "color": "yellow",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "speed": 110,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 100,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一只双足站立的机械电动模型鸡，体型大约是你的两倍。它穿了一个围裙，上边写着：“开饭咯”，虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_chicken_new",
+    "name": {
+      "str": "新型模型鸡"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "C",
+    "color": "yellow",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 6,
+    "armor_bash": 12,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 50,
+    "vision_night": 50,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          75
+        ],
+        [
+          "default_zombie_clothes",
+          10
+        ],
+        [
+          "child_items",
+          25
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 160,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一只双足站立的机械电动模型鸡，体型大约是你的两倍。它穿了一个围裙，上边写着：“派对时间！”，外层是强化塑胶，看得出是高科技产物，且处于良好状态。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_bear_old",
+    "name": {
+      "str": "老旧模型熊"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "B",
+    "color": "brown",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "speed": 110,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 100,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一只双足站立的机械电动模型熊，体型大约是你的两倍。它握着麦克风还戴着顶帽子，虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_bear_new",
+    "name": {
+      "str": "新型模型熊"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "B",
+    "color": "brown",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 6,
+    "armor_bash": 12,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 50,
+    "vision_night": 50,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 180,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一只双足站立的机械电动模型熊，体型大约是你的两倍。它握着麦克风还戴着顶帽子，外层是强化塑胶，看得出是高科技产物，且处于良好状态。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_bat",
+    "name": {
+      "str": "模型蝙蝠"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "B",
+    "color": "dark_gray",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型蝙蝠，体型大约是你的两倍。或许它曾经神气过，但现在也已经失修好久了。虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_beaver",
+    "name": {
+      "str": "模型河狸"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "b",
+    "color": "brown",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型河狸，体型大约是你的两倍。它的门牙看上去好锋利，这跟说好的不一样！虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_cat",
+    "name": {
+      "str": "模型猫"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "c",
+    "color": "yellow",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型猫，体型大约是你的两倍。它的爪子锋利的有点过了，虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_chipmunk",
+    "name": {
+      "str": "模型金花鼠"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "c",
+    "color": "brown",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 8,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型金花鼠，体型大约是你的两倍。很酷，但如果它不是正在向你冲锋，你或许有功夫赞它。虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_cow",
+    "name": {
+      "str": "模型牛"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "C",
+    "color": "white",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 160,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型牛，体型大约是你的两倍。语音盒被玩坏了，所以它正发出奇怪的呻吟，如果听着能硬起来那也是你的本事。虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_coyote",
+    "name": {
+      "str": "模型郊狼"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "C",
+    "color": "dark_gray",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 130,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型郊狼，体型大约是你的两倍。它的头抽搐的速度恰到好处的扩充了你的想象力，虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_deer",
+    "name": {
+      "str": "模型鹿"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "D",
+    "color": "brown",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型鹿，体型大约是你的两倍。如果你是猎人，那准备好面对复仇吧！虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_horse",
+    "name": {
+      "str": "模型马"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "H",
+    "color": "brown",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 140,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 180,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型马，体型大约是你的两倍。酷毙了！虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_pig",
+    "name": {
+      "str": "模型猪"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "P",
+    "color": "pink",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 160,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型猪，体型大约是你的两倍。虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_sheep",
+    "name": {
+      "str": "模型羊",
+      "str_pl": "模型羊"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "S",
+    "color": "white",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型羊，体型大约是你的两倍。羊毛就跟黑木耳生长的大森林一样，虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_squirrel",
+    "name": {
+      "str": "模型松鼠"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "S",
+    "color": "red",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型鹿，体型大约是你的两倍。如果你是猎人，那准备好面对复仇吧！虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_child",
+    "name": {
+      "str": "模型儿童",
+      "str_pl": "模型儿童"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "c",
+    "color": "yellow",
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 120,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 4,
+    "armor_bash": 4,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 100,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一个双足站立的机械电动模型熊孩子，而且它会像所有倒霉孩子一样发出剧烈的吵闹声！虽然是个机器人，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_marionette",
+    "name": {
+      "str": "木偶"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "m",
+    "color": "dark_gray",
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "material": [
+      "steel"
+    ],
+    "aggression": 100,
+    "morale": 100,
+    "speed": 160,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 4,
+    "armor_bash": 4,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 50,
+    "vision_night": 50,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          10
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 100,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "description": "一个会自己移动的提线木偶。但是你找不到它的线。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_animatronic_wolf",
+    "name": {
+      "str": "模型狼",
+      "str_pl": "模型狼"
+    },
+    "species": "ROBOT",
+    "default_faction": "animatronics",
+    "symbol": "W",
+    "color": "dark_gray",
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "material": [
+      "steel"
+    ],
+    "aggression": 50,
+    "morale": 100,
+    "speed": 130,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 8,
+    "melee_cut": 8,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 30,
+    "vision_night": 5,
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          60
+        ],
+        [
+          "default_zombie_clothes",
+          40
+        ],
+        [
+          "child_items",
+          75
+        ]
+      ]
+    },
+    "luminance": 0,
+    "hp": 150,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "description": "一只双足站立的机械电动模型狼，体型大约是你的两倍。如果说狼很可怕，那这只简直吓死人。虽然是个机器兽，却散发着尸臭。",
+    "flags": [
+      "SEES",
+      "GRABS",
+      "HEARS",
+      "BASHES",
+      "ELECTRONIC",
+      "NO_BREATHE"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ]
+  }
+]

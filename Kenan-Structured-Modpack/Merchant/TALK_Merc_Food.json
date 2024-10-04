@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TALK_Merc_Food",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_is_wearing": "badge_marshal",
+      "yes": "电池，燃料，烫斗，药品…好吧，还有最近紧俏的弹药和一些食物。别想打什么歪主意，我们可都全副武装。不管怎么说，要不要来点？",
+      "no": "电池，燃料，烫斗，药品…好吧，还有最近紧俏的弹药和一些食物。别想打什么歪主意，我们可都全副武装。不管怎么说，要不要来点？"
+    },
+    "responses": [
+      {
+        "text": "有什么我能帮忙的吗？",
+        "topic": "TALK_Merc_Mil_Help"
+      },
+      {
+        "text": "让我看看你有什么东西……",
+        "effect": "start_trade",
+        "topic": "TALK_Merc_Mil"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_Merc_Mil_Help",
+    "type": "talk_topic",
+    "dynamic_line": "不行。",
+    "responses": [
+      {
+        "text": "知道了。",
+        "topic": "TALK_Merc_Mil"
+      }
+    ]
+  }
+]

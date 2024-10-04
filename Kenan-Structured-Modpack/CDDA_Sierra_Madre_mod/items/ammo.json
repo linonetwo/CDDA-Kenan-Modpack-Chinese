@@ -1,0 +1,300 @@
+[
+  {
+    "id": "micro_cell",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "微型核融合电池"
+    },
+    "looks_like": "plasma",
+    "description": "微型核聚变电池是美国大山脉研究所研制的一种新型高能弹药。出奇的强大，虽然它的工作方式不允许武器高射速利用它。",
+    "weight": "15 g",
+    "volume": "30 ml",
+    "price": "50 USD",
+    "price_postapoc": "150 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "=",
+    "color": "light_cyan",
+    "count": 1,
+    "stack_size": 25,
+    "ammo_type": "microfusion",
+    "casing": "micro_spent",
+    "range": 50,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 80,
+      "armor_penetration": 30
+    },
+    "dispersion": 25,
+    "recoil": 1700,
+    "effects": [
+      "NEVER_MISFIRES",
+      "COOKOFF",
+      "PLASMA_BUBBLE",
+      "LIGHTNING"
+    ]
+  },
+  {
+    "id": "micro_cell_overcharged",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "微型核融合电池（过量充能）"
+    },
+    "looks_like": "plasma",
+    "description": "将两个微型核融合电池结合在一起可能会产生一个更强大的电池，但代价是它更容易失火。",
+    "weight": "25 g",
+    "volume": "40 ml",
+    "price": "60 USD",
+    "price_postapoc": "170 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "=",
+    "color": "light_cyan",
+    "count": 1,
+    "stack_size": 25,
+    "ammo_type": "microfusion",
+    "casing": "micro_spent",
+    "range": 50,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 100,
+      "armor_penetration": 32
+    },
+    "dispersion": 35,
+    "recoil": 2000,
+    "effects": [
+      "RECYCLED",
+      "COOKOFF",
+      "PLASMA_BUBBLE",
+      "LIGHTNING"
+    ]
+  },
+  {
+    "id": "energy_cell",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "能量电池"
+    },
+    "looks_like": "light_atomic_battery_cell",
+    "description": "能量电池，为下一代激光枪设计的特殊弹药类型。基本上是一个大容量电池改装成足够小，以适应枪械。",
+    "weight": "6 g",
+    "volume": "15 ml",
+    "price": "30 USD",
+    "price_postapoc": "100 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "=",
+    "color": "light_red",
+    "count": 1,
+    "stack_size": 100,
+    "ammo_type": "laser_cell",
+    "casing": "energy_spent",
+    "range": 50,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 30,
+      "armor_penetration": 25
+    },
+    "dispersion": 10,
+    "recoil": 0,
+    "effects": [
+      "NEVER_MISFIRES",
+      "LASER",
+      "DRAW_AS_LINE",
+      "BLINDS_EYES",
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "energy_cell_overcharged",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "能量电池（过量充能）"
+    },
+    "looks_like": "light_atomic_battery_cell",
+    "description": "将两个能量电池组合在一起可能会使一个更强大，但代价是它更容易失火。",
+    "weight": "12 g",
+    "volume": "20 ml",
+    "price": "35 USD",
+    "price_postapoc": "110 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "=",
+    "color": "light_red",
+    "count": 1,
+    "stack_size": 100,
+    "ammo_type": "laser_cell",
+    "casing": "energy_spent",
+    "range": 50,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 40,
+      "armor_penetration": 30
+    },
+    "dispersion": 20,
+    "recoil": 0,
+    "effects": [
+      "RECYCLED",
+      "LASER",
+      "DRAW_AS_LINE",
+      "BLINDS_EYES",
+      "NOGIB"
+    ]
+  },
+  {
+    "type": "ammunition_type",
+    "id": "microfusion",
+    "name": "微型核融合电池",
+    "default": "micro_cell"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "laser_cell",
+    "name": "能量电池",
+    "default": "energy_cell"
+  },
+  {
+    "id": "micro_spent",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "looks_like": "micro_cell",
+    "name": {
+      "str": "空核融合电池"
+    },
+    "description": "一个空的，耗尽的核融合电池。",
+    "weight": "7 g",
+    "volume": "30 ml",
+    "stackable": true,
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "=",
+    "color": "light_cyan"
+  },
+  {
+    "id": "energy_spent",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "looks_like": "energy_cell",
+    "name": {
+      "str": "空能量电池"
+    },
+    "description": "一个空的，耗尽的能量电池。",
+    "weight": "6 g",
+    "volume": "20 ml",
+    "stackable": true,
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "=",
+    "color": "light_red"
+  },
+  {
+    "id": "gauss_cell",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "5-细胞微型核融充能包"
+    },
+    "looks_like": "plasma",
+    "description": "5个微型核融合电池被组合在一起，以满足高斯步枪的高功率要求。",
+    "weight": "50 g",
+    "volume": "100 ml",
+    "price": "60 USD",
+    "price_postapoc": "200 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "=",
+    "color": "light_cyan",
+    "count": 1,
+    "stack_size": 25,
+    "ammo_type": "gauss_microfusion",
+    "casing": "micro_spent",
+    "range": 50,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 110,
+      "armor_penetration": 30
+    },
+    "dispersion": 30,
+    "recoil": 2000,
+    "effects": [
+      "NEVER_MISFIRES",
+      "COOKOFF",
+      "PLASMA_BUBBLE",
+      "LIGHTNING"
+    ]
+  },
+  {
+    "id": "gauss_cell_overcharged",
+    "type": "AMMO",
+    "name": {
+      "str_sp": "五室微型核融充能包（过量充能）"
+    },
+    "looks_like": "plasma",
+    "description": "5个过充微型核融合电池被组合在一起，以满足高斯步枪的高功率要求（实际上以较低的可靠性为代价）。",
+    "weight": "75 g",
+    "volume": "120 ml",
+    "price": "70 USD",
+    "price_postapoc": "230 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "plastic",
+      "superalloy"
+    ],
+    "symbol": "=",
+    "color": "light_cyan",
+    "count": 1,
+    "stack_size": 25,
+    "ammo_type": "gauss_microfusion",
+    "casing": "micro_spent",
+    "range": 50,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 130,
+      "armor_penetration": 32
+    },
+    "dispersion": 40,
+    "recoil": 2300,
+    "effects": [
+      "RECYCLED",
+      "COOKOFF",
+      "PLASMA_BUBBLE",
+      "LIGHTNING"
+    ]
+  },
+  {
+    "type": "ammunition_type",
+    "id": "gauss_microfusion",
+    "name": "5-细胞微型核融充能包",
+    "default": "gauss_cell"
+  }
+]

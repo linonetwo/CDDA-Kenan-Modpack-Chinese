@@ -1,0 +1,1524 @@
+[
+  {
+    "type": "terrain",
+    "id": "t_tree_apple_cut",
+    "name": "剪过枝的苹果树",
+    "description": "一棵在秋天能够结出苹果果实的树，分类学上属于苹果属。如果你顺着枝干仔细观察的话，就可以找到几个成熟的苹果。你可以用合适的工具砍倒它。这棵已经取了插条。",
+    "symbol": "7",
+    "color": "green",
+    "move_cost": 0,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT",
+      "HARVESTED"
+    ],
+    "transforms_into": "t_tree_apple_harvested",
+    "examine_action": "harvest_ter_nectar",
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "apple_harv"
+      }
+    ],
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "construction",
+    "id": "c_plant_apple_tree",
+    "group": "plant_apple_tree",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": "30 minutes",
+    "qualities": [
+      [
+        {
+          "id": "DIG",
+          "level": 2
+        }
+      ]
+    ],
+    "components": [
+      [
+        [
+          "apple_sapling",
+          1
+        ]
+      ]
+    ],
+    "pre_flags": "DIGGABLE",
+    "post_terrain": "t_tree_apple_harvested"
+  },
+  {
+    "type": "construction",
+    "id": "c_take_apple_cutting",
+    "group": "take_apple_tree_cutting",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": "10 minutes",
+    "qualities": [
+      [
+        {
+          "id": "CUT",
+          "level": 1
+        }
+      ]
+    ],
+    "pre_terrain": "t_tree_apple",
+    "post_terrain": "t_tree_apple_cut"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "apple_cutting",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "苹果树插条",
+      "str_pl": "苹果树插条"
+    },
+    "spoils_in": "24 hours",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "从苹果树上砍下的枝条。它很快就会枯死，尽快把它种进花盆里！",
+    "material": [
+      "veggy"
+    ],
+    "volume": "1500 ml",
+    "weight": "2721 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "stack_size": 100
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "apple_sapling",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "苹果树苗",
+      "str_pl": "苹果树苗"
+    },
+    "spoils_in": "14 days",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "一棵还未栽种的苹果树苗，如果你太久不种植，它会慢慢枯死。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "TOOL",
+    "id": "apple_cutting_potted",
+    "price": 120,
+    "name": {
+      "str": "盆栽苹果树",
+      "str_pl": "盆栽苹果树"
+    },
+    "symbol": ")",
+    "color": "green",
+    "description": "栽种在花盆里的苹果树枝条。它大约需要两个星期成长，之后你就可以把它移植到地里。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "3000 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 1209600,
+      "//": "2 weeks",
+      "not_ready_msg": "The plant isn't done growing yet.",
+      "msg": "你小心翼翼地把树从花盆里刨出来。",
+      "moves": 50,
+      "container": "clay_plant_pot",
+      "target": "apple_sapling"
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "apple_cutting_potted",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": "20 minutes",
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_plant_pot",
+          1
+        ]
+      ],
+      [
+        [
+          "apple_cutting",
+          1
+        ]
+      ],
+      [
+        [
+          "material_soil",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_pear_cut",
+    "description": "一棵在秋天能够结出梨子果实的树，分类学上属于梨属。如果你顺着枝干仔细观察的话，就可以找到几个成熟的梨子。你可以用合适的工具砍倒它。这棵已经取了插条。",
+    "name": "剪过枝的梨树",
+    "symbol": "7",
+    "color": "green",
+    "move_cost": 0,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT",
+      "HARVESTED"
+    ],
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "autumn"
+        ],
+        "id": "pear_harv"
+      }
+    ],
+    "examine_action": "harvested_plant",
+    "transforms_into": "t_tree_pear",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "construction",
+    "id": "c_plant_pear_tree",
+    "group": "plant_pear_tree",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 10,
+    "qualities": [
+      [
+        {
+          "id": "DIG",
+          "level": 2
+        }
+      ]
+    ],
+    "components": [
+      [
+        [
+          "pear_sapling",
+          1
+        ]
+      ]
+    ],
+    "pre_flags": "DIGGABLE",
+    "post_terrain": "t_tree_pear_harvested"
+  },
+  {
+    "type": "construction",
+    "id": "c_take_pear_cutting",
+    "group": "take_pear_tree_cutting",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 5,
+    "qualities": [
+      [
+        {
+          "id": "CUT",
+          "level": 1
+        }
+      ]
+    ],
+    "pre_terrain": "t_tree_pear",
+    "post_terrain": "t_tree_pear_cut"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "pear_cutting",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "梨树插条",
+      "str_pl": "梨树插条"
+    },
+    "spoils_in": "24 hours",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "从梨树上砍下的枝条。它很快就会枯死，尽快把它种进花盆里！",
+    "material": [
+      "veggy"
+    ],
+    "volume": "1500 ml",
+    "weight": "2721 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "pear_sapling",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "梨树苗",
+      "str_pl": "梨树苗"
+    },
+    "spoils_in": "14 days",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "一棵还未栽种的梨树树苗，如果你太久不种植，它会慢慢枯死。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "TOOL",
+    "id": "pear_cutting_potted",
+    "price": 120,
+    "name": {
+      "str": "盆栽梨树",
+      "str_pl": "盆栽梨树"
+    },
+    "symbol": ")",
+    "color": "green",
+    "description": "栽种在花盆里的梨树的枝条。它大约需要两个星期成长，之后你就可以把它移植到地里。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 1209600,
+      "//": "2 weeks",
+      "not_ready_msg": "The plant isn't done growing yet.",
+      "msg": "你小心翼翼地把树从花盆里刨出来。",
+      "moves": 50,
+      "container": "clay_plant_pot",
+      "target": "pear_sapling"
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "pear_cutting_potted",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": 10000,
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_plant_pot",
+          1
+        ]
+      ],
+      [
+        [
+          "pear_cutting",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_cherry_cut",
+    "name": "剪过枝的樱桃树",
+    "description": "一棵被砍掉一部分的樱桃树",
+    "symbol": "7",
+    "color": "green",
+    "move_cost": 0,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT",
+      "HARVESTED"
+    ],
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "cherry_harv"
+      }
+    ],
+    "examine_action": "harvested_plant",
+    "transforms_into": "t_tree_cherry",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "construction",
+    "id": "c_plant_cherry_tree",
+    "group": "plant_cherry_tree",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 10,
+    "qualities": [
+      [
+        {
+          "id": "DIG",
+          "level": 2
+        }
+      ]
+    ],
+    "components": [
+      [
+        [
+          "cherry_sapling",
+          1
+        ]
+      ]
+    ],
+    "pre_flags": "DIGGABLE",
+    "post_terrain": "t_tree_cherry_harvested"
+  },
+  {
+    "type": "construction",
+    "id": "c_take_cherry_cutting",
+    "group": "take_cherry_tree_cutting",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 5,
+    "qualities": [
+      [
+        {
+          "id": "CUT",
+          "level": 1
+        }
+      ]
+    ],
+    "pre_terrain": "t_tree_cherry",
+    "post_terrain": "t_tree_cherry_cut"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cherry_cutting",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "樱桃树插条",
+      "str_pl": "樱桃树插条"
+    },
+    "spoils_in": "24 hours",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "从樱桃树上砍下的枝条。它很快就会枯死，尽快把它种进花盆里！",
+    "material": [
+      "veggy"
+    ],
+    "volume": "1500 ml",
+    "weight": "2721 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cherry_sapling",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "樱桃树苗",
+      "str_pl": "樱桃树苗"
+    },
+    "spoils_in": "14 days",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "一棵还未栽种的樱桃树苗，如果你太久不种植，它会慢慢枯死。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "TOOL",
+    "id": "cherry_cutting_potted",
+    "price": 120,
+    "name": {
+      "str": "盆栽樱桃树",
+      "str_pl": "盆栽樱桃树"
+    },
+    "symbol": ")",
+    "color": "green",
+    "description": "栽种在花盆里的樱桃树的枝条。它大约需要两个星期成长，之后你就可以把它移植到地里。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 1209600,
+      "//": "2 weeks",
+      "not_ready_msg": "The plant isn't done growing yet.",
+      "msg": "你小心翼翼地把树从花盆里刨出来。",
+      "moves": 50,
+      "container": "clay_plant_pot",
+      "target": "cherry_sapling"
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "cherry_cutting_potted",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": 10000,
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_plant_pot",
+          1
+        ]
+      ],
+      [
+        [
+          "cherry_cutting",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_peach_cut",
+    "description": "一棵被砍掉一部分的桃树",
+    "name": "剪过枝的桃树",
+    "symbol": "7",
+    "color": "green",
+    "move_cost": 0,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT",
+      "HARVESTED"
+    ],
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "peach_harv"
+      }
+    ],
+    "transforms_into": "t_tree_peach_harvested",
+    "examine_action": "harvest_ter_nectar",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "construction",
+    "id": "c_plant_peach_tree",
+    "group": "plant_peach_tree",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 10,
+    "qualities": [
+      [
+        {
+          "id": "DIG",
+          "level": 2
+        }
+      ]
+    ],
+    "components": [
+      [
+        [
+          "peach_sapling",
+          1
+        ]
+      ]
+    ],
+    "pre_flags": "DIGGABLE",
+    "post_terrain": "t_tree_peach_harvested"
+  },
+  {
+    "type": "construction",
+    "id": "c_take_peach_cutting",
+    "group": "take_peach_tree_cutting",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 5,
+    "qualities": [
+      [
+        {
+          "id": "CUT",
+          "level": 1
+        }
+      ]
+    ],
+    "pre_terrain": "t_tree_peach",
+    "post_terrain": "t_tree_peach_cut"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "peach_cutting",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "桃树插条",
+      "str_pl": "桃树插条"
+    },
+    "spoils_in": "24 hours",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "从桃树上砍下的枝条。它很快就会枯死，尽快把它种进花盆里！",
+    "material": [
+      "veggy"
+    ],
+    "volume": "1500 ml",
+    "weight": "2721 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "peach_sapling",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "桃树苗",
+      "str_pl": "桃树苗"
+    },
+    "spoils_in": "14 days",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "一棵还未栽种的桃树苗，如果你太久不种植，它会慢慢枯死。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "TOOL",
+    "id": "peach_cutting_potted",
+    "price": 120,
+    "name": {
+      "str": "盆栽桃树",
+      "str_pl": "盆栽桃树"
+    },
+    "symbol": ")",
+    "color": "green",
+    "description": "栽种在花盆里的桃树的枝条。它大约需要两个星期成长，之后你就可以把它移植到地里。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 1209600,
+      "//": "2 weeks",
+      "not_ready_msg": "The plant isn't done growing yet.",
+      "msg": "你小心翼翼地把树从花盆里刨出来。",
+      "moves": 50,
+      "container": "clay_plant_pot",
+      "target": "peach_sapling"
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "peach_cutting_potted",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": 10000,
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_plant_pot",
+          1
+        ]
+      ],
+      [
+        [
+          "peach_cutting",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_apricot_cut",
+    "name": "剪过枝的杏树",
+    "description": "从杏树上剪下的树枝",
+    "symbol": "7",
+    "color": "green",
+    "move_cost": 0,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT",
+      "HARVESTED"
+    ],
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "apricot_harv"
+      }
+    ],
+    "examine_action": "harvested_plant",
+    "transforms_into": "t_tree_apricot",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "construction",
+    "id": "c_plant_apricot_tree",
+    "group": "plant_apricot_tree",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 10,
+    "qualities": [
+      [
+        {
+          "id": "DIG",
+          "level": 2
+        }
+      ]
+    ],
+    "components": [
+      [
+        [
+          "apricot_sapling",
+          1
+        ]
+      ]
+    ],
+    "pre_flags": "DIGGABLE",
+    "post_terrain": "t_tree_apricot_harvested"
+  },
+  {
+    "type": "construction",
+    "id": "c_take_apricot_cutting",
+    "group": "take_apricot_tree_cutting",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 5,
+    "qualities": [
+      [
+        {
+          "id": "CUT",
+          "level": 1
+        }
+      ]
+    ],
+    "pre_terrain": "t_tree_apricot",
+    "post_terrain": "t_tree_apricot_cut"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "apricot_cutting",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "杏树插条",
+      "str_pl": "杏树插条"
+    },
+    "spoils_in": "24 hours",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "从杏树上砍下的枝条。它很快就会枯死，尽快把它种进花盆里！",
+    "material": [
+      "veggy"
+    ],
+    "volume": "1500 ml",
+    "weight": "2721 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "apricot_sapling",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "杏树树苗",
+      "str_pl": "杏树树苗"
+    },
+    "spoils_in": "14 days",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "一棵还未栽种的杏树苗，如果你太久不种植，它会慢慢枯死。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "TOOL",
+    "id": "apricot_cutting_potted",
+    "price": 120,
+    "name": {
+      "str": "盆栽杏树",
+      "str_pl": "盆栽杏树"
+    },
+    "symbol": ")",
+    "color": "green",
+    "description": "栽种在花盆里的杏树的枝条。它大约需要两个星期成长，之后你就可以把它移植到地里。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 1209600,
+      "//": "2 weeks",
+      "not_ready_msg": "The plant isn't done growing yet.",
+      "msg": "你小心翼翼地把树从花盆里刨出来。",
+      "moves": 50,
+      "container": "clay_plant_pot",
+      "target": "apricot_sapling"
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "apricot_cutting_potted",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": 10000,
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_plant_pot",
+          1
+        ]
+      ],
+      [
+        [
+          "apricot_cutting",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_plum_cut",
+    "description": "一棵被砍掉一部分的李树",
+    "name": "剪过枝的李树",
+    "symbol": "7",
+    "color": "green",
+    "move_cost": 0,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT",
+      "HARVESTED"
+    ],
+    "harvest_by_season": [
+      {
+        "seasons": [
+          "summer"
+        ],
+        "id": "plum_harv"
+      }
+    ],
+    "examine_action": "harvested_plant",
+    "transforms_into": "t_tree_plum",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "construction",
+    "id": "c_plant_plum_tree",
+    "group": "plant_plum_tree",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 10,
+    "qualities": [
+      [
+        {
+          "id": "DIG",
+          "level": 2
+        }
+      ]
+    ],
+    "components": [
+      [
+        [
+          "plum_sapling",
+          1
+        ]
+      ]
+    ],
+    "pre_flags": "DIGGABLE",
+    "post_terrain": "t_tree_plum_harvested"
+  },
+  {
+    "type": "construction",
+    "id": "c_take_plum_cutting",
+    "group": "take_plum_tree_cutting",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 5,
+    "qualities": [
+      [
+        {
+          "id": "CUT",
+          "level": 1
+        }
+      ]
+    ],
+    "pre_terrain": "t_tree_plum",
+    "post_terrain": "t_tree_plum_cut"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "plum_cutting",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "李树插条",
+      "str_pl": "李树插条"
+    },
+    "spoils_in": "24 hours",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "从李树上砍下的枝条。它很快就会枯死，尽快把它种进花盆里！",
+    "material": [
+      "veggy"
+    ],
+    "volume": "1500 ml",
+    "weight": "2721 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "plum_sapling",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "李树苗",
+      "str_pl": "李树苗"
+    },
+    "spoils_in": "14 days",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "一棵还未栽种的李树苗，如果你太久不种植，它会慢慢枯死。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "TOOL",
+    "id": "plum_cutting_potted",
+    "price": 120,
+    "name": {
+      "str": "盆栽李树",
+      "str_pl": "盆栽李树"
+    },
+    "symbol": ")",
+    "color": "green",
+    "description": "栽种在花盆里的李树的枝条。它大约需要两个星期成长，之后你就可以把它移植到地里。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 1209600,
+      "//": "2 weeks",
+      "not_ready_msg": "The plant isn't done growing yet.",
+      "msg": "你小心翼翼地把树从花盆里刨出来。",
+      "moves": 50,
+      "container": "clay_plant_pot",
+      "target": "plum_sapling"
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "plum_cutting_potted",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": 10000,
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_plant_pot",
+          1
+        ]
+      ],
+      [
+        [
+          "plum_cutting",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "terrain",
+    "id": "t_tree_coffee_cut",
+    "description": "一棵被砍掉一部分的咖啡树",
+    "name": "剪过枝的咖啡树",
+    "symbol": "7",
+    "color": "green",
+    "move_cost": 0,
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "TREE",
+      "REDUCE_SCENT",
+      "HARVESTED"
+    ],
+    "examine_action": "harvested_plant",
+    "transforms_into": "t_tree_coffee",
+    "bash": {
+      "str_min": 80,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "whack!",
+      "ter_set": "t_dirt",
+      "items": [
+        {
+          "item": "stick",
+          "count": [
+            3,
+            10
+          ]
+        },
+        {
+          "item": "splinter",
+          "count": [
+            10,
+            25
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "construction",
+    "id": "c_plant_coffee_tree",
+    "group": "plant_coffee_tree",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 10,
+    "qualities": [
+      [
+        {
+          "id": "DIG",
+          "level": 2
+        }
+      ]
+    ],
+    "components": [
+      [
+        [
+          "coffee_sapling",
+          1
+        ]
+      ]
+    ],
+    "pre_flags": "DIGGABLE",
+    "post_terrain": "t_tree_coffee_harvested"
+  },
+  {
+    "type": "construction",
+    "id": "c_take_coffee_cutting",
+    "group": "take_coffee_tree_cutting",
+    "category": "FARM_WOOD",
+    "difficulty": 0,
+    "time": 5,
+    "qualities": [
+      [
+        {
+          "id": "CUT",
+          "level": 1
+        }
+      ]
+    ],
+    "pre_terrain": "t_tree_coffee",
+    "post_terrain": "t_tree_coffee_cut"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "coffee_cutting",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "咖啡树插条",
+      "str_pl": "咖啡树插条"
+    },
+    "spoils_in": "24 hours",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "咖啡树上砍下的枝条。它很快就会枯死，尽快把它种进花盆里！",
+    "material": [
+      "veggy"
+    ],
+    "volume": "1500 ml",
+    "weight": "2721 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "coffee_sapling",
+    "category": "other",
+    "price": 120,
+    "name": {
+      "str": "咖啡树苗",
+      "str_pl": "咖啡树苗"
+    },
+    "spoils_in": "14 days",
+    "nutrition": 5,
+    "comestible_type": "FOOD",
+    "tool": "null",
+    "addiction_type": "none",
+    "symbol": "/",
+    "color": "green",
+    "description": "一棵还未栽种的咖啡树苗，如果你太久不种植，它会慢慢枯死。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "charges": 1,
+    "stack_size": 100
+  },
+  {
+    "type": "TOOL",
+    "id": "coffee_cutting_potted",
+    "price": 120,
+    "name": {
+      "str": "盆栽咖啡树",
+      "str_pl": "盆栽咖啡树"
+    },
+    "symbol": ")",
+    "color": "green",
+    "description": "栽种在花盆里的咖啡树枝条。它大约需要两个星期成长，之后你就可以把它移植到地里。",
+    "material": [
+      "veggy"
+    ],
+    "volume": "4500 ml",
+    "weight": "5443 g",
+    "bashing": 0,
+    "cutting": 0,
+    "to_hit": 0,
+    "phase": "solid",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 1209600,
+      "//": "2 weeks",
+      "not_ready_msg": "The plant isn't done growing yet.",
+      "msg": "你小心翼翼地把树从花盆里刨出来。",
+      "moves": 50,
+      "container": "clay_plant_pot",
+      "target": "coffee_sapling"
+    }
+  },
+  {
+    "type": "recipe",
+    "result": "coffee_cutting_potted",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_OTHER",
+    "skill_used": "survival",
+    "difficulty": 0,
+    "time": 10000,
+    "reversible": true,
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_plant_pot",
+          1
+        ]
+      ],
+      [
+        [
+          "coffee_cutting",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "clay_plant_pot",
+    "category": "spare_parts",
+    "name": {
+      "str": "粘土盆栽盆"
+    },
+    "description": "一种大号的种植用陶瓷花盆，底部有孔用于排水。",
+    "weight": "3629 g",
+    "to_hit": 1,
+    "color": "light_gray",
+    "symbol": ")",
+    "material": [
+      "stone"
+    ],
+    "volume": "3000 ml",
+    "bashing": 2,
+    "cutting": 0,
+    "flags": [
+      "NO_SALVAGE"
+    ],
+    "price": 3500
+  },
+  {
+    "type": "recipe",
+    "result": "clay_plant_pot",
+    "id_suffix": "WL_recipes",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_TOOLS",
+    "skill_used": "fabrication",
+    "skills_required": [
+      "survival",
+      1
+    ],
+    "difficulty": 2,
+    "time": 65000,
+    "reversible": false,
+    "autolearn": true,
+    "tools": [
+      [
+        [
+          "brick_kiln",
+          60
+        ],
+        [
+          "kiln",
+          60
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "water",
+          2
+        ],
+        [
+          "water_clean",
+          2
+        ]
+      ],
+      [
+        [
+          "clay_lump",
+          10
+        ]
+      ]
+    ]
+  }
+]

@@ -1,0 +1,463 @@
+[
+  {
+    "id": "TALK_MORLOCK_LIBRARIAN",
+    "type": "talk_topic",
+    "dynamic_line": "你好。有什么东西要我帮忙找吗？",
+    "responses": [
+      {
+        "text": "想要点什么？你看起来像个爱读书的？",
+        "topic": "TALK_MORLOCK_LIBRARIAN_INTRO"
+      },
+      {
+        "text": "有本特别的书我非常想要。你能帮帮我吗？",
+        "topic": "TALK_MORLOCK_LIBRARIAN_REQUEST",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "npc_has_effect": "bookhunter_searching"
+              }
+            },
+            {
+              "not": {
+                "npc_has_effect": "remove_bookhunter_hasbook"
+              }
+            },
+            {
+              "not": {
+                "npc_has_effect": "bookhunter_hasbook"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "找得怎么样，<name_g>？",
+        "condition": {
+          "npc_has_effect": "bookhunter_searching"
+        },
+        "topic": "TALK_MORLOCK_LIBRARIAN_IMPATIENT"
+      },
+      {
+        "text": "书找到了吗？",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DELIVER",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "npc_has_effect": "bookhunter_searching"
+              }
+            },
+            {
+              "npc_has_effect": "bookhunter_hasbook"
+            }
+          ]
+        }
+      },
+      {
+        "text": "再见，寻书人。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_LIBRARIAN_INTRO",
+    "type": "talk_topic",
+    "dynamic_line": "没错。我导出收集书籍，以保存人类文明的记忆。有时候我多出来几本，就会分发给群众。您可以随意从货架上挑选您喜欢的。",
+    "responses": [
+      {
+        "text": "听起来不错。",
+        "topic": "TALK_MORLOCK_LIBRARIAN"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_LIBRARIAN_REQUEST",
+    "type": "talk_topic",
+    "dynamic_line": "我经常在外寻找稀有书籍。只要你指定，我就可以把书卖给你，但我的外勤人员需要花几天才能找到。还有价格——我按时间收费，不按书的价值收费。预付10000美元。如果你还有兴趣，我们可以做笔交易。",
+    "responses": [
+      {
+        "text": "[10000美元] 我想找一本关于吹玻璃的书。",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DEAL",
+        "condition": {
+          "u_has_cash": 1000000
+        },
+        "effect": [
+          {
+            "u_spend_cash": 1000000
+          },
+          {
+            "npc_add_effect": "bookhunter_searching",
+            "duration": 43200
+          },
+          {
+            "npc_add_effect": "bookhunter_glassblowing",
+            "duration": 1008000
+          },
+          {
+            "npc_add_effect": "bookhunter_hasbook",
+            "duration": 1008000
+          }
+        ]
+      },
+      {
+        "text": "[10000美元] 最重要的就是找到一本机器人黑客手册。",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DEAL",
+        "condition": {
+          "u_has_cash": 1000000
+        },
+        "effect": [
+          {
+            "u_spend_cash": 1000000
+          },
+          {
+            "npc_add_effect": "bookhunter_searching",
+            "duration": 43200
+          },
+          {
+            "npc_add_effect": "bookhunter_robots",
+            "duration": 1008000
+          },
+          {
+            "npc_add_effect": "bookhunter_hasbook",
+            "duration": 1008000
+          }
+        ]
+      },
+      {
+        "text": "[10000美元] 我需要制作武士刀的信息，要很多。",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DEAL",
+        "condition": {
+          "u_has_cash": 1000000
+        },
+        "effect": [
+          {
+            "u_spend_cash": 1000000
+          },
+          {
+            "npc_add_effect": "bookhunter_searching",
+            "duration": 43200
+          },
+          {
+            "npc_add_effect": "bookhunter_weapeast",
+            "duration": 1008000
+          },
+          {
+            "npc_add_effect": "bookhunter_hasbook",
+            "duration": 1008000
+          }
+        ]
+      },
+      {
+        "text": "[10000美元] 为一本寿司食谱杀人，我真的做得出来。",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DEAL",
+        "condition": {
+          "u_has_cash": 1000000
+        },
+        "effect": [
+          {
+            "u_spend_cash": 1000000
+          },
+          {
+            "npc_add_effect": "bookhunter_searching",
+            "duration": 43200
+          },
+          {
+            "npc_add_effect": "bookhunter_sushi",
+            "duration": 1008000
+          },
+          {
+            "npc_add_effect": "bookhunter_hasbook",
+            "duration": 1008000
+          }
+        ]
+      },
+      {
+        "text": "[10000美元] 我对化学战有着强烈的兴趣。",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DEAL",
+        "condition": {
+          "u_has_cash": 1000000
+        },
+        "effect": [
+          {
+            "u_spend_cash": 1000000
+          },
+          {
+            "npc_add_effect": "bookhunter_searching",
+            "duration": 43200
+          },
+          {
+            "npc_add_effect": "bookhunter_gaswarfare",
+            "duration": 1008000
+          },
+          {
+            "npc_add_effect": "bookhunter_hasbook",
+            "duration": 1008000
+          }
+        ]
+      },
+      {
+        "text": "[10000美元+食人族] 我想要一本人类食谱，并没有什么特别的原因。",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DEAL",
+        "condition": {
+          "and": [
+            {
+              "u_has_cash": 1000000
+            },
+            {
+              "u_has_flag": "CANNIBAL"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spend_cash": 1000000
+          },
+          {
+            "npc_add_effect": "bookhunter_searching",
+            "duration": 43200
+          },
+          {
+            "npc_add_effect": "bookhunter_cookhuman",
+            "duration": 1008000
+          },
+          {
+            "npc_add_effect": "bookhunter_hasbook",
+            "duration": 1008000
+          }
+        ]
+      },
+      {
+        "text": "[10000美元] 只要是能找到的有关人造皮毛的东西就行。",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DEAL",
+        "condition": {
+          "and": [
+            {
+              "u_has_cash": 1000000
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_spend_cash": 1000000
+          },
+          {
+            "npc_add_effect": "bookhunter_searching",
+            "duration": 43200
+          },
+          {
+            "npc_add_effect": "bookhunter_fauxfur",
+            "duration": 1008000
+          },
+          {
+            "npc_add_effect": "bookhunter_hasbook",
+            "duration": 1008000
+          }
+        ]
+      },
+      {
+        "text": "[1000美元] 我和你一样，也希望保存人类文明。我正在收集全套的《花花公子》，我会不惜一切代价让这个梦想成为现实。",
+        "topic": "TALK_MORLOCK_LIBRARIAN_DEAL",
+        "condition": {
+          "u_has_cash": 100000
+        },
+        "effect": [
+          {
+            "u_spend_cash": 100000
+          },
+          {
+            "npc_add_effect": "bookhunter_searching",
+            "duration": 43200
+          },
+          {
+            "npc_add_effect": "bookhunter_playboy",
+            "duration": 1008000
+          },
+          {
+            "npc_add_effect": "bookhunter_hasbook",
+            "duration": 1008000
+          }
+        ]
+      },
+      {
+        "text": "我现在有点缺钱。要不过几天……",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "u_has_cash": 1000000
+          }
+        }
+      },
+      {
+        "text": "算了。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_LIBRARIAN_DEAL",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_has_effect": "bookhunter_playboy",
+      "yes": "啊，好的。三天后再来拿你的“小本本”。",
+      "no": "那就说好了。三天后回来，我肯定就拿到了你要的书。"
+    },
+    "responses": [
+      {
+        "text": "一定准时！",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_LIBRARIAN_IMPATIENT",
+    "type": "talk_topic",
+    "dynamic_line": "我们还没找到，过几天再来吧。（画外音：当前NPC必须在刷新范围内计时器才能生效）",
+    "responses": [
+      {
+        "text": "我需要那本书！",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_LIBRARIAN_DELIVER",
+    "type": "talk_topic",
+    "dynamic_line": "我们找到了你要的书。祝读得开心。",
+    "responses": [
+      {
+        "text": "玻璃吹制工艺",
+        "condition": {
+          "npc_has_effect": "bookhunter_glassblowing"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "glassblowing_book"
+          },
+          {
+            "npc_add_effect": "remove_bookhunter_glassblowing",
+            "duration": 1
+          }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "机器人简单造",
+        "condition": {
+          "npc_has_effect": "bookhunter_robots"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "textbook_robots"
+          },
+          {
+            "npc_add_effect": "remove_bookhunter_hasbook",
+            "duration": 1
+          }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "*武士锻造图册*",
+        "condition": {
+          "npc_has_effect": "bookhunter_weapeast"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "textbook_weapeast"
+          },
+          {
+            "npc_add_effect": "remove_bookhunter_hasbook",
+            "duration": 1
+          }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "寿司简单做",
+        "condition": {
+          "npc_has_effect": "bookhunter_sushi"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "cookbook_sushi"
+          },
+          {
+            "npc_add_effect": "remove_bookhunter_hasbook",
+            "duration": 1
+          }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "化学战中的艺术与科学",
+        "condition": {
+          "npc_has_effect": "bookhunter_gaswarfare"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "textbook_gaswarfare"
+          },
+          {
+            "npc_add_effect": "remove_bookhunter_hasbook",
+            "duration": 1
+          }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "人类烹饪大全",
+        "condition": {
+          "npc_has_effect": "bookhunter_cookhuman"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "cookbook_human"
+          },
+          {
+            "npc_add_effect": "remove_bookhunter_hasbook",
+            "duration": 1
+          }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "新时尚：更友善且人道",
+        "condition": {
+          "npc_has_effect": "bookhunter_fauxfur"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "recipe_fauxfur"
+          },
+          {
+            "npc_add_effect": "remove_bookhunter_hasbook",
+            "duration": 1
+          }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "花花公子",
+        "condition": {
+          "npc_has_effect": "bookhunter_playboy"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "mag_porn",
+            "count": 12
+          },
+          {
+            "npc_add_effect": "remove_bookhunter_hasbook",
+            "duration": 1
+          }
+        ],
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "等一下。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

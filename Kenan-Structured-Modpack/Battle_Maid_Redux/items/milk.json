@@ -1,0 +1,98 @@
+[
+  {
+    "id": "little_maid_R18_tane",
+    "type": "TOOL",
+    "category": "other",
+    "name": {
+      "str": "小女仆宠物（已怀孕）"
+    },
+    "description": "肚子越来越大的小女仆。她微微地脸红着，优雅地向你微笑。你可以在28天后给她挤奶。",
+    "weight": "34000 g",
+    "volume": "10 L",
+    "price": "600 USD",
+    "material": [
+      "maid"
+    ],
+    "symbol": "m",
+    "color": "white",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 403200,
+      "not_ready_msg": "Her cheeks blush as you pet her head. She's not quite ready yet.",
+      "msg": "小女仆慈爱地揉着肚子。她很快就会开始产奶。",
+      "moves": 0,
+      "target": "little_maid_R18_milk"
+    }
+  },
+  {
+    "id": "little_maid_R18_milk",
+    "type": "TOOL",
+    "category": "other",
+    "name": {
+      "str": "小女仆宠物（可挤奶）"
+    },
+    "description": "腹部和胸部肿胀得很厉害的小女仆。她用一双可怜兮兮的眼睛盯着你。你可以给她挤奶。",
+    "weight": "36000 g",
+    "volume": "11250 ml",
+    "price": "600 USD",
+    "material": [
+      "maid"
+    ],
+    "symbol": "m",
+    "color": "white"
+  },
+  {
+    "id": "little_maid_R18_milk2",
+    "type": "TOOL",
+    "category": "other",
+    "name": {
+      "str": "小女仆宠物（已挤奶）"
+    },
+    "description": "刚被挤过奶的小女仆。她脸上洋溢着满足的表情，皮肤闪闪发光。你可以在23小时后再给她挤奶。",
+    "weight": "36000 g",
+    "volume": "11250 ml",
+    "price": "600 USD",
+    "material": [
+      "maid"
+    ],
+    "symbol": "m",
+    "color": "white",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 13800,
+      "not_ready_msg": "The little maid gently took your hand and placed it on her belly. It feels very warm...",
+      "msg": "那个小女仆靠近你。她可怜兮兮地望着你，等着被挤奶。",
+      "moves": 0,
+      "target": "little_maid_R18"
+    }
+  },
+  {
+    "id": "maid_aphrodisiac",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "name": {
+      "str": "女仆的春药"
+    },
+    "description": "一种春药，如果你喝了它，能提高你的精力。如果你把它喂给一个小女仆，她就会下蛋。",
+    "weight": "322 g",
+    "volume": "250 ml",
+    "material": [
+      "veggy"
+    ],
+    "symbol": "%",
+    "color": "pink",
+    "addiction_type": "none",
+    "spoils_in": "0 hours",
+    "stim": 0,
+    "container": "bottle_plastic",
+    "quench": 10,
+    "healthy": 1,
+    "addiction_potential": 0,
+    "nutrition": 10,
+    "price": 300,
+    "tool": "null",
+    "phase": "liquid",
+    "charges": 1,
+    "fun": 20
+  }
+]

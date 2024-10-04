@@ -1,0 +1,264 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "flintlock_large",
+    "name": "大口径药筒",
+    "default": "sp_large_ammo"
+  },
+  {
+    "id": "sp_large_ammo",
+    "looks_like": "flintlock_ammo",
+    "type": "AMMO",
+    "name": {
+      "str": "大口径药筒"
+    },
+    "description": "一种装有黑火药和金属弹丸的纸筒药卷。历史上曾用于缩短前膛枪的装填时间。这种药筒比大多数型号都要大。",
+    "weight": "65 g",
+    "volume": "280 ml",
+    "price": "11 USD",
+    "price_postapoc": "12 USD",
+    "material": [
+      "lead",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "count": 30,
+    "stack_size": 10,
+    "ammo_type": "flintlock_large",
+    "range": 7,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 65
+    },
+    "dispersion": 40,
+    "recoil": 1700,
+    "loudness": 75,
+    "effects": [
+      "COOKOFF",
+      "MUZZLE_SMOKE",
+      "BLACKPOWDER"
+    ]
+  },
+  {
+    "id": "sp_large_shot",
+    "looks_like": "flintlock_ammo",
+    "type": "AMMO",
+    "name": {
+      "str": "大口径子弹"
+    },
+    "description": "一种装有黑火药和金属颗粒的纸筒药卷。历史上曾用于缩短前膛枪的装填时间。这种药筒比大多数型号都要大。",
+    "weight": "65 g",
+    "volume": "280 ml",
+    "price": "11 USD",
+    "price_postapoc": "12 USD",
+    "material": [
+      "lead",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "count": 30,
+    "stack_size": 10,
+    "ammo_type": "flintlock_large",
+    "range": 5,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 55
+    },
+    "dispersion": 20,
+    "recoil": 1700,
+    "loudness": 90,
+    "effects": [
+      "COOKOFF",
+      "MUZZLE_SMOKE",
+      "SHOT",
+      "BLACKPOWDER"
+    ]
+  },
+  {
+    "id": "sp_large_ammo_exp",
+    "looks_like": "flintlock_ammo",
+    "type": "AMMO",
+    "name": {
+      "str": "大口径药筒弹壳"
+    },
+    "description": "一种装有黑火药和金属弹丸的纸筒药卷。历史上曾用于缩短前膛枪的装填时间。这种药筒比大多数型号都要大，含有爆炸物。",
+    "weight": "65 g",
+    "volume": "280 ml",
+    "price": "81 USD",
+    "price_postapoc": "42 USD",
+    "material": [
+      "lead",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "count": 30,
+    "stack_size": 10,
+    "ammo_type": "flintlock_large",
+    "range": 7,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 15
+    },
+    "dispersion": 40,
+    "recoil": 1700,
+    "loudness": 75,
+    "explosion": {
+      "power": 160,
+      "shrapnel": {
+        "casing_mass": 272,
+        "fragment_mass": 0.3
+      }
+    },
+    "effects": [
+      "COOKOFF",
+      "MUZZLE_SMOKE",
+      "CUSTOM_EXPLOSION"
+    ]
+  },
+  {
+    "id": "sp_large_ammo_bean",
+    "looks_like": "flintlock_ammo",
+    "type": "AMMO",
+    "name": {
+      "str": "大口径沙包弹药筒"
+    },
+    "description": "一种装有黑火药和金属弹丸的纸筒药卷。历史上曾用于缩短前膛枪的装填时间。这种药筒比大多数型号都要大，里面装有大型沙包弹，能够使敌人陷入强烈的眩晕。",
+    "weight": "70 g",
+    "volume": "280 ml",
+    "price": "11 USD",
+    "price_postapoc": "12 USD",
+    "material": [
+      "lead",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "count": 30,
+    "stack_size": 10,
+    "ammo_type": "flintlock_large",
+    "range": 7,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 15
+    },
+    "dispersion": 40,
+    "recoil": 1500,
+    "loudness": 75,
+    "effects": [
+      "COOKOFF",
+      "MUZZLE_SMOKE",
+      "BLACKPOWDER",
+      "LARGE_BEANBAG",
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "sp_large_ammo_acid",
+    "looks_like": "flintlock_ammo",
+    "type": "AMMO",
+    "name": {
+      "str": "大口径酸液药筒"
+    },
+    "description": "一种装有黑火药和金属弹丸的纸筒药卷。历史上曾用于缩短前膛枪的装填时间。这种药筒比大多数型号都要大，里面装有一枚酸液炸弹，能够制造一片腐蚀性区域。",
+    "weight": "70 g",
+    "volume": "280 ml",
+    "price": "11 USD",
+    "price_postapoc": "12 USD",
+    "material": [
+      "lead",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "count": 30,
+    "stack_size": 10,
+    "ammo_type": "flintlock_large",
+    "range": 7,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 15
+    },
+    "dispersion": 40,
+    "recoil": 1500,
+    "loudness": 75,
+    "effects": [
+      "COOKOFF",
+      "MUZZLE_SMOKE",
+      "ACIDBOMB"
+    ]
+  },
+  {
+    "id": "sp_large_ammo_net",
+    "looks_like": "flintlock_ammo",
+    "type": "AMMO",
+    "name": {
+      "str": "大口径网缚药筒"
+    },
+    "description": "一种装有黑火药和金属弹丸的纸筒药卷。历史上曾用于缩短前膛枪的装填时间。这种药筒比大多数型号都要大，里面装有一张网，能够缠住敌人。",
+    "weight": "70 g",
+    "volume": "280 ml",
+    "price": "11 USD",
+    "price_postapoc": "12 USD",
+    "material": [
+      "lead",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "count": 30,
+    "stack_size": 10,
+    "ammo_type": "flintlock_large",
+    "range": 7,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 15
+    },
+    "dispersion": 40,
+    "recoil": 1500,
+    "loudness": 75,
+    "effects": [
+      "COOKOFF",
+      "MUZZLE_SMOKE",
+      "BEANBAG",
+      "TANGLE"
+    ]
+  },
+  {
+    "id": "sp_large_ammo_flame",
+    "looks_like": "flintlock_ammo",
+    "type": "AMMO",
+    "name": {
+      "str": "大口径火焰弹药筒"
+    },
+    "description": "一种装有黑火药和金属弹丸的纸筒药卷。历史上曾用于缩短前膛枪的装填时间。这种药筒比大多数型号都要大，里面装着易燃的炸药，用来点燃地形和敌人。",
+    "weight": "70 g",
+    "volume": "280 ml",
+    "price": "11 USD",
+    "price_postapoc": "12 USD",
+    "material": [
+      "lead",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "count": 30,
+    "stack_size": 10,
+    "ammo_type": "flintlock_large",
+    "range": 7,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 15
+    },
+    "dispersion": 40,
+    "recoil": 1500,
+    "loudness": 75,
+    "effects": [
+      "COOKOFF",
+      "MUZZLE_SMOKE",
+      "FLAME"
+    ]
+  }
+]

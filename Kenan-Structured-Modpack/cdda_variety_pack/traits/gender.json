@@ -1,0 +1,146 @@
+[
+  {
+    "id": "gender_male",
+    "type": "mutation",
+    "name": {
+      "str": "性别：男性或大部分为男性"
+    },
+    "description": "你用一种传统的男性化的方式表现自己。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true
+  },
+  {
+    "id": "gender_female",
+    "type": "mutation",
+    "name": {
+      "str": "性别：女性或大部分为女性"
+    },
+    "description": "你用一种传统的女性化的方式表现自己。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true
+  },
+  {
+    "id": "gender_transgender",
+    "type": "mutation",
+    "name": {
+      "str": "性别：跨性别者"
+    },
+    "description": "你的表现与出生时的性别不同。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "cancels": [
+      "gender_cis"
+    ]
+  },
+  {
+    "id": "gender_non_conforming",
+    "type": "mutation",
+    "name": {
+      "str": "性别：非常规性别"
+    },
+    "description": "你不符合传统的男性或女性的表现。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "cancels": [
+      "gender_cis"
+    ]
+  },
+  {
+    "id": "gender_non_binary",
+    "type": "mutation",
+    "name": {
+      "str": "性别：非二元性别"
+    },
+    "description": "你的表现既有女性特征又有男性特征。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "cancels": [
+      "gender_cis"
+    ]
+  },
+  {
+    "id": "gender_cis",
+    "type": "mutation",
+    "name": {
+      "str": "性别：顺性别者"
+    },
+    "description": "你的表现与出生时的性别相同。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "cancels": [
+      "gender_non_conforming",
+      "gender_transgender",
+      "gender_non_binary"
+    ]
+  },
+  {
+    "id": "gender_transgender_male",
+    "type": "mutation",
+    "name": {
+      "str": "性别：跨性别男性"
+    },
+    "description": "你的表现与出生时的性别不同。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "cancels": [
+      "gender_cis",
+      "gender_transgender",
+      "gender_transgender_female"
+    ]
+  },
+  {
+    "id": "gender_transgender_female",
+    "type": "mutation",
+    "name": {
+      "str": "性别：跨性别女性"
+    },
+    "description": "你的表现与出生时的性别不同。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "cancels": [
+      "gender_cis",
+      "gender_transgender",
+      "gender_transgender_male"
+    ]
+  },
+  {
+    "id": "gender_transgender_agender",
+    "type": "mutation",
+    "name": {
+      "str": "性别：无性别者"
+    },
+    "description": "你同时表现出男性和女性的特征，或者不遵循正常的性别标准，或者不想与某个性别保持一致。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true,
+    "cancels": [
+      "gender_cis"
+    ]
+  }
+]

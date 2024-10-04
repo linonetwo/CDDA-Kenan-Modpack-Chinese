@@ -1,0 +1,106 @@
+[
+  {
+    "type": "scenario",
+    "id": "PRM_Doomguy",
+    "name": "DOOM战士",
+    "points": -4,
+    "description": "在地狱大开杀戒干掉恶魔之后，你发现他们溜到了地球上。",
+    "start_name": "DOOM建筑",
+    "allowed_locs": [
+      "hell_church",
+      "doomlabs",
+      "hell_fort"
+    ],
+    "professions": [
+      "doomguy",
+      "riot_cop",
+      "a pisskop"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "riot_cop",
+    "name": "逃离暴乱",
+    "points": -3,
+    "description": "你被派去镇压最后一场真正的暴乱;当暴乱者早已停止呼吸却仍然继续前进时，开始你的最后一次逃亡吧。",
+    "start_name": "坚守于公共设施",
+    "allowed_locs": [
+      "sloc_bookstore",
+      "sloc_grocery_store",
+      "sloc_police",
+      "sloc_garage",
+      "sloc_library",
+      "sloc_hospital",
+      "sloc_mall_food_court",
+      "sloc_mall_loading_area",
+      "sloc_church",
+      "sloc_cemetery",
+      "public_cemetery"
+    ],
+    "flags": [
+      "SUR_START"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "isolationist",
+    "name": "城镇之外",
+    "points": 1,
+    "description": "当炸弹落下时，你在文明之外;你甚至不知道末日已经来临，也不知道每个人都死了。这种无知会让你免于其他人的命运吗？",
+    "start_name": "城镇之外",
+    "allowed_locs": [
+      "Swamp Shack",
+      "campground",
+      "survivalist farm",
+      "farm unsettled",
+      "cabin_woods"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "teleported",
+    "name": "异空",
+    "points": -1,
+    "description": "你在别的地方;世界不是这样的。那里出现了某种亮光。现在你在这里了。它在哪里，你为什么在这里，你不知道。",
+    "start_name": "扭曲地带",
+    "allowed_locs": [
+      "sky anomalie",
+      "sludge pit",
+      "Strange Cabin",
+      "Crater",
+      "doom_lab_warp",
+      "Standing stones",
+      "Derelict Property"
+    ],
+    "professions": [
+      "churl",
+      "unemployed",
+      "riot_cop",
+      "doomguy",
+      "huntsman",
+      "mutant_crafter",
+      "a pisskop",
+      "scoundrel",
+      "recruit",
+      "rifleman",
+      "specops",
+      "mili_pilot",
+      "mili_medic",
+      "mili_burner",
+      "hazmat_unit",
+      "survivalist",
+      "crackhead",
+      "tweaker",
+      "salesman",
+      "hitchhiker",
+      "clown",
+      "lost_sub",
+      "blackbelt",
+      "archaeologist",
+      "naturalist",
+      "reenactor",
+      "jdelinquent",
+      "photojournalist"
+    ]
+  }
+]

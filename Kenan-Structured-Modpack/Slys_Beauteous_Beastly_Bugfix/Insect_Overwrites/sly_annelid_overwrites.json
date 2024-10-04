@@ -1,0 +1,81 @@
+[
+  {
+    "id": "mon_worm_small",
+    "type": "MONSTER",
+    "name": {
+      "str": "大型蠕虫"
+    },
+    "description": "一只令人不安的大型变异地下生物，可能是从蚯蚓之类变异而来的。长有吸血鬼般的尖牙利齿和与你膝盖同高的修长体形，边上肯定还有更多同类藏在地底下。",
+    "default_faction": "worm",
+    "bodytype": "snake",
+    "species": [
+      "WORM"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 20,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "s",
+    "color": "pink",
+    "aggression": 10,
+    "morale": 40,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_cut": 0,
+    "armor_bash": 2,
+    "harvest": "mutant_meatslug",
+    "looks_like": "mon_worm",
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_worm"
+    },
+    "flags": [
+      "DIGS",
+      "HEARS",
+      "GOODHEARING"
+    ]
+  },
+  {
+    "id": "mon_halfworm",
+    "type": "MONSTER",
+    "name": {
+      "str": "半截巨蠕虫"
+    },
+    "description": "一个巨虫被切断的部份，体液从断肢部分渗出，还在不断扭动着。",
+    "default_faction": "worm",
+    "bodytype": "snake",
+    "species": [
+      "WORM"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 20,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "s",
+    "color": "pink",
+    "aggression": 10,
+    "morale": 40,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_cut": 0,
+    "armor_bash": 2,
+    "harvest": "mutant_meatslug",
+    "upgrades": {
+      "age_grow": 10,
+      "into": "mon_worm"
+    },
+    "flags": [
+      "DIGS",
+      "HEARS",
+      "GOODHEARING"
+    ]
+  }
+]

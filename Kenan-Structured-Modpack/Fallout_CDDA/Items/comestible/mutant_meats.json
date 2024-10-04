@@ -1,0 +1,625 @@
+[
+  {
+    "id": "meat_mirelurk",
+    "copy-from": "flesh",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "生肉",
+      "str_pl": "生肉"
+    },
+    "description": "一份美味新鲜的泥沼蟹肉。可以生吃，但煮得更好。有微量的诱变成分，可能生吃不是最好的主意……",
+    "weight": "148 g",
+    "volume": "250 ml",
+    "price": 500,
+    "spoils_in": "6 days",
+    "healthy": 5,
+    "fun": 8,
+    "vitamins": [
+      [
+        "vitB",
+        9
+      ],
+      [
+        "mutagen_fish",
+        60
+      ]
+    ],
+    "calories": 121
+  },
+  {
+    "id": "meat_mirelurk_cooked",
+    "copy-from": "meat_mirelurk",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "烤泥沼蟹肉",
+      "str_pl": "烤泥沼蟹肉"
+    },
+    "description": "一份刚煮好的泥沼蟹肉。很有营养，而且诱变成分都被煮出来了。但保质期不会持续太久",
+    "proportional": {
+      "price": 1.5
+    },
+    "spoils_in": "3 days",
+    "healthy": 5,
+    "fun": 16,
+    "parasites": 0,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "mirelurk_jerky",
+    "copy-from": "meat_mirelurk",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "泥沼蟹肉干",
+      "str_pl": "泥沼蟹肉干"
+    },
+    "description": "一条特别准备的泥沼蟹肉。不幸的是，它保留了诱变特性，但从理论上讲，它可以永久保存。",
+    "color": "light_gray",
+    "spoils_in": "0 hours",
+    "stack_size": 4,
+    "parasites": 0,
+    "quench": -5,
+    "healthy": 3,
+    "fun": 16,
+    "vitamins": [
+      [
+        "vitA",
+        0
+      ],
+      [
+        "vitC",
+        0
+      ],
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        1
+      ],
+      [
+        "vitB",
+        42
+      ],
+      [
+        "mutagen_fish",
+        60
+      ]
+    ],
+    "proportional": {
+      "price": 2,
+      "volume": 0.28,
+      "weight": 0.28
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cake_mirelurk",
+    "name": {
+      "str": "泥沼蟹糕",
+      "str_pl": "泥沼蟹糕"
+    },
+    "weight": "201 g",
+    "color": "yellow",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "calories": 470,
+    "description": "一份美味的金黄色的酥炸玉米饼。烹饪去除了诱变性，所以你不会成为一个可怕的鱼人。",
+    "price": 500,
+    "material": [
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 10,
+    "rot_spawn": "GROUP_CARRION",
+    "vitamins": [
+      [
+        "iron",
+        1
+      ],
+      [
+        "vitB",
+        23
+      ]
+    ],
+    "rot_spawn_chance": 5
+  },
+  {
+    "id": "meat_mirelurk_pure",
+    "copy-from": "flesh",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "熟肉",
+      "str_pl": "熟肉"
+    },
+    "description": "一份美味新鲜的泥沼蟹肉排。切碎后并排空，使诱变成分最终减少到无害量。",
+    "weight": "148 g",
+    "volume": "250 ml",
+    "price": 500,
+    "spoils_in": "6 days",
+    "healthy": 5,
+    "fun": 8,
+    "parasites": 0,
+    "vitamins": [
+      [
+        "vitB",
+        9
+      ]
+    ],
+    "calories": 121
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "soup_mirelurk",
+    "name": {
+      "str": "泥沼蟹汤"
+    },
+    "weight": "265 g",
+    "color": "light_gray",
+    "spoils_in": "5 days",
+    "container": "can_food",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 8,
+    "healthy": 5,
+    "calories": 111,
+    "description": "营养丰富，美味可口的泥沼蟹汤。",
+    "price": 400,
+    "material": [
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        3
+      ],
+      [
+        "vitC",
+        7
+      ],
+      [
+        "iron",
+        1
+      ],
+      [
+        "calcium",
+        1
+      ],
+      [
+        "vitB",
+        5
+      ]
+    ],
+    "fun": 8
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "soup_commonwealth_chowder",
+    "name": {
+      "str": "联邦杂烩"
+    },
+    "weight": "261 g",
+    "color": "white",
+    "container": "can_food",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 8,
+    "healthy": 1,
+    "calories": 493,
+    "description": "一种由土豆、蔬菜和蘑菇做成的丰盛可口的泥沼蟹杂烩。它尝到了希望的味道。",
+    "price": 500,
+    "material": [
+      "flesh",
+      "milk",
+      "veggy",
+      "mushroom"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "fun": 18,
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ],
+    "vitamins": [
+      [
+        "vitA",
+        3
+      ],
+      [
+        "vitC",
+        2
+      ],
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        1
+      ],
+      [
+        "vitB",
+        2
+      ]
+    ]
+  },
+  {
+    "id": "claw_mirelurk",
+    "copy-from": "flesh",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "生泥沼蟹钳",
+      "str_pl": "生泥沼蟹钳"
+    },
+    "calories": 493,
+    "description": "一只未加工的爪子。生的可食用，但携带比正常肉更强的诱变剂",
+    "weight": "148 g",
+    "volume": "250 ml",
+    "price": 500,
+    "spoils_in": "6 days",
+    "healthy": 5,
+    "fun": 8,
+    "vitamins": [
+      [
+        "vitB",
+        9
+      ],
+      [
+        "mutagen_fish",
+        60
+      ]
+    ]
+  },
+  {
+    "id": "claw_mirelurk_cooked",
+    "copy-from": "claw_mirelurk",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "水煮银爪",
+      "str_pl": "水煮银爪"
+    },
+    "calories": 493,
+    "description": "刚煮好的米卢克爪。很有营养，而且诱变剂是煮出来的。但不会持续那么久",
+    "proportional": {
+      "price": 1.5
+    },
+    "spoils_in": "3 days",
+    "healthy": 5,
+    "fun": 16,
+    "parasites": 0,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "claw_mirelurk_cooked_lemon",
+    "copy-from": "claw_mirelurk",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "柠檬爪",
+      "str_pl": "柠檬爪"
+    },
+    "calories": 693,
+    "description": "刚煮好的米卢克爪。很有营养，而且诱变剂是煮出来的。用柠檬煮，也能维持相当长的时间。",
+    "proportional": {
+      "price": 1.5
+    },
+    "spoils_in": "8 days",
+    "healthy": 5,
+    "fun": 32,
+    "parasites": 0,
+    "vitamins": [
+      [
+        "vitC",
+        18
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "id": "meat_gecko",
+    "copy-from": "flesh",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "一大块生壁虎肉",
+      "str_pl": "生壁虎肉块"
+    },
+    "description": "刚屠宰的壁虎肉。你可以生吃，但你会后悔的。",
+    "weight": "296 g",
+    "volume": "250 ml",
+    "price": 500,
+    "spoils_in": "7 days",
+    "calories": 402,
+    "healthy": -5,
+    "fun": -10,
+    "cooks_like": "meat_cooked",
+    "vitamins": [
+      [
+        "vitC",
+        13
+      ],
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        53
+      ],
+      [
+        "vitB",
+        778
+      ]
+    ],
+    "flags": [
+      "SMOKABLE",
+      "RAW"
+    ],
+    "smoking_result": "meat_gecko_smoked"
+  },
+  {
+    "id": "meat_gecko_cooked",
+    "copy-from": "flesh",
+    "weight": "296 g",
+    "volume": "250 ml",
+    "spoils_in": "1 day",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "普通壁虎牛排"
+    },
+    "description": "这是一大块刚煮好的壁虎肉。它很饱，很有营养，但没煮过，有点淡。",
+    "price": 750,
+    "healthy": 1,
+    "parasites": 0,
+    "calories": 402,
+    "vitamins": [
+      [
+        "vitC",
+        16
+      ],
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        69
+      ],
+      [
+        "vitB",
+        778
+      ]
+    ],
+    "flags": [
+      "EATEN_HOT",
+      "NUTRIENT_OVERRIDE"
+    ]
+  },
+  {
+    "id": "meat_gecko_smoked",
+    "copy-from": "meat_gecko_cooked",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "熏肉"
+    },
+    "description": "美味的壁虎肉，经过大量熏制以保存。可以进一步熏制，使其完全脱水。",
+    "color": "brown",
+    "spoils_in": "38 days",
+    "quench": -1,
+    "fun": 5,
+    "flags": [
+      "EATEN_HOT",
+      "SMOKED",
+      "SMOKABLE"
+    ],
+    "smoking_result": "dry_meat_gecko"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "dry_meat_gecko",
+    "name": {
+      "str": "脱水壁虎肉"
+    },
+    "copy-from": "meat_gecko_cooked",
+    "weight": "85 g",
+    "color": "red",
+    "spoils_in": "720 days",
+    "quench": -3,
+    "description": "脱水壁虎片。经过适当的储存，这种干食品将在难以置信的长时间内保持可食用。",
+    "price": 900,
+    "material": [
+      "flesh"
+    ],
+    "primary_material": "cured_meat",
+    "volume": "125 ml",
+    "flags": [
+      "EDIBLE_FROZEN"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "rehydrated_meat_gecko",
+    "name": {
+      "str": "水发壁虎肉"
+    },
+    "copy-from": "meat_cooked",
+    "color": "light_red",
+    "description": "重组壁虎片，这是更愉快的吃现在他们已经补充水分。",
+    "price": 900,
+    "delete": {
+      "flags": [
+        "NUTRIENT_OVERRIDE"
+      ]
+    },
+    "fun": 2
+  },
+  {
+    "id": "eye_gecko",
+    "type": "COMESTIBLE",
+    "copy-from": "flesh",
+    "looks_like": "offal",
+    "name": {
+      "str": "壁虎之眼",
+      "str_pl": "壁虎眼"
+    },
+    "description": "壁虎粗糙的眼睛。对某些人来说绝对恶心，但如果烹调得当可以食用。",
+    "weight": "56 g",
+    "volume": "250 ml",
+    "color": "pink",
+    "charges": 4,
+    "spoils_in": "1 day",
+    "healthy": -2,
+    "quench": 2,
+    "fun": -10,
+    "calories": 50,
+    "vitamins": [
+      [
+        "vitA",
+        0
+      ],
+      [
+        "vitC",
+        9
+      ],
+      [
+        "calcium",
+        0
+      ],
+      [
+        "iron",
+        14
+      ],
+      [
+        "vitB",
+        22
+      ]
+    ]
+  },
+  {
+    "id": "eye_gecko_cooked",
+    "type": "COMESTIBLE",
+    "copy-from": "eye_gecko",
+    "looks_like": "offal_cooked",
+    "name": {
+      "str": "熟壁虎眼",
+      "str_pl": "熟壁虎眼"
+    },
+    "description": "壁虎的凸出的眼睛，被烹调成可以吃的东西。还是很恶心。",
+    "parasites": 0,
+    "delete": {
+      "flags": [
+        "RAW"
+      ]
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "raw_skin_gecko",
+    "category": "spare_parts",
+    "name": {
+      "str": "生壁虎皮"
+    },
+    "weight": "100 g",
+    "volume": "125 ml",
+    "color": "pink",
+    "spoils_in": "1 day 12 hours",
+    "comestible_type": "FOOD",
+    "symbol": ",",
+    "quench": -2,
+    "healthy": -1,
+    "calories": 350,
+    "description": "一张小心翼翼从壁虎身上剥下并折叠起来的生皮。你可以加工它以方便储存和鞣制，你也可以吃了它，如果你够绝望的话。",
+    "price": 330,
+    "material": [
+      "flesh"
+    ],
+    "flags": "TRADER_AVOID",
+    "stack_size": 1,
+    "fun": -12
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "raw_skin_gecko_gold",
+    "category": "spare_parts",
+    "name": {
+      "str": "生金壁虎皮"
+    },
+    "weight": "100 g",
+    "volume": "125 ml",
+    "color": "pink",
+    "spoils_in": "1 day 12 hours",
+    "comestible_type": "FOOD",
+    "symbol": ",",
+    "quench": -2,
+    "healthy": -1,
+    "calories": 350,
+    "description": "一张小心翼翼从金色壁虎身上剥下并折叠起来有光泽的生皮。你可以加工它以方便储存和鞣制，你也可以吃了它，如果你够绝望的话。",
+    "price": 330,
+    "material": [
+      "flesh"
+    ],
+    "flags": "TRADER_AVOID",
+    "stack_size": 1,
+    "fun": -12
+  },
+  {
+    "type": "GENERIC",
+    "id": "leather_gecko",
+    "symbol": ",",
+    "color": "light_gray",
+    "name": {
+      "str": "壁虎皮小片",
+      "str_pl": "壁虎皮小片"
+    },
+    "description": "一小块银色皮革，可以用来做坚韧的衣服。",
+    "price": "20 USD",
+    "material": [
+      "leather_gecko",
+      "flesh"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ],
+    "weight": "100 g",
+    "volume": "250 ml",
+    "category": "spare_parts",
+    "to_hit": -1
+  },
+  {
+    "type": "GENERIC",
+    "id": "leather_gecko_gold",
+    "symbol": ",",
+    "color": "yellow",
+    "name": {
+      "str": "金色壁虎皮小片",
+      "str_pl": "金色壁虎皮小片"
+    },
+    "description": "一小块金黄色的皮革，可以用来做坚韧而漂亮的衣服。",
+    "price": "20 USD",
+    "material": [
+      "leather_gecko_gold",
+      "flesh"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ],
+    "weight": "100 g",
+    "volume": "250 ml",
+    "category": "spare_parts",
+    "to_hit": -1
+  }
+]

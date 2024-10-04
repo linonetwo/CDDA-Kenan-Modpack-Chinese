@@ -1,0 +1,206 @@
+[
+  {
+    "id": "TALK_gallian_guard_start",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "你好，小姐，你想从我这里得到什么？",
+      "no": "你好，有什么事情吗？"
+    },
+    "responses": [
+      {
+        "text": "你是如何为加利亚当兵的？",
+        "topic": "TALK_gallian_guard_go"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_gallian_guard_go",
+    "type": "talk_topic",
+    "dynamic_line": "这是相当艰苦的工作，出于安全原因，我不能说太多，但我可以告诉你一点。想象一下无穷无尽的沉闷中穿插着来自帝国进攻的直接威胁，这就是当兵的感觉。工资不是很高，但你知道你是在为你的团队、家乡和国家而战。",
+    "responses": [
+      {
+        "text": "谢谢你的信息。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_gallian_officer_start",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "你好，小姐，你想从我这里得到什么？我很忙。",
+      "no": "你好，你想从我这里得到什么？我很忙。"
+    },
+    "responses": [
+      {
+        "text": "作为一名军官，你目前在做什么？",
+        "topic": "TALK_gallian_officer_go"
+      },
+      {
+        "text": "你有任务给我吗？",
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_gallian_officer_go",
+    "type": "talk_topic",
+    "dynamic_line": "在加利亚尼军队当军官很忙，尤其是在战时。担心自己的安全是一回事，担心你指挥下的所有男女完全是另一回事！",
+    "responses": [
+      {
+        "text": "谢谢你的信息。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_VAL_OFFICERKILL",
+    "type": "mission_definition",
+    "name": {
+      "str": "击杀帝国士兵"
+    },
+    "description": "一群联合帝国的士兵已经开始侦察当地，找到并击杀他们。",
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 5,
+    "value": 50000,
+    "end": {
+      "effect": [
+        {
+          "u_spawn_item": "1st_aid",
+          "count": 2
+        },
+        {
+          "u_spawn_item": "gal792_clip",
+          "count": 3
+        },
+        {
+          "u_spawn_item": "valrifmag1",
+          "count": 2
+        },
+        {
+          "u_spawn_item": "val_gall1"
+        },
+        {
+          "u_spawn_item": "val_gall3R"
+        },
+        {
+          "u_spawn_item": "gal792_b",
+          "count": 60
+        }
+      ]
+    },
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "field",
+        "reveal_radius": 2,
+        "random": true,
+        "search_range": 6
+      },
+      "update_mapgen": {
+        "rows": [
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "                        ",
+          "          M             ",
+          "            b b         ",
+          "         b b b@bb       ",
+          "             b b        ",
+          "                        ",
+          "                        "
+        ],
+        "terrain": {
+          "@": "t_grass",
+          "b": "t_dirt",
+          "M": "t_dirt"
+        },
+        "place_nested": [
+          {
+            "chunks": [
+              [
+                "ishock_spawn",
+                30
+              ],
+              [
+                "null",
+                70
+              ]
+            ],
+            "x": 5,
+            "y": 16
+          },
+          {
+            "chunks": [
+              [
+                "isniper_spawn",
+                30
+              ],
+              [
+                "null",
+                70
+              ]
+            ],
+            "x": 14,
+            "y": 16
+          }
+        ],
+        "place_npcs": [
+          {
+            "class": "imperial_scout",
+            "x": 12,
+            "y": 12,
+            "target": true
+          },
+          {
+            "class": "imperial_scout",
+            "x": 9,
+            "y": 9
+          },
+          {
+            "class": "imperial_shock",
+            "x": 3,
+            "y": 9
+          }
+        ]
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "我们需要帮助派遣一些帝国军队入侵我们的区域。",
+      "offer": "在加里安前线的这个区域，我们已经被拉长了。我们现有的大部分小队不是在防御就是在探测敌人的前线。我们需要额外的帮助来派遣一支已经在我们区域建立起来的帝国军队。你愿意帮助我们吗？",
+      "accepted": "我期待看到你的结果。",
+      "rejected": "考虑到这一点，被拒绝后，加里娅变得更虚弱了。",
+      "advice": "尽量与小鬼保持距离，他们的盔甲比我们的厚。",
+      "inquire": "你完成你的任务了吗？",
+      "success": "加利亚感谢你的服务",
+      "success_lie": "你这样做对我们有什么好处？",
+      "failure": "帝国又一次侵占了我们的土地。。。"
+    }
+  }
+]

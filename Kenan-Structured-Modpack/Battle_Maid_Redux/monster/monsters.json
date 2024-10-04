@@ -1,0 +1,273 @@
+[
+  {
+    "type": "MONSTER",
+    "id": "mon_shoggoth_maid",
+    "name": {
+      "str": "修格斯女仆"
+    },
+    "default_faction": "player",
+    "bodytype": "blob",
+    "species": [
+      "NETHER"
+    ],
+    "volume": "5 L",
+    "hp": 400,
+    "speed": 300,
+    "symbol": "M",
+    "color": "white",
+    "diff": 20,
+    "aggression": 10,
+    "morale": 100,
+    "melee_skill": 10,
+    "melee_dice": 5,
+    "melee_dice_sides": 5,
+    "dodge": 0,
+    "armor": {
+      "bash": 10,
+      "cut": 30,
+      "stab": 0,
+      "acid": 0,
+      "bullet": 25,
+      "electric": 0
+    },
+    "vision_day": 8,
+    "vision_night": 8,
+    "death_drops": "mon_shoggoth_maid_death_drops",
+    "harvest": "exempt",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        40
+      ],
+      [
+        "BIO_OP_IMPALE",
+        25
+      ],
+      { "id": "stretch_attack", "cooldown":5
+      }
+    ],
+    "description": "一只拟态成有着绝色容颜女仆的修格斯。与整洁的外表相反，她的头上有着一个粉色的漩涡，环绕着一圈彩虹色。她深深地爱着她的主人。",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "SWIMS",
+      "PLASTIC",
+      "SLUDGEPROOF",
+      "ACIDPROOF",
+      "NOHEAD",
+      "REVIVES",
+      "NOGIB"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_shoggoth",
+    "copy-from": "mon_shoggoth",
+    "death_drops": "mon_shoggoth_death_drops"
+  },
+  {
+    "//": "BONES",
+    "type": "MONSTER",
+    "id": "maid_master",
+    "name": {
+      "str": "主人",
+      "str_pl": "主人们"
+    },
+    "description": "这是你侍奉的房主托付给你的孩子。当你面临这场灾难时，你的内心陷入了深深的恐惧，但是保护这个孩子成了你活下去的目的，并且让你感觉不再那么孤独。",
+    "default_faction": "player",
+    "bodytype": "human",
+    "species": "UNKNOWN",
+    "hp": 40,
+    "speed": 130,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "m",
+    "color": "brown",
+    "diff": 2,
+    "aggression": -10,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "dodge": 2,
+    "armor": {
+      "bash": 0,
+      "cut": 0,
+      "stab": 0,
+      "acid": 0,
+      "bullet": 0,
+      "electric": 0
+    },
+    "vision_day": 30,
+    "vision_night": 3,
+    "harvest": "human",
+    "death_function": {
+      "effect": {
+        "id": "death_guilt",
+        "min_level": 6
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_little_maid",
+    "name": {
+      "str": "小女仆"
+    },
+    "default_faction": "player",
+    "bodytype": "human",
+    "species": [
+      "NETHER"
+    ],
+    "hp": 80,
+    "speed": 300,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "m",
+    "color": "white",
+    "diff": 2,
+    "aggression": 10,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 2,
+    "armor": {
+      "bash": 10,
+      "cut": 10,
+      "stab": 0,
+      "acid": 0,
+      "bullet": 8,
+      "electric": 0
+    },
+    "vision_day": 8,
+    "vision_night": 8,
+    "harvest": "exempt",
+    "death_drops": "mon_little_maid_death_drops",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "special_attacks": [
+      [
+        "PARROT",
+        40
+      ],
+      [
+        "BIO_OP_IMPALE",
+        25
+      ]
+    ],
+    "description": "一个从另一个世界召唤来的小女仆。即使你很难与她交流，但她似乎早就渴望被召唤了。",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "SWIMS",
+      "WARM",
+      "REVIVES",
+      "NOGIB"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_alchemic_golem",
+    "name": {
+      "str": "炼金术肉傀儡（熟）"
+    },
+    "default_faction": "player",
+    "species": [
+      "NETHER"
+    ],
+    "hp": 100,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "g",
+    "color": "red",
+    "diff": 2,
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 0
+      }
+    ],
+    "dodge": 0,
+    "armor": {
+      "bash": 0,
+      "cut": 0,
+      "stab": 0,
+      "acid": 0,
+      "bullet": 0,
+      "electric": 0
+    },
+    "vision_day": 15,
+    "vision_night": 15,
+    "emit_fields": [
+      "emit_toxic_leak"
+    ],
+    "harvest": "exempt",
+    "death_function": {
+      "message": "The %s's body leaks acid and explodes.",
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      },
+      "corpse_type": "NO_CORPSE"
+    },
+    "special_attacks": [
+      [
+        "ACID_BARF",
+        1
+      ]
+    ],
+    "description": "以炼金术手段制成的大量有生命的肉。扭曲变形的肉块中有一个像人一样的嘴状器官，不断地从中喷出有毒气体和酸性体液，同时发出令人讨厌的声音。",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "NO_BREATHE",
+      "ACIDPROOF",
+      "ACID_BLOOD"
+    ]
+  }
+]

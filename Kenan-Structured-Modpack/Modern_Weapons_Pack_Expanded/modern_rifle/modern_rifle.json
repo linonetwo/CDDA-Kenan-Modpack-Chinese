@@ -1,0 +1,1524 @@
+[
+  {
+    "id": "ar57",
+    "//": "The AR57 uses an empty STANAG 30 rd mag for a brass catcher.  I cannot create a special gunmod to accurately represent this because the functionality of the brass_catcher is hard coded - src/ranged.cpp line:1552",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "AR57卡宾枪（执法部队专用）"
+    },
+    "looks_like": "fn_p90",
+    "description": "这种短管步枪（带有6英寸凹槽枪管）是一种令人熟悉的AR型个人防御武器。它发射5.7x28mm弹药并装有一个FN P90的弹匣。这一把是半自动的执法版本。",
+    "weight": "2400 g",
+    "volume": "1250 ml",
+    "longest_side": "762 mm",
+    "price": "1250 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "57"
+    ],
+    "range": 8,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 6
+    },
+    "durability": 7,
+    "built_in_mods": [
+      "brass_catcher"
+    ],
+    "default_mods": [
+      "suppressor"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        5
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "receiver",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "500 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "fnp90mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r93t2",
+    "copy-from": "rifle_manual",
+    "type": "GUN",
+    "name": {
+      "str": "R93战术2型狙击步枪"
+    },
+    "looks_like": "m2010",
+    "//": "This used to use the caliber conversion code to convert into .223 and .308 variants. See https://github.com/CleverRaven/Cataclysm-DDA/pull/23078 .",
+    "description": "布拉塞尔R93战术2型狙击步枪是一把有直拉枪机的栓动狙击步枪。",
+    "weight": "5400 g",
+    "volume": "2750 ml",
+    "longest_side": "1130 mm",
+    "price": "4495 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "aluminum",
+      "plastic",
+      "steel"
+    ],
+    "color": "brown",
+    "ammo": [
+      "300",
+      "223",
+      "308"
+    ],
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "durability": 8,
+    "barrel_volume": "750 ml",
+    "built_in_mods": [
+      "adjustable_stock"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "223r5mag",
+          "308r5mag",
+          "300r4mag"
+        ]
+      }
+    ],
+    "flags": "NEVER_JAMS"
+  },
+  {
+    "id": "ameli",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "CETME Ameli阿梅利轻机枪"
+    },
+    "looks_like": "m240",
+    "description": "西班牙军方使用的CETME Ameli轻机枪, 与德国MG3相似但采用滚柱延迟后坐式工作原理。",
+    "weight": "5300 g",
+    "volume": "2500 ml",
+    "longest_side": "970 mm",
+    "price": "9000 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223"
+    ],
+    "dispersion": 160,
+    "durability": 7,
+    "reload": 400,
+    "modes": [
+      [
+        "DEFAULT",
+        "auto",
+        15
+      ]
+    ],
+    "default_mods": [
+      "bipod"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "belt223"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m1_9",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "name": {
+      "str": "齐亚帕M1-9步枪"
+    },
+    "looks_like": "savage_111f",
+    "description": "齐亚帕 M1-9，二战名枪M1卡宾枪的复制品，意大利生产，是一把导气式半自动小型狩猎步枪。",
+    "weight": "2700 g",
+    "volume": "2000 ml",
+    "longest_side": "914 mm",
+    "price": "540 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "ammo": [
+      "9mm"
+    ],
+    "dispersion": 45,
+    "durability": 8,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "receiver",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "m9mag",
+          "m9bigmag",
+          "nato9mag",
+          "9mmbetacmag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mdr",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "DT MDR步枪"
+    },
+    "looks_like": "iwi_tavor_x95_300blk",
+    "description": "DT MDR是一把气动，灵巧的无托突击步枪。",
+    "weight": "3230 g",
+    "volume": "2000 ml",
+    "longest_side": "660 mm",
+    "price": "2350 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ammo": [
+      "223",
+      "308"
+    ],
+    "dispersion": 25,
+    "durability": 8,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "transmag",
+          "stanag30",
+          "stanag10",
+          "stanag50",
+          "223betacmag",
+          "survivor223mag",
+          "g3mag",
+          "g3bigmag",
+          "308betacmag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "enfield_l85a2",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "恩菲尔德L85A2步枪"
+    },
+    "looks_like": "m4a1",
+    "description": "恩菲尔德L85A2，导气式枪机回转闭锁无托步枪，是英国武装部队（BAF）的标准步枪。",
+    "weight": "3820 g",
+    "volume": "1500 ml",
+    "longest_side": "785 mm",
+    "price": "2750 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ammo": [
+      "223"
+    ],
+    "range": 4,
+    "dispersion": 55,
+    "durability": 8,
+    "default_mods": [
+      "susat_scope",
+      "grip"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "transmag",
+          "stanag30",
+          "stanag10",
+          "stanag50",
+          "223betacmag",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fad",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "FAD 双重自动步枪"
+    },
+    "looks_like": "m4a1",
+    "description": "来自秘鲁的FAD双重自动步枪（西班牙语：Fusil Automático Doble）是一种紧凑型步兵支援武器，作为载具乘组人员携带的备用武器。使用了无托设计并在枪口下方固定了一个40mm口径的榴弹发射器。",
+    "weight": "3600 g",
+    "volume": "2000 ml",
+    "longest_side": "814 mm",
+    "price": "2750 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "ammo": [
+      "223"
+    ],
+    "dispersion": 45,
+    "durability": 8,
+    "built_in_mods": [
+      "m203"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "transmag",
+          "stanag30",
+          "stanag10",
+          "stanag50",
+          "223betacmag",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "fx_05",
+    "copy-from": "hk_g36",
+    "//": "See modern_weapon_mod/override.json for more information on the hk_g36.",
+    "type": "GUN",
+    "name": {
+      "str": "FX-05 “Xiuhcoatl” 突击步枪"
+    },
+    "description": "XF-05\"火蛇\"突击步枪，是一系列由墨西哥军队装备产业总局所研制和生产的突击步枪。外形与HK G36很像。",
+    "weight": "3890 g",
+    "default_mods": [
+      "fold_adjust_stock"
+    ],
+    "ammo": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "transmag",
+          "stanag30",
+          "stanag10",
+          "stanag50",
+          "223betacmag",
+          "survivor223mag",
+          "g36mag_30rd",
+          "g36mag_100rd"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "henry",
+    "type": "GUN",
+    "name": {
+      "str": "杠杆自动 霰弹枪"
+    },
+    "looks_like": "henry_big_boy",
+    "description": "亨利\"马腿子\"杠杆步枪有一条八边形枪管, 黄铜制的枪管固定环和枪机框. 这一受人欢迎的改型有一个像其他的猎枪改型一样的大环形杠杆.",
+    "weight": "3764 g",
+    "volume": "2250 ml",
+    "longest_side": "1143 mm",
+    "price": "950 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "shot"
+    ],
+    "skill": "rifle",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
+    "dispersion": 30,
+    "durability": 8,
+    "clip_size": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 7
+        }
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "galil",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "加利尔突击步枪"
+    },
+    "looks_like": "m4a1",
+    "description": "由以色列军事工业公司（IMI）制造的加利尔步枪，是一导气式/旋转枪机闭锁突击步枪，其设计深受Valmet Rk.62和AK-47的影响。它的特点是侧折叠铝制枪托和觇孔瞄准具。",
+    "weight": "3950 g",
+    "volume": "2000 ml",
+    "longest_side": "987 mm",
+    "price": "1850 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "aluminum"
+    ],
+    "ammo": [
+      "223",
+      "308"
+    ],
+    "dispersion": 25,
+    "durability": 9,
+    "barrel_volume": "250 ml",
+    "default_mods": [
+      "folding_stock",
+      "peep_sight"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "223ak74mag35",
+          "223ak74mag30",
+          "308ak74mag25"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "marlin_1894",
+    "type": "GUN",
+    "name": {
+      "str": "马林1894步枪"
+    },
+    "looks_like": "henry_big_boy",
+    "description": "使用 .44马格南弹药的马林1894连发式杠杆步枪，是你随身携带的完美伴侣。",
+    "weight": "2720 g",
+    "volume": "2250 ml",
+    "longest_side": "914 mm",
+    "price": "790 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "44"
+    ],
+    "skill": "rifle",
+    "range": 4,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 75,
+    "durability": 8,
+    "clip_size": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "44": 10
+        }
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "marlin_1894c",
+    "//": "I realize that a .357 retool mod could produce this caliber rifle but that would produce a weapon more inferior than it ought to be.",
+    "copy-from": "marlin_1894",
+    "looks_like": "henry_big_boy",
+    "type": "GUN",
+    "name": {
+      "str": "马林1894C步枪"
+    },
+    "description": "使用 .357马格南弹药的马林 1894C 连发杠杆步枪，是你随身携带的完美伴侣。",
+    "ammo": [
+      "357mag"
+    ],
+    "range": 4,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 6
+    },
+    "clip_size": 9,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "357mag": 9
+        }
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "marlin_336",
+    "copy-from": "henry",
+    "type": "GUN",
+    "looks_like": "henry_big_boy",
+    "name": {
+      "str": "马林336步枪"
+    },
+    "description": "马林336是一种非常流行的杠杆式步枪，它结合了手枪式握把枪托和快速响应的扳机。",
+    "weight": "3180 g",
+    "longest_side": "970 mm",
+    "price": "350 USD",
+    "relative": {
+      "dispersion": 20
+    },
+    "ammo": [
+      "shot"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 7
+        }
+      }
+    ]
+  },
+  {
+    "id": "464spx",
+    "copy-from": "henry",
+    "type": "GUN",
+    "name": {
+      "str": "莫斯伯格 464 SPX 步枪"
+    },
+    "looks_like": "henry_big_boy",
+    "description": "莫斯伯格464 SPX——一把中心发火连发步枪, 经典杠杆步枪的现代复刻版本.",
+    "weight": "3175 g",
+    "longest_side": "979 mm",
+    "price": "540 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "relative": {
+      "ranged_damage": {
+        "damage_type": "stab",
+        "amount": 1
+      },
+      "dispersion": -20
+    },
+    "built_in_mods": [
+      "adjustable_stock"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "ammo": [
+      "shot"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 7
+        }
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE",
+      "NEVER_JAMS"
+    ]
+  },
+  {
+    "id": "norinco56_1",
+    "copy-from": "ak47",
+    "type": "GUN",
+    "name": {
+      "str": "56-1冲锋枪"
+    },
+    "looks_like": "ak47",
+    "description": "56-1, 这把突击步枪是由中国北方工业公司制造，仿制了俄罗斯AKM。这种型号有一把固定在枪管下方的折叠三零刺刀和一个可折叠的枪托。",
+    "weight": "3215 g",
+    "volume": "750 ml",
+    "longest_side": "874 mm",
+    "price": "950 USD",
+    "default_mods": [
+      "folding_stock"
+    ],
+    "built_in_mods": [
+      "inter_bayonet"
+    ],
+    "ammo": [
+      "762"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "akdrum75"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "norinco56_2",
+    "copy-from": "ak47",
+    "type": "GUN",
+    "name": {
+      "str": "56-2冲锋枪"
+    },
+    "looks_like": "ak47",
+    "description": "56-2, 这把突击步枪是由中国北方工业公司制造，仿制了俄罗斯AKM。这种型号有可折叠的枪托。",
+    "weight": "3600 g",
+    "volume": "1250 ml",
+    "longest_side": "874 mm",
+    "price": "950 USD",
+    "default_mods": [
+      "folding_stock"
+    ],
+    "ammo": [
+      "762"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "akdrum75"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ruger_m77",
+    "type": "GUN",
+    "name": {
+      "str": "鲁格M77步枪"
+    },
+    "looks_like": "savage_111f",
+    "description": "鲁格M77猎枪，采用传统的毛瑟式枪机和旋转闭锁方式, 有一个巨大的弯曲拉机柄，是一种非常流行的猎枪。",
+    "weight": "3265 g",
+    "volume": "2250 ml",
+    "longest_side": "1067 mm",
+    "price": "650 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "3006"
+    ],
+    "skill": "rifle",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
+    "dispersion": 75,
+    "durability": 8,
+    "clip_size": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "3006": 6
+        }
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "saiga_mk3",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "name": {
+      "str": "Saiga Mk3 卡宾枪"
+    },
+    "looks_like": "ak47",
+    "description": "AK-74风格的半自动卡宾枪，长活塞导气，双闭锁突榫。用于打猎、射击和自卫，以其可靠性和准确性而闻名。",
+    "weight": "3400 g",
+    "volume": "2000 ml",
+    "longest_side": "900 mm",
+    "price": "2350 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "223",
+      "308",
+      "762"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 15,
+    "durability": 8,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "receiver",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "akdrum75",
+          "223ak74mag30",
+          "223ak74mag10",
+          "survivor223mag",
+          "308ak74mag25"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "bfg50carb",
+    "copy-from": "rifle_manual",
+    "type": "GUN",
+    "name": {
+      "str": "Serbu BFG-50 步枪"
+    },
+    "looks_like": "bfg50",
+    "description": "单发栓动狙击/反器材步枪, 旋转闭锁, 枪机上带有两个闭锁凸榫.",
+    "weight": "7700 g",
+    "volume": "3500 ml",
+    "longest_side": "1308 mm",
+    "price": "3075 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "50"
+    ],
+    "range": 40,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -6
+    },
+    "dispersion": 0,
+    "recoil": 75,
+    "durability": 8,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 1
+        }
+      }
+    ],
+    "barrel_volume": "1250 ml",
+    "default_mods": [
+      "muzzle_brake",
+      "rifle_scope"
+    ],
+    "flags": [
+      "RELOAD_ONE",
+      "NEVER_JAMS"
+    ]
+  },
+  {
+    "id": "bfg50a",
+    "type": "GUN",
+    "name": {
+      "str": "Serbu BFG-50A 步枪"
+    },
+    "looks_like": "bfg50",
+    "description": "一把半自动狙击/反器材步枪，采用导气式自动原理和枪机旋转式闭锁方式, 枪机头大致为一个三角形。",
+    "weight": "10400 g",
+    "volume": "4250 ml",
+    "longest_side": "1092 mm",
+    "price": "7980 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "aluminum",
+      "steel"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "50"
+    ],
+    "skill": "rifle",
+    "range": 45,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -5
+    },
+    "dispersion": 0,
+    "durability": 8,
+    "barrel_volume": "1500 ml",
+    "default_mods": [
+      "muzzle_brake",
+      "rifle_scope"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "m107a1mag"
+        ]
+      }
+    ],
+    "flags": "NEVER_JAMS"
+  },
+  {
+    "id": "steyr_ssg69",
+    "copy-from": "rifle_manual",
+    "type": "GUN",
+    "name": {
+      "str": "斯太尔SSG 69狙击步枪"
+    },
+    "looks_like": "M24",
+    "description": "斯太尔SSG 69被认为是世界上最精确的狙击步枪之一。使用旋转后拉式枪机。",
+    "weight": "4810 g",
+    "volume": "2250 ml",
+    "longest_side": "1140 mm",
+    "price": "1300 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "308",
+      "223"
+    ],
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 0,
+    "durability": 7,
+    "barrel_volume": "500 ml",
+    "default_mods": [
+      "rifle_scope"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag10",
+          "308steyrmag5",
+          "308steyrmag10"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mtar21",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "M.T.A.R. 21微型塔沃尔（X-95）冲锋枪"
+    },
+    "looks_like": "iwi_tavor_x95_300blk",
+    "//": "Rate of fire based on TAR-21.",
+    "description": "以色列塔沃尔 M.T.A.R.-21无托突击步枪使用了与AK47类似的长活塞导气系统。作为一种可靠的武器，它已被以色列国防军采用来取代M-16，并被世界各地的军警部队使用。",
+    "weight": "2950 g",
+    "volume": "2000 ml",
+    "longest_side": "720 mm",
+    "price": "1850 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "223",
+      "762"
+    ],
+    "dispersion": 30,
+    "durability": 9,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "akmag30",
+          "akmag10",
+          "akmag20",
+          "akmag40",
+          "akdrum75",
+          "transmag",
+          "stanag30",
+          "stanag10",
+          "stanag50",
+          "223ak74mag30",
+          "223ak74mag10",
+          "223betacmag",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "wa2000",
+    "//": "I hesitated to include this since only 15 were ever imported to the US, but...",
+    "copy-from": "rifle_manual",
+    "type": "GUN",
+    "name": {
+      "str": "瓦尔特WA 2000"
+    },
+    "looks_like": "m2010",
+    "description": "瓦尔特WA 2000是一种半自动无托狙击步枪，短行程活塞，旋转闭锁。",
+    "weight": "6462 g",
+    "volume": "1500 ml",
+    "longest_side": "905 mm",
+    "price": "75000 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "300",
+      "308"
+    ],
+    "range": 20,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 0,
+    "durability": 9,
+    "default_mods": [
+      "muzzle_brake",
+      "bipod",
+      "rifle_scope"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "308r5mag",
+          "300r4mag"
+        ]
+      }
+    ]
+  }
+]

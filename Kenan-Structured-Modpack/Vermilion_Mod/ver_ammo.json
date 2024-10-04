@@ -1,0 +1,104 @@
+[
+  {
+    "id": "145x114mm",
+    "type": "AMMO",
+    "name": {
+      "str": "14.5x114mm 反坦克弹",
+      "str_pl": "14.5x114mm 反坦克弹"
+    },
+    "description": "PTRS-41反坦克步枪的一个大型专用弹药筒。有很多拳头，但用途有限。",
+    "weight": "120 g",
+    "volume": "250 ml",
+    "price": "25 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 15,
+    "stack_size": 15,
+    "ammo_type": "145x114mm",
+    "casing": "145x114mm_casing",
+    "range": 45,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 70,
+      "armor_penetration": 29
+    },
+    "dispersion": 30,
+    "recoil": 27250,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "reloaded_145x114mm",
+    "copy-from": "145x114mm",
+    "type": "AMMO",
+    "name": {
+      "str": "14.5x114mm 反坦克弹 （复装）"
+    },
+    "description": "PTRS-41反坦克步枪的一个大型专用弹药筒。有很多拳头，但用途有限。这个是手工装的。",
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.9
+      },
+      "dispersion": 1.1
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    }
+  },
+  {
+    "id": "145x114mm_casing",
+    "copy-from": "casing",
+    "type": "GENERIC",
+    "name": {
+      "str": "14.5x114mm 弹壳"
+    },
+    "description": "一个14.5x114毫米的大空外壳。",
+    "weight": "19 g",
+    "volume": "12 ml"
+  },
+  {
+    "id": "e_rail",
+    "type": "AMMO",
+    "name": {
+      "str": "爆炸磁轨弹"
+    },
+    "description": "一小段被拉直的铁磁性钢筋。一个小的，粗糙的RDX填充弹头已经安装在尖端，造成了一个小爆炸的影响。可以被足够强大的电磁武器当作炮弹使用。",
+    "weight": "812 g",
+    "volume": "250 ml",
+    "price": "15 USD",
+    "to_hit": -2,
+    "bashing": 5,
+    "material": [
+      "iron"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "count": 10,
+    "ammo_type": "metal_rail",
+    "range": 40,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 85,
+      "armor_penetration": 5
+    },
+    "dispersion": 205,
+    "effects": [
+      "RECYCLED",
+      "CUSTOM_EXPLOSION"
+    ],
+    "explode_in_fire": true,
+    "explosion": {
+      "power": 11,
+      "distance_factor": 0.3
+    }
+  }
+]

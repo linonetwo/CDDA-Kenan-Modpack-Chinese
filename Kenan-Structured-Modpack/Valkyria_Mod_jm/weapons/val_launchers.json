@@ -1,0 +1,497 @@
+[
+  {
+    "type": "ammunition_type",
+    "id": "galance",
+    "name": "兰卡尔火箭",
+    "default": "lancaar_ammo"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "implance",
+    "name": "VB PL火箭",
+    "default": "vbpl_ammo"
+  },
+  {
+    "type": "ammunition_type",
+    "id": "sh_btype",
+    "name": "SH-B型迫击炮弹",
+    "default": "sh_bgrenade_shell"
+  },
+  {
+    "id": "Lancaarm4",
+    "looks_like": "m79",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "symbol": "(",
+    "color": "brown",
+    "name": {
+      "str_sp": "兰卡尔·M4"
+    },
+    "description": "加利亚最常见的反坦克兵刃，是作为一种允许步兵在没有辅助的情况下对抗坦克的方式而开发的。一枚穿甲弹头被装入矛尖，然后向目标发射，撞击时引爆。虽然它的力量和有效性是无可争议的，但它相当大的重量阻碍了用户的移动性。这种武器之所以得名，是因为它被用作兰斯形状的反装甲装置。",
+    "price": "1500 USD",
+    "price_postapoc": "10 USD",
+    "//": "Like the LAW, this thing is basically a tube with a lever.  It's even cheaper in terms of construction, but there's a premium due to being imported.  Also not disposable.",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "launcher",
+    "ammo": [
+      "galance"
+    ],
+    "weight": "7500 g",
+    "volume": "4700 ml",
+    "bashing": 10,
+    "to_hit": -3,
+    "dispersion": 600,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "galance": 1
+        }
+      }
+    ],
+    "reload": 250,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "AMMO",
+    "looks_like": "84x246mm_he",
+    "id": "lancaar_ammo",
+    "price": "100 USD",
+    "name": {
+      "str": "兰卡尔火箭"
+    },
+    "symbol": "=",
+    "color": "dark_gray",
+    "description": "枪骑兵130mm单级连发高爆弹。",
+    "material": [
+      "steel",
+      "powder"
+    ],
+    "volume": "1750 ml",
+    "price_postapoc": "20 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "weight": "2600 g",
+    "ammo_type": "galance",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 30,
+      "armor_multiplier": 0.1
+    },
+    "range": 60,
+    "dispersion": 75,
+    "recoil": 450,
+    "effects": [
+      "COOKOFF",
+      "EXPLOSIVE_BIG",
+      "TRAIL",
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "looks_like": "84x246mm_smoke",
+    "id": "lancaar_ammo_thermo",
+    "price": "100 USD",
+    "name": {
+      "str": "兰卡热压火箭"
+    },
+    "symbol": "=",
+    "color": "dark_gray",
+    "description": "枪骑兵130mm连发温压弹。",
+    "material": [
+      "steel",
+      "powder"
+    ],
+    "volume": "2250 ml",
+    "price_postapoc": "40 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "weight": "3500 g",
+    "ammo_type": "galance",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 10,
+      "armor_penetration": 10
+    },
+    "range": 60,
+    "dispersion": 50,
+    "recoil": 450,
+    "effects": [
+      "COOKOFF",
+      "EXPLOSIVE",
+      "TRAIL",
+      "NEVER_MISFIRES",
+      "PYROPHORIC"
+    ]
+  },
+  {
+    "id": "VBPLRocket",
+    "looks_like": "m79",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "symbol": "(",
+    "color": "brown",
+    "name": {
+      "str_sp": "VB PL兰瑟"
+    },
+    "description": "这种武器可以称得上是所有反坦克骑枪的鼻祖，由冯·比斯马克(VB)在炸药研究的领导者阿道夫·冯·比斯马克创始人的指导下开发。作为第一个意识到坦克战斗潜力的大国，帝国也积极发展对抗敌方坦克的手段。PL这个名称来自“装甲长矛”这个术语",
+    "price": "1500 USD",
+    "price_postapoc": "10 USD",
+    "//": "Like the LAW, this thing is basically a tube with a lever.  It's even cheaper in terms of construction, but there's a premium due to being imported.  Also not disposable.",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "launcher",
+    "ammo": [
+      "implance"
+    ],
+    "weight": "8500 g",
+    "volume": "4900 ml",
+    "bashing": 10,
+    "to_hit": -3,
+    "dispersion": 650,
+    "durability": 10,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "implance": 1
+        }
+      }
+    ],
+    "reload": 350,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "AMMO",
+    "looks_like": "84x246mm_he",
+    "id": "vbpl_ammo",
+    "price": "100 USD",
+    "name": {
+      "str": "VB PL火箭"
+    },
+    "symbol": "=",
+    "color": "dark_gray",
+    "description": "枪骑兵VB PL系列148mm单级高爆弹。",
+    "material": [
+      "steel",
+      "powder"
+    ],
+    "volume": "1750 ml",
+    "price_postapoc": "20 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "weight": "2700 g",
+    "ammo_type": "implance",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 34,
+      "armor_multiplier": 0.2
+    },
+    "range": 60,
+    "dispersion": 85,
+    "recoil": 650,
+    "effects": [
+      "COOKOFF",
+      "EXPLOSIVE_BIG",
+      "TRAIL",
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "looks_like": "84x246mm_smoke",
+    "id": "vbpl_ammo_thermo",
+    "price": "100 USD",
+    "name": {
+      "str": "VB PL温压火箭"
+    },
+    "symbol": "=",
+    "color": "dark_gray",
+    "description": "枪骑兵VB PL系列的148mm温压弹。",
+    "material": [
+      "steel",
+      "powder"
+    ],
+    "volume": "2450 ml",
+    "price_postapoc": "40 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "weight": "3800 g",
+    "ammo_type": "implance",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 15,
+      "armor_penetration": 10
+    },
+    "range": 60,
+    "dispersion": 70,
+    "recoil": 650,
+    "effects": [
+      "COOKOFF",
+      "EXPLOSIVE",
+      "TRAIL",
+      "NEVER_MISFIRES",
+      "PYROPHORIC"
+    ]
+  },
+  {
+    "id": "lsh_mortar",
+    "copy-from": "launcher_base",
+    "//": "Tileset whitelist for launchers.",
+    "type": "GUN",
+    "name": {
+      "str": "兰卡迫击炮"
+    },
+    "description": "兰卡尔SH是一种反坦克武器变体，用于杀伤人员，它使用了一种类似迫击炮的装有炸药的弹头。它的威力、爆炸半径和有效射程都超过了传统手榴弹。作为一种杀伤人员武器，便携性是重中之重。发射器看到了大幅瘦身，使SH成为迄今为止最轻的AT兰斯。也就是说，它仍然比普通火器重，这意味着只有那些用来携带长矛的人才能使用它。",
+    "weight": "6500 g",
+    "volume": "3900 ml",
+    "price": "4000 USD",
+    "price_postapoc": "25 USD",
+    "to_hit": -3,
+    "bashing": 12,
+    "material": [
+      "steel"
+    ],
+    "ammo": [
+      "sh_btype"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
+    "dispersion": 170,
+    "durability": 7,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "sh_btype": 1
+        }
+      }
+    ],
+    "reload": 350,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ]
+    ]
+  },
+  {
+    "abstract": "sh_bgrenade",
+    "type": "AMMO",
+    "name": {
+      "str": "SH-B型迫击炮弹"
+    },
+    "price": "100 USD",
+    "price_postapoc": "60 USD",
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "material": [
+      "steel",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 3,
+    "stack_size": 3,
+    "ammo_type": "sh_btype",
+    "range": 60,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 80
+    },
+    "dispersion": 30,
+    "recoil": 205,
+    "effects": [
+      "COOKOFF",
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+    "id": "sh_bgrenade_shell",
+    "looks_like": "84x246mm_smoke",
+    "copy-from": "sh_bgrenade",
+    "type": "AMMO",
+    "name": {
+      "str": "SH M迫击炮弹"
+    },
+    "description": "兰卡尔-M1迫击炮喷枪使用的低速迫击炮弹。由一枚改装过的B型手榴弹制成。",
+    "weight": "230 g",
+    "volume": "75 ml",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 200,
+      "armor_penetration": 30
+    },
+    "extend": {
+      "effects": [
+        "EXPLOSIVE_BIG"
+      ]
+    }
+  },
+  {
+    "id": "sh_bgrenade_ind",
+    "looks_like": "84x246mm_he",
+    "copy-from": "sh_bgrenade",
+    "type": "AMMO",
+    "name": {
+      "str": "SH M燃烧迫击炮弹"
+    },
+    "description": "兰卡尔-M1迫击炮喷枪使用的低速迫击炮弹。由一枚改装过的B型手榴弹制成。这个外壳有腐蚀性和易燃的填充物。",
+    "weight": "230 g",
+    "volume": "75 ml",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 100,
+      "armor_penetration": 15
+    },
+    "extend": {
+      "effects": [
+        "FLARE",
+        "EXPLOSIVE_BIG"
+      ]
+    }
+  },
+  {
+    "id": "val_valkyrurlance",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "瓦尔基鲁兰斯"
+    },
+    "description": "从整个大陆的挖掘地点出土的这些武器被认为是瓦尔基鲁尔人使用的。这种喷枪呈螺旋状外壳，由比目前精炼技术所能生产的纯度更高的菱镁矿制成。虽然这些武器的形状存在一些差异，但它们都以瓦尔基鲁尔螺旋形为核心图案。",
+    "weight": "3540 g",
+    "volume": "5000 ml",
+    "price": "95000 USD",
+    "price_postapoc": "3000 USD",
+    "to_hit": 3,
+    "bashing": 15,
+    "cutting": 50,
+    "material": [
+      "diamond"
+    ],
+    "symbol": "(",
+    "color": "cyan",
+    "skill": "rifle",
+    "range": 15,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 55,
+      "armor_penetration": 25
+    },
+    "dispersion": 35,
+    "durability": 9,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
+    "loudness": 15,
+    "reload": 400,
+    "ammo_effects": [
+      "PLASMA"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ]
+  }
+]

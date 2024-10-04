@@ -1,0 +1,28 @@
+[
+  {
+    "id": "TALK_OLD_GUARD_SOLDIER",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "topic": "TALK_OLD_GUARD_SOLDIER_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_OLD_GUARD_SOLDIER_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "所以谣言终究是真的。我可能欠一个死人20美元。",
+      "被困在地下金库里听上去也没那么糟糕。",
+      "我没见过绿色的小个子男人。",
+      "听起来比我的工资级别高。"
+    ],
+    "responses": [
+      {
+        "text": "我问你点别的。",
+        "topic": "TALK_OLD_GUARD_SOLDIER"
+      }
+    ]
+  }
+]

@@ -1,0 +1,1287 @@
+[
+  {
+    "id": "valrifmag1",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "兵工厂步枪弹匣Mk.I"
+    },
+    "description": "国家兵工厂使用的双柱单馈7.92x53mm 加利亚弹匣。可容纳8发子弹。",
+    "weight": "295 g",
+    "volume": "500 ml",
+    "price": "40 USD",
+    "price_postapoc": "10 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "gal792",
+    "capacity": 8,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "gal792": 8
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "valrifmag2",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "兵工厂步枪弹匣Mk.II"
+    },
+    "description": "国家兵工厂使用的双柱单馈7.92x53mm 加利亚弹夹。可容纳12发子弹。",
+    "weight": "295 g",
+    "volume": "500 ml",
+    "price": "40 USD",
+    "price_postapoc": "20 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "gal792",
+    "capacity": 12,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "gal792": 12
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "valrifmag3",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "兵工厂步枪弹匣Mk.III"
+    },
+    "description": "国家兵工厂使用的双柱单馈7.92x53mm 加利亚弹夹。可容纳15发子弹。",
+    "weight": "295 g",
+    "volume": "500 ml",
+    "price": "40 USD",
+    "price_postapoc": "30 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "gal792",
+    "capacity": 15,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "gal792": 15
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "valimag1",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "Kar弹匣MK1"
+    },
+    "description": "一个弹夹，单进料7.62x50mm帝国杂志创建的蔡克迈斯特。可容纳7发子弹。",
+    "weight": "295 g",
+    "volume": "500 ml",
+    "price": "40 USD",
+    "price_postapoc": "10 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "imp762",
+    "capacity": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "imp762": 7
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "valimag2",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "Kar弹匣MK2"
+    },
+    "description": "帝国军火库使用的一种双列单进7.62x50mm弹夹。可容纳10发子弹。",
+    "weight": "295 g",
+    "volume": "500 ml",
+    "price": "40 USD",
+    "price_postapoc": "20 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "imp762",
+    "capacity": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "imp762": 10
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "valimag3",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "kar弹匣MK3"
+    },
+    "description": "帝国兵工厂制造的双柱单馈7.62x50mm弹夹。保持14发子弹。",
+    "weight": "295 g",
+    "volume": "500 ml",
+    "price": "40 USD",
+    "price_postapoc": "30 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "imp762",
+    "capacity": 14,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "imp762": 14
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "val_gall1",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "加利亚-1型 步枪"
+    },
+    "description": "由加利亚唯一的武器制造商，国家兵工厂，开发的标准步枪。在EW1期间被研发并制造，它被发放给加利亚士兵，并在战争结束前用于战斗。通过最大限度地减少对现有模型动作的更改，开发人员能够节省实现其设计的时间，同时通过进一步定制以允许更广泛的用途。它的名字来源于它作为美国历史上第一把国产步枪的地位。",
+    "weight": "3250 g",
+    "volume": "1750 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "gal792"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 140,
+    "durability": 8,
+    "min_cycle_recoil": 2300,
+    "barrel_volume": "600 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "gal792_clip"
+        ]
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_gall3",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "加利亚-3型 步枪"
+    },
+    "description": "由加利亚唯一的武器制造商，国家兵工厂，开发的标准步枪。在EW1期间被研发并制造，它被发放给加利亚士兵，并在战争结束前用于战斗。通过最大限度地减少对现有模型动作的更改，开发人员能够节省实现其设计的时间，同时通过进一步定制以允许更广泛的用途。采用加长枪管，精度更高。",
+    "weight": "3350 g",
+    "volume": "1750 ml",
+    "price": "3500 USD",
+    "price_postapoc": "60 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "gal792"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
+    "dispersion": 135,
+    "durability": 8,
+    "min_cycle_recoil": 2000,
+    "barrel_volume": "700 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valrifmag1",
+          "valrifmag2"
+        ]
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_gall3R",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "加利亚-3R型 步枪"
+    },
+    "description": "加利亚唯一的武器制造商国家军火库研制的标准步枪。创造于EW1，它被分发给加利亚士兵，并看到在战争结束前的战斗中使用。通过最小化对现有模型的操作所做的更改，开发人员能够节省实现其设计的时间，同时还可以通过进一步的定制实现更广泛的用途。采用加长枪管以提高精度。这把步枪有一个匹配的精确枪管，以保证精确性。",
+    "weight": "3350 g",
+    "volume": "1750 ml",
+    "price": "3500 USD",
+    "price_postapoc": "85 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "gal792"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4
+    },
+    "dispersion": 130,
+    "durability": 8,
+    "min_cycle_recoil": 2100,
+    "barrel_volume": "700 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valrifmag1",
+          "valrifmag2"
+        ]
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_gallA1",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "加利亚-A1型 步枪"
+    },
+    "description": "加利亚-A的设计目的是为了给“加利亚”型号步枪的适应性底座增加阻挡力，它还在击发装置中使用了一个水基冷却系统，以确保能够平稳的快速射击，这在标准步枪中是不常见的。",
+    "weight": "3450 g",
+    "volume": "1850 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "gal792"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 145,
+    "durability": 8,
+    "min_cycle_recoil": 2300,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "barrel_volume": "600 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valrifmag1",
+          "valrifmag2",
+          "valrifmag3"
+        ]
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_gallA11",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "加利亚-A11型 步枪"
+    },
+    "description": "加利亚-A的设计目的是为了给“加利亚”型号步枪的适应性底座增加阻挡力，它还在击发装置中使用了一个水基冷却系统，以确保能够平稳的快速射击，这在标准步枪中是不常见的。除了更加精致的追踪工艺之外，该版本还采用加长枪管，略微提高了精度和后坐力。",
+    "weight": "3550 g",
+    "volume": "1850 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "gal792"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 130,
+    "durability": 8,
+    "min_cycle_recoil": 1650,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "barrel_volume": "600 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valrifmag1",
+          "valrifmag2",
+          "valrifmag3"
+        ]
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_gallS1",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "加利亚-S1型 步枪"
+    },
+    "description": "当开发者为以最初的“加利亚”型号枪支为模板制造出这杆枪时，射击精度是其焦点。它的每一个部件都是由各个领域的顶级工匠来完成的，从而创造出了一把如此精巧的步枪。这支枪的枪管还被加长到一个不同寻常的长度，以确保射击轨迹的稳定。",
+    "weight": "3450 g",
+    "volume": "1850 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "gal792"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 120,
+    "durability": 8,
+    "min_cycle_recoil": 2300,
+    "barrel_volume": "700 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "gal792_clip"
+        ]
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_gallS11",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "加利亚-S11型 步枪"
+    },
+    "description": "当开发者为以最初的“加利亚”型号枪支为模板制造出这杆枪时，射击精度是其焦点。它的每一个部件都是由各个领域的顶级工匠来完成的，从而创造出了一把如此精巧的步枪。这支枪的枪管还被加长到一个近乎极限的长度，以确保射击轨迹的稳定。",
+    "weight": "3450 g",
+    "volume": "1850 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "gal792"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 110,
+    "durability": 8,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valrifmag1",
+          "valrifmag2",
+          "valrifmag3"
+        ]
+      }
+    ],
+    "min_cycle_recoil": 2300,
+    "barrel_volume": "700 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_gallS20R",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "加利亚-S20R型 步枪"
+    },
+    "description": "当开发者为以最初的“加利亚”型号枪支为模板制造出这杆枪时，射击精度是其焦点。它的每一个部件都是由各个领域的顶级工匠来完成的，从而创造出了一把如此精巧的步枪。这个特别的版本是专门为加里亚特种部队制作的。",
+    "weight": "3450 g",
+    "volume": "1850 ml",
+    "price": "3500 USD",
+    "price_postapoc": "1055 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "gal792"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4
+    },
+    "dispersion": 85,
+    "durability": 8,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valrifmag1",
+          "valrifmag2",
+          "valrifmag3"
+        ]
+      }
+    ],
+    "min_cycle_recoil": 1600,
+    "built_in_mods": [
+      "bipod"
+    ],
+    "barrel_volume": "700 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_kar1",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "ZM Kar 1号"
+    },
+    "description": "这种步枪是由帝国顶级武器制造商Zechmeister（ZM公司）制造的，是帝国军队横扫欧罗巴的因素之一。ZM-Kar步枪比传统步枪轻得多，极大地提高了部队的机动性，并赢得了那些被迫携带它们行军的人的感谢。其独特的斧头形状赢得了它的昵称方济各会之间的用户。",
+    "weight": "3150 g",
+    "volume": "1600 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "imp762"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 170,
+    "durability": 7,
+    "min_cycle_recoil": 2600,
+    "barrel_volume": "500 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "imp762_clip"
+        ]
+      }
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_kar2",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "ZM Kar 2号"
+    },
+    "description": "这种步枪是由帝国顶级武器制造商Zechmeister（ZM公司）制造的，是帝国军队横扫欧罗巴的因素之一。ZM-Kar步枪比传统步枪轻得多，极大地提高了部队的机动性，并赢得了那些被迫携带它们行军的人的感谢。其独特的斧头形状赢得了它的昵称方济各会之间的用户。此变体有一个扩展的内部库。",
+    "weight": "3150 g",
+    "volume": "1600 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "imp762"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 170,
+    "durability": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valimag1",
+          "valimag2",
+          "valimag3"
+        ]
+      }
+    ],
+    "min_cycle_recoil": 2600,
+    "barrel_volume": "500 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_kar3",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "ZM Kar 3号"
+    },
+    "description": "这款型号是ZM kar步枪的延伸，相比老一代拥有更长的枪管和更高的初速。由于在动作和枪管之间增加了减震缓冲，使用者体验到的后坐力大大降低，这反过来又提高了准确性。",
+    "weight": "3150 g",
+    "volume": "1600 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "imp762"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 165,
+    "durability": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valimag1",
+          "valimag2",
+          "valimag3"
+        ]
+      }
+    ],
+    "min_cycle_recoil": 2600,
+    "barrel_volume": "500 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "val_kar6",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str_sp": "ZM卡6"
+    },
+    "description": "这款型号是ZM卡尔的延伸，拥有更长的枪管和更高的初速。由于在动作和枪管之间增加了减震缓冲，使用者经历的后坐力大大减少，这反过来又提高了准确性。采用了更重、加工更精的枪管，以及改进的弹匣。",
+    "weight": "3150 g",
+    "volume": "1600 ml",
+    "price": "3500 USD",
+    "price_postapoc": "55 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "imp762"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 155,
+    "durability": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valimag1",
+          "valimag2",
+          "valimag3"
+        ]
+      }
+    ],
+    "min_cycle_recoil": 2600,
+    "built_in_mods": [
+      "bipod"
+    ],
+    "barrel_volume": "500 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ]
+  }
+]

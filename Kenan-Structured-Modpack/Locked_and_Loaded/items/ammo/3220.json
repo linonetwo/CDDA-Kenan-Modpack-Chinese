@@ -1,0 +1,70 @@
+[
+  {
+    "id": "3220",
+    "type": "AMMO",
+    "name": {
+      "str": ".32-20弹"
+    },
+    "description": ".32-20温彻斯特弹，也被称为.32 WCF（温彻斯特中央式底火弹），是温彻斯特公司生产的第一种用来狩猎小型猎物的杠杆式枪弹。当时生产的.32-20在狩猎小型猎物时堪称完美。由于其威力较低，可以在杀死动物的同时保证肉不被损毁，但如果你希望它拥有更强大的威力，最好使用新式的.32子弹。",
+    "weight": "6 g",
+    "volume": "200 ml",
+    "price": "30 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "-",
+    "color": "white",
+    "count": 40,
+    "stack_size": 30,
+    "ammo_type": "3220",
+    "casing": "3220_casing",
+    "range": 18,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 15,
+      "armor_penetration": 4
+    },
+    "dispersion": 80,
+    "recoil": 150
+  },
+  {
+    "id": "bp_3220",
+    "copy-from": "3220",
+    "type": "AMMO",
+    "name": {
+      "str": ".32-20弹（黑火药）"
+    },
+    "proportional": {
+      "price": 0.3,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "3220_casing",
+    "copy-from": "casing",
+    "name": {
+      "str": ".32-20弹壳"
+    },
+    "description": "一枚.32-20子弹的空弹壳。",
+    "material": [
+      "brass"
+    ],
+    "volume": "50 ml",
+    "weight": "1 g"
+  }
+]

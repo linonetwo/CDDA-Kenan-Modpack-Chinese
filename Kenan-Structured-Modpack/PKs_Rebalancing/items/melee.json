@@ -1,0 +1,3971 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "sword_nail",
+    "copy-from": "sword_nail",
+    "symbol": "!",
+    "color": "light_gray",
+    "name": {
+      "str": "诺德剑"
+    },
+    "description": "钉齿剑，亦称诺德剑。这把木剑从剑刃上伸出很多歪歪扭扭的钉子，使其相较于挥砍更适合用于硬劈。",
+    "material": [
+      "wood"
+    ],
+    "volume": "1750 ml",
+    "weight": "748 g",
+    "longest_side": "75 cm",
+    "bashing": 12,
+    "cutting": 4,
+    "to_hit": 1,
+    "techniques": [
+      "WBLOCK_1"
+    ]
+  },
+  {
+    "id": "ax",
+    "type": "TOOL",
+    "copy-from": "ax",
+    "name": {
+      "str": "伐木斧"
+    },
+    "description": "巨大的双手斧。是个优秀的近战武器，至于速度比较慢，请不要在意这些细节。",
+    "weight": "2267 g",
+    "volume": "2500 ml",
+    "longest_side": "72 cm",
+    "price": "105 USD",
+    "to_hit": 1,
+    "bashing": 20,
+    "cutting": 25,
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "techniques": [
+      "heavy_blow",
+      "stuck_in_1",
+      "stuck_in_2",
+      "stuck_in_3",
+      "WBLOCK_1",
+      "BRUTAL",
+      "SWEEP"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "qualities": [
+      [
+        "AXE",
+        2
+      ],
+      [
+        "BUTCHER",
+        -36
+      ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "SHEATH_AXE"
+    ]
+  },
+  {
+    "id": "battleaxe",
+    "type": "TOOL",
+    "copy-from": "battleaxe",
+    "category": "weapons",
+    "name": {
+      "str": "战斧"
+    },
+    "description": "一柄起源于欧洲的战斧，长长的斧柄的一端装有双头斧刃。虽然只建议作为武器使用，但也可以勉强当作一把相当笨拙的伐木工具。",
+    "weight": "2002 g",
+    "volume": "2500 ml",
+    "longest_side": "75 cm",
+    "price": "400 USD",
+    "to_hit": 1,
+    "bashing": 20,
+    "cutting": 30,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WIDE",
+      "BRUTAL",
+      "stuck_in_1",
+      "stuck_in_2",
+      "stuck_in_3",
+      "WBLOCK_1",
+      "SWEEP"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "qualities": [
+      [
+        "AXE",
+        2
+      ],
+      [
+        "BUTCHER",
+        -20
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE",
+      "SHEATH_AXE"
+    ]
+  },
+  {
+    "id": "battletorch",
+    "looks_like": "torch",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "路易维尔屠杀者"
+    },
+    "description": "一支结实的木棒，由浸满汽油的破布和防火芳纶纤维包裹。找个打火机或者划根火柴点着它，比赛更加激烈了！",
+    "weight": "1485 g",
+    "volume": "2 L",
+    "price": "160 USD",
+    "to_hit": 3,
+    "bashing": 18,
+    "material": [
+      "wood",
+      "nomex"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ]
+  },
+  {
+    "id": "battletorch_lit",
+    "looks_like": "torch_lit",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "路易维尔屠杀者（点燃）",
+      "str_pl": "路易斯维尔屠宰场"
+    },
+    "description": "一支结实的木棒，由浸满汽油的破布和防火芳纶纤维包裹。它正明亮地燃烧着，你能更清楚的看清赛场边界了（当然裁判也能看清你的坏球而不是胡乱判为好球了）。",
+    "weight": "1485 g",
+    "volume": "2 L",
+    "price": "160 USD",
+    "to_hit": 3,
+    "bashing": 18,
+    "material": [
+      "wood",
+      "nomex"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "repose"
+    ],
+    "flags": [
+      "FIRE",
+      "LIGHT_310",
+      "CHARGEDIM",
+      "FLAMING",
+      "DURABLE_MELEE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "broadfire_off",
+    "looks_like": "broadsword",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "御火者（关）",
+      "str_pl": "火种（关闭）"
+    },
+    "description": "在黑暗时代用来解决冲突的两个经典象征的组合---大刀和火炬。将它点燃，告诉那些不信主的丧尸，谁才是上帝。",
+    "weight": "1474 g",
+    "volume": "2250 ml",
+    "price": "1200 USD",
+    "to_hit": 1,
+    "bashing": 8,
+    "cutting": 35,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "ammo_restriction": {
+          "gasoline": 50
+        }
+      }
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "stuck_in_2",
+      "SWEEP"
+    ],
+    "use_action": {
+      "type": "fireweapon_off",
+      "target_id": "broadfire_on",
+      "moves": 10,
+      "noise": 10,
+      "success_message": "Charge!!",
+      "lacks_fuel_message": "No strength to fight!"
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "broadfire_on",
+    "looks_like": "torch_lit",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "御火者（开）",
+      "str_pl": "火种（开）"
+    },
+    "description": "一个将中世纪用来解决麻烦的典范——大刀和火炬——组合起来的武器，刀刃因为高温而发光，令圣剑都黯然失色！使用它来关闭。",
+    "weight": "1474 g",
+    "volume": "2250 ml",
+    "price": "1200 USD",
+    "to_hit": 1,
+    "bashing": 8,
+    "cutting": 35,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "red",
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "ammo_restriction": {
+          "gasoline": 50
+        }
+      }
+    ],
+    "turns_per_charge": 30,
+    "revert_to": "broadfire_off",
+    "techniques": [
+      "WBLOCK_2",
+      "stuck_in_2",
+      "SWEEP",
+      "WIDE"
+    ],
+    "use_action": [
+      {
+        "type": "fireweapon_on",
+        "noise_chance": 35,
+        "noise_message": "Your blade burns for combat!",
+        "voluntary_extinguish_message": "Run away!",
+        "charges_extinguish_message": "Thy strength fades!",
+        "water_extinguish_message": "Your sword hisses in the water and goes out."
+      },
+      {
+        "type": "firestarter",
+        "moves": 30
+      }
+    ],
+    "flags": [
+      "FIRE",
+      "LIGHT_240",
+      "CHARGEDIM",
+      "FLAMING",
+      "DURABLE_MELEE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "broadsword",
+    "type": "TOOL",
+    "copy-from": "broadsword",
+    "category": "weapons",
+    "name": {
+      "str": "阔剑"
+    },
+    "description": "一种早期的现代剑，在16到18世纪的西方被广泛使用。之所以命名为阔剑，是为了与细长的迅捷剑对比。",
+    "weight": "1133 g",
+    "volume": "1750 ml",
+    "longest_side": "75 cm",
+    "price": "1200 USD",
+    "to_hit": 2,
+    "bashing": 8,
+    "cutting": 35,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "stuck_in_2"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        9
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "copper_ax",
+    "type": "TOOL",
+    "copy-from": "copper_ax",
+    "name": {
+      "str": "铜制斧头"
+    },
+    "description": "一个足够大的经过加工的铜块被安装在一个木制的手柄上，成了一把粗糙但有效的斧头。",
+    "weight": "3700 g",
+    "volume": "3500 ml",
+    "longest_side": "65 cm",
+    "price": "55 USD",
+    "bashing": 28,
+    "cutting": 18,
+    "material": [
+      "wood",
+      "copper"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL",
+      "SWEEP",
+      "repose",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "symbol": "/",
+    "color": "brown",
+    "qualities": [
+      [
+        "AXE",
+        1
+      ],
+      [
+        "BUTCHER",
+        -44
+      ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "SHEATH_AXE"
+    ]
+  },
+  {
+    "id": "crowbar",
+    "type": "TOOL",
+    "copy-from": "crowbar",
+    "name": {
+      "str": "撬棍"
+    },
+    "description": "一根正规工厂出品的撬棍，又名物理学圣剑，可以轻易进出别人的家里而不破坏门或者用来开启下水沟井盖，还可以潇洒的敲开丧尸的脑袋。实在是居家旅行的必备之物。激活它来使用。",
+    "weight": "500 g",
+    "volume": "1 L",
+    "longest_side": "35 cm",
+    "price": "13 USD",
+    "to_hit": 2,
+    "bashing": 22,
+    "cutting": 1,
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose",
+      "stuck_in_2"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "qualities": [
+      [
+        "PRY",
+        3
+      ],
+      [
+        "HAMMER",
+        1
+      ]
+    ],
+    "use_action": [
+      "HAMMER",
+      "CROWBAR"
+    ],
+    "flags": [
+      "BELT_CLIP"
+    ]
+  },
+  {
+    "id": "cutlass",
+    "type": "TOOL",
+    "copy-from": "cutlass",
+    "category": "weapons",
+    "name": {
+      "str": "短弯刀",
+      "str_pl": "弯刀"
+    },
+    "description": "这种阔刃军刀因为普遍被水手与海盗使用而闻名。偏短的刀刃让它在近身时得心应手。",
+    "weight": "955 g",
+    "volume": "1250 ml",
+    "longest_side": "55 cm",
+    "price": "960 USD",
+    "to_hit": 2,
+    "bashing": 7,
+    "cutting": 27,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        9
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "fire_ax",
+    "type": "TOOL",
+    "copy-from": "fire_ax",
+    "name": {
+      "str": "消防斧"
+    },
+    "description": "一把用于清理着火或易燃材料，切断火势蔓延的大斧，还可以劈开被烧变形的门窗，解救被困的人，如今可以用来解救受困于腐烂身体中的痛苦灵魂。\n“烈火雄心，尸海纵横。”",
+    "weight": "2520 g",
+    "volume": "2 L",
+    "price": "200 USD",
+    "longest_side": "90 cm",
+    "to_hit": 1,
+    "bashing": 20,
+    "cutting": 20,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "techniques": [
+      "BRUTAL",
+      "stuck_in_1",
+      "stuck_in_3"
+    ],
+    "qualities": [
+      [
+        "AXE",
+        2
+      ],
+      [
+        "PRY",
+        3
+      ],
+      [
+        "BUTCHER",
+        -30
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE",
+      "BELT_CLIP",
+      "SHEATH_AXE"
+    ],
+    "use_action": [
+      "CROWBAR"
+    ],
+    "pocket_data": [
+      {
+        "max_contains_volume": "1250 ml",
+        "max_contains_weight": "5500 g",
+        "max_item_length": "61 cm",
+        "moves": 150,
+        "item_restriction": [
+          "halligan"
+        ],
+        "holster": true
+      }
+    ]
+  },
+  {
+    "id": "machete",
+    "type": "TOOL",
+    "copy-from": "machete",
+    "category": "weapons",
+    "name": {
+      "str": "砍刀"
+    },
+    "description": "一柄较短、单刃、刀身宽大，以切砍为主要攻击方式的钢制砍刀。",
+    "weight": "538 g",
+    "volume": "1 L",
+    "longest_side": "30 cm",
+    "price": "28 USD",
+    "to_hit": 2,
+    "bashing": 5,
+    "cutting": 22,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_2",
+      "stuck_in_1",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        15
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "firemachete_off",
+    "looks_like": "machete",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "9号（关）",
+      "str_pl": "9号（关）"
+    },
+    "description": "这把大铁刀已经被改装成具备燃料储存、隔热以及点火系统。当加入汽油，刀刃能被点燃，并可灼烧你的目标。",
+    "weight": "1814 g",
+    "volume": "1500 ml",
+    "price": "280 USD",
+    "to_hit": 1,
+    "bashing": 6,
+    "cutting": 20,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "ammo_restriction": {
+          "gasoline": 50
+        }
+      }
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "stuck_in_1",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "use_action": {
+      "type": "fireweapon_off",
+      "target_id": "firemachete_on",
+      "moves": 10,
+      "noise": 0,
+      "success_chance": 2,
+      "success_message": "Your No. 9 glows!",
+      "failure_message": "Click.",
+      "lacks_fuel_message": "Click."
+    },
+    "flags": [
+      "FIRE",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "firemachete_on",
+    "looks_like": "torch_lit",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "9号（开）",
+      "str_pl": "9号（开）"
+    },
+    "description": "这把大铁刀已经被改装成具备燃料储存、隔热以及点火系统。刀刃因热而发光，让周围变得更亮，同时也变得非常热。",
+    "weight": "1814 g",
+    "volume": "1500 ml",
+    "price": "280 USD",
+    "to_hit": 1,
+    "bashing": 6,
+    "cutting": 20,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "red",
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "ammo_restriction": {
+          "gasoline": 50
+        }
+      }
+    ],
+    "turns_per_charge": 30,
+    "revert_to": "firemachete_off",
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "stuck_in_1",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "use_action": [
+      {
+        "type": "fireweapon_on",
+        "noise": 5,
+        "noise_chance": 25,
+        "noise_message": "Your No. 9 hisses.",
+        "auto_extinguish_chance": 100,
+        "auto_extinguish_message": "Your No. 9 cuts out!",
+        "voluntary_extinguish_message": "Your No. 9 goes dark.",
+        "charges_extinguish_message": "Out of ammo!",
+        "water_extinguish_message": "Your No. 9 hisses in the water and goes out."
+      },
+      {
+        "type": "firestarter",
+        "moves": 30
+      }
+    ],
+    "flags": [
+      "FIRE",
+      "LIGHT_240",
+      "CHARGEDIM",
+      "FLAMING",
+      "DURABLE_MELEE",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "firekatana_off",
+    "looks_like": "katana",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "升阳刀（关）",
+      "str_pl": "日出（关）"
+    },
+    "description": "这把武士刀刀锋边缘有着汽油喷嘴。大家喜欢火，人们喜欢武士刀，所以为什么不把它们结合在一起？汽油燃烧器附加在刀刃上可以烧伤敌人。使用它来点火。",
+    "weight": "1400 g",
+    "volume": "2250 ml",
+    "price": "980 USD",
+    "bashing": 4,
+    "cutting": 31,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "ammo_restriction": {
+          "gasoline": 50
+        }
+      }
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2"
+    ],
+    "use_action": {
+      "type": "fireweapon_off",
+      "target_id": "firekatana_on",
+      "moves": 10,
+      "noise": 10,
+      "success_message": "The Sun rises.",
+      "lacks_fuel_message": "Time stands still."
+    },
+    "flags": [
+      "FIRE",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "firekatana_on",
+    "looks_like": "torch_lit",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "升阳刀（开）",
+      "str_pl": "日出（on）"
+    },
+    "description": "武士刀可以发出愤怒灼热的光，当然这不是因为热，但它仍然像魔鬼一样刺痛。",
+    "weight": "1400 g",
+    "volume": "2250 ml",
+    "price": "980 USD",
+    "bashing": 4,
+    "cutting": 31,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "red",
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "ammo_restriction": {
+          "gasoline": 50
+        }
+      }
+    ],
+    "turns_per_charge": 30,
+    "revert_to": "firekatana_off",
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2",
+      "WIDE"
+    ],
+    "use_action": [
+      {
+        "type": "fireweapon_on",
+        "noise_chance": 35,
+        "noise_message": "The Sun shines brightly.",
+        "voluntary_extinguish_message": "The Sun sets.",
+        "charges_extinguish_message": "The Light Fades.",
+        "water_extinguish_message": "Your sword hisses in the water and goes out."
+      }
+    ]
+  },
+  {
+    "id": "halligan",
+    "type": "TOOL",
+    "copy-from": "halligan",
+    "name": {
+      "str": "消防破拆棍"
+    },
+    "description": "重型多用工具，通常被消防员、执法部门和救灾部队使用。用它来撬开房门和井盖吧！当然，砸丧尸也行。",
+    "weight": "3600 g",
+    "volume": "550 ml",
+    "longest_side": "45 cm",
+    "price": "75 USD",
+    "to_hit": 2,
+    "bashing": 43,
+    "cutting": 5,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL",
+      "SWEEP",
+      "WIDE",
+      "heavy_blow",
+      "stuck_in_1"
+    ],
+    "qualities": [
+      [
+        "PRY",
+        4
+      ],
+      [
+        "HAMMER",
+        2
+      ],
+      [
+        "DIG",
+        1
+      ]
+    ],
+    "use_action": [
+      "HAMMER",
+      "CROWBAR"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP",
+      "STAB",
+      "SHEATH_AXE"
+    ]
+  },
+  {
+    "id": "hammer",
+    "type": "TOOL",
+    "copy-from": "hammer",
+    "name": {
+      "str": "锤子"
+    },
+    "description": "这是一把带木柄的消磁钢锤。用锤子、钉子和你库存中的四分之二的东西，你可以用木板把相邻的门和窗钉起来。它还有许多其他用途。",
+    "weight": "566 g",
+    "volume": "315 ml",
+    "price": "7 USD",
+    "to_hit": 1,
+    "bashing": 9,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "symbol": ";",
+    "color": "brown",
+    "qualities": [
+      [
+        "HAMMER",
+        3
+      ],
+      [
+        "PRY",
+        1
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ]
+    ],
+    "use_action": [
+      "HAMMER",
+      "CROWBAR"
+    ],
+    "flags": [
+      "BELT_CLIP",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "iceaxe",
+    "type": "TOOL",
+    "copy-from": "iceaxe",
+    "name": {
+      "str": "冰斧"
+    },
+    "description": "这是一把头上带锤子的冰斧，是登山者使用的多功能登山工具。它足够坚固，所以你可以用它撬开关闭的门或提起人孔盖。",
+    "weight": "500 g",
+    "volume": "750 ml",
+    "longest_side": "25 cm",
+    "price": "50 USD",
+    "to_hit": 2,
+    "bashing": 24,
+    "cutting": 7,
+    "material": [
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "repose",
+      "stuck_in_2"
+    ],
+    "qualities": [
+      [
+        "HAMMER",
+        2
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ],
+      [
+        "PRY",
+        2
+      ]
+    ],
+    "use_action": [
+      "CROWBAR"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP",
+      "SHEATH_AXE"
+    ]
+  },
+  {
+    "id": "katana",
+    "type": "TOOL",
+    "copy-from": "katana",
+    "category": "weapons",
+    "name": {
+      "str": "武士刀"
+    },
+    "description": "一柄武士刀，打刀款式，为日本武士步兵作战时使用，刀身中央略微弯曲，以利于迅速拔刀，全长一米左右，刀刃锋利无比。",
+    "weight": "1133 g",
+    "volume": "2 L",
+    "longest_side": "65 cm",
+    "price": "980 USD",
+    "to_hit": 1,
+    "bashing": 5,
+    "cutting": 31,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        9
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "knife_combat",
+    "type": "TOOL",
+    "copy-from": "knife_combat",
+    "category": "weapons",
+    "name": {
+      "str": "战术匕首",
+      "str_pl": "战术匕首"
+    },
+    "description": "一把轻而极度锋利的军用战斗匕首，手持或当作刺刀使用同样致命。",
+    "weight": "558 g",
+    "volume": "500 ml",
+    "longest_side": "15 cm",
+    "price": "100 USD",
+    "to_hit": 1,
+    "bashing": 7,
+    "cutting": 24,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "gunmod_data": {
+      "location": "underbarrel",
+      "mod_targets": [
+        "shotgun",
+        "rifle"
+      ],
+      "install_time": "15 m",
+      "dispersion_modifier": 10,
+      "mode_modifier": [
+        [
+          "REACH",
+          "bayonet",
+          2,
+          [
+            "MELEE",
+            "REACH_ATTACK"
+          ]
+        ]
+      ]
+    },
+    "techniques": [
+      "RAPID",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        19
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "NPC_THROWN"
+    ]
+  },
+  {
+    "id": "knife_hunting",
+    "type": "TOOL",
+    "copy-from": "knife_hunting",
+    "category": "weapons",
+    "name": {
+      "str": "猎刀",
+      "str_pl": "猎刀"
+    },
+    "//": "Highest non-powertool butchering quality.  It's made for skinning and butchering game, which is what you're generally doing.",
+    "description": "猎人常用的刀具，这种单刃带鞘的小刀是专用于切削、剥皮等用途，而不是战斗。",
+    "weight": "390 g",
+    "volume": "250 ml",
+    "longest_side": "10 cm",
+    "price": "40 USD",
+    "cutting": 16,
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        30
+      ]
+    ],
+    "flags": [
+      "SHEATH_KNIFE"
+    ]
+  },
+  {
+    "id": "knife_rambo",
+    "type": "TOOL",
+    "copy-from": "knife_rambo",
+    "category": "weapons",
+    "name": {
+      "str": "生存刀",
+      "str_pl": "救生刀"
+    },
+    "//": "This isn't really supposed to be a very good knife, or a very good saw.  It's more for looking scary.",
+    "description": "一把常见于特种部队、野外求生爱好者所用的大号生存刀。刀身径直，刀背上有着一排锯齿，有着砍、锯、刺等多种用途，握柄底端镶嵌着一个迷你指南针。",
+    "weight": "612 g",
+    "volume": "1 L",
+    "longest_side": "15 cm",
+    "price": "20 USD",
+    "bashing": 6,
+    "cutting": 20,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose",
+      "stuck_in_2"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "SAW_W",
+        1
+      ],
+      [
+        "SAW_M",
+        1
+      ],
+      [
+        "BUTCHER",
+        7
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "knife_rm42",
+    "type": "TOOL",
+    "copy-from": "knife_rm42",
+    "category": "weapons",
+    "name": {
+      "str": "RM42 战术匕首",
+      "str_pl": "RM42 战术匕首"
+    },
+    "description": "一把坚固的哑光黑色Rivtech战斗匕首。它有着独特的细长剑形刃和专利防滑握柄，可以在合适的武器上当作刺刀使用。虽说它是为军队设计的，但是因为它吓人的外观，这把匕首在电影和收藏者中非常流行。",
+    "weight": "188 g",
+    "volume": "750 ml",
+    "longest_side": "15 cm",
+    "price": "450 USD",
+    "to_hit": 2,
+    "bashing": 4,
+    "cutting": 22,
+    "material": [
+      "ceramic",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "gunmod_data": {
+      "location": "underbarrel",
+      "mod_targets": [
+        "shotgun",
+        "rifle"
+      ],
+      "install_time": "15 m",
+      "dispersion_modifier": 10,
+      "mode_modifier": [
+        [
+          "REACH",
+          "bayonet",
+          2,
+          [
+            "MELEE",
+            "REACH_ATTACK"
+          ]
+        ]
+      ]
+    },
+    "techniques": [
+      "RAPID",
+      "WBLOCK_1",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        19
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE",
+      "NO_CVD"
+    ]
+  },
+  {
+    "id": "knife_trench",
+    "type": "TOOL",
+    "copy-from": "knife_trench",
+    "category": "weapons",
+    "name": {
+      "str": "战壕匕首",
+      "str_pl": "战壕刀"
+    },
+    "description": "一把拥有保护手指关节的钢制护手的匕首，专为第一次世界大战中残酷的肉搏战设计的武器，让士兵们在不足几英尺宽的战壕里互相厮杀，独特的刃形可以令其轻易的撬开或凿穿钢盔，对付丧尸也是同样如此。",
+    "weight": "608 g",
+    "volume": "500 ml",
+    "longest_side": "10 cm",
+    "price": "110 USD",
+    "to_hit": 2,
+    "bashing": 6,
+    "cutting": 19,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        19
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "STAB",
+      "SHEATH_KNIFE"
+    ]
+  },
+  {
+    "id": "kris",
+    "type": "TOOL",
+    "copy-from": "kris",
+    "category": "weapons",
+    "name": {
+      "str": "蛇剑",
+      "str_pl": "蛇剑"
+    },
+    "description": "东南亚原产的波纹状刀刃的匕首。刀刃的形状让它善于制造又大又疼的伤口。",
+    "weight": "558 g",
+    "volume": "750 ml",
+    "longest_side": "30 cm",
+    "price": "90 USD",
+    "to_hit": 1,
+    "bashing": 8,
+    "cutting": 24,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "BRUTAL",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        12
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "kukri",
+    "type": "TOOL",
+    "copy-from": "kukri",
+    "category": "weapons",
+    "name": {
+      "str": "库克利弯刀"
+    },
+    "description": "这种多功能的传统武器起源于尼泊尔。具有重厚的刀身和向内弯曲的刀刃，可以用来作为一种工具和武器。",
+    "weight": "450 g",
+    "volume": "750 ml",
+    "longest_side": "30 cm",
+    "price": "80 USD",
+    "to_hit": 1,
+    "bashing": 8,
+    "cutting": 25,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        18
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE"
+    ]
+  },
+  {
+    "id": "l-stick",
+    "type": "TOOL",
+    "copy-from": "l-stick",
+    "category": "weapons",
+    "name": {
+      "str": "光棒（关）",
+      "str_pl": "l形杆（关闭）"
+    },
+    "description": "这款由Light corporation生产的时尚的工作人员不仅可以作为光源，而且由于采用了超合金材料，它还可以作为轻型武器。由于专利效率的提高超过了标准光源，l-棒或灯棒，因为它通常被称为，电池使用时间比其他光源更长。",
+    "weight": "1 kg",
+    "volume": "3 L",
+    "longest_side": "145 cm",
+    "price": "50 USD",
+    "to_hit": 3,
+    "bashing": 23,
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "100 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "charges_per_use": 1,
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "repose"
+    ],
+    "use_action": {
+      "target": "l-stick_on",
+      "msg": "光棒亮了起来。",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "光棒的电池耗尽了。",
+      "type": "transform"
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SPEAR"
+    ]
+  },
+  {
+    "id": "l-stick_on",
+    "type": "TOOL",
+    "copy-from": "l-stick_on",
+    "category": "weapons",
+    "name": {
+      "str": "光棒（开）",
+      "str_pl": "L形杆（开）"
+    },
+    "description": "这款由Light corporation生产的时尚的工作人员不仅可以作为光源，而且由于采用了超合金材料，它还可以作为轻型武器。由于专利效率的提高超过了标准光源，l-棒或灯棒，因为它通常被称为，电池使用时间比其他光源更长。工作人员在明亮地发光，这是慢慢耗尽电池。",
+    "weight": "1 kg",
+    "volume": "3 L",
+    "longest_side": "145 cm",
+    "price": "80 USD",
+    "to_hit": 3,
+    "bashing": 23,
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "symbol": ";",
+    "color": "blue",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "100 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "turns_per_charge": 40,
+    "revert_to": "l-stick",
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "repose"
+    ],
+    "use_action": {
+      "target": "l-stick",
+      "msg": "光棒失去了亮光。",
+      "menu_text": "关闭",
+      "type": "transform"
+    },
+    "flags": [
+      "LIGHT_300",
+      "DURABLE_MELEE",
+      "TRADER_AVOID",
+      "SHEATH_SPEAR"
+    ]
+  },
+  {
+    "id": "makeshift_hammer",
+    "type": "TOOL",
+    "copy-from": "makeshift_hammer",
+    "name": {
+      "str": "简易锤子"
+    },
+    "description": "粗糙的锤子，用一块金属固定在棍子上制成。虽然当锤子是勉强凑合了，但跟正规的还是没得比。",
+    "weight": "1020 g",
+    "volume": "500 ml",
+    "price": "0 cent",
+    "bashing": 9,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "symbol": ";",
+    "color": "brown",
+    "qualities": [
+      [
+        "HAMMER",
+        2
+      ]
+    ],
+    "use_action": [
+      "HAMMER"
+    ],
+    "flags": [
+      "NONCONDUCTIVE",
+      "BELT_CLIP"
+    ]
+  },
+  {
+    "id": "mop",
+    "type": "TOOL",
+    "copy-from": "mop",
+    "name": {
+      "str": "拖把"
+    },
+    "description": "笨重的拖把，清理泄漏的液体很不错。",
+    "weight": "929 g",
+    "volume": "1750 ml",
+    "longest_side": "115 cm",
+    "price": "10 USD",
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "wood"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "use_action": [
+      "MOP"
+    ]
+  },
+  {
+    "id": "pickaxe",
+    "type": "TOOL",
+    "copy-from": "pickaxe",
+    "name": {
+      "str": "鹤嘴锄"
+    },
+    "description": "一把钢制大镐头，刨墙砸头两不误。劳动人民一声吼，地球也要抖三抖！",
+    "weight": "4535 g",
+    "volume": "3 L",
+    "longest_side": "61 cm",
+    "price": "160 USD",
+    "to_hit": -3,
+    "bashing": 20,
+    "cutting": 10,
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "heavy_blow",
+      "stuck_in_1"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "use_action": [
+      "PICKAXE"
+    ],
+    "flags": [
+      "SPEAR",
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE",
+      "DIG_TOOL",
+      "SHEATH_AXE"
+    ]
+  },
+  {
+    "id": "primitive_axe",
+    "type": "TOOL",
+    "copy-from": "primitive_axe",
+    "name": {
+      "str": "石斧"
+    },
+    "description": "一片锋利的石头被绑在一根棍子上，也能当斧子来用啦，可惜和铁斧相比，就差得远了。",
+    "weight": "1100 g",
+    "volume": "1 L",
+    "longest_side": "63 cm",
+    "price": "0 cent",
+    "bashing": 9,
+    "cutting": 15,
+    "material": [
+      "wood",
+      "stone"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "qualities": [
+      [
+        "AXE",
+        1
+      ],
+      [
+        "BUTCHER",
+        -70
+      ],
+      [
+        "HAMMER",
+        1
+      ]
+    ],
+    "flags": [
+      "BELT_CLIP",
+      "SHEATH_AXE"
+    ]
+  },
+  {
+    "id": "primitive_hammer",
+    "type": "TOOL",
+    "copy-from": "primitive_hammer",
+    "name": {
+      "str": "石锤"
+    },
+    "description": "一个插着棒子的岩石，勉强可以做锤子，但山寨的毕竟比不过真的。",
+    "weight": "1 kg",
+    "volume": "400 ml",
+    "longest_side": "15 cm",
+    "price": "0 cent",
+    "bashing": 14,
+    "material": [
+      "stone",
+      "wood"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "symbol": ";",
+    "color": "brown",
+    "qualities": [
+      [
+        "HAMMER",
+        2
+      ]
+    ],
+    "flags": [
+      "BELT_CLIP"
+    ],
+    "use_action": [
+      "HAMMER"
+    ]
+  },
+  {
+    "id": "rapier",
+    "type": "TOOL",
+    "copy-from": "rapier",
+    "category": "weapons",
+    "name": {
+      "str": "迅捷剑"
+    },
+    "description": "很适合绅士与剑士使用的武器，轻盈而迅捷，可以适用于各种战斗。",
+    "weight": "1 kg",
+    "volume": "1500 ml",
+    "longest_side": "75 cm",
+    "price": "980 USD",
+    "to_hit": 2,
+    "bashing": 2,
+    "cutting": 29,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "PRECISE",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        9
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "scalpel",
+    "type": "TOOL",
+    "copy-from": "scalpel",
+    "name": {
+      "str": "手术刀"
+    },
+    "description": "一把小型的，非常锋利的刀具，被广泛应用于各项外科手术中。如果你很擅长近战武器的话，它也会是一件大杀器。",
+    "weight": "23 g",
+    "volume": "15 ml",
+    "price": "10 USD",
+    "to_hit": -3,
+    "cutting": 7,
+    "material": [
+      "steel"
+    ],
+    "symbol": ",",
+    "color": "light_gray",
+    "techniques": [
+      "PRECISE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        3
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ],
+    "flags": [
+      "SPEAR"
+    ]
+  },
+  {
+    "id": "shock_staff",
+    "type": "TOOL",
+    "copy-from": "shock_staff",
+    "category": "weapons",
+    "name": {
+      "str": "电棍",
+      "str_pl": "电棍"
+    },
+    "description": "这是一柄铁头木棒，内置有高压眩晕枪。眩晕枪发出电流能传至棍棒两端的金属帽上，为将强敌电晕后痛殴致死提供了便利。",
+    "weight": "2351 g",
+    "volume": "3250 ml",
+    "longest_side": "145 cm",
+    "price": "80 USD",
+    "to_hit": 3,
+    "bashing": 29,
+    "material": [
+      "wood",
+      "iron"
+    ],
+    "symbol": "/",
+    "color": "brown",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "100 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "charges_per_use": 100,
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "SWEEP",
+      "repose"
+    ],
+    "use_action": [
+      "TAZER"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NO_UNLOAD",
+      "RECHARGE",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "shocktonfa_off",
+    "type": "TOOL",
+    "copy-from": "shocktonfa_off",
+    "category": "weapons",
+    "name": {
+      "str": "战术拐（关）",
+      "str_pl": "战术tonfas（关闭）"
+    },
+    "description": "这是个强化的塑料警棍，中空的部分装着电容与高效的充电电池。当握把上的开关被按下去时，一股高压电流会被传送至安装在警棍顶端的两个电极上，并输出给任何接触到电极的倒霉蛋身上。他还有个别致的小手电筒，现在处于关闭的状态。",
+    "weight": "726 g",
+    "volume": "2250 ml",
+    "longest_side": "30 cm",
+    "price": "170 USD",
+    "to_hit": 2,
+    "bashing": 17,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "100 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "charges_per_use": 1,
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "repose"
+    ],
+    "use_action": [
+      "SHOCKTONFA_OFF"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NO_UNLOAD",
+      "RECHARGE",
+      "NONCONDUCTIVE",
+      "BELT_CLIP"
+    ]
+  },
+  {
+    "id": "shocktonfa_on",
+    "type": "TOOL",
+    "copy-from": "shocktonfa_on",
+    "category": "weapons",
+    "name": {
+      "str": "战术拐（开）",
+      "str_pl": "战术tonfas （on）"
+    },
+    "description": "这是个强化的塑料警棍，中空的部分装着电容与高效的充电电池。当握把上的开关被按下去时，一股高压电流会被传送至安装在警棍顶端的两个电极上，并输出给任何接触到电极的倒霉蛋身上。它上面的手电筒已经开启，不断耗电来产生光亮。激活它来关闭。",
+    "weight": "726 g",
+    "volume": "2250 ml",
+    "longest_side": "30 cm",
+    "price": "170 USD",
+    "to_hit": 2,
+    "bashing": 14,
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "100 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "charges_per_use": 1,
+    "turns_per_charge": 15,
+    "revert_to": "shocktonfa_off",
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "repose"
+    ],
+    "use_action": [
+      "SHOCKTONFA_ON"
+    ],
+    "flags": [
+      "LIGHT_450",
+      "CHARGEDIM",
+      "DURABLE_MELEE",
+      "TRADER_AVOID",
+      "NONCONDUCTIVE",
+      "BELT_CLIP"
+    ]
+  },
+  {
+    "id": "shovel",
+    "type": "TOOL",
+    "copy-from": "shovel",
+    "name": {
+      "str": "铁锹"
+    },
+    "description": "一个挖坑工具，你可以用它在你周围挖坑。",
+    "weight": "1315 g",
+    "volume": "3500 ml",
+    "longest_side": "105 cm",
+    "price": "20 USD",
+    "to_hit": 3,
+    "bashing": 14,
+    "cutting": 3,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "heavy_blow",
+      "stuck_in_2"
+    ],
+    "symbol": "/",
+    "color": "brown",
+    "qualities": [
+      [
+        "DIG",
+        3
+      ],
+      [
+        "COOK",
+        1
+      ],
+      [
+        "BUTCHER",
+        -70
+      ]
+    ],
+    "flags": [
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "id": "hoe",
+    "type": "TOOL",
+    "copy-from": "hoe",
+    "name": {
+      "str": "锄头"
+    },
+    "description": "一把农具，你可以用它来把平土地锄成难以通过的一团泥。",
+    "weight": "1088 g",
+    "volume": "3500 ml",
+    "longest_side": "105 cm",
+    "price": "20 USD",
+    "to_hit": 3,
+    "bashing": 10,
+    "cutting": 6,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "stuck_in_1"
+    ],
+    "symbol": "/",
+    "color": "brown",
+    "use_action": [
+      "MAKEMOUND"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "candlestick",
+    "copy-from": "candlestick",
+    "symbol": "/",
+    "color": "yellow",
+    "name": {
+      "str": "烛台"
+    },
+    "description": "一个厚重的镍合金烛台，底座坚固，镀金。普拉姆教授在研究中用来杀死布莱克博士的那种。",
+    "category": "other",
+    "to_hit": -1,
+    "price": "100 USD",
+    "price_postapoc": "1 USD",
+    "material": [
+      "silver",
+      "brass",
+      "gold"
+    ],
+    "techniques": [
+      "heavy_blow"
+    ],
+    "weight": "3100 g",
+    "volume": "1 L",
+    "bashing": 16
+  },
+  {
+    "id": "switchblade",
+    "type": "TOOL",
+    "copy-from": "switchblade",
+    "category": "weapons",
+    "name": {
+      "str": "弹簧刀"
+    },
+    "description": "又长又细的弹簧小刀，不用时可以把刀刃收在刀柄里面，使用时自动弹出。",
+    "weight": "100 g",
+    "volume": "50 ml",
+    "longest_side": "7 cm",
+    "price": "20 USD",
+    "to_hit": -2,
+    "cutting": 16,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "techniques": [
+      "RAPID",
+      "repose"
+    ],
+    "symbol": ";",
+    "color": "dark_gray",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        14
+      ]
+    ],
+    "flags": [
+      "STAB"
+    ]
+  },
+  {
+    "id": "tanto",
+    "type": "TOOL",
+    "copy-from": "tanto",
+    "category": "weapons",
+    "name": {
+      "str": "日式短刀"
+    },
+    "description": "一把日式短刀，不同于肋差，此刀仅在护身和最后关头时切腹使用，几乎不参与战斗，一般贴身携带，古时除了武士以外，武家的女子也会携带。\n“在末世的绝望中可以赋予你更具意义的自尽方式。”",
+    "weight": "558 g",
+    "volume": "500 ml",
+    "longest_side": "30 cm",
+    "price": "180 USD",
+    "to_hit": 2,
+    "bashing": 1,
+    "cutting": 22,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": [
+      "RAPID",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        18
+      ]
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE"
+    ]
+  },
+  {
+    "id": "torch",
+    "copy-from": "torch",
+    "type": "TOOL",
+    "name": {
+      "str": "火把",
+      "str_pl": "火把"
+    },
+    "description": "浸透了可燃材料的布胡乱地缠在棍子上，点燃了似乎就能照亮四周。找个打火机或者划根火柴点着它。",
+    "weight": "831 g",
+    "volume": "750 ml",
+    "price": "0 cent",
+    "to_hit": 1,
+    "bashing": 8,
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ]
+  },
+  {
+    "id": "torch_lit",
+    "copy-from": "torch_lit",
+    "type": "TOOL",
+    "name": {
+      "str": "火把（点燃）",
+      "str_pl": "手电筒（点燃）"
+    },
+    "description": "浸透了可燃材料的布胡乱地缠在棍子上，正在燃烧，看，你有光了。",
+    "weight": "831 g",
+    "volume": "750 ml",
+    "price": "0 cent",
+    "to_hit": 1,
+    "bashing": 8,
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "flags": [
+      "FIRE",
+      "LIGHT_310",
+      "CHARGEDIM",
+      "FLAMING",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "wakizashi",
+    "type": "TOOL",
+    "copy-from": "wakizashi",
+    "category": "weapons",
+    "name": {
+      "str": "肋差",
+      "str_pl": "肋差"
+    },
+    "description": "一柄日本武士用于室内及其他狭小空间贴身战斗的短刀，通常随身携带，于遭遇突发敌人时，在打刀、太刀不利于使用的情况下自卫。",
+    "weight": "835 g",
+    "volume": "1500 ml",
+    "longest_side": "45 cm",
+    "price": "178 USD",
+    "to_hit": 1,
+    "bashing": 3,
+    "cutting": 24,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        13
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "wrench",
+    "type": "TOOL",
+    "copy-from": "wrench",
+    "name": {
+      "str": "扳手",
+      "str_pl": "扳手"
+    },
+    "description": "一把扳手，能当做武器握在手里，也是许多机械制造必备之物。",
+    "weight": "907 g",
+    "volume": "500 ml",
+    "price": "12 USD",
+    "to_hit": 1,
+    "bashing": 9,
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "qualities": [
+      [
+        "WRENCH",
+        2
+      ],
+      [
+        "WRENCH_FINE",
+        1
+      ],
+      [
+        "WHEEL_FAST",
+        1
+      ]
+    ],
+    "flags": [
+      "BELT_CLIP"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "mjolnir",
+    "copy-from": "mjolnir",
+    "name": {
+      "str": "Mjölnir，雷神之锤"
+    },
+    "description": "一把名为妙尔尼尔（Mjölnir）的神锤，用垂死恒星（白矮星）的星核打造。铭文上写着：\n \n执此锤者，\n如其适格，\n当承神威... \n摧毁！！",
+    "weight": "5443 g",
+    "color": "light_gray",
+    "symbol": "/",
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "techniques": [
+      "BRUTAL",
+      "WIDE",
+      "SWEEP",
+      "heavy_blow"
+    ],
+    "flags": [
+      "NONCONDUCTIVE"
+    ],
+    "volume": "2500 ml",
+    "longest_side": "35 cm",
+    "bashing": 9999,
+    "price": "120 USD",
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "bokken",
+    "type": "GENERIC",
+    "copy-from": "bokken",
+    "symbol": "/",
+    "color": "brown",
+    "name": {
+      "str": "日式木刀"
+    },
+    "description": "一柄用于锻炼的木刀，严格模仿真正武士刀的重量和平衡，尽管缺乏一个锋利的刀锋，但它仍然有相当的能力去造成致命的伤害。\n“ 洞 爷 湖 ”",
+    "price": "550 USD",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "SWEEP",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ],
+    "weight": "1133 g",
+    "volume": "2 L",
+    "longest_side": "75 cm",
+    "//": "MA reference I used held that a bokken crushes rather than cuts (or impales) but is otherwise just as damaging as a katana.  Nerfed by popular demand.",
+    "bashing": 25,
+    "cutting": 1,
+    "to_hit": 1,
+    "category": "weapons"
+  },
+  {
+    "type": "GENERIC",
+    "id": "cudgel",
+    "copy-from": "cudgel",
+    "name": {
+      "str": "长棍"
+    },
+    "description": "一根纤细的长木棍，虽然传统上用作训练决斗技巧的道具，但在紧要关头时它仍然是把好用的近战武器。",
+    "weight": "425 g",
+    "to_hit": 2,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "PRECISE",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP"
+    ],
+    "volume": "600 ml",
+    "longest_side": "35 cm",
+    "bashing": 8,
+    "price": "10 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "q_staff",
+    "copy-from": "q_staff",
+    "symbol": "/",
+    "color": "brown",
+    "name": {
+      "str": "武术长棍",
+      "str_pl": "四分卫"
+    },
+    "description": "一根光滑坚硬的木棒，有皮制的把手，轻便、匀称，很容易掌握。\n“多纳泰罗！”",
+    "price": "40 USD",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SPEAR"
+    ],
+    "weight": "1400 g",
+    "volume": "3 L",
+    "longest_side": "145 cm",
+    "bashing": 25,
+    "category": "weapons",
+    "to_hit": 3
+  },
+  {
+    "type": "GENERIC",
+    "id": "i_staff",
+    "copy-from": "i_staff",
+    "symbol": "/",
+    "color": "brown",
+    "name": {
+      "str": "镔铁棍",
+      "str_pl": "铁鞋四分卫"
+    },
+    "description": "一根光滑坚硬的木棒，有皮制的把手，并且箍上金属圈装上金属包头来加强攻击力。耐用、匀称，并且令人惊奇的容易掌握。",
+    "price": "60 USD",
+    "material": [
+      "wood",
+      "iron"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "SWEEP",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR"
+    ],
+    "weight": "2200 g",
+    "volume": "3 L",
+    "longest_side": "145 cm",
+    "bashing": 30,
+    "category": "weapons",
+    "to_hit": 3,
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "lajatang",
+    "copy-from": "lajatang",
+    "symbol": "/",
+    "color": "brown",
+    "name": {
+      "str": "圆月铲"
+    },
+    "description": "一柄据传是农具发展而来的圆月铲，是明代以后出现的武器，造型为一长柄两端各有锋刃，一边是月牙状，另一边则为铲状刃。多为东方的僧侣使用，因此别名“禅杖”。",
+    "price": "120 USD",
+    "material": [
+      "wood",
+      "iron"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "SPIN",
+      "repose",
+      "stuck_in_1",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ],
+    "weight": "2500 g",
+    "volume": "6500 ml",
+    "longest_side": "145 cm",
+    "bashing": 4,
+    "cutting": 26,
+    "to_hit": 2
+  },
+  {
+    "type": "GENERIC",
+    "id": "hatchet",
+    "copy-from": "hatchet",
+    "symbol": ";",
+    "color": "light_gray",
+    "name": {
+      "str": "短柄斧"
+    },
+    "description": "一柄单手的短斧，是一件不错的近战武器，也可以用于砍柴与捶打。",
+    "price": "25 USD",
+    "price_postapoc": "50 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "weight": "907 g",
+    "volume": "775 ml",
+    "longest_side": "25 cm",
+    "bashing": 14,
+    "cutting": 25,
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP",
+      "NONCONDUCTIVE",
+      "SHEATH_AXE"
+    ],
+    "to_hit": 1,
+    "category": "weapons",
+    "qualities": [
+      [
+        "AXE",
+        2
+      ],
+      [
+        "CUT",
+        1
+      ],
+      [
+        "HAMMER",
+        2
+      ],
+      [
+        "HAMMER_FINE",
+        1
+      ],
+      [
+        "BUTCHER",
+        16
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "pointy_stick",
+    "copy-from": "pointy_stick",
+    "symbol": "/",
+    "color": "brown",
+    "name": {
+      "str": "尖木棍"
+    },
+    "description": "一头削的尖尖的木棍，可以用来演杂技，当然也可以用来扎人。",
+    "material": [
+      "wood"
+    ],
+    "volume": "1250 ml",
+    "longest_side": "55 cm",
+    "weight": "900 g",
+    "bashing": 5,
+    "cutting": 9,
+    "to_hit": 1,
+    "flags": [
+      "SPEAR"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose",
+      "stuck_in_2"
+    ],
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broom",
+    "copy-from": "broom",
+    "name": {
+      "str": "扫把"
+    },
+    "description": "一个家务用扫帚，在灾变前可以做扫除或者追赶野猫用，灾变后可以鞭笞丧尸。\n“骑上它是不能飞的。”",
+    "weight": "929 g",
+    "longest_side": "110 cm",
+    "to_hit": 1,
+    "color": "yellow",
+    "symbol": "/",
+    "material": [
+      "plastic"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "volume": "1250 ml",
+    "bashing": 4,
+    "price": "24 USD",
+    "price_postapoc": "0 cent"
+  },
+  {
+    "type": "GENERIC",
+    "id": "hammer_sledge",
+    "copy-from": "hammer_sledge",
+    "name": {
+      "str": "大钢锤"
+    },
+    "description": "一柄巨大而沉重的钢制重锤，挥动起来很费劲，但其强大力量足以摧毁一面墙壁，作为武器更是当仁不让的极佳打击武器，一锤之威足以让丧尸粉身碎骨，但前提是能够挥的起来。",
+    "weight": "3775 g",
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "flags": [
+      "NONCONDUCTIVE"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL",
+      "WIDE",
+      "heavy_blow"
+    ],
+    "volume": "1250 ml",
+    "longest_side": "55 cm",
+    "bashing": 45,
+    "price": "120 USD",
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "nailbat",
+    "copy-from": "nailbat",
+    "name": {
+      "str": "钉头棒球棍"
+    },
+    "description": "一根棒身插了几根钉子的棒球棒，强力的近战武器。",
+    "weight": "1159 g",
+    "to_hit": 3,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "stuck_in_2"
+    ],
+    "volume": "1750 ml",
+    "longest_side": "65 cm",
+    "bashing": 23,
+    "cutting": 6,
+    "flags": [
+      "STAB"
+    ],
+    "price": "160 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "bwirebat",
+    "copy-from": "bwirebat",
+    "name": {
+      "str": "铁丝棒球棍"
+    },
+    "description": "一根在顶部缠绕了几道带刺铁丝网的棒球棒，野蛮的近战武器。",
+    "weight": "1420 g",
+    "to_hit": 3,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ],
+    "volume": "2 L",
+    "longest_side": "65 cm",
+    "bashing": 23,
+    "cutting": 5,
+    "price": "200 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "warhammer",
+    "copy-from": "warhammer",
+    "name": {
+      "str": "战锤"
+    },
+    "description": "一个与柄垂直相交的柄头上一边是平坦的锤状，另一边则是像钩爪一样尖起来，顶端还有一个与矛类似的尖刃，两边都可以攻击，面对装甲目标，以平坦面打击仍能给予相当大的伤害，但作为工具就没有作为武器那么称手。",
+    "weight": "1337 g",
+    "to_hit": 1,
+    "color": "brown",
+    "symbol": "/",
+    "//": "Craftable from steel, shouldn't be silver.  A warhammer is essentially one end of a pickaxe with balancing weight on the other and crushes/pierces the armor.",
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "techniques": [
+      "BRUTAL",
+      "SWEEP",
+      "heavy_blow"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "NONCONDUCTIVE",
+      "BELT_CLIP"
+    ],
+    "volume": "1250 ml",
+    "longest_side": "85 cm",
+    "bashing": 22,
+    "cutting": 23,
+    "price": "160 USD",
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "homewrecker",
+    "copy-from": "homewrecker",
+    "name": {
+      "str": "寡妇制造者"
+    },
+    "description": "一长条被几块钢铁紧紧包裹的木头。这使得这件武器笨重和缓慢，但可以造成沉重的打击。",
+    "weight": "3024 g",
+    "to_hit": -3,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "heavy_blow"
+    ],
+    "volume": "1250 ml",
+    "longest_side": "65 cm",
+    "bashing": 33,
+    "cutting": 2,
+    "flags": [
+      "STAB",
+      "NONCONDUCTIVE"
+    ],
+    "price": "80 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "bowling_pin",
+    "copy-from": "bowling_pin",
+    "name": {
+      "str": "保龄球瓶"
+    },
+    "description": "一只保龄球瓶。你非要做武器去砸别丧尸也行，就是有点短。",
+    "weight": "1530 g",
+    "to_hit": -1,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "volume": "2250 ml",
+    "longest_side": "25 cm",
+    "bashing": 11,
+    "price": "10 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "battletorch_done",
+    "copy-from": "battletorch_done",
+    "name": {
+      "str": "路易维尔屠杀者（燃尽）"
+    },
+    "description": "一支结实的木棒，由防火芳纶纤维包裹。挥起来手感不错，可以浸满汽油后点燃。拆解后可以回收棒球棒并得到一些防火芳纶纤维布片。",
+    "weight": "765 g",
+    "longest_side": "65 cm",
+    "to_hit": 3,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "volume": "1750 ml",
+    "bashing": 19,
+    "price": "180 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "bat_metal",
+    "copy-from": "bat_metal",
+    "name": {
+      "str": "铝质棒球棍"
+    },
+    "description": "一个铝制棒球棍，比木制棒球棍要轻，因此更易挥舞。",
+    "weight": "765 g",
+    "longest_side": "65 cm",
+    "to_hit": 3,
+    "color": "light_gray",
+    "symbol": "/",
+    "material": [
+      "aluminum"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ],
+    "volume": "1750 ml",
+    "bashing": 20,
+    "price": "160 USD"
+  },
+  {
+    "id": "spear_knife",
+    "type": "TOOL",
+    "copy-from": "spear_knife",
+    "category": "weapons",
+    "name": {
+      "str": "刺刀长矛"
+    },
+    "description": "顶端绑着一把刀刃的长长的木棍，吓唬人很不错。",
+    "weight": "1487 g",
+    "volume": "1250 ml",
+    "longest_side": "95 cm",
+    "price": "14 USD",
+    "to_hit": 1,
+    "bashing": 6,
+    "cutting": 18,
+    "material": [
+      "wood",
+      "iron"
+    ],
+    "symbol": "/",
+    "color": "brown",
+    "techniques": [
+      "WBLOCK_1",
+      "stuck_in_2"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "COOK",
+        1
+      ]
+    ],
+    "flags": [
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "FRAGILE_MELEE",
+      "SHEATH_SPEAR"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "spear_wood",
+    "copy-from": "spear_wood",
+    "name": {
+      "str": "木制长矛"
+    },
+    "description": "一根结实的长木杆，另一端削尖后用火烤硬化，成为了一个简单的木制长矛，但仍有不错的杀伤力。",
+    "weight": "898 g",
+    "to_hit": 1,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "volume": "1250 ml",
+    "longest_side": "115 cm",
+    "bashing": 3,
+    "cutting": 15,
+    "flags": [
+      "SPEAR",
+      "REACH_ATTACK",
+      "NPC_THROWN",
+      "SHEATH_SPEAR"
+    ],
+    "price": "40 USD",
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "spear_copper",
+    "copy-from": "spear_copper",
+    "name": {
+      "str": "铜制长矛"
+    },
+    "description": "一根结实的木制长杆，附有锋利的铜制矛头。",
+    "weight": "1450 g",
+    "to_hit": 1,
+    "color": "light_red",
+    "symbol": "/",
+    "material": [
+      "copper",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose"
+    ],
+    "volume": "1500 ml",
+    "longest_side": "145 cm",
+    "bashing": 6,
+    "cutting": 18,
+    "flags": [
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR"
+    ],
+    "price": "14 USD",
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "spear_steel",
+    "copy-from": "spear_steel",
+    "name": {
+      "str": "钢矛"
+    },
+    "description": "一根结实的木棍，配有手工钢质矛头。",
+    "weight": "1498 g",
+    "to_hit": 2,
+    "color": "light_gray",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "IMPALE",
+      "repose",
+      "stuck_in_2"
+    ],
+    "volume": "3 L",
+    "longest_side": "145 cm",
+    "bashing": 5,
+    "cutting": 29,
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR"
+    ],
+    "price": "160 USD",
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "spear_pipe",
+    "copy-from": "spear_pipe",
+    "name": {
+      "str": "钢管长矛"
+    },
+    "description": "一根又重又结实的带尖头的金属杆。",
+    "weight": "1998 g",
+    "//": "Changed the weight, affecting strike speed.",
+    "to_hit": 1,
+    "color": "light_gray",
+    "symbol": "/",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "IMPALE",
+      "stuck_in_2"
+    ],
+    "volume": "1250 ml",
+    "longest_side": "115 cm",
+    "bashing": 6,
+    "cutting": 25,
+    "flags": [
+      "SPEAR",
+      "REACH_ATTACK",
+      "SHEATH_SPEAR"
+    ],
+    "price": "80 USD",
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "qiang",
+    "copy-from": "qiang",
+    "name": {
+      "str": "长枪"
+    },
+    "description": "一把古中国长枪，在矛头下还有一把典型的流苏。刀剑枪棍四大兵器之一。\n“在东汉末年乃至三国、抗日战争时期与文革时期曾大放异彩。”",
+    "weight": "1398 g",
+    "to_hit": 2,
+    "color": "light_gray",
+    "symbol": "/",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "PRECISE",
+      "IMPALE",
+      "repose",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "volume": "2500 ml",
+    "longest_side": "145 cm",
+    "bashing": 4,
+    "cutting": 28,
+    "flags": [
+      "SPEAR",
+      "REACH_ATTACK",
+      "NONCONDUCTIVE",
+      "SHEATH_SPEAR"
+    ],
+    "price": "800 USD",
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "baton-extended",
+    "copy-from": "baton-extended",
+    "name": {
+      "str": "甩棍（展开）",
+      "str_pl": "可扩展警棍（扩展）"
+    },
+    "description": "一把叠缩式短棍，缩小后更易于携带。这是一件优异的近战武器。激活以使用。",
+    "weight": "725 g",
+    "longest_side": "35 cm",
+    "to_hit": 2,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "aluminum"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP"
+    ],
+    "use_action": {
+      "menu_text": "折叠",
+      "type": "transform",
+      "target": "baton",
+      "msg": "你折好你的甩棍。"
+    },
+    "volume": "750 ml",
+    "bashing": 18,
+    "price": "175 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "mace",
+    "copy-from": "mace",
+    "name": {
+      "str": "钉头槌"
+    },
+    "description": "一柄中世纪武器，木把手顶端有个重铁块，曾作为骑兵突袭的主要武器，虽然略有笨重，但对敌破甲能力极为优秀，在战争时期可将敌人的铠甲破为废铁 。",
+    "weight": "1500 g",
+    "to_hit": 1,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "techniques": [
+      "SWEEP",
+      "heavy_blow"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ],
+    "volume": "1250 ml",
+    "longest_side": "55 cm",
+    "//": "Same total damage and slightly higher weight than a morningstar - exchanged.",
+    "bashing": 37,
+    "price": "1 kUSD",
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "morningstar",
+    "copy-from": "morningstar",
+    "name": {
+      "str": "晨星锤"
+    },
+    "description": "一柄中世纪的武器，木柄上面附有一个带着若干锋刺的铁球，步兵对付具甲骑兵的主要武器之一，亦是骑兵间流行的杀敌利器，能够造成大量的钝击和刺击伤害。\n“带钉之锤形如晨星，耀眼且致命的诗意。”",
+    "weight": "1400 g",
+    "to_hit": 1,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "techniques": [
+      "SWEEP",
+      "heavy_blow"
+    ],
+    "volume": "1500 ml",
+    "longest_side": "55 cm",
+    "bashing": 35,
+    "cutting": 10,
+    "flags": [
+      "DURABLE_MELEE",
+      "SPEAR",
+      "NONCONDUCTIVE"
+    ],
+    "price": "1200 USD",
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "bio_claws_weapon",
+    "copy-from": "bio_claws_weapon",
+    "name": {
+      "str": "生化合金爪",
+      "str_pl": "生化合金爪"
+    },
+    "description": "用高科技金属合金制成的短而锋利的爪子。",
+    "to_hit": 4,
+    "color": "light_gray",
+    "symbol": "{",
+    "material": [
+      "superalloy"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "volume": "500 ml",
+    "bashing": 8,
+    "cutting": 16,
+    "flags": [
+      "STAB",
+      "UNARMED_WEAPON",
+      "NO_UNWIELD",
+      "UNBREAKABLE_MELEE",
+      "TRADER_AVOID"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        12
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "punch_dagger",
+    "copy-from": "punch_dagger",
+    "name": {
+      "str": "拳刃"
+    },
+    "description": "一把短而锋利的双刃匕首，可以紧握在手心，刀刃从指缝中露出来。它是起源于印度的冷兵器。",
+    "weight": "168 g",
+    "to_hit": 2,
+    "color": "dark_gray",
+    "symbol": "{",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "volume": "250 ml",
+    "bashing": 2,
+    "cutting": 14,
+    "flags": [
+      "STAB",
+      "UNARMED_WEAPON",
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE"
+    ],
+    "price": "100 USD",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        14
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "bagh_nakha",
+    "copy-from": "bagh_nakha",
+    "name": {
+      "str": "虎爪",
+      "str_pl": "虎爪"
+    },
+    "description": "一个小型刃爪武器，发源于印度，也被称作“bagh nakha\"或\"铁爪”。其小巧的体型使其能够被轻易隐藏在掌心之中。",
+    "weight": "92 g",
+    "volume": "125 ml",
+    "to_hit": 3,
+    "color": "dark_gray",
+    "symbol": "{",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "repose"
+    ],
+    "bashing": 2,
+    "cutting": 15,
+    "flags": [
+      "UNARMED_WEAPON",
+      "DURABLE_MELEE"
+    ],
+    "price": "200 USD",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        14
+      ]
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "cestus",
+    "copy-from": "cestus",
+    "symbol": "3",
+    "color": "light_gray",
+    "name": {
+      "str": "铁拳套",
+      "str_pl": "cestuses"
+    },
+    "description": "一只沉重的金属护手，套在拳头上可以增加打击力度，下方增加了结实的衬垫保护穿戴者的手不受伤害。",
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "techniques": [
+      "repose",
+      "stuck_in_2"
+    ],
+    "volume": "500 ml",
+    "weight": "970 g",
+    "bashing": 7,
+    "flags": [
+      "UNARMED_WEAPON",
+      "DURABLE_MELEE",
+      "NONCONDUCTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "tonfa",
+    "copy-from": "tonfa",
+    "name": {
+      "str": "T型拐"
+    },
+    "description": "一根通常被警察所使用的硬质塑料警棍。源自冲绳的土著武器，由棍身及垂直连接在主体的三分之一处的握把组成。",
+    "weight": "575 g",
+    "longest_side": "30 cm",
+    "to_hit": 2,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "plastic"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "repose"
+    ],
+    "flags": [
+      "BELT_CLIP",
+      "DURABLE_MELEE"
+    ],
+    "volume": "1275 ml",
+    "bashing": 18,
+    "price": "195 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "tonfa_wood",
+    "copy-from": "tonfa_wood",
+    "name": {
+      "str": "木拐"
+    },
+    "description": "一个通常为警用的木头结实短棍。原本是源于冲绳的武器，在棍身三分之一处有着一个垂直的握柄。",
+    "weight": "921 g",
+    "longest_side": "30 cm",
+    "to_hit": 2,
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP"
+    ],
+    "volume": "1575 ml",
+    "bashing": 18,
+    "price": "195 USD"
+  },
+  {
+    "type": "GENERIC",
+    "id": "PR24-extended",
+    "copy-from": "PR24-extended",
+    "category": "weapons",
+    "name": {
+      "str": "PR-24 甩棍（展开）",
+      "str_pl": "PR-24警棍（加长）"
+    },
+    "description": "一根警棍——麦当客 PR-24甩棍是一种可伸缩的，轻量级，侧柄执法警棍，在全世界范围内被广泛使用。有人谣传说其名字中的PR意为公共关系，激活以收缩。",
+    "weight": "680 g",
+    "to_hit": 2,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "RAPID",
+      "repose"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "BELT_CLIP"
+    ],
+    "use_action": {
+      "menu_text": "折叠",
+      "type": "transform",
+      "target": "PR24-retracted",
+      "msg": "你折好你的 PR-24 甩棍。"
+    },
+    "volume": "2 L",
+    "longest_side": "35 cm",
+    "bashing": 22,
+    "price": "300 USD"
+  },
+  {
+    "//": "Id retained to avoid breaking anything, same reason as with the makeshift glaive.",
+    "type": "GENERIC",
+    "id": "glass_macuahuitl",
+    "copy-from": "glass_macuahuitl",
+    "name": {
+      "str": "简易双刃剑"
+    },
+    "description": "两面粘满磨利石片的扁形木棍。",
+    "weight": "955 g",
+    "to_hit": 1,
+    "color": "dark_gray",
+    "symbol": "/",
+    "material": [
+      "wood",
+      "stone"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "repose",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "volume": "2250 ml",
+    "longest_side": "45 cm",
+    "bashing": 7,
+    "cutting": 14,
+    "price": "59 USD",
+    "price_postapoc": "20 USD"
+  },
+  {
+    "id": "fencing_foil",
+    "type": "GENERIC",
+    "copy-from": "fencing_foil",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "击剑花剑"
+    },
+    "description": "一把武器，用于最高贵的击剑运动。但是在大灾变后，这把剑身软又钝的剑没什么用。",
+    "price": "20 USD",
+    "price_postapoc": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "450 g",
+    "volume": "1250 ml",
+    "longest_side": "75 cm",
+    "bashing": 1,
+    "cutting": 2,
+    "to_hit": 2,
+    "techniques": [
+      "PRECISE",
+      "RAPID",
+      "WBLOCK_2",
+      "repose"
+    ],
+    "flags": [
+      "STAB",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "fencing_epee",
+    "type": "GENERIC",
+    "copy-from": "fencing_epee",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "击剑重剑"
+    },
+    "description": "击剑运动用的武器，很高级。这把硬身的重剑可能是击剑运动的各种比赛用剑中打丧尸最有力的了。",
+    "price": "20 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "steel"
+    ],
+    "weight": "650 g",
+    "volume": "1250 ml",
+    "longest_side": "75 cm",
+    "bashing": 3,
+    "cutting": 7,
+    "to_hit": 2,
+    "techniques": [
+      "PRECISE",
+      "RAPID",
+      "WBLOCK_2",
+      "repose"
+    ],
+    "flags": [
+      "STAB",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "fencing_sabre",
+    "type": "GENERIC",
+    "copy-from": "fencing_sabre",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "击剑佩剑"
+    },
+    "description": "击剑运动用的武器，很高级。这把有开锋的佩剑可能比重剑和花剑要短，但是也有一定的威力。",
+    "price": "20 USD",
+    "price_postapoc": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "weight": "400 g",
+    "volume": "1250 ml",
+    "longest_side": "75 cm",
+    "bashing": 1,
+    "cutting": 6,
+    "to_hit": 2,
+    "techniques": [
+      "PRECISE",
+      "RAPID",
+      "WBLOCK_2",
+      "repose"
+    ],
+    "flags": [
+      "STAB",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "rock_sock",
+    "copy-from": "rock_sock",
+    "symbol": ";",
+    "color": "white",
+    "name": {
+      "str": "袜装石锤",
+      "str_pl": "袜子里的石头"
+    },
+    "description": "人称要你命3000。在符合你私人口味的袜子（比如黑丝）底部放上块石头，就可以像流星锤一样挥动！噗...大杀器啊！",
+    "price": "10 USD",
+    "price_postapoc": "3 USD",
+    "material": [
+      "cotton",
+      "stone"
+    ],
+    "techniques": [
+      "heavy_blow"
+    ],
+    "weight": "1007 g",
+    "volume": "500 ml",
+    "longest_side": "5 cm",
+    "bashing": 8,
+    "to_hit": -1,
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "cutlass_fake",
+    "type": "GENERIC",
+    "copy-from": "cutlass_fake",
+    "symbol": "/",
+    "color": "dark_gray",
+    "name": {
+      "str": "短弯刀",
+      "str_pl": "弯刀"
+    },
+    "description": "阔刃军刀的拙劣仿制品，因为普遍被水手与海盗使用而闻名。此款外观、造型和材料与正品有差异，为廉价复制品。",
+    "price": "96 USD",
+    "price_postapoc": "0 cent",
+    "material": [
+      "aluminum"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "repose"
+    ],
+    "flags": [
+      "SHEATH_SWORD",
+      "FRAGILE_MELEE"
+    ],
+    "weight": "634 g",
+    "volume": "1750 ml",
+    "longest_side": "65 cm",
+    "bashing": 9,
+    "cutting": 2,
+    "to_hit": 2,
+    "category": "weapons"
+  },
+  {
+    "id": "cutlass_inferior",
+    "type": "TOOL",
+    "copy-from": "cutlass_inferior",
+    "symbol": "/",
+    "color": "dark_gray",
+    "name": {
+      "str": "短弯刀",
+      "str_pl": "弯刀"
+    },
+    "description": "这种阔刃军刀因为普遍被水手与海盗使用而闻名。偏短的刀刃让它在近身时得心应手。这一把看上去很糟糕，但挥舞几次问题不大。",
+    "price": "960 USD",
+    "material": [
+      "budget_steel"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2"
+    ],
+    "weight": "955 g",
+    "volume": "1250 ml",
+    "longest_side": "65 cm",
+    "bashing": 22,
+    "cutting": 9,
+    "flags": [
+      "SHEATH_SWORD"
+    ],
+    "to_hit": 2,
+    "category": "weapons",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        9
+      ]
+    ]
+  },
+  {
+    "id": "katana_fake",
+    "type": "GENERIC",
+    "copy-from": "katana_fake",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "武士刀"
+    },
+    "description": "一把武士刀，打刀款式，刀身细长而略带弧度，此款外观、造型和材料与正品有差异，为廉价复制品。",
+    "price": "50 USD",
+    "price_postapoc": "0 cent",
+    "material": [
+      "aluminum"
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "repose"
+    ],
+    "flags": [
+      "SHEATH_SWORD",
+      "FRAGILE_MELEE"
+    ],
+    "weight": "753 g",
+    "volume": "2 L",
+    "longest_side": "65 cm",
+    "bashing": 6,
+    "cutting": 2,
+    "to_hit": 1,
+    "category": "weapons"
+  },
+  {
+    "id": "katana_inferior",
+    "type": "TOOL",
+    "copy-from": "katana_inferior",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "武士刀"
+    },
+    "description": "一柄武士刀，打刀款式，为日本武士步兵作战时使用，刀身中央略微弯曲，以利于迅速拔刀，全长一米左右。这把刀的刀柄圆头已经脱落，刀刃也磨损严重。",
+    "price": "980 USD",
+    "material": [
+      "budget_steel"
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2",
+      "stuck_in_3"
+    ],
+    "flags": [
+      "SHEATH_SWORD"
+    ],
+    "weight": "1133 g",
+    "volume": "2 L",
+    "longest_side": "65 cm",
+    "bashing": 17,
+    "cutting": 8,
+    "to_hit": 1,
+    "category": "weapons",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        9
+      ]
+    ]
+  },
+  {
+    "id": "rapier_fake",
+    "type": "GENERIC",
+    "copy-from": "rapier_fake",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "迅捷剑"
+    },
+    "description": "很适合绅士与剑士使用的武器，轻盈而迅捷，可以适用于各种战斗。",
+    "price": "98 USD",
+    "price_postapoc": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "PRECISE",
+      "repose"
+    ],
+    "flags": [
+      "SHEATH_SWORD",
+      "FRAGILE_MELEE"
+    ],
+    "weight": "660 g",
+    "volume": "1500 ml",
+    "longest_side": "75 cm",
+    "bashing": 9,
+    "cutting": 2,
+    "to_hit": 2,
+    "category": "weapons"
+  },
+  {
+    "id": "wakizashi_fake",
+    "type": "GENERIC",
+    "copy-from": "wakizashi_fake",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "肋差"
+    },
+    "description": "一把廉价的复制品，相对而言比较常见的日式短剑。此款外观、造型和材料与正品有差异，为廉价复制品。",
+    "price": "78 USD",
+    "price_postapoc": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2"
+    ],
+    "flags": [
+      "SHEATH_SWORD",
+      "FRAGILE_MELEE"
+    ],
+    "weight": "557 g",
+    "volume": "1500 ml",
+    "longest_side": "45 cm",
+    "bashing": 8,
+    "cutting": 2,
+    "to_hit": 1,
+    "category": "weapons"
+  },
+  {
+    "id": "wakizashi_inferior",
+    "type": "TOOL",
+    "copy-from": "wakizashi_inferior",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "肋差",
+      "str_pl": "肋差"
+    },
+    "description": "这是一种比较常见的日本短刀。此款是做工不佳且有大量损坏的劣质品。",
+    "price": "178 USD",
+    "material": [
+      "budget_steel"
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2",
+      "repose",
+      "stuck_in_2"
+    ],
+    "flags": [
+      "SHEATH_SWORD"
+    ],
+    "weight": "835 g",
+    "volume": "1500 ml",
+    "longest_side": "45 cm",
+    "bashing": 17,
+    "cutting": 7,
+    "to_hit": 1,
+    "category": "weapons",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        13
+      ]
+    ]
+  },
+  {
+    "id": "kris_fake",
+    "type": "GENERIC",
+    "copy-from": "kris_fake",
+    "symbol": "/",
+    "color": "dark_gray",
+    "name": {
+      "str": "蛇剑",
+      "str_pl": "蛇剑"
+    },
+    "description": "一柄起源于爪哇的短剑，是马来人的特有武器，长约40-60厘米，剑刃呈蛇状波形，多为仪式所用。此款外观、造型和材料与正品有差异，为廉价复制品。",
+    "price": "38 USD",
+    "price_postapoc": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID",
+      "repose"
+    ],
+    "weight": "558 g",
+    "volume": "750 ml",
+    "longest_side": "30 cm",
+    "bashing": 2,
+    "cutting": 2,
+    "flags": [
+      "SHEATH_SWORD",
+      "FRAGILE_MELEE"
+    ],
+    "to_hit": 1,
+    "category": "weapons"
+  },
+  {
+    "id": "estoc",
+    "type": "GENERIC",
+    "copy-from": "estoc",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "穿甲刺剑"
+    },
+    "description": "这是一把细长的类似于长剑的剑，是西洋刺剑的前身。相较于其他较小的剑，它需要刀鞘（背）或刀鞘（肩）来收起。",
+    "price": "1350 USD",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "PRECISE",
+      "repose"
+    ],
+    "flags": [
+      "STAB",
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ],
+    "weight": "1814 g",
+    "volume": "2750 ml",
+    "longest_side": "100 cm",
+    "bashing": 4,
+    "cutting": 38,
+    "to_hit": 2,
+    "category": "weapons",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ]
+  },
+  {
+    "id": "estoc_fake",
+    "type": "GENERIC",
+    "copy-from": "estoc_fake",
+    "symbol": "/",
+    "color": "light_gray",
+    "name": {
+      "str": "穿甲刺剑"
+    },
+    "description": "这是一把细长的类似于长剑的剑的廉价复制品，是西洋刺剑的前身。相较于其他较小的剑，它需要刀鞘（背）或刀鞘（肩）来收起。",
+    "price": "135 USD",
+    "price_postapoc": "0 cent",
+    "material": [
+      "aluminum"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "PRECISE",
+      "repose"
+    ],
+    "flags": [
+      "SHEATH_SWORD",
+      "FRAGILE_MELEE"
+    ],
+    "weight": "939 g",
+    "volume": "2750 ml",
+    "longest_side": "100 cm",
+    "bashing": 14,
+    "cutting": 2,
+    "to_hit": 2,
+    "category": "weapons"
+  },
+  {
+    "id": "pipe_solid",
+    "type": "GENERIC",
+    "category": "spare_parts",
+    "name": {
+      "str": "金属棒"
+    },
+    "description": "一块又长又窄又坚固的金属，用力把它和附着的东西分开。虽然重而笨重，但如果你能驾驭它，它会成为一件出色的近战武器。",
+    "weight": "6850 g",
+    "volume": "1775 ml",
+    "longest_side": "115 cm",
+    "price": "75 USD",
+    "price_postapoc": "17 USD",
+    "to_hit": -2,
+    "bashing": 26,
+    "material": [
+      "iron",
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "BRUTAL",
+      "heavy_blow"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK"
+    ]
+  },
+  {
+    "id": "pipe_solid_spear",
+    "type": "GENERIC",
+    "category": "weapons",
+    "name": {
+      "str": "锋利的金属棒"
+    },
+    "description": "实心锻造金属轴，削尖成箭头状，并配有皮革手柄，使其更具多功能性。使用起来仍然有些笨拙，而且太重，不能作为合适的矛使用。",
+    "weight": "6695 g",
+    "volume": "1775 ml",
+    "longest_side": "115 cm",
+    "price": "75 USD",
+    "price_postapoc": "51 USD",
+    "to_hit": -1,
+    "bashing": 26,
+    "cutting": 8,
+    "material": [
+      "iron",
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "techniques": [
+      "WBLOCK_1",
+      "IMPALE",
+      "WIDE",
+      "BRUTAL",
+      "heavy_blow"
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "SPEAR"
+    ]
+  }
+]

@@ -1,0 +1,142 @@
+[
+  {
+    "id": "887nitro",
+    "copy-from": "shotgun_pump",
+    "name": {
+      "str": "雷明顿887 硝基版 霰弹枪"
+    },
+    "type": "GUN",
+    "description": "雷明顿887硝基版的外观与雷明顿870系列相似。887和870有相同的结构，但它们有两个不同的上弹动作。870是抬起外壳进行装弹，而887则有一个可旋转的枪托进行装弹。",
+    "looks_like": "remington_870",
+    "symbol": "(",
+    "weight": "3345 g",
+    "volume": "2750 ml",
+    "price": "250 USD",
+    "to_hit": -2,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
+    "dispersion": 305,
+    "durability": 8,
+    "clip_size": 5,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ]
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "barrel_volume": "236 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": "887tac",
+    "name": {
+      "str": "雷明顿887 硝基战术版 霰弹枪"
+    },
+    "copy-from": "shotgun_pump",
+    "description": "887战术坦克是一种普通的硝化甘油，但是它有一个18英寸的枪管和一个28英寸的枪管，两个皮卡丁尼铁轨，并且能装7发炮弹。",
+    "looks_like": "remington_870",
+    "type": "GUN",
+    "symbol": ")",
+    "weight": "3500 g",
+    "volume": "3 L",
+    "price": "530 USD",
+    "to_hit": -2,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
+    "dispersion": 300,
+    "durability": 8,
+    "clip_size": 7,
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "barrel_volume": "156 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail mount",
+        2
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 5
+        }
+      }
+    ]
+  }
+]

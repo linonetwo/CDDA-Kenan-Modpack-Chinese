@@ -1,0 +1,709 @@
+[
+  {
+    "id": "broken_turret_base",
+    "type": "GENERIC",
+    "symbol": ",",
+    "looks_like": "bot_turret",
+    "color": "light_gray",
+    "name": {
+      "str": "炮塔（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "price": "500 USD",
+    "price_postapoc": "100 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "1507 g",
+    "volume": "3 L",
+    "to_hit": -3,
+    "bashing": 8,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "broken_milturret_base",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "name": {
+      "str": "军用炮塔（损坏）"
+    },
+    "price": "500 USD",
+    "price_postapoc": 10000
+  },
+  {
+    "id": "broken_advturret_base",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "name": {
+      "str": "高级炮塔（损坏）"
+    },
+    "price": "500 USD",
+    "price_postapoc": 10000
+  },
+  {
+    "id": "broken_turret_disarmed",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "light_gray",
+    "name": {
+      "str": "防御炮塔（损坏）"
+    },
+    "description": "一个损坏的防御炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_milturret_disarmed",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "light_gray",
+    "name": {
+      "str": "军用炮塔（损坏）"
+    },
+    "description": "一个损坏的军用炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_advturret_disarmed",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "light_gray",
+    "name": {
+      "str": "高级炮塔（损坏）"
+    },
+    "description": "一个损坏的9mm防御炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_turret_9mm",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "light_gray",
+    "name": {
+      "str": "9mm口径炮塔（损坏）"
+    },
+    "description": "一个损坏的9mm防御炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_turret",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "light_gray",
+    "name": {
+      "str": "9mm口径炮塔（损坏）"
+    },
+    "description": "一个损坏的9mm防御炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_turret_shot",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "red",
+    "name": {
+      "str": "9mm口径炮塔（损坏）"
+    },
+    "description": "一个损坏的防御炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_turret_teargas",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "blue",
+    "name": {
+      "str": "防暴炮塔（损坏）"
+    },
+    "description": "一个损坏的防暴炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_turret_beanbag",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "blue",
+    "name": {
+      "str": "防暴炮塔（损坏）"
+    },
+    "description": "一个损坏的9mm防御炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_milturret_556",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "light_green",
+    "name": {
+      "str": "5.56mm口径炮塔（损坏）"
+    },
+    "description": "一个损坏的军用5.56mm口径炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_turret_rifle",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "light_green",
+    "name": {
+      "str": "5.56mm口径炮塔（损坏）"
+    },
+    "description": "一个损坏的军用5.56mm口径炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_milturret_308",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "light_green",
+    "name": {
+      "str": "7.62mm口径炮塔（损坏）"
+    },
+    "description": "一个损坏的军用7.62mm口径炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_milturret_50bmg",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "green",
+    "name": {
+      "str": ".50 口径炮塔（损坏）"
+    },
+    "description": "一个损坏的军用 .50 口径炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_turret_bmg",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "green",
+    "name": {
+      "str": ".50 口径炮塔（损坏）"
+    },
+    "description": "一个损坏的军用 .50 口径炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_milturret_40mm",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "light_green",
+    "name": {
+      "str": "40mm榴弹炮塔（损坏）"
+    },
+    "description": "一个损坏的军用40mm榴弹炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_milturret_needle",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "light_red",
+    "name": {
+      "str": "5.56mm口径炮塔（损坏）"
+    },
+    "description": "一个损坏的军用5x50mm镖形弹炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_milturret_8x40mm",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "red",
+    "name": {
+      "str": "8x40mm 无壳弹炮塔（损坏）"
+    },
+    "description": "一个损坏的军用8x40mm无壳弹炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_milturret_flame",
+    "type": "GENERIC",
+    "copy-from": "broken_milturret_base",
+    "color": "red",
+    "name": {
+      "str": "喷火炮塔（损坏）"
+    },
+    "description": "一个损坏的军用火焰喷射器炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_advturret_laser",
+    "type": "GENERIC",
+    "copy-from": "broken_advturret_base",
+    "color": "yellow",
+    "name": {
+      "str": "激光炮塔（损坏）"
+    },
+    "description": "一个损坏的高级激光炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_laserturret",
+    "type": "GENERIC",
+    "copy-from": "broken_advturret_base",
+    "color": "yellow",
+    "name": {
+      "str": "激光炮塔（损坏）"
+    },
+    "description": "一个损坏的高级激光炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_advturret_acid",
+    "type": "GENERIC",
+    "copy-from": "broken_advturret_base",
+    "color": "light_green",
+    "name": {
+      "str": "喷酸炮塔（损坏）"
+    },
+    "description": "一个损坏的高级酸液喷射器炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_advturret_plasma",
+    "type": "GENERIC",
+    "copy-from": "broken_advturret_base",
+    "color": "magenta",
+    "name": {
+      "str": "等离子炮塔（损坏）"
+    },
+    "description": "一个损坏的高级等离子炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_advturret_rail",
+    "type": "GENERIC",
+    "copy-from": "broken_advturret_base",
+    "color": "yellow",
+    "name": {
+      "str": "轨道炮炮塔（损坏）"
+    },
+    "description": "一个损坏的高级轨道炮炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_advturret_lightning",
+    "type": "GENERIC",
+    "copy-from": "broken_advturret_base",
+    "color": "white",
+    "name": {
+      "str": "放电炮塔（损坏）"
+    },
+    "description": "一个损坏的高级放电炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_advturret_emp",
+    "type": "GENERIC",
+    "copy-from": "broken_advturret_base",
+    "color": "yellow",
+    "name": {
+      "str": "EMP炮塔（损坏）"
+    },
+    "description": "一个损坏的高级EMP炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "id": "broken_turret_gnome",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "light_gray",
+    "name": {
+      "str": "园艺机器人（损坏）"
+    },
+    "description": "一个损坏的园艺机器人。现在安静的散在地上构不成威胁了。"
+  },
+  {
+    "id": "broken_hack_base",
+    "type": "GENERIC",
+    "symbol": ",",
+    "color": "light_green",
+    "name": {
+      "str": "眼球无人机（损坏）"
+    },
+    "looks_like": "broken_manhack",
+    "category": "other",
+    "description": "一个损坏的飞锯无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "price": "90 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "weight": "5400 g",
+    "volume": "750 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_manhack",
+    "copy-from": "broken_hack_base",
+    "color": "light_green",
+    "name": {
+      "str": "飞锯无人机（损坏）"
+    },
+    "description": "一个损坏的飞锯无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "price": "10 USD",
+    "weight": "5400 g"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_grenade_hack",
+    "copy-from": "broken_hack_base",
+    "color": "green",
+    "name": {
+      "str": "榴弹无人机（损坏）"
+    },
+    "description": "一个损坏的榴弹无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": "4480 g"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_mininuke_hack",
+    "copy-from": "broken_hack_base",
+    "color": "magenta",
+    "name": {
+      "str": "微型核弹无人机（损坏）"
+    },
+    "description": "一个损坏的红色无人机，即便如此也令人感觉不安。可以拆解得到部件。",
+    "price": "180 USD",
+    "weight": "12670 g"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_gasbomb_hack",
+    "copy-from": "broken_hack_base",
+    "color": "dark_gray",
+    "name": {
+      "str": "催泪弹无人机（损坏）"
+    },
+    "description": "一个损坏的催泪弹无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": "5360 g"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_EMP_hack",
+    "copy-from": "broken_hack_base",
+    "color": "cyan",
+    "name": {
+      "str": "EMP无人机（损坏）"
+    },
+    "description": "一个损坏的EMP无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": "4700 g"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_flashbang_hack",
+    "copy-from": "broken_hack_base",
+    "color": "dark_gray",
+    "name": {
+      "str": "闪光弹无人机（损坏）"
+    },
+    "description": "一个损坏的闪光弹无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": "4700 g"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_c4_hack",
+    "copy-from": "broken_hack_base",
+    "color": "light_gray",
+    "name": {
+      "str": "C-4炸弹无人机（损坏）"
+    },
+    "description": "一个损坏的C-4炸弹无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": "5870 g"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_eyebot",
+    "symbol": ",",
+    "color": "green",
+    "name": {
+      "str": "眼球无人机（损坏）"
+    },
+    "looks_like": "broken_eyebot",
+    "category": "other",
+    "description": "一台损坏的眼球无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "31520 g",
+    "volume": "15 L",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_eyebot_disarmed",
+    "copy-from": "broken_eyebot",
+    "name": {
+      "str": "眼球无人机（无武装）"
+    },
+    "description": "一个损坏的眼球无人机。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_utilibot",
+    "symbol": ",",
+    "color": "light_gray",
+    "looks_like": "broken_cleanerbot",
+    "name": {
+      "str": "通用机器人（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的通用机器人。现在安静的散在地上构不成威胁了。可以拆解得到部件或者改装再利用。",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_hazmatbot",
+    "name": {
+      "str": "通用机器人（损坏）"
+    },
+    "copy-from": "broken_utilibot",
+    "color": "green"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_skitterbot_disarmed",
+    "symbol": ",",
+    "color": "green",
+    "looks_like": "broken_skitterbot",
+    "name": {
+      "str": "掠行机器人（无武装）"
+    },
+    "category": "other",
+    "description": "一个损坏的掠行机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "62650 g",
+    "volume": "30 L",
+    "bashing": 4,
+    "cutting": 4,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_skitterbot",
+    "copy-from": "broken_skitterbot_disarmed",
+    "color": "light_blue",
+    "name": {
+      "str": "掠行机器人（损坏）"
+    },
+    "description": "一个损坏的掠行机器人。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_defbot_disarmed",
+    "symbol": ",",
+    "color": "light_gray",
+    "looks_like": "broken_riotbot",
+    "name": {
+      "str": "防御机器人（无武装）"
+    },
+    "category": "other",
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。",
+    "price": "300 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_secubot",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "安防机器人（损坏）"
+    },
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_riotbot",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "防暴机器人（损坏）"
+    },
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_defbot_riotcontrol",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "防暴机器人（损坏）"
+    },
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_copbot",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "防暴机器人（损坏）"
+    },
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_molebot",
+    "symbol": ",",
+    "color": "green",
+    "name": {
+      "str": "钻掘机器人（损坏）"
+    },
+    "category": "other",
+    "description": "已损坏的钻掘机器人。没有威胁，因为它再也钻不动了。可以拆解回收部件。",
+    "price": "200 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "170200 g",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 10,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_chickenbot",
+    "symbol": ",",
+    "color": "light_gray",
+    "name": {
+      "str": "双足机器人（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的双足机器人。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "430 kg",
+    "volume": "187500 ml",
+    "bashing": 10,
+    "cutting": 6,
+    "to_hit": -2,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_chickenbot_disarmed",
+    "symbol": ",",
+    "color": "light_gray",
+    "looks_like": "broken_chickenbot",
+    "name": {
+      "str": "双足机器人（无武装）"
+    },
+    "category": "other",
+    "description": "一个损坏的双足机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "430 kg",
+    "volume": "187500 ml",
+    "bashing": 10,
+    "cutting": 6,
+    "to_hit": -2,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_tankbot",
+    "symbol": ",",
+    "color": "green",
+    "name": {
+      "str": "坦克无人机（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的坦克无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "1223850 g",
+    "volume": "875000 ml",
+    "bashing": 20,
+    "cutting": 15,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_tankbot_disarmed",
+    "symbol": ",",
+    "color": "green",
+    "looks_like": "broken_tankbot",
+    "name": {
+      "str": "坦克无人机（无武装）"
+    },
+    "category": "other",
+    "description": "一个损坏的坦克无人机。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。",
+    "price": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "1223850 g",
+    "volume": "875000 ml",
+    "bashing": 20,
+    "cutting": 15,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  }
+]

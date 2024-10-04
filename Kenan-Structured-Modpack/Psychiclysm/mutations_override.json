@@ -1,0 +1,52 @@
+[
+  {
+    "type": "mutation",
+    "id": "OPTIMISTIC",
+    "name": {
+      "str": "乐天派"
+    },
+    "points": 2,
+    "description": "你大脑激素水平更加旺盛，时刻分泌着令你快乐的多巴胺，你一直在享受着生活的乐趣，并无视其中的艰难困苦。你通常比绝大多数人更加乐观。",
+    "starting_trait": true,
+    "valid": false,
+    "cancels": [
+      "BADTEMPER",
+      "AWAKENED"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SCHIZOPHRENIC",
+    "name": {
+      "str": "精神分裂"
+    },
+    "points": -2,
+    "description": "你经常受到精神分裂的困扰，会不断产生幻觉，可以通过服用氯丙嗪来控制症状。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "MEDICAL"
+    ],
+    "cancels": [
+      "WILLPOWER"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "JITTERY",
+    "name": {
+      "str": "神经质"
+    },
+    "points": -3,
+    "description": "你在极度紧张或兴奋时，你的手会不自觉地颤抖，降低你的敏捷。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "MEDICAL",
+      "MOUSE"
+    ],
+    "cancels": [
+      "FEARLESS"
+    ]
+  }
+]

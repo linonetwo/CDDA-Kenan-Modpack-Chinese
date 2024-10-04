@@ -1,0 +1,392 @@
+[
+  {
+    "id": "mon_cave_rat",
+    "type": "MONSTER",
+    "name": {
+      "str": "洞穴老鼠"
+    },
+    "description": "一只稍有变异的大黑鼠。如果大量出现那就非常危险，但单独一只？太弱了。",
+    "default_faction": "rat",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 3,
+    "volume": "400 ml",
+    "weight": "400 g",
+    "hp": 6,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "dark_gray",
+    "aggression": 5,
+    "morale": 5,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_cut": 1,
+    "dodge": 2,
+    "vision_day": 30,
+    "vision_night": 10,
+    "harvest": "mammal_fur",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        120
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "FUR",
+      "BONES"
+    ]
+  },
+  {
+    "id": "mon_rat_piglet",
+    "type": "MONSTER",
+    "name": {
+      "str": "仔猪大鼠"
+    },
+    "description": "这只啮齿类动物因其与猪相似而得名，在猪一样的饥饿中有一点点侵略性。",
+    "default_faction": "rat",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 2,
+    "volume": "10000 ml",
+    "weight": "10000 g",
+    "hp": 10,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "dark_gray",
+    "looks_like": "mon_rat_pig",
+    "aggression": 5,
+    "morale": 5,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_cut": 1,
+    "dodge": 2,
+    "vision_day": 30,
+    "vision_night": 10,
+    "harvest": "mammal_fur",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "upgrades": {
+      "age_grow": 5,
+      "into": "mon_rat_pig"
+    },
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 7
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        120
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "FUR",
+      "BONES"
+    ]
+  },
+  {
+    "id": "mon_rat_pig",
+    "type": "MONSTER",
+    "name": {
+      "str": "猪鼠"
+    },
+    "description": "这只啮齿类动物因其与猪相似而得名，在猪一样的饥饿中有一点点侵略性。",
+    "default_faction": "rat",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 8,
+    "volume": "200000 ml",
+    "weight": "200000 g",
+    "hp": 60,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "dark_gray",
+    "aggression": 20,
+    "morale": 5,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_cut": 1,
+    "dodge": 2,
+    "reproduction": {
+      "baby_monster": "mon_rat_piglet",
+      "baby_count": 3,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING",
+      "AUTUMN"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 2
+    },
+    "vision_day": 30,
+    "vision_night": 10,
+    "harvest": "mammal_large_fur",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        120
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "FUR",
+      "BONES"
+    ]
+  },
+  {
+    "id": "mon_rat_mole_young",
+    "type": "MONSTER",
+    "name": {
+      "str": "幼年变种鼹鼠"
+    },
+    "description": "一只变异的小鼹鼠！这些小东西吃起来很好，可以驯服，令人惊讶的是，它们长大后变得很凶猛。",
+    "default_faction": "rat",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 2,
+    "volume": "10000 ml",
+    "weight": "10000 g",
+    "hp": 10,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "dark_gray",
+    "looks_like": "mon_rat_pig",
+    "aggression": 5,
+    "morale": 5,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_cut": 1,
+    "dodge": 2,
+    "vision_day": 30,
+    "vision_night": 10,
+    "harvest": "mammal_large_fur",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "upgrades": {
+      "age_grow": 5,
+      "into": "mon_rat_mole_lesser"
+    },
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 7
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        120
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "FUR",
+      "BONES"
+    ]
+  },
+  {
+    "id": "mon_rat_mole_lesser",
+    "type": "MONSTER",
+    "name": {
+      "str": "小鼹鼠"
+    },
+    "description": "一只大而好斗的老鼠，大约有奶牛那么大。可以通过食物和训练来减少威胁和进攻性。",
+    "default_faction": "rat",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 8,
+    "volume": "120000 ml",
+    "weight": "120000 g",
+    "hp": 100,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "r",
+    "color": "dark_gray",
+    "aggression": 20,
+    "morale": 5,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_cut": 1,
+    "dodge": 2,
+    "reproduction": {
+      "baby_monster": "mon_rat_mole_young",
+      "baby_count": 3,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING",
+      "AUTUMN"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 2
+    },
+    "vision_day": 30,
+    "vision_night": 10,
+    "harvest": "mammal_large_fur",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "starting_ammo": {
+      "milk_raw": 20
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        120
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WARM",
+      "SWIMS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "MILKABLE",
+      "FUR",
+      "BONES"
+    ]
+  }
+]

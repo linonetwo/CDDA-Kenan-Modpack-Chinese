@@ -1,0 +1,735 @@
+[
+  {
+    "abstract": "mon_cow_mutant",
+    "type": "MONSTER",
+    "copy-from": "mon_cow",
+    "name": {
+      "str": "变异牛"
+    },
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MUTANT"
+    ],
+    "delete": {
+      "ammo": [
+        "milk"
+      ],
+      "flags": [
+        "PET_WONT_FOLLOW",
+        "MILKABLE"
+      ]
+    }
+  },
+  {
+    "abstract": "mon_cow_calf_mutant",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_calf",
+    "name": {
+      "str": "变异牛犊"
+    },
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MUTANT"
+    ]
+  },
+  {
+    "id": "mon_cow_sick_twisthorn",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_mutant",
+    "name": {
+      "str": "扭角奶牛",
+      "str_pl": "扭角母牛"
+    },
+    "description": "一头变异母牛，有多个角，以各种奇怪的角度从头骨中突出来。它的皮肤已经干燥收缩，形成了网状血痕，覆盖了这只不幸的动物。由于极度疼痛，这只奶牛变得暴躁不安。",
+    "color": "red",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_cow_sick_obese",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_mutant",
+    "name": {
+      "str": "巨脂牛",
+      "str_pl": "巨脂牛犊"
+    },
+    "description": "一头变异的母牛，由于被油和脂肪压着，它的移动非常困难。在大灾变后的废土上，这种天上掉下来的午餐不可能活得太久。",
+    "harvest": "mammal_large_fat",
+    "speed": 50,
+    "volume": "160000 ml",
+    "weight": "160000 g",
+    "color": "brown",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_cow_mutant_ironhorn",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_mutant",
+    "name": {
+      "str": "铁角牛",
+      "str_pl": "铁角母牛"
+    },
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "description": "一头变异的母牛，不知何故长出了一对金属角，其可以发挥很大的作用。它是一种极具攻击性的动物。",
+    "harvest": "mammal_large_metalbone",
+    "color": "light_gray",
+    "aggression": 50,
+    "morale": 60,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 10,
+    "melee_cut": 10,
+    "dodge": 2,
+    "armor_bash": 4
+  },
+  {
+    "id": "mon_cow_calf_mutant_ironhorn",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_calf_mutant",
+    "name": {
+      "str": "铁角牛犊",
+      "str_pl": "铁角牛犊"
+    },
+    "description": "一头年幼的变异奶牛，有一对金属角。",
+    "harvest": "mammal_large_metalbone",
+    "upgrades": {
+      "age_grow": 28,
+      "into": "mon_cow_mutant_ironhorn"
+    },
+    "color": "light_gray"
+  },
+  {
+    "id": "mon_cow_mutant_auroch",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_mutant",
+    "name": {
+      "str": "原牛",
+      "str_pl": "原牛"
+    },
+    "description": "一头退化到原始状态的变异牛。它的体型变大了，长出了一层厚重绒毛。与大多数变异动物不同，这只野兽仍有被驯服的潜力。",
+    "volume": "140000 ml",
+    "weight": "140000 g",
+    "harvest": "mammal_large_fur",
+    "reproduction": {
+      "baby_monster": "mon_cow_calf_mutant_auroch",
+      "baby_count": 1,
+      "baby_timer": 20
+    },
+    "color": "brown",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly."
+    },
+    "extend": {
+      "flags": [
+        "MILKABLE"
+      ]
+    }
+  },
+  {
+    "id": "mon_cow_calf_mutant_auroch",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_calf_mutant",
+    "name": {
+      "str": "原牛犊",
+      "str_pl": "原牛犊"
+    },
+    "description": "一头退化回原始状态的变异牛犊。",
+    "harvest": "mammal_large_fur",
+    "upgrades": {
+      "age_grow": 28,
+      "into": "mon_cow_mutant_auroch"
+    },
+    "color": "light_gray"
+  },
+  {
+    "id": "mon_cow_mutant_moss",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_mutant",
+    "name": {
+      "str": "苔藓野牛",
+      "str_pl": "苔藓野牛"
+    },
+    "description": "一头变异的奶牛，能通过苔藓状的皮毛进行光合作用。这头绿色的野兽非常嗜睡，经常被误认为是灌木丛或树篱。",
+    "reproduction": {
+      "baby_monster": "mon_cow_calf_mutant_moss",
+      "baby_count": 1,
+      "baby_timer": 20
+    },
+    "default_faction": "triffid",
+    "death_drops": "mutant_cowmoss_death_drops",
+    "color": "green"
+  },
+  {
+    "id": "mon_cow_calf_mutant_moss",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_calf_mutant",
+    "name": {
+      "str": "原牛犊",
+      "str_pl": "原牛犊"
+    },
+    "description": "一头年幼变异奶牛，能通过苔藓状的皮毛进行光合作用。这头绿色的野兽非常嗜睡，经常被误认为是灌木丛或树篱。",
+    "default_faction": "plant",
+    "death_drops": "mutant_cowmoss_death_drops",
+    "upgrades": {
+      "age_grow": 28,
+      "into": "mon_cow_mutant_moss"
+    },
+    "color": "light_gray"
+  },
+  {
+    "abstract": "mon_deer_mutant",
+    "type": "MONSTER",
+    "copy-from": "mon_deer",
+    "name": {
+      "str": "变异鹿"
+    },
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MUTANT"
+    ]
+  },
+  {
+    "id": "mon_deer_sick_crying",
+    "type": "MONSTER",
+    "copy-from": "mon_deer_mutant",
+    "name": {
+      "str": "怮哭母鹿",
+      "str_pl": "怮哭母鹿"
+    },
+    "description": "一只变异的鹿，浑身器官都产生病变，脓液从上面滴下来。这只动物不断地发出痛苦的哀鸣。",
+    "speed": 150,
+    "special_attacks": [
+      [
+        "PARROT",
+        100
+      ]
+    ],
+    "color": "brown",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_deer_sick_burnt",
+    "type": "MONSTER",
+    "copy-from": "mon_deer_mutant",
+    "name": {
+      "str": "灼伤雄鹿",
+      "str_pl": "灼伤雄鹿"
+    },
+    "description": "一只变异鹿，被辐射和高温严重灼伤。它的表皮被熏黑，上面粘满血块和灰烬。",
+    "speed": 150,
+    "color": "dark_gray",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "abstract": "mon_horse_mutant",
+    "type": "MONSTER",
+    "copy-from": "mon_horse",
+    "name": {
+      "str": "变异马"
+    },
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MUTANT"
+    ]
+  },
+  {
+    "id": "mon_horse_sick_famine",
+    "type": "MONSTER",
+    "copy-from": "mon_horse_mutant",
+    "name": {
+      "str": "饥瘦母马"
+    },
+    "description": "一匹变异马，几乎要饿死了。它的骨架在松弛的皮毛下清晰可见。",
+    "hp": 40,
+    "speed": 110,
+    "volume": "350000 ml",
+    "weight": "350000 g",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    },
+    "color": "brown"
+  },
+  {
+    "id": "mon_horse_sick_glue",
+    "type": "MONSTER",
+    "copy-from": "mon_horse_mutant",
+    "name": {
+      "str": "胶马"
+    },
+    "description": "一匹变异马，其张合的毛孔中不断渗出黏性物质。在这种痛苦的驱使下，这匹马在树和建筑物上蹭，所到之处都留下了令人作呕的胶状物的痕迹。",
+    "reproduction": {
+      "baby_egg": "bone_glue",
+      "baby_count": 20,
+      "baby_timer": 1
+    },
+    "biosignature": {
+      "biosig_item": "bone_glue",
+      "biosig_timer": 1
+    },
+    "color": "white"
+  },
+  {
+    "abstract": "mon_sheep_mutant",
+    "type": "MONSTER",
+    "copy-from": "mon_sheep",
+    "name": {
+      "str": "变异羊",
+      "str_pl": "变异羊"
+    },
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MUTANT"
+    ]
+  },
+  {
+    "id": "mon_sheep_sick_naked",
+    "type": "MONSTER",
+    "copy-from": "mon_sheep_mutant",
+    "name": {
+      "str": "裸羊",
+      "str_pl": "裸羊"
+    },
+    "description": "一只变异羊，由于辐射病而失去了所有的毛，这使它看起来怪异又恶心。",
+    "harvest": "mammal_leather",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    },
+    "color": "light_gray"
+  },
+  {
+    "id": "mon_sheep_sick_gamma",
+    "type": "MONSTER",
+    "copy-from": "mon_sheep_mutant",
+    "name": {
+      "str": "伽玛羊",
+      "str_pl": "伽玛羊"
+    },
+    "description": "一只变异羊，被放射性气体涨大，偶尔会释放到周围环境中。",
+    "luminance": 8,
+    "emit_fields": [
+      "emit_nuclear_trail"
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    },
+    "color": "light_green"
+  },
+  {
+    "id": "mon_ungulate_mutant_glass",
+    "type": "MONSTER",
+    "copy-from": "mon_horse_mutant",
+    "name": {
+      "str": "玻璃生物"
+    },
+    "description": "一只变异的有蹄类动物，其肉和骨头几乎完全透明。这种天生的伪装使它很难在远处或晚上被察觉到。",
+    "harvest": "animal_noskin",
+    "symbol": "G",
+    "//": "heat resist",
+    "extend": {
+      "flags": [
+        "NIGHT_INVISIBILITY",
+        "NO_BREED",
+        "FIREPROOF"
+      ]
+    },
+    "color": "white"
+  },
+  {
+    "id": "mon_ungulate_mutant_unicorn",
+    "type": "MONSTER",
+    "copy-from": "mon_horse_mutant",
+    "name": {
+      "str": "变异独角兽"
+    },
+    "description": "一匹罕见的变异有蹄类动物，前额长有一个角，看起来有点像神话中的动物。然而，这只独角兽却不那么友好。",
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "SOUND"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "symbol": "U",
+    "hp": 200,
+    "aggression": 50,
+    "morale": 90,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 12,
+    "dodge": 8,
+    "attack_effs": [
+      {
+        "id": "bleed",
+        "chance": 25,
+        "duration": 10
+      }
+    ],
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    },
+    "color": "white"
+  },
+  {
+    "id": "mon_ungulate_mutant_screech",
+    "type": "MONSTER",
+    "copy-from": "mon_horse_mutant",
+    "name": {
+      "str": "尖鸣造物"
+    },
+    "description": "一只变异的有蹄类动物，长出了一对额外的腿和长颈鹿般的长脖子。它可以通过吐出一团团恶臭的粘液和发出震耳欲聋的尖叫来保护自己。",
+    "symbol": "S",
+    "hp": 200,
+    "aggression": 50,
+    "morale": 90,
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "PLAYER_CLOSE",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "harvest": "mammal_large_fur",
+    "reproduction": {
+      "baby_monster": "mon_ungulate_mutant_brat",
+      "baby_count": 8,
+      "baby_timer": 20
+    },
+    "starting_ammo": {
+      "mucus_spit": 10
+    },
+    "special_attacks": [
+      [
+        "SHRIEK_STUN",
+        10
+      ],
+      [
+        "SHRIEK",
+        1
+      ],
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "move_cost": 140,
+        "gun_type": "fake_mucusspit",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "pistol",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            10,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -1,
+        "targeting_sound": "a horrible gargling sound.",
+        "targeting_volume": 10
+      }
+    ],
+    "color": "pink"
+  },
+  {
+    "id": "mon_ungulate_mutant_brat",
+    "type": "MONSTER",
+    "copy-from": "mon_cow_calf_mutant",
+    "name": {
+      "str": "尖鸣顽崽",
+      "str_pl": "尖鸣顽崽"
+    },
+    "description": "一头发生变异的幼年有蹄类动物，长出了一对额外的腿和长颈鹿般的长脖子。它能够通过吐出一团团恶臭的黏液球和发出震耳欲聋的尖叫来保护自己。",
+    "symbol": "S",
+    "aggression": 50,
+    "morale": 90,
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "PLAYER_CLOSE",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "harvest": "mammal_large_fur",
+    "upgrades": {
+      "age_grow": 28,
+      "into": "mon_ungulate_mutant_screech"
+    },
+    "starting_ammo": {
+      "mucus_spit": 10
+    },
+    "special_attacks": [
+      [
+        "SHRIEK_STUN",
+        20
+      ],
+      [
+        "SHRIEK",
+        10
+      ],
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "move_cost": 140,
+        "gun_type": "fake_mucusspit",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "pistol",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "require_targeting_player": false,
+        "ranges": [
+          [
+            0,
+            10,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ],
+    "color": "light_gray"
+  },
+  {
+    "abstract": "mon_pig_mutant",
+    "type": "MONSTER",
+    "copy-from": "mon_pig",
+    "name": {
+      "str": "变异猪"
+    },
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MUTANT"
+    ]
+  },
+  {
+    "abstract": "mon_pig_piglet_mutant",
+    "type": "MONSTER",
+    "copy-from": "mon_pig_piglet",
+    "name": {
+      "str": "突变猪崽"
+    },
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MUTANT"
+    ]
+  },
+  {
+    "id": "mon_pig_sick_fly",
+    "type": "MONSTER",
+    "copy-from": "mon_pig_mutant",
+    "name": {
+      "str": "蛆附猪"
+    },
+    "hp": 50,
+    "speed": 20,
+    "vision_day": 5,
+    "vision_night": 1,
+    "description": "一头寄生着蛆的变异猪。由于伤口坏死，它几乎看不见也动不了。",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    },
+    "color": "brown"
+  },
+  {
+    "id": "mon_pig_sick_tumor",
+    "type": "MONSTER",
+    "copy-from": "mon_pig_mutant",
+    "name": {
+      "str": "瘤猪"
+    },
+    "hp": 40,
+    "speed": 90,
+    "description": "一头变异猪，全身都是红肿的瘤块。它似乎一直处于剧痛和悲伤之中。",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    },
+    "color": "brown"
+  },
+  {
+    "id": "mon_pig_mutant_rhino",
+    "type": "MONSTER",
+    "copy-from": "mon_pig_mutant",
+    "name": {
+      "str": "犀牛猪"
+    },
+    "description": "一头大型变异猪，长着一层防护良好的厚皮，类似于犀牛。",
+    "color": "light_gray",
+    "volume": "400000 ml",
+    "weight": "400000 g",
+    "hp": 240,
+    "aggression": 0,
+    "morale": 80,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_cut": 8,
+    "dodge": 2,
+    "armor_bash": 10,
+    "armor_cut": 10,
+    "armor_bullet": 6,
+    "armor_stab": 3,
+    "reproduction": {
+      "baby_monster": "mon_pig_piglet_mutant_rhino",
+      "baby_count": 3,
+      "baby_timer": 10
+    }
+  },
+  {
+    "id": "mon_pig_piglet_mutant_rhino",
+    "type": "MONSTER",
+    "copy-from": "mon_pig_piglet_mutant",
+    "name": {
+      "str": "犀牛猪崽"
+    },
+    "description": "一头幼年变异猪，长着一层防护良好的厚皮，类似于犀牛。",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MUTANT"
+    ],
+    "upgrades": {
+      "age_grow": 20,
+      "into": "mon_pig_mutant_rhino"
+    },
+    "color": "light_gray"
+  },
+  {
+    "id": "mon_pig_mutant_quill",
+    "type": "MONSTER",
+    "copy-from": "mon_pig_mutant",
+    "name": {
+      "str": "刺豪猪"
+    },
+    "description": "一头大型变异猪，脊骨上长着一排排毒刺。尽管它的外表很可怕，但它基本没有攻击性。",
+    "attack_effs": [
+      {
+        "id": "badpoison",
+        "chance": 25,
+        "duration": 1000
+      }
+    ],
+    "volume": "300000 ml",
+    "weight": "300000 g",
+    "color": "light_gray",
+    "hp": 180,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 8,
+    "melee_cut": 10,
+    "dodge": 2,
+    "armor_bash": 5,
+    "armor_cut": 5,
+    "armor_bullet": 3,
+    "reproduction": {
+      "baby_monster": "mon_pig_piglet_mutant_quill",
+      "baby_count": 3,
+      "baby_timer": 10
+    },
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly."
+    }
+  },
+  {
+    "id": "mon_pig_piglet_mutant_quill",
+    "type": "MONSTER",
+    "copy-from": "mon_pig_piglet",
+    "name": {
+      "str": "犀牛猪崽"
+    },
+    "description": "一头幼年变异猪，身上长满了小小的骨状瘤。",
+    "upgrades": {
+      "age_grow": 20,
+      "into": "mon_pig_mutant_quill"
+    },
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly."
+    },
+    "color": "light_gray"
+  }
+]

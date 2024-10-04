@@ -1,0 +1,37 @@
+[
+  {
+    "type": "start_location",
+    "id": "psy_cabin",
+    "name": "小屋",
+    "terrain": [
+      "cabin"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "awakened",
+    "name": "女惊醒者",
+    "points": 0,
+    "description": "你总是很古怪，甚至有点疯狂。但现在，整个世界都疯了，现实正在把自己翻过来，你的思想已经开始觉醒到可怕的真理和黑暗的宇宙奥秘。",
+    "start_name": "研究中心",
+    "allowed_locs": [
+      "sloc_cabin",
+      "sloc_bookstore",
+      "sloc_forest",
+      "sloc_house_boarded",
+      "sloc_house"
+    ],
+    "professions": [
+      "awakened"
+    ],
+    "forbidden_traits": [
+      "OPTIMISTIC",
+      "PSYCHOPATH",
+      "WILLPOWER",
+      "FEARLESS"
+    ],
+    "flags": [
+      "OUTSIDE"
+    ]
+  }
+]

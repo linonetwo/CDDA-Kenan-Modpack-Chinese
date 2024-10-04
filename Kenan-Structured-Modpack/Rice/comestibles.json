@@ -1,0 +1,78 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "rice",
+    "name": {
+      "str": "大米"
+    },
+    "weight": "100 g",
+    "color": "yellow",
+    "comestible_type": "FOOD",
+    "symbol": "|",
+    "healthy": 1,
+    "nutrition": 5,
+    "fun": -5,
+    "description": "长粒香米",
+    "price": 10,
+    "material": [
+      "veggy"
+    ],
+    "volume": "250 ml",
+    "charges": 3,
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "patty_plain_rice",
+    "name": {
+      "str": "白米饼",
+      "str_pl": "白米饼"
+    },
+    "material": [
+      "veggy"
+    ],
+    "symbol": "O",
+    "color": "yellow",
+    "comestible_type": "FOOD",
+    "healthy": 3,
+    "nutrition": 12,
+    "quench": 6,
+    "weight": "11363 mg",
+    "volume": "750 ml",
+    "price": 50,
+    "spoils_in": "12 hours",
+    "description": "一块米饼",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "burger_plain_rice",
+    "name": {
+      "str": "白米汉堡",
+      "str_pl": "白米汉堡"
+    },
+    "material": [
+      "veggy"
+    ],
+    "symbol": "%",
+    "color": "yellow",
+    "comestible_type": "FOOD",
+    "healthy": 28,
+    "nutrition": 35,
+    "quench": 2,
+    "fun": 12,
+    "weight": "352253 mg",
+    "//": "It's just the base weight of the *rice patty*, times 3.10.",
+    "volume": "1500 ml",
+    "price": 50,
+    "spoils_in": "3 hours",
+    "description": "一块朴实无华的米汉堡。",
+    "flags": [
+      "EATEN_HOT"
+    ]
+  }
+]

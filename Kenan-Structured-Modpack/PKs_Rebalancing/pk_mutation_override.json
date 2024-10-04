@@ -1,0 +1,3212 @@
+[
+  {
+    "type": "mutation",
+    "id": "FLEET",
+    "copy-from": "FLEET",
+    "name": {
+      "str": "速行"
+    },
+    "points": 2,
+    "description": "你的腿部肌肉与协调能力更加出色，可以比别人走、跑得更快，俗称“健步如飞”。你步行的速度增加15%。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "RAPTOR",
+        "BEAST",
+        "FISH",
+        "LUPINE",
+        "MOUSE",
+        "INSECT"
+      ]
+    },
+    "metabolism_modifier": 0.05
+  },
+  {
+    "type": "mutation",
+    "id": "GOODHEARING",
+    "copy-from": "GOODHEARING",
+    "name": {
+      "str": "听觉发达"
+    },
+    "points": 1,
+    "description": "你的听觉神经更为发达，对于微小的、更远处的声音你可以更容易的听清楚。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "BIRD",
+        "FELINE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "SQUEAMISH",
+    "copy-from": "SQUEAMISH",
+    "name": {
+      "str": "洁癖"
+    },
+    "points": -1,
+    "description": "你甚至不能考虑给自己穿上脏衣服，尤其是丧尸的尸体。作为一个胆小鬼，你的所有生命值都会受到5%的惩罚。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "ALPHA",
+        "ELFA"
+      ]
+    },
+    "hp_modifier_secondary": -0.05
+  },
+  {
+    "type": "mutation",
+    "id": "GOODCARDIO",
+    "copy-from": "GOODCARDIO",
+    "name": {
+      "str": "精力充沛"
+    },
+    "points": 2,
+    "description": "你的耐力肌肉与心肺能力更加强大，在进行高强度体力运动时比普通人更持久。你的最大耐力增加25%。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "CHIMERA",
+        "RAPTOR"
+      ]
+    },
+    "stamina_regen_modifier": 0.02
+  },
+  {
+    "type": "mutation",
+    "id": "QUICK",
+    "copy-from": "QUICK",
+    "name": {
+      "str": "迅捷"
+    },
+    "points": 3,
+    "description": "你的神经反射能力更加迅速，不论是思考还是动作。你比普通人行动更快10%。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "FELINE"
+      ]
+    },
+    "metabolism_modifier": 0.05
+  },
+  {
+    "type": "mutation",
+    "id": "OPTIMISTIC",
+    "copy-from": "OPTIMISTIC",
+    "name": {
+      "str": "乐天派"
+    },
+    "points": 2,
+    "description": "你大脑激素水平更加旺盛，时刻分泌着令你快乐的多巴胺，你一直在享受着生活的乐趣，并无视其中的艰难困苦。你通常比绝大多数人更加乐观。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "CATTLE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "FASTHEALER",
+    "copy-from": "FASTHEALER",
+    "name": {
+      "str": "快速自愈"
+    },
+    "points": 2,
+    "description": "你的伤口比平时愈合得更快。伤口在睡眠时恢复速度提升50%，在清醒时提升20%。你折断的四肢愈合速度也是正常人的两倍。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "LIZARD"
+      ]
+    },
+    "healing_awake": 0.2,
+    "healing_resting": 0.5,
+    "metabolism_modifier": 0.4,
+    "stamina_regen_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "LIGHTEATER",
+    "copy-from": "LIGHTEATER",
+    "name": {
+      "str": "节食者"
+    },
+    "points": 2,
+    "description": "你的新陈代谢较为缓慢，你所需食物比普通人更少一些。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "LIZARD"
+      ]
+    },
+    "metabolism_modifier": -0.333
+  },
+  {
+    "type": "mutation",
+    "id": "EASYSLEEPER",
+    "copy-from": "EASYSLEEPER",
+    "name": {
+      "str": "睡神"
+    },
+    "points": 1,
+    "description": "你很容易入睡，即便在金属残骸上也照睡不误。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "CHIMERA"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PAINRESIST",
+    "copy-from": "PAINRESIST",
+    "name": {
+      "str": "疼痛抵抗"
+    },
+    "points": 2,
+    "description": "你的神经与精神更加坚韧，对疼痛有着很高的忍耐性。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "CHIMERA"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "NIGHTVISION",
+    "copy-from": "NIGHTVISION",
+    "name": {
+      "str": "夜视"
+    },
+    "points": 2,
+    "description": "你拥有天然的夜视能力，在黑暗中能看得比普通人更远一些。 激活以切换显示夜视范围。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "LIZARD"
+      ]
+    },
+    "active": true,
+    "starts_active": true
+  },
+  {
+    "type": "mutation",
+    "id": "TOUGH_FEET",
+    "copy-from": "TOUGH_FEET",
+    "name": {
+      "str": "坚硬脚掌"
+    },
+    "points": 1,
+    "description": "你的脚底很硬（脚+1击，+1切），你习惯赤脚。你不会因为不穿鞋而受到任何移动惩罚，并获得5%的所有生命值加成。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "CATTLE",
+        "SLIME",
+        "CHIMERA",
+        "PLANT",
+        "TROGLOBITE"
+      ]
+    },
+    "armor": [
+      {
+        "parts": [
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 1,
+        "cut": 1
+      }
+    ],
+    "hp_modifier_secondary": 0.05
+  },
+  {
+    "type": "mutation",
+    "id": "TOUGH",
+    "copy-from": "TOUGH",
+    "name": {
+      "str": "身强力壮"
+    },
+    "points": 2,
+    "description": "你的肌肉密度更大，对于外界打击有着更强的抵御能力，你的生命值上限增加20％。",
+    "starting_trait": true,
+    "category": [
+      "CATTLE",
+      "CHIMERA",
+      "PLANT",
+      "URSINE",
+      "TROGLOBITE"
+    ],
+    "hp_modifier": 0.2
+  },
+  {
+    "type": "mutation",
+    "id": "TOUGH2",
+    "copy-from": "TOUGH2",
+    "name": {
+      "str": "钢筋铁骨"
+    },
+    "points": 3,
+    "description": "你不仅肌肉密度更强大，你的内脏与骨骼也更加坚韧，你的生命值上限增加30％。",
+    "category": [
+      "CHIMERA",
+      "PLANT",
+      "URSINE"
+    ],
+    "hp_modifier": 0.3
+  },
+  {
+    "type": "mutation",
+    "id": "TOUGH3",
+    "copy-from": "TOUGH3",
+    "name": {
+      "str": "不可战胜"
+    },
+    "points": 4,
+    "description": "你的肌体强度极为强大，对于一切攻击都有着出色的抵御能力，你的生命值上限增加40％。",
+    "category": [
+      "CHIMERA"
+    ],
+    "hp_modifier": 0.4
+  },
+  {
+    "type": "mutation",
+    "id": "THICKSKIN",
+    "copy-from": "THICKSKIN",
+    "name": {
+      "str": "坚韧皮肤"
+    },
+    "points": 1,
+    "description": "你的皮肤组织比普通人更加坚韧。略微减少对你受到的钝击和斩击伤害，同时降低在通过尖锐地形时割伤自己的几率。",
+    "starting_trait": true
+  },
+  {
+    "type": "mutation",
+    "id": "PACKMULE",
+    "copy-from": "PACKMULE",
+    "name": {
+      "str": "打包专家"
+    },
+    "points": 1,
+    "description": "你打包东西很有效率！你可以从容器中提取东西快25%。",
+    "obtain_cost_multiplier": 0.75,
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "RAT"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "STRONGBACK",
+    "copy-from": "STRONGBACK",
+    "name": {
+      "str": "背肌发达"
+    },
+    "points": 2,
+    "description": "你背部肌肉力量比普通人更大，你的身体最大承载重量上升35%。",
+    "starting_trait": true,
+    "valid": false,
+    "weight_capacity_modifier": 1.35,
+    "category": [
+      "CATTLE",
+      "TROGLOBITE",
+      "INSECT"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "GOURMAND",
+    "copy-from": "GOURMAND",
+    "name": {
+      "str": "美食家"
+    },
+    "points": 2,
+    "description": "你比别人吃得更快，也比别人更能吃！你能从美食中获得更多的好心情，你也不介意残羹剩菜。激活该变异可跳过暴饮暴食的确认对话框。",
+    "starting_trait": true,
+    "cancels": [
+      "NAUSEA"
+    ],
+    "threshreq": [
+      "THRESH_SLIME",
+      "THRESH_CHIMERA",
+      "THRESH_RAT"
+    ],
+    "extend": {
+      "category": [
+        "SLIME",
+        "CHIMERA",
+        "RAT"
+      ]
+    },
+    "active": true,
+    "metabolism_modifier": 0.05,
+    "thirst_modifier": 0.05
+  },
+  {
+    "type": "mutation",
+    "id": "ADRENALINE",
+    "copy-from": "ADRENALINE",
+    "name": {
+      "str": "活化肾上腺素"
+    },
+    "points": 1,
+    "description": "你肾上腺髓质分泌的激素在紧急时刻作用更大，当你处于濒死等危险之中时，你可以获得一次短暂的加速以及力量提升。",
+    "starting_trait": true,
+    "thirst_modifier": 0.05,
+    "stamina_regen_modifier": 0.05
+  },
+  {
+    "type": "mutation",
+    "id": "EAGLEEYED",
+    "copy-from": "EAGLEEYED",
+    "//": "Can't change the ID as that breaks save-compatibility.",
+    "name": {
+      "str": "侦察者"
+    },
+    "points": 1,
+    "description": "你是个出色的领航员，你发现远处地标的能力无与伦比。你的大地图视野相比普通人有所扩大。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "FISH"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CANNIBAL",
+    "copy-from": "CANNIBAL",
+    "name": {
+      "str": "食人族"
+    },
+    "points": 1,
+    "description": "你喜好人肉，但你这一辈子都被禁止从你的特殊嗜好里获得快感，不过现在是世界末日，再没有人可以阻止你享用新鲜人肉了。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "RAT",
+      "CHIMERA",
+      "INSECT",
+      "TROGLOBITE"
+    ],
+    "flags": [
+      "CANNIBAL"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "WEAKSCENT",
+    "copy-from": "WEAKSCENT",
+    "name": {
+      "str": "体味微弱"
+    },
+    "points": 1,
+    "description": "你身上汗腺等处散发的气味很小，依靠气味追踪的怪物不太容易注意到你。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "ELFA",
+        "PLANT",
+        "LIZARD"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BADKNEES",
+    "copy-from": "BADKNEES",
+    "name": {
+      "str": "膝盖旧伤"
+    },
+    "points": -1,
+    "description": "你的膝盖状态由于旧伤一直欠佳。在比较崎岖的地形上行走会消耗额外的行动点。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "FISH",
+      "CATTLE",
+      "CEPHALOPOD",
+      "MEDICAL"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BADCARDIO",
+    "copy-from": "BADCARDIO",
+    "name": {
+      "str": "乏力"
+    },
+    "points": -2,
+    "description": "无论是由于缺乏锻炼和不良的饮食习惯，还是由于天生不愿意锻炼身体的耐力，你比其他人更容易因体力消耗而感到疲倦，之后更难喘口气。你的最大耐力比平时低25%。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "BEAST",
+      "CATTLE",
+      "ELFA"
+    ],
+    "stamina_regen_modifier": -0.2
+  },
+  {
+    "type": "mutation",
+    "id": "MYOPIC",
+    "copy-from": "MYOPIC",
+    "name": {
+      "str": "近视眼"
+    },
+    "points": -2,
+    "description": "如果没有眼镜，你看不清远处的东西了。幸运的是，你可以一开始就拥有一副近视镜。",
+    "starting_trait": true,
+    "cancels": [
+      "20_15",
+      "URSINE_EYE",
+      "EAGLEEYED"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLOWHEALER",
+    "copy-from": "SLOWHEALER",
+    "name": {
+      "str": "慢速自愈"
+    },
+    "points": -2,
+    "description": "你的伤口愈合得比大多数人都慢。伤口在睡眠时恢复速度以及折断的四肢的愈合速度是正常人的75%。",
+    "starting_trait": true,
+    "healing_resting": -0.25,
+    "metabolism_modifier": -0.05
+  },
+  {
+    "type": "mutation",
+    "id": "SLOWHEALER2",
+    "copy-from": "SLOWHEALER2",
+    "name": {
+      "str": "自愈弱化"
+    },
+    "points": -4,
+    "description": "你的机体自愈能力严重受损。伤口在睡眠时恢复速度以及折断的四肢的愈合速度是正常人的33%。",
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "healing_resting": -0.66,
+    "metabolism_modifier": -0.1
+  },
+  {
+    "type": "mutation",
+    "id": "SLOWHEALER3",
+    "copy-from": "SLOWHEALER3",
+    "name": {
+      "str": "自愈无效"
+    },
+    "points": -8,
+    "description": "伤口对你来说是非常危险的，因为它们几乎无法愈合。伤口在睡眠时恢复速度以及折断的四肢的愈合速度是正常人的10%。",
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "healing_resting": -0.9,
+    "metabolism_modifier": -0.15
+  },
+  {
+    "type": "mutation",
+    "id": "HYPEROPIC",
+    "copy-from": "HYPEROPIC",
+    "name": {
+      "str": "远视眼"
+    },
+    "points": -2,
+    "description": "你的晶状体硬化，弹性减弱，睫状肌收缩能力降低而致调节减退，近点远移，故发生近距离视物困难，近处的东西什么都看不清，所以根本无法看书、制造物品了。幸运的是，你可以一开始就拥有一副老花镜。",
+    "starting_trait": true,
+    "cancels": [
+      "20_15"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "HEAVYSLEEPER",
+    "copy-from": "HEAVYSLEEPER",
+    "name": {
+      "str": "重度沉睡"
+    },
+    "points": -1,
+    "description": "你很容易进入深度睡眠，而且深度更甚于常人，当你沉睡时，基本对外界没有任何感应，任何声响都无法唤醒你。",
+    "starting_trait": true,
+    "fatigue_regen_modifier": 0.005
+  },
+  {
+    "type": "mutation",
+    "id": "DISORGANIZED",
+    "copy-from": "DISORGANIZED",
+    "name": {
+      "str": "杂乱无章"
+    },
+    "points": -1,
+    "description": "你的物品总是放得一团糟。你从包里取东西的速度慢10%。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "LUPINE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BADHEARING",
+    "copy-from": "BADHEARING",
+    "name": {
+      "str": "耳背"
+    },
+    "points": -2,
+    "description": "你的听力很弱，可能听不清楚附近小的或远些的声音。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "MEDICAL"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "INSOMNIA",
+    "copy-from": "INSOMNIA",
+    "name": {
+      "str": "失眠症"
+    },
+    "points": -2,
+    "description": "你患有严重的失眠症，你的大脑睡眠功能非常紊乱，即使​​最好的情况下依然难以入睡。",
+    "starting_trait": true,
+    "valid": false,
+    "extend": {
+      "category": [
+        "ALPHA"
+      ]
+    },
+    "fatigue_regen_modifier": -0.01
+  },
+  {
+    "type": "mutation",
+    "id": "VEGETARIAN",
+    "copy-from": "VEGETARIAN",
+    "name": {
+      "str": "素食主义"
+    },
+    "points": -2,
+    "description": "你坚持素食主义。虽然你还是可以吃肉，但是你会因为恶心而受到心情惩罚。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "CATTLE",
+      "PLANT"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "THINSKIN",
+    "copy-from": "THINSKIN",
+    "name": {
+      "str": "脆弱皮肤"
+    },
+    "points": -1,
+    "description": "你的皮肤很脆弱。切割和重击伤害会略微增加（所有：-2切割和-2重击）。",
+    "starting_trait": true,
+    "category": [
+      "MEDICAL",
+      "CEPHALOPOD"
+    ],
+    "healing_awake": -0.05
+  },
+  {
+    "type": "mutation",
+    "id": "MEATARIAN",
+    "copy-from": "MEATARIAN",
+    "name": {
+      "str": "肉食主义"
+    },
+    "points": -2,
+    "description": "你讨厌蔬菜。虽然你还是可以吃菜，但是你会受到心情惩罚并且吸收更少的营养。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "SPIDER",
+      "LUPINE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ANTIFRUIT",
+    "copy-from": "ANTIFRUIT",
+    "name": {
+      "str": "水果不耐症"
+    },
+    "points": -3,
+    "description": "你厌恶水果。虽然你还是可以吃水果，但是你会受到心情惩罚并且吸收更少的营养。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "BEAST",
+      "FELINE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LACTOSE",
+    "copy-from": "LACTOSE",
+    "name": {
+      "str": "乳糖不耐症"
+    },
+    "points": -1,
+    "description": "你像世界上75%的人一样，你有乳糖不耐症，难以消化奶制品。虽然你还是可以吃，但是你会受到心情惩罚并且吸收更少的营养。",
+    "starting_trait": true,
+    "category": [
+      "TROGLOBITE",
+      "FISH",
+      "PLANT"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ANTIJUNK",
+    "copy-from": "ANTIJUNK",
+    "name": {
+      "str": "快餐不耐症"
+    },
+    "points": -1,
+    "description": "你非常讨厌那些高热量低营养的快餐，虽然你还是可以吃快餐，但是你会受到心情惩罚并吸收更少的营养。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "FELINE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "ANTIWHEAT",
+    "copy-from": "ANTIWHEAT",
+    "name": {
+      "str": "谷物不耐症"
+    },
+    "points": -2,
+    "description": "你有罕见的过敏症使你难以消化麦面制品。虽然你还是可以吃，但是你会受到心情惩罚并吸收更少的营养。",
+    "starting_trait": true,
+    "category": [
+      "CHIMERA",
+      "ELFA",
+      "LIZARD"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ADDICTIVE",
+    "copy-from": "ADDICTIVE",
+    "name": {
+      "str": "成瘾体质"
+    },
+    "points": -2,
+    "description": "你很容易对其他东西上瘾，烟酒不论，同时，也许是上瘾和戒瘾过于频繁，你想再次戒瘾是很难办到的。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "ALPHA"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "TRIGGERHAPPY",
+    "name": {
+      "str": "连射快感"
+    },
+    "points": -1,
+    "description": "未实装。在0.F之后删除，以保证存档兼容性。",
+    "starting_trait": true,
+    "threshreq": [
+      "THRESH_MEDICAL",
+      "THRESH_RAT",
+      "THRESH_LUPINE"
+    ],
+    "category": [
+      "MEDICAL",
+      "RAT",
+      "LUPINE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHEMIMBALANCE",
+    "copy-from": "CHEMIMBALANCE",
+    "name": {
+      "str": "内分泌失调"
+    },
+    "points": -2,
+    "description": "你的内分泌失调，无论精神还是肉体上。你的内部化学成份改变会造成饥饿、嗜睡、麻醉等作用。",
+    "starting_trait": true,
+    "cancels": [
+      "SAVANT",
+      "CHEMREBALANCE",
+      "CHEMREBALANCE2"
+    ],
+    "threshreq": [
+      "THRESH_SLIME",
+      "THRESH_MEDICAL",
+      "THRESH_CHIMERA",
+      "THRESH_ELFA",
+      "THRESH_CATTLE"
+    ],
+    "extend": {
+      "category": [
+        "CATTLE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "HOARDER",
+    "copy-from": "HOARDER",
+    "name": {
+      "str": "贮藏癖"
+    },
+    "points": -4,
+    "description": "你不把你的背包装满就觉得浑身不对劲。当你携带物品的体积小于你可携带的最大体积时，你会受到心情值惩罚。服用赞安诺等抗焦虑药可以控制这种焦虑。",
+    "starting_trait": true,
+    "threshreq": [
+      "THRESH_RAT"
+    ],
+    "category": [
+      "RAT"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SAVANT",
+    "copy-from": "SAVANT",
+    "name": {
+      "str": "独开一窍"
+    },
+    "points": -4,
+    "description": "你只专注于一项技能，对其他技能都不甚了解。除了你等级最高的技能外，你的所有其他技能经验获取速度减半。此外，当与学得快特性配合时，将会使所有技能的学习速度减慢。\n ",
+    "starting_trait": true,
+    "cancels": [
+      "CHEMIMBALANCE",
+      "CHEMREBALANCE",
+      "CHEMREBALANCE2"
+    ],
+    "threshreq": [
+      "THRESH_ALPHA",
+      "THRESH_CHIMERA"
+    ],
+    "category": [
+      "ALPHA",
+      "CHIMERA"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PACIFIST",
+    "copy-from": "PACIFIST",
+    "name": {
+      "str": "和平主义"
+    },
+    "points": -4,
+    "description": "你对暴力行为极为的抵触与反感，连想都不愿意想，你的战斗技能增长更为缓慢，你对杀戮造成的内疚也更为强烈。",
+    "starting_trait": true,
+    "valid": false,
+    "threshreq": [
+      "THRESH_CATTLE"
+    ],
+    "category": [
+      "CATTLE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLOWRUNNER",
+    "copy-from": "SLOWRUNNER",
+    "name": {
+      "str": "脚步迟缓"
+    },
+    "points": -3,
+    "description": "你不能像大多数人一样快速移动，导致在平地上有15%的速度损失。结果你就不那么渴了。",
+    "starting_trait": true,
+    "thirst_modifier": -0.2
+  },
+  {
+    "type": "mutation",
+    "id": "WEAKSTOMACH",
+    "copy-from": "WEAKSTOMACH",
+    "name": {
+      "str": "痨肠寡肚"
+    },
+    "points": -1,
+    "description": "你患有慢性胃病，在食物中毒或饮酒后有更大的几率呕吐。",
+    "starting_trait": true,
+    "thirst_modifier": 0.08
+  },
+  {
+    "type": "mutation",
+    "id": "FLIMSY",
+    "copy-from": "FLIMSY",
+    "name": {
+      "str": "瘦弱"
+    },
+    "points": -4,
+    "description": "你的身体不能承受太多蹂躏。最大HP比正常人低25％，恢复速度也比正常人慢。能和脆弱头骨叠加。",
+    "starting_trait": true,
+    "extend": {
+      "category": [
+        "CEPHALOPOD",
+        "MEDICAL"
+      ]
+    },
+    "hp_modifier": -0.25,
+    "cancels": [
+      "HUGE",
+      "TOUGH",
+      "TOUGH2",
+      "TOUGH3"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "NIGHTVISION3",
+    "copy-from": "NIGHTVISION3",
+    "name": {
+      "str": "完美夜视"
+    },
+    "points": 6,
+    "description": "你的视觉神经发生了变异，在夜晚的黑暗中可以看得更远，就像戴了夜视镜一样。激活来切换显示夜视可见范围。",
+    "cancels": [
+      "20_15",
+      "ELFA_NV",
+      "ELFA_FNV",
+      "FEL_NV",
+      "URSINE_EYE"
+    ],
+    "active": true,
+    "starts_active": true
+  },
+  {
+    "type": "mutation",
+    "id": "CEPH_EYES",
+    "copy-from": "CEPH_EYES",
+    "name": {
+      "str": "章鱼眼"
+    },
+    "points": 1,
+    "visibility": 8,
+    "ugliness": 5,
+    "description": "你的眼睛发生了变异，眼珠很突出，瞳孔发生了变化，你可以轻易的在水中视物。",
+    "cancels": [
+      "20_15",
+      "BIRD_EYE",
+      "LIZ_EYE",
+      "FEL_EYE",
+      "URSINE_EYE",
+      "COMPOUND_EYES",
+      "ELFAEYES"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CEPH_VISION",
+    "copy-from": "CEPH_VISION",
+    "name": {
+      "str": "章鱼视觉"
+    },
+    "points": 3,
+    "description": "你的视觉系统发生了变异，你的大脑神经跟上了你眼睛的速度，在黑暗中你看得更清楚了。不过阳光对你来说却更加刺眼。激活来切换显示夜视可见范围。",
+    "cancels": [
+      "20_15",
+      "LIZ_IR",
+      "FEL_NV",
+      "NIGHTVISION",
+      "NIGHTVISION2",
+      "NIGHTVISION3",
+      "ELFA_NV",
+      "ELFA_FNV"
+    ],
+    "active": true,
+    "starts_active": true
+  },
+  {
+    "type": "mutation",
+    "id": "ELFAEYES",
+    "copy-from": "ELFAEYES",
+    "name": {
+      "str": "精灵之眼"
+    },
+    "points": 1,
+    "visibility": 2,
+    "ugliness": -1,
+    "description": "你的眼睛发生了变异，眼睛颜色变成了莹绿色。瞳孔似乎在不断地转动，你很难描述出它的形状，这效果棒极了。",
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "ELFA_NV",
+    "copy-from": "ELFA_NV",
+    "name": {
+      "str": "精灵视觉"
+    },
+    "points": 3,
+    "description": "你的眼睛发生了变异，所视的阴影似乎并没有那么暗。激活来切换显示夜视可见范围。",
+    "cancels": [
+      "20_15",
+      "LIZ_IR",
+      "FEL_NV",
+      "NIGHTVISION",
+      "NIGHTVISION2",
+      "NIGHTVISION3"
+    ],
+    "active": true,
+    "starts_active": true
+  },
+  {
+    "type": "mutation",
+    "id": "ELFA_FNV",
+    "copy-from": "ELFA_FNV",
+    "name": {
+      "str": "精灵夜视"
+    },
+    "points": 5,
+    "description": "你的眼睛发生了变异，有着很好的夜视能力，但这不能让你在黑暗中执行精细的任务，如阅读和制造物品。激活来切换显示夜视可见范围。",
+    "cancels": [
+      "20_15",
+      "LIZ_IR",
+      "FEL_NV",
+      "NIGHTVISION",
+      "NIGHTVISION2",
+      "NIGHTVISION3"
+    ],
+    "active": true,
+    "starts_active": true
+  },
+  {
+    "type": "mutation",
+    "id": "FEL_EYE",
+    "copy-from": "FEL_EYE",
+    "name": {
+      "str": "猫眼"
+    },
+    "points": 0,
+    "visibility": 2,
+    "ugliness": -1,
+    "description": "你的眼睛发生了变异，瞳孔像猫一样眯成一条缝，在夜里闪着光。看起来不错，但并没有夜视功能。",
+    "cancels": [
+      "20_15",
+      "ELFAEYES",
+      "LIZ_EYE",
+      "BIRD_EYE",
+      "URSINE_EYE",
+      "COMPOUND_EYES"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "FEL_NV",
+    "copy-from": "FEL_NV",
+    "name": {
+      "str": "猫之视觉"
+    },
+    "points": 4,
+    "description": "你的视觉系统发生了变异，视觉神经和大脑终于适应了你的新眼睛。现在你能像猫一样看穿黑夜了。激活来切换显示夜视可见范围。",
+    "cancels": [
+      "20_15",
+      "ELFA_NV",
+      "ELFA_FNV",
+      "LIZ_IR",
+      "NIGHTVISION",
+      "NIGHTVISION2",
+      "NIGHTVISION3"
+    ],
+    "active": true,
+    "starts_active": true
+  },
+  {
+    "type": "mutation",
+    "id": "URSINE_EYE",
+    "copy-from": "URSINE_EYE",
+    "name": {
+      "str": "熊之视觉"
+    },
+    "points": 1,
+    "description": "你的视觉系统发生了变异，尽管黑暗里你看得更清楚，亮光底下你却看不了多远了。可能带副眼镜会有帮助。激活来切换显示夜视可见范围。",
+    "cancels": [
+      "20_15",
+      "ELFAEYES",
+      "LIZ_EYE",
+      "BIRD_EYE",
+      "FEL_EYE",
+      "COMPOUND_EYES",
+      "NIGHTVISION",
+      "NIGHTVISION2",
+      "NIGHTVISION3",
+      "MYOPIC"
+    ],
+    "active": true,
+    "starts_active": true
+  },
+  {
+    "type": "mutation",
+    "id": "BIRD_EYE",
+    "copy-from": "BIRD_EYE",
+    "name": {
+      "str": "鹰眼"
+    },
+    "points": 5,
+    "visibility": 1,
+    "description": "你的视觉非常敏锐，很远距离就能看见丧尸。感知+4",
+    "cancels": [
+      "20_15",
+      "ELFAEYES",
+      "FEL_EYE",
+      "LIZ_EYE",
+      "URSINE_EYE",
+      "COMPOUND_EYES"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LIZ_EYE",
+    "copy-from": "LIZ_EYE",
+    "name": {
+      "str": "蜥蜴之眼"
+    },
+    "points": 0,
+    "visibility": 2,
+    "ugliness": -1,
+    "description": "你的眼睛发生了变异，有着类似蜥蜴一样闪亮的虹膜和竖瞳，看上去很吓人，不过好像并不影响你的视力。",
+    "cancels": [
+      "20_15",
+      "ELFAEYES",
+      "FEL_EYE",
+      "URSINE_EYE",
+      "BIRD_EYE",
+      "COMPOUND_EYES"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LIZ_IR",
+    "copy-from": "LIZ_IR",
+    "name": {
+      "str": "红外蜥眼"
+    },
+    "points": 5,
+    "description": "你的视觉系统发生了变异，视觉神经与大脑已经随着你眼睛的变异而变异，现在你能使用红外线视觉了。",
+    "cancels": [
+      "20_15",
+      "ELFA_NV",
+      "ELFA_FNV",
+      "FEL_NV",
+      "INFRARED"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "GILLS",
+    "copy-from": "GILLS",
+    "name": {
+      "str": "鱼鳃"
+    },
+    "points": 2,
+    "visibility": 5,
+    "ugliness": 3,
+    "description": "你的脖子上长了一对鳃，可以在水下轻松呼吸。略微增加湿益。",
+    "cancels": [
+      "LUNGS",
+      "LUNGS_2",
+      "GILLS_CEPH"
+    ],
+    "stamina_regen_modifier": 0.2
+  },
+  {
+    "type": "mutation",
+    "id": "GILLS_CEPH",
+    "copy-from": "GILLS_CEPH",
+    "name": {
+      "str": "章鱼鳃"
+    },
+    "points": 2,
+    "visibility": 4,
+    "ugliness": 4,
+    "description": "你长了一对腮，从脖子一直长到耳朵后面。它们可以让你在水下轻松呼吸。略微增加湿益。",
+    "cancels": [
+      "LUNGS",
+      "LUNGS_2",
+      "GILLS"
+    ],
+    "wet_protection": [
+      {
+        "part": "head",
+        "good": 2
+      }
+    ],
+    "stamina_regen_modifier": 0.25
+  },
+  {
+    "type": "mutation",
+    "id": "M_SKIN",
+    "copy-from": "M_SKIN",
+    "name": {
+      "str": "马卡斯纤维层"
+    },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": 8,
+    "description": "吾等已开始将土著生理机能改造为马卡斯结构。大大降低了湿身心情惩罚。",
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "M_SKIN2",
+    "copy-from": "M_SKIN2",
+    "name": {
+      "str": "马卡斯御火层"
+    },
+    "points": 5,
+    "visibility": 10,
+    "ugliness": 8,
+    "description": "吾等已将源自马卡斯核心塔中的致密角闪石纤维嫁接至本地生物耐用而适应性强的肉体之上。大大降低了吾等速度，但为吾等全身提供可观的护甲，无视湿身心情惩罚，并提供对火焰的完全防护。",
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "SCALES",
+    "copy-from": "SCALES",
+    "name": {
+      "str": "鳞甲"
+    },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": 3,
+    "description": "一套灵活的绿色鳞片已经长到覆盖你的身体，充当自然盔甲（全部:+1重击，+2切割，+1酸，+1生物）。多少减少了潮湿的影响。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 1,
+        "cut": 2,
+        "acid": 1,
+        "biological": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "THICK_SCALES",
+    "copy-from": "THICK_SCALES",
+    "name": {
+      "str": "厚重鳞甲"
+    },
+    "points": 3,
+    "visibility": 10,
+    "ugliness": 4,
+    "mixed_effect": true,
+    "description": "一套沉重的绿色鳞片已经长到覆盖你的身体，充当自然盔甲（全部:+2重击，+5切割，+3酸，+1生物，+1热量）。虽然很难穿透，但它也限制了你的灵活性，导致敏捷受到-2的惩罚。大大减少潮湿影响。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 2,
+        "cut": 5,
+        "acid": 3,
+        "biological": 1,
+        "heat": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLEEK_SCALES",
+    "copy-from": "SLEEK_SCALES",
+    "name": {
+      "str": "光滑鳞甲"
+    },
+    "points": 4,
+    "visibility": 10,
+    "ugliness": 4,
+    "description": "一套非常灵活和光滑的鳞片已经长到覆盖你的身体。这些充当弱天然装甲（全部:+1 bash，+2 cut，+2 acid，+2 electric，+2 heat），提高你的游泳能力，让你难以抓取。主要是减少潮湿影响。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 1,
+        "cut": 2,
+        "acid": 2,
+        "electric": 2,
+        "heat": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LIGHT_BONES",
+    "copy-from": "LIGHT_BONES",
+    "name": {
+      "str": "轻盈骨架"
+    },
+    "points": 2,
+    "description": "你的骨骼发生了变异，骨质非常松脆，你的行动速度增加了10%，但你所携带的物品最大重量下降20%，而且你受到的钝击伤害略微提升。",
+    "metabolism_modifier": -0.1
+  },
+  {
+    "type": "mutation",
+    "id": "FEATHERS",
+    "copy-from": "FEATHERS",
+    "name": {
+      "str": "五彩羽毛"
+    },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": 3,
+    "description": "彩虹色的羽毛已经覆盖了你的整个身体，提供了一个边缘保护来抵御攻击和寒冷的轻微保护（所有:+2重击，+1切割，+1酸）。它们还提供天然防水。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 2,
+        "cut": 1,
+        "acid": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "DOWN",
+    "copy-from": "DOWN",
+    "name": {
+      "str": "羽绒"
+    },
+    "points": 0,
+    "visibility": 4,
+    "ugliness": 1,
+    "description": "你不需要带着你的隔热层往南迁移（全部:+5巴什，+1切，+2酸，+2电，+1热）。身边没有猿猴为此杀你更好！",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 5,
+        "cut": 1,
+        "acid": 2,
+        "electric": 2,
+        "heat": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "FUR",
+    "copy-from": "FUR",
+    "name": {
+      "str": "毛绒皮肤"
+    },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": 3,
+    "description": "厚厚的黑色皮毛覆盖了你的整个身体，提供了一个边缘保护来抵御攻击（所有:+1重击，+1切割，+1酸），并提供了相当大的御寒保护。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 1,
+        "cut": 1,
+        "acid": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "URSINE_FUR",
+    "copy-from": "URSINE_FUR",
+    "name": {
+      "str": "浓密毛皮"
+    },
+    "points": 4,
+    "visibility": 10,
+    "ugliness": 3,
+    "description": "你的皮毛已经长出来并且变厚了，提供了明显的防御攻击的保护以及相当好的隔离（全部:+3重击，+4切割，+1酸，+2加热）。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 3,
+        "cut": 4,
+        "acid": 1,
+        "heat": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LUPINE_FUR",
+    "copy-from": "LUPINE_FUR",
+    "name": {
+      "str": "灰色长毛"
+    },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": 3,
+    "description": "浓密的灰色皮毛已经覆盖了你的整个身体，提供了一个边缘保护来抵御攻击（所有:+2重击，+3切割，+1酸，+1电，+1热），并提供了相当大的防寒保护。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 2,
+        "cut": 3,
+        "acid": 1,
+        "electric": 1,
+        "heat": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "FELINE_FUR",
+    "copy-from": "FELINE_FUR",
+    "name": {
+      "str": "光滑皮毛"
+    },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": 3,
+    "description": "你长出了光滑的棕色皮毛，提供了一些御寒保护（全部:+2 bash，+2 cut，+2 acid，+1 electric）。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 2,
+        "cut": 2,
+        "acid": 2,
+        "electric": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LYNX_FUR",
+    "copy-from": "LYNX_FUR",
+    "name": {
+      "str": "猞猁皮毛"
+    },
+    "points": 1,
+    "visibility": 8,
+    "ugliness": 1,
+    "description": "你的脸颊和脖子周围的毛明显变长了。它提供轻微的防御攻击（头部，嘴巴:+1切割，+1加热）。",
+    "armor": [
+      {
+        "parts": [
+          "head",
+          "mouth"
+        ],
+        "cut": 1,
+        "heat": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN",
+    "copy-from": "CHITIN",
+    "name": {
+      "str": "甲壳皮肤"
+    },
+    "points": 2,
+    "visibility": 3,
+    "ugliness": 2,
+    "description": "你的表皮变成了一层薄而柔韧的甲壳质。它提供轻微的伤口保护（所有:+1重击，+2切割，+2酸，+1生物，+1热）。略微降低湿效果。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 1,
+        "cut": 2,
+        "acid": 2,
+        "biological": 1,
+        "heat": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN2",
+    "copy-from": "CHITIN2",
+    "name": {
+      "str": "甲壳护甲"
+    },
+    "points": 2,
+    "visibility": 6,
+    "ugliness": 3,
+    "mixed_effect": true,
+    "description": "你已经长出了几丁质外骨骼，很像昆虫的外骨骼。它提供了相当大的物理保护（所有:+3重击，+5切割，+3酸，+1生物，+2热量），但降低你的敏捷1。多少减少了潮湿的影响。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 3,
+        "cut": 5,
+        "acid": 3,
+        "biological": 1,
+        "heat": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN3",
+    "copy-from": "CHITIN3",
+    "name": {
+      "str": "甲壳板甲"
+    },
+    "points": 2,
+    "visibility": 8,
+    "ugliness": 5,
+    "description": "你已经长出了一个由厚而硬的板制成的甲壳质外骨骼。它提供了出色的物理保护（所有:+8重击，+12切割，+3酸，+2生物，+2热量），但降低了你的敏捷2，并拖累了除眼睛和嘴巴以外的所有身体部位。大大减少潮湿影响。",
+    "encumbrance_always": [
+      [
+        "torso",
+        15
+      ],
+      [
+        "head",
+        15
+      ],
+      [
+        "arm_l",
+        15
+      ],
+      [
+        "arm_r",
+        15
+      ],
+      [
+        "hand_l",
+        10
+      ],
+      [
+        "hand_r",
+        10
+      ],
+      [
+        "leg_l",
+        15
+      ],
+      [
+        "leg_r",
+        15
+      ],
+      [
+        "foot_l",
+        10
+      ],
+      [
+        "foot_r",
+        10
+      ]
+    ],
+    "passive_mods": {
+      "dex_mod": -1
+    },
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 8,
+        "cut": 12,
+        "bullet": 2,
+        "acid": 3,
+        "biological": 2,
+        "heat": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN_FUR",
+    "copy-from": "CHITIN_FUR",
+    "name": {
+      "str": "带毛甲壳"
+    },
+    "points": 3,
+    "visibility": 10,
+    "ugliness": 4,
+    "description": "你的甲壳质长出了某种毛发（全部:+1截）。比没有头发要暖和一点。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "cut": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN_FUR2",
+    "copy-from": "CHITIN_FUR2",
+    "name": {
+      "str": "毛皮甲壳"
+    },
+    "points": 4,
+    "visibility": 10,
+    "ugliness": 4,
+    "description": "你的甲壳质毛已经变厚，遍布全身（全部:+1 bash，+2 cut，+1 acid，+1 heat）。它提供微小的热量，帮助你感知附近的振动。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 1,
+        "cut": 2,
+        "acid": 1,
+        "heat": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN_FUR3",
+    "copy-from": "CHITIN_FUR3",
+    "name": {
+      "str": "毛皮板甲"
+    },
+    "points": 5,
+    "visibility": 10,
+    "ugliness": 4,
+    "description": "你的外骨骼已经变硬了——当然，限制了运动——并拥有一层让猫科动物的胡须羞愧的细毛（全部:+6 bash，+10 cut，+4 acid，+2 electric，+2 bio，+2 heat）。",
+    "encumbrance_always": [
+      [
+        "torso",
+        13
+      ],
+      [
+        "head",
+        13
+      ],
+      [
+        "arm_l",
+        13
+      ],
+      [
+        "arm_r",
+        13
+      ],
+      [
+        "hand_l",
+        12
+      ],
+      [
+        "hand_r",
+        12
+      ],
+      [
+        "leg_l",
+        13
+      ],
+      [
+        "leg_r",
+        13
+      ],
+      [
+        "foot_l",
+        12
+      ],
+      [
+        "foot_r",
+        12
+      ]
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 6,
+        "cut": 10,
+        "bullet": 2,
+        "acid": 4,
+        "electric": 2,
+        "biological": 2,
+        "heat": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CF_HAIR",
+    "copy-from": "CF_HAIR",
+    "name": {
+      "str": "螫毛"
+    },
+    "points": 3,
+    "visibility": 1,
+    "ugliness": 1,
+    "description": "你的大量毛发已经松弛（全部:+1重击，+2切割，+1加热）。如果一些生物试图攻击你，你的攻击者很可能会在一个刺激的地方得到细小的、有刚毛的甲壳质；它不含你的毒液，但会分散注意力。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 1,
+        "cut": 2,
+        "heat": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SPINES",
+    "copy-from": "SPINES",
+    "name": {
+      "str": "骨刺"
+    },
+    "points": 1,
+    "visibility": 1,
+    "ugliness": 2,
+    "description": "你的皮肤组织发生了变异，长出了许多细骨刺。当对手徒手攻击直接命中暴露在外的肢体时，将会受到不小的伤害。",
+    "category": [
+      "CEPHALOPOD",
+      "FISH",
+      "CHIMERA",
+      "LIZARD",
+      "MEDICAL"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "QUILLS",
+    "copy-from": "QUILLS",
+    "name": {
+      "str": "棘刺"
+    },
+    "points": 2,
+    "visibility": 3,
+    "ugliness": 3,
+    "description": "你的身体覆盖着大刺儿（全部:+1猛击，+2砍，+1热）。每当一个手无寸铁的对手攻击你身体上没有衣服覆盖的部分时，他们会受到很大的伤害。",
+    "category": [
+      "CHIMERA"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 1,
+        "cut": 2,
+        "heat": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PLANTSKIN",
+    "copy-from": "PLANTSKIN",
+    "name": {
+      "str": "软木皮层"
+    },
+    "points": 3,
+    "visibility": 3,
+    "ugliness": 2,
+    "description": "你的皮肤是浅绿色的，有一点木质的特质。这提供了一个薄弱的装甲（所有:+2切割，+1热量），并帮助你保持水分，从而减少口渴。大大减少湿处罚。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "cut": 2,
+        "heat": 1
+      }
+    ],
+    "thirst_modifier": -0.2
+  },
+  {
+    "type": "mutation",
+    "id": "BARK",
+    "copy-from": "BARK",
+    "name": {
+      "str": "古树皮肤"
+    },
+    "points": 5,
+    "visibility": 10,
+    "ugliness": 3,
+    "description": "你的皮肤被一层薄薄的树皮覆盖着，就像一棵树一样。这提供了对重击和切割伤害的抗性，但是使你容易受到攻击（所有:+5重击，+2切割）。大大减少潮湿影响。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 5,
+        "cut": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LEAVES",
+    "copy-from": "LEAVES",
+    "name": {
+      "str": "叶发"
+    },
+    "points": 6,
+    "visibility": 8,
+    "ugliness": 3,
+    "description": "你身上所有的毛发都变成了长长的草叶（全部:+1剪）。除了在身体上引人注目之外，它们还能在阳光下为你提供少量营养。略微降低湿效果。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "cut": 1
+      }
+    ],
+    "thirst_modifier": 0.04
+  },
+  {
+    "type": "mutation",
+    "id": "FLOWERS",
+    "copy-from": "FLOWERS",
+    "name": {
+      "str": "脑花怒放"
+    },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": -4,
+    "description": "你的脑袋上开出了花朵...居然还挺好看，特喵的还香气怡人，你不得不告诉别人你的名字是杨大车纳姆....",
+    "metabolism_modifier": 0.04
+  },
+  {
+    "type": "mutation",
+    "id": "M_BLOSSOMS",
+    "copy-from": "M_BLOSSOMS",
+    "name": {
+      "str": "马卡斯之花"
+    },
+    "points": 4,
+    "visibility": 10,
+    "ugliness": 3,
+    "description": "我们培育了当地的花卉。Mycus必须成长。",
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "M_BLOOM",
+    "copy-from": "M_BLOOM",
+    "name": {
+      "str": "马卡斯怒放"
+    },
+    "points": 6,
+    "visibility": 10,
+    "ugliness": 1,
+    "description": "本地的有機生物似乎把這種開放式散播孢子的行為看成是種危險，並開始攻擊馬庫斯。最近我們這裡的花朵都安靜下來，直到主宰決定什麼時候才是發芽的安全時機，快速生長當然會對於養分的提供造成壓力，但也保證了有效率的繁衍。",
+    "valid": false,
+    "active": true,
+    "cost": 10,
+    "kcal": true,
+    "thirst": true,
+    "fatigue": true
+  },
+  {
+    "type": "mutation",
+    "id": "SLIME_HANDS",
+    "copy-from": "SLIME_HANDS",
+    "name": {
+      "str": "粘液之手"
+    },
+    "points": 1,
+    "visibility": 5,
+    "ugliness": 4,
+    "description": "你手上的皮肤是一层粘膜，会产生一层又厚又刺鼻的黏液（全部:+1切，+3酸）。用手攻击会造成轻微的酸伤害。略微增加湿益。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "cut": 1,
+        "acid": 3
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BENDY1",
+    "copy-from": "BENDY1",
+    "name": {
+      "str": "弹性肢体"
+    },
+    "points": 1,
+    "visibility": 1,
+    "description": "你的四肢好像能够再主动“伸远”一点点。敏捷 +1。",
+    "extend": {
+      "threshreq": [
+        "THRESH_CEPHALOPOD",
+        "THRESH_PLANT",
+        "THRESH_SPIDER"
+      ],
+      "category": [
+        "CEPHALOPOD",
+        "PLANT",
+        "SPIDER"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BENDY2",
+    "copy-from": "BENDY2",
+    "name": {
+      "str": "橡胶肢体"
+    },
+    "points": 1,
+    "visibility": 1,
+    "mixed_effect": true,
+    "description": "你的四肢明显比可悲的人类肢体要柔韧。敏捷 +3，力量 -2。",
+    "purifiable": false,
+    "extend": {
+      "threshreq": [
+        "THRESH_CEPHALOPOD"
+      ],
+      "category": [
+        "CEPHALOPOD",
+        "SLIME",
+        "ELFA"
+      ]
+    },
+    "hp_adjustment": 3
+  },
+  {
+    "type": "mutation",
+    "id": "BENDY3",
+    "copy-from": "BENDY3",
+    "name": {
+      "str": "变形肢体"
+    },
+    "points": 0,
+    "visibility": 2,
+    "ugliness": 2,
+    "mixed_effect": true,
+    "description": "你的假足肢可以适合任何东西！+6敏捷，-4力量。",
+    "valid": false,
+    "purifiable": false,
+    "passive_mods": {
+      "dex_mod": 6,
+      "str_mod": -4
+    },
+    "hp_adjustment": 6
+  },
+  {
+    "type": "mutation",
+    "id": "COMPOUND_EYES",
+    "copy-from": "COMPOUND_EYES",
+    "name": {
+      "str": "复眼"
+    },
+    "points": 2,
+    "visibility": 9,
+    "ugliness": 5,
+    "description": "你的眼睛变成了像昆虫一样的复眼。只要你不戴眼镜，感知+2。",
+    "cancels": [
+      "20_15",
+      "ELFAEYES",
+      "FEL_EYE",
+      "URSINE_EYE",
+      "BIRD_EYE",
+      "LIZ_EYE"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PADDED_FEET",
+    "copy-from": "PADDED_FEET",
+    "name": {
+      "str": "肉质脚垫"
+    },
+    "points": 1,
+    "visibility": 1,
+    "description": "你的脚底部有很强的衬垫（脚:+2重击，+1切割）。不穿鞋不收运动罚分，赤脚运动甚至收10%的加成。",
+    "armor": [
+      {
+        "parts": [
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 2,
+        "cut": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "HOOVES",
+    "copy-from": "HOOVES",
+    "name": {
+      "str": "蹄足"
+    },
+    "points": -4,
+    "visibility": 2,
+    "ugliness": 2,
+    "mixed_effect": true,
+    "description": "你的脚已经融合成蹄子了。这样可以让踢击造成更多伤害，提供自然护甲（脚:+1 bash，+3 acid），免去穿鞋的需要；然而，你不能穿任何类型的鞋。减少潮湿影响。",
+    "armor": [
+      {
+        "parts": [
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 1,
+        "acid": 3
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "STOCKY_TROGLO",
+    "copy-from": "STOCKY_TROGLO",
+    "name": {
+      "str": "地底适应"
+    },
+    "points": 0,
+    "visibility": 3,
+    "ugliness": 2,
+    "description": "你的身体已经适应了封闭空间的生活。你看起来更矮更胖，用肌肉量来换取机动性。+3力量，-2敏捷。",
+    "passive_mods": {
+      "str_mod": 3,
+      "dex_mod": -2
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FLEET2",
+    "copy-from": "FLEET2",
+    "name": {
+      "str": "跑步健将"
+    },
+    "points": 3,
+    "description": "你的腿非常柔软有弹性。在平地上，你移动能快30%。",
+    "extend": {
+      "category": [
+        "INSECT",
+        "SPIDER",
+        "MOUSE"
+      ]
+    },
+    "metabolism_modifier": 0.08
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_STING",
+    "copy-from": "TAIL_STING",
+    "name": {
+      "str": "尖刺蝎尾"
+    },
+    "points": 0,
+    "visibility": 6,
+    "ugliness": 3,
+    "description": "你有一条像蝎子一样的尾巴，它并不能使你保持平衡，但提供刺击伤害。让你没法穿上不是织物的裤子。",
+    "category": [
+      "CHIMERA",
+      "INSECT"
+    ],
+    "allow_soft_gear": true
+  },
+  {
+    "type": "mutation",
+    "id": "HIBERNATE",
+    "copy-from": "HIBERNATE",
+    "name": {
+      "str": "冬眠"
+    },
+    "points": 3,
+    "description": "你已经发展了储存卡路里，然后长时间睡个好觉的能力。",
+    "valid": false,
+    "fatigue_regen_modifier": 0.02,
+    "active": true,
+    "cost": 0
+  },
+  {
+    "type": "mutation",
+    "id": "MUT_TOUGH",
+    "copy-from": "MUT_TOUGH",
+    "name": {
+      "str": "能屈能伸"
+    },
+    "points": 2,
+    "description": "你能从严酷的环境中存活下来，生命值上限额外加成20%。可以和强壮等特性叠加。",
+    "extend": {
+      "threshreq": [
+        "THRESH_LUPINE"
+      ],
+      "category": [
+        "LUPINE"
+      ]
+    },
+    "hp_modifier_secondary": 0.2
+  },
+  {
+    "type": "mutation",
+    "id": "MUT_TOUGH2",
+    "copy-from": "MUT_TOUGH2",
+    "name": {
+      "str": "内外兼修"
+    },
+    "points": 3,
+    "description": "基本没什么东西可以吓到你了。生命值上限额外加成30%。可以和强壮等特性叠加。",
+    "valid": false,
+    "extend": {
+      "threshreq": [
+        "THRESH_BEAST"
+      ],
+      "category": [
+        "BEAST"
+      ]
+    },
+    "hp_modifier_secondary": 0.3
+  },
+  {
+    "type": "mutation",
+    "id": "PRED4",
+    "copy-from": "PRED4",
+    "name": {
+      "str": "生杀予夺"
+    },
+    "points": 2,
+    "description": "你的思想和大脑已经适应了你在世界上的新位置:作为食物链的顶端。你可以毫不费力地掌握和保持战斗技能，但你的批判性思维已经进一步萎缩。",
+    "valid": false,
+    "purifiable": false,
+    "cancels": [
+      "SAVANT",
+      "CHEMIMBALANCE",
+      "PACIFIST"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "WINGS_BIRD",
+    "copy-from": "WINGS_BIRD",
+    "name": {
+      "str": "鸟翼"
+    },
+    "points": 2,
+    "visibility": 4,
+    "ugliness": 2,
+    "description": "你有一对大的羽毛翅膀（手臂:+1重击，+1切割）。你的身体太重了，不能飞，但是你可以在摔倒时用它们来减缓你的下降速度，在任何情况下都不会受到摔倒的伤害。",
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r"
+        ],
+        "bash": 1,
+        "cut": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "FAT",
+    "copy-from": "FAT",
+    "name": {
+      "str": "脂肪沉积"
+    },
+    "points": -1,
+    "visibility": 1,
+    "ugliness": 1,
+    "mixed_effect": true,
+    "description": "你的身体增加了一些额外的重量（全部:+2重击，+1切割）。它让你慢了一点，但有助于你的游泳和保暖。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 2,
+        "cut": 1
+      }
+    ],
+    "metabolism_modifier": -0.1,
+    "thirst_modifier": -0.1
+  },
+  {
+    "type": "mutation",
+    "id": "LARGE",
+    "copy-from": "LARGE",
+    "name": {
+      "str": "傻大个子"
+    },
+    "points": 0,
+    "visibility": 1,
+    "ugliness": 1,
+    "mixed_effect": true,
+    "description": "你变得明显更高更宽（躯干，手臂:+2 bash）。其中大部分是有用的肌肉量（力量+2），但你发现它会打乱你的平衡，你会以自己的方式获得（+10个躯干和手臂累赘）。",
+    "extend": {
+      "category": [
+        "BEAST",
+        "CHIMERA",
+        "PLANT"
+      ]
+    },
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ],
+        "bash": 2
+      }
+    ],
+    "hp_adjustment": -2,
+    "metabolism_modifier": 0.2,
+    "fatigue_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "LARGE_OK",
+    "copy-from": "LARGE_OK",
+    "name": {
+      "str": "魁梧身躯"
+    },
+    "points": 2,
+    "visibility": 1,
+    "description": "你用你应得的尊严（躯干、手臂:+2 bash）支撑着你结实的身体。实力+2。",
+    "extend": {
+      "threshreq": [
+        "THRESH_BEAST",
+        "THRESH_PLANT"
+      ],
+      "category": [
+        "BEAST",
+        "PLANT"
+      ]
+    },
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ],
+        "bash": 2
+      }
+    ],
+    "hp_adjustment": -2,
+    "metabolism_modifier": 0.2,
+    "fatigue_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "LARGE_CHIMERA",
+    "copy-from": "LARGE_CHIMERA",
+    "name": {
+      "str": "蓬勃发展的存在"
+    },
+    "points": 2,
+    "visibility": 1,
+    "description": "你的身体框架已经开始扩展，以反映内在的野兽（所有:+3重击，+1切割），给你的代谢系统带来额外的压力。你现在四肢上有足够的肌肉来支撑所有的东西（力量+3），但发现穿上那件紧缩的衣服更难了。",
+    "prereqs": [
+      "LARGE"
+    ],
+    "prereqs2": [
+      "STR_UP_3",
+      "STR_UP_4"
+    ],
+    "changes_to": [
+      "HUGE_OK"
+    ],
+    "leads_to": [
+      "MUT_TOUGH"
+    ],
+    "category": [
+      "CHIMERA"
+    ],
+    "encumbrance_always": [
+      [
+        "head",
+        5
+      ],
+      [
+        "mouth",
+        5
+      ],
+      [
+        "arm_l",
+        5
+      ],
+      [
+        "arm_r",
+        5
+      ],
+      [
+        "hand_l",
+        5
+      ],
+      [
+        "hand_r",
+        5
+      ],
+      [
+        "leg_l",
+        5
+      ],
+      [
+        "leg_r",
+        5
+      ],
+      [
+        "foot_l",
+        5
+      ],
+      [
+        "foot_r",
+        5
+      ]
+    ],
+    "passive_mods": {
+      "str_mod": 3
+    },
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 3,
+        "cut": 1
+      }
+    ],
+    "hp_adjustment": -2,
+    "metabolism_modifier": 0.2,
+    "fatigue_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "HUGE",
+    "copy-from": "HUGE",
+    "name": {
+      "str": "畸形巨大"
+    },
+    "points": -2,
+    "visibility": 4,
+    "ugliness": 4,
+    "mixed_effect": true,
+    "description": "你变得越来越庞大（全部:+4 bash，+1 cut），以至于你无法有效地穿上真人大小的衣服或车辆。其中很大一部分是强大的肌肉量（力量+5），但四处奔波真的很痛苦。",
+    "passive_mods": {
+      "str_mod": 5
+    },
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 4,
+        "cut": 1
+      }
+    ],
+    "hp_adjustment": -6,
+    "metabolism_modifier": 0.3,
+    "fatigue_modifier": 0.2
+  },
+  {
+    "type": "mutation",
+    "id": "HUGE_OK",
+    "copy-from": "HUGE_OK",
+    "name": {
+      "str": "巨无霸"
+    },
+    "points": 2,
+    "visibility": 4,
+    "ugliness": 3,
+    "mixed_effect": true,
+    "description": "你的心血管系统已经赶上了你庞大的肌肉体格（全部:+4 bash，+1 cut），那么谁还需要可悲的人车呢？实力+5。",
+    "extend": {
+      "threshreq": [
+        "THRESH_CHIMERA"
+      ],
+      "category": [
+        "CHIMERA"
+      ]
+    },
+    "passive_mods": {
+      "str_mod": 5
+    },
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 4,
+        "cut": 1
+      }
+    ],
+    "hp_adjustment": -6,
+    "metabolism_modifier": 0.3,
+    "fatigue_modifier": 0.2,
+    "stamina_regen_modifier": 0.3
+  },
+  {
+    "type": "mutation",
+    "id": "STR_UP",
+    "copy-from": "STR_UP",
+    "name": {
+      "str": "身强体壮"
+    },
+    "points": 1,
+    "description": "你的肌体比以前强壮了少许。力量+1",
+    "metabolism_modifier": 0.04,
+    "thirst_modifier": 0.04
+  },
+  {
+    "type": "mutation",
+    "id": "STR_UP_2",
+    "copy-from": "STR_UP_2",
+    "name": {
+      "str": "肌肉发达"
+    },
+    "points": 2,
+    "description": "在末日的磨砺下，你的肌肉更加发达。力量+2",
+    "metabolism_modifier": 0.05,
+    "thirst_modifier": 0.05
+  },
+  {
+    "type": "mutation",
+    "id": "STR_UP_3",
+    "copy-from": "STR_UP_3",
+    "name": {
+      "str": "孔武有力"
+    },
+    "points": 4,
+    "visibility": 1,
+    "description": "你的肌肉强度变得更大。力量+4",
+    "metabolism_modifier": 0.08,
+    "thirst_modifier": 0.08
+  },
+  {
+    "type": "mutation",
+    "id": "STR_UP_4",
+    "copy-from": "STR_UP_4",
+    "name": {
+      "str": "力大无穷"
+    },
+    "points": 7,
+    "visibility": 2,
+    "ugliness": 2,
+    "description": "你的肌肉围度与质量非常之大。你几乎超越了人类的极限！力量+7",
+    "metabolism_modifier": 0.1,
+    "thirst_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "STR_ALPHA",
+    "copy-from": "STR_ALPHA",
+    "name": {
+      "str": "终极力量"
+    },
+    "points": 6,
+    "description": "你的肌肉已经生长完美。",
+    "valid": false,
+    "metabolism_modifier": 0.12,
+    "thirst_modifier": 0.12
+  },
+  {
+    "type": "mutation",
+    "id": "DEX_UP",
+    "copy-from": "DEX_UP",
+    "name": {
+      "str": "动作轻灵"
+    },
+    "points": 1,
+    "description": "做了许多训练，你的动作似乎变得灵活了。敏捷+1",
+    "extend": {
+      "category": [
+        "LUPINE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "DEX_UP_3",
+    "copy-from": "DEX_UP_3",
+    "name": {
+      "str": "动如脱兔"
+    },
+    "points": 3,
+    "description": "你领悟了灵活行动的技巧。敏捷+4",
+    "extend": {
+      "category": [
+        "RAPTOR"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "FORKED_TONGUE",
+    "copy-from": "FORKED_TONGUE",
+    "name": {
+      "str": "蛇信"
+    },
+    "points": 0,
+    "visibility": 1,
+    "ugliness": 3,
+    "description": "你的舌头是分叉的，就像爬行动物一样。+1感知。",
+    "passive_mods": {
+      "per_mod": 1
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "EYEBULGE",
+    "copy-from": "EYEBULGE",
+    "name": {
+      "str": "凸眼"
+    },
+    "points": 0,
+    "visibility": 8,
+    "ugliness": 4,
+    "description": "你的眼睛从头颅突出来几英寸，但这并不影响你的视觉。",
+    "cancels": [
+      "20_15"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PALE",
+    "copy-from": "PALE",
+    "name": {
+      "str": "苍白皮肤"
+    },
+    "points": 0,
+    "visibility": 3,
+    "ugliness": 1,
+    "description": "你的皮肤很苍白。",
+    "extend": {
+      "category": [
+        "TROGLOBITE"
+      ]
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL",
+    "copy-from": "BEAUTIFUL",
+    "name": {
+      "str": "迷人美貌"
+    },
+    "points": 2,
+    "visibility": -4,
+    "ugliness": -4,
+    "description": "你的相貌十分英俊，大家很容易接近你并且信任你。",
+    "category": [
+      "FELINE",
+      "ELFA",
+      "BIRD"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "NAUSEA",
+    "copy-from": "NAUSEA",
+    "name": {
+      "str": "反胃"
+    },
+    "points": -2,
+    "description": "你几乎经常感到恶心，你的身体很容易干燥。你更容易因食物中毒、酒精等而呕吐。如果需要，你也可以让自己呕吐。",
+    "cancels": [
+      "GOURMAND"
+    ],
+    "metabolism_modifier": 0.1,
+    "thirst_modifier": 0.3,
+    "active": true
+  },
+  {
+    "type": "mutation",
+    "id": "VOMITOUS",
+    "copy-from": "VOMITOUS",
+    "name": {
+      "str": "易吐"
+    },
+    "points": -3,
+    "description": "你有严重的消化障碍，导致你的身体容易干燥。虽然它会导致你经常呕吐，但你发现你也可以根据需要引发呕吐反射。",
+    "metabolism_modifier": 0.2,
+    "thirst_modifier": 0.5,
+    "active": true
+  },
+  {
+    "type": "mutation",
+    "id": "HUNGER",
+    "copy-from": "HUNGER",
+    "name": {
+      "str": "快速新陈代谢"
+    },
+    "points": -2,
+    "description": "你消耗的食物比大部分人都多，同样，你耐力的恢复速度略微加快。",
+    "starting_trait": true,
+    "metabolism_modifier": 0.4,
+    "stamina_regen_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "HUNGER2",
+    "copy-from": "HUNGER2",
+    "name": {
+      "str": "急速新陈代谢"
+    },
+    "points": -2,
+    "description": "你消耗的食物相当于普通人食量的两倍多，这才能够支撑被变异扩充的心肺系统。同时，你的耐力能在经过激烈运动后更加快速的恢复。",
+    "metabolism_modifier": 0.8,
+    "stamina_regen_modifier": 0.3
+  },
+  {
+    "type": "mutation",
+    "id": "HUNGER3",
+    "copy-from": "HUNGER3",
+    "name": {
+      "str": "极限新陈代谢"
+    },
+    "points": -2,
+    "description": "为了保持你真正超人的耐力，你消耗的食物是普通人的近三倍。",
+    "metabolism_modifier": 1.6,
+    "stamina_regen_modifier": 0.5
+  },
+  {
+    "type": "mutation",
+    "id": "THIRST",
+    "copy-from": "THIRST",
+    "name": {
+      "str": "口干舌燥"
+    },
+    "points": -2,
+    "description": "你的身体容易脱水。你需要喝更多的水。",
+    "starting_trait": true,
+    "thirst_modifier": 0.4
+  },
+  {
+    "type": "mutation",
+    "id": "THIRST2",
+    "copy-from": "THIRST2",
+    "name": {
+      "str": "口舌生烟"
+    },
+    "points": -3,
+    "description": "呃，已经没水了么？你差不多需要两人份的水来维持生命。",
+    "thirst_modifier": 0.8
+  },
+  {
+    "type": "mutation",
+    "id": "THIRST3",
+    "copy-from": "THIRST3",
+    "name": {
+      "str": "奇渴无比"
+    },
+    "points": -5,
+    "description": "你很快就会变干，需要将近三倍的液体来保持水分。",
+    "thirst_modifier": 1.6
+  },
+  {
+    "type": "mutation",
+    "id": "ROT2",
+    "copy-from": "ROT2",
+    "name": {
+      "str": "衰退"
+    },
+    "points": -8,
+    "description": "你的身体正在非常缓慢地萎缩！",
+    "healing_awake": -0.02,
+    "healing_resting": -0.33
+  },
+  {
+    "type": "mutation",
+    "id": "ROT3",
+    "copy-from": "ROT3",
+    "name": {
+      "str": "解体"
+    },
+    "points": -10,
+    "description": "你的身体正在缓慢地萎缩！",
+    "healing_awake": -0.08,
+    "healing_resting": -0.5
+  },
+  {
+    "type": "mutation",
+    "id": "SLIMY",
+    "copy-from": "SLIMY",
+    "name": {
+      "str": "粘液外表"
+    },
+    "points": 2,
+    "visibility": 7,
+    "ugliness": 6,
+    "description": "你的身体涂上了一层细密的黏液（全部:+1切）。保护免受酸的长期影响，虽然不是短期的。大大增加湿益。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "cut": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "VISCOUS",
+    "copy-from": "VISCOUS",
+    "name": {
+      "str": "粘滞外表"
+    },
+    "points": 4,
+    "visibility": 7,
+    "ugliness": 8,
+    "description": "你身体的粘液输出变得粘稠和凝胶状（全部:+2切，+4酸）。有点防酸。大大增加湿益。",
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "cut": 2,
+        "acid": 4
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "AMORPHOUS",
+    "copy-from": "AMORPHOUS",
+    "name": {
+      "str": "无定形形体"
+    },
+    "points": -2,
+    "visibility": 10,
+    "ugliness": 10,
+    "description": "你的肉是一种令人愉悦的凝胶状稠度（全部:+6 bash，+1 cut）。你的身体功能似乎在四处活动，你的腿也能舒服地活动。",
+    "purifiable": false,
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth"
+        ],
+        "bash": 6,
+        "cut": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHLOROMORPH",
+    "copy-from": "CHLOROMORPH",
+    "name": {
+      "str": "植物形态"
+    },
+    "points": 10,
+    "visibility": 7,
+    "ugliness": 1,
+    "description": "你的每一寸皮肤都富含叶绿素，你的根很强壮，需要少量的水分。睡在可挖掘的土地上会满足你可能有的任何饥饿或干渴，而且你通常不太饿。",
+    "valid": false,
+    "purifiable": false,
+    "metabolism_modifier": -0.15,
+    "thirst_modifier": 0.1
+  },
+  {
+    "type": "mutation",
+    "id": "COLDBLOOD",
+    "copy-from": "COLDBLOOD",
+    "name": {
+      "str": "热能依赖"
+    },
+    "points": 0,
+    "mixed_effect": true,
+    "description": "你的肌肉反应取决于环境温度。低于65华氏度（18.3摄氏度）每5度（2.8度），你就会失去1%的速度。然而，这种迟缓有助于你保存能量和水分。",
+    "metabolism_modifier": -0.1,
+    "thirst_modifier": -0.1
+  },
+  {
+    "type": "mutation",
+    "id": "COLDBLOOD2",
+    "copy-from": "COLDBLOOD2",
+    "name": {
+      "str": "重度热能依赖"
+    },
+    "points": -2,
+    "mixed_effect": true,
+    "description": "你的肌肉反应高度依赖于环境温度。65°F（18.3°C）以下每3 （1.7）度你就失去1%的速度，但是你缓慢的新陈代谢需要的营养物质更少。",
+    "metabolism_modifier": -0.15,
+    "thirst_modifier": -0.15
+  },
+  {
+    "type": "mutation",
+    "id": "COLDBLOOD3",
+    "copy-from": "COLDBLOOD3",
+    "name": {
+      "str": "冷血动物"
+    },
+    "points": -3,
+    "mixed_effect": true,
+    "description": "你是冷血动物，靠热来保持运动。在65华氏度（18.3摄氏度）以下，你的速度每降低2度（1.1度），就会降低1%，但是你缓慢的新陈代谢需要更少的营养。",
+    "metabolism_modifier": -0.2,
+    "thirst_modifier": -0.2
+  },
+  {
+    "type": "mutation",
+    "id": "COLDBLOOD4",
+    "copy-from": "COLDBLOOD4",
+    "name": {
+      "str": "变温动物"
+    },
+    "points": 0,
+    "mixed_effect": true,
+    "description": "你的身体变得永远冷血。在华氏65度（摄氏18.3度）以下或以上每2度（1.1度），你的速度就会降低或升高。你的新陈代谢慢，需要的营养少。",
+    "purifiable": false,
+    "metabolism_modifier": -0.25,
+    "thirst_modifier": -0.25
+  },
+  {
+    "type": "mutation",
+    "id": "ARM_FEATHERS",
+    "copy-from": "ARM_FEATHERS",
+    "name": {
+      "str": "羽化手臂"
+    },
+    "points": -2,
+    "visibility": 8,
+    "ugliness": 2,
+    "bodytemp_modifiers": [
+      10,
+      25
+    ],
+    "description": "你的手臂长出了鲜艳的羽毛。它们有效地防水你的手臂，并减少打击（手臂:+1重击，+1切割），但真的会碍事。它们太小了，根本无法在空中帮助你。",
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r"
+        ],
+        "bash": 1,
+        "cut": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ARM_TENTACLES",
+    "copy-from": "ARM_TENTACLES",
+    "name": {
+      "str": "触手手臂"
+    },
+    "points": -4,
+    "visibility": 7,
+    "ugliness": 4,
+    "mixed_effect": true,
+    "description": "你的手臂已经变成了触须，敏捷加成1，永久手障25，不能戴手套。稍微减少湿处罚。",
+    "encumbrance_always": [
+      [
+        "hand_l",
+        25
+      ],
+      [
+        "hand_r",
+        25
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ARM_TENTACLES_4",
+    "copy-from": "ARM_TENTACLES_4",
+    "name": {
+      "str": "四手明王"
+    },
+    "points": -2,
+    "visibility": 8,
+    "ugliness": 5,
+    "description": "你的手臂已经变成了四条触须，敏捷加成1，永久手障25，不能戴手套。你可以用它们进行最多3次额外攻击。稍微减少湿处罚。",
+    "encumbrance_always": [
+      [
+        "hand_l",
+        25
+      ],
+      [
+        "hand_r",
+        25
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ARM_TENTACLES_8",
+    "copy-from": "ARM_TENTACLES_8",
+    "name": {
+      "str": "八臂哪吒"
+    },
+    "points": -1,
+    "visibility": 9,
+    "ugliness": 6,
+    "description": "你的手臂已经变成了八条触须，敏捷加成1，永久手障25，不能戴手套。你可以用它们进行最多7次额外攻击。稍微减少湿处罚。",
+    "encumbrance_always": [
+      [
+        "hand_l",
+        25
+      ],
+      [
+        "hand_r",
+        25
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SHELL",
+    "copy-from": "SHELL",
+    "name": {
+      "str": "龟壳"
+    },
+    "points": -5,
+    "visibility": 8,
+    "ugliness": 3,
+    "description": "你的躯干上长出了一层厚厚的外壳，提供了出色的护甲（躯干:+10重击，+14切割）。你发现你可以用这个空的空间作为16号储物空间，但是不能在你的躯干上穿任何东西。多少减少了潮湿的影响。",
+    "armor": [
+      {
+        "parts": "torso",
+        "bash": 10,
+        "cut": 14,
+        "bullet": 4
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SHELL2",
+    "copy-from": "SHELL2",
+    "name": {
+      "str": "大龟壳"
+    },
+    "points": -1,
+    "visibility": 10,
+    "ugliness": 3,
+    "mixed_effect": true,
+    "description": "你的保护壳（躯干:+14 bash，+18 cut）已经足够大，可以容纳——如果需要的话——你的整个身体。激活，将你的头和四肢拉进你的壳里，用机动性和视野换取温暖和庇护。",
+    "armor": [
+      {
+        "parts": "torso",
+        "bash": 14,
+        "cut": 18,
+        "bullet": 6
+      }
+    ],
+    "active": true
+  },
+  {
+    "type": "mutation",
+    "id": "ACIDBLOOD",
+    "copy-from": "ACIDBLOOD",
+    "name": {
+      "str": "酸性血液"
+    },
+    "points": 4,
+    "description": "你的身体已经形成了一种奇妙的防御机制。你流出的不是正常的血液，而是一种强分子酸，它会伤害任何愚蠢到伤害你的生物。身体化学的这些变化会增加你的新陈代谢。",
+    "metabolism_modifier": 0.15
+  }
+]

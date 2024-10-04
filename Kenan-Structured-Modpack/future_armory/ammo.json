@@ -1,0 +1,173 @@
+[
+  {
+    "id": "550arlov",
+    "type": "AMMO",
+    "name": {
+      "str": "550 Arlov 普通弹"
+    },
+    "description": "用于维特罗夫斯基 V-85 狙击步枪的独特子弹，它看起来像.50 BMG，但更细、更强大。",
+    "weight": "470 g",
+    "volume": "300 ml",
+    "price": "250 USD",
+    "bashing": 1,
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 30,
+    "ammo_type": "550arlov",
+    "range": 40,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 110,
+      "armor_penetration": 40
+    },
+    "dispersion": 220,
+    "effects": [
+      "COOKOFF",
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+    "id": "550_incendiary",
+    "copy-from": "550arlov",
+    "type": "AMMO",
+    "name": {
+      "str": "550 Arlov 燃烧弹"
+    },
+    "description": "550 Arlov弹的燃烧弹种类，这种子弹有红色的尖端，击中后会爆炸并燃烧目标。",
+    "count": 30,
+    "effects": [
+      "INCENDIARY"
+    ],
+    "proportional": {
+      "dispersion": 0.7
+    }
+  },
+  {
+    "id": "550_ap",
+    "copy-from": "550arlov",
+    "type": "AMMO",
+    "name": {
+      "str": "550 Arlov 穿甲弹"
+    },
+    "description": "550 Arlov弹的变种，其使用的弹头强化材料以降低伤害为代价，提升了其穿透装甲的能力。",
+    "count": 30,
+    "relative": {
+      "damage": {
+        "damage_type": "stab",
+        "amount": -30,
+        "armor_penetration": 40
+      }
+    }
+  },
+  {
+    "id": "550_explosive",
+    "copy-from": "550arlov",
+    "type": "AMMO",
+    "name": {
+      "str": "550 Arlov 高爆弹"
+    },
+    "description": "550 Arlov弹的变种，使用爆炸弹头，单纯拿来杀丧尸有点大材小用，但缺足以对坚硬目标造成伤害。",
+    "count": 30,
+    "extend": {
+      "effects": [
+        "EXPLOSIVE"
+      ]
+    }
+  },
+  {
+    "id": "20mm",
+    "type": "AMMO",
+    "name": {
+      "str": "20mm火神弹"
+    },
+    "description": "比.50 BMG更大，这颗20mm口径的子弹对所有的东西都有强大的破坏力，也许无论把它用于活人，还是活过来的死人身上，都算得上是一种浪费。",
+    "weight": "900 g",
+    "volume": "500 ml",
+    "price": "700 USD",
+    "bashing": 1,
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 3,
+    "ammo_type": "20mm",
+    "range": 140,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 200,
+      "armor_penetration": 50
+    },
+    "dispersion": 180,
+    "recoil": 27000,
+    "effects": [
+      "COOKOFF",
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+    "id": "9x39",
+    "type": "AMMO",
+    "name": {
+      "str": "9×39mm 普通弹"
+    },
+    "description": "这种苏系步枪的子弹被设计拥有良好的装甲穿透力和威力，几乎类似于AK-47使用的7.62mm子弹，这个子弹是专为VSS Vintorez设计的。",
+    "weight": "259 g",
+    "volume": "430 ml",
+    "price": "750 USD",
+    "bashing": 1,
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "light_gray",
+    "count": 20,
+    "ammo_type": "9x39",
+    "range": 120,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 110,
+      "armor_penetration": 50
+    },
+    "dispersion": 120,
+    "recoil": 10,
+    "effects": [
+      "NEVER_MISFIRES",
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "cannonball",
+    "type": "AMMO",
+    "name": {
+      "str": "加农炮弹"
+    },
+    "description": "巨大的钢球，专门为舰载大炮或便携式大炮设计。你能想象用它碾压丧尸的画面。",
+    "weight": "1500 g",
+    "volume": "600 ml",
+    "price": "700 USD",
+    "bashing": 5,
+    "material": [
+      "steel"
+    ],
+    "symbol": "O",
+    "color": "light_gray",
+    "count": 5,
+    "ammo_type": "cannonball",
+    "range": 100,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 150
+    },
+    "dispersion": 110,
+    "recoil": 90,
+    "effects": [
+      "EXPLOSIVE",
+      "MUZZLE_SMOKE",
+      "NO_ITEM_DAMAGE"
+    ]
+  }
+]

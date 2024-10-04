@@ -1,0 +1,56 @@
+[
+  {
+    "id": "55645",
+    "type": "AMMO",
+    "name": {
+      "str": "5.56x45mm弹"
+    },
+    "description": "5.56x45mm北约是一个无框的瓶颈回合。它是由FN Herstal在20世纪70年代设计的。这种独特的设计使得子弹一旦与目标相撞就会碎裂。当然，这可能是有问题的，如果发射到接近操作器。",
+    "weight": "4 g",
+    "volume": "250 ml",
+    "price": "40 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "-",
+    "color": "white",
+    "count": 10,
+    "stack_size": 5,
+    "ammo_type": "5842",
+    "casing": "5842_casing",
+    "range": 43,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 50,
+      "armor_penetration": 15
+    },
+    "dispersion": 50,
+    "recoil": 300
+  },
+  {
+    "id": "bp_55645",
+    "copy-from": "55645",
+    "type": "AMMO",
+    "name": {
+      "str": "5.56x45mm弹（黑火药）"
+    },
+    "proportional": {
+      "price": 0.3,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
+  }
+]

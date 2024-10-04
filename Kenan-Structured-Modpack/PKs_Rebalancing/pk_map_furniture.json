@@ -1,0 +1,64 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_spike",
+    "name": "钩头道钉",
+    "description": "看起来很危险，你可以把它安装在车上。",
+    "symbol": "J",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "required_str": -1,
+    "flags": [
+      "SHARP",
+      "NO_ITEM",
+      "TRANSPARENT",
+      "MOUNTABLE"
+    ],
+    "bash": {
+      "str_min": 18,
+      "str_max": 60,
+      "sound": "smash!",
+      "sound_fail": "tyyyng.",
+      "items": [
+        {
+          "item": "spike",
+          "count": [
+            0,
+            2
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "type": "furniture",
+    "id": "f_blade",
+    "name": "锋利刀片",
+    "description": "看起来很危险，你可以把它安装在车上。",
+    "symbol": "/",
+    "color": "light_gray",
+    "move_cost_mod": 2,
+    "required_str": -1,
+    "flags": [
+      "SHARP",
+      "TRANSPARENT",
+      "MOUNTABLE",
+      "ROUGH"
+    ],
+    "bash": {
+      "str_min": 12,
+      "str_max": 30,
+      "sound": "smash!",
+      "sound_fail": "tyyyng.",
+      "items": [
+        {
+          "item": "blade",
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
+    }
+  }
+]

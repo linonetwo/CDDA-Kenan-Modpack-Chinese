@@ -1,0 +1,360 @@
+[
+  {
+    "id": "tec_ninja_ninjutsu_precise",
+    "type": "technique",
+    "name": "奇袭",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "messages": [
+      "你出其不意，奇袭了 %s",
+      "<npcname> 奇袭 %s"
+    ]
+  },
+  {
+    "id": "tec_ninja_ninjutsu_slay",
+    "type": "technique",
+    "name": "暗杀",
+    "required_buffs_all": [
+      "buff_ninja_ninjutsu_as_the_wind",
+      "buff_ninja_ninjutsu_as_the_forest",
+      "buff_ninja_ninjutsu_as_the_fire",
+      "buff_ninja_ninjutsu_as_the_mountain"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 5
+      }
+    ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "grab_break": true,
+    "messages": [
+      "从背后无情的打击到%s",
+      "<npcname>遭到无情打击"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "dex",
+        "scale": 1
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "dex",
+        "scale": 0.5
+      }
+    ]
+  },
+  {
+    "id": "tec_ninja_ninjutsu_foresight",
+    "type": "technique",
+    "name": "遗弃",
+    "required_buffs_all": [
+      "buff_ninja_ninjutsu_as_the_wind",
+      "buff_ninja_ninjutsu_as_the_forest",
+      "buff_ninja_ninjutsu_as_the_fire",
+      "buff_ninja_ninjutsu_as_the_mountain"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 5
+      }
+    ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "dodge_counter": true,
+    "grab_break": true,
+    "down_dur": 2,
+    "messages": [
+      "%s被遗弃躲开",
+      "<npcname> %s被遗弃躲开"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.5
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0
+      }
+    ],
+    "flat_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 20
+      }
+    ]
+  },
+  {
+    "id": "style_ninjutsu_mod",
+    "type": "martial_art",
+    "name": "忍术",
+    "description": "忍术是从镰仓时期到江户时期，忍者们将武术和战术结合起来的传统艺术。我们专注于快速准确的秘密攻击。运用孙子兵法的行为原理，使超人之战成为可能。",
+    "initiate": [
+      "風林火山:Swift as wind, gentle as the forest, fierce as the fire, unshakable as mountain"
+    ],
+    "arm_block": 3,
+    "leg_block": 50,
+    "static_buffs": [
+      {
+        "id": "buff_ninja_ninjutsu_as_the_forest",
+        "name": "忍术（森林）",
+        "description": "你的训练可以让你在攻击时完全不出声，而且降低移动时的声音。\n\n近战攻击完全无声。移动声音减半。",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "buff_duration": 2,
+        "max_stacks": 1,
+        "quiet": true,
+        "stealthy": true
+      }
+    ],
+    "ondodge_buffs": [
+      {
+        "id": "buff_ninja_ninjutsu_as_the_wind",
+        "name": "忍术（风）",
+        "description": "激活条件：躲避攻击+1",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 2
+          }
+        ],
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "buff_duration": 8,
+        "max_stacks": 1,
+        "bonus_dodges": 1,
+        "flat_bonuses": [
+          {
+            "stat": "speed",
+            "scaling-stat": "per",
+            "scale": 2
+          }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_ninja_ninjutsu_as_the_fire",
+        "name": "忍术（火）",
+        "description": "激活条件：攻击命中\n精准，伤害提升灵巧度20%",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 3
+          }
+        ],
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "buff_duration": 8,
+        "max_stacks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ]
+      }
+    ],
+    "onblock_buffs": [
+      {
+        "id": "buff_ninja_ninjutsu_as_the_mountain",
+        "name": "Ninjutsu (Mountain)",
+        "description": "Activation condition: Block attack\nImmune to throw / Defensive bonus of 20% strength",
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 4
+          }
+        ],
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "throw_immune": true,
+        "buff_duration": 8,
+        "max_stacks": 1,
+        "flat_bonuses": [
+          {
+            "stat": "armor",
+            "type": "bash",
+            "scaling-stat": "str",
+            "scale": 0.25
+          },
+          {
+            "stat": "armor",
+            "type": "cut",
+            "scaling-stat": "str",
+            "scale": 0.25
+          },
+          {
+            "stat": "armor",
+            "type": "stab",
+            "scaling-stat": "str",
+            "scale": 0.25
+          }
+        ]
+      }
+    ],
+    "weapons": [
+      "bio_blade_weapon",
+      "bio_claws_weapon",
+      "bagh_nakha",
+      "knuckle_nail",
+      "knuckle_katar",
+      "punch_dagger",
+      "knuckle_steel",
+      "cestus",
+      "knuckle_brass",
+      "fake_razor",
+      "makeshift_machete",
+      "machete",
+      "survivor_machete",
+      "kukri",
+      "tanto",
+      "knife_rm42",
+      "ninja_katana",
+      "ninja_kusari_gama",
+      "ninja_nunchuk",
+      "ninja_shuriken",
+      "ninja_shuriken_star",
+      "arming_sword",
+      "arming_sword_inferior",
+      "arming_sword_fake",
+      "bokken",
+      "bokken_inferior",
+      "bokken_fake",
+      "broadsword",
+      "broadsword_inferior",
+      "broadsword_fake",
+      "butterfly_swords",
+      "cavalry_sabre",
+      "cavalry_sabre_fake",
+      "copper_knife",
+      "cutlass_fake",
+      "cutlass_inferior",
+      "cutlass",
+      "dao",
+      "diveknife",
+      "i_staff",
+      "jian",
+      "jian_inferior",
+      "jian_fake",
+      "katana",
+      "katana_inferior",
+      "katana_fake",
+      "kirpan",
+      "knife_combat",
+      "knife_hunting",
+      "knife_rambo",
+      "knife_trench",
+      "kirpan_cheap",
+      "kris",
+      "khopesh",
+      "longsword",
+      "longsword_inferior",
+      "longsword_fake",
+      "l-stick",
+      "l-stick_on",
+      "machete",
+      "makeshift_knife",
+      "nodachi",
+      "nodachi_inferior",
+      "nodachi_fake",
+      "q_staff",
+      "scimitar",
+      "scimitar_fake",
+      "scimitar_inferior",
+      "shillelagh",
+      "shillelagh_fake",
+      "shillelagh_weighted",
+      "shock_staff",
+      "sickle",
+      "switchblade",
+      "sword_bayonet",
+      "sword_crude",
+      "sword_nail",
+      "sword_wood",
+      "sword_xiphos",
+      "tanto_inferior",
+      "tanto_fake",
+      "wakizashi",
+      "wakizashi_inferior",
+      "wakizashi_fake"
+    ],
+    "techniques": [
+      "tec_ninja_ninjutsu_precise",
+      "tec_ninja_ninjutsu_slay",
+      "tec_ninja_ninjutsu_foresight"
+    ]
+  },
+  {
+    "id": "style_ninjutsu",
+    "copy-from": "style_ninjutsu",
+    "type": "martial_art",
+    "name": {
+      "str": "忍术"
+    },
+    "extend": {
+      "weapons": [
+        "ninja_katana",
+        "ninja_kusari_gama"
+      ]
+    }
+  },
+  {
+    "id": "style_niten",
+    "copy-from": "style_niten",
+    "type": "martial_art",
+    "name": {
+      "str": "二天一流"
+    },
+    "extend": {
+      "weapons": [
+        "ninja_katana"
+      ]
+    }
+  }
+]

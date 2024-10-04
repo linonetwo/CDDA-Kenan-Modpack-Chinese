@@ -1,0 +1,587 @@
+[
+  {
+    "//": "TODO check text, maybe rewrite something to be not this lame, balance him",
+    "type": "npc",
+    "id": "NPC_samurai_akira",
+    "name_unique": "爱家乐",
+    "gender": "male",
+    "name_suffix": "女武士",
+    "class": "NC_samurai_akira",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_samurai_akira_1",
+    "faction": "no_faction",
+    "mission_offered": "MISSION_samurai_akira_1"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_samurai_akira",
+    "name": {
+      "str": "Samurai Akira"
+    },
+    "job_description": "Samurai Akira.",
+    "common": false,
+    "bonus_str": {
+      "rng": [
+        2,
+        4
+      ]
+    },
+    "bonus_dex": {
+      "rng": [
+        2,
+        4
+      ]
+    },
+    "bonus_int": {
+      "rng": [
+        1,
+        2
+      ]
+    },
+    "bonus_per": {
+      "rng": [
+        1,
+        2
+      ]
+    },
+    "worn_override": "NC_samurai_akira_worn",
+    "carry_override": "NC_samurai_akira_carried",
+    "weapon_override": "NC_samurai_akira_weapon",
+    "traits": [
+      {
+        "group": "Appearance_EastAsian"
+      },
+      {
+        "group": "NPC_starting_traits"
+      },
+      {
+        "trait": "PAINRESIST"
+      }
+    ],
+    "skills": [
+      {
+        "skill": "melee",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "cutting",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      },
+      {
+        "skill": "dodge",
+        "bonus": {
+          "rng": [
+            2,
+            6
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_samurai_akira_worn",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "loincloth"
+      },
+      {
+        "item": "hakama_gi"
+      },
+      {
+        "item": "obi_gi"
+      },
+      {
+        "item": "armor_samurai"
+      },
+      {
+        "item": "helmet_kabuto"
+      },
+      {
+        "item": "tabi_dress"
+      },
+      {
+        "item": "bastsandals"
+      },
+      {
+        "item": "backpack"
+      },
+      {
+        "item": "waterskin"
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_samurai_akira_carried",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "waterskin"
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_samurai_akira_weapon",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "katana"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_samurai_akira_1"
+    ],
+    "dynamic_line": "嗯……",
+    "responses": [
+      {
+        "text": "关于那个任务……",
+        "topic": "TALK_MISSION_INQUIRE",
+        "condition": "has_assigned_mission"
+      },
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_samurai_akira_Background"
+      },
+      {
+        "text": "需要帮忙么？",
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "你能教我点什么吗？",
+        "topic": "TALK_samurai_akira_teach_check"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_samurai_akira_Background",
+    "dynamic_line": "我从日本来是为了取回古代的文物：健太郎大帝盔甲的一部分。",
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_samurai_akira_teach_check",
+    "dynamic_line": {
+      "npc_has_var": "u_helped_samurai_akira",
+      "type": "general",
+      "context": "meeting",
+      "value": "yes",
+      "yes": "那么，你想学剑法吗？很好。我可以教你。",
+      "no": "嗯…我还没准备好。我的任务还没完成。暂时。"
+    },
+    "responses": [
+      {
+        "text": "是的，教我。",
+        "condition": {
+          "npc_has_var": "u_helped_samurai_akira",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "and": [
+              {
+                "u_has_skill": {
+                  "skill": "melee",
+                  "level": 4
+                }
+              },
+              {
+                "u_has_skill": {
+                  "skill": "cutting",
+                  "level": 4
+                }
+              }
+            ]
+          }
+        },
+        "success": {
+          "topic": "TALK_samurai_akira_teach_yes"
+        },
+        "failure": {
+          "topic": "TALK_samurai_akira_nope"
+        }
+      },
+      {
+        "text": "可以理解，祝你今天愉快。",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_samurai_akira_teach_yes",
+    "dynamic_line": {
+      "npc_has_var": "samurai_akira_warn",
+      "type": "general",
+      "context": "meeting",
+      "value": "yes",
+      "yes": "你准备好了吗，我的学生？",
+      "no": "好，好啊。我正在找你这样的人呢。我的任务的最后一步就是找到一个值得托付的人，这样我就可以教他健太郎古老的武术。但要千万注意，训练会很艰难。所以如果你觉得准备好了，我们再开始。"
+    },
+    "responses": [
+      {
+        "text": "我准备好了。",
+        "topic": "TALK_samurai_akira_test1"
+      },
+      {
+        "text": "嗯，请稍等。",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_add_var": "samurai_akira_warn",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          },
+          {
+            "npc_first_topic": "TALK_samurai_akira_teach_yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_samurai_akira_test1",
+    "dynamic_line": "很好，很好。这就是你找来的盔甲吧。穿上去再来跟我谈谈。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_first_topic": "TALK_samurai_akira_test2"
+          },
+          {
+            "u_spawn_item": "helmet_kabuto"
+          },
+          {
+            "u_spawn_item": "tabi_dress"
+          },
+          {
+            "u_spawn_item": "armor_samurai"
+          },
+          {
+            "u_spawn_item": "katana"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_samurai_akira_test2",
+    "dynamic_line": "我会一直在这里等你。",
+    "responses": [
+      {
+        "text": "我准备好了，主人。下一步是什么？",
+        "topic": "TALK_samurai_akira_test3",
+        "condition": {
+          "and": [
+            {
+              "u_is_wearing": "helmet_kabuto"
+            },
+            {
+              "u_is_wearing": "tabi_dress"
+            },
+            {
+              "u_is_wearing": "armor_samurai"
+            },
+            "u_has_weapon"
+          ]
+        }
+      },
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_samurai_akira_test3",
+    "dynamic_line": "是的，很好，很好。你穿上盔甲，拿着武器，看上去像个优秀的战士。让我的学生做好准备。训练很难，但我希望你能成功。现在，训练：战斗至死！班扎伊！",
+    "responses": [
+      {
+        "text": "等等，哇…",
+        "topic": "TALK_DONE",
+        "effect": [
+          "insult_combat",
+          {
+            "add_mission": "MISSION_samurai_akira_0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_samurai_akira_nope",
+    "dynamic_line": "你还没准备好。晚点再来。[需要：近战4，切割4]",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_samurai_akira_1",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "找到塔比"
+    },
+    "description": "找到伟大英雄健太郎的黑足袋。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "tabi_dress",
+    "difficulty": 0,
+    "value": 100,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "hotel_tower_1_2",
+        "om_special": "hotel_1",
+        "om_terrain_replace": "house",
+        "om_terrain_match_type": "PREFIX",
+        "search_range": 250,
+        "min_distance": 5
+      },
+      "update_mapgen": {
+        "om_terrain": "hotel_tower_flr3_1_9",
+        "place_item": [
+          {
+            "item": "tabi_dress",
+            "x": 10,
+            "y": 21
+          }
+        ]
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_samurai_akira_2",
+    "dialogue": {
+      "describe": "-",
+      "offer": "那么，你想帮我完成神圣的任务吗？就这样吧！首先，肯塔罗大帝的塔比。不久前有个收藏家买了它，但没能送到他家，回到这个国家后死在了他住的旅馆里。别问我从哪里得到这些信息。去找，就在那家旅馆的某个地方。",
+      "accepted": "很好。不过，我不知道具体在哪里。也许，在顶层找找？",
+      "rejected": "懦夫！",
+      "advice": "如果你想成为一个伟大的战士，那将在传说中传唱，你需要学会如何处理自己的问题！",
+      "inquire": "…",
+      "success": "是的，是的，这是他的桌子。甚至闻起来像他。很好，很好。离我的任务结束又近了一步。",
+      "success_lie": "懦夫！",
+      "failure": "懦夫！"
+    }
+  },
+  {
+    "id": "MISSION_samurai_akira_2",
+    "//": "TODO maybe change spot, make custom set? ",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "找到头盔"
+    },
+    "description": "找到伟大英雄健太郎的头盔。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "helmet_kabuto",
+    "difficulty": 0,
+    "value": 1000,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "pawn_1",
+        "om_terrain_replace": "house",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "search_range": 150,
+        "min_distance": 30
+      },
+      "update_mapgen": {
+        "place_item": [
+          {
+            "item": "helmet_kabuto",
+            "x": 20,
+            "y": 21
+          }
+        ]
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_samurai_akira_3",
+    "dialogue": {
+      "describe": "-",
+      "offer": "第二件：肯塔罗的头盔。有个傻瓜以为这只是普通的头盔，就在当地的当铺里卖了。傻瓜！这比他从那里得到的要贵得多！所以，去那里，年轻人，找到他的头盔，拿给我！",
+      "accepted": "很好，很好。我在这里等你回来。",
+      "rejected": "懦夫！",
+      "advice": "如果你想成为一个伟大的战士，那将是传说中的歌曲，你需要学会如何处理自己的问题！",
+      "inquire": "我会一直在这里等你。",
+      "success": "是的，是的，是他的头盔。甚至闻起来像…肮脏的书呆子？！啊，恶作剧…啊哼！很好，很好。离我的任务结束还有两步。",
+      "success_lie": "…",
+      "failure": "…"
+    }
+  },
+  {
+    "id": "MISSION_samurai_akira_3",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "找到盔甲"
+    },
+    "description": "找到伟大英雄健太郎的盔甲。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "armor_samurai",
+    "difficulty": 0,
+    "value": 100,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "museum_north",
+        "om_terrain_replace": "house",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "search_range": 300,
+        "min_distance": 15,
+        "cant_see": true
+      },
+      "update_mapgen": {
+        "place_item": [
+          {
+            "item": "armor_samurai",
+            "x": 17,
+            "y": 9
+          }
+        ]
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_samurai_akira_4",
+    "dialogue": {
+      "describe": "-",
+      "offer": "第三件：肯塔罗的盔甲。35年前，他的盔甲被捐赠给了位于这个州的博物馆，这样孩子们就可以看到它…该死的那些孩子。我讨厌孩子！快，找到他的盔甲还给我！",
+      "accepted": "很好，等你的消息。",
+      "rejected": "懦夫！",
+      "advice": "如果你想成为一个伟大的战士，那将是传说中的歌曲，你需要学会如何处理自己的问题！",
+      "inquire": "…",
+      "success": "是的，是的，这是他的盔甲。甚至闻起来…我需要停止闻东西，是吗？啊哼！很好，很好。离我的任务结束还有三步之遥。",
+      "success_lie": "…",
+      "failure": "…"
+    }
+  },
+  {
+    "id": "MISSION_samurai_akira_4",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "找到武士刀"
+    },
+    "description": "找到伟大英雄健太郎的刀。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "katana",
+    "difficulty": 0,
+    "value": 100,
+    "start": {
+      "update_mapgen": {
+        "om_terrain": "mansion_t2",
+        "place_item": [
+          {
+            "item": "katana",
+            "x": 13,
+            "y": 8
+          }
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        {
+          "npc_add_var": "u_helped_samurai_akira",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "现在，最后一把：肯塔罗的剑！我原以为它藏匿在群山之中，在某个神殿里，但最近我才知道它糟了窃！那些卑鄙的政客资助了一队盗墓贼，他们闯进那座神殿偷走了肯塔罗的宝剑。*那些傻瓜，他们会被诅咒的！偷了这把剑足以让世界毁灭！啊…咳咳！*请帮我找到他的剑吧。",
+      "accepted": "很好。只有一个问题：我不知道它到底在哪里。我只知道那个政客住在这个州。也许他把它藏在豪宅里了？检查附近所有的豪宅。然后我们可以谈谈你的报酬了，年轻人。",
+      "rejected": "懦夫！",
+      "advice": "如果你想成为一个伟大的战士，那将是传说中的歌曲，你需要学会如何处理自己的问题！",
+      "inquire": "我会一直在这里等你。",
+      "success": "是的，是的，是他的剑！最后，我的任务几乎结束了！很好，年轻人，很好。现在，最后一步：培养有价值的人。我选择了你值得训练的古代格斗风格，那是肯塔罗大帝和他的一代又一代学生几个世纪以来对外界保密的！准备好了就跟我说，年轻人。",
+      "success_lie": "…",
+      "failure": "…"
+    }
+  },
+  {
+    "id": "MISSION_samurai_akira_0",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "与阿基拉一起训练"
+    },
+    "description": "阿基拉突然袭击了你。也许这是训练的一部分？",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "u_has_var": "-",
+      "type": "general",
+      "context": "meeting",
+      "value": "yes"
+    },
+    "difficulty": 0,
+    "value": 0,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    },
+    "fail": {
+      "effect": {
+        "u_spawn_item": "manual_niten"
+      }
+    }
+  }
+]

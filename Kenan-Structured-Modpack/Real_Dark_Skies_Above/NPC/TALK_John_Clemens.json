@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TALK_REFUGEE_John_2",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "effect": {
+          "u_add_var": "u_Talk_To_John_Clemens_about_Xenoids",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "condition": {
+          "not": {
+            "u_has_var": "u_Talk_To_John_Clemens_about_Xenoids",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_AleeshaSeward_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_AleeshaSeward_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": "我从没想过那些小绿人是真的！",
+    "responses": [
+      {
+        "text": "他们真的很好。",
+        "topic": "TALK_REFUGEE_John_2"
+      }
+    ]
+  }
+]

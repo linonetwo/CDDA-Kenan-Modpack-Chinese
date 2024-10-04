@@ -1,0 +1,721 @@
+[
+  {
+    "id": "colt_rangemaster",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "name": {
+      "str": "小马牧场主"
+    },
+    "description": "小马骑兵半自动步枪，.223口径。只有一个镜头。用来猎杀害虫十分流行。",
+    "weight": "2800 g",
+    "volume": "2 L",
+    "price": "921 USD",
+    "to_hit": 1,
+    "bashing": 12,
+    "looks_like": "marlin_9a",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 100,
+    "durability": 8,
+    "barrel_volume": "500 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "sights",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "rangemastermag",
+          "rangemastermag2",
+          "survivor223mag",
+          "stanag30",
+          "stanag10",
+          "stanag50"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "varmint_rifle",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "name": {
+      "str": "瓦尔明特步枪"
+    },
+    "description": ".223拉栓步枪。它很流行用来猎杀害虫。",
+    "weight": "2800 g",
+    "volume": "2 L",
+    "price": "921 USD",
+    "to_hit": 1,
+    "bashing": 12,
+    "looks_like": "marlin_9a",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 100,
+    "durability": 8,
+    "barrel_volume": "250 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "sights",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "rangemastermag",
+          "rangemastermag2",
+          "survivor223mag",
+          "stanag30",
+          "stanag10",
+          "stanag50"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "varmint_rifle_ratslayer",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "name": {
+      "str": "灭鼠步枪"
+    },
+    "description": "一种瓦明特步枪，似乎是由一个灭虫者定制的，用来偷猎害虫。它的表面是黑色的，上面刻着老鼠的头骨",
+    "weight": "2800 g",
+    "volume": "2 L",
+    "price": "921 USD",
+    "to_hit": 1,
+    "bashing": 12,
+    "looks_like": "marlin_9a",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "black",
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4
+    },
+    "dispersion": 100,
+    "durability": 10,
+    "barrel_volume": "750 ml",
+    "built_in_mods": [
+      "rifle_scope",
+      "suppressor",
+      "recoil_stock"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "sights",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "rangemastermag",
+          "rangemastermag2",
+          "survivor223mag",
+          "stanag30",
+          "stanag10",
+          "stanag50"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "dks501",
+    "copy-from": "rifle_semi",
+    "type": "GUN",
+    "name": {
+      "str": "DKS-501型"
+    },
+    "description": "DKS-501狙击步枪。在雇佣兵，特警，甚至军队中很流行的武器。它有一个独特的黑色和黄色油漆工作。",
+    "weight": "2800 g",
+    "volume": "2 L",
+    "price": "921 USD",
+    "to_hit": 1,
+    "bashing": 12,
+    "looks_like": "savage_111f",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4
+    },
+    "dispersion": 100,
+    "durability": 8,
+    "barrel_volume": "750 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "sights",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "rangemastermag",
+          "rangemastermag2",
+          "survivor223mag",
+          "stanag30",
+          "stanag10",
+          "stanag50"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "thatgun",
+    "copy-from": "pistol_revolver",
+    "type": "GUN",
+    "name": {
+      "str": ".223 左轮手枪",
+      "str_pl": ".223 左轮手枪"
+    },
+    "description": "一种很受欢迎的专业左轮手枪，位于.223室。它在警察和罪犯中都很受欢迎，因为它的外观很容易辨认，所以有“那把枪”的美誉。",
+    "weight": "1386 g",
+    "volume": "750 ml",
+    "price": "861 USD",
+    "to_hit": -2,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "red",
+    "ammo": [
+      "223"
+    ],
+    "dispersion": 180,
+    "durability": 8,
+    "clip_size": 5,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "223": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": "bozar",
+    "copy-from": "rifle_auto",
+    "type": "GUN",
+    "name": {
+      "str": "博扎尔"
+    },
+    "description": "狙击手艺术的极致精致。虽然，有些挑剔，容易堵塞，如果不保持严格清洁，大武器的准确性远远超过弥补其额外的维修要求。",
+    "weight": "3495 g",
+    "volume": "2 L",
+    "price": "2343 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223",
+      "308"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 20
+    },
+    "dispersion": 75,
+    "durability": 6,
+    "barrel_volume": "750 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "rangemastermag",
+          "rangemastermag2",
+          "survivor223mag",
+          "stanag30",
+          "stanag10",
+          "stanag50",
+          "g3mag",
+          "g3bigmag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rf2076",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str": "除雾器RF2076"
+    },
+    "description": "一个回溯到老式水冷机枪，德林格RF2076是一个侧面装载轻机枪。它非常笨重，用来做动力装甲。但是，它可以在没有能量护甲的情况下使用。",
+    "weight": "7330 g",
+    "volume": "6 L",
+    "price": "7500 USD",
+    "to_hit": -1,
+    "bashing": 16,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
+    "dispersion": 150,
+    "durability": 8,
+    "min_cycle_recoil": 1350,
+    "reload": 200,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "belt223",
+          "rf2076mag",
+          "rf2076drummag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "r91",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str": "R91突击步枪"
+    },
+    "description": "支架安全解决方案R91。这个婴儿在整个安克雷奇，以及国民警卫队，在大灾难之前都被使用过。它有一个经典的木制股票。",
+    "weight": "3160 g",
+    "volume": "1750 ml",
+    "price": "2400 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -2
+    },
+    "dispersion": 180,
+    "durability": 9,
+    "min_cycle_recoil": 1350,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag50",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "carbine_marksman",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str": "运枪人MC-223"
+    },
+    "description": "卡宾枪一种流行的小型卡宾枪，长期被美国空军的骑兵使用。它的精确性令人难以置信，而且能以相当大的爆发力开火。",
+    "weight": "3160 g",
+    "volume": "1750 ml",
+    "price": "2400 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -2
+    },
+    "dispersion": 180,
+    "durability": 8,
+    "min_cycle_recoil": 1350,
+    "default_mods": [
+      "rifle_scope"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag50",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "type93",
+    "copy-from": "rifle_auto",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "name": {
+      "str": "93型突击步枪"
+    },
+    "description": "一种天朝制造的突击步枪，口径被重新调高到5.56，以便渗透者在美国枪支商店轻松补充弹药。",
+    "weight": "3160 g",
+    "volume": "1750 ml",
+    "price": "2400 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -2
+    },
+    "dispersion": 180,
+    "durability": 5,
+    "min_cycle_recoil": 1350,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag50",
+          "survivor223mag"
+        ]
+      }
+    ]
+  }
+]

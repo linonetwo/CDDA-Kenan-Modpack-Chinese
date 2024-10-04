@@ -1,0 +1,2656 @@
+[
+  {
+    "id": "acu_jacket",
+    "type": "ARMOR",
+    "name": {
+      "str": "AUC夹克",
+      "str_pl": "AUC夹克"
+    },
+    "description": "一件受军方青睐的多口袋耐磨夹克。这件夹克采用的是老式的城市迷彩样式。",
+    "weight": "780 g",
+    "volume": "1000 ml",
+    "price": "35 USD",
+    "material": [
+      "cotton",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "600 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "600 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "350 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "350 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 20,
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "id": "acu_pants",
+    "type": "ARMOR",
+    "name": {
+      "str": "AUC长裤",
+      "str_pl": "AUC长裤"
+    },
+    "description": "一条衬有口袋的耐磨裤子，深受军方青睐。这条裤子采用的是老式的城市迷彩样式。",
+    "weight": "720 g",
+    "volume": "2500 ml",
+    "price": "35 USD",
+    "material": [
+      "cotton",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "700 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "700 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 100
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 100
+      }
+    ],
+    "warmth": 20,
+    "flags": [
+      "VARSIZE",
+      "POCKETS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 18,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "id": "pasgt_helmet",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "pasgt头盔"
+    },
+    "description": "一顶重型凯夫拉头盔，一直被美军使用到2005年前后。它能够为各种伤害提供保护。",
+    "weight": "1383 g",
+    "volume": "1750 ml",
+    "price": "150 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 20,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "pasgt_helmet_green",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "pasgt头盔（军绿色罩）"
+    },
+    "description": "一顶重型凯夫拉头盔，一直被美军使用到2005年前后。它能够为各种伤害提供保护。这顶头盔有一个军绿色的头盔罩。",
+    "weight": "1383 g",
+    "volume": "1750 ml",
+    "price": "150 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar",
+      "plastic",
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "green",
+    "warmth": 20,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "pasgt_helmet_patchwork",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "pasgt头盔（拼接迷彩罩）"
+    },
+    "description": "一顶重型凯夫拉头盔，一直被美军使用到2005年前后。它能够为各种伤害提供保护。这顶头盔有一个自制的拼布迷彩罩。",
+    "weight": "1383 g",
+    "volume": "1750 ml",
+    "price": "150 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar",
+      "plastic",
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "cyan",
+    "warmth": 20,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "pasgt_helmet_ucp",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "pasgt头盔（城市迷彩罩）"
+    },
+    "description": "一顶重型凯夫拉头盔，一直被美军使用到2005年前后。它能够为各种伤害提供保护。这顶头盔有一个城市迷彩罩。",
+    "weight": "1383 g",
+    "volume": "1750 ml",
+    "price": "150 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar",
+      "plastic",
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "warmth": 20,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "pasgt_helmet_multi",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "pasgt头盔（复合迷彩罩）"
+    },
+    "description": "一顶重型凯夫拉头盔，一直被美军使用到2005年前后。它能够为各种伤害提供保护。这顶头盔有一个复合迷彩罩。",
+    "weight": "1383 g",
+    "volume": "1750 ml",
+    "price": "150 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "kevlar",
+      "plastic",
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 20,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvucp",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（通用迷彩）（空）",
+      "str_pl": "IOTV（空）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的城市迷彩涂装版本。它有额外的装甲板插入袋，但如果不插入装甲板，只能提供比普通防弹衣稍多一点的防护。",
+    "weight": "2860 g",
+    "volume": "6 L",
+    "price": "1000 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 4
+  },
+  {
+    "id": "iotvkevlarucp",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（通用迷彩）（凯夫拉板）",
+      "str_pl": "IOTV（凯夫拉板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的城市迷彩涂装版本。已插入凯夫拉板以改善其防护性能。",
+    "weight": "5721 g",
+    "volume": "6 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvceramicucp",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（通用迷彩）（陶瓷装甲板）",
+      "str_pl": "IOTV（陶瓷装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的城市迷彩涂装版本。已插入陶瓷装甲板以改善其防护性能。",
+    "weight": "5721 g",
+    "volume": "6 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvharducp",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（通用迷彩）（硬化装甲板）",
+      "str_pl": "IOTV（硬化装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的城市迷彩涂装版本。已插入硬化装甲板以改善其防护性能。",
+    "weight": "20850 g",
+    "volume": "6 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "qt_steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvsteelucp",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（通用迷彩）（钢制装甲板）",
+      "str_pl": "IOTV（钢制装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的城市迷彩涂装版本。已插入钢制装甲板以改善其防护性能。",
+    "weight": "10250 g",
+    "volume": "6 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvsuperucp",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（通用迷彩）（超合金装甲板）",
+      "str_pl": "IOTV（超合金装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的城市迷彩涂装版本。已插入超合金装甲板以改善其防护性能。",
+    "weight": "8525 g",
+    "volume": "6 L",
+    "price": "1600 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvucp_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（通用迷彩）（空）",
+      "str_pl": "IOTV（空）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。",
+    "weight": "5720 g",
+    "volume": "12 L",
+    "price": "1000 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvkevlarucp_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（通用迷彩）（凯夫拉板）",
+      "str_pl": "IOTV（凯夫拉板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入凯夫拉板以改善其防护性能。",
+    "weight": "11442 g",
+    "volume": "12 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvceramicucp_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（通用迷彩）（陶瓷装甲板）",
+      "str_pl": "IOTV（陶瓷装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入陶瓷装甲板以改善其防护性能。",
+    "weight": "11442 g",
+    "volume": "12 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvharducp_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（通用迷彩）（硬化装甲板）",
+      "str_pl": "IOTV（硬化装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入硬化装甲板以改善其防护性能。",
+    "weight": "41700 g",
+    "volume": "12 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "qt_steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 50,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvsteelucp_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（通用迷彩）（钢制装甲板）",
+      "str_pl": "IOTV（钢制装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入钢制装甲板以改善其防护性能。",
+    "weight": "20500 g",
+    "volume": "12 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 27,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvsuperucp_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（通用迷彩）（超合金装甲板）",
+      "str_pl": "IOTV（超合金装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入超合金装甲板以改善其防护性能。",
+    "weight": "17050 g",
+    "volume": "12 L",
+    "price": "1600 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "plate_carrier_ucp",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（通用迷彩）（空）",
+      "str_pl": "携板背心（空）"
+    },
+    "description": "携板背心的城市迷彩涂装版本。它有额外的装甲板插入袋，但如果不插入装甲板，只能提供比普通防弹衣稍多一点的防护。",
+    "weight": "1430 g",
+    "volume": "1000 ml",
+    "price": "1000 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "id": "plate_carrier_ucp_kevlar",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（通用迷彩）（凯夫拉板）",
+      "str_pl": "携板背心（凯夫拉板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入凯夫拉板以改善其防护性能。",
+    "weight": "2860 g",
+    "volume": "4 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "plate_carrier_ucp_ceramic",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（通用迷彩）（陶瓷装甲板）",
+      "str_pl": "携板背心（陶瓷装甲板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入陶瓷装甲板以改善其防护性能。",
+    "weight": "2860 g",
+    "volume": "4 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "plate_carrier_ucp_hard",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（通用迷彩）（硬化装甲板）",
+      "str_pl": "携板背心（硬化装甲板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入硬化装甲板以改善其防护性能。",
+    "weight": "10425 g",
+    "volume": "4 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "qt_steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "plate_carrier_ucp_steel",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（通用迷彩）（钢制装甲板）",
+      "str_pl": "携板背心（钢制装甲板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入钢制装甲板以改善其防护性能。",
+    "weight": "5125 g",
+    "volume": "1000 ml",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "plate_carrier_ucp_super",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（通用迷彩）（超合金装甲板）",
+      "str_pl": "携板背心（超合金装甲板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入超合金装甲板以改善其防护性能。",
+    "weight": "4262 g",
+    "volume": "1000 ml",
+    "price": "1600 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "iotvmulti",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（多地形迷彩）（空）",
+      "str_pl": "IOTV（多地形迷彩）（空）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的城市迷彩涂装版本。它有额外的装甲板插入袋，但如果不插入装甲板，只能提供比普通防弹衣稍多一点的防护。这件背心使用了新型的多地形迷彩涂装。",
+    "weight": "2860 g",
+    "volume": "6 L",
+    "price": "1000 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 4
+  },
+  {
+    "id": "iotvkevlarmulti",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（多地形迷彩）（凯夫拉板）",
+      "str_pl": "IOTV（多地形迷彩）（凯夫拉板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的城市迷彩涂装版本。已插入凯夫拉板以改善其防护性能。这件背心使用了新型的多地形迷彩涂装。",
+    "weight": "5721 g",
+    "volume": "6 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvceramicmulti",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（多地形迷彩）（陶瓷装甲板）",
+      "str_pl": "IOTV（陶瓷装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的多地形迷彩版本。已插入陶瓷装甲板以改善其防护性能。",
+    "weight": "5721 g",
+    "volume": "6 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvhardmulti",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（多地形迷彩）（硬化装甲板）",
+      "str_pl": "IOTV（硬化装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的多地形迷彩版本。已插入硬化装甲板以改善其防护性能。",
+    "weight": "20850 g",
+    "volume": "6 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "qt_steel"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvsteelmulti",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（多地形迷彩）（钢制装甲板）",
+      "str_pl": "IOTV（钢制装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的多地形迷彩版本。已插入钢制装甲板以改善其防护性能。",
+    "weight": "10250 g",
+    "volume": "6 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvsupermulti",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV（多地形迷彩）（超合金装甲板）",
+      "str_pl": "IOTV（超合金装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）的多地形迷彩版本。已插入超合金装甲板以改善其防护性能。",
+    "weight": "8525 g",
+    "volume": "6 L",
+    "price": "1600 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 5
+  },
+  {
+    "id": "iotvmulti_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（多地形迷彩）（空）",
+      "str_pl": "IOTV（空）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。",
+    "weight": "5720 g",
+    "volume": "12 L",
+    "price": "1000 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvkevlarmulti_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（多地形迷彩）（凯夫拉板）",
+      "str_pl": "IOTV（凯夫拉板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入凯夫拉板以改善其防护性能。",
+    "weight": "11442 g",
+    "volume": "12 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvceramicmulti_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（多地形迷彩）（陶瓷装甲板）",
+      "str_pl": "IOTV（陶瓷装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入陶瓷装甲板以改善其防护性能。",
+    "weight": "11442 g",
+    "volume": "12 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvhardmulti_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（多地形迷彩）（硬化装甲板）",
+      "str_pl": "IOTV（硬化装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入硬化装甲板以改善其防护性能。",
+    "weight": "41700 g",
+    "volume": "12 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "qt_steel"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 50,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvsteelmulti_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（多地形迷彩）（钢制装甲板）",
+      "str_pl": "IOTV（钢制装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入钢制装甲板以改善其防护性能。",
+    "weight": "20500 g",
+    "volume": "12 L",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 27,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "iotvsupermulti_mk2",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IOTV MK2（多地形迷彩）（超合金装甲板）",
+      "str_pl": "IOTV（超合金装甲板）"
+    },
+    "description": "改进外置战术背心（Improved Outer Tactical Vest）MK2的城市迷彩涂装版本。IOTV MK2是普通IOTV的重型版本。它有两倍的装甲板和两倍的存储容量，但相对的，它也有两倍的累赘和更重的重量。已插入超合金装甲板以改善其防护性能。",
+    "weight": "17050 g",
+    "volume": "12 L",
+    "price": "1600 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 90
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 10
+  },
+  {
+    "id": "plate_carrier_multi",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（多地形迷彩）（空）",
+      "str_pl": "携板背心（空）"
+    },
+    "description": "携板背心的多地形迷彩涂装版本。它有额外的装甲板插入袋，但如果不插入装甲板，提供的防护就不如普通的防弹衣。",
+    "weight": "1430 g",
+    "volume": "1000 ml",
+    "price": "1000 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "id": "plate_carrier_multi_kevlar",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（多地形迷彩）（凯夫拉板）",
+      "str_pl": "携板背心（凯夫拉板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入凯夫拉板以改善其防护性能。",
+    "weight": "2860 g",
+    "volume": "1000 ml",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "plate_carrier_multi_ceramic",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（多地形迷彩）（陶瓷装甲板）",
+      "str_pl": "携板背心（陶瓷装甲板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入陶瓷装甲板以改善其防护性能。",
+    "weight": "2860 g",
+    "volume": "1000 ml",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 85
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "plate_carrier_multi_hard",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（多地形迷彩）（硬化装甲板）",
+      "str_pl": "携板背心（硬化装甲板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入硬化装甲板以改善其防护性能。",
+    "weight": "10425 g",
+    "volume": "1000 ml",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "qt_steel"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "plate_carrier_multi_steel",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（多地形迷彩）（钢制装甲板）",
+      "str_pl": "携板背心（钢制装甲板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入钢制装甲板以改善其防护性能。",
+    "weight": "5125 g",
+    "volume": "1000 ml",
+    "price": "900 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "plate_carrier_multi_super",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "携板背心（多地形迷彩）（超合金装甲板）",
+      "str_pl": "携板背心（超合金装甲板）"
+    },
+    "description": "一个城市迷彩涂装的携板背心。已插入超合金装甲板以改善其防护性能。",
+    "weight": "4262 g",
+    "volume": "1000 ml",
+    "price": "1600 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3
+  },
+  {
+    "id": "acu_jacket_multi",
+    "type": "ARMOR",
+    "name": {
+      "str": "AUC复合迷彩夹克",
+      "str_pl": "ACU 复合迷彩夹克(multicam)"
+    },
+    "description": "一件受军方青睐的多口袋耐磨夹克。这件夹克采用的是新式的复合迷彩样式。",
+    "weight": "780 g",
+    "volume": "1000 ml",
+    "price": "35 USD",
+    "material": [
+      "cotton",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "600 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "600 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "350 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "350 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 20,
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "id": "acu_pants_multi",
+    "type": "ARMOR",
+    "name": {
+      "str": "AUC复合迷彩长裤",
+      "str_pl": "ACU 复合迷彩长裤(multicam)"
+    },
+    "description": "一条衬有口袋的耐磨裤子，深受军方青睐。这条裤子采用的是新式的复合迷彩样式。",
+    "weight": "720 g",
+    "volume": "2500 ml",
+    "price": "35 USD",
+    "material": [
+      "cotton",
+      "plastic"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "700 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "700 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 100
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 100
+      }
+    ],
+    "warmth": 20,
+    "flags": [
+      "VARSIZE",
+      "POCKETS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 18,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "id": "talos",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "T.A.L.O.S 作战服"
+    },
+    "//": "the exosuit was just reaching a point where it could be issued out to combat units, as such it won't spawn on military personal and can only be obtained from military sites",
+    "description": "T.A.L.O.S（战术突击轻型作战服）是一种为军事用途开发的实验性作战服。它使用由凯夫拉和非牛顿金属流体组成的革命性新型混合装甲系统来分散冲击力。它还有一个不可折叠的外骨骼，可以增加穿戴者的操作能力。由穿戴者的运动提供动力。",
+    "weight": "22700 g",
+    "volume": "37500 ml",
+    "price": "100000 USD",
+    "to_hit": -1,
+    "bashing": 1,
+    "material": [
+      "aluminum",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2900 ml",
+        "max_contains_weight": "9 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2900 ml",
+        "max_contains_weight": "9 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2075 ml",
+        "max_contains_weight": "6 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2075 ml",
+        "max_contains_weight": "6 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1275 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1275 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 60,
+    "flags": [
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 98,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r",
+          "hand_l",
+          "hand_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 10,
+    "environmental_protection": 10
+  },
+  {
+    "id": "talos_helmet",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "T.A.L.O.S 作战头盔"
+    },
+    "description": "T.A.L.O.S 战斗头盔被设计用于告知穿戴者所有关键任务信息，并保护他们免受所有危险。",
+    "weight": "4540 g",
+    "volume": "3750 ml",
+    "price": "500000 USD",
+    "to_hit": -1,
+    "bashing": 3,
+    "material": [
+      "aluminum",
+      "superalloy"
+    ],
+    "symbol": "[",
+    "color": "brown",
+    "warmth": 60,
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "flags": [
+      "WATCH",
+      "WATERPROOF",
+      "STURDY",
+      "PARTIAL_DEAF",
+      "THERMOMETER",
+      "FLASH_PROTECTION",
+      "GAS_PROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "mouth",
+          "eyes"
+        ]
+      }
+    ],
+    "material_thickness": 10,
+    "environmental_protection": 10
+  },
+  {
+    "id": "lv2_ policevest",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IIa 警服",
+      "str_pl": "柔软背心"
+    },
+    "description": "普通警察配备的标准IIa级警服。它的保护性不高，但总好过什么都没穿。",
+    "weight": "1430 g",
+    "volume": "1000 ml",
+    "price": "1000 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "id": "lv3_ policevest",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "IIIa 警用背心",
+      "str_pl": "柔软背心"
+    },
+    "description": "为特警队配备的标准IIIa级警服。它的防护性能是标准IIa背心的两倍。",
+    "weight": "2300 g",
+    "volume": "1000 ml",
+    "price": "1000 USD",
+    "to_hit": -3,
+    "bashing": 6,
+    "material": [
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 120
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 85,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 4
+  }
+]

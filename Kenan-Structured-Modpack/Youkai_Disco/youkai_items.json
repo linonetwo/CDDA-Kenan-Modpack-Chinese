@@ -1,0 +1,97 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "broken_kappabot",
+    "symbol": "k",
+    "color": "red",
+    "name": {
+      "str": "破碎的神秘机器人"
+    },
+    "category": "other",
+    "description": "一大堆奇怪的金属零件，软管，管子和钚。就你的电气知识而言，这是毫无意义的，但对于零件来说，它总是可以被拆散的。",
+    "price": "15 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "1000000 g",
+    "volume": "750 L",
+    "bashing": 45,
+    "cutting": 10,
+    "to_hit": -11,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "nekomata_tails",
+    "symbol": "<",
+    "color": "dark_gray",
+    "name": {
+      "str": "一对猫又尾巴",
+      "str_pl": "一对猫又尾巴"
+    },
+    "material": [
+      "flesh"
+    ],
+    "vitamins": [
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        20
+      ],
+      [
+        "vitB",
+        10
+      ],
+      [
+        "mutagen_feline",
+        500
+      ]
+    ],
+    "price": "2000 USD",
+    "healthy": 6,
+    "weight": "300 g",
+    "volume": "500 ml",
+    "fun": -15,
+    "comestible_type": "FOOD",
+    "stim": 1,
+    "addiction_potential": 3,
+    "description": "一对猫尾巴，以一种超凡脱俗但迷人的方式一起成长。吃了它们可能会让你变成一个更完美的人。"
+  },
+  {
+    "type": "TOOL",
+    "id": "wooden_kine",
+    "name": {
+      "str": "木槌"
+    },
+    "description": "长柄槌头的大木槌，传统上用来捣米或小米，它还能在紧要关头砸破人的脑袋。",
+    "weight": "4500 g",
+    "color": "brown",
+    "symbol": "/",
+    "material": [
+      "wood"
+    ],
+    "flags": "NONCONDUCTIVE",
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL",
+      "WIDE",
+      "SWEEP"
+    ],
+    "volume": "2500 ml",
+    "bashing": 13,
+    "to_hit": -1,
+    "price": "120 USD",
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  }
+]

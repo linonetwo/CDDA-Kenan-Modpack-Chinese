@@ -1,0 +1,210 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_FK",
+    "//": "TODO change this lame line",
+    "dynamic_line": "你没看到我在训练吗？让开，<name_b>！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FK_ELITE",
+    "//": "TODO change this lame line",
+    "dynamic_line": "又是一张新面孔…",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FK_MASTER",
+    "//": "TODO change this lame line",
+    "dynamic_line": "一个错误的举动，你就死定了！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FK_COACH",
+    "//": "TODO change this lame line",
+    "dynamic_line": "哦，又一个幸存者！<greet> 你想学习火焰指节学校的方法吗？",
+    "responses": [
+      {
+        "text": "对不起，我是来杀你的！",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "u_faction_rep": -100
+          }
+        ]
+      },
+      {
+        "text": "当然，在哪里签字？",
+        "topic": "TALK_MISSION_OFFER",
+        "condition": {
+          "not": {
+            "u_has_var": "fkl_business",
+            "type": "flag",
+            "context": "meeting",
+            "value": "yes"
+          }
+        }
+      },
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FK_DOOR",
+    "//": "TODO change this lame line",
+    "dynamic_line": "站住！来者何人？",
+    "responses": [
+      {
+        "text": "友好",
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "u_has_item": "flyer_fk"
+          }
+        },
+        "success": {
+          "topic": "TALK_FK_DOOR_ENTRY"
+        },
+        "failure": {
+          "topic": "TALK_FK_DOOR_DENY"
+        }
+      },
+      {
+        "text": "是敌人。",
+        "topic": "TALK_FK_DOOR_DENY"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FK_DOOR_ENTRY",
+    "//": "TODO change this lame line",
+    "dynamic_line": "准许！往前走，不要碰任何东西，否则你会后悔的，<name_g>！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "mapgen_update": "fk_door",
+            "origin_npc": true
+          },
+          {
+            "npc_first_topic": "TALK_FK"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FK_DOOR_DENY",
+    "//": "TODO change this lame line",
+    "dynamic_line": "滚开，<name_b>！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_FK_DOOR_DENY_ENEMY",
+    "//": "TODO change this lame line",
+    "dynamic_line": "以为自己很有趣，是吗？伙计们，教教这个<name_b>什么叫礼貌！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "u_faction_rep": -100
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "MISSION_fk_coach",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "“烈火指”学校"
+    },
+    "description": "和火焰指节的首领谈谈。",
+    "goal": "MGOAL_TALK_TO_NPC",
+    "difficulty": 1,
+    "value": 100,
+    "start": {
+      "effect": [
+        {
+          "npc_first_topic": "TALK_FK_ELITE"
+        },
+        {
+          "u_add_var": "fkl_business",
+          "type": "flag",
+          "context": "meeting",
+          "value": "yes"
+        },
+        {
+          "u_spawn_item": "flyer_fk"
+        }
+      ],
+      "assign_mission_target": {
+        "om_terrain": "fk_base_2",
+        "om_special": "Flame Knuckle base",
+        "om_terrain_replace": "forest",
+        "om_terrain_match_type": "PREFIX",
+        "cant_see": true,
+        "reveal_radius": 1,
+        "search_range": 200,
+        "min_distance": 50
+      },
+      "update_mapgen": {
+        "place_npcs": [
+          {
+            "class": "NPC_flame_knuckle_leader",
+            "x": 2,
+            "y": 11,
+            "target": true
+          }
+        ]
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "如果你想加入我们，去和我老板谈谈。他需要更多的人来支持我们的事业。我们会给你食物，庇护所，保护你，教你如何保护自己。",
+      "accepted": "很好。这就是我们的基地了。跟他谈谈说你想加入就好。哦，差点忘了，拿着这个。把这个给入口的守卫看，不然他不会让你进去的。",
+      "rejected": "嗯，不再多想想吗？",
+      "advice": "小心。",
+      "inquire": "你和他谈过了吗？",
+      "success": "好。",
+      "success_lie": "哈。",
+      "failure": "哈。"
+    }
+  }
+]

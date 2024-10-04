@@ -1,0 +1,1391 @@
+[
+  {
+    "id": "IA2",
+    "type": "GUN",
+    "copy-from": "rifle_auto",
+    "name": {
+      "str": "IA2 突击步枪"
+    },
+    "description": "IA2是一种可切换射击模式的突击步枪，旨在取代服役于巴西军方的老式FAL、M16 A2和HK33。大面积安装了皮卡汀尼导轨（鱼骨），因此有丰富的可安装配件。这套标准长度突击步枪配置枪管长17.2英寸（440毫米），能装备所有STANAG的弹匣。",
+    "weight": "3500 g",
+    "volume": "2 L",
+    "price": "300 USD",
+    "to_hit": -1,
+    "bashing": 7,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "green",
+    "ammo": [
+      "223"
+    ],
+    "skill": "rifle",
+    "dispersion": 160,
+    "durability": 6,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
+    "barrel_volume": "250 ml",
+    "built_in_mods": [
+      "folding_stock"
+    ],
+    "valid_mod_locations": [
+      [
+        "acessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        3
+      ],
+      [
+        "sight",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "IA2_CQC",
+    "copy-from": "IA2",
+    "type": "GUN",
+    "name": {
+      "str": "IA2 CQC 突击步枪"
+    },
+    "description": "IA2是一种可切换射击模式的突击步枪，旨在取代服役于巴西军方的老式FAL、M16 A2和HK33。大面积安装了皮卡汀尼导轨（鱼骨），因此有丰富的可安装配件。这套CQC配置枪管长10.3英寸（260毫米），能装备所有STANAG的弹匣。",
+    "weight": "3100 g",
+    "volume": "1500 ml",
+    "price": "200 USD",
+    "symbol": "(",
+    "color": "green",
+    "ammo": [
+      "223"
+    ],
+    "dispersion": 200,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "IA2_car",
+    "copy-from": "IA2",
+    "type": "GUN",
+    "name": {
+      "str": "IA2 卡宾枪"
+    },
+    "description": "IA2卡宾枪是一种可切换射击模式的突击步枪，旨在取代服役于巴西军方的老式FAL、M16 A2和HK33。大面积安装了皮卡汀尼导轨（鱼骨），因此有丰富的可安装配件。这套卡宾枪配置枪管长14.5英寸（370mm），能装备所有STANAG的弹匣。",
+    "weight": "3400 g",
+    "volume": "1750 ml",
+    "price": "300 USD",
+    "to_hit": -1,
+    "bashing": 9,
+    "symbol": "(",
+    "color": "green",
+    "ammo": [
+      "223"
+    ],
+    "dispersion": 170,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rdb",
+    "type": "GUN",
+    "name": {
+      "str": "RDB 无托步枪"
+    },
+    "description": "与传统的无托步枪不同的是，RDB步枪是向下抛壳的，这使得它成为了一把真正意义上双手可用的无托步枪。",
+    "weight": "3041 g",
+    "volume": "1250 ml",
+    "price": "2500 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "223"
+    ],
+    "skill": "rifle",
+    "dispersion": 140,
+    "durability": 5,
+    "barrel_volume": "250 ml",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m231",
+    "type": "GUN",
+    "name": {
+      "str": "M-231射孔枪"
+    },
+    "description": "m231射孔枪是一种重型M16型步枪。它没有枪托，没有瞄准器，有一个可以拧进美军装甲车射击孔的螺纹把手，而且它的射击速度高得惊人。它被设计以来就是为了车载射击的目的。",
+    "weight": "3391 g",
+    "volume": "1250 ml",
+    "price": "60 USD",
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [
+      "steel",
+      "plastic",
+      "aluminum"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223"
+    ],
+    "skill": "rifle",
+    "dispersion": 600,
+    "durability": 5,
+    "modes": [
+      [
+        "DEFAULT",
+        "full auto",
+        30
+      ]
+    ],
+    "barrel_volume": "250 ml",
+    "valid_mod_locations": [
+      [
+        "barrel",
+        1
+      ],
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xm231",
+    "copy-from": "m231",
+    "type": "GUN",
+    "name": {
+      "str": "XM-231"
+    },
+    "description": "xm231射孔枪是一种重型M16型步枪。与m231不同的是，xm231有一个金属折叠枪托和基本的瞄具，但它仍然有螺纹护手，可以拧进美军装甲车的射击孔，并具有高到离谱的射速。它被设计以来就是为了车载设计的目的。",
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223"
+    ],
+    "dispersion": 480,
+    "built_in_mods": [
+      "folding_stock"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "xm29",
+    "type": "GUN",
+    "name": {
+      "str": "XM-29 OICW"
+    },
+    "description": "XM-29 OICW是一种实验步枪，旨在取代美军目前服役的M-16步枪。OICW是一种可切换射击模式的突击战斗步枪，由两部分组成：一个20x28mm HE模块，枪管长度为460毫米，一个改装过的G36，枪管长度为250毫米。尽管它增加了单兵的可用火力，但重量惊人，而且不擅长攻击远距离目标。",
+    "weight": "8200 g",
+    "volume": "3 L",
+    "price": "100000 USD",
+    "to_hit": -1,
+    "bashing": 15,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223"
+    ],
+    "skill": "rifle",
+    "dispersion": 130,
+    "durability": 5,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
+    "barrel_volume": "250 ml",
+    "built_in_mods": [
+      "xm29launcher",
+      "oicwscope"
+    ],
+    "valid_mod_locations": [
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "accessories",
+        4
+      ],
+      [
+        "mechanism",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m16a1",
+    "type": "GUN",
+    "name": {
+      "str": "M16A1 突击步枪"
+    },
+    "description": "第一代M16。被作为m14步枪的替代品在越南引进，但它有许多机械故障，总体来说是一种非常糟糕的武器。",
+    "weight": "3977 g",
+    "volume": "1750 ml",
+    "price": "200 USD",
+    "to_hit": -1,
+    "bashing": 9,
+    "material": [
+      "steel",
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "skill": "rifle",
+    "dispersion": 160,
+    "durability": 4,
+    "barrel_volume": "250 ml",
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        10
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "accessories",
+        4
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ar15a1",
+    "type": "GUN",
+    "copy-from": "m16a1",
+    "name": {
+      "str": "M16A1（半自动）"
+    },
+    "description": "第一代M16。被作为m14步枪的替代品在越南引进，但它有许多机械故障，总体来说是一种非常糟糕的武器。这把步枪是民用的复制品。",
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "durability": 8,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m16a1burst",
+    "copy-from": "m16a1",
+    "type": "GUN",
+    "name": {
+      "str": "M16A1（爆炸开火）"
+    },
+    "description": "第一代M16。被作为m14步枪的替代品在越南引进，但它有许多机械故障，总体来说是一种非常糟糕的武器。这把步枪配有一个a2 下机匣，使它用爆发射击替代了全自动射击。",
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "burst",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m16a1/a3",
+    "copy-from": "m16a1",
+    "type": "GUN",
+    "name": {
+      "str": "M16A1（自动/爆炸开火）"
+    },
+    "description": "第一代M16。被作为m14步枪的替代品在越南引进，但它有许多机械故障，总体来说是一种非常糟糕的武器。这把步枪有一个a3 下机匣，使它同时拥有爆发射击和全自动射击能力。",
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "burst",
+        3
+      ],
+      [
+        "AUTO",
+        "full-auto",
+        10
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m16a2",
+    "type": "GUN",
+    "name": {
+      "str": "M16A2 突击步枪"
+    },
+    "description": "第二代M16。全自动射击被淘汰了，取而代之的是3发点射模式。",
+    "weight": "3977 g",
+    "volume": "1750 ml",
+    "price": "200 USD",
+    "to_hit": -1,
+    "bashing": 9,
+    "material": [
+      "steel",
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "skill": "rifle",
+    "dispersion": 150,
+    "durability": 4,
+    "barrel_volume": "250 ml",
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "burst",
+        3
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "accessories",
+        4
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ar15a2",
+    "copy-from": "m16a2",
+    "type": "GUN",
+    "name": {
+      "str": "M16A2（半自动）"
+    },
+    "description": "第二代M16。这种步枪是一种民用衍生型，因此它只有半自动射击能力。",
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m16a2auto",
+    "copy-from": "m16a2",
+    "type": "GUN",
+    "name": {
+      "str": "M16A2（全自动）"
+    },
+    "description": "第二代M16。这把步枪有一个a1 下机匣，使它用全自动射击代替了三发点射。",
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "full-auto",
+        10
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m16a2/a3",
+    "copy-from": "m16a2",
+    "type": "GUN",
+    "name": {
+      "str": "M16A2（全自动/爆炸开火）"
+    },
+    "description": "第二代M16。这种步枪配有一个a3 下机匣，提供全自动射击和三发点射能力。",
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "burst",
+        3
+      ],
+      [
+        "AUTO",
+        "full-auto",
+        10
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m16a3",
+    "type": "GUN",
+    "name": {
+      "str": "M16A3"
+    },
+    "description": "M16系列步枪的第三代产品。A3版本有一个集成的四导轨枪前身和一个可拆卸的提手，用于安装光学器件，当然其也拥有半自动、连发和全自动射击模式。",
+    "weight": "3977 g",
+    "volume": "1750 ml",
+    "price": "900 USD",
+    "to_hit": -1,
+    "bashing": 9,
+    "material": [
+      "steel",
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "skill": "rifle",
+    "dispersion": 140,
+    "durability": 4,
+    "barrel_volume": "250 ml",
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "burst",
+        3
+      ],
+      [
+        "AUTO",
+        "full-auto",
+        10
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "accessories",
+        4
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        2
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "m16a3auto",
+    "copy-from": "m16a3",
+    "type": "GUN",
+    "name": {
+      "str": "M16A3（自动）"
+    },
+    "description": "第三代M16系列步枪。a3衍生型配有一个集成的四面导轨和一个可拆卸的提把，用于安装光学瞄准镜。这把步枪配有一个a1 下机匣，因此只有半自动射击和全自动射击能力。",
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "full-auto",
+        10
+      ]
+    ]
+  },
+  {
+    "id": "m16a3burst",
+    "copy-from": "m16a3",
+    "type": "GUN",
+    "name": {
+      "str": "M16A3（爆发开火）"
+    },
+    "description": "第三代M16系列步枪。a3衍生型配有一个集成的四面导轨和一个可拆卸的提把，用于安装光学瞄准镜。这把步枪配有一个a1 下机匣，因此只有半自动射击和爆发射击能力。",
+    "material": [
+      "steel",
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "light_gray",
+    "ammo": [
+      "223",
+      "300blk"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "full-auto",
+        10
+      ]
+    ]
+  },
+  {
+    "id": "HMG44_223",
+    "copy-from": "HMG44",
+    "type": "GUN",
+    "name": {
+      "str": "STG-44（5.56x45）"
+    },
+    "description": "众所周知，STG-44是世界上最早的突击步枪之一，第二次世界大战期间由德国生产，原本使用的是7.92x33短弹。然而这是一把复制枪，使用更常见的5.56x45子弹。",
+    "ammo": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HMG44_223_sbr",
+    "copy-from": "HMG44_sbr",
+    "type": "GUN",
+    "name": {
+      "str": "STG-44（5.56x45短管）"
+    },
+    "description": "众所周知，STG-44是世界上最早的突击步枪之一，第二次世界大战期间由德国生产，原本使用的是7.92x33短弹。然而这是一把复制枪，使用更常见的5.56x45子弹。同时，它也被截短，并改造成了短管步枪。",
+    "ammo": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HMG44_223_smol",
+    "copy-from": "HMG44_smol",
+    "type": "GUN",
+    "name": {
+      "str": "STG-44（5.56x45手枪式）"
+    },
+    "description": "众所周知，STG-44是世界上最早的突击步枪之一，第二次世界大战期间由德国生产，原本使用的是7.92x33短弹。然而这是一把复制枪，使用更常见的5.56x45子弹。切断了枪托又锯短了枪管，成为了一把非常紧凑的枪械。",
+    "ammo": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HMG44_223_auto",
+    "copy-from": "HMG44_auto",
+    "type": "GUN",
+    "name": {
+      "str": "STG-44（5.56x45全自动）"
+    },
+    "description": "众所周知，STG-44是世界上最早的突击步枪之一，第二次世界大战期间由德国生产，原本使用的是7.92x33短弹。然而这是一把复制枪，使用更常见的5.56x45子弹。它的下机匣被替换成了原装品。",
+    "ammo": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HMG44_223_sbr_auto",
+    "copy-from": "HMG44_sbr_auto",
+    "type": "GUN",
+    "name": {
+      "str": "STG-44（5.56x45短管全自动）"
+    },
+    "description": "众所周知，STG-44是世界上最早的突击步枪之一，第二次世界大战期间由德国生产，原本使用的是7.92x33短弹。然而这是一把复制枪，使用更常见的5.56x45子弹。它的下机匣被替换成了原装品，同时也被截短，并改造成了短管步枪。",
+    "ammo": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HMG44_223_smol_auto",
+    "copy-from": "HMG44_smol_auto",
+    "type": "GUN",
+    "name": {
+      "str": "STG-44（5.56x45全自动手枪式）"
+    },
+    "description": "众所周知，STG-44是世界上最早的突击步枪之一，第二次世界大战期间由德国生产，原本使用的是7.92x33短弹。然而这是一把复制枪，使用更常见的5.56x45子弹。切断了枪托又锯短了枪管，成为了一把非常紧凑的枪械。它的下机匣被替换成了原装品。",
+    "ammo": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "stanag30",
+          "stanag5",
+          "stanag10",
+          "stanag20",
+          "stanag40",
+          "stanag50",
+          "stanag60",
+          "stanag60drum",
+          "stanag90",
+          "stanag100",
+          "stanag100drum",
+          "stanag150",
+          "survivor223mag"
+        ]
+      }
+    ]
+  }
+]

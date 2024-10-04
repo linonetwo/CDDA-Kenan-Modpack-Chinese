@@ -1,0 +1,67 @@
+[
+  {
+    "id": "hipoint45mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "Hi-Point .45 手枪弹匣"
+    },
+    "description": "9发容量的标准弹匣，适用于所有.45口径的Hi-point系列枪支。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "45"
+    ],
+    "capacity": 9,
+    "flags": [
+      "MAG_COMPACT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "45": 9
+        }
+      }
+    ]
+  },
+  {
+    "id": "hipoint45magext",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "Hi-Point .45 扩充弹匣"
+    },
+    "description": "14发容量的扩充弹匣，适用于所有.45口径的Hi-point系列枪支。",
+    "//": "The extended magazine is much less reliable then the standard magazine",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "45"
+    ],
+    "capacity": 14,
+    "flags": [
+      "MAG_BULKY"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "45": 14
+        }
+      }
+    ]
+  }
+]

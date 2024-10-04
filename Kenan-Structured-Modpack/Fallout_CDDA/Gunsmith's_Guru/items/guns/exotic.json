@@ -1,0 +1,155 @@
+[
+  {
+    "id": "gunblade",
+    "type": "GUN",
+    "name": {
+      "str": "枪刃",
+      "str_pl": "枪刃"
+    },
+    "description": "一把剑和一把0.44口径的左轮手枪的组合如同可怕的憎恶（缝合怪）。主要由日式宅男和变态法西斯使用。它太大了所以也不适合放在皮套或护套中。",
+    "weight": "2311 g",
+    "volume": "2 L",
+    "price": "100 USD",
+    "to_hit": 1,
+    "bashing": 10,
+    "cutting": 29,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "44"
+    ],
+    "skill": "pistol",
+    "range": 2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 180,
+    "durability": 6,
+    "clip_size": 6,
+    "reload": 250,
+    "barrel_volume": "500 ml",
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "44": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "belt_gun",
+    "copy-from": "pistol_base",
+    "type": "GUN",
+    "name": {
+      "str": "皮带扣枪",
+      "str_pl": "皮带扣枪"
+    },
+    "description": "一把小小的.22手枪，是纳粹发明的。只有不到10份原件。现在这并不重要，不仅稀有性无关紧要，而且这些东西非常不可靠。",
+    "weight": "164 g",
+    "volume": "250 ml",
+    "price": "1100 USD",
+    "to_hit": -1,
+    "bashing": 5,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "color": "dark_gray",
+    "ammo": [
+      "22"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -2
+    },
+    "dispersion": 520,
+    "durability": 6,
+    "clip_size": 1,
+    "flags": [
+      "RELOAD_ONE",
+      "BELTED"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "22": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "rifle_shield",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "盾枪"
+    },
+    "description": "一种古老的半生不熟的武器，有盾牌的步枪。很难瞄准。你可以用它来阻止攻击",
+    "weight": "1950 g",
+    "volume": "2500 ml",
+    "price": "410 USD",
+    "to_hit": -1,
+    "bashing": 15,
+    "material": [
+      "iron",
+      "wood"
+    ],
+    "symbol": "(",
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "color": "brown",
+    "ammo": [
+      "flintlock"
+    ],
+    "skill": "rifle",
+    "range": 4,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 10
+    },
+    "dispersion": 360,
+    "durability": 6,
+    "clip_size": 1,
+    "reload": 1200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "DURABLE_MELEE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "flintlock": 1
+        }
+      }
+    ]
+  }
+]

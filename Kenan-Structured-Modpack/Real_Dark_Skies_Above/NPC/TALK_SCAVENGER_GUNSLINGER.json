@@ -1,0 +1,895 @@
+[
+  {
+    "type": "npc",
+    "id": "DKZ_SCAVENGER_GUNSLINGER",
+    "class": "NC_SCAVENGER_GUNSLINGER",
+    "attitude": 0,
+    "mission": 3,
+    "chat": "TALK_SCAVENGER_GUNSLINGER_ROOT",
+    "faction": "wasteland_scavengers"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_SCAVENGER_GUNSLINGER",
+    "name": {
+      "str": "Scavenger"
+    },
+    "job_description": "I'm here to shoot the wings off flies.",
+    "common": false,
+    "traits": [
+      {
+        "trait": "DKZ_COMBAT",
+        "prob": 100
+      },
+      {
+        "group": "NPC_starting_traits"
+      },
+      {
+        "group": "Appearance_demographics"
+      },
+      {
+        "trait": "ROBUST",
+        "prob": 80
+      }
+    ],
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": {
+          "sum": [
+            {
+              "dice": [
+                3,
+                2
+              ]
+            },
+            {
+              "constant": -4
+            }
+          ]
+        }
+      },
+      {
+        "skill": "survival",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "firstaid",
+        "bonus": {
+          "rng": [
+            1,
+            2
+          ]
+        }
+      },
+      {
+        "skill": "dodge",
+        "bonus": {
+          "rng": [
+            3,
+            5
+          ]
+        }
+      },
+      {
+        "skill": "melee",
+        "bonus": {
+          "rng": [
+            2,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "unarmed",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "bashing",
+        "bonus": {
+          "rng": [
+            2,
+            4
+          ]
+        }
+      },
+      {
+        "skill": "stabbing",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "cutting",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "gun",
+        "bonus": {
+          "rng": [
+            2,
+            4
+          ]
+        }
+      },
+      {
+        "skill": "smg",
+        "bonus": {
+          "rng": [
+            2,
+            4
+          ]
+        }
+      },
+      {
+        "skill": "shotgun",
+        "bonus": {
+          "rng": [
+            2,
+            4
+          ]
+        }
+      },
+      {
+        "skill": "pistol",
+        "bonus": {
+          "rng": [
+            7,
+            11
+          ]
+        }
+      },
+      {
+        "skill": "rifle",
+        "bonus": {
+          "rng": [
+            3,
+            5
+          ]
+        }
+      }
+    ],
+    "bonus_str": {
+      "rng": [
+        1,
+        3
+      ]
+    },
+    "bonus_dex": {
+      "rng": [
+        3,
+        5
+      ]
+    },
+    "bonus_int": {
+      "rng": [
+        -1,
+        1
+      ]
+    },
+    "bonus_per": {
+      "rng": [
+        3,
+        5
+      ]
+    }
+  },
+  {
+    "//": "----------INVENTORY LOADOUTS-----------------------------------------------------------------------------------",
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_underwear_bottom_male",
+    "subtype": "collection",
+    "items": [
+      [
+        "boxer_shorts",
+        70
+      ],
+      [
+        "briefs",
+        30
+      ],
+      [
+        "boxer_briefs",
+        50
+      ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_underwear_bottom_female",
+    "subtype": "collection",
+    "items": [
+      [
+        "panties",
+        70
+      ],
+      [
+        "boy_shorts",
+        50
+      ],
+      [
+        "bikini_bottom",
+        10
+      ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_underwear_top_male",
+    "subtype": "collection",
+    "items": [
+      [
+        "null",
+        50
+      ],
+      [
+        "undershirt",
+        50
+      ],
+      [
+        "long_undertop",
+        20
+      ],
+      [
+        "tank_top",
+        25
+      ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_underwear_top_female",
+    "subtype": "collection",
+    "items": [
+      [
+        "null",
+        10
+      ],
+      [
+        "bra",
+        70
+      ],
+      [
+        "sports_bra",
+        50
+      ],
+      [
+        "tank_top",
+        50
+      ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_underwear_feet_male",
+    "items": [
+      [
+        "null",
+        5
+      ],
+      [
+        "socks",
+        80
+      ],
+      [
+        "socks_ankle",
+        60
+      ],
+      [
+        "socks_wool",
+        20
+      ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_underwear_feet_female",
+    "items": [
+      [
+        "null",
+        5
+      ],
+      [
+        "socks",
+        50
+      ],
+      [
+        "socks_ankle",
+        30
+      ],
+      [
+        "socks_wool",
+        10
+      ],
+      [
+        "stockings",
+        20
+      ],
+      [
+        "tights",
+        20
+      ]
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_pants_male",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "jeans",
+        "prob": 20
+      },
+      {
+        "item": "pants",
+        "prob": 20
+      },
+      {
+        "item": "pants_leather",
+        "prob": 20
+      },
+      {
+        "item": "pants_cargo",
+        "prob": 20
+      },
+      {
+        "item": "bunker_pants",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_pants_female",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "jeans",
+        "prob": 20
+      },
+      {
+        "item": "pants",
+        "prob": 20
+      },
+      {
+        "item": "pants_leather",
+        "prob": 20
+      },
+      {
+        "item": "pants_cargo",
+        "prob": 20
+      },
+      {
+        "item": "skirt",
+        "prob": 20
+      },
+      {
+        "item": "bunker_pants",
+        "prob": 10
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_shirt_male",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "tshirt",
+        "prob": 20
+      },
+      {
+        "item": "polo_shirt",
+        "prob": 20
+      },
+      {
+        "item": "dress_shirt",
+        "prob": 20
+      },
+      {
+        "item": "tank_top",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_shirt_female",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "tshirt",
+        "prob": 20
+      },
+      {
+        "item": "polo_shirt",
+        "prob": 20
+      },
+      {
+        "item": "dress_shirt",
+        "prob": 20
+      },
+      {
+        "item": "tank_top",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_gloves",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "null",
+        "prob": 60
+      },
+      {
+        "item": "gloves_leather",
+        "prob": 20
+      },
+      {
+        "item": "gloves_fingerless",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_coat",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "touring_suit",
+        "prob": 20
+      },
+      {
+        "item": "jacket_leather",
+        "prob": 20
+      },
+      {
+        "item": "trenchcoat",
+        "prob": 20
+      },
+      {
+        "item": "jacket_jean",
+        "prob": 20
+      },
+      {
+        "item": "bunker_coat",
+        "prob": 10
+      },
+      {
+        "item": "jacket_windbreaker",
+        "prob": 10
+      },
+      {
+        "item": "kevlar",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_shoes",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "boots_western",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_masks",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "null",
+        "prob": 800
+      },
+      {
+        "item": "mask_dust",
+        "prob": 10
+      },
+      {
+        "item": "bandana",
+        "prob": 10
+      },
+      {
+        "item": "mask_filter",
+        "prob": 10,
+        "charges-min": 10
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_eyes",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "null",
+        "prob": 80
+      },
+      {
+        "item": "glasses_safety",
+        "prob": 20
+      },
+      {
+        "item": "sunglasses",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_hat",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "null",
+        "prob": 80
+      },
+      {
+        "item": "hat_ball",
+        "prob": 10
+      },
+      {
+        "item": "hat_hard",
+        "prob": 10
+      },
+      {
+        "item": "helmet_bike",
+        "prob": 10
+      },
+      {
+        "item": "helmet_riot",
+        "prob": 10
+      },
+      {
+        "item": "helmet_motor",
+        "prob": 10
+      },
+      {
+        "item": "hat_hunting",
+        "prob": 10
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_extra",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "null",
+        "prob": 5
+      },
+      {
+        "item": "backpack",
+        "prob": 25
+      },
+      {
+        "item": "backpack_leather",
+        "prob": 25
+      },
+      {
+        "item": "rucksack",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_bashing",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "hammer",
+        "prob": 20
+      },
+      {
+        "item": "wrench",
+        "prob": 20
+      },
+      {
+        "item": "hammer_sledge",
+        "prob": 10
+      },
+      {
+        "item": "hammer_sledge_short",
+        "prob": 10
+      },
+      {
+        "item": "pipe",
+        "prob": 20
+      },
+      {
+        "item": "bat",
+        "prob": 20
+      },
+      {
+        "item": "bat_metal",
+        "prob": 20
+      },
+      {
+        "item": "crowbar",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_cutting",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "knife_butcher",
+        "prob": 20
+      },
+      {
+        "item": "hatchet",
+        "prob": 20
+      },
+      {
+        "item": "ax",
+        "prob": 20
+      },
+      {
+        "item": "machete",
+        "prob": 20
+      },
+      {
+        "item": "knife_combat",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_stabbing",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "spear_knife",
+        "prob": 50
+      },
+      {
+        "item": "spear_rebar",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_throw",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "throwing_knife",
+        "prob": 50
+      },
+      {
+        "item": "throwing_axe",
+        "prob": 50
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_archery",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "crossbow",
+        "prob": 5
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_pistols",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "group": "guns_pistol_rare",
+        "prob": 130
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_shotgun",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "group": "guns_shotgun_common",
+        "prob": 70
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_smg",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "group": "guns_smg_common",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_rifle",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "group": "guns_rifle_common",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_launcher",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "group": "guns_launcher_milspec",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_weapon_random",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "item": "q_staff",
+        "prob": 100
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_SCAVENGER_GUNSLINGER_misc",
+    "subtype": "distribution",
+    "entries": [
+      {
+        "group": "rad_gear",
+        "count-min": 1,
+        "count-max": 2,
+        "prob": 90
+      },
+      {
+        "group": "fireman_gear",
+        "count-min": 1,
+        "count-max": 2,
+        "prob": 90
+      },
+      {
+        "group": "gear_survival",
+        "count-min": 1,
+        "count-max": 3,
+        "prob": 90
+      },
+      {
+        "item": "western_holster",
+        "prob": 100
+      },
+      {
+        "item": "insecticide",
+        "prob": 20
+      },
+      {
+        "item": "antifungal",
+        "prob": 20
+      },
+      {
+        "item": "antiparasitic",
+        "prob": 20
+      }
+    ]
+  },
+  {
+    "//": "----------DIALOGUE OPTIONS-------------------------------------------------------------------------------------",
+    "id": "TALK_SCAVENGER_GUNSLINGER_ROOT",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_is_wearing": "badge_marshal",
+      "yes": [
+        "你迷路了吗，执法官？",
+        "别惹麻烦，警长，你不再是法律了。"
+      ],
+      "no": [
+        "别在这里惹麻烦，我宁愿杀怪物也不愿杀人。",
+        "一路平安，拾荒者。"
+      ]
+    },
+    "responses": [
+      {
+        "text": "让我们交易吧。",
+        "effect": "start_trade",
+        "topic": "TALK_SCAVENGER_GUNSLINGER_ROOT"
+      },
+      {
+        "text": "你在这里干什么？",
+        "topic": "TALK_SCAVENGER_GUNSLINGER_DOING"
+      },
+      {
+        "text": "楼上是什么？",
+        "topic": "TALK_SCAVENGER_GUNSLINGER_UPSTAIRS"
+      },
+      {
+        "text": "后会有期！",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SCAVENGER_GUNSLINGER_DOING",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "所有住在这里的人都有安排，最底层的两层是自由贸易区，最高层是外星人抵抗行动。我们都帮助他们保持外部防御，并警告周围有僵尸或异种生物。你随时可以指望楼上的狙击手在捣毁和抢劫的同时进行监视。",
+      "我知道楼上和地下室都有变种人，但他们都是好人。只要你不盯着那些严重变形的。",
+      "我在这里与其他拾荒者保持和平，但每个人都对彼此非常友好，因为外面有怪物。"
+    ],
+    "responses": [
+      {
+        "text": "让我们交易吧。",
+        "effect": "start_trade",
+        "topic": "TALK_SCAVENGER_GUNSLINGER_ROOT"
+      },
+      {
+        "text": "对每个人都很好的安排。",
+        "topic": "TALK_SCAVENGER_GUNSLINGER_ROOT"
+      },
+      {
+        "text": "好吧，你去做吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_SCAVENGER_GUNSLINGER_UPSTAIRS",
+    "type": "talk_topic",
+    "dynamic_line": [
+      "有时我会去屋顶帮助狙击手看守。即使我们不能把它们拿下来，使用真正强大的步枪也很有趣。",
+      "我只是上楼去看看赌场，用偷来的现金卡赌博很有趣。我涨了将近十万美元。",
+      "图书馆很好，他们总是在寻找更多的书，越稀有，他们会给他们更多。"
+    ],
+    "responses": [
+      {
+        "text": "让我们交易吧。",
+        "effect": "start_trade",
+        "topic": "TALK_SCAVENGER_GUNSLINGER_ROOT"
+      },
+      {
+        "text": "好的，再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

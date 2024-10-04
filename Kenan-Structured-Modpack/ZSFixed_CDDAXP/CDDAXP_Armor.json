@@ -1,0 +1,1460 @@
+[
+  {
+    "id": "cddaxp_envmask",
+    "type": "ARMOR",
+    "name": {
+      "str": "Miltech 环境防护口罩"
+    },
+    "description": "Miltech 的轻型防护面罩，配有高效的多用途过滤器，只需绑在口鼻上就可使用。 提供非常优秀的环境保护，并防止烟雾和其他污染物被你吸入。",
+    "weight": "578 g",
+    "volume": "750 ml",
+    "price": "42 USD",
+    "to_hit": 0,
+    "bashing": 1,
+    "cutting": 0,
+    "phase": "solid",
+    "material": [
+      "plastic",
+      "aluminum"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 17,
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 100,
+        "covers": [
+          "mouth"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 13
+  },
+  {
+    "id": "cddaxp_srtrenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "暴徒风衣"
+    },
+    "description": "一件自制的装甲棉风衣，让你的手臂不受束缚。它有很多口袋，提供了相当充足的储存空间。",
+    "weight": "800 g",
+    "volume": "4250 ml",
+    "price": "151 USD",
+    "to_hit": -1,
+    "material": [
+      "cotton",
+      "iron"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      }
+    ],
+    "warmth": 13,
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1
+  },
+  {
+    "id": "cddaxp_rcpants",
+    "type": "ARMOR",
+    "name": {
+      "str": "暴徒长裤"
+    },
+    "description": "一条内衬口袋的自制装甲裤，提供大量的存储空间。",
+    "weight": "700 g",
+    "volume": "2750 ml",
+    "price": "30 USD",
+    "material": [
+      "cotton",
+      "iron"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      }
+    ],
+    "warmth": 13,
+    "flags": [
+      "VARSIZE",
+      "POCKETS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1
+  },
+  {
+    "id": "cddaxp_retshield",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "锋刃掷盾"
+    },
+    "description": "一个重型重塑井盖，被轻量化并重铸作为上尉的掷盾。现在你只需要一个飞行动力装甲…",
+    "weight": "2000 g",
+    "volume": "2500 ml",
+    "price": "800 USD",
+    "to_hit": 0,
+    "bashing": 10,
+    "cutting": 20,
+    "phase": "solid",
+    "material": [
+      "iron"
+    ],
+    "symbol": ")",
+    "color": "dark_gray",
+    "warmth": 0,
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "STURDY",
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BLOCK_WHILE_WORN"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 30,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 0
+  },
+  {
+    "id": "cddaxp_survsrtrenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "幸存者暴徒风衣"
+    },
+    "description": "一件自制的带有小袋的装甲棉风衣，让你的手臂不受束缚。它的背部还有一个大型皮革枪套。激活以收拔枪械。 ",
+    "weight": "1200 g",
+    "volume": "4750 ml",
+    "price": "253 USD",
+    "to_hit": -1,
+    "material": [
+      "cotton",
+      "iron"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "3500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2500 ml",
+        "max_contains_weight": "3500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "4250 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 20
+      }
+    ],
+    "warmth": 15,
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "OUTER",
+      "NO_QUICKDRAW"
+    ],
+    "armor": [
+      {
+        "encumbrance": 22,
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1
+  },
+  {
+    "id": "cddaxp_survrcpants",
+    "type": "ARMOR",
+    "name": {
+      "str": "幸存者暴徒长裤"
+    },
+    "description": "一条自制的带口袋的装甲裤，结合了一条作为腰带的多用途子弹带。",
+    "weight": "1100 g",
+    "volume": "3250 ml",
+    "price": "82 USD",
+    "material": [
+      "cotton",
+      "iron"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1175 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1175 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "ammo_restriction": {
+          "22": 18,
+          "32": 18,
+          "38": 18,
+          "44": 18,
+          "45": 18,
+          "223": 18,
+          "308": 18,
+          "762": 18,
+          "3006": 18,
+          "9mm": 18,
+          "762R": 18,
+          "8x40mm": 18,
+          "shot": 18,
+          "20x66mm": 18
+        },
+        "moves": 20
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "VARSIZE",
+      "POCKETS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 22,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1
+  },
+  {
+    "id": "cddaxp_bracer",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "护腕",
+      "str_pl": "护腕"
+    },
+    "description": "一对金属护臂，用以保护前臂免受伤害。",
+    "weight": "400 g",
+    "volume": "1250 ml",
+    "price": "60 USD",
+    "to_hit": 1,
+    "material": [
+      "iron"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 0,
+    "flags": [
+      "BELTED",
+      "VARSIZE",
+      "STURDY",
+      "BLOCK_WHILE_WORN"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 40,
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 0
+  },
+  {
+    "id": "cddaxp_rillepack",
+    "type": "ARMOR",
+    "name": {
+      "str": "RILLE 战术背包"
+    },
+    "description": "“暴徒轻型负载装备”是对军用背包深度定制的改进型。它使用两个榴弹袋作为肩带，装甲化并覆有口袋。",
+    "weight": "1000 g",
+    "volume": "11 L",
+    "price": "70 USD",
+    "material": [
+      "iron",
+      "kevlar"
+    ],
+    "symbol": "[",
+    "color": "green",
+    "warmth": 9,
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "40 L",
+        "max_contains_weight": "60 kg",
+        "max_item_length": "60 cm",
+        "magazine_well": "8500 ml",
+        "moves": 265
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5740 ml",
+        "max_contains_weight": "12 kg",
+        "max_item_length": "40 cm",
+        "magazine_well": "1500 ml",
+        "moves": 175
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "3740 ml",
+        "max_contains_weight": "4 kg",
+        "max_item_length": "35 cm",
+        "magazine_well": "1 L",
+        "moves": 100
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "3700 ml",
+        "max_contains_weight": "3740 g",
+        "max_item_length": "35 cm",
+        "magazine_well": "1 L",
+        "moves": 100
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "BELTED",
+      "TARDIS"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          10,
+          40
+        ],
+        "coverage": 35,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 2,
+    "environmental_protection": 0
+  },
+  {
+    "id": "cddaxp_lamessrtrenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "甲壳暴徒风衣"
+    },
+    "description": "一件自制的带有小袋的装甲棉风衣，用凯夫拉片和甲壳块填充，昆虫外观令人不适。它的背部还有一个大型皮革枪套。激活以收拔枪械。",
+    "weight": "1400 g",
+    "volume": "5250 ml",
+    "price": "375 USD",
+    "to_hit": -1,
+    "material": [
+      "kevlar",
+      "chitin"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "1800 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "900 ml",
+        "max_contains_weight": "1800 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "4250 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 20
+      }
+    ],
+    "warmth": 15,
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "OUTER",
+      "NO_QUICKDRAW",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 26,
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2
+  },
+  {
+    "id": "cddaxp_lamesrcpants",
+    "type": "ARMOR",
+    "name": {
+      "str": "甲壳暴徒长裤"
+    },
+    "description": "一条用凯夫拉片和甲壳块填充的自制装甲长裤，结合了作为腰带的多用途子弹带。它的昆虫外观令人不适。",
+    "weight": "1300 g",
+    "volume": "3750 ml",
+    "price": "134 USD",
+    "material": [
+      "kevlar",
+      "chitin"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1375 ml",
+        "max_contains_weight": "2750 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1375 ml",
+        "max_contains_weight": "2750 g",
+        "moves": 80
+      },
+      {
+        "ammo_restriction": {
+          "22": 18,
+          "32": 18,
+          "38": 18,
+          "44": 18,
+          "45": 18,
+          "223": 18,
+          "308": 18,
+          "762": 18,
+          "3006": 18,
+          "9mm": 18,
+          "762R": 18,
+          "8x40mm": 18,
+          "shot": 18,
+          "20x66mm": 18
+        },
+        "moves": 20
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 26,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2
+  },
+  {
+    "id": "cddaxp_longshirt",
+    "type": "ARMOR",
+    "name": {
+      "str": "暴徒长袖衬衫"
+    },
+    "description": "一件自制的带口袋的长袖衬衫，并有两个弹匣包，使弹匣可以随取随用。精细的做工让它又耐用穿起来又舒服。激活以收拔枪械。",
+    "weight": "160 g",
+    "volume": "1250 ml",
+    "price": "200 USD",
+    "material": [
+      "cotton",
+      "iron"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "1 kg",
+        "moves": 5,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "warmth": 5,
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 90,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "id": "cddaxp_srshirt",
+    "type": "ARMOR",
+    "name": {
+      "str": "甲壳暴徒衬衫"
+    },
+    "description": "一件自制衬衫，是标准暴徒衬衫的硬质版本，填充了凯夫拉片和甲壳块。精细的做工让它又耐用穿起来又舒服。激活以收拔至多两个弹匣。 ",
+    "weight": "175 g",
+    "volume": "1500 ml",
+    "price": "275 USD",
+    "material": [
+      "kevlar",
+      "chitin"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "500 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "1 kg",
+        "moves": 5,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "warmth": 5,
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 7,
+        "coverage": 90,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1
+  },
+  {
+    "id": "cddaxp_srbshirt",
+    "type": "ARMOR",
+    "name": {
+      "str": "镶骨暴徒衬衫"
+    },
+    "description": "一件自制衬衫，是标准暴徒衬衫的硬质版本，填充了凯夫拉片和骨头。精细的做工让它又耐用穿起来又舒服。激活以收拔至多两个弹匣。 ",
+    "weight": "160 g",
+    "volume": "1500 ml",
+    "price": "275 USD",
+    "material": [
+      "kevlar",
+      "bone"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "1 kg",
+        "moves": 5,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "warmth": 5,
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 90,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1
+  },
+  {
+    "id": "cddaxp_srcshirt",
+    "type": "ARMOR",
+    "name": {
+      "str": "瓷板暴徒衬衫"
+    },
+    "description": "一件自制衬衫，是标准暴徒衬衫的硬质版本，填充了凯夫拉片和陶瓷。精细的做工让它又耐用穿起来又舒服。激活以收拔至多两个弹匣。 ",
+    "weight": "180 g",
+    "volume": "1500 ml",
+    "price": "275 USD",
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "holster": true,
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "1 L",
+        "max_contains_weight": "1 kg",
+        "moves": 5,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "warmth": 5,
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你收好了%s。"
+    },
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 90,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1
+  },
+  {
+    "id": "cddaxp_lamessbtrenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "镶骨暴徒风衣"
+    },
+    "description": "一件自制的带有小袋的装甲棉风衣，用凯夫拉片和骨头填充，外观令人毛骨悚然。它的背部还有一个大型皮革枪套。激活以收拔枪械。",
+    "weight": "1400 g",
+    "volume": "5250 ml",
+    "price": "375 USD",
+    "to_hit": -1,
+    "material": [
+      "kevlar",
+      "bone"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1200 ml",
+        "max_contains_weight": "1760 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1200 ml",
+        "max_contains_weight": "1760 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "4500 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 20,
+        "holster": true
+      }
+    ],
+    "warmth": 15,
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "OUTER",
+      "NO_QUICKDRAW",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 24,
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2
+  },
+  {
+    "id": "cddaxp_lamesbcpants",
+    "type": "ARMOR",
+    "name": {
+      "str": "镶骨暴徒长裤"
+    },
+    "description": "一条用凯夫拉片和骨头填充的自制装甲长裤，结合了作为腰带的多用途子弹带。它的外观令人毛骨悚然。",
+    "weight": "1300 g",
+    "volume": "3750 ml",
+    "price": "134 USD",
+    "material": [
+      "kevlar",
+      "bone"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "ammo_restriction": {
+          "22": 18,
+          "32": 18,
+          "38": 18,
+          "44": 18,
+          "45": 18,
+          "223": 18,
+          "308": 18,
+          "762": 18,
+          "3006": 18,
+          "9mm": 18,
+          "762R": 18,
+          "8x40mm": 18,
+          "shot": 18,
+          "20x66mm": 18
+        },
+        "moves": 20
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 24,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2
+  },
+  {
+    "id": "cddaxp_lamessctrenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "瓷板暴徒风衣"
+    },
+    "description": "一件自制的带有小袋的装甲棉风衣，用凯夫拉片和陶瓷填充，外观很有科技范。它的背部还有一个大型皮革枪套。激活以收拔枪械。",
+    "weight": "1400 g",
+    "volume": "5250 ml",
+    "price": "375 USD",
+    "to_hit": -1,
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "3500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "4500 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 20,
+        "holster": true
+      }
+    ],
+    "warmth": 15,
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "OUTER",
+      "NO_QUICKDRAW",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 28,
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2
+  },
+  {
+    "id": "cddaxp_lamesccpants",
+    "type": "ARMOR",
+    "name": {
+      "str": "瓷板暴徒长裤"
+    },
+    "description": "一条用凯夫拉片和陶瓷填充的自制装甲长裤，结合了作为腰带的多用途子弹带。它的外观很有科技范。",
+    "weight": "1300 g",
+    "volume": "3750 ml",
+    "price": "134 USD",
+    "material": [
+      "kevlar",
+      "ceramic"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1200 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1200 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "ammo_restriction": {
+          "22": 18,
+          "32": 18,
+          "38": 18,
+          "44": 18,
+          "45": 18,
+          "223": 18,
+          "308": 18,
+          "762": 18,
+          "3006": 18,
+          "9mm": 18,
+          "762R": 18,
+          "8x40mm": 18,
+          "shot": 18,
+          "20x66mm": 18
+        },
+        "moves": 20
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 28,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 2
+  },
+  {
+    "id": "cddaxp_hlamesstrenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "重型暴徒风衣"
+    },
+    "description": "一件带有口袋的自制重型装甲棉制风衣，用凯夫拉片和钢填充。仿佛穿着能行走于枪林弹雨，背部还有一个大型皮革快拔枪套。激活以收拔枪械。",
+    "weight": "1500 g",
+    "volume": "5250 ml",
+    "price": "400 USD",
+    "to_hit": -1,
+    "material": [
+      "kevlar",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1750 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1750 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "4500 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 20,
+        "holster": true
+      }
+    ],
+    "warmth": 15,
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "OUTER",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 3
+  },
+  {
+    "id": "cddaxp_hlamescpants",
+    "type": "ARMOR",
+    "name": {
+      "str": "重型暴徒长裤"
+    },
+    "description": "一条用超合金和刚填充的自制重型装甲长裤，结合了作为腰带的多用途子弹带。仿佛穿着能行走于枪林弹雨。",
+    "weight": "1400 g",
+    "volume": "3750 ml",
+    "price": "185 USD",
+    "material": [
+      "kevlar",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "875 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "875 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "ammo_restriction": {
+          "22": 18,
+          "32": 18,
+          "38": 18,
+          "44": 18,
+          "45": 18,
+          "223": 18,
+          "308": 18,
+          "762": 18,
+          "3006": 18,
+          "9mm": 18,
+          "762R": 18,
+          "8x40mm": 18,
+          "shot": 18,
+          "20x66mm": 18
+        },
+        "moves": 20
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 3
+  },
+  {
+    "id": "cddaxp_fbackholster",
+    "type": "ARMOR",
+    "name": {
+      "str": "快拔枪套（背）"
+    },
+    "description": "一个绑在背部的皮枪套，大小足以容纳步枪及其他大型枪械。带有一个精心设计的机械装置用于快速拔出。激活它来收拔枪械。",
+    "weight": "250 g",
+    "volume": "1500 ml",
+    "price": "150 USD",
+    "material": [
+      "leather"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "3750 ml",
+        "max_contains_weight": "4 kg",
+        "moves": 5,
+        "holster": true
+      }
+    ],
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "id": "cddaxp_bplamesstrenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str": "防弹暴徒风衣"
+    },
+    "description": "一件带有口袋的自制装甲棉制风衣，用超合金和钢填充。它看起来很笨重，背部还有一个大型皮革快拔枪套。激活以收拔枪械。",
+    "weight": "1700 g",
+    "volume": "5250 ml",
+    "price": "450 USD",
+    "to_hit": -1,
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "1500 ml",
+        "max_contains_weight": "3 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "min_item_volume": "0 ml",
+        "max_contains_volume": "4250 ml",
+        "max_contains_weight": "5 kg",
+        "moves": 5,
+        "holster": true
+      }
+    ],
+    "warmth": 15,
+    "use_action": {
+      "type": "holster"
+    },
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "OUTER",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 32,
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 3
+  },
+  {
+    "id": "cddaxp_bplamescpants",
+    "type": "ARMOR",
+    "name": {
+      "str": "防弹暴徒长裤"
+    },
+    "description": "一条用超合金和刚填充的自制装甲长裤，结合了作为腰带的多用途子弹带。它看起来很笨重。",
+    "weight": "1600 g",
+    "volume": "3750 ml",
+    "price": "235 USD",
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "symbol": "[",
+    "color": "light_gray",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "625 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "ammo_restriction": {
+          "22": 18,
+          "32": 18,
+          "38": 18,
+          "44": 18,
+          "45": 18,
+          "223": 18,
+          "308": 18,
+          "762": 18,
+          "3006": 18,
+          "9mm": 18,
+          "762R": 18,
+          "8x40mm": 18,
+          "shot": 18,
+          "20x66mm": 18
+        },
+        "moves": 20
+      }
+    ],
+    "warmth": 15,
+    "flags": [
+      "STURDY",
+      "VARSIZE",
+      "POCKETS",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 32,
+        "coverage": 95,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 4,
+    "environmental_protection": 3
+  }
+]

@@ -1,0 +1,126 @@
+[
+  {
+    "id": "cbma_myomer_repair_tool",
+    "type": "TOOL",
+    "name": {
+      "str": "肌球蛋白修复工具",
+      "str_pl": "肌球蛋白修复工具"
+    },
+    "description": "修复受损肌纤维的工具套装。维修前记得先切断肌纤维的电源。",
+    "weight": "150 g",
+    "volume": "3750 ml",
+    "price": "0 cent",
+    "material": [
+      "steel"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "looks_like": "welder",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 200
+        }
+      }
+    ],
+    "charges_per_use": 5,
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        3
+      ],
+      [
+        "SEW",
+        1
+      ]
+    ],
+    "use_action": {
+      "type": "repair_item",
+      "item_action_type": "repair_myomer",
+      "materials": [
+        "myomer"
+      ],
+      "skill": "firstaid",
+      "tool_quality": 5,
+      "cost_scaling": 0.1,
+      "move_cost": 750
+    }
+  },
+  {
+    "id": "cbma_myomer_fiber_dupe",
+    "type": "TOOL",
+    "name": {
+      "str": "肌球蛋白纤维培养皿（培养中）",
+      "str_pl": "肌球蛋白纤维培养皿（培养中）"
+    },
+    "description": "肌球蛋白纤维的核心浸泡在培养液中生长。这个过程将在一小时内完成。",
+    "weight": "150 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "material": [
+      "glass",
+      "myomer_on"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "looks_like": "flask_glass",
+    "use_action": {
+      "target": "cbma_myomer_fiber_dupe_done",
+      "msg": "肌球蛋白纤维的培养看起来已经完成。",
+      "moves": 150,
+      "type": "delayed_transform",
+      "transform_age": 14400,
+      "not_ready_msg": "It does not seem to be completed yet."
+    }
+  },
+  {
+    "id": "cbma_myomer_fiber_dupe_done",
+    "type": "GENERIC",
+    "name": {
+      "str": "肌球蛋白纤维培养皿（完成）",
+      "str_pl": "肌球蛋白纤维培养皿（完成）"
+    },
+    "description": "肌球蛋白纤维的核心已经在培养基中浸泡并生长完成。可以通过拆卸取出。",
+    "weight": "250 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "material": [
+      "glass",
+      "myomer_on"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "looks_like": "flask_glass"
+  },
+  {
+    "type": "GENERIC",
+    "id": "cbma_myomer_fiber",
+    "symbol": ",",
+    "color": "brown",
+    "looks_like": "sinew",
+    "name": {
+      "str": "肌球蛋白纤维",
+      "str_pl": "肌球蛋白纤维"
+    },
+    "description": "一束精制的肌球蛋白纤维。可用于修理和制造。",
+    "price": "0 cent",
+    "material": [
+      "myomer_on"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ],
+    "weight": "77 g",
+    "volume": "250 ml",
+    "category": "spare_parts"
+  }
+]

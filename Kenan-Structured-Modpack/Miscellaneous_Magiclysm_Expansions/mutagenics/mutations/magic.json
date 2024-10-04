@@ -1,0 +1,610 @@
+[
+  {
+    "type": "mutation_type",
+    "id": "MANA_ADD"
+  },
+  {
+    "type": "mutation_type",
+    "id": "MANA_MULT"
+  },
+  {
+    "type": "mutation_type",
+    "id": "MANA_REGEN"
+  },
+  {
+    "type": "mutation",
+    "id": "THRESH_MAGIC",
+    "name": {
+      "str": "魔法协调"
+    },
+    "points": 1,
+    "description": "你对魔法的调音提高了自身，允许mroe有效地使用法术。",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_ADD1",
+    "name": {
+      "str": "次等魔力容纳"
+    },
+    "points": 1,
+    "description": "你可以在你的身体里储存比正常略多的魔力。",
+    "cancels": [
+      "MANA_SUB1",
+      "MANA_SUB2",
+      "MANA_SUB3"
+    ],
+    "changes_to": [
+      "MANA_ADD2"
+    ],
+    "types": [
+      "MANA_ADD"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "starting_trait": true,
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_modifier": 500
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_ADD2",
+    "name": {
+      "str": "中等魔力容纳"
+    },
+    "points": 2,
+    "description": "你可以在你的身体里储存比正常多的魔力。",
+    "cancels": [
+      "MANA_SUB1",
+      "MANA_SUB2",
+      "MANA_SUB3"
+    ],
+    "changes_to": [
+      "MANA_ADD3"
+    ],
+    "types": [
+      "MANA_ADD"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "starting_trait": true,
+    "prereqs": [
+      "MANA_ADD1"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_modifier": 1000
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_ADD3",
+    "name": {
+      "str": "高等魔力容纳"
+    },
+    "points": 4,
+    "description": "你可以在你的身体里储存比正常多很多的魔力。",
+    "cancels": [
+      "MANA_SUB1",
+      "MANA_SUB2",
+      "MANA_SUB3"
+    ],
+    "types": [
+      "MANA_ADD"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "starting_trait": true,
+    "prereqs": [
+      "MANA_ADD2"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_modifier": 2000
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_SUB1",
+    "name": {
+      "str": "较低魔力容纳"
+    },
+    "points": -1,
+    "description": "你的身体里储存的魔力比正常略少。",
+    "cancels": [
+      "MANA_ADD1",
+      "MANA_ADD2",
+      "MANA_ADD3"
+    ],
+    "changes_to": [
+      "MANA_SUB2"
+    ],
+    "types": [
+      "MANA_ADD"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_modifier": -500
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_SUB2",
+    "name": {
+      "str": "低效魔力容纳"
+    },
+    "points": -2,
+    "description": "你的身体里储存的魔力比正常少。",
+    "cancels": [
+      "MANA_ADD1",
+      "MANA_ADD2",
+      "MANA_ADD3"
+    ],
+    "changes_to": [
+      "MANA_SUB3"
+    ],
+    "types": [
+      "MANA_ADD"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "prereqs": [
+      "MANA_SUB1"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_modifier": -1000
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_SUB3",
+    "name": {
+      "str": "极低魔力容纳"
+    },
+    "points": -3,
+    "description": "你的身体里储存的魔力比正常少很多。",
+    "cancels": [
+      "MANA_ADD1",
+      "MANA_ADD2",
+      "MANA_ADD3"
+    ],
+    "types": [
+      "MANA_ADD"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "prereqs": [
+      "MANA_SUB2"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_modifier": -2000
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_REGEN1",
+    "name": {
+      "str": "次等魔力再生"
+    },
+    "points": 1,
+    "description": "你的自然魔力再生比正常速度稍快。",
+    "cancels": [
+      "BAD_MANA_REGEN1",
+      "BAD_MANA_REGEN2",
+      "BAD_MANA_REGEN3"
+    ],
+    "changes_to": [
+      "MANA_REGEN2"
+    ],
+    "types": [
+      "MANA_REGEN"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "starting_trait": true,
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_regen_multiplier": 1.1
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_REGEN2",
+    "name": {
+      "str": "中等魔力再生"
+    },
+    "points": 3,
+    "description": "你的自然魔力再生比正常速度快。",
+    "prereqs": [
+      "MANA_REGEN1"
+    ],
+    "cancels": [
+      "BAD_MANA_REGEN1",
+      "BAD_MANA_REGEN2",
+      "BAD_MANA_REGEN3"
+    ],
+    "changes_to": [
+      "MANA_REGEN3"
+    ],
+    "types": [
+      "MANA_REGEN"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_regen_multiplier": 1.25
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_REGEN3",
+    "name": {
+      "str": "高等魔力再生"
+    },
+    "points": 8,
+    "description": "你的自然魔力再生比正常快很多。",
+    "prereqs": [
+      "MANA_REGEN2"
+    ],
+    "cancels": [
+      "BAD_MANA_REGEN1",
+      "BAD_MANA_REGEN2",
+      "BAD_MANA_REGEN3"
+    ],
+    "types": [
+      "MANA_REGEN"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_regen_multiplier": 1.5
+  },
+  {
+    "type": "mutation",
+    "id": "BAD_MANA_REGEN1",
+    "name": {
+      "str": "稍慢魔力再生"
+    },
+    "points": -1,
+    "description": "你的自然魔力再生比正常速度稍慢。",
+    "cancels": [
+      "MANA_REGEN1",
+      "MANA_REGEN2",
+      "MANA_REGEN3"
+    ],
+    "changes_to": [
+      "BAD_MANA_REGEN2"
+    ],
+    "types": [
+      "MANA_REGEN"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "starting_trait": true,
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_regen_multiplier": 0.9
+  },
+  {
+    "type": "mutation",
+    "id": "BAD_MANA_REGEN2",
+    "name": {
+      "str": "缓慢魔力再生"
+    },
+    "points": -3,
+    "description": "你的自然魔力再生比正常速度慢。",
+    "prereqs": [
+      "BAD_MANA_REGEN1"
+    ],
+    "cancels": [
+      "MANA_REGEN1",
+      "MANA_REGEN2",
+      "MANA_REGEN3"
+    ],
+    "changes_to": [
+      "BAD_MANA_REGEN3"
+    ],
+    "types": [
+      "MANA_REGEN"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_regen_multiplier": 0.75
+  },
+  {
+    "type": "mutation",
+    "id": "BAD_MANA_REGEN3",
+    "name": {
+      "str": "极慢魔力再生"
+    },
+    "points": -6,
+    "description": "你的自然魔力再生比正常要慢很多。",
+    "prereqs": [
+      "BAD_MANA_REGEN2"
+    ],
+    "cancels": [
+      "MANA_REGEN1",
+      "MANA_REGEN2",
+      "MANA_REGEN3"
+    ],
+    "types": [
+      "MANA_REGEN"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_regen_multiplier": 0.5
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_MULT1",
+    "name": {
+      "str": "次等魔力敏感"
+    },
+    "points": 1,
+    "description": "你可以感觉到你体内的魔力比正常情况更好一些，现在你能获得较高的魔力储备上限增加25%。",
+    "cancels": [
+      "BAD_MANA_MULT1",
+      "BAD_MANA_MULT2",
+      "BAD_MANA_MULT3"
+    ],
+    "changes_to": [
+      "MANA_MULT2"
+    ],
+    "types": [
+      "MANA_MULT"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "starting_trait": true,
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_multiplier": 1.25
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_MULT2",
+    "name": {
+      "str": "中等魔力敏感"
+    },
+    "points": 3,
+    "description": "你可以感觉到你体内的魔力比正常情况下要好，魔力储备上限增加90%。",
+    "cancels": [
+      "BAD_MANA_MULT1",
+      "BAD_MANA_MULT2",
+      "BAD_MANA_MULT3"
+    ],
+    "changes_to": [
+      "MANA_MULT3"
+    ],
+    "types": [
+      "MANA_MULT"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "prereqs": [
+      "MANA_MULT1"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_multiplier": 1.9
+  },
+  {
+    "type": "mutation",
+    "id": "MANA_MULT3",
+    "name": {
+      "str": "高等魔力敏感"
+    },
+    "points": 8,
+    "description": "你可以感觉到你体内的魔力比正常情况下要好得多，现在你能获得更高的魔力储备上限增加150%。",
+    "cancels": [
+      "BAD_MANA_MULT1",
+      "BAD_MANA_MULT2",
+      "BAD_MANA_MULT3"
+    ],
+    "types": [
+      "MANA_MULT"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "prereqs": [
+      "MANA_MULT2"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_multiplier": 2.5
+  },
+  {
+    "type": "mutation",
+    "id": "BAD_MANA_MULT1",
+    "name": {
+      "str": "稍弱魔力敏感"
+    },
+    "points": -1,
+    "description": "你很难感觉到你体内的魔力，你的魔力储备只能发挥出部分水平，影响了你的上限。",
+    "cancels": [
+      "MANA_MULT1",
+      "MANA_MULT2",
+      "MANA_MULT3"
+    ],
+    "changes_to": [
+      "BAD_MANA_MULT2"
+    ],
+    "types": [
+      "MANA_MULT"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "starting_trait": true,
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_multiplier": 0.85
+  },
+  {
+    "type": "mutation",
+    "id": "BAD_MANA_MULT2",
+    "name": {
+      "str": "较弱魔力敏感"
+    },
+    "points": -3,
+    "description": "你很难感觉到你体内的魔力，你的魔力储备只能发挥出部分水平，影响了你的上限。",
+    "cancels": [
+      "MANA_MULT1",
+      "MANA_MULT2",
+      "MANA_MULT3"
+    ],
+    "changes_to": [
+      "BAD_MANA_MULT3"
+    ],
+    "types": [
+      "MANA_MULT"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "prereqs": [
+      "BAD_MANA_MULT1"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_multiplier": 0.65
+  },
+  {
+    "type": "mutation",
+    "id": "BAD_MANA_MULT3",
+    "name": {
+      "str": "极弱魔力敏感"
+    },
+    "points": -6,
+    "description": "你很难感觉到你体内的魔力，你的魔力储备只能发挥出部分水平，影响了你的上限。",
+    "cancels": [
+      "MANA_MULT1",
+      "MANA_MULT2",
+      "MANA_MULT3"
+    ],
+    "types": [
+      "MANA_MULT"
+    ],
+    "category": [
+      "MAGIC"
+    ],
+    "prereqs": [
+      "BAD_MANA_MULT2"
+    ],
+    "flags": [
+      "NON_THRESH"
+    ],
+    "mana_multiplier": 0.35
+  },
+  {
+    "type": "mutation",
+    "id": "DEBUG_spell_mutation",
+    "name": {
+      "str": "调试法术突变"
+    },
+    "points": 20,
+    "description": "将所有调试法术设置为最高级。",
+    "spells_learned": [
+      [
+        "example_template",
+        10
+      ],
+      [
+        "debug_stamina",
+        0
+      ],
+      [
+        "debug_hp",
+        0
+      ],
+      [
+        "debug_bionic",
+        0
+      ],
+      [
+        "debug_effect",
+        0
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "MAG1",
+    "name": {
+      "str": "先天法术：魔术师之手"
+    },
+    "points": 2,
+    "description": "你对魔术师的调谐允许你召唤一只幽影之手。",
+    "category": [
+      "MAGIC"
+    ],
+    "prereqs": [
+      "MAGUS"
+    ],
+    "spells_learned": [
+      [
+        "mhand",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "MAG2",
+    "name": {
+      "str": "先天法术：冲击波"
+    },
+    "points": 2,
+    "description": "你对魔术师的调谐允许你将敌人炸倒在地。",
+    "category": [
+      "MAGIC"
+    ],
+    "prereqs": [
+      "MAGUS"
+    ],
+    "spells_learned": [
+      [
+        "cone_force",
+        1
+      ]
+    ]
+  }
+]

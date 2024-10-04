@@ -1,0 +1,238 @@
+[
+  {
+    "id": "nano_wire_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "纳米核心弹匣（线型）"
+    },
+    "description": "一种自动弹药生产装置，配有集成电源，可根据需要将原料加工成可用的弹药。不幸的是，它能源耗尽时需要手动重置，且不能手动补充。",
+    "looks_like": "m107a1mag",
+    "weight": "210 g",
+    "volume": "250 ml",
+    "price": "47 USD",
+    "price_postapoc": 750,
+    "material": [
+      "nanite"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "nanite_ammo"
+    ],
+    "default_ammo": "nanite_wire",
+    "capacity": 50,
+    "count": 50,
+    "reload_time": 0,
+    "flags": [
+      "MAG_COMPACT",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "TRADER_AVOID"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "nanite_ammo": 50
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "target": "nano_mag_empty",
+        "active": false,
+        "msg": "你清理并重置你的核心弹匣。",
+        "menu_text": "重置并清空",
+        "moves": 150
+      }
+    ]
+  },
+  {
+    "id": "nano_dart_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "纳米核心弹匣（冲击型）"
+    },
+    "description": "一种自动弹药生产装置，配有集成电源，可根据需要将原料加工成可用的弹药。不幸的是，它能源耗尽时需要手动重置，且不能手动补充。",
+    "looks_like": "m107a1mag",
+    "weight": "210 g",
+    "volume": "250 ml",
+    "price": "47 USD",
+    "price_postapoc": 750,
+    "material": [
+      "nanite"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "nanite_ammo"
+    ],
+    "default_ammo": "nanite_dart",
+    "capacity": 1000,
+    "count": 1000,
+    "reload_time": 0,
+    "flags": [
+      "MAG_COMPACT",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "TRADER_AVOID"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "nanite_ammo": 1000
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "target": "nano_mag_empty",
+        "active": false,
+        "msg": "你清理并重置你的核心弹匣。",
+        "menu_text": "重置并清空",
+        "moves": 150
+      }
+    ]
+  },
+  {
+    "id": "nano_blade_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "纳米核心弹匣（切割型）"
+    },
+    "description": "一种自动弹药生产装置，配有集成电源，可根据需要将原料加工成可用的弹药。不幸的是，它能源耗尽时需要手动重置，且不能手动补充。",
+    "looks_like": "m107a1mag",
+    "weight": "210 g",
+    "volume": "250 ml",
+    "price": "47 USD",
+    "price_postapoc": 750,
+    "material": [
+      "nanite"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "nanite_ammo"
+    ],
+    "default_ammo": "nanite_blade",
+    "capacity": 250,
+    "count": 250,
+    "reload_time": 0,
+    "flags": [
+      "MAG_COMPACT",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "TRADER_AVOID"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "nanite_ammo": 250
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "target": "nano_mag_empty",
+        "active": false,
+        "msg": "你清理并重置你的核心弹匣。",
+        "menu_text": "重置并清空",
+        "moves": 150
+      }
+    ]
+  },
+  {
+    "id": "nano_deathcloud_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "纳米核心弹匣（死亡之云型）"
+    },
+    "description": "一种自动弹药生产装置，配有集成电源，可根据需要将原料加工成可用的弹药。不幸的是，它能源耗尽时需要手动重置，且不能手动补充。",
+    "looks_like": "m107a1mag",
+    "weight": "210 g",
+    "volume": "250 ml",
+    "price": "47 USD",
+    "price_postapoc": 750,
+    "material": [
+      "nanite"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "nanite_deathcloud_ammo"
+    ],
+    "default_ammo": "nanite_deathcloud",
+    "capacity": 5,
+    "count": 5,
+    "reload_time": 0,
+    "flags": [
+      "MAG_COMPACT",
+      "NO_UNLOAD",
+      "NO_RELOAD",
+      "TRADER_AVOID"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "nanite_deathcloud_ammo": 5
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "transform",
+        "target": "nano_mag_empty",
+        "active": false,
+        "msg": "你清理并重置你的核心弹匣。",
+        "menu_text": "重置并清空",
+        "moves": 150
+      }
+    ]
+  },
+  {
+    "id": "nano_mag_empty",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "纳米核心弹匣（空）"
+    },
+    "description": "一种自动弹药生产装置，配有集成电源，可根据需要将原料加工成可用的弹药。不幸的是，它能源耗尽时需要手动重置，且不能手动补充。",
+    "looks_like": "m107a1mag",
+    "weight": "210 g",
+    "volume": "90 ml",
+    "price": "47 USD",
+    "price_postapoc": 750,
+    "material": [
+      "nanite"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "nanite_ammo"
+    ],
+    "capacity": 5,
+    "reload_time": 3,
+    "flags": [
+      "MAG_COMPACT",
+      "TRADER_AVOID"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "nanite_ammo": 5
+        }
+      }
+    ]
+  }
+]

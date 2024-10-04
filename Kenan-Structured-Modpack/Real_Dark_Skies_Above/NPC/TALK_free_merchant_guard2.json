@@ -1,0 +1,34 @@
+[
+  {
+    "id": "TALK_EVAC_GUARD2",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "topic": "TALK_EVAC_GUARD2_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_EVAC_GUARD2_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": "在我的收音机电池没电之前，我就听说了。就我而言，只是另一种目标。",
+    "responses": [
+      {
+        "text": "流浪狗呢？",
+        "topic": "TALK_EVAC_GUARD2_STRAYS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_EVAC_GUARD2_STRAYS",
+    "type": "talk_topic",
+    "dynamic_line": "丧尸很坏，但那些东西真的让我毛骨悚然。我是说只有上帝知道那些蓝色水晶是从哪里来的。",
+    "responses": [
+      {
+        "text": "我知道你的意思。",
+        "topic": "TALK_EVAC_GUARD1"
+      }
+    ]
+  }
+]

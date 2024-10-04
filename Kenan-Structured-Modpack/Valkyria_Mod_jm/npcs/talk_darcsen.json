@@ -1,0 +1,60 @@
+[
+  {
+    "id": "TALK_DARCSEN",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "像你这样的女人是怎么越过守卫的，你非得杀了他们吗？但愿你把他们的尸体砸烂",
+      "no": "像你这样的人是怎么越过警卫的，你非得开枪打他们吗？但愿你把他们的尸体砸烂"
+    },
+    "responses": [
+      {
+        "text": "那么在这个劳动营是什么感觉呢？",
+        "topic": "TALK_DARCSEN_INFO"
+      },
+      {
+        "text": "我受不了你黑头发的味道，你和你的人民应该得到一切！",
+        "topic": "TALK_DARCSEN_QUIT",
+        "effect": [
+          {
+            "u_faction_rep": -25
+          }
+        ]
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_DARCSEN_INFO",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "这太可怕了，想象一下你生活中最糟糕的单调和劳动，然后想象比这更糟糕的事情。我们每天都在为帝国开采拉根特矿，只能得到一些残羹剩饭来养活自己。",
+      "no": "这太可怕了，想象一下你生活中最糟糕的单调和劳动，然后想象比这更糟糕的事情。我们每天都在为帝国开采拉根特矿，只能得到一些残羹剩饭来养活自己。"
+    },
+    "responses": [
+      {
+        "text": "知道了。",
+        "topic": "TALK_DARCSEN"
+      }
+    ]
+  },
+  {
+    "id": "TALK_DARCSEN_QUIT",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "我受够你了！先是帝国，现在是你？。",
+      "no": "我受够你了！先是帝国，现在是你？"
+    },
+    "responses": [
+      {
+        "text": "我不在乎。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "beam_scatterer",
+    "copy-from": "beam_scatterer",
+    "type": "GUNMOD",
+    "name": {
+      "str": "激光散射器"
+    },
+    "description": "一套适用于激光武器的光学器件，可将激光束分解成许多低能激光。增加近身伤害，但大大减少射程。",
+    "install_time": "15 m",
+    "range_modifier": -12,
+    "damage_modifier": {
+      "damage_type": "heat",
+      "amount": 5
+    },
+    "mod_targets": [
+      "rifle",
+      "pistol",
+      "smg",
+      "shotgun"
+    ]
+  },
+  {
+    "id": "heat_ray_conversion",
+    "type": "GUNMOD",
+    "name": {
+      "str": "热射线转换器"
+    },
+    "description": "一种罕见的先进电子装置，可以将激光武器转换成能造成燃烧的火焰武器，但代价是伤害降低和功耗增加。",
+    "weight": "380 g",
+    "volume": "1000 ml",
+    "price": "840 USD",
+    "install_time": "15 m",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray",
+    "location": "lens",
+    "mod_targets": [
+      "rifle",
+      "pistol",
+      "smg",
+      "shotgun"
+    ],
+    "range_modifier": -25,
+    "damage_modifier": {
+      "damage_type": "heat",
+      "amount": -8
+    },
+    "ups_charges_modifier": 50,
+    "ammo_effects": [
+      "FLAME",
+      "STREAM"
+    ],
+    "min_skills": [
+      [
+        "weapon",
+        4
+      ],
+      [
+        "electronics",
+        5
+      ]
+    ]
+  },
+  {
+    "id": "aux_laser",
+    "type": "GUNMOD",
+    "name": {
+      "str": "39式辅助激光器"
+    },
+    "description": "泛太平洋财团的39式激光辅助武器系统是可以安装在军用步枪的枪管下挂件，在主武器的弹药耗尽时，可以继续作战。",
+    "weight": "2600 g",
+    "volume": "500 ml",
+    "price": "5550 USD",
+    "install_time": "30 m",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "magenta",
+    "location": "underbarrel",
+    "mod_targets": [
+      "rifle",
+      "crossbow"
+    ],
+    "gun_data": {
+      "skill": "rifle",
+      "dispersion": 10,
+      "durability": 10,
+      "range": 28,
+      "loudness": 12,
+      "ups_charges": 22,
+      "ranged_damage": {
+        "damage_type": "heat",
+        "amount": 12,
+        "armor_penetration": 15
+      },
+      "ammo_effects": [
+        "LASER",
+        "INCENDIARY"
+      ]
+    },
+    "dispersion_modifier": 15,
+    "min_skills": [
+      [
+        "rifle",
+        2
+      ],
+      [
+        "electronics",
+        4
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD"
+    ]
+  },
+  {
+    "id": "focusing_unit",
+    "type": "GUNMOD",
+    "name": {
+      "str": "聚焦单元"
+    },
+    "description": "一套适用于激光武器的光学器件，可将激光束聚焦成一束细的高能激光。增加了射程，但减少了热能伤害。",
+    "weight": "380 g",
+    "volume": "250 ml",
+    "price": "840 USD",
+    "install_time": "15 m",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray",
+    "location": "lens",
+    "mod_targets": [
+      "rifle",
+      "pistol",
+      "smg",
+      "shotgun"
+    ],
+    "range_modifier": 12,
+    "damage_modifier": {
+      "damage_type": "heat",
+      "amount": -5
+    },
+    "ammo_effects": [
+      "SHOT"
+    ],
+    "min_skills": [
+      [
+        "weapon",
+        4
+      ]
+    ]
+  },
+  {
+    "id": "optimized_capacitor",
+    "type": "GUNMOD",
+    "name": {
+      "str": "优化电容"
+    },
+    "description": "一个精调优化的电容器单元。以降低伤害为代价，大大降低了激光武器的能量消耗。",
+    "weight": "380 g",
+    "volume": "250 ml",
+    "integral_volume": "0 ml",
+    "price": "840 USD",
+    "install_time": "30 m",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "light_gray",
+    "location": "emitter",
+    "mod_targets": [
+      "rifle",
+      "pistol",
+      "smg",
+      "shotgun"
+    ],
+    "damage_modifier": {
+      "damage_type": "heat",
+      "amount": -5
+    },
+    "ups_charges_modifier": -10,
+    "min_skills": [
+      [
+        "weapon",
+        4
+      ],
+      [
+        "electronics",
+        5
+      ]
+    ]
+  },
+  {
+    "id": "high_density_capacitor",
+    "copy-from": "high_density_capacitor",
+    "description": "一个具有更高能量密度的电容器，增加了射程和伤害，但代价是耗电量增加。",
+    "type": "GUNMOD",
+    "name": {
+      "str": "高密度电容"
+    },
+    "install_time": "15 m",
+    "range_modifier": 5,
+    "damage_modifier": {
+      "damage_type": "heat",
+      "amount": 5
+    },
+    "ups_charges_modifier": 10,
+    "mod_targets": [
+      "rifle",
+      "pistol",
+      "smg",
+      "shotgun"
+    ]
+  }
+]

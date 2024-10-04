@@ -1,0 +1,331 @@
+[
+  {
+    "id": "clay_solution_extractor",
+    "type": "GENERIC",
+    "category": "tools",
+    "name": {
+      "str": "粘土蒸发皿"
+    },
+    "description": "一个浅平的带有盖子的大碗，可以用于蒸发水分。容量约20升，最好配合便携式木炭烤架一起使用。",
+    "weight": "5480 g",
+    "volume": "20 L",
+    "price": "25 USD",
+    "bashing": 1,
+    "material": [
+      "clay"
+    ],
+    "symbol": ")",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "45 kg"
+      }
+    ],
+    "qualities": [
+      [
+        "COOK",
+        3
+      ],
+      [
+        "BOIL",
+        2
+      ],
+      [
+        "CONTAIN",
+        1
+      ],
+      [
+        "CHEM",
+        1
+      ]
+    ],
+    "use_action": "HEAT_FOOD",
+    "flags": [
+      "ALLOWS_REMOTE_USE",
+      "TARDIS"
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "clay_solution_extractor",
+    "id_suffix": "evaporation_salt_water",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_CONTAINERS",
+    "skill_used": "fabrication",
+    "skills_required": [
+      "survival",
+      1
+    ],
+    "difficulty": 2,
+    "time": "80 m",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "water",
+          3
+        ],
+        [
+          "water_clean",
+          3
+        ]
+      ],
+      [
+        [
+          "clay_lump",
+          15
+        ]
+      ],
+      [
+        [
+          "cordage_short",
+          2,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "leather",
+          3
+        ],
+        [
+          "fur",
+          3
+        ],
+        [
+          "birchbark",
+          9
+        ]
+      ],
+      [
+        [
+          "adhesive",
+          2,
+          "LIST"
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "clay_solution_extractor_salt_water",
+    "id_suffix": "evaporation_salt_water",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "survival",
+    "skills_required": [
+      "cooking",
+      2
+    ],
+    "difficulty": 1,
+    "time": "5 seconds",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "salt_water",
+          80
+        ]
+      ],
+      [
+        [
+          "clay_solution_extractor",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "clay_solution_extractor_starch_water",
+    "id_suffix": "evaporation_starch_water",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "survival",
+    "skills_required": [
+      "cooking",
+      2
+    ],
+    "difficulty": 1,
+    "time": "5 seconds",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "starch_water",
+          40
+        ]
+      ],
+      [
+        [
+          "water",
+          40
+        ],
+        [
+          "water_clean",
+          40
+        ]
+      ],
+      [
+        [
+          "clay_solution_extractor",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "id": "clay_solution_extractor_salt_water",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": {
+      "str": "粘土蒸发皿（盐水）"
+    },
+    "description": "一个浅平的带有盖子的大碗，可以用于蒸发水分。这个装满了盐水，可以放在烟熏架上加热",
+    "weight": "5480 g",
+    "volume": "20 L",
+    "price": "25 USD",
+    "bashing": 4,
+    "material": [
+      "clay"
+    ],
+    "symbol": ")",
+    "color": "brown",
+    "flags": [
+      "SMOKABLE"
+    ],
+    "smoking_result": "clay_solution_extractor_salt"
+  },
+  {
+    "id": "clay_solution_extractor_starch_water",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": {
+      "str": "粘土蒸发皿（淀粉水）"
+    },
+    "description": "一个浅平的带有盖子的大碗，可以用于蒸发水分。这个装满了淀粉水，可以放在烟熏架上加热",
+    "weight": "5480 g",
+    "volume": "20 L",
+    "price": "25 USD",
+    "bashing": 4,
+    "material": [
+      "clay"
+    ],
+    "symbol": ")",
+    "color": "brown",
+    "flags": [
+      "SMOKABLE"
+    ],
+    "smoking_result": "clay_solution_extractor_flour"
+  },
+  {
+    "id": "clay_solution_extractor_salt",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": {
+      "str": "粘土蒸发皿（盐）"
+    },
+    "description": "一个浅平的带有盖子的大碗，可以用于蒸发水分。这个装满了盐，你现在可以把它拆开了",
+    "weight": "5480 g",
+    "volume": "20 L",
+    "price": "25 USD",
+    "bashing": 1,
+    "material": [
+      "clay"
+    ],
+    "symbol": ")",
+    "color": "brown"
+  },
+  {
+    "id": "clay_solution_extractor_flour",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": {
+      "str": "粘土蒸发盘（面粉）"
+    },
+    "description": "一个浅平的带有盖子的大碗，可以用于蒸发水分。这个装满了干面粉，你现在可以把它拆开了",
+    "weight": "5480 g",
+    "volume": "20 L",
+    "price": "25 USD",
+    "bashing": 1,
+    "material": [
+      "clay"
+    ],
+    "symbol": ")",
+    "color": "brown"
+  },
+  {
+    "type": "recipe",
+    "result": "salt",
+    "result_mult": 8,
+    "id_suffix": "evaporation_salt_water_disassemble",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "survival",
+    "skills_required": [
+      "cooking",
+      2
+    ],
+    "difficulty": 1,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "byproducts": [
+      [
+        "clay_solution_extractor"
+      ]
+    ],
+    "time": "2 minutes",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_solution_extractor_salt",
+          1
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "flour",
+    "result_mult": 6,
+    "id_suffix": "evaporation_starch_water_disassemble",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_MATERIALS",
+    "skill_used": "survival",
+    "skills_required": [
+      "cooking",
+      2
+    ],
+    "difficulty": 1,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "byproducts": [
+      [
+        "clay_solution_extractor"
+      ]
+    ],
+    "time": "2 minutes",
+    "autolearn": true,
+    "components": [
+      [
+        [
+          "clay_solution_extractor_flour",
+          1
+        ]
+      ]
+    ]
+  }
+]

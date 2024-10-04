@@ -1,0 +1,32 @@
+[
+  {
+    "id": "TALK_steamtown_guard_start",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "您好，夫人。",
+      "no": "您好，先生。"
+    },
+    "responses": [
+      {
+        "text": "谢谢，你知道我在哪里吗？",
+        "topic": "TALK_steamtown_guard_go"
+      }
+    ]
+  },
+  {
+    "id": "TALK_steamtown_guard_go",
+    "type": "talk_topic",
+    "dynamic_line": "您偶然发现了我们的小镇，按我的话说，在这乱世里有点像一处绿洲！请不要太过拘束，但也不要耽搁太久。",
+    "responses": [
+      {
+        "text": "明白了。谢谢你。",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "我会回来的。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

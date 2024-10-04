@@ -1,0 +1,34 @@
+[
+  {
+    "type": "furniture",
+    "id": "f_gnome",
+    "name": "园艺机器人",
+    "description": "一个园艺机器人，安静而且毫无威胁。",
+    "symbol": "g",
+    "looks_like": "mon_kreck",
+    "color": "white",
+    "move_cost_mod": -1,
+    "required_str": 1,
+    "flags": [
+      "TRANSPARENT",
+      "EASY_DECONSTRUCT"
+    ],
+    "deployed_item": "garden_gnome",
+    "examine_action": "deployed_furniture",
+    "bash": {
+      "str_min": 1,
+      "str_max": 40,
+      "sound": "krash!",
+      "sound_fail": "krak.",
+      "items": [
+        {
+          "item": "ceramic_shard",
+          "count": [
+            2,
+            6
+          ]
+        }
+      ]
+    }
+  }
+]

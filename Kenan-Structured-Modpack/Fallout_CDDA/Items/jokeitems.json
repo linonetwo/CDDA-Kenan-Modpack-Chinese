@@ -1,0 +1,63 @@
+[
+  {
+    "id": "bag_canvas_westtek_nylon",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "West Tek尼龙袋"
+    },
+    "description": "一个大尼龙袋。你还记得大灾变前人们对这些东西大发脾气。",
+    "weight": "415 g",
+    "volume": "1 L",
+    "price": "0 cent",
+    "to_hit": -5,
+    "material": [
+      "cotton"
+    ],
+    "symbol": ")",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "15 L",
+        "max_contains_weight": "30 kg",
+        "spoil_multiplier": 0.7,
+        "moves": 400
+      }
+    ]
+  },
+  {
+    "id": "bottle_plastic_nukadark",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "玻璃瓶"
+    },
+    "description": "核子可乐瓶形状的塑料外壳。里面有个玻璃瓶…倒得不好。",
+    "weight": "300 g",
+    "volume": "1000 ml",
+    "price": "0 cent",
+    "to_hit": 1,
+    "bashing": 2,
+    "material": [
+      "glass"
+    ],
+    "symbol": ")",
+    "color": "cyan",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g"
+      }
+    ],
+    "qualities": [
+      [
+        "BOIL",
+        1
+      ]
+    ]
+  }
+]

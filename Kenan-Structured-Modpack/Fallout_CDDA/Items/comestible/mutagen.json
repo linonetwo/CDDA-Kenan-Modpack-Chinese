@@ -1,0 +1,28 @@
+[
+  {
+    "id": "iv_mutagen_fev",
+    "copy-from": "iv_mutagen_flavor",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "强迫进化病毒"
+    },
+    "description": "一种超浓缩、发光、粘稠的诱变剂。你需要注射器注射…如果你真的想？",
+    "healthy": -10,
+    "stim": -10,
+    "addiction_potential": 12,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你注射了强制进化病毒。",
+      "tools_needed": {
+        "syringe": -1
+      },
+      "vitamins": [
+        [
+          "mutagen_alpha",
+          450,
+          550
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,1029 @@
+[
+  {
+    "id": "mon_small_spider",
+    "//": "Size words are meaningless for mutant bugs. Use comparisons to real animals.",
+    "type": "MONSTER",
+    "copy-from": "mon_small_bug",
+    "default_faction": "spider_cellar",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "aggression": -10,
+    "morale": 50,
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "abstract": "mon_large_spider",
+    "type": "MONSTER",
+    "name": {
+      "str": "大型蜘蛛"
+    },
+    "copy-from": "mon_large_bug",
+    "default_faction": "spider",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "abstract": "mon_giant_spider",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蜘蛛"
+    },
+    "copy-from": "mon_giant_bug",
+    "default_faction": "spider",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "abstract": "mon_mega_spider",
+    "type": "MONSTER",
+    "name": {
+      "str": "超巨型蜘蛛"
+    },
+    "copy-from": "mon_mega_bug",
+    "default_faction": "spider",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK"
+    ]
+  },
+  {
+    "id": "mon_spider_cellar_giant_s",
+    "alias": "mon_small_cellar_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_spider",
+    "name": {
+      "str": "巨型地窖蜘蛛幼体"
+    },
+    "description": "一只刚孵化的巨型地窖蜘蛛，体型和老鼠一般。体型太小了，不能产生太多的毒液，但仍然像成年人一样迅速和敏捷。",
+    "symbol": "s",
+    "color": "brown",
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_spider_cellar_giant"
+    },
+    "//": "replacing VENOM flag with attack_effs for more customization",
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 30,
+        "duration": 50
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_spider_cellar_giant",
+    "alias": "mon_large_cellar_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_large_spider",
+    "name": {
+      "str": "巨型地窖蜘蛛"
+    },
+    "//": "Adding em-dashes for some serial descriptors. Hopefully helps clarity.",
+    "description": "一只焦躁不安的变异蜘蛛，体型和狗差不多，有着相对小的身体和细长的腿。它较小的同类以敏捷和捕食其他蜘蛛而闻名。",
+    "symbol": "s",
+    "color": "brown",
+    "aggression": -20,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 30,
+        "duration": 50
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_cellar_spider",
+      "baby_count": 2,
+      "baby_timer": 9
+    },
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_small_jumping_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_spider",
+    "name": {
+      "str": "巨型跳蛛幼体"
+    },
+    "description": "一只刚孵化的变异跳蛛，体型和老鼠一般。",
+    "default_faction": "spider_jumping",
+    "symbol": "s",
+    "dodge": 9,
+    "color": "white",
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_spider_jumping_giant"
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 30,
+        "duration": 50
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "FIRE",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_tame_small_jumping_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_jumping_spider",
+    "description": "一只刚孵化的变异跳蛛，体型和老鼠一般。这只似乎特别聪明。",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_spider_jumping_giant",
+    "alias": "mon_large_jumping_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_large_spider",
+    "name": {
+      "str": "巨型跳蛛"
+    },
+    "description": "一只体型和狗一般大的巨型跳蛛。它有着巨大的前肢和两对好奇的眼睛。",
+    "default_faction": "spider_jumping",
+    "symbol": "s",
+    "color": "white",
+    "aggression": -20,
+    "dodge": 8,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 10
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_jumping_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "upgrades": {
+      "half_life": 30,
+      "into": "mon_giant_jumping_spider"
+    },
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 2,
+        "max_range": 5
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_giant_jumping_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_giant_spider",
+    "name": {
+      "str": "巨型跳蛛"
+    },
+    "description": "一只体型和美洲狮一般大的巨型跳蛛。它有着巨大的前肢和两对好奇的眼睛。",
+    "default_faction": "spider_jumping",
+    "symbol": "S",
+    "color": "white",
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 20
+      }
+    ],
+    "upgrades": {
+      "half_life": 60,
+      "into": "mon_mega_jumping_spider"
+    },
+    "reproduction": {
+      "baby_egg": "egg_jumping_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 6,
+        "max_range": 8
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_mega_jumping_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_mega_spider",
+    "name": {
+      "str": "超巨型跳蛛"
+    },
+    "description": "一只体型和马一般大的巨型跳蛛。它有着巨大的前肢和两对好奇的眼睛。",
+    "default_faction": "spider_jumping",
+    "symbol": "S",
+    "color": "i_white",
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 20
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_jumping_spider",
+      "baby_count": 2,
+      "baby_timer": 10
+    },
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 20,
+        "max_range": 20
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "PET_MOUNTABLE"
+    ]
+  },
+  {
+    "id": "mon_small_trapdoor_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_spider",
+    "name": {
+      "str": "巨型活板门蜘蛛幼体"
+    },
+    "description": "一只刚孵化的变异螲蟷，体型和老鼠一般。",
+    "default_faction": "spider_trapdoor",
+    "symbol": "s",
+    "dodge": 9,
+    "color": "blue",
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_large_trapdoor_spider"
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 30,
+        "duration": 50
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "FIRE",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_tame_small_trapdoor_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_trapdoor_spider",
+    "description": "一只刚孵化的变异螲蟷，体型和老鼠一般。这只看起来特别可爱。",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "GRABS",
+      "CAN_DIG",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_large_trapdoor_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_large_spider",
+    "name": {
+      "str": "巨型活板门蜘蛛"
+    },
+    "description": "一只体型和狗一般大的巨型活板门蜘蛛。地面以下，它会挖一个深坑，作为陷阱来困住粗心的猎物。",
+    "default_faction": "spider_trapdoor",
+    "symbol": "s",
+    "color": "blue",
+    "aggression": -20,
+    "dodge": 8,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 10
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_trapdoor_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "upgrades": {
+      "half_life": 30,
+      "into": "mon_giant_trapdoor_spider"
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "GRABS",
+      "CAN_DIG",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_spider_trapdoor_giant",
+    "alias": "mon_giant_trapdoor_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_giant_spider",
+    "name": {
+      "str": "巨型活板门蜘蛛"
+    },
+    "description": "一只体型和美洲狮一般大的巨型活板门蜘蛛。在地面以下，它会挖一个深坑，作为陷阱来困住粗心的猎物。",
+    "default_faction": "spider_trapdoor",
+    "symbol": "S",
+    "color": "blue",
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 20
+      }
+    ],
+    "upgrades": {
+      "half_life": 60,
+      "into": "mon_mega_web_spider"
+    },
+    "reproduction": {
+      "baby_egg": "egg_trapdoor_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "GRABS",
+      "CAN_DIG",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_mega_trapdoor_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_mega_spider",
+    "name": {
+      "str": "超巨型活板门蜘蛛"
+    },
+    "description": "一种体型和马一般大的巨型活板门蜘蛛。地面以下，它会挖一个深坑，作为陷阱来困住粗心的猎物。",
+    "default_faction": "spider_trapdoor",
+    "symbol": "S",
+    "color": "i_blue",
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 20
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_trapdoor_spider",
+      "baby_count": 2,
+      "baby_timer": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "GRABS",
+      "CAN_DIG",
+      "WEBWALK",
+      "PET_MOUNTABLE"
+    ]
+  },
+  {
+    "id": "mon_spider_web_s",
+    "alias": "mon_small_web_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_spider",
+    "name": {
+      "str": "巨网蜘蛛幼体"
+    },
+    "description": "一种刚孵化的变异网蛛，体型和老鼠一般。它等待着猎物落入它在树木间编织的大网中。",
+    "default_faction": "spider_web",
+    "symbol": "s",
+    "dodge": 9,
+    "color": "yellow",
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_large_web_spider"
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 30,
+        "duration": 50
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "FIRE",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_tame_small_web_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_web_spider",
+    "description": "一只刚孵化的变异网蛛，体型和老鼠一般。这只似乎相当友好。",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_large_web_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_large_spider",
+    "name": {
+      "str": "巨型网蛛"
+    },
+    "description": "一只体型和狗一般大的巨型蜘蛛。它等待着猎物落入它在树木间编织的大网中。",
+    "default_faction": "spider_web",
+    "symbol": "s",
+    "color": "yellow",
+    "aggression": -20,
+    "dodge": 8,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 10
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_web_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "upgrades": {
+      "half_life": 30,
+      "into": "mon_giant_web_spider"
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_spider_web",
+    "alias": "mon_giant_web_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_giant_spider",
+    "name": {
+      "str": "巨型网蛛"
+    },
+    "description": "一只体型和美洲狮一般大的巨型网蛛。它等待着猎物落入它在树木间编织的大网中。",
+    "default_faction": "spider_web",
+    "symbol": "S",
+    "color": "yellow",
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 20
+      }
+    ],
+    "upgrades": {
+      "half_life": 60,
+      "into": "mon_mega_web_spider"
+    },
+    "reproduction": {
+      "baby_egg": "egg_web_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_mega_web_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_mega_spider",
+    "name": {
+      "str": "超巨型网蛛"
+    },
+    "description": "一只体型和马一般大的巨型蜘蛛。它等待着猎物落入它在树木间编织的大网中。",
+    "default_faction": "spider_web",
+    "symbol": "S",
+    "color": "i_yellow",
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 20
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_web_spider",
+      "baby_count": 2,
+      "baby_timer": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "PET_MOUNTABLE"
+    ]
+  },
+  {
+    "id": "mon_spider_widow_giant_s",
+    "alias": "mon_small_blackwidow_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_spider",
+    "name": {
+      "str": "巨黑寡妇幼蛛"
+    },
+    "description": "一只刚孵化的变异黑寡妇。这种蜘蛛毒素更加猛烈，犹如噩梦来袭。",
+    "default_faction": "spider_widow",
+    "symbol": "s",
+    "dodge": 9,
+    "color": "white",
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_spider_widow_giant"
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 60,
+        "duration": 50
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "FIRE",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_spider_widow_giant",
+    "alias": "mon_large_blackwidow_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_large_spider",
+    "name": {
+      "str": "巨黑寡妇蜘蛛"
+    },
+    "description": "一只体型和狗一般大的巨型蜘蛛。这种蜘蛛毒素更加猛烈，犹如噩梦来袭。",
+    "default_faction": "spider_widow",
+    "symbol": "s",
+    "color": "white",
+    "dodge": 8,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 90,
+        "duration": 100
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_blackwidow_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_small_wolf_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_spider",
+    "name": {
+      "str": "巨狼蛛幼体"
+    },
+    "description": "一只刚孵化的变异狼蛛，体型和老鼠一般。",
+    "default_faction": "spider_wolf",
+    "symbol": "s",
+    "speed": 150,
+    "attack_cost": 150,
+    "dodge": 9,
+    "color": "brown",
+    "upgrades": {
+      "age_grow": 12,
+      "into": "mon_spider_wolf_giant"
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 30,
+        "duration": 50
+      }
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "FIRE",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_tame_small_wolf_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_small_wolf_spider",
+    "description": "一只刚孵化的变异狼蛛，体型和老鼠一般。这只看起来特别可爱，毛茸茸的。",
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily dances around with its multiple legs while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_large_wolf_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_large_spider",
+    "name": {
+      "str": "巨型狼蛛"
+    },
+    "description": "一只体型和狗一般大的巨型狼蛛。它在捕捉和消化猎物上表现出优秀的机动性和攻击性。",
+    "default_faction": "spider_wolf",
+    "symbol": "s",
+    "color": "brown",
+    "speed": 120,
+    "attack_cost": 120,
+    "aggression": 20,
+    "dodge": 8,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 10
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_wolf_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "upgrades": {
+      "half_life": 30,
+      "into": "mon_giant_wolf_spider"
+    },
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_spider_wolf_giant",
+    "alias": "mon_giant_wolf_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_giant_spider",
+    "name": {
+      "str": "巨型狼蛛"
+    },
+    "description": "一只巨型变异蜘蛛，比一只真正的狼大两倍。它在捕捉和消化猎物上表现出优秀的机动性和攻击性。",
+    "default_faction": "spider_wolf",
+    "symbol": "S",
+    "color": "brown",
+    "speed": 110,
+    "attack_cost": 110,
+    "aggression": 20,
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 20
+      }
+    ],
+    "upgrades": {
+      "half_life": 60,
+      "into": "mon_mega_wolf_spider"
+    },
+    "reproduction": {
+      "baby_egg": "egg_wolf_spider",
+      "baby_count": 1,
+      "baby_timer": 10
+    },
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CLIMBS",
+      "PET_MOUNTABLE"
+    ]
+  },
+  {
+    "id": "mon_mega_wolf_spider",
+    "type": "MONSTER",
+    "copy-from": "mon_mega_spider",
+    "name": {
+      "str": "超巨型狼蛛"
+    },
+    "description": "一只体型和马一般大的巨型狼蛛。它在捕捉和消化猎物上表现出优秀的机动性和攻击性。",
+    "default_faction": "spider_wolf",
+    "symbol": "S",
+    "color": "i_brown",
+    "aggression": 60,
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 50,
+        "duration": 20
+      }
+    ],
+    "reproduction": {
+      "baby_egg": "egg_wolf_spider",
+      "baby_count": 2,
+      "baby_timer": 10
+    },
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "PET_MOUNTABLE"
+    ]
+  }
+]

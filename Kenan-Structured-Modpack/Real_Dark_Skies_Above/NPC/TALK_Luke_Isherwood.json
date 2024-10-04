@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TALK_ISHERWOOD_LUKE_TOPICS",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "effect": {
+          "u_add_var": "u_Talk_To_LukeIsherwood_about_Xenoids",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "condition": {
+          "not": {
+            "u_has_var": "u_Talk_To_LukeIsherwood_about_Xenoids",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_ISHERWOOD_LUKE_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_ISHERWOOD_LUKE_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": "如果他们真的是外星人，我挺知道他们是从哪儿来的。",
+    "responses": [
+      {
+        "text": "也许对有些事儿还是无知为妙。",
+        "topic": "TALK_ISHERWOOD_LUKE_TOPICS"
+      }
+    ]
+  }
+]

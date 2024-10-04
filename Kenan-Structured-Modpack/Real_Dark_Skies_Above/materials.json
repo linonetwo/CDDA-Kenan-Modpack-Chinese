@@ -1,0 +1,172 @@
+[
+  {
+    "type": "material",
+    "id": "dkz_blend_mat",
+    "name": "棱柱混合金属",
+    "density": 30,
+    "specific_heat_liquid": 0.79,
+    "specific_heat_solid": 0.54,
+    "latent_heat": 390,
+    "resist": {
+      "bash": 6,
+      "cut": 6,
+      "acid": 6,
+      "heat": 7,
+      "electric": 0,
+      "bullet": 5
+    },
+    "chip_resist": 30,
+    "repaired_with": "dkz_blend_scrap",
+    "dmg_adj": [
+      "划伤",
+      "凹损",
+      "砸扁",
+      "破碎"
+    ],
+    "bash_dmg_verb": "凹损",
+    "cut_dmg_verb": "刮花",
+    "burn_products": [
+      [
+        "dkz_blend_scrap",
+        1
+      ]
+    ]
+  },
+  {
+    "type": "material",
+    "id": "dkz_weave_mat",
+    "name": "显色织物",
+    "density": 2,
+    "specific_heat_liquid": 1.7,
+    "specific_heat_solid": 1.7,
+    "latent_heat": 42,
+    "soft": true,
+    "resist": {
+      "bash": 3,
+      "cut": 3,
+      "acid": 9,
+      "heat": 2,
+      "electric": 2,
+      "bullet": 2
+    },
+    "chip_resist": 7,
+    "repaired_with": "dkz_weave_scrap",
+    "salvaged_into": "dkz_weave_scrap",
+    "dmg_adj": [
+      "撕裂",
+      "扯烂",
+      "碎裂",
+      "破烂"
+    ],
+    "bash_dmg_verb": "撕裂",
+    "cut_dmg_verb": "斩击",
+    "burn_data": [
+      {
+        "fuel": 1,
+        "smoke": 1,
+        "burn": 1,
+        "volume_per_turn": "650 ml"
+      },
+      {
+        "fuel": 1,
+        "smoke": 1,
+        "burn": 1
+      },
+      {
+        "fuel": 1,
+        "smoke": 1,
+        "burn": 2
+      }
+    ]
+  },
+  {
+    "type": "material",
+    "id": "dkz_biopoly_mat",
+    "name": "胶原聚合物",
+    "density": 8,
+    "specific_heat_liquid": 1.6,
+    "specific_heat_solid": 1.6,
+    "latent_heat": 50,
+    "resist": {
+      "bash": 3,
+      "cut": 3,
+      "acid": 7,
+      "heat": 5,
+      "electric": 2,
+      "bullet": 2
+    },
+    "chip_resist": 6,
+    "repaired_with": "dkz_polymer_scrap",
+    "salvaged_into": "dkz_polymer_scrap",
+    "dmg_adj": [
+      "刮花",
+      "斩击",
+      "裂纹",
+      "破碎"
+    ],
+    "bash_dmg_verb": "凹损",
+    "cut_dmg_verb": "穿孔",
+    "burn_data": [
+      {
+        "fuel": 1,
+        "smoke": 2,
+        "burn": 1,
+        "volume_per_turn": "750 ml"
+      },
+      {
+        "fuel": 1,
+        "smoke": 3,
+        "burn": 2
+      },
+      {
+        "fuel": 1,
+        "smoke": 5,
+        "burn": 5
+      }
+    ]
+  },
+  {
+    "type": "material",
+    "id": "dkz_biogel_mat",
+    "name": "乳化水凝胶",
+    "density": 8,
+    "specific_heat_liquid": 1.6,
+    "specific_heat_solid": 1.6,
+    "latent_heat": 200,
+    "resist": {
+      "bash": 1,
+      "cut": 1,
+      "acid": 2,
+      "heat": 1,
+      "electric": 1,
+      "bullet": 1
+    },
+    "chip_resist": 2,
+    "dmg_adj": [
+      "轻微损坏",
+      "损坏",
+      "严重损坏",
+      "彻底损坏"
+    ],
+    "bash_dmg_verb": "碎浆的",
+    "cut_dmg_verb": "斩击",
+    "burn_data": [
+      {
+        "fuel": 1,
+        "smoke": 2,
+        "burn": 1,
+        "volume_per_turn": "750 ml"
+      },
+      {
+        "fuel": 1,
+        "smoke": 3,
+        "burn": 2
+      },
+      {
+        "fuel": 1,
+        "smoke": 5,
+        "burn": 5
+      }
+    ]
+  }
+]

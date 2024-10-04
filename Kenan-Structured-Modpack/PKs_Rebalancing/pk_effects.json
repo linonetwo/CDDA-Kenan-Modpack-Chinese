@@ -1,0 +1,996 @@
+[
+  {
+    "type": "effect_type",
+    "id": "gauze",
+    "base_mods": {
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_chance": [
+        800
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "rad_reduce",
+    "int_add_val": 1,
+    "max_intensity": 6,
+    "base_mods": {
+      "rad_min": [
+        -0.6
+      ],
+      "rad_chance": [
+        20
+      ]
+    },
+    "scaling_mods": {
+      "health_amount": [
+        -1
+      ],
+      "rad_chance": [
+        -0.4
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "rad_tenths",
+    "int_add_val": 1,
+    "max_intensity": 9,
+    "base_mods": {
+      "rad_min": [
+        1
+      ],
+      "rad_max": [
+        2
+      ],
+      "rad_chance": [
+        10
+      ],
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_chance": [
+        100
+      ]
+    },
+    "scaling_mods": {
+      "rad_chance": [
+        -0.5
+      ],
+      "h_mod_chance": [
+        -10
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "rad_fives",
+    "int_add_val": 1,
+    "max_intensity": 5,
+    "base_mods": {
+      "rad_min": [
+        0
+      ],
+      "rad_max": [
+        5
+      ],
+      "rad_chance": [
+        10
+      ],
+      "rad_max_val": [
+        240
+      ],
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_chance": [
+        20
+      ]
+    },
+    "scaling_mods": {
+      "rad_chance": [
+        -1
+      ],
+      "h_mod_chance": [
+        -1
+      ],
+      "rad_max_val": [
+        80
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "chelated_iron",
+    "name": [
+      "铁离子",
+      "铁离子",
+      "螯合铁",
+      "螯合铁",
+      "铁离子过量",
+      "铁离子过量"
+    ],
+    "desc": [
+      "你吃的东西从来不是用来吃的，而且含有重金属。"
+    ],
+    "int_add_val": 1,
+    "max_intensity": 6,
+    "base_mods": {
+      "thirst_min": [
+        1
+      ],
+      "thirst_tick": [
+        10
+      ],
+      "thirst_chance": [
+        10
+      ],
+      "thirst_max_val": [
+        25
+      ],
+      "vomit_chance": [
+        3000
+      ]
+    },
+    "scaling_mods": {
+      "thirst_chance": [
+        -1
+      ],
+      "thirst_max_val": [
+        35
+      ],
+      "vomit_chance": [
+        -300,
+        -200
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "doom_stimpack",
+    "name": [
+      "刺激性疲劳",
+      "挥之不去的刺激",
+      "缠绵的",
+      "撕扯！"
+    ],
+    "max_intensity": 4,
+    "apply_message": "你眼前一片红色！",
+    "apply_memorial_log": "Got stimmed up for some intense action, destroying their health.",
+    "remove_message": "你为此感到不健康，但至少刺激消失了。",
+    "int_add_val": 1,
+    "int_decay_step": -1,
+    "int_decay_tick": 39,
+    "max_duration": 39,
+    "decay_messages": [
+      [
+        "你觉得刺激开始征税，因为他们磨损你。",
+        "bad"
+      ],
+      [
+        "你感觉不像以前那么糟了。",
+        "neutral"
+      ],
+      [
+        "冲刺带着你，撕扯！",
+        "good"
+      ]
+    ],
+    "removes_effects": [
+      "winded"
+    ],
+    "hurt_sizing": true,
+    "base_mods": {
+      "speed_mod": [
+        -15
+      ],
+      "str_mod": [
+        -3
+      ],
+      "dex_mod": [
+        -4
+      ],
+      "int_mod": [
+        -1
+      ],
+      "per_mod": [
+        -3
+      ],
+      "pkill_amount": [
+        30
+      ],
+      "sleepiness_amount": [
+        -50
+      ],
+      "stamina_min": [
+        -3
+      ],
+      "health_min": [
+        -1
+      ],
+      "health_min_val": [
+        -60
+      ],
+      "h_mod_min": [
+        -1
+      ],
+      "h_mod_min_val": [
+        -40
+      ],
+      "hurt_min": [
+        2
+      ],
+      "hurt_chance": [
+        10
+      ],
+      "hurt_tick": [
+        10
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        20
+      ],
+      "str_mod": [
+        5
+      ],
+      "dex_mod": [
+        4
+      ],
+      "int_mod": [
+        -2
+      ],
+      "per_mod": [
+        2
+      ],
+      "pkill_amount": [
+        10
+      ],
+      "fatigue_min": [
+        -1
+      ],
+      "stamina_min": [
+        4
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "stamina_regen",
+    "name": [
+      "体魄补药"
+    ],
+    "int_add_val": 1,
+    "max_intensity": 5,
+    "base_mods": {
+      "stamina_min": [
+        3
+      ],
+      "dex_mod": [
+        1
+      ],
+      "pkill_amount": [
+        5
+      ],
+      "sleepiness_amount": [
+        -20
+      ],
+      "thirst_amount": [
+        15
+      ]
+    },
+    "scaling_mods": {
+      "stamina_min": [
+        3
+      ],
+      "per_mod": [
+        -1
+      ],
+      "pkill_amount": [
+        5
+      ],
+      "sleepiness_amount": [
+        -10
+      ],
+      "thirst_amount": [
+        15
+      ],
+      "vomit_chance": [
+        250
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "doom_unhealth",
+    "int_add_val": 1,
+    "max_intensity": 3,
+    "base_mods": {
+      "health_min": [
+        -0.5
+      ],
+      "h_mod_min": [
+        -1
+      ]
+    },
+    "scaling_mods": {
+      "health_min": [
+        -0.5
+      ],
+      "h_mod_min": [
+        -1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "spider_web_slow",
+    "name": [
+      "蜘蛛毒"
+    ],
+    "int_add_val": 1,
+    "max_intensity": 10,
+    "resist_traits": [
+      "POISRESIST",
+      "EATPOISON"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        -6,
+        -5
+      ],
+      "pain_amount": [
+        10,
+        4
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -1,
+        -0.5
+      ],
+      "pain_amount": [
+        4,
+        3
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "spider_web_alpha",
+    "int_add_val": 1,
+    "max_intensity": 5,
+    "resist_traits": [
+      "POISRESIST",
+      "EATPOISON"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        -3,
+        -1
+      ],
+      "dex_mod": [
+        -1
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -3,
+        -1
+      ],
+      "dex_mod": [
+        -0.5,
+        -0.25
+      ],
+      "str_mod": [
+        -0.75,
+        -0.5
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "spider_web_omega",
+    "int_add_val": 1,
+    "max_intensity": 5,
+    "int_decay_step": -1,
+    "int_decay_tick": 200,
+    "resist_traits": [
+      "POISRESIST",
+      "EATPOISON"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        -2,
+        0
+      ],
+      "dex_mod": [
+        -1
+      ],
+      "sleep_chance": [
+        100,
+        150
+      ],
+      "sleep_min": [
+        100,
+        50
+      ],
+      "sleep_max": [
+        300,
+        100
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -2,
+        0
+      ],
+      "dex_mod": [
+        -0.75,
+        -0.5
+      ],
+      "str_mod": [
+        -0.25,
+        0
+      ],
+      "sleep_chance": [
+        -15
+      ],
+      "sleep_min": [
+        50,
+        25
+      ],
+      "sleep_max": [
+        100,
+        50
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "spider_web_mu",
+    "resist_traits": [
+      "POISRESIST",
+      "EATPOISON"
+    ],
+    "base_mods": {
+      "speed_mod": [
+        -10
+      ],
+      "hurt_min": [
+        3,
+        2
+      ],
+      "hurt_chance": [
+        20,
+        50
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "antibiotics_1",
+    "//": "This provides temporary immunity to various 'minor' diseases, as well as affecting longterm health.",
+    "int_add_val": 1,
+    "apply_message": "你咽下一片抗生素…和一片希望。",
+    "remove_message": "你的身体免疫力较弱。",
+    "blocks_effects": [
+      "tetanus",
+      "infected",
+      "common_cold",
+      "flu",
+      "flu_zed",
+      "infection_minor"
+    ],
+    "removes_effects": [
+      "tetanus",
+      "infected",
+      "common_cold",
+      "flu",
+      "flu_zed",
+      "infection_minor"
+    ],
+    "base_mods": {
+      "h_mod_min": [
+        1
+      ],
+      "h_mod_chance": [
+        1200
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "antibiotics_2",
+    "//": "This provides immunity to various non-microbial 'diseases', and affects short-term health adversely.  Mostly noticably deters fungal infections.",
+    "int_add_val": 1,
+    "remove_message": "你身体的自然防御能力超过了抗体的作用。",
+    "removes_effects": [
+      "bloodworms",
+      "paincysts",
+      "brainworms"
+    ],
+    "blocks_effects": [
+      "fungus",
+      "bloodworms",
+      "paincysts",
+      "brainworms",
+      "tapeworm"
+    ],
+    "base_mods": {
+      "health_min": [
+        -1
+      ],
+      "health_chance": [
+        1200
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "triffid_cure",
+    "int_add_val": 1,
+    "max_intensity": 2,
+    "int_decay_step": -1,
+    "int_decay_tick": 300,
+    "apply_message": "你觉得痒。",
+    "decay_messages": [
+      [
+        "补药的解毒作用消失了。",
+        "neutral"
+      ],
+      [
+        "你感觉不那么痒了。",
+        "good"
+      ]
+    ],
+    "removes_effects": [
+      "bite",
+      "poison",
+      "stung",
+      "foodpoison",
+      "fungus",
+      "paralyzepoison",
+      "flu_zed",
+      "infection_minor"
+    ],
+    "blocks_effects": [
+      "bite",
+      "poison",
+      "stung",
+      "fungus",
+      "paralyzepoison",
+      "flu_zed",
+      "infection_minor"
+    ],
+    "base_mods": {
+      "pain_min": [
+        1
+      ],
+      "pain_chance": [
+        40
+      ],
+      "rad_amount": [
+        -25
+      ]
+    },
+    "scaling_mods": {
+      "pain_chance": [
+        -10
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "triffid_neutralization",
+    "int_add_val": 1,
+    "max_intensity": 2,
+    "int_decay_step": -1,
+    "int_decay_tick": 450,
+    "decay_messages": [
+      [
+        "血清的解毒作用减弱了。",
+        "neutral"
+      ],
+      [
+        "你感觉不那么痒了。",
+        "good"
+      ]
+    ],
+    "apply_message": "你觉得痒。",
+    "removes_effects": [
+      "fungus",
+      "dermatik",
+      "bloodworms",
+      "paincysts",
+      "brainworms",
+      "tapeworm",
+      "poison",
+      "stung",
+      "badpoison",
+      "foodpoison",
+      "paralyzepoison",
+      "bite",
+      "infected",
+      "spider_web_mu",
+      "spider_web_omega",
+      "spider_web_alpha",
+      "spider_web_slow",
+      "doom_unhealth",
+      "flu_zed",
+      "infection_minor"
+    ],
+    "blocks_effects": [
+      "bite",
+      "poison",
+      "stung",
+      "fungus",
+      "badpoison",
+      "paralyzepoison",
+      "spider_web_mu",
+      "spider_web_omega",
+      "spider_web_alpha",
+      "spider_web_slow",
+      "doom_unhealth",
+      "flu_zed",
+      "infection_minor"
+    ],
+    "base_mods": {
+      "pain_min": [
+        1
+      ],
+      "pain_chance": [
+        20
+      ],
+      "rad_amount": [
+        -50
+      ]
+    },
+    "scaling_mods": {
+      "pain_chance": [
+        -5
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "skunk_spray",
+    "name": [
+      "臭不可闻的"
+    ],
+    "desc": [
+      "你很难集中注意力或呼吸，因为气味很难闻。"
+    ],
+    "max_intensity": 2,
+    "apply_message": "怪物用难闻的液体喷你！",
+    "int_add_val": 1,
+    "int_decay_step": -1,
+    "int_decay_tick": 600,
+    "decay_messages": [
+      [
+        "你不觉得你闻起来很难闻了。",
+        "good"
+      ],
+      [
+        "你渐渐习惯了那种臭味。",
+        "good"
+      ]
+    ],
+    "base_mods": {
+      "speed_mod": [
+        -2
+      ],
+      "per_mod": [
+        -1
+      ],
+      "stamina_min": [
+        -1
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -3
+      ],
+      "int_mod": [
+        -1
+      ],
+      "per_mod": [
+        -1
+      ],
+      "stamina_min": [
+        -1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "scrib",
+    "name": [
+      "瘫痪的"
+    ],
+    "desc": [
+      "你瘫痪了！"
+    ],
+    "apply_message": "你的关节锁死了！",
+    "decay_messages": [
+      [
+        "你现在可以挣脱束缚了！",
+        "good"
+      ]
+    ],
+    "base_mods": {
+      "speed_mod": [
+        -100
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "thing_poison",
+    "name": [
+      "生物毒素"
+    ],
+    "desc": [
+      "你的身体又热又冷，疼痛难忍，麻木又冷！"
+    ],
+    "int_add_val": 1,
+    "max_intensity": 5,
+    "int_decay_step": -1,
+    "int_decay_tick": 50,
+    "base_mods": {
+      "speed_mod": [
+        -3
+      ],
+      "dex_mod": [
+        -0.5
+      ],
+      "int_mod": [
+        -1
+      ],
+      "fatigue_min": [
+        1
+      ],
+      "fatigue_max": [
+        5
+      ],
+      "fatigue_chance": [
+        25
+      ],
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        3
+      ],
+      "hurt_chance": [
+        50
+      ],
+      "stamina_min": [
+        -0.3
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -2
+      ],
+      "dex_mod": [
+        -0.5
+      ],
+      "int_mod": [
+        -0.5
+      ],
+      "str_mod": [
+        -0.5
+      ],
+      "fatigue_chance": [
+        -5
+      ],
+      "hurt_chance": [
+        -5
+      ],
+      "stamina_min": [
+        -0.3
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "slashed",
+    "int_add_val": 1,
+    "max_intensity": 2,
+    "base_mods": {
+      "pain_min": [
+        1
+      ],
+      "pain_max": [
+        3
+      ],
+      "pain_chance": [
+        3
+      ],
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        2
+      ],
+      "hurt_chance": [
+        10
+      ]
+    },
+    "scaling_mods": {
+      "pain_chance": [
+        -2
+      ],
+      "hurt_chance": [
+        -8
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "infection_minor",
+    "name": [
+      "轻微炎症"
+    ],
+    "desc": [
+      "你的伤口发炎了。强烈的免疫力或适当的穿衣应该有帮助。"
+    ],
+    "resist_effects": [
+      "took_flumed",
+      "INFRESIST",
+      "DISRESISTANT",
+      "gauze",
+      "disinfected"
+    ],
+    "int_add_val": 1,
+    "max_intensity": 7,
+    "base_mods": {
+      "speed_mod": [
+        -2,
+        -1
+      ],
+      "pain_min": [
+        0
+      ],
+      "pain_max": [
+        3,
+        2
+      ],
+      "pain_max_val": [
+        15
+      ],
+      "pain_chance": [
+        500,
+        900
+      ],
+      "rad_min": [
+        1
+      ],
+      "rad_max_val": [
+        21
+      ],
+      "rad_chance": [
+        1600
+      ],
+      "health_min": [
+        -2,
+        -1
+      ],
+      "health_max": [
+        1
+      ],
+      "health_min_val": [
+        -10
+      ],
+      "health_max_val": [
+        11
+      ],
+      "health_chance": [
+        1800
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -1
+      ],
+      "pain_max": [
+        0.4,
+        0.2
+      ],
+      "pain_max_val": [
+        5
+      ],
+      "pain_chance": [
+        -50,
+        -90
+      ],
+      "rad_max_val": [
+        7
+      ],
+      "rad_chance": [
+        -100,
+        -50
+      ],
+      "health_min_val": [
+        -4
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "flu_zed",
+    "name": [
+      "肠颤"
+    ],
+    "desc": [
+      "你的肠子很虚弱，你的血液很热，你的内脏像流淌的鸡蛋。"
+    ],
+    "rating": "bad",
+    "resist_effects": [
+      "took_flumed",
+      "INFRESIST",
+      "DISRESISTANT"
+    ],
+    "harmful_cough": true,
+    "base_mods": {
+      "speed_mod": [
+        -12,
+        -5
+      ],
+      "thirst_tick": [
+        180,
+        300
+      ],
+      "thirst_min": [
+        1
+      ],
+      "fatigue_tick": [
+        50
+      ],
+      "fatigue_chance": [
+        4,
+        12
+      ],
+      "fatigue_min": [
+        1
+      ],
+      "str_mod": [
+        -2,
+        -1
+      ],
+      "dex_mod": [
+        -1,
+        0
+      ],
+      "per_mod": [
+        -1,
+        0
+      ],
+      "pain_min": [
+        0
+      ],
+      "pain_max": [
+        1
+      ],
+      "pain_max_val": [
+        17,
+        10
+      ],
+      "pain_tick": [
+        40,
+        120
+      ],
+      "cough_chance": [
+        800,
+        1600
+      ],
+      "vomit_chance": [
+        3000,
+        9000
+      ]
+    }
+  }
+]

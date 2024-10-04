@@ -1,0 +1,73 @@
+[
+  {
+    "id": "ria_1010",
+    "type": "GUN",
+    "copy-from": "pistol_base",
+    "symbol": "(",
+    "color": "dark_gray",
+    "name": {
+      "str": "RIA 1010 手枪",
+      "str_pl": "RIA 1010 手枪"
+    },
+    "description": "RIA 1010是<info>Rubicon Industries</info>公司在大灾变前设计的最后一把手枪。\n这是一把很轻的手枪，使用的是<info>中口径</info>弹药类型。\n该武器看起来像是RIA 313的变种，尺寸略小，弹夹较大，有补偿器，底部有独特的握把/闪光灯，该武器具有光滑的深灰色和黑色金属外观。\n\n这把武器很<good>好</good>，可能<good>不会失灵</good>，可以应付<good>相当的近战攻击</good>。\n\n<info>Xeno的SAS4武器包Mod</info>",
+    "skill": "pistol",
+    "ammo": [
+      "44"
+    ],
+    "weight": "300 g",
+    "volume": "500 ml",
+    "longest_side": "127 mm",
+    "price": "164 USD",
+    "price_postapoc": "25 USD",
+    "bashing": 4,
+    "to_hit": -2,
+    "material": [
+      "steel"
+    ],
+    "dispersion": 120,
+    "sight_dispersion": 80,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 1
+    },
+    "range": 0,
+    "min_cycle_recoil": 80,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "1250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "22ria44",
+          "35ria44bad",
+          "35ria44good"
+        ]
+      }
+    ]
+  }
+]

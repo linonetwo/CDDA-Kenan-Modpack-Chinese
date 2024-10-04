@@ -1,0 +1,496 @@
+[
+  {
+    "type": "martial_art",
+    "id": "mss_style_sledge",
+    "name": {
+      "str": "幸存者锤式战法"
+    },
+    "description": "你已经开始相当熟练地操作重型近战武器。锤式战法使你能够利用自己的力量尽情霸凌对手，直到合适的时机出现，巧妙地挥动武器进行致命一击。",
+    "initiate": [
+      "你转动你的脖子，准备粉碎你的敌人。",
+      "%s扭动了一下脖子，似乎是在恐吓。"
+    ],
+    "autolearn": [
+      [
+        "bashing",
+        5
+      ]
+    ],
+    "strictly_melee": true,
+    "static_buffs": [
+      {
+        "id": "mss_buff_sledge_stonewall",
+        "name": "骇人巨兽",
+        "description": "不论人、机器还是怪物，在你和你的力量面前都寸步难行。\n\n 格挡次数+2，闪避技能-3，格挡值增加力量的70%。",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "bonus_blocks": 2,
+        "flat_bonuses": [
+          {
+            "stat": "block",
+            "scaling-stat": "str",
+            "scale": 0.7
+          },
+          {
+            "stat": "dodge",
+            "scale": -3
+          }
+        ]
+      }
+    ],
+    "onmove_buffs": [
+      {
+        "id": "mss_buff_sledge_onmove",
+        "name": "重心转移",
+        "description": "移动重心虽然让你难以巧妙地承接打击，但事实证明这能显著提高挥舞速度。\n\n格挡次数-2，格挡值减少力量的70%。\n钝击伤害+10%。\n持续1回合。",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 1,
+        "bonus_blocks": -2,
+        "flat_bonuses": [
+          {
+            "stat": "block",
+            "scaling-stat": "str",
+            "scale": -0.7
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.1
+          }
+        ]
+      }
+    ],
+    "onmiss_buffs": [
+      {
+        "id": "mss_buff_sledge_onmiss",
+        "name": "Swinging Big",
+        "description": "That's it! Now direct it towards them! \n\n+20%% bonus to bashing damage.\nEnables \"Flying Blow\" technique.\nEnables \"Violent Shove\" technique.\nLasts 2 turns. Stacks 3 times.",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 4
+          }
+        ],
+        "buff_duration": 2,
+        "max_stacks": 2,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.2
+          }
+        ]
+      }
+    ],
+    "onattack_buffs": [
+      {
+        "id": "mss_buff_sledge_onhit",
+        "name": "疲劳控制",
+        "description": "预先对着敌人挥舞武器有利于预测对方的行动，但如果变换动作会更困难。休息一下。\n\n阻挡次数+1\n行动点消耗+15%\n持续2回合，可叠加3次",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 2,
+        "max_stacks": 3,
+        "bonus_blocks": 1,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 1.15
+          }
+        ]
+      }
+    ],
+    "onblock_buffs": [
+      {
+        "id": "mss_buff_sledge_onblock",
+        "name": "Riled Up",
+        "description": "Like a little fly, buzzing around harmlessly... \n\n+10%% bonus to bashing damage.\n-10%% movecost.\nEnables \"Violent Shove\" technique.\nLasts 1 turn.  Stacks 3 times.",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 1,
+        "max_stacks": 3,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.1
+          },
+          {
+            "stat": "movecost",
+            "scale": 0.9
+          }
+        ]
+      }
+    ],
+    "ondodge_buffs": [
+      {
+        "id": "mss_buff_sledge_ondodge",
+        "name": "渴望联系",
+        "description": "你躲开了。下一次，你将承受打击，让他们支付适当的费用。\n\n-3.0闪避技能\n持续3回合。堆叠3次。",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 3,
+        "max_stacks": 3,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": -3
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "mss_tec_sledge_counter",
+      "mss_tec_sledge_shove",
+      "mss_tec_sledge_feint",
+      "mss_tec_sledge_deathblow",
+      "mss_tec_sledge_deathblowstun",
+      "mss_tec_sledge_break",
+      "mss_tec_sledge_jab",
+      "mss_tec_sledge_gutbuster",
+      "mss_tec_sledge_tap",
+      "mss_tec_sledge_shoveonmiss"
+    ],
+    "weapons": [
+      "ax",
+      "battleaxe",
+      "battleaxe_fake",
+      "battleaxe_inferior",
+      "copper_ax",
+      "fire_ax",
+      "halberd",
+      "halberd_fake",
+      "hammer_sledge",
+      "hammer_sledge_short",
+      "hammer_sledge_engineer",
+      "hammer_sledge_heavy",
+      "lobotomizer",
+      "lucern_hammer",
+      "lucern_hammerfake",
+      "makeshift_halberd",
+      "pickaxe",
+      "homewrecker",
+      "mss_survivor_sledge"
+    ]
+  },
+  {
+    "type": "martial_art",
+    "id": "mss_style_flail",
+    "name": {
+      "str": "幸存者连枷战法"
+    },
+    "description": "你已经开始相当熟练地操作重型近战武器。连枷战法可以让你用链子随心所欲的控制对手的方向，或者用连枷的头部其进行沉重一击。",
+    "initiate": [
+      "你自信地握紧连枷，摇动起来。",
+      "%s握紧连枷，无所事事地摇动着。"
+    ],
+    "autolearn": [
+      [
+        "bashing",
+        6
+      ]
+    ],
+    "strictly_melee": true,
+    "static_buffs": [
+      {
+        "id": "mss_buff_flail_metalflow",
+        "name": "金属转轮",
+        "description": "你的连枷必须保持旋转，不惜一切代价。\n\n闪避技能+1",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "mss_buff_flail_whirl",
+        "name": "Whirling Mass",
+        "description": "The faster it moves, the harder it hits.\n\n+10% bonus to bashing damage.\nLasts 3 turns.  Stacks 5 times.",
+        "skill_requirements": [
+          {
+            "name": "bashing",
+            "level": 6
+          }
+        ],
+        "melee_allowed": true,
+        "buff_duration": 3,
+        "max_stacks": 5,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.1
+          }
+        ]
+      }
+    ],
+    "onmiss_buffs": [
+      {
+        "id": "mss_buff_flail_onmiss",
+        "name": "Missed",
+        "description": "Getting the flail back into proper control is quite the ordeal. \n\n-10%% bashing damage.\nLasts 1 turn. Stacks 2 times.",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 1,
+        "max_stacks": 2,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 0.8
+          }
+        ]
+      }
+    ],
+    "onattack_buffs": [
+      {
+        "id": "mss_buff_flail_onhit",
+        "name": "速度衰减",
+        "description": "每次攻击都会抵消链锤的速度，但或许你的力气足够大把速度保持下去。\n钝击伤害-20%。\n持续2回合，可叠加5次",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 2,
+        "max_stacks": 5,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 0.8
+          }
+        ]
+      }
+    ],
+    "ondodge_buffs": [
+      {
+        "id": "mss_buff_flail_ondodge",
+        "name": "快速弥撒",
+        "description": "躲避攻击只会加速你的武器！\n\n+10%%猛击伤害。\n支持“惊人一击”技术。\n持续1圈。堆叠3次。",
+        "melee_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 1,
+        "max_stacks": 3,
+        "flat_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.1
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "mss_tec_flail_break",
+      "mss_tec_flail_feint",
+      "mss_tec_flail_stunningblow",
+      "mss_tec_flail_swingaround",
+      "mss_tec_flail_swingandfling",
+      "mss_tec_flail_direct",
+      "mss_tec_flail_wrappedtrip",
+      "mss_tec_flail_kickover",
+      "mss_tec_flail_heavyblow"
+    ],
+    "weapons": [
+      "2h_flail_steel",
+      "2h_flail_wood",
+      "mss_survivor_flail"
+    ]
+  },
+  {
+    "type": "martial_art",
+    "id": "mss_style_glove",
+    "name": {
+      "str": "幸存者徒手战法"
+    },
+    "description": "你已经不满足于以前简单的用手击打去杀人。现在你自研的徒手战法将让你用无情的且迅猛的力量组合向僵尸们展示打倒的真正定义。",
+    "initiate": [
+      "你稳稳地摆起架势，一只手臂蓄势待发。",
+      "%s稳稳地摆起架势，一只手臂蓄势待发。"
+    ],
+    "autolearn": [
+      [
+        "unarmed",
+        5
+      ]
+    ],
+    "arm_block": 1,
+    "static_buffs": [
+      {
+        "id": "mss_buff_glove_ready",
+        "name": "蓄势待发",
+        "description": "你准备好了，你的武器也准备好了。你们会一直如此。\n\n格挡次数+2，闪避技能-1，格挡值增加力量的50%。",
+        "unarmed_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "bonus_blocks": 2,
+        "flat_bonuses": [
+          {
+            "stat": "block",
+            "scaling-stat": "str",
+            "scale": 0.5
+          },
+          {
+            "stat": "dodge",
+            "scale": -1
+          }
+        ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "mss_buff_glove_onpause",
+        "name": "Waiting",
+        "description": "You're watching. You're waiting. Your fist aches for action.\n\n+10% bonus to bashing damage./n+1 Block attempts.\nLasts 1 turn.  Stacks 2 times.",
+        "unarmed_allowed": true,
+        "buff_duration": 1,
+        "max_stacks": 2,
+        "bonus_blocks": 1,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.1
+          }
+        ]
+      }
+    ],
+    "onattack_buffs": [
+      {
+        "id": "mss_buff_glove_onhit",
+        "name": "猛撞头部",
+        "description": "重拳一出，无人能挡！\n钝击伤害+10%。\n阻挡次数+1。\n持续2回合。可叠加2次。",
+        "unarmed_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 2,
+        "max_stacks": 2,
+        "bonus_blocks": 1,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scale": 1.1
+          }
+        ]
+      }
+    ],
+    "onblock_buffs": [
+      {
+        "id": "mss_buff_glove_onblock",
+        "name": "Stopped And Smacked",
+        "description": "One punch is just your entry. Now you can start the real deal.",
+        "unarmed_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 2
+          }
+        ],
+        "buff_duration": 1,
+        "flat_bonuses": [
+          {
+            "stat": "hit",
+            "scale": 1
+          }
+        ]
+      }
+    ],
+    "ondodge_buffs": [
+      {
+        "id": "mss_buff_glove_ondodge",
+        "name": "急着要下马",
+        "description": "你躲开了。下一次，你将受到打击，这样你就可以开始打击。\n\n-3.0闪避技能\n持续3回合。堆叠3次。",
+        "unarmed_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "melee",
+            "level": 1
+          }
+        ],
+        "buff_duration": 3,
+        "max_stacks": 3,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scale": -3
+          }
+        ]
+      }
+    ],
+    "techniques": [
+      "mss_tec_glove_break",
+      "mss_tec_glove_feint",
+      "mss_tec_glove_counter",
+      "mss_tec_glove_superiorcounter",
+      "mss_tec_glove_bodyshot",
+      "mss_tec_glove_superiorbodyshot",
+      "mss_tec_glove_bodyshotknock",
+      "mss_tec_glove_superiorbodyshotknock",
+      "mss_tec_glove_smackdown",
+      "mss_tec_glove_superiorsmackdown",
+      "mss_tec_glove_knockout",
+      "mss_tec_glove_wallbash"
+    ]
+  }
+]

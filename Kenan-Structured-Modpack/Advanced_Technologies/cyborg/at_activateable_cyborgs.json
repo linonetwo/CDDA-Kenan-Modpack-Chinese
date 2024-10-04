@@ -1,0 +1,113 @@
+[
+  {
+    "id": "inactive_cyborg",
+    "type": "TOOL",
+    "symbol": ",",
+    "color": "light_green",
+    "name": {
+      "str": "休眠的半机械人"
+    },
+    "description": "这是一个不活跃的半机械人，由一个以前死去的人，几个仿生升级，和一些限制器和控制系统组成。",
+    "price": "16000 USD",
+    "material": [
+      "hflesh",
+      "steel"
+    ],
+    "weight": "87500 g",
+    "volume": "21250 ml",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -10,
+    "max_charges": 0,
+    "initial_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_cyborg",
+      "difficulty": 4,
+      "skills": [
+        "electronics",
+        "mechanics"
+      ],
+      "hostile_msg": "你不恰当地激活了电子人，它开始攻击了！",
+      "friendly_msg": "电子人启动了，并站了起来。",
+      "place_randomly": false,
+      "moves": 230
+    }
+  },
+  {
+    "id": "inactive_cyborg_heavy",
+    "type": "TOOL",
+    "symbol": ",",
+    "color": "light_green",
+    "name": {
+      "str": "休眠的重型半机械人"
+    },
+    "description": "未激活的半机械人，结构坚固，附加了许多额外的硬件，以及厚钢铁外壳，覆盖着先进的电子设备和维持生命的系统。就目前的状况来看，这个半机械人更像是机械而不是人。",
+    "price": "19500 USD",
+    "material": [
+      "qt_steel",
+      "hflesh"
+    ],
+    "weight": "100000 g",
+    "volume": "22 L",
+    "bashing": 8,
+    "cutting": 0,
+    "to_hit": -12,
+    "max_charges": 0,
+    "initial_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_cyborg_heavy",
+      "difficulty": 5,
+      "skills": [
+        "electronics",
+        "mechanics"
+      ],
+      "hostile_msg": "你不恰当地激活了电子人，它开始攻击了！",
+      "friendly_msg": "电子人启动了，并站了起来。",
+      "place_randomly": false,
+      "moves": 250
+    }
+  },
+  {
+    "id": "inactive_cyborg_advanced",
+    "type": "TOOL",
+    "symbol": ",",
+    "color": "light_green",
+    "name": {
+      "str": "高级改造人（休眠）"
+    },
+    "description": "一个坚固的机械躯干，几乎看不见有机物。它的外壳和钢架上嫁接了机械化的突起，看起来像是动力装甲的一部分。",
+    "price": "25000 USD",
+    "material": [
+      "qt_steel",
+      "hflesh"
+    ],
+    "weight": "125000 g",
+    "volume": "24500 ml",
+    "bashing": 12,
+    "cutting": 0,
+    "to_hit": -16,
+    "max_charges": 0,
+    "initial_charges": 0,
+    "charges_per_use": 0,
+    "turns_per_charge": 0,
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_cyborg_advanced",
+      "difficulty": 7,
+      "skills": [
+        "electronics",
+        "mechanics"
+      ],
+      "hostile_msg": "你不恰当地激活了电子人，它开始攻击了！",
+      "friendly_msg": "电子人启动了，并站了起来。",
+      "place_randomly": false,
+      "moves": 270
+    }
+  }
+]

@@ -1,0 +1,489 @@
+[
+  {
+    "//": "TODO potom",
+    "type": "npc",
+    "id": "NPC_captain_cost",
+    "gender": "male",
+    "class": "NC_SOLDIER",
+    "name_unique": "杰森·成本",
+    "name_suffix": "船长",
+    "attitude": 1,
+    "mission": 7,
+    "chat": "TALK_captain_cost_meeting",
+    "faction": "no_faction",
+    "mission_offered": "MISSION_captain_cost_1"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_meeting",
+    "dynamic_line": "你好，<name_g>。我是中情局的科斯特上尉。你想不想协助政府？",
+    "responses": [
+      {
+        "text": "是的，我很感兴趣。告诉我更多。",
+        "topic": "TALK_captain_cost_mission_1"
+      },
+      {
+        "text": "<no>，政府早就灰飞烟灭了。",
+        "topic": "TALK_captain_cost_refuse"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_mission_1",
+    "dynamic_line": "很好。我需要找到一架坠毁的直升机，你得帮我找。没得商量。直升机坠毁在附近的田地里。我需要直升机上的信息。这些信息对我的任务<very>有价值。快去找吧。时间可不充裕，你也想尽快处理完这件事的，对吧，<name_g>？",
+    "responses": [
+      {
+        "text": "嗯，好吗？",
+        "topic": "TALK_DONE",
+        "effect": "assign_mission"
+      },
+      {
+        "text": "听起来很危险。我会过去的。",
+        "topic": "TALK_captain_cost_refuse"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_refuse",
+    "dynamic_line": "你确定吗？",
+    "responses": [
+      {
+        "text": "不，我是警察，我必须帮助我的政府。",
+        "topic": "TALK_NONE",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CYBERCOP",
+            "PROF_FED",
+            "PROF_PD_DET",
+            "PROF_POLICE",
+            "PROF_SWAT"
+          ]
+        },
+        "switch": true
+      },
+      {
+        "text": "也许我应该重新考虑一下…",
+        "topic": "TALK_NONE"
+      },
+      {
+        "text": "怎么了？",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat",
+        "switch": true
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_1",
+    "dynamic_line": "我们时间不多了，<name_g>。",
+    "responses": [
+      {
+        "text": "我们到了！",
+        "topic": "TALK_captain_cost_wait",
+        "condition": {
+          "and": [
+            "mission_complete",
+            {
+              "u_has_mission": "MISSION_captain_cost_3"
+            }
+          ]
+        }
+      },
+      {
+        "text": "这是你要的信息，上尉。",
+        "condition": {
+          "and": [
+            {
+              "or": [
+                {
+                  "u_has_mission": "MISSION_captain_cost_1"
+                },
+                {
+                  "u_has_mission": "MISSION_captain_cost_2"
+                }
+              ]
+            },
+            "mission_complete"
+          ]
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "u_has_mission": "MISSION_captain_cost_1"
+          }
+        },
+        "success": {
+          "topic": "TALK_captain_cost_m1_complete"
+        },
+        "failure": {
+          "topic": "TALK_captain_cost_m2_complete"
+        }
+      },
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_captain_cost_Background"
+      },
+      {
+        "text": "我不想再帮你了。",
+        "topic": "TALK_captain_cost_refuse"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_Background",
+    "dynamic_line": "我是美国的一名陆军上尉，也是一名军人！",
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_m1_complete",
+    "dynamic_line": "很好。下一项。我们需要前往附近的军事掩体取得一份高度机密的情报。带我一起去，我们可以协力破解，但记得注意时间！",
+    "responses": [
+      {
+        "text": "嗯，好吗？",
+        "topic": "TALK_DONE",
+        "effect": [
+          "mission_success",
+          "clear_mission",
+          "assign_mission"
+        ]
+      },
+      {
+        "text": "听起来很危险。我会过去的。",
+        "topic": "TALK_captain_cost_refuse"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_m2_complete",
+    "dynamic_line": "很好。最后一项。我们需要联系一位在这个地区工作的特工来完成我的任务。为此我们得找到密码，用电台跟他联系。带我去集合点，在那里我们可以找到更多的信息。",
+    "responses": [
+      {
+        "text": "嗯，好吗？",
+        "topic": "TALK_DONE",
+        "effect": [
+          "mission_success",
+          "clear_mission",
+          "assign_mission"
+        ]
+      },
+      {
+        "text": "听起来很危险。我会过去的。",
+        "topic": "TALK_captain_cost_refuse"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_wait",
+    "dynamic_line": "很好。看到那栋楼了吗？那就是我们的集合点。找找有没有什么纸条之类的东西，一定有一张写着的。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          "stop_following",
+          {
+            "mapgen_update": "jcost_place_trap",
+            "origin_npc": true,
+            "om_terrain": "forest",
+            "search_range": 3,
+            "min_distance": 1
+          },
+          {
+            "npc_first_topic": "TALK_captain_cost_wait1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_wait1",
+    "dynamic_line": "时间不等人啊，<name_g>。",
+    "responses": [
+      {
+        "text": "所以，我把那张纸条给你了！想解释一下为什么会有很多攻击性的无人机吗？",
+        "topic": "TALK_captain_cost_traitor",
+        "condition": {
+          "u_has_item": "jcost_note"
+        },
+        "effect": "mission_success",
+        "switch": true
+      },
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "switch": true
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_traitor",
+    "dynamic_line": "嗯，我没想到会有人在那之后还活着，<name_g>。",
+    "responses": [
+      {
+        "text": "你会死的，就在这里，就在现在！",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      },
+      {
+        "text": "你现在就告诉我真相，否则<ill_kill_you>, <name_b>!",
+        "trial": {
+          "type": "INTIMIDATE",
+          "difficulty": 45,
+          "mod": [
+            [
+              "FEAR",
+              8
+            ],
+            [
+              "VALUE",
+              2
+            ],
+            [
+              "TRUST",
+              2
+            ],
+            [
+              "BRAVERY",
+              -2
+            ]
+          ]
+        },
+        "success": {
+          "topic": "TALK_captain_cost_truth"
+        },
+        "failure": {
+          "topic": "TALK_captain_cost_lie"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_truth",
+    "dynamic_line": "好吧，好吧，我告诉你真相。我为中国情报局工作。他们在释放<swear>瘟疫之前把我扔到这里，这样我就可以向他们报告它有多致命。我不知道会这么糟，<name_g>，<very>可怕。我的最后一个任务就是离开这里，去见另一个可以组织我去别的地方的特工。请原谅我，<name_g>！如果你愿意，我会给你一些<very>有价值的东西…",
+    "responses": [
+      {
+        "text": "去死吧，<name_b>。",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      },
+      {
+        "text": "活着回来。如果我再看到你的脸，<ill_kill_you>。",
+        "topic": "TALK_DONE",
+        "effect": [
+          "end_conversation",
+          {
+            "u_spawn_item": "manual_taekwondo"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_captain_cost_lie",
+    "dynamic_line": "<no>, <name_b>. <ill_kill_you>, <name_b>。你已经帮了我很多，现在没有你我也足够完成任务了，<name_b>！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_captain_cost_1",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "找到坠毁的直升机"
+    },
+    "description": "考斯特让你找到坠毁的直升机",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "black_box_transcript",
+    "difficulty": 0,
+    "value": 1000,
+    "deadline_low": 2,
+    "deadline_high": 3,
+    "start": {
+      "effect": [
+        "follow_only",
+        {
+          "toggle_npc_rule": "follow_distance_2"
+        },
+        {
+          "npc_first_topic": "TALK_captain_cost_1"
+        }
+      ],
+      "update_mapgen": {
+        "om_terrain": "field",
+        "place_vehicles": [
+          {
+            "status": 1,
+            "vehicle": "crashed_helicopters",
+            "x": 7,
+            "y": 9
+          }
+        ],
+        "place_monsters": [
+          {
+            "monster": "GROUP_MIL_STRONG",
+            "x": [
+              5,
+              15
+            ],
+            "y": [
+              5,
+              15
+            ]
+          }
+        ],
+        "place_item": [
+          {
+            "item": "black_box_transcript",
+            "x": 8,
+            "y": 10
+          }
+        ]
+      }
+    },
+    "fail": {
+      "effect": [
+        "stop_following",
+        "insult_combat"
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_captain_cost_2",
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_captain_cost_2",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "带我去碉堡"
+    },
+    "description": "考斯特让你带他去军事掩体",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "military_record",
+    "difficulty": 0,
+    "value": 100,
+    "deadline_low": 2,
+    "deadline_high": 3,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "bunker",
+        "om_special": "military_bunker",
+        "om_terrain_replace": "field",
+        "search_range": 200,
+        "min_distance": 50,
+        "cant_see": true
+      },
+      "update_mapgen": {
+        "om_terrain": "bunker_basement",
+        "place_item": [
+          {
+            "item": "military_record",
+            "x": 21,
+            "y": 3
+          }
+        ]
+      }
+    },
+    "fail": {
+      "effect": [
+        "stop_following",
+        "insult_combat"
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_captain_cost_3",
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_captain_cost_3",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "与特务联络"
+    },
+    "description": "考斯特让你帮他联系一名在当地活动的特工",
+    "goal": "MGOAL_GO_TO",
+    "difficulty": 0,
+    "value": 100,
+    "//": "TODO redo quest",
+    "deadline_low": 2,
+    "deadline_high": 3,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "forest",
+        "search_range": 25,
+        "min_distance": 5,
+        "random": true
+      }
+    },
+    "fail": {
+      "effect": [
+        "stop_following",
+        "insult_combat"
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  }
+]

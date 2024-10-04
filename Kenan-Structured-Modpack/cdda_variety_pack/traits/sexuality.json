@@ -1,0 +1,162 @@
+[
+  {
+    "id": "sexuality_straight",
+    "type": "mutation",
+    "name": {
+      "str": "性取向：异性恋"
+    },
+    "description": "你是异性恋。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "cancels": [
+      "sexuality_pan",
+      "sexuality_bisexual",
+      "sexuality_gay",
+      "sexuality_lesbian",
+      "sexuality_queer",
+      "sexuality_asexual"
+    ],
+    "player_display": true
+  },
+  {
+    "id": "sexuality_bisexual",
+    "type": "mutation",
+    "name": {
+      "str": "性取向：双性恋"
+    },
+    "description": "你是双性恋。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "cancels": [
+      "sexuality_straight",
+      "sexuality_pan",
+      "sexuality_gay",
+      "sexuality_lesbian",
+      "sexuality_queer",
+      "sexuality_asexual"
+    ],
+    "player_display": true
+  },
+  {
+    "id": "sexuality_pan",
+    "type": "mutation",
+    "name": {
+      "str": "性取向：泛性恋"
+    },
+    "description": "你是泛性恋。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "cancels": [
+      "sexuality_straight",
+      "sexuality_bisexual",
+      "sexuality_gay",
+      "sexuality_lesbian",
+      "sexuality_queer",
+      "sexuality_asexual"
+    ],
+    "player_display": true
+  },
+  {
+    "id": "sexuality_questioning",
+    "type": "mutation",
+    "name": {
+      "str": "性取向：疑性恋"
+    },
+    "description": "你对你的性取向感到疑惑。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "player_display": true
+  },
+  {
+    "id": "sexuality_gay",
+    "type": "mutation",
+    "name": {
+      "str": "性取向：男同性恋"
+    },
+    "description": "你是男同性恋。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "cancels": [
+      "sexuality_straight",
+      "sexuality_pan",
+      "sexuality_bisexual",
+      "sexuality_lesbian",
+      "sexuality_queer",
+      "sexuality_asexual"
+    ],
+    "player_display": true
+  },
+  {
+    "id": "sexuality_lesbian",
+    "type": "mutation",
+    "name": {
+      "str": "性取向：女同性恋"
+    },
+    "description": "你是女同性恋。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "cancels": [
+      "sexuality_straight",
+      "sexuality_pan",
+      "sexuality_bisexual",
+      "sexuality_gay",
+      "sexuality_queer",
+      "sexuality_asexual"
+    ],
+    "player_display": true
+  },
+  {
+    "id": "sexuality_queer",
+    "type": "mutation",
+    "name": {
+      "str": "性取向：非异性恋"
+    },
+    "description": "你是非异性恋。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "cancels": [
+      "sexuality_straight",
+      "sexuality_pan",
+      "sexuality_bisexual",
+      "sexuality_gay",
+      "sexuality_lesbian",
+      "sexuality_asexual"
+    ],
+    "player_display": true
+  },
+  {
+    "id": "sexuality_asexual",
+    "type": "mutation",
+    "name": {
+      "str": "性取向：无性恋"
+    },
+    "description": "你是无性恋（没有性趣）。",
+    "points": 0,
+    "starting_trait": true,
+    "valid": false,
+    "purifiable": false,
+    "cancels": [
+      "sexuality_straight",
+      "sexuality_pan",
+      "sexuality_bisexual",
+      "sexuality_gay",
+      "sexuality_lesbian",
+      "sexuality_queer"
+    ],
+    "player_display": true
+  }
+]

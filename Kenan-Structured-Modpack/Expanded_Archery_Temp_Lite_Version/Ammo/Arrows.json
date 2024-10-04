@@ -1,0 +1,121 @@
+[
+  {
+    "type": "AMMO",
+    "id": "arrow_metal_inc",
+    "price": "50 USD",
+    "name": {
+      "str": "铁制燃烧箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "description": "这支金属箭的箭头上附有燃烧性粉末，并在击中后点燃。无法回收，但你为什么还想着要回收？",
+    "material": [
+      "steel"
+    ],
+    "volume": "250 ml",
+    "weight": "73 g",
+    "bashing": 3,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 5,
+      "armor_penetration": 7
+    },
+    "range": 10,
+    "dispersion": 70,
+    "loudness": 0,
+    "count": 10,
+    "effects": [
+      "INCENDIARY"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "arrow_metal_stun",
+    "price": "100 USD",
+    "name": {
+      "str": "铁制眩晕箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "description": "这支金属箭的箭头被替换成了一个微型电击器，类似电击枪那样吧，相比之下的优势在于射程更远，前提是你能击中目标。一次性用品，无法回收。",
+    "material": [
+      "steel"
+    ],
+    "volume": "250 ml",
+    "weight": "100 g",
+    "bashing": 3,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "range": 4,
+    "dispersion": 90,
+    "loudness": 0,
+    "count": 5,
+    "stack_size": 10,
+    "effects": [
+      "LARGE_BEANBAG"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "arrow_metal_emp",
+    "price": "100 USD",
+    "name": {
+      "str": "铁制EMP箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "description": "这支金属箭的箭头被替换成了一个微型电磁脉冲发生器。一次性用品，无法回收，可别打偏了。",
+    "material": [
+      "steel"
+    ],
+    "volume": "250 ml",
+    "weight": "100 g",
+    "bashing": 3,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "range": 4,
+    "dispersion": 90,
+    "loudness": 0,
+    "count": 5,
+    "stack_size": 10,
+    "effects": [
+      "EMP"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "smart_arrow",
+    "price": "2000 USD",
+    "name": {
+      "str": "实验型智能箭"
+    },
+    "symbol": "=",
+    "color": "green",
+    "description": "这支高科技实验型箭矢配备了主动稳定与瞄准系统，即使目标微小或正在移动也能达到完美的精度。专供特种部队使用，虽然伤害在功能性上做出了让步，但无声即隐形在渗透中是非常有必要的。一个简单而又不凡的浮空定位系统甚至能在箭矢射出后回到使用者身边，就差你吹吹口哨了。",
+    "material": [
+      "superalloy",
+      "ceramic"
+    ],
+    "volume": "250 ml",
+    "weight": "60 g",
+    "bashing": 3,
+    "cutting": 2,
+    "ammo_type": "arrow",
+    "casing": "smart_arrow",
+    "damage": {
+      "damage_type": "stab",
+      "amount": 18,
+      "armor_penetration": 10
+    },
+    "range": 16,
+    "dispersion": 0,
+    "loudness": 0,
+    "count": 1,
+    "stack_size": 10,
+    "effects": [
+      "WIDE"
+    ]
+  }
+]

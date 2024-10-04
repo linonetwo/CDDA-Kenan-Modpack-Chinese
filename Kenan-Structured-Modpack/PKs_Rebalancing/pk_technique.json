@@ -1,0 +1,205 @@
+[
+  {
+    "type": "technique",
+    "id": "heavy_blow",
+    "name": "锤击",
+    "description": "猛烈反击",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 3,
+    "knockback_dist": 1,
+    "weighting": -2,
+    "messages": [
+      "你敲%s",
+      "<npcname>锤子在%s"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.75
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0.75
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.33
+      }
+    ]
+  },
+  {
+    "id": "repose",
+    "type": "technique",
+    "name": "镇静",
+    "description": "挣脱反击",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 0
+      }
+    ],
+    "weighting": -3,
+    "crit_tec": true,
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "grab_break": true,
+    "stun_dur": 1,
+    "messages": [
+      "当你进攻时，你防守性地休息",
+      "<npcname>用防御姿态应对%s，并且将伤害挡了回去"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.1
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.8
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.8
+      }
+    ]
+  },
+  {
+    "id": "stuck_in_1",
+    "type": "technique",
+    "name": "嵌入",
+    "description": "慢攻[66%]",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 2
+      }
+    ],
+    "weighting": -5,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "stun_dur": 1,
+    "messages": [
+      "你的武器卡在伤口里，需要时间取出！它使人想起",
+      "<npcname> %s武器在伤口里卡得很好，需要时间移除！它使人想起"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.67
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.67
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.3
+      }
+    ]
+  },
+  {
+    "id": "stuck_in_2",
+    "type": "technique",
+    "name": "陷入",
+    "description": "攻击稍慢[33%]",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "weighting": -5,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "messages": [
+      "你的武器卡在伤口里，需要一段时间才能取出！它使人想起",
+      "<npcname> %s武器卡在伤口里，需要一段时间才能取出！它使人想起"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.1
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.1
+      }
+    ]
+  },
+  {
+    "id": "stuck_in_3",
+    "type": "technique",
+    "name": "楔入",
+    "description": "慢速攻击并击昏敌人",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 4
+      }
+    ],
+    "weighting": -5,
+    "unarmed_allowed": false,
+    "melee_allowed": true,
+    "down_dur": 1,
+    "stun_dur": 1,
+    "messages": [
+      "你的武器使你的对手失去平衡！它使人想起",
+      "<npcname> %s利用对手失去平衡！它使人想起"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.25
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.25
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 1.2
+      }
+    ]
+  }
+]

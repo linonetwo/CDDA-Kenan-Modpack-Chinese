@@ -1,0 +1,379 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "macaroni_blamco_raw",
+    "name": {
+      "str": "生奶酪",
+      "str_pl": "生奶酪"
+    },
+    "weight": "480 g",
+    "color": "yellow",
+    "container": "box_small",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "calories": 87,
+    "description": "如果你绝望的话，它可以生吃，但是煮得更好。经过辐射灭菌，寿命可达200年以上",
+    "price": 150,
+    "material": [
+      "wheat",
+      "milk"
+    ],
+    "flags": [
+      "EDIBLE_FROZEN"
+    ],
+    "volume": "750 ml",
+    "fun": -6
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "macaroni_blamco",
+    "name": {
+      "str": "布朗科奶酪",
+      "str_pl": "布朗科奶酪"
+    },
+    "weight": "323 g",
+    "color": "yellow",
+    "spoils_in": "10 hours",
+    "container": "box_small",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 25,
+    "calories": 434,
+    "description": "煮熟的布朗科奶酪。好吃。",
+    "price": 380,
+    "material": [
+      "wheat",
+      "milk"
+    ],
+    "volume": "1000 ml",
+    "charges": 2,
+    "flags": [
+      "EATEN_HOT",
+      "TRADER_AVOID"
+    ],
+    "fun": 5,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cave_fungus",
+    "name": {
+      "str": "洞穴真菌"
+    },
+    "weight": "159 g",
+    "color": "green",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 5,
+    "calories": 122,
+    "description": "发光的洞穴真菌。它能吸收辐射，而且味道很好",
+    "price": 140,
+    "material": [
+      "mushroom"
+    ],
+    "volume": "250 ml",
+    "fun": 3,
+    "flags": [
+      "FREEZERBURN",
+      "SMOKABLE"
+    ],
+    "rot_spawn": "GROUP_ROTTING_PLANT"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "can_cram",
+    "name": {
+      "str": "饱饱肉罐头"
+    },
+    "weight": "340 g",
+    "color": "pink",
+    "container": "can_food",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -3,
+    "calories": 100,
+    "description": "猪肉罐头产品，是不自然的粉红色，奇怪的橡胶，不是很好吃，很大程度上里面像是塞满了陈年剩菜。单靠它一点都不好，但它可以永久保存，还有1001种食谱可以烹饪它。",
+    "price": 400,
+    "material": [
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "charges": 8,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": -20,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "mutfruit",
+    "name": {
+      "str": "多果"
+    },
+    "weight": "226 g",
+    "color": "blue",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 3,
+    "healthy": 2,
+    "calories": 130,
+    "description": "一个奇怪的蓝色浆果。",
+    "price": 400,
+    "material": [
+      "fruit"
+    ],
+    "volume": "250 ml",
+    "fun": 4,
+    "rot_spawn": "GROUP_ROTTING_PLANT"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "mutfruit_crunchy",
+    "name": {
+      "str": "松脆的水果"
+    },
+    "weight": "182 g",
+    "color": "red",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 3,
+    "healthy": 1,
+    "calories": 95,
+    "description": "略带紫色的水果，类似苹果。",
+    "price": 900,
+    "material": [
+      "fruit"
+    ],
+    "volume": "250 ml",
+    "fun": 3,
+    "flags": [
+      "FREEZERBURN"
+    ],
+    "rot_spawn": "GROUP_ROTTING_PLANT"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "instamash_raw",
+    "name": {
+      "str": "生土豆泥",
+      "str_pl": "生土豆泥"
+    },
+    "weight": "45 g",
+    "color": "white",
+    "container": "box_small",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -1,
+    "calories": 9,
+    "description": "速溶土豆泥。生的令人作呕，但煮熟后却成了很好的安慰食品。",
+    "price": 450,
+    "material": [
+      "powder",
+      "veggy"
+    ],
+    "volume": "250 ml",
+    "flags": [
+      "EDIBLE_FROZEN"
+    ],
+    "charges": 10,
+    "fun": -5
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "instamash_cooked",
+    "name": {
+      "str": "熟土豆泥"
+    },
+    "weight": "210 g",
+    "color": "brown",
+    "spoils_in": "2 days",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": -1,
+    "calories": 274,
+    "description": "美味的，煮熟的土豆泥。多加些配料会更好。",
+    "price": 150,
+    "material": [
+      "veggy"
+    ],
+    "volume": "250 ml",
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 3,
+    "rot_spawn": "GROUP_ROTTING_PLANT"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "fancylad",
+    "name": {
+      "str": "花式小吃蛋糕"
+    },
+    "weight": "46 g",
+    "color": "yellow",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 1,
+    "calories": 74,
+    "description": "这些东西会永远存在。",
+    "price": 550,
+    "material": [
+      "wheat",
+      "milk",
+      "junk"
+    ],
+    "volume": "250 ml",
+    "charges": 4,
+    "fun": 8,
+    "rot_spawn": "GROUP_ROTTING_PLANT"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "meat_wonder",
+    "name": {
+      "str": "神奇的肉"
+    },
+    "weight": "110 g",
+    "color": "white",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": 5,
+    "calories": 694,
+    "description": "一块奇怪的肉…粘在里面。奇怪的。",
+    "price": "210 USD",
+    "material": [
+      "flesh"
+    ],
+    "volume": "250 ml",
+    "fun": 7,
+    "rot_spawn": "GROUP_CARRION",
+    "rot_spawn_chance": 25
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "salisbury_steak_fallout",
+    "name": {
+      "str": "生萨德路索尔兹伯里牛排"
+    },
+    "weight": "453 g",
+    "color": "brown",
+    "container": "box_small",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -2,
+    "healthy": -2,
+    "calories": 434,
+    "description": "这种东西可以保存200年。也许那时一个电台DJ会拿自己的年龄开玩笑。去煮吧。",
+    "price": 320,
+    "material": [
+      "flesh",
+      "junk"
+    ],
+    "volume": "1000 ml",
+    "fun": -3,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "cooked_salisbury_steak_fallout",
+    "name": {
+      "str": "索尔兹伯里牛排"
+    },
+    "weight": "450 g",
+    "color": "brown",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -1,
+    "healthy": 1,
+    "calories": 313,
+    "description": "嘿，孩子们，你们想要一些200年前的索尔兹伯里牛排，还是想要一些新闻？是新闻。",
+    "price": 90,
+    "material": [
+      "flesh",
+      "junk"
+    ],
+    "volume": "1000 ml",
+    "charges": 2,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 2,
+    "rot_spawn": "GROUP_CARRION"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "sugarbombs",
+    "name": {
+      "str": "糖弹谷类"
+    },
+    "weight": "42 g",
+    "color": "yellow",
+    "stim": 12,
+    "container": "box_small",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -2,
+    "calories": 43,
+    "healthy": -13,
+    "description": "糖弹：100%每日价值…糖。",
+    "price": 400,
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "flags": [
+      "EDIBLE_FROZEN"
+    ],
+    "charges": 12,
+    "fun": 10
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "eggs_devilled_fallout",
+    "name": {
+      "str": "鱼糜蛋"
+    },
+    "weight": "480 g",
+    "color": "yellow",
+    "container": "box_small",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": -5,
+    "calories": 87,
+    "description": "经过加工和辐照的脱蛋。不过他们很好！",
+    "price": 150,
+    "material": [
+      "junk",
+      "milk",
+      "egg"
+    ],
+    "flags": [
+      "EDIBLE_FROZEN"
+    ],
+    "volume": "750 ml",
+    "fun": 6
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "fruit_punga",
+    "name": {
+      "str": "蓬果"
+    },
+    "weight": "226 g",
+    "color": "green",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": 3,
+    "healthy": 30,
+    "calories": 130,
+    "description": "一种外观奇特的绿色水果，对健康有显著的好处。",
+    "price": 400,
+    "material": [
+      "fruit"
+    ],
+    "volume": "250 ml",
+    "fun": 4,
+    "rot_spawn": "GROUP_ROTTING_PLANT"
+  }
+]

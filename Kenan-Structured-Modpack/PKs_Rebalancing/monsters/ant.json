@@ -1,0 +1,1309 @@
+[
+  {
+    "id": "mon_ant_queen",
+    "copy-from": "mon_ant_queen",
+    "type": "MONSTER",
+    "name": {
+      "str": "蚁后"
+    },
+    "description": "一只巨大的红色蚂蚁，腹部看起来十分肿胀。它移动缓慢而从容，照顾着周围卵的同时继续产下更多的蚂蚁卵。它的触须几乎是艺术品，或者至少不是用来感知的……",
+    "hp": 140,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 3,
+    "armor_bash": 16,
+    "armor_cut": 25,
+    "armor_bullet": 20,
+    "armor_acid": 2,
+    "vision_day": 5,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "ant_dinject",
+        40
+      ],
+      [
+        "SHRIEK_ALERT",
+        5
+      ],
+      [
+        "UPGRADE",
+        3
+      ]
+    ],
+    "extend": {
+      "anger_triggers": [
+        "FIRE"
+      ],
+      "flags": [
+        "SEES",
+        "KEENNOSE",
+        "PATH_AVOID_DANGER_1",
+        "FIREPROOF",
+        "BASHES"
+      ]
+    }
+  },
+  {
+    "id": "mon_ant_queen_young",
+    "type": "MONSTER",
+    "name": {
+      "str": "年轻的蚁后"
+    },
+    "description": "一只多产的雌性蚂蚁。它仍然带着翅膀，很可能正在准备或刚刚完成它的婚礼飞行。它的身体为未来的子孙储存了大量的营养。这些大蚂蚁都知道用火焰来自卫;这是对不太受欢迎的大灾难的一种适应。",
+    "default_faction": "ant_hack",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 25,
+    "harvest": "arachnid",
+    "hp": 90,
+    "speed": 90,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "a",
+    "color": "i_light_red",
+    "looks_like": "mon_ant_queen",
+    "aggression": 0,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 1,
+    "armor_bash": 10,
+    "armor_cut": 14,
+    "armor_bullet": 11,
+    "armor_acid": 4,
+    "vision_day": 20,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "ant_dinject",
+        30
+      ],
+      [
+        "SHRIEK_ALERT",
+        15
+      ],
+      [
+        "SHRIEK_STUN",
+        1
+      ]
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "CLIMBS",
+      "FIREPROOF",
+      "FLIES",
+      "BASHES"
+    ]
+  },
+  {
+    "id": "mon_ant_male",
+    "type": "MONSTER",
+    "name": {
+      "str": "雄蚁"
+    },
+    "description": "巨型雄蚁，通常在春季出现，很少在其他时间出现。在短暂的一生中，与其他雄蚁争夺交配权，只在死亡前实际交配一次。",
+    "default_faction": "ant_male",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 16,
+    "harvest": "arachnid",
+    "hp": 80,
+    "speed": 105,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "a",
+    "color": "dark_gray",
+    "looks_like": "mon_ant",
+    "aggression": 30,
+    "morale": 70,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 10,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 6
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 5,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "armor_acid": 3,
+    "armor_fire": 12,
+    "vision_day": 25,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "ant_dinject",
+        40
+      ],
+      [
+        "wound_minor",
+        30
+      ]
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "FIRE"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "placate_triggers": [
+      "FRIEND_ATTACKED"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "CLIMBS",
+      "FLIES",
+      "BASHES"
+    ]
+  },
+  {
+    "id": "mon_ant_larva",
+    "copy-from": "mon_ant_larva",
+    "type": "MONSTER",
+    "name": {
+      "str": "蚂蚁幼虫"
+    },
+    "description": "一团翻滚着的发黄的肉团，这个小家伙只能进行微不足道的自卫。",
+    "hp": 15,
+    "melee_dice_sides": 2,
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "armor_acid": 5,
+    "harvest": "meatslug",
+    "special_attacks": [
+      [
+        "ant_dinject",
+        30
+      ],
+      [
+        "wound_minor",
+        20
+      ]
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_WEAK"
+    ],
+    "extend": {
+      "flags": [
+        "HEARS",
+        "SWARMS"
+      ]
+    }
+  },
+  {
+    "id": "mon_ant",
+    "copy-from": "mon_ant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蚂蚁"
+    },
+    "melee_skill": 4,
+    "melee_dice_sides": 8,
+    "melee_cut": 3,
+    "armor_bash": 6,
+    "armor_cut": 10,
+    "armor_bullet": 6,
+    "armor_fire": 2,
+    "special_attacks": [
+      [
+        "ant_dinject",
+        40
+      ],
+      { "id": "grab", "cooldown": 20},
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 20,
+        "accuracy": 5,
+        "infection_chance": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 5,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ],
+    "extend": {
+      "upgrades": {
+        "into_group": "GROUP_DRONE",
+        "half_life": 5
+      }
+    },
+    "delete": {
+      "upgrades": {
+        "age_grow": 14,
+        "into": "mon_ant_soldier"
+      }
+    }
+  },
+  {
+    "id": "mon_ant_soldier",
+    "type": "MONSTER",
+    "name": {
+      "str": "兵蚁"
+    },
+    "description": "一只毛茸茸的红色巨蚁，几乎有其他巨蚁两倍大小。从它的下颚伸出一对凸出的钳子。",
+    "default_faction": "ant",
+    "species": [
+      "INSECT"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 80,
+    "speed": 100,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "a",
+    "color": "red",
+    "aggression": 30,
+    "morale": 100,
+    "melee_skill": 7,
+    "melee_dice": 1,
+    "melee_dice_sides": 8,
+    "melee_cut": 6,
+    "dodge": 2,
+    "armor_bash": 10,
+    "armor_cut": 12,
+    "armor_bullet": 9,
+    "vision_day": 5,
+    "vision_night": 5,
+    "harvest": "arachnid",
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_ant_scrib",
+    "type": "MONSTER",
+    "name": {
+      "str": "觅食蚂蚁"
+    },
+    "description": "有甲壳覆盖着的敏捷，只有儿童大小的蚂蚁。对于一只虫子来说，它能发出令人惊讶的声音，包括震耳欲聋的哭声。",
+    "default_faction": "ant_hack",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 7,
+    "harvest": "arachnid",
+    "hp": 40,
+    "speed": 90,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "s",
+    "color": "light_gray",
+    "looks_like": "mon_ant",
+    "aggression": -1,
+    "morale": 50,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 2,
+    "dodge": 2,
+    "armor_bash": 5,
+    "armor_cut": 10,
+    "armor_bullet": 6,
+    "armor_fire": 5,
+    "vision_day": 7,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "scrib",
+        40
+      ],
+      [
+        "SHRIEK_ALERT",
+        40
+      ],
+      [
+        "SHRIEK_STUN",
+        1
+      ]
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "CHITIN",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_ant_terminal",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蚂蚁"
+    },
+    "description": "一只巨大的红色蚂蚁，浑身是几丁质装甲壳。它有一对不断震动的触角和狰狞的下颚。这种本地动物很适应它的新体型。",
+    "default_faction": "ant_hack",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 10,
+    "harvest": "arachnid",
+    "hp": 65,
+    "speed": 105,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "a",
+    "color": "brown",
+    "looks_like": "mon_ant",
+    "aggression": 0,
+    "morale": 60,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 10,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 3
+      }
+    ],
+    "melee_cut": 4,
+    "dodge": 1,
+    "armor_bash": 8,
+    "armor_cut": 14,
+    "armor_bullet": 11,
+    "armor_fire": 5,
+    "vision_day": 5,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "ant_dinject",
+        40
+      ],
+      { "id": "grab", "cooldown": 20
+      },
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 12,
+        "accuracy": 7,
+        "infection_chance": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 10,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "CHITIN",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_ant_soldier_terminal",
+    "type": "MONSTER",
+    "name": {
+      "str": "兵蚁"
+    },
+    "description": "一种巨大的多毛红色蚂蚁，几乎是其他巨型蚂蚁的两倍大。它的颚部伸出了一对狰狞的钳子。这种本地动物很适应它的新体型。",
+    "default_faction": "ant_hack",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 20,
+    "harvest": "arachnid",
+    "hp": 90,
+    "speed": 110,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "a",
+    "color": "red",
+    "looks_like": "mon_ant_soldier",
+    "aggression": 7,
+    "morale": 100,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 7,
+    "melee_cut": 6,
+    "dodge": 1,
+    "armor_bash": 10,
+    "armor_cut": 18,
+    "armor_bullet": 14,
+    "armor_acid": 3,
+    "vision_day": 5,
+    "vision_night": 5,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 60
+      },
+      [
+        "ant_sinject",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 15,
+        "accuracy": 9,
+        "infection_chance": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 14,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 9,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "CHITIN",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_ant_soldier_pk_weak",
+    "type": "MONSTER",
+    "name": {
+      "str": "杰克蚂蚁"
+    },
+    "description": "这只敏捷的蚂蚁的体型比其他兵蚁略小，它会跟在猎物后跳跃并将其拖回蜂巢进行处理。它的下颚几乎和它的胸骨一般大小，能够分泌毒液。",
+    "default_faction": "ant_hack",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 16,
+    "harvest": "arachnid",
+    "hp": 60,
+    "speed": 125,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "a",
+    "color": "magenta",
+    "looks_like": "mon_ant_soldier",
+    "aggression": 8,
+    "morale": 80,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 4,
+    "dodge": 2,
+    "armor_bash": 8,
+    "armor_cut": 12,
+    "armor_bullet": 9,
+    "armor_acid": 2,
+    "armor_fire": 2,
+    "vision_day": 25,
+    "vision_night": 5,
+    "special_attacks": [
+      { "id": "grab_drag", "cooldown":15
+      },
+      [
+        "ant_dinject",
+        40
+      ],
+      [
+        "ant_sinject",
+        40
+      ],
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 25,
+        "accuracy": 8,
+        "infection_chance": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 10,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "id": "hammer",
+        "cooldown": 40,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 12,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "stab",
+            "amount": 6,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 2
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "FIRE"
+    ],
+    "upgrades": {
+      "half_life": 28,
+      "into": "mon_ant_soldier_pk"
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "CHITIN",
+      "CLIMBS",
+      "BASHES"
+    ]
+  },
+  {
+    "id": "mon_ant_soldier_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "杰克蚂蚁"
+    },
+    "description": "这只敏捷的蚂蚁的体型比其他兵蚁略小，它会跟在猎物后跳跃并将其拖回蜂巢进行处理。它的下颚几乎和它的胸骨一般大小，能够分泌一种滑润的毒液",
+    "default_faction": "ant_hack",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 20,
+    "harvest": "arachnid",
+    "hp": 75,
+    "speed": 125,
+    "material": [
+      "iflesh"
+    ],
+    "looks_like": "mon_ant_soldier",
+    "symbol": "a",
+    "color": "magenta",
+    "aggression": 8,
+    "morale": 80,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 4,
+    "dodge": 3,
+    "armor_bash": 12,
+    "armor_cut": 16,
+    "armor_bullet": 12,
+    "armor_acid": 3,
+    "armor_fire": 2,
+    "vision_day": 30,
+    "vision_night": 5,
+    "special_attacks": [
+      { "id": "grab_drag", "cooldown":15
+      },
+      [
+        "ant_dinject",
+        40
+      ],
+      [
+        "ant_sinject",
+        40
+      ],
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 25,
+        "accuracy": 10,
+        "infection_chance": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 14,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "id": "hammer",
+        "cooldown": 40,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 16,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 3
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "CHITIN",
+      "CLIMBS",
+      "BASHES"
+    ]
+  },
+  {
+    "copy-from": "mon_ant_acid_queen",
+    "id": "mon_ant_acid_queen",
+    "type": "MONSTER",
+    "name": {
+      "str": "酸蚁蚁后"
+    },
+    "description": "一只巨大的棕色蚂蚁，有一个不断搏动的拉长腹部。比起使用酸它似乎对照顾自己的蛋更感兴趣。 。 。",
+    "default_faction": "ant",
+    "diff": 16,
+    "hp": 170,
+    "speed": 30,
+    "aggression": 0,
+    "morale": 90,
+    "melee_skill": 5,
+    "melee_dice": 4,
+    "melee_dice_sides": 3,
+    "melee_cut": 8,
+    "dodge": 0,
+    "armor_bash": 10,
+    "armor_stab": 14,
+    "armor_cut": 20,
+    "armor_bullet": 16,
+    "vision_day": 5,
+    "vision_night": 10,
+    "starting_ammo": {
+      "bot_ant_acid_ultralisk": 1
+    },
+    "special_attacks": [
+      [
+        "GRENADIER_ELITE",
+        5
+      ],
+      [
+        "UPGRADE",
+        3
+      ],
+      [
+        "scrib",
+        20
+      ]
+    ],
+    "death_function": {
+      "message": "The %s's body leaks acid.",
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    }
+  },
+  {
+    "id": "mon_ant_acid_larva",
+    "type": "MONSTER",
+    "copy-from": "mon_ant_acid_larva",
+    "name": {
+      "str": "酸性幼虫蚁"
+    },
+    "description": "一只蠕动的黄色蠕虫，身体的两端似乎微微渗出液体。它的柔软的几丁质有点像螃蟹。",
+    "default_faction": "ant",
+    "harvest": "meatslug",
+    "speed": 10,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "special_attacks": [
+      [
+        "ACID_BARF",
+        30
+      ]
+    ]
+  },
+  {
+    "id": "mon_ant_acid",
+    "type": "MONSTER",
+    "copy-from": "mon_ant_acid",
+    "name": {
+      "str": "巨型酸蚁"
+    },
+    "description": "一只几乎失明的红色蚂蚁，它肿胀的腹部末端带着一个小孔。似乎有闪闪发光的液体周期性地从中滴出来的。",
+    "default_faction": "ant_hack",
+    "diff": 13,
+    "hp": 65,
+    "speed": 75,
+    "melee_skill": 4,
+    "dodge": 0,
+    "armor_bash": 4,
+    "armor_stab": 5,
+    "armor_cut": 12,
+    "armor_bullet": 9,
+    "vision_day": 3,
+    "vision_night": 3,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 20
+      },
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 30,
+        "accuracy": 5,
+        "infection_chance": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "acid",
+            "amount": 4,
+            "armor_multiplier": 0.5
+          }
+        ]
+      },
+      {
+        "type": "gun",
+        "cooldown": 5,
+        "move_cost": 150,
+        "gun_type": "acid_spit",
+        "fake_skills": [
+          [
+            "gun",
+            1
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "fake_dex": 2,
+        "fake_per": 2,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "description": "酸蚁士兵喷出一束酸液！",
+        "no_ammo_sound": "过度唠叨",
+        "targeting_sound": "angry chittering",
+        "ranges": [
+          [
+            2,
+            3,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ],
+    "extend": {
+      "anger_triggers": [
+        "FIRE"
+      ],
+      "upgrades": {
+        "into_group": "GROUP_ANT_ACID_UPGRADE",
+        "half_life": 5
+      }
+    },
+    "delete": {
+      "anger_triggers": [
+        "FRIEND_ATTACKED",
+        "PLAYER_CLOSE"
+      ],
+      "upgrades": {
+        "age_grow": 14,
+        "into": "mon_ant_acid_soldier"
+      }
+    }
+  },
+  {
+    "id": "mon_ant_acid_terminal",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型酸蚁"
+    },
+    "description": "一只几乎失明的红色蚂蚁，它肿胀的腹部末端带着一个小孔。似乎有闪闪发光的液体周期性地从中滴出来的。",
+    "default_faction": "ant_hack",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 13,
+    "harvest": "arachnid_acid",
+    "hp": 70,
+    "speed": 75,
+    "material": [
+      "iflesh"
+    ],
+    "looks_like": "mon_ant_acid",
+    "symbol": "a",
+    "color": "green",
+    "morale": 65,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_cut": 6,
+    "dodge": 0,
+    "armor_bash": 5,
+    "armor_stab": 6,
+    "armor_cut": 14,
+    "armor_bullet": 11,
+    "vision_day": 3,
+    "vision_night": 3,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 20
+      },
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 30,
+        "accuracy": 5,
+        "infection_chance": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "acid",
+            "amount": 4,
+            "armor_multiplier": 0.5
+          }
+        ]
+      },
+      {
+        "type": "gun",
+        "cooldown": 5,
+        "move_cost": 150,
+        "gun_type": "acid_spit",
+        "fake_skills": [
+          [
+            "gun",
+            1
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "fake_dex": 2,
+        "fake_per": 2,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "description": "酸蚁士兵喷出一束酸液！",
+        "no_ammo_sound": "过度唠叨",
+        "targeting_sound": "angry chittering",
+        "ranges": [
+          [
+            2,
+            3,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "FIRE"
+    ],
+    "death_function": {
+      "message": "The %s's body leaks acid.",
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "ACIDPROOF",
+      "CLIMBS",
+      "HEARS",
+      "POISON",
+      "SEES",
+      "SMELLS"
+    ]
+  },
+  {
+    "id": "mon_ant_acid_soldier",
+    "type": "MONSTER",
+    "copy-from": "mon_ant_acid_soldier",
+    "name": {
+      "str": "酸蚁士兵"
+    },
+    "description": "一只巨大的毛茸茸的棕色蚂蚁，长着高出工蚁巨大的头冠。有着它巨大的下颚，一种腐蚀性液体从它膨胀的腹部末端渗出，也阻止了它攀爬。",
+    "default_faction": "ant_hack",
+    "diff": 25,
+    "hp": 115,
+    "speed": 85,
+    "aggression": 7,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "dodge": 1,
+    "armor_bash": 9,
+    "armor_stab": 13,
+    "armor_cut": 20,
+    "armor_bullet": 16,
+    "vision_day": 4,
+    "vision_night": 4,
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 20,
+        "accuracy": 6,
+        "infection_chance": 6,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 12,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "acid",
+            "amount": 5,
+            "armor_multiplier": 0.5
+          }
+        ]
+      },
+      [
+        "ACID_BARF",
+        60
+      ],
+      {
+        "type": "gun",
+        "cooldown": 5,
+        "move_cost": 150,
+        "gun_type": "acid_spit",
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "rifle",
+            3
+          ]
+        ],
+        "fake_dex": 5,
+        "fake_per": 5,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "description": "酸蚁士兵喷出一束酸液！",
+        "no_ammo_sound": "过度唠叨",
+        "targeting_sound": "angry chittering",
+        "ranges": [
+          [
+            2,
+            4,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ],
+    "harvest": "arachnid_acid"
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_ant_acid_kwama",
+    "name": {
+      "str": "库阿玛虫"
+    },
+    "description": "你不知道这是什么东西，但那些蚂蚁们显然把它当作自己的后代。它的头看起来就像一只蛆虫，完全没有钳子，三只小眼睛盯着不同的方向，虽然它通常用四肢行走，但偶尔也会用后肢站立四处张望，它笨拙地用每个肢体上的三个手指去试图抓着东西。",
+    "species": "INSECT",
+    "default_faction": "ant_hack",
+    "symbol": "A",
+    "color": "red",
+    "material": [
+      "iflesh"
+    ],
+    "looks_like": "mon_ant_acid",
+    "diff": 20,
+    "hp": 120,
+    "aggression": 7,
+    "morale": 85,
+    "speed": 95,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 7,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 4
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 8,
+    "armor_stab": 9,
+    "armor_cut": 14,
+    "armor_bullet": 9,
+    "vision_day": 25,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "ACID",
+        60
+      ],
+      [
+        "ACID_BARF",
+        60
+      ],
+      [
+        "wound_minor",
+        40
+      ],
+      [
+        "scrib",
+        60
+      ]
+    ],
+    "harvest": "arachnid_acid",
+    "flags": [
+      "ACIDPROOF",
+      "POISON",
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "CLIMBS"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "PLAYER_CLOSE",
+      "FIRE"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ]
+  },
+  {
+    "type": "MONSTER",
+    "id": "mon_ant_acid_ultralisk",
+    "name": {
+      "str": "猛犸"
+    },
+    "description": "这头犹如一头大象一般大的蚁巢守卫者长有一种切割保护十分不错的几丁质，它的头部长有四个剃刀般锋利的下颚和一个悬挂在头上的外分泌腺体，上面滴着一种污浊肮脏的绿色液体，也使它的嗅觉能力失效了。这些怪物本身并不是完全耐酸的，一旦它们的发育完全成熟，它们便会成为一个寿命极短的，手段残忍的蚁巢守卫者。",
+    "species": "INSECT",
+    "default_faction": "ant_hack",
+    "symbol": "A",
+    "color": "green_red",
+    "material": [
+      "iflesh"
+    ],
+    "looks_like": "mon_ant_soldier_mega",
+    "diff": 30,
+    "hp": 260,
+    "aggression": 30,
+    "morale": 99,
+    "speed": 60,
+    "melee_skill": 5,
+    "melee_dice": 8,
+    "melee_dice_sides": 2,
+    "melee_cut": 10,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 4
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 14,
+    "armor_stab": 16,
+    "armor_cut": 24,
+    "armor_bullet": 18,
+    "armor_acid": 4,
+    "vision_day": 7,
+    "vision_night": 4,
+    "special_attacks": [
+      [
+        "SMASH",
+        90
+      ],
+      [
+        "ACID",
+        75
+      ],
+      [
+        "hammer",
+        30
+      ],
+      {
+        "id": "wound_minor",
+        "cooldown": 30,
+        "accuracy": 6,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 12,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "acid",
+            "amount": 8,
+            "armor_multiplier": 0.5
+          }
+        ]
+      },
+      {
+        "id": "slash",
+        "cooldown": 30,
+        "accuracy": 6,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 16,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "acid",
+            "amount": 6,
+            "armor_multiplier": 0.5
+          }
+        ]
+      }
+    ],
+    "harvest": "arachnid_acid",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "BASHES",
+      "DESTROYS",
+      "PUSH_MON",
+      "CHITIN"
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "PLAYER_CLOSE",
+      "FIRE",
+      "HURT"
+    ]
+  }
+]

@@ -1,0 +1,198 @@
+[
+  {
+    "//": "TODO write normal text?",
+    "type": "GENERIC",
+    "id": "uncle_bens_mustang",
+    "name": {
+      "str_sp": "本叔叔的野马"
+    },
+    "weight": "300 g",
+    "color": "light_cyan",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝了一小口。尝起来像汽油",
+      "effects": [
+        {
+          "id": "ub_mustang",
+          "duration": "100 m"
+        },
+        {
+          "id": "took_ub_mustang",
+          "duration": 1,
+          "permanent": true
+        }
+      ],
+      "moves": 50
+    },
+    "symbol": ")",
+    "description": "有贴纸的大塑料罐，上面有野马的照片。贴纸顶部的文字：“Best before…”，其他文字无法阅读。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": "plastic",
+    "volume": "3750 ml",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "abstract": "enemy_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "weight": "0 g",
+    "color": "light_red",
+    "symbol": "O",
+    "description": "倒下的敌人的头颅。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": "flesh",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT",
+      "TRADER_AVOID",
+      "TRADER_KEEP"
+    ]
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "fk_leader_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "copy-from": "enemy_head",
+    "description": "“烈火指”的头目被砍下的头颅。"
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "ip_leader_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "copy-from": "enemy_head",
+    "description": "铁砂掌师傅被砍下的头颅。"
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "prisoner_bill_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "copy-from": "enemy_head",
+    "description": "囚犯比尔被砍下的头颅。"
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "prisoner_bill_real_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "copy-from": "enemy_head",
+    "description": "“真正的”囚犯法案的头像被砍掉了"
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "boxer_johnny_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "copy-from": "enemy_head",
+    "description": "拳击手约翰尼被砍下的头颅。"
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "moneylender_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "copy-from": "enemy_head",
+    "description": "放债人被砍下的头颅。"
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "pt_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "copy-from": "enemy_head",
+    "description": "警察老师砍下了他的头。"
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "oa_head",
+    "name": {
+      "str_sp": "断头"
+    },
+    "copy-from": "enemy_head",
+    "description": "老刺客被砍下的头颅。"
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "flyer_fk",
+    "copy-from": "flyer",
+    "name": {
+      "str_sp": "火焰指节传单"
+    },
+    "description": "一张“烈火指”搏击学校的广告。",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "police_record",
+    "copy-from": "record_patient",
+    "name": {
+      "str_sp": "警察记录"
+    },
+    "description": "装满警察记录的大文件夹。",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "//": "TODO write normal text? maybe change id",
+    "type": "GENERIC",
+    "id": "military_record",
+    "copy-from": "record_patient",
+    "name": {
+      "str_sp": "机密档案"
+    },
+    "description": "一个大文件夹，里面装满了军事机密文件。",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "jcost_note",
+    "category": "books",
+    "symbol": ",",
+    "color": "white",
+    "name": {
+      "str": "奇怪的音符"
+    },
+    "description": "一张纸。上面写着什么，字迹潦草。",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "material": [
+      "paper"
+    ],
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "weight": "3 g",
+    "volume": "1 ml"
+  }
+]

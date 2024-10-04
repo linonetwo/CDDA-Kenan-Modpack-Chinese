@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TALK_REFUGEE_Fatima_2",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "effect": {
+          "u_add_var": "u_Talk_To_Fatima_about_Xenoids",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "condition": {
+          "not": {
+            "u_has_var": "u_Talk_To_Fatima_about_Xenoids",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_EVAC_Fatima_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_EVAC_Fatima_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": "当时我在疏散巴士上，我看到一群长相奇怪的士兵一样的家伙，他们拿着刀剑和盾牌。我还以为这是暴乱期间某些疯子搞的角色扮演呢，直到其中一个“人”瞪了我一眼。我发誓，它的眼睛闪着红光。然后我经历了这辈子最严重的一次恐慌症发作，就好像骑士变成了十字军东征军，而我是耶路撒冷城墙外的难民。要不是我肚子空空的话，我当时怕是会屎尿横流了。这事儿想起来就吓人。",
+    "responses": [
+      {
+        "text": "很高兴你挺过来了。",
+        "topic": "TALK_REFUGEE_Fatima_2"
+      }
+    ]
+  }
+]

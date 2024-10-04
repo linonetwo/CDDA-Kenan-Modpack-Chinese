@@ -1,0 +1,406 @@
+[
+  {
+    "id": "mounted_punt_gun",
+    "copy-from": "turret",
+    "type": "vehicle_part",
+    "name": {
+      "str": "悬挂式平底炮"
+    },
+    "item": "punt_gun",
+    "color": "green",
+    "broken_color": "green",
+    "breaks_into": [
+      {
+        "item": "punt_gun",
+        "prob": 50
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ],
+          [
+            "shotgun",
+            2
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "id": "mounted_punt_gun_homemade",
+    "copy-from": "turret",
+    "type": "vehicle_part",
+    "name": {
+      "str": "自制充气枪"
+    },
+    "item": "punt_gun_homemade",
+    "color": "green",
+    "broken_color": "green",
+    "breaks_into": [
+      {
+        "item": "punt_gun_homemade",
+        "prob": 50
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ],
+          [
+            "shotgun",
+            1
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "mounted_cannon_ancient",
+    "copy-from": "turret",
+    "name": {
+      "str": "车载 加农炮"
+    },
+    "item": "cannon_ancient",
+    "size": 35,
+    "breaks_into": [
+      {
+        "item": "cannon_ancient",
+        "prob": 50
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ],
+          [
+            "launcher",
+            1
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "mounted_cannon_makeshift",
+    "copy-from": "turret",
+    "name": {
+      "str": "简易加农炮"
+    },
+    "item": "cannon_makeshift",
+    "size": 35,
+    "breaks_into": [
+      {
+        "item": "cannon_makeshift",
+        "prob": 50
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ],
+          [
+            "launcher",
+            1
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "mounted_22_gatling",
+    "copy-from": "turret",
+    "name": {
+      "str": "车载 .22 迷你炮"
+    },
+    "item": "gatling_22_handmade",
+    "size": 35,
+    "breaks_into": [
+      {
+        "item": "gatling_22_handmade",
+        "prob": 50
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    }
+  },
+  {
+    "type": "vehicle_part",
+    "id": "mounted_45_gatling",
+    "copy-from": "turret",
+    "name": {
+      "str": "车载 .45口径转轮机枪"
+    },
+    "item": "gatling_45_handmade",
+    "size": 35,
+    "breaks_into": [
+      {
+        "item": "gatling_45_handmade",
+        "prob": 50
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "20 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "15 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    }
+  }
+]

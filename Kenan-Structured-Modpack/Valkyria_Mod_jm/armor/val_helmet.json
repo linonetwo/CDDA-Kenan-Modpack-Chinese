@@ -1,0 +1,128 @@
+[
+  {
+    "id": "gal_helmet",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "加利亚 P.32头盔"
+    },
+    "description": "一顶沉重的头盔，提供了极好的保护，可免受各种伤害。它被命名为加利亚P.32头盔。",
+    "weight": "1383 g",
+    "volume": "1750 ml",
+    "price": "150 USD",
+    "price_postapoc": "15 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "looks_like": "hat_hard",
+    "color": "green",
+    "warmth": 15,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 19,
+        "coverage": 80,
+        "covers": [
+          "head"
+        ],
+        "material": [
+          "steel"
+        ],
+        "material_thickness": 4
+      }
+    ]
+  },
+  {
+    "id": "imp_helmet",
+    "repairs_like": "helmet_barbute",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str": "1926型钢盔"
+    },
+    "description": "作为帝国最著名的象征之一，钢盔可以追溯到第一次欧洲大战的大屠杀。像许多帝国的盔甲一样，它是相当累赘和沉重的，但有惊人的保护。",
+    "weight": "1750 g",
+    "volume": "2150 ml",
+    "price": "150 USD",
+    "price_postapoc": "15 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "looks_like": "hat_hard",
+    "color": "green",
+    "warmth": 20,
+    "techniques": [
+      "WBLOCK_1"
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 23,
+        "coverage": 75,
+        "covers": [
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "material": [
+          "steel"
+        ],
+        "material_thickness": 3,
+        "environmental_protection": 6
+      }
+    ]
+  },
+  {
+    "id": "bruhlscarf",
+    "repairs_like": "balclava",
+    "type": "ARMOR",
+    "name": {
+      "str": "布鲁尔头巾"
+    },
+    "description": "红色的棉头巾。加利亚农村地区的妇女通常穿的。",
+    "weight": "120 g",
+    "volume": "250 ml",
+    "price": "12 USD",
+    "price_postapoc": "50 cent",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "hat_cotton",
+    "color": "dark_gray",
+    "warmth": 10,
+    "flags": [
+      "VARSIZE",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "coverage": 30,
+        "covers": [
+          "head"
+        ],
+        "material": [
+          "cotton"
+        ],
+        "material_thickness": 1
+      }
+    ]
+  }
+]

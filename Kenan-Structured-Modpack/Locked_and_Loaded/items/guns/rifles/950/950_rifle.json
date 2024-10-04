@@ -1,0 +1,45 @@
+[
+  {
+    "id": "950rifle",
+    "name": {
+      "str": "SSK.950步枪"
+    },
+    "copy-from": "rifle_manual",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "description": "只有三支JDJ步枪被制成了原型。体重110磅（50公斤），说这把步枪很难使用是轻描淡写的。一枪的后坐力可以把任何人送上地面，如果不小心的话。",
+    "weight": "49895 g",
+    "volume": "10 L",
+    "price": "30000 USD",
+    "to_hit": -2,
+    "bashing": 16,
+    "material": "steel",
+    "ammo": [
+      "950"
+    ],
+    "range": 230,
+    "dispersion": 300,
+    "durability": 9,
+    "//": "barrle volume is estimated as I can't find the actual barrel length.",
+    "barrel_volume": "800 ml",
+    "longest_side": "1500 mm",
+    "default_mods": [
+      "bipod",
+      "rifle_scope",
+      "muzzle_brake"
+    ],
+    "clip_size": 1,
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "950": 1
+        }
+      }
+    ]
+  }
+]

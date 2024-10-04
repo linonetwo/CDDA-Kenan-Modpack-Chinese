@@ -1,0 +1,158 @@
+[
+  {
+    "id": "mon_pig_piglet",
+    "type": "MONSTER",
+    "name": {
+      "str": "小猪"
+    },
+    "description": "一只在地上呼噜呼噜满地打滚的憨厚小猪，比野生成年野猪更容易被驯养。",
+    "default_faction": "pig",
+    "bodytype": "pig",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "10000 ml",
+    "weight": "10000 g",
+    "hp": 5,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "color": "pink",
+    "looks_like": "mon_pig",
+    "aggression": -10,
+    "morale": 10,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 1,
+    "dodge": 4,
+    "harvest": "mammal_small_leather",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "upgrades": {
+      "age_grow": 20,
+      "into": "mon_pig"
+    },
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 7
+    },
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        40
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly."
+    },
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "PET_MOUNTABLE",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_pig",
+    "type": "MONSTER",
+    "name": {
+      "str": "猪"
+    },
+    "description": "一种由野猪驯化后选育而来的的家养杂食性动物，好奇心强的同时又聪明。如果长时间放任不管的话很容易回归野性，但还是可以重新驯化，不过需要用足够多的时间和耐心的训练。",
+    "default_faction": "pig",
+    "bodytype": "pig",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "200000 ml",
+    "weight": "200000 g",
+    "hp": 50,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "p",
+    "color": "pink",
+    "aggression": 10,
+    "morale": 30,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 8,
+    "melee_cut": 4,
+    "dodge": 2,
+    "harvest": "mammal_large_leather",
+    "reproduction": {
+      "baby_monster": "mon_pig_piglet",
+      "baby_count": 3,
+      "baby_timer": 10
+    },
+    "baby_flags": [
+      "SPRING",
+      "AUTUMN"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_manure",
+      "biosig_timer": 2
+    },
+    "path_settings": {
+      "max_dist": 10
+    },
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        20
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly."
+    },
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "PET_MOUNTABLE",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  }
+]

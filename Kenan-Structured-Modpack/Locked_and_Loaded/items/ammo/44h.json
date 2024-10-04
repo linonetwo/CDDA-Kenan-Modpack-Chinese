@@ -1,0 +1,70 @@
+[
+  {
+    "id": "44h",
+    "type": "AMMO",
+    "name": {
+      "str": ".44 亨利弹"
+    },
+    "description": ".44亨利弹，又称.44环形弹、.44长环形弹，或欧洲的11x23mmR弹（11x23mm环形弹），是一种供环形步枪和手枪使用的弹药。这款子弹主要因其在亨利步枪和温彻斯特1866型枪中的使用而闻名，在被.44-40温彻斯特枪超越后，这款子弹在市面上已经销声匿迹。",
+    "weight": "6 g",
+    "volume": "50 ml",
+    "price": "50 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "-",
+    "color": "white",
+    "count": 40,
+    "stack_size": 30,
+    "ammo_type": "44h",
+    "casing": "44h_casing",
+    "range": 28,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 30,
+      "armor_penetration": 3
+    },
+    "dispersion": 300,
+    "recoil": 100
+  },
+  {
+    "id": "bp_44h",
+    "copy-from": "44h",
+    "type": "AMMO",
+    "name": {
+      "str": ".44 亨利弹（黑火药）"
+    },
+    "proportional": {
+      "price": 0.3,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "44h_casing",
+    "copy-from": "casing",
+    "name": {
+      "str": ".44 亨利弹弹壳"
+    },
+    "description": "一个44亨利弹的空弹壳。",
+    "material": [
+      "brass"
+    ],
+    "volume": "40 ml",
+    "weight": "1 g"
+  }
+]

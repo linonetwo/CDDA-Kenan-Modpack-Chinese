@@ -1,0 +1,97 @@
+[
+  {
+    "//": "RP traits that help define your character in the world. allows you to indicate your character's background, affecting some NPC interactions. *very* experimental",
+    "type": "mutation",
+    "id": "DKZ_COMBAT",
+    "name": {
+      "str": "角色：战士"
+    },
+    "points": 0,
+    "description": "你已经看到了你的一部分擦伤和擦伤，当大灾变来袭，你战斗的异族人，并设法生存下来讲故事。\n\n没有直接的技能优势，但允许你在某些NPC面前展示自己作为一名战士。总有一天会有人认出你。",
+    "valid": false,
+    "cancels": [
+      "DKZ_TECH",
+      "DKZ_SCIENTIST",
+      "DKZ_MEDIC",
+      "DKZ_LEADER"
+    ],
+    "starting_trait": true,
+    "purifiable": false
+  },
+  {
+    "//": "RP traits that help define your character in the world. allows you to indicate your character's background, affecting some NPC interactions. *very* experimental",
+    "type": "mutation",
+    "id": "DKZ_TECH",
+    "name": {
+      "str": "RP：技术员"
+    },
+    "points": 0,
+    "description": "从你第一次看到Xenoids开始，你就一直在试图弄清楚它们是如何工作的。你迫不及待地想把它们拆开，如果可能的话，它们是活的，功能齐全的。\n\n没有直接的技能优势，但允许你以技术员的身份向某些NPC展示自己。总有一天会有人认出你。",
+    "valid": false,
+    "cancels": [
+      "DKZ_COMBAT",
+      "DKZ_SCIENTIST",
+      "DKZ_MEDIC",
+      "DKZ_LEADER"
+    ],
+    "starting_trait": true,
+    "purifiable": false
+  },
+  {
+    "//": "RP traits that help define your character in the world. allows you to indicate your character's background, affecting some NPC interactions. *very* experimental",
+    "type": "mutation",
+    "id": "DKZ_SCIENTIST",
+    "name": {
+      "str": "RP：科学家"
+    },
+    "points": 0,
+    "description": "你花在书本或屏幕前的时间比你在外面的时间要多；但是这些异族怪物颠覆了你认为你知道的关于科学的一切，而且它们正试图杀死你。\n\n没有直接的技能优势，但允许你以科学家的身份向某些NPC展示自己。总有一天会有人认出你。",
+    "valid": false,
+    "cancels": [
+      "DKZ_COMBAT",
+      "DKZ_TECH",
+      "DKZ_MEDIC",
+      "DKZ_LEADER"
+    ],
+    "starting_trait": true,
+    "purifiable": false
+  },
+  {
+    "//": "RP traits that help define your character in the world. allows you to indicate your character's background, affecting some NPC interactions. *very* experimental",
+    "type": "mutation",
+    "id": "DKZ_MEDIC",
+    "name": {
+      "str": "角色：医生"
+    },
+    "points": 0,
+    "description": "你的工作或经历让你经历了各种各样的创伤，包括身体和精神上的创伤，在大灾难期间，你被信任提供救生护理。\n\n没有直接的技能优势，但是可以让你在某些NPC面前展示你自己。总有一天会有人认出你。",
+    "valid": false,
+    "cancels": [
+      "DKZ_COMBAT",
+      "DKZ_TECH",
+      "DKZ_SCIENTIST",
+      "DKZ_LEADER"
+    ],
+    "starting_trait": true,
+    "purifiable": false
+  },
+  {
+    "//": "RP traits that help define your character in the world. allows you to indicate your character's background, affecting some NPC interactions. *very* experimental",
+    "type": "mutation",
+    "id": "DKZ_LEADER",
+    "name": {
+      "str": "角色：领导"
+    },
+    "points": 0,
+    "description": "不管你喜不喜欢，你总是有管理人的本领，而且在这方面有一些来之不易的技巧。在大灾变中，在异族人的到来和随之而来的混乱中，你帮助你周围的人找到了安全的地方。\n\n没有直接的技能优势，但可以让你以领导者的身份出现在某些NPC面前。总有一天会有人认出你。",
+    "valid": false,
+    "cancels": [
+      "DKZ_COMBAT",
+      "DKZ_TECH",
+      "DKZ_SCIENTIST",
+      "DKZ_MEDIC"
+    ],
+    "starting_trait": true,
+    "purifiable": false
+  }
+]

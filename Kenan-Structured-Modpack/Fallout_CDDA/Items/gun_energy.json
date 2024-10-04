@@ -1,0 +1,1112 @@
+[
+  {
+    "id": "wattz_1000",
+    "type": "GUN",
+    "color": "light_gray",
+    "symbol": "{",
+    "name": {
+      "str": "Wattz 1000激光手枪"
+    },
+    "description": "沃特兹1000激光手枪。民用型号，所以威力低于军用或警用型号，使用电池。",
+    "price": "424 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "weight": "2940 g",
+    "volume": "1 L",
+    "bashing": 3,
+    "to_hit": -1,
+    "ammo_effects": [
+      "LASER"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_disposable_cell",
+          "light_disposable_cell",
+          "light_minus_battery_cell",
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ],
+    "skill": "pistol",
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 2,
+      "armor_penetration": 5
+    },
+    "range": 30,
+    "dispersion": 5,
+    "sight_dispersion": 20,
+    "recoil": 0,
+    "durability": 8,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi",
+        1
+      ],
+      [
+        "BURST",
+        "spray",
+        10
+      ],
+      [
+        "AUTO",
+        "auto",
+        15
+      ]
+    ],
+    "reload": 140,
+    "loudness": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "mon_wattz_1000",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "Monster Wattz 1000 激光手枪"
+    },
+    "description": "该物品用于实现怪物攻击，如果你看到这个说明游戏出Bug了。",
+    "skill": "pistol",
+    "range": 30,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 4,
+      "armor_penetration": 5
+    },
+    "dispersion": 10,
+    "durability": 8,
+    "loudness": 12,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "4 rd.",
+        4
+      ],
+      [
+        "AUTO",
+        "auto",
+        6
+      ]
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ]
+  },
+  {
+    "id": "wattz_1000_magneto",
+    "type": "GUN",
+    "color": "white",
+    "symbol": "{",
+    "name": {
+      "str": "瓦茨1000磁激光手枪"
+    },
+    "description": "这把沃特兹1000激光手枪已升级与磁场定位系统，收紧激光发射，使这把手枪额外的穿透力。",
+    "price": "424 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "weight": "2940 g",
+    "volume": "1 L",
+    "bashing": 3,
+    "to_hit": -1,
+    "ammo_effects": [
+      "LASER"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ammo_to_fire": 20,
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "skill": "pistol",
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 27,
+      "armor_penetration": 12
+    },
+    "range": 30,
+    "dispersion": 5,
+    "sight_dispersion": 20,
+    "recoil": 0,
+    "durability": 8,
+    "reload": 300,
+    "loudness": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "laser_pistol_aep",
+    "type": "GUN",
+    "color": "light_gray",
+    "symbol": "{",
+    "name": {
+      "str": "AEP7 激光手枪"
+    },
+    "description": "AEP7激光手枪投入使用，以取代老化的Wattz 1000型号。它拥有宽大的电池尺寸，射程密集，对扩展使用的弹性，以及相当不错的伤害输出，是一个非常好的选择。",
+    "price": "424 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "weight": "2940 g",
+    "volume": "1 L",
+    "bashing": 3,
+    "to_hit": -1,
+    "ammo_effects": [
+      "LASER"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ammo_to_fire": 20,
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "500 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_disposable_cell",
+          "light_disposable_cell",
+          "light_minus_battery_cell",
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ],
+    "skill": "pistol",
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 20,
+      "armor_penetration": 5
+    },
+    "range": 30,
+    "dispersion": 5,
+    "sight_dispersion": 20,
+    "recoil": 0,
+    "durability": 8,
+    "reload": 300,
+    "loudness": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "mon_laser_pistol_aep",
+    "type": "GUN",
+    "copy-from": "fake_item",
+    "name": {
+      "str": "怪物 AEP7 激光手枪"
+    },
+    "description": "该物品用于实现怪物攻击，如果你看到这个说明游戏出Bug了。",
+    "skill": "pistol",
+    "range": 30,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 22,
+      "armor_penetration": 7
+    },
+    "dispersion": 10,
+    "durability": 8,
+    "loudness": 12,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "4 rd.",
+        4
+      ],
+      [
+        "AUTO",
+        "auto",
+        6
+      ]
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ]
+  },
+  {
+    "id": "laser_pistol_aep_pewpew",
+    "type": "GUN",
+    "color": "light_gray",
+    "symbol": "{",
+    "name": {
+      "str": "Sunset Sasparilla AEP7激光手枪"
+    },
+    "description": "AEP7激光手枪投入使用，以取代老化的Wattz 1000型号。它拥有宽大的电池尺寸，射程密集，对扩展使用的弹性，以及相当不错的伤害输出，是一个非常好的选择。这一个是定制的标志日落萨斯帕里拉，并开火5枪一次，有点像散弹枪。光束有明显的红色。",
+    "price": "424 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "weight": "2940 g",
+    "volume": "1 L",
+    "bashing": 3,
+    "to_hit": -1,
+    "ammo_effects": [
+      "LASER"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ammo_to_fire": 20,
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_disposable_cell",
+          "light_disposable_cell",
+          "light_minus_battery_cell",
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ],
+    "skill": "pistol",
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 20,
+      "armor_penetration": 9
+    },
+    "range": 30,
+    "dispersion": 5,
+    "sight_dispersion": 20,
+    "recoil": 0,
+    "durability": 8,
+    "modes": [
+      [
+        "DEFAULT",
+        "Single Fire",
+        5
+      ]
+    ],
+    "reload": 300,
+    "loudness": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "wattz_2000",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "瓦茨2000激光步枪"
+    },
+    "description": "沃特兹2000激光步枪。使用UPS提供更强大的激光，并使用加长枪管提供额外的射程。",
+    "price": "16000 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "energy_drain": "84 kJ",
+    "skill": "rifle",
+    "weight": "2950 g",
+    "volume": "3 L",
+    "bashing": 12,
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 75,
+      "armor_penetration": 24
+    },
+    "range": 80,
+    "dispersion": 0,
+    "sight_dispersion": 60,
+    "recoil": 0,
+    "durability": 8,
+    "reload": 100,
+    "built_in_mods": [
+      "rifle_scope"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "aer9",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "AER9激光步枪"
+    },
+    "description": "一把AER9激光步枪。虽然不是目前使用的顶级机型，但它的高耐用性和可靠性使得它远比芬尼基AEP12更受欢迎，而在UPS上使用电池则使其在紧要关头对激光用户更为简单。",
+    "price": "16000 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ammo_to_fire": 20,
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "magazine_well": "1 L",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "skill": "rifle",
+    "weight": "2950 g",
+    "volume": "3 L",
+    "bashing": 12,
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 40,
+      "armor_penetration": 18
+    },
+    "range": 80,
+    "dispersion": 0,
+    "sight_dispersion": 60,
+    "recoil": 0,
+    "durability": 10,
+    "reload": 100,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "aer9_tribeam",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "三光束AER9 激光步枪"
+    },
+    "description": "一把AER9激光步枪，被改装成霰弹枪一样射击。它消耗的能量是原来的三倍，但造成的伤害要大得多。",
+    "price": "16000 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ammo_to_fire": 50,
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "skill": "shotgun",
+    "weight": "2950 g",
+    "volume": "2 L",
+    "bashing": 12,
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 121,
+      "armor_penetration": 33
+    },
+    "range": 40,
+    "dispersion": 0,
+    "sight_dispersion": 60,
+    "recoil": 0,
+    "durability": 10,
+    "reload": 100,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "aer14_prototype",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "AER14原型激光步枪"
+    },
+    "description": "AER14激光步枪的原型。意在取代市场上老旧的激光步枪设计，这是伟大的平衡了瓦茨激光手枪和AER9激光步枪。然而，作为原型，它更容易损坏。它有一个漂亮的绿色光束。",
+    "price": "16000 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ammo_to_fire": 20,
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "500 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "skill": "rifle",
+    "weight": "2950 g",
+    "volume": "3 L",
+    "bashing": 12,
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 58,
+      "armor_penetration": 25
+    },
+    "range": 80,
+    "dispersion": 0,
+    "sight_dispersion": 60,
+    "recoil": 0,
+    "durability": 7,
+    "reload": 100,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "laser_rcw",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "brown",
+    "name": {
+      "str": "激光Rcw"
+    },
+    "description": "这种“激光突击步枪”的独特之处是增加了一个“鼓”，使这种武器具有独特的外观、高射速和不寻常的名称。",
+    "price": "16000 USD",
+    "looks_like": "tommygun",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "energy_drain": "10 kJ",
+    "skill": "smg",
+    "weight": "2950 g",
+    "volume": "3 L",
+    "bashing": 12,
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 10,
+      "armor_penetration": 10
+    },
+    "range": 40,
+    "dispersion": 0,
+    "sight_dispersion": 60,
+    "recoil": 0,
+    "durability": 10,
+    "reload": 100,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "p94_caster",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "symbol": "(",
+    "color": "green",
+    "name": {
+      "str": "温彻斯特P94等离子连铸机"
+    },
+    "description": "温彻斯特P94型电浆步枪，它是一把像工业机器一样笨重但是强力的武器，它使用微型核融电池供能，电浆在一个特殊的腔室内成型并在由超导材料制成的管道中被电磁场加速驱动发射出去，枪口处的爪型电磁场发生装置则负责稳定这团电浆的轨道以保证其精度。",
+    "price": "17500 USD",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "MODE_BURST",
+      "NEVER_JAMS"
+    ],
+    "energy_drain": "65 kJ",
+    "ammo_effects": [
+      "PLASMA",
+      "FLAME"
+    ],
+    "skill": "launcher",
+    "weight": "4535 g",
+    "volume": "3750 ml",
+    "bashing": 12,
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 50,
+      "armor_penetration": 20
+    },
+    "dispersion": 60,
+    "durability": 8,
+    "reload": 700,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "p94_rifle",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "symbol": "(",
+    "color": "green",
+    "name": {
+      "str": "温彻斯特P94-B等离子步枪"
+    },
+    "description": "温彻斯特P94-B型等离子步枪。一种工业级能量武器，向超导管发射过热的等离子体。由微型核融合电池提供动力。",
+    "price": "17500 USD",
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "MODE_BURST",
+      "NEVER_JAMS"
+    ],
+    "energy_drain": "30 kJ",
+    "ammo_effects": [
+      "PLASMA",
+      "FLAME"
+    ],
+    "skill": "rifle",
+    "weight": "4535 g",
+    "volume": "3750 ml",
+    "bashing": 12,
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 25,
+      "armor_penetration": 12
+    },
+    "dispersion": 60,
+    "durability": 8,
+    "reload": 700,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "musket_laser",
+    "type": "GUN",
+    "color": "green",
+    "symbol": "(",
+    "name": {
+      "str": "激光滑膛枪"
+    },
+    "description": "AER-9激光步枪的枪管安装在带有曲柄机构的临时装备上。启动它来启动。革命风格的现代权力。",
+    "price": "7490 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "weight": "4964 g",
+    "volume": "4250 ml",
+    "bashing": 8,
+    "to_hit": -1,
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NON-FOULING",
+      "NEEDS_NO_LUBE"
+    ],
+    "ammo_to_fire": 20,
+    "skill": "rifle",
+    "ammo": [
+      "battery"
+    ],
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 32,
+      "armor_penetration": 14
+    },
+    "range": 30,
+    "dispersion": 50,
+    "sight_dispersion": 100,
+    "recoil": 15,
+    "durability": 6,
+    "reload": 0,
+    "loudness": 20,
+    "use_action": "HAND_CRANK",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  }
+]

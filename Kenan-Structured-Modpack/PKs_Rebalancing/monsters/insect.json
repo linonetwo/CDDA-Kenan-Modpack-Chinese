@@ -1,0 +1,2413 @@
+[
+  {
+    "id": "mon_mosquito_giant",
+    "type": "MONSTER",
+    "copy-from": "mon_mosquito_giant",
+    "description": "一种巨大的变异蚊子，不稳定地摆动。它的脸上长着一个尖尖的长鼻。它试图抓住足够大的猎物。",
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 5
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "doom_unhealth",
+        "duration": 2,
+        "chance": 20
+      }
+    ],
+    "special_attacks": [
+      [
+        "numbing_poison",
+        20
+      ],
+      [
+        "wound_minor",
+        30
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "STUMBLES",
+      "VENOM",
+      "FLIES",
+      "HIT_AND_RUN",
+      "PARALYZEVENOM",
+      "GRABS"
+    ]
+  },
+  {
+    "id": "mon_slug_giant",
+    "type": "MONSTER",
+    "copy-from": "mon_slug_giant",
+    "name": {
+      "str": "巨型蛞蝓"
+    },
+    "emit_fields": [
+      "emit_acid_trail_slow"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "BASHES",
+      "ACIDPROOF",
+      "FAT",
+      "ARTHROPOD_BLOOD"
+    ]
+  },
+  {
+    "id": "mon_centipede_giant",
+    "type": "MONSTER",
+    "copy-from": "mon_centipede_giant",
+    "description": "一种一米长的蜈蚣，有一对凶险的钳子，几十条细长的腿和一种高度腐蚀性的毒液。",
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 3
+      }
+    ],
+    "special_attacks": [
+      [
+        "ACID",
+        30
+      ],
+      [
+        "numbing_poison",
+        20
+      ],
+      [
+        "wound_minor",
+        15
+      ]
+    ],
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 35
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "VENOM",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_maggot",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨蛆"
+    },
+    "description": "一种灰白色的巨型蛆，被吸引腐烂以供进食。最终会变成苍蝇。",
+    "default_faction": "small_animal",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "INSECT"
+    ],
+    "diff": 2,
+    "harvest": "meatslug",
+    "hp": 10,
+    "speed": 15,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "a",
+    "color": "white",
+    "aggression": -20,
+    "morale": 0,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 1,
+    "dodge": 1,
+    "armor_bash": 0,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_acid": 1,
+    "flags": [
+      "HEARS",
+      "SMELLS",
+      "CAN_DIG",
+      "LARVA"
+    ]
+  },
+  {
+    "id": "mon_caterpillar",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨毛虫"
+    },
+    "description": "沙发垫大小的多节毛虫。虽然没有威胁，但它是彩色的，以警告捕食者。",
+    "default_faction": "small_animal",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "INSECT"
+    ],
+    "diff": 5,
+    "hp": 12,
+    "speed": 15,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "meatslug",
+    "symbol": "w",
+    "color": "light_green",
+    "aggression": -30,
+    "morale": 10,
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 1,
+    "armor_bash": 2,
+    "vision_day": 5,
+    "vision_night": 2,
+    "special_attacks": [
+      [
+        "SHRIEK",
+        30
+      ]
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "HURT",
+      "FRIEND_DIED"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "LARVA",
+      "NOHEAD",
+      "CLIMBS",
+      "WEBWALK"
+    ]
+  },
+  {
+    "id": "mon_pupae",
+    "type": "MONSTER",
+    "name": {
+      "str": "蛹囊"
+    },
+    "description": "某种昆虫，包在厚厚的几丁质蛹壳里，上面覆盖着精致的粘性网。比看上去耐用多了。",
+    "default_faction": "small_animal",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "INSECT"
+    ],
+    "diff": 4,
+    "hp": 15,
+    "speed": 5,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "meatslug",
+    "symbol": "q",
+    "color": "brown",
+    "aggression": -50,
+    "morale": 0,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "melee_cut": 0,
+    "dodge": 0,
+    "armor_bash": 10,
+    "armor_cut": 14,
+    "armor_bullet": 10,
+    "armor_acid": 6,
+    "armor_fire": 7,
+    "emit_fields": [
+      "emit_web"
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      10
+    ],
+    "flags": [
+      "NOHEAD",
+      "WEBWALK",
+      "STUMBLES",
+      "IMMOBILE"
+    ]
+  },
+  {
+    "id": "mon_pupae_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "蛹囊"
+    },
+    "description": "某种昆虫，包在厚厚的几丁质蛹壳里，上面覆盖着精致的粘性网。比看上去耐用多了。",
+    "default_faction": "roach",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "INSECT"
+    ],
+    "diff": 4,
+    "hp": 15,
+    "speed": 5,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "meatslug",
+    "symbol": "q",
+    "color": "brown",
+    "aggression": -50,
+    "morale": 0,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "melee_cut": 0,
+    "dodge": 0,
+    "armor_bash": 10,
+    "armor_cut": 14,
+    "armor_bullet": 10,
+    "armor_acid": 6,
+    "armor_fire": 7,
+    "emit_fields": [
+      "emit_web"
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      10
+    ],
+    "flags": [
+      "NOHEAD",
+      "WEBWALK",
+      "STUMBLES",
+      "IMMOBILE"
+    ]
+  },
+  {
+    "id": "mon_butterfly",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蝴蝶"
+    },
+    "description": "什么看起来-大部分-像一只帝王蝶，有着精致的四肢和一对卷曲的触角。它的翼展足以吞没你。",
+    "default_faction": "roach",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "INSECT"
+    ],
+    "diff": 12,
+    "hp": 30,
+    "speed": 130,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "meatslug",
+    "symbol": "W",
+    "color": "light_red",
+    "aggression": -35,
+    "morale": 20,
+    "melee_skill": 3,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 3
+      },
+      {
+        "damage_type": "acid",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 0,
+    "dodge": 6,
+    "vision_day": 15,
+    "vision_night": 5,
+    "emit_fields": [
+      "emit_fungacidal_small"
+    ],
+    "special_attacks": [
+      [
+        "ACID",
+        45
+      ]
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      30
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "STALK",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "FRIEND_DIED",
+      "FIRE"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "STUMBLES",
+      "FLIES",
+      "ACIDPROOF",
+      "HARDTOSHOOT",
+      "GROUP_MORALE",
+      "SWARMS",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_moth",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨蛾"
+    },
+    "description": "躯干大小的半透明白色蛾子。它不稳定地四处飘动，被光源吸引，并在尾迹中释放出微弱的抗真菌粉末。",
+    "default_faction": "roach",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "INSECT"
+    ],
+    "diff": 12,
+    "hp": 35,
+    "speed": 155,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "meatslug",
+    "symbol": "W",
+    "color": "white",
+    "aggression": -35,
+    "morale": 20,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 3
+      },
+      {
+        "damage_type": "acid",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 0,
+    "dodge": 5,
+    "vision_day": 5,
+    "vision_night": 15,
+    "emit_fields": [
+      "emit_fungacidal_small"
+    ],
+    "special_attacks": [
+      [
+        "ACID",
+        30
+      ]
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      35
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "FIRE",
+      "STALK",
+      "FRIEND_ATTACKED"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "FRIEND_DIED"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "STUMBLES",
+      "FLIES",
+      "ACIDPROOF",
+      "HARDTOSHOOT",
+      "GROUP_MORALE",
+      "SWARMS",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_tardigrade",
+    "type": "MONSTER",
+    "name": {
+      "str": "缓行"
+    },
+    "description": "作为世界上最耐用的生物之一，缓步动物比恐龙和人类都长寿。这是一个丰满的，现在驼鹿大小的八条腿的小动物，运动着一个有裂缝的壳，在奠定了部分。沿着贝壳的长度可以看到成对的感觉触手在四处挥舞。虽然它有爪的手指似乎是用来抓的，但由于它们的巨大尺寸，触手在防御时可以挥舞。",
+    "default_faction": "herbivore",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "INSECT"
+    ],
+    "diff": 5,
+    "hp": 450,
+    "speed": 15,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "B",
+    "color": "brown_white",
+    "aggression": -5,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 24,
+    "armor_bash": 30,
+    "armor_cut": 35,
+    "armor_bullet": 30,
+    "armor_acid": 6,
+    "armor_fire": 9,
+    "vision_day": 5,
+    "vision_night": 3,
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ],
+      { "id": "grab", "cooldown": 30
+      },
+      [
+        "VINE",
+        15
+      ]
+    ],
+    "anger_triggers": [
+      "HURT",
+      "STALK",
+      "FRIEND_DIED"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "STUMBLES",
+      "BASHES",
+      "ARTHROPOD_BLOOD",
+      "NO_BREATHE",
+      "SWIMS",
+      "ANIMAL",
+      "FAT",
+      "CHITIN"
+    ]
+  },
+  {
+    "id": "mon_spider_cellar_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型地窖蛛"
+    },
+    "description": "一个焦躁不安的褐色的变异蜘蛛，有着相对小的身体和细长的腿。它那些较小的姊妹有着众所周知的敏捷，而且还会捕食其他蜘蛛。",
+    "default_faction": "spider_cellar",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 2,
+    "volume": "30 L",
+    "weight": "40750 g",
+    "hp": 45,
+    "speed": 145,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "s",
+    "color": "brown",
+    "aggression": -10,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_cut": 4,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 2
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "badpoison",
+        "duration": 800,
+        "chance": 25
+      }
+    ],
+    "dodge": 7,
+    "armor_bash": 2,
+    "armor_cut": 4,
+    "armor_bullet": 2,
+    "armor_acid": 4,
+    "vision_day": 5,
+    "vision_night": 9,
+    "harvest": "arachnid",
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ]
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "VENOM",
+      "WEBWALK",
+      "CLIMBS",
+      "HARDTOSHOOT",
+      "PUSH_MON",
+      "PATH_AVOID_FIRE"
+    ],
+    "//": "No, they are not in fact the most venomous spider in the world."
+  },
+  {
+    "id": "mon_spider_widow_giant",
+    "type": "MONSTER",
+    "copy-from": "mon_spider_widow_giant",
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 4,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 1200,
+        "chance": 50
+      },
+      {
+        "id": "badpoison",
+        "duration": 1200,
+        "chance": 50
+      }
+    ],
+    "emit_fields": [
+      "emit_web"
+    ],
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CHITIN",
+      "CLIMBS"
+    ]
+  },
+  {
+    "id": "mon_spider_trapdoor_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型螲蟷蛛"
+    },
+    "description": "一只巨大的深棕色蜘蛛，长着球型的胸腔，会挖掘出一个大坑，等待粗心大意的猎物掉入陷阱。",
+    "default_faction": "spider_trapdoor",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 15,
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 55,
+    "speed": 115,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "s",
+    "color": "blue",
+    "aggression": 60,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_cut": 6,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 2
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 5
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 4,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 5,
+    "vision_night": 7,
+    "harvest": "arachnid",
+    "upgrades": {
+      "half_life": 19,
+      "into_group": "TRAP_SPIDER_UPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "CAN_DIG",
+      "WEBWALK",
+      "CHITIN",
+      "FAT",
+      "CLIMBS",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_spider_jumping_giant",
+    "type": "MONSTER",
+    "copy-from": "mon_spider_jumping_giant",
+    "hp": 35,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_cut": 4,
+    "dodge": 6,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 2
+      },
+      {
+        "damage_type": "acid",
+        "amount": 2
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 30
+      }
+    ],
+    "armor_bash": 2,
+    "armor_cut": 5,
+    "armor_bullet": 3,
+    "vision_day": 20,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ]
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FIRE"
+    ],
+    "upgrades": {
+      "half_life": 17,
+      "into": "mon_spider_jumping_giant_acid"
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "HEARS",
+      "CHITIN",
+      "CLIMBS",
+      "ACIDPROOF",
+      "PUSH_MON"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED",
+      "STALK"
+    ]
+  },
+  {
+    "id": "mon_spider_web_s",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型网蛛幼体"
+    },
+    "description": "一个未成熟的巨型网蛛，太年轻了以至于还没有毒，你可以走过去快速解决它。",
+    "default_faction": "spider_web",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "volume": "30 L",
+    "weight": "40 kg",
+    "hp": 20,
+    "speed": 65,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "s",
+    "color": "yellow",
+    "aggression": 20,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 1,
+    "armor_bash": 2,
+    "armor_cut": 6,
+    "armor_bullet": 5,
+    "vision_day": 12,
+    "vision_night": 5,
+    "harvest": "arachnid",
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ]
+    ],
+    "upgrades": {
+      "half_life": 3,
+      "into": "mon_spider_web_small"
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "STUMBLES",
+      "CLIMBS",
+      "PUSH_MON",
+      "CHITIN"
+    ]
+  },
+  {
+    "id": "mon_spider_web_small",
+    "type": "MONSTER",
+    "name": {
+      "str": "大型网蛛"
+    },
+    "description": "一只体型和小狗一般大小的变异浅灰色蜘蛛，长着细长的腿、大大的眼睛和超大的獠牙。",
+    "default_faction": "spider_web",
+    "copy-from": "mon_spider_web_small",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 2,
+    "volume": "30 L",
+    "weight": "40 kg",
+    "hp": 20,
+    "speed": 110,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "s",
+    "color": "yellow",
+    "aggression": 20,
+    "morale": 67,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 3,
+    "melee_cut": 4,
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 6,
+    "armor_bullet": 5,
+    "vision_day": 5,
+    "vision_night": 5,
+    "harvest": "arachnid",
+    "emit_fields": [
+      "emit_web_small"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CHITIN",
+      "CLIMBS",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_spider_web",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型网蛛"
+    },
+    "description": "一只巨大的浅灰色织网蜘蛛，在丛林树木间编织这死亡的蛛网，等待猎物的上门。",
+    "default_faction": "spider_web",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 14,
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 40,
+    "speed": 110,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "s",
+    "color": "yellow",
+    "aggression": 20,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_cut": 4,
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 6,
+    "armor_bullet": 5,
+    "vision_day": 5,
+    "vision_night": 5,
+    "harvest": "arachnid",
+    "emit_fields": [
+      "emit_web_small"
+    ],
+    "upgrades": {
+      "half_life": 19,
+      "into_group": "WEB_SPIDER_UPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CHITIN",
+      "CLIMBS",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_spider_wolf_giant",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型狼蛛"
+    },
+    "description": "变异的狼蛛，为普通狼蛛的三十倍大小，移动迅速且富有攻击性，被盯上的猎物很难逃脱。",
+    "default_faction": "spider_wolf",
+    "bodytype": "spider",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 2,
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 40,
+    "speed": 160,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "s",
+    "color": "brown",
+    "aggression": 30,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_cut": 8,
+    "dodge": 4,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 650,
+        "chance": 15
+      }
+    ],
+    "armor_bash": 4,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "armor_acid": 2,
+    "vision_day": 7,
+    "vision_night": 15,
+    "harvest": "arachnid",
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ]
+    ],
+    "upgrades": {
+      "half_life": 29,
+      "into": "mon_spider_wolf_giant_pk"
+    },
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "CHITIN",
+      "FAT",
+      "PATH_AVOID_DANGER_1",
+      "VENOM",
+      "CLIMBS",
+      "PATH_AVOID_FIRE",
+      "PATH_AVOID_FALL"
+    ]
+  },
+  {
+    "id": "mon_spider_wolf_giant_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "大型狼蛛"
+    },
+    "description": "这只狼蛛已经长到了可怕的地步。与攻击相比，它的毒液相对较弱。",
+    "default_faction": "spider_wolf",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 30,
+    "hp": 100,
+    "speed": 145,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "S",
+    "color": "brown",
+    "aggression": 35,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 8,
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 650,
+        "chance": 15
+      }
+    ],
+    "armor_bash": 9,
+    "armor_cut": 14,
+    "armor_bullet": 9,
+    "armor_acid": 4,
+    "vision_day": 9,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "CHITIN",
+      "FAT",
+      "CLIMBS",
+      "PATH_AVOID_DANGER_1"
+    ],
+    "anger_triggers": [
+      "STALK",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_DIED"
+    ]
+  },
+  {
+    "id": "mon_spider_web_queen",
+    "type": "MONSTER",
+    "name": {
+      "str": "大鸡蛋袋"
+    },
+    "description": "一个大的蛋袋，里面装着定期孵化的蛋，还有一些护理用品。这个似乎比其他的更重要。",
+    "default_faction": "spider_web",
+    "species": [
+      "ABERRATION"
+    ],
+    "diff": 10,
+    "hp": 90,
+    "speed": 100,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "exempt",
+    "symbol": "O",
+    "color": "i_yellow",
+    "aggression": 100,
+    "morale": 200,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "dodge": 0,
+    "armor_bash": 2,
+    "armor_acid": 3,
+    "vision_day": 20,
+    "vision_night": 20,
+    "starting_ammo": {
+      "bot_spider_web_omega": 10,
+      "bot_spider_web_s": 40
+    },
+    "special_attacks": [
+      [
+        "GRENADIER_ELITE",
+        30
+      ],
+      [
+        "GRENADIER",
+        20
+      ]
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "spider_eggs",
+          100
+        ]
+      ]
+    },
+    "death_function": {
+      "message": "The %s disintegrates!",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "NO_BREATHE",
+      "IMMOBILE",
+      "QUEEN"
+    ]
+  },
+  {
+    "id": "mon_trapdoor_egg",
+    "type": "MONSTER",
+    "name": {
+      "str": "鸡蛋袋"
+    },
+    "description": "定期孵化的蛋袋。",
+    "default_faction": "spider_trapdoor",
+    "species": [
+      "ABERRATION"
+    ],
+    "diff": 10,
+    "hp": 40,
+    "speed": 100,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "exempt",
+    "symbol": "O",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 200,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "dodge": 0,
+    "armor_bash": 2,
+    "armor_acid": 1,
+    "vision_day": 20,
+    "vision_night": 20,
+    "starting_ammo": {
+      "bot_spider_trapdoor_giant": 3,
+      "bot_trapdoor_s": 17
+    },
+    "special_attacks": [
+      [
+        "GRENADIER",
+        20
+      ]
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "spider_eggs",
+          100
+        ]
+      ]
+    },
+    "death_function": {
+      "message": "The %s disintegrates!",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "NO_BREATHE",
+      "IMMOBILE"
+    ]
+  },
+  {
+    "id": "mon_trapdoor_queen",
+    "type": "MONSTER",
+    "name": {
+      "str": "大鸡蛋袋"
+    },
+    "description": "一个大的蛋袋，里面装着定期孵化的蛋，还有一些护理用品。这个似乎比其他的更重要。",
+    "default_faction": "spider_trapdoor",
+    "species": [
+      "ABERRATION"
+    ],
+    "diff": 10,
+    "hp": 90,
+    "speed": 100,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "O",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 200,
+    "melee_skill": 0,
+    "melee_dice": 0,
+    "melee_dice_sides": 0,
+    "dodge": 0,
+    "armor_bash": 2,
+    "armor_acid": 3,
+    "vision_day": 20,
+    "vision_night": 20,
+    "starting_ammo": {
+      "bot_spider_trapdoor_giant": 7,
+      "bot_spider_trapdoor_giant_guardian": 3,
+      "bot_trapdoor_s": 30
+    },
+    "special_attacks": [
+      [
+        "GRENADIER_ELITE",
+        30
+      ],
+      [
+        "GRENADIER",
+        20
+      ]
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "spider_eggs",
+          100
+        ]
+      ]
+    },
+    "death_function": {
+      "message": "The %s disintegrates!",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "NO_BREATHE",
+      "IMMOBILE",
+      "QUEEN"
+    ]
+  },
+  {
+    "id": "mon_spider_trapdoor_giant_s",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型活板门蜘蛛"
+    },
+    "description": "小活板门蜘蛛。由于体型太小，无法单独有效地捕猎，这种松散的变异陷门蜘蛛群落对捕食者提供的保护有限，尽管这会增加蜘蛛被同类吃掉的风险。",
+    "default_faction": "spider_trapdoor",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 12,
+    "hp": 30,
+    "speed": 70,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "s",
+    "color": "light_blue",
+    "aggression": 40,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 3,
+    "dodge": 0,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 5
+      }
+    ],
+    "armor_bash": 3,
+    "armor_cut": 7,
+    "armor_bullet": 3,
+    "vision_day": 5,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ]
+    ],
+    "upgrades": {
+      "half_life": 3,
+      "into": "mon_spider_trapdoor_giant"
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "HEARS",
+      "GRABS",
+      "CAN_DIG",
+      "WEBWALK",
+      "CHITIN",
+      "FAT",
+      "CLIMBS",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_spider_trapdoor_giant_guardian",
+    "type": "MONSTER",
+    "name": {
+      "str": "阿尔法螲蟷蛛"
+    },
+    "description": "一种大而重装甲的活板门蜘蛛。主要发现于更大的活板门蜘蛛群的中心，如果食物变得稀少，它们可以保持食物。",
+    "default_faction": "spider_trapdoor",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 20,
+    "harvest": "arachnid",
+    "hp": 150,
+    "speed": 95,
+    "material": [
+      "iflesh"
+    ],
+    "symbol": "s",
+    "color": "i_blue",
+    "aggression": 80,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 10,
+    "melee_cut": 7,
+    "dodge": 3,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 6
+      },
+      {
+        "damage_type": "stab",
+        "amount": 4
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 4
+      }
+    ],
+    "armor_bash": 9,
+    "armor_cut": 14,
+    "vision_day": 10,
+    "vision_night": 13,
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ],
+      [
+        "wasp_sting",
+        20
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "CAN_DIG",
+      "WEBWALK",
+      "CHITIN",
+      "FAT",
+      "CLIMBS",
+      "PUSH_MON",
+      "PATH_AVOID_DANGER_1"
+    ]
+  },
+  {
+    "id": "mon_spider_trapdoor_giant_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型螲蟷蛛"
+    },
+    "description": "一种巨大而敏捷的蜘蛛，胸部呈球状。它挖了一个很深的地下洞穴，作为伏击粗心猎物的一个坑。",
+    "default_faction": "spider_trapdoor",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 18,
+    "hp": 80,
+    "speed": 110,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "s",
+    "color": "blue",
+    "aggression": 60,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 6,
+    "dodge": 3,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 3
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 5
+      }
+    ],
+    "armor_bash": 4,
+    "armor_cut": 8,
+    "vision_day": 5,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "LUNGE",
+        30
+      ],
+      [
+        "wound_minor",
+        20
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "CAN_DIG",
+      "WEBWALK",
+      "CHITIN",
+      "FAT",
+      "CLIMBS",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_spider_web_alpha",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型网蛛"
+    },
+    "description": "一个更大，更具侵略性的伏击捕食者，这种蜘蛛网使用武力捕捉其猎物。",
+    "default_faction": "spider_web",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 16,
+    "hp": 60,
+    "speed": 105,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "s",
+    "color": "yellow",
+    "aggression": 60,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 3,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 8
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "spider_web_slow",
+        "duration": 600,
+        "chance": 65
+      },
+      {
+        "id": "spider_web_alpha",
+        "duration": 360,
+        "chance": 65
+      },
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 50
+      }
+    ],
+    "armor_bash": 4,
+    "armor_cut": 10,
+    "vision_day": 15,
+    "vision_night": 10,
+    "emit_fields": [
+      "emit_web_small"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CHITIN",
+      "CLIMBS",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_spider_web_omega",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型网蛛"
+    },
+    "description": "这种蜘蛛使用持久的毒素来消灭更强的敌人。",
+    "default_faction": "spider_web",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 16,
+    "hp": 50,
+    "speed": 115,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "s",
+    "color": "yellow",
+    "aggression": 40,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 6,
+    "dodge": 5,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 6
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "spider_web_slow",
+        "duration": 600,
+        "chance": 65
+      },
+      {
+        "id": "spider_web_omega",
+        "duration": 360,
+        "chance": 65
+      },
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 50
+      }
+    ],
+    "armor_bash": 3,
+    "armor_cut": 8,
+    "vision_day": 15,
+    "vision_night": 10,
+    "emit_fields": [
+      "emit_web_small"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CHITIN",
+      "CLIMBS",
+      "PUSH_MON",
+      "PRIORITIZE_TARGETS"
+    ]
+  },
+  {
+    "id": "mon_spider_web_mu",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型网蛛"
+    },
+    "description": "这种蜘蛛似乎有专门的能力来消灭被真菌孢子感染的生物，而真菌孢子无疑是一种未被充分利用的食物来源。",
+    "default_faction": "spider_web",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 14,
+    "hp": 50,
+    "speed": 130,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "s",
+    "color": "yellow",
+    "aggression": 40,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 4,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 10
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "spider_web_slow",
+        "duration": 600,
+        "chance": 65
+      },
+      {
+        "id": "spider_web_mu",
+        "duration": 360,
+        "chance": 65
+      },
+      {
+        "id": "poison",
+        "duration": 650,
+        "chance": 50
+      }
+    ],
+    "armor_bash": 3,
+    "armor_cut": 8,
+    "vision_day": 20,
+    "vision_night": 10,
+    "emit_fields": [
+      "emit_web_small"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "WEBWALK",
+      "CHITIN",
+      "CLIMBS",
+      "PARALYZEVENOM",
+      "HIT_AND_RUN",
+      "PUSH_MON"
+    ]
+  },
+  {
+    "id": "mon_spider_jumping_giant_acid",
+    "type": "MONSTER",
+    "name": {
+      "str": "水母蜘蛛"
+    },
+    "description": "一种大狗大小的蜘蛛，前腿细长，后腿粗壮。从它的胃里滴下腐蚀性的唾液，并能被它敏捷的四肢操纵。",
+    "default_faction": "spider_jumping",
+    "species": [
+      "SPIDER"
+    ],
+    "diff": 12,
+    "hp": 45,
+    "speed": 110,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "s",
+    "color": "i_white",
+    "aggression": -5,
+    "morale": 80,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_cut": 2,
+    "dodge": 6,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 6
+      },
+      {
+        "damage_type": "acid",
+        "amount": 3
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "badpoison",
+        "duration": 900,
+        "chance": 50
+      }
+    ],
+    "armor_bash": 3,
+    "armor_cut": 7,
+    "vision_day": 20,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "wound_minor",
+        15
+      ],
+      [
+        "ACID",
+        25
+      ],
+      [
+        "ACID_BARF",
+        25
+      ],
+      {
+        "type": "leap",
+        "cooldown": 2,
+        "max_range": 7
+      }
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      10
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "HEARS",
+      "CHITIN",
+      "CLIMBS",
+      "ACIDPROOF",
+      "ACID_BLOOD",
+      "PUSH_MON"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED",
+      "STALK"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FIRE"
+    ]
+  },
+  {
+    "id": "mon_bee",
+    "type": "MONSTER",
+    "copy-from": "mon_bee",
+    "description": "用菜刀大小的毒刺，这只狗大小的昆虫的黑色和黄色标记警告你不要打扰它。它的细毛似乎能吸引电荷。",
+    "hp": 35,
+    "aggression": -10,
+    "morale": 40,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 2
+      }
+    ],
+    "dodge": 4,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 50,
+        "chance": 75
+      }
+    ],
+    "armor_bash": 4,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 11,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "numbing_poison",
+        15
+      ],
+      {
+        "id": "wasp_sting",
+        "cooldown": 15,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 6,
+            "armor_multiplier": 0.85
+          },
+          {
+            "damage_type": "cut",
+            "amount": 6,
+            "armor_multiplier": 0.85
+          }
+        ],
+        "effects": [
+          {
+            "id": "poison",
+            "duration": 800
+          },
+          {
+            "id": "infection_minor",
+            "duration": 8400,
+            "chance": 35
+          }
+        ]
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      20
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "bees",
+          35
+        ]
+      ]
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "FLIES",
+      "STUMBLES",
+      "CHITIN",
+      "SWARMS",
+      "GROUP_MORALE",
+      "ELECTRIC"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED"
+    ]
+  },
+  {
+    "id": "mon_bee_scout",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蜜蜂"
+    },
+    "description": "用菜刀大小的毒刺，这只狗大小的昆虫的黑色和黄色标记警告你不要打扰它。它的细毛似乎能吸引电荷。",
+    "default_faction": "bee",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 16,
+    "hp": 28,
+    "speed": 160,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid_bee",
+    "symbol": "a",
+    "color": "yellow",
+    "aggression": -10,
+    "morale": 20,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 1
+      },
+      {
+        "damage_type": "stab",
+        "amount": 4
+      }
+    ],
+    "dodge": 5,
+    "armor_bash": 4,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 11,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "numbing_poison",
+        20
+      ],
+      {
+        "id": "wasp_sting",
+        "cooldown": 20,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 5,
+            "armor_multiplier": 0.85
+          },
+          {
+            "damage_type": "cut",
+            "amount": 5,
+            "armor_multiplier": 0.85
+          }
+        ],
+        "effects": [
+          {
+            "id": "poison",
+            "duration": 600
+          },
+          {
+            "id": "infection_minor",
+            "duration": 8400,
+            "chance": 30
+          }
+        ]
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      25
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "bees",
+          35
+        ]
+      ]
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 75
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "FLIES",
+      "STUMBLES",
+      "CHITIN",
+      "SWARMS",
+      "GROUP_MORALE",
+      "ELECTRIC"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_DIED"
+    ]
+  },
+  {
+    "id": "mon_bee_soldier",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蜜蜂"
+    },
+    "description": "用菜刀大小的毒刺，这只狗大小的昆虫的黑色和黄色标记警告你不要打扰它。它的细毛似乎能吸引电荷。",
+    "default_faction": "bee",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 18,
+    "hp": 49,
+    "speed": 130,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid_bee",
+    "symbol": "a",
+    "color": "yellow",
+    "aggression": 0,
+    "morale": 40,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 6
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 5,
+    "armor_cut": 7,
+    "armor_bullet": 5,
+    "vision_day": 11,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "numbing_poison",
+        12
+      ],
+      {
+        "id": "wasp_sting",
+        "cooldown": 12,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 7,
+            "armor_multiplier": 0.85
+          },
+          {
+            "damage_type": "cut",
+            "amount": 7,
+            "armor_multiplier": 0.85
+          }
+        ],
+        "effects": [
+          {
+            "id": "poison",
+            "duration": 600
+          },
+          {
+            "id": "infection_minor",
+            "duration": 8400,
+            "chance": 30
+          }
+        ]
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      15
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "bees",
+          35
+        ]
+      ]
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 75
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "FLIES",
+      "STUMBLES",
+      "CHITIN",
+      "SWARMS",
+      "GROUP_MORALE",
+      "ELECTRIC"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED",
+      "PLAYER_CLOSE"
+    ]
+  },
+  {
+    "id": "mon_bee_queen",
+    "type": "MONSTER",
+    "name": {
+      "str": "大蜂王"
+    },
+    "description": "蜂王，是蜜蜂社会中一个典型的不受挑战的主宰者。沿着腹部的细毛似乎传导电能。没有她，蜂巢就会融化，寻找死亡或新主人。",
+    "default_faction": "bee",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 20,
+    "hp": 63,
+    "speed": 140,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid_bee",
+    "symbol": "Q",
+    "color": "yellow",
+    "aggression": -5,
+    "morale": 30,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 4
+      },
+      {
+        "damage_type": "stab",
+        "amount": 6
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 4,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 10,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "SHOCKSTORM",
+        40
+      ],
+      [
+        "numbing_poison",
+        20
+      ],
+      {
+        "id": "wasp_sting",
+        "cooldown": 15,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 6,
+            "armor_multiplier": 0.85
+          },
+          {
+            "damage_type": "cut",
+            "amount": 6,
+            "armor_multiplier": 0.85
+          }
+        ],
+        "effects": [
+          {
+            "id": "poison",
+            "duration": 800
+          },
+          {
+            "id": "infection_minor",
+            "duration": 8400,
+            "chance": 35
+          }
+        ]
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      50
+    ],
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_DIED",
+      "PLAYER_CLOSE"
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "bees",
+          20
+        ]
+      ]
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 75
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "FLIES",
+      "STUMBLES",
+      "CHITIN",
+      "SWARMS",
+      "GROUP_MORALE",
+      "ELECTRIC",
+      "QUEEN"
+    ]
+  },
+  {
+    "id": "mon_bee_king",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型皇家蜜蜂"
+    },
+    "description": "不明性别的多产蜜蜂。尽管女王可能会容忍其他交配的雌性出现在她的蜂巢里，但它们都是她的后代，如果发生冲突，除了一只之外，所有的雌性都会离开。",
+    "default_faction": "bee",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 18,
+    "hp": 42,
+    "speed": 140,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "arachnid_bee",
+    "symbol": "Q",
+    "color": "yellow",
+    "aggression": -5,
+    "morale": 30,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 2
+      },
+      {
+        "damage_type": "stab",
+        "amount": 6
+      }
+    ],
+    "dodge": 4,
+    "armor_bash": 4,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 11,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "SHOCKSTORM",
+        60
+      ],
+      [
+        "numbing_poison",
+        20
+      ],
+      {
+        "id": "wasp_sting",
+        "cooldown": 15,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 6,
+            "armor_multiplier": 0.85
+          },
+          {
+            "damage_type": "cut",
+            "amount": 6,
+            "armor_multiplier": 0.85
+          }
+        ],
+        "effects": [
+          {
+            "id": "poison",
+            "duration": 800
+          },
+          {
+            "id": "infection_minor",
+            "duration": 8400,
+            "chance": 35
+          }
+        ]
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      35
+    ],
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED",
+      "PLAYER_CLOSE"
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "bees",
+          20
+        ]
+      ]
+    },
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400,
+        "chance": 50
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "KEENNOSE",
+      "FLIES",
+      "STUMBLES",
+      "CHITIN",
+      "SWARMS",
+      "GROUP_MORALE",
+      "ELECTRIC"
+    ]
+  },
+  {
+    "id": "mon_bee_larvae",
+    "type": "MONSTER",
+    "name": {
+      "str": "蜜蜂幼虫"
+    },
+    "description": "一团扭曲的白肉，这种像蛆一样的怪物会根据它的饮食成熟；丰富的饮食会导致更高贵的种姓。",
+    "default_faction": "bee",
+    "species": [
+      "INSECT"
+    ],
+    "diff": 5,
+    "hp": 15,
+    "speed": 45,
+    "material": [
+      "iflesh"
+    ],
+    "harvest": "meatslug",
+    "symbol": "a",
+    "color": "white",
+    "aggression": 0,
+    "morale": 20,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 5,
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_acid": 2,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_WEAK"
+    ],
+    "upgrades": {
+      "half_life": 14,
+      "into_group": "GROUP_BEE"
+    },
+    "flags": [
+      "HEARS",
+      "SMELLS",
+      "LARVA",
+      "CHITIN",
+      "IMMOBILE"
+    ]
+  },
+  {
+    "id": "mon_wasp",
+    "type": "MONSTER",
+    "copy-from": "mon_wasp",
+    "vision_day": 12,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "wasp_sting",
+        3
+      ],
+      [
+        "ant_sinject",
+        3
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "FLIES",
+      "CHITIN",
+      "SWARMS",
+      "GROUP_MORALE"
+    ]
+  },
+  {
+    "id": "mon_wasp_queen",
+    "type": "MONSTER",
+    "copy-from": "mon_wasp",
+    "name": {
+      "str": "蜂王"
+    },
+    "description": "这只黄蜂似乎为其他黄蜂提供了一个总的方向。杀了这个可能会让他们散开。",
+    "symbol": "a",
+    "color": "light_gray",
+    "aggression": 10,
+    "morale": 40,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_cut": 8,
+    "dodge": 5,
+    "armor_bash": 6,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 12,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "wasp_sting",
+        3
+      ],
+      [
+        "ant_sinject",
+        3
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "FLIES",
+      "CHITIN",
+      "SWARMS",
+      "GROUP_MORALE",
+      "QUEEN"
+    ]
+  },
+  {
+    "id": "mon_wasp_larvae",
+    "type": "MONSTER",
+    "copy-from": "mon_bee_larvae",
+    "default_faction": "wasp",
+    "name": {
+      "str": "幼虫黄蜂"
+    },
+    "description": "一种蠕动的幼虫，如果被允许生长，它将成熟为一只巨大的黄蜂。"
+  }
+]

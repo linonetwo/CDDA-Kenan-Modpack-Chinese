@@ -1,0 +1,219 @@
+[
+  {
+    "id": "dkz_nozzlegun_salvaged",
+    "type": "TOOL",
+    "category": "weapons",
+    "looks_like": "chemical_thrower",
+    "name": {
+      "str": "缴获的异族喷嘴枪"
+    },
+    "description": "一把奇怪的，看起来甚至有些脆弱的枪，一端有一个大喷嘴。似乎没有任何扳机，也没有任何可以装载弹药的地方。这把枪有股强烈的花香。",
+    "weight": "5400 g",
+    "volume": "3750 ml",
+    "longest_side": "95 cm",
+    "price": "3100 USD",
+    "price_postapoc": "75 USD",
+    "melee_damage": { "bash": 2 },
+    "material": [
+      "dkz_biopoly_mat"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "flags": [
+      "ALWAYS_TWOHAND",
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "id": "dkz_flamesword_salvaged",
+    "type": "TOOL",
+    "category": "weapons",
+    "looks_like": "zweihander",
+    "name": {
+      "str": "回收的异族火焰巨剑"
+    },
+    "description": "一把用一种不知名的高密度铬金属锻造而成的、结构精良、装饰精美的大剑。它吐出火焰的能力似乎并不符合你的意愿，但锋芒依然异常锋利。",
+    "weight": "5400 g",
+    "volume": "3750 ml",
+    "longest_side": "129 cm",
+    "price": "3100 USD",
+    "price_postapoc": "75 USD",
+    "melee_damage": { "bash": 17,"cut":40 },
+    "material": [
+      "dkz_blend_mat"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "charges_per_use": 1,
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "gasoline": 50
+        }
+      }
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "BRUTAL",
+      "SWEEP"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD",
+      "ALWAYS_TWOHAND",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "dkz_knightsword_salvaged",
+    "type": "TOOL",
+    "symbol": "/",
+    "color": "light_gray",
+    "looks_like": "arming_sword",
+    "name": {
+      "str": "回收的异族长剑"
+    },
+    "description": "一种结构精良的剑，由致密的外星金属制成，为色狼骑士服务。装饰它的蚀刻象形文字不再发光，但它的尖端是完美的服务。",
+    "price": "2000 USD",
+    "price_postapoc": "45 USD",
+    "material": [
+      "dkz_blend_mat"
+    ],
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "weight": "3360 g",
+    "volume": "2 L",
+    "longest_side": "96 cm",
+    "melee_damage": { "bash": 14,"cut": 31 },
+    "to_hit": 1,
+    "category": "weapons",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        2
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "dkz_rangermachete_salvaged",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "回收的异族重砍刀"
+    },
+    "description": "这把又大又重的刀几乎，但不完全像砍刀。它有一些淡淡的灰色象形文字沿着刀片的长度蚀刻。",
+    "weight": "725 g",
+    "volume": "1 L",
+    "longest_side": "47 cm",
+    "price": "500 USD",
+    "price_postapoc": "15 USD",
+    "to_hit": 1,
+    "melee_damage": { "bash": 3,"cut": 17 },
+    "material": [
+      "dkz_blend_mat"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "looks_like": "machete",
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        5
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "dkz_enforcerbaton_salvaged",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "回收的异族震击棒"
+    },
+    "description": "这根又粗又重的警棍显然有着奇怪的平衡感。底部有一个奇怪的聚合物抓爪，而顶部的三分之一是由大片的断裂晶体组成。整个指挥棒上覆盖着隐约可见的异种象形文字，指挥棒已经完全变成灰色。",
+    "weight": "1250 g",
+    "volume": "1 L",
+    "longest_side": "43 cm",
+    "price": "500 USD",
+    "price_postapoc": "15 USD",
+    "to_hit": 1,
+    "melee_damage": { "bash": 11,"cut": 1 },
+    "material": [
+      "dkz_blend_mat",
+      "dkz_biopoly_mat"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "looks_like": "baton-extended",
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "dkz_xenoid_armlet_salvaged",
+    "copy-from": "copper_bracelet",
+    "type": "ARMOR",
+    "category": "weapons",
+    "material": [
+      "dkz_biopoly_mat"
+    ],
+    "name": {
+      "str": "回收的异族手枪"
+    },
+    "flags": [
+      "TRADER_AVOID"
+    ],
+    "description": "这个奇怪的铜色外星人塑料臂带有两个非常小的管从「顶部」伸出，而「底部」有五个不同的按钮一样的压痕排列成一个圆圈，它的整个表面都刻有繁复的象形文字。但这个装置似乎有一个失能开关，已经让它完全烧坏不可用了。"
+  }
+]

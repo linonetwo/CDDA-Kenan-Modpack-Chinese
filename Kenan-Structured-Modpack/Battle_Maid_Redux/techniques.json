@@ -1,0 +1,223 @@
+[
+  {
+    "type": "technique",
+    "id": "tec_maid_precise",
+    "name": "恩典之约",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 5
+      }
+    ],
+    "weighting": 4,
+    "melee_allowed": true,
+    "crit_ok": true,
+    "downed_target": true,
+    "required_buffs_all": [
+      "maid_pause_bonus"
+    ],
+    "messages": [
+      "你用一个优雅巧妙的花招击中了%s",
+      "<npcname>以优雅的动作刺向了%s"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 1.5
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 2
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_maid_counter",
+    "name": "绝望计数器",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 1
+      }
+    ],
+    "block_counter": true,
+    "melee_allowed": true,
+    "knockback_dist": 1,
+    "messages": [
+      "你挡住%s的攻击，并把他推了回去。给我后退！",
+      "<npcname>奋力将%s逼退"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 0.25
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0.25
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0.25
+      }
+    ],
+    "flat_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 50
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_maid_meleecounter",
+    "name": "唾弃",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 5
+      }
+    ],
+    "required_buffs_all": [
+      "maid_pause_bonus"
+    ],
+    "dodge_counter": true,
+    "melee_allowed": true,
+    "down_dur": 1,
+    "messages": [
+      "你华丽转圈的躲开并回击了%s",
+      "<npcname>带着惊人的恶意发起攻击"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      }
+    ],
+    "flat_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 50
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_maid_miyage",
+    "name": "精准打击",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "melee_allowed": true,
+    "required_buffs_all": [
+      "maid_pause_bonus"
+    ],
+    "stun_dur": 1,
+    "messages": [
+      "你精妙的攻击打破了%s的防护",
+      "<npcname>精确地打击了%s"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.33
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.33
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_maid_kyusyu",
+    "name": "精准攻击",
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 3
+      }
+    ],
+    "required_buffs_all": [
+      "maid_pause_bonus"
+    ],
+    "down_dur": 2,
+    "melee_allowed": true,
+    "knockback_dist": 1,
+    "messages": [
+      "你用愤怒和为主人奉献的决心攻击了%s",
+      "<npcname>带着愤怒和为主人奉献的决心攻击了%s"
+    ],
+    "flat_bonuses": [
+      {
+        "stat": "arpen",
+        "type": "bash",
+        "scale": 5
+      },
+      {
+        "stat": "arpen",
+        "type": "cut",
+        "scale": 5
+      },
+      {
+        "stat": "arpen",
+        "type": "stab",
+        "scale": 5
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scale": 1.66
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 1.66
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "tec_maid_grab",
+    "name": "防狼术15号",
+    "messages": [
+      "你躲开了%s的摸索。只有主人才能碰那个地方！",
+      "%s试图抓住<npcname>，但他却躲开了！"
+    ],
+    "skill_requirements": [
+      {
+        "name": "melee",
+        "level": 1
+      }
+    ],
+    "melee_allowed": true,
+    "defensive": true,
+    "grab_break": true
+  }
+]

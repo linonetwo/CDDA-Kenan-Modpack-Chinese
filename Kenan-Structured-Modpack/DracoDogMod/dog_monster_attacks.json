@@ -1,0 +1,163 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "dogbite",
+    "cooldown": 20,
+    "move_cost": 150,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 10,
+        "armor_penetration": 2,
+        "armor_multiplier": 0.5
+      }
+    ],
+    "body_parts": [
+      [
+        "foot_l",
+        3
+      ],
+      [
+        "foot_r",
+        3
+      ],
+      [
+        "leg_l",
+        6
+      ],
+      [
+        "leg_r",
+        6
+      ],
+      [
+        "hand_l",
+        2
+      ],
+      [
+        "hand_r",
+        2
+      ],
+      [
+        "arm_l",
+        4
+      ],
+      [
+        "arm_r",
+        4
+      ]
+    ],
+    "effects": [
+      {
+        "id": "grabbed",
+        "duration": 600
+      }
+    ],
+    "hit_dmg_u": "%1$s 咬到了你的 %2$s！",
+    "hit_dmg_npc": "%1$s 咬到了 <npcname> 的 %2$s！",
+    "no_dmg_msg_u": "%1$s试图去咬你的%2$s，但未能穿透装甲！",
+    "no_dmg_msg_npc": "%1$s试图去咬<npcname>的%2$s，但未能穿透装甲！"
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "fdogbite",
+    "cooldown": 20,
+    "move_cost": 135,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 13,
+        "armor_penetration": 4,
+        "armor_multiplier": 0.6
+      }
+    ],
+    "body_parts": [
+      [
+        "foot_l",
+        3
+      ],
+      [
+        "foot_r",
+        3
+      ],
+      [
+        "leg_l",
+        6
+      ],
+      [
+        "leg_r",
+        6
+      ],
+      [
+        "hand_l",
+        2
+      ],
+      [
+        "hand_r",
+        2
+      ],
+      [
+        "arm_l",
+        4
+      ],
+      [
+        "arm_r",
+        4
+      ]
+    ],
+    "effects": [
+      {
+        "id": "grabbed",
+        "duration": 900
+      }
+    ],
+    "hit_dmg_u": "%1$s凶猛地咬到了你的%2$s！",
+    "hit_dmg_npc": "%1$s凶猛地咬到了<npcname>的%2$s！",
+    "no_dmg_msg_u": "%1$s试图去咬你的%2$s，但未能穿透装甲！",
+    "no_dmg_msg_npc": "%1$s试图去咬<npcname>的%2$s，但未能穿透装甲！"
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "minordogbite",
+    "cooldown": 15,
+    "move_cost": 135,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 8,
+        "armor_penetration": 2,
+        "armor_multiplier": 0.5
+      }
+    ],
+    "body_parts": [
+      [
+        "foot_l",
+        3
+      ],
+      [
+        "foot_r",
+        3
+      ],
+      [
+        "leg_l",
+        6
+      ],
+      [
+        "leg_r",
+        6
+      ]
+    ],
+    "effects": [
+      {
+        "id": "grabbed",
+        "duration": 300
+      }
+    ],
+    "hit_dmg_u": "%1$s咬住你的%2$s！",
+    "hit_dmg_npc": "%1$s咬住了<npcname>的%2$s！",
+    "no_dmg_msg_u": "%1$s试图咬住你的%2$s，但未能穿透装甲！",
+    "no_dmg_msg_npc": "%1$s试图咬住<npcname>的%2$s，但未能穿透装甲！"
+  }
+]

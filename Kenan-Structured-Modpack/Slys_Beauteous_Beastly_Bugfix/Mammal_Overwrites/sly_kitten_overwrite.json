@@ -1,0 +1,772 @@
+[
+  {
+    "id": "mon_cat_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "短毛幼猫"
+    },
+    "description": "一只可爱的小猫，喵喵叫着在死亡的夹缝间流窜。看上去是野猫。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat"
+    }
+  },
+  {
+    "id": "mon_cat_chonker_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "黄色幼猫"
+    },
+    "description": "这只可怜的小猫看上去快饿死了！你忍不住想看看手头有没有猫粮……",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_chonker"
+    }
+  },
+  {
+    "id": "mon_cat_calico_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "三花幼猫"
+    },
+    "description": "斑驳的棕色和灰色斑点表明了这只小猫是一只三花猫，而且应该是雌性。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_calico"
+    }
+  },
+  {
+    "id": "mon_cat_tabby_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "虎斑幼猫"
+    },
+    "description": "眼睛周围的锋利线条和熟悉的波浪状条纹表明这只小猫是一只常见的虎斑猫。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_tabby"
+    }
+  },
+  {
+    "id": "mon_cat_spynx_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "斯芬克斯幼猫"
+    },
+    "description": "这只小猫身上几乎完全没有毛，这说明它是无毛的斯芬克斯品种。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_sphynx"
+    }
+  },
+  {
+    "id": "mon_cat_devon_rex_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "德文雷克斯幼猫"
+    },
+    "description": "一只有着惊人的大眼睛和大耳朵的外表奇特的猫，长着柔软的卷曲毛皮。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_devon_rex"
+    }
+  },
+  {
+    "id": "mon_cat_bengal_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "孟加拉幼猫"
+    },
+    "description": "你在孟加拉猫身上见过这样的斑点，但它还只是只小猫。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_bengal"
+    }
+  },
+  {
+    "id": "mon_cat_persian_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "波斯幼猫"
+    },
+    "description": "它可爱的塌鼻子和悲伤恳求的眼神恳求你收留下这只幼小的波斯猫。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_persian"
+    }
+  },
+  {
+    "id": "mon_cat_siamese_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "暹罗幼猫"
+    },
+    "description": "有着奶油色的皮毛和深色的斑点，你猜这只小猫一定是一只暹罗幼猫。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_siamese"
+    }
+  },
+  {
+    "id": "mon_cat_maine_coon_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "缅因库恩幼猫"
+    },
+    "description": "这只缅因幼猫长着簇生着毛的耳朵，脸上的图案十分醒目。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_maine_coon"
+    }
+  },
+  {
+    "id": "mon_cat_Longhair_kitten",
+    "type": "MONSTER",
+    "name": {
+      "str": "长毛幼猫"
+    },
+    "description": "虽然看起来不过是一团长着眼睛的小毛球，但这只小猫像是长毛猫。",
+    "default_faction": "cat",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "1000 ml",
+    "weight": "1 kg",
+    "hp": 6,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "c",
+    "color": "light_gray",
+    "aggression": -99,
+    "morale": 2,
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "dodge": 14,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ],
+    "fear_triggers": [
+      "SOUND",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "harvest": "mammal_tiny",
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  Or maybe it just tolerates your presence better.  It's hard to tell with felines.",
+      "pet": "The %s sofly purrs as you pet it.  It demands more."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "CLIMBS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "HIT_AND_RUN"
+    ],
+    "upgrades": {
+      "age_grow": 120,
+      "into": "mon_cat_longhair"
+    }
+  }
+]

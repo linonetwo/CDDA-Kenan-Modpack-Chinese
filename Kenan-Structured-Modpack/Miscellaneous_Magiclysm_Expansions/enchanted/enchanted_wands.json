@@ -1,0 +1,20 @@
+[
+  {
+    "type": "TOOL",
+    "id": "wand_demon_fireball",
+    "name": {
+      "str": "恶魔蜘蛛法杖",
+      "str_pl": "恶魔蜘蛛法杖"
+    },
+    "copy-from": "spell_wand",
+    "price": "300 USD",
+    "description": "你的魔杖是用邪恶恶魔的甲壳块锻造而成的，尽情展现它的力量吧！",
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "burning_hands",
+      "no_fail": true,
+      "level": 5,
+      "need_wielding": true
+    }
+  }
+]

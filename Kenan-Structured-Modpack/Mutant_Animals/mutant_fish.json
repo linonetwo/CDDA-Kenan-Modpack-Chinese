@@ -1,0 +1,302 @@
+[
+  {
+    "abstract": "mon_fish_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "鱼",
+      "str_pl": "鱼"
+    },
+    "description": "一条变异鱼，变异猫和幸存者最喜欢的猎物。",
+    "default_faction": "fish",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "FISH"
+    ],
+    "volume": "30000 ml",
+    "weight": "40750 g",
+    "hp": 20,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "f",
+    "color": "white",
+    "aggression": -50,
+    "morale": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_cut": 1,
+    "luminance": 0,
+    "reproduction": {
+      "baby_egg": "egg_fish",
+      "baby_count": 3,
+      "baby_timer": 150
+    },
+    "baby_flags": [
+      "AUTUMN",
+      "WINTER"
+    ],
+    "fear_triggers": [
+      "PLAYER_CLOSE",
+      "SOUND"
+    ],
+    "harvest": "fish_large",
+    "flags": [
+      "FISHABLE",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "SWIMS",
+      "AQUATIC"
+    ]
+  },
+  {
+    "id": "mon_fish_sick_puke",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "泌呕鱼",
+      "str_pl": "泌呕鱼"
+    },
+    "description": "一条令人作呕的变异鱼，体型和大鲤鱼差不多。它身上渗出一种褐色黏胶，闻起来像变质的牛奶。",
+    "color": "green"
+  },
+  {
+    "id": "mon_fish_sick_finger",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "头指鱼",
+      "str_pl": "头指鱼"
+    },
+    "description": "一条畸形的变异鱼，体型和大鲤鱼差不多。一簇手指状的肢体从它的头上爆裂出来。",
+    "color": "brown"
+  },
+  {
+    "id": "mon_fish_sick_tumor",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "瘤鱼",
+      "str_pl": "瘤鱼"
+    },
+    "description": "一条面目可憎的变异鱼，体型和大鲤鱼一般。它全身长满大大小小的出血肿瘤和肉瘤，这使它难以游动。",
+    "speed": 100,
+    "color": "brown"
+  },
+  {
+    "id": "mon_fish_mutant_angel",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "天使鱼",
+      "str_pl": "天使鱼"
+    },
+    "description": "一条体型和大鲤鱼一般的变异鱼。它的内脏发出某种脉冲光，可以轻易透过它那半透明的表皮。",
+    "luminance": 10,
+    "color": "white"
+  },
+  {
+    "id": "mon_fish_mutant_bloat",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "肿胀鱼",
+      "str_pl": "肿胀鱼"
+    },
+    "description": "一条大小形状和篮球一般的变异鱼。当受到威胁时，这条鱼会将自己的身体膨胀到非常大的尺寸。如果其受到攻击，攻击者和这条鱼都会接受猛烈爆炸的洗礼。",
+    "hp": 1,
+    "death_function": {
+      "effect": {
+        "id": "death_explosion",
+        "hit_self": true
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s explodes!"
+    },
+    "color": "white"
+  },
+  {
+    "id": "mon_fish_mutant_ghoul",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "水鬼",
+      "str_pl": "水鬼"
+    },
+    "description": "一条大型变异鱼，体型和虎鲨差不多。它像一条鲶鱼，但它没有触须，而是拥有一对细长的手臂，末端是令人不安的人类手掌。这种水鬼会抓住水边的猎物，将其拉入深水。",
+    "hp": 200,
+    "aggression": 100,
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "morale": 100,
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "color": "white",
+    "symbol": "G",
+    "attack_effs": [
+      {
+        "id": "grabbed",
+        "chance": 30
+      }
+    ],
+    "special_attacks": [
+      { "id": "ranged_pull", "cooldown":5
+      },
+      { "id": "grab_drag", "cooldown":1
+      }
+    ],
+    "extend": {
+      "flags": [
+        "PUSH_MON",
+        "REVIVES"
+      ]
+    }
+  },
+  {
+    "id": "mon_fish_mutant_terror",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "恐怖下颚鱼"
+    },
+    "description": "一条大型变异鱼，体型和虎鲨差不多。它有一个巨大的下颚，上面排列着剃刀般的牙齿。",
+    "symbol": "J",
+    "aggression": 100,
+    "morale": 100,
+    "anger_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "SOUND",
+      "FIRE"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 300,
+    "armor_bash": 6,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 10,
+    "melee_cut": 10,
+    "attack_effs": [
+      {
+        "id": "bleed",
+        "chance": 10,
+        "duration": 5
+      }
+    ],
+    "dodge": 2,
+    "speed": 110,
+    "color": "red"
+  },
+  {
+    "id": "mon_fish_mutant_accordian",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "手风琴鱼",
+      "str_pl": "手风琴鱼"
+    },
+    "description": "一条鲤鱼大小的变异鱼。它通过身体诡异的伸展和收缩来移动，因而得此怪名。",
+    "color": "white"
+  },
+  {
+    "id": "mon_fish_mutant_whisper",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "耳语者"
+    },
+    "description": "一条大型变异鱼，体型和虎鲨差不多。它的身体像鳗鱼一样又长又滑。耳语者能完美模仿所有它吞噬过的人，并可以用死者的声音呼救。",
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 100,
+    "special_attacks": [
+      [
+        "PARROT",
+        200
+      ]
+    ],
+    "color": "white",
+    "extend": {
+      "flags": [
+        "NIGHT_INVISIBILITY"
+      ]
+    }
+  },
+  {
+    "id": "mon_fish_mutant_butter",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "奶油鱼",
+      "str_pl": "奶油鱼"
+    },
+    "description": "一条体型和大鲤鱼一般的变异鱼。它能通过产生和释放一种稠油来控制身体的浮力大小，这种油可能可以收集。",
+    "color": "yellow",
+    "starting_ammo": {
+      "cooking_oil": 10
+    },
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "extend": {
+      "flags": [
+        "MILKABLE"
+      ]
+    }
+  },
+  {
+    "id": "mon_fish_mutant_spit",
+    "type": "MONSTER",
+    "copy-from": "mon_fish_mutant",
+    "name": {
+      "str": "射水鱼",
+      "str_pl": "射水鱼"
+    },
+    "description": "一条体型和鲤鱼一般的变异鱼。它通过喷射水柱，将路过的鸟类击入水中来捕食。",
+    "color": "light_blue",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 100,
+        "move_cost": 200,
+        "gun_type": "fake_waterspit",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "pistol",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "require_targeting_player": false,
+        "ranges": [
+          [
+            0,
+            10,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1019 @@
+[
+  {
+    "id": "bomblet_launcher_single",
+    "type": "GUN",
+    "name": {
+      "str": "爆炸管发射器"
+    },
+    "description": "一种简易的自制小炸弹发射器，由钉在一段钢管上的木制支架和一个改进的用来固定和激活小炸弹的击发器组成。",
+    "weight": "1514 g",
+    "volume": "1250 ml",
+    "longest_side": "680 mm",
+    "price": "450 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "looks_like": "launcher_simple",
+    "symbol": ")",
+    "color": "light_red",
+    "ammo": [
+      "bomblet"
+    ],
+    "skill": "launcher",
+    "range": 1,
+    "dispersion": 50,
+    "sight_dispersion": 50,
+    "recoil": 35,
+    "durability": 7,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bomblet": 1
+        }
+      }
+    ],
+    "reload": 300,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "bomblet_launcher_double",
+    "type": "GUN",
+    "name": {
+      "str": "双炸弹发射器"
+    },
+    "description": "自制的双管小炸弹发射器。它可以同时发射两颗小炸弹，而且可以进行一些的改装。",
+    "weight": "1690 g",
+    "volume": "1500 ml",
+    "longest_side": "680 mm",
+    "price": "950 USD",
+    "to_hit": -2,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "looks_like": "launcher_simple",
+    "symbol": ")",
+    "color": "magenta",
+    "ammo": [
+      "bomblet"
+    ],
+    "skill": "launcher",
+    "range": 2,
+    "dispersion": 50,
+    "sight_dispersion": 50,
+    "recoil": 30,
+    "durability": 7,
+    "clip_size": 2,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bomblet": 2
+        }
+      }
+    ],
+    "reload": 250,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE"
+    ],
+    "flags": [
+      "MODE_BURST",
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "bomblet_launcher_rotary",
+    "type": "GUN",
+    "name": {
+      "str": "PRMP4胡椒枪 发射器"
+    },
+    "description": "PRMP4“胡椒枪”具有单发和连发的模式，是最早也是最成功的小炸弹发射器之一。它被设计用来给镇压小分队的步兵配备，它同样可以在不致命的情况下平息暴动。",
+    "weight": "3259 g",
+    "volume": "2500 ml",
+    "longest_side": "680 mm",
+    "price": "2100 USD",
+    "to_hit": -1,
+    "bashing": 11,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "looks_like": "mgl",
+    "symbol": ")",
+    "color": "magenta",
+    "ammo": [
+      "bomblet"
+    ],
+    "skill": "launcher",
+    "range": 5,
+    "dispersion": 20,
+    "sight_dispersion": 20,
+    "recoil": 20,
+    "durability": 10,
+    "clip_size": 24,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bomblet": 24
+        }
+      }
+    ],
+    "reload": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE"
+    ],
+    "flags": [
+      "MODE_BURST",
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "bomblet_launcher_dualshot",
+    "type": "GUN",
+    "name": {
+      "str": "PRMP2仲裁者 发射器"
+    },
+    "description": "PRMP2“仲裁者”是一种可以单手手持的发射器，可同时填装两种不同的子弹，以适应当今不断变化的作战场景.虽然比一个普通的发射器有着更多功能,但也导致装弹时间延长和更强烈的后坐力。",
+    "weight": "1642 g",
+    "volume": "750 ml",
+    "longest_side": "680 mm",
+    "price": "1750 USD",
+    "to_hit": -3,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "looks_like": "m79",
+    "symbol": ")",
+    "color": "light_red",
+    "ammo": [
+      "bomblet"
+    ],
+    "skill": "launcher",
+    "range": 5,
+    "dispersion": 20,
+    "sight_dispersion": 20,
+    "recoil": 55,
+    "durability": 6,
+    "clip_size": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bomblet": 6
+        }
+      }
+    ],
+    "reload": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "built_in_mods": [
+      "bomblet_undermod"
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE"
+    ],
+    "flags": [
+      "MODE_BURST",
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "bomblet_launcher_brute",
+    "type": "GUN",
+    "name": {
+      "str": "25型小炸弹发射器"
+    },
+    "description": "这把枪有着一个巨大的弯曲刀片固定在发射器上。由此产生的武器非常重，需要足够壮才能灵活的使用它，但可以提供接近中程的压制，具有相对较低的后坐力，并可以在射击中重新装载一个自制的条状弹匣。",
+    "weight": "10052 g",
+    "volume": "6 L",
+    "longest_side": "920 mm",
+    "price": "2800 USD",
+    "to_hit": 1,
+    "bashing": 18,
+    "cutting": 36,
+    "material": [
+      "steel",
+      "spess_plastic"
+    ],
+    "looks_like": "mark19",
+    "symbol": ")",
+    "color": "red",
+    "ammo": [
+      "bomblet"
+    ],
+    "skill": "launcher",
+    "range": 10,
+    "dispersion": 20,
+    "sight_dispersion": 30,
+    "recoil": 10,
+    "durability": 10,
+    "reload": 100,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "500 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "brute_shot_mag"
+        ]
+      }
+    ],
+    "techniques": [
+      "WIDE",
+      "BRUTAL",
+      "heavy_blow"
+    ]
+  },
+  {
+    "id": "bomblet_undermod",
+    "type": "GUNMOD",
+    "name": {
+      "str": "枪管下抛弹机"
+    },
+    "description": "一种步枪的下挂配件，能装下并发射最多3枚小炸弹。下挂配件及其弹药的重量在一定程度上降低了两种武器的精度。",
+    "weight": "972 g",
+    "volume": "750 ml",
+    "longest_side": "340 mm",
+    "price": "900 USD",
+    "install_time": "15 m",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "i_magenta",
+    "location": "underbarrel",
+    "mod_targets": [
+      "rifle",
+      "crossbow",
+      "shotgun"
+    ],
+    "gun_data": {
+      "ammo": [
+        "bomblet"
+      ],
+      "skill": "launcher",
+      "dispersion": 20,
+      "sight_dispersion": 1,
+      "recoil": 50,
+      "durability": 10,
+      "clip_size": 3,
+      "reload": 150
+    },
+    "dispersion_modifier": 40,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bomblet": 3
+        }
+      }
+    ],
+    "min_skills": [
+      [
+        "gun",
+        3
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "shockcannon",
+    "type": "GUN",
+    "name": {
+      "str": "防震炮"
+    },
+    "description": "一个相当笨重的电磁炮，能够猛烈地发出一阵电流。不完全是特斯拉大炮，它始终是一个相当强大的镇暴武器。可以修改为使用钚电池或ups来供能",
+    "weight": "4542 g",
+    "volume": "5750 ml",
+    "longest_side": "1020 mm",
+    "price": "1750 USD",
+    "to_hit": -3,
+    "bashing": 10,
+    "material": [
+      "spess_plastic",
+      "plastic"
+    ],
+    "looks_like": "laser_cannon",
+    "symbol": "v",
+    "color": "white_yellow",
+    "ammo": [
+      "battery"
+    ],
+    "skill": "launcher",
+    "range": 5,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 5,
+      "armor_penetration": 100
+    },
+    "dispersion": 200,
+    "sight_dispersion": 100,
+    "recoil": 10,
+    "durability": 4,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "reload": 1,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE",
+      "BEANBAG",
+      "WIDE",
+      "BOUNCE",
+      "LIGHTNING"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "RECHARGE"
+    ],
+    "ammo_to_fire": 100
+  },
+  {
+    "id": "shockcannon_ups",
+    "type": "GUN",
+    "name": {
+      "str": "军用防震炮"
+    },
+    "description": "一个相当笨重的军用电磁炮，能够猛烈地发出一阵电流。不完全是特斯拉大炮，它始终是一个相当强大的镇暴武器。以UPS来提供能源，没有拆下UPS供电模组就不能使用电池来供能。",
+    "weight": "4542 g",
+    "volume": "5750 ml",
+    "longest_side": "1020 mm",
+    "price": "1750 USD",
+    "to_hit": -3,
+    "bashing": 10,
+    "material": [
+      "spess_plastic",
+      "plastic"
+    ],
+    "looks_like": "laser_cannon",
+    "symbol": "v",
+    "color": "white_yellow",
+    "ammo": [
+      "battery"
+    ],
+    "skill": "launcher",
+    "range": 5,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 5,
+      "armor_penetration": 100
+    },
+    "dispersion": 200,
+    "sight_dispersion": 100,
+    "recoil": 10,
+    "durability": 4,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "energy_drain": "50 kJ",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE",
+      "BEANBAG",
+      "WIDE",
+      "BOUNCE",
+      "LIGHTNING"
+    ],
+    "flags": [
+      "USE_UPS",
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "RECHARGE"
+    ]
+  },
+  {
+    "id": "shockcannon_plut",
+    "type": "GUN",
+    "name": {
+      "str": "原子冲击炮"
+    },
+    "description": "一个相当笨重的电磁炮，能够猛烈地发出一阵电流。不完全是特斯拉大炮，它始终是一个相当强大的镇暴武器。使用钚电池来提供大量的能源，并且在拆除之前无法使用ups或电池来供能。",
+    "weight": "4542 g",
+    "volume": "5750 ml",
+    "longest_side": "1020 mm",
+    "price": "1750 USD",
+    "to_hit": -3,
+    "bashing": 10,
+    "material": [
+      "spess_plastic",
+      "plastic"
+    ],
+    "looks_like": "laser_cannon",
+    "symbol": "v",
+    "color": "white_yellow",
+    "ammo": [
+      "battery"
+    ],
+    "skill": "launcher",
+    "range": 5,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 5,
+      "armor_penetration": 100
+    },
+    "dispersion": 200,
+    "sight_dispersion": 100,
+    "recoil": 10,
+    "durability": 4,
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "heavy_battery_cell",
+          "heavy_plus_battery_cell",
+          "heavy_atomic_battery_cell",
+          "heavy_disposable_cell"
+        ]
+      }
+    ],
+    "reload": 1,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE",
+      "BEANBAG",
+      "WIDE",
+      "BOUNCE",
+      "LIGHTNING"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD"
+    ],
+    "ammo_to_fire": 50
+  },
+  {
+    "id": "410_lever",
+    "type": "GUN",
+    "name": {
+      "str": "Klaxon x410 霰弹枪"
+    },
+    "description": "一种小型中程杠杆式霰弹枪，使用较小的410口径霰弹，klaxon也能够发射0.45口径子弹和410口径子弹，为“现代户外运动者提供了高通用性和可靠性”。其名称中的“X”表示其10轮容量。",
+    "weight": "1805 g",
+    "volume": "1750 ml",
+    "longest_side": "920 mm",
+    "price": "1750 USD",
+    "to_hit": -2,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "looks_like": "winchester_1887",
+    "symbol": ")",
+    "color": "light_red",
+    "ammo": [
+      "45",
+      "410shot"
+    ],
+    "skill": "shotgun",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "range": -1,
+    "dispersion": 140,
+    "durability": 5,
+    "clip_size": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "45": 10,
+          "410shot": 10
+        }
+      }
+    ],
+    "reload": 50,
+    "reload_noise": "click - chak",
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "410_revolver",
+    "type": "GUN",
+    "name": {
+      "str": "5410边境 左轮手枪"
+    },
+    "description": "一把左轮手枪，用来射击小口径。410发霰弹枪。作为一个强大的家庭防御武器，5410前线市场足够大，使重新加载与实践快照，并接受大多数第三方修改，使用户感到尽可能安全。",
+    "weight": "715 g",
+    "volume": "750 ml",
+    "longest_side": "340 mm",
+    "price": "750 USD",
+    "to_hit": -2,
+    "material": [
+      "steel"
+    ],
+    "looks_like": "ruger_redhawk",
+    "symbol": ")",
+    "color": "light_red",
+    "ammo": [
+      "410shot"
+    ],
+    "skill": "pistol",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "range": -1,
+    "dispersion": 210,
+    "durability": 9,
+    "clip_size": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "410shot": 6
+        }
+      }
+    ],
+    "reload": 80,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "ithaca_doom",
+    "copy-from": "shotgun_pump",
+    "type": "GUN",
+    "name": {
+      "str": "伊萨卡 2021霰弹枪"
+    },
+    "description": "伊萨卡公司商业化生产的2021霰弹枪，是为家庭防卫和私人军事用途设计的坚固的下枪管霰弹枪。 因为这种易操作的霰弹枪采用手枪握把和缩短的枪管，所以其缺乏合适的枪托和枪管下的连接点。",
+    "weight": "3066 g",
+    "volume": "1500 ml",
+    "longest_side": "525 mm",
+    "price": "2 kUSD",
+    "to_hit": -2,
+    "bashing": 6,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ")",
+    "color": "pink",
+    "ammo": [
+      "shot"
+    ],
+    "skill": "shotgun",
+    "range": 3,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 300,
+    "recoil": 70,
+    "durability": 7,
+    "clip_size": 12,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 12
+        }
+      }
+    ],
+    "reload": 120,
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "ithaca_doom_dual",
+    "copy-from": "shotgun_pump",
+    "type": "GUN",
+    "name": {
+      "str": "伊萨卡 无命者霰弹枪"
+    },
+    "description": "无命者是制造商伊萨卡通过合同生产的最后一款霰弹枪之一，它是一款坚固且只需低维护的下枪管装弹枪支，枪管缩小以增加机动性。 通过部分铝制改装，这款轻量级霰弹枪可以容纳12枚弹壳，只需轻轻一扣下扳机，武器就可以剧烈开火，让使用者在不释放扳机的情况下，以最快的速度将新霰弹泵入枪膛。",
+    "weight": "2466 g",
+    "volume": "1500 ml",
+    "longest_side": "625 mm",
+    "price": "2 kUSD",
+    "to_hit": -2,
+    "bashing": 6,
+    "material": [
+      "steel",
+      "aluminum"
+    ],
+    "symbol": ")",
+    "color": "pink",
+    "ammo": [
+      "shot"
+    ],
+    "skill": "shotgun",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
+    "dispersion": 330,
+    "recoil": 350,
+    "durability": 9,
+    "clip_size": 12,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 12
+        }
+      }
+    ],
+    "reload": 130,
+    "flags": [
+      "MODE_BURST",
+      "NEVER_JAMS",
+      "RELOAD_ONE"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "BFG",
+    "type": "GUN",
+    "symbol": ")",
+    "color": "green",
+    "name": {
+      "str": "BFG 2041-2",
+      "str_pl": "BFG 2041-2"
+    },
+    "description": "BFG 2041-2，粒子能量武器的原型。它利用亚光速粒子，从一个目标传播到另一个目标，放大周围环境的能量，并在受害者体内产生次核爆炸。",
+    "price": "125 kUSD",
+    "material": [
+      "spess_plastic",
+      "steel"
+    ],
+    "ammo_effects": [
+      "DRAW_AS_LINE"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "RELOAD_ONE",
+      "WATERPROOF_GUN"
+    ],
+    "skill": "launcher",
+    "ammo": [
+      "bfg_plutonium"
+    ],
+    "weight": "9200 g",
+    "volume": "4 L",
+    "longest_side": "1170 mm",
+    "to_hit": -3,
+    "dispersion": 200,
+    "durability": 9,
+    "clip_size": 2,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bfg_plutonium": 2
+        }
+      }
+    ],
+    "reload": 350
+  }
+]

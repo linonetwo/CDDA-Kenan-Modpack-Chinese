@@ -1,0 +1,805 @@
+[
+  {
+    "type": "npc",
+    "id": "NPC_Barrett_Hartley",
+    "gender": "male",
+    "class": "NC_Barrett_Hartley",
+    "name_unique": "巴雷特·哈特利",
+    "attitude": 0,
+    "mission": 7,
+    "chat": "TALK_Barrett_Hartley_1",
+    "faction": "Hartley_family",
+    "mission_offered": "MISSION_Barrett_Hartley_1"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_Barrett_Hartley",
+    "name": {
+      "str": "Barrett Hartley"
+    },
+    "common": false,
+    "job_description": "I'm just wandering.",
+    "traits": [
+      {
+        "trait": "BGSS_Barrett_Hartley"
+      },
+      {
+        "group": "NPC_starting_traits"
+      },
+      {
+        "group": "Appearance_Germanic"
+      }
+    ],
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": {
+          "mul": [
+            {
+              "one_in": 3
+            },
+            {
+              "sum": [
+                {
+                  "dice": [
+                    4,
+                    2
+                  ]
+                },
+                {
+                  "rng": [
+                    -4,
+                    -1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_Barrett_Hartley_1",
+      "TALK_Barrett_Hartley_Background"
+    ],
+    "dynamic_line": "<greet>",
+    "responses": [
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_Barrett_Hartley_Background"
+      },
+      {
+        "text": "你好吗？",
+        "topic": "TALK_Barrett_Hartley_safe_hay",
+        "condition": {
+          "u_has_var": "u_helped_Barrett_Hartley",
+          "type": "flag",
+          "context": "end",
+          "value": "yes"
+        },
+        "switch": true
+      },
+      {
+        "text": "需要帮忙么？",
+        "topic": "TALK_MISSION_LIST",
+        "switch": true
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_Background",
+    "dynamic_line": "没什么特别要说的。我很幸运活了下来，在座的其他人一样。<the_cataclysm>一到，我和家人在家，我妻子就变成了一个<zombie>，试图吃掉我们的女儿…太可怕了，<name_g>，我不想谈这个了。让我们结束这个话题吧。"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_wait",
+    "dynamic_line": "你找到她了吗？",
+    "responses": [
+      {
+        "text": "对不起，我没能及时赶到…",
+        "topic": "TALK_Barrett_Hartley_daughter_lost",
+        "condition": {
+          "and": [
+            "mission_complete",
+            {
+              "not": {
+                "u_has_mission": "MISSION_Rosalyn_Hartley_0"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "很抱歉，我不能让她活着…",
+        "topic": "TALK_Barrett_Hartley_daughter_lost",
+        "condition": {
+          "and": [
+            "mission_complete",
+            {
+              "u_has_var": "Rosalyn_Hartley_dead",
+              "type": "flag",
+              "context": "death",
+              "value": "yes"
+            }
+          ]
+        }
+      },
+      {
+        "text": "她在这里，还活着。",
+        "topic": "TALK_Barrett_Hartley_ask_lead",
+        "condition": {
+          "and": [
+            {
+              "not": "mission_complete"
+            },
+            {
+              "u_has_mission": "MISSION_Rosalyn_Hartley_0"
+            }
+          ]
+        },
+        "effect": [
+          "mission_success",
+          "clear_mission",
+          {
+            "add_mission": "MISSION_Barrett_Hartley_2"
+          },
+          "follow_only"
+        ]
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_daughter_lost",
+    "dynamic_line": "哦不，我女儿…",
+    "responses": [
+      {
+        "text": "对不起，我让你失望了…",
+        "topic": "TALK_Barrett_Hartley_daughter_lost1",
+        "effect": [
+          "mission_failure",
+          "clear_mission",
+          {
+            "u_lose_var": "Rosalyn_Hartley_dead",
+            "type": "flag",
+            "context": "death"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_daughter_lost1",
+    "dynamic_line": "我失去了我的妻子，我的母亲，我的父亲，我的朋友，现在…我的女儿…我不想再活下去了…",
+    "responses": [
+      {
+        "text": "你觉得和我一起旅行怎么样？",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 25
+        },
+        "success": {
+          "topic": "TALK_Barrett_Hartley_join"
+        },
+        "failure": {
+          "topic": "TALK_DONE",
+          "effect": [
+            "end_conversation",
+            "stop_following",
+            "flee"
+          ]
+        }
+      },
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          "end_conversation",
+          "stop_following",
+          "flee"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_join",
+    "dynamic_line": "我什么都没有了，所以…",
+    "responses": [
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_ask_lead",
+    "dynamic_line": "你是我的救世主，谢谢你！问你我很不舒服，但是…你能带我们去避难所吗？我有一张地图，上面有这样的避难所。也许会有一些人和我女儿在一起我们会更容易生存…",
+    "responses": [
+      {
+        "text": "当然，没问题。跟着我。",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "我现在有点忙。下次吧？",
+        "topic": "TALK_Barrett_Hartley_ask_lead_plead"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_ask_lead_plead",
+    "dynamic_line": "拜托，你是我们最后的希望！",
+    "responses": [
+      {
+        "text": "好的，好的。那就跟我来。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_lead_shelter",
+    "dynamic_line": {
+      "u_has_mission": "MISSION_Rosalyn_Hartley_0",
+      "yes": "我们到了吗，<name_g>？",
+      "no": "罗莎琳！"
+    },
+    "responses": [
+      {
+        "text": "我想我们应该避开这个庇护所。",
+        "topic": "TALK_Barrett_Hartley_lead_shelter1",
+        "condition": {
+          "and": [
+            {
+              "or": [
+                {
+                  "u_has_var": "evac_problem_done",
+                  "type": "flag",
+                  "context": "problem",
+                  "value": "yes"
+                },
+                "mission_complete"
+              ]
+            },
+            {
+              "u_has_mission": "MISSION_Barrett_Hartley_2"
+            }
+          ]
+        }
+      },
+      {
+        "text": "我们到了！",
+        "condition": {
+          "and": [
+            "mission_complete",
+            {
+              "u_has_mission": "MISSION_Barrett_Hartley_3"
+            }
+          ]
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "u_has_var": "Rosalyn_Hartley_safe",
+            "type": "flag",
+            "context": "safe",
+            "value": "yes"
+          }
+        },
+        "success": {
+          "topic": "TALK_Barrett_Hartley_evac_center"
+        },
+        "failure": {
+          "topic": "TALK_Barrett_Hartley_evac_center_daughter"
+        }
+      },
+      {
+        "text": "对不起，我让你失望了…",
+        "topic": "TALK_Barrett_Hartley_daughter_lost",
+        "condition": {
+          "not": {
+            "u_has_mission": "MISSION_Rosalyn_Hartley_0"
+          }
+        },
+        "switch": true
+      },
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE",
+        "switch": true
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_lead_shelter1",
+    "dynamic_line": "看来你是对的。嗯，这里躺着的是什么……“他伸手去拿地上的一张纸。”听着，这是关于难民中心的报道。即使有地图怎么去那里。也许我们应该在那里碰碰运气？",
+    "responses": [
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE",
+        "effect": [
+          "mission_success",
+          "clear_mission",
+          {
+            "add_mission": "MISSION_Barrett_Hartley_3"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_evac_center",
+    "dynamic_line": "很好。让我和负责人谈谈。也许他们会让我们进去。",
+    "responses": [
+      {
+        "text": "当然。",
+        "topic": "TALK_DONE",
+        "effect": [
+          "stop_following",
+          {
+            "npc_first_topic": "TALK_Barrett_Hartley_evac_center_lobby"
+          },
+          {
+            "u_add_var": "merchant_center_Barrett_Hartley",
+            "type": "ask",
+            "context": "stay",
+            "value": "0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_evac_center_daughter",
+    "dynamic_line": "我女儿还好吗？她安全吗？",
+    "responses": [
+      {
+        "text": "我会问她的。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_evac_center_lobby",
+    "dynamic_line": "我想和他们谈谈，但他们不让我们进去。也许你可以试试？",
+    "responses": [
+      {
+        "text": "不，得到了同样的答案。对不起的。",
+        "topic": "TALK_Barrett_Hartley_evac_center_refused",
+        "condition": {
+          "u_has_var": "merchant_center_Barrett_Hartley",
+          "type": "ask",
+          "context": "stay",
+          "value": "no"
+        }
+      },
+      {
+        "text": "我可以试试。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_evac_center_refused",
+    "dynamic_line": "啊，太糟糕了。无论如何谢谢你的帮助。",
+    "responses": [
+      {
+        "text": "没问题，<name_g>。祝你好运。",
+        "topic": "TALK_DONE",
+        "effect": [
+          "mission_success",
+          "clear_mission",
+          {
+            "npc_first_topic": "TALK_Barrett_Hartley_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_safe_hay",
+    "dynamic_line": {
+      "math": [ "time_since(npc_flag_safe_Barrett_Hartley_safe)", ">", "time('7 d')" ],
+      "yes": "我很好，谢谢。一切都很顺利，<name_g>。这里的人很好，总是有一些工作可以做：有时我帮忙分发带来的哈巴，总是需要修理障碍，有时他们在没有多余人手的情况下把我安排在岗位上。你能想象吗，我甚至还加入了老卫兵？嗯，差不多了。只需要完成他们的简单任务，我就被视为正式会员了！会有薪水，口粮够我们两个人吃。",
+      "no": "我很好，谢谢。这里有点挤，但我们能应付。最重要的是这里很安全，至少我们有自己的食物。他们不是免费的，很辛苦，但是像我这样的人有足够的工作，所以我没有抱怨。"
+    },
+    "responses": [
+      {
+        "text": "也许我能帮你？",
+        "topic": "TALK_Barrett_Hartley_safe_help",
+        "condition": {
+          "npc_compare_time_since_var": "Barrett_Hartley_safe",
+          "type": "flag",
+          "context": "safe",
+          "op": ">",
+          "time": "7 days"
+        }
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_safe_help",
+    "dynamic_line": "你真的想帮我吗？那就听我说。代表派我和另一个<name_g>去检查一个可能的地狱骑士的藏匿处。我的搭档不见了，但我不想一个人去。我执行任务时，你能陪着我吗？",
+    "responses": [
+      {
+        "text": "当然，我们走吧。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "add_mission": "MISSION_Barrett_Hartley_4"
+        }
+      },
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_help_mission_follow",
+    "dynamic_line": "我们到了吗，<name_g>？",
+    "responses": [
+      {
+        "text": "我们到了。我们开始搜索吧。",
+        "topic": "TALK_Barrett_Hartley_help_mission",
+        "condition": "mission_complete",
+        "switch": true
+      },
+      {
+        "text": "还没有。",
+        "topic": "TALK_DONE",
+        "switch": true
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_help_mission",
+    "dynamic_line": "*环顾四周说：“好吧，现在我需要找到一些线索……”他开始在房间里四处窥探，而你决定休息一下，闭上眼睛。你被楼梯边传来的奇怪声音吵醒了。你很快意识到你有客人，但为时已晚。有几支枪正朝巴雷特射击。",
+    "responses": [
+      {
+        "text": "小心！",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Barrett_Hartley_help_mission",
+    "dynamic_line": "*转过身来，但为时已晚。第一枪打在他的头上，只留下一个漂亮的洞，血像喷泉一样从里面涌出，还有他的大脑碎片。现在不受欢迎的客人已经把注意力转向你了。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          "mission_success",
+          "clear_mission",
+          "npc_die"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "MISSION_Barrett_Hartley_1",
+    "type": "mission_definition",
+    "name": {
+      "str": "寻找女儿"
+    },
+    "description": "帮巴雷特找到他的女儿，把她带回他身边。",
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 0,
+    "value": 0,
+    "has_generic_rewards": false,
+    "start": {
+      "effect": {
+        "npc_first_topic": "TALK_Barrett_Hartley_wait"
+      },
+      "assign_mission_target": {
+        "om_terrain": "school_1_2"
+      },
+      "update_mapgen": {
+        "om_terrain": "school_3_6",
+        "place_npcs": [
+          {
+            "class": "NPC_Rosalyn_Hartley",
+            "x": 12,
+            "y": 6,
+            "target": true
+          }
+        ]
+      }
+    },
+    "fail": {
+      "effect": {
+        "u_add_var": "Barrett_Hartley_dead",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "问你这件事我很不舒服，但是…事实是我女儿和我一起躲在学校大楼里。楼上很安静，餐厅里有很多用品。到了该走的时候，匆忙中我忘了带我女儿最喜欢的洋娃娃，她很担心她，所以决定回来拿。我试图劝阻她，但她那天晚上不听我的话，跟着她心爱的洋娃娃跑去上学。请帮我找回我的女儿！",
+      "accepted": "谢谢您！我就在这儿等你。",
+      "rejected": "拜托，你是我最后的希望！",
+      "advice": "小心。她是我唯一剩下的人。",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_Barrett_Hartley_2",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "疏散避难所"
+    },
+    "description": "带哈特利一家去避难所",
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 0,
+    "value": 0,
+    "start": {
+      "effect": [
+        "follow_only",
+        {
+          "npc_first_topic": "TALK_Barrett_Hartley_lead_shelter"
+        }
+      ],
+      "assign_mission_target": {
+        "om_terrain": "shelter_vandal",
+        "om_special": "Evac Shelter Vandalized"
+      },
+      "update_mapgen": {
+        "place_npcs": [
+          {
+            "class": "NPC_Jerry_Bumpkin",
+            "x": 12,
+            "y": 12,
+            "target": true
+          },
+          {
+            "class": "NPC_Jerry_Bumpkin_goon",
+            "x": [
+              5,
+              20
+            ],
+            "y": [
+              5,
+              20
+            ],
+            "repeat": [
+              3,
+              7
+            ]
+          }
+        ]
+      }
+    },
+    "fail": {
+      "effect": {
+        "u_add_var": "Barrett_Hartley_dead",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_Barrett_Hartley_3",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "疏散中心"
+    },
+    "description": "带哈特利一家去疏散中心。",
+    "goal": "MGOAL_GO_TO_TYPE",
+    "destination": "evac_center_18",
+    "difficulty": 0,
+    "value": 0,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "evac_center_18",
+        "om_special": "evac_center"
+      }
+    },
+    "end": {
+      "effect": [
+        {
+          "u_add_var": "u_helped_Barrett_Hartley",
+          "type": "flag",
+          "context": "end",
+          "value": "yes"
+        },
+        {
+          "npc_add_var": "Barrett_Hartley_safe",
+          "type": "flag",
+          "context": "safe",
+          "time": true
+        }
+      ]
+    },
+    "fail": {
+      "effect": {
+        "u_add_var": "Barrett_Hartley_dead",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_Barrett_Hartley_4",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "第一个OG任务"
+    },
+    "description": "帮助巴雷特完成他的第一个任务。把他带到地狱掠夺者的潜在藏身处，四处寻找可疑的东西。",
+    "goal": "MGOAL_GO_TO",
+    "difficulty": 0,
+    "value": 0,
+    "start": {
+      "effect": [
+        "follow_only",
+        {
+          "npc_first_topic": "TALK_Barrett_Hartley_help_mission_follow"
+        }
+      ],
+      "assign_mission_target": {
+        "om_terrain": "pawn_pf_under"
+      }
+    },
+    "end": {
+      "update_mapgen": {
+        "om_terrain": "pawn_pf_under",
+        "place_npcs": [
+          {
+            "class": "bandit",
+            "x": [
+              9,
+              12
+            ],
+            "y": [
+              14,
+              15
+            ],
+            "repeat": [
+              2,
+              4
+            ]
+          }
+        ]
+      },
+      "effect": [
+        {
+          "u_add_var": "Barrett_Hartley_mission_end",
+          "type": "flag",
+          "context": "mission",
+          "value": "yes"
+        },
+        {
+          "u_add_var": "Barrett_Hartley_dead",
+          "type": "flag",
+          "context": "death",
+          "value": "yes"
+        }
+      ]
+    },
+    "fail": {
+      "effect": {
+        "u_add_var": "Barrett_Hartley_dead",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_Barrett_Hartley_0",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "你见过巴雷特·哈特利"
+    },
+    "description": "他看起来是个好人。也许你不该让他死？",
+    "goal": "MGOAL_CONDITION",
+    "difficulty": 0,
+    "value": 0,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    },
+    "fail": {
+      "effect": {
+        "u_add_var": "Barrett_Hartley_dead",
+        "type": "flag",
+        "context": "death",
+        "value": "yes"
+      }
+    }
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "type": "start_location",
+    "id": "ws_cruise_ship_x0y0z0",
+    "name": "船员宿舍",
+    "terrain": [
+      "ws_cruise_ship_x0y0z0"
+    ]
+  },
+  {
+    "type": "start_location",
+    "id": "ws_cruise_ship_x0y1z0",
+    "name": "船舱 西北",
+    "terrain": [
+      "ws_cruise_ship_x0y1z0"
+    ]
+  },
+  {
+    "type": "start_location",
+    "id": "ws_cruise_ship_x0y2z0",
+    "name": "船舱 西南",
+    "terrain": [
+      "ws_cruise_ship_x0y2z0"
+    ]
+  },
+  {
+    "type": "start_location",
+    "id": "ws_cruise_ship_x1y1z0",
+    "name": "船舱 东北",
+    "terrain": [
+      "ws_cruise_ship_x1y1z0"
+    ]
+  },
+  {
+    "type": "start_location",
+    "id": "ws_cruise_ship_x1y2z0",
+    "name": "船舱 东南",
+    "terrain": [
+      "ws_cruise_ship_x1y2z0"
+    ]
+  },
+  {
+    "type": "scenario",
+    "id": "cruise_ship_start",
+    "name": "死亡游轮",
+    "points": -3,
+    "description": "你终于攒够了钱踏上了梦寐以求的新英格兰旅行，；这天你终于踏上了船板，还在幻想着去哪玩时却发现自己和数不尽的不死生物在同一条船上！奋力逃出去，游到陆上摆脱这些怪物！陆上很安全，或许吧……",
+    "start_name": "游轮",
+    "allowed_locs": [
+      "ws_cruise_ship_x0y0z0",
+      "ws_cruise_ship_x0y1z0",
+      "ws_cruise_ship_x0y2z0",
+      "ws_cruise_ship_x1y1z0",
+      "ws_cruise_ship_x1y2z0"
+    ],
+    "flags": [
+      "CHALLENGE",
+      "SUR_START",
+      "CITY_START"
+    ]
+  }
+]

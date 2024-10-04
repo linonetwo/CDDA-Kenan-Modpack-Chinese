@@ -1,0 +1,151 @@
+[
+  {
+    "id": "magic_fuel_bunker",
+    "type": "vehicle_part",
+    "name": {
+      "str": "魔法燃料舱"
+    },
+    "item": "magic_fuel_bunker",
+    "location": "fuel_source",
+    "variants": [ { "symbols": "O", "symbols_broken": "#" } ],
+    "color": "blue",
+    "broken_color": "blue",
+    "looks_like": "tank",
+    "durability": 150,
+    "description": "一个能够装载固态燃料的货舱，这是专门为固体魔力燃料设计的。装入车辆引擎所对应消耗的燃料后，引擎启动时将会自动从对应的燃料舱内抽取燃料。",
+    "size": 60000,
+    "damage_modifier": 80,
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          2,
+          2
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          1,
+          2
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          1,
+          5
+        ]
+      }
+    ],
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "damage_reduction": {
+      "all": 24,
+      "stab": 18
+    }
+  },
+  {
+    "id": "engine_mana",
+    "copy-from": "steam_engine",
+    "variants": [ { "symbols": "M", "symbols_broken": "#" } ],
+    "color": "blue",
+    "broken_color": "blue",
+    "fuel_type": "crystallized_mana",
+    "fuel_options": [
+      "crystallized_mana"
+    ],
+    "type": "vehicle_part",
+    "item": "mana_engine",
+    "extend": {
+      "flags": [
+        "E_COLD_START"
+      ]
+    },
+    "backfire_threshold": 0.7,
+    "backfire_freq": 10,
+    "noise_factor": 5,
+    "durability": 200,
+    "damage_reduction": {
+      "all": 75
+    },
+    "epower": 0,
+    "power": 93250,
+    "energy_consumption": 4662,
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          30,
+          60
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          30,
+          60
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          30,
+          60
+        ]
+      },
+      {
+        "item": "water",
+        "count": [
+          50,
+          120
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,756 @@
+[
+  {
+    "//": "TODO check text, write something not lame, balance him a bit maybe?",
+    "type": "npc",
+    "id": "NPC_police_teacher",
+    "name_suffix": "军官",
+    "class": "NC_police_teacher",
+    "attitude": 0,
+    "mission": 8,
+    "chat": "TALK_police_teacher_1",
+    "faction": "no_faction",
+    "mission_offered": "MISSION_police_teacher_1"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_police_teacher",
+    "name": {
+      "str": "Police Teacher"
+    },
+    "job_description": "Police Teacher.",
+    "common": false,
+    "bonus_str": {
+      "rng": [
+        1,
+        3
+      ]
+    },
+    "bonus_dex": {
+      "rng": [
+        1,
+        5
+      ]
+    },
+    "bonus_int": {
+      "rng": [
+        1,
+        2
+      ]
+    },
+    "bonus_per": {
+      "rng": [
+        1,
+        2
+      ]
+    },
+    "worn_override": "NC_police_teacher_worn",
+    "carry_override": "NC_police_teacher_carried",
+    "weapon_override": "EMPTY_GROUP",
+    "traits": [
+      {
+        "group": "NPC_starting_traits"
+      },
+      {
+        "group": "Appearance_demographics"
+      },
+      {
+        "trait": "PROF_SWAT"
+      },
+      {
+        "trait": "PAINRESIST"
+      }
+    ],
+    "skills": [
+      {
+        "skill": "gun",
+        "bonus": {
+          "rng": [
+            1,
+            5
+          ]
+        }
+      },
+      {
+        "skill": "shotgun",
+        "bonus": {
+          "rng": [
+            1,
+            5
+          ]
+        }
+      },
+      {
+        "skill": "pistol",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "melee",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "bashing",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      },
+      {
+        "skill": "unarmed",
+        "bonus": {
+          "rng": [
+            1,
+            3
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_police_teacher_worn",
+    "subtype": "collection",
+    "entries": [
+      {
+        "item": "socks"
+      },
+      {
+        "item": "swat_armor"
+      },
+      {
+        "item": "tac_fullhelmet"
+      },
+      {
+        "item": "boots_combat"
+      },
+      {
+        "item": "gloves_tactical"
+      },
+      {
+        "item": "badge_swat"
+      },
+      {
+        "item": "wristwatch"
+      },
+      {
+        "item": "bandolier_shotgun",
+        "contents-group": "bandolier_swat_cqc1"
+      },
+      {
+        "item": "bandolier_shotgun",
+        "contents-group": "bandolier_swat_cqc2"
+      },
+      {
+        "item": "legpouch_large",
+        "contents-group": "army_mags_usp9"
+      },
+      {
+        "item": "usp_9mm",
+        "ammo-item": "9mmfmj",
+        "charges": 15,
+        "container-item": "holster"
+      },
+      {
+        "item": "baton-extended",
+        "container-item": "police_belt"
+      },
+      {
+        "item": "ksg",
+        "ammo-item": "shot_00",
+        "charges": 7,
+        "contents-item": "shoulder_strap"
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_police_teacher_carried",
+    "subtype": "collection",
+    "entries": [
+      {
+        "group": "charged_two_way_radio"
+      },
+      {
+        "item": "ear_plugs",
+        "custom-flags": [
+          "no_auto_equip"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_police_teacher_1"
+    ],
+    "dynamic_line": {
+      "u_is_wearing": "badge_marshal",
+      "yes": "你好，执法官……",
+      "no": {
+        "u_has_any_trait": [
+          "PROF_POLICE",
+          "PROF_SWAT",
+          "PROF_CYBERCOP"
+        ],
+        "yes": "警官…",
+        "no": {
+          "u_has_any_trait": [
+            "PROF_PD_DET"
+          ],
+          "yes": "警探…",
+          "no": "你好，公民……"
+        }
+      }
+    },
+    "speaker_effect": {
+      "sentinel": "met",
+      "effect": {
+        "add_mission": "MISSION_police_teacher_0"
+      }
+    },
+    "responses": [
+      {
+        "text": "关于那个任务……",
+        "condition": {
+          "and": [
+            "mission_complete",
+            "has_many_assigned_missions"
+          ]
+        },
+        "topic": "TALK_MISSION_INQUIRE"
+      },
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_police_teacher_Background"
+      },
+      {
+        "text": "需要帮忙么？",
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "你能教我点什么吗？",
+        "topic": "TALK_police_teacher_teach_check"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "//": "TODO WRITE SOMETHING!!!",
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_Background",
+    "dynamic_line": "嗯，我当时在这间牢房里，管着自己的事，但当灯熄灭时，紧急系统锁定了整个警局，我就被困在这里了。",
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      },
+      {
+        "text": "你确定你说的是实话吗？",
+        "condition": {
+          "not": {
+            "npc_has_var": "police_teacher_background",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 8
+        },
+        "success": {
+          "topic": "TALK_police_teacher_truth"
+        },
+        "failure": {
+          "topic": "TALK_police_teacher_lie"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_teach_check",
+    "dynamic_line": "听着，现在我只能想一件事，那绝对不是关于教学的，好吗？",
+    "responses": [
+      {
+        "text": "那么，现在呢？",
+        "condition": {
+          "npc_has_var": "u_helped_police_teacher",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "npc_has_var": "police_teacher_teach",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "success": {
+          "effect": [
+            {
+              "u_spawn_item": "manual_swordsmanship"
+            },
+            {
+              "npc_lose_var": "police_teacher_teach",
+              "type": "general",
+              "context": "meeting"
+            }
+          ],
+          "topic": "TALK_police_teacher_teach"
+        },
+        "failure": {
+          "topic": "TALK_police_teacher_teach_done"
+        }
+      },
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_NONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_teach",
+    "dynamic_line": "我都是靠这本书学习的。你可以拿走它。祝你好运。",
+    "responses": [
+      {
+        "text": "谢谢你，警官。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_teach_done",
+    "dynamic_line": "我已经把我知道的都教给你了。",
+    "responses": [
+      {
+        "text": "再次感谢，警官。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_truth",
+    "dynamic_line": "好吧，好吧，我告诉你。事实是，当第一批丧尸试图进入我们部门时，我很害怕，甚至没有注意到我是如何把自己关在这里，关在这个牢房里的。也许我惊慌失措，我没有逃跑，也没有帮助同事，我想，也许，这根金属棒能保护我。我真的为自己感到羞耻。在这样的紧急情况下，军官们应该保持冷静，帮助平民做他们需要的任何事情，保护他们，但是……做了什么就做什么。",
+    "responses": [
+      {
+        "text": "哦，呃，那好吧？",
+        "topic": "TALK_police_teacher_1",
+        "effect": [
+          {
+            "npc_add_var": "police_teacher_background",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "police_teacher_background_truth",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_working",
+    "dynamic_line": {
+      "npc_compare_time_since_var": "police_teacher_work",
+      "type": "general",
+      "context": "flag",
+      "op": ">",
+      "time": "2 days",
+      "yes": "我完成了。",
+      "no": "我还在努力，<name_g>。"
+    },
+    "responses": [
+      {
+        "text": "好的，<name_g>，慢慢来。",
+        "topic": "TALK_DONE",
+        "condition": {
+          "not": {
+            "npc_compare_time_since_var": "police_teacher_work",
+            "type": "general",
+            "context": "flag",
+            "op": ">",
+            "time": "2 days"
+          }
+        }
+      },
+      {
+        "text": "很好，<name_g>。",
+        "topic": "TALK_police_teacher_1",
+        "condition": {
+          "npc_compare_time_since_var": "police_teacher_work",
+          "type": "test",
+          "context": "var_time_test",
+          "op": ">",
+          "time": "2 days"
+        },
+        "effect": [
+          {
+            "npc_first_topic": "TALK_police_teacher_1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "//": "TODO WRITE SOMETHING!!!",
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_lie",
+    "dynamic_line": "不，哈哈，这是个意外，真的。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_add_var": "police_teacher_background",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_wait",
+    "dynamic_line": "…",
+    "responses": [
+      {
+        "text": "我回来了。",
+        "topic": "TALK_police_teacher_1"
+      },
+      {
+        "text": "你在找密室，是吗？",
+        "topic": "TALK_police_teacher_basement",
+        "condition": {
+          "u_has_var": "bill_the_assassin_basement",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_basement",
+    "dynamic_line": "什么？什么密室？我不知道你在说什么！",
+    "responses": [
+      {
+        "text": "比尔全都告诉我了。你想把我干掉，独吞从比利的藏身处弄来的所有好东西？想得美。哈哈哈！",
+        "topic": "TALK_police_teacher_basement1"
+      }
+    ]
+  },
+  {
+    "//": "TODO WRITE SOMETHING!!!",
+    "type": "talk_topic",
+    "id": "TALK_police_teacher_basement",
+    "dynamic_line": "<name_g>，你真的相信<name_b>的话吗？我把知道的都告诉你了！杀了他，求你不要杀我！",
+    "responses": [
+      {
+        "text": "我会考虑的。",
+        "topic": "TALK_police_teacher_basement1"
+      },
+      {
+        "text": "没门。",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_police_teacher_1",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "找到警方报告"
+    },
+    "description": "警官让你给他找一个文件夹，里面有警方的报告，就在附近的镇上。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "police_record",
+    "difficulty": 0,
+    "value": 1000,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "police_1",
+        "om_special": "police_1",
+        "om_terrain_replace": "house",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "search_range": 150,
+        "min_distance": 35
+      },
+      "update_mapgen": {
+        "om_terrain": "police_2ndfloor_1",
+        "place_item": [
+          {
+            "item": "police_record",
+            "x": 4,
+            "y": 6
+          }
+        ]
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_police_teacher_2",
+    "dialogue": {
+      "describe": "-",
+      "offer": "在<the_cataclysm>之前，我参加了一个秘密的警察搜索小组，这个小组是为了追踪一个为一个著名的头目工作的刺客而成立的。他们称他为“刺客比尔”。不知怎的，我们设法追踪到了他，甚至把他关了<very>久的牢。但是你看，外面的情况发生了巨大的变化，我知道像他这样的人会毫不犹豫地利用这个机会挣脱束缚。而且，嗯，我想像他这样的人肯定会报复，所以…我只想确定这家伙是活着还是变成了<zombie>。帮忙找到警方的记录，这样我就能知道他们把他锁在哪里了，也许还能知道他在那里发生了什么。",
+      "accepted": "哇，谢谢你。我会等的。",
+      "rejected": "为什么？",
+      "advice": "嗯，老实说，我不知道它可能在哪里。试着搜查整栋楼。",
+      "inquire": "所以呢？",
+      "success": "很好，谢谢。稍等一会儿…哦，就在上面，哈哈。让我看看…现在我知道去哪里找他了。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_police_teacher_2",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "杀死比尔"
+    },
+    "description": "警官让你杀了囚犯比尔，把他的头拿回来作为证据。",
+    "goal": "MGOAL_FIND_ITEM",
+    "item": "prisoner_bill_head",
+    "difficulty": 0,
+    "value": 100,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "prison_1_2",
+        "om_special": "Prison",
+        "om_terrain_replace": "field",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "search_range": 200,
+        "min_distance": 45
+      },
+      "update_mapgen": {
+        "place_monster": [
+          {
+            "monster": "mon_bill",
+            "x": [
+              7,
+              65
+            ],
+            "y": [
+              30,
+              65
+            ]
+          }
+        ]
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_police_teacher_3",
+    "dialogue": {
+      "describe": "-",
+      "offer": "所以，现在我知道他在哪里服刑了，我想看看他发生了什么…什么？我为什么不自己去看看呢？嗯，哈哈，我有点忙着…保护我的警察，哈哈！所以，如果你想帮我，请找比尔。如果他在那里，杀了他，把他的头当屎一样拿来。他脸上有一个像龙的纹身，所以你不能把他当成任何人。",
+      "accepted": "非常感谢。我会等的。",
+      "rejected": "为什么？",
+      "advice": "请小心行事。监狱里有警察机器人和炮塔守卫，是一个<very>危险的地方。",
+      "inquire": "所以呢？",
+      "success": "很好。给我看看。嗯，可算是干掉你了，你这个肮脏的混蛋。试水笑到了最后啊？哈哈！哈…等一下。绿色的眼睛，土豆鼻，左眼下的伤疤，牙印看起来像他的，但是…那是只地龙，不是龙！啊，这个骗子！所以，现在我们知道我们把另一个人关进了监狱，他却很可能还活着。真是个坏消息。我得好好想想。",
+      "success_lie": "-",
+      "failure": "真可惜。"
+    }
+  },
+  {
+    "id": "MISSION_police_teacher_3",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "比尔的房子"
+    },
+    "description": "警官让你带他去比尔家。",
+    "goal": "MGOAL_GO_TO",
+    "destination": "house_10",
+    "difficulty": 0,
+    "value": 100,
+    "start": {
+      "effect": "follow_only",
+      "assign_mission_target": {
+        "om_terrain": "house_10",
+        "om_terrain_replace": "house",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "search_range": 200,
+        "min_distance": 30,
+        "random": true
+      }
+    },
+    "end": {
+      "effect": [
+        "stop_following",
+        {
+          "npc_add_var": "police_teacher_work",
+          "type": "general",
+          "context": "flag",
+          "time": true
+        },
+        {
+          "npc_first_topic": "TALK_police_teacher_working"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_police_teacher_4",
+    "dialogue": {
+      "describe": "-",
+      "offer": "好的，我有一些办法来处理这种情况。我们得先找到那个混蛋，在他对付我们之前先对付他！带我去他家。我百分之百肯定他会去的。我们可以在那里得到更多关于他的位置的信息。",
+      "accepted": "走吧。带路。",
+      "rejected": "为什么？",
+      "advice": "你掩护我，我掩护你。这样，我们就有更多的生存机会。",
+      "inquire": "我会一直在这里等你。",
+      "success": "很好。等一下，我需要一些时间四处看看，找找有什么东西能让我们找到他…",
+      "success_lie": "-",
+      "failure": "真可惜。"
+    }
+  },
+  {
+    "id": "MISSION_police_teacher_4",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "杀死真正的比尔"
+    },
+    "description": "警官让你杀了真正的比尔。",
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 0,
+    "value": 100,
+    "start": {
+      "effect": {
+        "npc_first_topic": "TALK_police_teacher_wait"
+      },
+      "assign_mission_target": {
+        "om_terrain": "forest",
+        "om_terrain_replace": "field",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "search_range": 200,
+        "min_distance": 30,
+        "random": true
+      },
+      "update_mapgen": {
+        "place_npcs": [
+          {
+            "class": "NPC_bill_the_assassin",
+            "x": 10,
+            "y": 10,
+            "target": true
+          }
+        ]
+      }
+    },
+    "end": {
+      "effect": [
+        {
+          "npc_add_var": "police_teacher_teach",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        {
+          "npc_add_var": "u_helped_police_teacher",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "好吧，我可能知道在哪儿能找到他。我会给你真实帐单的大概位置。找到那个混蛋杀了他。",
+      "accepted": "我会等你的。小心。",
+      "rejected": "为什么？",
+      "advice": "他<very>危险，所以还是不要直接接近他比较好。你和他之间能离多远就离多远吧。",
+      "inquire": "我会一直在这里等你。",
+      "success": "哇，真是松了一口气！现在我可以在晚上安静地睡觉了。谢谢您！",
+      "success_lie": "-",
+      "failure": "真可惜。"
+    }
+  },
+  {
+    "id": "MISSION_police_teacher_0",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "你见过警察老师吗"
+    },
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "u_has_var": "-",
+      "type": "general",
+      "context": "meeting",
+      "value": "yes"
+    },
+    "difficulty": 0,
+    "value": 0,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    },
+    "fail": {
+      "effect": [
+        {
+          "u_spawn_item": "pt_head"
+        },
+        {
+          "u_add_var": "police_teacher_dead",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        }
+      ]
+    }
+  }
+]

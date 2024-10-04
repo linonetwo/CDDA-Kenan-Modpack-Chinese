@@ -1,0 +1,286 @@
+[
+  {
+    "type": "effect_type",
+    "id": "guards_distracted"
+  },
+  {
+    "type": "npc",
+    "id": "NPC_bandit_gs_prisoner1",
+    "class": "NC_GS_SLAVE",
+    "attitude": 1,
+    "mission": 8,
+    "gender": "male",
+    "chat": "TALK_bandit_gs_prisoner1_1",
+    "faction": "hells_raiders_slaves"
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_1",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_male": true,
+      "yes": "嘘，嘿，你，过来，<name_g>。",
+      "no": "啊，请不要再处罚了！"
+    },
+    "responses": [
+      {
+        "text": "呵呵？你在跟我说话？",
+        "topic": "TALK_bandit_gs_prisoner1_2",
+        "condition": "u_male",
+        "switch": true
+      },
+      {
+        "text": "奇怪的。",
+        "topic": "TALK_DONE",
+        "effect": "end_conversation",
+        "switch": true
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_2",
+    "type": "talk_topic",
+    "dynamic_line": "是的，你，过来。我以前没见过你，<name_g>。他们抓到你带你来上班了吗？",
+    "responses": [
+      {
+        "text": "不，我不是个失败者。",
+        "topic": "TALK_bandit_gs_prisoner1_3"
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bandit_gs_prisoner1_3"
+    ],
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "你不怕我把你翻过来吗？",
+        "topic": "TALK_bandit_gs_prisoner1_3_tyo"
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bandit_gs_prisoner1_3",
+      "TALK_bandit_gs_prisoner1_3_tyo"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "听着，<name_g>，我正打算离开这里。想帮我吗？",
+    "responses": [
+      {
+        "text": "听起来很有趣。你需要什么？",
+        "topic": "TALK_bandit_gs_prisoner1_4"
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_4",
+    "type": "talk_topic",
+    "dynamic_line": "把你和那些小妞的事做完，跟我谈谈。在那之前，让我们假装不认识对方。",
+    "responses": [
+      {
+        "text": "当然。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_first_topic": "TALK_bandit_gs_prisoner1_m1"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_3_tyo",
+    "type": "talk_topic",
+    "dynamic_line": "谁会相信你？我告诉你<name_g>，这些婊子真是疯子。他们不会相信像你我这样的人。再说，你的男性团结呢？拜托，帮我一把。"
+  },
+  {
+    "id": [
+      "TALK_bandit_gs_prisoner1_1",
+      "TALK_bandit_gs_prisoner1_2",
+      "TALK_bandit_gs_prisoner1_3",
+      "TALK_bandit_gs_prisoner1_3_tyo"
+    ],
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "我不能和奴隶说话。",
+        "topic": "TALK_DONE",
+        "effect": "end_conversation"
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_m1",
+    "type": "talk_topic",
+    "dynamic_line": "*口哨声。",
+    "responses": [
+      {
+        "text": "那么，计划是什么？",
+        "topic": "TALK_bandit_gs_prisoner1_m1_1",
+        "condition": {
+          "not": {
+            "u_has_mission": "MISSION_bandit_sb_drugmaker_3"
+          }
+        }
+      },
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_m1_1",
+    "type": "talk_topic",
+    "dynamic_line": "我很高兴你能来。事情是这样的：首先，我们需要转移那些保护翅膀的小鸡的注意力，然后，我们就跑。想办法对付他们。",
+    "responses": [
+      {
+        "text": "我看看能做些什么。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_first_topic": "TALK_bandit_gs_prisoner1_m1_wait"
+        }
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_m1_wait",
+    "type": "talk_topic",
+    "dynamic_line": "*口哨声。",
+    "responses": [
+      {
+        "text": "全部完成。下一步是什么？",
+        "topic": "TALK_bandit_gs_prisoner1_m1_2"
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_m1_2",
+    "type": "talk_topic",
+    "dynamic_line": "好，我们<swear>逃出去。”他抓起一堆缝在一起的被单，用它们盖住了栅栏。之后，他拿起一根小金属管，用它在地板上开了一个秘密的洞。”那是我们通往自由的路，<name_g>。走吧。你先。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": [
+          "follow_only",
+          {
+            "npc_first_topic": "TALK_bandit_gs_prisoner1_follow"
+          },
+          {
+            "npc_change_faction": "grim_sisters"
+          },
+          {
+            "u_faction_rep": -200
+          },
+          {
+            "npc_change_faction": "hells_raiders_slaves"
+          },
+          {
+            "mapgen_update": "bandit_gs_prisoner1_escape1",
+            "origin_npc": true
+          },
+          {
+            "mapgen_update": "bandit_gs_prisoner1_escape2",
+            "om_terrain": "prison_1_gs_b_1"
+          },
+          {
+            "mapgen_update": "bandit_gs_prisoner1_escape3",
+            "om_terrain": "prison_1_gs_1",
+            "offset_z": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_follow",
+    "type": "talk_topic",
+    "dynamic_line": "自由就在眼前，我能感觉到。",
+    "responses": [
+      {
+        "text": "哇，我们成功了。",
+        "topic": "TALK_bandit_gs_prisoner1_follow_end",
+        "condition": {
+          "npc_at_om_location": "prison_1_gs_1"
+        },
+        "effect": [
+          "stop_following",
+          "leave",
+          "end_conversation",
+          {
+            "npc_change_faction": "grim_sisters"
+          },
+          {
+            "u_faction_rep": 100
+          },
+          {
+            "npc_change_faction": "hells_raiders_slaves"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_bandit_gs_prisoner1_follow_end",
+    "type": "talk_topic",
+    "dynamic_line": "啊，自由的甜美之风，<name_g>。我都不知道该怎么感谢你。我会想办法的，我保证。现在，我们快跑！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "bandit_gs_prisoner1_escape1",
+    "method": "json",
+    "object": {
+      "set": [
+        {
+          "line": "furniture",
+          "id": "f_curtain",
+          "x": 12,
+          "y": 18,
+          "x2": 12,
+          "y2": 20
+        }
+      ],
+      "place_terrain": [
+        {
+          "ter": "t_hole",
+          "x": 13,
+          "y": 20
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "bandit_gs_prisoner1_escape2",
+    "method": "json",
+    "object": {
+      "place_terrain": [
+        {
+          "ter": "t_ladder_up",
+          "x": 10,
+          "y": 5
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "bandit_gs_prisoner1_escape3",
+    "method": "json",
+    "object": {
+      "place_terrain": [
+        {
+          "ter": "t_ladder_down",
+          "x": 10,
+          "y": 5
+        }
+      ]
+    }
+  }
+]

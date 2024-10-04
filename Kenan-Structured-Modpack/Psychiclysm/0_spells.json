@@ -1,0 +1,466 @@
+[
+  {
+    "id": "monspell_fear",
+    "type": "SPELL",
+    "//": "monster-only spell for fear attacks.",
+    "name": {
+      "str": "怪物法术：恐惧"
+    },
+    "description": "把人类吓跑。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "fear",
+    "energy_source": "HP",
+    "min_range": 15,
+    "max_range": 15,
+    "max_level": 1,
+    "difficulty": 0,
+    "base_casting_time": 100,
+    "base_energy_cost": 2,
+    "min_duration": 36000,
+    "max_duration": 60000
+  },
+  {
+    "id": "monspell_psychic_stress",
+    "type": "SPELL",
+    "name": {
+      "str": "怪物法术：威压"
+    },
+    "description": "把人逼傻。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "psychic_stress",
+    "base_casting_time": 10,
+    "base_energy_cost": 10,
+    "energy_source": "HP",
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "min_duration": 36000,
+    "max_duration": 36000,
+    "min_range": 20,
+    "max_range": 20
+  },
+  {
+    "id": "monspell_psychic_feedback",
+    "type": "SPELL",
+    "name": {
+      "str": "…怪物能力。反馈"
+    },
+    "description": "引起对人类的心理反馈。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "psychic_feedback",
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "leg_l",
+      "leg_r",
+      "arm_r",
+      "arm_l"
+    ],
+    "base_casting_time": 10,
+    "base_energy_cost": 10,
+    "energy_source": "STAMINA",
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "min_duration": 60,
+    "max_duration": 60,
+    "min_range": 20,
+    "max_range": 20
+  },
+  {
+    "id": "monspell_flaming_eye",
+    "type": "SPELL",
+    "name": {
+      "str": "怪物法术：燃烧之眼凝视"
+    },
+    "description": "反馈+发呆",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "dazed",
+    "affected_body_parts": [
+      "head"
+    ],
+    "extra_effects": [
+      {
+        "id": "monspell_psychic_feedback",
+        "max_level": 10
+      }
+    ],
+    "base_casting_time": 10,
+    "base_energy_cost": 10,
+    "energy_source": "STAMINA",
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "min_duration": 60,
+    "max_duration": 60,
+    "min_range": 20,
+    "max_range": 20
+  },
+  {
+    "id": "monspell_madness",
+    "type": "SPELL",
+    "//": "permanent madness effect.",
+    "name": {
+      "str": "怪物法术。疯狂"
+    },
+    "description": "永远疯狂。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "PERMANENT",
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "madness",
+    "affected_body_parts": [
+      "torso"
+    ],
+    "base_casting_time": 1,
+    "base_energy_cost": 1,
+    "energy_source": "STAMINA",
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 1,
+    "min_duration": 10,
+    "max_duration": 10
+  },
+  {
+    "id": "resist_psychic_stress",
+    "type": "SPELL",
+    "name": {
+      "str": "心灵堡垒"
+    },
+    "description": "抵抗精神攻击的精神盾牌。在人类的心灵周围建立起一座令人鼓舞的记忆和有益形象的高耸堡垒。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "resist_psychic_stress",
+    "base_casting_time": 6000,
+    "base_energy_cost": 4000,
+    "energy_source": "STAMINA",
+    "spell_class": "AWAKENED",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 90000,
+    "max_duration": 90000
+  },
+  {
+    "id": "resist_fear",
+    "type": "SPELL",
+    "name": {
+      "str": "封闭本能"
+    },
+    "description": "抵抗恐惧的精神盾牌。将本我放置在一个闪烁着纯净意志的容器中，防止它产生的恐惧压倒自我。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "resist_fear",
+    "base_casting_time": 6000,
+    "base_energy_cost": 4000,
+    "energy_source": "STAMINA",
+    "spell_class": "AWAKENED",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 90000,
+    "max_duration": 90000
+  },
+  {
+    "id": "resist_psychic_feedback",
+    "type": "SPELL",
+    "name": {
+      "str": "强制二元性"
+    },
+    "description": "抵抗破坏性精神攻击的精神盾牌。通过封闭脉轮和防止引起心身反应的对脑干的攻击来加强精神和身体的二元性。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "resist_psychic_feedback",
+    "base_casting_time": 6000,
+    "base_energy_cost": 4000,
+    "energy_source": "STAMINA",
+    "spell_class": "AWAKENED",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 90000,
+    "max_duration": 90000
+  },
+  {
+    "id": "block_psychic",
+    "type": "SPELL",
+    "name": {
+      "str": "逆微观"
+    },
+    "description": "一个存在短时间的盾牌，可以抵御所有的心灵攻击。把心灵变成一个自我维持的缩影，与外界的影响完全隔绝。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "block_psychic",
+    "base_casting_time": 600,
+    "base_energy_cost": 7000,
+    "energy_source": "STAMINA",
+    "spell_class": "AWAKENED",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 30000,
+    "max_duration": 30000
+  },
+  {
+    "id": "remove_madness",
+    "//": "item spell",
+    "type": "SPELL",
+    "name": {
+      "str": "…物品法术：消除疯狂。"
+    },
+    "description": "一种用来治愈心灵创伤的冥想。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "remove_madness",
+    "base_casting_time": 1200,
+    "base_energy_cost": 4000,
+    "energy_source": "STAMINA",
+    "spell_class": "AWAKENED",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 90000,
+    "max_duration": 90000
+  },
+  {
+    "id": "boost_int_per",
+    "type": "SPELL",
+    "name": {
+      "str": "曼陀罗强化术"
+    },
+    "description": "暂时提高智力和感知能力。你在脑海中形成一个旋转的光曼荼罗，允许你更有效地改变神经通路。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "boost_int_per",
+    "base_casting_time": 1200,
+    "base_energy_cost": 100,
+    "energy_source": "STAMINA",
+    "spell_class": "AWAKENED",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 1080000,
+    "max_duration": 1080000
+  },
+  {
+    "id": "boost_speed",
+    "type": "SPELL",
+    "name": {
+      "str": "神经超限术"
+    },
+    "description": "暂时提高速度。消除神经系统的限制和条件性的抑制，以瞬间提高精神速度。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "boost_speed",
+    "base_casting_time": 1,
+    "base_energy_cost": 7000,
+    "energy_source": "STAMINA",
+    "spell_class": "AWAKENED",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 30000,
+    "max_duration": 30000
+  },
+  {
+    "id": "bionic_resist_fear",
+    "type": "SPELL",
+    "name": {
+      "str": "减少恐惧"
+    },
+    "description": "…",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "resist_fear",
+    "base_casting_time": 6,
+    "base_energy_cost": 100,
+    "energy_source": "BIONIC",
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 180000,
+    "max_duration": 180000
+  },
+  {
+    "id": "bionic_resist_psychic",
+    "type": "SPELL",
+    "name": {
+      "str": "…仿生能力。心灵盾牌"
+    },
+    "description": "…",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "resist_psychic_stress",
+    "extra_effects": [
+      {
+        "id": "bionic_resist_psychic_feedback",
+        "max_level": 10
+      }
+    ],
+    "base_casting_time": 6,
+    "base_energy_cost": 100,
+    "energy_source": "BIONIC",
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 180000,
+    "max_duration": 180000
+  },
+  {
+    "id": "bionic_resist_psychic_feedback",
+    "type": "SPELL",
+    "name": {
+      "str": "…仿生能力。反馈"
+    },
+    "description": "…",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "resist_psychic_feedback",
+    "base_casting_time": 600,
+    "base_energy_cost": 4,
+    "energy_source": "NONE",
+    "spell_class": "NONE",
+    "difficulty": 0,
+    "max_level": 10,
+    "min_duration": 180000,
+    "max_duration": 180000
+  }
+]

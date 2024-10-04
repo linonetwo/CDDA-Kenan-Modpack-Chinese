@@ -1,0 +1,64 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "hypo_pkill",
+    "cooldown": 5,
+    "move_cost": 150,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 5,
+        "armor_penetration": 15,
+        "armor_multiplier": 0.2
+      }
+    ],
+    "effects": [
+      {
+        "id": "pkill3",
+        "duration": 300
+      },
+      {
+        "id": "pkill2",
+        "duration": 600
+      }
+    ],
+    "hit_dmg_u": "%1$s 用针管给你注射了什么东西！",
+    "hit_dmg_npc": "%1$s 用针管给 <npcname> 注射了什么东西！",
+    "no_dmg_msg_u": "%1$s 试图用针管给你注射什么东西，但是没能穿透护甲！",
+    "no_dmg_msg_npc": "%1$s 试图用针管给 <npcname> 注射什么东西，但是没能穿透护甲！"
+  },
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "hypo_poison",
+    "cooldown": 5,
+    "move_cost": 150,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 5,
+        "armor_penetration": 15,
+        "armor_multiplier": 0.2
+      }
+    ],
+    "effects": [
+      {
+        "id": "paralyzepoison",
+        "duration": 30
+      },
+      {
+        "id": "badpoison",
+        "duration": 10
+      },
+      {
+        "id": "nausea",
+        "duration": 100
+      }
+    ],
+    "hit_dmg_u": "%1$s 用针管给你注射了什么东西！",
+    "hit_dmg_npc": "%1$s 用针管给 <npcname> 注射了什么东西！",
+    "no_dmg_msg_u": "%1$s 试图用针管给你注射什么东西，但是没能穿透护甲！",
+    "no_dmg_msg_npc": "%1$s 试图用针管给 <npcname> 注射什么东西，但是没能穿透护甲！"
+  }
+]

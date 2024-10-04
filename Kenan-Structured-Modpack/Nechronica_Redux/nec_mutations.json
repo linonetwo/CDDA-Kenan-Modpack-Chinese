@@ -1,0 +1,1166 @@
+[
+  {
+    "//": "New addition start characteristic girls who have also daughters of men are also perfect with this",
+    "type": "mutation",
+    "id": "NEC_OTOKONOKO",
+    "name": {
+      "str": "男の娘"
+    },
+    "points": 0,
+    "description": "你的身体是一个年轻的女孩，但你也有男性特征。虽然它很罕见，但它将不再有用了。",
+    "starting_trait": true,
+    "valid": false
+  },
+  {
+    "//": "Undead threshold",
+    "type": "mutation",
+    "id": "THRESH_NECROMANTIC",
+    "name": {
+      "str": "不死者"
+    },
+    "points": 1,
+    "description": "倒塌的尸体是破碎的，斑驳的。即使它坏了，你也可以简单地重新连接零件。",
+    "valid": false,
+    "purifiable": false,
+    "threshold": true
+  },
+  {
+    "//": "----------------Additional change to existing mutation----------------",
+    "type": "mutation",
+    "id": "CANNIBAL",
+    "name": {
+      "str": "食人族"
+    },
+    "points": 1,
+    "description": "你喜好人肉，但你这一辈子都被禁止从你的特殊嗜好里获得快感，不过现在是世界末日，再没有人可以阻止你享用新鲜人肉了。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "NECROMANTIC"
+    ],
+    "cancels": [
+      "VEGETARIAN"
+    ],
+    "flags": [
+      "CANNIBAL"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLIMY",
+    "name": {
+      "str": "粘液外表"
+    },
+    "points": 2,
+    "visibility": 7,
+    "ugliness": 6,
+    "description": "你的身上粘粘糊糊的，走过的地方都有痕迹。大大增加湿身心情加成。",
+    "leads_to": [
+      "SLIME_HANDS"
+    ],
+    "changes_to": [
+      "VISCOUS"
+    ],
+    "category": [
+      "FISH",
+      "SLIME",
+      "TROGLOBITE",
+      "CEPHALOPOD",
+      "NECROMANTIC"
+    ],
+    "wet_protection": [
+      {
+        "part": "head",
+        "neutral": 3,
+        "good": 4
+      },
+      {
+        "part": "leg_l",
+        "neutral": 7,
+        "good": 14
+      },
+      {
+        "part": "leg_r",
+        "neutral": 7,
+        "good": 14
+      },
+      {
+        "part": "foot_l",
+        "neutral": 2,
+        "good": 4
+      },
+      {
+        "part": "foot_r",
+        "neutral": 2,
+        "good": 4
+      },
+      {
+        "part": "arm_l",
+        "neutral": 7,
+        "good": 12
+      },
+      {
+        "part": "arm_r",
+        "neutral": 7,
+        "good": 12
+      },
+      {
+        "part": "hand_l",
+        "neutral": 2,
+        "good": 3
+      },
+      {
+        "part": "hand_r",
+        "neutral": 2,
+        "good": 3
+      },
+      {
+        "part": "torso",
+        "neutral": 14,
+        "good": 26
+      }
+    ]
+  },
+  {
+    "//": "Route to undead mutation Routine addition wing-like protrusion → collapse finer etc.",
+    "type": "mutation",
+    "id": "WINGS_STUB",
+    "name": {
+      "str": "翅根"
+    },
+    "points": 0,
+    "visibility": 2,
+    "ugliness": 2,
+    "description": "你肩胛骨外有一对又粗又短的小翅膀，你可以拍打它们，但它们没什么用。",
+    "changes_to": [
+      "WINGS_BIRD",
+      "WINGS_BAT",
+      "WINGS_INSECT",
+      "WINGS_BUTTERFLY",
+      "NEC_WINGS"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "HEADBUMPS",
+    "name": {
+      "str": "头部隆块"
+    },
+    "points": 0,
+    "visibility": 3,
+    "ugliness": 3,
+    "description": "你额头上有一对突起。",
+    "changes_to": [
+      "HORNS",
+      "ANTENNAE",
+      "NEC_HORNS"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "NAILS",
+    "name": {
+      "str": "长指甲"
+    },
+    "points": 1,
+    "visibility": 1,
+    "description": "你的指甲变得很长。如果不戴手套，徒手攻击对方时将造成少量斩击伤害。",
+    "types": [
+      "CLAWS"
+    ],
+    "changes_to": [
+      "CLAWS",
+      "TALONS",
+      "NEC_HORNS"
+    ],
+    "cancels": [
+      "ARM_TENTACLES",
+      "ARM_TENTACLES_4",
+      "ARM_TENTACLES_8"
+    ],
+    "category": [
+      "RAPTOR"
+    ]
+  },
+  {
+    "//": "Below we write what mutates with undead mutation",
+    "type": "mutation",
+    "id": "HUNGER2",
+    "name": {
+      "str": "急速新陈代谢"
+    },
+    "points": -2,
+    "description": "你消耗的食物相当于普通人食量的两倍多，这才能够支撑被变异扩充的心肺系统。同时，你的耐力能在经过激烈运动后更加快速的恢复。",
+    "prereqs": [
+      "HUNGER"
+    ],
+    "changes_to": [
+      "HUNGER3"
+    ],
+    "types": [
+      "METABOLISM"
+    ],
+    "category": [
+      "BEAST",
+      "SLIME",
+      "RAPTOR",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "HUNGER3",
+    "name": {
+      "str": "极限新陈代谢"
+    },
+    "points": -2,
+    "description": "你的全身系统发生了变异，你消耗的食物相当于普通人食量的三倍多，但以此来维持你超人一般的耐力。",
+    "//~": "The simile there is intended for a Really Quick Burn--BAM burned.",
+    "prereqs": [
+      "HUNGER2"
+    ],
+    "leads_to": [
+      "EATHEALTH"
+    ],
+    "types": [
+      "METABOLISM"
+    ],
+    "category": [
+      "CHIMERA",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CLAWS",
+    "name": {
+      "str": "利爪"
+    },
+    "points": 2,
+    "visibility": 3,
+    "ugliness": 2,
+    "description": "你的指甲变得又长又硬，如果不戴手套，徒手攻击对方会造成少量斩击伤害。",
+    "types": [
+      "CLAWS"
+    ],
+    "prereqs": [
+      "NAILS"
+    ],
+    "changes_to": [
+      "CLAWS_RETRACT",
+      "CLAWS_RAT"
+    ],
+    "cancels": [
+      "ARM_TENTACLES",
+      "ARM_TENTACLES_4",
+      "ARM_TENTACLES_8"
+    ],
+    "category": [
+      "BEAST",
+      "RAT",
+      "URSINE",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ACIDPROOF",
+    "name": {
+      "str": "耐酸"
+    },
+    "points": 3,
+    "description": "你的皮肤系统发生了变异，身体现在对酸的伤害免疫了。",
+    "threshreq": [
+      "THRESH_INSECT",
+      "THRESH_CHIMERA",
+      "THRESH_MEDICAL",
+      "THRESH_SLIME",
+      "THRESH_NECROMANTIC"
+    ],
+    "category": [
+      "INSECT",
+      "CHIMERA",
+      "MEDICAL",
+      "SLIME",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "ACIDBLOOD",
+    "name": {
+      "str": "酸性血液"
+    },
+    "points": 4,
+    "description": "你的身体产生了一种神奇的防御机制。你流出的血含有强酸，会伤害任何蠢到弄破你皮肤的家伙。",
+    "prereqs": [
+      "ACIDPROOF"
+    ],
+    "threshreq": [
+      "THRESH_INSECT",
+      "THRESH_CHIMERA",
+      "THRESH_MEDICAL",
+      "THRESH_SLIME",
+      "THRESH_NECROMANTIC"
+    ],
+    "category": [
+      "INSECT",
+      "CHIMERA",
+      "MEDICAL",
+      "SLIME",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "VOMITOUS",
+    "name": {
+      "str": "易吐"
+    },
+    "points": -3,
+    "description": "你有严重的消化系统紊乱，虽然它会导致你频繁呕吐，但你也可以根据需求触发呕吐反射。",
+    "prereqs": [
+      "NAUSEA"
+    ],
+    "changes_to": [
+      "EATPOISON"
+    ],
+    "category": [
+      "SLIME",
+      "RAT",
+      "MEDICAL",
+      "ELFA",
+      "NECROMANTIC"
+    ],
+    "active": true
+  },
+  {
+    "type": "mutation",
+    "id": "EATPOISON",
+    "name": {
+      "str": "肠道坚韧"
+    },
+    "points": 3,
+    "description": "你的肠道已经强化到可以处理大部分有毒食物。",
+    "changes_to": [
+      "EATDEAD"
+    ],
+    "prereqs": [
+      "NAUSEA",
+      "VOMITOUS",
+      "POISRESIST",
+      "POISONOUS"
+    ],
+    "//": "Yes, you eventually got over the massive digestive upset.  Mutations aren't easy on a system!",
+    "prereqs2": [
+      "SAPROVORE",
+      "TOLERANCE"
+    ],
+    "threshreq": [
+      "THRESH_TROGLOBITE",
+      "THRESH_CHIMERA",
+      "THRESH_RAPTOR",
+      "THRESH_RAT",
+      "THRESH_MOUSE",
+      "THRESH_NECROMANTIC"
+    ],
+    "category": [
+      "TROGLOBITE",
+      "RAPTOR",
+      "RAT",
+      "CHIMERA",
+      "NECROMANTIC"
+    ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "EATDEAD",
+    "name": {
+      "str": "食尸鬼"
+    },
+    "points": 4,
+    "description": "吃下腐坏、被污染的丧尸肉有助于你对抗饥饿，还很安全——尽管那些肉还是让你没什么胃口。",
+    "prereqs": [
+      "EATPOISON"
+    ],
+    "threshreq": [
+      "THRESH_CHIMERA",
+      "THRESH_RAT",
+      "THRESH_MOUSE",
+      "THRESH_NECROMANTIC"
+    ],
+    "category": [
+      "RAT",
+      "CHIMERA",
+      "MOUSE",
+      "NECROMANTIC"
+    ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "TROGLO2",
+    "name": {
+      "str": "畏光如鼠"
+    },
+    "points": -3,
+    "description": "阳光让你很不舒服。如果你在户外，你所有属性值-1，如果天气晴朗，则-2。",
+    "cancels": [
+      "SUNLIGHT_DEPENDENT"
+    ],
+    "prereqs": [
+      "TROGLO"
+    ],
+    "changes_to": [
+      "TROGLO3"
+    ],
+    "category": [
+      "RAT",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SORES",
+    "name": {
+      "str": "疥疮症"
+    },
+    "points": -2,
+    "visibility": 5,
+    "ugliness": 6,
+    "description": "你的四肢覆盖满了疼痛的溃疡。当你穿着衣服时更是会痛不欲生。",
+    "prereqs": [
+      "SPOTS"
+    ],
+    "category": [
+      "SLIME",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_THICK",
+    "name": {
+      "str": "粗尾巴"
+    },
+    "points": 1,
+    "visibility": 8,
+    "ugliness": 2,
+    "description": "你现在有了一根长长的、粗粗的蜥蜴尾巴。它能够帮你维持平衡，同时还能当做一根很犀利的鞭子。让你没法穿上不是织物的裤子。",
+    "types": [
+      "TAIL"
+    ],
+    "prereqs": [
+      "TAIL_STUB"
+    ],
+    "changes_to": [
+      "TAIL_CLUB"
+    ],
+    "category": [
+      "LIZARD",
+      "NECROMANTIC"
+    ],
+    "restricts_gear": [
+      "leg_l",
+      "leg_r"
+    ],
+    "allow_soft_gear": true,
+    "attacks": {
+      "attack_text_u": "你用尾巴猛抽%s",
+      "attack_text_npc": "%1$s 用尾巴猛抽 %2$s",
+      "chance": 20,
+      "base_damage": {
+        "damage_type": "stab",
+        "amount": 8
+      }
+    },
+    "dodge_modifier": 1
+  },
+  {
+    "type": "mutation",
+    "id": "ANIMALDISCORD",
+    "name": {
+      "str": "动物公敌"
+    },
+    "points": -1,
+    "description": "你的身体散发着令动物反感的信息素，大多数动物不喜欢你，具有攻击性的动物更会表现出强烈的攻击性。此特性只对野生动物起效。",
+    "starting_trait": true,
+    "cancels": [
+      "ANIMALEMPATH"
+    ],
+    "changes_to": [
+      "ANIMALDISCORD2"
+    ],
+    "category": [
+      "LUPINE",
+      "BEAST",
+      "RAPTOR",
+      "INSECT",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SMELLY2",
+    "name": {
+      "str": "狐臭"
+    },
+    "points": -2,
+    "visibility": 4,
+    "ugliness": 5,
+    "description": "你的臭味十里外都能闻得到，怪物很容易追到你，人类都离你远远的。",
+    "prereqs": [
+      "SMELLY"
+    ],
+    "leads_to": [
+      "PHEROMONE_INSECT",
+      "PHEROMONE_MAMMAL"
+    ],
+    "category": [
+      "FISH",
+      "BEAST",
+      "SLIME",
+      "CHIMERA",
+      "URSINE",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "REGEN",
+    "name": {
+      "str": "急速自愈"
+    },
+    "points": 6,
+    "description": "你的机体自愈能力发生了变异，你在受创时，身体会以难以置信的速度愈合伤口。",
+    "types": [
+      "HEALING"
+    ],
+    "prereqs": [
+      "FASTHEALER2"
+    ],
+    "category": [
+      "SLIME",
+      "TROGLOBITE",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "INSOMNIA",
+    "name": {
+      "str": "失眠症"
+    },
+    "points": -2,
+    "description": "你患有严重的失眠症，你的大脑睡眠功能非常紊乱，即使​​最好的情况下依然难以入睡。",
+    "starting_trait": true,
+    "valid": false,
+    "category": [
+      "MEDICAL",
+      "NECROMANTIC"
+    ],
+    "cancels": [
+      "EASYSLEEPER"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PAINRESIST",
+    "name": {
+      "str": "疼痛抵抗"
+    },
+    "points": 2,
+    "description": "你的神经与精神更加坚韧，对疼痛有着很高的忍耐性。",
+    "starting_trait": true,
+    "valid": false,
+    "cancels": [
+      "MORE_PAIN",
+      "MORE_PAIN2",
+      "MORE_PAIN3"
+    ],
+    "category": [
+      "MEDICAL",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PAINREC1",
+    "name": {
+      "str": "疼痛恢复"
+    },
+    "points": 3,
+    "description": "你从疼痛中恢复的速度要比一般人快一些。",
+    "changes_to": [
+      "PAINREC2"
+    ],
+    "category": [
+      "MEDICAL",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PAINREC2",
+    "name": {
+      "str": "快速疼痛恢复"
+    },
+    "points": 5,
+    "description": "你从疼痛中恢复的速度要比一般人要快很多。",
+    "prereqs": [
+      "PAINREC1"
+    ],
+    "changes_to": [
+      "PAINREC3"
+    ],
+    "category": [
+      "MEDICAL",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PAINREC3",
+    "name": {
+      "str": "急速疼痛恢复"
+    },
+    "points": 8,
+    "description": "你从疼痛中恢复的速度远远超过一般人。",
+    "prereqs": [
+      "PAINREC2"
+    ],
+    "category": [
+      "MEDICAL",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "NOPAIN",
+    "name": {
+      "str": "疼痛麻木"
+    },
+    "points": 2,
+    "description": "再也没什么让你感到疼痛了，那些撕咬撞击枪凿斧砍仅仅让你感到有点痒。",
+    "valid": false,
+    "purifiable": false,
+    "prereqs": [
+      "MASOCHIST",
+      "PAINRESIST"
+    ],
+    "prereqs2": [
+      "PAINREC3"
+    ],
+    "cancels": [
+      "MORE_PAIN",
+      "MORE_PAIN2",
+      "MORE_PAIN3"
+    ],
+    "threshreq": [
+      "THRESH_MEDICAL",
+      "THRESH_NECROMANTIC"
+    ],
+    "category": [
+      "MEDICAL",
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "//": "----------------Below undead exclusive mutation----------------",
+    "type": "mutation",
+    "id": "NEC_ADD_EYE",
+    "name": {
+      "str": "附眼"
+    },
+    "points": 1,
+    "visibility": 2,
+    "ugliness": 7,
+    "description": "一只新的眼睛从你身体里出来。视野变宽了，但外表很恶心。感知+2",
+    "category": [
+      "NECROMANTIC"
+    ],
+    "valid": false,
+    "passive_mods": {
+      "per_mod": 2
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_ADD_ARM",
+    "name": {
+      "str": "附臂"
+    },
+    "points": 3,
+    "visibility": 8,
+    "ugliness": 5,
+    "description": "你不再只有两只胳膊了。你肩上还有额外的手臂。这很难掌握，但你可以扩大你的战术范围。指数+2",
+    "category": [
+      "NECROMANTIC"
+    ],
+    "valid": false,
+    "passive_mods": {
+      "dex_mod": 2
+    }
+  },
+  {
+    "//": " tried making it but I did not have the speed MOD and I could not differentiate it.",
+    "type": "mutation",
+    "id": "NEC_ADD_LEG",
+    "name": {
+      "str": "附腿"
+    },
+    "points": 3,
+    "visibility": 4,
+    "ugliness": 5,
+    "description": "你现在有两条腿了。另一双腿从你的腰部长出来。你将无法装备通常的护腿装备，但你可以快速移动。",
+    "restricts_gear": [
+      "leg_l",
+      "leg_r"
+    ],
+    "passive_mods": {
+      "dex_mod": 2
+    },
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_OOANA",
+    "name": {
+      "str": "大窟窿"
+    },
+    "points": 0,
+    "visibility": 3,
+    "ugliness": 2,
+    "description": "你身上有个大洞。然而，战斗没有阻碍，看到它的人有点吃惊。",
+    "category": [
+      "NECROMANTIC"
+    ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_HORNS",
+    "name": {
+      "str": "小牛犄角"
+    },
+    "points": -2,
+    "visibility": 5,
+    "ugliness": 3,
+    "mixed_effect": true,
+    "description": "巨大的突起从你的身体上长出来。近距离刺穿和钩住就足够了。",
+    "prereqs": [
+      "HEADBUMPS",
+      "NAILS"
+    ],
+    "category": [
+      "NECROMANTIC"
+    ],
+    "attacks": {
+      "attack_text_u": "你用你的角刺%s。",
+      "attack_text_npc": "%1$s用角刺%2$s。",
+      "chance": 20,
+      "base_damage": {
+        "damage_type": "stab",
+        "amount": 8
+      }
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_TONGUE",
+    "name": {
+      "str": "细长舌头"
+    },
+    "points": 0,
+    "visibility": 1,
+    "ugliness": 1,
+    "changes_to": [
+      "NEC_TONGUE2"
+    ],
+    "description": "你的舌头变得又长又管状。不是特别有效。",
+    "category": [
+      "NECROMANTIC"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_TONGUE2",
+    "name": {
+      "str": "缠物舌"
+    },
+    "points": 2,
+    "visibility": 4,
+    "ugliness": 4,
+    "prereqs": [
+      "NEC_TONGUE"
+    ],
+    "cancels": [
+      "BEAK",
+      "BEAK_HUM",
+      "BEAK_PECK",
+      "PROBOSCIS",
+      "MANDIBLES",
+      "MUZZLE_LONG",
+      "MUZZLE",
+      "MINOTAUR"
+    ],
+    "description": "你的舌头流着口水。你不能在嘴上装备任何东西，但当你用舌头攻击他们时，他们会感到惊讶。",
+    "category": [
+      "NECROMANTIC"
+    ],
+    "restricts_gear": [
+      "mouth"
+    ],
+    "attacks": {
+      "attack_text_u": "你用舌头攻击%s。",
+      "attack_text_npc": "%1$s用舌头攻击%2$s。",
+      "body_part": "mouth",
+      "chance": 20,
+      "base_damage": {
+        "damage_type": "stab",
+        "amount": 15
+      },
+      "strength_damage": {
+        "damage_type": "stab",
+        "amount": 0.5
+      }
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_FAILED",
+    "name": {
+      "str": "捉襟见肘"
+    },
+    "points": -2,
+    "visibility": 4,
+    "ugliness": 4,
+    "changes_to": [
+      "NEC_RUPTURE"
+    ],
+    "description": "你的身体开始崩解。你变得更加累赘和虚弱。",
+    "category": [
+      "NECROMANTIC"
+    ],
+    "encumbrance_always": [
+      [
+        "torso",
+        3
+      ],
+      [
+        "head",
+        3
+      ],
+      [
+        "arm_l",
+        3
+      ],
+      [
+        "arm_r",
+        3
+      ],
+      [
+        "hand_l",
+        3
+      ],
+      [
+        "hand_r",
+        3
+      ],
+      [
+        "leg_l",
+        3
+      ],
+      [
+        "leg_r",
+        3
+      ],
+      [
+        "foot_l",
+        3
+      ],
+      [
+        "foot_r",
+        3
+      ]
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": -3,
+        "cut": -3
+      }
+    ],
+    "valid": false
+  },
+  {
+    "//": "----------------Below undead * threshold * mutation----------------",
+    "type": "mutation",
+    "id": "NEC_WINGS",
+    "name": {
+      "str": "破膜"
+    },
+    "points": 5,
+    "visibility": 12,
+    "ugliness": 6,
+    "threshreq": [
+      "THRESH_NECROMANTIC"
+    ],
+    "description": "一层致命的肉，堕落天使的翅膀。虽然你不能飞，但翅膀可以保护你的身体免受攻击。",
+    "prereqs": [
+      "WINGS_STUB"
+    ],
+    "cancels": [
+      "WINGS_BIRD",
+      "WINGS_INSECT",
+      "WINGS_BUTTERFLY"
+    ],
+    "category": [
+      "NECROMANTIC"
+    ],
+    "wet_protection": [
+      {
+        "part": "arm_l",
+        "neutral": 5,
+        "good": 10
+      },
+      {
+        "part": "arm_r",
+        "neutral": 5,
+        "good": 10
+      },
+      {
+        "part": "torso",
+        "neutral": 10,
+        "good": 20
+      }
+    ],
+    "encumbrance_always": [
+      [
+        "torso",
+        10
+      ]
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ],
+        "bash": 14,
+        "cut": 8
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_ADD_HEAD",
+    "name": {
+      "str": "附头"
+    },
+    "points": 7,
+    "visibility": 15,
+    "ugliness": 10,
+    "threshreq": [
+      "THRESH_NECROMANTIC"
+    ],
+    "category": [
+      "NECROMANTIC"
+    ],
+    "description": "你肩上还有一个头。在这里，你觉得你只有一个很好。你不能直接看到脸的另一面，但你可以理解你在那里看到的东西。智力+5，感知+3",
+    "encumbrance_always": [
+      [
+        "head",
+        5
+      ]
+    ],
+    "passive_mods": {
+      "int_mod": 5,
+      "per_mod": 3
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_RUPTURE",
+    "name": {
+      "str": "崩裂"
+    },
+    "points": -5,
+    "visibility": 6,
+    "ugliness": 8,
+    "threshreq": [
+      "THRESH_NECROMANTIC"
+    ],
+    "description": "你的身体正在裂开。你变得更加累赘和虚弱。",
+    "changes_to": [
+      "NEC_PATCH"
+    ],
+    "prereqs": [
+      "NEC_FAILED"
+    ],
+    "category": [
+      "NECROMANTIC"
+    ],
+    "encumbrance_always": [
+      [
+        "torso",
+        9
+      ],
+      [
+        "head",
+        5
+      ],
+      [
+        "arm_l",
+        5
+      ],
+      [
+        "arm_r",
+        7
+      ],
+      [
+        "hand_l",
+        8
+      ],
+      [
+        "hand_r",
+        5
+      ],
+      [
+        "leg_l",
+        5
+      ],
+      [
+        "leg_r",
+        6
+      ],
+      [
+        "foot_l",
+        5
+      ],
+      [
+        "foot_r",
+        5
+      ]
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": -6,
+        "cut": -6
+      }
+    ],
+    "valid": false
+  },
+  {
+    "type": "mutation",
+    "id": "NEC_PATCH",
+    "name": {
+      "str": "化形"
+    },
+    "points": 7,
+    "visibility": 8,
+    "ugliness": 5,
+    "description": "你可以方便地改变你的身体。虽然抵抗攻击的能力稍弱，但总体累赘大大减轻。",
+    "category": [
+      "NECROMANTIC"
+    ],
+    "threshreq": [
+      "THRESH_NECROMANTIC"
+    ],
+    "prereqs": [
+      "NEC_RUPTURE"
+    ],
+    "encumbrance_always": [
+      [
+        "torso",
+        -10
+      ],
+      [
+        "head",
+        -10
+      ],
+      [
+        "arm_l",
+        -10
+      ],
+      [
+        "arm_r",
+        -10
+      ],
+      [
+        "hand_l",
+        -10
+      ],
+      [
+        "hand_r",
+        -10
+      ],
+      [
+        "leg_l",
+        -10
+      ],
+      [
+        "leg_r",
+        -10
+      ],
+      [
+        "foot_l",
+        -10
+      ],
+      [
+        "foot_r",
+        -10
+      ]
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "head",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": -2,
+        "cut": -4
+      }
+    ],
+    "valid": false
+  }
+]

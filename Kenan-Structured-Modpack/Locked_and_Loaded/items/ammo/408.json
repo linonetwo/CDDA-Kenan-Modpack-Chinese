@@ -1,0 +1,70 @@
+[
+  {
+    "id": "408",
+    "type": "AMMO",
+    "name": {
+      "str": ".408 夏安战术弹"
+    },
+    "description": ".408夏安战术弹是一种无底缘瓶颈式中央底火子弹，专为军用远程狙击步枪设计，由约翰.D.泰勒博士和机械师威廉.O.沃德曼研制。它是作为最常见的北约军用长射程子弹的竞品而开发的，如.338拉普马格南和.50BMG。",
+    "weight": "27 g",
+    "volume": "175 ml",
+    "price": "30 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "-",
+    "color": "white",
+    "count": 20,
+    "stack_size": 10,
+    "ammo_type": "408",
+    "casing": "408_casing",
+    "range": 100,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 107,
+      "armor_penetration": 25
+    },
+    "dispersion": 120,
+    "recoil": 25000
+  },
+  {
+    "id": "bp_408",
+    "copy-from": "408",
+    "type": "AMMO",
+    "name": {
+      "str": ".408 夏安战术弹 (黑火药)"
+    },
+    "proportional": {
+      "price": 0.3,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
+  },
+  {
+    "type": "GENERIC",
+    "id": "408_casing",
+    "copy-from": "casing",
+    "name": {
+      "str": ".408 夏安战术弹弹壳"
+    },
+    "description": "一枚0.408夏安战术弹的空弹壳。",
+    "material": [
+      "brass"
+    ],
+    "volume": "30 ml",
+    "weight": "5 g"
+  }
+]

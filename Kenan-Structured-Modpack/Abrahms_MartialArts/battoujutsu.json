@@ -1,0 +1,1455 @@
+[
+  {
+    "type": "martial_art",
+    "id": "style_battoujutsu",
+    "name": {
+      "str": ""
+    },
+    "description": "",
+    "initiate": [
+      "",
+      ""
+    ],
+    "autolearn": [
+      [
+        "cutting",
+        1
+      ]
+    ],
+    "primary_skill": "cutting",
+    "allow_all_weapons": true,
+    "static_buffs": [
+      {
+        "id": "buff_ichimonji_static",
+        "name": "",
+        "description": "",
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 2
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv1_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 1
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 1,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv2_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 2
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 2,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv3_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 3
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 3,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.3
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.3
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.3
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.3
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv4_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 4
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 4,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.4
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.4
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.4
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.4
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv5_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 5
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 5,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv6_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 6
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 6,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.6
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.6
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.6
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.6
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv7_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 7
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 7,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.7
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.7
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.7
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.7
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv8_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 8
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 8,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.8
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.8
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.8
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.8
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv9_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 9
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 9,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.9
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.9
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.9
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.9
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv10_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 10
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 10,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 1
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv11_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 11
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 11,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1.1
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 1.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 1.1
+          }
+        ]
+      },
+      {
+        "id": "buff_traininglv12_static",
+        "name": "",
+        "description": "",
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 12
+          }
+        ],
+        "melee_allowed": true,
+        "bonus_dodges": 12,
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 3
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 3
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 3
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 3
+          }
+        ]
+      }
+    ],
+    "onhit_buffs": [
+      {
+        "id": "buff_training_onhit",
+        "name": "",
+        "description": "",
+        "unarmed_allowed": true,
+        "skill_requirements": [
+          {
+            "name": "cutting",
+            "level": 3
+          }
+        ],
+        "max_stacks": 99999,
+        "buff_duration": 3,
+        "bonus_dodges": 3,
+        "flat_bonuses": [
+          {
+            "stat": "damage",
+            "type": "bash",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "damage",
+            "type": "stab",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ]
+      }
+    ],
+    "ongethit_buffs": [
+      {
+        "id": "buff_toughen_ongethit",
+        "name": "What doesn't kill you...",
+        "description": "makes you stronger.",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "max_stacks": 99999,
+        "buff_duration": 3,
+        "bonus_dodges": 3,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.25
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          }
+        ]
+      }
+    ],
+    "onattack_buffs": [
+      {
+        "id": "buff_tameshigiri_onattack",
+        "name": "",
+        "description": "",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "max_stacks": 99999,
+        "buff_duration": 3,
+        "bonus_dodges": 3,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.25
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          }
+        ]
+      }
+    ],
+    "onblock_buffs": [
+      {
+        "id": "buff_tsubaserai_onblock",
+        "name": "Tsuba serai",
+        "description": "You deflect the enemy's attack to open a hole in their defenses.",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "max_stacks": 99999,
+        "buff_duration": 4,
+        "bonus_dodges": 3,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.25
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          }
+        ]
+      }
+    ],
+    "onpause_buffs": [
+      {
+        "id": "buff_steel_onpause",
+        "name": "Kuji-in",
+        "description": "You steel yourself with a brief hand meditation as the enemy approaches.",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "max_stacks": 99999,
+        "buff_duration": 4,
+        "bonus_dodges": 3,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.25
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          }
+        ]
+      }
+    ],
+    "oncrit_buffs": [
+      {
+        "id": "buff_heavycrittraining_oncrit",
+        "name": "人工肌肉纤维",
+        "description": "每一次暴击都会给你一个小的临时提升，可以叠加。",
+        "unarmed_allowed": true,
+        "max_stacks": 99999,
+        "buff_duration": 4,
+        "bonus_dodges": 3,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 2
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 2
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.5
+          }
+        ]
+      }
+    ],
+    "onmove_buffs": [
+      {
+        "id": "buff_heavycharge_onmove",
+        "name": "",
+        "description": "",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "max_stacks": 99999,
+        "buff_duration": 3,
+        "bonus_dodges": 3,
+        "flat_bonuses": [
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.2
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 0.1
+          }
+        ]
+      }
+    ],
+    "onkill_buffs": [
+      {
+        "id": "buff_onthemark_onkill",
+        "name": "",
+        "description": "",
+        "unarmed_allowed": true,
+        "melee_allowed": true,
+        "flat_bonuses": [
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 1
+          }
+        ],
+        "mult_bonuses": [
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "hit",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "arpen",
+            "type": "cut",
+            "scaling-stat": "dex",
+            "scale": 1
+          },
+          {
+            "stat": "dodge",
+            "scaling-stat": "dex",
+            "scale": 1
+          }
+        ],
+        "bonus_dodges": 3,
+        "max_stacks": 99999,
+        "buff_duration": 5
+      }
+    ],
+    "onmiss_buffs": [
+      {
+        "id": "buff_dairyfarmer_onmiss",
+        "name": "You Fight Like A Dairy Farmer",
+        "description": "You fight like a dairy farmer!",
+        "unarmed_allowed": true,
+        "mult_bonuses": [
+          {
+            "stat": "movecost",
+            "scale": 0
+          },
+          {
+            "stat": "damage",
+            "type": "cut",
+            "scale": 1.5
+          }
+        ],
+        "bonus_dodges": 1,
+        "buff_duration": 2
+      }
+    ],
+    "techniques": [
+      "absword_cow",
+      "absword_annihilated",
+      "absword_block",
+      "absword_spin",
+      "absword_impale",
+      "absword_brutal",
+      "absword_criticalblow",
+      "absword_feint",
+      "absword_break",
+      "absword_stomp",
+      "absword_kneesweep",
+      "absword_lunge",
+      "absword_riposte",
+      "absword_pommel",
+      "absword_elbow",
+      "absword_counter"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "absword_cow",
+    "name": "",
+    "melee_allowed": true,
+    "required_buffs_all": [
+      "buff_dairyfarmer_onmiss"
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "hit",
+        "scaling-stat": "dex",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "dex",
+        "scale": 1.2
+      }
+    ],
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "absword_annihilated",
+    "name": "",
+    "required_buffs_all": [
+      "buff_dairyfarmer_onmiss"
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 10
+      }
+    ],
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "dex",
+        "scale": 99
+      },
+      {
+        "stat": "hit",
+        "scaling-stat": "dex",
+        "scale": 99
+      }
+    ],
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "absword_block",
+    "name": "格挡",
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "block",
+        "scale": 0.5
+      }
+    ],
+    "messages": [
+      "你格挡了%s的攻击",
+      "<npcname>格挡了%s的攻击"
+    ],
+    "description": "中级格挡技能"
+  },
+  {
+    "type": "technique",
+    "id": "absword_spin",
+    "name": "旋转攻击",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 4
+      }
+    ],
+    "crit_tec": true,
+    "messages": [
+      "",
+      ""
+    ],
+    "aoe": "spin",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "absword_impale",
+    "name": "刺穿攻击",
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 6
+      }
+    ],
+    "crit_tec": true,
+    "messages": [
+      "你直直穿刺%s",
+      "<npcname>刺穿%s"
+    ],
+    "aoe": "impale",
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "absword_brutal",
+    "name": "残暴打击",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 5
+      }
+    ],
+    "crit_tec": true,
+    "stun_dur": 1,
+    "knockback_dist": 1,
+    "messages": [
+      "",
+      ""
+    ],
+    "description": "击晕 1 回合，击退 1 格，仅暴击"
+  },
+  {
+    "type": "technique",
+    "id": "absword_criticalblow",
+    "name": "",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "mult_bonuses": [
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "dex",
+        "scale": 99
+      }
+    ],
+    "crit_tec": true,
+    "weighting": -250,
+    "messages": [
+      "",
+      ""
+    ],
+    "description": ""
+  },
+  {
+    "type": "technique",
+    "id": "absword_feint",
+    "name": "佯攻",
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 2
+      }
+    ],
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "defensive": true,
+    "miss_recovery": true,
+    "messages": [
+      "你佯攻%s。",
+      "<npcname>佯攻%s。"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "absword_break",
+    "name": "反擒拿",
+    "unarmed_allowed": true,
+    "melee_allowed": true,
+    "defensive": true,
+    "grab_break": true,
+    "messages": [
+      "%s 试着抓住你，但你挣脱了！",
+      "%s 试着抓住 <npcname>，但被挣脱了！"
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "absword_stomp",
+    "name": "",
+    "messages": [
+      "",
+      ""
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 2
+      },
+      {
+        "name": "melee",
+        "level": 1
+      }
+    ],
+    "unarmed_allowed": true,
+    "down_dur": 1
+  },
+  {
+    "type": "technique",
+    "id": "absword_kneesweep",
+    "name": "扫堂腿",
+    "messages": [
+      "",
+      ""
+    ],
+    "skill_requirements": [
+      {
+        "name": "unarmed",
+        "level": 2
+      }
+    ],
+    "unarmed_allowed": true,
+    "weighting": 2,
+    "down_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.75
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "absword_lunge",
+    "name": "",
+    "messages": [
+      "你弓步突进，对准剑尖，刺向%s",
+      "<npcname>弓步刺击%s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 2
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.8
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "dex",
+        "scale": 1.5
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "dex",
+        "scale": 2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "absword_riposte",
+    "name": "击剑抢攻",
+    "messages": [
+      "你对%s递出一剑完美的抢攻。",
+      "<npcname>对%s递出一剑完美的抢攻。"
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 8
+      }
+    ],
+    "melee_allowed": true,
+    "block_counter": true,
+    "crit_ok": true,
+    "stun_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "dex",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "dex",
+        "scale": 1.2
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scaling-stat": "dex",
+        "scale": 1.2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "absword_pommel",
+    "name": "剑柄猛击",
+    "messages": [
+      "",
+      ""
+    ],
+    "skill_requirements": [
+      {
+        "name": "cutting",
+        "level": 3
+      }
+    ],
+    "melee_allowed": true,
+    "crit_ok": true,
+    "dodge_counter": true,
+    "down_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "stab",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "dex",
+        "scale": 2
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "absword_elbow",
+    "name": "肘击",
+    "messages": [
+      "你猛冲一步，手肘上挑，肘击了 %s",
+      "<npcname> 猛冲一步，手肘上挑，肘击了 %s"
+    ],
+    "skill_requirements": [
+      {
+        "name": "unarmed",
+        "level": 1
+      }
+    ],
+    "unarmed_allowed": true,
+    "crit_tec": true,
+    "stun_dur": 1,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0.5
+      },
+      {
+        "stat": "damage",
+        "type": "bash",
+        "scaling-stat": "dex",
+        "scale": 1.5
+      }
+    ]
+  },
+  {
+    "type": "technique",
+    "id": "absword_counter",
+    "name": "反击",
+    "messages": [
+      "",
+      ""
+    ],
+    "unarmed_allowed": true,
+    "dodge_counter": true,
+    "crit_ok": true,
+    "mult_bonuses": [
+      {
+        "stat": "movecost",
+        "scale": 0
+      },
+      {
+        "stat": "damage",
+        "type": "cut",
+        "scaling-stat": "dex",
+        "scale": 5
+      },
+      {
+        "stat": "hit",
+        "scale": 0.5
+      }
+    ]
+  }
+]

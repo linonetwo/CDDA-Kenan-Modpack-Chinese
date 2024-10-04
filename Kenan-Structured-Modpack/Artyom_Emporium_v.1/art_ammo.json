@@ -1,0 +1,525 @@
+[
+  {
+    "type": "AMMO",
+    "id": ".380",
+    "price": "50 USD",
+    "name": {
+      "str": ".380",
+      "str_pl": ".380"
+    },
+    "symbol": "=",
+    "color": "light_gray",
+    "description": ".380ACP（9x17mm）手枪弹是一种小且紧凑的手枪弹药，通常用于个人防卫级别的紧凑手枪上。",
+    "material": [
+      "steel",
+      "powder"
+    ],
+    "volume": "250 ml",
+    "weight": "2 g",
+    "melee_damage": { "bash": 1},
+    "to_hit": 0,
+    "ammo_type": "380",
+    "casing": ".380_casing",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 18,
+      "armor_penetration": 6
+    },
+    "range": 16,
+    "dispersion": 120,
+    "recoil": 50,
+    "count": 50,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": ".380_casing",
+    "category": "spare_parts",
+    "price": "100 USD",
+    "name": {
+      "str": ".380 空弹壳"
+    },
+    "symbol": "=",
+    "color": "yellow",
+    "description": "一个.380弹的空弹壳。",
+    "material": [
+      "steel"
+    ],
+    "volume": "250 ml",
+    "weight": "5 g",
+    "melee_damage": { "bash": 1},
+    "to_hit": 0,
+    "ammo_type": "components",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 0,
+      "armor_penetration": 0
+    },
+    "range": 0,
+    "dispersion": 0,
+    "recoil": 0,
+    "count": 200
+  },
+  {
+    "id": ".303",
+    "type": "AMMO",
+    "name": {
+      "str": ".303 英式步枪弹"
+    },
+    "description": ".303英式步枪弹是在北约弹药的引进和标准化之前，英军普遍使用的老式弹药，因为李-恩菲尔德步枪而名扬天下，作为一款老式的步枪弹，这种弹药的准确度和杀伤力对比.308可不逞多让。",
+    "weight": "18 g",
+    "volume": "250 ml",
+    "price": "22 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 20,
+    "stack_size": 20,
+    "ammo_type": ".303",
+    "casing": ".303_casing",
+    "range": 65,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 60,
+      "armor_penetration": 2
+    },
+    "dispersion": 15,
+    "recoil": 3000,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": ".303_casing",
+    "category": "spare_parts",
+    "price": "100 USD",
+    "name": {
+      "str": ".303弹壳"
+    },
+    "symbol": "=",
+    "color": "yellow",
+    "description": "一个.303英式弹的空弹壳。",
+    "material": [
+      "brass"
+    ],
+    "volume": "250 ml",
+    "weight": "5 g",
+    "melee_damage": { "bash": 1},
+    "to_hit": 0,
+    "ammo_type": "components",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 0,
+      "armor_penetration": 0
+    },
+    "range": 0,
+    "dispersion": 0,
+    "recoil": 0,
+    "count": 1
+  },
+  {
+    "id": "reloaded_303",
+    "copy-from": ".303",
+    "type": "AMMO",
+    "name": {
+      "str": "复装.303 英式步枪弹"
+    },
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.9
+      },
+      "dispersion": 1.1
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "reloaded_308_match",
+    "copy-from": "308",
+    "type": "AMMO",
+    "name": {
+      "str": ".308 竞赛弹"
+    },
+    "proportional": {
+      "price": 2,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.1
+      },
+      "dispersion": 0.8
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "762_54R_incendiary",
+    "copy-from": "762_54R",
+    "type": "AMMO",
+    "name": {
+      "str": "7.62x54mmR 穿甲爆燃弹"
+    },
+    "description": "最初被苏联防空武器使用，后来被狙击手用于摧毁法西斯的轻型装甲车或者电子器材。命中目标时会产生小规模的爆炸，使用他的时候不要让目标太靠近你自己。 ",
+    "damage": {
+      "damage_type": "bullet",
+      "armor_penetration": 10
+    },
+    "extend": {
+      "effects": [
+        "INCENDIARY",
+        "EXPLOSIVE_SMALL"
+      ]
+    }
+  },
+  {
+    "type": "AMMO",
+    "id": ".460",
+    "name": {
+      "str": ".460 罗兰德弹",
+      "str_pl": ".460 罗兰德弹"
+    },
+    "description": ".460罗兰是M1911等手枪中使用的.45ACP子弹的改进形，虽然弹壳看起来有点长，但是弹药的总长度还是一样的，这种弹药有着比.45ACP更大的威力和更高的初速。被誉为世界上最强大的手枪弹药之一。",
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": "20 USD",
+    "count": 30,
+    "stack_size": 30,
+    "material": [
+      "steel",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "ammo_type": ".460",
+    "casing": "45_casing",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 40,
+      "armor_penetration": 5
+    },
+    "range": 16,
+    "dispersion": 110,
+    "recoil": 290,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "id": "reloaded_.460",
+    "copy-from": ".460",
+    "type": "AMMO",
+    "name": {
+      "str": "复装.460 罗兰德弹",
+      "str_pl": "复装.460 罗兰德弹"
+    },
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.9
+      },
+      "dispersion": 1.1
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "8mmMauser",
+    "type": "AMMO",
+    "name": {
+      "str": "8x57mm 毛瑟弹"
+    },
+    "description": "德国毛瑟兵工厂于1903年推出的全威力步枪弹药，8x57mm毛瑟步枪弹是有史以来最著名和生产最多的弹药之一。 许多国家都曾经使用过这种弹药，且至今仍在狩猎领域中保持活跃。",
+    "weight": "18 g",
+    "volume": "250 ml",
+    "price": "22 USD",
+    "material": [
+      "brass",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "yellow",
+    "count": 20,
+    "stack_size": 20,
+    "ammo_type": "7.92mm",
+    "casing": "8mm_casing",
+    "range": 65,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 55,
+      "armor_penetration": 2
+    },
+    "dispersion": 11,
+    "recoil": 3100,
+    "effects": [
+      "COOKOFF"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "8mm_casing",
+    "category": "spare_parts",
+    "price": "100 USD",
+    "name": {
+      "str": "8x57mm毛瑟空弹壳"
+    },
+    "symbol": "=",
+    "color": "yellow",
+    "description": "一个8x57mm毛瑟弹的空弹壳。",
+    "material": [
+      "brass"
+    ],
+    "volume": "250 ml",
+    "weight": "5 g",
+    "melee_damage": { "bash": 1},
+    "to_hit": 0,
+    "ammo_type": "components",
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 0,
+      "armor_penetration": 0
+    },
+    "range": 0,
+    "dispersion": 0,
+    "recoil": 0,
+    "count": 1
+  },
+  {
+    "id": "reloaded_7.92mm",
+    "copy-from": "8mmMauser",
+    "type": "AMMO",
+    "name": {
+      "str": "复装 8x57mm 毛瑟弹"
+    },
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.9
+      },
+      "dispersion": 1.1
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    },
+    "delete": {
+      "effects": [
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "reloaded_303_match",
+    "copy-from": ".303",
+    "type": "AMMO",
+    "name": {
+      "str": "复装 .303 竞赛弹"
+    },
+    "proportional": {
+      "price": 2,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.1
+      },
+      "dispersion": 0.8
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "50api",
+    "copy-from": "50bmg",
+    "type": "AMMO",
+    "name": {
+      "str": ".50 BMG 穿甲爆破弹"
+    },
+    "//": "$30+/shot thanks to tight regulation, one way or another.",
+    "price": "150 USD",
+    "description": "12.7x99mm的穿甲爆破弹，可以把轻松的把轻型装甲炸开，在命中目标时会产生爆炸，通常在世界各地作为反器材狙击枪的反器材弹种。",
+    "count": 5,
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 110,
+      "armor_penetration": 12
+    },
+    "extend": {
+      "effects": [
+        "EXPLOSIVE_SMALL"
+      ]
+    }
+  },
+  {
+    "id": "reloaded_556_match",
+    "copy-from": "556",
+    "type": "AMMO",
+    "name": {
+      "str": "复装 5.56x45mm 竞赛弹"
+    },
+    "description": "一些手工复装的5.56x45mm竞赛弹，复装时特别加强了精度和伤害，效果还不错，就是成本有点高了。",
+    "proportional": {
+      "price": 2,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.1
+      },
+      "dispersion": 0.8
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "reloaded_3006_match",
+    "copy-from": "3006",
+    "type": "AMMO",
+    "name": {
+      "str": "复装 .30-06 竞赛弹"
+    },
+    "description": "一些手工复装的.30-06竞赛弹，复装时特别加强了精度和伤害，效果不错，就是成本高了点。",
+    "proportional": {
+      "price": 2,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.1
+      },
+      "dispersion": 0.8
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "reloaded_762ak_match",
+    "copy-from": "762_m87",
+    "type": "AMMO",
+    "name": {
+      "str": "复装 7.62x39mm 竞赛弹"
+    },
+    "description": "一些手工复装的7.62x39mm竞赛弹，复装时特别加强了精度和伤害，效果还不错，就是成本有点高。",
+    "proportional": {
+      "price": 2,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.1
+      },
+      "dispersion": 0.8
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "reloaded_22_quiet",
+    "copy-from": "22_lr",
+    "type": "AMMO",
+    "name": {
+      "str": "复装 .22 ZP弹"
+    },
+    "description": "一个非常安静且轻的.22lr的弹药，用于没有耳保护的室内练习。多数时候你会发现枪的声音比弹药本身更响。这个是手工复装的型号，美国制造。",
+    "proportional": {
+      "price": 2,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.8
+      },
+      "dispersion": 1.1,
+      "range": 0.8,
+      "recoil": 0.01,
+      "loudness": 0.01
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "reloaded_545_match",
+    "copy-from": "545",
+    "type": "AMMO",
+    "name": {
+      "str": "复装 5.45x39mm 竞赛弹"
+    },
+    "description": "一些手工复装的5.45x39mm竞赛弹，复装时特别加强了精度和伤害，效果还不错，就是成本有点高。",
+    "proportional": {
+      "price": 2,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.1
+      },
+      "dispersion": 0.8
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "NEVER_MISFIRES"
+      ]
+    }
+  },
+  {
+    "id": "Match_7.92mm",
+    "copy-from": "8mmMauser",
+    "type": "AMMO",
+    "name": {
+      "str": "复装 8x57mm 毛瑟竞赛弹"
+    },
+    "description": "一些手工复装的8x57mm竞赛弹，复装时着重改善了精度和伤害，效果还不错，就是成本和制作工艺高了点。",
+    "proportional": {
+      "price": 1.9,
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.1
+      },
+      "dispersion": 0.8
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED",
+        "NEVER_MISFIRES"
+      ]
+    }
+  }
+]

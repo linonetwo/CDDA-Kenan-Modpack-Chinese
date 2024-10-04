@@ -1,0 +1,170 @@
+[
+  {
+    "id": "heavy_rail_rifle",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "重型轨道步枪"
+    },
+    "description": "这种性能和设计严重过剩的铁磁轨道枪主要被设计为给目标带来电磁驱动的毁灭，不管目标是建筑、载具还是尸潮。但是，这把武器异常庞大而沉重，使得它比其他的步枪更要难以携带，更别说它极差的续航能力了。它需要统一标准供电装备，即UPS，来供给大量的能量。",
+    "weight": "11500 g",
+    "volume": "4500 ml",
+    "longest_side": "1170 mm",
+    "price": "9000 USD",
+    "price_postapoc": "90 USD",
+    "to_hit": -1,
+    "bashing": 12,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "metal_rail"
+    ],
+    "skill": "rifle",
+    "range": 40,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 45,
+      "armor_penetration": 15
+    },
+    "dispersion": 100,
+    "durability": 7,
+    "clip_size": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "metal_rail": 10
+        }
+      }
+    ],
+    "energy_drain": "100 kJ",
+    "reload": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "emitter",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "INCENDIARY",
+      "TRAIL"
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ]
+  },
+  {
+    "id": "rebar_rifle",
+    "looks_like": "ar15",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "电磁轨道步枪"
+    },
+    "description": "一把电力驱动的单发电磁轨道枪，采用废金属自制而成。它通过电磁感应所产生洛仑兹力将发射的金属棒加速到超高速，同时加热棒体至接近自燃的温度，该武器采用标准UPS供电。",
+    "weight": "4213 g",
+    "volume": "2500 ml",
+    "longest_side": "1020 mm",
+    "price": "5500 USD",
+    "price_postapoc": "60 USD",
+    "to_hit": -3,
+    "bashing": 10,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "(",
+    "color": "brown",
+    "ammo": [
+      "metal_rail"
+    ],
+    "skill": "rifle",
+    "dispersion": 90,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 25,
+      "armor_penetration": 10
+    },
+    "durability": 6,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "metal_rail": 1
+        }
+      }
+    ],
+    "energy_drain": "40 kJ",
+    "reload": 200,
+    "valid_mod_locations": [
+      [
+        "emitter",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "INCENDIARY",
+      "TRAIL"
+    ]
+  }
+]

@@ -1,0 +1,295 @@
+[
+  {
+    "id": "morlock_map",
+    "copy-from": "abstractmap",
+    "type": "GENERIC",
+    "name": {
+      "str": "地下地图"
+    },
+    "description": "这是一张当地下水道和地铁的粗略地图，此外还标注了一些别的地点。",
+    "color": "light_green",
+    "use_action": {
+      "type": "reveal_map",
+      "radius": 180,
+      "terrain": [
+        "sub_station",
+        "underground_sub_station",
+        "sewer_sub_station",
+        "sewer",
+        "subway",
+        "morlock_village_mid_a",
+        "morlock_village_mid_b",
+        "morlock_village_edge_b",
+        "morlock_village_edge_b",
+        "morlock_village_corner_a"
+      ],
+      "message": "你在地图上标记了地下的地点。"
+    }
+  },
+  {
+    "id": "morlock_cookbook",
+    "type": "BOOK",
+    "name": {
+      "str": "莫洛克食谱"
+    },
+    "description": "一本手写笔记，上面写满了噩梦般的莫洛克食谱，诸如老鼠汤、炒蟑螂、虫卷饼等等。不过里面也混杂着一些有用的食谱。",
+    "weight": "1887 g",
+    "volume": "1250 ml",
+    "price": 900,
+    "bashing": 5,
+    "material": [
+      "paper",
+      "leather"
+    ],
+    "symbol": "?",
+    "color": "light_gray",
+    "skill": "cooking",
+    "required_level": 1,
+    "max_level": 3,
+    "intelligence": 7,
+    "time": 45,
+    "fun": -3
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "mushroom_tea",
+    "name": {
+      "str": "菇茶",
+      "str_pl": "菇茶"
+    },
+    "weight": "250 g",
+    "color": "brown",
+    "container": "ceramic_cup",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 44,
+    "healthy": 2,
+    "calories": 2,
+    "description": "有助健康的草药汤，把蘑菇放入沸水中煮烂制成。",
+    "price": 100,
+    "volume": "250 ml",
+    "material": [
+      "water"
+    ],
+    "phase": "liquid",
+    "flags": [
+      "EATEN_HOT",
+      "NUTRIENT_OVERRIDE"
+    ],
+    "fun": 1
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "mushroom_glowing",
+    "name": {
+      "str": "荧光蘑菇"
+    },
+    "weight": "69 g",
+    "color": "yellow",
+    "spoils_in": "7 days",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "healthy": -3,
+    "calories": 30,
+    "description": "一个散发着微弱荧光的变异蘑菇。不适宜在这种状态下食用。",
+    "price": 140,
+    "material": [
+      "mushroom"
+    ],
+    "volume": "250 ml",
+    "fun": 10,
+    "flags": [
+      "FREEZERBURN",
+      "LIGHT_2"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        1
+      ],
+      [
+        "iron",
+        1
+      ]
+    ],
+    "rot_spawn": "GROUP_ROTTING_PLANT",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你吃了荧光蘑菇。",
+      "effects": [
+        {
+          "id": "blind",
+          "duration": 10
+        },
+        {
+          "id": "foodpoison",
+          "duration": 4200
+        },
+        {
+          "id": "hallu",
+          "duration": 3600
+        }
+      ]
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "seed_mushroom_glowing",
+    "copy-from": "seed_mushroom_base",
+    "name": {
+      "str": "荧光蘑菇孢子",
+      "str_pl": "荧光蘑菇孢子"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "LIGHT_2"
+    ],
+    "seed_data": {
+      "plant_name": "glowing mushroom",
+      "fruit": "mushroom_glowing",
+      "grow": "45 days"
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "dry_mushroom_glowing",
+    "name": {
+      "str": "干荧光蘑菇"
+    },
+    "copy-from": "dry_mushroom",
+    "description": "一个变异蘑菇。它不再发出荧光，但仍然不宜食用。"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "glowing_tea",
+    "name": {
+      "str": "奇茶",
+      "str_pl": "奇茶"
+    },
+    "weight": "250 g",
+    "color": "brown",
+    "container": "ceramic_cup",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": 44,
+    "healthy": 2,
+    "calories": 2,
+    "description": "有助健康的草药汤，把变异蘑菇放入沸水中煮烂制成。有致幻作用。",
+    "price": 100,
+    "volume": "250 ml",
+    "material": [
+      "water"
+    ],
+    "phase": "liquid",
+    "flags": [
+      "EATEN_HOT",
+      "NUTRIENT_OVERRIDE"
+    ],
+    "fun": 20,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你喝下了奇茶。",
+      "effects": [
+        {
+          "id": "hallu",
+          "duration": 3600
+        }
+      ]
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "brew_sunshine",
+    "name": {
+      "str": "阳光酒原浆",
+      "str_pl": "阳光酒原浆"
+    },
+    "description": "未发酵的阳光酒。只是一些水，糖和发光变种蘑菇的混合物，就跟尤里斯特做的一样。",
+    "weight": "50 g",
+    "color": "yellow",
+    "container": "jug_clay",
+    "flags": "TRADER_AVOID",
+    "symbol": "~",
+    "calories": 104,
+    "quench": 2,
+    "fun": -5,
+    "material": [
+      "water",
+      "junk"
+    ],
+    "volume": "250 ml",
+    "charges": 7,
+    "phase": "liquid",
+    "comestible_type": "DRINK",
+    "brewable": {
+      "time": "6 hours",
+      "results": [
+        "wash_sunshine",
+        "yeast"
+      ]
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "wash_sunshine",
+    "name": {
+      "str": "阳光酒淡酒",
+      "str_pl": "阳光酒淡酒"
+    },
+    "description": "经过发酵，但未经蒸馏的阳光酒。含有一切你不想见到的污染物。",
+    "weight": "50 g",
+    "color": "yellow",
+    "addiction_type": "alcohol",
+    "addiction_potential": 1,
+    "use_action": "ALCOHOL_WEAK",
+    "stim": -3,
+    "container": "jug_clay",
+    "symbol": "~",
+    "calories": 9,
+    "quench": -2,
+    "healthy": -10,
+    "fun": -20,
+    "material": [
+      "water",
+      "alcohol"
+    ],
+    "volume": "250 ml",
+    "charges": 7,
+    "phase": "liquid",
+    "comestible_type": "DRINK"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "sunshine",
+    "name": {
+      "str": "阳光老兄",
+      "str_pl": "阳光老兄"
+    },
+    "weight": "35 g",
+    "color": "yellow",
+    "addiction_type": "alcohol",
+    "use_action": "ALCOHOL_STRONG",
+    "stim": -18,
+    "container": "jug_clay",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": -16,
+    "healthy": -6,
+    "addiction_potential": 7,
+    "calories": 101,
+    "description": "最烈，最纯，独一无二的老酒，由发光的蘑菇和糖蒸馏而成。地底人最喜欢的饮料。",
+    "price": 850,
+    "material": [
+      "alcohol"
+    ],
+    "volume": "250 ml",
+    "phase": "liquid",
+    "charges": 7,
+    "flags": [
+      "EATEN_COLD",
+      "LIGHT_1"
+    ],
+    "freezing_point": -49,
+    "fun": 12
+  }
+]

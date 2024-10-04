@@ -1,0 +1,370 @@
+[
+  {
+    "id": "TALK_FOUNTAIN",
+    "type": "talk_topic",
+    "dynamic_line": "您的生活没有转机吗？烦恼困扰着您吗？命运把您抛弃了吗？如果是这样，马德雷赌场，在它所有的荣耀，邀请您重新开始。来到一个财富、兴奋与阴谋无处不在的地方。漫步在我们美丽的度假胜地蜿蜒的街道上，结交新朋友…或者重新点燃旧的火焰。让您的眼睛在晴朗的星空下，领略开阔沙漠的奢华。从我们的别墅区屋顶观赏日落。无数的消遣等待着您。在我们的赌场一掷千金，在剧院观赏戏剧，或是住在我们的专属总统套房，将庇护您-并满足您的每一个奇思妙想。所以如果生活的烦恼让您感到沮丧…如果您需要摆脱困境…如果您只是需要一个重新开始的机会，请加入我们。让我们离开这个悲惨世界，在马德雷赌场盛大开幕式上，今年十月。我们等您。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "INTRO"
+      }
+    ]
+  },
+  {
+    "id": "INTRO",
+    "type": "talk_topic",
+    "dynamic_line": "嘿，你！在那边！你能听见我说话吗？很好，我知道你能听到我…现在仔细听，好好听…马德雷赌场，这个地方…我知道你为什么在这里。你自己的贪婪把你带到了这里。现在你要帮我。",
+    "responses": [
+      {
+        "text": "这是什么鬼？",
+        "topic": "WHO"
+      },
+      {
+        "text": "那个女声和那个演讲是什么？",
+        "topic": "BROADCAST"
+      },
+      {
+        "text": "我为什么要帮你？",
+        "topic": "COLLAR"
+      },
+      {
+        "text": "好的，我会帮忙的。",
+        "topic": "MISSION_1"
+      }
+    ]
+  },
+  {
+    "id": "INTRO2",
+    "type": "talk_topic",
+    "dynamic_line": "那么，我们最后能讨论更重要的问题吗？",
+    "responses": [
+      {
+        "text": "这是什么鬼？",
+        "topic": "WHO"
+      },
+      {
+        "text": "那个女声和那个演讲是什么？",
+        "topic": "BROADCAST"
+      },
+      {
+        "text": "我为什么要帮你？",
+        "topic": "COLLAR"
+      },
+      {
+        "text": "好的，我会帮忙的。",
+        "topic": "MISSION_1"
+      }
+    ]
+  },
+  {
+    "id": "BROADCAST",
+    "type": "talk_topic",
+    "dynamic_line": "那是Sierra Madre广播系统…世界末日就在盛大开幕的当晚到来，所以没人关掉广告广播…从那以后，它在荒地上一遍遍地播放广告，靠备用电源运行…这就是吸引你来这里的原因，对吗？现在，让我们讨论更多悬而未决的话题，好吗？",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "INTRO2"
+      }
+    ]
+  },
+  {
+    "id": "COLLAR",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "SIERRA_HUNTER",
+      "yes": "我看到你脖子上戴着装满炸药的金属项圈…很好。那意味着你必须服从。只要你说一个“不”字的话，我就把它引爆。",
+      "no": "我的意思是，当然你不必，但如果你这样做了，你也会帮自己打开马德雷赌场。这就是你来这里的目的，对吗？那么，你怎么说？"
+    },
+    "responses": [
+      {
+        "text": "我是不会相信你的胡说八道。",
+        "condition": {
+          "not": {
+            "u_has_trait": "SIERRA_HUNTER"
+          }
+        },
+        "topic": "THINK"
+      },
+      {
+        "text": "我是不会相信你的胡说八道。",
+        "condition": {
+          "u_has_trait": "SIERRA_HUNTER"
+        },
+        "topic": "TALK_DONE",
+        "effect": {
+          "u_add_effect": "collar_boom",
+          "duration": 5
+        }
+      },
+      {
+        "text": "好吧，好吧，我来帮你。",
+        "topic": "MISSION_1"
+      }
+    ]
+  },
+  {
+    "id": "THINK",
+    "type": "talk_topic",
+    "dynamic_line": "好吧，这是你的选择-但祝你好运，躲过潜伏在这里每个角落的危险，在没有我的帮助下到达马德雷赌场！",
+    "responses": [
+      {
+        "text": "我不需要任何人告诉我该怎么做。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_first_topic": "TALK_REFUSE"
+        }
+      },
+      {
+        "text": "好…好吧，你赢了，我来帮你。",
+        "topic": "MISSION_1"
+      }
+    ]
+  },
+  {
+    "id": "TALK_REFUSE",
+    "type": "talk_topic",
+    "dynamic_line": "你改变主意了吗？你觉得进入马德雷赌场太难了吗？",
+    "responses": [
+      {
+        "text": "我再说一遍，我帮不了你。",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "好…好吧，你赢了，我来帮你。",
+        "topic": "MISSION_1"
+      }
+    ]
+  },
+  {
+    "id": "WHO",
+    "type": "talk_topic",
+    "dynamic_line": "开始帮助我，而不是问一些毫无意义的问题，这对你最有利。我是谁？我只是一个为了能和你说话而侵入广播系统的人。也许我会告诉你更多，如果你证明自己是值得的，那就是。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "INTRO2"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_1",
+    "type": "talk_topic",
+    "dynamic_line": "哦，这样你就能做出明智的决定了？很好，很好…现在听我说：打开马德雷赌场的唯一方法就是启动庆典活动…然而，一些关键的电子和配电系统最终因缺乏维护而出现故障。幸运的是，我学到了很多关于这些系统的知识，并且对它们的工作原理有了大致的了解。我知道别墅周围有三个地方应该有备用的电子板和处理单元，我们可以用来解决系统故障的问题。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "MISSION_11"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_11",
+    "type": "talk_topic",
+    "dynamic_line": "这些电子元件的位置直接与启动Gala活动的关键位置联系在一起，因为我知道如何启动Gala，这意味着我也知道在哪里可以找到它们。我请求你找回它们。第一个Sierra Madre电子板位于Salida del Sol的电源开关站。其余两个在Puesta del Sol，一个在该区拐角处的开关站，另一个在Puesta del Sol和医疗区之间的一堵墙旁边的一栋建筑物的阳台上。看看你的追踪装置，我已经把你的三个位置都标上了绿色的“S”。一旦你拿到了，回到喷泉，我会告诉你下一步是什么。",
+    "responses": [
+      {
+        "text": "好吧，我要去…",
+        "topic": "HURRY",
+        "effect": {
+          "npc_first_topic": "MIDMISSION"
+        }
+      },
+      {
+        "text": "还有什么我应该注意的吗？",
+        "topic": "TIPS"
+      }
+    ]
+  },
+  {
+    "id": "TIPS",
+    "type": "talk_topic",
+    "dynamic_line": "当心鬼人，那些在别墅区里潜伏和狩猎的变异前人类。它们很危险，即使你“杀死”它们，它们也会在一段时间后复活。唯一能让他们彻底死掉的方法就是砍断他们的四肢。也要小心他们的陷阱。另外，整个马德雷赌场都被红雾污染了。这些红雾在有些地区更加集中，你应该不惜一切代价躲开，但即使你避开它们，气体仍然无处不在，它会慢慢侵蚀毒害你的身体，所以你最好快点。不要浪费太多时间，如果你犹豫不决，否则它会杀了你。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TIPS2"
+      }
+    ]
+  },
+  {
+    "id": "TIPS2",
+    "type": "talk_topic",
+    "dynamic_line": "还要注意马德雷赌场的全息图。他们是世界末日前科技的顶峰…完全自主的工人…全息保安将拍摄激光束的视线，但如果你有幸得到你的手上未使用的发射器和生成一个你自己的，它将守卫于你的身边，保护你逃离鬼人的魔掌。也不要浪费你的子弹-他们几乎是无敌的，唯一的解决办法是找到相应的发射器摧毁或关闭他们。也会有全息商人，你可以交易，但他们只认战前的货币，所以我不会指望有这么多的补给方式。然而，整个别墅充满了从前幸存者遗留下来的物品。此外，当地的自动售货机似乎仍在工作。使用马德雷赌场筹码，您可以在别墅区的大多数街道和建筑物中轻松找到，您可以从售货机那里购买食物，如果您找到对应的编码卡，它们还可以解锁军需品和医疗用品。最后一件事：看到喷泉下面的步枪了吗？拿去吧。它会帮助你生存。",
+    "responses": [
+      {
+        "text": "我脖子上的领子真让我担心…",
+        "condition": {
+          "u_has_trait": "SIERRA_HUNTER"
+        },
+        "topic": "COLLAR_TIP"
+      },
+      {
+        "text": "好吧，我会注意你说的话…我在路上。",
+        "topic": "HURRY",
+        "effect": {
+          "npc_first_topic": "MIDMISSION"
+        }
+      }
+    ]
+  },
+  {
+    "id": "COLLAR_TIP",
+    "type": "talk_topic",
+    "dynamic_line": "哦，不用担心，只要你服从我的命令就行了。马德雷赌场的扬声器和无线电广播的频率是一次意外引起的，但是邮差把它们都炸飞了，所以不用担心。再说一次，只要你不自己动手，服从我的命令，这东西就不会爆炸。选择权在你…",
+    "responses": [
+      {
+        "text": "快递员？",
+        "topic": "COURIER"
+      },
+      {
+        "text": "嗯，我并没有感觉好一点，但似乎我别无选择…我马上就来。",
+        "topic": "HURRY",
+        "effect": {
+          "npc_first_topic": "MIDMISSION"
+        }
+      }
+    ]
+  },
+  {
+    "id": "COURIER",
+    "type": "talk_topic",
+    "dynamic_line": "哦，没关系，邮差是一个幸存者，一个像你一样的马德雷赌场寻宝者，别让我想起这狗屎…在我向邮差提出了所有的要求之后，我的后背被刺伤作为回报…但是马德雷赌场已经没有邮差了，所以不要害怕。",
+    "responses": [
+      {
+        "text": "好吧，我会注意你说的话…我在路上。",
+        "topic": "HURRY",
+        "effect": {
+          "npc_first_topic": "MIDMISSION"
+        }
+      }
+    ]
+  },
+  {
+    "id": "MIDMISSION",
+    "type": "talk_topic",
+    "dynamic_line": "你按我的要求做了吗？",
+    "responses": [
+      {
+        "text": "是的，三个都找到了，三个都找到了。",
+        "condition": {
+          "u_has_items": {
+            "item": "card_chip",
+            "count": 3
+          }
+        },
+        "topic": "MISSION_2"
+      },
+      {
+        "text": "不，还在挣扎。",
+        "condition": {
+          "not": {
+            "u_has_items": {
+              "item": "card_chip",
+              "count": 3
+            }
+          }
+        },
+        "topic": "HURRY"
+      }
+    ]
+  },
+  {
+    "id": "MIDMISSION2",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "gala_trait",
+      "no": "我看晚会还没开始，快点！",
+      "yes": "庆祝活动已经开始，赌场的大门打开了！你到底在这里干什么！等着鬼魂追上你！快进去！"
+    },
+    "responses": [
+      {
+        "text": "好吧，好吧，我尽力而为…",
+        "condition": {
+          "not": {
+            "u_has_trait": "gala_trait"
+          }
+        },
+        "topic": "HURRY"
+      },
+      {
+        "text": "好吧，好吧，我在跑…",
+        "condition": {
+          "u_has_trait": "gala_trait"
+        },
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_first_topic": "HURRY2"
+        }
+      }
+    ]
+  },
+  {
+    "id": "HURRY",
+    "type": "talk_topic",
+    "dynamic_line": "那就别浪费我的时间，按我说的去做！",
+    "responses": [
+      {
+        "text": "好吧，好吧，我马上…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_2",
+    "type": "talk_topic",
+    "dynamic_line": "很好，很好…至少现在我确信你有能力在马德雷赌场生存…现在是你开始活动庆典的时候了。把你得到的电子板放在喷泉全息图下面，这样我可以扫描它们。这将允许我生成一个特殊的访问代码，可以用来触发使用备用电源系统，因为主电源系统已经失效很久了。备份应该比主备份更有弹性，所以应该可以正常工作。控制庆典活动的终点站位于坎帕纳斯·德尔·索尔钟楼的顶部。我用一个黄色的“S”给你标记了那个地方。一旦你开始晚会，就跑向赌场。音乐和焰火会吸引很多不必要的注意…祝你好运。",
+    "responses": [
+      {
+        "text": "好吧，我这就去…",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "npc_first_topic": "MIDMISSION2"
+          },
+          {
+            "u_sell_item": "card_chip",
+            "count": 3
+          },
+          {
+            "npc_consume_item": "card_chip",
+            "count": 3
+          },
+          {
+            "u_spawn_item": "casino_enter_card"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "HURRY2",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_trait": "entered_casino",
+      "yes": "你在这里干什么？等云把你害死？或者你不再想要马德雷山了？不管怎样，现在太迟了-我命令你马上回去工作！",
+      "no": {
+        "u_has_trait": "win",
+        "no": "别再浪费时间了，到赌场里去！这就是你想要的，这就是为什么你敢来这里，对吗？…快点！",
+        "yes": "等一下，你走之前。我…我们…希望您在这里过得愉快。离别是悲伤的时刻。放手…困难。作为马德雷山的客人，你比任何人都了解这个事实。弗雷德里克·辛克莱相信一个人的生命每天都可以重新开始，财富比你手中的财富更重要。爱。生活…家人，需要照顾的人，以及那些会照顾你的人。对于那些知道这些快乐的人来说，马德雷山几乎没有他们所没有的东西。在外面的世界，越过这些墙，那是你重新开始的机会。我希望你能在更快乐的时候回来。在那之前，马德雷山脉…我…会把你留在我们心中。"
+      }
+    },
+    "responses": [
+      {
+        "text": "好吧，好吧，我马上…",
+        "condition": {
+          "not": {
+            "u_has_trait": "win"
+          }
+        },
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "…",
+        "condition": {
+          "u_has_trait": "win"
+        },
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

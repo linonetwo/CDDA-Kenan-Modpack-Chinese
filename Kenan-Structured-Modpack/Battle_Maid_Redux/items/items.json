@@ -1,0 +1,101 @@
+[
+  {
+    "id": "shoggoth_heart",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": {
+      "str": "修格斯之心",
+      "str_pl": "修格斯之心"
+    },
+    "description": "一颗修格斯之心。你可以吃下它来掌握这种怪物的变形能力，也可以用它以另一种方式来“掌握”这种怪物。",
+    "weight": "4535 g",
+    "volume": "1 L",
+    "price": "50 USD",
+    "material": [
+      "flesh"
+    ],
+    "symbol": ")",
+    "color": "dark_gray",
+    "healthy": -10,
+    "fun": -25,
+    "vitamins": [
+      [
+        "mutagen_shoggoth",
+        300
+      ]
+    ]
+  },
+  {
+    "id": "shoggoth_heart_desiccated",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "name": {
+      "str": "脱水修格斯之心"
+    },
+    "description": "一个巨大的肉块——这是将一颗修格斯之心割开放血后所残存的部分。如果你实在是饿得发慌的话可以吃掉它，但是看上去*真的*很恶心。",
+    "weight": "1360 g",
+    "volume": "250 ml",
+    "price": 1000,
+    "price_postapoc": 25,
+    "material": [
+      "flesh"
+    ],
+    "symbol": ")",
+    "color": "black_red",
+    "healthy": -1,
+    "calories": 217,
+    "use_action": [
+      "POISON"
+    ],
+    "fun": -30
+  },
+  {
+    "id": "protein_milk",
+    "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
+    "name": {
+      "str_sp": "高蛋白“牛奶”"
+    },
+    "description": "浓稠的白色液体，富含蛋白质。这个特殊的份量比一般牛奶的大50倍，使它成为一个像样的，但又非常奇怪的食物。",
+    "weight": "258 g",
+    "volume": "250 ml",
+    "price": 38,
+    "price_postapoc": 50,
+    "material": [
+      "milk"
+    ],
+    "symbol": "~",
+    "color": "white",
+    "spoils_in": "1 d",
+    "container": "jug_plastic",
+    "quench": 10,
+    "healthy": 1,
+    "calories": 750,
+    "phase": "liquid",
+    "flags": [
+      "EATEN_COLD"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        2
+      ]
+    ],
+    "fun": 0
+  },
+  {
+    "id": "milk_serum",
+    "type": "GENERIC",
+    "category": "tools",
+    "name": {
+      "str": "乳牛女仆血清",
+      "str_pl": "乳牛女仆血清"
+    },
+    "description": "一种诱变剂血清，用于将受试者转变成能产生大量牛奶的温顺仆人。与追随者交谈以使用。",
+    "weight": "250 g",
+    "volume": "150 ml",
+    "price": "50 USD",
+    "symbol": "-",
+    "color": "dark_gray"
+  }
+]

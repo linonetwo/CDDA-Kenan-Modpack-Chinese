@@ -1,0 +1,226 @@
+[
+  {
+    "id": "nano_turret_pistol_weapon",
+    "type": "GUN",
+    "name": {
+      "str": "纳米手枪"
+    },
+    "description": "你不应该看到这个。nano_turret_pistol_weapon",
+    "copy-from": "nano_turret_pistol"
+  },
+  {
+    "id": "nano_turret_shredder_weapon",
+    "type": "GUN",
+    "name": {
+      "str": "纳米霰弹枪"
+    },
+    "description": "你不应该看到这个。nano_turret_shredder_weapon",
+    "copy-from": "nano_turret_shredder"
+  },
+  {
+    "id": "nano_turret_rifle_weapon",
+    "type": "GUN",
+    "name": {
+      "str": "纳米步枪"
+    },
+    "description": "你不应该看到这个。nano_turret_rifle_weapon",
+    "copy-from": "nano_turret_rifle"
+  },
+  {
+    "id": "nano_turret_smg_weapon",
+    "type": "GUN",
+    "name": {
+      "str": "纳米冲锋枪"
+    },
+    "description": "你不应该看到这个。nano_turret_smg_weapon",
+    "copy-from": "nano_turret_smg"
+  },
+  {
+    "id": "mon_nano_turret_pistol",
+    "type": "MONSTER",
+    "name": {
+      "str": "纳米手枪炮塔"
+    },
+    "description": "一片闪闪发光的液态金属池中伸出来一个小型炮筒，这种炮塔射击精度高，但伤害不足。",
+    "default_faction": "nanotech_guards",
+    "looks_like": "mon_blob_large",
+    "species": [
+      "NANOTECH"
+    ],
+    "harvest": "exempt",
+    "diff": 30,
+    "volume": "2000 ml",
+    "weight": "3627 g",
+    "hp": 150,
+    "speed": 100,
+    "material": [
+      "nanite"
+    ],
+    "symbol": "2",
+    "color": "light_gray",
+    "aggression": 100,
+    "morale": 100,
+    "armor_bash": 16,
+    "armor_cut": 48,
+    "armor_bullet": 43,
+    "armor_stab": 64,
+    "armor_acid": 32,
+    "armor_fire": 8,
+    "luminance": 0,
+    "vision_day": 25,
+    "vision_night": 25,
+    "revert_to_itype": "nanoturret_pistol",
+    "starting_ammo": {
+      "metal_nanopowder": 300
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "gun_type": "nano_turret_pistol_weapon",
+        "ranges": [
+          [
+            0,
+            3,
+            "AUTO"
+          ],
+          [
+            4,
+            9,
+            "BURST"
+          ],
+          [
+            10,
+            16,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ],
+    "death_drops": "nanoturret_death",
+    "flags": [
+      "SEES",
+      "NOHEAD",
+      "IMMOBILE",
+      "NO_BREATHE",
+      "NOGIB",
+      "PLASTIC",
+      "PRIORITIZE_TARGETS"
+    ]
+  },
+  {
+    "id": "mon_nano_turret_shredder",
+    "copy-from": "mon_nano_turret_pistol",
+    "type": "MONSTER",
+    "name": {
+      "str": "纳米霰弹枪炮塔"
+    },
+    "description": "一片闪闪发光的液态金属池中伸出来一个宽型炮筒，这种炮塔威力大，但射击精度低且射程短。",
+    "diff": 50,
+    "volume": "4000 ml",
+    "weight": "4375 g",
+    "revert_to_itype": "nanoturret_shredder",
+    "starting_ammo": {
+      "metal_nanopowder": 200
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "gun_type": "nano_turret_shredder_weapon",
+        "ranges": [
+          [
+            0,
+            4,
+            "BURST"
+          ],
+          [
+            5,
+            14,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_nano_turret_rifle",
+    "copy-from": "mon_nano_turret_pistol",
+    "type": "MONSTER",
+    "name": {
+      "str": "纳米步枪炮塔"
+    },
+    "description": "一片闪闪发光的液态金属池中伸出来一个长筒炮，这种炮塔射击精度高，但威力不足。",
+    "diff": 40,
+    "volume": "4000 ml",
+    "weight": "4375 g",
+    "revert_to_itype": "nanoturret_rifle",
+    "starting_ammo": {
+      "metal_nanopowder": 300
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "gun_type": "nano_turret_rifle_weapon",
+        "ranges": [
+          [
+            0,
+            4,
+            "AUTO"
+          ],
+          [
+            5,
+            14,
+            "BURST"
+          ],
+          [
+            15,
+            24,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_nano_turret_smg",
+    "copy-from": "mon_nano_turret_pistol",
+    "type": "MONSTER",
+    "name": {
+      "str": "纳米冲锋枪炮塔"
+    },
+    "description": "一片闪闪发光的液态金属池中伸出来一个短筒炮，这种炮塔射速很快，但射程短且不可持续。",
+    "diff": 50,
+    "volume": "3000 ml",
+    "weight": "4523 g",
+    "revert_to_itype": "nanoturret_smg",
+    "starting_ammo": {
+      "metal_nanopowder": 200
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "gun_type": "nano_turret_smg_weapon",
+        "ranges": [
+          [
+            0,
+            3,
+            "FULL"
+          ],
+          [
+            4,
+            7,
+            "BURST"
+          ],
+          [
+            8,
+            14,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ]
+  }
+]

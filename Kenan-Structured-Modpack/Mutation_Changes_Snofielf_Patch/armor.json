@@ -1,0 +1,115 @@
+[
+  {
+    "type": "ARMOR",
+    "id": "gauntlets_larmor",
+    "category": "armor",
+    "name": {
+      "str": "皮甲护手",
+      "str_pl": "皮甲护手"
+    },
+    "weight": "350 g",
+    "volume": "750 ml",
+    "color": "brown",
+    "to_hit": -2,
+    "symbol": "[",
+    "description": "一双沉重的无指皮护手。非常灵活和舒适。",
+    "price": "34 USD",
+    "material": [
+      "leather"
+    ],
+    "warmth": 15,
+    "bashing": 2,
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "ALLOWS_NATURAL_ATTACKS",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 60,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "material_thickness": 3,
+    "environmental_protection": 1
+  },
+  {
+    "type": "ARMOR",
+    "id": "gloves_fingerless",
+    "name": {
+      "str": "无指皮手套",
+      "str_pl": "无指皮手套"
+    },
+    "weight": "100 g",
+    "color": "dark_gray",
+    "to_hit": 2,
+    "symbol": "[",
+    "description": "一双露出手指的皮手套，相比有指手套，无指手套更能让你的双手灵活一些。",
+    "price": "14 USD",
+    "material": [
+      "leather"
+    ],
+    "volume": "250 ml",
+    "warmth": 10,
+    "flags": [
+      "VARSIZE",
+      "WATER_FRIENDLY",
+      "ALLOWS_NATURAL_ATTACKS",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 50,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "type": "ARMOR",
+    "id": "gloves_fingerless_mod",
+    "name": {
+      "str": "无指皮护手",
+      "str_pl": "无指皮护手"
+    },
+    "category": "armor",
+    "weight": "380 g",
+    "color": "dark_gray",
+    "to_hit": 2,
+    "symbol": "[",
+    "description": "一双露出手指的皮手套，相比有指手套，无指手套更能让你的双手灵活一些，手背部位嵌有金属片加强防护能力。",
+    "price": "90 USD",
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "volume": "500 ml",
+    "warmth": 5,
+    "flags": [
+      "VARSIZE",
+      "ALLOWS_NATURAL_ATTACKS",
+      "STURDY",
+      "OVERSIZE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 50,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  }
+]

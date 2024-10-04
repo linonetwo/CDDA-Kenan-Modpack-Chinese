@@ -1,0 +1,39 @@
+[
+  {
+    "type": "monster_attack",
+    "attack_type": "melee",
+    "id": "zap_hit_light",
+    "cooldown": 10,
+    "move_cost": 50,
+    "damage_max_instance": [
+      {
+        "damage_type": "stab",
+        "amount": 5,
+        "armor_penetration": 20
+      }
+    ],
+    "body_parts": [
+      [
+        "torso",
+        1
+      ]
+    ],
+    "effects": [
+      {
+        "id": "stunned",
+        "duration": 2,
+        "chance": 75
+      },
+      {
+        "id": "bleed",
+        "duration": 5,
+        "bp": "torso",
+        "chance": 40
+      }
+    ],
+    "hit_dmg_u": "%1$s给你的躯干来了一记重刺！",
+    "hit_dmg_npc": "%1$s给<npcname>的躯干来了一记重刺！",
+    "no_dmg_msg_u": "%1$s试图刺击你的躯干，但这一击被装甲弹开了。",
+    "no_dmg_msg_npc": "%1$s试图刺击<npcname>的躯干，但这一击被装甲弹开了。"
+  }
+]

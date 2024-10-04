@@ -1,0 +1,590 @@
+[
+  {
+    "id": "mon_doom_archvile_queen",
+    "type": "MONSTER",
+    "name": {
+      "str": "恶作剧"
+    },
+    "species": [
+      "ABERRATION"
+    ],
+    "default_faction": "upper_doom",
+    "symbol": "A",
+    "color": "dark_gray",
+    "harvest": "zombie",
+    "material": [
+      "flesh"
+    ],
+    "diff": 30,
+    "aggression": 5,
+    "morale": 200,
+    "speed": 110,
+    "melee_skill": 10,
+    "melee_dice": 9,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 6,
+    "armor_bash": 15,
+    "armor_cut": 15,
+    "armor_bullet": 10,
+    "armor_stab": 5,
+    "vision_day": 55,
+    "vision_night": 10,
+    "luminance": 6,
+    "hp": 240,
+    "special_attacks": [
+      [
+        "RESURRECT",
+        0
+      ],
+      [
+        "UPGRADE",
+        0
+      ],
+      {
+        "id": "hammer",
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 6,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "bash",
+            "amount": 26,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "mon_archvile_elec_attack"
+        },
+        "cooldown": 15,
+        "monster_message": "<color_red>地狱之口被撕开了！地狱之火击打%3$s！</color>"
+      },
+      {
+        "type": "gun",
+        "cooldown": 30,
+        "gun_type": "hell_bomblet_launcher_rotary2",
+        "fake_str": 10,
+        "fake_dex": 20,
+        "fake_per": 7,
+        "fake_skills": [
+          [
+            "gun",
+            9
+          ],
+          [
+            "launcher",
+            9
+          ]
+        ],
+        "move_cost": 100,
+        "targeting_cost": 100,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "ranges": [
+          [
+            0,
+            20,
+            "AUTO"
+          ]
+        ],
+        "description": "疼痛的温暖在你体内蔓延！"
+      }
+    ],
+    "description": "一种瘦骨如柴的黄色长人形动物。它几乎完全掌控了火焰，可以运用火焰来攻击，给倒下的盟友带来生命。",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "QUEEN"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ]
+  },
+  {
+    "id": "mon_imp_revive",
+    "type": "MONSTER",
+    "name": {
+      "str": "结痂小恶魔"
+    },
+    "species": [
+      "ABERRATION"
+    ],
+    "default_faction": "doom",
+    "symbol": "i",
+    "color": "brown",
+    "harvest": "zombie_leather",
+    "material": [
+      "flesh"
+    ],
+    "diff": 12,
+    "aggression": 30,
+    "morale": 30,
+    "speed": 110,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_cut": 7,
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "armor_fire": 5,
+    "armor_acid": 1,
+    "vision_day": 40,
+    "vision_night": 8,
+    "luminance": 1,
+    "hp": 85,
+    "special_attacks": [
+      [
+        "LUNGE",
+        40
+      ],
+      [
+        "wound_minor",
+        30
+      ],
+      [
+        "hammer",
+        20
+      ],
+      {
+        "type": "leap",
+        "cooldown": 25,
+        "max_range": 4
+      },
+      {
+        "type": "bite",
+        "cooldown": 40,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 14,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "type": "gun",
+        "cooldown": 8,
+        "gun_type": "hell_ball2",
+        "fake_str": 10,
+        "fake_dex": 13,
+        "fake_per": 7,
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "pistol",
+            3
+          ]
+        ],
+        "move_cost": 150,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "targeting_cost": 200,
+        "targeting_sound": "RAAAAGHH!",
+        "targeting_volume": 25,
+        "ranges": [
+          [
+            2,
+            17,
+            "DEFAULT"
+          ]
+        ],
+        "description": "幼魔丢出了一个火球！"
+      }
+    ],
+    "description": "这个类人生物就像一个燃烧过的灰岩。它用致命的火焰和强壮的爪子来攻击敌人，是恶魔军队的杂兵。",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "CLIMBS",
+      "PUSH_MON",
+      "GROUP_MORALE",
+      "REVIVES",
+      "REVIVES_HEALTHY"
+    ]
+  },
+  {
+    "id": "mon_pinky_revive",
+    "type": "MONSTER",
+    "name": {
+      "str": "伤痕累累的恶魔"
+    },
+    "species": [
+      "ABERRATION"
+    ],
+    "default_faction": "doom",
+    "symbol": "D",
+    "color": "red",
+    "harvest": "exempt",
+    "material": [
+      "flesh"
+    ],
+    "diff": 16,
+    "aggression": 60,
+    "morale": 80,
+    "speed": 95,
+    "melee_skill": 5,
+    "melee_dice": 7,
+    "melee_dice_sides": 4,
+    "melee_cut": 4,
+    "dodge": 7,
+    "armor_bash": 8,
+    "armor_cut": 4,
+    "armor_bullet": 3,
+    "armor_stab": 10,
+    "armor_fire": 8,
+    "armor_acid": 1,
+    "vision_day": 35,
+    "vision_night": 9,
+    "hp": 140,
+    "special_attacks": [
+      [
+        "hammer",
+        30
+      ],
+      [
+        "wound_minor",
+        30
+      ],
+      { "id": "grab_drag", "cooldown":10
+      },
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "accuracy": 4,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 15,
+            "armor_multiplier": 0.5
+          },
+          {
+            "damage_type": "bash",
+            "amount": 24,
+            "armor_multiplier": 0.5
+          }
+        ]
+      }
+    ],
+    "description": "一种粉红色皮肤的两足怪物，其下颚占其身体的的部分很不成比例。能够融入阴影中伏击受害者。",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "PUSH_MON",
+      "GROUP_BASH",
+      "NIGHT_INVISIBILITY",
+      "GROUP_MORALE",
+      "REVIVES",
+      "REVIVES_HEALTHY"
+    ]
+  },
+  {
+    "id": "mon_hell_knight_revive",
+    "type": "MONSTER",
+    "name": {
+      "str": "惨败的地狱骑士"
+    },
+    "species": [
+      "ABERRATION"
+    ],
+    "default_faction": "upper_doom",
+    "symbol": "K",
+    "color": "red_yellow",
+    "harvest": "zombie_leather",
+    "material": [
+      "flesh"
+    ],
+    "diff": 20,
+    "aggression": 100,
+    "morale": 100,
+    "speed": 90,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 16,
+    "melee_cut": 6,
+    "dodge": 3,
+    "armor_bash": 6,
+    "armor_cut": 10,
+    "armor_bullet": 6,
+    "armor_acid": 3,
+    "armor_fire": 10,
+    "vision_day": 50,
+    "vision_night": 10,
+    "luminance": 1,
+    "hp": 160,
+    "special_attacks": [
+      [
+        "SMASH",
+        60
+      ],
+      { "id": "grab", "cooldown": 40
+      },
+      {
+        "id": "hammer",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 22,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "cut",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "type": "gun",
+        "cooldown": 8,
+        "gun_type": "hell_plasma1",
+        "fake_str": 17,
+        "fake_dex": 9,
+        "fake_per": 10,
+        "fake_skills": [
+          [
+            "gun",
+            4
+          ],
+          [
+            "rifle",
+            2
+          ]
+        ],
+        "move_cost": 150,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "targeting_cost": 200,
+        "targeting_sound": "ROOAWNNT!!",
+        "targeting_volume": 40,
+        "ranges": [
+          [
+            2,
+            9,
+            "DEFAULT"
+          ]
+        ],
+        "description": "一个等离子球从骑士手中的等离子炮射出！"
+      }
+    ],
+    "description": "一个高耸的怪物，模糊地让人想起萨提尔。作为其领域的统治物种的一员，它被赋予行政控制权。它的等离子体爆炸是致命的。",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "PUSH_MON",
+      "REVIVES",
+      "REVIVES_HEALTHY"
+    ]
+  },
+  {
+    "id": "mon_cacodemon_revive",
+    "type": "MONSTER",
+    "name": {
+      "str": "可恶的恶作剧"
+    },
+    "species": [
+      "ABERRATION"
+    ],
+    "default_faction": "doom",
+    "symbol": "C",
+    "color": "i_red",
+    "harvest": "arachnid_tainted",
+    "material": [
+      "flesh"
+    ],
+    "diff": 20,
+    "aggression": 70,
+    "morale": 70,
+    "speed": 80,
+    "melee_skill": 6,
+    "melee_dice": 15,
+    "melee_dice_sides": 3,
+    "melee_cut": 10,
+    "dodge": 5,
+    "armor_bash": 8,
+    "armor_cut": 16,
+    "armor_bullet": 14,
+    "armor_stab": 10,
+    "armor_acid": 6,
+    "armor_fire": 6,
+    "vision_day": 40,
+    "vision_night": 12,
+    "luminance": 1,
+    "hp": 140,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 20,
+        "accuracy": 5,
+        "infection_chance": 11,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 38,
+            "armor_multiplier": 0.5
+          }
+        ]
+      },
+      {
+        "type": "gun",
+        "cooldown": 6,
+        "gun_type": "hell_plasma3",
+        "fake_str": 16,
+        "fake_dex": 5,
+        "fake_per": 8,
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "rifle",
+            6
+          ]
+        ],
+        "move_cost": 95,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "targeting_cost": 300,
+        "targeting_sound": "SKIIIEEEE",
+        "targeting_volume": 30,
+        "ranges": [
+          [
+            2,
+            21,
+            "DEFAULT"
+          ]
+        ],
+        "description": "当它张开嘴时，一股等离子体洪流喷涌而出！"
+      }
+    ],
+    "description": "一个有着邪恶牙齿的暗红色球体。当它从嘴里喷出等离子时，它的那只眼睛亮了起来。",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "FLIES",
+      "POISON",
+      "ARTHROPOD_BLOOD",
+      "BASHES",
+      "PUSH_MON",
+      "REVIVES",
+      "REVIVES_HEALTHY"
+    ]
+  },
+  {
+    "id": "mon_doom_churl_revive",
+    "type": "MONSTER",
+    "name": {
+      "str": "被奴役的丘勒"
+    },
+    "description": "一个被折磨的奴隶;一个还活着的幸存者，不断被挨打，挨饿，衣衫褴褛，挥舞着粗糙的武器。他们看起来饿得什么都能吃。",
+    "species": [
+      "MAMMAL"
+    ],
+    "default_faction": "doom",
+    "symbol": "@",
+    "color": "red",
+    "harvest": "human",
+    "material": [
+      "flesh"
+    ],
+    "diff": 10,
+    "hp": 65,
+    "aggression": 60,
+    "morale": 40,
+    "speed": 115,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 10,
+    "melee_cut": 6,
+    "dodge": 5,
+    "armor_bash": 5,
+    "armor_cut": 5,
+    "armor_bullet": 5,
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "spearmelee_pk",
+          95
+        ]
+      ]
+    },
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "id": "scratch",
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 8,
+            "armor_multiplier": 0.85
+          },
+          {
+            "damage_type": "bash",
+            "amount": 14,
+            "armor_multiplier": 0.85
+          }
+        ]
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "HUMAN",
+      "POISON",
+      "CLIMBS",
+      "REVIVES",
+      "REVIVES_HEALTHY"
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "FRIEND_DIED"
+    ]
+  }
+]

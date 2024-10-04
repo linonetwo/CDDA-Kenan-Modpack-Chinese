@@ -1,0 +1,237 @@
+[
+  {
+    "id": "22mag",
+    "copy-from": "sw22mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": ".22 弹匣"
+    },
+    "description": "一个标准的10发弹匣，用于.22口径的手枪。"
+  },
+  {
+    "id": "357_magazine",
+    "type": "MAGAZINE",
+    "name": {
+      "str": ".357 弹匣"
+    },
+    "description": "标准的.357半自动弹匣，弹容7发。",
+    "//": "A Coonan.357 weighs (approx.) 1383.5 empty and 1496.9 full.  If a single round weighs 8 (can't be less than a .38) and there are 7 in a mag then (8*7)+X==113.4 and so the mag itself must weigh 57.4",
+    "weight": "57 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "357mag"
+    ],
+    "capacity": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "357mag": 7
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "strike9mm_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "阿森纳“STRIKE ONE” 手枪9毫米弹匣"
+    },
+    "description": "勃朗宁HP的标准弹匣，可交错放置17发子弹。",
+    "weight": "70 g",
+    "volume": "250 ml",
+    "price": "43 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "9mm"
+    ],
+    "capacity": 17,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 17
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "sw9mm_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "S&W 9mm弹匣"
+    },
+    "description": "S&W 9毫米弹匣，14发双排弹匣。",
+    "weight": "70 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "9mm"
+    ],
+    "capacity": 14,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 14
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "hp9mm_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "9mm勃朗宁HP手枪弹匣"
+    },
+    "description": "勃朗宁HP的标准弹匣，可交错放置13发子弹。",
+    "weight": "70 g",
+    "volume": "250 ml",
+    "price": "25 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "9mm"
+    ],
+    "capacity": 13,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 13
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "ccw9mm_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "9mm弹匣，用于紧凑型手枪。"
+    },
+    "description": "紧凑型手枪的标准弹匣，可容纳7发子弹。",
+    "weight": "54 g",
+    "volume": "250 ml",
+    "price": "25 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "9mm"
+    ],
+    "capacity": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 7
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "stechkinmag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "斯捷奇金20发弹匣"
+    },
+    "description": "斯捷奇金APB的标准弹匣，可容纳20发子弹，双排双进。",
+    "weight": "80 g",
+    "volume": "250 ml",
+    "price": "65 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "9x18"
+    ],
+    "capacity": 20,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9x18": 20
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "vd01mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "VD-01圆柱形弹匣"
+    },
+    "description": "Voros Danuvia VD-01专用的33发管下螺旋弹匣。",
+    "weight": "450 g",
+    "volume": "250 ml",
+    "price": "49 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "9mm"
+    ],
+    "capacity": 33,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 33
+        }
+      }
+    ],
+    "reload_time": 110,
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  }
+]

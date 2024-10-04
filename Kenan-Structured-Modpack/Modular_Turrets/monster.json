@@ -1,0 +1,1048 @@
+[
+  {
+    "id": "base_turret",
+    "type": "MONSTER",
+    "name": {
+      "str": "全自动炮塔"
+    },
+    "default_faction": "defense_bot",
+    "species": [
+      "ROBOT"
+    ],
+    "hp": 30,
+    "speed": 100,
+    "material": [
+      "steel"
+    ],
+    "symbol": "t",
+    "looks_like": "mon_turret",
+    "aggression": 100,
+    "morale": 100,
+    "armor_bash": 14,
+    "armor_cut": 16,
+    "armor_bullet": 14,
+    "armor_acid": 14,
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "death_drops": "broken_robots",
+    "flags": [
+      "SEES",
+      "NOHEAD",
+      "ELECTRONIC",
+      "IMMOBILE",
+      "NO_BREATHE",
+      "DROPS_AMMO"
+    ]
+  },
+  {
+    "id": "mon_turret_disarmed",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "防御炮塔（无武装）"
+    },
+    "symbol": "t",
+    "description": "通用原子公司制造的 TX 系列炮塔基座，这台体积小巧的锭形的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，需要安装一个内置枪械模块才会攻击敌人。",
+    "default_faction": "defense_bot",
+    "diff": 14,
+    "color": "light_gray",
+    "luminance": 200,
+    "revert_to_itype": "bot_turret_disarmed"
+  },
+  {
+    "id": "mon_milturret_disarmed",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "军用炮塔（无武装）"
+    },
+    "symbol": "t",
+    "description": "Leadworks有限公司制造的 TX 系列炮塔基座，这台军用型号的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，需要安装一个内置枪械模块才会攻击敌人。",
+    "color": "light_gray",
+    "luminance": 200,
+    "revert_to_itype": "bot_milturret_disarmed"
+  },
+  {
+    "id": "mon_advturret_disarmed",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "高级炮塔（无武装）"
+    },
+    "symbol": "t",
+    "description": "DoubleTech公司制造的 T 系列炮塔基座，这台技术最复杂的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，需要安装一个内置枪械模块才会攻击敌人。",
+    "default_faction": "defense_bot",
+    "color": "light_gray",
+    "luminance": 200,
+    "revert_to_itype": "bot_advturret_disarmed"
+  },
+  {
+    "id": "mon_turret_9mm",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "9mm口径炮塔"
+    },
+    "symbol": "t",
+    "description": "通用原子公司制造的 TX-1 “守护者”型炮塔，这台体积小巧的锭形的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置9mm口径冲锋枪可以360°无死角移动。",
+    "default_faction": "defense_bot",
+    "diff": 10,
+    "color": "light_gray",
+    "luminance": 200,
+    "revert_to_itype": "bot_turret_9mm",
+    "starting_ammo": {
+      "9mm": 100
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "gun_type": "robogun_9mm",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "smg",
+            2
+          ]
+        ],
+        "fake_dex": 9,
+        "ranges": [
+          [
+            0,
+            2,
+            "BURST"
+          ],
+          [
+            3,
+            6,
+            "AUTO"
+          ],
+          [
+            7,
+            12,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_turret_shot",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "霰弹枪炮塔"
+    },
+    "symbol": "t",
+    "description": "通用原子公司制造的 TX-4 “守护者”型炮塔，这台体积小巧的锭形的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置12号口径霰弹枪可以360°无死角移动。",
+    "default_faction": "defense_bot",
+    "diff": 10,
+    "color": "red",
+    "luminance": 200,
+    "revert_to_itype": "bot_turret_shot",
+    "starting_ammo": {
+      "shot_00": 75
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "gun_type": "robogun_shot",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "shotgun",
+            2
+          ]
+        ],
+        "fake_dex": 9,
+        "ranges": [
+          [
+            0,
+            8,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_turret_teargas",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "防暴炮塔"
+    },
+    "symbol": "t",
+    "description": "通用原子公司制造的 TZ-1a “监狱长”型炮塔，这台体积小巧的锭形的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置40mm催泪瓦斯弹发射器可以360°无死角移动。",
+    "default_faction": "cop_bot",
+    "diff": 10,
+    "color": "blue",
+    "luminance": 300,
+    "revert_to_itype": "bot_turret_teargas",
+    "starting_ammo": {
+      "40x46mm_m651": 25
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "gun_type": "robogun_teargas",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "launcher",
+            2
+          ]
+        ],
+        "fake_dex": 9,
+        "ranges": [
+          [
+            0,
+            6,
+            "DEFAULT"
+          ],
+          [
+            7,
+            12,
+            "BURST"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_turret_beanbag",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "防暴炮塔"
+    },
+    "symbol": "t",
+    "description": "通用原子公司制造的 TZ-1b “平暴者”型炮塔，这台体积小巧的锭形的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置40mm沙包榴弹发射器可以360°无死角移动。",
+    "default_faction": "cop_bot",
+    "diff": 5,
+    "color": "blue",
+    "luminance": 300,
+    "revert_to_itype": "bot_turret_beanbag",
+    "starting_ammo": {
+      "40x46mm_m1006": 25
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "gun_type": "robogun_beanbag",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "launcher",
+            2
+          ]
+        ],
+        "fake_dex": 9,
+        "ranges": [
+          [
+            0,
+            8,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_milturret_556",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "5.56mm口径炮塔"
+    },
+    "symbol": "t",
+    "description": "Leadworks有限公司制造的 TX-32L “哨兵”型炮塔，这台军用型号的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置5.56mm口径步枪可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "green",
+    "luminance": 200,
+    "revert_to_itype": "bot_milturret_556",
+    "starting_ammo": {
+      "556": 100
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "gun_type": "robogun_556",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            4,
+            "BURST"
+          ],
+          [
+            4,
+            8,
+            "AUTO"
+          ],
+          [
+            9,
+            16,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -1,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_milturret_308",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "7.62mm口径炮塔"
+    },
+    "symbol": "t",
+    "description": "Leadworks有限公司制造的 TX-32H “哨兵”型炮塔，这台军用型号的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置7.62mm口径步枪可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "green",
+    "luminance": 200,
+    "revert_to_itype": "bot_milturret_308",
+    "starting_ammo": {
+      "762_51": 75
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "gun_type": "robogun_308",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            4,
+            "BURST"
+          ],
+          [
+            4,
+            8,
+            "AUTO"
+          ],
+          [
+            9,
+            18,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -1,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_milturret_50bmg",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": ".50 口径炮塔"
+    },
+    "symbol": "t",
+    "description": "Leadworks有限公司制造的 TX-13 “哨兵”型炮塔，这台军用型号的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置 .50 口径机枪可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 30,
+    "color": "green",
+    "luminance": 200,
+    "revert_to_itype": "bot_milturret_50bmg",
+    "starting_ammo": {
+      "50bmg": 75
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 3,
+        "move_cost": 150,
+        "gun_type": "robogun_50bmg",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            5,
+            "DEFAULT"
+          ],
+          [
+            6,
+            10,
+            "BURST"
+          ],
+          [
+            11,
+            20,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -1,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_milturret_8x40mm",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "8x40mm 无壳弹炮塔"
+    },
+    "symbol": "t",
+    "description": "Leadworks有限公司制造的 TX-01A “看守者”型炮塔，这台军用型号的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置8x40mm无壳弹步枪可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "green",
+    "luminance": 200,
+    "revert_to_itype": "bot_milturret_8x40mm",
+    "starting_ammo": {
+      "8mm_fmj": 150
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "gun_type": "robogun_8x40mm",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            6
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            5,
+            "BURST"
+          ],
+          [
+            6,
+            10,
+            "AUTO"
+          ],
+          [
+            11,
+            24,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -1,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_milturret_needle",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "镖形弹炮塔"
+    },
+    "symbol": "t",
+    "description": "Leadworks有限公司制造的 TN-7 “岗哨”型炮塔，这台军用型号的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置 5mm 镖形弹步枪可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "green",
+    "luminance": 200,
+    "revert_to_itype": "bot_milturret_needle",
+    "starting_ammo": {
+      "5x50dart": 150
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "gun_type": "robogun_needle",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            4,
+            "BURST"
+          ],
+          [
+            4,
+            8,
+            "AUTO"
+          ],
+          [
+            9,
+            16,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -1,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_milturret_40mm",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "40mm榴弹炮塔"
+    },
+    "symbol": "t",
+    "description": "Leadworks有限公司制造的 TG-7 “岗哨”型炮塔，这台军用型号的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置40mm榴弹发射器可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "red",
+    "luminance": 200,
+    "revert_to_itype": "bot_milturret_40mm",
+    "starting_ammo": {
+      "40x46mm_m433": 15
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 3,
+        "gun_type": "robogun_40mm",
+        "fake_skills": [
+          [
+            "gun",
+            4
+          ],
+          [
+            "launcher",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            6,
+            30,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 200,
+        "targeting_timeout_extend": -10,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_milturret_flame",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "喷火炮塔"
+    },
+    "symbol": "t",
+    "description": "Leadworks有限公司制造的 TF-7 “岗哨”型炮塔，这台军用型号的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置火焰喷射器可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "red",
+    "luminance": 200,
+    "revert_to_itype": "bot_milturret_flame",
+    "starting_ammo": {
+      "napalm": 100
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "gun_type": "robogun_flame",
+        "fake_skills": [
+          [
+            "gun",
+            4
+          ],
+          [
+            "launcher",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            10,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 200,
+        "targeting_timeout_extend": -10,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ],
+    "extend": {
+      "flags": [
+        "FIREPROOF"
+      ]
+    }
+  },
+  {
+    "id": "mon_advturret_laser",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "激光炮塔"
+    },
+    "symbol": "t",
+    "description": "DoubleTech公司制造的 T-L3 “闪烁体”型炮塔，这台技术最复杂的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置激光武器可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "yellow",
+    "luminance": 300,
+    "revert_to_itype": "bot_advturret_laser",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 4,
+        "gun_type": "robogun_laser",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            8,
+            "AUTO"
+          ],
+          [
+            8,
+            16,
+            "BURST"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -5,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 20
+      }
+    ]
+  },
+  {
+    "id": "mon_advturret_acid",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "喷酸炮塔"
+    },
+    "symbol": "t",
+    "description": "DoubleTech公司制造的 T-A3 “分解者”型炮塔，这台技术最复杂的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置酸液喷射器可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 10,
+    "color": "light_green",
+    "luminance": 300,
+    "revert_to_itype": "bot_advturret_acid",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "move_cost": 50,
+        "gun_type": "robogun_acid",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "fake_per": 10,
+        "require_targeting_player": false,
+        "ranges": [
+          [
+            0,
+            20,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_advturret_plasma",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "等离子炮塔"
+    },
+    "symbol": "t",
+    "description": "DoubleTech公司制造的 T-P3 “炽炎”型炮塔，这台技术最复杂的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置等离子发射器可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "magenta",
+    "luminance": 300,
+    "revert_to_itype": "bot_advturret_plasma",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 3,
+        "gun_type": "robogun_plasma",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            4,
+            16,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 100,
+        "laser_lock": true,
+        "targeting_timeout_extend": -20,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ],
+    "extend": {
+      "flags": [
+        "FIREPROOF"
+      ]
+    }
+  },
+  {
+    "id": "mon_advturret_rail",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "轨道炮炮塔"
+    },
+    "symbol": "t",
+    "description": "DoubleTech公司制造的 T-R3 “劲弩”型炮塔，这台先进的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置的轨道炮可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 30,
+    "color": "magenta",
+    "luminance": 300,
+    "revert_to_itype": "bot_advturret_rail",
+    "starting_ammo": {
+      "steel_rail": 25
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 4,
+        "gun_type": "robogun_rail",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            18,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "laser_lock": true,
+        "targeting_cost": 200,
+        "targeting_timeout_extend": -10,
+        "targeting_sound": "\"Hostile detected.\"",
+        "targeting_volume": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_advturret_lightning",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "先进放电炮塔"
+    },
+    "symbol": "t",
+    "description": "DoubleTech公司制造的 T-E3 “雷击”型炮塔，这台技术最复杂的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置放电装置可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 20,
+    "color": "yellow",
+    "luminance": 300,
+    "revert_to_itype": "bot_advturret_lightning",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 1,
+        "gun_type": "robogun_lightning",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            12,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_player": true,
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -1,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ],
+    "extend": {
+      "flags": [
+        "ELECTRIC"
+      ]
+    }
+  },
+  {
+    "id": "mon_advturret_emp",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "EMP炮塔"
+    },
+    "symbol": "t",
+    "description": "DoubleTech公司制造的 T-EMP3 “日冕”型炮塔，这台技术最复杂的自动炮塔使用目前最先进的ATR自动目标识别系统来动态识别敌我目标，炮塔上内置EMP发射器可以360°无死角移动。",
+    "default_faction": "military",
+    "diff": 10,
+    "color": "yellow",
+    "luminance": 300,
+    "revert_to_itype": "bot_advturret_emp",
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "gun_type": "robogun_emp",
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "rifle",
+            5
+          ]
+        ],
+        "fake_dex": 10,
+        "ranges": [
+          [
+            0,
+            4,
+            "BURST"
+          ],
+          [
+            4,
+            8,
+            "AUTO"
+          ],
+          [
+            9,
+            16,
+            "DEFAULT"
+          ]
+        ],
+        "require_targeting_npc": true,
+        "require_targeting_monster": true,
+        "targeting_cost": 10,
+        "targeting_timeout_extend": -1,
+        "targeting_sound": "\"Hostile Detected.\"",
+        "targeting_volume": 10
+      }
+    ],
+    "extend": {
+      "flags": [
+        "ELECTRIC"
+      ]
+    }
+  },
+  {
+    "id": "mon_turret_gnome",
+    "type": "MONSTER",
+    "copy-from": "base_turret",
+    "name": {
+      "str": "武装园艺机器人"
+    },
+    "looks_like": "mon_kreck",
+    "symbol": "g",
+    "description": "一个园艺机器人，安静而且毫无威胁。",
+    "default_faction": "defense_bot",
+    "diff": 10,
+    "color": "red",
+    "revert_to_itype": "bot_turret_gnome",
+    "starting_ammo": {
+      "9mm": 100
+    },
+    "special_attacks": [
+      {
+        "type": "gun",
+        "cooldown": 2,
+        "gun_type": "robogun_9mm",
+        "fake_skills": [
+          [
+            "gun",
+            2
+          ],
+          [
+            "smg",
+            2
+          ]
+        ],
+        "fake_dex": 9,
+        "ranges": [
+          [
+            0,
+            2,
+            "BURST"
+          ],
+          [
+            3,
+            6,
+            "AUTO"
+          ],
+          [
+            7,
+            12,
+            "DEFAULT"
+          ]
+        ]
+      }
+    ],
+    "death_drops": {
+      "groups": [
+        [
+          "broken_robots",
+          10
+        ],
+        [
+          "broken_ceramics",
+          10
+        ]
+      ]
+    }
+  }
+]

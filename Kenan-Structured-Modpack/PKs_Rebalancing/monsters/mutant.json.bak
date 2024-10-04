@@ -1,0 +1,2131 @@
+[
+  {
+    "id": "mon_razorclaw",
+    "type": "MONSTER",
+    "name": {
+      "str": "利爪怪"
+    },
+    "copy-from": "mon_razorclaw",
+    "path_settings": {
+      "max_dist": 12
+    },
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "flu_zed",
+        "duration": 14400,
+        "chance": 5
+      }
+    ],
+    "special_attacks": [
+      [
+        "SHRIEK_ALERT",
+        6
+      ],
+      [
+        "SHRIEK_STUN",
+        1
+      ],
+      [
+        "scratch",
+        20
+      ],
+      [
+        "wound_minor",
+        15
+      ]
+    ]
+  },
+  {
+    "id": "mon_dermatik_larva",
+    "type": "MONSTER",
+    "copy-from": "mon_dermatik_larva",
+    "melee_skill": 1,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ],
+    "vision_day": 5,
+    "vision_night": 5,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "infection_chance": 8
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "CAN_DIG",
+      "LARVA"
+    ]
+  },
+  {
+    "id": "mon_dermatik",
+    "type": "MONSTER",
+    "copy-from": "mon_dermatik",
+    "hp": 85,
+    "speed": 125,
+    "aggression": 0,
+    "morale": 60,
+    "melee_skill": 7,
+    "melee_dice": 1,
+    "melee_dice_sides": 7,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 4
+      },
+      {
+        "damage_type": "acid",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 3,
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 15
+      }
+    ],
+    "armor_bash": 2,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 15,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "DERMATIK",
+        20
+      ],
+      [
+        "wound_minor",
+        30
+      ]
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK",
+      "STALK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "FLIES",
+      "CHITIN"
+    ]
+  },
+  {
+    "id": "mon_coyote_wolf",
+    "type": "MONSTER",
+    "copy-from": "mon_coyote_wolf",
+    "hp": 25,
+    "upgrades": {
+      "half_life": 19,
+      "into": "mon_coyote_wolf_zerg"
+    }
+  },
+  {
+    "id": "mon_sewer_snake",
+    "type": "MONSTER",
+    "copy-from": "mon_sewer_snake",
+    "description": "这是一种具有攻击性的变异盲蛇，地下的生活赋予了其淡黄色的躯体。这种生物生活在地下，并因为其群居在下水道的习性，而得名。",
+    "default_faction": "mutant_omnivore",
+    "attack_effs": [
+      {
+        "id": "badpoison",
+        "duration": 900
+      },
+      {
+        "id": "skunk_spray",
+        "duration": 3000
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 120
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "VENOM",
+      "SWIMS",
+      "LEATHER",
+      "BONES"
+    ]
+  },
+  {
+    "id": "mon_sewer_fish",
+    "type": "MONSTER",
+    "copy-from": "mon_sewer_fish",
+    "default_faction": "mutant_predator",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      }
+    ]
+  },
+  {
+    "id": "mon_sludge_crawler",
+    "type": "MONSTER",
+    "copy-from": "mon_sludge_crawler",
+    "default_faction": "mutant_omnivore",
+    "symbol": "S",
+    "color": "light_gray",
+    "aggression": 50,
+    "morale": 80,
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      }
+    ],
+    "special_attacks": [
+      [
+        "sliming",
+        30
+      ]
+    ],
+    "emit_fields": [
+      "emit_sludge"
+    ],
+    "regenerates": 1,
+    "flags": [
+      "NOHEAD",
+      "SEES",
+      "POISON",
+      "HEARS",
+      "SMELLS",
+      "SLUDGEPROOF",
+      "SWIMS",
+      "FLAMMABLE",
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "mon_sludge_crawler_queen",
+    "type": "MONSTER",
+    "copy-from": "mon_sludge_crawler",
+    "name": {
+      "str": "泥泞蛞蝓"
+    },
+    "description": "一种像蛞蝓的大动物，长9英尺，宽如冰箱。它黑色的身体在地上渗出时闪闪发光。眼柄偶尔会从油团中挤出来，四处张望。这个大妈妈看起来很重要。",
+    "default_faction": "mutant_omnivore",
+    "species": [
+      "MUTANT"
+    ],
+    "diff": 13,
+    "hp": 420,
+    "speed": 60,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "S",
+    "color": "light_gray",
+    "looks_like": "mon_gelatin",
+    "aggression": 40,
+    "morale": 90,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 6
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 50
+      }
+    ],
+    "special_attacks": [
+      [
+        "sliming",
+        30
+      ]
+    ],
+    "emit_fields": [
+      "emit_sludge"
+    ],
+    "dodge": 5,
+    "armor_bash": 8,
+    "vision_day": 10,
+    "vision_night": 30,
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "regenerates": 1,
+    "flags": [
+      "NOHEAD",
+      "SEES",
+      "POISON",
+      "HEARS",
+      "SMELLS",
+      "SLUDGEPROOF",
+      "SWIMS",
+      "FLAMMABLE",
+      "NOGIB",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_chud",
+    "type": "MONSTER",
+    "copy-from": "mon_chud",
+    "melee_skill": 6,
+    "melee_dice": 1,
+    "melee_dice_sides": 8,
+    "melee_cut": 1,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ],
+      { "id": "grab", "cooldown": 30
+      },
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 20,
+        "infection_chance": 30
+      }
+    ]
+  },
+  {
+    "id": "mon_one_eye",
+    "type": "MONSTER",
+    "copy-from": "mon_one_eye",
+    "default_faction": "mutant_omnivore",
+    "melee_skill": 9,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 1,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ],
+      { "id": "grab", "cooldown": 30
+      },
+      [
+        "SMASH",
+        30
+      ],
+      [
+        "scratch",
+        60
+      ],
+      [
+        "hammer",
+        15
+      ]
+    ]
+  },
+  {
+    "id": "mon_crawler",
+    "type": "MONSTER",
+    "copy-from": "mon_crawler",
+    "default_faction": "mutant_predator",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      }
+    ],
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ]
+    ]
+  },
+  {
+    "id": "mon_dark_wyrm",
+    "type": "MONSTER",
+    "copy-from": "mon_dark_wyrm",
+    "default_faction": "mutant",
+    "melee_skill": 8,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 8
+      }
+    ],
+    "melee_cut": 6,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "vision_day": 2,
+    "vision_night": 2,
+    "emit_fields": [
+      "emit_acid_small",
+      "emit_acid_trail_slow"
+    ],
+    "special_attacks": [
+      [
+        "ACID",
+        15
+      ],
+      [
+        "hammer",
+        30
+      ]
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      80
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "GOODHEARING",
+      "CAN_DIG",
+      "BASHES",
+      "BORES",
+      "POISON",
+      "SUNDEATH",
+      "ACIDPROOF",
+      "LEATHER"
+    ]
+  },
+  {
+    "id": "mon_amigara_horror",
+    "type": "MONSTER",
+    "copy-from": "mon_amigara_horror",
+    "default_faction": "mutant",
+    "hp": 200,
+    "melee_skill": 15,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_damage": [
+      {
+        "damage_type": "biological",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 0,
+    "dodge": 3,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 50
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 100
+      }
+    ],
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "emit_fields": [
+      "emit_fatigue"
+    ],
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ],
+      { "type": "spell", "spell_data": { "id": "fear_paralyze" }, "monster_message": "", "cooldown":7
+      },
+      { "id": "grab_drag", "cooldown":30
+      },
+      { "id": "stretch_attack", "cooldown":5
+      },
+      {
+        "id": "hammer",
+        "cooldown": 20,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 9,
+            "armor_multiplier": 0.85
+          },
+          {
+            "damage_type": "biological",
+            "amount": 1
+          }
+        ]
+      }
+    ],
+    "flags": [
+      "SMELLS",
+      "HEARS",
+      "SEES",
+      "STUMBLES",
+      "HARDTOSHOOT",
+      "HUMAN",
+      "LEATHER",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS"
+    ]
+  },
+  {
+    "id": "mon_thing_head",
+    "type": "MONSTER",
+    "name": {
+      "str": "狗头"
+    },
+    "description": "一个狗的头，黑色的软泥和触手从它那撕裂开的伤口中不断地流出。",
+    "default_faction": "mutant",
+    "species": [
+      "NETHER"
+    ],
+    "diff": 16,
+    "hp": 60,
+    "speed": 60,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_tiny",
+    "symbol": "h",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_cut": 1,
+    "attack_effs": [
+      {
+        "id": "thing_poison",
+        "duration": 50
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 100
+      }
+    ],
+    "dodge": 2,
+    "vision_night": 15,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 15
+      },
+      { "id": "tentacle", "cooldown":5
+      },
+      [
+        "VINE",
+        10
+      ]
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS"
+    ]
+  },
+  {
+    "id": "mon_thing_spider",
+    "type": "MONSTER",
+    "name": {
+      "str": "十字头"
+    },
+    "description": "一个畸形的头颅，上面长有十条细长的肢体，那眼眶中还有一双眼睛在看着你。",
+    "default_faction": "mutant",
+    "species": [
+      "NETHER"
+    ],
+    "diff": 16,
+    "hp": 40,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_tiny",
+    "symbol": "s",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 0,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 2
+      },
+      {
+        "damage_type": "acid",
+        "amount": 4
+      },
+      {
+        "damage_type": "biological",
+        "amount": 1
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "thing_poison",
+        "duration": 50
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 100
+      }
+    ],
+    "dodge": 2,
+    "vision_night": 10,
+    "special_attacks": [
+      [
+        "LUNGE",
+        60
+      ],
+      [
+        "VINE",
+        10
+      ],
+      {
+        "type": "leap",
+        "cooldown": 7,
+        "max_range": 2
+      }
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS"
+    ]
+  },
+  {
+    "id": "mon_dog_thing",
+    "type": "MONSTER",
+    "copy-from": "mon_dog_thing",
+    "default_faction": "mutant_predator",
+    "special_attacks": [
+      [
+        "DOGTHING",
+        80
+      ],
+      [
+        "DARKMAN",
+        5
+      ]
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "ANIMAL",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "FUR",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "mon_headless_dog_thing",
+    "type": "MONSTER",
+    "name": {
+      "str": "触手变异犬"
+    },
+    "copy-from": "mon_headless_dog_thing",
+    "description": "狗的身上有大量的粘液，黑色的触角从头部生长出来。",
+    "default_faction": "mutant_predator",
+    "diff": 18,
+    "hp": 160,
+    "speed": 140,
+    "melee_skill": 8,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_cut": 4,
+    "attack_effs": [
+      {
+        "id": "thing_poison",
+        "duration": 100
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 100
+      }
+    ],
+    "dodge": 5,
+    "special_attacks": [
+      { "id": "tentacle", "cooldown":5
+      },
+      [
+        "GRENADIER",
+        5
+      ]
+    ],
+    "starting_ammo": {
+      "bot_thing_head": 3,
+      "bot_thing_spider": 3
+    },
+    "death_function": {
+      "effect": {
+        "id": "death_thing",
+        "hit_self": true
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s emerges!"
+    },
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "BASHES"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "FRIEND_DIED",
+      "SOUND"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED"
+    ]
+  },
+  {
+    "id": "mon_thing",
+    "type": "MONSTER",
+    "copy-from": "mon_thing",
+    "default_faction": "mutant_predator",
+    "hp": 180,
+    "speed": 120,
+    "melee_skill": 12,
+    "melee_dice": 5,
+    "melee_dice_sides": 6,
+    "melee_cut": 4,
+    "attack_effs": [
+      {
+        "id": "thing_poison",
+        "duration": 200
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 100
+      }
+    ],
+    "dodge": 3,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "armor_bash": 12,
+    "armor_acid": 15,
+    "vision_night": 10,
+    "special_attacks": [
+      { "id": "tentacle", "cooldown":5
+      },
+      [
+        "GRENADIER",
+        5
+      ]
+    ],
+    "starting_ammo": {
+      "bot_thing_head": 4,
+      "bot_thing_spider": 4
+    },
+    "death_function": {
+      "effect": {
+        "id": "death_darkman"
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    }
+  },
+  {
+    "id": "mon_human_snail",
+    "type": "MONSTER",
+    "copy-from": "mon_human_snail",
+    "default_faction": "mutant_omnivore",
+    "hp": 80,
+    "speed": 60,
+    "aggression": 0,
+    "morale": 30,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 2
+      }
+    ],
+    "melee_cut": 0,
+    "dodge": 0,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 40
+      }
+    ],
+    "armor_bash": 6,
+    "armor_cut": 12,
+    "armor_bullet": 8,
+    "vision_day": 5,
+    "vision_night": 20,
+    "emit_fields": [
+      "emit_slime_trail"
+    ],
+    "special_attacks": [
+      [
+        "ACID",
+        20
+      ],
+      [
+        "impale",
+        40
+      ],
+      [
+        "numbing_poison",
+        30
+      ],
+      [
+        "sliming",
+        60
+      ]
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT",
+      "FRIEND_DIED"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "PATH_AVOID_DANGER_2",
+      "HUMAN",
+      "ACIDPROOF",
+      "ACID_BLOOD"
+    ]
+  },
+  {
+    "id": "mon_twisted_body",
+    "type": "MONSTER",
+    "copy-from": "mon_twisted_body",
+    "description": "一个人的身体，但四肢不可能扭曲。它迅速地爬来爬去，发出可怕的刺耳的呻吟声。",
+    "default_faction": "mutant",
+    "hp": 60,
+    "speed": 110,
+    "aggression": 0,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 3,
+    "dodge": 6,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 50
+      }
+    ],
+    "vision_day": 40,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "wound_minor",
+        40
+      ],
+      [
+        "scratch",
+        20
+      ],
+      [
+        "slash",
+        40
+      ]
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK",
+      "FRIEND_ATTACKED"
+    ],
+    "regenerates": 1,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "POISON",
+      "HUMAN",
+      "LEATHER",
+      "CLIMBS",
+      "SWARMS"
+    ]
+  },
+  {
+    "id": "mon_jabberwock",
+    "type": "MONSTER",
+    "copy-from": "mon_jabberwock",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "special_attacks": [
+      [
+        "FLESH_GOLEM",
+        10
+      ],
+      { "type": "spell", "spell_data": { "id": "fear_paralyze" }, "monster_message": "", "cooldown":40
+      },
+      {
+        "id": "scratch",
+        "cooldown": 20,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 14,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "stab",
+            "amount": 6,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "id": "slash",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 16,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ],
+    "upgrades": {
+      "half_life": 28,
+      "into": "mon_jabberwock_pk"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "DESTROYS",
+      "ATTACKMON",
+      "FUR",
+      "LEATHER",
+      "BONES",
+      "POISON",
+      "BONES",
+      "FAT",
+      "REVIVES",
+      "NO_NECRO"
+    ]
+  },
+  {
+    "id": "mon_jabberwock_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "伽卜沃克"
+    },
+    "description": "来自人类和其他生物的腐烂的身体部分融合在一起，形成了这种畸形的肉体。所有人头的眼睛迅速地四处飞舞，嘴巴发出一片呻吟的尖叫声。它来找你了",
+    "default_faction": "jabberwock",
+    "species": [
+      "ABERRATION"
+    ],
+    "diff": 50,
+    "hp": 600,
+    "speed": 140,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "J",
+    "color": "dark_gray_red",
+    "looks_like": "mon_jabberwock",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 13,
+    "melee_dice": 5,
+    "melee_dice_sides": 9,
+    "melee_cut": 10,
+    "dodge": 5,
+    "armor_bash": 18,
+    "armor_cut": 12,
+    "armor_bullet": 8,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 40
+      }
+    ],
+    "vision_day": 50,
+    "vision_night": 5,
+    "special_attacks": [
+      [
+        "FLESH_GOLEM",
+        5
+      ],
+      [
+        "SMASH",
+        50
+      ],
+      { "type": "spell", "spell_data": { "id": "fear_paralyze" }, "monster_message": "", "cooldown":3
+      },
+      {
+        "id": "slash",
+        "cooldown": 20,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 20,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "stab",
+            "amount": 12,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ],
+    "harvest": "jabberwock",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "DESTROYS",
+      "ATTACKMON",
+      "FUR",
+      "LEATHER",
+      "BONES",
+      "POISON",
+      "BONES",
+      "FAT",
+      "REVIVES",
+      "NO_NECRO"
+    ]
+  },
+  {
+    "id": "mon_bat_vampire",
+    "type": "MONSTER",
+    "name": {
+      "str": "吸血蝙蝠"
+    },
+    "description": "一种变异的蝙蝠，有着奇怪形状的鼻子。当它的团队把猎物打晕后，它用牙齿在猎物身上咬出一个洞，用细长的舌头迅速吸干猎物的血液。",
+    "default_faction": "mutant_small",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "ABERRATION"
+    ],
+    "diff": 12,
+    "hp": 25,
+    "speed": 170,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_small_fur",
+    "symbol": "w",
+    "color": "brown_red",
+    "looks_like": "mon_bat",
+    "aggression": -5,
+    "morale": 20,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 2,
+    "melee_damage": [
+      {
+        "damage_type": "biological",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 4,
+    "dodge": 3,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "armor_bash": 6,
+    "vision_day": 10,
+    "vision_night": 20,
+    "path_settings": {
+      "max_dist": 20
+    },
+    "special_attacks": [
+      [
+        "wound_minor",
+        20
+      ],
+      [
+        "numbing_poison",
+        5
+      ],
+      [
+        "SHRIEK_ALERT",
+        30
+      ],
+      [
+        "SHRIEK_STUN",
+        1
+      ],
+      {
+        "type": "bite",
+        "cooldown": 3,
+        "infection_chance": 12
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK",
+      "FIRE",
+      "SOUND"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED"
+    ],
+    "placate_triggers": [
+      "SOUND"
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "GOODHEARING",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "FLIES",
+      "ANIMAL",
+      "BONES",
+      "LEATHER",
+      "HARDTOSHOOT",
+      "SWARMS",
+      "HIT_AND_RUN",
+      "GROUP_MORALE"
+    ]
+  },
+  {
+    "id": "mon_coyote_wolf_zerg",
+    "type": "MONSTER",
+    "name": {
+      "str": "镰刀郊狼"
+    },
+    "description": "它看起来像一只普通的棕色土狼，身体侧边有黑色的条纹，除了在两腿之间有一个可以折叠的肌肉肢体，末端有一个镰刀状的突出物。",
+    "default_faction": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 16,
+    "hp": 45,
+    "speed": 145,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_fur",
+    "symbol": "d",
+    "color": "brown_white",
+    "looks_like": "mon_wolf",
+    "aggression": 0,
+    "morale": 15,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 12,
+    "dodge": 5,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "armor_bash": 3,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 40,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 30
+    },
+    "special_attacks": [
+      [
+        "wound_minor",
+        40
+      ],
+      { "id": "longswipe", "cooldown":20
+      },
+      [
+        "slash",
+        20
+      ],
+      [
+        "impale",
+        50
+      ],
+      {
+        "type": "leap",
+        "cooldown": 20,
+        "max_range": 3,
+        "min_consider_range": 2,
+        "max_consider_range": 7,
+        "allow_no_target": false
+      }
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "ANIMAL",
+      "WARM",
+      "FUR",
+      "KEENNOSE",
+      "BONES",
+      "FAT",
+      "SWARMS",
+      "GROUP_MORALE"
+    ]
+  },
+  {
+    "id": "mon_raphael",
+    "type": "MONSTER",
+    "name": {
+      "str": "乌龟人"
+    },
+    "description": "一个十分强壮的绿色类人生物，皮肤肿胀，中间和背部长有一个坚硬的棕色壳。虽然肌肉发达，动作敏捷，但它的皮肤和龟壳都闪着令人作呕的光泽。它戴着一个粗糙的红色眼罩，上面有两个破洞，可以看见东西。",
+    "default_faction": "mutant",
+    "species": [
+      "REPTILE"
+    ],
+    "diff": 28,
+    "hp": 200,
+    "speed": 125,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "arachnid",
+    "symbol": "T",
+    "color": "red_green",
+    "aggression": 6,
+    "morale": 95,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 7,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 15
+      }
+    ],
+    "dodge": 5,
+    "armor_bash": 6,
+    "armor_stab": 8,
+    "armor_cut": 14,
+    "armor_bullet": 10,
+    "armor_acid": 5,
+    "armor_fire": 8,
+    "vision_day": 40,
+    "vision_night": 15,
+    "special_attacks": [
+      {
+        "id": "slash",
+        "cooldown": 20,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 18,
+            "armor_multiplier": 0.75
+          },
+          {
+            "damage_type": "stab",
+            "amount": 4,
+            "armor_multiplier": 0.75
+          }
+        ]
+      },
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 2
+      },
+      {
+        "id": "impale",
+        "cooldown": 20,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 18,
+            "armor_multiplier": 0.75
+          },
+          {
+            "damage_type": "cut",
+            "amount": 6,
+            "armor_multiplier": 0.75
+          }
+        ]
+      },
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 2
+      }
+    ],
+    "death_drops": "mon_zombie_hulk_death_drops",
+    "regen_morale": true,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "BASHES",
+      "GROUP_BASH",
+      "HUMAN",
+      "BONES",
+      "GROUP_MORALE",
+      "PATH_AVOID_DANGER_1",
+      "HIT_AND_RUN"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "FIRE",
+      "HURT"
+    ]
+  },
+  {
+    "id": "mon_donatello",
+    "type": "MONSTER",
+    "name": {
+      "str": "乌龟人"
+    },
+    "copy-from": "mon_raphael",
+    "hp": 160,
+    "speed": 110,
+    "color": "pink_green",
+    "aggression": 0,
+    "morale": 80,
+    "melee_skill": 7,
+    "melee_dice": 1,
+    "melee_dice_sides": 16,
+    "melee_cut": 0,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 1
+      }
+    ],
+    "dodge": 6,
+    "special_attacks": [
+      [
+        "SMASH",
+        30
+      ],
+      [
+        "BIO_OP_TAKEDOWN",
+        30
+      ],
+      [
+        "SCIENCE",
+        20
+      ],
+      {
+        "type": "gun",
+        "cooldown": 5,
+        "move_cost": 200,
+        "gun_type": "tihar",
+        "ammo_type": "pebble",
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "fake_str": 14,
+        "fake_dex": 16,
+        "fake_per": 10,
+        "max_ammo": 1000,
+        "ranges": [
+          [
+            0,
+            3,
+            "AUTO"
+          ]
+        ],
+        "targeting_cost": 125,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "description": "带着紫色眼罩的忍者神龟冲过来了！",
+        "no_ammo_sound": "科瓦邦加！"
+      }
+    ],
+    "starting_ammo": {
+      "pebble": 1000
+    },
+    "regen_morale": true,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "BASHES",
+      "GROUP_BASH",
+      "HUMAN",
+      "BONES",
+      "GROUP_MORALE",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "FIRE"
+    ],
+    "placate_triggers": [
+      "HURT",
+      "PLAYER_WEAK"
+    ]
+  },
+  {
+    "id": "mon_leonardo",
+    "type": "MONSTER",
+    "name": {
+      "str": "乌龟人"
+    },
+    "copy-from": "mon_raphael",
+    "hp": 180,
+    "speed": 115,
+    "symbol": "T",
+    "color": "light_blue_green",
+    "aggression": 0,
+    "morale": 90,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 16,
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      }
+    ],
+    "dodge": 6,
+    "special_attacks": [
+      [
+        "BIO_OP_TAKEDOWN",
+        40
+      ],
+      { "id": "longswipe", "cooldown":30
+      },
+      { "id": "grab", "cooldown": 10
+      },
+      {
+        "id": "slash",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "cut",
+            "amount": 22,
+            "armor_multiplier": 0.75
+          }
+        ]
+      },
+      {
+        "type": "leap",
+        "cooldown": 10,
+        "max_range": 3
+      },
+      {
+        "type": "gun",
+        "cooldown": 5,
+        "move_cost": 250,
+        "gun_type": "flaregun",
+        "ammo_type": "signal_flare",
+        "fake_str": 14,
+        "fake_dex": 16,
+        "fake_per": 10,
+        "max_ammo": 1000,
+        "ranges": [
+          [
+            5,
+            20,
+            "DEFAULT"
+          ]
+        ],
+        "targeting_cost": 200,
+        "require_targeting_player": false,
+        "require_targeting_npc": false,
+        "require_targeting_monster": false,
+        "description": "蓝色的忍者神龟照亮了黑暗！"
+      }
+    ],
+    "starting_ammo": {
+      "signal_flare": 2
+    },
+    "regen_morale": true,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "BASHES",
+      "GROUP_BASH",
+      "HUMAN",
+      "BONES",
+      "GROUP_MORALE",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ]
+  },
+  {
+    "id": "mon_michelangelo",
+    "type": "MONSTER",
+    "name": {
+      "str": "乌龟人"
+    },
+    "copy-from": "mon_raphael",
+    "hp": 160,
+    "speed": 120,
+    "color": "yellow_green",
+    "aggression": -5,
+    "morale": 80,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_cut": 2,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 1
+      }
+    ],
+    "dodge": 7,
+    "special_attacks": [
+      { "id": "ranged_pull", "cooldown":10
+      },
+      [
+        "DANCE",
+        7
+      ],
+      {
+        "id": "hammer",
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 18,
+            "armor_multiplier": 0.7
+          }
+        ]
+      },
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 2
+      }
+    ],
+    "regen_morale": true,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "BASHES",
+      "GROUP_BASH",
+      "HUMAN",
+      "BONES",
+      "GROUP_MORALE",
+      "PATH_AVOID_DANGER_2"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT",
+      "STALK"
+    ],
+    "placate_triggers": [
+      "FIRE",
+      "PLAYER_WEAK"
+    ]
+  },
+  {
+    "id": "mon_ratman_ninja",
+    "type": "MONSTER",
+    "name": {
+      "str": "藤条"
+    },
+    "description": "一个驼背的人形老鼠，长着看上去十分凶恶的爪子，身上穿着宽松的束腰外衣。它那饥饿的眼睛凝视着黑暗，寻找着食物——或者小玩意。",
+    "default_faction": "mutant",
+    "species": [
+      "MAMMAL"
+    ],
+    "diff": 20,
+    "hp": 120,
+    "speed": 120,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "mammal_fur",
+    "symbol": "R",
+    "color": "dark_gray",
+    "aggression": 0,
+    "morale": 80,
+    "melee_skill": 8,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_cut": 12,
+    "dodge": 7,
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_acid": 1,
+    "armor_fire": 1,
+    "vision_day": 30,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "BIO_OP_TAKEDOWN",
+        30
+      ],
+      { "id": "grab", "cooldown": 30
+      },
+      {
+        "id": "hammer",
+        "cooldown": 15,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 18,
+            "armor_multiplier": 0.7
+          },
+          {
+            "damage_type": "cut",
+            "amount": 8,
+            "armor_multiplier": 0.7
+          }
+        ]
+      },
+      {
+        "id": "slash",
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 6
+          },
+          {
+            "damage_type": "cut",
+            "amount": 14
+          }
+        ]
+      },
+      {
+        "type": "leap",
+        "cooldown": 20,
+        "max_range": 3
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "regen_morale": true,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "KEENNOSE",
+      "BORES",
+      "HUMAN",
+      "BONES",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS",
+      "HARDTOSHOOT"
+    ],
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ]
+  },
+  {
+    "id": "mon_giant_crayfish",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型螯虾"
+    },
+    "copy-from": "mon_giant_crayfish",
+    "diff": 16,
+    "hp": 50,
+    "speed": 115,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "y",
+    "color": "red",
+    "aggression": 30,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 6,
+    "dodge": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ],
+    "armor_bash": 5,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "vision_day": 35,
+    "vision_night": 7,
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ],
+      {
+        "id": "hammer",
+        "cooldown": 30,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 13,
+            "armor_multiplier": 0.8
+          }
+        ]
+      },
+      {
+        "id": "scratch",
+        "cooldown": 25,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 13,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "cut",
+            "amount": 5,
+            "armor_multiplier": 0.8
+          }
+        ],
+        "effects": [
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "torso"
+          }
+        ]
+      }
+    ],
+    "flags": [
+      "SMELLS",
+      "HEARS",
+      "SEES",
+      "CHITIN",
+      "SWIMS",
+      "GRABS",
+      "FAT",
+      "ARTHROPOD_BLOOD"
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ]
+  },
+  {
+    "id": "mon_graboid",
+    "type": "MONSTER",
+    "name": {
+      "str": "地魔虫"
+    },
+    "copy-from": "mon_graboid",
+    "diff": 28,
+    "hp": 230,
+    "speed": 170,
+    "aggression": 50,
+    "morale": 120,
+    "melee_skill": 5,
+    "melee_dice": 6,
+    "melee_dice_sides": 6,
+    "melee_cut": 9,
+    "armor_bash": 12,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "armor_stab": 8,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ],
+    "vision_day": 2,
+    "vision_night": 2,
+    "special_attacks": [
+      { "id": "ranged_pull", "cooldown":15
+      },
+      { "id": "grab_drag", "cooldown":25
+      },
+      {
+        "id": "hammer",
+        "cooldown": 40,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 16,
+            "armor_multiplier": 0.75
+          }
+        ]
+      },
+      {
+        "type": "bite",
+        "cooldown": 30,
+        "accuracy": 6,
+        "infection_chance": 11,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 27,
+            "armor_multiplier": 0.85
+          },
+          {
+            "damage_type": "stab",
+            "amount": 9,
+            "armor_multiplier": 0.85
+          }
+        ],
+        "effects": [
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "torso"
+          }
+        ]
+      }
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_halfworm",
+        "hit_self": true
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s splits in two!"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "DIGS",
+      "BASHES",
+      "POISON",
+      "WARM",
+      "LEATHER",
+      "FAT"
+    ],
+    "anger_triggers": [
+      "SOUND",
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_DIED",
+      "FIRE"
+    ]
+  },
+  {
+    "id": "mon_worm",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型蠕虫"
+    },
+    "copy-from": "mon_worm",
+    "diff": 14,
+    "hp": 67,
+    "speed": 80,
+    "aggression": 30,
+    "morale": 90,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_cut": 5,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ],
+    "armor_bash": 3,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "special_attacks": [
+      [
+        "wound_minor",
+        30
+      ]
+    ],
+    "regen_morale": true,
+    "regenerates": 1,
+    "flags": [
+      "DIGS",
+      "HEARS",
+      "GOODHEARING",
+      "WARM",
+      "LEATHER"
+    ],
+    "anger_triggers": [
+      "SOUND",
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_DIED"
+    ]
+  },
+  {
+    "id": "mon_halfworm",
+    "type": "MONSTER",
+    "name": {
+      "str": "半截巨蠕虫"
+    },
+    "description": "一个巨虫被切断的部份，体液从断肢部分渗出，还在不断扭动着。",
+    "default_faction": "worm",
+    "bodytype": "snake",
+    "species": [
+      "WORM"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "diff": 8,
+    "hp": 35,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "s",
+    "aggression": 15,
+    "morale": 40,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_cut": 3,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ],
+    "armor_bash": 2,
+    "harvest": "mutant_meatslug",
+    "upgrades": {
+      "half_life": 3,
+      "into_group": "GROUP_WORM"
+    },
+    "regenerates": 1,
+    "regen_morale": true,
+    "flags": [
+      "CAN_DIG",
+      "HEARS",
+      "GOODHEARING",
+      "WARM",
+      "LEATHER"
+    ],
+    "anger_triggers": [
+      "SOUND",
+      "FRIEND_ATTACKED",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT",
+      "FRIEND_DIED"
+    ]
+  },
+  {
+    "id": "mon_thing_swamp",
+    "type": "MONSTER",
+    "name": {
+      "str": "出汗的屁股",
+      "str_pl": "沼泽驴"
+    },
+    "description": "一个裹着芦苇的人形实体，行动缓慢，却不知何为疲倦，它身上散发着坟墓和所有有毒废物的气味。",
+    "default_faction": "mutant",
+    "species": [
+      "HORROR"
+    ],
+    "diff": 22,
+    "hp": 200,
+    "speed": 60,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "P",
+    "color": "green",
+    "aggression": 50,
+    "morale": 99,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 10,
+    "melee_cut": 0,
+    "dodge": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 120
+      }
+    ],
+    "armor_bash": 4,
+    "armor_cut": 13,
+    "armor_bullet": 10,
+    "armor_stab": 10,
+    "armor_acid": 20,
+    "armor_fire": 1,
+    "vision_day": 35,
+    "vision_night": 12,
+    "emit_fields": [
+      "emit_gas_stream",
+      "emit_gas_stream"
+    ],
+    "path_settings": {
+      "max_dist": 30
+    },
+    "death_function": {
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s's body melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "POISON",
+      "HUMAN",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "NO_BREATHE",
+      "LEATHER",
+      "BONES",
+      "STUMBLES"
+    ]
+  }
+]

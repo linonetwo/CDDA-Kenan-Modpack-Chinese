@@ -1,0 +1,844 @@
+[
+  {
+    "id": "valmagmag1",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "兵工厂机枪弹匣Mk.I"
+    },
+    "description": "国家兵工厂使用的双柱单馈9x31mm 弹匣。可容纳15发子弹。",
+    "weight": "295 g",
+    "volume": "500 ml",
+    "price": "40 USD",
+    "price_postapoc": "10 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "eur9mm",
+    "capacity": 15,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "eur9mm": 15
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "valmagmag2",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "兵工厂机枪Mk.II"
+    },
+    "description": "国家兵工厂使用的双柱单馈9x31mm 弹匣。可容纳25发子弹。",
+    "weight": "345 g",
+    "volume": "600 ml",
+    "price": "40 USD",
+    "price_postapoc": "20 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "eur9mm",
+    "capacity": 25,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "eur9mm": 25
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "zmmag1",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "ZM 弹匣MK1"
+    },
+    "description": "由Zeichmeister创建的双柱、单进料9x31mm杂志。可容纳10发子弹。",
+    "weight": "275 g",
+    "volume": "450 ml",
+    "price": "40 USD",
+    "price_postapoc": "10 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "eur9mm",
+    "capacity": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "eur9mm": 10
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "zmmag2",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "ZM 弹匣MK2"
+    },
+    "description": "由Zeichmeister创作的双柱单页9x 31毫米杂志。保持15发子弹。",
+    "weight": "290 g",
+    "volume": "500 ml",
+    "price": "40 USD",
+    "price_postapoc": "20 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "eur9mm",
+    "capacity": 15,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "eur9mm": 15
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "zmmag3",
+    "looks_like": "mp5mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "ZM 弹匣MK3"
+    },
+    "description": "由Zeichmeister创作的双柱单页9x 31毫米杂志。保持25发子弹。",
+    "weight": "315 g",
+    "volume": "550 ml",
+    "price": "40 USD",
+    "price_postapoc": "30 USD",
+    "material": "steel",
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": "eur9mm",
+    "capacity": 25,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "eur9mm": 25
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  },
+  {
+    "id": "val_mags1",
+    "looks_like": "hk_mp5",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "M1"
+    },
+    "description": "EW1开发了各种各样的武器以满足广泛的需求。其中，机关枪的阻止力使其在加利亚国内外的武器大师中格外受欢迎。尽管各种形状和尺寸的机枪在战斗中都有应用，但Mags机枪因其便携性而在前线受到特别重视。它在快速射击速度和易用性方面表现出色，在近距离的战壕和城市作战中表现出无与伦比的性能。",
+    "weight": "3650 g",
+    "volume": "1950 ml",
+    "price": "400 USD",
+    "price_postapoc": "15 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": "steel",
+    "symbol": "[",
+    "color": "dark_gray",
+    "ammo": [
+      "eur9mm"
+    ],
+    "skill": "smg",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
+    "dispersion": 270,
+    "durability": 6,
+    "blackpowder_tolerance": 24,
+    "min_cycle_recoil": 450,
+    "modes": [
+      [
+        "DEFAULT",
+        "burst",
+        3
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valmagmag1",
+          "valmagmag2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "val_mags3",
+    "looks_like": "hk_mp5",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "MAGS M3"
+    },
+    "description": "作为著名的MAGS系列冲锋枪的变种，机枪的阻止力使其在加利亚和国外的武器大师中格外流行。尽管各种形状和尺寸的机枪在战斗中都有应用，但Mags机枪因其便携性而在前线受到特别重视。在快速射击速度和易用性方面，这一版本有较长的枪管，减少了散布，并略微提高了初速。",
+    "weight": "3650 g",
+    "volume": "1950 ml",
+    "price": "400 USD",
+    "price_postapoc": "15 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": "steel",
+    "symbol": "[",
+    "color": "dark_gray",
+    "ammo": [
+      "eur9mm"
+    ],
+    "skill": "smg",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 255,
+    "durability": 6,
+    "blackpowder_tolerance": 24,
+    "min_cycle_recoil": 450,
+    "modes": [
+      [
+        "DEFAULT",
+        "burst",
+        3
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valmagmag1",
+          "valmagmag2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "val_mags10",
+    "looks_like": "hk_mp5",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "马格斯M10"
+    },
+    "description": "作为著名的MAGS系列冲锋枪的变种，机枪的阻止力使其在加利亚和国外的武器大师中格外流行。尽管各种形状和尺寸的机枪在战斗中都有应用，但Mags机枪因其便携性而在前线受到特别重视。在快速射击速度和简易性方面，这个版本在枪管周围有一个水套，允许它有持续的自动射击。",
+    "weight": "4150 g",
+    "volume": "2350 ml",
+    "price": "400 USD",
+    "price_postapoc": "15 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": "steel",
+    "symbol": "[",
+    "color": "dark_gray",
+    "ammo": [
+      "eur9mm"
+    ],
+    "skill": "smg",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 265,
+    "durability": 6,
+    "blackpowder_tolerance": 24,
+    "min_cycle_recoil": 400,
+    "modes": [
+      [
+        "BURST",
+        "3 rd.",
+        3
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valmagmag1",
+          "valmagmag2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "val_mags30",
+    "looks_like": "hk_mp5",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str": "MAGS M30冲锋枪"
+    },
+    "description": "作为著名的MAGS系列冲锋枪的变种，这种机枪的制动力使它在加里亚国内外的武器大师中格外受欢迎。尽管各种形状和大小的型号都可以在战斗中使用，但马格斯机枪因其便携性而在前线特别受重视。这个版本在速射速度和简易性方面表现出色，它的枪管周围有一个水套，允许它持续自动开火。这种变体已经被进一步设计成超出其类型的通常规格。",
+    "weight": "4150 g",
+    "volume": "2350 ml",
+    "price": "400 USD",
+    "price_postapoc": "15 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": "steel",
+    "symbol": "[",
+    "color": "dark_gray",
+    "ammo": [
+      "eur9mm"
+    ],
+    "skill": "smg",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
+    "dispersion": 235,
+    "durability": 6,
+    "blackpowder_tolerance": 24,
+    "min_cycle_recoil": 380,
+    "modes": [
+      [
+        "BURST",
+        "3 rd.",
+        3
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "valmagmag1",
+          "valmagmag2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zmmp1",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str_sp": "ZM议员1"
+    },
+    "description": "这位ZM议员自诩其精致程度如此之高，以至于被誉为泽赫迈斯特的终极杰作。它在火力、精度和便携性方面表现出色，代表了机枪所要求的一切的顶峰。进一步增加交易甜度的是压制零件的高浓度，易于低成本制造。拿着这些枪，帝国军队不受联邦和其他国家的限制，越过了欧罗巴。",
+    "weight": "2900 g",
+    "volume": "1650 ml",
+    "price": "1250 USD",
+    "price_postapoc": "27 USD",
+    "bashing": 9,
+    "material": "steel",
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "eur9mm"
+    ],
+    "skill": "smg",
+    "dispersion": 300,
+    "durability": 7,
+    "min_cycle_recoil": 475,
+    "modes": [
+      [
+        "DEFAULT",
+        "burst",
+        4
+      ]
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        3
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "zmmag1",
+          "zmmag2"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zmmp3",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str_sp": "ZM MP 3"
+    },
+    "description": "这位ZM议员自诩其精致程度如此之高，以至于被誉为泽赫迈斯特的终极杰作。它在火力、精度和便携性方面表现出色，代表了机枪所要求的一切的顶峰。进一步增加交易甜度的是压制零件的高浓度，易于低成本制造。拿着这些枪，帝国军队不受联邦和其他国家的限制，越过了欧罗巴。",
+    "weight": "3000 g",
+    "volume": "1800 ml",
+    "price": "1250 USD",
+    "price_postapoc": "27 USD",
+    "bashing": 9,
+    "material": "steel",
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "eur9mm"
+    ],
+    "skill": "smg",
+    "dispersion": 280,
+    "durability": 7,
+    "min_cycle_recoil": 475,
+    "modes": [
+      [
+        "DEFAULT",
+        "burst",
+        4
+      ]
+    ],
+    "built_in_mods": [
+      "folding_stock"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        3
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "zmmag1",
+          "zmmag2",
+          "zmmag3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "zmmpx3",
+    "looks_like": "glock_17",
+    "type": "GUN",
+    "reload_noise_volume": 10,
+    "name": {
+      "str_sp": "ZM MP 6型"
+    },
+    "description": "ZM MP拥有高度的精致度，被誉为Zechmeister的终极杰作。它在火力、精确性和便携性方面表现出色，代表了机枪所需一切的顶峰。这项交易的另一个甜点是高浓度的冲压件，容易以低成本制造。有了这些枪，帝国军队越过了欧罗巴未经联邦和其他国家。有些人认为是一种新的步枪，在它自己的右边，在一把冲锋枪和一把全口径步枪之间。",
+    "weight": "3000 g",
+    "volume": "1800 ml",
+    "price": "1250 USD",
+    "price_postapoc": "27 USD",
+    "bashing": 9,
+    "material": "steel",
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "eur9mm"
+    ],
+    "skill": "smg",
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
+    "dispersion": 265,
+    "durability": 7,
+    "min_cycle_recoil": 450,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "3 rd.",
+        3
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
+    "built_in_mods": [
+      "bipod"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        3
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "faults": [
+      "fault_gun_blackpowder",
+      "fault_gun_dirt",
+      "fault_gun_chamber_spent"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "magazine_well": "250 ml",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "zmmag1",
+          "zmmag2",
+          "zmmag3"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1089 @@
+[
+  {
+    "id": "nmproto",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM103 9mm 步枪",
+      "str_pl": "NM103 9mm 步枪"
+    },
+    "description": "尼米安工业研制的首种枪械，这种轻量步枪非常精准且耐用，但也因此弹夹尺寸非常小。",
+    "price": "2500 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [],
+    "skill": "rifle",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "1500 g",
+    "volume": "1750 ml",
+    "longest_side": "200 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 5
+    },
+    "dispersion": 75,
+    "range": 8,
+    "sight_dispersion": 75,
+    "recoil": 30,
+    "durability": 8,
+    "clip_size": 4,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 4
+        }
+      }
+    ],
+    "reload": 600,
+    "loudness": 100,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm50pistol",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM302 .50 重型手枪",
+      "str_pl": "NM302 .50 重型手枪"
+    },
+    "description": "这支手枪由尼米安公司在2038年左右研发并生产成功，采用了几个创造性的想法和大量的超级合金，使得.50 BMG弹药可以在这支手枪中发射。",
+    "price": "15000 USD",
+    "//": ".50 BMG and good range. It deserves this price.",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "RELOAD_ONE",
+      "NEVER_JAMS",
+      "RELOAD_EJECT"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "50"
+    ],
+    "weight": "1550 g",
+    "volume": "1 L",
+    "longest_side": "340 mm",
+    "bashing": 7,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -2
+    },
+    "dispersion": 250,
+    "range": 8,
+    "sight_dispersion": 75,
+    "recoil": 500,
+    "durability": 8,
+    "clip_size": 1,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 1
+        }
+      }
+    ],
+    "reload": 350,
+    "loudness": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm22pistol",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM322 .22 手枪",
+      "str_pl": "NM322 .22 手枪"
+    },
+    "description": "尼米安公司制造的.22手枪。小口径的子弹使得工程师在设计时能够使手枪容纳超过4发子弹的同时还增加了连发模式。",
+    "price": "1200 USD",
+    "//": "Superalloy never comes cheap, mate.",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MODE_BURST"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "22"
+    ],
+    "weight": "550 g",
+    "volume": "500 ml",
+    "longest_side": "200 mm",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
+    "dispersion": 75,
+    "range": 5,
+    "sight_dispersion": 75,
+    "recoil": 0,
+    "durability": 8,
+    "clip_size": 8,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "22": 8
+        }
+      }
+    ],
+    "reload": 500,
+    "loudness": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm45snprpistol",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM380 .45 狙击手枪",
+      "str_pl": "NM380s .45"
+    },
+    "description": "尼米安公司制造的.45手枪。 \"狙击手枪 \"作为其宣传的卖点，这个小宝贝确实拥有一个好的射手所需要的一切：一个内置的瞄准镜，一个也可以作为腰带使用的枪托和令人难以置信的准确性。不过弹仓内部只能容纳4发子弹。",
+    "price": "5000 USD",
+    "//": "Superalloy never comes cheap, mate.",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "VARSIZE",
+      "WAIST",
+      "OVERSIZE",
+      "IS_ARMOR"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "45"
+    ],
+    "weight": "1200 g",
+    "volume": "1250 ml",
+    "longest_side": "200 mm",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 0,
+    "range": 8,
+    "sight_dispersion": 15,
+    "recoil": 200,
+    "durability": 8,
+    "clip_size": 4,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "45": 4
+        }
+      }
+    ],
+    "reload": 600,
+    "loudness": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ]
+    ],
+    "phase": "solid"
+  },
+  {
+    "id": "nm7x30snprpistol",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM380 7x30mm 狙击手枪",
+      "str_pl": "NM380 7x30mm 狙击手枪"
+    },
+    "description": "尼米安公司制造的7x30mm口径手枪。由其同公司的.45口径手枪仿制而来，但被改造为只能使用尼米安公司自己的弹药。 \"狙击手枪 \"作为其宣传的卖点，这个小宝贝拥有一个好的射手所需要的一切：一个内置的瞄准镜，一个也可以作为腰带使用的枪托和令人难以置信的准确性。弹仓内部可容纳6发子弹。与竞赛弹配合使用效果更佳。",
+    "price": "3000 USD",
+    "//": "Superalloy never comes cheap, mate.",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "VARSIZE",
+      "WAIST",
+      "OVERSIZE",
+      "IS_ARMOR"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "7x30mm"
+    ],
+    "weight": "1150 g",
+    "volume": "1250 ml",
+    "longest_side": "200 mm",
+    "bashing": 1,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 0,
+    "range": 8,
+    "sight_dispersion": 15,
+    "recoil": 150,
+    "durability": 8,
+    "clip_size": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "7x30mm": 6
+        }
+      }
+    ],
+    "reload": 600,
+    "loudness": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "mechanism",
+        1
+      ]
+    ],
+    "phase": "solid"
+  },
+  {
+    "id": "nm223pistol",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM-323 .233 手枪",
+      "str_pl": "NM323 .223 手枪"
+    },
+    "description": "尼米安工业手枪，使用.223类型的子弹。它仍然比外面的大多数枪更加精准，且仍然很轻，但轻量也仍然使后坐很难控制，仅能容纳3发子弹。",
+    "price": "2000 USD",
+    "//": "Superalloy never comes cheap, mate.",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_ONE",
+      "RELOAD_EJECT"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "223"
+    ],
+    "weight": "920 g",
+    "volume": "750 ml",
+    "longest_side": "200 mm",
+    "bashing": 4,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -1
+    },
+    "dispersion": 50,
+    "range": 0,
+    "sight_dispersion": 75,
+    "recoil": 250,
+    "durability": 8,
+    "clip_size": 3,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "223": 3
+        }
+      }
+    ],
+    "reload": 150,
+    "loudness": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nmslfchrgpistol",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM333 自充能手枪",
+      "str_pl": "NM333 自充能手枪"
+    },
+    "description": "尼米安公司制造的激光手枪，从其内部集成的钚电池中获取能量，因此在在钚电池完全放电之前可以发射大约550万次。不过光束的威力非常弱。",
+    "price": "10000 USD",
+    "//": "Hey, Infinity here, and it ain't gonna be cheap.",
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NO_UNLOAD"
+    ],
+    "skill": "pistol",
+    "weight": "1800 g",
+    "volume": "1500 ml",
+    "longest_side": "200 mm",
+    "bashing": 8,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 6,
+      "armor_penetration": 2
+    },
+    "dispersion": 70,
+    "range": 10,
+    "sight_dispersion": 75,
+    "recoil": 0,
+    "durability": 7,
+    "clip_size": 0,
+    "reload": 125,
+    "loudness": 0,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm9mmsmg",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "blue",
+    "name": {
+      "str": "NM808 9mm 冲锋枪",
+      "str_pl": "NM808 9mm 冲锋枪"
+    },
+    "description": "尼米安工业的9mm冲锋枪，由于采用了超合金材料，尺寸相当轻，而且相当有破坏性。仍然是相当小的弹夹，虽然相较于其他尼米安武器算大的了。",
+    "price": "16750 USD",
+    "//": "SMGs aren't as commercially traded as rifles/handguns/SGs, so no cite for price points. Also, superalloy!",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": "MODE_BURST",
+    "skill": "smg",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "1250 g",
+    "volume": "2 L",
+    "longest_side": "680 mm",
+    "bashing": 7,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
+    "dispersion": 100,
+    "range": 2,
+    "sight_dispersion": 75,
+    "recoil": 15,
+    "durability": 8,
+    "clip_size": 14,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 14
+        }
+      }
+    ],
+    "reload": 500,
+    "loudness": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "magazine",
+        2
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm9mmsmgrare",
+    "type": "GUN",
+    "symbol": "(",
+    "color": "blue",
+    "name": {
+      "str": "NM808-S 9mm 冲锋枪",
+      "str_pl": "NM808-Ss 9mm 冲锋枪"
+    },
+    "description": "尼米安工业的9mm冲锋枪，这种极为罕见的变体是为极为富有的人制造的。它几乎到处都有超合金，经过广泛的改装并调校得非常好。",
+    "price": "100000 USD",
+    "//": "It's made almost entirely of superalloy, what do you expect?",
+    "material": [
+      "superalloy"
+    ],
+    "flags": [
+      "MODE_BURST",
+      "NEVER_JAMS"
+    ],
+    "skill": "smg",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "1050 g",
+    "volume": "2 L",
+    "longest_side": "680 mm",
+    "bashing": 4,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 5
+    },
+    "dispersion": 50,
+    "range": 3,
+    "sight_dispersion": 45,
+    "recoil": 30,
+    "durability": 8,
+    "clip_size": 18,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 18
+        }
+      }
+    ],
+    "reload": 450,
+    "loudness": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "magazine",
+        2
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm9mmrifle",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM104 9mm 步枪",
+      "str_pl": "NM104 9mm 步枪"
+    },
+    "description": "尼米安工业的9mm步枪，比NM103稍重，但更加精准，而且可以容纳更多的弹药。",
+    "price": "5000 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [],
+    "skill": "rifle",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "1650 g",
+    "volume": "1750 ml",
+    "longest_side": "1020 mm",
+    "bashing": 6,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 6
+    },
+    "dispersion": 50,
+    "range": 26,
+    "sight_dispersion": 60,
+    "recoil": 0,
+    "durability": 8,
+    "clip_size": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 7
+        }
+      }
+    ],
+    "reload": 450,
+    "loudness": 100,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nmlightshotgun",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM220 霰弹枪",
+      "str_pl": "NM220 霰弹枪"
+    },
+    "description": "尼米安公司生产的轻型霰弹枪，是不太成功的设计之一，因为提高精确度对霰弹枪来说不是很重要。弹仓内可容纳3发霰弹。",
+    "price": "900 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
+    "skill": "shotgun",
+    "ammo": [
+      "shot"
+    ],
+    "weight": "2150 g",
+    "volume": "2 L",
+    "longest_side": "920 mm",
+    "bashing": 5,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
+    "dispersion": 25,
+    "range": 6,
+    "sight_dispersion": 75,
+    "recoil": 500,
+    "durability": 8,
+    "clip_size": 3,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 3
+        }
+      }
+    ],
+    "reload": 200,
+    "loudness": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "conversion",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm7x30pistol",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM310 7x30mm 手枪",
+      "str_pl": "NM310 7x30mm 手枪"
+    },
+    "description": "尼米安公司制造的7x30mm口径手枪，轻便、准确、耐用。",
+    "price": "4000 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "7x30mm"
+    ],
+    "weight": "750 g",
+    "volume": "750 ml",
+    "longest_side": "200 mm",
+    "bashing": 3,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 60,
+    "range": 0,
+    "sight_dispersion": 75,
+    "recoil": 135,
+    "durability": 8,
+    "clip_size": 7,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "7x30mm": 7
+        }
+      }
+    ],
+    "reload": 500,
+    "loudness": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "nm7x30smg",
+    "type": "GUN",
+    "symbol": "[",
+    "color": "blue",
+    "name": {
+      "str": "NM810 7x30mm 冲锋枪",
+      "str_pl": "NM810 7x30mm 冲锋枪"
+    },
+    "description": "尼米安公司制造的7x30mm口径冲锋枪，重量轻，精度高，经久耐用。",
+    "price": "10000 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MODE_BURST"
+    ],
+    "skill": "smg",
+    "ammo": [
+      "7x30mm"
+    ],
+    "weight": "1250 g",
+    "volume": "2 L",
+    "longest_side": "680 mm",
+    "bashing": 3,
+    "cutting": 0,
+    "to_hit": -2,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 90,
+    "range": 0,
+    "sight_dispersion": 75,
+    "recoil": 90,
+    "durability": 8,
+    "clip_size": 20,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "7x30mm": 20
+        }
+      }
+    ],
+    "reload": 600,
+    "loudness": 200,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "magazine",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ]
+  }
+]

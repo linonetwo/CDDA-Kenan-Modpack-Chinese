@@ -1,0 +1,37 @@
+[
+  {
+    "id": "TALK_ISHERWOOD_CARLOS_TOPICS",
+    "type": "talk_topic",
+    "responses": [
+      {
+        "text": "关于异种，你能告诉我些什么？",
+        "effect": {
+          "u_add_var": "u_Talk_To_CarlosIsherwood_about_Xenoids",
+          "type": "general",
+          "context": "meeting",
+          "value": "yes"
+        },
+        "condition": {
+          "not": {
+            "u_has_var": "u_Talk_To_CarlosIsherwood_about_Xenoids",
+            "type": "general",
+            "context": "meeting",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_ISHERWOOD_CARLOS_XENOIDS"
+      }
+    ]
+  },
+  {
+    "id": "TALK_ISHERWOOD_CARLOS_XENOIDS",
+    "type": "talk_topic",
+    "dynamic_line": "鉴于巴里的遭遇，我不会怀疑世上有各种各样的外星人。希望他们会自相残杀，而不是来杀我们。",
+    "responses": [
+      {
+        "text": "希望如此。",
+        "topic": "TALK_ISHERWOOD_CARLOS_TOPICS"
+      }
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "f_cooler_closed",
+    "type": "furniture",
+    "name": "封闭式制冷机",
+    "description": "一个用于保持食物新鲜的制冷机，目前已关闭。",
+    "symbol": "o",
+    "color": [
+      "light_cyan"
+    ],
+    "move_cost_mod": -1,
+    "max_volume": "500 ml",
+    "required_str": 1,
+    "bash": {
+      "str_min": 8,
+      "str_max": 50,
+      "sound": "crack!",
+      "sound_fail": "bonk",
+      "items": [
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "CONTAINER",
+      "PLACE_ITEM",
+      "MOUNTABLE",
+      "TRANSPARENT",
+      "SEALED"
+    ]
+  },
+  {
+    "id": "f_cooler_open",
+    "type": "furniture",
+    "name": "开放式制冷机",
+    "description": "一个用于保持食物新鲜的制冷机，它目前是开着的。",
+    "symbol": "u",
+    "color": [
+      "light_cyan"
+    ],
+    "move_cost_mod": -1,
+    "max_volume": "500 ml",
+    "required_str": 1,
+    "bash": {
+      "str_min": 8,
+      "str_max": 50,
+      "sound": "crack!",
+      "sound_fail": "bonk",
+      "items": [
+        {
+          "item": "plastic_chunk",
+          "count": [
+            2,
+            8
+          ]
+        }
+      ]
+    },
+    "deconstruct": {
+      "items": [
+        {
+          "item": "cool_cooler",
+          "count": 1
+        }
+      ]
+    },
+    "flags": [
+      "CONTAINER",
+      "PLACE_ITEM",
+      "MOUNTABLE",
+      "TRANSPARENT"
+    ]
+  }
+]

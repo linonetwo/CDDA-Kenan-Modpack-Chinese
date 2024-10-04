@@ -1,0 +1,58 @@
+[
+  {
+    "id": "MISSION_PYROMANIAC",
+    "type": "mission_definition",
+    "name": {
+      "str": "愤怒的纵火狂"
+    },
+    "goal": "MGOAL_GO_TO",
+    "difficulty": 0,
+    "value": 0,
+    "//": "NPC will ask player to burn tagged house. Will follow player after accepting mission.",
+    "//2": "Change first topic to do proper checks. MGOAL_GO_TO to check if player stands on tagged tile.",
+    "//3": "At the end of the mission, will place fire on tagged tile and NPC will join player faction.",
+    "has_generic_rewards": false,
+    "start": {
+      "effect": [
+        "follow_only",
+        {
+          "npc_first_topic": "MISSION_PYROMANIAC"
+        }
+      ],
+      "assign_mission_target": {
+        "om_terrain": "house",
+        "om_terrain_replace": "forest",
+        "om_terrain_match_type": "PREFIX",
+        "search_range": 75,
+        "random": true,
+        "z": 0
+      }
+    },
+    "end": {
+      "effect": [
+        "follow",
+        {
+          "u_consume_item": "gasoline",
+          "count": 200
+        },
+        {
+          "mapgen_update": "MISSION_PYROMANIAC_BURN"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_OPENER_NPC"
+    ],
+    "dialogue": {
+      "describe": "哦天啊，我好想<swear>烧啊…",
+      "offer": "我真<swear>被激怒了！我有一个毁了我一生的敌人，现在我要报仇！我不在乎<the_cataclysm>，我只想烧了他的房子！你能帮我吗，<name_g>？",
+      "accepted": "很好。我们去他家<swear>烧了吧！哦，顺便问一下，你能带上汽油吗，<name_g>？气得忘记带了…",
+      "rejected": "说真的？这是一件很容易的工作…",
+      "advice": "也许我们可以在加油站找到一些汽油。",
+      "inquire": "准备好了吗，<name_g>？",
+      "success": "甜蜜，甜蜜的复仇！啊，好香啊！感觉就像早晨凝固汽油弹的味道！他所有的东西，甚至可能那<name_b>都会在几分钟内烧成灰烬。你帮我报仇，所以我会跟着你走到底，<name_g>！",
+      "success_lie": "什么？！你这个骗子！",
+      "failure": "哇，你失败了？怎么…"
+    }
+  }
+]

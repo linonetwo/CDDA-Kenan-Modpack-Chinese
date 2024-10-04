@@ -1,0 +1,186 @@
+[
+  {
+    "id": "katari",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "拳剑",
+      "str_pl": "拳剑"
+    },
+    "description": "这种起源于印度次大陆的手持匕首以仪式用途而著名。但也有杀死丧尸的潜力。",
+    "weight": "1100 g",
+    "volume": "500 ml",
+    "price": "450 USD",
+    "to_hit": 3,
+    "bashing": 5,
+    "cutting": 15,
+    "thrown_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 20
+      }
+    ],
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "RAPID",
+      "VORPAL",
+      "PRECISE"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "CUT_FINE",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE"
+    ]
+  },
+  {
+    "id": "chalikar",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "轮刃",
+      "str_pl": "轮刃"
+    },
+    "description": "这把起源于印度次大陆的环形刀刃的锋利程度足够砍倒丧尸和人类。可以投掷或用作近战武器。\n“再多注入点查克拉…”",
+    "weight": "1000 g",
+    "volume": "1000 ml",
+    "price": "600 USD",
+    "to_hit": 5,
+    "cutting": 20,
+    "thrown_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 30
+      }
+    ],
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "SPIN",
+      "WIDE"
+    ],
+    "symbol": "o",
+    "color": "light_gray",
+    "qualities": [
+      [
+        "CUT",
+        1
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE"
+    ]
+  },
+  {
+    "id": "razor_sword",
+    "type": "GENERIC",
+    "category": "weapons",
+    "name": {
+      "str": "剃刀剑"
+    },
+    "description": "一把剑刃类似剃刀的剑，剑柄上有一个按钮，可以将剑刃转换成鞭状。你可能认为这种武器是多余的，不，在天启世界没有什么是多余的。",
+    "weight": "1300 g",
+    "volume": "1200 ml",
+    "price": "900 USD",
+    "to_hit": 4,
+    "cutting": 30,
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "techniques": [
+      "SPIN",
+      "WIDE",
+      "IMPALE"
+    ],
+    "symbol": "/",
+    "color": "brown",
+    "use_action": {
+      "menu_text": "激活",
+      "type": "transform",
+      "target": "razor_whip",
+      "msg": "鞭模式已激活。"
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "id": "razor_whip",
+    "type": "GENERIC",
+    "category": "weapons",
+    "name": {
+      "str": "剃刀鞭"
+    },
+    "description": "一根带有剃刀状刀刃的长鞭，按下按钮将转换回剑模式。尽情鞭打和斩击丧尸吧。",
+    "weight": "1300 g",
+    "volume": "1800 ml",
+    "price": "900 USD",
+    "to_hit": 4,
+    "cutting": 50,
+    "material": [
+      "steel",
+      "leather"
+    ],
+    "techniques": [
+      "BRUTAL",
+      "SPIN",
+      "WIDE"
+    ],
+    "symbol": "/",
+    "color": "brown",
+    "use_action": {
+      "menu_text": "关闭",
+      "type": "transform",
+      "target": "razor_sword",
+      "msg": "剑模式已激活。"
+    },
+    "flags": [
+      "REACH_ATTACK",
+      "REACH3",
+      "WHIP"
+    ]
+  },
+  {
+    "id": "boomerang",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "回旋镖"
+    },
+    "description": "澳大利亚古代的武器，通常用于狩猎，现在用来猎杀丧尸和敲碎他们的头骨。",
+    "weight": "100 g",
+    "volume": "875 ml",
+    "price": "500 USD",
+    "to_hit": 2,
+    "bashing": 15,
+    "thrown_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 30
+      }
+    ],
+    "material": [
+      "wood"
+    ],
+    "symbol": ">",
+    "color": "brown",
+    "flags": [
+      "DURABLE_MELEE"
+    ]
+  }
+]

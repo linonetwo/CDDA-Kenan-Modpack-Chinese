@@ -1,0 +1,4082 @@
+[
+  {
+    "id": "mon_zombie",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      { "id": "grab", "cooldown": 50
+      },
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "upgrades": {
+      "half_life": 8,
+      "into_group": "GROUP_ZOMBIE_UPGRADE"
+    }
+  },
+  {
+    "id": "mon_zombie_runner",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_runner",
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      [
+        "scratch",
+        5
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 9,
+            "armor_multiplier": 0.9
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_hunter",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_hunter",
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ],
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 4
+      },
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 12,
+            "armor_multiplier": 0.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_predator",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_predator",
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ],
+      [
+        "impale",
+        30
+      ],
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "max_range": 7,
+        "allow_no_target": false
+      },
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 10,
+            "armor_multiplier": 0.7
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_runner_pk",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie",
+    "name": {
+      "str": "野性追猎者"
+    },
+    "color": "brown_white",
+    "looks_like": "mon_zombie_runner",
+    "description": "这个刚复活不久的丧尸跑得很快，他的头神经质一样的前后不断晃动并且啮咬自己的手。",
+    "hp": 65,
+    "speed": 110,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 1,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 10
+      },
+      [
+        "scratch",
+        5
+      ],
+      {
+        "type": "bite",
+        "cooldown": 15,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 10,
+            "armor_multiplier": 0.9
+          }
+        ]
+      }
+    ],
+    "upgrades": {
+      "half_life": 7,
+      "into_group": "GROUP_ZOMBIE_GRAB"
+    }
+  },
+  {
+    "id": "mon_zombie_grabber",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_grabber",
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 2
+      }
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 10
+      },
+      [
+        "scratch",
+        15
+      ],
+      [
+        "PARROT",
+        50
+      ],
+      {
+        "type": "bite",
+        "cooldown": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_hazmat",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_hazmat",
+    "hp": 70,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 5
+      }
+    ],
+    "armor_bash": 8,
+    "armor_cut": 5,
+    "armor_bullet": 3,
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "ACIDPROOF",
+      "NO_BREATHE",
+      "NO_NECRO",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "ELECTRIC",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_armored",
+    "type": "MONSTER",
+    "name": {
+      "str": "装甲丧尸"
+    },
+    "copy-from": "mon_zombie_armored",
+    "description": "一个身着着已经破损的动力装甲的丧尸，纵使有着”无敌“的动力装甲，他仍不知何故被杀死且感染成了丧尸。",
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 8,
+    "melee_cut": 0,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 2
+      }
+    ],
+    "special_attacks": [
+      [
+        "hammer",
+        20
+      ]
+    ]
+  },
+  {
+    "id": "mon_beekeeper",
+    "type": "MONSTER",
+    "copy-from": "mon_beekeeper",
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 5
+      }
+    ],
+    "vision_day": 30,
+    "vision_night": 5,
+    "upgrades": {
+      "half_life": 4,
+      "into": "mon_beekeeper_pk"
+    }
+  },
+  {
+    "id": "mon_zombie_rot_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "腐烂的丧尸"
+    },
+    "description": "大灾变给与了它第二次“生命”。它褪色的浮肿肉体布满了溃烂的伤口和醒目的脓疮成群的苍蝇从这个怪物的身体里飞进飞出，许多伤口肿胀而渗出来..",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 6,
+    "hp": 75,
+    "speed": 66,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "green_yellow",
+    "looks_like": "mon_zombie_rot",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 1,
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 6
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "rad_fives",
+        "duration": 2
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 9,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "armor_stab": 6,
+    "vision_day": 35,
+    "vision_night": 9,
+    "emit_fields": [
+      "emit_gas_plume"
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 10
+      },
+      [
+        "scratch",
+        20
+      ],
+      [
+        "slash",
+        60
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "accuracy": 6
+      },
+      {
+        "id": "diseased swipe",
+        "cooldown": 12,
+        "accuracy": 4
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_crawler_pk_weak",
+    "flags": [
+      "SEES",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_rot",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_rot",
+    "speed": 60,
+    "vision_day": 30,
+    "vision_night": 9,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 5,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 3,
+        "accuracy": 4
+      },
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "id": "diseased swipe",
+        "cooldown": 12,
+        "accuracy": 3,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          },
+          {
+            "damage_type": "cut",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          }
+        ]
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 15
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_rot_flu",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_rot",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 3,
+        "accuracy": 4
+      },
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "id": "diseased swipe",
+        "cooldown": 12,
+        "accuracy": 2,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          },
+          {
+            "damage_type": "cut",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          }
+        ],
+        "effects": [
+          {
+            "id": "nausea",
+            "duration": 200
+          },
+          {
+            "id": "flu_zed",
+            "duration": 3200,
+            "chance": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_rot_pk_flu",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_rot_pk",
+    "special_attacks": [
+      { "id": "grab", "cooldown": 10
+      },
+      [
+        "scratch",
+        20
+      ],
+      [
+        "slash",
+        60
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "accuracy": 6
+      },
+      {
+        "id": "diseased swipe",
+        "cooldown": 12,
+        "accuracy": 3,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          },
+          {
+            "damage_type": "cut",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          }
+        ],
+        "effects": [
+          {
+            "id": "nausea",
+            "duration": 200
+          },
+          {
+            "id": "flu_zed",
+            "duration": 3200,
+            "chance": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_rot_worms",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_rot",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 3,
+        "accuracy": 4
+      },
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "id": "diseased swipe",
+        "cooldown": 12,
+        "accuracy": 2,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          },
+          {
+            "damage_type": "cut",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          }
+        ],
+        "effects": [
+          {
+            "id": "nausea",
+            "duration": 200
+          },
+          {
+            "id": "bloodworms",
+            "duration": 446400,
+            "chance": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_rot_pk_worms",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_rot_pk",
+    "special_attacks": [
+      { "id": "grab", "cooldown": 10
+      },
+      [
+        "scratch",
+        20
+      ],
+      [
+        "slash",
+        60
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "accuracy": 6
+      },
+      {
+        "id": "diseased swipe",
+        "cooldown": 12,
+        "accuracy": 3,
+        "effects": [
+          {
+            "id": "nausea",
+            "duration": 200
+          },
+          {
+            "id": "brainworms",
+            "duration": 446400,
+            "chance": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_rot_pain",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_rot",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 3,
+        "accuracy": 4
+      },
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "id": "diseased swipe",
+        "cooldown": 12,
+        "accuracy": 2,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          },
+          {
+            "damage_type": "cut",
+            "amount": 5,
+            "armor_multiplier": 0.75
+          }
+        ],
+        "effects": [
+          {
+            "id": "nausea",
+            "duration": 200
+          },
+          {
+            "id": "paincysts",
+            "duration": 446400,
+            "chance": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_rot_pk_pain",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_rot_pk",
+    "special_attacks": [
+      { "id": "grab", "cooldown": 10
+      },
+      [
+        "scratch",
+        20
+      ],
+      [
+        "slash",
+        60
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "accuracy": 6
+      },
+      {
+        "id": "diseased swipe",
+        "cooldown": 12,
+        "accuracy": 3,
+        "effects": [
+          {
+            "id": "nausea",
+            "duration": 200
+          },
+          {
+            "id": "tetanus",
+            "duration": 121000,
+            "chance": 35
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_shrieker",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_shrieker",
+    "vision_day": 45,
+    "vision_night": 2,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      [
+        "SHRIEK",
+        10
+      ],
+      { "id": "grab", "cooldown": 30
+      },
+      [
+        "scratch",
+        20
+      ]
+    ]
+  },
+  {
+    "id": "mon_zombie_screecher",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_screecher",
+    "vision_day": 45,
+    "vision_night": 3,
+    "special_attacks": [
+      [
+        "SHRIEK_ALERT",
+        20
+      ],
+      [
+        "SHRIEK_STUN",
+        1
+      ],
+      [
+        "scratch",
+        20
+      ]
+    ]
+  },
+  {
+    "id": "mon_zombie_acidic_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "酸液丧尸"
+    },
+    "copy-from": "mon_zombie_acidic",
+    "description": "一个看上去非常恶心的苍白丧尸，它的皮肤看上去非常薄，你甚至都能看到它静脉下流动着粘稠的黄色液体。最好不要太靠近它 ...",
+    "diff": 18,
+    "harvest": "zombie",
+    "hp": 75,
+    "speed": 85,
+    "melee_skill": 4,
+    "melee_dice": 5,
+    "melee_dice_sides": 3,
+    "melee_cut": 1,
+    "dodge": 1,
+    "armor_bash": 6,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "armor_stab": 0,
+    "vision_day": 40,
+    "vision_night": 5,
+    "emit_fields": [
+      "emit_acid_small"
+    ],
+    "special_attacks": [
+      [
+        "ACID_BARF",
+        10
+      ],
+      { "id": "grab", "cooldown": 7
+      }
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      65
+    ],
+    "death_function": {
+      "message": "The %s's body leaks acid.",
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    },
+    "burn_into": "mon_zombie_scorched",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "ACIDPROOF",
+      "ACID_BLOOD",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_acidic",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_acidic",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_spitter",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_spitter",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_corrosive",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_corrosive",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      }
+    ],
+    "emit_fields": [
+      "emit_acid_small"
+    ]
+  },
+  {
+    "id": "mon_zombie_cripple",
+    "type": "MONSTER",
+    "name": {
+      "str": "残废的丧尸"
+    },
+    "description": "一个曾是瘸子的人类，现在变成了瘸腿的丧尸。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 2,
+    "hp": 60,
+    "speed": 50,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_green",
+    "aggression": 70,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 0,
+    "dodge": 0,
+    "armor_bash": 0,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "vision_day": 40,
+    "vision_night": 3,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 2
+      }
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 5
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "upgrades": {
+      "half_life": 5,
+      "into_group": "GROUP_ZOMBIE_DECAY"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_blind",
+    "type": "MONSTER",
+    "name": {
+      "str": "瞎丧尸"
+    },
+    "description": "一具眼睛已经瞎了的丧尸，但他看上去充满了愤怒与饥渴。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 2,
+    "hp": 80,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_green",
+    "looks_like": "mon_zombie",
+    "aggression": 70,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 1,
+    "dodge": 0,
+    "armor_bash": 0,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "special_attacks": [
+      { "id": "grab_drag", "cooldown":25
+      },
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 3
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "upgrades": {
+      "half_life": 5,
+      "into": "mon_zombie_blind_pk"
+    },
+    "flags": [
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_blind_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "看不见的丧尸"
+    },
+    "description": "一具人类尸体，充满了不可思议的敏捷。它没有瞳孔，失明的眼睛茫然地凝视着，掩盖了它的优雅和其他感知。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 2,
+    "hp": 80,
+    "speed": 115,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_green",
+    "looks_like": "mon_zombie_runner",
+    "aggression": 60,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 2,
+    "melee_dice_sides": 6,
+    "melee_cut": 1,
+    "dodge": 4,
+    "armor_bash": 5,
+    "armor_cut": 5,
+    "armor_bullet": 5,
+    "special_attacks": [
+      { "id": "grab_drag", "cooldown":10
+      },
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 3
+      }
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_death_drops",
+          90
+        ],
+        [
+          "pk_melee",
+          10
+        ]
+      ]
+    },
+    "burn_into": "mon_zombie_scorched",
+    "flags": [
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "KEENNOSE",
+      "STUMBLES",
+      "HARDTOSHOOT",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_2",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸"
+    },
+    "description": "一具死而复生的活死人身体摇晃、迟缓，黑洞的眼睛潜藏着对血肉无法压抑的狂躁渴望，大脑可能还保留了一定程度处理能力，拥有一定的运动机能和移动能力。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 3,
+    "hp": 70,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_green",
+    "looks_like": "mon_zombie",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 1,
+    "melee_dice_sides": 4,
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 1
+      }
+    ],
+    "melee_cut": 1,
+    "dodge": 1,
+    "armor_bash": 0,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "vision_day": 40,
+    "vision_night": 3,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "upgrades": {
+      "half_life": 10,
+      "into_group": "GROUP_ZOMBIE_UPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_3",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸"
+    },
+    "description": "一具死而复生的活死人身体摇晃、迟缓，黑洞的眼睛潜藏着对血肉无法压抑的狂躁渴望，大脑可能还保留了一定程度处理能力，拥有一定的运动机能和移动能力。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 3,
+    "hp": 90,
+    "speed": 65,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_green",
+    "looks_like": "mon_zombie",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 0,
+    "dodge": 0,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 35,
+    "vision_night": 3,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 15
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "upgrades": {
+      "half_life": 10,
+      "into_group": "GROUP_ZOMBIE_UPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "饥饿的丧尸"
+    },
+    "description": "一个生前瘦骨嶙峋的丧尸，它死后还在用那身躯在缓慢地蹒跚前行，但你就此小看它，那么可能要吃亏。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 6,
+    "hp": 100,
+    "speed": 75,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_green",
+    "looks_like": "mon_zombie",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 7,
+    "melee_cut": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 2
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 3,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 40,
+    "vision_night": 3,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 20
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched_pk",
+    "upgrades": {
+      "half_life": 30,
+      "into_group": "GROUP_ZOMBIE_EVO"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_child",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_child",
+    "special_attacks": [
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "upgrades": {
+      "half_life": 14,
+      "into_group": "GROUP_CHILD_ZOMBIE_UPGRADE"
+    }
+  },
+  {
+    "id": "mon_zombie_child_2",
+    "type": "MONSTER",
+    "name": {
+      "str": "儿童丧尸",
+      "str_pl": "儿童丧尸"
+    },
+    "description": "一个不幸在年幼时期就被感染为丧尸的孩子，有着失神无助与痛苦饥渴的外表，情感正常的人类杀死这样的孩子通常会感到难过与悲伤。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 2,
+    "hp": 35,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "z",
+    "color": "light_green",
+    "looks_like": "mon_zombie_child",
+    "aggression": 45,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 2,
+    "dodge": 3,
+    "armor_bash": 2,
+    "armor_cut": 0,
+    "armor_bullet": 0,
+    "vision_day": 35,
+    "vision_night": 3,
+    "special_attacks": [
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_clothes",
+          100
+        ],
+        [
+          "child_items",
+          65
+        ]
+      ]
+    },
+    "burn_into": "mon_zombie_child_scorched",
+    "upgrades": {
+      "half_life": 14,
+      "into_group": "GROUP_CHILD_ZOMBIE_UPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "GUILT",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_child_3",
+    "type": "MONSTER",
+    "name": {
+      "str": "儿童丧尸",
+      "str_pl": "儿童丧尸"
+    },
+    "description": "一个不幸在年幼时期就被感染为丧尸的孩子，有着失神无助与痛苦饥渴的外表，情感正常的人类杀死这样的孩子通常会感到难过与悲伤。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 2,
+    "hp": 50,
+    "speed": 60,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "z",
+    "color": "light_green",
+    "looks_like": "mon_zombie_child",
+    "aggression": 50,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "melee_cut": 2,
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 35,
+    "vision_night": 3,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_clothes",
+          100
+        ],
+        [
+          "child_items",
+          65
+        ]
+      ]
+    },
+    "burn_into": "mon_zombie_child_scorched",
+    "upgrades": {
+      "half_life": 14,
+      "into_group": "GROUP_CHILD_ZOMBIE_UPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "GUILT",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_hollow_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸最低点"
+    },
+    "description": "这个丧尸的黑色眼窝中空无一物，但你感觉它在不停地巡视周围的环境。当它观察时，它的身体会以一种足以折断身体里的大部分骨头的方式跳动和扭曲。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 24,
+    "hp": 140,
+    "speed": 85,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "black_green",
+    "looks_like": "mon_zombie_hollow",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 9,
+    "melee_cut": 2,
+    "dodge": 4,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 2
+      }
+    ],
+    "armor_bash": 10,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "armor_acid": 2,
+    "armor_fire": 2,
+    "vision_day": 45,
+    "vision_night": 5,
+    "special_attacks": [
+      { "id": "stretch_bite", "cooldown":15
+      },
+      { "id": "stretch_attack", "cooldown":10
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "REVIVES",
+      "WARM",
+      "BASHES",
+      "GRABS",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_fat_2",
+    "type": "MONSTER",
+    "name": {
+      "str": "肥胖丧尸"
+    },
+    "description": "一只身体脂肪层发生了变异的肥胖丧尸，它臃肿的尸体踉跄着，吞下的恶心食物在胃中腐烂，散发着浓烈的恶臭，空洞的黑色眼眶扫视四周。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 3,
+    "hp": 90,
+    "speed": 65,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "green",
+    "looks_like": "mon_zombie_fat",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 3,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 1,
+    "dodge": 1,
+    "armor_bash": 5,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 40,
+    "vision_night": 3,
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "min_mul": 0.75
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "upgrades": {
+      "half_life": 11,
+      "into_group": "GROUP_ZOMBIE_FAT"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "FAT",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_fat_3",
+    "type": "MONSTER",
+    "name": {
+      "str": "肥胖丧尸"
+    },
+    "description": "一只身体脂肪层发生了变异的肥胖丧尸，它臃肿的尸体踉跄着，吞下的恶心食物在胃中腐烂，散发着浓烈的恶臭，空洞的黑色眼眶扫视四周。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 3,
+    "hp": 115,
+    "speed": 50,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "green",
+    "looks_like": "mon_zombie_fat",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 0,
+    "dodge": 0,
+    "armor_bash": 6,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "vision_day": 40,
+    "vision_night": 3,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "min_mul": 0.75
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "upgrades": {
+      "half_life": 11,
+      "into_group": "GROUP_ZOMBIE_FAT"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "FAT",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_beekeeper_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "结痂丧尸"
+    },
+    "description": "一个畸形丧尸，它的皮肤已经变成了一层厚厚的，带硬壳的疤痕组织。它的身体组织分泌一种闻起来十分刺鼻的有毒液体。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 12,
+    "hp": 80,
+    "speed": 50,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_red",
+    "looks_like": "mon_beekeeper",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 2,
+    "dodge": 0,
+    "armor_bash": 7,
+    "armor_cut": 11,
+    "armor_bullet": 6,
+    "vision_day": 35,
+    "vision_night": 5,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "duration": 400
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 3
+      }
+    ],
+    "emit_fields": [
+      "emit_flesh_slough"
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 20
+      },
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_clothes",
+          50
+        ],
+        [
+          "hive",
+          30
+        ]
+      ]
+    },
+    "burn_into": "mon_zombie_scorched_pk",
+    "flags": [
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "ELECTRIC",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_child_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "拾荒者丧尸"
+    },
+    "description": "虽然它长着一张幼童的脸，但在它的指关节上却长满了老茧。它似乎以战斗为乐，从它那狡猾恶心的笑容和闪烁的眼神中就可以看出…",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 12,
+    "hp": 55,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "z",
+    "color": "green",
+    "looks_like": "mon_zombie_sproglodyte",
+    "aggression": 70,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 4,
+    "melee_cut": 1,
+    "dodge": 2,
+    "armor_bash": 1,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 30,
+    "vision_night": 3,
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ],
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "min_mul": 0.3
+      }
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_clothes",
+          80
+        ],
+        [
+          "child_items",
+          25
+        ]
+      ]
+    },
+    "burn_into": "mon_zombie_child_scorched",
+    "upgrades": {
+      "half_life": 24,
+      "into": "mon_zombie_child_reaver"
+    },
+    "flags": [
+      "GRABS",
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "GUILT",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_child_reaver",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸收割者"
+    },
+    "description": "这只丧尸的脸已毁容结痂，这个肮脏的儿童丧尸是通过不断的战斗所锻造出来的，非凡的敏捷、速度和野蛮让它能残忍地杀死对手。它身上的伤痕表明，这不是它第一次（或第二次）死亡。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 16,
+    "hp": 80,
+    "speed": 105,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "z",
+    "color": "red",
+    "looks_like": "mon_zombie_anklebiter",
+    "aggression": 90,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 5,
+    "melee_cut": 5,
+    "dodge": 4,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 3
+      }
+    ],
+    "armor_bash": 8,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "armor_acid": 4,
+    "armor_fire": 4,
+    "vision_day": 35,
+    "vision_night": 4,
+    "special_attacks": [
+      [
+        "slash",
+        10
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "min_mul": 0.5
+      }
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_clothes",
+          25
+        ],
+        [
+          "child_items",
+          15
+        ]
+      ]
+    },
+    "burn_into": "mon_zombie_child_scorched_pk",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "PATH_AVOID_DANGER_1",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_survivor",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_survivor",
+    "hp": 160,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "SHRIEK",
+        20
+      ],
+      [
+        "scratch",
+        20
+      ],
+      [
+        "slash",
+        30
+      ],
+      {
+        "type": "bite",
+        "cooldown": 15,
+        "min_mul": 0.5
+      }
+    ],
+    "burn_into": "mon_zombie_scorched_pk"
+  },
+  {
+    "id": "mon_zombie_crawler",
+    "type": "MONSTER",
+    "name": {
+      "str": "爬行丧尸"
+    },
+    "description": "一具只靠着上肢缓慢地爬行的人类尸体，而它的下肢已经腐坏得原形崩坏了。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 60,
+    "speed": 20,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "pink_green",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 0,
+    "vision_day": 30,
+    "vision_night": 5,
+    "harvest": "zombie",
+    "special_attacks": [
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 15
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 2
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_crawler_scorched",
+    "upgrades": {
+      "half_life": 21,
+      "into": "mon_zombie_crawler_pk_weak"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GRABS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_tough",
+    "copy-from": "mon_zombie_tough",
+    "type": "MONSTER",
+    "name": {
+      "str": "健壮丧尸"
+    },
+    "description": "这个丧尸的生前矫健的如同一名运动员，如今成为了凶残的丧尸怪物。它面孔扭曲，每一个毛孔都释放出纯粹的破坏欲望。",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "min_mul": 0.7
+      },
+      { "id": "grab", "cooldown": 60
+      },
+      [
+        "scratch",
+        20
+      ]
+    ],
+    "burn_into": "mon_zombie_smoker",
+    "extend": {
+      "upgrades": {
+        "half_life": 24,
+        "into_group": "GROUP_ZOMBIE_TOUGH"
+      }
+    },
+    "delete": {
+      "upgrades": {
+        "half_life": 28,
+        "into_group": "GROUP_ZOMBIE_UPGRADE"
+      }
+    }
+  },
+  {
+    "id": "mon_zombie_tough_2",
+    "type": "MONSTER",
+    "name": {
+      "str": "健壮丧尸"
+    },
+    "description": "这个丧尸的生前矫健的如同一名运动员，如今成为了凶残的丧尸怪物。它面孔扭曲，每一个毛孔都释放出纯粹的破坏欲望。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 3,
+    "hp": 90,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_red",
+    "looks_like": "mon_zombie_tough",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_cut": 2,
+    "dodge": 2,
+    "armor_bash": 2,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 40,
+    "vision_night": 3,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "min_mul": 0.7
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_smoker",
+    "upgrades": {
+      "half_life": 22,
+      "into_group": "GROUP_ZOMBIE_TOUGH"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_tough_3",
+    "type": "MONSTER",
+    "name": {
+      "str": "健壮丧尸"
+    },
+    "description": "这个丧尸的生前矫健的如同一名运动员，如今成为了凶残的丧尸怪物。它面孔扭曲，每一个毛孔都释放出纯粹的破坏欲望。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 3,
+    "harvest": "zombie",
+    "hp": 125,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "light_red",
+    "looks_like": "mon_zombie_tough",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_cut": 0,
+    "dodge": 1,
+    "armor_bash": 5,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 40,
+    "vision_night": 3,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5,
+        "min_mul": 0.7
+      }
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_smoker",
+    "upgrades": {
+      "half_life": 22,
+      "into_group": "GROUP_ZOMBIE_TOUGH"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_master",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_master",
+    "vision_day": 50,
+    "vision_night": 9,
+    "special_attacks": [
+      [
+        "UPGRADE",
+        0
+      ],
+      [
+        "FORMBLOB",
+        1200
+      ],
+      [
+        "slash",
+        20
+      ]
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_blobsplit",
+        "hit_self": true
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s splits in two!"
+    },
+    "burn_into": "mon_zombie_scorched_master",
+    "upgrades": {
+      "half_life": 21,
+      "into": "mon_zombie_master_pk"
+    }
+  },
+  {
+    "id": "mon_zombie_necro",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_necro",
+    "vision_day": 50,
+    "vision_night": 9,
+    "special_attacks": [
+      [
+        "RESURRECT",
+        0
+      ],
+      [
+        "FORMBLOB",
+        1200
+      ],
+      [
+        "slash",
+        20
+      ]
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_blobsplit",
+        "hit_self": true
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s splits in two!"
+    },
+    "burn_into": "mon_zombie_scorched_necro",
+    "upgrades": {
+      "half_life": 24,
+      "into": "mon_zombie_necro_pk"
+    }
+  },
+  {
+    "id": "mon_zombie_hulk",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_hulk",
+    "speed": 135,
+    "burn_into": "mon_zombie_fiend_pk",
+    "upgrades": {
+      "half_life": 56,
+      "into": "mon_zombie_hulk_pk"
+    }
+  },
+  {
+    "id": "mon_zombie_electric",
+    "copy-from": "mon_zombie_electric",
+    "type": "MONSTER",
+    "name": {
+      "str": "放电丧尸"
+    },
+    "description": "一具身体呈现淡蓝色的丧尸，由于生化插件的异常放电，其周围不断有噼啪的电流环绕。",
+    "diff": 12,
+    "burn_into": "mon_zombie_scorched_shocker",
+    "extend": {
+      "upgrades": {
+        "half_life": 22,
+        "into_group": "GROUP_ZOMBIE_ELECTRIC"
+      }
+    },
+    "delete": {
+      "upgrades": {
+        "half_life": 28,
+        "into": "mon_zombie_nullfield"
+      }
+    }
+  },
+  {
+    "id": "mon_zombie_electric_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "火花丧尸"
+    },
+    "description": "随着这种丧尸开始像其他丧尸一样身体扭曲变形，它的仿生学变得不稳定且十分不可靠。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 16,
+    "hp": 125,
+    "speed": 105,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "CBM_CIV",
+    "symbol": "Z",
+    "color": "light_cyan",
+    "looks_like": "mon_zombie_electric",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 6
+      }
+    ],
+    "dodge": 3,
+    "armor_bash": 3,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 35,
+    "vision_night": 8,
+    "luminance": 16,
+    "emit_fields": [
+      "emit_spark",
+      "emit_boltstorm"
+    ],
+    "special_attacks": [
+      [
+        "SHOCKSTORM",
+        40
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      100
+    ],
+    "death_drops": "mon_zombie_hulk_death_drops",
+    "burn_into": "mon_zombie_scorched_shocker",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "ELECTRIC",
+      "CBM_CIV",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_brute",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_brute",
+    "speed": 80,
+    "special_attacks": [
+      [
+        "SMASH",
+        30
+      ],
+      { "id": "grab", "cooldown": 7
+      },
+      {
+        "id": "hammer",
+        "cooldown": 30,
+        "accuracy": 3,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 24,
+            "armor_multiplier": 0.75
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "mon_zombie_brute_shocker",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_brute_shocker",
+    "speed": 75,
+    "hp": 240,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 8,
+    "melee_cut": 2,
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 8
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 6,
+    "armor_cut": 8,
+    "special_attacks": [
+      [
+        "SHOCKSTORM",
+        15
+      ],
+      [
+        "SMASH",
+        30
+      ],
+      [
+        "hammer",
+        30
+      ]
+    ],
+    "emit_fields": [
+      "emit_spark"
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      75
+    ],
+    "burn_into": "mon_zombie_fiend_shocker"
+  },
+  {
+    "id": "mon_zombie_brute_ninja",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_brute_ninja",
+    "hp": 220,
+    "speed": 110,
+    "aggression": 75,
+    "melee_skill": 8,
+    "melee_dice": 6,
+    "melee_dice_sides": 3,
+    "melee_cut": 5,
+    "dodge": 4,
+    "armor_bash": 8,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "vision_day": 25,
+    "vision_night": 20,
+    "special_attacks": [
+      [
+        "SMASH",
+        40
+      ],
+      { "id": "stretch_attack", "cooldown":30
+      },
+      { "id": "longswipe", "cooldown":30
+      },
+      {
+        "id": "hammer",
+        "cooldown": 40,
+        "accuracy": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 24,
+            "armor_multiplier": 0.75
+          }
+        ]
+      }
+    ],
+    "burn_into": "mon_zombie_fiend_pk"
+  },
+  {
+    "id": "mon_zombie_brute_grappler",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_brute_grappler",
+    "hp": 280,
+    "speed": 80,
+    "melee_skill": 7,
+    "melee_dice": 8,
+    "melee_dice_sides": 3,
+    "dodge": 3,
+    "armor_bash": 10,
+    "armor_cut": 14,
+    "armor_bullet": 10,
+    "armor_stab": 6,
+    "vision_day": 40,
+    "vision_night": 3,
+    "special_attacks": [
+      [
+        "SMASH",
+        30
+      ],
+      [
+        "BIO_OP_TAKEDOWN",
+        20
+      ],
+      { "id": "ranged_pull", "cooldown":20
+      },
+      { "id": "grab_drag", "cooldown":10
+      },
+      {
+        "type": "bite",
+        "cooldown": 15,
+        "min_mul": 0.2,
+        "infection_chance": 30
+      },
+      {
+        "id": "hammer",
+        "cooldown": 30,
+        "accuracy": 5,
+        "damage_max_instance": [
+          {
+            "damage_type": "bash",
+            "amount": 28,
+            "armor_multiplier": 0.7
+          }
+        ]
+      }
+    ],
+    "burn_into": "mon_zombie_fiend_pk"
+  },
+  {
+    "id": "mon_zombie_biter",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_biter",
+    "description": "肌肉光滑的扭曲的人体。它的下颚已经拉长成一个像熊的鼻子，滴着恶臭的唾液。",
+    "diff": 16,
+    "hp": 100,
+    "speed": 110,
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 7,
+    "melee_cut": 4,
+    "dodge": 3,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "armor_bash": 5,
+    "armor_cut": 1,
+    "armor_bullet": 1,
+    "vision_day": 25,
+    "vision_night": 15,
+    "burn_into": "mon_zombie_scorched"
+  },
+  {
+    "id": "mon_zombie_gasbag",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_gasbag",
+    "attack_effs": [
+      {
+        "id": "rad_fives",
+        "duration": 1
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      }
+    ],
+    "emit_fields": [
+      "emit_gas_stream",
+      "emit_gas_plume"
+    ],
+    "upgrades": {
+      "half_life": 21,
+      "into": "mon_zombie_gasbag_pk"
+    }
+  },
+  {
+    "id": "mon_zombie_smoker",
+    "type": "MONSTER",
+    "name": {
+      "str": "烟雾丧尸"
+    },
+    "description": "一个黑色扭曲的丧尸，肉块挂在其身上，不停地发出阴霾的黑烟。",
+    "default_faction": "zombie",
+    "bodytype": "human",
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 75,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "Z",
+    "color": "dark_gray",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 4,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_cut": 2,
+    "dodge": 4,
+    "armor_fire": 5,
+    "vision_day": 50,
+    "vision_night": 3,
+    "harvest": "exempt",
+    "attack_effs": [
+      {
+        "id": "rad_fives",
+        "duration": 5
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 30
+      }
+    ],
+    "burn_into": "mon_zombie_scorched_pk",
+    "emit_fields": [
+      {
+        "emit_id": "emit_smoke_stream",
+        "delay": "1 s"
+      }
+    ],
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "scratch",
+        15
+      ]
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_smokeburst",
+        "hit_self": true
+      },
+      "message": "A %s explodes!"
+    },
+    "upgrades": {
+      "half_life": 35,
+      "into_group": "GROUP_ZOMBIE_SMOKER"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "HARDTOSHOOT",
+      "NO_BREATHE",
+      "REVIVES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_shady",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_shady",
+    "aggression": 75,
+    "vision_day": 6,
+    "vision_night": 40,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 10
+      },
+      [
+        "scratch",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 15
+      }
+    ],
+    "burn_into": "mon_zombie_crawler_pk_weak"
+  },
+  {
+    "id": "mon_zombie_shady_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "暗影丧尸"
+    },
+    "description": "一个模糊扭曲的人形轮廓，即使在明亮的光线下，也仅能看到闪闪发光的轮廓。它的步伐看起来像一个丧尸，但你也只能看到这么多。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 3,
+    "hp": 100,
+    "speed": 75,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_gray",
+    "looks_like": "mon_zombie_shady",
+    "aggression": 60,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 7,
+    "melee_cut": 2,
+    "dodge": 3,
+    "armor_bash": 3,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "vision_day": 5,
+    "vision_night": 40,
+    "special_attacks": [
+      [
+        "scratch",
+        20
+      ],
+      { "id": "grab", "cooldown": 15
+      },
+      {
+        "type": "bite",
+        "cooldown": 15
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "FRIEND_DIED",
+      "HURT"
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "upgrades": {
+      "half_life": 28,
+      "into": "mon_zombie_shady_ghost"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "NIGHT_INVISIBILITY",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_shady_ghost",
+    "type": "MONSTER",
+    "name": {
+      "str": "空灵丧尸"
+    },
+    "description": "这个看起来十分瘦弱的身影周围那永久的阴影使人很难辨认它的轮廓。 你能看到的它是半透明的，且在闪闪发光。它会在光线中迷失方向，并会主动避开火焰。",
+    "default_faction": "zombie",
+    "categories": [
+      "CLASSIC"
+    ],
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 16,
+    "hp": 90,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "black_white",
+    "looks_like": "mon_zombie_shady",
+    "aggression": 5,
+    "morale": 90,
+    "melee_skill": 6,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "pure",
+        "amount": 1
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 5
+      },
+      {
+        "id": "rad_fives",
+        "duration": 5
+      }
+    ],
+    "dodge": 6,
+    "armor_bash": 6,
+    "armor_cut": 16,
+    "armor_bullet": 12,
+    "armor_acid": 2,
+    "armor_fire": 5,
+    "vision_day": 10,
+    "vision_night": 50,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 5
+      },
+      [
+        "slash",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 20
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "FRIEND_DIED",
+      "STALK",
+      "HURT"
+    ],
+    "placate_triggers": [
+      "FIRE"
+    ],
+    "flags": [
+      "HARDTOSHOOT",
+      "SEES",
+      "HEARS",
+      "PATH_AVOID_DANGER_1",
+      "SMELLS",
+      "STUMBLES",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "NIGHT_INVISIBILITY",
+      "SWIMS",
+      "PLASTIC",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_hollow",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_hollow",
+    "hp": 100,
+    "speed": 80,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 7,
+    "melee_cut": 2,
+    "dodge": 4,
+    "armor_bash": 7,
+    "armor_cut": 5,
+    "armor_bullet": 3,
+    "armor_stab": 10,
+    "burn_into": "mon_zombie_scorched_pk",
+    "upgrades": {
+      "half_life": 44,
+      "into": "mon_zombie_hollow_pk"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "REVIVES",
+      "STUMBLES",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GRABS",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_master_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸主宰"
+    },
+    "description": "一具苍白而又带有渗人粉色皮肤的尸体，面揣着悲惨微笑和残酷的无瞳之眼。它的脸正以一种蕴藏智慧和情感的方式扭曲。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 25,
+    "hp": 140,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "pink_red",
+    "looks_like": "mon_zombie_master",
+    "aggression": 5,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 7,
+    "melee_cut": 4,
+    "dodge": 4,
+    "armor_bash": 6,
+    "armor_cut": 3,
+    "armor_bullet": 3,
+    "armor_acid": 2,
+    "armor_fire": 3,
+    "vision_day": 50,
+    "vision_night": 10,
+    "special_attacks": [
+      [
+        "UPGRADE",
+        10
+      ],
+      [
+        "FORMBLOB",
+        900
+      ],
+      { "id": "longswipe", "cooldown":90
+      },
+      [
+        "slash",
+        20
+      ]
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "effect": {
+        "id": "death_blobsplit",
+        "hit_self": true
+      },
+      "message": "The %s splits in two!"
+    },
+    "burn_into": "mon_zombie_scorched_necro",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "NO_NECRO",
+      "REVIVES",
+      "BONES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_necro_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "死灵法尸"
+    },
+    "description": "一具扭曲的，皮肤灰白且肌肉正在不断颤抖的类人生物。当它对着倒下的同类做出亵渎的手势时，扭曲的手臂似乎吸收了某种其他的超自然力量。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 25,
+    "hp": 160,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "dark_gray",
+    "looks_like": "mon_zombie_necro",
+    "aggression": 5,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 3,
+    "melee_dice_sides": 4,
+    "melee_cut": 6,
+    "dodge": 6,
+    "armor_bash": 8,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_acid": 3,
+    "armor_fire": 3,
+    "vision_day": 50,
+    "vision_night": 10,
+    "special_attacks": [
+      [
+        "RESURRECT",
+        10
+      ],
+      [
+        "FORMBLOB",
+        960
+      ],
+      [
+        "slash",
+        20
+      ]
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "effect": {
+        "id": "death_blobsplit",
+        "hit_self": true
+      },
+      "message": "The %s splits in two!"
+    },
+    "burn_into": "mon_zombie_scorched_necro",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "NO_NECRO",
+      "REVIVES",
+      "BONES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_lord",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸领主"
+    },
+    "description": "这具看起来动作优雅的丧尸站在那里，挺直了背，面带嘲讽的微笑且瞪着眼睛，用它那锯齿状的爪子挥动着，似乎在指挥附近的丧尸。它的皮肤是一种令人恶心的猩红色，每隔一段时间它就会停下来排出一些粘稠的、有生命的小块。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 25,
+    "hp": 180,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "red_magenta",
+    "looks_like": "mon_zombie_master",
+    "aggression": 5,
+    "morale": 100,
+    "melee_skill": 8,
+    "melee_dice": 3,
+    "melee_dice_sides": 6,
+    "melee_cut": 7,
+    "dodge": 6,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 5
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      },
+      {
+        "id": "rad_tenths",
+        "duration": 15
+      }
+    ],
+    "armor_bash": 12,
+    "armor_cut": 8,
+    "armor_bullet": 6,
+    "armor_acid": 3,
+    "armor_fire": 3,
+    "vision_day": 50,
+    "vision_night": 10,
+    "special_attacks": [
+      [
+        "UPGRADE",
+        20
+      ],
+      [
+        "RESURRECT",
+        20
+      ],
+      [
+        "FORMBLOB",
+        320
+      ],
+      { "id": "longswipe", "cooldown":15
+      },
+      [
+        "slash",
+        20
+      ]
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "death_drops": "default_zombie_death_drops",
+    "death_function": {
+      "effect": {
+        "id": "death_blobsplit",
+        "hit_self": true
+      },
+      "message": "The %s splits in two!"
+    },
+    "burn_into": "mon_zombie_scorched_necro",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "PATH_AVOID_DANGER_2",
+      "PRIORITIZE_TARGETS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "NO_NECRO",
+      "REVIVES",
+      "BONES",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_swimmer",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_swimmer",
+    "burn_into": "mon_zombie_scorched",
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 2
+      }
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 15
+      },
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "upgrades": {
+      "half_life": 17,
+      "into": "mon_zombie_mancroc"
+    }
+  },
+  {
+    "id": "mon_zombie_swimmer_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "泳装丧尸"
+    },
+    "description": "这种蹼足的游泳者摇摆不定，但掠夺性的方式。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 10,
+    "hp": 80,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_blue",
+    "looks_like": "mon_zombie_swimmer",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 3,
+    "dodge": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 5
+      }
+    ],
+    "armor_bash": 2,
+    "vision_day": 40,
+    "vision_night": 5,
+    "special_attacks": [
+      { "id": "grab", "cooldown": 10
+      },
+      [
+        "scratch",
+        10
+      ],
+      {
+        "type": "bite",
+        "cooldown": 20
+      }
+    ],
+    "death_drops": "mon_zombie_swimmer_death_drops",
+    "burn_into": "mon_zombie_scorched",
+    "upgrades": {
+      "half_life": 17,
+      "into": "mon_zombie_scales"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "SWIMS",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_scales",
+    "type": "MONSTER",
+    "name": {
+      "str": "镶嵌丧尸"
+    },
+    "description": "这种丧尸似乎在水里比在外面更舒服。它的皮肤已经硬化成了片状的几丁质层，它那迟钝的动作令它看起来没那么有敌意。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 16,
+    "hp": 120,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "blue_cyan",
+    "looks_like": "mon_zombie_swimmer",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 8,
+    "melee_dice_sides": 2,
+    "melee_cut": 1,
+    "dodge": 2,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 15
+      }
+    ],
+    "armor_bash": 10,
+    "armor_cut": 18,
+    "armor_bullet": 12,
+    "armor_stab": 12,
+    "armor_fire": 8,
+    "vision_day": 40,
+    "vision_night": 4,
+    "special_attacks": [
+      { "id": "grab_drag", "cooldown":20
+      },
+      [
+        "slash",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 8
+      }
+    ],
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "mon_zombie_swimmer_death_drops",
+          20
+        ]
+      ]
+    },
+    "burn_into": "mon_zombie_fiend",
+    "flags": [
+      "CHITIN",
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "SWIMS",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_mancroc",
+    "type": "MONSTER",
+    "copy-from": "mon_zombie_mancroc",
+    "hp": 120,
+    "speed": 100,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 5,
+    "melee_cut": 8,
+    "dodge": 2,
+    "armor_bash": 3,
+    "armor_cut": 6,
+    "armor_bullet": 4,
+    "vision_day": 25,
+    "vision_night": 5,
+    "attack_effs": [
+      {
+        "id": "flu_zed",
+        "duration": 8000,
+        "chance": 1
+      }
+    ],
+    "special_attacks": [
+      { "id": "grab_drag", "cooldown":25
+      },
+      [
+        "slash",
+        20
+      ],
+      {
+        "type": "bite",
+        "cooldown": 10,
+        "accuracy": 7,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.5
+          },
+          {
+            "damage_type": "bash",
+            "amount": 18,
+            "armor_multiplier": 0.5
+          }
+        ]
+      }
+    ],
+    "burn_into": "mon_zombie_scorched_pk"
+  },
+  {
+    "id": "mon_zombie_crawler_pk_weak",
+    "type": "MONSTER",
+    "name": {
+      "str": "蹒跚而行的丧尸"
+    },
+    "description": "一具只靠着上肢缓慢滴爬行的丧尸;它那被火碳化了的皮肤上有锯齿状的裂缝。躯干上被爬行所摩擦撕裂的地方，黏糊糊的污泥从它胸腔里的洞里不断地逃出来。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 16,
+    "hp": 90,
+    "speed": 45,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "green_yellow",
+    "looks_like": "mon_zombie_crawler",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 10,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 12
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 7,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_fire": 1,
+    "vision_day": 10,
+    "vision_night": 20,
+    "emit_fields": [
+      "emit_sludge_small"
+    ],
+    "special_attacks": [
+      [
+        "ACID_BARF",
+        30
+      ],
+      { "id": "grab", "cooldown": 60
+      },
+      [
+        "PARROT",
+        50
+      ],
+      [
+        "FORMBLOB",
+        2200
+      ]
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      25
+    ],
+    "burn_into": "mon_zombie_crawler_pk",
+    "flags": [
+      "ACIDPROOF",
+      "ACID_BLOOD",
+      "SEES",
+      "HEARS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "NO_NECRO",
+      "REVIVES_HEALTHY",
+      "SLUDGEPROOF",
+      "FLAMMABLE",
+      "SWIMS",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_crawler_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "蹒跚而行的怪兽"
+    },
+    "description": "一只俯卧的人形怪物，充血的躯体足以有着三人大小，向前跳着发出令人作呕的吮吸声。当它从地面汲取物体和物质时，就会变得非常非常强大，并产生几个黑色物质......",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 24,
+    "hp": 90,
+    "speed": 65,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "green_yellow",
+    "looks_like": "mon_zombie_crawler",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 1,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 8
+      },
+      {
+        "damage_type": "stab",
+        "amount": 8
+      }
+    ],
+    "dodge": 1,
+    "armor_bash": 7,
+    "armor_cut": 4,
+    "armor_bullet": 4,
+    "armor_fire": 3,
+    "vision_day": 5,
+    "vision_night": 15,
+    "emit_fields": [
+      "emit_sludge"
+    ],
+    "special_attacks": [
+      [
+        "ACID_BARF",
+        30
+      ],
+      { "id": "grab", "cooldown": 60
+      },
+      [
+        "PARROT",
+        40
+      ],
+      [
+        "ABSORB_ITEMS",
+        0
+      ],
+      [
+        "FORMBLOB",
+        2000
+      ]
+    ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      10
+    ],
+    "burn_into": "mon_zombie_crawler_scorched",
+    "flags": [
+      "ACIDPROOF",
+      "ACID_BLOOD",
+      "SEES",
+      "HEARS",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "NO_NECRO",
+      "REVIVES_HEALTHY",
+      "PLASTIC",
+      "SLUDGEPROOF",
+      "FLAMMABLE",
+      "SWIMS",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_hulk_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸坦克"
+    },
+    "description": "据说这个庞然大物是几具尸体的结合体，巨大的丧尸坦克可能是究极毁灭工具。以为用了残忍的手段来弥补了它的不足，可以说它是丧尸灾难的破坏球。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 60,
+    "hp": 650,
+    "speed": 135,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "magenta_white",
+    "looks_like": "mon_zombie_hulk",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 20,
+    "melee_cut": 4,
+    "dodge": 4,
+    "armor_bash": 14,
+    "armor_cut": 20,
+    "armor_bullet": 15,
+    "armor_stab": 10,
+    "armor_fire": 5,
+    "vision_day": 50,
+    "vision_night": 4,
+    "special_attacks": [
+      [
+        "SMASH",
+        20
+      ],
+      [
+        "BIO_OP_TAKEDOWN",
+        30
+      ]
+    ],
+    "death_drops": "mon_zombie_hulk_death_drops",
+    "burn_into": "mon_zombie_fiend_pk",
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "DESTROYS",
+      "POISON",
+      "ATTACKMON",
+      "LEATHER",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "FAT",
+      "PUSH_MON",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_boomer_huge_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "巨型爆汁丧尸"
+    },
+    "description": "一只全身即将爆炸的爆汁丧尸，表皮已经变异得比较坚硬了，嘴中溢出的胆汁颜色似乎在进行变化。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 15,
+    "hp": 60,
+    "speed": 85,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "pink_white",
+    "looks_like": "mon_zombie_brute",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 2,
+    "melee_dice": 3,
+    "melee_dice_sides": 3,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      }
+    ],
+    "dodge": 0,
+    "armor_bash": 5,
+    "armor_cut": 5,
+    "armor_bullet": 5,
+    "vision_day": 40,
+    "vision_night": 5,
+    "emit_fields": [
+      "emit_bile"
+    ],
+    "luminance": 2,
+    "special_attacks": [
+      [
+        "scratch",
+        20
+      ],
+      [
+        "BOOMER_GLOW",
+        20
+      ],
+      [
+        "BREATHE",
+        8
+      ]
+    ],
+    "death_drops": "default_zombie_items",
+    "death_function": {
+      "effect": {
+        "id": "death_boomer_glow",
+        "hit_self": true,
+        "min_level": 1
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "A %s explode!"
+    },
+    "flags": [
+      "SEES",
+      "GOODHEARING",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BILE_BLOOD",
+      "BONES",
+      "FAT",
+      "PUSH_MON",
+      "PATH_AVOID_DANGER_1",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_charred_nightmare",
+    "type": "MONSTER",
+    "copy-from": "mon_charred_nightmare",
+    "attack_effs": [
+      {
+        "id": "rad_fives",
+        "duration": 20
+      }
+    ],
+    "flags": [
+      "SEES",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "NOGIB",
+      "BONES",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_irradiated_wanderer_1",
+    "type": "MONSTER",
+    "copy-from": "mon_irradiated_wanderer_1",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 10
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "NOGIB",
+      "BONES",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_irradiated_wanderer_2",
+    "type": "MONSTER",
+    "copy-from": "mon_irradiated_wanderer_2",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 12
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "NOGIB",
+      "BONES",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_irradiated_wanderer_3",
+    "type": "MONSTER",
+    "copy-from": "mon_irradiated_wanderer_3",
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 20
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "NOGIB",
+      "BONES",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_irradiated_wanderer_4",
+    "type": "MONSTER",
+    "copy-from": "mon_irradiated_wanderer_4",
+    "attack_effs": [
+      {
+        "id": "rad_fives",
+        "duration": 5
+      }
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "NOGIB",
+      "BONES",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_gasbag_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "腐烂的丧尸"
+    },
+    "description": "臃肿得难以置信的躯体，满身的脂肪堆积在一起，散发着一股有毒的气体。闪闪发光的污泥从它张开的嘴里滴落下来。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 10,
+    "hp": 110,
+    "speed": 100,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "pink_magenta",
+    "looks_like": "mon_zombie_gasbag",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 10,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      }
+    ],
+    "dodge": 2,
+    "armor_bash": 16,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "armor_stab": 12,
+    "armor_acid": 2,
+    "armor_fire": 10,
+    "vision_day": 40,
+    "vision_night": 4,
+    "emit_fields": [
+      "emit_gas_plume"
+    ],
+    "special_attacks": [
+      { "id": "grab_drag", "cooldown":12
+      },
+      { "id": "stretch_attack", "cooldown":15
+      }
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_boomer_glow",
+        "hit_self": true,
+        "min_level": 1
+      },
+      "corpse_type": "NO_CORPSE",
+      "message": "A %s explode!"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "HARDTOSHOOT",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "PUSH_MON",
+      "PATH_AVOID_DANGER_1",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_radbag",
+    "type": "MONSTER",
+    "name": {
+      "str": "闷烧丧尸"
+    },
+    "description": "一个在一团雾气中微微发光的人形。 光是看它就会让你的皮肤刺痛;当它碰到你时会让你有一种很糟糕的刺痛感。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 16,
+    "hp": 80,
+    "speed": 70,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_green_yellow",
+    "looks_like": "mon_zombie_gasbag",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 3,
+    "melee_damage": [
+      {
+        "damage_type": "heat",
+        "amount": 2
+      }
+    ],
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 120
+      },
+      {
+        "id": "rad_fives",
+        "duration": 10
+      }
+    ],
+    "dodge": 5,
+    "armor_bash": 8,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 50,
+    "vision_night": 9,
+    "luminance": 3,
+    "emit_fields": [
+      "emit_gas_plume"
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 20
+      }
+    ],
+    "death_drops": "mon_zombie_hulk_death_drops",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "NIGHT_INVISIBILITY",
+      "FILTHY"
+    ]
+  },
+  {
+    "id": "mon_zombie_smoker_pk",
+    "type": "MONSTER",
+    "name": {
+      "str": "丧尸砧骨"
+    },
+    "description": "一个肥胖粗壮的、轮廓十分朦胧的类人生物，它的周围不断散发着烟雾。这股浓烟不仅遮蔽了它的盟友，也模糊了它的视野。",
+    "default_faction": "zombie",
+    "species": [
+      "ZOMBIE"
+    ],
+    "diff": 16,
+    "hp": 80,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
+    "symbol": "Z",
+    "color": "light_green_yellow",
+    "looks_like": "mon_zombie_smoker",
+    "aggression": 100,
+    "morale": 100,
+    "melee_skill": 5,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 4,
+    "attack_effs": [
+      {
+        "id": "rad_tenths",
+        "duration": 60
+      },
+      {
+        "id": "rad_fives",
+        "duration": 10
+      }
+    ],
+    "dodge": 5,
+    "armor_bash": 8,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "vision_day": 50,
+    "vision_night": 9,
+    "emit_fields": [
+      "emit_smoke_blast"
+    ],
+    "special_attacks": [
+      { "id": "grab", "cooldown": 20
+      },
+      [
+        "slash",
+        20
+      ],
+      {
+        "id": "scratch",
+        "cooldown": 15,
+        "accuracy": 4,
+        "damage_max_instance": [
+          {
+            "damage_type": "heat",
+            "amount": 2
+          },
+          {
+            "damage_type": "cut",
+            "amount": 9,
+            "armor_multiplier": 0.67
+          }
+        ]
+      }
+    ],
+    "death_drops": "mon_zombie_hulk_death_drops",
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "BONES",
+      "NIGHT_INVISIBILITY",
+      "FILTHY"
+    ]
+  }
+]

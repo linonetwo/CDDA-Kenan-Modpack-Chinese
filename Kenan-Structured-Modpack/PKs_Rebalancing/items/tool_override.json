@@ -1,0 +1,75 @@
+[
+  {
+    "id": "popcan_stove",
+    "type": "TOOL",
+    "copy-from": "popcan_stove",
+    "name": {
+      "str": "汽水罐炉具"
+    },
+    "description": "这是一个超轻酒精燃烧炉与煨环，手工制作从一对铝苏打罐。它配有一个250毫升的塑料瓶，用来盛装浓缩酒精燃料。",
+    "weight": "45 g",
+    "volume": "750 ml",
+    "price": "250 cent",
+    "bashing": 1,
+    "material": [
+      "aluminum"
+    ],
+    "symbol": ";",
+    "color": "light_gray",
+    "ammo": [
+      "conc_alcohol"
+    ],
+    "sub": "hotplate",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "conc_alcohol": 250
+        }
+      }
+    ],
+    "charges_per_use": 4,
+    "use_action": "HOTPLATE"
+  },
+  {
+    "id": "pipe_launcher40mm",
+    "type": "GUNMOD",
+    "copy-from": "pipe_launcher40mm",
+    "name": {
+      "str": "自制 40mm 榴弹发射器"
+    },
+    "description": "一个自制的简易发射器，可以安装到几乎任何步枪上。每次装填一发40mm榴弹。",
+    "weight": "2080 g",
+    "volume": "750 ml",
+    "price": "250 USD",
+    "install_time": "15 m",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": ":",
+    "color": "light_gray",
+    "location": "underbarrel",
+    "mod_targets": [
+      "rifle",
+      "crossbow",
+      "shotgun"
+    ],
+    "gun_data": {
+      "ammo": "40x46mm",
+      "skill": "launcher",
+      "dispersion": 450,
+      "durability": 10,
+      "clip_size": 1
+    },
+    "dispersion_modifier": 60,
+    "min_skills": [
+      [
+        "gun",
+        1
+      ]
+    ]
+  }
+]

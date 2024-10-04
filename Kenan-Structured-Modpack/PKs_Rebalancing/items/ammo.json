@@ -1,0 +1,765 @@
+[
+  {
+    "id": "water_smoke",
+    "copy-from": "water",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "烟雾制造剂",
+      "str_pl": "烟雾制造剂"
+    },
+    "description": "一种稠化的溶液，准备蒸发成烟。也许不吃更安全",
+    "category": "other",
+    "color": "cyan",
+    "container": "bottle_plastic",
+    "nutrition": 3,
+    "quench": 9,
+    "ammo_data": {
+      "ammo_type": "smoke_juice"
+    },
+    "flags": [
+      "EATEN_COLD"
+    ]
+  },
+  {
+    "id": "chime_scrap",
+    "type": "AMMO",
+    "name": {
+      "str": "噪音制造器"
+    },
+    "//": "An intro to mechanics, and a noisemaker.",
+    "description": "几块被拴在一根绳子上的形状粗糙的金属。这个东西展开后投掷出去，可以制造一些噪音干扰。",
+    "weight": "440 g",
+    "volume": "250 ml",
+    "price": "3 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "&",
+    "color": "light_gray",
+    "count": 1,
+    "ammo_type": "thrown",
+    "effects": [
+      "RECOVER_10",
+      "NO_EMBED"
+    ],
+    "flags": [
+      "ACT_ON_RANGED_HIT"
+    ],
+    "use_action": {
+      "target": "chime_scrap_act",
+      "target_charges": 2,
+      "active": true,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "chime_scrap_act",
+    "type": "TOOL",
+    "name": {
+      "str": "噪音制造器"
+    },
+    "//": "turns on because it needs to make noise.  Cant use a use action because they all use customized, specific sound description.",
+    "description": "几块被拴在一根绳子上的形状粗糙的金属。这个东西展开后投掷出去，可以制造一些噪音干扰。",
+    "weight": "440 g",
+    "volume": "250 ml",
+    "price": "3 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "&",
+    "color": "light_gray",
+    "revert_to": "chime_scrap",
+    "initial_charges": 2,
+    "max_charges": 2,
+    "turns_per_charge": 1,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {}
+    }
+  },
+  {
+    "id": "bomblet_casing",
+    "type": "AMMO",
+    "copy-from": "casing",
+    "category": "spare_parts",
+    "name": {
+      "str": "小炸弹盒"
+    },
+    "description": "一个空的小炸弹盒。",
+    "weight": "12 g",
+    "volume": "500 ml",
+    "price": "100 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "count": 10,
+    "ammo_type": "components"
+  },
+  {
+    "id": "bomblet_explosive",
+    "type": "AMMO",
+    "name": {
+      "str": "小炸弹"
+    },
+    "description": "一个装有爆炸性油灰的小圆筒。设计用于突发事件。",
+    "weight": "80 g",
+    "volume": "500 ml",
+    "price": "400 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "brown",
+    "count": 6,
+    "ammo_type": "bomblet",
+    "range": 25,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 1,
+      "armor_penetration": 10
+    },
+    "effects": [
+      "NEVER_MISFIRES",
+      "COOKOFF",
+      "RECOVER_9",
+      "ACT_ON_RANGED_HIT",
+      "CUSTOM_EXPLOSION"
+    ],
+    "explode_in_fire": true,
+    "explosion": {
+      "power": 12,
+      "distance_factor": 0.1,
+      "shrapnel": 2
+    }
+  },
+  {
+    "id": "bomblet_frag",
+    "type": "AMMO",
+    "name": {
+      "str": "破片小炸弹"
+    },
+    "description": "一种小圆柱体，由易燃的爆炸性油灰和金属破片填充。爆炸时飞出的弹片相当强大，但对持用者来说同样不可预测和危险 ---保持距离，远离危险。",
+    "weight": "80 g",
+    "volume": "500 ml",
+    "price": "650 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "yellow",
+    "count": 6,
+    "ammo_type": "bomblet",
+    "range": 20,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 3,
+      "armor_penetration": 10
+    },
+    "effects": [
+      "NEVER_MISFIRES",
+      "COOKOFF",
+      "RECOVER_9",
+      "ACT_ON_RANGED_HIT",
+      "CUSTOM_EXPLOSION"
+    ],
+    "explode_in_fire": true,
+    "explosion": {
+      "power": 4,
+      "distance_factor": 0.1,
+      "shrapnel": 12
+    }
+  },
+  {
+    "id": "bomblet_fire",
+    "type": "AMMO",
+    "name": {
+      "str": "燃烧小炸弹"
+    },
+    "description": "一个装有强力助燃剂的小圆筒。撞击时产生巨大的撞击声、烟雾和火灾。小心使用，否则对你也是危险的。",
+    "weight": "80 g",
+    "volume": "500 ml",
+    "price": "550 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "red",
+    "count": 6,
+    "ammo_type": "bomblet",
+    "range": 20,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 3,
+      "armor_penetration": 10
+    },
+    "effects": [
+      "INCENDIARY",
+      "NEVER_MISFIRES",
+      "COOKOFF",
+      "RECOVER_9",
+      "ACT_ON_RANGED_HIT",
+      "CUSTOM_EXPLOSION"
+    ],
+    "explode_in_fire": true,
+    "emits": [
+      "emit_smoke_bomblet",
+      "emit_fire_bomblet",
+      "emit_fire_bomblet_small"
+    ],
+    "countdown_interval": 2,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {
+        "power": 4,
+        "distance_factor": 0.1
+      }
+    }
+  },
+  {
+    "id": "bomblet_acid",
+    "type": "AMMO",
+    "name": {
+      "str": "酸液小炸弹"
+    },
+    "description": "充满强酸和有毒化学物质的小圆筒。产生大量的酸液和扩散在空气中的腐蚀性物质，---准备好橡胶靴。",
+    "weight": "80 g",
+    "volume": "500 ml",
+    "price": "500 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "light_green",
+    "count": 6,
+    "ammo_type": "bomblet",
+    "range": 20,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 3,
+      "armor_penetration": 10
+    },
+    "effects": [
+      "NEVER_MISFIRES",
+      "COOKOFF",
+      "RECOVER_9",
+      "ACT_ON_RANGED_HIT",
+      "CUSTOM_EXPLOSION"
+    ],
+    "explode_in_fire": true,
+    "emits": [
+      "emit_tgas_bomblet",
+      "emit_acid_bomblet"
+    ],
+    "countdown_interval": 2,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {
+        "power": 4,
+        "distance_factor": 0.1
+      }
+    }
+  },
+  {
+    "id": "bomblet_stun",
+    "type": "AMMO",
+    "name": {
+      "str": "闪光小炸弹"
+    },
+    "description": "一种小圆柱体，爆炸时会发出大量的声音和光，和闪光弹一样。在大灾变之前，关于滥用这种弹药导致伤亡的故事就已经流传开来。",
+    "weight": "80 g",
+    "volume": "500 ml",
+    "price": "450 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "light_blue",
+    "count": 6,
+    "ammo_type": "bomblet",
+    "range": 25,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 3,
+      "armor_penetration": 10
+    },
+    "effects": [
+      "LARGE_BEANBAG",
+      "RECOVER_9",
+      "NEVER_MISFIRES",
+      "COOKOFF",
+      "ACT_ON_RANGED_HIT",
+      "CUSTOM_EXPLOSION"
+    ],
+    "explode_in_fire": true,
+    "emits": [
+      "emit_dazzle_bomblet",
+      "emit_teargas_bomblet"
+    ],
+    "countdown_interval": 2,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "target": "bomblet_stun_act",
+      "target_charges": 1,
+      "active": true,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "bomblet_stun_act",
+    "type": "TOOL",
+    "name": {
+      "str": "闪光小炸弹"
+    },
+    "description": "一个激活的闪光小炸弹，准备爆炸了。",
+    "weight": "80 g",
+    "volume": "500 ml",
+    "price": "450 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "light_blue",
+    "initial_charges": 1,
+    "max_charges": 1,
+    "turns_per_charge": 1,
+    "use_action": {
+      "type": "explosion",
+      "emp_blast_radius": 1,
+      "explosion": {
+        "power": 1,
+        "distance_factor": 0.2,
+        "shrapnel": 1
+      }
+    }
+  },
+  {
+    "id": "acidbomb_large",
+    "type": "AMMO",
+    "category": "weapons",
+    "name": {
+      "str": "大型酸液炸弹"
+    },
+    "description": "这个由三个装着酸液的瓶子捆在一起的酸液炸弹内部有足够多的酸性液体，可以在一个较大的区域内倾洒大量酸液。",
+    "weight": "1231 g",
+    "volume": "750 ml",
+    "price": "75 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "glass"
+    ],
+    "symbol": "*",
+    "color": "i_light_green",
+    "ammo_type": "thrown",
+    "effects": [
+      "RECOVER_9"
+    ],
+    "flags": [
+      "ACT_ON_RANGED_HIT"
+    ],
+    "emits": [
+      "emit_acid_large"
+    ],
+    "countdown_interval": 8,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {}
+    }
+  },
+  {
+    "id": "acidbomb_small",
+    "type": "AMMO",
+    "category": "weapons",
+    "name": {
+      "str": "小型酸液炸弹"
+    },
+    "description": "一瓶装满腐蚀性化学物质的玻璃罐或者是捆绑在一起的烧杯，当暴露在空气中时，它们会向四面八方喷射，形成一个洒满酸液的区域。",
+    "weight": "813 g",
+    "volume": "500 ml",
+    "price": "50 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "glass"
+    ],
+    "symbol": "*",
+    "color": "green",
+    "ammo_type": "thrown",
+    "effects": [
+      "RECOVER_9"
+    ],
+    "flags": [
+      "ACT_ON_RANGED_HIT"
+    ],
+    "emits": [
+      "emit_acid_small",
+      "emit_acid_trail_slow"
+    ],
+    "countdown_interval": 21,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {}
+    }
+  },
+  {
+    "id": "molotov_micro",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "自制莫洛托夫燃烧瓶"
+    },
+    "description": "一个装满汽油的小容器，用引线系住。当它被点燃并扔出去的时候，它可能会被抓住，也可能会因为摔破而毫无用处。",
+    "weight": "295 g",
+    "volume": "250 ml",
+    "price": "45 USD",
+    "to_hit": -1,
+    "bashing": 8,
+    "material": [
+      "hydrocarbons",
+      "cotton",
+      "glass"
+    ],
+    "symbol": "*",
+    "color": "light_red",
+    "explode_in_fire": true,
+    "use_action": {
+      "target": "molotov_micro_act",
+      "msg": "你点燃自制燃烧弹。",
+      "target_charges": 2,
+      "active": true,
+      "moves": 75,
+      "need_fire": 1,
+      "type": "transform"
+    },
+    "flags": [
+      "NPC_ACTIVATE"
+    ]
+  },
+  {
+    "id": "molotov_micro_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "自制莫洛托夫燃烧瓶（点燃）"
+    },
+    "description": "一个已经点燃的自制莫洛托夫燃烧瓶 。 。 。  也许应该扔出去了？",
+    "weight": "285 g",
+    "volume": "250 ml",
+    "material": [
+      "hydrocarbons",
+      "cotton"
+    ],
+    "symbol": "*",
+    "color": "light_red",
+    "initial_charges": 2,
+    "max_charges": 2,
+    "turns_per_charge": 1,
+    "countdown_action": {
+      "type": "explosion",
+      "fields_type": "fd_fire",
+      "fields_radius": 0,
+      "fields_min_intensity": 0,
+      "fields_max_intensity": 2
+    },
+    "flags": [
+      "LIGHT_15",
+      "TRADER_AVOID",
+      "NPC_THROW_NOW"
+    ]
+  },
+  {
+    "id": "shot_410_slug",
+    "type": "AMMO",
+    "name": {
+      "str": ".410 独头弹"
+    },
+    "description": "一种设计用来穿透装甲的实心小口径猎枪炮弹。",
+    "weight": "22 g",
+    "volume": "250 ml",
+    "price": "75 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_red",
+    "count": 20,
+    "stack_size": 20,
+    "ammo_type": "410shot",
+    "casing": "410shot_hull",
+    "range": 16,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 34,
+      "armor_penetration": 8
+    },
+    "dispersion": 40,
+    "recoil": 550,
+    "loudness": 140,
+    "effects": [
+      "COOKOFF",
+      "BEANBAG"
+    ]
+  },
+  {
+    "id": "shot_410_flechette",
+    "type": "AMMO",
+    "name": {
+      "str": "410弗莱切特"
+    },
+    "description": "一种小口径的霰弹枪，正好有4个尖弹头和大量的炸药。",
+    "weight": "22 g",
+    "volume": "250 ml",
+    "price": "75 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_red",
+    "count": 20,
+    "stack_size": 20,
+    "ammo_type": "410shot",
+    "casing": "410shot_hull",
+    "range": 12,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 26,
+      "armor_penetration": 12
+    },
+    "dispersion": 10,
+    "recoil": 350,
+    "effects": [
+      "COOKOFF",
+      "SHOT"
+    ]
+  },
+  {
+    "id": "shot_410_inc",
+    "type": "AMMO",
+    "name": {
+      "str": ".410燃烧弹"
+    },
+    "description": "弹壳一种小口径的猎枪炮弹，有爆炸性燃烧物储备，在撞击时猛烈燃烧。",
+    "weight": "26 g",
+    "volume": "250 ml",
+    "price": "75 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "light_red",
+    "count": 20,
+    "stack_size": 20,
+    "ammo_type": "410shot",
+    "casing": "410shot_hull",
+    "range": 8,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 8
+    },
+    "dispersion": 40,
+    "recoil": 300,
+    "loudness": 180,
+    "effects": [
+      "COOKOFF",
+      "BEANBAG",
+      "INCENDIARY"
+    ]
+  },
+  {
+    "id": "shot_410_slug_reloaded",
+    "type": "AMMO",
+    "copy-from": "shot_410_slug",
+    "name": {
+      "str": ".410 独头弹（复装）"
+    },
+    "description": "一种手装固体子弹的小口径霰弹枪壳，设计用于穿透装甲。",
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.8
+      },
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    }
+  },
+  {
+    "id": "shot_410_flechette_reloaded",
+    "type": "AMMO",
+    "copy-from": "shot_410_flechette",
+    "name": {
+      "str": ".410 镖形霰弹（复装）"
+    },
+    "description": "一种手动装填的小口径霰弹枪弹壳，有4个尖头弹和大量炸药。",
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.8
+      },
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    }
+  },
+  {
+    "id": "shot_410_inc_reloaded",
+    "type": "AMMO",
+    "copy-from": "shot_410_inc",
+    "name": {
+      "str": ".410燃烧弹，重新装弹"
+    },
+    "description": "一种手动重新装填的小口径猎枪炮弹，带有爆炸性燃烧物，在撞击时会猛烈燃烧。",
+    "proportional": {
+      "price": 0.7,
+      "damage": {
+        "damage_type": "stab",
+        "amount": 0.8
+      },
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    }
+  },
+  {
+    "id": "bfg_shell",
+    "type": "AMMO",
+    "name": {
+      "str": "BFG 炮弹",
+      "str_pl": "BFG 炮弹"
+    },
+    "description": "一个巨大的绿色球体，无时无刻散发着发着微弱的光，表面有着不断变换的漩涡状图案。一旦受到猛烈的冲击，就会破坏内部亚金物质的稳定，引爆周围。值得注意的是，它是防走火的。",
+    "weight": "800 g",
+    "volume": "800 ml",
+    "price": "9000 USD",
+    "material": [
+      "spess_plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "light_green",
+    "count": 1,
+    "ammo_type": "bfg_plutonium",
+    "range": 40,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 35,
+      "armor_penetration": 20
+    },
+    "effects": [
+      "RECOVER_9",
+      "NO_EMBED",
+      "BOUNCE",
+      "PLASMA",
+      "ACT_ON_RANGED_HIT",
+      "CUSTOM_EXPLOSION",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ],
+    "emits": [
+      "emit_bfg_rad",
+      "emit_plasma",
+      "emit_fatigue_big",
+      "emit_fatigue"
+    ],
+    "countdown_interval": 2,
+    "countdown_action": {
+      "target": "bfg_shell_act",
+      "target_charges": 1,
+      "active": true,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "bfg_shell_act",
+    "type": "TOOL",
+    "name": {
+      "str": "BFG 炮弹"
+    },
+    "description": "一个能量集中的发光球体，随着它的内部结构的损坏而展开和扭动。",
+    "weight": "80 g",
+    "volume": "500 ml",
+    "price": "450 USD",
+    "material": [
+      "plastic",
+      "powder"
+    ],
+    "symbol": "*",
+    "color": "light_blue",
+    "initial_charges": 1,
+    "max_charges": 1,
+    "turns_per_charge": 1,
+    "use_action": {
+      "type": "explosion",
+      "emp_blast_radius": 8,
+      "explosion": {
+        "power": 120,
+        "distance_factor": 0.4,
+        "shrapnel": 4
+      },
+      "fields_type": "fd_plasma",
+      "fields_radius": 2,
+      "fields_min_intensity": 0,
+      "fields_max_intensity": 1
+    }
+  },
+  {
+    "id": "brute_shot_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "蛮人子弹带"
+    },
+    "description": "一小块废铁精心制作而成，可快速将小炸弹取出来插入25型小炸弹发射器。",
+    "weight": "210 g",
+    "volume": "750 ml",
+    "price": "20 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "dark_gray",
+    "ammo_type": [
+      "bomblet"
+    ],
+    "capacity": 12,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bomblet": 12
+        }
+      }
+    ],
+    "reload_time": 250,
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  }
+]

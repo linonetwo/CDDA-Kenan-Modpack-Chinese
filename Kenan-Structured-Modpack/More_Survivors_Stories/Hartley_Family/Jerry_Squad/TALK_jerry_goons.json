@@ -1,0 +1,136 @@
+[
+  {
+    "type": "talk_topic",
+    "id": "TALK_Jerry_Bumpkin_GOON",
+    "dynamic_line": {
+      "npc_has_var": "ally_transfered",
+      "type": "flag",
+      "context": "transfered",
+      "value": "js",
+      "yes": "嘿，<name_g>。杰瑞的小队没事。这里有很多很酷的人。怎么了？",
+      "no": "别惹麻烦，你会没事的。"
+    },
+    "responses": [
+      {
+        "text": "想帮我打扫酒店吗？",
+        "topic": "TALK_Jerry_Bumpkin_GOON_CHOOSE",
+        "condition": {
+          "and": [
+            {
+              "u_has_mission": "MISSION_Jerry_Bumpkin_2"
+            },
+            {
+              "not": {
+                "u_has_mission": "MISSION_Jerry_Bumpkin_goon_0"
+              }
+            },
+            {
+              "u_has_var": "jerry_give_goon",
+              "type": "flag",
+              "context": "goons",
+              "value": "yes"
+            }
+          ]
+        }
+      },
+      {
+        "text": "嘿，杰瑞死了。想和我一起旅行吗？",
+        "topic": "TALK_SUGGEST_FOLLOW",
+        "condition": {
+          "u_has_var": "jerry_bumpkin",
+          "type": "flag",
+          "context": "death",
+          "value": "yes"
+        }
+      },
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Jerry_Bumpkin_GOON_CHOOSE",
+    "dynamic_line": "当然。我们走吧？",
+    "responses": [
+      {
+        "text": "给我看看你有什么！",
+        "topic": "TALK_Jerry_Bumpkin_GOON_CHOOSE",
+        "effect": "reveal_stats"
+      },
+      {
+        "text": "是的，我们走吧。",
+        "topic": "TALK_Jerry_Bumpkin_GOON_FOLLOW",
+        "effect": [
+          "follow_only",
+          {
+            "add_mission": "MISSION_Jerry_Bumpkin_goon_0"
+          },
+          {
+            "u_lose_var": "jerry_give_goon",
+            "type": "flag",
+            "context": "goons"
+          },
+          {
+            "npc_first_topic": "TALK_Jerry_Bumpkin_goon_parking"
+          }
+        ]
+      },
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_Jerry_Bumpkin_GOON_FOLLOW",
+    "dynamic_line": "是什么，<name_g>？",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_Jerry_Bumpkin_goon_0",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "保护傻瓜"
+    },
+    "description": "如果你失去他的人杰里会伤害你的。",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "not": {
+        "u_has_mission": "MISSION_Jerry_Bumpkin_2"
+      }
+    },
+    "difficulty": 0,
+    "value": 0,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    },
+    "fail": {
+      "effect": {
+        "u_adjust_var": "lend_goons",
+        "type": "flag",
+        "context": "death",
+        "adjustment": 1
+      }
+    }
+  }
+]

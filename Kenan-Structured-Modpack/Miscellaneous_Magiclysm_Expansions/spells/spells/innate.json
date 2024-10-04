@@ -1,0 +1,64 @@
+[
+  {
+    "id": "mhand",
+    "type": "SPELL",
+    "name": {
+      "str": "魔术师之手"
+    },
+    "description": "一只幽影般的手被召唤出来帮助你。",
+    "message": "一只神奇的手出现在你面前。",
+    "valid_targets": [
+      "ground"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "max_level": 20,
+    "difficulty": 0,
+    "spell_class": "MAGUS",
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mahand",
+    "energy_source": "MANA",
+    "base_casting_time": 100,
+    "base_energy_cost": 50,
+    "min_range": 3,
+    "max_range": 3,
+    "flags": [
+      "NO_LEGS"
+    ],
+    "min_duration": 30000,
+    "max_duration": 150000,
+    "duration_increment": 4000
+  },
+  {
+    "id": "cone_force",
+    "type": "SPELL",
+    "name": {
+      "str": "冲击波"
+    },
+    "description": "你向目标发射一股锥形推力。",
+    "effect": "attack",
+    "shape": "cone",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "max_level": 20,
+    "min_damage": 30,
+    "max_damage": 90,
+    "damage_increment": 2,
+    "min_aoe": 45,
+    "max_aoe": 75,
+    "aoe_increment": 2,
+    "min_range": 8,
+    "max_range": 30,
+    "range_increment": 1,
+    "spell_class": "MAGUS",
+    "base_casting_time": 200,
+    "base_energy_cost": 400,
+    "energy_source": "MANA",
+    "difficulty": 0,
+    "damage_type": "pure"
+  }
+]

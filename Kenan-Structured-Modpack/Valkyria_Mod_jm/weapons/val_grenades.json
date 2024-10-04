@@ -1,0 +1,148 @@
+[
+  {
+    "id": "bt_grenade",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "加利亚B型木柄手榴弹"
+    },
+    "description": "一个木制手柄从这种简单的罐式炸药中延伸出来，由粉末状的夜光石混合物制成，爆炸时会发出特有的蓝色光芒。它使用一种基于摩擦的保险丝系统，用户首先取下手柄末端的火盖，然后拉动内部撕裂线点燃保险丝。",
+    "weight": "350 g",
+    "volume": "220 ml",
+    "price": "15 USD",
+    "price_postapoc": "10 USD",
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "*",
+    "color": "green",
+    "use_action": {
+      "target": "bt_grenade_act",
+      "msg": "你拉开B型手榴弹的引线。",
+      "target_charges": 5,
+      "active": true,
+      "menu_text": "拉开保险",
+      "type": "transform"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "BOMB",
+      "GRENADE"
+    ]
+  },
+  {
+    "id": "bt_grenade_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "加利亚B型木柄手榴弹（已拉开）"
+    },
+    "description": "这是一枚现役的加利亚B型木柄手榴弹，现在随时会爆炸。最好扔了它！",
+    "weight": "350 g",
+    "volume": "220 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "*",
+    "color": "green",
+    "initial_charges": 5,
+    "max_charges": 5,
+    "turns_per_charge": 1,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {
+        "power": 320,
+        "shrapnel": {
+          "casing_mass": 544,
+          "fragment_mass": 0.3
+        }
+      }
+    },
+    "flags": [
+      "BOMB",
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "id": "vbwf_grenade",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "帝国VB WF手榴弹"
+    },
+    "description": "类似于其他地方使用的基本结构，这种摩擦引信手榴弹是帝国军队的官方标准。虽然引爆前的时间延迟可以通过装置侧面的刻度盘或螺丝来调整，但大多数用户都不愿意偏离训练中训练他们的时间。",
+    "weight": "380 g",
+    "volume": "240 ml",
+    "price": "15 USD",
+    "price_postapoc": "10 USD",
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "symbol": "*",
+    "color": "green",
+    "use_action": {
+      "target": "bt_grenade_act",
+      "msg": "你拔掉手榴弹上的别针。",
+      "target_charges": 5,
+      "active": true,
+      "menu_text": "拉开保险",
+      "type": "transform"
+    },
+    "flags": [
+      "RADIO_MODABLE",
+      "RADIO_INVOKE_PROC",
+      "BOMB",
+      "GRENADE"
+    ]
+  },
+  {
+    "id": "vbwf_grenade_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "VB WF手榴弹（无保险）"
+    },
+    "description": "这是一枚有效的帝国VB WF手榴弹，随时都会爆炸。最好扔出去！",
+    "weight": "350 g",
+    "volume": "220 ml",
+    "price": "0 cent",
+    "price_postapoc": "0 cent",
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "*",
+    "color": "green",
+    "initial_charges": 5,
+    "max_charges": 5,
+    "turns_per_charge": 1,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {
+        "power": 320,
+        "shrapnel": {
+          "casing_mass": 544,
+          "fragment_mass": 0.3
+        }
+      }
+    },
+    "flags": [
+      "BOMB",
+      "TRADER_AVOID"
+    ]
+  }
+]

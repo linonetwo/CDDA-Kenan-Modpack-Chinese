@@ -1,0 +1,92 @@
+[
+  {
+    "id": "cm_sub_light_com2",
+    "type": "GUN",
+    "copy-from": "rifle_semi",
+    "symbol": "(",
+    "color": "white",
+    "name": {
+      "str": "亚光 COM2（CM）电磁步枪",
+      "str_pl": "亚光 COM2（CM）电磁步枪"
+    },
+    "description": "亚光COM2射出的子弹使用<info>'Centre Of Mass Displacement'</info>的技术，在飞行到最后一米时会瞬间提升到<good>极高的速度</good>。据记录，12mm的COM2子弹的可以达到接近每秒100,000米的速度。足够在任何东西上留下一个大洞。它表面覆盖有白色的涂装，上面有灰色的线条，中间有一个明亮的蓝色LED灯条，枪管两侧有一些LED小灯，所有的这些都分布在其哑黑色的枪身上。\n\n这种武器性能<good>优良</good>，而且<good>不大可能故障</good>，<good>可以适当用于近战</good>\n\n <info>Xeno的SAS4武器包Mod</info>",
+    "skill": "rifle",
+    "ammo": [
+      "12mm"
+    ],
+    "weight": "1500 g",
+    "volume": "3750 ml",
+    "longest_side": "127 mm",
+    "price": "254 USD",
+    "price_postapoc": "25 USD",
+    "bashing": 7,
+    "to_hit": -2,
+    "material": [
+      "steel"
+    ],
+    "dispersion": 300,
+    "sight_dispersion": 50,
+    "durability": 8,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 80
+    },
+    "range": 70,
+    "min_cycle_recoil": 150,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        4
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "750 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "2cm12mm",
+          "4cm12mm"
+        ]
+      }
+    ]
+  }
+]

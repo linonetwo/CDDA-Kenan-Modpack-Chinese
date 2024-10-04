@@ -1,0 +1,545 @@
+[
+  {
+    "id": "flaming_skull",
+    "type": "AMMO",
+    "name": {
+      "str": "头骨火"
+    },
+    "//": "This stuff lights you on fire, but not the environment.",
+    "description": "一阵火焰。",
+    "weight": "1 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "*",
+    "color": "red",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "shot",
+    "range": 0,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 8
+    },
+    "recoil": 200,
+    "effects": [
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "flaming_ball",
+    "type": "AMMO",
+    "name": {
+      "str": "火球"
+    },
+    "//": "This stuff is what destroys forests, homes, and framerates.",
+    "description": "一个拳头大小的火球，正在燃烧着它周围的空气。",
+    "weight": "1 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "*",
+    "color": "red",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "shot",
+    "range": 20,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 5
+    },
+    "recoil": 200,
+    "effects": [
+      "FLARE",
+      "TRAIL"
+    ],
+    "flags": [
+      "NOGIB"
+    ]
+  },
+  {
+    "id": "hell_plasma_k",
+    "type": "AMMO",
+    "name": {
+      "str": "等离子体"
+    },
+    "//": "knight plasma.",
+    "description": "恶魔骑士的等离子体。",
+    "weight": "1 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "`",
+    "color": "magenta",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "battery",
+    "range": 13,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 17
+    },
+    "recoil": 200,
+    "effects": [
+      "SHOT"
+    ],
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "id": "hell_plasma_b",
+    "type": "AMMO",
+    "name": {
+      "str": "等离子体"
+    },
+    "//": "deadlier plasma.",
+    "description": "恶魔男爵的等离子体。",
+    "weight": "1 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "`",
+    "color": "magenta",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "battery",
+    "range": 21,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 23
+    },
+    "recoil": 200,
+    "effects": [
+      "SHOT",
+      "FLARE"
+    ],
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "id": "hell_plasma_c",
+    "type": "AMMO",
+    "name": {
+      "str": "等离子体"
+    },
+    "//": "deadliest plasma.",
+    "description": "巨眼魔的等离子体。",
+    "weight": "1 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "`",
+    "color": "magenta",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "battery",
+    "range": 30,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 17
+    },
+    "recoil": 200,
+    "effects": [
+      "LIGHTNING"
+    ],
+    "flags": [
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "id": "hell_laser",
+    "type": "AMMO",
+    "name": {
+      "str": "蜘蛛激光器"
+    },
+    "description": "一只蜘蛛激光。继续，把它捡起来。不需手套。",
+    "weight": "68 g",
+    "volume": "250 ml",
+    "price": "800 USD",
+    "material": [
+      "plastic"
+    ],
+    "symbol": "|",
+    "color": "magenta",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "battery",
+    "range": 55,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 13,
+      "armor_penetration": 9
+    },
+    "effects": [
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+    "id": "hell_laser_queen",
+    "type": "AMMO",
+    "name": {
+      "str": "蜘蛛激光器"
+    },
+    "description": "一个恶魔蜘蛛的激光。 继续，把它捡起来。",
+    "weight": "68 g",
+    "volume": "250 ml",
+    "price": "800 USD",
+    "material": [
+      "plastic"
+    ],
+    "symbol": "|",
+    "color": "magenta",
+    "count": 1,
+    "stack_size": 1,
+    "ammo_type": "battery",
+    "range": 55,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 9,
+      "armor_penetration": 15
+    },
+    "effects": [
+      "NEVER_MISFIRES",
+      "RECYCLED",
+      "ACT_ON_RANGED_HIT",
+      "CUSTOM_EXPLOSION",
+      "BEANBAG"
+    ],
+    "explosion": {
+      "power": 2,
+      "distance_factor": 0.3,
+      "shrapnel": 1
+    }
+  },
+  {
+    "id": "cyber_rocket",
+    "type": "AMMO",
+    "name": {
+      "str": "赛博火箭"
+    },
+    "description": "相对较弱的一个火箭，它的力量是它的能力，被爆发射击。",
+    "weight": "2500 g",
+    "volume": "1250 ml",
+    "price": "100 USD",
+    "material": [
+      "steel",
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "dark_gray",
+    "count": 1,
+    "ammo_type": "66mm",
+    "range": 60,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 222,
+      "armor_penetration": 30
+    },
+    "dispersion": 800,
+    "recoil": 500,
+    "effects": [
+      "EXPLOSIVE",
+      "TRAIL",
+      "SMOKE"
+    ]
+  },
+  {
+    "id": "hell_napalm",
+    "type": "AMMO",
+    "name": {
+      "str": "凝固汽油弹球"
+    },
+    "//": "Napalm is military-use, so not cheap.",
+    "description": "一个包含一单位汽油弹的球体，不管那对恶魔力量意味着什么。里面的东西在飞行中漏了出来。",
+    "weight": "3 g",
+    "volume": "500 ml",
+    "price": "500 USD",
+    "phase": "liquid",
+    "material": [
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "red",
+    "count": 1,
+    "ammo_type": "gasoline",
+    "dispersion": 650,
+    "recoil": 400,
+    "range": 25,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 13,
+      "armor_penetration": 25
+    },
+    "effects": [
+      "NAPALM",
+      "PLASMA",
+      "WIDE",
+      "TRAIL",
+      "SMOKE",
+      "NEVER_MISFIRES"
+    ]
+  },
+  {
+    "id": "bomblet_vile",
+    "type": "AMMO",
+    "name": {
+      "str": "火焰发生器"
+    },
+    "description": "恶魔会召唤一道火焰的裂缝来打击敌人。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "*",
+    "color": "yellow_red",
+    "ammo_type": "bomblet",
+    "range": 25,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 2,
+      "armor_penetration": 200
+    },
+    "effects": [
+      "ACT_ON_RANGED_HIT",
+      "RECOVER_5"
+    ],
+    "use_action": {
+      "target": "bomblet_vile_act",
+      "target_charges": 5,
+      "active": true,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "bomblet_vile_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "痛风"
+    },
+    "description": "一种不知道从哪里冒出来的旋风，它的火焰进入了现实。",
+    "weight": "285 g",
+    "volume": "250 ml",
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "*",
+    "color": "yellow_red",
+    "max_charges": 5,
+    "initial_charges": 5,
+    "turns_per_charge": 1,
+    "emits": [
+      "emit_fvent_vile"
+    ],
+    "countdown_interval": 5,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {
+        "power": 2,
+        "distance_factor": 0.1
+      }
+    }
+  },
+  {
+    "id": "bomblet_archvile",
+    "type": "AMMO",
+    "name": {
+      "str": "拱形火焰发生器"
+    },
+    "description": "恶魔祭司会从地狱召唤火焰来攻击敌人。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "material": [
+      "flesh",
+      "bone"
+    ],
+    "symbol": "*",
+    "color": "yellow_red",
+    "ammo_type": "bomblet",
+    "range": 25,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 4,
+      "armor_penetration": 200
+    },
+    "effects": [
+      "ACT_ON_RANGED_HIT",
+      "RECOVER_5"
+    ],
+    "use_action": {
+      "target": "bomblet_archvile_act",
+      "target_charges": 5,
+      "active": true,
+      "type": "transform"
+    }
+  },
+  {
+    "id": "bomblet_archvile_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "火焰裂缝"
+    },
+    "description": "一个裂缝，把地狱的火焰带入了现实。",
+    "weight": "285 g",
+    "volume": "250 ml",
+    "material": [
+      "hflesh"
+    ],
+    "symbol": "*",
+    "color": "yellow_red",
+    "max_charges": 5,
+    "initial_charges": 5,
+    "turns_per_charge": 1,
+    "emits": [
+      "emit_fvent_archvile",
+      "emit_fvent_vile"
+    ],
+    "countdown_interval": 5,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "type": "explosion",
+      "explosion": {
+        "power": 2,
+        "distance_factor": 0.1
+      }
+    }
+  },
+  {
+    "id": "bomblet_archdemon",
+    "type": "AMMO",
+    "name": {
+      "str": "卡克德蒙符文"
+    },
+    "description": "恶魔祭祀会召唤出这些，你命不久矣。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "0 cent",
+    "material": [
+      "flesh",
+      "steel"
+    ],
+    "symbol": "*",
+    "color": "brown",
+    "ammo_type": "bomblet",
+    "range": 25,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 5,
+      "armor_penetration": 200
+    },
+    "effects": [
+      "ACT_ON_RANGED_HIT",
+      "RECOVER_5"
+    ],
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_cacodemon",
+      "difficulty": 90,
+      "place_randomly": true,
+      "skills": [
+        "survival",
+        "melee"
+      ]
+    }
+  },
+  {
+    "id": "bomblet_chickenbot",
+    "type": "AMMO",
+    "name": {
+      "str": "胆小鬼"
+    },
+    "description": "地上一个发光的洞，形状模糊，像一颗星星。",
+    "material": [
+      "steel"
+    ],
+    "symbol": "*",
+    "color": "light_red",
+    "count": 8,
+    "ammo_type": "bomblet",
+    "range": 50,
+    "dispersion": 350,
+    "recoil": 100,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 20,
+      "armor_penetration": 10
+    },
+    "effects": [
+      "NEVER_MISFIRES",
+      "NO_EMBED",
+      "RECOVER_9",
+      "ACT_ON_RANGED_HIT"
+    ],
+    "emits": [
+      "emit_fire_bomblet_small"
+    ],
+    "countdown_interval": 2,
+    "countdown_destroy": true,
+    "countdown_action": {
+      "target": "bomblet_chickenbot_act",
+      "active": true,
+      "type": "transform"
+    },
+    "flags": [
+      "LIGHT_15",
+      "TRADER_AVOID",
+      "NPC_THROW_NOW",
+      "ZERO_WEIGHT"
+    ]
+  },
+  {
+    "id": "bomblet_chickenbot_act",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "chickenbomb（法案）"
+    },
+    "description": "BWAACK公司",
+    "symbol": "*",
+    "color": "light_red",
+    "material": [
+      "steel"
+    ],
+    "max_charges": 2,
+    "initial_charges": 2,
+    "turns_per_charge": 1,
+    "use_action": {
+      "type": "explosion",
+      "explosion": {
+        "power": 40,
+        "distance_factor": 0.5,
+        "shrapnel": 1
+      }
+    },
+    "flags": [
+      "LIGHT_15",
+      "TRADER_AVOID",
+      "NPC_THROW_NOW",
+      "ZERO_WEIGHT"
+    ]
+  }
+]

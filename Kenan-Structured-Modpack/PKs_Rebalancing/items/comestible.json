@@ -1,0 +1,575 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "fresh_fries_big",
+    "name": {
+      "str": "额外的大屁股薯条",
+      "str_pl": "超大屁股薯条"
+    },
+    "weight": "175 g",
+    "color": "yellow",
+    "spoils_in": "8 days",
+    "container": "box_small",
+    "comestible_type": "FOOD",
+    "symbol": "%",
+    "quench": -7,
+    "healthy": -2,
+    "calories": 208,
+    "description": "小卡尔很欣赏你的生意。享受你点的“超级大屁股薯条”。请回来时，你可以再购买'额外的大屁股薯条'。",
+    "price": "5 USD",
+    "material": [
+      "junk"
+    ],
+    "volume": "250 ml",
+    "charges": 2,
+    "flags": [
+      "EATEN_HOT"
+    ],
+    "fun": 9
+  },
+  {
+    "id": "medikit",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "医疗包"
+    },
+    "description": "一个PRM公司的医药箱. 可以在战场环境上快速急救；尽管它的设计目的是为了快速附着在受损组织上，而不是消毒.",
+    "weight": "400 g",
+    "volume": "500 ml",
+    "price": "500 USD",
+    "material": [
+      "spess_plastic"
+    ],
+    "symbol": "+",
+    "color": "red",
+    "comestible_type": "MED",
+    "charges": 3,
+    "stack_size": 6,
+    "use_action": {
+      "type": "heal",
+      "move_cost": 3300,
+      "long_action": true,
+      "bandages_power": 8,
+      "disinfectant_power": 8,
+      "bleed": 35,
+      "bite": 0.99,
+      "effects": [
+        {
+          "id": "doom_unhealth",
+          "duration": 10
+        },
+        {
+          "id": "pkill1",
+          "duration": 300
+        },
+        {
+          "id": "gauze",
+          "duration": 17200
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "id": "berserker_drug",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "狂暴者背包"
+    },
+    "description": "一个装在保护盒中的静脉注射器。PRM的专利兴奋剂将在短暂的时间内将身体机能推向极限，使激烈的战斗变得更容易。",
+    "weight": "360 g",
+    "volume": "500 ml",
+    "price": "10 kUSD",
+    "to_hit": -1,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "|",
+    "color": "light_gray",
+    "use_action": {
+      "target": "berserker_drug_act",
+      "msg": "你把针扎进静脉，你的血就会沸腾！",
+      "target_charges": 7,
+      "active": true,
+      "moves": 250,
+      "type": "transform"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED",
+      "ALLOWS_NATURAL_ATTACKS",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "NPC_SAFE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 10,
+        "covers": [
+          "hand_l",
+          "hand_r",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 0
+  },
+  {
+    "id": "berserker_drug_act",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "狂暴者能量包（激活）"
+    },
+    "description": "一个装在保护盒中的静脉注射器。 PRM出品的化学物质在其针头中涌动着，将为使用者提供难以置信的力量和敏捷。",
+    "weight": "360 g",
+    "volume": "500 ml",
+    "price": "10 kUSD",
+    "to_hit": -1,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "|",
+    "color": "i_dark_gray",
+    "initial_charges": 7,
+    "max_charges": 7,
+    "turns_per_charge": 1,
+    "revert_to": "bag_plastic",
+    "use_action": {
+      "type": "consume_drug",
+      "effects": [
+        {
+          "id": "doom_stimpack",
+          "duration": 40
+        }
+      ]
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED",
+      "ALLOWS_NATURAL_ATTACKS",
+      "NO_RELOAD",
+      "NPC_SAFE"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 10,
+        "covers": [
+          "hand_l",
+          "hand_r",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ],
+    "material_thickness": 0
+  },
+  {
+    "id": "stamina_vial",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "体魄补药"
+    },
+    "description": "这些分了3层浆液含有一系列经过充能的有机化合物，可能会让人感觉难以下咽，但对铁杆运动员和要求严格的士兵来说，可以明显提高耐力。 像大多数PRM产品一样，它只为短期使用而设计，并可能破坏身体内部化学物质的平衡。",
+    "weight": "720 g",
+    "volume": "750 ml",
+    "price": "1 kUSD",
+    "to_hit": -1,
+    "phase": "liquid",
+    "container": "bottle_glass",
+    "material": [
+      "glass"
+    ],
+    "symbol": ")",
+    "color": "blue",
+    "comestible_type": "MED",
+    "charges": 3,
+    "calories": 104,
+    "fun": -5,
+    "use_action": {
+      "type": "consume_drug",
+      "effects": [
+        {
+          "id": "doom_unhealth",
+          "duration": 3
+        },
+        {
+          "id": "stamina_regen",
+          "duration": 150
+        }
+      ]
+    },
+    "flags": [
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "id": "homebrew_antiseptic",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "自制防腐剂"
+    },
+    "description": "在荒野中发现的一种绝望的混合物，有望治疗伤口，阻止或防止感染。它可能是悬浮物，但也可能有治疗作用。最好是这样，尽管它很刺痛人。",
+    "weight": "450 g",
+    "volume": "250 ml",
+    "price": "5 USD",
+    "symbol": "%",
+    "color": "light_green",
+    "fun": -8,
+    "healthy": 1,
+    "comestible_type": "MED",
+    "use_action": {
+      "type": "heal",
+      "disinfectant_power": 3,
+      "bite": 0.35,
+      "move_cost": 1200,
+      "long_action": true,
+      "effects": [
+        {
+          "id": "stung",
+          "duration": 12
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "id": "antidote_posion",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "三叶解毒药"
+    },
+    "description": "一种防止基本毒物的手工酿造的饮料。对各种各样的已知毒药有效，但可能不能胜任解除更恶劣毒液的任务。它可以治疗和阻断生物毒物。",
+    "weight": "175 g",
+    "volume": "250 ml",
+    "price": "350 USD",
+    "phase": "liquid",
+    "container": "flask_glass",
+    "material": [
+      "powder"
+    ],
+    "symbol": ",",
+    "color": "light_green",
+    "comestible_type": "MED",
+    "use_action": {
+      "type": "consume_drug",
+      "tools_needed": {
+        "syringe": 1
+      },
+      "effects": [
+        {
+          "id": "triffid_cure",
+          "duration": 1
+        },
+        {
+          "id": "doom_unhealth",
+          "duration": 5
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "id": "antidote_badpoison",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "三叶中和剂"
+    },
+    "description": "一种浓缩的药物冲泡剂，能中和大多数已知毒素并将其排出体外。与蜂王浆不同，它能在一段时间内阻止未来的攻击。",
+    "weight": "175 g",
+    "volume": "250 ml",
+    "price": "350 USD",
+    "phase": "liquid",
+    "container": "flask_glass",
+    "material": [
+      "powder"
+    ],
+    "symbol": ",",
+    "color": "light_green",
+    "comestible_type": "MED",
+    "use_action": {
+      "type": "consume_drug",
+      "tools_needed": {
+        "syringe": 1
+      },
+      "effects": [
+        {
+          "id": "triffid_neutralization",
+          "duration": 1
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "id": "vitamins",
+    "copy-from": "vitamins",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "复合维生素"
+    },
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你服用了%s。",
+      "effects": [
+        {
+          "id": "chelated_iron",
+          "duration": 400
+        },
+        {
+          "id": "rad_reduce",
+          "duration": 400
+        }
+      ],
+      "vitamins": [
+        [
+          "calcium",
+          16,
+          32
+        ],
+        [
+          "iron",
+          16,
+          32
+        ],
+        [
+          "vitA",
+          16,
+          32
+        ],
+        [
+          "vitB",
+          16,
+          32
+        ],
+        [
+          "vitC",
+          16,
+          32
+        ]
+      ]
+    },
+    "flags": [
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "id": "gummy_vitamins",
+    "copy-from": "vitamins",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "维他命树脂糖"
+    },
+    "description": "必需的膳食营养素方便地包装在水果味的嚼糖形式，以掩盖其中所含的离子铁。当平衡的饮食不可能时，这是最后的选择，这也会清除体内的微量毒素和放射性粒子。过量使用会导致高浓度污染，有时甚至过量。",
+    "calories": 9,
+    "stim": -1,
+    "fun": 4,
+    "container": "null",
+    "charges": 10,
+    "stack_size": 10,
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你服用了%s。",
+      "effects": [
+        {
+          "id": "chelated_iron",
+          "duration": 600
+        },
+        {
+          "id": "rad_reduce",
+          "duration": 600
+        }
+      ],
+      "vitamins": [
+        [
+          "calcium",
+          25,
+          50
+        ],
+        [
+          "iron",
+          25,
+          50
+        ],
+        [
+          "vitA",
+          25,
+          50
+        ],
+        [
+          "vitB",
+          25,
+          50
+        ],
+        [
+          "vitC",
+          25,
+          50
+        ]
+      ]
+    },
+    "flags": [
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "id": "prussian_blue",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "普鲁士蓝药片"
+    },
+    "description": "含氧化亚铁氰化物盐的片剂。如果在辐射暴露后服用，能够清除体内的核污染物。结果需要数小时才能显现出来，持续一整天，而且可以通过多次服用来放大。",
+    "weight": "1 g",
+    "volume": "250 ml",
+    "price": "30 USD",
+    "charges": 10,
+    "stack_size": 200,
+    "material": [
+      "powder"
+    ],
+    "flags": [
+      "NPC_SAFE"
+    ],
+    "symbol": "!",
+    "color": "blue",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你服用了一些普鲁士蓝药片。",
+      "effects": [
+        {
+          "id": "pblue",
+          "duration": 14400
+        }
+      ]
+    }
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "fertilizer_chelated",
+    "copy-from": "fungicide",
+    "name": {
+      "str": "水族肥料",
+      "str_pl": "水族肥料"
+    },
+    "color": "light_red",
+    "calories": 35,
+    "stim": -2,
+    "healthy": -4,
+    "fun": -20,
+    "charges": 16,
+    "stack_size": 16,
+    "description": "农业级离子处理肥料，用于从水族箱中清除矿物质。可以在紧急情况下清除体内的辐射。",
+    "price": "15 USD",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你吃了一份%s。",
+      "effects": [
+        {
+          "id": "chelated_iron",
+          "duration": 1200
+        },
+        {
+          "id": "chelated_iron",
+          "duration": 800
+        },
+        {
+          "id": "chelated_iron",
+          "duration": 600
+        },
+        {
+          "id": "rad_reduce",
+          "duration": 600
+        },
+        {
+          "id": "rad_reduce",
+          "duration": 300
+        }
+      ],
+      "vitamins": [
+        [
+          "iron",
+          30,
+          60
+        ]
+      ]
+    },
+    "flags": [
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "type": "AMMO",
+    "id": "medical_tape",
+    "copy-from": "medical_tape",
+    "name": {
+      "str": "医用胶带"
+    },
+    "description": "一卷医用胶布，有一些透气用小孔，总体类似强力胶带。\n“可用于假扮木乃伊，但风干肉对丧尸而言更具风味。”",
+    "count": 100
+  },
+  {
+    "id": "flu_shot",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str": "流感疫苗"
+    },
+    "copy-from": "flu_shot",
+    "description": "一支用于大规模疫苗接种的医用流感疫苗，尚未开封。旨在为流感提供免疫。其基本原理大概是用一种减毒或无毒的毒株或病原蛋白激动机体，产生免疫应答。",
+    "healthy": 3,
+    "flags": [
+      "NPC_SAFE"
+    ]
+  },
+  {
+    "id": "dr_stem_cell",
+    "type": "COMESTIBLE",
+    "name": {
+      "str": "干细胞博士"
+    },
+    "description": "严格控制的干细胞剂量。虽然可以用于体育和工业事故，但大多数治疗都是留给那些能负担得起高昂费用的人的。使用者可能会经历严重的疼痛。并非所有用户都会体验到相同级别的结果。按指示使用。如果你有假肢，计划活到30岁以上，或者已经超过30岁，请咨询你的医生。",
+    "weight": "175 g",
+    "volume": "250 ml",
+    "price": "7770 USD",
+    "phase": "liquid",
+    "container": "flask_glass",
+    "material": [
+      "powder"
+    ],
+    "symbol": ",",
+    "color": "green",
+    "comestible_type": "MED",
+    "use_action": {
+      "type": "consume_drug",
+      "tools_needed": {
+        "syringe": 1
+      },
+      "effects": [
+        {
+          "id": "stemcell_treatment",
+          "duration": 30
+        },
+        {
+          "id": "slashed",
+          "duration": 30
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE"
+    ]
+  }
+]

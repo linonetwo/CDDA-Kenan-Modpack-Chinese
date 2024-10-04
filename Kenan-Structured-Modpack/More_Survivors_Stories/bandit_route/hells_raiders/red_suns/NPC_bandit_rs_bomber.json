@@ -1,0 +1,601 @@
+[
+  {
+    "type": "npc",
+    "id": "NPC_bandit_rs_bomber",
+    "class": "NC_bandit_rs_bomber",
+    "gender": "male",
+    "attitude": 0,
+    "mission": 8,
+    "chat": "TALK_bandit_rs_bomber1",
+    "faction": "red_suns",
+    "mission_offered": "MISSION_bandit_rs_bomber_1"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_bandit_rs_bomber",
+    "common": false,
+    "name": {
+      "str": "Bomber"
+    },
+    "job_description": "I'm just wandering.",
+    "shopkeeper_item_group": "NC_bandit_rs_bomber_shop",
+    "traits": [
+      {
+        "group": "NPC_starting_traits"
+      },
+      {
+        "group": "Appearance_demographics"
+      }
+    ],
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": {
+          "mul": [
+            {
+              "one_in": 3
+            },
+            {
+              "sum": [
+                {
+                  "dice": [
+                    4,
+                    2
+                  ]
+                },
+                {
+                  "rng": [
+                    -4,
+                    -1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_bandit_rs_bomber_shop",
+    "subtype": "collection",
+    "items": [
+      {
+        "group": "grenades",
+        "count": [
+          5,
+          12
+        ]
+      },
+      {
+        "group": "tools_earthworking",
+        "prob": 60,
+        "count": [
+          2,
+          4
+        ]
+      },
+      {
+        "group": "supplies_fuel",
+        "prob": 40,
+        "count": [
+          2,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bandit_rs_bomber1",
+      "TALK_bandit_rs_bomber_busy",
+      "TALK_bandit_rs_bomber_mission2",
+      "TALK_bandit_rs_bomber_Background"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": [
+      "有东西要爆炸吗？",
+      "让我们吹点东西吧！",
+      "有炸药吗？"
+    ],
+    "responses": [
+      {
+        "text": "我有东西给你。",
+        "condition": {
+          "and": [
+            {
+              "u_has_mission": "MISSION_bandit_rs_bomber_1"
+            },
+            "mission_complete"
+          ]
+        },
+        "topic": "TALK_bandit_rs_bomber_hw",
+        "switch": true
+      },
+      {
+        "text": "关于那个任务……",
+        "condition": {
+          "and": [
+            "has_assigned_mission",
+            "mission_complete"
+          ]
+        },
+        "topic": "TALK_MISSION_INQUIRE",
+        "switch": true
+      },
+      {
+        "text": "说说你的故事？",
+        "topic": "TALK_bandit_rs_bomber_Background"
+      },
+      {
+        "text": "需要帮忙么？",
+        "condition": {
+          "not": {
+            "npc_has_var": "m1_end",
+            "type": "flag",
+            "context": "mission",
+            "value": "yes"
+          }
+        },
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "你的工作进展如何？",
+        "condition": {
+          "npc_has_var": "m1_end",
+          "type": "flag",
+          "context": "mission",
+          "value": "yes"
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "not": {
+              "npc_compare_time_since_var": "need_time",
+              "type": "time",
+              "context": "mission",
+              "op": "<",
+              "time": "6 h"
+            }
+          }
+        },
+        "success": {
+          "effect": {
+            "npc_lose_var": "need_time",
+            "type": "time",
+            "context": "mission"
+          },
+          "topic": "TALK_bandit_rs_bomber_mission2"
+        },
+        "failure": {
+          "topic": "TALK_bandit_rs_bomber_busy"
+        }
+      },
+      {
+        "text": "让我们交易吧。",
+        "topic": "TALK_bandit_rs_bomber1",
+        "condition": {
+          "npc_has_var": "trade",
+          "type": "flag",
+          "context": "open_trade",
+          "value": "yes"
+        },
+        "effect": "start_trade"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_rs_bomber_hw",
+    "dynamic_line": "<very>正。你有什么给我的？",
+    "responses": [
+      {
+        "text": "一包C4。",
+        "topic": "TALK_MISSION_SUCCESS",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "c4"
+            },
+            {
+              "u_has_mission": "MISSION_bandit_rs_bomber_1"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_consume_item": "c4"
+          },
+          "mission_success"
+        ]
+      },
+      {
+        "text": "凿岩机。",
+        "topic": "TALK_MISSION_SUCCESS",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "jackhammer"
+            },
+            {
+              "u_has_mission": "MISSION_bandit_rs_bomber_1"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_consume_item": "jackhammer"
+          },
+          "mission_success"
+        ]
+      },
+      {
+        "text": "电钻。",
+        "topic": "TALK_MISSION_SUCCESS",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "elec_jackhammer"
+            },
+            {
+              "u_has_mission": "MISSION_bandit_rs_bomber_1"
+            }
+          ]
+        },
+        "effect": [
+          {
+            "u_consume_item": "elec_jackhammer"
+          },
+          "mission_success"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_rs_bomber_Background",
+    "dynamic_line": "嘿，伙计，我们为什么要谈论老故事？我们把东西炸了吧！"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_rs_bomber_mission2",
+    "dynamic_line": "一切都准备好了，<name_g>。我能够接近他们，现在只有一小步。问题是，我一打开通道，它们就会像蚂蚁一样从蜂巢里涌出来。把几个人放在这里，这样他们就可以开枪了，但由于某些原因，没有人同意。现在我坐在这里，等待奇迹。",
+    "responses": [
+      {
+        "text": "如果你愿意，我可以帮你。",
+        "topic": "TALK_bandit_rs_bomber_mission2_ask"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_rs_bomber_mission2_ask",
+    "dynamic_line": "你真的想帮忙吗？那你必须做好准备。我一开道，他们就等不了多久，马上就出来。",
+    "responses": [
+      {
+        "text": "没问题。",
+        "topic": "TALK_bandit_rs_bomber_mission2_accepted"
+      },
+      {
+        "text": "我需要一些时间来准备。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_rs_bomber_mission2_accepted",
+    "dynamic_line": "好吧，在这儿等着。”他咯咯笑着跑掉了。五分钟后，他跑了过来，气喘吁吁，试图说服你躲开。与此同时，爆炸声震耳欲聋，震耳欲聋。”一切都准备好了，<name_g>。这条路是敞开的。",
+    "speaker_effect": [
+      {
+        "condition": {
+          "u_compare_time_since_var": "refugee_center",
+          "type": "time",
+          "context": "captured",
+          "op": ">=",
+          "time": "21 days"
+        },
+        "effect": {
+          "add_mission": "MISSION_bandit_rs_bomber_2-z"
+        }
+      },
+      {
+        "condition": {
+          "not": {
+            "u_has_mission": "MISSION_bandit_rs_bomber_2-z"
+          }
+        },
+        "effect": {
+          "add_mission": "MISSION_bandit_rs_bomber_2-h"
+        }
+      },
+      {
+        "effect": [
+          {
+            "npc_lose_var": "m1_end",
+            "type": "flag",
+            "context": "mission"
+          }
+        ]
+      }
+    ],
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_rs_bomber_busy",
+    "dynamic_line": "我需要更多的时间。比我最初想象的要难。"
+  },
+  {
+    "id": "MISSION_bandit_rs_bomber_1",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "仪器"
+    },
+    "description": "带些东西给轰炸机使用：手提钻，电钻或c4。",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "or": [
+        {
+          "u_has_item": "elec_jackhammer"
+        },
+        {
+          "u_has_item": "jackhammer"
+        },
+        {
+          "u_has_item": "c4"
+        }
+      ]
+    },
+    "difficulty": 0,
+    "value": 10000,
+    "end": {
+      "update_mapgen": {
+        "om_terrain": "evac_center_13",
+        "place_terrain": [
+          {
+            "ter": "t_door_metal_o",
+            "x": 1,
+            "y": 14
+          },
+          {
+            "ter": "t_door_metal_o",
+            "x": 21,
+            "y": 14
+          }
+        ]
+      },
+      "effect": [
+        {
+          "npc_add_var": "need_time",
+          "type": "time",
+          "context": "mission",
+          "time": true
+        },
+        {
+          "npc_add_var": "m1_end",
+          "type": "flag",
+          "context": "mission",
+          "value": "yes"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "<greet>我被要求从地下室抽这些幸存者的烟，但他们在那里把自己围得很好，没有技术设备我无法应付。给我拿点东西，这样我就能和他们联系上，也许是像手提钻或c4之类的东西。",
+      "accepted": "别着急。这些老鼠太封闭了，没有外界的干扰它们是出不去的。",
+      "rejected": "你真无聊。",
+      "advice": "他到邻近的城镇去逛街。",
+      "inquire": "-",
+      "success": "不错。再给我几个小时，我就把那些老鼠抽出来。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_bandit_rs_bomber_2-h",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "地下室老鼠"
+    },
+    "description": "降落到难民中心地下室清理干净。",
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 0,
+    "value": 25000,
+    "start": {
+      "update_mapgen": [
+        {
+          "om_terrain": "evac_center_12_z-1",
+          "place_nested": [
+            {
+              "chunks": [
+                "nest_evac_center_basement_12_h"
+              ],
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "place_npcs": [
+            {
+              "class": "guard_fm",
+              "x": [
+                5,
+                18
+              ],
+              "y": [
+                5,
+                18
+              ],
+              "target": true
+            }
+          ]
+        },
+        {
+          "om_terrain": "evac_center_13_z-1",
+          "place_nested": [
+            {
+              "chunks": [
+                "nest_evac_center_basement_13_h"
+              ],
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "om_terrain": "evac_center_14_z-1",
+          "place_nested": [
+            {
+              "chunks": [
+                "nest_evac_center_basement_14_h"
+              ],
+              "x": 0,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    },
+    "end": {
+      "effect": [
+        {
+          "npc_add_var": "trade",
+          "type": "flag",
+          "context": "open_trade",
+          "value": "yes"
+        },
+        {
+          "u_add_var": "rc_basement",
+          "type": "flag",
+          "context": "basement_cleaned",
+          "value": "yes"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "过得如何？",
+      "success": "他们的防御对他们没有帮助，他。不过，干得不错。我这里有少量炸药。如果你感兴趣的话，我可以卖给你一些。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_bandit_rs_bomber_2-z",
+    "type": "mission_definition",
+    "has_generic_rewards": false,
+    "name": {
+      "str": "地下室老鼠"
+    },
+    "description": "降落到难民中心地下室清理干净。",
+    "goal": "MGOAL_KILL_MONSTER",
+    "difficulty": 0,
+    "value": 25000,
+    "start": {
+      "update_mapgen": [
+        {
+          "om_terrain": "evac_center_12_z-1",
+          "place_nested": [
+            {
+              "chunks": [
+                "nest_evac_center_basement_12_z"
+              ],
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "place_monster": [
+            {
+              "monster": "mon_zombie",
+              "x": [
+                5,
+                18
+              ],
+              "y": [
+                5,
+                18
+              ],
+              "target": true
+            }
+          ]
+        },
+        {
+          "om_terrain": "evac_center_13_z-1",
+          "place_nested": [
+            {
+              "chunks": [
+                "nest_evac_center_basement_13_z"
+              ],
+              "x": 0,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "om_terrain": "evac_center_14_z-1",
+          "place_nested": [
+            {
+              "chunks": [
+                "nest_evac_center_basement_14_z"
+              ],
+              "x": 0,
+              "y": 0
+            }
+          ]
+        }
+      ]
+    },
+    "end": {
+      "effect": [
+        {
+          "npc_add_var": "trade",
+          "type": "flag",
+          "context": "open_trade",
+          "value": "yes"
+        },
+        {
+          "u_add_var": "rc_basement",
+          "type": "flag",
+          "context": "basement_cleaned",
+          "value": "yes"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "-",
+      "accepted": "-",
+      "rejected": "-",
+      "advice": "-",
+      "inquire": "过得如何？",
+      "success": "他们都变成了丧尸？那是<very>悲哀。不过，干得不错。我这里有少量炸药。如果你有兴趣的话，我可以卖给你一些",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  }
+]

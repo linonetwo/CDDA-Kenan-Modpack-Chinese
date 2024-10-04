@@ -1,0 +1,293 @@
+[
+  {
+    "type": "effect_type",
+    "id": "sp_physprow_ef",
+    "name": [
+      "体能增强"
+    ],
+    "desc": [
+      "你的力量和智力得到了灵药的增强"
+    ],
+    "apply_message": "你吸入灵药。",
+    "remove_message": "灵药的效果逐渐消失。",
+    "rating": "good",
+    "base_mods": {
+      "str_mod": [
+        2
+      ],
+      "int_mod": [
+        2
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "sp_awareton_ef",
+    "name": [
+      "感知增强"
+    ],
+    "desc": [
+      "你的感知得到了感知补药的增强"
+    ],
+    "apply_message": "你吸入灵药。",
+    "remove_message": "灵药的效果逐渐消失。",
+    "rating": "good",
+    "base_mods": {
+      "per_mod": [
+        3
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "sp_dexton_ef",
+    "name": [
+      "敏捷增强"
+    ],
+    "desc": [
+      "你的敏捷得到了反射增强补药的增强"
+    ],
+    "apply_message": "你吸入灵药。",
+    "remove_message": "灵药的效果逐渐消失。",
+    "rating": "good",
+    "base_mods": {
+      "speed_mod": [
+        10
+      ],
+      "dex_mod": [
+        3
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "sp_minton_ef",
+    "name": [
+      "智力增强"
+    ],
+    "desc": [
+      "你的智力得到了提神含片的增强"
+    ],
+    "apply_message": "你吃下了含片。",
+    "remove_message": "糖药片的效果逐渐消失。",
+    "rating": "good",
+    "max_intensity": 4,
+    "int_add_val": 1,
+    "int_decay_tick": 500,
+    "base_mods": {
+      "int_mod": [
+        3
+      ]
+    },
+    "scaling_mods": {
+      "str_mod": [
+        -1
+      ],
+      "dex_mod": [
+        -1
+      ],
+      "per_mod": [
+        -1
+      ],
+      "int_mod": [
+        0.5
+      ],
+      "vomit_chance": [
+        250
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "sp_qpowder_ef",
+    "name": [
+      "速度增强"
+    ],
+    "desc": [
+      "你的速度得到了快速冲刺药粉的增强"
+    ],
+    "apply_message": "你吃下了药粉。",
+    "remove_message": "药粉的效果逐渐消失。",
+    "rating": "good",
+    "max_intensity": 4,
+    "int_add_val": 1,
+    "int_decay_tick": 400,
+    "base_mods": {
+      "speed_mod": [
+        15
+      ],
+      "stamina_amount": [
+        4
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        2
+      ],
+      "int_mod": [
+        -0.8
+      ],
+      "vomit_chance": [
+        200
+      ],
+      "stamina_amount": [
+        4
+      ]
+    }
+  },
+  {
+    "id": "sp_physprow",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str_sp": "体能灵药"
+    },
+    "description": "一种强效的灵药，能在短时间内增强人的力量和智力。",
+    "weight": "35 g",
+    "volume": "250 ml",
+    "price": 14000,
+    "price_postapoc": 14000,
+    "charges": 2,
+    "stack_size": 6,
+    "symbol": "p",
+    "color": "white",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "当你喝下灵药时，你会感到肌肉紧绷，神经突触也更加活跃。",
+      "effects": [
+        {
+          "id": "sp_physprow_ef",
+          "duration": 1200
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE",
+      "IRREPLACEABLE_CONSUMABLE"
+    ]
+  },
+  {
+    "id": "sp_awareton",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str_sp": "艾迪生的感知补药"
+    },
+    "description": "疯狂的医生斯内德·艾迪生研制的强效补药，能在短时间内提高人的感知。",
+    "weight": "35 g",
+    "volume": "250 ml",
+    "price": 14000,
+    "price_postapoc": 14000,
+    "charges": 2,
+    "stack_size": 6,
+    "symbol": "p",
+    "color": "white",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你感到你的瞳孔放大，周围的世界变得更清晰了。",
+      "effects": [
+        {
+          "id": "sp_awareton_ef",
+          "duration": 2200
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE",
+      "IRREPLACEABLE_CONSUMABLE"
+    ]
+  },
+  {
+    "id": "sp_dexton",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str_sp": "阿尔弗雷德的反射增强补药"
+    },
+    "description": "服下阿尔弗雷德·莫古斯的补药后，使用者很快就会发现在一段时间内他们的行动变得更加敏捷。",
+    "weight": "35 g",
+    "volume": "250 ml",
+    "price": 14000,
+    "price_postapoc": 14000,
+    "charges": 2,
+    "stack_size": 6,
+    "symbol": "p",
+    "color": "white",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你感到你的神经平静了许多，似乎你的敏捷超出常人。",
+      "effects": [
+        {
+          "id": "sp_dexton_ef",
+          "duration": 2200
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE",
+      "IRREPLACEABLE_CONSUMABLE"
+    ]
+  },
+  {
+    "id": "sp_minton",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str_sp": "博伊斯专利的提神含片"
+    },
+    "description": "一种号称能将使用者智力提高超过平均水平的药物，但要小心，反复使用会导致健康问题！",
+    "weight": "35 g",
+    "volume": "250 ml",
+    "price": 14000,
+    "price_postapoc": 14000,
+    "charges": 2,
+    "stack_size": 6,
+    "symbol": "p",
+    "color": "white",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你感到你的思想更迅速，更清晰，似乎你的智力超出常人。",
+      "effects": [
+        {
+          "id": "sp_minton_ef",
+          "duration": 2200
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE",
+      "IRREPLACEABLE_CONSUMABLE"
+    ]
+  },
+  {
+    "id": "sp_qpowder",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str_sp": "索普认证的快速冲刺药粉"
+    },
+    "description": "一种蓝白色的粉末，摄入时会极大地增强使用者的移动能力！但请注意，长期使用可能有害健康。",
+    "weight": "35 g",
+    "volume": "250 ml",
+    "price": 14000,
+    "price_postapoc": 14000,
+    "charges": 2,
+    "stack_size": 6,
+    "symbol": "p",
+    "color": "white",
+    "use_action": {
+      "type": "consume_drug",
+      "activation_message": "你感到你的肌肉充满能量，每根肌腱都因力量而绷紧！",
+      "effects": [
+        {
+          "id": "sp_qpowder_ef",
+          "duration": 1500
+        }
+      ]
+    },
+    "flags": [
+      "NPC_SAFE",
+      "IRREPLACEABLE_CONSUMABLE"
+    ]
+  }
+]

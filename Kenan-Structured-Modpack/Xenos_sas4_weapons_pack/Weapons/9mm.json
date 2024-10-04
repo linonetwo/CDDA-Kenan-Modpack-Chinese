@@ -1,0 +1,1273 @@
+[
+  {
+    "id": "z1_assault",
+    "type": "GUN",
+    "copy-from": "rifle_base",
+    "symbol": "(",
+    "color": "light_gray",
+    "name": {
+      "str": "Z-1 突击步枪",
+      "str_pl": "Z-1 突击步枪"
+    },
+    "description": "Z-1突击步枪是由<info>Z-Arm Tech</info>生产的一种平衡且 \"强大 \"的突击步枪，适用于中短距离交战。\nZ-1突击步枪使用<info>小口径</info>弹药，它仿照M4（很可能是柯尔特突击队的变种）进行了未来主义的设计。它的扳机前面有'Z-1'字样。它的枪托、提手、握把和护手板上都有划痕并且用一些胶布包裹，这证明这把枪被重度使用过，现在的状况很差，但仍然可以使用。\n\n这把武器<bad>制作不良</bad>，而且<bad>容易出现故障</bad>，<bad>不适合近战使用</bad>\n\n<info> Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "950 g",
+    "volume": "1500 ml",
+    "longest_side": "840 mm",
+    "bashing": 13,
+    "to_hit": -2,
+    "dispersion": 30,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 100,
+    "durability": 2,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -3
+    },
+    "range": 4,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        10
+      ],
+      [
+        "BURST",
+        "5 rd",
+        5
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "10za",
+          "25za",
+          "40za",
+          "50za"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "z2_lmp",
+    "type": "GUN",
+    "copy-from": "smg_base",
+    "symbol": "(",
+    "color": "light_gray",
+    "name": {
+      "str": "Z-2 LMP 冲锋枪",
+      "str_pl": "Z-2 LMP 冲锋枪"
+    },
+    "description": "Z-2 LMP是一款<info>小口径</info> 冲锋枪，是<info> Z-Arm Tech </info> \n生产的快速运动和机动性的理想选择Z-2 LMP类似于MP5，没有可调节的支架，后视镜，有反射瞄准镜和垂直前爪。它的选择性点火开关正前方有“Z-2”字样。它有划痕和一些管道胶带包裹在它的握把上，这意味着这把枪现在的状况很糟糕，但仍然可以使用。\n\n这种武器制造不良，很容易出现故障，如果有任何打击，它就不能处理太多问题",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "smg",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "550 g",
+    "volume": "750 ml",
+    "longest_side": "680 mm",
+    "bashing": 6,
+    "to_hit": -2,
+    "dispersion": 30,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 140,
+    "durability": 2,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -6
+    },
+    "range": 1,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "sling",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        6
+      ],
+      [
+        "BURST",
+        "3 rd",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "10za",
+          "25za",
+          "40za",
+          "50za",
+          "65za",
+          "80za"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "z1_assault_fixed",
+    "type": "GUN",
+    "copy-from": "rifle_base",
+    "symbol": "(",
+    "color": "light_gray",
+    "name": {
+      "str": "经过修复的 Z-1 突击步枪",
+      "str_pl": "经过修复的 Z-1 突击步枪"
+    },
+    "description": "Z-1突击步枪是由<info>Z-Arm Tech</info>生产的一种平衡且 \"强大 \"的突击步枪，适用于中短距离交战。\nZ-1突击步枪使用<info>小口径</info>弹药，它仿照M4（很可能是柯尔特突击队的变种）进行了未来主义的设计。它的扳机前面有'Z-1'字样。它有划痕，但大部分的损坏都已经被耐心修复了。\n\n这把武器性能<color_yellow>适中</color>，而且<color_yellow>很少故障</color>，<color_yellow>可以稍微用于近战</color>\n\n<info> Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "900 g",
+    "volume": "1500 ml",
+    "longest_side": "840 mm",
+    "bashing": 15,
+    "to_hit": 2,
+    "dispersion": 10,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 90,
+    "durability": 5,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 3
+    },
+    "range": 7,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        10
+      ],
+      [
+        "BURST",
+        "5 rd",
+        5
+      ],
+      [
+        "BURST",
+        "3 rd",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "10za",
+          "25za",
+          "40za",
+          "50za"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "z2_lmp_fixed",
+    "type": "GUN",
+    "copy-from": "smg_base",
+    "symbol": "(",
+    "color": "light_gray",
+    "name": {
+      "str": "经过修复的 Z-2 LMP 冲锋枪",
+      "str_pl": "经过修复的 Z-2 LMP 冲锋枪"
+    },
+    "description": "Z-2 LMP是一种<info>小口径</info>冲锋枪，是结合快速移动和机动性的理想选择，由<info>Z-Arm Tech</info>公司生产。\nZ-2 LMP类似于MP5，但没有可调节的枪托，也没有后瞄准器，但有反射式瞄准器和垂直前握把。它的射击模式切换开关前面有 \"Z-2 \"的字样。它有划痕，但几乎所有的损坏都已经被耐心修复了。\n\n这把武器性能<color_yellow>适中</color>，而且<color_yellow>很少故障</color>，<color_yellow>可以稍微用于近战</color>\n\n <info>Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "smg",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "500 g",
+    "volume": "750 ml",
+    "longest_side": "680 mm",
+    "bashing": 9,
+    "to_hit": 2,
+    "dispersion": 30,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 120,
+    "durability": 5,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 2
+    },
+    "range": 3,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        6
+      ],
+      [
+        "BURST",
+        "3 rd",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "10za",
+          "25za",
+          "40za",
+          "50za",
+          "65za",
+          "80za"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "z1_assault_reinforced",
+    "type": "GUN",
+    "copy-from": "rifle_base",
+    "symbol": "(",
+    "color": "light_gray",
+    "name": {
+      "str": "经过强化的 Z-1 突击步枪",
+      "str_pl": "经过强化的 Z-1 突击步枪"
+    },
+    "description": "Z-1突击步枪是由<info>Z-Arm Tech</info>生产的一种平衡且 \"强大 \"的突击步枪，适用于中短距离交战。\nZ-1突击步枪使用<info>小口径</info>弹药，它仿照M4（很可能是柯尔特突击队的变种）进行了未来主义的设计。它的扳机前面有'Z-1'字样。它有划痕，但大部分的损坏都已经被耐心修复了，它的枪身还用金属条进行了加固，枪管也进行了升级\n\n这把武器已经被<good>强化</good>，而且<good>不大可能故障</good>，<good>可以适当用于近战</good>\n\n<info> Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "1000 g",
+    "volume": "1500 ml",
+    "longest_side": "840 mm",
+    "bashing": 18,
+    "to_hit": 2,
+    "dispersion": 10,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 110,
+    "durability": 8,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 7
+    },
+    "range": 11,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        10
+      ],
+      [
+        "BURST",
+        "5 rd",
+        5
+      ],
+      [
+        "BURST",
+        "3 rd",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "10za",
+          "25za",
+          "40za",
+          "50za"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "z2_lmp_reinforced",
+    "type": "GUN",
+    "copy-from": "smg_base",
+    "symbol": "(",
+    "color": "light_gray",
+    "name": {
+      "str": "加强型Z-2 LMP冲锋枪",
+      "str_pl": "加强型Z-2 LMP冲锋枪"
+    },
+    "description": "Z-2 LMP是一种<info>小口径</info>冲锋枪，是结合快速移动和机动性的理想选择，由<info>Z-Arm Tech</info>公司生产。\nZ-2 LMP类似于MP5，但没有可调节的枪托，也没有后瞄准器，但有反射式瞄准器和垂直前握把。它的射击模式切换开关前面有 \"Z-2 \"的字样。它有划痕，但几乎所有的损坏都已经被耐心修复了，它的枪身还用金属条进行了加固，枪管也进行了升级。\n\n这把武器性能<color_yellow>适中</color>，而且<color_yellow>很少故障</color>，<color_yellow>可以稍微用于近战</color>\n\n <info>Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "smg",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "700 g",
+    "volume": "750 ml",
+    "longest_side": "680 mm",
+    "bashing": 13,
+    "to_hit": 3,
+    "dispersion": 40,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 120,
+    "durability": 8,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 7
+    },
+    "range": 6,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        6
+      ],
+      [
+        "BURST",
+        "3 rd",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "10za",
+          "25za",
+          "40za",
+          "50za",
+          "65za",
+          "80za"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hvm_001",
+    "type": "GUN",
+    "copy-from": "pistol_base",
+    "symbol": "(",
+    "color": "green",
+    "name": {
+      "str": "HVM 001 半自动手枪",
+      "str_pl": "HVM 001 半自动手枪"
+    },
+    "description": "HVM 001是由<info>High Value Metrics（HVM）</info>生产的第一支枪。\n它是该公司生产的武器系列中最弱的枪。\n它使用<info>小口径</info>弹药类型，看起来像一把未来主义的格洛克形状的手枪，其特点是它的弹夹放在类似毛瑟C96的枪管下，其表面有时尚的绿色迷彩图案。\n\n这种武器性能<color_yellow>平均</color>，而且<good>不大可能故障</good>，<good>可以适当用于近战</good>\n\n<info> Xeno的SAS4武器包Mod</info>",
+    "price": "164 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "600 g",
+    "volume": "1000 ml",
+    "longest_side": "200 mm",
+    "bashing": 6,
+    "to_hit": -2,
+    "dispersion": 180,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 125,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -7
+    },
+    "range": -8,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "25hvm",
+          "25hvmspeedloader"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hvm_002",
+    "type": "GUN",
+    "copy-from": "smg_base",
+    "symbol": "(",
+    "color": "green",
+    "name": {
+      "str": "HVM 002 冲锋枪",
+      "str_pl": "HVM 002 冲锋枪"
+    },
+    "description": "HVM 002是由<info>High Value Metrics（HVM）</info> 制造的第二款武器\n它是该公司生产的武器系列中最弱的冲锋枪。\n它使用与HVM 001相同的<info>小口径</info>弹药，是一款无托冲锋枪，可能是仿照 Uzi 或 MP7 设计的，有一个固定的枪托、一个垂直的前握把和一个未使用的顶部导轨，其表面涂装了时尚的绿色迷彩图案。\n\n这种武器性能<color_yellow>平均</color>，而且<good>不大可能故障</good>，<good>可以适当用于近战</good>\n\n<info>Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "smg",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "950 g",
+    "volume": "1500 ml",
+    "longest_side": "680 mm",
+    "bashing": 8,
+    "to_hit": -2,
+    "dispersion": 220,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 120,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -10
+    },
+    "range": -4,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        6
+      ],
+      [
+        "BURST",
+        "3 rd",
+        3
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "500 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "25hvm",
+          "50hvm",
+          "25hvmspeedloader",
+          "50hvmspeedloader"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hvm_005_G",
+    "type": "GUN",
+    "copy-from": "rifle_base",
+    "symbol": "(",
+    "color": "green",
+    "name": {
+      "str": "HVM 005 G-Class 突击步枪",
+      "str_pl": "HVM 005 G-Class 突击步枪"
+    },
+    "description": "HVM 005 G-Class是由<info>High Value Metrics（HVM）</info>设计并制造生产的。\n与其竞争对手相比，它是<bad>最弱</bad>的突击步枪。\n它使用与HVM 001和HVM 002相同的<info>小口径</info>弹药，它是一种小型步枪，其灵感来自L85或FAMAS，采用带有时尚绿色迷彩图案的迷彩设计。\n\n这种武器性能<color_yellow>平均</color>，而且<good>不大可能故障</good>，<good>可以适当用于近战</good>\n\n<info>Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "950 g",
+    "volume": "2500 ml",
+    "longest_side": "900 mm",
+    "bashing": 12,
+    "to_hit": -2,
+    "dispersion": 220,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 120,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -12
+    },
+    "range": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        12
+      ],
+      [
+        "BURST",
+        "5 rd",
+        5
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "1 L",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "25hvm",
+          "50hvm",
+          "75hvm",
+          "100hvm",
+          "25hvmspeedloader",
+          "50hvmspeedloader",
+          "75hvmspeedloader",
+          "100hvmspeedloader",
+          "2x50hvm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "hvm_008",
+    "type": "GUN",
+    "copy-from": "rifle_base",
+    "symbol": "(",
+    "color": "green",
+    "name": {
+      "str": "HVM 008 轻机枪",
+      "str_pl": "HVM 008 轻机枪"
+    },
+    "description": "HVM 008是由<info>High Value Metrics（HVM）</info> 生产的低端轻机枪。\n与竞争对手相比，它是<bad>最差的</bad> 轻机枪。它使用与HVM 001和HVM 002相同的<info>小口径</info>弹药\nHVM 008的灵感可能来自M60（外观）和MG34（使用弹鼓作为进料系统）的组合，带有时尚的绿色迷彩图案的迷彩设计。\n\n这种武器性能<color_yellow>平均</color>，而且<good>不大可能故障</good>，<good>可以适当用于近战</good>\n\n<info>Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "plastic",
+      "steel"
+    ],
+    "skill": "rifle",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "1450 g",
+    "volume": "4500 ml",
+    "longest_side": "1105 mm",
+    "bashing": 12,
+    "to_hit": -2,
+    "dispersion": 260,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 100,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -14
+    },
+    "range": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "auto",
+        15
+      ],
+      [
+        "BURST",
+        "5 rd",
+        5
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "2750 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "75hvm",
+          "100hvm",
+          "75hvmspeedloader",
+          "100hvmspeedloader",
+          "2x50hvm",
+          "2x100hvm",
+          "180hvm",
+          "2x180hvm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "ria_313",
+    "type": "GUN",
+    "copy-from": "pistol_base",
+    "symbol": "(",
+    "color": "dark_gray",
+    "name": {
+      "str": "RIA 313 手枪",
+      "str_pl": "RIA 313 手枪"
+    },
+    "description": "RIA 313是<info>Rubicon Industries</info>公司设计的第一批手枪之一。\n它是一把很轻的手枪，使用的是<info>小口径</info>弹药类型。\n这款武器看起来像一把未来派的手枪，外观上似乎是M9或SIG-Sauer P226的组合，尺寸上则大约是沙漠之鹰的，大枪口和一对重新设计的瞄准镜，使这款武器具有时尚的深灰色和黑色金属外观。\n\n这种武器性能<good>优良</good>，而且<good>不大可能故障</good>，<good>十分适合用于近战</good>\n\n<info>Xeno的SAS4武器包Mod</info>",
+    "price": "164 USD",
+    "material": [
+      "steel"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "300 g",
+    "volume": "500 ml",
+    "longest_side": "177 mm",
+    "bashing": 4,
+    "to_hit": -2,
+    "dispersion": 120,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 80,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 1
+    },
+    "range": 0,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "500 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "20ria9mm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cm_205",
+    "type": "GUN",
+    "copy-from": "pistol_base",
+    "symbol": "(",
+    "color": "white",
+    "name": {
+      "str": "CM 205 手枪",
+      "str_pl": "CM 205 手枪"
+    },
+    "description": "CM 205是一款由<info>Critical Mass</info>公司制造的手枪。\nCM 205似乎是CM 202的改进版，提供了更多的外部武器扩展槽，同时也设计了<good>更大的弹匣</good>和一个伸缩瞄准器，它的枪管下弹匣的设计类似于毛瑟C96和TEC-9。\n选择使用<info>小口径</info>弹药使该武器的弹夹<good>能容纳更多的子弹</good>，而内部结构的设计使子弹<good>能以两倍的速度飞行</good>。另外，小口径和强大的内部结构使该武器能够使用<good>全自动</good>的射击模式。\n\n这种武器性能<good>优良</good>，而且<good>不大可能故障</good>，<good>可以适当用于近战</good>\n\n<info> Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "steel"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "650 g",
+    "volume": "1500 ml",
+    "longest_side": "200 mm",
+    "bashing": 7,
+    "to_hit": -2,
+    "dispersion": 30,
+    "sight_dispersion": 40,
+    "min_cycle_recoil": 50,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 20
+    },
+    "range": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        3
+      ],
+      [
+        "AUTO",
+        "auto",
+        8
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "500 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "40cm9mm",
+          "60cm9mm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "cm_225",
+    "type": "GUN",
+    "copy-from": "pistol_base",
+    "symbol": "(",
+    "color": "white",
+    "name": {
+      "str": "CM 225 手枪",
+      "str_pl": "CM 225 手枪"
+    },
+    "description": "CM 225是一款由<info>Critical Mass</info>公司制造的手枪。\nCM 225似乎是CM 202的改进版，提供了更多的外部武器扩展槽，同时扩大的枪身也可以容纳<good>极大的弹匣</good>，它的枪管下弹匣的设计类似于毛瑟C96和TEC-9。\n选择使用<info>小口径</info>弹药使该武器的弹夹<good>能容纳更多的子弹</good>，比起CM 202能容纳多得多的弹药，而内部结构的设计使子弹能以两倍的速度飞行。另外，小口径和强大的内部结构使该武器能够使用<good>全自动</good>的射击模式。\n\n这种武器性能<good>优良</good>，而且<good>不大可能故障</good>，<good>可以适当用于近战</good>\n\n<info> Xeno的SAS4武器包Mod</info>",
+    "price": "254 USD",
+    "material": [
+      "steel"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "650 g",
+    "volume": "1500 ml",
+    "longest_side": "200 mm",
+    "bashing": 7,
+    "to_hit": -2,
+    "dispersion": 30,
+    "sight_dispersion": 40,
+    "min_cycle_recoil": 50,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 20
+    },
+    "range": 2,
+    "valid_mod_locations": [
+      [
+        "accessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        4
+      ],
+      [
+        "AUTO",
+        "auto",
+        10
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "750 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "40cm9mm",
+          "60cm9mm",
+          "80cm9mm",
+          "2x40cm9mm"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "poison_claw",
+    "type": "GUN",
+    "copy-from": "pistol_base",
+    "symbol": "(",
+    "color": "red",
+    "name": {
+      "str": "“毒爪” 酸液手枪",
+      "str_pl": "“毒爪” 酸液手枪"
+    },
+    "description": "毒爪是由Rancor公司生产的唯一一把手枪。\n该武器的设计灵感来自于TF2n中的Vita-Saw。\n它在武器下面有一个巨大的锋利的刀片，使得它无法安装枪管下的配件，在上面有一个小的液体罐，覆盖在瞄准器上，这个小的液体罐可以容纳多升浓缩在原子压缩器中的酸，使其成为一个有效的无尽的酸源，然后当你按下扳机时，酸被倒入子弹中，当射入敌人体内后，这颗浓缩的酸液弹就会爆炸开来。\n\n这把武器<good>做工精良</good>，因而<good>不会卡壳</good>，并且在战斗中<good>经久耐用</good>\n\n<info>Xeno的SAS4武器包Mod</info>",
+    "price": "164 USD",
+    "material": [
+      "steel"
+    ],
+    "skill": "pistol",
+    "ammo": [
+      "9mm"
+    ],
+    "weight": "200 g",
+    "volume": "500 ml",
+    "longest_side": "200 mm",
+    "bashing": 35,
+    "to_hit": 8,
+    "dispersion": 120,
+    "sight_dispersion": 80,
+    "min_cycle_recoil": 60,
+    "durability": 6,
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 35
+    },
+    "range": 2,
+    "valid_mod_locations": [
+      [
+        "barrel",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "750 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "10rancor9mm",
+          "20rancor9mm",
+          "30rancor9mm"
+        ]
+      }
+    ]
+  }
+]

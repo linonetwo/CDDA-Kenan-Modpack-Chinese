@@ -1,0 +1,36 @@
+[
+  {
+    "type": "mutation",
+    "id": "MARTIAL_ARTS_shinigami",
+    "name": {
+      "str": "死神之歌"
+    },
+    "points": 3,
+    "description": "你学会通过挥舞镰刀，令他发出歌声。",
+    "starting_trait": true,
+    "initial_ma_styles": [
+      "style_shinigami"
+    ],
+    "valid": false,
+    "purifiable": false
+  },
+  {
+    "type": "mutation",
+    "id": "PROF_MARTIAL_ARTS_shinigami",
+    "name": {
+      "str": "死神之歌"
+    },
+    "points": 0,
+    "description": "学会了死亡之神的战歌。",
+    "starting_trait": false,
+    "initial_ma_styles": [
+      "style_shinigami"
+    ],
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "cancels": [
+      "MARTIAL_ARTS_shinigami"
+    ]
+  }
+]

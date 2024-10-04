@@ -1,0 +1,210 @@
+[
+  {
+    "id": "TALK_MORLOCK_TRADER",
+    "type": "talk_topic",
+    "dynamic_line": "有什么事吗，伙计？",
+    "responses": [
+      {
+        "text": "住的地方不错，舒坦。",
+        "topic": "TALK_MORLOCK_TRADER_INTRO"
+      },
+      {
+        "text": "你们到底是谁？",
+        "topic": "TALK_MORLOCK_TRADER_FACTION"
+      },
+      {
+        "text": "我可以加入你的团队吗？",
+        "topic": "TALK_MORLOCK_TRADER_NO_JOIN"
+      },
+      {
+        "text": "你做什么生意？",
+        "topic": "TALK_MORLOCK_TRADER_REQUEST"
+      },
+      {
+        "text": "那么让我们交易吧。",
+        "topic": "TALK_MORLOCK_TRADER_TRADE"
+      },
+      {
+        "text": "回见，伙计。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_TRADER_INTRO",
+    "type": "talk_topic",
+    "dynamic_line": "滚开，<name_g>。又不是我们自己选择住在下水道的。",
+    "responses": [
+      {
+        "text": "至少你活下来了，也没有那么糟吧。",
+        "topic": "TALK_MORLOCK_TRADER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_TRADER_FACTION",
+    "type": "talk_topic",
+    "dynamic_line": "我们是莫洛克人，一群住在地下的流浪汉和失败者。我们没有组织，也没有领导者，但我们团结在一起。",
+    "responses": [
+      {
+        "text": "不错。",
+        "topic": "TALK_MORLOCK_TRADER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_TRADER_NO_JOIN",
+    "type": "talk_topic",
+    "dynamic_line": "你到底为什么要加入我们？这里的大多数人本来也是不想加入我们的。而且如果你不长出一条老鼠尾巴或一对鱼鳃，很可能没法适应这里的生活。",
+    "responses": [
+      {
+        "text": "我看看能做些什么。",
+        "topic": "TALK_MORLOCK_TRADER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_TRADER_REQUEST",
+    "type": "talk_topic",
+    "dynamic_line": "我们一直在寻找诱变剂和净化剂。你每带来一份诱变剂或净化剂，我都可以在账上记500美元。如果你对这类东西感兴趣的话，我也可以把普通的诱变剂换成更高级的。",
+    "responses": [
+      {
+        "text": "知道了。诱变剂。净化器。",
+        "topic": "TALK_MORLOCK_TRADER"
+      }
+    ]
+  },
+  {
+    "id": "TALK_MORLOCK_TRADER_TRADE",
+    "type": "talk_topic",
+    "dynamic_line": "有什么事吗？",
+    "responses": [
+      {
+        "text": "让我们交易吧。",
+        "effect": "start_trade",
+        "topic": "TALK_MORLOCK_TRADER_TRADE"
+      },
+      {
+        "text": "[10] 给你找来几瓶鲜榨的诱变剂。",
+        "topic": "TALK_MORLOCK_TRADER_TRADE",
+        "condition": {
+          "u_has_items": {
+            "item": "mutagen",
+            "count": 10
+          }
+        },
+        "effect": {
+          "u_sell_item": "mutagen",
+          "count": 10,
+          "cost": 500000
+        }
+      },
+      {
+        "text": "[1] 给你拿了瓶诱变剂。",
+        "topic": "TALK_MORLOCK_TRADER_TRADE",
+        "condition": {
+          "u_has_item": "mutagen"
+        },
+        "effect": {
+          "u_sell_item": "mutagen",
+          "count": 1,
+          "cost": 50000
+        }
+      },
+      {
+        "text": "[10] 给你找到一些净化剂",
+        "topic": "TALK_MORLOCK_TRADER_TRADE",
+        "condition": {
+          "u_has_items": {
+            "item": "purifier",
+            "count": 10
+          }
+        },
+        "effect": {
+          "u_sell_item": "purifier",
+          "count": 10,
+          "cost": 500000
+        }
+      },
+      {
+        "text": "[1] 有瓶净化剂给你。",
+        "topic": "TALK_MORLOCK_TRADER_TRADE",
+        "condition": {
+          "u_has_item": "purifier"
+        },
+        "effect": {
+          "u_sell_item": "purifier",
+          "count": 1,
+          "cost": 50000
+        }
+      },
+      {
+        "text": "[10] 有老鼠味的吗？",
+        "topic": "TALK_MORLOCK_TRADER_TRADE",
+        "condition": {
+          "u_has_items": {
+            "item": "mutagen",
+            "count": 10
+          }
+        },
+        "effect": [
+          {
+            "u_sell_item": "mutagen",
+            "count": 10
+          },
+          {
+            "u_spawn_item": "iv_mutagen_rat",
+            "count": 1,
+            "container": "bottle_glass"
+          }
+        ]
+      },
+      {
+        "text": "[10] 我要一剂穴居人血清，<name_g>。",
+        "topic": "TALK_MORLOCK_TRADER_TRADE",
+        "condition": {
+          "u_has_items": {
+            "item": "mutagen",
+            "count": 10
+          }
+        },
+        "effect": [
+          {
+            "u_sell_item": "mutagen",
+            "count": 10
+          },
+          {
+            "u_spawn_item": "iv_mutagen_troglobite",
+            "count": 1,
+            "container": "bottle_glass"
+          }
+        ]
+      },
+      {
+        "text": "[10] 给我一些甜鱼汁。",
+        "topic": "TALK_MORLOCK_TRADER_TRADE",
+        "condition": {
+          "u_has_items": {
+            "item": "mutagen",
+            "count": 10
+          }
+        },
+        "effect": [
+          {
+            "u_sell_item": "mutagen",
+            "count": 10
+          },
+          {
+            "u_spawn_item": "iv_mutagen_fish",
+            "count": 1,
+            "container": "bottle_glass"
+          }
+        ]
+      },
+      {
+        "text": "回见，伙计。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

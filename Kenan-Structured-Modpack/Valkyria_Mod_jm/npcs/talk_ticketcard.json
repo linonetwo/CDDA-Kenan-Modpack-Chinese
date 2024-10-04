@@ -1,0 +1,81 @@
+[
+  {
+    "id": "TALK_TICKETFAC",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "你好女士，我是一个权宜之计，允许用户在游戏开始时改变他们的派别。否则就不可能在帝国职业生涯开始时为帝国效力。",
+      "no": "你好，先生，这是一个权宜之计，允许用户在游戏开始时改变他们的派别。否则就不可能在帝国职业生涯开始时为帝国效力。"
+    },
+    "responses": [
+      {
+        "text": "和我一起增加帝国的名声。",
+        "topic": "TALK_TICKETFAC_E1",
+        "effect": [
+          {
+            "npc_change_faction": "val_fac_empire"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "TALK_TICKETFAC_E1",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "我把你和帝国的关系提高了30分。",
+      "no": "我把你和帝国的关系提高了30分。"
+    },
+    "responses": [
+      {
+        "text": "现在改变我和加利亚的关系。",
+        "effect": [
+          {
+            "u_faction_rep": 30
+          },
+          {
+            "npc_change_faction": "val_fac_gallia"
+          }
+        ],
+        "topic": "TALK_TICKETFAC_G1"
+      }
+    ]
+  },
+  {
+    "id": "TALK_TICKETFAC_G1",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "我已经减少了你和加利亚的关系30分。",
+      "no": "我已经减少了你和加利亚的关系30分。"
+    },
+    "responses": [
+      {
+        "text": "继续。",
+        "effect": [
+          {
+            "u_faction_rep": -30
+          }
+        ],
+        "topic": "TALK_TICKETDEATH"
+      }
+    ]
+  },
+  {
+    "id": "TALK_TICKETDEATH",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "过程完成了。",
+      "no": "过程完成了。"
+    },
+    "responses": [
+      {
+        "text": "现在走开",
+        "effect": "npc_die",
+        "topic": "TALK_DONE"
+      }
+    ]
+  }
+]

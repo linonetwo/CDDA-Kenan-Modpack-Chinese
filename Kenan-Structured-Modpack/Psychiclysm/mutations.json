@@ -1,0 +1,303 @@
+[
+  {
+    "type": "mutation",
+    "id": "TEST_PSYCHIC",
+    "name": {
+      "str": "测试用灵能"
+    },
+    "points": 0,
+    "description": "调试特性。",
+    "starting_trait": true,
+    "purifiable": false,
+    "valid": false,
+    "spells_learned": [
+      [
+        "resist_psychic_stress",
+        9
+      ],
+      [
+        "resist_fear",
+        9
+      ],
+      [
+        "resist_psychic_feedback",
+        9
+      ],
+      [
+        "block_psychic",
+        9
+      ],
+      [
+        "boost_int_per",
+        9
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "AWAKENED",
+    "name": {
+      "str": "女惊醒者"
+    },
+    "points": 1,
+    "description": "你已经觉醒到精神现象的黑暗实相和流经宇宙的无形力量。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": true,
+    "category": [
+      "ALPHA",
+      "SLIME",
+      "CEPHALOPOD"
+    ],
+    "leads_to": [
+      "PSYCHIC_DEFENSE",
+      "PSYCHIC_STRENGTH",
+      "MESMER"
+    ],
+    "cancels": [
+      "WILLPOWER",
+      "OPTIMISTIC",
+      "FEARLESS"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "FEARLESS",
+    "name": {
+      "str": "无知无畏"
+    },
+    "points": 1,
+    "description": "你什么都不怕，至少对地球是这样。你对宇宙恐怖和基于恐惧的心灵攻击也有一定的抵抗力。然而，这也阻止了你获得精神力量。",
+    "starting_trait": true,
+    "mixed_effect": true,
+    "purifiable": false,
+    "category": [
+      "BEAST",
+      "CHIMERA"
+    ],
+    "valid": false,
+    "cancels": [
+      "JITTERY",
+      "AWAKENED"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "WILLPOWER",
+    "name": {
+      "str": "钢铁之心"
+    },
+    "points": 1,
+    "description": "你有着坚定的意志，能够抵御灵能攻击。然而，这也阻止了你获得灵能的力量。",
+    "starting_trait": true,
+    "mixed_effect": true,
+    "purifiable": false,
+    "valid": false,
+    "category": [
+      "ELFA"
+    ],
+    "cancels": [
+      "SCHIZOPHRENIC",
+      "AWAKENED"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "RESISTFEAR",
+    "name": {
+      "str": "恐惧抵抗"
+    },
+    "points": 2,
+    "description": "你已经超越了原始的战斗或逃跑本能。对恐惧的惩罚减少了。",
+    "category": [
+      "CEPHALOPOD",
+      "CHIMERA",
+      "PLANT",
+      "MYCUS",
+      "MEDICAL"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "MESMER",
+    "name": {
+      "str": "催眠者"
+    },
+    "points": 5,
+    "description": "通过人格的力量，你可以说服和接纳意志薄弱的人。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": true,
+    "social_modifiers": {
+      "persuade": 30
+    },
+    "category": [
+      "ALPHA",
+      "SLIME",
+      "CEPHALOPOD"
+    ],
+    "cancels": [
+      "WILLPOWER",
+      "FEARLESS"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PSYCHIC_DEFENSE",
+    "name": {
+      "str": "心理防御"
+    },
+    "points": 5,
+    "description": "你过于敏感的头脑已经适应了持续的精神压力。你现在可以积极地防御恐惧和心理冲击。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": true,
+    "category": [
+      "ALPHA",
+      "SLIME",
+      "CEPHALOPOD"
+    ],
+    "prereqs": [
+      "AWAKENED"
+    ],
+    "spells_learned": [
+      [
+        "resist_fear",
+        9
+      ],
+      [
+        "resist_psychic_stress",
+        9
+      ],
+      [
+        "resist_psychic_feedback",
+        9
+      ],
+      [
+        "block_psychic",
+        9
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "PSYCHIC_PROJECT",
+    "name": {
+      "str": "心理投射"
+    },
+    "points": 5,
+    "description": "你不断扩展的思想已经开始超越你物质自我的边界。你现在可以物化物体，并赋予它们你的力量。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "threshreq": [
+      "THRESH_ALPHA",
+      "THRESH_CEPHALOPOD",
+      "THRESH_SLIME"
+    ],
+    "category": [
+      "ALPHA",
+      "SLIME",
+      "CEPHALOPOD"
+    ],
+    "prereqs": [
+      "AWAKENED"
+    ],
+    "active": true,
+    "cost": 500,
+    "fatigue": true,
+    "spawn_item": {
+      "type": "psychic_crystal",
+      "message": "You concentrate your psychic energies into material form"
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "PSYCHIC_STRENGTH",
+    "name": {
+      "str": "精神力量"
+    },
+    "points": 5,
+    "description": "你不断增长的意识包含了你自主神经系统的一部分。你已经获得了暂时克服身体极限的能力。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": true,
+    "category": [
+      "ALPHA",
+      "CEPHALOPOD"
+    ],
+    "passive_mods": {
+      "str_mod": 1
+    },
+    "prereqs": [
+      "AWAKENED"
+    ],
+    "spells_learned": [
+      [
+        "boost_int_per",
+        9
+      ],
+      [
+        "boost_speed",
+        9
+      ],
+      [
+        "recover_fatigue",
+        9
+      ],
+      [
+        "recover_pain",
+        9
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "THRALL",
+    "name": {
+      "str": "被奴役者"
+    },
+    "points": -3,
+    "description": "这个人已经被你的魅力征服了。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "player_display": true,
+    "passive_mods": {
+      "int_mod": -1
+    },
+    "social_modifiers": {
+      "persuade": -10
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "UNTHRALL",
+    "name": {
+      "str": "不可奴役"
+    },
+    "points": 1,
+    "description": "这个人现在对诱惑免疫。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "player_display": false
+  },
+  {
+    "type": "mutation",
+    "id": "LOBOTOMY",
+    "name": {
+      "str": "脑叶切除"
+    },
+    "points": -1,
+    "description": "无论是通过手术还是纯粹的精神手段，你的精神力量都被移除了。",
+    "starting_trait": false,
+    "purifiable": false,
+    "valid": false,
+    "player_display": true,
+    "passive_mods": {
+      "int_mod": -2,
+      "per_mod": -2
+    }
+  }
+]

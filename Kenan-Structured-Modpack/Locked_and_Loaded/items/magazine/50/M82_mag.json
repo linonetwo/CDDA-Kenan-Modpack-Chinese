@@ -1,0 +1,33 @@
+[
+  {
+    "id": "M82_mag",
+    "type": "MAGAZINE",
+    "name": {
+      "str": "M82弹匣"
+    },
+    "description": "M82的弹匣可以装10发0.50BMG的子弹。",
+    "weight": "168 g",
+    "volume": "250 ml",
+    "price": "80 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "looks_like": "8x40_50_mag",
+    "ammo_type": "50",
+    "capacity": 10,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 10
+        }
+      }
+    ],
+    "flags": [
+      "MAG_COMPACT"
+    ]
+  }
+]

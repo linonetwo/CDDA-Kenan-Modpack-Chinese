@@ -1,0 +1,666 @@
+[
+  {
+    "id": "galarmyjacket",
+    "repairs_like": "trenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "加利亚P.32陆军夹克"
+    },
+    "description": "一种供加利亚尼军队使用的束腰外衣。它著名的蓝色外观很有特色，给加利亚的市民带来了希望。",
+    "weight": "780 g",
+    "volume": "3 L",
+    "price": "35 USD",
+    "price_postapoc": "7 USD",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "coat_winter",
+    "color": "green",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 65
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 65
+      }
+    ],
+    "warmth": 20,
+    "valid_mods": [
+      "steel_padded"
+    ],
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ],
+        "material": [
+          "cotton"
+        ],
+        "material_thickness": 4,
+        "environmental_protection": 3
+      }
+    ]
+  },
+  {
+    "id": "galwebbing",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "加利亚 P.33军用织带"
+    },
+    "description": "一个织物弹药袋，可以绑在你的胸部，手边可以放一个弹匣。这种样式在加利亚冲锋队中很常见。",
+    "weight": "120 g",
+    "volume": "220 ml",
+    "price": "12 USD",
+    "price_postapoc": "20 USD",
+    "material": [
+      "leather"
+    ],
+    "symbol": "[",
+    "looks_like": "ragpouch",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "moves": 40,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g",
+        "holster": true,
+        "rigid": false,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你藏起你的%s"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "coverage": 15,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "leather"
+        ],
+        "material_thickness": 4
+      }
+    ]
+  },
+  {
+    "id": "galchestarmor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str_sp": "加利亚 P.33防弹胸甲"
+    },
+    "description": "一副加利亚盔甲，有几块金属板固定在佩戴者的肩膀和上肩膀附近。",
+    "weight": "1250 g",
+    "volume": "750 ml",
+    "price": "200 USD",
+    "price_postapoc": "50 cent",
+    "to_hit": -1,
+    "bashing": 2,
+    "cutting": 3,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "looks_like": "cuirass_lightplate",
+    "color": "light_gray",
+    "warmth": 20,
+    "flags": [
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 6,
+        "coverage": 35,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "steel"
+        ],
+        "material_thickness": 5
+      }
+    ]
+  },
+  {
+    "id": "imparmyjacket",
+    "repairs_like": "trenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "1929型野战夹克"
+    },
+    "description": "一种用于东欧联合帝国的束腰外衣。它著名的蓝色外观非常独特，给加利亚的市民灌输了一种希望。",
+    "weight": "780 g",
+    "volume": "3 L",
+    "price": "35 USD",
+    "price_postapoc": 750,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "coat_winter",
+    "color": "green",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "800 ml",
+        "max_contains_weight": "2 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 65
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "450 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 65
+      }
+    ],
+    "warmth": 20,
+    "valid_mods": [
+      "steel_padded"
+    ],
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ],
+        "material": [
+          "cotton"
+        ],
+        "material_thickness": 4,
+        "environmental_protection": 2
+      }
+    ]
+  },
+  {
+    "id": "impwebbing",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "帝国Y带织带"
+    },
+    "description": "一个织物弹药袋，可以绑在你的胸前，手边可以放一个弹匣。这种样式常见于帝国冲锋队。",
+    "weight": "220 g",
+    "volume": "220 ml",
+    "price": "12 USD",
+    "price_postapoc": "20 USD",
+    "material": [
+      "leather"
+    ],
+    "symbol": "[",
+    "looks_like": "ragpouch",
+    "color": "dark_gray",
+    "pocket_data": [
+      {
+        "moves": 40,
+        "max_contains_volume": "750 ml",
+        "max_contains_weight": "1500 g",
+        "holster": true,
+        "rigid": false,
+        "flag_restriction": [
+          "MAG_COMPACT"
+        ]
+      }
+    ],
+    "use_action": {
+      "type": "holster",
+      "holster_prompt": "存储弹药",
+      "holster_msg": "你藏起你的%s"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "coverage": 25,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "leather"
+        ],
+        "material_thickness": 4
+      }
+    ]
+  },
+  {
+    "id": "impchestarmor",
+    "type": "ARMOR",
+    "category": "armor",
+    "name": {
+      "str_sp": "1931年款帝国胸甲"
+    },
+    "description": "也许是除了ZM MP议员之外最著名的帝国军事装备，1931年版的帝国胸甲常常成为帝国力量的沉重提醒。胸板几乎完全由钢制成，通常非常笨重，但为用户提供了无与伦比的保护。",
+    "weight": "3250 g",
+    "volume": "750 ml",
+    "price": "200 USD",
+    "price_postapoc": "50 cent",
+    "to_hit": -1,
+    "bashing": 2,
+    "cutting": 3,
+    "material": [
+      "steel"
+    ],
+    "symbol": "[",
+    "looks_like": "cuirass_lightplate",
+    "color": "light_gray",
+    "warmth": 20,
+    "flags": [
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 17,
+        "coverage": 80,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "steel"
+        ],
+        "material_thickness": 4,
+        "environmental_protection": 5
+      }
+    ]
+  },
+  {
+    "id": "galwomjacket",
+    "repairs_like": "trenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "加利亚 P.34女兵夹克"
+    },
+    "description": "一种供加利亚尼军队使用的束腰外衣。它著名的蓝色外观很有特色，给加利亚的市民带来了希望。专为女性打造，从其更苗条的剪裁来看，更适合女性的身材。",
+    "weight": "640 g",
+    "volume": "2 L",
+    "price": "35 USD",
+    "price_postapoc": "7 USD",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "coat_winter",
+    "color": "green",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "600 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "600 ml",
+        "max_contains_weight": "1500 g",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "400 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 65
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "400 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 65
+      }
+    ],
+    "warmth": 16,
+    "valid_mods": [
+      "steel_padded"
+    ],
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ],
+        "material": [
+          "cotton"
+        ],
+        "material_thickness": 2,
+        "environmental_protection": 3
+      }
+    ]
+  },
+  {
+    "id": "galwomtunic",
+    "repairs_like": "trenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "Bruhl女式民兵束腰外衣"
+    },
+    "description": "一种外衣，供全国各地的加利亚平民民兵部队使用。这基本上只是一件用加利亚民族色彩制作的短裙，但很容易穿进去。。",
+    "weight": "440 g",
+    "volume": "2 L",
+    "price": "35 USD",
+    "price_postapoc": "7 USD",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "coat_winter",
+    "color": "green",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "300 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "300 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "200 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 65
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "200 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 65
+      }
+    ],
+    "warmth": 16,
+    "valid_mods": [
+      "steel_padded"
+    ],
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ],
+        "material": [
+          "cotton"
+        ],
+        "material_thickness": 2,
+        "environmental_protection": 2
+      }
+    ]
+  },
+  {
+    "id": "gallian_pack",
+    "type": "ARMOR",
+    "name": {
+      "str": "加利亚P.25步兵背包"
+    },
+    "description": "一种设计用于加里亚军队的小皮革背包。很好的储物空间，不会有一点累赘。",
+    "weight": "700 g",
+    "volume": "2 L",
+    "price": "119 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "leather",
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "backpack",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": false,
+        "max_contains_volume": "15 L",
+        "max_contains_weight": "30 kg",
+        "max_item_length": "65 cm",
+        "moves": 250
+      }
+    ],
+    "warmth": 9,
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          4,
+          17
+        ],
+        "coverage": 30,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "leather",
+          "cotton"
+        ],
+        "material_thickness": 3
+      }
+    ]
+  },
+  {
+    "id": "imperial_pack",
+    "type": "ARMOR",
+    "name": {
+      "str": "1924型帝国背包"
+    },
+    "description": "为帝国军队设计的小皮背包。第一次欧罗巴战争中使用的旧帆布背包的改进版。",
+    "weight": "700 g",
+    "volume": "2 L",
+    "price": "119 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "leather",
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "backpack",
+    "color": "brown",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "rigid": false,
+        "max_contains_volume": "15 L",
+        "max_contains_weight": "30 kg",
+        "max_item_length": "65 cm",
+        "moves": 250
+      }
+    ],
+    "warmth": 9,
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          4,
+          17
+        ],
+        "coverage": 30,
+        "covers": [
+          "torso"
+        ],
+        "material": [
+          "leather",
+          "cotton"
+        ],
+        "material_thickness": 3
+      }
+    ]
+  },
+  {
+    "id": "valdarcshawl",
+    "type": "ARMOR",
+    "name": {
+      "str": "达森披肩"
+    },
+    "description": "一种带帽斗篷，在欧罗巴的达森妇女中最常见。",
+    "weight": "320 g",
+    "volume": "1 L",
+    "price": "107 USD",
+    "price_postapoc": "5 USD",
+    "to_hit": -1,
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "coat_rain",
+    "color": "blue",
+    "warmth": 25,
+    "flags": [
+      "OVERSIZE",
+      "HOOD",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 4,
+        "coverage": 65,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ],
+        "material": [
+          "cotton"
+        ],
+        "material_thickness": 2,
+        "environmental_protection": 3
+      }
+    ]
+  },
+  {
+    "id": "val_gallian_dress",
+    "repairs_like": "trenchcoat",
+    "type": "ARMOR",
+    "name": {
+      "str_sp": "加利亚裙"
+    },
+    "description": "加利亚城市和乡村妇女最常穿的一种棉布衣服。",
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "60 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "looks_like": "dress",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "1 kg",
+        "moves": 80
+      }
+    ],
+    "warmth": 10,
+    "valid_mods": [
+      "steel_padded"
+    ],
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 7,
+        "coverage": 75,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ],
+        "material": [
+          "cotton"
+        ],
+        "material_thickness": 4
+      }
+    ]
+  }
+]

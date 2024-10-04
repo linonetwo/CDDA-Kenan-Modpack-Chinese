@@ -1,0 +1,56 @@
+[
+  {
+    "id": "mayonnaise_gummy",
+    "type": "COMESTIBLE",
+    "symbol": "~",
+    "color": "white",
+    "name": {
+      "str": "蛋黄酱软糖",
+      "str_pl": "蛋黄酱软糖"
+    },
+    "description": "由于含油量过多而没能干燥成粉末的蛋黄酱，现在是橡胶一样的胶状物。尝起来还有点蛋黄酱的味道。虽然不能被重新配制成可涂抹的蛋黄酱，但可以用水加热使其软化。",
+    "price": 18,
+    "material": [
+      "junk",
+      "egg"
+    ],
+    "comestible_type": "FOOD",
+    "weight": "5 g",
+    "volume": "25 ml",
+    "calories": 10,
+    "spoils_in": "360 days",
+    "charges": 1,
+    "fun": -1,
+    "flags": [
+      "NUTRIENT_OVERRIDE",
+      "USE_EAT_VERB"
+    ],
+    "cooks_like": "mayonnaise"
+  },
+  {
+    "id": "ketchup_powder",
+    "type": "COMESTIBLE",
+    "symbol": "~",
+    "color": "red",
+    "name": {
+      "str": "番茄酱粉末",
+      "str_pl": "番茄酱粉末"
+    },
+    "description": "已经磨成粉末的脱水番茄酱。可作为干点心的调味品，或用水重新调配成番茄酱。",
+    "price": 18,
+    "material": [
+      "veggy",
+      "junk"
+    ],
+    "comestible_type": "FOOD",
+    "weight": "2 g",
+    "volume": "25 ml",
+    "calories": 21,
+    "charges": 1,
+    "fun": 4,
+    "flags": [
+      "NUTRIENT_OVERRIDE"
+    ],
+    "cooks_like": "ketchup"
+  }
+]

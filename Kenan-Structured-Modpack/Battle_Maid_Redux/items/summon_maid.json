@@ -1,0 +1,226 @@
+[
+  {
+    "id": "flask_shoggoth",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "烧瓶（修格斯）",
+      "str_pl": "烧瓶（修格斯）"
+    },
+    "description": "玻璃烧瓶中装有一块似乎正在生长的肉。这块肉偶尔会颤动一下。",
+    "weight": "1200 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "material": [
+      "glass",
+      "maid"
+    ],
+    "symbol": "M",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 201600,
+      "not_ready_msg": "The piece of meat pulsates.",
+      "msg": "随着肉块的不断生长，烧瓶有迸裂的危险。再使用一次，可打开烧瓶来释放压力。",
+      "moves": 0,
+      "target": "shoggoth_maid"
+    }
+  },
+  {
+    "id": "shoggoth_maid",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "category": "other",
+    "name": {
+      "str": "正在生长的修格斯女仆"
+    },
+    "description": "这个烧瓶里的肉发出五颜六色的光芒。它在微微颤抖。",
+    "weight": "1200 g",
+    "volume": "250 ml",
+    "price": "600 USD",
+    "material": [
+      "glass",
+      "maid"
+    ],
+    "symbol": "M",
+    "color": "dark_gray",
+    "use_action": {
+      "type": "place_npc",
+      "npc_class_id": "shoggoth_maid",
+      "summon_msg": "The odd meat is released from its glass flask prison and begins to rapidly and violently expand, extending numerous disjointed tentacles in every direction. The tentacles intertwine with each other and transform into an organism, resembling a beautiful woman, not quite like the horrible nightmare creature it used to be. She suddenly speaks up: 'Finally, I am able to meet you like this! Thank you for helping me, master!'",
+      "place_randomly": true
+    }
+  },
+  {
+    "id": "res_shoggoth",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "category": "other",
+    "name": {
+      "str": "恢复活力的修格斯女仆"
+    },
+    "description": "“怎么了？你为什么还不把我放在地上？啊，主人想和“小女仆”多呆一会吗？嗯…我想这也是没办法的事呢~”",
+    "weight": "1200 g",
+    "volume": "250 ml",
+    "price": "600 USD",
+    "material": [
+      "maid"
+    ],
+    "symbol": "M",
+    "color": "white",
+    "use_action": {
+      "type": "place_npc",
+      "npc_class_id": "shoggoth_maid",
+      "summon_msg": "'Sorry I kept you waiting, master! I will do my best to serve you and support you to the best of my abilities!'",
+      "place_randomly": true
+    }
+  },
+  {
+    "id": "mini_shoggoth",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "小修格斯女仆",
+      "str_pl": "小修格斯女仆们"
+    },
+    "description": "“啊…我想我玩的太过火了，结果变成这样了。我需要一些时间来恢复我以前的形态。请主人把我放在口袋里让我暖暖身子！别把我放进冰箱！千万不要！”",
+    "weight": "200 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "material": [
+      "maid"
+    ],
+    "symbol": "m",
+    "color": "white",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 100800,
+      "not_ready_msg": "'Fufufu~ Are you worried? I am fine, your maid is fine! ... I guess. So, please wait a bit longer... I'm sorry for making you concerned.'",
+      "msg": "“我已经完全恢复了！我会好好服侍你的，主人！不过现在，请先把我放在地上。”",
+      "moves": 0,
+      "target": "res_shoggoth"
+    }
+  },
+  {
+    "id": "maid_master_child",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "category": "other",
+    "name": {
+      "str": "主人"
+    },
+    "description": "这是你侍奉的房主托付给你的孩子。当你面临这场灾难时，你的内心陷入了深深的恐惧，但是保护这个孩子成了你活下去的目的，并且让你感觉不再那么孤独。",
+    "weight": "1200 g",
+    "volume": "250 ml",
+    "price": "600 USD",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "m",
+    "color": "brown",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "maid_master",
+      "friendly_msg": "主人似乎很担心邻居们的状况。",
+      "place_randomly": true
+    }
+  },
+  {
+    "id": "summon_little_maid",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "category": "other",
+    "name": {
+      "str": "卷轴（召唤小女仆）"
+    },
+    "description": "一套用来召唤不同类型女仆的卷轴和祭品。把献祭的糖倒在魔法阵中间，并且施放正确的咒语。",
+    "weight": "1200 g",
+    "volume": "250 ml",
+    "price": "600 USD",
+    "material": [
+      "paper"
+    ],
+    "symbol": "M",
+    "color": "white",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_little_maid",
+      "friendly_msg": "献祭的糖在法力寄点融化，并开始喷出白烟。当甜味四处扩散，你注意到一个孩子大小的模糊身影站在魔法阵里。烟雾完全散去后，一个小女仆站在刚才黑影的位置，用好奇的眼神打量着你。“你就是我的主人吗？”",
+      "place_randomly": true
+    }
+  },
+  {
+    "id": "mini_little_maid",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "小小女仆",
+      "str_pl": "小小女仆们"
+    },
+    "description": "你的小女仆的小小版本。",
+    "weight": "150 g",
+    "volume": "250 ml",
+    "price": "50 USD",
+    "material": [
+      "maid"
+    ],
+    "symbol": "m",
+    "color": "white",
+    "use_action": {
+      "type": "delayed_transform",
+      "transform_age": 7200,
+      "not_ready_msg": "While standing still on the palm of your hand, she stares downwards and mutters 'Master...' in a barely audible voice.",
+      "msg": "“主人~！主人~~！”小女仆拍拍你的肩膀，然后指着地面，她似乎是想要从你的肩膀下来。准备好了就把她放在地上。",
+      "moves": 0,
+      "target": "res_little_maid"
+    }
+  },
+  {
+    "id": "res_little_maid",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "category": "other",
+    "name": {
+      "str": "恢复活力的小女仆"
+    },
+    "description": "看起来你的小女仆已经完全康复。",
+    "weight": "1200 g",
+    "volume": "250 ml",
+    "price": "600 USD",
+    "material": [
+      "maid"
+    ],
+    "symbol": "m",
+    "color": "white",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_little_maid",
+      "friendly_msg": "小女仆跳下地，转身然后轻轻撩起裙子下摆，向你鞠了一躬。“主人!”她微笑着说。",
+      "place_randomly": true
+    }
+  },
+  {
+    "id": "summon_alchemic_golem",
+    "type": "COMESTIBLE",
+    "comestible_type": "FOOD",
+    "category": "other",
+    "name": {
+      "str": "炼金术肉傀儡（熟）"
+    },
+    "description": "以炼金术手段制成的大量有生命的肉。扭曲变形的肉块中有一个像人一样的嘴状器官，不断地从中喷出有毒气体和酸性体液，同时发出令人讨厌的声音。",
+    "weight": "1000 g",
+    "volume": "250 ml",
+    "price": "600 USD",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "g",
+    "color": "red",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_alchemic_golem",
+      "friendly_msg": "我释放了一个恶心的怪物...",
+      "place_randomly": true
+    }
+  }
+]

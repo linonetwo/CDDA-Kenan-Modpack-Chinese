@@ -1,0 +1,208 @@
+[
+  {
+    "id": "IA2_DMR",
+    "type": "GUN",
+    "name": {
+      "str": "IA2 DMR 突击步枪"
+    },
+    "description": "IA2是一种可切换射击模式的突击步枪，旨在取代服役于巴西军方的老式FAL、M16 A2和HK33。大面积安装了皮卡汀尼导轨（鱼骨），因此有丰富的可安装配件。这套DMR配置采用7.62x51口径（也称为.308）枪膛，枪管长17.2英寸（440mm）。DMR配置和狙击手配置一样能装备FAL弹夹。",
+    "weight": "3600 g",
+    "volume": "2 L",
+    "price": "300 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "green",
+    "ammo": [
+      "308"
+    ],
+    "skill": "rifle",
+    "dispersion": 160,
+    "durability": 7,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
+    "barrel_volume": "250 ml",
+    "built_in_mods": [
+      "folding_stock"
+    ],
+    "valid_mod_locations": [
+      [
+        "acessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        3
+      ],
+      [
+        "sight",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "falmag",
+          "falbigmag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "IA2_SNIPER",
+    "type": "GUN",
+    "name": {
+      "str": "IA2 精确射手步枪"
+    },
+    "description": "IA2狙击枪是一种精密的半自动步枪，旨在取代服役于巴西军方的老式狙击步枪。大面积安装了皮卡汀尼导轨（鱼骨），因此有丰富的可安装配件。狙击手配置采用7.62x51口径（也称为.308）枪膛，枪管长20英寸（510mm）。狙击手配置和DMR配置一样能够装备FAL弹夹。",
+    "weight": "3800 g",
+    "volume": "2 L",
+    "price": "300 USD",
+    "to_hit": -1,
+    "bashing": 10,
+    "material": [
+      "aluminum",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "green",
+    "ammo": [
+      "308"
+    ],
+    "skill": "rifle",
+    "dispersion": 160,
+    "durability": 7,
+    "barrel_volume": "500 ml",
+    "valid_mod_locations": [
+      [
+        "acessories",
+        2
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        2
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        3
+      ],
+      [
+        "sight",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "falmag",
+          "falbigmag"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "rfb",
+    "type": "GUN",
+    "name": {
+      "str": "RFP 无托步枪",
+      "str_pl": "RFB 无托步枪"
+    },
+    "description": "RFB是有史以来第一款真正的双灵巧7.62北约无托步枪，突破性地设计了向前的抛壳系统。它也是有史以来最安全的无托枪之一，后膛与射手的脸隔着两层1.6毫米的钢板。",
+    "weight": "3677 g",
+    "volume": "1 L",
+    "price": "3500 USD",
+    "to_hit": -1,
+    "bashing": 6,
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "symbol": "(",
+    "color": "dark_gray",
+    "ammo": [
+      "308"
+    ],
+    "skill": "rifle",
+    "dispersion": 160,
+    "durability": 8,
+    "barrel_volume": "250 ml",
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "falmag",
+          "falbigmag"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,580 @@
+[
+  {
+    "//": "TODO write everything, add trade stock with MJ, drugs, maybe something more; 4th quest, something else.",
+    "type": "npc",
+    "id": "NPC_bandit_sb_drugmaker",
+    "class": "NC_SCAVENGER",
+    "attitude": 0,
+    "mission": 8,
+    "chat": "TALK_bandit_sb_drugmaker",
+    "faction": "sunset_bikers",
+    "mission_offered": "MISSION_bandit_sb_drugmaker_1"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_bandit_sb_drugmaker",
+    "common": false,
+    "name": {
+      "str": "Drug-maker"
+    },
+    "job_description": "I'm just wandering.",
+    "shopkeeper_item_group": "NC_bandit_sb_drugmaker_shop",
+    "traits": [
+      {
+        "group": "NPC_starting_traits"
+      },
+      {
+        "group": "Appearance_demographics"
+      }
+    ],
+    "skills": [
+      {
+        "skill": "ALL",
+        "level": {
+          "mul": [
+            {
+              "one_in": 3
+            },
+            {
+              "sum": [
+                {
+                  "dice": [
+                    4,
+                    2
+                  ]
+                },
+                {
+                  "rng": [
+                    -4,
+                    -1
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "type": "item_group",
+    "id": "NC_bandit_sb_drugmaker_shop",
+    "subtype": "collection",
+    "items": [
+      {
+        "group": "stash_drugs",
+        "count": [
+          1,
+          6
+        ]
+      },
+      {
+        "item": "joint",
+        "count": [
+          5,
+          35
+        ]
+      },
+      {
+        "item": "weed",
+        "count": [
+          10,
+          50
+        ]
+      },
+      [
+        "pipe_glass",
+        100
+      ]
+    ]
+  },
+  {
+    "//": "'condition': { 'u_has_var': 'bandit_dump_unlocked', 'type': 'flag', 'context': 'missions_sb', 'value': 'yes' },",
+    "id": [
+      "TALK_bandit_sb_drugmaker"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_var": "bandit_dump_unlocked",
+      "type": "flag",
+      "context": "missions_sb",
+      "value": "yes",
+      "yes": "你好。",
+      "no": "我很忙。晚点再跟我说。"
+    },
+    "responses": [
+      {
+        "text": "嗨。",
+        "topic": "TALK_bandit_sb_drugmaker1",
+        "effect": {
+          "npc_first_topic": "TALK_bandit_sb_drugmaker1"
+        }
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bandit_sb_drugmaker1",
+      "TALK_bandit_sb_drugmaker_Background",
+      "TALK_bandit_sb_drugmaker_wait"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": {
+      "npc_compare_time_since_var": "wait_for_farm",
+      "type": "time",
+      "context": "open_mission",
+      "op": ">",
+      "time": "14 days",
+      "yes": "哟，<name_g>，你看到我的<very>大农场了吗？那些奴隶努力工作！现在我可以开始把这些东西卖给我周围的<name_b>了。另一方面，正如我们所讨论的，你将拥有我们收入的50%。如果你想买的话，还有一个特别的折扣，他说。",
+      "no": "<greet>"
+    },
+    "speaker_effect": {
+      "condition": {
+        "npc_compare_time_since_var": "wait_for_farm",
+        "type": "time",
+        "context": "open_mission",
+        "op": ">",
+        "time": "14 days"
+      },
+      "effect": [
+        {
+          "mapgen_update": "bandit_sb_drugmaker_farm1",
+          "om_terrain": "ws_biker_dump_0_1"
+        },
+        {
+          "mapgen_update": "bandit_sb_drugmaker_farm2",
+          "om_terrain": "ws_biker_dump_0_2"
+        },
+        {
+          "npc_lose_var": "wait_for_farm",
+          "type": "time",
+          "context": "open_mission"
+        },
+        {
+          "u_add_var": "sb_narc_farm",
+          "type": "switch",
+          "context": "farm_status",
+          "value": "working"
+        },
+        {
+          "npc_add_var": "wait_for_m4",
+          "type": "time",
+          "context": "open_mission",
+          "time": true
+        }
+      ]
+    },
+    "responses": [
+      {
+        "text": "关于那个任务……",
+        "condition": {
+          "u_has_mission": "MISSION_bandit_sb_drugmaker_3"
+        },
+        "topic": "TALK_bandit_sb_drugmaker_slaves",
+        "switch": true
+      },
+      {
+        "text": "关于那个任务……",
+        "condition": {
+          "and": [
+            "has_assigned_mission",
+            "mission_complete"
+          ]
+        },
+        "topic": "TALK_MISSION_INQUIRE",
+        "switch": true
+      },
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_bandit_sb_drugmaker_Background"
+      },
+      {
+        "text": "需要帮忙么？",
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "and": [
+              {
+                "not": {
+                  "npc_compare_time_since_var": "wait_for_m4",
+                  "type": "time",
+                  "context": "open_mission",
+                  "op": "<",
+                  "time": "12 days"
+                }
+              },
+              {
+                "not": {
+                  "npc_compare_time_since_var": "wait_for_farm",
+                  "type": "time",
+                  "context": "open_mission",
+                  "op": "<",
+                  "time": "14 days"
+                }
+              }
+            ]
+          }
+        },
+        "success": {
+          "effect": [
+            {
+              "npc_lose_var": "wait_for_m4",
+              "type": "time",
+              "context": "open_mission"
+            }
+          ],
+          "topic": "TALK_MISSION_LIST"
+        },
+        "failure": {
+          "topic": "TALK_bandit_sb_drugmaker_wait"
+        }
+      },
+      {
+        "text": "让我们交易吧。",
+        "condition": {
+          "u_has_var": "sb_narc_farm",
+          "type": "switch",
+          "context": "farm_status",
+          "value": "working"
+        },
+        "topic": "TALK_bandit_sb_drugmaker1",
+        "effect": "start_trade"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_sb_drugmaker_Background",
+    "dynamic_line": "我在<the_cataclysm>之前是个化学家。现在我在为日落摩托团的人做毒品。真见鬼耶！"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_sb_drugmaker_wait",
+    "dynamic_line": "对不起，<name_g>，我现在没有什么可以给你的。晚点来找我。"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_sb_drugmaker_slaves",
+    "dynamic_line": "你带他们来了吗，伙计？",
+    "responses": [
+      {
+        "text": "我只有一些。",
+        "topic": "TALK_bandit_sb_drugmaker_slaves_complete",
+        "condition": {
+          "or": [
+            {
+              "and": [
+                {
+                  "u_compare_var": "slaves_for_sb",
+                  "type": "count",
+                  "context": "alive",
+                  "op": ">",
+                  "value": 0
+                },
+                {
+                  "not": {
+                    "u_has_mission": "MISSION_gs_slaves"
+                  }
+                }
+              ]
+            },
+            {
+              "u_has_trait": "DEBUG_MIND_CONTROL"
+            }
+          ]
+        },
+        "switch": true
+      },
+      {
+        "text": "很抱歉，我没能让他们活着…",
+        "topic": "TALK_MISSION_FAILURE",
+        "condition": {
+          "and": [
+            {
+              "u_compare_var": "slaves_for_sb",
+              "type": "count",
+              "context": "dead",
+              "op": ">",
+              "value": 0
+            },
+            {
+              "not": {
+                "u_has_mission": "MISSION_gs_slaves"
+              }
+            }
+          ]
+        },
+        "effect": "mission_failure",
+        "switch": true
+      },
+      {
+        "text": "没关系的，真的。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_sb_drugmaker_slaves_complete",
+    "dynamic_line": "为什么他们这么少？去他妈的，只要他们能工作。",
+    "speaker_effect": [
+      {
+        "effect": [
+          "mission_success",
+          "clear_mission",
+          {
+            "u_lose_var": "slaves_for_sb",
+            "type": "count",
+            "context": "dead"
+          },
+          {
+            "u_lose_var": "slaves_for_sb",
+            "type": "count",
+            "context": "alive"
+          },
+          {
+            "u_lose_var": "gs_take_slaves",
+            "type": "count",
+            "context": "take_slaves"
+          },
+          {
+            "npc_add_var": "wait_for_farm",
+            "type": "time",
+            "context": "open_mission",
+            "time": true
+          }
+        ]
+      }
+    ],
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "MISSION_bandit_sb_drugmaker_1",
+    "type": "mission_definition",
+    "name": {
+      "str": "毒品农场私人有限公司。1"
+    },
+    "description": "送1000颗大麻种子。",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 0,
+    "value": 0,
+    "item": "seed_weed",
+    "count": 1000,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_bandit_sb_drugmaker_2",
+    "dialogue": {
+      "describe": "-",
+      "offer": "我想自己搞个毒品农场赚钱。我有一些种子供应，但这不足以充分发展它。我自己做不到，我需要一个搭档。你想成为我的搭档吗？如果你帮我发展农场，我们将把利润分成50乘50。",
+      "accepted": "很好。所以我们要做的第一件事就是找到种子。至少带2公斤大麻籽。我会通过我的渠道找到更多的。我们越早播种，收获就越快。",
+      "rejected": "我想让你成为我的搭档…",
+      "advice": "好像我比你更了解你在哪里能找到他们。",
+      "inquire": "找到了吗？",
+      "success": "哇，你真的找到那么多种子了吗？不幸的是，我找到了一半。嗯，我希望3公斤就够了。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_bandit_sb_drugmaker_2",
+    "type": "mission_definition",
+    "name": {
+      "str": "毒品农场私人有限公司。2"
+    },
+    "description": "运送15袋商品肥料。",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 0,
+    "value": 0,
+    "item": "fertilizer_commercial",
+    "count": 6750,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_bandit_sb_drugmaker_3",
+    "dialogue": {
+      "describe": "-",
+      "offer": "我们拿到了种子。现在，我们需要为我们的农场找到肥料。给我15袋市售肥料。",
+      "accepted": "我会通过我的渠道找到更多的。我们越早播种，收获就越快。",
+      "rejected": "我想让你成为我的搭档…",
+      "advice": "好像我比你更了解你在哪里能找到他们。",
+      "inquire": "找到了吗？",
+      "success": "哇，你真的找到那么多麻袋了吗？不幸的是，我设法找到了更少的。好吧，我希望25袋就够了。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_bandit_sb_drugmaker_3",
+    "type": "mission_definition",
+    "name": {
+      "str": "毒品农场私人有限公司。三"
+    },
+    "description": "送4个奴隶。",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "npc_has_var": "-",
+      "type": "-",
+      "context": "-",
+      "value": "-"
+    },
+    "difficulty": 0,
+    "value": 15000,
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_bandit_sb_drugmaker_4",
+    "dialogue": {
+      "describe": "-",
+      "offer": "这些都是准备工作。现在，让我们做一个农场！当地的<name_b>永远不会工作，所以我需要一些其他的工人。我最近问我们的领导我如何解决这个问题，他说他会考虑的。如果他有什么事，就和领导谈谈。",
+      "accepted": "太好了。如果他什么都同意的话，那么我们至少得派一组的工人来。",
+      "rejected": "我想让你成为我的搭档…",
+      "advice": "你们在这里投递的越多，我们的田地就越大，相应地，我们的收入也就越高。尽量让他们安然无恙。",
+      "inquire": "-",
+      "success": "-",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "//": "TODO write something",
+    "id": "MISSION_bandit_sb_drugmaker_4",
+    "type": "mission_definition",
+    "name": {
+      "str": "报复"
+    },
+    "goal": "MGOAL_ASSASSINATE",
+    "difficulty": 0,
+    "value": 10000,
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "bandit_garage_1",
+        "om_special": "bandit_garage",
+        "cant_see": true,
+        "om_terrain_replace": "field"
+      },
+      "update_mapgen": [
+        {
+          "om_terrain": "ws_biker_dump_0_1",
+          "place_nested": [
+            {
+              "chunks": [
+                "nest_narc_farm_burn1"
+              ],
+              "x": 4,
+              "y": 14
+            }
+          ]
+        },
+        {
+          "om_terrain": "ws_biker_dump_0_2",
+          "place_nested": [
+            {
+              "chunks": [
+                "nest_narc_farm_burn2"
+              ],
+              "x": 4,
+              "y": 0
+            }
+          ]
+        },
+        {
+          "om_terrain": "bandit_garage_2",
+          "place_npcs": [
+            {
+              "class": "bandit",
+              "x": [
+                1,
+                12
+              ],
+              "y": [
+                4,
+                19
+              ],
+              "repeat": [
+                2,
+                6
+              ]
+            },
+            {
+              "class": "bandit",
+              "x": 12,
+              "y": 12,
+              "target": true
+            }
+          ]
+        }
+      ],
+      "effect": [
+        {
+          "u_spawn_item": "gasbomb",
+          "count": 5
+        },
+        {
+          "u_spawn_item": "mask_gas"
+        },
+        {
+          "u_add_var": "sb_narc_farm",
+          "type": "switch",
+          "context": "farm_status",
+          "value": "burned"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "啊，又是你<name_g>。我们的新农场怎么样？这一切一成熟，我们就有了第一个收获，我们就开始有了稳定的收入！他说：“我已经和一些小帮派建立了联系，他们愿意用掠夺来的财物换取我们的货物。”。说到小帮派。我需要你做点什么。",
+      "accepted": "哦，是的，还有一件事……“你开始聊天。过了一会儿，你闻到了烟味。你决定看看烟是从哪里冒出来的。”哦，不，我美丽的庄稼！这个该死的<name_b>决定把我搞砸了。好吧，我们会想办法的。拿着这些手榴弹和这个面具。让这些婊子窒息！",
+      "rejected": "我们可以稍后再做，<name_g>。",
+      "advice": "加油，加油！",
+      "inquire": "希望你能给我带来好消息，<name_g>。",
+      "success": "不错。可惜我们的小农场被烧了。啊，我们改天再考虑。有你这样的生意伙伴真好。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "bandit_sb_drugmaker_farm1",
+    "method": "json",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [
+            "nest_narc_farm1"
+          ],
+          "x": 4,
+          "y": 4
+        }
+      ]
+    }
+  },
+  {
+    "type": "mapgen",
+    "update_mapgen_id": "bandit_sb_drugmaker_farm2",
+    "method": "json",
+    "object": {
+      "place_nested": [
+        {
+          "chunks": [
+            "nest_narc_farm2"
+          ],
+          "x": 4,
+          "y": 0
+        }
+      ]
+    }
+  }
+]

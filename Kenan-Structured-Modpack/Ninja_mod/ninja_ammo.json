@@ -1,0 +1,149 @@
+[
+  {
+    "id": "ninja_shuriken_star",
+    "type": "AMMO",
+    "name": {
+      "str": "手里剑",
+      "str_pl": "手里剑"
+    },
+    "description": "手里剑是忍者的投掷之星",
+    "weight": "120 g",
+    "volume": "250 ml",
+    "price": 600,
+    "to_hit": 2,
+    "bashing": 1,
+    "cutting": 9,
+    "material": [
+      "steel"
+    ],
+    "symbol": "+",
+    "color": "dark_gray",
+    "count": 5,
+    "ammo_type": "ammo_type_ninja_shuriken",
+    "range": 0,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 14,
+      "armor_penetration": 2
+    },
+    "dispersion": 0,
+    "recoil": 0,
+    "effects": [
+      "RECOVER_25"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        7
+      ]
+    ]
+  },
+  {
+    "id": "ninja_shuriken",
+    "type": "AMMO",
+    "name": {
+      "str": "手里剑",
+      "str_pl": "手里剑"
+    },
+    "description": "不是忍者之星的手里剑。",
+    "weight": "160 g",
+    "volume": "250 ml",
+    "price": 700,
+    "to_hit": 2,
+    "bashing": 2,
+    "cutting": 15,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "dark_gray",
+    "count": 3,
+    "ammo_type": "ammo_type_ninja_shuriken",
+    "range": 0,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 19,
+      "armor_penetration": 8
+    },
+    "dispersion": 0,
+    "recoil": 0,
+    "effects": [
+      "RECOVER_25"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        7
+      ]
+    ]
+  },
+  {
+    "id": "ninja_shuriken_paper",
+    "type": "AMMO",
+    "name": {
+      "str": "纸手里剑",
+      "str_pl": "纸手里剑"
+    },
+    "description": "这些手里剑是纸做的。",
+    "weight": "3 g",
+    "volume": "5 ml",
+    "price": 100,
+    "to_hit": -1,
+    "bashing": 1,
+    "cutting": 1,
+    "material": [
+      "paper"
+    ],
+    "symbol": "+",
+    "color": "white",
+    "count": 5,
+    "ammo_type": "ammo_type_ninja_shuriken",
+    "range": 0,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 0,
+    "recoil": 0,
+    "effects": [
+      "RECOVER_1"
+    ]
+  },
+  {
+    "id": "chem_rocket_fuel",
+    "copy-from": "chem_rocket_fuel",
+    "type": "AMMO",
+    "category": "spare_parts",
+    "name": {
+      "str": "火箭弹燃料",
+      "str_pl": "火箭弹燃料"
+    },
+    "description": "一堆锌粉和硫磺的混合物，由强力胶粘合胶结，可以用作临时火箭燃料。",
+    "weight": "70 g",
+    "volume": "250 ml",
+    "price": 500,
+    "bashing": 1,
+    "material": [
+      "powder"
+    ],
+    "symbol": "=",
+    "color": "white",
+    "count": 10,
+    "ammo_type": "ammo_type_ninja_jet_fuel",
+    "range": 0,
+    "damage": {
+      "damage_type": "stab",
+      "amount": 0
+    },
+    "dispersion": 0,
+    "recoil": 0
+  }
+]

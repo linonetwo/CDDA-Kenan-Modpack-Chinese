@@ -1,0 +1,224 @@
+[
+  {
+    "id": "holo_scope",
+    "type": "GUNMOD",
+    "name": {
+      "str": "全息步枪目镜"
+    },
+    "looks_like": "acog_scope",
+    "description": "专门为全息步枪设计的2.86倍瞄准镜。有一个漂亮的圆形，黑色的十字线清晰可见的略带绿色的镜头。",
+    "weight": "240 g",
+    "volume": "120 ml",
+    "price": "1000 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "superalloy",
+      "glass"
+    ],
+    "symbol": ":",
+    "color": "blue",
+    "location": "sights",
+    "mod_targets": [
+      "holorifle"
+    ],
+    "install_time": "10 m",
+    "sight_dispersion": 12,
+    "field_of_view": 390,
+    "min_skills": [
+      [
+        "weapon",
+        4
+      ],
+      [
+        "gun",
+        2
+      ]
+    ],
+    "flags": [
+      "DISABLE_SIGHTS",
+      "ZOOM",
+      "IRREMOVABLE"
+    ]
+  },
+  {
+    "id": "holo_optics",
+    "type": "GUNMOD",
+    "name": {
+      "str": "全息步枪光学聚焦镜",
+      "str_pl": "全息步枪光学聚焦镜"
+    },
+    "description": "一套光学系统，用来集中光束使其更强大，增加伤害输出。",
+    "looks_like": "focusing_lens",
+    "weight": "380 g",
+    "volume": "250 ml",
+    "price": "1000 USD",
+    "price_postapoc": "20 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": ":",
+    "color": "blue",
+    "location": "lens",
+    "install_time": "15 m",
+    "mod_targets": [
+      "holorifle"
+    ],
+    "damage_modifier": {
+      "damage_type": "bullet",
+      "amount": 10
+    },
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ],
+      [
+        "electronics",
+        2
+      ]
+    ],
+    "flags": [
+      "INSTALL_DIFFICULT",
+      "IRREMOVABLE"
+    ]
+  },
+  {
+    "id": "holo_cal",
+    "type": "GUNMOD",
+    "name": {
+      "str": "全息步枪高级校准组件"
+    },
+    "description": "全息步枪的一组部件，有助于校准光束轨迹，提高精度。",
+    "looks_like": "electrolaser_conversion",
+    "weight": "150 g",
+    "volume": "250 ml",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": "600 USD",
+    "price_postapoc": "15 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "symbol": ":",
+    "color": "blue",
+    "location": "mechanism",
+    "mod_targets": [
+      "holorifle"
+    ],
+    "install_time": "45 m",
+    "dispersion_modifier": -10,
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ],
+      [
+        "mechanics",
+        2
+      ],
+      [
+        "gun",
+        4
+      ],
+      [
+        "electronics",
+        3
+      ]
+    ],
+    "flags": [
+      "INSTALL_DIFFICULT",
+      "IRREMOVABLE"
+    ]
+  },
+  {
+    "id": "holo_components",
+    "type": "GUNMOD",
+    "name": {
+      "str": "全息步枪增强组件"
+    },
+    "description": "一套加固的全息步枪零件，使其更可靠。",
+    "looks_like": "electrolaser_conversion",
+    "weight": "250 g",
+    "volume": "250 ml",
+    "integral_volume": "0 ml",
+    "integral_weight": "0 g",
+    "price": "600 USD",
+    "price_postapoc": "15 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "symbol": ":",
+    "color": "blue",
+    "location": "mechanism",
+    "mod_targets": [
+      "holorifle"
+    ],
+    "install_time": "45 m",
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ],
+      [
+        "mechanics",
+        2
+      ],
+      [
+        "gun",
+        4
+      ],
+      [
+        "electronics",
+        3
+      ]
+    ],
+    "flags": [
+      "INSTALL_DIFFICULT",
+      "IRREMOVABLE",
+      "NEVER_JAMS"
+    ]
+  },
+  {
+    "id": "gauss_scope",
+    "type": "GUNMOD",
+    "name": {
+      "str": "高斯步枪瞄准镜"
+    },
+    "description": "专门为高斯步枪设计的步枪瞄准镜。有一个蓝色发光的镜头看通过，帮助与目标识别，允许调整变焦和快速瞄准。",
+    "looks_like": "rifle_scope",
+    "weight": "300 g",
+    "volume": "200 ml",
+    "price": "1000 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "superalloy",
+      "glass"
+    ],
+    "symbol": ":",
+    "color": "blue",
+    "location": "sights",
+    "mod_targets": [
+      "gauss_rifle"
+    ],
+    "install_time": "20 m",
+    "sight_dispersion": 0,
+    "field_of_view": 330,
+    "min_skills": [
+      [
+        "weapon",
+        5
+      ],
+      [
+        "gun",
+        3
+      ]
+    ],
+    "flags": [
+      "DISABLE_SIGHTS",
+      "ZOOM",
+      "IRREMOVABLE"
+    ]
+  }
+]

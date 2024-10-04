@@ -1,0 +1,112 @@
+[
+  {
+    "id": "XEAS_bag",
+    "type": "ARMOR",
+    "name": {
+      "str": "X.E.A.S.涡旋背包"
+    },
+    "description": "一个轻便美观但特殊的小型蕾丝花边包，涡旋空间储存概念设计使其拥有不可思议的收纳能力。当你往里看的时候如同置身于风暴中心一般……",
+    "weight": "300 g",
+    "volume": "3 L",
+    "price": "3000 USD",
+    "price_postapoc": "5000 USD",
+    "material": [
+      "nomex"
+    ],
+    "symbol": "[",
+    "looks_like": "rucksack",
+    "color": "light_cyan",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "40 L",
+        "max_contains_weight": "50 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "40 L",
+        "max_contains_weight": "50 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "30 kg",
+        "moves": 80
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "30 kg",
+        "moves": 80
+      }
+    ],
+    "warmth": 1,
+    "flags": [
+      "BELTED",
+      "WATERPROOF",
+      "STURDY",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          1,
+          1
+        ],
+        "coverage": 1,
+        "covers": [
+          "torso"
+        ]
+      }
+    ],
+    "material_thickness": 2
+  },
+  {
+    "result": "XEAS_bag",
+    "activity_level": "LIGHT_EXERCISE",
+    "type": "recipe",
+    "category": "CC_ARMOR",
+    "subcategory": "CSC_ARMOR_STORAGE",
+    "skill_used": "tailor",
+    "skills_required": [
+      "fabrication",
+      3
+    ],
+    "difficulty": 3,
+    "time": 5000,
+    "book_learn": [
+      [
+        "recipe_maiar",
+        3
+      ]
+    ],
+    "using": [
+      [
+        "sewing_standard",
+        100
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "SEW",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "vortex_stone",
+          1
+        ]
+      ],
+      [
+        [
+          "nomex",
+          10
+        ]
+      ]
+    ]
+  }
+]

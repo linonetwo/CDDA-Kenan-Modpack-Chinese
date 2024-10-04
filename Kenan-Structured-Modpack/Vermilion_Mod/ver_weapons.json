@@ -1,0 +1,265 @@
+[
+  {
+    "id": "hf_blade",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "高频振动刀"
+    },
+    "description": "一把高科技的原型武士刀，用强大的交流电进行了性能上的强化，使刀身在极高的频率下产生共振。由于震荡削弱了刀刃所接触到的任何分子键，它几乎可以毫无阻碍的切开任何东西。",
+    "weight": "1300 g",
+    "volume": "2250 ml",
+    "price": "5000 USD",
+    "to_hit": 1,
+    "cutting": 65,
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        3
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SWORD"
+    ]
+  },
+  {
+    "type": "TOOL",
+    "id": "jet_hammer_off",
+    "name": {
+      "str": "喷射锤（关闭）"
+    },
+    "description": "一种大的、全金属的大锤，头部装有一对小推进器和一个小发动机。关闭时相当笨拙和不平衡。激活以打开。",
+    "weight": "7212 g",
+    "color": "red",
+    "symbol": "/",
+    "material": [
+      "steel"
+    ],
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "gasoline": 300
+        }
+      }
+    ],
+    "category": "weapons",
+    "techniques": [
+      "BRUTAL",
+      "WIDE",
+      "SWEEP"
+    ],
+    "volume": "4250 ml",
+    "bashing": 40,
+    "price": "190 USD",
+    "to_hit": -4,
+    "use_action": {
+      "type": "transform",
+      "msg": "射流锤劈啪作响。",
+      "target": "jet_hammer_on",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "汽油不足！"
+    },
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ]
+  },
+  {
+    "id": "jet_hammer_on",
+    "type": "TOOL",
+    "name": {
+      "str": "射流锤（开）"
+    },
+    "description": "喷气锤隆隆作响，旋转。它仍然相当笨拙和不平衡。弄得一团糟。激活可关闭。",
+    "weight": "7212 g",
+    "volume": "4250 ml",
+    "price": "190 USD",
+    "to_hit": -3,
+    "bashing": 70,
+    "material": [
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "red",
+    "ammo": [
+      "gasoline"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "gasoline": 300
+        }
+      }
+    ],
+    "turns_per_charge": 1,
+    "revert_to": "jet_hammer_off",
+    "category": "weapons",
+    "techniques": [
+      "WBLOCK_1",
+      "BRUTAL",
+      "WIDE",
+      "SWEEP"
+    ],
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "喷射锤发出嘶嘶声，然后安静下来。",
+      "target": "jet_hammer_off"
+    },
+    "flags": [
+      "MESSY",
+      "TRADER_AVOID",
+      "POWERED"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "absolute_reaper",
+    "name": {
+      "str": "绝对收割者"
+    },
+    "description": "“收割者，收割者，人们都这么叫我。为什么？” “因为他们都死了。当我唱歌的时候，我结束了他们的生命…”",
+    "weight": "4820 g",
+    "volume": "4250 ml",
+    "price": "5500 USD",
+    "to_hit": 1,
+    "bashing": 10,
+    "cutting": 55,
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "category": "weapons",
+    "techniques": [
+      "WIDE",
+      "BRUTAL",
+      "SWEEP",
+      "WBLOCK_2",
+      "VORPAL"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        -23
+      ]
+    ],
+    "flags": [
+      "DURABLE_MELEE",
+      "REACH_ATTACK",
+      "MESSY"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "收割机知道你的名字！",
+      "target": "absolute_sniper"
+    }
+  },
+  {
+    "id": "absolute_sniper",
+    "type": "GUN",
+    "name": {
+      "str": "绝对狙击步枪"
+    },
+    "symbol": "/",
+    "color": "dark_gray",
+    "description": "“安魂曲。子弹正好穿过胸骨。摇篮曲摇到地狱去，宝贝…”",
+    "price": "5500 USD",
+    "material": [
+      "steel",
+      "superalloy"
+    ],
+    "skill": "rifle",
+    "weight": "4820 g",
+    "volume": "4250 ml",
+    "to_hit": -1,
+    "bashing": 10,
+    "ammo": [
+      "50"
+    ],
+    "range": 45,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -3
+    },
+    "dispersion": 95,
+    "durability": 7,
+    "barrel_volume": "1250 ml",
+    "clip_size": 4,
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "abso_mag",
+          "abso1_mag"
+        ]
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "bore",
+        1
+      ]
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "RELOAD_EJECT",
+      "MESSY",
+      "RELOAD_ONE"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "收割机来了，罪人！",
+      "target": "absolute_reaper"
+    }
+  }
+]

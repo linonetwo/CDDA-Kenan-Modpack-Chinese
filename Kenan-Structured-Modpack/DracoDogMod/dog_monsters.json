@@ -1,0 +1,1038 @@
+[
+  {
+    "id": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "混血拉布拉多犬"
+    },
+    "description": "这只普通的混血拉布拉多犬已经明显发狂了。尽管它的本能让它依旧信任人类，但比起原先驯服的宠物要差得远了。",
+    "default_faction": "dog",
+    "bodytype": "dog",
+    "categories": [
+      "WILDLIFE"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "30 L",
+    "weight": "30000 g",
+    "harvest": "mammal_small_fur",
+    "hp": 30,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "light_gray",
+    "aggression": -10,
+    "morale": 15,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 3,
+    "dodge": 3,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "revert_to_itype": "mon_dog_crate",
+    "reproduction": {
+      "baby_monster": "mon_dog_pup",
+      "baby_count": 4,
+      "baby_timer": 270
+    },
+    "//": "1-4 puppies & 270 days per-litter for size small canines",
+    "baby_flags": [
+      "SPRING",
+      "SUMMER",
+      "AUTUMN",
+      "WINTER"
+    ],
+    "biosignature": {
+      "biosig_item": "feces_dog",
+      "biosig_timer": 6
+    },
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "special_attacks": [
+      [
+        "dogbite",
+        20
+      ],
+      [
+        "EAT_FOOD",
+        100
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "GROUP_MORALE",
+      "HEARS",
+      "CANPLAY",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "SWARMS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_dog_atk",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗拉布拉多犬"
+    },
+    "description": "一只受过战斗训练的毛茸茸的拉布拉多犬。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "revert_to_itype": "mon_dog_atk_crate"
+  },
+  {
+    "id": "mon_dog_bull",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "斗牛犬"
+    },
+    "description": "美国斗牛犬是一种勇敢且体格健壮的狗，看起来挺适合在末世里生存。可以被训练成战斗犬。",
+    "volume": "49 L",
+    "weight": "49000 g",
+    "hp": 47,
+    "speed": 135,
+    "melee_skill": 4,
+    "melee_dice_sides": 2,
+    "melee_cut": 6,
+    "vision_night": 4,
+    "harvest": "mammal_small_leather",
+    "revert_to_itype": "mon_dog_bull_crate",
+    "reproduction": {
+      "baby_monster": "mon_dog_bull_pup",
+      "baby_count": 7,
+      "baby_timer": 300
+    },
+    "//": "7 puppies and 300-320 days per-litter for size medium canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "CANPLAY",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_dog_atkbull",
+    "copy-from": "mon_dog_bull",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗斗牛犬"
+    },
+    "looks_like": "mon_dog_bull",
+    "description": "一只受过战斗训练的肌肉发达的罗威纳犬。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "revert_to_itype": "mon_dog_atkbull_crate",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "special_attacks": [
+      [
+        "LUNGE",
+        15
+      ]
+    ]
+  },
+  {
+    "id": "mon_dog_auscattle",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "牧牛犬"
+    },
+    "description": "澳大利亚牧牛犬是一种机敏而健壮、受所有农场欢迎的狗，擅长越过障碍和放牧牲畜。可以被训练成战斗犬。",
+    "volume": "18 L",
+    "weight": "18000 g",
+    "hp": 20,
+    "speed": 200,
+    "morale": 10,
+    "melee_skill": 4,
+    "melee_dice_sides": 2,
+    "melee_cut": 6,
+    "dodge": 4,
+    "vision_night": 6,
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 8,
+        "max_range": 2
+      }
+    ],
+    "reproduction": {
+      "baby_monster": "mon_dog_auscattle_pup",
+      "baby_count": 4,
+      "baby_timer": 270
+    },
+    "//": "1-4 puppies & 270 days per-litter for size small canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "CLIMBS",
+      "CANPLAY",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ]
+  },
+  {
+    "id": "mon_dog_atkauscattle",
+    "copy-from": "mon_dog_auscattle",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗牧牛犬"
+    },
+    "looks_like": "mon_dog_auscattle",
+    "description": "一只受过战斗训练的速度极快的澳洲牧牛犬。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "revert_to_itype": "mon_dog_atkauscattle_crate",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "special_attacks": [
+      [
+        "LUNGE",
+        15
+      ]
+    ]
+  },
+  {
+    "id": "mon_dog_pitbullmix",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "比特犬"
+    },
+    "description": "与通常印象相反，比特犬并不是单一犬种，而是几类不同犬的统称。它们能力平平但因为并不存在的自锁颌部而广为人知，至少它们的专注力很高，一旦咬住轻易不放松。可以被训练成战斗犬。",
+    "volume": "25 L",
+    "weight": "25000 g",
+    "hp": 27,
+    "speed": 135,
+    "aggression": 1,
+    "morale": 11,
+    "melee_skill": 4,
+    "melee_dice_sides": 2,
+    "melee_cut": 5,
+    "harvest": "mammal_small_leather",
+    "revert_to_itype": "mon_dog_pitbullmix_crate",
+    "special_attacks": [
+      [
+        "dogbite",
+        5
+      ],
+      [
+        "fdogbite",
+        15
+      ]
+    ],
+    "reproduction": {
+      "baby_monster": "mon_dog_pitbullmix_pup",
+      "baby_count": 4,
+      "baby_timer": 270
+    },
+    "//": "1-4 puppies & 270 days per-litter for size small canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_atkpitbullmix",
+    "copy-from": "mon_dog_pitbullmix",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗比特犬"
+    },
+    "looks_like": "mon_dog_pitbullmix",
+    "description": "一只受过战斗训练的凶猛的比特犬。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "revert_to_itype": "mon_dog_atkpitbullmix_crate",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "special_attacks": [
+      [
+        "LUNGE",
+        15
+      ]
+    ]
+  },
+  {
+    "id": "mon_dog_beagle",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "猎兔犬"
+    },
+    "description": "一只可爱的小猎犬在世界末日中幸存了下来。它们又敏捷又小，很难被射击击中。通常成群结队地攻击。",
+    "volume": "10 L",
+    "weight": "10000 g",
+    "hp": 13,
+    "speed": 135,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_cut": 2,
+    "harvest": "mammal_small_leather",
+    "revert_to_itype": "mon_dog_beagle_crate",
+    "special_attacks": [
+      [
+        "minordogbite",
+        20
+      ]
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_dog_beagle_pup",
+      "baby_count": 4,
+      "baby_timer": 270
+    },
+    "//": "1-4 puppies & 270 days per-litter for size tiny canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "GROUP_MORALE",
+      "GUILT",
+      "HARDTOSHOOT",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "SWARMS",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_atkbeagle",
+    "copy-from": "mon_dog_beagle",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗小猎犬"
+    },
+    "looks_like": "mon_dog_beagle",
+    "description": "一只受过战斗训练的帝王小猎犬。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "revert_to_itype": "mon_dog_atkbeagle_crate"
+  },
+  {
+    "id": "mon_dog_bcollie",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "边境牧羊犬"
+    },
+    "description": "边境牧羊犬是一种喜欢运动和过度活跃的狗，喜欢放牧和跳跃，是一种敏捷的攻击犬。虽然它们很容易训练，但不是很喜欢在公园里活动。可以训练成攻击犬。",
+    "volume": "16 L",
+    "weight": "16000 g",
+    "hp": 19,
+    "speed": 200,
+    "aggression": -5,
+    "morale": 10,
+    "melee_cut": 4,
+    "dodge": 4,
+    "revert_to_itype": "mon_dog_bcollie_crate",
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 8,
+        "max_range": 2
+      }
+    ],
+    "reproduction": {
+      "baby_monster": "mon_dog_bcollie_pup",
+      "baby_count": 4,
+      "baby_timer": 270
+    },
+    "//": "1-4 puppies & 270 days per-litter for size small canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "CLIMBS",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_atkbcollie",
+    "copy-from": "mon_dog_bcollie",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗边境牧羊犬"
+    },
+    "looks_like": "mon_dog_bcollie",
+    "description": "一只受过战斗训练的超级边境牧羊犬。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "revert_to_itype": "mon_dog_atkbcollie_crate",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "special_attacks": [
+      [
+        "LUNGE",
+        15
+      ]
+    ]
+  },
+  {
+    "id": "mon_dog_boxer",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "拳师獒犬"
+    },
+    "description": "拳师獒犬是一种常见的情感丰富的犬种，除此之外，就平均能力而言相比其他犬种没有特别突出的特点。可以被训练成战斗犬。",
+    "volume": "27500 ml",
+    "weight": "27500 g",
+    "hp": 29,
+    "aggression": -8,
+    "melee_skill": 4,
+    "melee_dice_sides": 2,
+    "melee_cut": 4,
+    "vision_night": 4,
+    "harvest": "mammal_small_leather",
+    "revert_to_itype": "mon_dog_boxer_crate",
+    "fear_triggers": [
+      "HURT"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_dog_boxer_pup",
+      "baby_count": 4,
+      "baby_timer": 270
+    },
+    "//": "1-4 puppies & 270 days per-litter for size small canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    }
+  },
+  {
+    "id": "mon_dog_atkboxer",
+    "copy-from": "mon_dog_boxer",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗拳师獒犬"
+    },
+    "looks_like": "mon_dog_boxer",
+    "description": "训练有素的健壮的拳击獒。拥有优化的敏捷性、攻击力、生命值、主人关系和速度。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "revert_to_itype": "mon_dog_atkboxer_crate",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "special_attacks": [
+      [
+        "LUNGE",
+        15
+      ]
+    ]
+  },
+  {
+    "id": "mon_dog_chihuahua",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "吉娃娃犬"
+    },
+    "description": "它是一只小小的吉娃娃，存活下来简直是一个奇迹。它幼小的身形和好斗的天性或许能派得上用场。",
+    "volume": "750 ml",
+    "weight": "2200 g",
+    "hp": 6,
+    "speed": 135,
+    "aggression": 4,
+    "morale": 8,
+    "melee_skill": 3,
+    "melee_dice_sides": 2,
+    "melee_cut": 2,
+    "vision_night": 6,
+    "harvest": "mammal_tiny",
+    "revert_to_itype": "mon_dog_chihuahua_crate",
+    "special_attacks": [
+      [
+        "minordogbite",
+        20
+      ]
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_dog_chihuahua_pup",
+      "baby_count": 3,
+      "baby_timer": 240
+    },
+    "//": "1-3 puppies & 240 days per-litter for size tiny canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "GUILT",
+      "HARDTOSHOOT",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_atkchihuahua",
+    "copy-from": "mon_dog_chihuahua",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗吉娃娃犬"
+    },
+    "looks_like": "mon_dog_chihuahua",
+    "description": "一种易怒的吉娃娃，被训练成拥抱树皮而不是咬人。拥有优化的敏捷性、攻击力、生命值、主人关系和速度。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "revert_to_itype": "mon_dog_atkchihuahua_crate"
+  },
+  {
+    "id": "mon_dog_dachshund",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "腊肠犬"
+    },
+    "description": "一只温纳狗！这只看起来笨拙的狗可以是一只有用的看门狗，加上它看起来可爱，因为它四处游荡，也使它很难被射击击中。",
+    "volume": "10 L",
+    "weight": "10000 g",
+    "hp": 10,
+    "speed": 135,
+    "aggression": -4,
+    "morale": 10,
+    "melee_skill": 3,
+    "melee_dice_sides": 2,
+    "vision_night": 6,
+    "harvest": "mammal_small_leather",
+    "revert_to_itype": "mon_dog_dachshund_crate",
+    "special_attacks": [
+      [
+        "minordogbite",
+        20
+      ]
+    ],
+    "fear_triggers": [
+      "HURT"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_dog_dachshund_pup",
+      "baby_count": 4,
+      "baby_timer": 270
+    },
+    "//": "1-4 puppies & 270 days per-litter for size small canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "GUILT",
+      "HARDTOSHOOT",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_atkdachshund",
+    "copy-from": "mon_dog_dachshund",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗腊肠犬"
+    },
+    "looks_like": "mon_dog_dachshund",
+    "description": "一种长身体的腊肠猎犬，受过战斗训练，或者只是它想让你相信它受过训练。拥有优化的敏捷性、攻击力、生命值、主人关系和速度。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "revert_to_itype": "mon_dog_atkdachshund_crate"
+  },
+  {
+    "id": "mon_dog_gshepherd",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "德国牧羊犬"
+    },
+    "description": "最早的K-9犬种。易于训练，攻击力强，会保卫主人直至死去，但并不适应团队行动。可以被训练成战斗犬。",
+    "volume": "46500 ml",
+    "weight": "38500 g",
+    "hp": 36,
+    "aggression": 2,
+    "morale": 10,
+    "melee_cut": 6,
+    "vision_night": 6,
+    "revert_to_itype": "mon_dog_gshepherd_crate",
+    "reproduction": {
+      "baby_monster": "mon_dog_gshepherd_pup",
+      "baby_count": 7,
+      "baby_timer": 300
+    },
+    "//": "1-7 puppies & 300-320 days per-litter for size medium canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_atkgshepherd",
+    "copy-from": "mon_dog_gshepherd",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗德国牧羊犬"
+    },
+    "looks_like": "mon_dog_gshepherd",
+    "description": "一只受过战斗训练的高贵的德国牧羊犬，不会逃跑。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "revert_to_itype": "mon_dog_atkgshepherd_crate",
+    "special_attacks": [
+      [
+        "LUNGE",
+        15
+      ]
+    ],
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_gpyrenees",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "大白熊犬"
+    },
+    "description": "大白熊犬是一种孔武有力的狗，有着美丽而稠密的白色毛皮。最初是用来震慑狼和其他捕食者，如今却要保护牲畜免受蹒跚尸潮的袭击。",
+    "volume": "52500 ml",
+    "weight": "52500 g",
+    "hp": 40,
+    "speed": 100,
+    "aggression": 3,
+    "morale": 10,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_cut": 5,
+    "dodge": 2,
+    "vision_night": 6,
+    "harvest": "mammal_fur",
+    "revert_to_itype": "mon_dog_gpyrenees_crate",
+    "reproduction": {
+      "baby_monster": "mon_dog_gpyrenees_pup",
+      "baby_count": 7,
+      "baby_timer": 320
+    },
+    "//": "1-7 puppies & 300-320 days per-litter for size medium canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_atkgpyrenees",
+    "copy-from": "mon_dog_gpyrenees",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗大白熊犬"
+    },
+    "looks_like": "mon_dog_gpyrenees",
+    "description": "一只受过战斗训练的高耐性大白熊犬。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "revert_to_itype": "mon_dog_atkgpyrenees_crate"
+  },
+  {
+    "id": "mon_dog_rottweiler",
+    "copy-from": "mon_dog",
+    "type": "MONSTER",
+    "name": {
+      "str": "罗威纳犬"
+    },
+    "description": "罗威纳犬是罗马军团獒犬的后裔，一旦发狂将会很难对付的可怕品种。它精力充沛，十分凶猛，完全有能力置人于死地。",
+    "volume": "50 L",
+    "weight": "50000 g",
+    "hp": 42,
+    "speed": 135,
+    "aggression": 4,
+    "morale": 8,
+    "melee_skill": 4,
+    "melee_dice_sides": 2,
+    "melee_cut": 6,
+    "vision_night": 6,
+    "harvest": "mammal_leather",
+    "revert_to_itype": "mon_dog_rottweiler_crate",
+    "reproduction": {
+      "baby_monster": "mon_dog_rottweiler_pup",
+      "baby_count": 7,
+      "baby_timer": 300
+    },
+    "//": "1-7 puppies & 300-320 days per-litter for size medium canines",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "ANIMAL",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "CANPLAY"
+    ]
+  },
+  {
+    "id": "mon_dog_atkrottweiler",
+    "copy-from": "mon_dog_rottweiler",
+    "type": "MONSTER",
+    "name": {
+      "str": "战斗罗威纳犬"
+    },
+    "looks_like": "mon_dog_rottweiler",
+    "description": "一只受过战斗训练的残暴的罗威纳犬。敏捷、攻击力、生命值、攻击性和速度均有提升。",
+    "proportional": {
+      "hp": 1.15,
+      "morale": 1.67,
+      "speed": 1.1
+    },
+    "relative": {
+      "aggression": 10,
+      "dodge": 1,
+      "melee_skill": 1,
+      "melee_dice_sides": 1,
+      "melee_cut": 1
+    },
+    "revert_to_itype": "mon_dog_atkrottweiler_crate",
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "special_attacks": [
+      [
+        "LUNGE",
+        15
+      ]
+    ]
+  }
+]

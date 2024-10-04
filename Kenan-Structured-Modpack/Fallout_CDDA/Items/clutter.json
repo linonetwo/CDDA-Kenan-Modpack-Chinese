@@ -1,0 +1,531 @@
+[
+  {
+    "id": "deck_of_tragic_cards",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "一副“悲剧”牌",
+      "str_pl": "一副副“悲剧”牌"
+    },
+    "description": "这不仅仅是一个游戏，它是一种生活方式-它肯定可以上瘾。这是一副标准的收集牌。",
+    "weight": "50 g",
+    "volume": "100 ml",
+    "price": 200,
+    "material": [
+      "paper"
+    ],
+    "symbol": ",",
+    "color": "red",
+    "snippet_category": [
+      {
+        "id": "craptier",
+        "text": "The deck is built poorly, with a bunch of terrible cards in it, like Scorned Egomaniac."
+      },
+      {
+        "id": "casual",
+        "text": "This deck is a lovingly used one. The deck seems to be built semi-competently."
+      },
+      {
+        "id": "Commander",
+        "text": "This decks a bit larger than you expected. It turns out its a General format deck! It is built around King of Passantler, a three-color undead!"
+      },
+      {
+        "id": "Voxruby",
+        "text": "Holy crap, a Vox Ruby! You could have bought a car with one of these before the cataclysm"
+      },
+      {
+        "id": "blackdahlia",
+        "text": "This deck has a Black Dahlia! You could have bought a mansion with one of these in the before times. Shame nobodys around to appreciate this now."
+      }
+    ],
+    "flags": [
+      "NO_REPAIR"
+    ],
+    "use_action": "PLAY_GAME"
+  },
+  {
+    "id": "painting_fuzzy",
+    "type": "GENERIC",
+    "//": "velvet elvis. velvis!",
+    "category": "other",
+    "name": {
+      "str": "模糊绘画"
+    },
+    "description": "歌手的形象。显然，很老了。图像有一层仍完好无损的毛毡涂层",
+    "weight": "1 g",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT"
+    ],
+    "price": 800,
+    "material": [
+      "wool"
+    ],
+    "symbol": "*",
+    "color": "light_gray"
+  },
+  {
+    "id": "coin_NCR",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "NCR美元",
+      "str_pl": "NCR美元"
+    },
+    "description": "1NCR元。废土世界的法定货币，或者说，如果你在加利福尼亚州、内华达州、亚利桑那州或俄勒冈州，而不是新英格兰的永恒之地，那就是法定货币。",
+    "weight": "6 g",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT"
+    ],
+    "price": 100,
+    "material": [
+      "gold"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "use_action": "COIN_FLIP"
+  },
+  {
+    "id": "coin_legion_small",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "第纳尔军团",
+      "str_pl": "第纳尔军团"
+    },
+    "description": "一枚来自西部大灾难后文明的银币。你不知道它是怎么来的。",
+    "weight": "6 g",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT"
+    ],
+    "price": 400,
+    "material": [
+      "silver"
+    ],
+    "symbol": "o",
+    "color": "light_gray",
+    "use_action": "COIN_FLIP"
+  },
+  {
+    "id": "coin_legion_large",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "金黄色军团",
+      "str_pl": "金黄色军团"
+    },
+    "description": "一枚来自西部大灾变后文明的金币。你不知道它是哪来的。",
+    "weight": "6 g",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT"
+    ],
+    "price": "40 USD",
+    "material": [
+      "gold"
+    ],
+    "symbol": "o",
+    "color": "yellow",
+    "use_action": "COIN_FLIP"
+  },
+  {
+    "id": "cap_bottle",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "瓶盖",
+      "str_pl": "瓶盖"
+    },
+    "description": "一文不值的核子可乐瓶盖。你听说过在一些地方它们被用作金钱，尽管你怀疑这只是一个故事。",
+    "weight": "6 g",
+    "volume": "0 ml",
+    "flags": [
+      "ZERO_WEIGHT"
+    ],
+    "price": 25,
+    "material": [
+      "steel"
+    ],
+    "symbol": "o",
+    "color": "red"
+  },
+  {
+    "id": "pipboy_2000",
+    "type": "TOOL",
+    "name": {
+      "str": "皮普男孩2000"
+    },
+    "description": "皮普男孩2000；著名的皮普男孩系列个人电脑的旧手持式模型。虽然不像3000型号那样冒险，但它的电池寿命仍然很长。",
+    "weight": "200 g",
+    "volume": "500 ml",
+    "price": "120 USD",
+    "material": [
+      "plastic"
+    ],
+    "symbol": ";",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_disposable_cell",
+          "light_disposable_cell",
+          "light_minus_battery_cell",
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ],
+    "color": "light_gray",
+    "use_action": "PORTABLE_GAME"
+  },
+  {
+    "type": "TOOL_ARMOR",
+    "//": "Todo; add other purposes than just gaming and watching!",
+    "id": "pipboy_3000",
+    "name": {
+      "str": "皮普男孩3000"
+    },
+    "category": "clothing",
+    "volume": "250 ml",
+    "description": "皮普男孩3000；安装在手腕上的笨重的计算机。这些东西由Vault Tecs Vault推广，用途广泛。",
+    "weight": "500 g",
+    "to_hit": -1,
+    "color": "light_gray",
+    "price": "60 USD",
+    "material": [
+      "plastic"
+    ],
+    "flags": [
+      "WATCH",
+      "WATER_FRIENDLY",
+      "BELTED",
+      "FRAGILE",
+      "ALLOWS_NATURAL_ATTACKS",
+      "OVERSIZE"
+    ],
+    "symbol": "[",
+    "ammo": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "light_minus_disposable_cell",
+          "light_disposable_cell",
+          "light_minus_battery_cell",
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
+        ]
+      }
+    ],
+    "use_action": "PORTABLE_GAME",
+    "armor": [
+      {
+        "coverage": 15,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "doll_nixon",
+    "type": "TOOL",
+    "name": {
+      "str": "尼克松先生"
+    },
+    "description": "一个红鼻子的小洋娃娃。不知为什么，你不相信这个看似无辜的孩子的玩具。",
+    "weight": "907 g",
+    "volume": "750 ml",
+    "price": "20 USD",
+    "to_hit": -1,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "n",
+    "color": "blue"
+  },
+  {
+    "id": "condom_jimmy_blue",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "吉米帽子"
+    },
+    "description": "这是一个吉米帽子品牌的避孕套，一个非常可靠的品牌。这一个是为了取悦她。",
+    "weight": "5 g",
+    "volume": "3 ml",
+    "price": "0 cent",
+    "to_hit": -5,
+    "material": [
+      "plastic"
+    ],
+    "symbol": ")",
+    "color": "blue",
+    "flags": [
+      "TARDIS",
+      "ZERO_WEIGHT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": false,
+        "max_contains_volume": "3750 ml",
+        "max_contains_weight": "7500 g"
+      }
+    ],
+    "properties": {
+        "burst_when_filled":"75"
+      }
+  },
+  {
+    "id": "condom_jimmy_green",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "吉米帽子"
+    },
+    "description": "这是一个吉米帽子品牌的避孕套，一个非常可靠的品牌。这种含有磷绿染料#2，涂上杀精润滑剂以增加保护。",
+    "weight": "5 g",
+    "volume": "3 ml",
+    "price": "0 cent",
+    "to_hit": -5,
+    "material": [
+      "plastic"
+    ],
+    "symbol": ")",
+    "color": "green",
+    "flags": [
+      "TARDIS",
+      "ZERO_WEIGHT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": false,
+        "max_contains_volume": "3750 ml",
+        "max_contains_weight": "7500 g"
+      }
+    ],
+    "properties": {
+        "burst_when_filled":"75"
+      }
+  },
+  {
+    "id": "condom_jimmy_red",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "吉米帽子"
+    },
+    "description": "这是一个吉米帽子品牌的避孕套，一个非常可靠的品牌。这一个含有磷光红色染料#5，有一个美味的肉桂面包味道…或者你听说了。",
+    "weight": "5 g",
+    "volume": "3 ml",
+    "price": "0 cent",
+    "to_hit": -5,
+    "material": [
+      "plastic"
+    ],
+    "symbol": ")",
+    "color": "red",
+    "flags": [
+      "TARDIS",
+      "ZERO_WEIGHT"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": false,
+        "max_contains_volume": "3750 ml",
+        "max_contains_weight": "7500 g"
+      }
+    ],
+    "properties": {
+        "burst_when_filled":"75"
+      }
+  },
+  {
+    "id": "flask_vault",
+    "type": "GENERIC",
+    "category": "container",
+    "name": {
+      "str": "金库13烧瓶"
+    },
+    "description": "一个250毫升的蓝色烧瓶，上面涂有黄色的数字13。你不知道为什么，但你想喝一杯。",
+    "weight": "120 g",
+    "volume": "250 ml",
+    "price": "10 USD",
+    "to_hit": 1,
+    "bashing": 3,
+    "material": [
+      "iron"
+    ],
+    "symbol": ")",
+    "color": "blue",
+    "pocket_data": [
+      {
+        "pocket_type": "CONTAINER",
+        "watertight": true,
+        "rigid": true,
+        "max_contains_volume": "250 ml",
+        "max_contains_weight": "500 g"
+      }
+    ],
+    "armor_data": {
+      "armor": [
+        {
+          "coverage": 2,
+          "covers": [
+            "leg_l",
+            "leg_r"
+          ],
+          "material_thickness": 1,
+          "material": [
+            "iron"
+          ]
+        }
+      ]
+    },
+    "qualities": [
+      [
+        "BOIL",
+        1
+      ]
+    ],
+    "flags": [
+      "WAIST",
+      "OVERSIZE",
+      "WATER_FRIENDLY",
+      "TARDIS"
+    ]
+  },
+  {
+    "id": "doll_action_abe",
+    "type": "TOOL",
+    "name": {
+      "str": "林肯人偶"
+    },
+    "description": "一个小的，木制的动作像，亚伯拉罕·林肯总统的右手拿着一个忍者像。他的背上还有一把剑。",
+    "weight": "907 g",
+    "volume": "750 ml",
+    "price": "20 USD",
+    "to_hit": -1,
+    "material": [
+      "wood"
+    ],
+    "symbol": "a",
+    "color": "black"
+  },
+  {
+    "id": "doll_dinky",
+    "type": "TOOL",
+    "name": {
+      "str": "小霸王龙"
+    },
+    "description": "绿色塑料恐龙。仔细想想，它其实是由恐龙尸体组成的恐龙。（塑料的来源——石油源自于古代生物尸体）",
+    "weight": "907 g",
+    "volume": "750 ml",
+    "price": "20 USD",
+    "to_hit": -1,
+    "material": [
+      "plastic"
+    ],
+    "symbol": "d",
+    "color": "green"
+  },
+  {
+    "id": "doll_buttercup",
+    "type": "TOOL",
+    "name": {
+      "str": "毛茛"
+    },
+    "description": "机器马的黄色小模型。每个女孩的梦想玩具！",
+    "weight": "907 g",
+    "volume": "750 ml",
+    "price": "20 USD",
+    "to_hit": -1,
+    "material": [
+      "aluminum"
+    ],
+    "symbol": "b",
+    "color": "yellow"
+  },
+  {
+    "id": "toy_nuka_truck",
+    "type": "TOOL",
+    "name": {
+      "str": "核子可乐玩具车"
+    },
+    "description": "一辆大型压铸核子可乐卡车。完美的城市透视，或只是展示。",
+    "weight": "907 g",
+    "volume": "2500 ml",
+    "price": "20 USD",
+    "to_hit": -1,
+    "material": [
+      "aluminum"
+    ],
+    "symbol": "t",
+    "color": "red"
+  },
+  {
+    "id": "souveneir_rocket",
+    "type": "TOOL",
+    "name": {
+      "str": "雷普康Souveneir火箭"
+    },
+    "description": "装满发光液体的玩具火箭船。灾难发生前，一些孩子去医院喝了它。记住这一点会让你恶心地笑。现在的孩子们。",
+    "weight": "207 g",
+    "volume": "1500 ml",
+    "price": "20 USD",
+    "to_hit": -1,
+    "material": [
+      "aluminum"
+    ],
+    "symbol": "r",
+    "color": "red"
+  },
+  {
+    "id": "deck_caravan",
+    "type": "GENERIC",
+    "category": "other",
+    "name": {
+      "str": "商队甲板",
+      "str_pl": "商队甲板"
+    },
+    "description": "一副52张扑克牌，风格独特，为西部商人所用。或者，在大灾变之前。这些人感觉很受欢迎，就像很多人一样——他们玩着一场商队游戏。",
+    "weight": "50 g",
+    "volume": "100 ml",
+    "price": "20 USD",
+    "material": [
+      "paper"
+    ],
+    "symbol": ",",
+    "color": "red",
+    "flags": [
+      "NO_REPAIR"
+    ],
+    "use_action": "PLAY_GAME"
+  }
+]

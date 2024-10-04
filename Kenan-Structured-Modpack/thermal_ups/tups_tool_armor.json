@@ -1,0 +1,162 @@
+[
+  {
+    "id": "thermal_suit_ups",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "symbol": "[",
+    "color": "light_gray",
+    "name": {
+      "str": "电热连身衣（UPS）"
+    },
+    "description": "这是一套配有内部UPS供电加热元件的薄保暖内衣的全身套装。它比电池供电的同类产品更暖和。激活以打开。",
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
+    "price": "200 USD",
+    "material": [
+      "cotton"
+    ],
+    "weight": "864 g",
+    "volume": "2 L",
+    "use_action": {
+      "type": "transform",
+      "msg": "你激活你的%s。",
+      "target": "thermal_suit_ups_on",
+      "active": true
+    },
+    "warmth": 10,
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "id": "thermal_suit_ups_on",
+    "copy-from": "thermal_suit_ups",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "电热连身衣（UPS）（开）",
+      "str_pl": "电热连身衣（UPS）（开）"
+    },
+    "description": "这是一套配有UPS电源加热元件的薄保暖内衣的全身套装。它比电池供电的同类产品更暖和。它当前处于打开状态，并不断消耗UPS电量。激活以关闭。",
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "TRADER_AVOID",
+      "USE_UPS"
+    ],
+    "revert_to": "thermal_suit_ups",
+    "power_draw": 120000,
+    "warmth": 100,
+    "use_action": {
+      "menu_text": "关闭",
+      "type": "transform",
+      "msg": "你关闭了%s。",
+      "target": "thermal_suit_ups"
+    }
+  },
+  {
+    "id": "thermal_outfit_ups",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "symbol": "[",
+    "color": "light_gray",
+    "name": {
+      "str": "电热套装（UPS）",
+      "str_pl": "电热套装（UPS）"
+    },
+    "description": "这套薄薄的保暖内衣从头到脚覆盖你，并配有内部UPS供电的加热元件。它比电池供电的同类产品更暖和。激活以打开。",
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
+    "price": "350 USD",
+    "material": [
+      "cotton"
+    ],
+    "weight": "1452 g",
+    "volume": "4500 ml",
+    "use_action": {
+      "type": "transform",
+      "msg": "你激活你的%s。",
+      "target": "thermal_outfit_ups_on",
+      "active": true
+    },
+    "warmth": 10,
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "head",
+          "mouth",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r",
+          "hand_l",
+          "hand_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material_thickness": 1
+  },
+  {
+    "id": "thermal_outfit_ups_on",
+    "copy-from": "thermal_outfit_ups",
+    "type": "TOOL_ARMOR",
+    "name": {
+      "str": "电热套装（UPS）（开）",
+      "str_pl": "电热套装（UPS）（开）"
+    },
+    "description": "这套薄薄的保暖内衣从头到脚覆盖你，并配有内部UPS供电的加热元件。它比电池供电的同类产品更暖和。它当前处于打开状态，并不断消耗UPS电源。激活以关闭。",
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "TRADER_AVOID",
+      "USE_UPS"
+    ],
+    "power_draw": 130000,
+    "revert_to": "thermal_outfit_ups",
+    "use_action": {
+      "type": "transform",
+      "menu_text": "关闭",
+      "msg": "你关闭了%s。",
+      "target": "thermal_outfit_ups"
+    },
+    "warmth": 100,
+    "armor": [
+      {
+        "covers": [
+          "head",
+          "mouth",
+          "torso",
+          "arm_l",
+          "arm_r",
+          "leg_l",
+          "leg_r",
+          "hand_l",
+          "hand_r",
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ],
+    "material": [
+      "cotton"
+    ],
+    "material_thickness": 1
+  }
+]

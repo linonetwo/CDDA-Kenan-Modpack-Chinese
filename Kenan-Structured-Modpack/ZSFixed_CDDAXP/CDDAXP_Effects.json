@@ -1,0 +1,59 @@
+[
+  {
+    "type": "effect_type",
+    "id": "cddaxp_buff_per",
+    "name": [
+      "增强现实 - 低",
+      "增强现实 - 中",
+      "增强现实 - 高"
+    ],
+    "desc": [
+      "增强现实 - 低：一个有助于正确估计高度和距离的绿色网格。",
+      "增强现实 - 中：物体和生物在网格上的高亮。",
+      "增强现实 - 高：显示物体和生物的“ID”，并带有其他信息和生物特征数据。"
+    ],
+    "remove_message": "“增强现实”已关闭。",
+    "max_duration": 150,
+    "max_intensity": 3,
+    "int_add_val": 1,
+    "base_mods": {
+      "per_mod": [
+        1
+      ]
+    },
+    "scaling_mods": {
+      "per_mod": [
+        1
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "cddaxp_asteroid_inj",
+    "name": [
+      "合成代谢下降",
+      "类固醇Roid"
+    ],
+    "desc": [
+      "呜哇哇哇！我愚愚愚愚蠢！",
+      "感受固醇狂怒！！！"
+    ],
+    "remove_message": "类固醇效果消失。",
+    "max_duration": 800,
+    "max_intensity": 2,
+    "int_dur_factor": 400,
+    "base_mods": {
+      "int_mod": [
+        -4
+      ]
+    },
+    "scaling_mods": {
+      "str_mod": [
+        4
+      ],
+      "int_mod": [
+        4
+      ]
+    }
+  }
+]

@@ -1,0 +1,36 @@
+[
+  {
+    "id": "TALK_VALMAN",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "嘿，女士。什么风把你吹来了我们在加利亚的小镇？",
+      "no": "你好。像你这样的人在我们加利亚小镇做什么？"
+    },
+    "responses": [
+      {
+        "text": "所以你是这个镇上的人？住在加利亚是什么感觉？",
+        "topic": "TALK_VALMAN_INFO"
+      },
+      {
+        "text": "再见，谢谢你的时间。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "id": "TALK_VALMAN_INFO",
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_female": true,
+      "yes": "我一生都住在这里，我想不出我更想去的地方。风车、工厂、农村城镇和大城市，让我有宾至如归的感觉。帝国主义者决定入侵并破坏我们平静的生活，这是一种耻辱。",
+      "no": "我一生都住在这里，我想不出我更想去的地方。风车、工厂、农村城镇和大城市，让我有宾至如归的感觉。帝国主义者决定入侵并破坏我们平静的生活，这是一种耻辱。"
+    },
+    "responses": [
+      {
+        "text": "知道了。",
+        "topic": "TALK_VALMAN"
+      }
+    ]
+  }
+]

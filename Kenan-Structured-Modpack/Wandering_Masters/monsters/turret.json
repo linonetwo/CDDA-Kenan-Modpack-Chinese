@@ -1,0 +1,33 @@
+[
+  {
+    "type": "MONSTER_FACTION",
+    "name": "moneylender_gang",
+    "neutral": [
+      "cop_bot",
+      "defense_bot",
+      "utility_bot",
+      "animal"
+    ],
+    "friendly": [
+      "player",
+      "human"
+    ],
+    "hate": [
+      "zombie",
+      "fungus",
+      "cult",
+      "triffid",
+      "nether"
+    ]
+  },
+  {
+    "id": "mon_crows_m240_ml",
+    "type": "MONSTER",
+    "copy-from": "mon_crows_m240",
+    "name": {
+      "str": "M240 CROWS II 炮塔"
+    },
+    "description": "这是一台M153 CROWS II 自主武器系统的升级型号，安装了自主操作软件。在大灾难发生前，美国军方已经部署了数千架辆这种炮塔，它们的价值在于能够在不暴露驾驶员的情况下，在远距离与任何步兵交战。这一台配备了一支 M240 机枪。",
+    "default_faction": "moneylender_gang"
+  }
+]

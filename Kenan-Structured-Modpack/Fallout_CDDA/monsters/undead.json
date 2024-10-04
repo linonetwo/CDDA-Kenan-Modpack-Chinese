@@ -1,0 +1,116 @@
+[
+  {
+    "id": "mon_fallout_ghoul",
+    "type": "MONSTER",
+    "name": {
+      "str": "狂尸鬼"
+    },
+    "description": "在大灾变之前很久，这个人曾经是一个正常人，但是现在他们被辐射烧得面目全非，这个人看起来很不文明，很野蛮。",
+    "default_faction": "ghoul",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "200 ml",
+    "weight": "407 g",
+    "hp": 56,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "g",
+    "color": "red",
+    "aggression": 100,
+    "morale": 5,
+    "melee_dice": 6,
+    "melee_dice_sides": 7,
+    "harvest": "zombie",
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "SWARMS",
+      "SWIMS"
+    ]
+  },
+  {
+    "id": "mon_radghoul",
+    "type": "MONSTER",
+    "name": {
+      "str": "发光尸鬼"
+    },
+    "description": "这个食尸鬼被产生它的辐射所吞噬，因此没有受到辐射的影响。",
+    "default_faction": "ghoul",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "600 ml",
+    "weight": "900 g",
+    "hp": 137,
+    "speed": 97,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "G",
+    "color": "green",
+    "aggression": 100,
+    "morale": 7,
+    "melee_dice": 8,
+    "melee_dice_sides": 8,
+    "luminance": 120,
+    "harvest": "zombie",
+    "emit_fields": [
+      {
+        "emit_id": "emit_rad_cloud",
+        "delay": "2 s"
+      }
+    ],
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "SWIMS",
+      "POISON",
+      "NO_BREATHE"
+    ]
+  },
+  {
+    "id": "mon_scorched",
+    "type": "MONSTER",
+    "name": {
+      "str": "烧焦尸鬼"
+    },
+    "description": "这是一个人，直到它屈服于焦灼的瘟疫，现在它是一个行走的外壳，它似乎记得如何使用武器。",
+    "default_faction": "ghoul",
+    "species": [
+      "ZOMBIE"
+    ],
+    "volume": "620 ml",
+    "weight": "345 g",
+    "hp": 87,
+    "speed": 98,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "S",
+    "color": "red",
+    "aggression": 100,
+    "morale": 10,
+    "melee_dice": 5,
+    "melee_dice_sides": 7,
+    "melee_cut": 9,
+    "dodge": 9,
+    "harvest": "human",
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT"
+    ],
+    "death_drops": "scorched_drops",
+    "flags": [
+      "HEARS",
+      "SEES",
+      "SWIMS",
+      "GRABS",
+      "PATH_AVOID_DANGER_2"
+    ]
+  }
+]

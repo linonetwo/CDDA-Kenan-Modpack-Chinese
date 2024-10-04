@@ -1,0 +1,46 @@
+[
+  {
+    "type": "effect_type",
+    "id": "panic",
+    "name": [
+      "恐惧"
+    ],
+    "desc": [
+      "你无法停止颤抖，被存在的恐惧所淹没！"
+    ],
+    "apply_message": "强烈的恐惧淹没了你的理智，你开始无法控制地颤抖！",
+    "rating": "bad",
+    "blood_analysis_description": "unidentified stress hormones",
+    "remove_message": "你感觉你的心率减慢到正常。",
+    "miss_messages": [
+      [
+        "你不由自主地颤抖",
+        4
+      ]
+    ],
+    "base_mods": {
+      "dex_mod": [
+        -2
+      ],
+      "int_mod": [
+        -1
+      ],
+      "per_mod": [
+        -3
+      ],
+      "sleepiness_amount": [
+        2
+      ],
+      "vomit_chance": [
+        25
+      ],
+      "vomit_tick": [
+        15
+      ],
+      "pain_amount": [
+        1
+      ]
+    },
+    "show_in_info": true
+  }
+]

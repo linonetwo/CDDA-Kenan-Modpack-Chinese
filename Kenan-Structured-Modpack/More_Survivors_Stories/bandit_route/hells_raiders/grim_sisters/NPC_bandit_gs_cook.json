@@ -1,0 +1,391 @@
+[
+  {
+    "type": "effect_type",
+    "id": "gs_cook_opened_present",
+    "//": "Defined here because this should be the only time this effect is referenced."
+  },
+  {
+    "type": "npc",
+    "id": "NPC_bandit_gs_cook",
+    "class": "NC_SURVIVOR_CHEF",
+    "attitude": 0,
+    "mission": 8,
+    "gender": "female",
+    "chat": "TALK_bandit_gs_cook",
+    "faction": "grim_sisters"
+  },
+  {
+    "//": "'condition': { 'u_has_items': { 'item': 'corpse_generic_human', 'count': 1 },",
+    "id": [
+      "TALK_bandit_gs_cook"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_male": true,
+      "yes": "嗨，<sweetie>。",
+      "no": "你想要什么？！你没吃午饭，婊子，所以你连饭都吃不到。别给我找借口。"
+    },
+    "responses": [
+      {
+        "text": "你好。",
+        "topic": "TALK_bandit_gs_cook_1",
+        "condition": "u_male",
+        "effect": {
+          "npc_first_topic": "TALK_bandit_gs_cook_1"
+        },
+        "switch": true
+      },
+      {
+        "text": "粗鲁无礼。",
+        "topic": "TALK_DONE",
+        "switch": true
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_bandit_gs_cook_1",
+      "TALK_bandit_gs_cook_questions_cook4_bad",
+      "TALK_bandit_gs_cook_questions_cook_done",
+      "TALK_bandit_gs_cook_questions_cook4_takesome"
+    ],
+    "dynamic_line": [
+      "我能给你拿点什么，<sweetie>？",
+      "你饿了吗，<sweetie>？我可以给你做点东西。",
+      "你今天想吃什么，<sweetie>？"
+    ],
+    "responses": [
+      {
+        "text": "关于那个任务……",
+        "condition": {
+          "and": [
+            "has_assigned_mission",
+            "mission_complete"
+          ]
+        },
+        "topic": "TALK_MISSION_INQUIRE"
+      },
+      {
+        "text": "我想问你一件事…",
+        "topic": "TALK_bandit_gs_cook_questions"
+      },
+      {
+        "text": "我在我的食物袋里发现了一个人类的手指。你到底给了我什么？",
+        "condition": {
+          "u_has_effect": "gs_cook_opened_present"
+        },
+        "effect": {
+          "u_lose_effect": "gs_cook_opened_present"
+        },
+        "topic": "TALK_bandit_gs_cook_questions_cook4_wit"
+      },
+      {
+        "text": "需要帮忙么？",
+        "condition": {
+          "npc_has_var": "know_taste",
+          "type": "flag",
+          "context": "open_missions",
+          "value": "yes"
+        },
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": [
+      "TALK_bandit_gs_cook_questions",
+      "TALK_bandit_gs_cook_questions_cook",
+      "TALK_bandit_gs_cook_questions_cook1",
+      "TALK_bandit_gs_cook_questions_place",
+      "TALK_bandit_gs_cook_questions_story"
+    ],
+    "dynamic_line": "你想知道什么，<sweetie>？",
+    "responses": [
+      {
+        "text": "这是哪里？",
+        "topic": "TALK_bandit_gs_cook_questions_place"
+      },
+      {
+        "text": "你在这里做什么？",
+        "topic": "TALK_bandit_gs_cook_questions_cook"
+      },
+      {
+        "text": "说说你的故事？",
+        "topic": "TALK_bandit_gs_cook_questions_story"
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_bandit_gs_cook_1"
+      }
+    ]
+  },
+  {
+    "//": "TODO write something",
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_place",
+    "dynamic_line": "这是我们的小基地，<sweetie>。"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_story",
+    "dynamic_line": "啊，那是个悲惨的故事。现在，我们来谈谈你吧，<sweetie>。"
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook",
+    "dynamic_line": "我在为我们的孩子和那些婊子做饭。",
+    "responses": [
+      {
+        "text": "你在给他们做什么？",
+        "condition": {
+          "not": {
+            "or": [
+              {
+                "npc_has_var": "know_taste",
+                "type": "flag",
+                "context": "open_missions",
+                "value": "yes"
+              },
+              {
+                "npc_has_var": "know_taste",
+                "type": "flag",
+                "context": "open_missions",
+                "value": "no"
+              }
+            ]
+          }
+        },
+        "topic": "TALK_bandit_gs_cook_questions_cook1"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook1",
+    "dynamic_line": "嗯，各种各样的事情，<sweetie>。不同的汤，荤菜，诸如此类的东西。",
+    "responses": [
+      {
+        "text": "我能尝尝吗？",
+        "topic": "TALK_bandit_gs_cook_questions_cook2"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook2",
+    "dynamic_line": "哦，<sweetie>，我都不知道你是否喜欢。我们的口味会比较特别，但如果你真的想尝尝，我可以给你弄点这样特别的东西尝尝。",
+    "responses": [
+      {
+        "text": "是的，当然，我想尝尝。",
+        "topic": "TALK_bandit_gs_cook_questions_cook3"
+      },
+      {
+        "text": "谢谢，我会过去的。",
+        "topic": "TALK_bandit_gs_cook_questions_cook3"
+      }
+    ]
+  },
+  {
+    "//": "TODO write something not that lame dude",
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook3",
+    "dynamic_line": {
+      "and": [
+        "Then close your eyes and open your eyes.\"  at first, doubts overcame you, but the interest was so strong that you decided to obey.  You felt the touch of a small spoon on your lips and took the contents into your mouth.   ",
+        {
+          "u_has_trait": "CANNIBAL",
+          "yes": "Familiar taste notes filled all the cavities of your mouth, and you wouldn't confuse this smell with anything in the world.  Paradise honey, heavenly nectar.  Here it is - true pleasure.",
+          "no": "The taste turned out to be strange, sometimes even unpleasant.  The smell was not much better.  Tough, like the meat of an old animal that has been in the freezer for a long time."
+        },
+        "  \"How was it, <sweetie>?"
+      ]
+    },
+    "responses": [
+      {
+        "text": "好吃，真好吃。我不希望在这个新世界里找到像我这样品味独特的人。",
+        "condition": {
+          "u_has_trait": "CANNIBAL"
+        },
+        "topic": "TALK_bandit_gs_cook_questions_cook4_cannibal",
+        "switch": true
+      },
+      {
+        "text": "味道…不错。我能再吃点吗？",
+        "topic": "TALK_bandit_gs_cook_questions_cook4_more",
+        "switch": true,
+        "default": true
+      },
+      {
+        "text": "味道…怪怪的。这是怎么一回事？",
+        "topic": "TALK_bandit_gs_cook_questions_cook4_wit",
+        "switch": true,
+        "default": true
+      },
+      {
+        "text": "它尝起来…糟透了，真的糟透了。",
+        "topic": "TALK_bandit_gs_cook_questions_cook4_bad",
+        "switch": true,
+        "default": true
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook4_more",
+    "dynamic_line": "当然，<sweetie>，oh，她刚去了储藏室，现在回来了。走吧，你想带上一些吗？",
+    "responses": [
+      {
+        "text": "是啊，当然了。",
+        "topic": "TALK_bandit_gs_cook_questions_cook4_takesome",
+        "effect": {
+          "npc_add_var": "know_taste",
+          "type": "flag",
+          "context": "open_missions",
+          "value": "no"
+        }
+      },
+      {
+        "text": "谢谢，但我吃饱了。顺便问一下，是什么？",
+        "topic": "TALK_bandit_gs_cook_questions_cook4_wit"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook4_takesome",
+    "dynamic_line": "干得好。我给你放了特别的东西，<sweetie>。",
+    "speaker_effect": {
+      "effect": {
+        "u_spawn_item": "gs_cook_foodpack"
+      }
+    }
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook4_wit",
+    "dynamic_line": "嗯，我们叫它“两腿猪”，但你可能知道它是人，嗯，应该用“他”。不幸的是，我们主要用的是人类中最好吃的那一半的肉。那个专横的婊子不想让我把那些讨厌的锄头割下来当食物吃。她说了些…blabla，去她妈的。哦，味道好吗，<sweetie>？我把我的爱和关心放在你的饭里。别对我的厨艺说三道四，那会伤了我的心…",
+    "responses": [
+      {
+        "text": "很好，我真的很喜欢。",
+        "topic": "TALK_bandit_gs_cook_questions_cook_done",
+        "effect": {
+          "u_add_trait": "CANNIBAL"
+        }
+      },
+      {
+        "text": "好吃。",
+        "trial": {
+          "type": "LIE",
+          "difficulty": 20
+        },
+        "success": {
+          "topic": "TALK_bandit_gs_cook_questions_cook_done"
+        },
+        "failure": {
+          "topic": "TALK_bandit_gs_cook_questions_cook4_bad"
+        }
+      },
+      {
+        "text": "是什么？*呕吐*",
+        "topic": "TALK_bandit_gs_cook_questions_cook4_puke",
+        "effect": {
+          "npc_add_var": "know_taste",
+          "type": "flag",
+          "context": "open_missions",
+          "value": "no"
+        }
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook4_cannibal",
+    "dynamic_line": "我很高兴你能分享我们的品味，<sweetie>。你还要吗？",
+    "responses": [
+      {
+        "text": "当然，如果你现在明白我的意思的话，我可以吃一整只两腿猪。*眨眼*",
+        "topic": "TALK_bandit_gs_cook_questions_cook_done",
+        "effect": [
+          {
+            "npc_add_var": "want_more",
+            "type": "flag",
+            "context": "temp_var",
+            "value": "yes"
+          }
+        ]
+      },
+      {
+        "text": "谢谢，但我吃饱了。",
+        "topic": "TALK_bandit_gs_cook_questions_cook_done"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook4_bad",
+    "dynamic_line": "啊，听了真难过。你伤害了我的感情，<sweetie>。我以为你会喜欢的…",
+    "speaker_effect": {
+      "effect": {
+        "npc_add_var": "know_taste",
+        "type": "flag",
+        "context": "open_missions",
+        "value": "no"
+      }
+    }
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook4_puke",
+    "dynamic_line": "你！你个忘恩负义的猪猡！我这是我专门为你做的，你却把它扔了？！<swear>   <name_b> !",
+    "responses": [
+      {
+        "text": "臭婆娘！",
+        "topic": "TALK_DONE",
+        "effect": [
+          {
+            "u_add_effect": "nausea",
+            "duration": "900 s"
+          },
+          "end_conversation"
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_gs_cook_questions_cook_done",
+    "dynamic_line": {
+      "and": [
+        {
+          "npc_has_var": "want_more",
+          "type": "flag",
+          "context": "temp_var",
+          "value": "yes",
+          "yes": "My, my, what a man.  Here you go, <sweetie>."
+        },
+        "  Oh, by the way, <sweetie>.  Would you want to help poor lady dealing with a little problem?  Our meat supplies are running low, and we always need more.  If you could spare some of your time to help me, I'm sure I can find a way to properly reward you, <sweetie>."
+      ]
+    },
+    "speaker_effect": {
+      "effect": [
+        {
+          "npc_lose_var": "want_more",
+          "type": "flag",
+          "context": "temp_var"
+        },
+        {
+          "npc_add_var": "know_taste",
+          "type": "flag",
+          "context": "open_missions",
+          "value": "yes"
+        }
+      ]
+    }
+  }
+]

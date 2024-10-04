@@ -1,0 +1,504 @@
+[
+  {
+    "type": "profession",
+    "id": "biker_khan",
+    "name": "大可汗",
+    "description": "你在大汗帮度过了一生：枪，喷气机，骑自行车。现在结束了，你想继续你的人生选择。",
+    "points": 3,
+    "skills": [
+      {
+        "level": 2,
+        "name": "driving"
+      },
+      {
+        "level": 2,
+        "name": "mechanics"
+      },
+      {
+        "level": 4,
+        "name": "cooking"
+      }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "jeans",
+          "tank_top",
+          "widowmaker",
+          "shot_00",
+          "crackpipe",
+          "crack",
+          "textbook_chemistry",
+          "chaps_leather",
+          "socks",
+          "boots",
+          "bandana",
+          "jacket_leather",
+          "wristwatch"
+        ],
+        "entries": [
+          {
+            "group": "charged_cell_phone"
+          },
+          {
+            "item": "sheath",
+            "contents-item": "knife_trench"
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "boy_shorts"
+      ]
+    },
+    "//": "Crack addiction only there because no jet. Same with chemistry textbook Will add Jet later.",
+    "addictions": [
+      {
+        "intensity": 10,
+        "type": "crack"
+      }
+    ]
+  },
+  {
+    "type": "profession",
+    "id": "biker_atomcat",
+    "name": "原子猫",
+    "description": "在大灾变之前，你和周围最酷的猫一起度过了一生；原子猫。你知道如何绕过原子弹载具，甚至是偶尔的一套动力装甲。",
+    "points": 3,
+    "skills": [
+      {
+        "level": 1,
+        "name": "driving"
+      },
+      {
+        "level": 4,
+        "name": "mechanics"
+      },
+      {
+        "level": 1,
+        "name": "speech"
+      }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "jeans",
+          "tank_top",
+          "chaps_leather",
+          "socks",
+          "toolbox_empty",
+          "boots",
+          "bandana",
+          "jacket_leather_atomcat",
+          "wristwatch"
+        ],
+        "entries": [
+          {
+            "group": "charged_cell_phone"
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "bra",
+        "boy_shorts"
+      ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "officer_enclave",
+    "name": "英克雷军官",
+    "description": "英克雷派你的小队去调查新英格兰剩下的东西，找回重要的军事文件。他们被屠杀了，剩下的只有你。物资供应不足，如果有的话，几个月内都不会有备份。英克雷万岁。",
+    "points": 5,
+    "CBMs": [
+      "bio_targeting",
+      "bio_night_vision",
+      "bio_geiger",
+      "bio_fingerhack",
+      "bio_lockpick",
+      "bio_face_mask",
+      "bio_metabolics",
+      "bio_power_storage_mkII"
+    ],
+    "skills": [
+      {
+        "level": 1,
+        "name": "gun"
+      },
+      {
+        "level": 4,
+        "name": "speech"
+      },
+      {
+        "level": 1,
+        "name": "firstaid"
+      },
+      {
+        "level": 1,
+        "name": "electronics"
+      },
+      {
+        "level": 1,
+        "name": "survival"
+      }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "jumpsuit_enclave",
+          "winter_jacket_enclave",
+          "winter_pants_enclave",
+          "hat_enclave",
+          "socks",
+          "14mm",
+          "binoculars",
+          "boots_combat",
+          "two_way_radio",
+          "pipboy_2000"
+        ],
+        "entries": [
+          {
+            "item": "ear_plugs",
+            "custom-flags": [
+              "no_auto_equip"
+            ]
+          },
+          {
+            "item": "14mmpistol",
+            "ammo-item": "14mm",
+            "charges": 7
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "sports_bra",
+        "boxer_shorts"
+      ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "minuteman",
+    "name": "义勇军",
+    "description": "“一分钟就保护人民。”这是最初的想法。但现在贝克尔将军是个丧尸，义勇军只是一个零散的记忆，你试图保护的所有人都死了。",
+    "points": 6,
+    "skills": [
+      {
+        "level": 2,
+        "name": "survival"
+      },
+      {
+        "level": 2,
+        "name": "tailor"
+      },
+      {
+        "level": 4,
+        "name": "speech"
+      },
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 2,
+        "name": "cooking"
+      }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "stockings",
+          "pockknife",
+          "matches",
+          "pipe_tobacco",
+          "tobacco",
+          "knee_high_boots",
+          "breeches",
+          "waistcoat",
+          "sword_revolutionary",
+          "duster_minutemen",
+          "leather_belt",
+          "knit_scarf",
+          "tricorne",
+          "hatchet",
+          "hardtack"
+        ],
+        "entries": [
+          {
+            "group": "charged_cell_phone"
+          },
+          {
+            "item": "musket_laser",
+            "ammo-item": "battery",
+            "charges": 3000,
+            "contents-item": "shoulder_strap"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": "profession",
+    "id": "soldier_anchorage",
+    "name": "锚地士兵",
+    "description": "你在安克雷奇为美国而战。你习惯了寒冷，习惯了无情的攻击。你以为你都看过了。现在你更清楚了，就像死人在地上行走一样。",
+    "points": 6,
+    "skills": [
+      {
+        "level": 4,
+        "name": "gun"
+      },
+      {
+        "level": 3,
+        "name": "rifle"
+      },
+      {
+        "level": 2,
+        "name": "melee"
+      },
+      {
+        "level": 1,
+        "name": "stabbing"
+      },
+      {
+        "level": 3,
+        "name": "survival"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "winter_pants_army",
+          "undershirt",
+          "helmet_combat_light_winter",
+          "armor_combat_light_winter",
+          "balclava_winter",
+          "gloves_liner",
+          "glasses_bal",
+          "gloves_tactical",
+          "socks",
+          "boots_combat",
+          "wristwatch",
+          "molle_pack"
+        ],
+        "entries": [
+          {
+            "group": "charged_two_way_radio"
+          },
+          {
+            "item": "ear_plugs",
+            "custom-flags": [
+              "no_auto_equip"
+            ]
+          },
+          {
+            "item": "knife_trench",
+            "container-item": "sheath"
+          },
+          {
+            "item": "ak112",
+            "ammo-item": "5mm",
+            "charges": 30,
+            "contents-item": [
+              "shoulder_strap",
+              "holo_sight"
+            ]
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "sports_bra",
+        "boxer_shorts"
+      ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "specops_anchorage",
+    "name": "锚地特种作业人员",
+    "description": "你是安克雷奇战役的荣誉战争英雄。你看到了一些男人做梦都想不到的事情。你以为军队为你准备了一切。显然不是。",
+    "points": 8,
+    "skills": [
+      {
+        "level": 3,
+        "name": "gun"
+      },
+      {
+        "level": 3,
+        "name": "smg"
+      },
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 2,
+        "name": "melee"
+      },
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 1,
+        "name": "firstaid"
+      },
+      {
+        "level": 1,
+        "name": "swimming"
+      },
+      {
+        "level": 1,
+        "name": "survival"
+      }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "winter_pants_army",
+          "undershirt",
+          "helmet_combat_light_winter",
+          "armor_combat_light_winter",
+          "balclava_winter",
+          "glasses_bal",
+          "gloves_tactical",
+          "socks",
+          "boots_combat",
+          "two_way_radio",
+          "wristwatch",
+          "molle_pack"
+        ],
+        "entries": [
+          {
+            "item": "ear_plugs",
+            "custom-flags": [
+              "no_auto_equip"
+            ]
+          },
+          {
+            "item": "knife_trench",
+            "container-item": "sheath"
+          },
+          {
+            "item": "10mmsmg",
+            "ammo-item": "10mmjhp",
+            "charges": 30,
+            "contents-item": [
+              "shoulder_strap",
+              "suppressor",
+              "holo_sight"
+            ]
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "sports_bra",
+        "boxer_shorts"
+      ]
+    }
+  },
+  {
+    "type": "profession",
+    "id": "medic_anchorage",
+    "name": "安克雷奇战斗医疗兵",
+    "description": "你在安克雷奇战役中是一名战斗医疗兵。当你的朋友们在与红军的战斗中牺牲的时候，你却让他们中的大多数活着。你希望你救人的日子已经过去了，但现在你可能不得不拯救自己的生命。",
+    "points": 6,
+    "skills": [
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 2,
+        "name": "rifle"
+      },
+      {
+        "level": 1,
+        "name": "melee"
+      },
+      {
+        "level": 4,
+        "name": "firstaid"
+      },
+      {
+        "level": 1,
+        "name": "stabbing"
+      },
+      {
+        "level": 1,
+        "name": "survival"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      }
+    ],
+    "items": {
+      "both": {
+        "items": [
+          "winter_pants_army",
+          "undershirt",
+          "helmet_combat_light_winter",
+          "armor_combat_light_winter_medic",
+          "balclava_winter",
+          "gloves_liner",
+          "gloves_tactical",
+          "socks",
+          "boots_combat",
+          "wristwatch",
+          "molle_pack"
+        ],
+        "entries": [
+          {
+            "group": "charged_two_way_radio"
+          },
+          {
+            "item": "ear_plugs",
+            "custom-flags": [
+              "no_auto_equip"
+            ]
+          },
+          {
+            "item": "knife_trench",
+            "container-item": "sheath"
+          },
+          {
+            "item": "ak112",
+            "ammo-item": "5mm",
+            "charges": 30,
+            "contents-item": [
+              "shoulder_strap",
+              "holo_sight"
+            ]
+          }
+        ]
+      },
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "sports_bra",
+        "boxer_shorts"
+      ]
+    }
+  }
+]

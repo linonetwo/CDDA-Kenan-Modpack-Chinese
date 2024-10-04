@@ -1,0 +1,861 @@
+[
+  {
+    "type": "mutation",
+    "id": "FEATHERS_DILUTED",
+    "name": {
+      "str": "覆羽肢体"
+    },
+    "points": 1,
+    "visibility": 5,
+    "ugliness": 1,
+    "bodytemp_modifiers": [
+      25,
+      50
+    ],
+    "description": "你的皮肤组织发生了变异，绚丽的羽毛长满了你的四肢。羽毛可以抵挡少量伤害并提供很好的保暖。同时，它们也拥有防水能力。",
+    "types": [
+      "SKIN"
+    ],
+    "changes_to": [
+      "FEATHERS"
+    ],
+    "category": [
+      "BIRD_DILUTED"
+    ],
+    "wet_protection": [
+      {
+        "part": "leg_l",
+        "ignored": 4
+      },
+      {
+        "part": "leg_r",
+        "ignored": 4
+      },
+      {
+        "part": "foot_l",
+        "ignored": 1
+      },
+      {
+        "part": "foot_r",
+        "ignored": 1
+      },
+      {
+        "part": "arm_l",
+        "ignored": 3
+      },
+      {
+        "part": "arm_r",
+        "ignored": 3
+      },
+      {
+        "part": "hand_l",
+        "ignored": 1
+      },
+      {
+        "part": "hand_r",
+        "ignored": 1
+      }
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LIGHTFUR_DILUTED",
+    "name": {
+      "str": "轻薄毛绒肢体"
+    },
+    "points": 1,
+    "visibility": 3,
+    "ugliness": 1,
+    "bodytemp_modifiers": [
+      125,
+      250
+    ],
+    "bodytemp_sleep": 50,
+    "description": "你的皮肤组织发生了变异，四肢长出了一层轻便的毛皮，它可以给你提供一些保暖。",
+    "category": [
+      "CHIMERA_DILUTED",
+      "SPIDER_DILUTED",
+      "MOUSE_DILUTED"
+    ],
+    "types": [
+      "SKIN"
+    ],
+    "changes_to": [
+      "FUR_DILUTED",
+      "FELINE_FUR_DILUTED",
+      "LUPINE_FUR_DILUTED",
+      "URSINE_FUR_DILUTED",
+      "CHITIN_FUR_DILUTED",
+      "LIGHTFUR"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "FUR_DILUTED",
+    "name": {
+      "str": "毛绒肢体"
+    },
+    "points": 1,
+    "visibility": 5,
+    "ugliness": 1,
+    "bodytemp_modifiers": [
+      375,
+      750
+    ],
+    "bodytemp_sleep": 250,
+    "description": "你的皮肤组织发生了变异，四肢长出了长长的黑色的绒毛，既可以抵挡攻击又可以保暖。",
+    "types": [
+      "SKIN"
+    ],
+    "changes_to": [
+      "URSINE_FUR_DILUTED",
+      "FUR"
+    ],
+    "prereqs": [
+      "LIGHTFUR_DILUTED"
+    ],
+    "category": [
+      "BEAST_DILUTED",
+      "CATTLE_DILUTED",
+      "RAT_DILUTED"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "URSINE_FUR_DILUTED",
+    "name": {
+      "str": "蓬乱毛绒肢体"
+    },
+    "points": 2,
+    "visibility": 5,
+    "ugliness": 1,
+    "bodytemp_modifiers": [
+      375,
+      750
+    ],
+    "bodytemp_sleep": 250,
+    "description": "你的皮肤组织发生了变异，毛发长得又浓又密，提供了客观的伤害防护，同时也是不错的保温层。",
+    "types": [
+      "SKIN"
+    ],
+    "changes_to": [
+      "URSINE_FUR"
+    ],
+    "prereqs": [
+      "LIGHTFUR_DILUTED"
+    ],
+    "category": [
+      "URSINE_DILUTED"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "LUPINE_FUR_DILUTED",
+    "name": {
+      "str": "灰色毛绒肢体"
+    },
+    "points": 1,
+    "visibility": 5,
+    "ugliness": 1,
+    "bodytemp_modifiers": [
+      375,
+      750
+    ],
+    "bodytemp_sleep": 250,
+    "description": "你的皮肤组织发生了变异，四肢被深灰色毛皮包裹着，抗寒能力大幅度提升，但物理防御力增加有限。",
+    "types": [
+      "SKIN"
+    ],
+    "changes_to": [
+      "LUPINE_FUR"
+    ],
+    "prereqs": [
+      "LIGHTFUR_DILUTED"
+    ],
+    "category": [
+      "LUPINE_DILUTED"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "FELINE_FUR_DILUTED",
+    "name": {
+      "str": "光滑毛绒肢体"
+    },
+    "points": 1,
+    "visibility": 5,
+    "ugliness": 1,
+    "bodytemp_modifiers": [
+      250,
+      500
+    ],
+    "bodytemp_sleep": 150,
+    "description": "你四肢的皮肤组织发生了变异，变得厚而光滑，散发着巧克力色的光泽。加强了抗寒能力。",
+    "types": [
+      "SKIN"
+    ],
+    "prereqs": [
+      "LIGHTFUR_DILUTED"
+    ],
+    "changes_to": [
+      "FELINE_FUR"
+    ],
+    "category": [
+      "BEAST_DILUTED",
+      "FELINE_DILUTED",
+      "MOUSE_DILUTED"
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN_DILUTED",
+    "name": {
+      "str": "甲壳皮肤（四肢）"
+    },
+    "points": 1,
+    "visibility": 1,
+    "ugliness": 1,
+    "description": "你四肢上的皮肤组织发生了变异，产生了甲壳。变成了一个轻薄而有弹性的甲壳层。对斩击伤害提供了轻微的防护。稍微减少湿身心情惩罚。",
+    "types": [
+      "SKIN"
+    ],
+    "changes_to": [
+      "CHITIN2_DILUTED",
+      "CHITIN_FUR_DILUTED",
+      "CHITIN"
+    ],
+    "category": [
+      "SPIDER_DILUTED"
+    ],
+    "wet_protection": [
+      {
+        "part": "leg_l",
+        "ignored": 5
+      },
+      {
+        "part": "leg_r",
+        "ignored": 5
+      },
+      {
+        "part": "foot_l",
+        "ignored": 1
+      },
+      {
+        "part": "foot_r",
+        "ignored": 1
+      },
+      {
+        "part": "arm_l",
+        "ignored": 4
+      },
+      {
+        "part": "arm_r",
+        "ignored": 4
+      },
+      {
+        "part": "hand_l",
+        "ignored": 1
+      },
+      {
+        "part": "hand_r",
+        "ignored": 1
+      }
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 2,
+        "cut": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN2_DILUTED",
+    "name": {
+      "str": "甲壳盔甲（四肢）"
+    },
+    "points": 1,
+    "visibility": 3,
+    "ugliness": 1,
+    "bash_dmg_bonus": 2,
+    "mixed_effect": true,
+    "description": "你的皮肤组织发生了变异，产生了甲壳。四肢被类似昆虫的外壳所包围，它可以为你提供全方位的保护，但你的敏捷 -1。稍微减少湿身心情惩罚。",
+    "types": [
+      "SKIN"
+    ],
+    "prereqs": [
+      "CHITIN_DILUTED"
+    ],
+    "changes_to": [
+      "CHITIN3_DILUTED",
+      "CHITIN2"
+    ],
+    "category": [
+      "INSECT_DILUTED"
+    ],
+    "wet_protection": [
+      {
+        "part": "leg_l",
+        "ignored": 9
+      },
+      {
+        "part": "leg_r",
+        "ignored": 9
+      },
+      {
+        "part": "foot_l",
+        "ignored": 2
+      },
+      {
+        "part": "foot_r",
+        "ignored": 2
+      },
+      {
+        "part": "arm_l",
+        "ignored": 8
+      },
+      {
+        "part": "arm_r",
+        "ignored": 8
+      },
+      {
+        "part": "hand_l",
+        "ignored": 2
+      },
+      {
+        "part": "hand_r",
+        "ignored": 2
+      }
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 4,
+        "cut": 4
+      }
+    ],
+    "passive_mods": {
+      "dex_mod": -1
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN3_DILUTED",
+    "name": {
+      "str": "甲壳板甲（四肢）"
+    },
+    "points": 1,
+    "visibility": 4,
+    "ugliness": 2,
+    "bash_dmg_bonus": 3,
+    "description": "你的皮肤组织发生了变异，产生了甲壳。四肢被类似甲壳虫的厚厚的外壳所包围，它可以为你提供近乎完美的保护，但你的敏捷 -1，且四肢都额外增加了累赘。大大减少湿身心情惩罚。",
+    "types": [
+      "SKIN"
+    ],
+    "prereqs": [
+      "CHITIN2_DILUTED",
+      "CHITIN_FUR2_DILUTED"
+    ],
+    "category": [
+      "SPIDER_DILUTED"
+    ],
+    "changes_to": [
+      "CHITIN3"
+    ],
+    "wet_protection": [
+      {
+        "part": "leg_l",
+        "ignored": 14
+      },
+      {
+        "part": "leg_r",
+        "ignored": 14
+      },
+      {
+        "part": "foot_l",
+        "ignored": 4
+      },
+      {
+        "part": "foot_r",
+        "ignored": 4
+      },
+      {
+        "part": "arm_l",
+        "ignored": 12
+      },
+      {
+        "part": "arm_r",
+        "ignored": 12
+      },
+      {
+        "part": "hand_l",
+        "ignored": 3
+      },
+      {
+        "part": "hand_r",
+        "ignored": 3
+      }
+    ],
+    "encumbrance_always": [
+      [
+        "arm_l",
+        10
+      ],
+      [
+        "arm_r",
+        10
+      ],
+      [
+        "hand_l",
+        10
+      ],
+      [
+        "hand_r",
+        10
+      ],
+      [
+        "leg_l",
+        10
+      ],
+      [
+        "leg_r",
+        10
+      ],
+      [
+        "foot_l",
+        10
+      ],
+      [
+        "foot_r",
+        10
+      ]
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 8,
+        "cut": 8
+      }
+    ],
+    "passive_mods": {
+      "dex_mod": -1
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN_FUR_DILUTED",
+    "name": {
+      "str": "多毛甲壳（四肢）"
+    },
+    "points": 1,
+    "visibility": 5,
+    "ugliness": 2,
+    "bodytemp_modifiers": [
+      50,
+      75
+    ],
+    "bodytemp_sleep": 25,
+    "description": "你的皮肤组织发生了变异，产生了甲壳。几丁质甲壳上进化出了一些毛发。比光溜溜的要暖和点儿。",
+    "types": [
+      "SKIN"
+    ],
+    "prereqs": [
+      "CHITIN_DILUTED",
+      "LIGHTFUR_DILUTED"
+    ],
+    "category": [
+      "SPIDER_DILUTED"
+    ],
+    "changes_to": [
+      "CHITIN_FUR2_DILUTED",
+      "CHITIN_FUR"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "bash": 2,
+        "cut": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "CHITIN_FUR2_DILUTED",
+    "name": {
+      "str": "毛绒甲壳（四肢）"
+    },
+    "points": 2,
+    "visibility": 5,
+    "ugliness": 2,
+    "bodytemp_modifiers": [
+      75,
+      125
+    ],
+    "bodytemp_sleep": 38,
+    "description": "你的皮肤组织发生了变异，产生了甲壳。甲壳上的几丁质毛发变得浓密并且遍布四肢。这为你提供了一点热量，并且有助于你感知附近的振动。",
+    "types": [
+      "SKIN"
+    ],
+    "prereqs": [
+      "CHITIN_FUR_DILUTED"
+    ],
+    "category": [
+      "SPIDER_DILUTED"
+    ],
+    "changes_to": [
+      "CHITIN_FUR2",
+      "CHITIN3_DILUTED"
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "mouth",
+          "eyes"
+        ],
+        "bash": 4,
+        "cut": 4
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BARK_DILUTED",
+    "name": {
+      "str": "树皮肢体"
+    },
+    "points": 2,
+    "visibility": 5,
+    "ugliness": 1,
+    "description": "你四肢的皮肤组织发生了变异，被一层薄薄的树皮所覆盖。它可以减少你受到的斩击伤害，并且轻微增加火焰抵抗。大大减少湿身心情惩罚。其他部位的皮肤则是浅绿色的。",
+    "types": [
+      "SKIN",
+      "skin_tone"
+    ],
+    "prereqs": [
+      "PLANTSKIN"
+    ],
+    "changes_to": [
+      "BARK"
+    ],
+    "category": [
+      "PLANT_DILUTED"
+    ],
+    "wet_protection": [
+      {
+        "part": "head",
+        "ignored": 4
+      },
+      {
+        "part": "leg_l",
+        "ignored": 16
+      },
+      {
+        "part": "leg_r",
+        "ignored": 16
+      },
+      {
+        "part": "foot_l",
+        "ignored": 5
+      },
+      {
+        "part": "foot_r",
+        "ignored": 5
+      },
+      {
+        "part": "arm_l",
+        "ignored": 14
+      },
+      {
+        "part": "arm_r",
+        "ignored": 14
+      },
+      {
+        "part": "hand_l",
+        "ignored": 4
+      },
+      {
+        "part": "hand_r",
+        "ignored": 4
+      },
+      {
+        "part": "torso",
+        "ignored": 10
+      }
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "cut": 2
+      },
+      {
+        "parts": [
+          "torso",
+          "mouth",
+          "eyes"
+        ],
+        "cut": 1
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SCALES_DILUTED",
+    "name": {
+      "str": "覆鳞肢体"
+    },
+    "points": 1,
+    "visibility": 5,
+    "ugliness": 1,
+    "description": "你的皮肤组织发生了变异，柔软的绿色鳞片长满了你的四肢，成为了你天然的护甲。稍微减少湿身心情惩罚。",
+    "types": [
+      "SKIN"
+    ],
+    "category": [
+      "CHIMERA_DILUTED",
+      "RAPTOR_DILUTED",
+      "LIZARD_DILUTED"
+    ],
+    "changes_to": [
+      "SCALES",
+      "SLEEK_SCALES_DILUTED"
+    ],
+    "movecost_swim_modifier": 0.92,
+    "wet_protection": [
+      {
+        "part": "leg_l",
+        "ignored": 10
+      },
+      {
+        "part": "leg_r",
+        "ignored": 10
+      },
+      {
+        "part": "foot_l",
+        "ignored": 3
+      },
+      {
+        "part": "foot_r",
+        "ignored": 3
+      },
+      {
+        "part": "arm_l",
+        "ignored": 9
+      },
+      {
+        "part": "arm_r",
+        "ignored": 9
+      },
+      {
+        "part": "hand_l",
+        "ignored": 2
+      },
+      {
+        "part": "hand_r",
+        "ignored": 2
+      }
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "cut": 2
+      }
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "SLEEK_SCALES_DILUTED",
+    "name": {
+      "str": "光滑覆鳞肢体"
+    },
+    "points": 2,
+    "visibility": 5,
+    "ugliness": 2,
+    "description": "你的皮肤组织发生了变异，柔韧光滑的鳞片长满了你的四肢，成为了你天然的护甲。这些鳞片不能带来有力的保护，但增强了你的游泳能力，同时让你滑溜溜的难以被抓住。减少湿身心情惩罚。",
+    "types": [
+      "SKIN"
+    ],
+    "changes_to": [
+      "SLEEK_SCALES"
+    ],
+    "prereqs": [
+      "SCALES_DILUTED"
+    ],
+    "category": [
+      "FISH_DILUTED"
+    ],
+    "movecost_swim_modifier": 0.8,
+    "wet_protection": [
+      {
+        "part": "leg_l",
+        "good": 21
+      },
+      {
+        "part": "leg_r",
+        "good": 21
+      },
+      {
+        "part": "foot_l",
+        "good": 6
+      },
+      {
+        "part": "foot_r",
+        "good": 6
+      },
+      {
+        "part": "arm_l",
+        "good": 19
+      },
+      {
+        "part": "arm_r",
+        "good": 19
+      },
+      {
+        "part": "hand_l",
+        "good": 5
+      },
+      {
+        "part": "hand_r",
+        "good": 5
+      }
+    ],
+    "armor": [
+      {
+        "parts": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ],
+        "cut": 1
+      }
+    ]
+  }
+]

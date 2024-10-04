@@ -1,0 +1,42 @@
+[
+  {
+    "type": "COMESTIBLE",
+    "id": "feces_roach",
+    "name": {
+      "str": "臭虫粪球"
+    },
+    "copy-from": "feces_bird",
+    "description": "一堆巨大的黑色球体，里面是各种早已腐烂的材料。"
+  },
+  {
+    "type": "COMESTIBLE",
+    "id": "acid_free",
+    "name": {
+      "str": "浓酸",
+      "str_pl": "浓酸"
+    },
+    "weight": "250 g",
+    "color": "green",
+    "flags": [
+      "ACID"
+    ],
+    "use_action": "BLECH",
+    "comestible_type": "DRINK",
+    "symbol": "~",
+    "quench": -96,
+    "healthy": -4,
+    "description": "浓缩酸液。不要喝。",
+    "price": "20 USD",
+    "volume": "250 ml",
+    "phase": "liquid",
+    "category": "chems",
+    "fun": -45,
+    "drop_action": {
+      "type": "emit_actor",
+      "emits": [
+        "emit_acid_splash"
+      ],
+      "scale_qty": true
+    }
+  }
+]

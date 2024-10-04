@@ -1,0 +1,512 @@
+[
+  {
+    "type": "npc",
+    "id": "NPC_bandit_fs_recruiter",
+    "class": "NC_SCAVENGER",
+    "attitude": 0,
+    "mission": 3,
+    "name_suffix": "招聘人员",
+    "chat": "TALK_bandit_fs_recruiter",
+    "mission_offered": "MISSION_bandit_fs_recruiter_1",
+    "faction": "forest_snakes"
+  },
+  {
+    "id": [
+      "TALK_bandit_fs_recruiter"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": {
+      "u_has_var": "bandit_camp_unlocked",
+      "type": "flag",
+      "context": "missions_fs",
+      "value": "yes",
+      "yes": "你好。",
+      "no": "我很忙。晚点再跟我说。"
+    },
+    "responses": [
+      {
+        "text": "嗨。",
+        "topic": "TALK_bandit_fs_recruiter1",
+        "condition": {
+          "u_has_var": "bandit_camp_unlocked",
+          "type": "flag",
+          "context": "missions_fs",
+          "value": "yes"
+        },
+        "effect": {
+          "npc_first_topic": "TALK_bandit_fs_recruiter1"
+        }
+      }
+    ]
+  },
+  {
+    "id": [
+      "TALK_bandit_fs_recruiter1",
+      "TALK_bandit_fs_recruiter_good",
+      "TALK_bandit_fs_recruiter_bad",
+      "TALK_bandit_fs_recruiter_recruit",
+      "TALK_bandit_fs_recruiter_Background",
+      "TALK_bandit_fs_recruiter_gangs",
+      "TALK_bandit_fs_recruiter_recruit_reward"
+    ],
+    "type": "talk_topic",
+    "dynamic_line": "<greet>",
+    "responses": [
+      {
+        "text": "关于那个任务……",
+        "condition": "has_assigned_mission",
+        "topic": "TALK_MISSION_INQUIRE"
+      },
+      {
+        "text": "<BGSS_intro_question>",
+        "topic": "TALK_bandit_fs_recruiter_Background"
+      },
+      {
+        "text": "需要帮忙么？",
+        "topic": "TALK_MISSION_LIST"
+      },
+      {
+        "text": "我是来领奖的。",
+        "condition": {
+          "u_compare_var": "bandit_recruiter_reward",
+          "type": "count",
+          "context": "reward",
+          "op": ">",
+          "value": 0
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "u_compare_var": "lend_bandits_fs",
+            "type": "count",
+            "context": "death",
+            "op": ">=",
+            "value": 2
+          }
+        },
+        "success": {
+          "topic": "TALK_bandit_fs_recruiter_bad",
+          "effect": {
+            "u_adjust_var": "bandit_recruiter_reward",
+            "type": "count",
+            "context": "reward",
+            "adjustment": -1
+          }
+        },
+        "failure": {
+          "topic": "TALK_bandit_fs_recruiter_reward",
+          "effect": [
+            {
+              "u_lose_var": "lend_bandits_fs",
+              "type": "count",
+              "context": "death"
+            }
+          ]
+        },
+        "switch": true
+      },
+      {
+        "text": "我有一些新兵。",
+        "condition": {
+          "u_compare_var": "forest_snakes",
+          "type": "count",
+          "context": "bandits",
+          "op": ">",
+          "value": 0
+        },
+        "topic": "TALK_bandit_fs_recruiter_reward",
+        "effect": {
+          "u_adjust_var": "forest_snakes",
+          "type": "count",
+          "context": "bandits",
+          "adjustment": -1
+        },
+        "switch": true
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_fs_recruiter_Background",
+    "dynamic_line": "是的，和这里的其他人一样，我也只是幸存了下来。我这大半辈子都在抗争，我负责我的地区，我指挥着军队。但是我们内心的火焰因为<the_cataclysm>而熄灭了。现在我正忙于招募新兵蛋子和维持我手下的士气。好吧，我只想确保这些<name_b>不会互相咬住对方的喉咙。",
+    "responses": [
+      {
+        "text": "招聘？",
+        "topic": "TALK_bandit_fs_recruiter_recruit"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_fs_recruiter_recruit",
+    "dynamic_line": "是的，招人。我们总是需要更多的力量，我们拥有的人手越多，我们在<the_cataclysm>之后就越强大。总之，有几个傻瓜可以方便地被派到其他帮派之间一决胜负总是件好事，这样能让主要骨干完好无损。顺便说一句，如果你遇到有价值的人，就把他带过来吧。对于每一个熟练的打手，我都很乐意分享我们的资源储备。",
+    "speaker_effect": {
+      "sentinel": "recruits",
+      "effect": {
+        "u_add_var": "ally_transfer_fs",
+        "type": "flag",
+        "context": "transfer",
+        "value": "yes"
+      }
+    },
+    "responses": [
+      {
+        "text": "其他乐队呢？",
+        "topic": "TALK_bandit_fs_recruiter_gangs"
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_fs_recruiter_gangs",
+    "dynamic_line": {
+      "and": [
+        "We are not some kind of integral structure with our own hierarchy.  We're just a bunch of different gangs who decided to hang a common flag on ourselves to look more formidable than we really are.  Showdown between gangs is a rare occurrence, but sometimes it happens: either for habar, looting spots, or other bullshit reasons.",
+        {
+          "days_since_cataclysm": 120,
+          "yes": "  I'll tell you a little secret, there will soon be a gathering of gang leaders, and I got the impression that everything will change dramatically there."
+        }
+      ]
+    }
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_fs_recruiter_bad",
+    "dynamic_line": {
+      "and": [
+        "You lost ",
+        {
+          "u_compare_var": "lend_bandits_fs",
+          "type": "count",
+          "context": "death",
+          "op": "==",
+          "value": 2,
+          "yes": "two",
+          "no": "three"
+        },
+        " of my men and still came for reward?  Get out of here, <swear> <name_b>, before I kick your ass!"
+      ]
+    },
+    "speaker_effect": {
+      "effect": {
+        "u_lose_var": "lend_bandits_fs",
+        "type": "count",
+        "context": "death"
+      }
+    }
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_fs_recruiter_reward",
+    "dynamic_line": {
+      "and": [
+        {
+          "u_compare_var": "bandit_recruiter_reward",
+          "type": "count",
+          "context": "reward",
+          "op": ">",
+          "value": 1,
+          "yes": "Good job out there.",
+          "no": [
+            "This one is not bad.",
+            "This one is not very good.",
+            "This one is really bad.  Do not bring more like that",
+            "This one is what we need.  Bring more like that.",
+            "This one will do.",
+            "This one we use like cannon fodder."
+          ]
+        },
+        "  Choose."
+      ]
+    },
+    "speaker_effect": {
+      "effect": {
+        "u_adjust_var": "bandit_recruiter_reward",
+        "type": "count",
+        "context": "reward",
+        "adjustment": -1
+      }
+    },
+    "responses": [
+      {
+        "text": "军队补给。",
+        "topic": "TALK_bandit_fs_recruiter_recruit_reward",
+        "effect": [
+          {
+            "mapgen_update": "bandit_fs_recruiter_loot_army",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "罐头食品。",
+        "topic": "TALK_bandit_fs_recruiter_recruit_reward",
+        "effect": [
+          {
+            "mapgen_update": "bandit_fs_recruiter_loot_food",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "中世纪的东西。",
+        "topic": "TALK_bandit_fs_recruiter_recruit_reward",
+        "effect": [
+          {
+            "mapgen_update": "bandit_fs_recruiter_loot_antique_rare",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "药房。",
+        "topic": "TALK_bandit_fs_recruiter_recruit_reward",
+        "effect": [
+          {
+            "mapgen_update": "bandit_fs_recruiter_loot_drugs",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "稀有武器。",
+        "topic": "TALK_bandit_fs_recruiter_recruit_reward",
+        "effect": [
+          {
+            "mapgen_update": "bandit_fs_recruiter_loot_guns_police_rare",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "近战武器。",
+        "topic": "TALK_bandit_fs_recruiter_recruit_reward",
+        "effect": [
+          {
+            "mapgen_update": "bandit_fs_recruiter_loot_weapons",
+            "origin_npc": true
+          }
+        ]
+      },
+      {
+        "text": "警察的武器。",
+        "topic": "TALK_bandit_fs_recruiter_recruit_reward",
+        "effect": [
+          {
+            "mapgen_update": "bandit_fs_recruiter_loot_swat_gear",
+            "origin_npc": true
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_bandit_fs_recruiter_recruit_reward",
+    "dynamic_line": "干得好。我们有一个永恒的手缺乏，所以不要犹豫，带来更多。"
+  },
+  {
+    "id": "MISSION_bandit_fs_recruiter_1",
+    "type": "mission_definition",
+    "name": {
+      "str": "带刺篱笆"
+    },
+    "description": "为森林蛇招募者找到150卷带刺铁丝网。",
+    "goal": "MGOAL_FIND_ITEM",
+    "difficulty": 0,
+    "value": 10000,
+    "item": "wire_barbed",
+    "count": 150,
+    "end": {
+      "effect": {
+        "u_adjust_var": "bandit_recruiter_reward",
+        "type": "count",
+        "context": "reward",
+        "adjustment": 1
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "followup": "MISSION_bandit_fs_recruiter_2",
+    "dialogue": {
+      "describe": "-",
+      "offer": "听着，菜鸟…哦，是你。我把你和我的一个士兵搞混了。我们正计划加强我们营地的防御，这项任务落在我的肩上。我需要150卷铁丝网。当然，我们没有这样的数量，但是如果你能给我找到一些，我会让它值得你的。",
+      "accepted": "不用着急，不过如果你不耽搁的话，我会很高兴的。",
+      "rejected": "好吧，我去问问别人。",
+      "advice": "看看五金店或类似的地方。",
+      "inquire": "找到了吗？",
+      "success": "干得好，<name_g>。我会让你觉得值得的。",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  },
+  {
+    "id": "MISSION_bandit_fs_recruiter_2",
+    "type": "mission_definition",
+    "name": {
+      "str": "懒惰的建设者"
+    },
+    "description": "说服3个人开始在栅栏上工作。",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": {
+      "u_has_var": "bandit_camp_helpers",
+      "type": "count",
+      "context": "help_count",
+      "value": "3"
+    },
+    "difficulty": 0,
+    "value": 20000,
+    "start": {
+      "effect": [
+        {
+          "u_add_var": "bandit_camp_helpers",
+          "type": "count",
+          "context": "help_count",
+          "value": "0"
+        },
+        {
+          "u_add_var": "bandit_camp_help",
+          "type": "flag",
+          "context": "search_for_help",
+          "value": "yes"
+        }
+      ]
+    },
+    "end": {
+      "update_mapgen": [
+        {
+          "om_terrain": "bandit_camp_1",
+          "set": [
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 6,
+              "y": 5,
+              "x2": 6,
+              "y2": 23
+            },
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 7,
+              "y": 5,
+              "x2": 23,
+              "y2": 5
+            }
+          ]
+        },
+        {
+          "om_terrain": "bandit_camp_2",
+          "set": [
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 0,
+              "y": 5,
+              "x2": 18,
+              "y2": 5
+            },
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 18,
+              "y": 5,
+              "x2": 18,
+              "y2": 22
+            }
+          ]
+        },
+        {
+          "om_terrain": "bandit_camp_3",
+          "set": [
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 6,
+              "y": 0,
+              "x2": 6,
+              "y2": 5
+            },
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 6,
+              "y": 7,
+              "x2": 6,
+              "y2": 19
+            },
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 7,
+              "y": 19,
+              "x2": 23,
+              "y2": 19
+            }
+          ]
+        },
+        {
+          "om_terrain": "bandit_camp_4",
+          "set": [
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 18,
+              "y": 0,
+              "x2": 18,
+              "y2": 19
+            },
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 17,
+              "y": 19,
+              "x2": 4,
+              "y2": 19
+            },
+            {
+              "line": "terrain",
+              "id": "t_fence_barbed",
+              "x": 0,
+              "y": 19,
+              "x2": 1,
+              "y2": 19
+            }
+          ]
+        }
+      ],
+      "effect": [
+        {
+          "u_lose_var": "bandit_camp_help",
+          "type": "count",
+          "context": "help_count"
+        },
+        {
+          "u_adjust_var": "bandit_recruiter_reward",
+          "type": "count",
+          "context": "reward",
+          "adjustment": 1
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "dialogue": {
+      "describe": "-",
+      "offer": "菜鸟，你为什么不上…哦，又是你。对不起，我把你错当成别人了。我们还在做这个<swear>建设，这些<sware><name_b>的不想工作！我现在正忙着另一项重要的工作，所以我不能踢这些人的屁股。帮我组建一个施工队，我会让你觉得值得的。",
+      "accepted": "壮观的。营地里到处都是懒驴。随便问问，也许有人会同意工作。",
+      "rejected": "好吧，我去问问别人。",
+      "advice": "未经我的允许不允许踢屁股！",
+      "inquire": "怎么样？",
+      "success": "你很有天赋，<name_g>，干得好。我已经看到这些懒惰的人差不多完了。你帮了我很多，谢谢。希望<name_b>把栅栏修好…",
+      "success_lie": "-",
+      "failure": "-"
+    }
+  }
+]

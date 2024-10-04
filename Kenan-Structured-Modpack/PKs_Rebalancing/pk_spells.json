@@ -1,0 +1,130 @@
+[
+  {
+    "id": "mon_vile_flame_burst",
+    "type": "SPELL",
+    "name": {
+      "str": "邪恶的火焰爆发"
+    },
+    "description": "PK火焰爆发",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 2,
+    "max_damage": 3,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 15,
+    "max_range": 15,
+    "field_id": "fd_flame_burst",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "damage_type": "heat"
+  },
+  {
+    "id": "mon_vile_elec_attack",
+    "type": "SPELL",
+    "name": {
+      "str": "邪恶的电攻击"
+    },
+    "description": "PK核燃料气",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "mon_vile_flame_burst"
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 2,
+    "max_damage": 3,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 15,
+    "max_range": 15,
+    "field_id": "fd_nuke_gas",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "damage_type": "electric"
+  },
+  {
+    "id": "mon_archvile_flame_burst",
+    "type": "SPELL",
+    "name": {
+      "str": "弓形火焰爆发"
+    },
+    "description": "PK额外火焰爆发",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 4,
+    "max_damage": 5,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 17,
+    "max_range": 17,
+    "field_id": "fd_flame_burst",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "damage_type": "heat"
+  },
+  {
+    "id": "mon_archvile_elec_attack",
+    "type": "SPELL",
+    "name": {
+      "str": "电子攻击"
+    },
+    "description": "PK额外核气体",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "mon_archvile_flame_burst"
+      }
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 4,
+    "max_damage": 5,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "min_range": 17,
+    "max_range": 17,
+    "field_id": "fd_nuke_gas",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1,
+    "damage_type": "electric"
+  }
+]

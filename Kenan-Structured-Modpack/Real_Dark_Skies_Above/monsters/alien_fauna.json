@@ -1,0 +1,407 @@
+[
+  {
+    "id": "dkz_mon_lurker_sewer",
+    "type": "MONSTER",
+    "name": {
+      "str": "下水道潜伏者"
+    },
+    "description": "一个湿淋淋的怪物，蛇型的身躯和一团扭动着的触手长在一张咬人的血盆大口上，它似乎在垃圾和污水中找到了自己的家。它是伏击型的捕食者，喜欢潜伏在浑浊的水面下，等待猎物走进足够被它长长触手捕捉到的范围之内。",
+    "default_faction": "lurker",
+    "bodytype": "spider",
+    "categories": [
+      "ALIEN"
+    ],
+    "species": [
+      "WILDALIEN"
+    ],
+    "volume": "62500 ml",
+    "weight": "81500 g",
+    "hp": 150,
+    "speed": 120,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "&",
+    "color": "green_white",
+    "aggression": 25,
+    "morale": 20,
+    "melee_skill": 6,
+    "melee_dice": 4,
+    "melee_dice_sides": 5,
+    "dodge": 4,
+    "armor": { "bash": 6, "cut": 2 },
+    "harvest": "zombie_leather",
+    "special_attacks": [
+      { "id": "ranged_pull", "cooldown": 10 },
+      { "id": "grab_drag", "cooldown": 3 },
+      {
+        "type": "bite",
+        "infection_chance": 50,
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 10,
+            "armor_multiplier": 0.8
+          }
+        ],
+        "cooldown": 10
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE",
+      "SWIMS",
+      "AQUATIC",
+      "POISON",
+      "HARDTOSHOOT"
+    ]
+  },
+  {
+    "id": "dkz_mon_lurker",
+    "type": "MONSTER",
+    "name": {
+      "str": "沼泽潜伏者"
+    },
+    "description": "一个长长的，蜿蜒的身体，黑暗而浑浊，就像它所居住的水域。卷须尾随其后，在咬牙切齿的中央口腔中形成无数的牙齿。它喜欢潜伏在水面下，漂流着，就像一块不起眼的垃圾，直到有东西离它太近。",
+    "looks_like": "dkz_mon_lurker_sewer",
+    "default_faction": "lurker",
+    "bodytype": "spider",
+    "categories": [
+      "ALIEN"
+    ],
+    "species": [
+      "WILDALIEN"
+    ],
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "hp": 250,
+    "speed": 90,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "&",
+    "color": "light_blue_white",
+    "aggression": 10,
+    "morale": 100,
+    "melee_skill": 7,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "armor": { "bash": 12, "cut": 18 },
+    "harvest": "zombie_leather",
+    "special_attacks": [
+      { "id": "grab_drag", "cooldown": 3 },
+      {
+        "type": "bite",
+        "damage_max_instance": [
+          {
+            "damage_type": "stab",
+            "amount": 12,
+            "armor_multiplier": 0.7
+          },
+          {
+            "damage_type": "bash",
+            "amount": 9,
+            "armor_multiplier": 0.7
+          }
+        ],
+        "effects": [
+          {
+            "id": "grabbed",
+            "duration": 1000,
+            "bp": "torso"
+          }
+        ],
+        "cooldown": 10
+      }
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE",
+      "SWIMS",
+      "AQUATIC",
+      "POISON"
+    ]
+  },
+  {
+    "id": "dkz_mon_mossliz",
+    "type": "MONSTER",
+    "name": "蜥蜴苔藓牛",
+    "description": "一种母牛大小的爬行动物，体表覆盖着一层厚厚的苔藓植物和岩石。它用结实的腿在这片土地上跋涉，用细小而锋利的牙齿觅食它能接触到的任何植物。它对你的存在好像不太介意。",
+    "default_faction": "packliz",
+    "bodytype": "gator",
+    "categories": [
+      "ALIEN"
+    ],
+    "species": [
+      "WILDALIEN"
+    ],
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "hp": 150,
+    "speed": 80,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "L",
+    "color": "green",
+    "aggression": -15,
+    "morale": 20,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 4,
+    "melee_damage": [ { "damage_type": "cut", "amount": 12 } ],
+    "dodge": 1,
+    "armor": { "bash": 3, "cut": 4 },
+    "vision_night": 35,
+    "harvest": "mutant_animal_large_noskin",
+    "path_settings": {
+      "max_dist": 5
+    },
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 6
+      },
+      [
+        "EAT_FOOD",
+        40
+      ]
+    ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "petfood": {
+      "food": [
+        "CATTLEFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER",
+      "ANIMAL",
+      "PET_WONT_FOLLOW",
+      "PET_MOUNTABLE"
+    ]
+  },
+  {
+    "id": "dkz_mon_packliz",
+    "type": "MONSTER",
+    "name": "蜥蜴蓝犬",
+    "description": "一种体型和一只大狗差不多大的瘦小的爬行动物，头上长着浓密的橘蓝色“羽毛”一般的鬃毛。蕨叶状的突触从头长到尾，当它和族群里的其他成员一同出现时，上面会发出微弱的光。",
+    "default_faction": "packliz",
+    "bodytype": "gator",
+    "categories": [
+      "ALIEN"
+    ],
+    "species": [
+      "WILDALIEN"
+    ],
+    "volume": "52500 ml",
+    "weight": "63525 g",
+    "hp": 100,
+    "speed": 110,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "L",
+    "aggression": 25,
+    "morale": 70,
+    "color": "light_blue",
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_damage": [ { "damage_type": "cut", "amount": 5 } ],
+    "dodge": 2,
+    "armor": { "bash": 4, "cut": 2 },
+    "vision_day": 40,
+    "vision_night": 30,
+    "harvest": "mutant_animal_large_noskin",
+    "path_settings": {
+      "max_dist": 10
+    },
+    "special_attacks": [
+      [
+        "scratch",
+        10
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "EAT_FOOD",
+        20
+      ]
+    ],
+    "anger_triggers": [
+      "PLAYER_CLOSE",
+      "FRIEND_ATTACKED",
+      "HURT"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "WARM",
+      "SWARMS",
+      "PATH_AVOID_DANGER",
+      "GROUP_MORALE",
+      "ANIMAL",
+      "ATTACKMON",
+      "SWIMS",
+      "PET_WONT_FOLLOW"
+    ]
+  },
+  {
+    "id": "dkz_mon_wisp",
+    "type": "MONSTER",
+    "name": {
+      "str_sp": "发光虫"
+    },
+    "description": "一种拳头大小的生物，看起来像一条覆盖着发光斑纹的漂浮的蛞蝓，能够通过其翼状的突膜和分泌白雾来进行有限的飞行。它们常常一群群漂浮在枯叶、腐烂的水果和其他东西附近。它带着好奇心看着你，偶尔闪烁一下它的斑纹，好像在和同伴交流。",
+    "bodytype": "blob",
+    "default_faction": "alien_herbivore",
+    "categories": [
+      "ALIEN"
+    ],
+    "species": [
+      "WILDALIEN"
+    ],
+    "volume": "650 ml",
+    "weight": "715 g",
+    "hp": 4,
+    "speed": 25,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "o",
+    "color": "cyan",
+    "luminance": 5,
+    "aggression": -99,
+    "morale": 0,
+    "dodge": 4,
+    "fear_triggers": [
+      "SOUND",
+      "FIRE",
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT"
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "petfood": {
+      "food": [
+        "CATFOOD"
+      ],
+      "feed": "The %s seems to like you! It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wiggles around while you pat their head."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "KEENNOSE",
+      "ANIMAL",
+      "PATH_AVOID_DANGER",
+      "FLIES",
+      "SWARMS",
+      "PET_WONT_FOLLOW"
+    ]
+  },
+  {
+    "id": "dkz_mon_bileworm",
+    "type": "MONSTER",
+    "name": {
+      "str": "胆汁蠕虫"
+    },
+    "description": "一种类似蠕虫的大型生物，闻起来有死亡的味道，适合它喜欢吃腐肉和其他腐烂的有机物，尽管它可能会攻击受伤的猎物。它有能力在洞穴里和有限的陆地上行走，借助大量短触须环绕它的嘴和身体下面。",
+    "looks_like": "mon_worm",
+    "default_faction": "bileworm",
+    "bodytype": "snake",
+    "categories": [
+      "ALIEN"
+    ],
+    "species": [
+      "WILDALIEN"
+    ],
+    "volume": "92500 ml",
+    "weight": "120 kg",
+    "hp": 200,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "W",
+    "color": "light_green",
+    "aggression": -20,
+    "morale": 20,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 6,
+    "melee_damage": [
+      {
+        "damage_type": "acid",
+        "amount": 4
+      }
+    ],
+    "armor": { "bash": 2 },
+    "harvest": "mutant_meatslug",
+    "special_attacks": [
+      [
+        "ACID_BARF",
+        10
+      ]
+    ],
+    "anger_triggers": [
+      "PLAYER_WEAK"
+    ],
+    "flags": [
+      "KEENNOSE",
+      "HEARS",
+      "SMELLS",
+      "BASHES",
+      "DESTROYS",
+      "ACIDPROOF",
+      "CAN_DIG"
+    ]
+  }
+]

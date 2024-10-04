@@ -1,0 +1,36 @@
+[
+  {
+    "id": "45_speedloader6",
+    "looks_like": "38_speedloader",
+    "type": "MAGAZINE",
+    "name": {
+      "str": ".45 ACP 6发快速上弹器"
+    },
+    "description": "这个快速上弹器可容纳6发 .45 ACP子弹，并能快速装载兼容的左轮手枪。",
+    "weight": "92 g",
+    "volume": "250 ml",
+    "price": "15 USD",
+    "material": [
+      "steel"
+    ],
+    "symbol": "#",
+    "color": "light_gray",
+    "ammo_type": [
+      "45"
+    ],
+    "capacity": 6,
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "45": 6
+        }
+      }
+    ],
+    "//": "Zero max volume",
+    "flags": [
+      "SPEEDLOADER"
+    ]
+  }
+]

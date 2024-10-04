@@ -1,0 +1,141 @@
+[
+  {
+    "type": "SPELL",
+    "id": "dkz_monspell_stun",
+    "name": {
+      "str": "psi眩晕"
+    },
+    "description": "使目标眩晕几圈的攻击",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "stunned",
+    "message": "%1$s在%3$s点做手势，一股令人迷失的灵能脉冲在空中荡漾！",
+    "min_range": 3,
+    "max_range": 10,
+    "min_duration": 125,
+    "max_duration": 250,
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "dkz_monspell_panic",
+    "name": {
+      "str": "psi恐慌"
+    },
+    "description": "使目标惊慌失措几圈的攻击",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "panic",
+    "message": "%1$s在%3$s处做手势，一个引起恐惧的心灵能量脉冲在空气中荡漾！",
+    "min_range": 5,
+    "max_range": 17,
+    "min_duration": 725,
+    "max_duration": 1275,
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "dkz_monspell_halluc",
+    "name": {
+      "str": "幻觉"
+    },
+    "description": "使目标产生幻觉多次的攻击",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "visuals",
+    "message": "%1$s在%3$s处做手势，一股扭曲心灵的灵能脉冲在空中荡漾！",
+    "min_range": 5,
+    "max_range": 29,
+    "min_duration": 7500,
+    "max_duration": 15000,
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "dkz_spell_mindblast",
+    "name": {
+      "str": "psi头脑风暴"
+    },
+    "description": "用一股迷失方向的灵能冲击目标。随机效应",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "message": "",
+    "effect": "none",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 2,
+    "max_range": 10,
+    "base_casting_time": 250,
+    "extra_effects": [
+      {
+        "id": "dkz_monspell_stun"
+      },
+      {
+        "id": "dkz_monspell_panic"
+      },
+      {
+        "id": "dkz_monspell_panic"
+      },
+      {
+        "id": "dkz_monspell_halluc"
+      },
+      {
+        "id": "dkz_monspell_halluc"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "WONDER",
+      "NO_PROJECTILE"
+    ]
+  },
+  {
+    "type": "SPELL",
+    "id": "dkz_cameraflash",
+    "name": {
+      "str": "数码相机"
+    },
+    "description": "使目标失明几圈的攻击",
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "blind",
+    "message": "",
+    "min_range": 1,
+    "max_range": 1,
+    "min_duration": 625,
+    "max_duration": 875,
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_PROJECTILE"
+    ]
+  }
+]

@@ -1,0 +1,445 @@
+[
+  {
+    "abstract": "mon_dog_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "变异犬"
+    },
+    "description": "一只变异的犬科动物。",
+    "default_faction": "dog",
+    "bodytype": "dog",
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "MAMMAL"
+    ],
+    "volume": "30000 ml",
+    "weight": "30000 g",
+    "harvest": "mammal_small_fur",
+    "hp": 30,
+    "speed": 150,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "d",
+    "color": "light_gray",
+    "aggression": -10,
+    "morale": 15,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 3,
+    "dodge": 3,
+    "vision_night": 5,
+    "path_settings": {
+      "max_dist": 10
+    },
+    "biosignature": {
+      "biosig_item": "feces_dog",
+      "biosig_timer": 6
+    },
+    "anger_triggers": [
+      "HURT",
+      "FRIEND_ATTACKED",
+      "FRIEND_DIED"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "special_attacks": [
+      [
+        "EAT_FOOD",
+        100
+      ]
+    ],
+    "flags": [
+      "ANIMAL",
+      "GROUP_MORALE",
+      "HEARS",
+      "HIT_AND_RUN",
+      "KEENNOSE",
+      "PATH_AVOID_DANGER_1",
+      "SEES",
+      "SMELLS",
+      "SWARMS",
+      "WARM"
+    ]
+  },
+  {
+    "abstract": "mon_dog_mutant_pup",
+    "type": "MONSTER",
+    "copy-from": "mon_dog_mutant",
+    "name": {
+      "str": "变异幼崽"
+    },
+    "description": "一只畸形的变异幼犬。",
+    "volume": "750 ml",
+    "weight": "1000 g",
+    "hp": 8,
+    "speed": 98,
+    "aggression": -13,
+    "morale": 8,
+    "melee_skill": 2,
+    "melee_dice": 1,
+    "melee_dice_sides": 1,
+    "melee_cut": 1,
+    "dodge": 1,
+    "vision_night": 4,
+    "harvest": "mammal_tiny",
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_dog_sick_scab",
+    "copy-from": "mon_dog_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "血痂犬"
+    },
+    "description": "一只布满血痂和血迹的变异犬科动物。虽然因疾病而虚弱，但这只动物依然因其狂乱和高度侵略性而危险。",
+    "hp": 25,
+    "speed": 100,
+    "color": "brown",
+    "aggression": 35,
+    "morale": 45,
+    "dodge": 1,
+    "harvest": "animal_noskin",
+    "upgrades": {
+      "half_life": 60,
+      "into_group": "GROUP_CANINE_MUTANT"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_dog_sick_blister",
+    "copy-from": "mon_dog_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "水疱狗"
+    },
+    "description": "一只全身布满巨大水泡的变异犬。虽然因疾病而变得虚弱，但这只动物依然是疯狂和具有高度攻击性的。",
+    "hp": 50,
+    "speed": 100,
+    "color": "brown",
+    "aggression": 100,
+    "morale": 25,
+    "dodge": 1,
+    "harvest": "animal_noskin",
+    "upgrades": {
+      "half_life": 60,
+      "into_group": "GROUP_CANINE_MUTANT"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_dog_sick_pus",
+    "copy-from": "mon_dog_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "泌脓犬"
+    },
+    "description": "一只变异的犬科动物，其残破皮毛上滴下腐臭的脓液。虽然因疾病而变得虚弱，但这只动物依然是疯狂和具有高度攻击性的。",
+    "hp": 20,
+    "speed": 200,
+    "color": "brown",
+    "aggression": -20,
+    "morale": 100,
+    "dodge": 1,
+    "harvest": "animal_noskin",
+    "upgrades": {
+      "half_life": 60,
+      "into_group": "GROUP_CANINE_MUTANT"
+    },
+    "extend": {
+      "flags": [
+        "NO_BREED"
+      ]
+    }
+  },
+  {
+    "id": "mon_dog_sick_pup",
+    "copy-from": "mon_dog_mutant_pup",
+    "type": "MONSTER",
+    "name": {
+      "str": "畸形幼犬"
+    },
+    "description": "一只变异幼犬，皮毛残破，四肢畸形。",
+    "color": "green",
+    "upgrades": {
+      "age_grow": 42,
+      "into_group": "GROUP_CANINE_MUTANT"
+    }
+  },
+  {
+    "id": "mon_dog_mutant_worm",
+    "copy-from": "mon_dog_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "蠕虫犬"
+    },
+    "description": "一只长着粗尾巴的无毛长颈怪物，曾经是一只犬科动物。复眼不规则地长在它那细长的头颅上。",
+    "hp": 80,
+    "armor_bash": 4,
+    "armor_cut": 4,
+    "armor_bullet": 2,
+    "armor_stab": 2,
+    "melee_skill": 6,
+    "melee_dice": 2,
+    "melee_dice_sides": 5,
+    "melee_cut": 6,
+    "dodge": 4,
+    "speed": 200,
+    "color": "white",
+    "aggression": 50,
+    "morale": 10,
+    "vision_night": 20,
+    "reproduction": {
+      "baby_monster": "mon_dog_mutant_worm_pup",
+      "baby_count": 2,
+      "baby_timer": 270
+    },
+    "harvest": "mammal_small_leather",
+    "extend": {
+      "flags": [
+        "BILE_BLOOD"
+      ]
+    }
+  },
+  {
+    "id": "mon_dog_mutant_worm_pup",
+    "copy-from": "mon_dog_mutant_pup",
+    "type": "MONSTER",
+    "name": {
+      "str": "蠕行"
+    },
+    "description": "正在蠕动的蠕虫犬后代。多面体的眼睛不规则地长在它细长的头颅上。",
+    "color": "white",
+    "morale": 30,
+    "vision_night": 10,
+    "harvest": "mammal_small_leather",
+    "upgrades": {
+      "age_grow": 30,
+      "into": "mon_dog_mutant_worm"
+    },
+    "extend": {
+      "flags": [
+        "BILE_BLOOD"
+      ]
+    }
+  },
+  {
+    "id": "mon_dog_mutant_happy",
+    "copy-from": "mon_dog_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "笑盈犬"
+    },
+    "description": "一只遍体鳞伤的怪物，有一个异常巨大的头和许多排的毒牙，曾经是一只犬科动物。它异常宽大的嘴巴使它看起来有一直在微笑着。",
+    "hp": 60,
+    "melee_skill": 4,
+    "melee_dice": 3,
+    "melee_dice_sides": 5,
+    "melee_cut": 8,
+    "attack_effs": [
+      {
+        "id": "poison",
+        "chance": 30,
+        "duration": 25
+      }
+    ],
+    "dodge": 3,
+    "speed": 150,
+    "color": "pink",
+    "aggression": 100,
+    "morale": 50,
+    "harvest": "animal_noskin",
+    "reproduction": {
+      "baby_monster": "mon_dog_mutant_happy_pup",
+      "baby_count": 2,
+      "baby_timer": 270
+    }
+  },
+  {
+    "id": "mon_dog_mutant_happy_pup",
+    "copy-from": "mon_dog_mutant_pup",
+    "type": "MONSTER",
+    "name": {
+      "str": "笑盈幼犬"
+    },
+    "description": "叽叽喳喳的笑盈犬幼崽。它长着一口毒牙。",
+    "harvest": "animal_noskin",
+    "upgrades": {
+      "age_grow": 42,
+      "into": "mon_dog_mutant_happy"
+    },
+    "color": "pink"
+  },
+  {
+    "id": "mon_dog_mutant_digiri",
+    "copy-from": "mon_dog_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "迪吉里狗"
+    },
+    "description": "一只怪异的生物，曾经是一只犬科动物，它的头和脊椎长出了骨管，并从中发出一阵阵不属于这个世界的叹息声。它流出的蓝色油状唾液可以阻碍血液凝结。",
+    "hp": 40,
+    "melee_skill": 4,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 6,
+    "attack_effs": [
+      {
+        "id": "bleed",
+        "chance": 25,
+        "duration": 10
+      }
+    ],
+    "special_attacks": [
+      [
+        "PARROT",
+        5
+      ]
+    ],
+    "dodge": 4,
+    "speed": 150,
+    "color": "light_blue",
+    "aggression": 50,
+    "morale": 50,
+    "reproduction": {
+      "baby_monster": "mon_dog_mutant_digiri_pup",
+      "baby_count": 2,
+      "baby_timer": 270
+    }
+  },
+  {
+    "id": "mon_dog_mutant_digiri_pup",
+    "copy-from": "mon_dog_mutant_pup",
+    "type": "MONSTER",
+    "name": {
+      "str": "迪吉里犬幼崽"
+    },
+    "description": "一只迪吉里犬的后代。它的骨管还没有完全发育，它看起来几乎和一只正常的狗一样。",
+    "color": "light_blue",
+    "upgrades": {
+      "age_grow": 42,
+      "into": "mon_dog_mutant_digiri"
+    }
+  },
+  {
+    "id": "mon_dog_mutant_dire",
+    "copy-from": "mon_dog_mutant",
+    "type": "MONSTER",
+    "name": {
+      "str": "恐狼"
+    },
+    "description": "一只犬科动物变异成的野兽，体型和一只灰熊差不多。它能以惊人的速度从伤病中恢复过来。这只野兽已经无法被控制了，但其幼体也许可以驯化。",
+    "symbol": "D",
+    "color": "red",
+    "volume": "650000 ml",
+    "weight": "650000 g",
+    "hp": 300,
+    "harvest": "mammal_large_fur",
+    "armor_bash": 6,
+    "armor_cut": 2,
+    "armor_bullet": 2,
+    "melee_skill": 4,
+    "melee_dice": 4,
+    "melee_dice_sides": 8,
+    "melee_cut": 15,
+    "attack_effs": [
+      {
+        "id": "downed",
+        "chance": 10,
+        "duration": 3
+      }
+    ],
+    "dodge": 4,
+    "speed": 110,
+    "aggression": 80,
+    "morale": 100,
+    "regenerates": 1,
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT",
+      "FRIEND_DIED",
+      "PLAYER_WEAK",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "MEAT"
+    ],
+    "reproduction": {
+      "baby_monster": "mon_dog_mutant_dire_pup",
+      "baby_count": 1,
+      "baby_timer": 270
+    },
+    "delete": {
+      "flags": [
+        "HIT_AND_RUN"
+      ]
+    },
+    "extend": {
+      "flags": [
+        "FUR",
+        "PET_MOUNTABLE"
+      ]
+    }
+  },
+  {
+    "id": "mon_dog_mutant_dire_pup",
+    "copy-from": "mon_dog_mutant_pup",
+    "type": "MONSTER",
+    "name": {
+      "str": "恐狼幼崽"
+    },
+    "description": "恐狼的后代，已经长到正常狼那么大了。它看起来几乎和家犬一样聪明友好。",
+    "color": "light_red",
+    "volume": "26625 ml",
+    "weight": "26625 g",
+    "hp": 40,
+    "speed": 165,
+    "material": [
+      "flesh"
+    ],
+    "symbol": "w",
+    "morale": 20,
+    "melee_skill": 7,
+    "melee_dice": 2,
+    "melee_dice_sides": 3,
+    "melee_cut": 4,
+    "dodge": 4,
+    "armor_bash": 1,
+    "vision_night": 5,
+    "harvest": "mammal_fur",
+    "regenerates": 1,
+    "upgrades": {
+      "age_grow": 60,
+      "into": "mon_dog_mutant_dire"
+    },
+    "petfood": {
+      "food": [
+        "DOGFOOD"
+      ],
+      "feed": "The %s seems to like you!  It lets you pat its head and seems friendly.",
+      "pet": "The %s happily wags its tail while you pat their head."
+    },
+    "extend": {
+      "flags": [
+        "FUR",
+        "CANPLAY"
+      ]
+    }
+  }
+]

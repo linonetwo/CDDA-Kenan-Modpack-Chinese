@@ -1,0 +1,158 @@
+[
+  {
+    "id": "railaccelerator",
+    "type": "GUN",
+    "looks_like": "heavy_rail_rifle",
+    "name": {
+      "str": "S-01钢轨加速器mk2"
+    },
+    "description": "一个粗糙的，巨大的科技废料大块坐在什么似乎是一个小口径机枪的框架和扩大接收器的大口径机枪，以及无数的皮卡汀尼铁路和零碎和其他武器，现在无法识别，加强了高温合金和陶瓷覆盖压电电容器的残骸。这种武器以超致命的速度发射轨道，撞击时会粉碎。在刀刃附近刻着“带着爱，施昂”的字样，还有一个小小的雕刻品，上面刻着一个人的尖耳脑袋，得意地咧嘴一笑，举着胜利的标志。",
+    "weight": "20 kg",
+    "volume": "5250 ml",
+    "longest_side": "1230 mm",
+    "price": "780 USD",
+    "to_hit": -3,
+    "bashing": 16,
+    "cutting": 21,
+    "material": [
+      "steel",
+      "superalloy",
+      "ceramic"
+    ],
+    "symbol": "(",
+    "color": "magenta",
+    "ammo": [
+      "metal_rail"
+    ],
+    "skill": "rifle",
+    "range": 45,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 50,
+      "armor_penetration": 115
+    },
+    "barrel_volume": "1500 ml",
+    "sight_dispersion": 180,
+    "dispersion": 105,
+    "durability": 6,
+    "ups_charges": 750,
+    "loudness": 64,
+    "recoil": 3000,
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "s01ra_mag"
+        ]
+      }
+    ],
+    "built_in_mods": [
+      "ceramic_blade_s01",
+      "cushioned_handle_s01",
+      "accelerator_barrel_s01"
+    ],
+    "valid_mod_locations": [
+      [
+        "accessories",
+        4
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        3
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "barrel",
+        1
+      ],
+      [
+        "battery",
+        2
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "well",
+        1
+      ]
+    ],
+    "ammo_effects": [
+      "TRAIL",
+      "WIDE"
+    ]
+  },
+  {
+    "id": "ptrs41",
+    "type": "GUN",
+    "name": {
+      "str": "PTRS-41 反坦克步枪"
+    },
+    "looks_like": "ar15",
+    "copy-from": "rifle_base",
+    "symbol": "(",
+    "color": "dark_gray",
+    "description": "PTRS-41是苏联在二战期间生产和使用的一种半自动反坦克步枪。它发射威力强大的14.5x114mm弹药，但在灾难发生后要找到这些弹药可能是一项艰巨的任务。",
+    "price": "1890 USD",
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "weight": "20300 g",
+    "volume": "3500 ml",
+    "longest_side": "2108 mm",
+    "to_hit": -1,
+    "bashing": 10,
+    "ammo": [
+      "145x114mm"
+    ],
+    "range": 45,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -3
+    },
+    "dispersion": 95,
+    "durability": 7,
+    "barrel_volume": "1250 ml",
+    "default_mods": [
+      "bipod",
+      "muzzle_brake"
+    ],
+    "pocket_data": [
+      {
+        "magazine_well": "250 ml",
+        "pocket_type": "MAGAZINE_WELL",
+        "holster": true,
+        "max_contains_volume": "20 L",
+        "max_contains_weight": "20 kg",
+        "item_restriction": [
+          "145x114mm_mag"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "dog_whistle_prim",
+    "type": "TOOL",
+    "name": {
+      "str": "狗哨"
+    },
+    "description": "一只小木哨，吹它的时候会产生一种高频的声波，附近所有非敌对状态的狗狗都会向你靠拢并为你而战。",
+    "weight": "22 g",
+    "volume": "3 ml",
+    "price": "10 USD",
+    "material": [
+      "wood"
+    ],
+    "symbol": ";",
+    "color": "yellow",
+    "use_action": "DOG_WHISTLE"
+  },
+  {
+    "type": "recipe",
+    "result": "dog_whistle_prim",
+    "category": "CC_OTHER",
+    "subcategory": "CSC_OTHER_CONTAINERS",
+    "skill_used": "fabrication",
+    "difficulty": 3,
+    "skills_required": [
+      "survival",
+      4
+    ],
+    "time": 20000,
+    "autolearn": true,
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "components": [
+      [
+        [
+          "stick",
+          2
+        ]
+      ]
+    ]
+  }
+]

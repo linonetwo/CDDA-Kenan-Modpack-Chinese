@@ -1,0 +1,26 @@
+[
+  {
+    "type": "mutation",
+    "id": "DEBUG_REGENERATION",
+    "name": {
+      "str": "调试再生能力"
+    },
+    "points": 0,
+    "description": "你的身体有着开挂般的再生速度。",
+    "healing_awake": 1000000,
+    "healing_resting": 1000000
+  },
+  {
+    "type": "mutation",
+    "id": "DEBUG_TOUGHNESS",
+    "name": {
+      "str": "调试韧性"
+    },
+    "points": 0,
+    "description": "你的身体可以承受开挂般的伤害。",
+    "types": [
+      "HEALING"
+    ],
+    "hp_modifier_secondary": 1000
+  }
+]

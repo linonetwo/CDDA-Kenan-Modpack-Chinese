@@ -1,0 +1,170 @@
+[
+  {
+    "type": "mutation",
+    "id": "hypostasis",
+    "name": {
+      "str": "血液坠积"
+    },
+    "points": -1,
+    "description": "你的身体一直在努力跟上你的生理节奏，但不断变差。你常常觉得自己不够完美;这需要补救。",
+    "starting_trait": true,
+    "category": [
+      "ALPHA",
+      "MEDICAL"
+    ],
+    "changes_to": [
+      "growpangs"
+    ],
+    "healing_awake": -0.001,
+    "healing_resting": -0.15,
+    "fatigue_modifier": 0.01,
+    "stamina_regen_modifier": -0.04
+  },
+  {
+    "type": "mutation",
+    "id": "growpangs",
+    "name": {
+      "str": "成长的痛苦"
+    },
+    "points": -2,
+    "description": "完美的塑造正在成为一种成功，尽管过去的肉体仍然存在。你身体的残留部分偶尔会在你体内产生轻微的“刺激”。这只是轻微的副作用。",
+    "category": [
+      "ALPHA",
+      "MEDICAL"
+    ],
+    "healing_awake": -0.0015,
+    "healing_resting": -0.2,
+    "fatigue_modifier": 0.025,
+    "metabolism_modifier": 0.025,
+    "thirst_modifier": 0.025,
+    "stamina_regen_modifier": -0.05
+  },
+  {
+    "type": "mutation",
+    "id": "20_15",
+    "name": {
+      "str": "20/15视力"
+    },
+    "points": 2,
+    "visibility": -1,
+    "ugliness": -1,
+    "description": "你的眼睛被评为人类的完美水平-就像你身体的其他部分一样。你的感知+1",
+    "starting_trait": true,
+    "cancels": [
+      "BIRD_EYE",
+      "LIZ_EYE",
+      "FEL_EYE",
+      "URSINE_EYE",
+      "COMPOUND_EYES",
+      "ELFAEYES",
+      "CEPH_EYES",
+      "HYPEROPIC",
+      "MYOPIC",
+      "NIGHTVISION2"
+    ],
+    "category": [
+      "ALPHA",
+      "MEDICAL"
+    ],
+    "passive_mods": {
+      "per_mod": 1
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CHEMREBALANCE",
+    "name": {
+      "str": "冥想"
+    },
+    "points": 1,
+    "description": "你的头脑是清晰的，向外的，你会发现你更容易去体验这个世界和原始的情感。你的感知得到+1.",
+    "starting_trait": true,
+    "cancels": [
+      "SAVANT",
+      "CHEMIMBALANCE"
+    ],
+    "changes_to": [
+      "CHEMREBALANCE2"
+    ],
+    "category": [
+      "ALPHA",
+      "ELFA",
+      "RAPTOR",
+      "URSINE",
+      "LIZARD"
+    ],
+    "passive_mods": {
+      "per_mod": 1
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "CHEMREBALANCE2",
+    "name": {
+      "str": "静心"
+    },
+    "points": 3,
+    "description": "你的头脑内充满了智慧和宁静。智力+1，感知+2.",
+    "cancels": [
+      "SAVANT",
+      "CHEMIMBALANCE"
+    ],
+    "category": [
+      "ELFA",
+      "URSINE"
+    ],
+    "passive_mods": {
+      "per_mod": 2,
+      "int_mod": 1
+    }
+  },
+  {
+    "type": "mutation",
+    "id": "LUNGS",
+    "name": {
+      "str": "强壮的肺"
+    },
+    "points": 2,
+    "visibility": 0,
+    "ugliness": 0,
+    "description": "你的肺结构很发达。呼吸变得更容易，让你能够更快的恢复耐力。",
+    "starting_trait": true,
+    "cancels": [
+      "GILLS",
+      "GILLS_CEPH"
+    ],
+    "changes_to": [
+      "LUNGS_2"
+    ],
+    "category": [
+      "BEAST",
+      "LUPINE",
+      "FELINE",
+      "ALPHA",
+      "CHIMERA",
+      "BIRD"
+    ],
+    "stamina_regen_modifier": 0.15
+  },
+  {
+    "type": "mutation",
+    "id": "LUNGS_2",
+    "name": {
+      "str": "强健的肺"
+    },
+    "points": 3,
+    "visibility": 0,
+    "ugliness": 0,
+    "description": "你的肺部极其强壮，尽情咆哮吧！战斗变得更加轻松。",
+    "cancels": [
+      "GILLS",
+      "GILLS_CEPH"
+    ],
+    "category": [
+      "BEAST",
+      "FELINE",
+      "CHIMERA"
+    ],
+    "stamina_regen_modifier": 0.25
+  }
+]

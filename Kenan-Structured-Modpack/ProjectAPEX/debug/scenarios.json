@@ -1,0 +1,25 @@
+[
+  {
+    "type": "scenario",
+    "id": "apex_debug_evac",
+    "name": "APEX调试场景",
+    "points": 0,
+    "description": "你在大灾变的初次冲击中幸存了下来。现在你滞留在一个貌似相对安全的官方疏散点。先去找点东西吃吧。",
+    "allowed_locs": [
+      "sloc_shelter_a",
+      "sloc_shelter_b",
+      "sloc_shelter_c"
+    ],
+    "start_name": "紧急避难所",
+    "professions": [
+      "apex_debug_mk0",
+      "apex_debug_mki",
+      "apex_debug_mkii",
+      "apex_debug_mkiii"
+    ],
+    "flags": [
+      "CITY_START",
+      "LONE_START"
+    ]
+  }
+]

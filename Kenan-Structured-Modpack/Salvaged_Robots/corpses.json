@@ -1,0 +1,769 @@
+[
+  {
+    "type": "GENERIC",
+    "id": "broken_autoarmor_light",
+    "symbol": ",",
+    "color": "light_gray",
+    "looks_like": "power_armor_light",
+    "name": {
+      "str": "自动化轻型动力装甲（损坏）"
+    },
+    "category": "other",
+    "description": "一套损坏的安装了AI核心，能够自主行动的动力装甲。它无法被你装备或拆解，但是可以改装再利用。",
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
+    "weight": "9310 g",
+    "volume": "55 L",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_autoarmor_basic",
+    "copy-from": "broken_autoarmor_light",
+    "looks_like": "power_armor_basic",
+    "name": {
+      "str": "自动化基础动力装甲（损坏）"
+    },
+    "description": "一套损坏的安装了AI核心，能够自主行动的动力装甲。它无法被你装备或拆解，但是可以改装再利用。",
+    "weight": "28010 g",
+    "volume": "75 L",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_autoarmor_heavy",
+    "copy-from": "broken_autoarmor_light",
+    "name": {
+      "str": "自动化重型动力装甲（损坏）"
+    },
+    "category": "other",
+    "looks_like": "power_armor_heavy",
+    "description": "一套损坏的安装了AI核心，能够自主行动的动力装甲。它无法被你装备或拆解，但是可以改装再利用。",
+    "weight": "30650 g",
+    "volume": "87500 ml",
+    "flags": [
+      "TRADER_AVOID"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_craftbuddy",
+    "symbol": ",",
+    "color": "light_gray",
+    "looks_like": "broken_tribot",
+    "name": {
+      "str": "制造小帮手（损坏）",
+      "str_pl": "制造小帮手（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的制造小帮手。现在安静的散在地上无法移动了。可以拆解得到部件或者改装再利用。",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_light_hack",
+    "copy-from": "broken_hack_base",
+    "color": "white",
+    "name": {
+      "str": "浮灯无人机（损坏）"
+    },
+    "description": "一个损坏的浮灯无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": 4700
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_arson_hack",
+    "copy-from": "broken_hack_base",
+    "color": "white",
+    "name": {
+      "str": "浮灯无人机（损坏）"
+    },
+    "description": "一个损坏的放火无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": 4700
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_distract_hack",
+    "copy-from": "broken_hack_base",
+    "color": "white",
+    "name": {
+      "str": "浮灯无人机（损坏）"
+    },
+    "description": "一个损坏的吵吵无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": 4700
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_spore_hack",
+    "copy-from": "broken_hack_base",
+    "color": "dark_gray",
+    "name": {
+      "str": "孢子机器人（损坏）"
+    },
+    "description": "一个损坏的孢子无人机。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "weight": 4700
+  },
+  {
+    "id": "broken_turret_water",
+    "type": "GENERIC",
+    "copy-from": "broken_turret_base",
+    "color": "light_blue",
+    "name": {
+      "str": "水炮炮塔（损坏）"
+    },
+    "description": "一个损坏的水炮炮塔。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_eyebot_heater",
+    "copy-from": "broken_eyebot",
+    "color": "pink",
+    "name": {
+      "str": "浮空加热器（损坏）"
+    },
+    "description": "一个损坏的浮空加热器。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_eyebot_furnace",
+    "copy-from": "broken_eyebot",
+    "color": "red",
+    "name": {
+      "str": "浮空壁炉（损坏）"
+    },
+    "description": "一个损坏的悬浮炉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_eyebot_burn",
+    "copy-from": "broken_eyebot",
+    "color": "red",
+    "name": {
+      "str": "机械燃烧之眼（损坏）"
+    },
+    "description": "一个损坏的机械燃烧之眼。现在安静的散在地上构不成威胁了。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_utilibot_butler",
+    "copy-from": "broken_utilibot",
+    "color": "dark_gray",
+    "name": {
+      "str": "管家机器人（损坏）"
+    },
+    "description": "一个损坏的管家机器人。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_utilibot_const",
+    "copy-from": "broken_utilibot",
+    "color": "dark_gray",
+    "name": {
+      "str": "建筑机器人（损坏）"
+    },
+    "description": "一个损坏的建筑机器人。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_utilibot_fire",
+    "copy-from": "broken_utilibot",
+    "color": "yellow",
+    "name": {
+      "str": "消防机器人（损坏）"
+    },
+    "description": "一个损坏的消防机器人。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_utilibot_blob",
+    "copy-from": "broken_utilibot",
+    "color": "light_green",
+    "name": {
+      "str": "变形怪培育机（损坏）"
+    },
+    "description": "一个损坏的变形怪培育机。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_utilibot_slimespring",
+    "copy-from": "broken_utilibot",
+    "color": "light_green",
+    "name": {
+      "str": "变形怪培育器（损坏）"
+    },
+    "description": "一个损坏的变形怪培育器。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_utilibot_digester",
+    "copy-from": "broken_utilibot",
+    "color": "light_green",
+    "name": {
+      "str": "消化机器人（损坏）"
+    },
+    "description": "一个损坏的消化机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_utilibot_beehive",
+    "copy-from": "broken_utilibot",
+    "color": "yellow",
+    "name": {
+      "str": "蜂巢机器人（损坏）"
+    },
+    "description": "一个损坏的蜂巢机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_medibot",
+    "symbol": ",",
+    "color": "white",
+    "looks_like": "broken_tribot",
+    "name": {
+      "str": "医疗机器人（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的医疗机器人。现在安静的散在地上构不成威胁了。可以拆解得到部件。",
+    "price": "300 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_medibot_disarmed",
+    "name": {
+      "str": "医疗机器人（无武装）"
+    },
+    "copy-from": "broken_medibot",
+    "description": "一个损坏的医疗机器人。内置医用设备和手术装置已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_medibot_assassin",
+    "name": {
+      "str": "刺客机器人（损坏）"
+    },
+    "copy-from": "broken_medibot",
+    "color": "dark_gray",
+    "description": "一个损坏的刺客机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_medibot_elixir",
+    "copy-from": "broken_medibot",
+    "color": "light_green",
+    "name": {
+      "str": "灵药机器人（损坏）"
+    },
+    "description": "一个损坏的灵药机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_medibot_party",
+    "copy-from": "broken_medibot",
+    "color": "yellow",
+    "name": {
+      "str": "派对机器人（损坏）"
+    },
+    "description": "一个损坏的派对机器人。看样子派对结束了。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_broken_cyborg",
+    "symbol": ",",
+    "color": "light_gray",
+    "name": {
+      "str": "报废改造人（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的报废改造人。现在安静的散在地上构不成威胁了。可以拆解得到部件或者改装再利用。",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_cyborg_necro",
+    "symbol": ",",
+    "color": "light_gray",
+    "name": {
+      "str": "死灵改造人（损坏）"
+    },
+    "category": "other",
+    "description": "一个损坏的死灵改造人。现在安静的散在地上构不成威胁了。可以拆解得到部件或者改装再利用。",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_skitterbot_rat",
+    "copy-from": "broken_skitterbot",
+    "color": "light_gray",
+    "name": {
+      "str": "捕鼠机器人（损坏）"
+    },
+    "description": "一个损坏的捕鼠机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_skitterbot_grab",
+    "copy-from": "broken_skitterbot",
+    "color": "light_gray",
+    "name": {
+      "str": "擒拿机器人（损坏）"
+    },
+    "description": "一个损坏的擒拿机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_skitterbot_hunter",
+    "copy-from": "broken_skitterbot",
+    "color": "light_gray",
+    "name": {
+      "str": "灭害机器人（损坏）"
+    },
+    "description": "一个损坏的灭害机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_defbot_9mm",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "安防机器人（损坏）"
+    },
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_defbot_shot",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "防御机器人（损坏）"
+    },
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_defbot_riotcontrol",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "防暴机器人（损坏）"
+    },
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_defbot_cowboy",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "brown",
+    "name": {
+      "str": "机器废料牛仔（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_defbot_samurai",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "cyan",
+    "name": {
+      "str": "机器短路武士（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_defbot_paladin",
+    "copy-from": "broken_defbot_disarmed",
+    "color": "red",
+    "name": {
+      "str": "机器瞎搭圣骑（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_disarmed",
+    "symbol": ",",
+    "color": "green",
+    "looks_like": "broken_secubot",
+    "name": {
+      "str": "军用机器人（无武装）"
+    },
+    "category": "other",
+    "description": "一个损坏的防御机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。",
+    "price": "300 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_trainer",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "军训机器人（损坏）"
+    },
+    "description": "一个损坏的军训机器人，内置了一把彩弹枪。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_556",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "军用机器人（损坏）"
+    },
+    "description": "一个损坏的军用机器人，内置了一把5.56mm口径枪械。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_308",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "军用机器人（损坏）"
+    },
+    "description": "一个损坏的军用机器人，内置了一把7.62mm口径枪械。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_50bmg",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "军用机器人（损坏）"
+    },
+    "description": "一个损坏的军用机器人，内置了一把 .50 口径枪械。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_8x40mm",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "军用机器人（损坏）"
+    },
+    "description": "一个损坏的军用机器人，内置了一把8x40mm无壳弹枪械。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_needle",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "light_gray",
+    "name": {
+      "str": "军用机器人（损坏）"
+    },
+    "description": "一个损坏的军用机器人，内置了一把镖形弹枪械。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_40mm",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "red",
+    "name": {
+      "str": "军用机器人（损坏）"
+    },
+    "description": "一个损坏的军用机器人，内置了一把40mm榴弹发射器。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_flame",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "red",
+    "name": {
+      "str": "军用喷火机器人（损坏）"
+    },
+    "description": "一个损坏的军用机器人，内置了一把火焰喷射器。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_gaurdian",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "white",
+    "name": {
+      "str": "守护者机器人（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_deluxe",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "yellow",
+    "name": {
+      "str": "豪华机器人（损坏）"
+    },
+    "description": "一个损坏的豪华机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_protector",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "green",
+    "name": {
+      "str": "保卫者机器人（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_milbot_defender",
+    "copy-from": "broken_milbot_disarmed",
+    "color": "red",
+    "name": {
+      "str": "防卫者机器人（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_advbot_disarmed",
+    "symbol": ",",
+    "color": "white",
+    "looks_like": "broken_copbot",
+    "name": {
+      "str": "高级机器人（无武装）"
+    },
+    "category": "other",
+    "description": "一个损坏的高级机器人。内置武器已经被拆卸掉。可以拆解得到部件或者改装再利用。",
+    "price": "300 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
+    "weight": "140 kg",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 6,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_advbot_laser",
+    "copy-from": "broken_advbot_disarmed",
+    "color": "yellow",
+    "name": {
+      "str": "高级机器人（损坏）"
+    },
+    "description": "一个损坏的高级机器人，内置了一把激光武器。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_advbot_plasma",
+    "copy-from": "broken_advbot_disarmed",
+    "color": "magenta",
+    "name": {
+      "str": "高级机器人（损坏）"
+    },
+    "description": "一个损坏的高级机器人，内置了一把等离子发射器。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_advbot_rail",
+    "copy-from": "broken_advbot_disarmed",
+    "color": "magenta",
+    "name": {
+      "str": "高级机器人（损坏）"
+    },
+    "description": "一个损坏的高级机器人，内置了一把激光武器。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_advbot_lightning",
+    "copy-from": "broken_advbot_disarmed",
+    "color": "light_blue",
+    "name": {
+      "str": "高级机器人（损坏）"
+    },
+    "description": "一个损坏的高级机器人，内置了一个放电装置。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_advbot_emp",
+    "copy-from": "broken_advbot_disarmed",
+    "color": "light_blue",
+    "name": {
+      "str": "高级机器人（损坏）"
+    },
+    "description": "一个损坏的高级机器人，内置了一把EMP发射器。现在安静的散在地上构不成威胁了。可以拆解得到部件。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_advbot_glitter",
+    "copy-from": "broken_advbot_disarmed",
+    "color": "yellow",
+    "name": {
+      "str": "机器闪光女士（损坏）",
+      "str_pl": "机器闪光女士（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_advbot_bitter",
+    "copy-from": "broken_advbot_disarmed",
+    "color": "light_green",
+    "name": {
+      "str": "机器辛辣阿姨（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_chickenbot_horror",
+    "copy-from": "broken_chickenbot_disarmed",
+    "color": "red",
+    "name": {
+      "str": "机器电锯狂人（损坏）"
+    },
+    "description": "一个损坏的改装机器人，谢天谢地它可算是歇了。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_chickenbot_terror",
+    "copy-from": "broken_chickenbot_disarmed",
+    "color": "red",
+    "name": {
+      "str": "机器尖啸恐魔（损坏）"
+    },
+    "description": "一个损坏的改装机器人，谢天谢地它可算是歇了。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_chickenbot_nightmare",
+    "copy-from": "broken_chickenbot_disarmed",
+    "color": "red",
+    "name": {
+      "str": "机器钩心梦魇（损坏）"
+    },
+    "description": "一个损坏的改装机器人，谢天谢地它可算是歇了。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_tankbot_king",
+    "copy-from": "broken_tankbot_disarmed",
+    "color": "pink",
+    "name": {
+      "str": "机器铁拳国王（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_tankbot_sultan",
+    "copy-from": "broken_tankbot_disarmed",
+    "color": "magenta",
+    "name": {
+      "str": "机器核子苏丹（损坏）"
+    },
+    "description": "一个损坏的改装机器人。可以拆解得到部件或者改装再利用。"
+  },
+  {
+    "type": "GENERIC",
+    "id": "broken_molebot",
+    "symbol": ",",
+    "color": "green",
+    "name": {
+      "str": "钻掘机器人（损坏）"
+    },
+    "category": "other",
+    "description": "已损坏的钻掘机器人。没有威胁，因为它再也钻不动了。可以拆解回收部件。",
+    "price": "200 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "weight": "170200 g",
+    "volume": "62500 ml",
+    "bashing": 6,
+    "cutting": 10,
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "LEAK_DAM",
+      "RADIOACTIVE"
+    ]
+  }
+]
