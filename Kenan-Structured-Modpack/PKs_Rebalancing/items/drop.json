@@ -11,7 +11,6 @@
     "volume": "250 ml",
     "price": "0 cent",
     "to_hit": -3,
-    "bashing": 1,
     "material": [
       "veggy"
     ],
@@ -20,7 +19,10 @@
     "nutrition": 4,
     "quench": 11,
     "fun": 0,
-    "spoils_in": "168 hours"
+    "spoils_in": "168 hours",
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -58,12 +60,14 @@
     "volume": "250 ml",
     "price": "25 USD",
     "to_hit": -3,
-    "bashing": 1,
     "material": [
       "veggy"
     ],
     "symbol": "%",
-    "color": "light_green"
+    "color": "light_green",
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -76,7 +80,6 @@
     "description": "一个未清洗的巨象熊的头。它可以用一些技巧和耐心制作成一个舒适的熊骨头盔，在弹尽粮绝的时候可以试着吃下去。",
     "volume": "4500 ml",
     "to_hit": -3,
-    "bashing": 4,
     "material": [
       "flesh",
       "bone"
@@ -94,7 +97,10 @@
     },
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "id": "megabear_skull_picked",
@@ -106,7 +112,6 @@
     "weight": "3113 g",
     "volume": "4 L",
     "to_hit": -1,
-    "bashing": 7,
     "material": [
       "bone",
       "flesh"
@@ -115,7 +120,10 @@
     "color": "i_dark_gray",
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7
+    }
   },
   {
     "id": "megabear_skull_clean",
@@ -128,12 +136,14 @@
     "volume": "4 L",
     "price": "95 USD",
     "to_hit": -2,
-    "bashing": 8,
     "material": [
       "bone"
     ],
     "symbol": "c",
-    "color": "white"
+    "color": "white",
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "broken_mechaspider",
@@ -147,13 +157,15 @@
     "volume": "85 L",
     "price": "1 kUSD",
     "to_hit": -3,
-    "bashing": 4,
     "material": [
       "steel",
       "flesh"
     ],
     "symbol": "%",
-    "color": "white"
+    "color": "white",
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "id": "arachnotron_guts",
@@ -167,12 +179,14 @@
     "volume": "82 L",
     "price": "425 USD",
     "to_hit": -3,
-    "bashing": 4,
     "material": [
       "steel"
     ],
     "symbol": "%",
-    "color": "light_gray"
+    "color": "light_gray",
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "id": "spider_brain",
@@ -362,7 +376,6 @@
     "weight": "590 g",
     "volume": "500 ml",
     "price": "11 USD",
-    "bashing": 4,
     "material": [
       "glass",
       "flesh"
@@ -374,6 +387,9 @@
       "msg": "你打开了罐子，内容物暴露在空气中。",
       "container": "jar_glass_sealed",
       "type": "transform"
+    },
+    "melee_damage": {
+      "bash": 4
     }
   },
   {

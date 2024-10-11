@@ -248,7 +248,9 @@
       "max_dist": 20
     },
     "special_attacks": [
-      { "id": "grab_drag", "cooldown":10
+      {
+        "id": "grab_drag",
+        "cooldown": 10
       },
       [
         "hammer",
@@ -429,7 +431,9 @@
       "bot_manhack_missile": 16
     },
     "special_attacks": [
-      { "id": "ranged_pull", "cooldown":20
+      {
+        "id": "ranged_pull",
+        "cooldown": 20
       },
       [
         "GRENADIER",
@@ -507,7 +511,9 @@
         "slash",
         40
       ],
-      { "id": "grab", "cooldown": 40
+      {
+        "id": "grab",
+        "cooldown": 40
       },
       {
         "id": "hammer",
@@ -615,7 +621,9 @@
         "SMASH",
         40
       ],
-      { "id": "grab", "cooldown": 30
+      {
+        "id": "grab",
+        "cooldown": 30
       },
       [
         "slash",
@@ -1658,7 +1666,14 @@
     "vision_day": 20,
     "vision_night": 3,
     "special_attacks": [
-      { "type": "spell", "spell_data": { "id": "fear_paralyze" }, "monster_message": "", "cooldown":25}
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "fear_paralyze"
+        },
+        "monster_message": "",
+        "cooldown": 25
+      }
     ],
     "death_drops": "default_zombie_clothes",
     "flags": [
