@@ -46,11 +46,11 @@
         "condition": {
           "and": [
             {
-              "u_compare_var": "bbm_students",
-              "type": "flag",
-              "context": "meeting",
-              "op": "<",
-              "value": 2
+              "math": [
+                "u_flag_meeting_bbm_students",
+                "<",
+                "2"
+              ]
             },
             {
               "u_has_var": "ally_transfer_ip",
@@ -67,11 +67,11 @@
         "condition": {
           "and": [
             {
-              "u_compare_var": "fkl_students",
-              "type": "flag",
-              "context": "meeting",
-              "op": "<",
-              "value": 2
+              "math": [
+                "u_flag_meeting_fkl_students",
+                "<",
+                "2"
+              ]
             },
             {
               "u_has_var": "ally_transfer_fk",
@@ -88,11 +88,11 @@
         "condition": {
           "and": [
             {
-              "u_compare_var": "bj_students",
-              "type": "flag",
-              "context": "meeting",
-              "op": "<",
-              "value": 2
+              "math": [
+                "u_flag_meeting_bj_students",
+                "<",
+                "2"
+              ]
             },
             {
               "u_has_var": "ally_transfer_bj",
@@ -140,10 +140,10 @@
             "npc_first_topic": "TALK_npc_student_ip"
           },
           {
-            "u_adjust_var": "bbm_students",
-            "type": "flag",
-            "context": "meeting",
-            "adjustment": 1
+            "math": [
+              "u_flag_meeting_bbm_students",
+              "++"
+            ]
           }
         ]
       },
@@ -184,10 +184,10 @@
             "npc_first_topic": "TALK_npc_student_fk"
           },
           {
-            "u_adjust_var": "fkl_students",
-            "type": "flag",
-            "context": "meeting",
-            "adjustment": 1
+            "math": [
+              "u_flag_meeting_fkl_students",
+              "++"
+            ]
           }
         ]
       },
@@ -228,10 +228,10 @@
             "npc_first_topic": "TALK_npc_student_bj"
           },
           {
-            "u_adjust_var": "bj_students",
-            "type": "flag",
-            "context": "meeting",
-            "adjustment": 1
+            "math": [
+              "u_flag_meeting_bj_students",
+              "++"
+            ]
           }
         ]
       },

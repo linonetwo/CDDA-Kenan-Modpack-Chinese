@@ -139,8 +139,8 @@
   {
     "//": "TODO: see if `use_action` transfers onto copied object",
     "type": "TOOL",
-    "id": "inflatable_boat",
-    "copy-from": "inflatable_boat",
+    "id": "folded_inflatable_boat",
+    "copy-from": "folded_inflatable_boat",
     "name": {
       "str": "折叠充气船"
     },
@@ -249,9 +249,11 @@
     "material": [
       "rubber"
     ],
-    "bashing": 1,
-    "cutting": 1,
-    "to_hit": -2
+    "to_hit": -2,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 1
+    }
   },
   {
     "type": "GUN",

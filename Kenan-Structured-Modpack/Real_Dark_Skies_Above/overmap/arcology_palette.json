@@ -8,20 +8,71 @@
     "color": "dark_gray",
     "move_cost": 10,
     "coverage": 65,
-    "flags": [ "TRANSPARENT", "BASHABLE", "CONTAINER", "FLAMMABLE", "PLACE_ITEM" ],
+    "flags": [
+      "TRANSPARENT",
+      "BASHABLE",
+      "CONTAINER",
+      "FLAMMABLE",
+      "PLACE_ITEM"
+    ],
     "deconstruct": {
       "ter_set": "t_rock_floor",
       "items": [
-        { "item": "wire", "count": [ 1, 3 ] },
-        { "item": "pipe", "count": [ 1, 2 ] },
-        { "item": "chain", "prob": 40 },
-        { "item": "cu_pipe", "prob": 40 },
-        { "item": "scrap", "count": [ 1, 4 ] },
-        { "item": "hose", "count": 1 },
-        { "item": "steel_chunk", "count": [ 1, 5 ] },
-        { "item": "bearing", "charges": [ 4, 12 ] },
-        { "item": "frame", "prob": 50 },
-        { "item": "motor", "prob": 50 }
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "chain",
+          "prob": 40
+        },
+        {
+          "item": "cu_pipe",
+          "prob": 40
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "hose",
+          "count": 1
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            5
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            4,
+            12
+          ]
+        },
+        {
+          "item": "frame",
+          "prob": 50
+        },
+        {
+          "item": "motor",
+          "prob": 50
+        }
       ]
     },
     "bash": {
@@ -31,15 +82,52 @@
       "sound_fail": "ting.",
       "ter_set": "t_rock_floor",
       "items": [
-        { "item": "wire", "count": 1 },
-        { "item": "pipe", "count": 2, "prob": 40 },
-        { "item": "chain", "prob": 20 },
-        { "item": "cu_pipe", "prob": 10 },
-        { "item": "scrap", "count": [ 3, 8 ] },
-        { "item": "steel_chunk", "count": [ 1, 4 ] },
-        { "item": "bearing", "charges": [ 2, 8 ] },
-        { "item": "frame", "prob": 20 },
-        { "item": "motor", "prob": 10 }
+        {
+          "item": "wire",
+          "count": 1
+        },
+        {
+          "item": "pipe",
+          "count": 2,
+          "prob": 40
+        },
+        {
+          "item": "chain",
+          "prob": 20
+        },
+        {
+          "item": "cu_pipe",
+          "prob": 10
+        },
+        {
+          "item": "scrap",
+          "count": [
+            3,
+            8
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "frame",
+          "prob": 20
+        },
+        {
+          "item": "motor",
+          "prob": 10
+        }
       ]
     }
   },
@@ -52,23 +140,85 @@
     "color": "light_gray",
     "move_cost": 0,
     "coverage": 75,
-    "flags": [ "BASHABLE", "CONTAINER", "SEALED", "PLACE_ITEM" ],
+    "flags": [
+      "BASHABLE",
+      "CONTAINER",
+      "SEALED",
+      "PLACE_ITEM"
+    ],
     "deconstruct": {
       "ter_set": "t_rock_floor",
       "items": [
-        { "item": "wire", "count": [ 1, 3 ] },
-        { "item": "pipe", "count": [ 1, 2 ] },
-        { "item": "chain", "prob": 60 },
-        { "item": "cu_pipe", "prob": 20 },
-        { "item": "steel_lump", "count": [ 1, 2 ] },
-        { "item": "hose", "count": 1 },
-        { "item": "sheet_metal", "count": [ 1, 3 ] },
-        { "item": "steel_chunk", "count": [ 1, 3 ] },
-        { "item": "bearing", "charges": [ 4, 12 ] },
-        { "item": "frame", "prob": 60 },
-        { "item": "motor", "prob": 30 },
-        { "item": "metal_tank", "prob": 30 },
-        { "item": "motor_large", "prob": 10 }
+        {
+          "item": "wire",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "pipe",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "chain",
+          "prob": 60
+        },
+        {
+          "item": "cu_pipe",
+          "prob": 20
+        },
+        {
+          "item": "steel_lump",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "hose",
+          "count": 1
+        },
+        {
+          "item": "sheet_metal",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            4,
+            12
+          ]
+        },
+        {
+          "item": "frame",
+          "prob": 60
+        },
+        {
+          "item": "motor",
+          "prob": 30
+        },
+        {
+          "item": "metal_tank",
+          "prob": 30
+        },
+        {
+          "item": "motor_large",
+          "prob": 10
+        }
       ]
     },
     "bash": {
@@ -78,18 +228,63 @@
       "sound_fail": "ting.",
       "ter_set": "t_rock_floor",
       "items": [
-        { "item": "wire", "count": 1 },
-        { "item": "pipe", "count": 1 },
-        { "item": "chain", "prob": 20 },
-        { "item": "steel_lump", "count": 1 },
-        { "item": "scrap", "count": [ 1, 5 ] },
-        { "item": "sheet_metal", "count": 2 },
-        { "item": "steel_chunk", "count": [ 1, 2 ] },
-        { "item": "bearing", "charges": [ 2, 8 ] },
-        { "item": "frame", "prob": 30 },
-        { "item": "motor", "prob": 10 },
-        { "item": "metal_tank", "prob": 20 },
-        { "item": "motor_large", "prob": 5 }
+        {
+          "item": "wire",
+          "count": 1
+        },
+        {
+          "item": "pipe",
+          "count": 1
+        },
+        {
+          "item": "chain",
+          "prob": 20
+        },
+        {
+          "item": "steel_lump",
+          "count": 1
+        },
+        {
+          "item": "scrap",
+          "count": [
+            1,
+            5
+          ]
+        },
+        {
+          "item": "sheet_metal",
+          "count": 2
+        },
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "bearing",
+          "charges": [
+            2,
+            8
+          ]
+        },
+        {
+          "item": "frame",
+          "prob": 30
+        },
+        {
+          "item": "motor",
+          "prob": 10
+        },
+        {
+          "item": "metal_tank",
+          "prob": 20
+        },
+        {
+          "item": "motor_large",
+          "prob": 5
+        }
       ]
     }
   },
@@ -104,20 +299,84 @@
     "coverage": 50,
     "light_emitted": 10,
     "roof": "t_flat_roof",
-    "flags": [ "TRANSPARENT", "CONSOLE", "NOITEM", "INDOORS", "SHORT", "PERMEABLE" ],
+    "flags": [
+      "TRANSPARENT",
+      "CONSOLE",
+      "NOITEM",
+      "INDOORS",
+      "SHORT",
+      "PERMEABLE"
+    ],
     "deconstruct": {
       "ter_set": "t_floor",
       "items": [
-        { "item": "processor", "count": [ 1, 2 ] },
-        { "item": "RAM", "count": [ 4, 8 ] },
-        { "item": "cable", "charges": [ 4, 6 ] },
-        { "item": "large_lcd_screen", "count": 1 },
-        { "item": "e_scrap", "count": [ 10, 16 ] },
-        { "item": "circuit", "count": [ 6, 10 ] },
-        { "item": "power_supply", "count": [ 2, 4 ] },
-        { "item": "amplifier", "count": [ 2, 4 ] },
-        { "item": "plastic_chunk", "count": [ 10, 12 ] },
-        { "item": "scrap", "count": [ 6, 8 ] }
+        {
+          "item": "processor",
+          "count": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "RAM",
+          "count": [
+            4,
+            8
+          ]
+        },
+        {
+          "item": "cable",
+          "charges": [
+            4,
+            6
+          ]
+        },
+        {
+          "item": "large_lcd_screen",
+          "count": 1
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            10,
+            16
+          ]
+        },
+        {
+          "item": "circuit",
+          "count": [
+            6,
+            10
+          ]
+        },
+        {
+          "item": "power_supply",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "amplifier",
+          "count": [
+            2,
+            4
+          ]
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            10,
+            12
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            6,
+            8
+          ]
+        }
       ]
     },
     "bash": {
@@ -127,16 +386,70 @@
       "sound_fail": "whack!",
       "ter_set": "t_console_broken",
       "items": [
-        { "item": "processor", "prob": 25 },
-        { "item": "RAM", "count": [ 0, 2 ], "prob": 50 },
-        { "item": "cable", "charges": [ 1, 2 ], "prob": 50 },
-        { "item": "large_lcd_screen", "prob": 25 },
-        { "item": "e_scrap", "count": [ 1, 4 ], "prob": 50 },
-        { "item": "circuit", "count": [ 0, 2 ], "prob": 50 },
-        { "item": "power_supply", "prob": 25 },
-        { "item": "amplifier", "prob": 25 },
-        { "item": "plastic_chunk", "count": [ 4, 10 ], "prob": 50 },
-        { "item": "scrap", "count": [ 2, 6 ], "prob": 50 }
+        {
+          "item": "processor",
+          "prob": 25
+        },
+        {
+          "item": "RAM",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "cable",
+          "charges": [
+            1,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "large_lcd_screen",
+          "prob": 25
+        },
+        {
+          "item": "e_scrap",
+          "count": [
+            1,
+            4
+          ],
+          "prob": 50
+        },
+        {
+          "item": "circuit",
+          "count": [
+            0,
+            2
+          ],
+          "prob": 50
+        },
+        {
+          "item": "power_supply",
+          "prob": 25
+        },
+        {
+          "item": "amplifier",
+          "prob": 25
+        },
+        {
+          "item": "plastic_chunk",
+          "count": [
+            4,
+            10
+          ],
+          "prob": 50
+        },
+        {
+          "item": "scrap",
+          "count": [
+            2,
+            6
+          ],
+          "prob": 50
+        }
       ]
     }
   },

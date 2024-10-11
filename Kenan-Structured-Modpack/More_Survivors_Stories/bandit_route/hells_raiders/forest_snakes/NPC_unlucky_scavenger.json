@@ -42,9 +42,7 @@
             "npc_first_topic": "TALK_unlucky_scavenger1"
           },
           {
-            "u_add_var": "ask_bandit",
-            "type": "mission",
-            "context": "scavenger",
+            "u_add_var": "mission_scavenger_ask_bandit",
             "value": "yes"
           }
         ]
@@ -69,15 +67,11 @@
         "condition": {
           "or": [
             {
-              "u_has_var": "ask_bandit",
-              "type": "mission",
-              "context": "scavenger",
+              "u_has_var": "mission_scavenger_ask_bandit",
               "value": "done"
             },
             {
-              "u_has_var": "bandit_fs_leader",
-              "type": "switch",
-              "context": "alive_dead",
+              "u_has_var": "switch_alive_dead_bandit_fs_leader",
               "value": "dead"
             }
           ]
@@ -87,9 +81,7 @@
             "npc_first_topic": "TALK_unlucky_scavenger_follow"
           },
           {
-            "u_lose_var": "ask_bandit",
-            "type": "mission",
-            "context": "scavenger"
+            "u_lose_var": "mission_scavengerask_bandit"
           },
           "assign_mission"
         ]
@@ -147,9 +139,7 @@
           "npc_change_faction": "free_merchants"
         },
         {
-          "u_add_var": "unlucky_scavenger_safe",
-          "type": "flag",
-          "context": "safe",
+          "u_add_var": "flag_safe_unlucky_scavenger_safe",
           "value": "yes"
         }
       ]

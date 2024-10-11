@@ -11,7 +11,6 @@
     "volume": "3752 ml",
     "price": "20 USD",
     "to_hit": -1,
-    "bashing": 1,
     "material": [
       "wood"
     ],
@@ -25,7 +24,10 @@
         "max_contains_volume": "3750 ml",
         "max_contains_weight": "8 kg"
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "birch_funnel",
@@ -70,6 +72,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "birch_water_jug",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",
@@ -106,6 +109,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "birch_funnel",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_CONTAINERS",

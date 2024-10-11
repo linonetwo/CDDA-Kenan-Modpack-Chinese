@@ -24,8 +24,6 @@
     "weight": "6326 g",
     "volume": "6500 ml",
     "longest_side": "2500 mm",
-    "bashing": 14,
-    "cutting": 0,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -75,7 +73,11 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 0
+    }
   },
   {
     "id": "USAS_20",
@@ -92,7 +94,6 @@
     "price": "3000 USD",
     "price_postapoc": "50 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "plastic"
@@ -173,7 +174,10 @@
           "USAS2020mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "deagle_660",
@@ -190,7 +194,6 @@
     "price": "900 USD",
     "price_postapoc": "35 USD",
     "to_hit": -2,
-    "bashing": 15,
     "material": [
       "steel",
       "rubber"
@@ -266,11 +269,14 @@
           "deaglemag66"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15
+    }
   },
   {
     "id": "ar50",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 12,
     "name": {
@@ -283,7 +289,6 @@
     "price": "2900 USD",
     "price_postapoc": "90 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "plastic"
@@ -370,11 +375,14 @@
           "11stick"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "ak50",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 12,
     "name": {
@@ -387,7 +395,6 @@
     "price": "2900 USD",
     "price_postapoc": "90 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -453,7 +460,10 @@
           "50stick"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "KORD",
@@ -470,7 +480,6 @@
     "price": "28000 USD",
     "price_postapoc": "250 USD",
     "to_hit": -2,
-    "bashing": 12,
     "material": "steel",
     "ammo": [
       "50R"
@@ -543,7 +552,10 @@
           "50Rbox"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "S660R",
@@ -560,7 +572,6 @@
     "price": "1100 USD",
     "price_postapoc": "55 USD",
     "to_hit": -1,
-    "bashing": 11,
     "material": [
       "steel",
       "rubber"
@@ -618,7 +629,10 @@
         "underbarrel mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 11
+    }
   },
   {
     "id": "atgmpod",
@@ -640,7 +654,6 @@
     "volume": "20 L",
     "longest_side": "1200 mm",
     "reload_noise_volume": 12,
-    "bashing": 12,
     "to_hit": -3,
     "dispersion": 200,
     "durability": 8,
@@ -687,7 +700,10 @@
     "flags": [
       "BACKBLAST",
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "33x308_smac",
@@ -712,8 +728,6 @@
     "weight": "44800 g",
     "volume": "11250 ml",
     "longest_side": "2175 mm",
-    "bashing": 14,
-    "cutting": 0,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -793,7 +807,11 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 0
+    }
   },
   {
     "id": "33x308_shmg",
@@ -818,8 +836,6 @@
     "weight": "96 kg",
     "volume": "16250 ml",
     "longest_side": "2175 mm",
-    "bashing": 16,
-    "cutting": 0,
     "to_hit": -2,
     "ranged_damage": {
       "damage_type": "stab",
@@ -895,7 +911,11 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 0
+    }
   },
   {
     "id": "14.5x65_shmg",
@@ -920,8 +940,6 @@
     "weight": "65 kg",
     "volume": "10 L",
     "longest_side": "1760 mm",
-    "bashing": 16,
-    "cutting": 0,
     "to_hit": -2,
     "ranged_damage": {
       "damage_type": "stab",
@@ -999,7 +1017,11 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 0
+    }
   },
   {
     "id": "14.5x65_mrc",
@@ -1024,8 +1046,6 @@
     "weight": "145 kg",
     "volume": "22500 ml",
     "longest_side": "1760 mm",
-    "bashing": 16,
-    "cutting": 0,
     "to_hit": -2,
     "ranged_damage": {
       "damage_type": "stab",
@@ -1092,7 +1112,11 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 0
+    }
   },
   {
     "id": "65x465c",
@@ -1118,8 +1142,6 @@
     "weight": "102006 g",
     "volume": "18 L",
     "longest_side": "1840 mm",
-    "bashing": 14,
-    "cutting": 0,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -1149,7 +1171,11 @@
         "grip",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 0
+    }
   },
   {
     "id": "light_railgun",
@@ -1176,8 +1202,6 @@
     "weight": "3825 g",
     "volume": "2500 ml",
     "longest_side": "1020 mm",
-    "bashing": 8,
-    "cutting": 0,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -1227,7 +1251,11 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 0
+    }
   },
   {
     "id": "gatling",
@@ -1254,8 +1282,6 @@
     "weight": "122 kg",
     "volume": "11500 ml",
     "longest_side": "1170 mm",
-    "bashing": 12,
-    "cutting": 0,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -1305,6 +1331,10 @@
         "sights",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12,
+      "cut": 0
+    }
   }
 ]

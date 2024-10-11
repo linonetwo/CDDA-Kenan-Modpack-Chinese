@@ -276,9 +276,7 @@
     "dynamic_line": "*放声大笑，更像是野兽在攻击前的咆哮。”你一点也不怕问我这个。就这样吧，我会满足你的要求。从我的女人中选一个去。”",
     "speaker_effect": {
       "effect": {
-        "u_add_var": "hh_reward_chick",
-        "type": "generic",
-        "context": "reward",
+        "u_add_var": "generic_reward_hh_reward_chick",
         "value": "yes"
       }
     }
@@ -292,9 +290,7 @@
     "dynamic_line": "*放声大笑，更像是野兽在攻击前的咆哮。”就这样吧。你会得到适当的奖励。”",
     "speaker_effect": {
       "effect": {
-        "u_add_var": "hh_reward_merchant",
-        "type": "generic",
-        "context": "reward",
+        "u_add_var": "generic_reward_hh_reward_merchant",
         "value": "yes"
       }
     }
@@ -374,9 +370,7 @@
       {
         "text": "关于你的任务…",
         "condition": {
-          "npc_has_var": "wait_kill",
-          "type": "flag",
-          "context": "unmarked_mission",
+          "npc_has_var": "flag_unmarked_mission_wait_kill",
           "value": "yes"
         },
         "topic": "TALK_hell_hound_kill_ask"
@@ -386,16 +380,12 @@
         "condition": {
           "and": [
             {
-              "u_has_var": "fs_leader_mission_khh",
-              "type": "count",
-              "context": "unmarked_mission_progress",
+              "u_has_var": "count_unmarked_mission_progress_fs_leader_mission_khh",
               "value": "4"
             },
             {
               "not": {
-                "npc_has_var": "wait_kill",
-                "type": "flag",
-                "context": "unmarked_mission",
+                "npc_has_var": "flag_unmarked_mission_wait_kill",
                 "value": "yes"
               }
             }
@@ -437,9 +427,7 @@
         "trial": {
           "type": "CONDITION",
           "condition": {
-            "u_has_var": "rc_basement",
-            "type": "flag",
-            "context": "basement_cleaned",
+            "u_has_var": "flag_basement_cleaned_rc_basement",
             "value": "yes"
           }
         },
@@ -479,9 +467,7 @@
       {
         "text": "他死了。",
         "condition": {
-          "npc_has_var": "bandit_fs_leader",
-          "type": "switch",
-          "context": "alive_dead",
+          "npc_has_var": "switch_alive_dead_bandit_fs_leader",
           "value": "dead"
         },
         "topic": "TALK_hell_hound_kill_done"
@@ -503,9 +489,7 @@
         "text": "我会考虑的。",
         "effect": [
           {
-            "npc_add_var": "wait_kill",
-            "type": "flag",
-            "context": "unmarked_mission",
+            "npc_add_var": "flag_unmarked_mission_wait_kill",
             "value": "yes"
           }
         ],
@@ -535,9 +519,7 @@
     "speaker_effect": {
       "effect": [
         {
-          "u_add_var": "fs_leader_mission_khh",
-          "type": "count",
-          "context": "unmarked_mission_progress",
+          "u_add_var": "count_unmarked_mission_progress_fs_leader_mission_khh",
           "value": "5"
         },
         {
@@ -648,15 +630,11 @@
     "start": {
       "effect": [
         {
-          "u_add_var": "hell_hound",
-          "type": "switch",
-          "context": "alive_dead",
+          "u_add_var": "switch_alive_dead_hell_hound",
           "value": "alive"
         },
         {
-          "u_add_var": "met_hell_hound",
-          "type": "flag",
-          "context": "meeting",
+          "u_add_var": "flag_meeting_met_hell_hound",
           "value": "yes"
         }
       ]
@@ -664,14 +642,10 @@
     "fail": {
       "effect": [
         {
-          "u_lose_var": "met_hell_hound",
-          "type": "flag",
-          "context": "meeting"
+          "u_lose_var": "flag_meeting_met_hell_hound"
         },
         {
-          "u_add_var": "hell_hound",
-          "type": "switch",
-          "context": "alive_dead",
+          "u_add_var": "switch_alive_dead_hell_hound",
           "value": "dead"
         }
       ]

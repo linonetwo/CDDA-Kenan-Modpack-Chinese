@@ -27,15 +27,17 @@
     ],
     "volume": "1000 ml",
     "longest_side": "100 cm",
-    "bashing": 65,
-    "cutting": 12,
     "price": "1100 USD",
     "qualities": [
       [
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 65,
+      "cut": 12
+    }
   },
   {
     "type": "GENERIC",
@@ -66,8 +68,6 @@
     ],
     "volume": "1500 ml",
     "longest_side": "170 cm",
-    "bashing": 45,
-    "cutting": 45,
     "price": "1300 USD",
     "qualities": [
       [
@@ -78,7 +78,11 @@
         "BUTCHER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 45,
+      "cut": 45
+    }
   },
   {
     "type": "GENERIC",
@@ -106,15 +110,17 @@
     ],
     "volume": "2500 ml",
     "longest_side": "80 cm",
-    "bashing": 63,
-    "cutting": 4,
     "price": "1000 USD",
     "qualities": [
       [
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 63,
+      "cut": 4
+    }
   },
   {
     "type": "GENERIC",
@@ -133,8 +139,6 @@
     "volume": "500 ml",
     "longest_side": "10 cm",
     "weight": "890 g",
-    "bashing": 15,
-    "cutting": 1,
     "price_postapoc": 500,
     "flags": [
       "UNARMED_WEAPON",
@@ -149,6 +153,10 @@
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15,
+      "cut": 1
+    }
   }
 ]

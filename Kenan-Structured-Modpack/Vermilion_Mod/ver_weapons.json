@@ -11,7 +11,6 @@
     "volume": "2250 ml",
     "price": "5000 USD",
     "to_hit": 1,
-    "cutting": 65,
     "material": [
       "superalloy",
       "steel"
@@ -35,7 +34,10 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "cut": 65
+    }
   },
   {
     "type": "TOOL",
@@ -70,7 +72,6 @@
       "SWEEP"
     ],
     "volume": "4250 ml",
-    "bashing": 40,
     "price": "190 USD",
     "to_hit": -4,
     "use_action": {
@@ -86,7 +87,10 @@
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 40
+    }
   },
   {
     "id": "jet_hammer_on",
@@ -99,7 +103,6 @@
     "volume": "4250 ml",
     "price": "190 USD",
     "to_hit": -3,
-    "bashing": 70,
     "material": [
       "steel"
     ],
@@ -142,7 +145,10 @@
       "MESSY",
       "TRADER_AVOID",
       "POWERED"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 70
+    }
   },
   {
     "type": "GENERIC",
@@ -155,8 +161,6 @@
     "volume": "4250 ml",
     "price": "5500 USD",
     "to_hit": 1,
-    "bashing": 10,
-    "cutting": 55,
     "material": [
       "steel",
       "superalloy"
@@ -190,6 +194,10 @@
       "type": "transform",
       "msg": "收割机知道你的名字！",
       "target": "absolute_sniper"
+    },
+    "melee_damage": {
+      "bash": 10,
+      "cut": 55
     }
   },
   {
@@ -210,7 +218,6 @@
     "weight": "4820 g",
     "volume": "4250 ml",
     "to_hit": -1,
-    "bashing": 10,
     "ammo": [
       "50"
     ],
@@ -260,6 +267,9 @@
       "type": "transform",
       "msg": "收割机来了，罪人！",
       "target": "absolute_reaper"
+    },
+    "melee_damage": {
+      "bash": 10
     }
   }
 ]

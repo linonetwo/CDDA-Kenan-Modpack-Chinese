@@ -23,7 +23,6 @@
     "weight": "3900 g",
     "volume": "2 L",
     "longest_side": "1225 mm",
-    "bashing": 12,
     "to_hit": -1,
     "dispersion": 75,
     "durability": 9,
@@ -116,7 +115,10 @@
           "akdrum75"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "svs-24c",
@@ -233,7 +235,6 @@
     "weight": "3900 g",
     "volume": "2 L",
     "longest_side": "1225 mm",
-    "bashing": 12,
     "to_hit": -1,
     "dispersion": 75,
     "durability": 9,
@@ -313,7 +314,10 @@
           "akdrum75"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "cw-24m",
@@ -499,7 +503,6 @@
     ],
     "weight": "4300 g",
     "volume": "2750 ml",
-    "bashing": 12,
     "to_hit": -1,
     "dispersion": 75,
     "durability": 9,
@@ -570,7 +573,10 @@
           "cwd_63bigmag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "wrist_dread",
@@ -594,7 +600,6 @@
     "weight": "1 kg",
     "volume": "1 L",
     "longest_side": "150 mm",
-    "bashing": 8,
     "to_hit": -1,
     "dispersion": 150,
     "sight_dispersion": 150,
@@ -642,6 +647,9 @@
     ],
     "flags": [
       "NON-FOULING"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   }
 ]

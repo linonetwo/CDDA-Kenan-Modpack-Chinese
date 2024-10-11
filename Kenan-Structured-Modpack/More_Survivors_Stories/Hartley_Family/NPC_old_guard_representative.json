@@ -7,9 +7,7 @@
         "text": "你认识一个叫巴雷特·哈特利的人吗？",
         "topic": "TALK_OLD_GUARD_REP_BH",
         "condition": {
-          "u_has_var": "Barrett_Hartley_mission_end",
-          "type": "flag",
-          "context": "mission",
+          "u_has_var": "flag_mission_Barrett_Hartley_mission_end",
           "value": "yes"
         }
       }
@@ -36,9 +34,7 @@
     "dynamic_line": "*仔细听着，然后说：“是啊，结果不太好。第二个会因为胆小而受到惩罚。如果他还活着…好吧，你完成了任务，这是有奖励的。你可以自己拿。”",
     "speaker_effect": {
       "effect": {
-        "u_add_var": "Barrett_Hartley_mission_end",
-        "type": "flag",
-        "context": "mission",
+        "u_add_var": "flag:mission_Barrett_Hartley_mission_end",
         "value": "done"
       }
     },

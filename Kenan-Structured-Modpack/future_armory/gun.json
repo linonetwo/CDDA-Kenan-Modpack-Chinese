@@ -12,7 +12,6 @@
     "longest_side": "340 mm",
     "price": "3000 USD",
     "to_hit": -2,
-    "bashing": 10,
     "material": [
       "budget_steel"
     ],
@@ -46,7 +45,10 @@
           "50": 5
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "v85",
@@ -61,7 +63,6 @@
     "longest_side": "1020 mm",
     "price": "5000 USD",
     "to_hit": -4,
-    "bashing": 14,
     "material": [
       "budget_steel"
     ],
@@ -95,7 +96,10 @@
           "v85mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "id": "eliminator",
@@ -110,7 +114,6 @@
     "longest_side": "1170 mm",
     "price": "100000 USD",
     "to_hit": -5,
-    "bashing": 10,
     "material": [
       "steel",
       "plastic"
@@ -162,7 +165,10 @@
     "flags": [
       "NEVER_JAMS",
       "NO_UNLOAD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "va989",
@@ -177,7 +183,6 @@
     "longest_side": "1020 mm",
     "price": "25000 USD",
     "to_hit": -2,
-    "bashing": 10,
     "material": [
       "steel",
       "plastic"
@@ -240,7 +245,10 @@
     "flags": [
       "NEVER_JAMS",
       "NO_UNLOAD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "xs3",
@@ -254,7 +262,6 @@
     "longest_side": "200 mm",
     "price": "17500 USD",
     "to_hit": -1,
-    "bashing": 9,
     "material": [
       "steel"
     ],
@@ -299,7 +306,10 @@
           "xs3mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9
+    }
   },
   {
     "id": "anzio20mm",
@@ -313,7 +323,6 @@
     "longest_side": "1230 mm",
     "price": "45000 USD",
     "to_hit": -5,
-    "bashing": 15,
     "material": [
       "steel"
     ],
@@ -350,7 +359,10 @@
           "anziomag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15
+    }
   },
   {
     "id": "pancor_jack",
@@ -364,7 +376,6 @@
     "longest_side": "787 mm",
     "price": "100000 USD",
     "to_hit": -5,
-    "bashing": 15,
     "material": [
       "steel"
     ],
@@ -396,7 +407,10 @@
           "pancormag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15
+    }
   },
   {
     "id": "armgun",
@@ -410,7 +424,6 @@
     "longest_side": "200 mm",
     "price": "5000 USD",
     "to_hit": 1,
-    "bashing": 15,
     "material": [
       "steel"
     ],
@@ -458,6 +471,9 @@
           ]
         }
       ]
+    },
+    "melee_damage": {
+      "bash": 15
     }
   },
   {
@@ -472,7 +488,6 @@
     "longest_side": "1230 mm",
     "price": "1793 USD",
     "to_hit": 1,
-    "bashing": 10,
     "material": [
       "wood",
       "steel"
@@ -508,7 +523,10 @@
           "vssmag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "port_cannon",
@@ -522,7 +540,6 @@
     "longest_side": "1170 mm",
     "price": "2132 USD",
     "to_hit": -3,
-    "bashing": 15,
     "material": [
       "steel"
     ],
@@ -554,7 +571,10 @@
     "reload": 100,
     "flags": [
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15
+    }
   },
   {
     "id": "win_liberator",
@@ -568,7 +588,6 @@
     "longest_side": "400 mm",
     "price": "3000 USD",
     "to_hit": -2,
-    "bashing": 10,
     "material": [
       "steel"
     ],
@@ -601,7 +620,10 @@
     "flags": [
       "RELOAD_ONE",
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "mts255",
@@ -615,7 +637,6 @@
     "longest_side": "400 mm",
     "price": "40000 USD",
     "to_hit": -1,
-    "bashing": 15,
     "material": [
       "wood",
       "steel"
@@ -649,6 +670,9 @@
     "flags": [
       "RELOAD_ONE",
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15
+    }
   }
 ]

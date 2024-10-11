@@ -406,7 +406,6 @@
     "weight": "1800 g",
     "volume": "2750 ml",
     "to_hit": -2,
-    "bashing": 10,
     "price": "5600 USD",
     "material": [
       "plastic",
@@ -436,7 +435,10 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 6
+    "environmental_protection": 6,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "pb_traitor_suit",
@@ -510,7 +512,6 @@
     "volume": "2 L",
     "price": "70 USD",
     "to_hit": -1,
-    "bashing": 4,
     "material": [
       "kevlar",
       "leather",
@@ -536,7 +537,10 @@
       }
     ],
     "material_thickness": 4,
-    "environmental_protection": 3
+    "environmental_protection": 3,
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "id": "pb_traitor_pants",

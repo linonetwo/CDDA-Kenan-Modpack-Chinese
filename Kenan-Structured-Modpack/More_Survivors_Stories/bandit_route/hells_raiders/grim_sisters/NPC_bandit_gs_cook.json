@@ -83,9 +83,7 @@
       {
         "text": "需要帮忙么？",
         "condition": {
-          "npc_has_var": "know_taste",
-          "type": "flag",
-          "context": "open_missions",
+          "npc_has_var": "flag_open_missions_know_taste",
           "value": "yes"
         },
         "topic": "TALK_MISSION_LIST"
@@ -147,15 +145,11 @@
           "not": {
             "or": [
               {
-                "npc_has_var": "know_taste",
-                "type": "flag",
-                "context": "open_missions",
+                "npc_has_var": "flag_open_missions_know_taste",
                 "value": "yes"
               },
               {
-                "npc_has_var": "know_taste",
-                "type": "flag",
-                "context": "open_missions",
+                "npc_has_var": "flag_open_missions_know_taste",
                 "value": "no"
               }
             ]
@@ -196,7 +190,7 @@
     "type": "talk_topic",
     "id": "TALK_bandit_gs_cook_questions_cook3",
     "dynamic_line": {
-      "and": [
+      "concatenate": [
         "Then close your eyes and open your eyes.\"  at first, doubts overcame you, but the interest was so strong that you decided to obey.  You felt the touch of a small spoon on your lips and took the contents into your mouth.   ",
         {
           "u_has_trait": "CANNIBAL",
@@ -244,9 +238,7 @@
         "text": "是啊，当然了。",
         "topic": "TALK_bandit_gs_cook_questions_cook4_takesome",
         "effect": {
-          "npc_add_var": "know_taste",
-          "type": "flag",
-          "context": "open_missions",
+          "npc_add_var": "flag_open_missions_know_taste",
           "value": "no"
         }
       },
@@ -295,9 +287,7 @@
         "text": "是什么？*呕吐*",
         "topic": "TALK_bandit_gs_cook_questions_cook4_puke",
         "effect": {
-          "npc_add_var": "know_taste",
-          "type": "flag",
-          "context": "open_missions",
+          "npc_add_var": "flag_open_missions_know_taste",
           "value": "no"
         }
       }
@@ -313,9 +303,7 @@
         "topic": "TALK_bandit_gs_cook_questions_cook_done",
         "effect": [
           {
-            "npc_add_var": "want_more",
-            "type": "flag",
-            "context": "temp_var",
+            "npc_add_var": "flag_temp_var_want_more",
             "value": "yes"
           }
         ]
@@ -332,9 +320,7 @@
     "dynamic_line": "啊，听了真难过。你伤害了我的感情，<sweetie>。我以为你会喜欢的…",
     "speaker_effect": {
       "effect": {
-        "npc_add_var": "know_taste",
-        "type": "flag",
-        "context": "open_missions",
+        "npc_add_var": "flag_open_missions_know_taste",
         "value": "no"
       }
     }
@@ -361,11 +347,9 @@
     "type": "talk_topic",
     "id": "TALK_bandit_gs_cook_questions_cook_done",
     "dynamic_line": {
-      "and": [
+      "concatenate": [
         {
-          "npc_has_var": "want_more",
-          "type": "flag",
-          "context": "temp_var",
+          "npc_has_var": "flag_temp_var_want_more",
           "value": "yes",
           "yes": "My, my, what a man.  Here you go, <sweetie>."
         },
@@ -375,14 +359,10 @@
     "speaker_effect": {
       "effect": [
         {
-          "npc_lose_var": "want_more",
-          "type": "flag",
-          "context": "temp_var"
+          "npc_lose_var": "flag_temp_var_want_more"
         },
         {
-          "npc_add_var": "know_taste",
-          "type": "flag",
-          "context": "open_missions",
+          "npc_add_var": "flag_open_missions_know_taste",
           "value": "yes"
         }
       ]

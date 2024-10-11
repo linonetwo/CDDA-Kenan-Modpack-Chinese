@@ -3,7 +3,7 @@
     "id": "M40",
     "copy-from": "rifle_manual",
     "reload_noise_volume": 10,
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "name": {
       "str": "M40型"
@@ -13,7 +13,6 @@
     "volume": "3 L",
     "price": "870 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -49,6 +48,9 @@
           "762": 5
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   }
 ]

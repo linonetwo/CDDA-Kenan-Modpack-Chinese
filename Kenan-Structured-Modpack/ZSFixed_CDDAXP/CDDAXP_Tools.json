@@ -12,7 +12,6 @@
     "volume": "250 ml",
     "price": "95 USD",
     "to_hit": -1,
-    "bashing": 8,
     "material": [
       "steel",
       "plastic"
@@ -30,7 +29,10 @@
     },
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "cddaxp_bfopen",
@@ -45,8 +47,6 @@
     "volume": "500 ml",
     "price": "95 USD",
     "to_hit": 1,
-    "bashing": 2,
-    "cutting": 17,
     "material": [
       "steel",
       "plastic"
@@ -57,7 +57,9 @@
     "max_charges": 0,
     "charges_per_use": 0,
     "turns_per_charge": 0,
-    "techniques": "RAPID",
+    "techniques": [
+      "RAPID"
+    ],
     "qualities": [
       [
         "CUT",
@@ -77,10 +79,13 @@
       }
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_KNIFE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "stab": 17
+    }
   },
   {
     "id": "cddaxp_kusarigama",
@@ -95,8 +100,6 @@
     "volume": "1 L",
     "price": "250 USD",
     "to_hit": 2,
-    "bashing": 6,
-    "cutting": 22,
     "material": [
       "steel",
       "wood"
@@ -124,7 +127,11 @@
     "flags": [
       "CHOP",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 22
+    }
   },
   {
     "id": "cddaxp_happo",
@@ -139,8 +146,6 @@
     "volume": "250 ml",
     "price": "175 USD",
     "to_hit": 0,
-    "bashing": 1,
-    "cutting": 0,
     "material": [
       "egg",
       "powder"
@@ -159,6 +164,10 @@
       "need_fire": 1,
       "need_fire_msg": "You need a source of fire!",
       "type": "transform"
+    },
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
     }
   },
   {
@@ -174,8 +183,6 @@
     "volume": "250 ml",
     "price": "0 cent",
     "to_hit": 0,
-    "bashing": 1,
-    "cutting": 0,
     "material": [
       "egg",
       "powder"
@@ -192,6 +199,10 @@
       "fields_radius": 2,
       "fields_min_intensity": 1,
       "fields_max_intensity": 3
+    },
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
     }
   },
   {
@@ -205,8 +216,6 @@
     "volume": "250 ml",
     "price": "90 USD",
     "to_hit": 0,
-    "bashing": 1,
-    "cutting": 0,
     "material": [
       "glass",
       "plastic"
@@ -242,6 +251,10 @@
           "duration": 50
         }
       ]
+    },
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
     }
   },
   {
@@ -255,8 +268,6 @@
     "volume": "250 ml",
     "price": "3500 USD",
     "to_hit": -1,
-    "bashing": 1,
-    "cutting": 0,
     "material": [
       "plastic"
     ],
@@ -312,6 +323,10 @@
         "NO_SALVAGE",
         "TRADER_KEEP_EQUIPPED"
       ]
+    },
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
     }
   },
   {
@@ -347,7 +362,6 @@
     "volume": "750 ml",
     "price": "65 USD",
     "to_hit": -3,
-    "bashing": 4,
     "material": [
       "plastic",
       "powder"
@@ -374,7 +388,10 @@
       "RADIO_MODABLE",
       "RADIO_INVOKE_PROC",
       "BOMB"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "id": "cddaxp_tbomb_act",
@@ -389,7 +406,6 @@
     "volume": "750 ml",
     "price": "0 cent",
     "to_hit": -3,
-    "bashing": 4,
     "material": [
       "plastic",
       "powder"
@@ -411,6 +427,9 @@
         "power": 15,
         "shrapnel": 15
       }
+    },
+    "melee_damage": {
+      "bash": 4
     }
   },
   {
@@ -425,7 +444,6 @@
     "volume": "6250 ml",
     "price": "2500 USD",
     "to_hit": -2,
-    "bashing": 15,
     "material": [
       "glass",
       "iron"
@@ -437,7 +455,10 @@
       "LEAK_DAM",
       "RADIOACTIVE",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15
+    }
   },
   {
     "id": "cddaxp_vptmeats",
@@ -451,7 +472,6 @@
     "weight": "240 g",
     "volume": "250 ml",
     "price": "0 cent",
-    "bashing": 8,
     "material": [
       "plastic",
       "flesh"
@@ -469,7 +489,10 @@
     },
     "flags": [
       "NO_SALVAGE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "cddaxp_ckatana",
@@ -483,8 +506,6 @@
     "volume": "2 L",
     "price": "1550 USD",
     "to_hit": 1,
-    "bashing": 2,
-    "cutting": 40,
     "material": [
       "ceramic",
       "plastic"
@@ -510,7 +531,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "cut": 40
+    }
   },
   {
     "id": "cddaxp_cmachete",
@@ -524,15 +549,15 @@
     "volume": "1 L",
     "price": "90 USD",
     "to_hit": 2,
-    "bashing": 2,
-    "cutting": 34,
     "material": [
       "ceramic",
       "plastic"
     ],
     "symbol": "/",
     "color": "white",
-    "techniques": "WBLOCK_1",
+    "techniques": [
+      "WBLOCK_1"
+    ],
     "qualities": [
       [
         "CUT",
@@ -548,7 +573,11 @@
       "NON_STUCK",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "cut": 34
+    }
   },
   {
     "id": "cddaxp_cknife",
@@ -563,15 +592,15 @@
     "volume": "500 ml",
     "price": "60 USD",
     "to_hit": 2,
-    "bashing": 1,
-    "cutting": 24,
     "material": [
       "ceramic",
       "plastic"
     ],
     "symbol": "/",
     "color": "white",
-    "techniques": "RAPID",
+    "techniques": [
+      "RAPID"
+    ],
     "qualities": [
       [
         "CUT",
@@ -583,10 +612,13 @@
       ]
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_KNIFE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "stab": 24
+    }
   },
   {
     "id": "cddaxp_ckukri",
@@ -600,15 +632,15 @@
     "volume": "750 ml",
     "price": "160 USD",
     "to_hit": 1,
-    "bashing": 1,
-    "cutting": 30,
     "material": [
       "ceramic",
       "plastic"
     ],
     "symbol": "/",
     "color": "white",
-    "techniques": "WBLOCK_1",
+    "techniques": [
+      "WBLOCK_1"
+    ],
     "qualities": [
       [
         "CUT",
@@ -623,7 +655,11 @@
       "CHOP",
       "DURABLE_MELEE",
       "SHEATH_KNIFE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 30
+    }
   },
   {
     "id": "cddaxp_crapier",
@@ -637,8 +673,6 @@
     "volume": "1500 ml",
     "price": "1500 USD",
     "to_hit": 2,
-    "bashing": 1,
-    "cutting": 37,
     "material": [
       "ceramic",
       "plastic"
@@ -661,10 +695,13 @@
       ]
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "stab": 37
+    }
   },
   {
     "id": "cddaxp_cbroadsword",
@@ -678,8 +715,6 @@
     "volume": "1750 ml",
     "price": "1850 USD",
     "to_hit": 2,
-    "bashing": 6,
-    "cutting": 46,
     "material": [
       "ceramic",
       "plastic"
@@ -704,7 +739,11 @@
       "CHOP",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 46
+    }
   },
   {
     "id": "cddaxp_czweihander",
@@ -718,8 +757,6 @@
     "volume": "3250 ml",
     "price": "2500 USD",
     "to_hit": 1,
-    "bashing": 15,
-    "cutting": 52,
     "material": [
       "ceramic",
       "plastic"
@@ -736,7 +773,11 @@
       "CHOP",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15,
+      "cut": 52
+    }
   },
   {
     "id": "cddaxp_cwakizashi",
@@ -750,8 +791,6 @@
     "volume": "1500 ml",
     "price": "280 USD",
     "to_hit": 1,
-    "bashing": 1,
-    "cutting": 36,
     "material": [
       "ceramic",
       "plastic"
@@ -777,7 +816,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 36
+    }
   },
   {
     "id": "cddaxp_cnodachi",
@@ -791,8 +834,6 @@
     "volume": "3250 ml",
     "price": "1850 USD",
     "to_hit": 1,
-    "bashing": 3,
-    "cutting": 58,
     "material": [
       "ceramic",
       "plastic"
@@ -818,7 +859,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 58
+    }
   },
   {
     "id": "cddaxp_dkusarigama",
@@ -832,8 +877,6 @@
     "volume": "1 L",
     "price": "800 USD",
     "to_hit": 2,
-    "bashing": 6,
-    "cutting": 29,
     "material": [
       "diamond",
       "wood"
@@ -861,7 +904,11 @@
     "flags": [
       "CHOP",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 29
+    }
   },
   {
     "id": "cddaxp_ckusarigama",
@@ -875,8 +922,6 @@
     "volume": "1 L",
     "price": "800 USD",
     "to_hit": 2,
-    "bashing": 4,
-    "cutting": 31,
     "material": [
       "ceramic",
       "plastic"
@@ -904,6 +949,10 @@
     "flags": [
       "CHOP",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "cut": 31
+    }
   }
 ]

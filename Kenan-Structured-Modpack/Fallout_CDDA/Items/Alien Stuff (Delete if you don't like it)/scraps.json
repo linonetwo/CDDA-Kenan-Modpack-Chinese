@@ -34,7 +34,6 @@
       "alloy_zetan"
     ],
     "volume": "1 L",
-    "bashing": 5,
     "category": "spare_parts",
     "price": "60 USD",
     "qualities": [
@@ -42,7 +41,10 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "canister_zetan",
@@ -121,10 +123,12 @@
       "alloy_zetan"
     ],
     "volume": "5 L",
-    "bashing": 4,
     "category": "veh_parts",
     "price": "120 USD",
     "diameter": 32,
-    "width": 20
+    "width": 20,
+    "melee_damage": {
+      "bash": 4
+    }
   }
 ]

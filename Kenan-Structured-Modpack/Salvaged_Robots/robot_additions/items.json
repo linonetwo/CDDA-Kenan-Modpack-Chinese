@@ -18,8 +18,8 @@
     "color": "light_gray",
     "looks_like": "cargo_rack",
     "properties": {
-        "monster_size_capacity":"LARGE"
-      },
+      "monster_size_capacity": "LARGE"
+    },
     "use_action": "CAPTURE_MONSTER_VEH",
     "flags": [
       "TRADER_AVOID"
@@ -42,7 +42,6 @@
     "volume": "250 ml",
     "weight": "1 g",
     "to_hit": -3,
-    "bashing": 1,
     "initial_charges": 40,
     "max_charges": 40,
     "turns_per_charge": 1,
@@ -55,6 +54,9 @@
     "flags": [
       "LIGHT_10",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   }
 ]

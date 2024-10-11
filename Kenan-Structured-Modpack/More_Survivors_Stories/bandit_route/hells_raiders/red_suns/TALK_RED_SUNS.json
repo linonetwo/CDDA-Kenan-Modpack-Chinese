@@ -21,9 +21,7 @@
         "text": "现在谁负责？",
         "topic": "TALK_RED_SUNS_LEADER",
         "condition": {
-          "u_has_var": "hell_hound",
-          "type": "switch",
-          "context": "alive_dead",
+          "u_has_var": "switch_alive_dead_hell_hound",
           "value": "dead"
         },
         "switch": true
@@ -32,9 +30,7 @@
         "text": "听着，那个毛茸茸的大个子是谁？",
         "topic": "TALK_RED_SUNS_HELL_HOUND",
         "condition": {
-          "u_has_var": "hell_hound",
-          "type": "switch",
-          "context": "alive_dead",
+          "u_has_var": "switch_alive_dead_hell_hound",
           "value": "alive"
         },
         "switch": true
@@ -77,9 +73,7 @@
               }
             },
             {
-              "u_has_var": "fs_leader_mission_khh",
-              "type": "count",
-              "context": "unmarked_mission_progress",
+              "u_has_var": "count_unmarked_mission_progress_fs_leader_mission_khh",
               "value": "1"
             }
           ]
@@ -112,9 +106,7 @@
     "dynamic_line": "我告诉你一个秘密，我们不太喜欢他。他疯了！他经常有精神病，在这期间他开始攻击周围的每一个人。在最近的一次精神病发作中，他把我们的一个手下搞得一团糟。可怜的家伙…老领导比这个神经病好多倍了。",
     "speaker_effect": {
       "effect": {
-        "u_add_var": "fs_leader_mission_khh",
-        "type": "count",
-        "context": "unmarked_mission_progress",
+        "u_add_var": "count_unmarked_mission_progress_fs_leader_mission_khh",
         "value": "2"
       }
     }

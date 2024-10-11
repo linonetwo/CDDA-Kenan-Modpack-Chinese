@@ -12,7 +12,6 @@
     "price": "15 USD",
     "price_postapoc": "10 USD",
     "to_hit": -1,
-    "bashing": 6,
     "material": [
       "steel",
       "wood"
@@ -32,7 +31,10 @@
       "RADIO_INVOKE_PROC",
       "BOMB",
       "GRENADE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "bt_grenade_act",
@@ -47,7 +49,6 @@
     "price": "0 cent",
     "price_postapoc": "0 cent",
     "to_hit": -1,
-    "bashing": 6,
     "material": [
       "steel",
       "plastic"
@@ -70,7 +71,10 @@
     "flags": [
       "BOMB",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "vbwf_grenade",
@@ -85,7 +89,6 @@
     "price": "15 USD",
     "price_postapoc": "10 USD",
     "to_hit": -1,
-    "bashing": 6,
     "material": [
       "steel",
       "wood"
@@ -105,7 +108,10 @@
       "RADIO_INVOKE_PROC",
       "BOMB",
       "GRENADE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "vbwf_grenade_act",
@@ -120,7 +126,6 @@
     "price": "0 cent",
     "price_postapoc": "0 cent",
     "to_hit": -1,
-    "bashing": 6,
     "material": [
       "steel",
       "plastic"
@@ -143,6 +148,9 @@
     "flags": [
       "BOMB",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   }
 ]

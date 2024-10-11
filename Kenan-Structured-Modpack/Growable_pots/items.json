@@ -21,10 +21,12 @@
         "open_container": true
       }
     ],
-    "bashing": 1,
-    "cutting": 0,
     "category": "tools",
-    "to_hit": 0
+    "to_hit": 0,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -43,8 +45,10 @@
       "veggy"
     ],
     "volume": "2500 ml",
-    "bashing": 1,
-    "category": "tools"
+    "category": "tools",
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "type": "GENERIC",

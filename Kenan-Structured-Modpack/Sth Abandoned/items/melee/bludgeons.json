@@ -1,0 +1,90 @@
+[
+  {
+    "id": "l-stick",
+    "type": "TOOL",
+    "category": "weapons",
+    "name": {
+      "str": "L-stick (off)",
+      "str_pl": "L-sticks (off)"
+    },
+    "description": "Produced by the Light corporation, this stylish staff not only functions as a light source, but doubles as a light-weight weapon, due to the superalloy materials it is made of.  Due to proprietary efficiency improvements over standard light sources, the L-stick or light stick as it is commonly called, batteries last longer than other light sources.",
+    "weight": "1000 g",
+    "volume": "3 L",
+    "longest_side": "180 cm",
+    "price": 5000,
+    "price_postapoc": 3000,
+    "to_hit": 3,
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "symbol": "/",
+    "color": "light_gray",
+    "ammo": [
+      "battery"
+    ],
+    "charges_per_use": 1,
+    "techniques": [
+      "WBLOCK_1",
+      "RAPID"
+    ],
+    "use_action": {
+      "target": "l-stick_on",
+      "msg": "The L-stick(tm) lights up.",
+      "active": true,
+      "need_charges": 1,
+      "need_charges_msg": "The L-stick(tm)'s batteries are empty.",
+      "type": "transform"
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_SPEAR"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE_WELL",
+        "rigid": true,
+        "holster": true,
+        "max_contains_volume": "525 ml",
+        "max_contains_weight": "1 kg",
+        "item_restriction": [
+          "medium_plus_battery_cell",
+          "medium_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
+      }
+    ],
+    "melee_damage": {
+      "bash": 24
+    }
+  },
+  {
+    "id": "l-stick_on",
+    "copy-from": "l-stick",
+    "type": "TOOL",
+    "name": {
+      "str": "L-stick (on)",
+      "str_pl": "L-sticks (on)"
+    },
+    "description": "Produced by the Light corporation, this stylish staff not only functions as a light source, but doubles as a light-weight weapon, due to the superalloy materials it is made of.  Due to proprietary efficiency improvements over standard light sources, the L-stick or light stick as it is commonly called, batteries last longer than other light sources.  The staff is glowing brightly, which is slowly draining the batteries.",
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "revert_to": "l-stick",
+    "power_draw": 5000,
+    "use_action": {
+      "target": "l-stick",
+      "msg": "The l-stick(tm)'s light fades away.",
+      "menu_text": "Turn off",
+      "type": "transform"
+    },
+    "flags": [
+      "LIGHT_300",
+      "DURABLE_MELEE",
+      "TRADER_AVOID",
+      "SHEATH_SPEAR"
+    ]
+  }
+]

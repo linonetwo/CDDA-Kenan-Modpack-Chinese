@@ -16,8 +16,6 @@
     "weight": "32000 g",
     "volume": "7 L",
     "longest_side": "400 mm",
-    "bashing": 8,
-    "cutting": 0,
     "to_hit": -2,
     "pocket_data": [
       {
@@ -75,7 +73,11 @@
         "SCREW_FINE",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 0
+    }
   },
   {
     "type": "TOOL",
@@ -100,10 +102,7 @@
     ],
     "volume": "1000 ml",
     "longest_side": "500 mm",
-    "bashing": 4,
-    "cutting": 36,
     "flags": [
-      "STAB",
       "UNBREAKABLE_MELEE",
       "SHEATH_SWORD"
     ],
@@ -118,6 +117,10 @@
         "BUTCHER",
         20
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "stab": 36
+    }
   }
 ]

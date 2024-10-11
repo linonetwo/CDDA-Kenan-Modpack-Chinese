@@ -11,7 +11,6 @@
     "longest_side": "680 mm",
     "price": "450 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -51,7 +50,10 @@
     "flags": [
       "NEVER_JAMS",
       "RELOAD_ONE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "bomblet_launcher_double",
@@ -65,7 +67,6 @@
     "longest_side": "680 mm",
     "price": "950 USD",
     "to_hit": -2,
-    "bashing": 10,
     "material": [
       "steel",
       "wood"
@@ -118,7 +119,10 @@
       "MODE_BURST",
       "NEVER_JAMS",
       "RELOAD_ONE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "bomblet_launcher_rotary",
@@ -132,7 +136,6 @@
     "longest_side": "680 mm",
     "price": "2100 USD",
     "to_hit": -1,
-    "bashing": 11,
     "material": [
       "steel",
       "plastic"
@@ -201,7 +204,10 @@
       "MODE_BURST",
       "NEVER_JAMS",
       "RELOAD_ONE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 11
+    }
   },
   {
     "id": "bomblet_launcher_dualshot",
@@ -215,7 +221,6 @@
     "longest_side": "680 mm",
     "price": "1750 USD",
     "to_hit": -3,
-    "bashing": 10,
     "material": [
       "steel",
       "plastic"
@@ -279,7 +284,10 @@
       "MODE_BURST",
       "NEVER_JAMS",
       "RELOAD_ONE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "bomblet_launcher_brute",
@@ -293,8 +301,6 @@
     "longest_side": "920 mm",
     "price": "2800 USD",
     "to_hit": 1,
-    "bashing": 18,
-    "cutting": 36,
     "material": [
       "steel",
       "spess_plastic"
@@ -353,7 +359,11 @@
       "WIDE",
       "BRUTAL",
       "heavy_blow"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 18,
+      "cut": 36
+    }
   },
   {
     "id": "bomblet_undermod",
@@ -423,7 +433,6 @@
     "longest_side": "1020 mm",
     "price": "1750 USD",
     "to_hit": -3,
-    "bashing": 10,
     "material": [
       "spess_plastic",
       "plastic"
@@ -491,7 +500,10 @@
       "NO_UNLOAD",
       "RECHARGE"
     ],
-    "ammo_to_fire": 100
+    "ammo_to_fire": 100,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "shockcannon_ups",
@@ -505,7 +517,6 @@
     "longest_side": "1020 mm",
     "price": "1750 USD",
     "to_hit": -3,
-    "bashing": 10,
     "material": [
       "spess_plastic",
       "plastic"
@@ -573,7 +584,10 @@
       "NEVER_JAMS",
       "NO_UNLOAD",
       "RECHARGE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "shockcannon_plut",
@@ -587,7 +601,6 @@
     "longest_side": "1020 mm",
     "price": "1750 USD",
     "to_hit": -3,
-    "bashing": 10,
     "material": [
       "spess_plastic",
       "plastic"
@@ -654,7 +667,10 @@
       "NEVER_JAMS",
       "NO_UNLOAD"
     ],
-    "ammo_to_fire": 50
+    "ammo_to_fire": 50,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "410_lever",
@@ -823,7 +839,6 @@
     "longest_side": "525 mm",
     "price": "2 kUSD",
     "to_hit": -2,
-    "bashing": 6,
     "material": [
       "steel",
       "plastic"
@@ -894,7 +909,10 @@
         "sling",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "ithaca_doom_dual",
@@ -909,7 +927,6 @@
     "longest_side": "625 mm",
     "price": "2 kUSD",
     "to_hit": -2,
-    "bashing": 6,
     "material": [
       "steel",
       "aluminum"
@@ -968,7 +985,10 @@
         "stock",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "BFG",

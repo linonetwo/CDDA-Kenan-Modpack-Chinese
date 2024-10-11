@@ -14,7 +14,6 @@
     ],
     "volume": "250 ml",
     "weight": "217 g",
-    "bashing": 5,
     "ammo_type": "bolt",
     "damage": {
       "damage_type": "stab",
@@ -27,7 +26,10 @@
     "count": 10,
     "effects": [
       "INCENDIARY"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "type": "AMMO",
@@ -44,8 +46,6 @@
     ],
     "volume": "250 ml",
     "weight": "145 g",
-    "bashing": 3,
-    "cutting": 2,
     "ammo_type": "bolt",
     "range": 8,
     "dispersion": 100,
@@ -53,7 +53,11 @@
     "count": 5,
     "effects": [
       "LARGE_BEANBAG"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 2
+    }
   },
   {
     "type": "AMMO",
@@ -70,8 +74,6 @@
     ],
     "volume": "250 ml",
     "weight": "152 g",
-    "bashing": 3,
-    "cutting": 2,
     "ammo_type": "bolt",
     "range": 8,
     "dispersion": 100,
@@ -79,6 +81,10 @@
     "count": 5,
     "effects": [
       "EMP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 2
+    }
   }
 ]

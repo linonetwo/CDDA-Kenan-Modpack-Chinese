@@ -14,8 +14,6 @@
     "price": "500 USD",
     "price_postapoc": "25 USD",
     "to_hit": 2,
-    "bashing": 7,
-    "cutting": 20,
     "material": [
       "wood",
       "steel"
@@ -42,7 +40,11 @@
       "NONCONDUCTIVE",
       "SHEATH_SPEAR",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7,
+      "cut": 20
+    }
   },
   {
     "id": "spear_knife_ghost_clean",
@@ -59,8 +61,6 @@
     "price": "600 USD",
     "price_postapoc": "50 USD",
     "to_hit": 2,
-    "bashing": 8,
-    "cutting": 28,
     "material": [
       "wood",
       "steel",
@@ -89,7 +89,11 @@
       "NONCONDUCTIVE",
       "SHEATH_SPEAR",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 28
+    }
   },
   {
     "id": "spear_knife_ghost_weak",
@@ -107,8 +111,6 @@
     "price": "500 USD",
     "price_postapoc": "25 USD",
     "to_hit": 2,
-    "bashing": 7,
-    "cutting": 20,
     "material": [
       "wood",
       "steel"
@@ -148,7 +150,11 @@
       "NONCONDUCTIVE",
       "SHEATH_SPEAR",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7,
+      "cut": 20
+    }
   },
   {
     "id": "spear_knife_ghost_potent",
@@ -166,8 +172,6 @@
     "price": "500 USD",
     "price_postapoc": "25 USD",
     "to_hit": 2,
-    "bashing": 7,
-    "cutting": 20,
     "material": [
       "wood",
       "steel"
@@ -207,7 +211,11 @@
       "NONCONDUCTIVE",
       "SHEATH_SPEAR",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7,
+      "cut": 20
+    }
   },
   {
     "id": "spear_knife_ghost_lethal",
@@ -225,8 +233,6 @@
     "price": "500 USD",
     "price_postapoc": "25 USD",
     "to_hit": 2,
-    "bashing": 7,
-    "cutting": 20,
     "material": [
       "wood",
       "steel"
@@ -266,7 +272,11 @@
       "NONCONDUCTIVE",
       "SHEATH_SPEAR",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7,
+      "cut": 20
+    }
   },
   {
     "id": "spear_throwing_ghost",
@@ -290,7 +300,6 @@
     ],
     "volume": " 850 ml",
     "longest_side": "110 cm",
-    "cutting": 15,
     "thrown_damage": [
       {
         "damage_type": "bash",
@@ -321,7 +330,10 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "cut": 15
+    }
   },
   {
     "id": "bear_fist",
@@ -339,8 +351,6 @@
     "price": "10 USD",
     "price_postapoc": "25 USD",
     "to_hit": -1,
-    "bashing": 14,
-    "cutting": 17,
     "material": [
       "steel"
     ],
@@ -367,7 +377,11 @@
     ],
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 17
+    }
   },
   {
     "id": "bear_fist_weak",
@@ -385,8 +399,6 @@
     "price": "10 USD",
     "price_postapoc": "25 USD",
     "to_hit": -1,
-    "bashing": 14,
-    "cutting": 17,
     "material": [
       "steel"
     ],
@@ -426,7 +438,11 @@
     },
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 17
+    }
   },
   {
     "id": "bear_fist_potent",
@@ -444,8 +460,6 @@
     "price": "10 USD",
     "price_postapoc": "25 USD",
     "to_hit": -1,
-    "bashing": 14,
-    "cutting": 17,
     "material": [
       "steel"
     ],
@@ -485,7 +499,11 @@
     },
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 17
+    }
   },
   {
     "id": "bear_fist_lethal",
@@ -503,8 +521,6 @@
     "price": "10 USD",
     "price_postapoc": "25 USD",
     "to_hit": -1,
-    "bashing": 14,
-    "cutting": 17,
     "material": [
       "steel"
     ],
@@ -544,7 +560,11 @@
     },
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 17
+    }
   },
   {
     "id": "bear_fist_upgraded",
@@ -562,8 +582,6 @@
     "price": "12 USD",
     "price_postapoc": "27 USD",
     "to_hit": -1,
-    "bashing": 16,
-    "cutting": 18,
     "material": [
       "steel"
     ],
@@ -590,7 +608,11 @@
     ],
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 18
+    }
   },
   {
     "id": "bear_fist_upgraded_weak",
@@ -608,8 +630,6 @@
     "price": "12 USD",
     "price_postapoc": "27 USD",
     "to_hit": -1,
-    "bashing": 16,
-    "cutting": 18,
     "material": [
       "steel"
     ],
@@ -649,7 +669,11 @@
     },
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 18
+    }
   },
   {
     "id": "bear_fist_upgraded_potent",
@@ -667,8 +691,6 @@
     "price": "12 USD",
     "price_postapoc": "27 USD",
     "to_hit": -1,
-    "bashing": 16,
-    "cutting": 18,
     "material": [
       "steel"
     ],
@@ -708,7 +730,11 @@
     },
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 18
+    }
   },
   {
     "id": "bear_fist_upgraded_lethal",
@@ -726,8 +752,6 @@
     "price": "12 USD",
     "price_postapoc": "27 USD",
     "to_hit": -1,
-    "bashing": 16,
-    "cutting": 18,
     "material": [
       "steel"
     ],
@@ -767,7 +791,11 @@
     },
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 18
+    }
   },
   {
     "id": "knife_cosmic",
@@ -784,8 +812,6 @@
     "price": "250 USD",
     "price_postapoc": "100 USD",
     "to_hit": 3,
-    "bashing": 5,
-    "cutting": 18,
     "material": [
       "steel",
       "plastic",
@@ -811,10 +837,13 @@
       ]
     ],
     "flags": [
-      "STAB",
       "SHEATH_KNIFE",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "stab": 18
+    }
   },
   {
     "id": "knife_cosmic_weak",
@@ -831,8 +860,6 @@
     "price": "250 USD",
     "price_postapoc": "100 USD",
     "to_hit": 3,
-    "bashing": 5,
-    "cutting": 18,
     "material": [
       "steel",
       "plastic",
@@ -871,10 +898,13 @@
       ]
     },
     "flags": [
-      "STAB",
       "SHEATH_KNIFE",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "stab": 18
+    }
   },
   {
     "id": "knife_cosmic_potent",
@@ -891,8 +921,6 @@
     "price": "250 USD",
     "price_postapoc": "100 USD",
     "to_hit": 3,
-    "bashing": 5,
-    "cutting": 18,
     "material": [
       "steel",
       "plastic",
@@ -931,10 +959,13 @@
       ]
     },
     "flags": [
-      "STAB",
       "SHEATH_KNIFE",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "stab": 18
+    }
   },
   {
     "id": "knife_cosmic_lethal",
@@ -951,8 +982,6 @@
     "price": "250 USD",
     "price_postapoc": "100 USD",
     "to_hit": 3,
-    "bashing": 5,
-    "cutting": 18,
     "material": [
       "steel",
       "plastic",
@@ -991,10 +1020,13 @@
       ]
     },
     "flags": [
-      "STAB",
       "SHEATH_KNIFE",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "stab": 18
+    }
   },
   {
     "id": "knife_cosmic_clean",
@@ -1011,8 +1043,6 @@
     "price": "250 USD",
     "price_postapoc": "110 USD",
     "to_hit": 3,
-    "bashing": 5,
-    "cutting": 20,
     "material": [
       "steel",
       "plastic",
@@ -1039,10 +1069,13 @@
       ]
     ],
     "flags": [
-      "STAB",
       "SHEATH_KNIFE",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "stab": 20
+    }
   },
   {
     "id": "knife_cosmic_heat",
@@ -1059,8 +1092,6 @@
     "price": "250 USD",
     "price_postapoc": "130 USD",
     "to_hit": 3,
-    "bashing": 5,
-    "cutting": 18,
     "material": [
       "steel",
       "plastic",
@@ -1086,12 +1117,15 @@
       ]
     ],
     "flags": [
-      "STAB",
       "FIRE",
       "FLAMING",
       "SHEATH_KNIFE",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "stab": 18
+    }
   },
   {
     "id": "ghost_bomb",
@@ -1107,7 +1141,6 @@
     "price": 500,
     "price_postapoc": "10 USD",
     "to_hit": -1,
-    "bashing": 6,
     "material": [
       "steel"
     ],
@@ -1133,7 +1166,10 @@
       "BOMB",
       "ACT_IN_FIRE",
       "NPC_ACTIVATE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "ghost_bomb_act",
@@ -1149,7 +1185,6 @@
     "price": "0 cent",
     "price_postapoc": "0 cent",
     "to_hit": -1,
-    "bashing": 6,
     "material": [
       "steel"
     ],
@@ -1169,7 +1204,10 @@
       "BOMB",
       "TRADER_AVOID",
       "NPC_THROW_NOW"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "holorifle",
@@ -1202,7 +1240,6 @@
     "volume": "2600 ml",
     "barrel_volume": "700 ml",
     "longest_side": "1350 mm",
-    "bashing": 13,
     "to_hit": -2,
     "dispersion": 125,
     "durability": 7,
@@ -1250,7 +1287,10 @@
           "microfusion": 4
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 13
+    }
   },
   {
     "id": "gauss_rifle",
@@ -1281,7 +1321,6 @@
     "volume": "3000 ml",
     "barrel_volume": "800 ml",
     "longest_side": "1500 mm",
-    "bashing": 22,
     "to_hit": -2,
     "dispersion": 85,
     "durability": 10,
@@ -1347,7 +1386,10 @@
           "gauss_mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 22
+    }
   },
   {
     "id": "sierra_laser_pistol",
@@ -1374,7 +1416,6 @@
     "weight": "890 g",
     "volume": "750 ml",
     "longest_side": "290 mm",
-    "bashing": 8,
     "to_hit": -2,
     "dispersion": 60,
     "recoil": 0,
@@ -1427,7 +1468,10 @@
           "energy_mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "colt_trooper_357",
@@ -1444,7 +1488,6 @@
     "price": "620 USD",
     "price_postapoc": "12 USD",
     "to_hit": -2,
-    "bashing": 9,
     "material": [
       "steel",
       "plastic"
@@ -1507,7 +1550,10 @@
           "357mag": 6
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9
+    }
   },
   {
     "id": "holo_gun",
@@ -1523,7 +1569,6 @@
     "price": "720000 USD",
     "price_postapoc": "5500 USD",
     "to_hit": -2,
-    "bashing": 5,
     "material": [
       "superalloy"
     ],
@@ -1583,6 +1628,9 @@
       "NO_UNLOAD",
       "NON-FOULING",
       "NEEDS_NO_LUBE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   }
 ]

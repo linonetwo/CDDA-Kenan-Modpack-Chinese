@@ -280,9 +280,7 @@
         "text": "那血清呢？",
         "topic": "TALK_mad_scientist_serum",
         "condition": {
-          "npc_has_var": "mad_scientist_experiment",
-          "type": "flag",
-          "context": "experiment",
+          "npc_has_var": "flag_experiment_mad_scientist_experiment",
           "value": "yes"
         },
         "switch": true
@@ -296,9 +294,7 @@
         "text": "你想跟着我吗？",
         "topic": "TALK_SUGGEST_FOLLOW",
         "condition": {
-          "npc_has_var": "u_helped_mad_scientist",
-          "type": "flag",
-          "context": "help",
+          "npc_has_var": "flag_help_u_helped_mad_scientist",
           "value": "yes"
         }
       },
@@ -349,18 +345,17 @@
         "topic": "TALK_DONE",
         "effect": [
           {
-            "npc_lose_var": "mad_scientist_experiment",
-            "type": "flag",
-            "context": "experiment"
+            "npc_lose_var": "flag_experiment_mad_scientist_experiment"
           },
           {
             "npc_first_topic": "TALK_mad_scientist_serum_making"
           },
           {
-            "npc_add_var": "making_serum",
-            "type": "flag",
-            "context": "experiment",
-            "time": true
+            "math": [
+              "n_flag_experiment_making_serum",
+              "=",
+              "time('now')"
+            ]
           }
         ]
       },
@@ -374,11 +369,11 @@
     "type": "talk_topic",
     "id": "TALK_mad_scientist_serum_making",
     "dynamic_line": {
-      "npc_compare_time_since_var": "making_serum",
-      "type": "flag",
-      "context": "experiment",
-      "op": ">",
-      "time": "1 day",
+      "math": [
+        "time_since(n_flag_experiment_making_serum)",
+        ">",
+        "time('1 d')"
+      ],
       "yes": "很好，血清准备好了。我们可以试试吗？",
       "no": "我需要更多的时间，<name_g>。晚点再来。"
     },
@@ -387,11 +382,11 @@
         "text": "我们开始吧！",
         "topic": "TALK_mad_scientist_experiment",
         "condition": {
-          "npc_compare_time_since_var": "making_serum",
-          "type": "flag",
-          "context": "experiment",
-          "op": ">",
-          "time": "1 day"
+          "math": [
+            "time_since(n_flag_experiment_making_serum)",
+            ">",
+            "time('1 d')"
+          ]
         }
       },
       {
@@ -528,10 +523,11 @@
         "topic": "TALK_DONE",
         "effect": [
           {
-            "npc_add_var": "mad_scientist_need_time",
-            "type": "flag",
-            "context": "wait",
-            "time": true
+            "math": [
+              "n_flag_wait_mad_scientist_need_time",
+              "=",
+              "time('now')"
+            ]
           },
           {
             "npc_first_topic": "TALK_mad_scientist_brew"
@@ -544,11 +540,11 @@
     "type": "talk_topic",
     "id": "TALK_mad_scientist_brew",
     "dynamic_line": {
-      "npc_compare_time_since_var": "mad_scientist_need_time",
-      "type": "flag",
-      "context": "wait",
-      "op": ">",
-      "time": "12 hours",
+      "math": [
+        "time_since(n_flag_wait_mad_scientist_need_time)",
+        ">",
+        "time('12 h')"
+      ],
       "yes": "完成了！我们来测试一下？",
       "no": "我需要更多的时间。"
     },
@@ -557,11 +553,11 @@
         "text": "已经注射了！",
         "topic": "TALK_mad_scientist_brew_check",
         "condition": {
-          "npc_compare_time_since_var": "mad_scientist_need_time",
-          "type": "flag",
-          "context": "wait",
-          "op": ">",
-          "time": "12 hours"
+          "math": [
+            "time_since(n_flag_wait_mad_scientist_need_time)",
+            ">",
+            "time('12 h')"
+          ]
         }
       }
     ]
@@ -680,11 +676,11 @@
     "type": "mission_definition",
     "has_generic_rewards": false,
     "name": {
-      "str": "蜘蛛卵"
+      "str": "鸡蛋"
     },
-    "description": "带15个蜘蛛蛋。",
+    "description": "带15个鸡蛋。",
     "goal": "MGOAL_FIND_ITEM",
-    "item": "spider_egg",
+    "item": "egg_chicken",
     "count": 15,
     "difficulty": 0,
     "value": 0,
@@ -695,9 +691,9 @@
     "dialogue": {
       "describe": "-",
       "offer": "在大灾变之前，我正在研究各种药物和病毒，我们在动物身上进行了测试。我想这一切的原因之一是我们实验室释放的病毒。为了完全确定这一点，我需要研究改变的动物群。你准备好帮我了吗？",
-      "accepted": "很好。首先，我想研究病毒是如何影响像蜘蛛这样可爱的小动物的。也许你看到了他们的遭遇。可怕的景象。给我15个蜘蛛蛋。",
+      "accepted": "很好。首先，我想研究病毒是如何影响像鸡这样可爱的小动物的。也许你看到了他们的遭遇。可怕的景象。给我15个鸡蛋。",
       "rejected": "呸。",
-      "advice": "蜘蛛喜欢在森林和沼泽附近定居。",
+      "advice": "鸡蛋可以在农场或厨房找到。",
       "inquire": "你的搜索进展如何？",
       "success": "好极了，我马上开始学习！",
       "success_lie": "-",
@@ -777,9 +773,7 @@
     "value": 0,
     "end": {
       "effect": {
-        "npc_add_var": "mad_scientist_experiment",
-        "type": "flag",
-        "context": "experiment",
+        "npc_add_var": "flag_experiment_mad_scientist_experiment",
         "value": "yes"
       }
     },
@@ -843,9 +837,7 @@
     "end": {
       "effect": [
         {
-          "npc_add_var": "u_helped_mad_scientist",
-          "type": "flag",
-          "context": "help",
+          "npc_add_var": "flag_help_u_helped_mad_scientist",
           "value": "yes"
         },
         {

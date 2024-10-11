@@ -15,10 +15,12 @@
       "ceramic"
     ],
     "volume": "6 L",
-    "bashing": 10,
-    "cutting": 0,
     "category": "veh_parts",
-    "price": 32000
+    "price": 32000,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -36,10 +38,12 @@
       "ceramic"
     ],
     "volume": "22500 ml",
-    "bashing": 10,
-    "cutting": 0,
     "category": "veh_parts",
-    "price": 32000
+    "price": 32000,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -56,10 +60,12 @@
       "rubber"
     ],
     "volume": "250 ml",
-    "bashing": 10,
-    "cutting": 0,
     "category": "veh_parts",
-    "price": 350
+    "price": 350,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -76,10 +82,12 @@
       "qt_steel"
     ],
     "volume": "18750 ml",
-    "bashing": 10,
-    "cutting": 0,
     "category": "veh_parts",
-    "price": 124000
+    "price": 124000,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -97,10 +105,12 @@
       "qt_steel"
     ],
     "volume": "7500 ml",
-    "bashing": 10,
-    "cutting": 0,
     "category": "veh_parts",
-    "price": 124000
+    "price": 124000,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 0
+    }
   },
   {
     "type": "WHEEL",
@@ -114,7 +124,6 @@
     "volume": "40000 ml",
     "price": "340 USD",
     "price_postapoc": "10 USD",
-    "bashing": 17,
     "to_hit": -1,
     "material": [
       "qt_steel",
@@ -123,7 +132,10 @@
     "symbol": "]",
     "color": "green",
     "diameter": 44,
-    "width": 30
+    "width": 30,
+    "melee_damage": {
+      "bash": 17
+    }
   },
   {
     "type": "GENERIC",
@@ -138,10 +150,12 @@
       "qt_steel"
     ],
     "volume": "12500 ml",
-    "bashing": 10,
-    "cutting": 0,
     "category": "veh_parts",
-    "price": 80000
+    "price": 80000,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -160,10 +174,12 @@
       "DEF_DISARM"
     ],
     "volume": "40 L",
-    "bashing": 35,
-    "cutting": 0,
     "category": "veh_parts",
-    "price": 24000
+    "price": 24000,
+    "melee_damage": {
+      "bash": 35,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -182,10 +198,12 @@
       "DEF_DISARM"
     ],
     "volume": "75 L",
-    "bashing": 35,
-    "cutting": 0,
     "category": "veh_parts",
-    "price": 24000
+    "price": 24000,
+    "melee_damage": {
+      "bash": 35,
+      "cut": 0
+    }
   },
   {
     "id": "mechleg_mount_light",
@@ -218,13 +236,15 @@
     "volume": "6 L",
     "price": "30 USD",
     "price_postapoc": 500,
-    "bashing": 14,
     "to_hit": -2,
     "material": [
       "steel"
     ],
     "symbol": ";",
-    "color": "dark_gray"
+    "color": "dark_gray",
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "id": "mechleg_mount_heavy",
@@ -239,13 +259,15 @@
     "volume": "7 L",
     "price": "50 USD",
     "price_postapoc": 500,
-    "bashing": 14,
     "to_hit": -2,
     "material": [
       "steel"
     ],
     "symbol": ";",
-    "color": "dark_gray"
+    "color": "dark_gray",
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "id": "v8M_diesel",

@@ -3,9 +3,7 @@
     "type": "talk_topic",
     "id": "TALK_Jerry_Bumpkin_GOON",
     "dynamic_line": {
-      "npc_has_var": "ally_transfered",
-      "type": "flag",
-      "context": "transfered",
+      "npc_has_var": "flag_transfered_ally_transfered",
       "value": "js",
       "yes": "嘿，<name_g>。杰瑞的小队没事。这里有很多很酷的人。怎么了？",
       "no": "别惹麻烦，你会没事的。"
@@ -25,9 +23,7 @@
               }
             },
             {
-              "u_has_var": "jerry_give_goon",
-              "type": "flag",
-              "context": "goons",
+              "u_has_var": "flag_goons_jerry_give_goon",
               "value": "yes"
             }
           ]
@@ -37,9 +33,7 @@
         "text": "嘿，杰瑞死了。想和我一起旅行吗？",
         "topic": "TALK_SUGGEST_FOLLOW",
         "condition": {
-          "u_has_var": "jerry_bumpkin",
-          "type": "flag",
-          "context": "death",
+          "u_has_var": "flag_death_jerry_bumpkin",
           "value": "yes"
         }
       },
@@ -68,9 +62,7 @@
             "add_mission": "MISSION_Jerry_Bumpkin_goon_0"
           },
           {
-            "u_lose_var": "jerry_give_goon",
-            "type": "flag",
-            "context": "goons"
+            "u_lose_var": "flag_goons_jerry_give_goon"
           },
           {
             "npc_first_topic": "TALK_Jerry_Bumpkin_goon_parking"
@@ -126,10 +118,10 @@
     },
     "fail": {
       "effect": {
-        "u_adjust_var": "lend_goons",
-        "type": "flag",
-        "context": "death",
-        "adjustment": 1
+        "math": [
+          "n_flag_death_lend_goons",
+          "++"
+        ]
       }
     }
   }

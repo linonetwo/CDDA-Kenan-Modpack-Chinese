@@ -7,9 +7,7 @@
         "text": "我抓到你的叛徒了。",
         "topic": "TALK_OLD_GUARD_REP_TRAITOR",
         "condition": {
-          "u_has_var": "rc_search_for_bandit",
-          "type": "count",
-          "context": "unmarked_mission_progress",
+          "u_has_var": "count_unmarked_mission_progress_rc_search_for_bandit",
           "value": "2"
         },
         "switch": true
@@ -28,9 +26,7 @@
           "npc_first_topic": "TALK_OLD_GUARD_REP_BUSY"
         },
         {
-          "u_lose_var": "rc_search_for_bandit",
-          "type": "count",
-          "context": "unmarked_mission_progress"
+          "u_lose_var": "count_unmarked_mission_progress_rc_search_for_bandit"
         }
       ]
     },

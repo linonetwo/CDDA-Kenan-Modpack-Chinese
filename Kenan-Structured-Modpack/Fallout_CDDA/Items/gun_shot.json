@@ -38,7 +38,6 @@
     "volume": "2 L",
     "price": "400 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -93,7 +92,10 @@
           "20ga": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "caravan_shotgun",
@@ -188,7 +190,6 @@
     "volume": "2500 ml",
     "price": "1699 USD",
     "to_hit": -1,
-    "bashing": 12,
     "looks_like": "rm20",
     "material": [
       "steel",
@@ -214,6 +215,9 @@
     ],
     "flags": [
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   }
 ]

@@ -23,7 +23,6 @@
     "barrel_volume": "250 ml",
     "weight": "1200 g",
     "volume": "2500 ml",
-    "bashing": 10,
     "to_hit": -2,
     "dispersion": 220,
     "sight_dispersion": 120,
@@ -81,7 +80,10 @@
           "shot": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "ria_30_strikeforce",
@@ -107,7 +109,6 @@
     "barrel_volume": "250 ml",
     "weight": "1200 g",
     "volume": "2500 ml",
-    "bashing": 10,
     "to_hit": -2,
     "dispersion": 220,
     "sight_dispersion": 120,
@@ -166,7 +167,10 @@
           "saiga10mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "stripper",
@@ -192,7 +196,6 @@
     ],
     "weight": "1200 g",
     "volume": "2000 ml",
-    "bashing": 18,
     "to_hit": 7,
     "dispersion": 220,
     "sight_dispersion": 120,
@@ -262,6 +265,9 @@
           "stripper18belt"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 18
+    }
   }
 ]

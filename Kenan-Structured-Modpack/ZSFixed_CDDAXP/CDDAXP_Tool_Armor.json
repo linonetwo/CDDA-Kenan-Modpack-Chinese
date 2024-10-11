@@ -11,8 +11,6 @@
     "volume": "2250 ml",
     "price": "17500 USD",
     "to_hit": -1,
-    "bashing": 10,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "kevlar",
@@ -64,7 +62,11 @@
       }
     ],
     "material_thickness": 4,
-    "environmental_protection": 0
+    "environmental_protection": 0,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_goggles_artnv",
@@ -78,8 +80,6 @@
     "volume": "1250 ml",
     "price": "20000 USD",
     "to_hit": -3,
-    "bashing": 0,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "plastic",
@@ -134,7 +134,11 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 8
+    "environmental_protection": 8,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_goggles_artnv_on",
@@ -148,8 +152,6 @@
     "volume": "1250 ml",
     "price": "20000 USD",
     "to_hit": -3,
-    "bashing": 0,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "plastic",
@@ -216,7 +218,11 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 8
+    "environmental_protection": 8,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_artclocloak",
@@ -230,8 +236,6 @@
     "volume": "2750 ml",
     "price": "55500 USD",
     "to_hit": -1,
-    "bashing": 1,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "cotton",
@@ -296,7 +300,11 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 6
+    "environmental_protection": 6,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_artclocloak_on",
@@ -310,8 +318,6 @@
     "volume": "2750 ml",
     "price": "55500 USD",
     "to_hit": -1,
-    "bashing": 1,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "cotton",
@@ -374,7 +380,11 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 6
+    "environmental_protection": 6,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_artesosk",
@@ -388,8 +398,6 @@
     "volume": "3000 ml",
     "price": "175000 USD",
     "to_hit": -3,
-    "bashing": 0,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "aluminum",
@@ -448,7 +456,11 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 0
+    "environmental_protection": 0,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_artesosk_on",
@@ -462,8 +474,6 @@
     "volume": "3 L",
     "price": "175000 USD",
     "to_hit": -3,
-    "bashing": 0,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "aluminum",
@@ -535,7 +545,11 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 0
+    "environmental_protection": 0,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_artgloves",
@@ -549,8 +563,6 @@
     "volume": "500 ml",
     "price": "5500 USD",
     "to_hit": 2,
-    "bashing": 1,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "kevlar",
@@ -606,7 +618,11 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 1
+    "environmental_protection": 1,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_artgloves_on",
@@ -620,8 +636,6 @@
     "volume": "500 ml",
     "price": "5500 USD",
     "to_hit": 2,
-    "bashing": 1,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "kevlar",
@@ -688,7 +702,11 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 1
+    "environmental_protection": 1,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_survrbelt",
@@ -700,7 +718,6 @@
     "weight": "3400 g",
     "volume": "4 L",
     "price": "500 USD",
-    "bashing": 1,
     "material": [
       "leather",
       "iron"
@@ -797,7 +814,10 @@
         ]
       }
     ],
-    "material_thickness": 2
+    "material_thickness": 2,
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "cddaxp_mtsuit",

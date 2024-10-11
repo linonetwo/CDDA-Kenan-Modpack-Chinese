@@ -132,9 +132,7 @@
         "text": "需要帮忙么？",
         "condition": {
           "not": {
-            "npc_has_var": "m1_end",
-            "type": "flag",
-            "context": "mission",
+            "npc_has_var": "flag_mission_m1_end",
             "value": "yes"
           }
         },
@@ -143,28 +141,24 @@
       {
         "text": "你的工作进展如何？",
         "condition": {
-          "npc_has_var": "m1_end",
-          "type": "flag",
-          "context": "mission",
+          "npc_has_var": "flag_mission_m1_end",
           "value": "yes"
         },
         "trial": {
           "type": "CONDITION",
           "condition": {
             "not": {
-              "npc_compare_time_since_var": "need_time",
-              "type": "time",
-              "context": "mission",
-              "op": "<",
-              "time": "6 h"
+              "math": [
+                "time_since(n_time_mission_need_time)",
+                "<",
+                "time('6 h')"
+              ]
             }
           }
         },
         "success": {
           "effect": {
-            "npc_lose_var": "need_time",
-            "type": "time",
-            "context": "mission"
+            "npc_lose_var": "time_mission_need_time"
           },
           "topic": "TALK_bandit_rs_bomber_mission2"
         },
@@ -176,9 +170,7 @@
         "text": "让我们交易吧。",
         "topic": "TALK_bandit_rs_bomber1",
         "condition": {
-          "npc_has_var": "trade",
-          "type": "flag",
-          "context": "open_trade",
+          "npc_has_var": "flag_open_trade_trade",
           "value": "yes"
         },
         "effect": "start_trade"
@@ -294,11 +286,11 @@
     "speaker_effect": [
       {
         "condition": {
-          "u_compare_time_since_var": "refugee_center",
-          "type": "time",
-          "context": "captured",
-          "op": ">=",
-          "time": "21 days"
+          "math": [
+            "time_since(u_time_captured_refugee_center)",
+            ">=",
+            "time('21 d')"
+          ]
         },
         "effect": {
           "add_mission": "MISSION_bandit_rs_bomber_2-z"
@@ -317,9 +309,7 @@
       {
         "effect": [
           {
-            "npc_lose_var": "m1_end",
-            "type": "flag",
-            "context": "mission"
+            "npc_lose_var": "flag_mission_m1_end"
           }
         ]
       }
@@ -378,15 +368,14 @@
       },
       "effect": [
         {
-          "npc_add_var": "need_time",
-          "type": "time",
-          "context": "mission",
-          "time": true
+          "math": [
+            "n_time_mission_need_time",
+            "=",
+            "time('now')"
+          ]
         },
         {
-          "npc_add_var": "m1_end",
-          "type": "flag",
-          "context": "mission",
+          "npc_add_var": "flag_mission_m1_end",
           "value": "yes"
         }
       ]
@@ -474,15 +463,11 @@
     "end": {
       "effect": [
         {
-          "npc_add_var": "trade",
-          "type": "flag",
-          "context": "open_trade",
+          "npc_add_var": "flag_open_trade_trade",
           "value": "yes"
         },
         {
-          "u_add_var": "rc_basement",
-          "type": "flag",
-          "context": "basement_cleaned",
+          "u_add_var": "flag_basement_cleaned_rc_basement",
           "value": "yes"
         }
       ]
@@ -570,15 +555,11 @@
     "end": {
       "effect": [
         {
-          "npc_add_var": "trade",
-          "type": "flag",
-          "context": "open_trade",
+          "npc_add_var": "flag_open_trade_trade",
           "value": "yes"
         },
         {
-          "u_add_var": "rc_basement",
-          "type": "flag",
-          "context": "basement_cleaned",
+          "u_add_var": "flag_basement_cleaned_rc_basement",
           "value": "yes"
         }
       ]

@@ -11,7 +11,6 @@
     "volume": "6 L",
     "price": "550000 USD",
     "to_hit": -4,
-    "bashing": 18,
     "looks_like": "m134",
     "material": [
       "qt_steel"
@@ -74,7 +73,10 @@
     "flags": [
       "NEVER_JAMS",
       "MOUNTED_GUN"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 18
+    }
   },
   {
     "id": "cz53minigun",
@@ -88,7 +90,6 @@
     "volume": "6 L",
     "price": "550000 USD",
     "to_hit": -4,
-    "bashing": 18,
     "looks_like": "m134",
     "material": [
       "qt_steel"
@@ -151,7 +152,10 @@
     "flags": [
       "NEVER_JAMS",
       "MOUNTED_GUN"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 18
+    }
   },
   {
     "id": "avenger",
@@ -165,7 +169,6 @@
     "volume": "6 L",
     "price": "550000 USD",
     "to_hit": -4,
-    "bashing": 18,
     "looks_like": "m134",
     "material": [
       "qt_steel"
@@ -228,7 +231,10 @@
     "flags": [
       "NEVER_JAMS",
       "MOUNTED_GUN"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 18
+    }
   },
   {
     "id": "l30",
@@ -242,7 +248,6 @@
     "volume": "4500 ml",
     "price": "7500 USD",
     "to_hit": -1,
-    "bashing": 8,
     "looks_like": "m134",
     "material": [
       "steel",
@@ -297,7 +302,10 @@
       "NEVER_JAMS",
       "NO_UNLOAD",
       "MOUNTED_GUN"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "grenademg",
@@ -312,7 +320,6 @@
     "volume": "4 L",
     "price": "16500 USD",
     "to_hit": -1,
-    "bashing": 14,
     "material": [
       "steel"
     ],
@@ -373,7 +380,10 @@
     ],
     "flags": [
       "MOUNTED_GUN"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "id": "25mmapw",
@@ -388,7 +398,6 @@
     "volume": "750 ml",
     "price": "8500 USD",
     "to_hit": -3,
-    "bashing": 6,
     "material": [
       "steel"
     ],
@@ -412,7 +421,10 @@
           "25mmdrummagxl"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "broadsider",
@@ -440,7 +452,6 @@
     ],
     "weight": "5220 g",
     "volume": "6 L",
-    "bashing": 12,
     "to_hit": -3,
     "dispersion": 300,
     "durability": 7,
@@ -473,7 +484,10 @@
           "cannonball": 3
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "rockwell_bigbazooka",
@@ -502,7 +516,6 @@
     ],
     "weight": "5220 g",
     "volume": "6 L",
-    "bashing": 12,
     "to_hit": -3,
     "dispersion": 300,
     "durability": 7,
@@ -535,12 +548,15 @@
           "bbrocket": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "amr50",
     "copy-from": "rifle_base",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "name": {
       "str": "炮手AMR-50",
@@ -551,7 +567,6 @@
     "volume": "3500 ml",
     "price": "14833 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel"
     ],
@@ -585,7 +600,10 @@
     ],
     "flags": [
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "70mm_autocannon",
@@ -612,7 +630,6 @@
     ],
     "weight": "200 kg",
     "volume": "7500 ml",
-    "bashing": 12,
     "to_hit": -1,
     "dispersion": 0,
     "sight_dispersion": 10,
@@ -642,7 +659,10 @@
           "belt70mm"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "tank_gun_dual",
@@ -664,7 +684,6 @@
     ],
     "weight": "3300 kg",
     "volume": "10 L",
-    "bashing": 12,
     "to_hit": -6,
     "range": 50,
     "dispersion": 20,
@@ -685,7 +704,10 @@
     "flags": [
       "NO_RELOAD",
       "MOUNTED_GUN"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "tank_gun_105",
@@ -712,7 +734,6 @@
     ],
     "weight": "3000 kg",
     "volume": "8750 ml",
-    "bashing": 12,
     "to_hit": -6,
     "range": 40,
     "dispersion": 20,
@@ -729,6 +750,9 @@
           "105mm": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   }
 ]

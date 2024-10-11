@@ -80,13 +80,15 @@
     ],
     "weight": "430000 g",
     "volume": "187500 ml",
-    "bashing": 10,
-    "cutting": 6,
     "to_hit": -2,
     "flags": [
       "TRADER_AVOID",
       "NO_REPAIR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -105,13 +107,15 @@
     ],
     "weight": "1023850 g",
     "volume": "1100 L",
-    "bashing": 20,
-    "cutting": 15,
     "to_hit": -3,
     "flags": [
       "TRADER_AVOID",
       "NO_REPAIR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 15
+    }
   },
   {
     "type": "GENERIC",
@@ -130,13 +134,15 @@
     ],
     "weight": "1223850 g",
     "volume": "875 L",
-    "bashing": 20,
-    "cutting": 15,
     "to_hit": -3,
     "flags": [
       "TRADER_AVOID",
       "NO_REPAIR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 15
+    }
   },
   {
     "id": "bot_tripod",
@@ -150,7 +156,6 @@
     "volume": "92500 ml",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -168,6 +173,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -183,7 +191,6 @@
     "volume": "250 L",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -201,6 +208,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -216,7 +226,6 @@
     "volume": "250 L",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -234,6 +243,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {

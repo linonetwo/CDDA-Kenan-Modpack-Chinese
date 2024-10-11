@@ -15,11 +15,11 @@
           "type": "CONDITION",
           "condition": {
             "not": {
-              "npc_compare_time_since_var": "time_brew",
-              "type": "time",
-              "context": "brew",
-              "op": "<",
-              "time": "14 days"
+              "math": [
+                "time_since(npc_time_brew_time_brew)",
+                "<",
+                "time('14 d')"
+              ]
             }
           }
         },

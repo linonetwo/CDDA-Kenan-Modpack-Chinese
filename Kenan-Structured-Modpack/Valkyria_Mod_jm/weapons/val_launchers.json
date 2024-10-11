@@ -43,7 +43,6 @@
     ],
     "weight": "7500 g",
     "volume": "4700 ml",
-    "bashing": 10,
     "to_hit": -3,
     "dispersion": 600,
     "durability": 10,
@@ -83,7 +82,10 @@
         "rail mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "type": "AMMO",
@@ -186,7 +188,6 @@
     ],
     "weight": "8500 g",
     "volume": "4900 ml",
-    "bashing": 10,
     "to_hit": -3,
     "dispersion": 650,
     "durability": 10,
@@ -226,7 +227,10 @@
         "rail mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "type": "AMMO",
@@ -317,7 +321,6 @@
     "price": "4000 USD",
     "price_postapoc": "25 USD",
     "to_hit": -3,
-    "bashing": 12,
     "material": [
       "steel"
     ],
@@ -362,7 +365,10 @@
         "grip mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "abstract": "sh_bgrenade",
@@ -443,7 +449,7 @@
   },
   {
     "id": "val_valkyrurlance",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -455,8 +461,6 @@
     "price": "95000 USD",
     "price_postapoc": "3000 USD",
     "to_hit": 3,
-    "bashing": 15,
-    "cutting": 50,
     "material": [
       "diamond"
     ],
@@ -492,6 +496,10 @@
       "NEVER_JAMS",
       "NON-FOULING",
       "NEEDS_NO_LUBE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15,
+      "cut": 50
+    }
   }
 ]

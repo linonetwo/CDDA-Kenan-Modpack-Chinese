@@ -9,9 +9,7 @@
         "condition": {
           "and": [
             {
-              "u_has_var": "merchant_center_Barrett_Hartley",
-              "type": "ask",
-              "context": "stay",
+              "u_has_var": "ask_stay_merchant_center_Barrett_Hartley",
               "value": "0"
             },
             {
@@ -24,9 +22,7 @@
         "text": "你能接受那边那个女孩吗？",
         "topic": "TALK_EVAC_MERCHANT_Rosalyn_Hartley",
         "condition": {
-          "u_has_var": "Rosalyn_Hartley_alone",
-          "type": "flag",
-          "context": "alone",
+          "u_has_var": "flag_alone_Rosalyn_Hartley_alone",
           "value": "yes"
         }
       }
@@ -62,9 +58,7 @@
         "text": "…",
         "topic": "TALK_DONE",
         "effect": {
-          "u_add_var": "merchant_center_Barrett_Hartley",
-          "type": "ask",
-          "context": "stay",
+          "u_add_var": "ask_stay_merchant_center_Barrett_Hartley",
           "value": "no"
         }
       }

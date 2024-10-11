@@ -122,11 +122,11 @@
           "type": "CONDITION",
           "condition": {
             "not": {
-              "npc_compare_time_since_var": "wait_time",
-              "type": "general",
-              "context": "brew",
-              "op": "<",
-              "time": "1 day"
+              "math": [
+                "time_since(n_general_brew_wait_time)",
+                "<",
+                "time('1 d')"
+              ]
             }
           }
         },

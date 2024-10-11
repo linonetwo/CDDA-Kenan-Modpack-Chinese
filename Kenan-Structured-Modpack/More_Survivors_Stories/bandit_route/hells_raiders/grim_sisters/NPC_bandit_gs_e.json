@@ -35,7 +35,7 @@
     ],
     "type": "talk_topic",
     "dynamic_line": {
-      "and": [
+      "concatenate": [
         "*took the receipt and looked closely at it.  After a few minutes, she returned it to you and said: \"Forward and to the left.  ",
         {
           "u_male": true,
@@ -50,9 +50,7 @@
         "topic": "TALK_DONE",
         "effect": [
           {
-            "u_add_var": "open_gs_base",
-            "type": "flag",
-            "context": "give_access",
+            "u_add_var": "flag_give_access_open_gs_base",
             "value": "yes"
           },
           {

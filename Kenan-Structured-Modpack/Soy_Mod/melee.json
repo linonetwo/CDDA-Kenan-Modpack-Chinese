@@ -16,8 +16,6 @@
       "soybeanmaterial"
     ],
     "volume": "2500 ml",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "category": "tools",
     "use_action": {
@@ -27,6 +25,10 @@
       "msg": "毛豆成熟了！",
       "moves": 0,
       "target": "fi_ueki_edamame"
+    },
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
     }
   },
   {
@@ -46,10 +48,12 @@
       "soybeanmaterial"
     ],
     "volume": "2500 ml",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
-    "category": "tools"
+    "category": "tools",
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -68,8 +72,6 @@
       "soybeanmaterial"
     ],
     "volume": "2500 ml",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "category": "tools",
     "use_action": {
@@ -79,6 +81,10 @@
       "msg": "大豆已经产出！",
       "moves": 0,
       "target": "fi_ueki_daizu"
+    },
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
     }
   },
   {
@@ -98,10 +104,12 @@
       "soybeanmaterial"
     ],
     "volume": "2500 ml",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
-    "category": "tools"
+    "category": "tools",
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -128,12 +136,14 @@
         "max_contains_weight": "15 kg"
       }
     ],
-    "bashing": 0,
-    "cutting": 0,
     "category": "tools",
     "to_hit": 0,
     "flags": [
       "TARDIS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   }
 ]

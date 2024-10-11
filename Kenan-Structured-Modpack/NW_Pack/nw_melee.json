@@ -14,8 +14,10 @@
       "wood",
       "gold"
     ],
-    "bashing": 27,
-    "price": 160000
+    "price": 160000,
+    "melee_damage": {
+      "bash": 27
+    }
   },
   {
     "id": "gungnir_replica",
@@ -36,8 +38,10 @@
       "IMPALE"
     ],
     "volume": "3250 ml",
-    "bashing": 10,
-    "price": 120000
+    "price": 120000,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "laevateinn_replica",
@@ -52,9 +56,13 @@
       "steel",
       "gold"
     ],
-    "techniques": "WBLOCK_2",
+    "techniques": [
+      "WBLOCK_2"
+    ],
     "weight": "1860 g",
-    "bashing": 17,
-    "cutting": 33
+    "melee_damage": {
+      "bash": 17,
+      "cut": 33
+    }
   }
 ]

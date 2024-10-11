@@ -16,9 +16,7 @@
         "text": "听着，我为你找到的那些浆果，它们真的有治疗作用吗？",
         "condition": {
           "not": {
-            "npc_has_var": "confronted_ms",
-            "type": "flag",
-            "context": "bg",
+            "npc_has_var": "flag_bg_confronted_ms",
             "value": "yes"
           }
         },
@@ -71,9 +69,7 @@
         "failure": {
           "topic": "BGSS_mad_scientist_LIE",
           "effect": {
-            "npc_add_var": "confronted_ms",
-            "type": "flag",
-            "context": "bg",
+            "npc_add_var": "flag_bg_confronted_ms",
             "value": "yes"
           }
         }

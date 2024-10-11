@@ -1,7 +1,7 @@
 [
   {
     "id": "tihar",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "symbol": "(",
@@ -28,7 +28,6 @@
     "weight": "4211 g",
     "volume": "2750 ml",
     "longest_side": "1020 mm",
-    "bashing": 8,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -95,11 +94,14 @@
         "underbarrel mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "helsing",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "symbol": "(",
@@ -126,7 +128,6 @@
     "weight": "3110 g",
     "volume": "3 L",
     "longest_side": "1020 mm",
-    "bashing": 12,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -181,7 +182,10 @@
         "underbarrel mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "pneumatic_shotgun",
@@ -213,7 +217,6 @@
     "volume": "2500 ml",
     "longest_side": "920 mm",
     "price_postapoc": "120 USD",
-    "bashing": 8,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -280,7 +283,10 @@
         "underbarrel mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "mininuke_launcher",
@@ -309,7 +315,6 @@
     ],
     "weight": "11260 g",
     "volume": "2750 ml",
-    "bashing": 12,
     "to_hit": -1,
     "range": 40,
     "dispersion": 600,
@@ -345,6 +350,9 @@
           "mininuke_mod": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   }
 ]

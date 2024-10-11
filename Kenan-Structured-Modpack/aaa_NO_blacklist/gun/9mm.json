@@ -10,7 +10,6 @@
     "volume": "500 ml",
     "price": 300,
     "to_hit": -1,
-    "bashing": 5,
     "material": [
       "budget_steel",
       "plastic"
@@ -35,7 +34,10 @@
           "hipoint9extmag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "hipoint9car",
@@ -48,7 +50,6 @@
     "volume": "2 L",
     "price": "30 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "budget_steel",
       "plastic"
@@ -96,7 +97,10 @@
           "hipoint9extmag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "pm-83p",
@@ -109,7 +113,6 @@
     "volume": "1000 ml",
     "price": "700 USD",
     "to_hit": -1,
-    "bashing": 3,
     "material": [
       "steel",
       "plastic"
@@ -143,6 +146,9 @@
           "rak_9mm_15"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3
+    }
   }
 ]

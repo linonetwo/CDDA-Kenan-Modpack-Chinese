@@ -11,8 +11,6 @@
     "volume": "2 L",
     "price": "100 USD",
     "to_hit": 1,
-    "bashing": 10,
-    "cutting": 29,
     "material": [
       "steel",
       "wood"
@@ -44,7 +42,11 @@
           "44": 6
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 29
+    }
   },
   {
     "id": "belt_gun",
@@ -59,7 +61,6 @@
     "volume": "250 ml",
     "price": "1100 USD",
     "to_hit": -1,
-    "bashing": 5,
     "material": [
       "steel",
       "wood"
@@ -87,7 +88,10 @@
           "22": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "rifle_shield",
@@ -101,7 +105,6 @@
     "volume": "2500 ml",
     "price": "410 USD",
     "to_hit": -1,
-    "bashing": 15,
     "material": [
       "iron",
       "wood"
@@ -150,6 +153,9 @@
           "flintlock": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15
+    }
   }
 ]

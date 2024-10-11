@@ -50,7 +50,6 @@
     "volume": "3750 ml",
     "price": "30 USD",
     "to_hit": -3,
-    "bashing": 2,
     "material": [
       "wood"
     ],
@@ -59,10 +58,14 @@
     "use_action": {
       "type": "deploy_furn",
       "furn_type": "f_wooden_rollmat"
+    },
+    "melee_damage": {
+      "bash": 2
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "wooden_rollmat",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",

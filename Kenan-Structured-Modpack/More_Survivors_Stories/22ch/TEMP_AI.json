@@ -20,9 +20,7 @@
         "trial": {
           "type": "CONDITION",
           "condition": {
-            "u_has_var": "22ch_ai",
-            "type": "flag",
-            "context": "ai",
+            "u_has_var": "flag_ai_22ch_ai",
             "value": "yes"
           }
         },
@@ -43,9 +41,7 @@
     "type": "talk_topic",
     "id": "TALK_AI_FAIL",
     "dynamic_line": {
-      "u_has_var": "22ch_ai",
-      "type": "flag",
-      "context": "ai",
+      "u_has_var": "flag_ai_22ch_ai",
       "value": "no",
       "yes": "[*AI剧烈爆炸*]",
       "no": "[*什么都没发生*]"
@@ -55,17 +51,13 @@
         "text": "…",
         "topic": "TALK_DONE",
         "condition": {
-          "u_has_var": "22ch_ai",
-          "type": "flag",
-          "context": "ai",
+          "u_has_var": "flag_ai_22ch_ai",
           "value": "no"
         },
         "effect": [
           "npc_die",
           {
-            "u_lose_var": "22ch_ai",
-            "type": "flag",
-            "context": "ai"
+            "u_lose_var": "flag_ai_22ch_ai"
           }
         ],
         "switch": true

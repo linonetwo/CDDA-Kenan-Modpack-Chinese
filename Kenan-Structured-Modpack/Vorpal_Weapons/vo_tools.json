@@ -14,7 +14,6 @@
     ],
     "weight": "1264 g",
     "volume": "250 ml",
-    "bashing": 6,
     "to_hit": -1,
     "flags": [
       "BOMB"
@@ -26,6 +25,9 @@
       "target_charges": 3,
       "active": true,
       "msg": "我启动了一个炸弹。"
+    },
+    "melee_damage": {
+      "bash": 6
     }
   },
   {
@@ -44,7 +46,6 @@
     "flags": "TRADER_AVOID",
     "weight": "1264 g",
     "volume": "250 ml",
-    "bashing": 6,
     "to_hit": -1,
     "max_charges": 3,
     "initial_charges": 3,
@@ -57,6 +58,9 @@
       "fields_type": "fd_web",
       "fields_min_intensity": 0,
       "fields_max_intensity": 3
+    },
+    "melee_damage": {
+      "bash": 6
     }
   },
   {
@@ -75,9 +79,11 @@
     ],
     "weight": "529 g",
     "volume": "750 ml",
-    "bashing": 3,
     "to_hit": -1,
-    "use_action": "MOP"
+    "use_action": "MOP",
+    "melee_damage": {
+      "bash": 3
+    }
   },
   {
     "id": "brainwash_off_vo",

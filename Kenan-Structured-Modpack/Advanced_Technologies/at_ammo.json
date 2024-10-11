@@ -15,8 +15,6 @@
     "volume": "2 L",
     "longest_side": "36 mm",
     "weight": "1200 g",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "ammo_type": "6mm",
     "casing": "6mm_casing",
@@ -31,7 +29,11 @@
     "count": 1000,
     "effects": [
       "COOKOFF"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "AMMO",
@@ -49,8 +51,6 @@
     ],
     "volume": "110 ml",
     "weight": "70 g",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "ammo_type": "11mm",
     "casing": "11spent",
@@ -66,7 +66,11 @@
     "stack_size": 30,
     "effects": [
       "COOKOFF"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "id": "50R",
@@ -611,8 +615,6 @@
     "volume": "1 ml",
     "longest_side": "36 mm",
     "weight": "1 g",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "ammo_type": "components",
     "damage": {
@@ -623,7 +625,11 @@
     "range": 0,
     "dispersion": 0,
     "recoil": 0,
-    "count": 2000
+    "count": 2000,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "AMMO",
@@ -641,8 +647,6 @@
     "volume": "11 ml",
     "longest_side": "100 mm",
     "weight": "16 g",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "ammo_type": "20mm",
     "damage": {
@@ -657,6 +661,10 @@
     "stack_size": 80,
     "effects": [
       "COOKOFF"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   }
 ]

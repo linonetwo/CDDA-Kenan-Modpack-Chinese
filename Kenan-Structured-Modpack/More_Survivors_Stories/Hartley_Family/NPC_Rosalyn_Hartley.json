@@ -65,9 +65,7 @@
     "type": "talk_topic",
     "id": "TALK_Rosalyn_Hartley_1",
     "dynamic_line": {
-      "u_has_var": "Barrett_Hartley_dead",
-      "type": "flag",
-      "context": "death",
+      "u_has_var": "flag_death_Barrett_Hartley_dead",
       "value": "yes",
       "yes": "爸爸…",
       "no": {
@@ -106,9 +104,7 @@
         "effect": [
           "stop_following",
           {
-            "u_add_var": "Rosalyn_Hartley_safe",
-            "type": "flag",
-            "context": "safe",
+            "u_add_var": "flag_safe_Rosalyn_Hartley_safe",
             "value": "yes"
           },
           {
@@ -120,9 +116,7 @@
         "text": "这些人会照顾你的。对他们好一点。",
         "topic": "TALK_Rosalyn_Hartley_safe_alone",
         "condition": {
-          "u_has_var": "Rosalyn_Hartley_alone",
-          "type": "flag",
-          "context": "alone",
+          "u_has_var": "flag_alone_Rosalyn_Hartley_alone",
           "value": "no"
         },
         "switch": true
@@ -131,9 +125,7 @@
         "text": "对不起……",
         "topic": "TALK_Rosalyn_Hartley_father_dead",
         "condition": {
-          "u_has_var": "Barrett_Hartley_dead",
-          "type": "flag",
-          "context": "death",
+          "u_has_var": "flag_death_Barrett_Hartley_dead",
           "value": "yes"
         },
         "switch": true
@@ -168,21 +160,18 @@
         "topic": "TALK_DONE",
         "effect": [
           {
-            "u_lose_var": "Barrett_Hartley_dead",
-            "type": "flag",
-            "context": "death"
+            "u_lose_var": "flag_death_Barrett_Hartley_dead"
           },
           {
-            "u_add_var": "Rosalyn_Hartley_alone",
-            "type": "flag",
-            "context": "alone",
+            "u_add_var": "flag_alone_Rosalyn_Hartley_alone",
             "value": "yes"
           },
           {
-            "npc_add_var": "alone",
-            "type": "time",
-            "context": "time_alone",
-            "time": true
+            "math": [
+              "n_time_alone_time_alone",
+              "=",
+              "time('now')"
+            ]
           }
         ]
       }
@@ -214,21 +203,18 @@
         "topic": "TALK_DONE",
         "effect": [
           {
-            "u_lose_var": "Barrett_Hartley_dead",
-            "type": "flag",
-            "context": "death"
+            "u_lose_var": "flag_death_Barrett_Hartley_dead"
           },
           {
-            "u_add_var": "Rosalyn_Hartley_alone",
-            "type": "flag",
-            "context": "alone",
+            "u_add_var": "flag_alone_Rosalyn_Hartley_alone",
             "value": "yes"
           },
           {
-            "npc_add_var": "alone",
-            "type": "time",
-            "context": "time_alone",
-            "time": true
+            "math": [
+              "n_time_alone_time_alone",
+              "=",
+              "time('now')"
+            ]
           }
         ]
       }
@@ -274,9 +260,7 @@
     "type": "talk_topic",
     "id": "TALK_Rosalyn_Hartley_evac_lobby",
     "dynamic_line": {
-      "u_has_var": "Barrett_Hartley_dead",
-      "type": "flag",
-      "context": "death",
+      "u_has_var": "flag_death_Barrett_Hartley_dead",
       "value": "yes",
       "yes": "我爸爸在哪？",
       "no": {
@@ -288,9 +272,7 @@
     "speaker_effect": {
       "sentinel": "safe",
       "condition": {
-        "u_has_var": "u_helped_Barrett_Hartley",
-        "type": "flag",
-        "context": "end",
+        "u_has_var": "flag_end_u_helped_Barrett_Hartley",
         "value": "yes"
       },
       "effect": [
@@ -351,14 +333,16 @@
     "goal_condition": {
       "and": [
         {
-          "u_has_var": "Rosalyn_Hartley_alone",
-          "type": "flag",
-          "context": "alone",
+          "u_has_var": "flag_alone_Rosalyn_Hartley_alone",
           "value": "yes"
         },
         {
           "not": {
-            "math": [ "time_since(npc_time_time_alone_alone)", "<", "time('1 d')" ]
+            "math": [
+              "time_since(n_time_alone_time_alone)",
+              "<",
+              "time('1 d')"
+            ]
           }
         }
       ]
@@ -382,14 +366,10 @@
     "fail": {
       "effect": [
         {
-          "u_lose_var": "Rosalyn_Hartley_alone",
-          "type": "flag",
-          "context": "alone"
+          "u_lose_var": "flag_alone_Rosalyn_Hartley_alone"
         },
         {
-          "u_add_var": "Rosalyn_Hartley_dead",
-          "type": "flag",
-          "context": "death",
+          "u_add_var": "flag_death_Rosalyn_Hartley_dead",
           "value": "yes"
         }
       ]

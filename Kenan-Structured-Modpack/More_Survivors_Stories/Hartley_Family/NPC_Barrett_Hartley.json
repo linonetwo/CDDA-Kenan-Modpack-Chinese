@@ -75,9 +75,7 @@
         "text": "你好吗？",
         "topic": "TALK_Barrett_Hartley_safe_hay",
         "condition": {
-          "u_has_var": "u_helped_Barrett_Hartley",
-          "type": "flag",
-          "context": "end",
+          "u_has_var": "flag_end_u_helped_Barrett_Hartley",
           "value": "yes"
         },
         "switch": true
@@ -124,9 +122,7 @@
           "and": [
             "mission_complete",
             {
-              "u_has_var": "Rosalyn_Hartley_dead",
-              "type": "flag",
-              "context": "death",
+              "u_has_var": "flag_death_Rosalyn_Hartley_dead",
               "value": "yes"
             }
           ]
@@ -172,9 +168,7 @@
           "mission_failure",
           "clear_mission",
           {
-            "u_lose_var": "Rosalyn_Hartley_dead",
-            "type": "flag",
-            "context": "death"
+            "u_lose_var": "flag_death_Rosalyn_Hartley_dead"
           }
         ]
       }
@@ -269,9 +263,7 @@
             {
               "or": [
                 {
-                  "u_has_var": "evac_problem_done",
-                  "type": "flag",
-                  "context": "problem",
+                  "u_has_var": "flag_problem_evac_problem_done",
                   "value": "yes"
                 },
                 "mission_complete"
@@ -296,9 +288,7 @@
         "trial": {
           "type": "CONDITION",
           "condition": {
-            "u_has_var": "Rosalyn_Hartley_safe",
-            "type": "flag",
-            "context": "safe",
+            "u_has_var": "flag_safe_Rosalyn_Hartley_safe",
             "value": "yes"
           }
         },
@@ -358,9 +348,7 @@
             "npc_first_topic": "TALK_Barrett_Hartley_evac_center_lobby"
           },
           {
-            "u_add_var": "merchant_center_Barrett_Hartley",
-            "type": "ask",
-            "context": "stay",
+            "u_add_var": "ask_stay_merchant_center_Barrett_Hartley",
             "value": "0"
           }
         ]
@@ -387,9 +375,7 @@
         "text": "不，得到了同样的答案。对不起的。",
         "topic": "TALK_Barrett_Hartley_evac_center_refused",
         "condition": {
-          "u_has_var": "merchant_center_Barrett_Hartley",
-          "type": "ask",
-          "context": "stay",
+          "u_has_var": "ask_stay_merchant_center_Barrett_Hartley",
           "value": "no"
         }
       },
@@ -421,7 +407,11 @@
     "type": "talk_topic",
     "id": "TALK_Barrett_Hartley_safe_hay",
     "dynamic_line": {
-      "math": [ "time_since(npc_flag_safe_Barrett_Hartley_safe)", ">", "time('7 d')" ],
+      "math": [
+        "time_since(n_flag_safe_Barrett_Hartley_safe)",
+        ">",
+        "time('7 d')"
+      ],
       "yes": "我很好，谢谢。一切都很顺利，<name_g>。这里的人很好，总是有一些工作可以做：有时我帮忙分发带来的哈巴，总是需要修理障碍，有时他们在没有多余人手的情况下把我安排在岗位上。你能想象吗，我甚至还加入了老卫兵？嗯，差不多了。只需要完成他们的简单任务，我就被视为正式会员了！会有薪水，口粮够我们两个人吃。",
       "no": "我很好，谢谢。这里有点挤，但我们能应付。最重要的是这里很安全，至少我们有自己的食物。他们不是免费的，很辛苦，但是像我这样的人有足够的工作，所以我没有抱怨。"
     },
@@ -430,7 +420,11 @@
         "text": "也许我能帮你？",
         "topic": "TALK_Barrett_Hartley_safe_help",
         "condition": {
-          "math": [ "time_since(npc_flag_safe_Barrett_Hartley_safe)", ">", "time('7 d')" ]
+          "math": [
+            "time_since(n_flag_safe_Barrett_Hartley_safe)",
+            ">",
+            "time('7 d')"
+          ]
         }
       },
       {
@@ -534,9 +528,7 @@
     },
     "fail": {
       "effect": {
-        "u_add_var": "Barrett_Hartley_dead",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_Barrett_Hartley_dead",
         "value": "yes"
       }
     },
@@ -605,9 +597,7 @@
     },
     "fail": {
       "effect": {
-        "u_add_var": "Barrett_Hartley_dead",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_flag_Barrett_Hartley_dead",
         "value": "yes"
       }
     },
@@ -647,24 +637,21 @@
     "end": {
       "effect": [
         {
-          "u_add_var": "u_helped_Barrett_Hartley",
-          "type": "flag",
-          "context": "end",
+          "u_add_var": "flag_end_u_helped_Barrett_Hartley",
           "value": "yes"
         },
         {
-          "npc_add_var": "Barrett_Hartley_safe",
-          "type": "flag",
-          "context": "safe",
-          "time": true
+          "math": [
+            "n_flag_safe_Barrett_Hartley_safe",
+            "=",
+            "time('now')"
+          ]
         }
       ]
     },
     "fail": {
       "effect": {
-        "u_add_var": "Barrett_Hartley_dead",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_Barrett_Hartley_dead",
         "value": "yes"
       }
     },
@@ -728,24 +715,18 @@
       },
       "effect": [
         {
-          "u_add_var": "Barrett_Hartley_mission_end",
-          "type": "flag",
-          "context": "mission",
+          "u_add_var": "flag_mission_Barrett_Hartley_mission_end",
           "value": "yes"
         },
         {
-          "u_add_var": "Barrett_Hartley_dead",
-          "type": "flag",
-          "context": "death",
+          "u_add_var": "flagd_eath_Barrett_Hartley_dead",
           "value": "yes"
         }
       ]
     },
     "fail": {
       "effect": {
-        "u_add_var": "Barrett_Hartley_dead",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_Barrett_Hartley_dead",
         "value": "yes"
       }
     },
@@ -791,9 +772,7 @@
     },
     "fail": {
       "effect": {
-        "u_add_var": "Barrett_Hartley_dead",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_Barrett_Hartley_dead",
         "value": "yes"
       }
     }

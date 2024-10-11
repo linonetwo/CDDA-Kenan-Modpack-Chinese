@@ -21,9 +21,7 @@
         "text": "想照顾这个女孩吗？她一个人在这个世界上，没有家人。",
         "topic": "TALK_REFUGEE_Rosalyn_Hartley_NO",
         "condition": {
-          "u_has_var": "Rosalyn_Hartley_alone",
-          "type": "flag",
-          "context": "alone",
+          "u_has_var": "flag_alone_Rosalyn_Hartley_alone",
           "value": "yes"
         }
       }
@@ -42,9 +40,7 @@
         "text": "想照顾这个女孩吗？她一个人在这个世界上，没有家人。",
         "topic": "TALK_REFUGEE_Rosalyn_Hartley_YES",
         "condition": {
-          "u_has_var": "Rosalyn_Hartley_alone",
-          "type": "flag",
-          "context": "alone",
+          "u_has_var": "flag_alone_Rosalyn_Hartley_alone",
           "value": "yes"
         }
       }
@@ -77,9 +73,7 @@
         },
         "effect": [
           {
-            "u_add_var": "Rosalyn_Hartley_alone",
-            "type": "flag",
-            "context": "alone",
+            "u_add_var": "flag_alone_Rosalyn_Hartley_alone",
             "value": "no"
           },
           {
@@ -92,9 +86,7 @@
         "text": "谢谢你。",
         "topic": "TALK_DONE",
         "effect": {
-          "u_add_var": "Rosalyn_Hartley_alone",
-          "type": "flag",
-          "context": "alone",
+          "u_add_var": "flag_alone_Rosalyn_Hartley_alone",
           "value": "no"
         }
       }

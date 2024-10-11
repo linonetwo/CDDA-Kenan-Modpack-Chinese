@@ -28,7 +28,6 @@
     "melee_dice": 1,
     "melee_dice_sides": 4,
     "melee_cut": 1,
-    "luminance": 0,
     "reproduction": {
       "baby_egg": "egg_fish",
       "baby_count": 3,
@@ -148,9 +147,13 @@
       }
     ],
     "special_attacks": [
-      { "id": "ranged_pull", "cooldown":5
+      {
+        "id": "ranged_pull",
+        "cooldown": 5
       },
-      { "id": "grab_drag", "cooldown":1
+      {
+        "id": "grab_drag",
+        "cooldown": 1
       }
     ],
     "extend": {

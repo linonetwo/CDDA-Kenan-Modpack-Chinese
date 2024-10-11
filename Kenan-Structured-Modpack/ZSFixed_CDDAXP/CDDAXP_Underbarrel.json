@@ -11,8 +11,6 @@
     "price": "400 USD",
     "install_time": "30 m",
     "to_hit": -1,
-    "bashing": 0,
-    "cutting": 24,
     "material": [
       "ceramic",
       "plastic"
@@ -32,7 +30,11 @@
       "NON_STUCK",
       "SPEAR",
       "KNIFE_COMBAT"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 0,
+      "cut": 24
+    }
   },
   {
     "id": "cddaxp_cswordbayonet",
@@ -45,8 +47,6 @@
     "volume": "750 ml",
     "price": "500 USD",
     "install_time": "30 m",
-    "bashing": 0,
-    "cutting": 30,
     "material": [
       "ceramic",
       "plastic"
@@ -65,7 +65,11 @@
       "NON_STUCK",
       "CHOP",
       "KNIFE_COMBAT"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 0,
+      "cut": 30
+    }
   },
   {
     "id": "cddaxp_cpistolbayonet",
@@ -79,8 +83,6 @@
     "price": "400 USD",
     "install_time": "30 m",
     "to_hit": -4,
-    "bashing": 0,
-    "cutting": 24,
     "material": [
       "ceramic",
       "plastic"
@@ -95,8 +97,11 @@
     ],
     "dispersion_modifier": 15,
     "flags": [
-      "STAB",
       "KNIFE_COMBAT"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 0,
+      "stab": 24
+    }
   }
 ]

@@ -7,9 +7,7 @@
     "dynamic_line": {
       "u_male": true,
       "yes": {
-        "npc_has_var": "talked_once",
-        "type": "flag",
-        "context": "talked",
+        "npc_has_var": "flag_talked_talked_once",
         "value": "yes",
         "yes": "准备死吧，猪！",
         "no": "你再转向我，猪，我就把你切成碎片。"
@@ -21,9 +19,7 @@
         "and": [
           {
             "not": {
-              "npc_has_var": "talked_once",
-              "type": "flag",
-              "context": "talked",
+              "npc_has_var": "flag_talked_talked_once",
               "value": "yes"
             }
           },
@@ -31,9 +27,7 @@
         ]
       },
       "effect": {
-        "npc_add_var": "talked_once",
-        "type": "flag",
-        "context": "talked",
+        "npc_add_var": "flag_talked_talked_once",
         "value": "yes"
       }
     },
@@ -41,9 +35,7 @@
       {
         "text": "…",
         "condition": {
-          "npc_has_var": "talked_once",
-          "type": "flag",
-          "context": "talked",
+          "npc_has_var": "flag_talked_talked_once",
           "value": "yes"
         },
         "effect": "insult_combat",

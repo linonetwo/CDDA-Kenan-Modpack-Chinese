@@ -12,7 +12,6 @@
     "longest_side": "340 mm",
     "price": "2500 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "steel",
       "plastic"
@@ -43,7 +42,10 @@
     ],
     "built_in_mods": [
       "m320_mod"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "boomlighter",
@@ -71,7 +73,6 @@
     "weight": "1500 g",
     "volume": "500 ml",
     "longest_side": "340 mm",
-    "bashing": 10,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -133,7 +134,10 @@
         "stock",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "gunsword",
@@ -165,8 +169,6 @@
     "weight": "1800 g",
     "volume": "2250 ml",
     "longest_side": "1020 mm",
-    "bashing": 2,
-    "cutting": 22,
     "to_hit": 3,
     "ranged_damage": {
       "damage_type": "stab",
@@ -209,7 +211,11 @@
     ],
     "techniques": [
       "WBLOCK_2"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "cut": 22
+    }
   },
   {
     "id": "gunknife",
@@ -232,7 +238,6 @@
       "NEVER_JAMS",
       "RELOAD_EJECT",
       "SHEATH_KNIFE",
-      "STAB",
       "DURABLE_MELEE",
       "NON-FOULING"
     ],
@@ -243,8 +248,6 @@
     "weight": "700 g",
     "volume": "500 ml",
     "longest_side": "200 mm",
-    "bashing": 2,
-    "cutting": 14,
     "to_hit": 1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -298,7 +301,11 @@
         "BUTCHER",
         14
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "stab": 14
+    }
   },
   {
     "id": "50pistol",
@@ -326,7 +333,6 @@
     "weight": "3800 g",
     "volume": "2 L",
     "longest_side": "680 mm",
-    "bashing": 11,
     "to_hit": -4,
     "ranged_damage": {
       "damage_type": "stab",
@@ -383,7 +389,10 @@
         "stock",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 11
+    }
   },
   {
     "id": "hk_mp5eod",
@@ -399,7 +408,6 @@
     "longest_side": "680 mm",
     "price": "4300 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "steel",
       "plastic"
@@ -452,7 +460,10 @@
           "ump45mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "e1776",
@@ -476,7 +487,6 @@
     "weight": "3400 g",
     "volume": "1250 ml",
     "longest_side": "680 mm",
-    "bashing": 10,
     "to_hit": -2,
     "ranged_damage": {
       "damage_type": "stab",
@@ -572,7 +582,10 @@
           "ump45mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "light_carb",
@@ -603,7 +616,6 @@
     "weight": "2100 g",
     "volume": "1500 ml",
     "longest_side": "900 mm",
-    "bashing": 7,
     "ranged_damage": {
       "damage_type": "stab",
       "amount": 10,
@@ -643,7 +655,10 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7
+    }
   },
   {
     "id": "arccan",
@@ -675,7 +690,6 @@
     "weight": "2700 g",
     "volume": "2 L",
     "longest_side": "1170 mm",
-    "bashing": 7,
     "ranged_damage": {
       "damage_type": "stab",
       "amount": 16,
@@ -711,7 +725,10 @@
         "stock",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7
+    }
   },
   {
     "id": "m1911ds",
@@ -725,7 +742,6 @@
     "volume": "750 ml",
     "longest_side": "229 mm",
     "price": "1500 USD",
-    "bashing": 7,
     "to_hit": -2,
     "material": [
       "steel",
@@ -794,6 +810,9 @@
           "m1911bigmag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7
+    }
   }
 ]

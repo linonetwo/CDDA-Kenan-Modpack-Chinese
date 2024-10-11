@@ -21,10 +21,8 @@
     ],
     "volume": "2500 ml",
     "longest_side": "380 mm",
-    "cutting": 0,
     "warmth": 30,
     "phase": "solid",
-    "bashing": 12,
     "flags": [
       "WATERPROOF",
       "STURDY",
@@ -42,7 +40,11 @@
       }
     ],
     "material_thickness": 5,
-    "environmental_protection": 4
+    "environmental_protection": 4,
+    "melee_damage": {
+      "bash": 12,
+      "cut": 0
+    }
   },
   {
     "type": "ARMOR",
@@ -66,10 +68,8 @@
     ],
     "volume": "2 L",
     "longest_side": "380 mm",
-    "cutting": 0,
     "warmth": 10,
     "phase": "solid",
-    "bashing": 10,
     "flags": [
       "VARSIZE",
       "WATERPROOF",
@@ -85,7 +85,11 @@
       }
     ],
     "material_thickness": 3,
-    "environmental_protection": 0
+    "environmental_protection": 0,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 0
+    }
   },
   {
     "type": "ARMOR",
@@ -109,10 +113,8 @@
     ],
     "volume": "3 L",
     "longest_side": "380 mm",
-    "cutting": 0,
     "warmth": 30,
     "phase": "solid",
-    "bashing": 12,
     "flags": [
       "WATCH",
       "WATERPROOF",
@@ -131,6 +133,10 @@
       }
     ],
     "material_thickness": 6,
-    "environmental_protection": 8
+    "environmental_protection": 8,
+    "melee_damage": {
+      "bash": 12,
+      "cut": 0
+    }
   }
 ]

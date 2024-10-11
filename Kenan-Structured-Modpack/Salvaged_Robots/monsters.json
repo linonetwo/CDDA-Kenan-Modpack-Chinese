@@ -318,12 +318,6 @@
     "path_settings": {
       "max_dist": 10
     },
-    "special_attacks": [
-      [
-        "CHICKENBOT",
-        4
-      ]
-    ],
     "death_function": {
       "corpse_type": "BROKEN"
     },
@@ -377,12 +371,6 @@
     "path_settings": {
       "max_dist": 20
     },
-    "special_attacks": [
-      [
-        "MULTI_ROBOT",
-        3
-      ]
-    ],
     "death_function": {
       "corpse_type": "BROKEN"
     },
@@ -1353,7 +1341,9 @@
       }
     ],
     "special_attacks": [
-      { "id": "grab", "cooldown": 1
+      {
+        "id": "grab",
+        "cooldown": 1
       }
     ],
     "extend": {
@@ -3037,9 +3027,13 @@
         "SHRIEK_STUN",
         10
       ],
-      { "id": "ranged_pull", "cooldown":10
+      {
+        "id": "ranged_pull",
+        "cooldown": 10
       },
-      { "id": "grab_drag", "cooldown":10
+      {
+        "id": "grab_drag",
+        "cooldown": 10
       }
     ],
     "extend": {
@@ -3204,7 +3198,9 @@
         "SMASH",
         30
       ],
-      { "id": "grab", "cooldown": 20
+      {
+        "id": "grab",
+        "cooldown": 20
       }
     ],
     "extend": {

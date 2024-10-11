@@ -10,9 +10,7 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "jerry_cleaning",
-              "type": "count",
-              "context": "cleaning",
+              "npc_has_var": "count_cleaning_jerry_cleaning",
               "value": "0"
             },
             {
@@ -58,9 +56,7 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "jerry_cleaning",
-              "type": "count",
-              "context": "cleaning",
+              "npc_has_var": "count_cleaning_jerry_cleaning",
               "value": "0"
             },
             "at_safe_space",
@@ -89,10 +85,10 @@
           ]
         },
         "effect": {
-          "u_adjust_var": "jerry_cleaning",
-          "type": "count",
-          "context": "cleaning",
-          "adjustment": 1
+          "math": [
+            "n_count_cleaning_jerry_cleaning",
+            "++"
+          ]
         }
       },
       {
@@ -101,9 +97,7 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "jerry_cleaning",
-              "type": "count",
-              "context": "cleaning",
+              "npc_has_var": "count_cleaning_jerry_cleaning",
               "value": "1"
             },
             "at_safe_space",
@@ -123,10 +117,10 @@
           ]
         },
         "effect": {
-          "u_adjust_var": "jerry_cleaning",
-          "type": "count",
-          "context": "cleaning",
-          "adjustment": 1
+          "math": [
+            "u_count_cleaning_jerry_cleaning",
+            "++"
+          ]
         }
       },
       {
@@ -135,9 +129,7 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "jerry_cleaning",
-              "type": "count",
-              "context": "cleaning",
+              "npc_has_var": "count_cleaning_jerry_cleaning",
               "value": "2"
             },
             "at_safe_space",
@@ -157,10 +149,10 @@
           ]
         },
         "effect": {
-          "u_adjust_var": "jerry_cleaning",
-          "type": "count",
-          "context": "cleaning",
-          "adjustment": 1
+          "math": [
+            "u_count_cleaning_jerry_cleaning",
+            "++"
+          ]
         }
       },
       {
@@ -169,9 +161,7 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "jerry_cleaning",
-              "type": "count",
-              "context": "cleaning",
+              "npc_has_var": "count_cleaning_jerry_cleaning",
               "value": "3"
             },
             "at_safe_space",
@@ -191,10 +181,10 @@
           ]
         },
         "effect": {
-          "u_adjust_var": "jerry_cleaning",
-          "type": "count",
-          "context": "cleaning",
-          "adjustment": 1
+          "math": [
+            "u_count_cleaning_jerry_cleaning",
+            "++"
+          ]
         }
       },
       {
@@ -203,9 +193,7 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "jerry_cleaning",
-              "type": "count",
-              "context": "cleaning",
+              "npc_has_var": "count_cleaning_jerry_cleaning",
               "value": "4"
             },
             "at_safe_space",
@@ -225,10 +213,10 @@
           ]
         },
         "effect": {
-          "u_adjust_var": "jerry_cleaning",
-          "type": "count",
-          "context": "cleaning",
-          "adjustment": 1
+          "math": [
+            "n_count_cleaning_jerry_cleaning",
+            "++"
+          ]
         }
       },
       {
@@ -237,9 +225,7 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "jerry_cleaning",
-              "type": "count",
-              "context": "cleaning",
+              "npc_has_var": "count_cleaning_jerry_cleaning",
               "value": "5"
             },
             "at_safe_space",
@@ -259,10 +245,10 @@
           ]
         },
         "effect": {
-          "u_adjust_var": "jerry_cleaning",
-          "type": "count",
-          "context": "cleaning",
-          "adjustment": 1
+          "math": [
+            "n_count_cleaning_jerry_cleaning",
+            "++"
+          ]
         },
         "switch": true
       },

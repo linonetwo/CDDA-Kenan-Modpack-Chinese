@@ -10,7 +10,6 @@
     "volume": "250 ml",
     "price": "30 USD",
     "to_hit": -1,
-    "bashing": 1,
     "material": [
       "plastic",
       "aluminum"
@@ -39,7 +38,10 @@
       }
     ],
     "charges_per_use": 10,
-    "use_action": "SHAVEKIT"
+    "use_action": "SHAVEKIT",
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "press_large",
@@ -52,11 +54,13 @@
     "volume": "100 L",
     "price": "500 USD",
     "to_hit": -4,
-    "bashing": 15,
     "material": [
       "steel"
     ],
-    "symbol": "="
+    "symbol": "=",
+    "melee_damage": {
+      "bash": 15
+    }
   },
   {
     "id": "plasma_torch",
@@ -68,7 +72,6 @@
     },
     "description": "通过热等离子体加速射流切割导电材料的有力工具。也可选择电弧焊。著名焊工达斯维达会很自豪的。",
     "price": "200 USD",
-    "bashing": 22,
     "to_hit": -6,
     "weight": "30 kg",
     "volume": "67 L",
@@ -113,7 +116,10 @@
           "heavy_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 22
+    }
   },
   {
     "id": "lathe",
@@ -124,7 +130,6 @@
     },
     "description": "围绕旋转轴旋转工件以执行各种操作的机械，可以切削、打磨、滚花、钻孔、变形、端面和车削等，使用不同的工具处理工件，来制造沿轴对称的物体。",
     "price": "1000 USD",
-    "bashing": 24,
     "to_hit": -6,
     "weight": "40 kg",
     "volume": "72 L",
@@ -153,6 +158,9 @@
           "heavy_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 24
+    }
   }
 ]

@@ -13,8 +13,6 @@
     "price": "30 USD",
     "install_time": "15 m",
     "to_hit": -1,
-    "bashing": 15,
-    "cutting": 9,
     "material": [
       "steel"
     ],
@@ -50,7 +48,9 @@
         2
       ]
     ],
-    "techniques": "BRUTAL",
+    "techniques": [
+      "BRUTAL"
+    ],
     "qualities": [
       [
         "CUT",
@@ -67,6 +67,10 @@
     ],
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15,
+      "cut": 9
+    }
   }
 ]

@@ -148,7 +148,9 @@
         "wound_minor",
         30
       ],
-      { "id": "grab", "cooldown": 15
+      {
+        "id": "grab",
+        "cooldown": 15
       },
       {
         "id": "scratch",
@@ -199,7 +201,14 @@
     "vision_night": 30,
     "luminance": 25,
     "special_attacks": [
-      { "type": "spell", "spell_data": { "id": "stare" }, "monster_message": "", "cooldown": 12 }
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "stare"
+        },
+        "monster_message": "",
+        "cooldown": 12
+      }
     ]
   },
   {
@@ -224,9 +233,17 @@
     "armor_bullet": 4,
     "vision_day": 40,
     "special_attacks": [
-      { "id": "grab", "cooldown": 30
+      {
+        "id": "grab",
+        "cooldown": 30
       },
-      { "type": "spell", "spell_data": { "id": "fear_paralyze" }, "monster_message": "", "cooldown":20
+      {
+        "type": "spell",
+        "spell_data": {
+          "id": "fear_paralyze"
+        },
+        "monster_message": "",
+        "cooldown": 20
       },
       [
         "hammer",
@@ -339,7 +356,9 @@
         "hammer",
         20
       ],
-      { "id": "grab", "cooldown": 30
+      {
+        "id": "grab",
+        "cooldown": 30
       },
       {
         "id": "scratch",

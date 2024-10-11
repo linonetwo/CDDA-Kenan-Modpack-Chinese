@@ -209,16 +209,18 @@
           "condition": {
             "and": [
               {
-                "u_has_skill": {
-                  "skill": "melee",
-                  "level": 4
-                }
+                "math": [
+                  "u_skill('melee')",
+                  ">=",
+                  "4"
+                ]
               },
               {
-                "u_has_skill": {
-                  "skill": "cutting",
-                  "level": 4
-                }
+                "math": [
+                  "u_skill('cutting')",
+                  ">=",
+                  "4"
+                ]
               }
             ]
           }

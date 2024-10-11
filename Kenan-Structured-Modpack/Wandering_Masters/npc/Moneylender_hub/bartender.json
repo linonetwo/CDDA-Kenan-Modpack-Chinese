@@ -166,10 +166,11 @@
         "text": "如果你让我进去你会失去什么？",
         "topic": "TALK_moneylender_bartender_talk",
         "condition": {
-          "u_has_skill": {
-            "skill": "speech",
-            "level": 3
-          }
+          "math": [
+            "u_skill('speech')",
+            ">=",
+            "3"
+          ]
         }
       },
       {

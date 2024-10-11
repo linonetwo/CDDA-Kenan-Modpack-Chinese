@@ -159,8 +159,6 @@
       "IMPALE",
       "WBLOCK_1"
     ],
-    "bashing": 10,
-    "cutting": 40,
     "qualities": [
       [
         "DRILL",
@@ -172,11 +170,14 @@
       ]
     ],
     "flags": [
-      "STAB",
       "NO_UNWIELD",
       "UNBREAKABLE_MELEE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "stab": 40
+    }
   },
   {
     "type": "bionic",
@@ -231,7 +232,6 @@
     "material": [
       "superalloy"
     ],
-    "cutting": 40,
     "techniques": [
       "WBLOCK_2",
       "RAPID"
@@ -242,7 +242,10 @@
       "TRADER_AVOID",
       "NONCONDUCTIVE",
       "NO_UNWIELD"
-    ]
+    ],
+    "melee_damage": {
+      "cut": 40
+    }
   },
   {
     "id": "bio_lightsaber",

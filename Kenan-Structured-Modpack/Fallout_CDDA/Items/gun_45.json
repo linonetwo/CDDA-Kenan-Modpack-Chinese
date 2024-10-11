@@ -10,7 +10,6 @@
     "weight": "2945 g",
     "volume": "1750 ml",
     "price": "400 USD",
-    "bashing": 10,
     "material": [
       "steel"
     ],
@@ -63,7 +62,10 @@
           "mac10mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "tommygun_silver",
@@ -78,7 +80,6 @@
     "volume": "2 L",
     "price": "4500 USD",
     "to_hit": -2,
-    "bashing": 10,
     "material": [
       "silver",
       "wood"
@@ -159,6 +160,9 @@
           "thompson_drum_silver"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   }
 ]

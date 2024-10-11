@@ -1,7 +1,7 @@
 [
   {
     "id": "cranked_machinegun",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -13,7 +13,6 @@
     "price": "420 USD",
     "price_postapoc": "420 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -79,7 +78,10 @@
         "stock mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "long_range_pistol",
@@ -95,7 +97,6 @@
     "price": "410 USD",
     "price_postapoc": "410 USD",
     "to_hit": -1,
-    "bashing": 5,
     "material": [
       "steel",
       "wood"
@@ -155,7 +156,10 @@
         "underbarrel mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "highvel_pistol",
@@ -171,7 +175,6 @@
     "price": "400 USD",
     "price_postapoc": "400 USD",
     "to_hit": -1,
-    "bashing": 5,
     "material": [
       "steel",
       "wood"
@@ -232,7 +235,10 @@
         "underbarrel mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "highbore_pistol",
@@ -248,7 +254,6 @@
     "price": "400 USD",
     "price_postapoc": "400 USD",
     "to_hit": -1,
-    "bashing": 5,
     "material": [
       "steel",
       "wood"
@@ -303,7 +308,10 @@
         "stock mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "am_riflecannon",
@@ -319,7 +327,6 @@
     "price": "455 USD",
     "price_postapoc": "455 USD",
     "to_hit": 1,
-    "bashing": 14,
     "material": [
       "steel",
       "wood"
@@ -371,11 +378,14 @@
         "stock mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "id": "sptesla_gun",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -387,7 +397,6 @@
     "price": "620 USD",
     "price_postapoc": "620 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -458,11 +467,14 @@
           "medium_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "sp_pyro_gun",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -474,7 +486,6 @@
     "price": "620 USD",
     "price_postapoc": "620 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -535,7 +546,10 @@
     ],
     "ammo_effects": [
       "FLARE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "foch_warbringer",
@@ -549,7 +563,6 @@
     "price": "920 USD",
     "price_postapoc": "920 USD",
     "to_hit": -1,
-    "bashing": 9,
     "material": [
       "steel",
       "wood"
@@ -621,7 +634,10 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9
+    }
   },
   {
     "id": "sp_shocking_staff_off",
@@ -644,8 +660,6 @@
     "ammo": [
       "battery"
     ],
-    "cutting": 5,
-    "bashing": 9,
     "to_hit": 2,
     "charges_per_use": 20,
     "use_action": "TAZER",
@@ -670,7 +684,11 @@
           "light_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9,
+      "cut": 5
+    }
   },
   {
     "id": "sp_shocking_staff_on",
@@ -693,7 +711,6 @@
     "ammo": [
       "battery"
     ],
-    "cutting": 45,
     "to_hit": 2,
     "flags": [
       "BELT_CLIP",
@@ -723,11 +740,14 @@
           "light_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "cut": 45
+    }
   },
   {
     "id": "paterson_mechgun",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -739,7 +759,6 @@
     "price": "450 USD",
     "price_postapoc": "450 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -805,11 +824,14 @@
         "stock mount",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "sp_faraday_staff",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -821,7 +843,6 @@
     "price": "600 USD",
     "price_postapoc": "600 USD",
     "to_hit": 1,
-    "bashing": 14,
     "material": [
       "steel",
       "copper"
@@ -904,11 +925,14 @@
           "medium_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "id": "spchar_gun",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -920,7 +944,6 @@
     "price": "500 USD",
     "price_postapoc": "500 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "copper"
@@ -986,7 +1009,10 @@
           "medium_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "type": "GENERIC",
@@ -1011,8 +1037,6 @@
       "RAPID"
     ],
     "volume": "2850 ml",
-    "bashing": 5,
-    "cutting": 19,
     "flags": [
       "DURABLE_MELEE",
       "SPEAR",
@@ -1026,6 +1050,10 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 19
+    }
   }
 ]

@@ -15,7 +15,6 @@
     ],
     "volume": "97 L",
     "weight": "34500 g",
-    "bashing": 8,
     "ammo_type": "mininuke_mod",
     "damage": {
       "damage_type": "stab",
@@ -25,7 +24,10 @@
     "effects": [
       "MININUKE_MOD",
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "type": "AMMO",
@@ -43,8 +45,6 @@
     ],
     "volume": "250 ml",
     "weight": "55 g",
-    "bashing": 2,
-    "cutting": 1,
     "ammo_type": "shotcanister",
     "looks_like": "shot_scrap",
     "range": 1,
@@ -54,7 +54,11 @@
     },
     "dispersion": 250,
     "loudness": 0,
-    "count": 10
+    "count": 10,
+    "melee_damage": {
+      "bash": 2,
+      "cut": 1
+    }
   },
   {
     "type": "AMMO",
@@ -72,8 +76,6 @@
     ],
     "volume": "250 ml",
     "weight": "55 g",
-    "bashing": 2,
-    "cutting": 1,
     "ammo_type": "shotcanister",
     "looks_like": "shot_scrap",
     "range": 2,
@@ -84,7 +86,11 @@
     },
     "dispersion": 80,
     "loudness": 0,
-    "count": 10
+    "count": 10,
+    "melee_damage": {
+      "bash": 2,
+      "cut": 1
+    }
   },
   {
     "type": "AMMO",
@@ -102,8 +108,6 @@
     ],
     "volume": "250 ml",
     "weight": "55 g",
-    "bashing": 2,
-    "cutting": 1,
     "ammo_type": "shotcanister",
     "looks_like": "shot_scrap",
     "range": 3,
@@ -114,7 +118,11 @@
     },
     "dispersion": 50,
     "loudness": 0,
-    "count": 10
+    "count": 10,
+    "melee_damage": {
+      "bash": 2,
+      "cut": 1
+    }
   },
   {
     "type": "AMMO",
@@ -132,8 +140,6 @@
     ],
     "volume": "250 ml",
     "weight": "55 g",
-    "bashing": 2,
-    "cutting": 1,
     "ammo_type": "shotcanister",
     "looks_like": "shot_scrap",
     "range": 2,
@@ -144,7 +150,11 @@
     },
     "dispersion": 100,
     "loudness": 0,
-    "count": 10
+    "count": 10,
+    "melee_damage": {
+      "bash": 2,
+      "cut": 1
+    }
   },
   {
     "id": "pebble_mk2",
@@ -156,7 +166,6 @@
     "weight": "12 g",
     "volume": "250 ml",
     "price": 100,
-    "bashing": 1,
     "material": [
       "iron"
     ],
@@ -174,7 +183,10 @@
     "loudness": 0,
     "effects": [
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "pebble_clay_mk2",
@@ -186,7 +198,6 @@
     "weight": "12 g",
     "volume": "250 ml",
     "price": 100,
-    "bashing": 1,
     "material": [
       "iron"
     ],
@@ -204,7 +215,10 @@
     "loudness": 0,
     "effects": [
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "pebble_mk3",
@@ -216,7 +230,6 @@
     "weight": "16 g",
     "volume": "250 ml",
     "price": 100,
-    "bashing": 1,
     "material": [
       "bone"
     ],
@@ -234,7 +247,10 @@
     "loudness": 0,
     "effects": [
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "pebble_mk4",
@@ -246,7 +262,6 @@
     "weight": "18 g",
     "volume": "250 ml",
     "price": 100,
-    "bashing": 1,
     "material": [
       "superalloy"
     ],
@@ -264,6 +279,9 @@
     "loudness": 0,
     "effects": [
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   }
 ]

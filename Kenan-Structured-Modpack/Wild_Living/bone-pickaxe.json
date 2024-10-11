@@ -2,6 +2,7 @@
   {
     "result": "pickaxe_bone",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",
     "skill_used": "fabrication",
@@ -95,8 +96,6 @@
     "volume": "2500 ml",
     "price": 800,
     "to_hit": -3,
-    "bashing": 10,
-    "cutting": 3,
     "material": [
       "wood"
     ],
@@ -112,6 +111,10 @@
       "SPEAR",
       "FRAGILE",
       "DIG_TOOL"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 3
+    }
   }
 ]

@@ -55,7 +55,6 @@
     "price": "200 USD",
     "price_postapoc": "200 USD",
     "to_hit": -1,
-    "bashing": 1,
     "material": [
       "kevlar",
       "cotton"
@@ -80,7 +79,10 @@
       }
     ],
     "material_thickness": 3,
-    "environmental_protection": 3
+    "environmental_protection": 3,
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "mss_helmet_lsurvivor",
@@ -96,7 +98,6 @@
     "price": "450 USD",
     "price_postapoc": "40 USD",
     "to_hit": -1,
-    "bashing": 7,
     "material": [
       "kevlar",
       "leather"
@@ -123,7 +124,10 @@
       }
     ],
     "material_thickness": 4,
-    "environmental_protection": 3
+    "environmental_protection": 3,
+    "melee_damage": {
+      "bash": 7
+    }
   },
   {
     "id": "mss_mask_extralsurvivor",
@@ -192,7 +196,6 @@
     "price": "580 USD",
     "price_postapoc": "20 USD",
     "to_hit": -1,
-    "bashing": 6,
     "material": [
       "kevlar",
       "cotton"
@@ -218,7 +221,10 @@
       }
     ],
     "material_thickness": 3,
-    "environmental_protection": 3
+    "environmental_protection": 3,
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "mss_extralsurvivor_suit",
@@ -347,7 +353,6 @@
     "price": "260 USD",
     "price_postapoc": "260 USD",
     "to_hit": -1,
-    "bashing": 2,
     "material": [
       "kevlar",
       "steel"
@@ -372,7 +377,10 @@
       }
     ],
     "material_thickness": 8,
-    "environmental_protection": 5
+    "environmental_protection": 5,
+    "melee_damage": {
+      "bash": 2
+    }
   },
   {
     "id": "mss_helmet_superhsurvivor",
@@ -388,7 +396,6 @@
     "price": "600 USD",
     "price_postapoc": "120 USD",
     "to_hit": -2,
-    "bashing": 12,
     "material": [
       "kevlar",
       "steel"
@@ -415,7 +422,10 @@
       }
     ],
     "material_thickness": 8,
-    "environmental_protection": 5
+    "environmental_protection": 5,
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "mss_mask_superhsurvivor",
@@ -485,7 +495,6 @@
     "price": "580 USD",
     "price_postapoc": "60 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "kevlar",
       "steel",
@@ -515,7 +524,10 @@
       }
     ],
     "material_thickness": 5,
-    "environmental_protection": 3
+    "environmental_protection": 3,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "mss_superhsurvivor_suit",
@@ -531,7 +543,6 @@
     "price": "2500 USD",
     "price_postapoc": "500 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel",
       "kevlar",
@@ -589,7 +600,10 @@
       }
     ],
     "material_thickness": 8,
-    "environmental_protection": 3
+    "environmental_protection": 3,
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "mss_cloak_hsurvivor",
@@ -689,7 +703,6 @@
     "price": "400 USD",
     "price_postapoc": "40 USD",
     "to_hit": -2,
-    "bashing": 7,
     "material": [
       "steel",
       "leather"
@@ -715,7 +728,10 @@
       }
     ],
     "material_thickness": 7,
-    "environmental_protection": 1
+    "environmental_protection": 1,
+    "melee_damage": {
+      "bash": 7
+    }
   },
   {
     "id": "mss_fancy_plate_boots",
@@ -732,7 +748,6 @@
     "price": "500 USD",
     "price_postapoc": "70 USD",
     "to_hit": -2,
-    "bashing": 7,
     "material": [
       "steel",
       "leather"
@@ -758,7 +773,10 @@
       }
     ],
     "material_thickness": 9,
-    "environmental_protection": 1
+    "environmental_protection": 1,
+    "melee_damage": {
+      "bash": 7
+    }
   },
   {
     "id": "mss_fancy_plate_helmet",
@@ -774,7 +792,6 @@
     "longest_side": "50 cm",
     "price": "400 USD",
     "price_postapoc": "120 USD",
-    "bashing": 10,
     "material": [
       "steel",
       "leather"
@@ -804,7 +821,10 @@
       }
     ],
     "material_thickness": 10,
-    "environmental_protection": 1
+    "environmental_protection": 1,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "mss_fancy_plate_armor",
@@ -820,13 +840,12 @@
     "price": "7800 USD",
     "price_postapoc": "100 USD",
     "to_hit": -5,
-    "bashing": 8,
     "material": [
       "steel",
       "leather"
     ],
     "symbol": "[",
-    "looks_like": "armor_lightplate",
+    "looks_like": "armor_junk_lightplate",
     "color": "dark_gray",
     "warmth": 20,
     "flags": [
@@ -850,6 +869,9 @@
       }
     ],
     "material_thickness": 8,
-    "environmental_protection": 1
+    "environmental_protection": 1,
+    "melee_damage": {
+      "bash": 8
+    }
   }
 ]

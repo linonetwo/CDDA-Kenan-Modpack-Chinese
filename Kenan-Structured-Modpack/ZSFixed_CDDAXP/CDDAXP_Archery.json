@@ -12,8 +12,6 @@
     "volume": "250 ml",
     "price": "70 USD",
     "to_hit": 1,
-    "bashing": 3,
-    "cutting": 14,
     "material": [
       "steel"
     ],
@@ -27,7 +25,11 @@
       "amount": 0
     },
     "dispersion": 0,
-    "recoil": 0
+    "recoil": 0,
+    "melee_damage": {
+      "bash": 3,
+      "cut": 14
+    }
   },
   {
     "id": "cddaxp_dshuriken",
@@ -42,8 +44,6 @@
     "volume": "250 ml",
     "price": "600 USD",
     "to_hit": 1,
-    "bashing": 3,
-    "cutting": 20,
     "material": [
       "diamond"
     ],
@@ -57,7 +57,11 @@
       "amount": 0
     },
     "dispersion": 0,
-    "recoil": 0
+    "recoil": 0,
+    "melee_damage": {
+      "bash": 3,
+      "cut": 20
+    }
   },
   {
     "id": "cddaxp_cshuriken",
@@ -72,8 +76,6 @@
     "volume": "250 ml",
     "price": "600 USD",
     "to_hit": 1,
-    "bashing": 1,
-    "cutting": 22,
     "material": [
       "ceramic"
     ],
@@ -87,6 +89,10 @@
       "amount": 0
     },
     "dispersion": 0,
-    "recoil": 0
+    "recoil": 0,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 22
+    }
   }
 ]

@@ -110,9 +110,7 @@
         "topic": "TALK_DONE",
         "effect": [
           {
-            "u_add_var": "evac_problem_done",
-            "type": "flag",
-            "context": "problem",
+            "u_add_var": "flag_problem_evac_problem_done",
             "value": "yes"
           },
           {
@@ -165,9 +163,7 @@
       {
         "text": "镍币？真的？",
         "condition": {
-          "npc_has_var": "nickel",
-          "type": "flag",
-          "context": "open_reply",
+          "npc_has_var": "flag_open_reply_nickel",
           "value": "1"
         },
         "topic": "TALK_Jerry_Bumpkin_nickels"
@@ -175,9 +171,7 @@
       {
         "text": "你在<the_cataclysm>之前是个有名的小猪储钱罐劫匪？",
         "condition": {
-          "npc_has_var": "nickel",
-          "type": "flag",
-          "context": "open_reply",
+          "npc_has_var": "flag_open_reply_nickel",
           "value": "2"
         },
         "topic": "TALK_Jerry_Bumpkin_nickels_robber"
@@ -185,9 +179,7 @@
       {
         "text": "听着，你把这些硬币放哪儿了？如果我打你，他们会像玩电子游戏一样从你身上掉下来吗？",
         "condition": {
-          "npc_has_var": "nickel",
-          "type": "flag",
-          "context": "open_reply",
+          "npc_has_var": "flag_open_reply_nickel",
           "value": "3"
         },
         "topic": "TALK_Jerry_Bumpkin_nickels_fu"
@@ -199,9 +191,7 @@
           "condition": {
             "or": [
               {
-                "u_has_var": "u_helped_Barrett_Hartley",
-                "type": "flag",
-                "context": "end",
+                "u_has_var": "flag_end_u_helped_Barrett_Hartley",
                 "value": "yes"
               },
               {
@@ -224,11 +214,11 @@
         "condition": {
           "and": [
             {
-              "u_compare_var": "lend_goons",
-              "type": "flag",
-              "context": "death",
-              "op": ">",
-              "value": 0
+              "math": [
+                "u_flag_death_lend_goons",
+                ">",
+                "0"
+              ]
             },
             {
               "not": {
@@ -240,11 +230,11 @@
         "trial": {
           "type": "CONDITION",
           "condition": {
-            "u_compare_var": "lend_goons",
-            "type": "flag",
-            "context": "death",
-            "op": ">=",
-            "value": 2
+            "math": [
+              "u_flag_death_lend_goons",
+              ">=",
+              "2"
+            ]
           }
         },
         "success": {
@@ -269,9 +259,7 @@
         "text": "…",
         "topic": "TALK_DONE",
         "effect": {
-          "u_add_var": "jerry_give_goon",
-          "type": "flag",
-          "context": "goons",
+          "u_add_var": "flag_goons_jerry_give_goon",
           "value": "yes"
         }
       }
@@ -293,9 +281,7 @@
     "dynamic_line": "是的，那他们呢？你不知道这世界上最稳定的货币吗？你有没有发现现在一枚镍币价值要远超过5美分？或者说，5美分硬币……不管怎样，我认为使用旧硬币作为货币没有任何问题，即使是在<the_cataclysm>之后。",
     "speaker_effect": {
       "effect": {
-        "npc_lose_var": "nickel",
-        "type": "flag",
-        "context": "open_reply"
+        "npc_lose_var": "flag_open_reply_nickel"
       }
     }
   },
@@ -305,9 +291,7 @@
     "dynamic_line": "<fuck_you> .  再来一个笑话和<ill_kill_you>。",
     "speaker_effect": {
       "effect": {
-        "npc_lose_var": "nickel",
-        "type": "flag",
-        "context": "open_reply"
+        "npc_lose_var": "flag_open_reply_nickel"
       }
     }
   },
@@ -345,9 +329,7 @@
     "description": "杰瑞让你为他的船员多带些人手。至少两个就够了。",
     "goal": "MGOAL_CONDITION",
     "goal_condition": {
-      "u_has_var": "jerry_goons",
-      "type": "flag",
-      "context": "goons",
+      "u_has_var": "flag_goons_jerry_goons",
       "value": "2"
     },
     "difficulty": 0,
@@ -355,9 +337,7 @@
     "start": {
       "effect": [
         {
-          "u_add_var": "ally_transfer_js",
-          "type": "flag",
-          "context": "transfer",
+          "u_add_var": "flag_transfer_ally_transfer_js",
           "value": "yes"
         }
       ]
@@ -377,29 +357,21 @@
           "count": 1600
         },
         {
-          "npc_add_var": "nickel",
-          "type": "flag",
-          "context": "open_reply",
+          "npc_add_var": "flag_open_reply_nickel",
           "value": "1"
         },
         {
-          "u_lose_var": "ally_transfer_js",
-          "type": "flag",
-          "context": "transfer"
+          "u_lose_var": "flag_transfer_ally_transfer_js"
         }
       ]
     },
     "fail": {
       "effect": [
         {
-          "u_lose_var": "jerry_goons",
-          "type": "flag",
-          "context": "goons"
+          "u_lose_var": "flag_goons_jerry_goons"
         },
         {
-          "u_lose_var": "ally_transfer_js",
-          "type": "flag",
-          "context": "transfer"
+          "u_lose_var": "flag_transfer_ally_transfer_js"
         }
       ]
     },
@@ -429,9 +401,7 @@
     "description": "帮助杰瑞把旅馆建成他的新基地。为此，请将其从<zombies>中清除。",
     "goal": "MGOAL_CONDITION",
     "goal_condition": {
-      "u_has_var": "jerry_cleaning",
-      "type": "count",
-      "context": "cleaning",
+      "u_has_var": "count_cleaning_jerry_cleaning",
       "value": "6"
     },
     "difficulty": 0,
@@ -440,15 +410,11 @@
       "reveal_om_ter": "hotel_tower_1_2",
       "effect": [
         {
-          "u_add_var": "jerry_cleaning",
-          "type": "count",
-          "context": "cleaning",
+          "u_add_var": "count_cleaning_jerry_cleaning",
           "value": "0"
         },
         {
-          "u_add_var": "jerry_give_goon",
-          "type": "flag",
-          "context": "goons",
+          "u_add_var": "flag_goons_jerry_give_goon",
           "value": "yes"
         }
       ]
@@ -456,14 +422,10 @@
     "end": {
       "effect": [
         {
-          "u_lose_var": "jerry_cleaning",
-          "type": "count",
-          "context": "meeting"
+          "u_lose_var": "count_meeting_jerry_cleaning"
         },
         {
-          "u_lose_var": "lend_goons",
-          "type": "flag",
-          "context": "death"
+          "u_lose_var": "flag_death_lend_goons"
         },
         {
           "u_spawn_item": "coin_nickel",
@@ -474,9 +436,7 @@
           "count": 1125
         },
         {
-          "npc_add_var": "nickel",
-          "type": "flag",
-          "context": "open_reply",
+          "npc_add_var": "flag_open_reply_nickel",
           "value": "2"
         }
       ]
@@ -484,14 +444,10 @@
     "fail": {
       "effect": [
         {
-          "u_lose_var": "jerry_cleaning",
-          "type": "count",
-          "context": "meeting"
+          "u_lose_var": "count_meeting_jerry_cleaning"
         },
         {
-          "u_lose_var": "lend_goons",
-          "type": "flag",
-          "context": "death"
+          "u_lose_var": "flag_death_lend_goons"
         }
       ]
     },
@@ -547,9 +503,7 @@
           "count": 1800
         },
         {
-          "npc_add_var": "nickel",
-          "type": "flag",
-          "context": "open_reply",
+          "npc_add_var": "flag_open_reply_nickel",
           "value": "3"
         }
       ]
@@ -596,9 +550,7 @@
     },
     "fail": {
       "effect": {
-        "u_add_var": "jerry_bumpkin",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_jerry_bumpkin",
         "value": "yes"
       }
     }

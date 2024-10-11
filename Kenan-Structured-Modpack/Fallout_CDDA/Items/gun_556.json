@@ -11,7 +11,6 @@
     "volume": "2 L",
     "price": "921 USD",
     "to_hit": 1,
-    "bashing": 12,
     "looks_like": "marlin_9a",
     "material": [
       "steel",
@@ -75,7 +74,10 @@
           "stanag50"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "varmint_rifle",
@@ -89,7 +91,6 @@
     "volume": "2 L",
     "price": "921 USD",
     "to_hit": 1,
-    "bashing": 12,
     "looks_like": "marlin_9a",
     "material": [
       "steel",
@@ -153,7 +154,10 @@
           "stanag50"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "varmint_rifle_ratslayer",
@@ -167,7 +171,6 @@
     "volume": "2 L",
     "price": "921 USD",
     "to_hit": 1,
-    "bashing": 12,
     "looks_like": "marlin_9a",
     "material": [
       "steel",
@@ -236,7 +239,10 @@
           "stanag50"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "dks501",
@@ -250,7 +256,6 @@
     "volume": "2 L",
     "price": "921 USD",
     "to_hit": 1,
-    "bashing": 12,
     "looks_like": "savage_111f",
     "material": [
       "steel",
@@ -314,7 +319,10 @@
           "stanag50"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "thatgun",
@@ -329,7 +337,6 @@
     "volume": "750 ml",
     "price": "861 USD",
     "to_hit": -2,
-    "bashing": 10,
     "material": [
       "steel",
       "wood"
@@ -388,7 +395,10 @@
           "223": 5
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "bozar",
@@ -402,7 +412,6 @@
     "volume": "2 L",
     "price": "2343 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "plastic"
@@ -438,12 +447,15 @@
           "g3bigmag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "rf2076",
     "copy-from": "rifle_auto",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "name": {
       "str": "除雾器RF2076"
@@ -453,7 +465,6 @@
     "volume": "6 L",
     "price": "7500 USD",
     "to_hit": -1,
-    "bashing": 16,
     "material": [
       "steel",
       "plastic"
@@ -542,12 +553,15 @@
           "rf2076drummag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16
+    }
   },
   {
     "id": "r91",
     "copy-from": "rifle_auto",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "name": {
       "str": "R91突击步枪"
@@ -557,7 +571,6 @@
     "volume": "1750 ml",
     "price": "2400 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "wood"
@@ -599,12 +612,15 @@
           "survivor223mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "carbine_marksman",
     "copy-from": "rifle_auto",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "name": {
       "str": "运枪人MC-223"
@@ -614,7 +630,6 @@
     "volume": "1750 ml",
     "price": "2400 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "plastic"
@@ -659,12 +674,15 @@
           "survivor223mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "type93",
     "copy-from": "rifle_auto",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "name": {
       "str": "93型突击步枪"
@@ -674,7 +692,6 @@
     "volume": "1750 ml",
     "price": "2400 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "plastic"
@@ -716,6 +733,9 @@
           "survivor223mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   }
 ]

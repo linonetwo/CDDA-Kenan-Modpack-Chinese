@@ -20,7 +20,7 @@
     }
   },
   {
-    "id": "TALK_EVAC_MERCHANT",
+    "id": "TALK_FREE_MERCHANTS_MERCHANT",
     "type": "talk_topic",
     "speaker_effect": {
       "sentinel": "met",
@@ -58,9 +58,7 @@
     "value": 0,
     "fail": {
       "effect": {
-        "u_add_var": "fm_merchant",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_fm_merchant",
         "value": "yes"
       }
     },
@@ -98,9 +96,7 @@
     "value": 0,
     "fail": {
       "effect": {
-        "u_add_var": "fm_food",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_fm_food",
         "value": "yes"
       }
     },
@@ -138,9 +134,7 @@
     "value": 0,
     "fail": {
       "effect": {
-        "u_add_var": "fm_doctor",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_fm_doctor",
         "value": "yes"
       }
     },
@@ -178,9 +172,7 @@
     "value": 0,
     "fail": {
       "effect": {
-        "u_add_var": "og_rep",
-        "type": "flag",
-        "context": "death",
+        "u_add_var": "flag_death_og_rep",
         "value": "yes"
       }
     },

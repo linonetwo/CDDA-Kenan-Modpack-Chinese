@@ -13,9 +13,7 @@
     "weight": "93400 g",
     "volume": "450 L",
     "longest_side": "1000 mm",
-    "bashing": 8,
     "to_hit": -9,
-    "cutting": 0,
     "material": [
       "qt_steel"
     ],
@@ -27,7 +25,11 @@
         "max_contains_volume": "400 L",
         "max_contains_weight": "50000 g"
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 0
+    }
   },
   {
     "id": "saux_fuel_pod",
@@ -43,8 +45,6 @@
     "weight": "75600 g",
     "volume": "250 L",
     "longest_side": "800 mm",
-    "bashing": 8,
-    "cutting": 0,
     "to_hit": -5,
     "material": [
       "qt_steel"
@@ -57,6 +57,10 @@
         "max_contains_volume": "200 L",
         "max_contains_weight": "30000 g"
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 0
+    }
   }
 ]

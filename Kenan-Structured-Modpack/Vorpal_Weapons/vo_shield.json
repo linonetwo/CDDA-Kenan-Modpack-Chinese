@@ -16,7 +16,6 @@
     ],
     "volume": "5500 ml",
     "to_hit": -1,
-    "bashing": 10,
     "symbol": "[",
     "flags": [
       "OVERSIZE",
@@ -40,7 +39,10 @@
         ]
       }
     ],
-    "material_thickness": 4
+    "material_thickness": 4,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "type": "ARMOR",
@@ -58,7 +60,6 @@
       "steel"
     ],
     "volume": "3500 ml",
-    "bashing": 14,
     "symbol": "[",
     "flags": [
       "OVERSIZE",
@@ -82,7 +83,10 @@
         ]
       }
     ],
-    "material_thickness": 3
+    "material_thickness": 3,
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "type": "ARMOR",
@@ -100,7 +104,6 @@
     ],
     "volume": "5 L",
     "to_hit": -1,
-    "bashing": 10,
     "symbol": "[",
     "flags": [
       "OVERSIZE",
@@ -123,7 +126,10 @@
         ]
       }
     ],
-    "material_thickness": 5
+    "material_thickness": 5,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "type": "ARMOR",
@@ -141,7 +147,6 @@
     ],
     "volume": "1 L",
     "to_hit": -2,
-    "bashing": 6,
     "symbol": "[",
     "flags": [
       "OVERSIZE",
@@ -165,7 +170,10 @@
         ]
       }
     ],
-    "material_thickness": 2
+    "material_thickness": 2,
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "type": "ARMOR",
@@ -210,7 +218,6 @@
         "moves": 80
       }
     ],
-    "bashing": 8,
     "symbol": "[",
     "flags": [
       "FANCY",
@@ -234,7 +241,10 @@
         ]
       }
     ],
-    "material_thickness": 2
+    "material_thickness": 2,
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "type": "item_group",
@@ -286,7 +296,7 @@
   },
   {
     "type": "item_group",
-    "id": "cop_gear",
+    "id": "cop_gear_2",
     "copy-from": "cop_gear",
     "extend": {
       "items": [

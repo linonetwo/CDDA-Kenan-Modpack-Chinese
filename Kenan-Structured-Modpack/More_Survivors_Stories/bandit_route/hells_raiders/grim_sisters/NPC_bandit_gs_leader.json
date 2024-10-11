@@ -15,9 +15,7 @@
     ],
     "type": "talk_topic",
     "dynamic_line": {
-      "u_has_var": "open_gs_base",
-      "type": "flag",
-      "context": "give_access",
+      "u_has_var": "flag_give_access_open_gs_base",
       "value": "yes",
       "yes": {
         "u_male": true,
@@ -35,9 +33,7 @@
         "and": [
           {
             "not": {
-              "u_has_var": "open_gs_base",
-              "type": "flag",
-              "context": "give_access",
+              "u_has_var": "flag_give_access_open_gs_base",
               "value": "yes"
             }
           },
@@ -54,9 +50,7 @@
         "condition": {
           "and": [
             {
-              "u_has_var": "open_gs_base",
-              "type": "flag",
-              "context": "give_access",
+              "u_has_var": "flag_give_access_open_gs_base",
               "value": "yes"
             },
             {
@@ -96,9 +90,7 @@
           "om_terrain": "prison_1_gs_4"
         },
         {
-          "u_add_var": "gs_take_slaves",
-          "type": "count",
-          "context": "take_slaves",
+          "u_add_var": "count_take_slaves_gs_take_slaves",
           "value": "4"
         }
       ]

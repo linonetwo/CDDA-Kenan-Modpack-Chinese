@@ -10,8 +10,6 @@
     "volume": "500 ml",
     "price": 500,
     "to_hit": -1,
-    "bashing": 3,
-    "cutting": 1,
     "material": [
       "wood",
       "stone"
@@ -23,10 +21,15 @@
         "DRILL",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 1
+    }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "flint_hand_drill",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",

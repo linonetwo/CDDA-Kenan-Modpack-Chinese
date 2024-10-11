@@ -19,18 +19,16 @@
       {
         "text": "收拾好你的东西，我们去你的新家。",
         "condition": {
-          "u_has_var": "gs_take_slaves",
-          "type": "count",
-          "context": "take_slaves",
+          "u_has_var": "count_take_slaves_gs_take_slaves",
           "value": "4"
         },
         "effect": [
           "follow_only",
           {
-            "u_adjust_var": "gs_take_slaves",
-            "type": "count",
-            "context": "take_slaves",
-            "adjustment": -1
+            "math": [
+              "u_count_take_slaves_gs_take_slaves",
+              "++"
+            ]
           },
           {
             "npc_first_topic": "TALK_bandit_gs_slave1_follow"
@@ -41,18 +39,16 @@
       {
         "text": "收拾好你的东西，我们去你的新家。",
         "condition": {
-          "u_has_var": "gs_take_slaves",
-          "type": "count",
-          "context": "take_slaves",
+          "u_has_var": "count_take_slaves_gs_take_slaves",
           "value": "3"
         },
         "effect": [
           "follow_only",
           {
-            "u_adjust_var": "gs_take_slaves",
-            "type": "count",
-            "context": "take_slaves",
-            "adjustment": -1
+            "math": [
+              "u_count_take_slaves_gs_take_slaves",
+              "--"
+            ]
           },
           {
             "npc_first_topic": "TALK_bandit_gs_slave2_follow"
@@ -63,18 +59,16 @@
       {
         "text": "收拾好你的东西，我们去你的新家。",
         "condition": {
-          "u_has_var": "gs_take_slaves",
-          "type": "count",
-          "context": "take_slaves",
+          "u_has_var": "count_take_slaves_gs_take_slaves",
           "value": "2"
         },
         "effect": [
           "follow_only",
           {
-            "u_adjust_var": "gs_take_slaves",
-            "type": "count",
-            "context": "take_slaves",
-            "adjustment": -1
+            "math": [
+              "u_count_take_slaves_gs_take_slaves",
+              "--"
+            ]
           },
           {
             "npc_first_topic": "TALK_bandit_gs_slave3_follow"
@@ -85,18 +79,16 @@
       {
         "text": "收拾好你的东西，我们去你的新家。",
         "condition": {
-          "u_has_var": "gs_take_slaves",
-          "type": "count",
-          "context": "take_slaves",
+          "npc_has_var": "count_take_slaves_gs_take_slaves",
           "value": "1"
         },
         "effect": [
           "follow_only",
           {
-            "u_adjust_var": "gs_take_slaves",
-            "type": "count",
-            "context": "take_slaves",
-            "adjustment": -1
+            "math": [
+              "u_count_take_slaves_gs_take_slaves",
+              "--"
+            ]
           },
           {
             "npc_first_topic": "TALK_bandit_gs_slave4_follow"
@@ -109,11 +101,11 @@
         "topic": "TALK_bandit_gs_slave",
         "effect": "reveal_stats",
         "condition": {
-          "u_compare_var": "gs_take_slaves",
-          "type": "count",
-          "context": "take_slaves",
-          "op": ">",
-          "value": 0
+          "math": [
+            "u_count_take_slaves_gs_take_slaves",
+            ">",
+            "0"
+          ]
         }
       }
     ]
@@ -179,9 +171,7 @@
     ],
     "type": "talk_topic",
     "dynamic_line": {
-      "u_has_var": "sb_narc_farm",
-      "type": "switch",
-      "context": "farm_status",
+      "u_has_var": "switch_farm_status_sb_narc_farm",
       "value": "burned",
       "yes": "农场被烧毁了，所以我在这附近没什么事可做。我只是在消磨时间赌博喝酒。",
       "no": "太阳升起，我自己在工作，太阳落山，我自己在跳舞。每一天，我新生活的每一天…"
@@ -192,9 +182,7 @@
           "true": "Work hard, and some day, you'll earn your freedom. *chuckle*",
           "false": "Don't worry, they will find you a new task to work on.",
           "condition": {
-            "u_has_var": "sb_narc_farm",
-            "type": "switch",
-            "context": "farm_status",
+            "u_has_var": "switch_farm_status_sb_narc_farm",
             "value": "burned"
           }
         },
@@ -211,36 +199,37 @@
     },
     "goal": "MGOAL_CONDITION",
     "goal_condition": {
-      "npc_compare_time_since_var": "annoy_player",
-      "type": "time",
-      "context": "annoy_player_like_really_a_lot_at_least_i_want_to_do_it_that_way",
-      "op": ">",
-      "time": "5 m"
+      "math": [
+        "time_since(n_time_annoy_player_like_really_a_lot_at_least_i_want_to_do_it_that_way_annoy_player)",
+        ">",
+        "time('5 m')"
+      ]
     },
     "difficulty": 0,
     "value": 0,
     "start": {
       "effect": {
-        "npc_add_var": "annoy_player",
-        "type": "time",
-        "context": "annoy_player_like_really_a_lot_at_least_i_want_to_do_it_that_way",
-        "time": true
+        "math": [
+          "n_time_annoy_player_like_really_a_lot_at_least_i_want_to_do_it_that_way_annoy_player",
+          "=",
+          "time('now')"
+        ]
       }
     },
     "end": {
       "effect": {
-        "u_adjust_var": "slaves_for_sb",
-        "type": "count",
-        "context": "alive",
-        "adjustment": 1
+        "math": [
+          "u_count_alive_slaves_for_sb",
+          "++"
+        ]
       }
     },
     "fail": {
       "effect": {
-        "u_adjust_var": "slaves_for_sb",
-        "type": "count",
-        "context": "dead",
-        "adjustment": 1
+        "math": [
+          "u_count_dead_slaves_for_sb",
+          "++"
+        ]
       }
     },
     "origins": [

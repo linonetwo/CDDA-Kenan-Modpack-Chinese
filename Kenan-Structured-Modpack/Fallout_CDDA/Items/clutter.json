@@ -295,8 +295,8 @@
       }
     ],
     "properties": {
-        "burst_when_filled":"75"
-      }
+      "burst_when_filled": "75"
+    }
   },
   {
     "id": "condom_jimmy_green",
@@ -329,8 +329,8 @@
       }
     ],
     "properties": {
-        "burst_when_filled":"75"
-      }
+      "burst_when_filled": "75"
+    }
   },
   {
     "id": "condom_jimmy_red",
@@ -363,8 +363,8 @@
       }
     ],
     "properties": {
-        "burst_when_filled":"75"
-      }
+      "burst_when_filled": "75"
+    }
   },
   {
     "id": "flask_vault",
@@ -378,7 +378,6 @@
     "volume": "250 ml",
     "price": "10 USD",
     "to_hit": 1,
-    "bashing": 3,
     "material": [
       "iron"
     ],
@@ -419,7 +418,10 @@
       "OVERSIZE",
       "WATER_FRIENDLY",
       "TARDIS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3
+    }
   },
   {
     "id": "doll_action_abe",

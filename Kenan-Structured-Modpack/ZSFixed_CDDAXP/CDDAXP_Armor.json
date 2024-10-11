@@ -10,8 +10,6 @@
     "volume": "750 ml",
     "price": "42 USD",
     "to_hit": 0,
-    "bashing": 1,
-    "cutting": 0,
     "phase": "solid",
     "material": [
       "plastic",
@@ -33,7 +31,11 @@
       }
     ],
     "material_thickness": 3,
-    "environmental_protection": 13
+    "environmental_protection": 13,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "id": "cddaxp_srtrenchcoat",
@@ -156,8 +158,6 @@
     "volume": "2500 ml",
     "price": "800 USD",
     "to_hit": 0,
-    "bashing": 10,
-    "cutting": 20,
     "phase": "solid",
     "material": [
       "iron"
@@ -188,7 +188,11 @@
       }
     ],
     "material_thickness": 3,
-    "environmental_protection": 0
+    "environmental_protection": 0,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 20
+    }
   },
   {
     "id": "cddaxp_survsrtrenchcoat",

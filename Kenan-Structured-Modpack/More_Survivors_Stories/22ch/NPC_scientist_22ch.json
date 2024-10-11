@@ -91,22 +91,16 @@
         "text": "那家伙派我来的。",
         "topic": "TALK_MISSION_LIST",
         "condition": {
-          "u_has_var": "lead_scientist_22ch_need_time",
-          "type": "general",
-          "context": "meeting",
+          "u_has_var": "general_meeting_lead_scientist_22ch_need_time",
           "value": "yes"
         },
         "effect": [
           {
-            "npc_add_var": "scientist_22ch_transmitter",
-            "type": "general",
-            "context": "meeting",
+            "npc_add_var": "general_meeting_scientist_22ch_transmitter",
             "value": "0"
           },
           {
-            "u_add_var": "scientist_22ch_working",
-            "type": "general",
-            "context": "meeting",
+            "u_add_var": "general_meeting_scientist_22ch_working",
             "value": "yes"
           },
           {
@@ -133,9 +127,7 @@
           "type": "CONDITION",
           "condition": {
             "not": {
-              "npc_has_var": "scientist_22ch_transmitter",
-              "type": "flag",
-              "context": "meeting",
+              "npc_has_var": "flag_meeting_scientist_22ch_transmitter",
               "value": "4"
             }
           }
@@ -148,7 +140,10 @@
               "origin_npc": true
             },
             {
-              "math":["npc_flag_meeting_scientist_22ch_transmitter","++"]
+              "math": [
+                "n_flag_meeting_scientist_22ch_transmitter",
+                "++"
+              ]
             }
           ]
         },
@@ -165,9 +160,7 @@
               "npc_at_om_location": "cabin_basement_test"
             },
             {
-              "npc_has_var": "scientist_22ch_transmitter",
-              "type": "flag",
-              "context": "meeting",
+              "npc_has_var": "flag_meeting_scientist_22ch_transmitter",
               "value": "4"
             }
           ]
@@ -227,14 +220,10 @@
           },
           "mission_success",
           {
-            "u_lose_var": "lead_scientist_22ch_need_time",
-            "type": "general",
-            "context": "meeting"
+            "u_lose_var": "general_meeting_lead_scientist_22ch_need_time"
           },
           {
-            "u_add_var": "lead_scientist_22ch_finished",
-            "type": "general",
-            "context": "meeting",
+            "u_add_var": "general_meeting_lead_scientist_22ch_finished",
             "value": "yes"
           }
         ]

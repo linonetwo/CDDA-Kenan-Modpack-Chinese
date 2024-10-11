@@ -11,7 +11,6 @@
     "volume": "1750 ml",
     "price": "2900 USD",
     "to_hit": -1,
-    "bashing": 12,
     "looks_like": "ak47",
     "material": [
       "steel",
@@ -89,7 +88,10 @@
     ],
     "flags": [
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "carbine_assault",
@@ -103,8 +105,7 @@
     "volume": "1750 ml",
     "price": "2900 USD",
     "to_hit": -1,
-    "bashing": 12,
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "material": [
       "steel",
       "wood"
@@ -181,6 +182,9 @@
     ],
     "flags": [
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   }
 ]

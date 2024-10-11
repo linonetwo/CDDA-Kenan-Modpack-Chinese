@@ -10,7 +10,6 @@
     "weight": "1313 g",
     "volume": "2500 ml",
     "price": "130 USD",
-    "bashing": 4,
     "material": [
       "paper",
       "leather"
@@ -20,7 +19,10 @@
     "skill": "fabrication",
     "required_level": 4,
     "max_level": 5,
-    "time": 30
+    "time": 30,
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "id": "basicscythes_book",
@@ -33,7 +35,6 @@
     "weight": "770 g",
     "volume": "1250 ml",
     "price": "77 USD",
-    "bashing": 4,
     "material": [
       "paper"
     ],
@@ -43,6 +44,9 @@
     "required_level": 4,
     "max_level": 5,
     "intelligence": 8,
-    "time": 30
+    "time": 30,
+    "melee_damage": {
+      "bash": 4
+    }
   }
 ]

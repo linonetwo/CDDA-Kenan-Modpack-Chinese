@@ -42,7 +42,9 @@
     },
     "hp": 90,
     "special_attacks": [
-      { "id": "grab", "cooldown": 6
+      {
+        "id": "grab",
+        "cooldown": 6
       }
     ],
     "description": "经历了工业区贫民窟数年的冲突而变得冷酷无情的罪犯。这个人拿着一把手枪。",
@@ -70,9 +72,6 @@
     ],
     "fear_triggers": [
       "FRIEND_DIED"
-    ],
-    "placate_triggers": [
-      "MEAT"
     ],
     "categories": [
       "CLASSIC"
@@ -193,8 +192,7 @@
     ],
     "placate_triggers": [
       "PLAYER_WEAK",
-      "SOUND",
-      "MEAT"
+      "SOUND"
     ],
     "categories": [
       "CLASSIC"
@@ -274,9 +272,6 @@
     ],
     "fear_triggers": [
       "FRIEND_DIED"
-    ],
-    "placate_triggers": [
-      "MEAT"
     ],
     "categories": [
       "CLASSIC"
@@ -362,9 +357,11 @@
     ],
     "volume": "30 L",
     "weight": "43750 g",
-    "bashing": 4,
-    "cutting": 4,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    }
   },
   {
     "type": "TOOL",
@@ -383,8 +380,6 @@
     ],
     "volume": "30 L",
     "weight": "43750 g",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -401,6 +396,10 @@
         "mechanics"
       ],
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -420,8 +419,6 @@
     ],
     "volume": "30 L",
     "weight": "43750 g",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -438,6 +435,10 @@
         "mechanics"
       ],
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -511,9 +512,11 @@
     ],
     "volume": "72500 ml",
     "weight": "101500 g",
-    "bashing": 4,
-    "cutting": 4,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    }
   },
   {
     "type": "TOOL",
@@ -532,8 +535,6 @@
     ],
     "volume": "72500 ml",
     "weight": "101500 g",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -550,6 +551,10 @@
         "mechanics"
       ],
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -569,8 +574,6 @@
     ],
     "volume": "72500 ml",
     "weight": "101500 g",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -587,6 +590,10 @@
         "mechanics"
       ],
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {

@@ -17,8 +17,6 @@
     ],
     "weight": "269 g",
     "volume": "2 L",
-    "bashing": 3,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -36,7 +34,11 @@
         "NANOTECH",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 0
+    }
   },
   {
     "id": "nanite_guide",
@@ -56,8 +58,6 @@
     ],
     "weight": "100 g",
     "volume": "2250 ml",
-    "bashing": 3,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -69,6 +69,10 @@
       "fun": -1,
       "skill": "computer",
       "required_level": 0
+    },
+    "melee_damage": {
+      "bash": 3,
+      "cut": 0
     }
   },
   {
@@ -89,8 +93,6 @@
     ],
     "weight": "269 g",
     "volume": "2 L",
-    "bashing": 3,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -108,7 +110,11 @@
         "NANOTECH",
         2
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 0
+    }
   },
   {
     "id": "nanite_core_3",
@@ -128,8 +134,6 @@
     ],
     "weight": "269 g",
     "volume": "2 L",
-    "bashing": 2,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -147,7 +151,11 @@
         "NANOTECH",
         3
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "cut": 0
+    }
   },
   {
     "id": "nanite_core_4",
@@ -167,8 +175,6 @@
     ],
     "weight": "269 g",
     "volume": "2 L",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -186,7 +192,11 @@
         "NANOTECH",
         4
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "id": "ai_core",
@@ -206,8 +216,6 @@
     ],
     "weight": "269 g",
     "volume": "2 L",
-    "bashing": 3,
-    "cutting": 0,
     "to_hit": -1,
     "book_data": {
       "max_level": 3,
@@ -219,7 +227,11 @@
     },
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 0
+    }
   },
   {
     "id": "ai_core_blank",
@@ -239,11 +251,13 @@
     ],
     "weight": "269 g",
     "volume": "2 L",
-    "bashing": 3,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 0
+    }
   }
 ]

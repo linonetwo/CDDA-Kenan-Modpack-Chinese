@@ -2,7 +2,7 @@
   {
     "id": "coilgun",
     "copy-from": "coilgun",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "name": {
       "str": "自制线圈枪"
@@ -15,7 +15,6 @@
     "price": "750 USD",
     "price_postapoc": "50 USD",
     "to_hit": -2,
-    "bashing": 10,
     "material": [
       "copper",
       "steel"
@@ -71,19 +70,21 @@
           "nailmag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "nailrifle",
     "copy-from": "nailgun",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "name": {
       "str": "射钉步枪"
     },
     "description": "这是一把射钉枪，被改造的面目全非，增加了一个短枪管，枪托和护木。它可以使用可拆卸弹匣装填，总体上说是更为有效的武器。",
     "to_hit": -1,
-    "bashing": 12,
     "price_postapoc": 750,
     "skill": "rifle",
     "modes": [
@@ -156,6 +157,9 @@
     "proportional": {
       "price": 3,
       "dispersion": 0.5
+    },
+    "melee_damage": {
+      "bash": 12
     }
   }
 ]

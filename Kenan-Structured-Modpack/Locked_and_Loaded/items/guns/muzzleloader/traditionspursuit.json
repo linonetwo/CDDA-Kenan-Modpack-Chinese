@@ -5,7 +5,7 @@
       "str": "0.50口径"
     },
     "copy-from": "rifle_manual",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "description": "传统的追求。50口径的炮口装弹机是你典型的炮口装弹机；把火药倒进枪管里，放一些布在里面，用钢制的bb，然后用冲压杆使它紧凑。虽然现实是非常长的，权力使它值得等待。",
     "weight": "2994 g",
@@ -13,7 +13,6 @@
     "skill": "rifle",
     "price": "330 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel"
     ],
@@ -61,6 +60,9 @@
           "50_bb": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   }
 ]

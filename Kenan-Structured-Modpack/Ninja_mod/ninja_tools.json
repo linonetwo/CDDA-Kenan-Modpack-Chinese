@@ -11,8 +11,6 @@
     "volume": "1 L",
     "price": "950 USD",
     "to_hit": 2,
-    "bashing": 2,
-    "cutting": 22,
     "material": [
       "steel"
     ],
@@ -37,7 +35,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "cut": 22
+    }
   },
   {
     "id": "ninja_kusari_gama",
@@ -51,8 +53,6 @@
     "volume": "1250 ml",
     "price": "500 USD",
     "to_hit": 1,
-    "bashing": 10,
-    "cutting": 12,
     "material": [
       "steel",
       "wood"
@@ -80,7 +80,11 @@
       "REACH_ATTACK",
       "REACH3",
       "BELT_CLIP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 12
+    }
   },
   {
     "id": "ninja_nunchuk",
@@ -94,8 +98,6 @@
     "volume": "1 L",
     "price": "300 USD",
     "to_hit": 3,
-    "bashing": 20,
-    "cutting": 1,
     "material": [
       "steel",
       "leather"
@@ -113,7 +115,11 @@
       "UNARMED_WEAPON",
       "REACH_ATTACK",
       "BELT_CLIP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 1
+    }
   },
   {
     "id": "ninja_scroll_lightning",
@@ -127,8 +133,6 @@
     "volume": "500 ml",
     "price": "1000 USD",
     "to_hit": -2,
-    "bashing": 1,
-    "cutting": 1,
     "material": [
       "paper",
       "steel",
@@ -156,7 +160,11 @@
     "flags": [
       "NEVER_JAMS",
       "MODE_BURST"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 1
+    }
   },
   {
     "id": "ninja_scroll_fire",
@@ -171,8 +179,6 @@
     "volume": "500 ml",
     "price": "1000 USD",
     "to_hit": -2,
-    "bashing": 1,
-    "cutting": 1,
     "material": [
       "paper",
       "steel",
@@ -207,7 +213,11 @@
         },
         "watertight": true
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 1
+    }
   },
   {
     "id": "ninja_decoy",
@@ -220,7 +230,6 @@
     "weight": "5000 g",
     "volume": "3750 ml",
     "price": "10 USD",
-    "bashing": 1,
     "material": [
       "wood",
       "cotton"
@@ -238,6 +247,9 @@
       "skills": [
         "survival"
       ]
+    },
+    "melee_damage": {
+      "bash": 1
     }
   },
   {
@@ -380,7 +392,6 @@
     "volume": "2 L",
     "price": "300 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "cotton",
       "leather",
@@ -403,7 +414,10 @@
       }
     ],
     "material_thickness": 2,
-    "environmental_protection": 1
+    "environmental_protection": 1,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "ninja_hood_survivor",
@@ -417,7 +431,6 @@
     "volume": "2 L",
     "price": "600 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "kevlar",
       "cotton",
@@ -454,7 +467,10 @@
       }
     ],
     "material_thickness": 3,
-    "environmental_protection": 15
+    "environmental_protection": 15,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "ninja_chainmail",
@@ -730,7 +746,6 @@
     "volume": "2 L",
     "price": "3000 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "wood"
     ],
@@ -763,7 +778,10 @@
       "FANCY"
     ],
     "material_thickness": 0,
-    "environmental_protection": 0
+    "environmental_protection": 0,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "ninja_jetpack",
@@ -777,7 +795,6 @@
     "volume": "3750 ml",
     "price": "2000 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "steel"
     ],
@@ -822,7 +839,10 @@
       }
     ],
     "material_thickness": 1,
-    "environmental_protection": 0
+    "environmental_protection": 0,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "ninja_jetpack_on",
@@ -836,7 +856,6 @@
     "volume": "3750 ml",
     "price": "2000 USD",
     "to_hit": -1,
-    "bashing": 10,
     "material": [
       "steel"
     ],
@@ -895,7 +914,10 @@
       }
     ],
     "material_thickness": 1,
-    "environmental_protection": 0
+    "environmental_protection": 0,
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "ninja_gun_ay893",
@@ -909,7 +931,6 @@
     "volume": "1 L",
     "price": "893 USD",
     "to_hit": -2,
-    "bashing": 8,
     "material": [
       "steel",
       "plastic"
@@ -961,6 +982,9 @@
     ],
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   }
 ]

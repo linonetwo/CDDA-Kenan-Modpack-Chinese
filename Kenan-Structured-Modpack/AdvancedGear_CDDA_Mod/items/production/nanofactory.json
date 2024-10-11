@@ -52,8 +52,6 @@
     "volume": "50ml",
     "weight": "10 g",
     "phase": "solid",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "ammo_type": "3d_resin",
     "damage": {
@@ -67,7 +65,11 @@
     "count": 100,
     "effects": [
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "AMMO",
@@ -85,8 +87,6 @@
     "volume": "50ml",
     "weight": "10 g",
     "phase": "solid",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "ammo_type": "3d_resin",
     "damage": {
@@ -100,7 +100,11 @@
     "count": 100,
     "effects": [
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "AMMO",
@@ -118,8 +122,6 @@
     "volume": "50ml",
     "weight": "10 g",
     "phase": "solid",
-    "bashing": 1,
-    "cutting": 0,
     "to_hit": 0,
     "ammo_type": "3d_resin",
     "damage": {
@@ -133,7 +135,11 @@
     "count": 100,
     "effects": [
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "ammunition_type",
@@ -158,8 +164,6 @@
     ],
     "weight": "600000 g",
     "volume": "500 L",
-    "bashing": 5,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -169,7 +173,11 @@
         "NANO_FAB",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 0
+    }
   },
   {
     "id": "nanofactory_exp",
@@ -188,12 +196,14 @@
     ],
     "weight": "600000 g",
     "volume": "500 L",
-    "bashing": 5,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 0
+    }
   },
   {
     "id": "nano_ammo_fab",
@@ -212,12 +222,14 @@
     ],
     "weight": "3522 g",
     "volume": "2500 ml",
-    "bashing": 5,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 0
+    }
   },
   {
     "id": "nanite_power_cell",
@@ -260,8 +272,6 @@
     ],
     "weight": "1000 g",
     "volume": "1000 ml",
-    "bashing": 1,
-    "cutting": 1,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -298,7 +308,11 @@
         "cost_scaling": 1,
         "move_cost": 250
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 1
+    }
   },
   {
     "id": "nanofactory_2",
@@ -316,8 +330,6 @@
     ],
     "weight": "300000 g",
     "volume": "160 L",
-    "bashing": 5,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -327,7 +339,11 @@
         "NANO_FAB",
         2
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 0
+    }
   },
   {
     "id": "nano_programmer_2",
@@ -345,8 +361,6 @@
     ],
     "weight": "100 g",
     "volume": "1 L",
-    "bashing": 1,
-    "cutting": 1,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -383,7 +397,11 @@
         "cost_scaling": 0.75,
         "move_cost": 250
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 1
+    }
   },
   {
     "id": "nanofactory_3",
@@ -401,8 +419,6 @@
     ],
     "weight": "1000 g",
     "volume": "4 L",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -447,7 +463,11 @@
         "cost_scaling": 0.5,
         "move_cost": 250
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "id": "nanofactory_4",
@@ -465,8 +485,6 @@
     ],
     "weight": "200 g",
     "volume": "1500 ml",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
@@ -511,6 +529,10 @@
         "cost_scaling": 0.25,
         "move_cost": 250
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   }
 ]

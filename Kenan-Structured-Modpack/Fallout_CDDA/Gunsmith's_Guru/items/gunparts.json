@@ -13,11 +13,13 @@
     ],
     "weight": "158 g",
     "volume": "1 L",
-    "bashing": 2,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2
+    }
   },
   {
     "type": "GENERIC",
@@ -33,11 +35,13 @@
     ],
     "weight": "158 g",
     "volume": "250 ml",
-    "bashing": 2,
     "to_hit": -1,
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2
+    }
   },
   {
     "type": "GENERIC",
@@ -55,9 +59,11 @@
       "steel"
     ],
     "volume": "500 ml",
-    "bashing": 6,
     "price": "75 USD",
-    "price_postapoc": 300
+    "price_postapoc": 300,
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -75,9 +81,11 @@
       "steel"
     ],
     "volume": "1 L",
-    "bashing": 12,
     "price": "75 USD",
-    "price_postapoc": 300
+    "price_postapoc": 300,
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "type": "GENERIC",
@@ -210,12 +218,14 @@
     "volume": "500 ml",
     "price": 400,
     "to_hit": 1,
-    "bashing": 6,
     "material": [
       "wood"
     ],
     "symbol": ":",
-    "color": "dark_gray"
+    "color": "dark_gray",
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -276,12 +286,14 @@
     "volume": "8 L",
     "price": "80 USD",
     "to_hit": -4,
-    "bashing": 5,
     "material": [
       "steel"
     ],
     "symbol": "}",
-    "color": "green"
+    "color": "green",
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "metal_box_small",
@@ -325,12 +337,14 @@
     "volume": "1 L",
     "price": "10 USD",
     "to_hit": -4,
-    "bashing": 5,
     "material": [
       "steel"
     ],
     "symbol": "}",
-    "color": "green"
+    "color": "green",
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "22boxmag",

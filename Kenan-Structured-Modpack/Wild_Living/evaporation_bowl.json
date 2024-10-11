@@ -10,7 +10,6 @@
     "weight": "5480 g",
     "volume": "20 L",
     "price": "25 USD",
-    "bashing": 1,
     "material": [
       "clay"
     ],
@@ -47,10 +46,14 @@
     "flags": [
       "ALLOWS_REMOTE_USE",
       "TARDIS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "clay_solution_extractor",
     "id_suffix": "evaporation_salt_water",
     "category": "CC_OTHER",
@@ -112,6 +115,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "clay_solution_extractor_salt_water",
     "id_suffix": "evaporation_salt_water",
     "category": "CC_OTHER",
@@ -141,6 +145,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "clay_solution_extractor_starch_water",
     "id_suffix": "evaporation_starch_water",
     "category": "CC_OTHER",
@@ -189,7 +194,6 @@
     "weight": "5480 g",
     "volume": "20 L",
     "price": "25 USD",
-    "bashing": 4,
     "material": [
       "clay"
     ],
@@ -198,7 +202,10 @@
     "flags": [
       "SMOKABLE"
     ],
-    "smoking_result": "clay_solution_extractor_salt"
+    "smoking_result": "clay_solution_extractor_salt",
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "id": "clay_solution_extractor_starch_water",
@@ -211,7 +218,6 @@
     "weight": "5480 g",
     "volume": "20 L",
     "price": "25 USD",
-    "bashing": 4,
     "material": [
       "clay"
     ],
@@ -220,7 +226,10 @@
     "flags": [
       "SMOKABLE"
     ],
-    "smoking_result": "clay_solution_extractor_flour"
+    "smoking_result": "clay_solution_extractor_flour",
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "id": "clay_solution_extractor_salt",
@@ -233,12 +242,14 @@
     "weight": "5480 g",
     "volume": "20 L",
     "price": "25 USD",
-    "bashing": 1,
     "material": [
       "clay"
     ],
     "symbol": ")",
-    "color": "brown"
+    "color": "brown",
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "clay_solution_extractor_flour",
@@ -251,15 +262,18 @@
     "weight": "5480 g",
     "volume": "20 L",
     "price": "25 USD",
-    "bashing": 1,
     "material": [
       "clay"
     ],
     "symbol": ")",
-    "color": "brown"
+    "color": "brown",
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "salt",
     "result_mult": 8,
     "id_suffix": "evaporation_salt_water_disassemble",
@@ -295,6 +309,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "flour",
     "result_mult": 6,
     "id_suffix": "evaporation_starch_water_disassemble",

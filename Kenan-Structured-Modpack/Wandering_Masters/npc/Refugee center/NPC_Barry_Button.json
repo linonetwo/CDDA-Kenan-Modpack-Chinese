@@ -147,11 +147,11 @@
     "type": "talk_topic",
     "id": "TALK_Barry_Button_job",
     "dynamic_line": {
-      "npc_compare_time_since_var": "barryb_wait",
-      "type": "flag",
-      "context": "meeting",
-      "op": ">=",
-      "time": "24 h",
+      "math": [
+        "time_since(n_flag_meeting_barryb_wait)",
+        ">=",
+        "time('24 h')"
+      ],
       "yes": "所以，我需要一些帮助。带我去最近的银行！",
       "no": "我在休息。晚点回来。"
     },
@@ -160,11 +160,11 @@
         "text": "当然，<name_g>。",
         "topic": "TALK_DONE",
         "condition": {
-          "npc_compare_time_since_var": "barryb_wait",
-          "type": "flag",
-          "context": "meeting",
-          "op": ">=",
-          "time": "24 h"
+          "math": [
+            "time_since(n_flag_meeting_barryb_wait)",
+            ">=",
+            "time('24 h')"
+          ]
         },
         "effect": [
           "follow_only",
@@ -344,11 +344,11 @@
     "goal": "MGOAL_CONDITION",
     "//": "place_monsters at start",
     "goal_condition": {
-      "u_compare_time_since_var": "barryb_heist",
-      "type": "flag",
-      "context": "meeting",
-      "op": ">=",
-      "time": "45 m"
+      "math": [
+        "time_since(u_flag_meeting_barryb_heist)",
+        ">=",
+        "time('45 m')"
+      ]
     },
     "difficulty": 0,
     "value": 1000,

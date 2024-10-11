@@ -16,9 +16,11 @@
     ],
     "weight": "102650 g",
     "volume": "30 L",
-    "bashing": 4,
-    "cutting": 4,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    }
   },
   {
     "type": "GENERIC",
@@ -37,9 +39,11 @@
     ],
     "weight": "31520 g",
     "volume": "15 L",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "TOOL",
@@ -58,8 +62,6 @@
     ],
     "weight": "3520 g",
     "volume": "15 L",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -78,6 +80,10 @@
       ],
       "moves": 200,
       "place_randomly": true
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -97,9 +103,11 @@
     ],
     "weight": "62650 g",
     "volume": "30 L",
-    "bashing": 4,
-    "cutting": 4,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    }
   },
   {
     "type": "TOOL",
@@ -118,8 +126,6 @@
     ],
     "weight": "62650 g",
     "volume": "30 L",
-    "bashing": 4,
-    "cutting": 4,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -137,6 +143,10 @@
         "computer"
       ],
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
     }
   },
   {
@@ -156,9 +166,11 @@
     ],
     "weight": "31520 g",
     "volume": "15 L",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "TOOL",
@@ -177,8 +189,6 @@
     ],
     "weight": "3520 g",
     "volume": "15 L",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -197,6 +207,10 @@
       ],
       "moves": 200,
       "place_randomly": true
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -216,9 +230,11 @@
     ],
     "weight": "3213 g",
     "volume": "750 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "id": "bot_venomhack",
@@ -236,8 +252,6 @@
     ],
     "weight": "300 g",
     "volume": "250 ml",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -258,6 +272,10 @@
       "friendly_msg": "毒液黑刺机器人从你手上飞起来，开始滴下有毒的化学物质。",
       "place_randomly": true,
       "moves": 60
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -277,9 +295,11 @@
     ],
     "weight": "3213 g",
     "volume": "750 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "id": "bot_distractron",
@@ -297,8 +317,6 @@
     ],
     "weight": "300 g",
     "volume": "250 ml",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -319,6 +337,10 @@
       "friendly_msg": "诱饵无人机从你手中飞走，它的灯亮了起来。",
       "place_randomly": true,
       "moves": 60
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -338,9 +360,11 @@
     ],
     "weight": "3213 g",
     "volume": "750 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "id": "bot_smokehack",
@@ -358,8 +382,6 @@
     ],
     "weight": "300 g",
     "volume": "250 ml",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -380,6 +402,10 @@
       "friendly_msg": "烟幕机器人你手中飞出，并燃烧了起来。",
       "place_randomly": true,
       "moves": 60
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -399,9 +425,11 @@
     ],
     "weight": "31520 g",
     "volume": "15 L",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -420,9 +448,11 @@
     ],
     "weight": "31520 g",
     "volume": "15 L",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "TOOL",
@@ -441,8 +471,6 @@
     ],
     "weight": "31520 g",
     "volume": "15 L",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -461,6 +489,10 @@
       ],
       "moves": 100,
       "place_randomly": true
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -480,9 +512,11 @@
     ],
     "weight": "62650 g",
     "volume": "30 L",
-    "bashing": 4,
-    "cutting": 4,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    }
   },
   {
     "type": "GENERIC",
@@ -501,9 +535,11 @@
     ],
     "weight": "62650 g",
     "volume": "30 L",
-    "bashing": 4,
-    "cutting": 4,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    }
   },
   {
     "type": "TOOL",
@@ -522,8 +558,6 @@
     ],
     "weight": "62650 g",
     "volume": "30 L",
-    "bashing": 4,
-    "cutting": 4,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -543,6 +577,10 @@
       "hostile_msg": "你为溜冰者机器人配置的程序出了 bug ！它开始蓄起敌意。",
       "friendly_msg": "溜冰者机器人转动轮子，发出一连串火花。",
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
     }
   },
   {
@@ -562,9 +600,11 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -583,9 +623,11 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "TOOL",
@@ -608,8 +650,6 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -630,6 +670,10 @@
       "friendly_msg": "电击机器人发出低沉的电嗡嗡声，开始慢慢走动。",
       "place_randomly": true,
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -649,9 +693,11 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -670,9 +716,11 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "id": "bot_chickenbot",
@@ -687,7 +735,6 @@
     "volume": "250 L",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -705,6 +752,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -720,7 +770,6 @@
     "volume": "250 L",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -738,6 +787,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -776,7 +828,7 @@
   },
   {
     "id": "laser_cannon",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -788,7 +840,6 @@
     "price": "4000 USD",
     "price_postapoc": "80 USD",
     "to_hit": -1,
-    "bashing": 4,
     "material": [
       "steel",
       "plastic"
@@ -849,7 +900,10 @@
       "NO_UNLOAD",
       "NON_FOULING",
       "NEEDS_NO_LUBE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "type": "TOOL",
@@ -872,8 +926,6 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -894,6 +946,10 @@
       "friendly_msg": "太阳能机器人成功启动，灯闪烁着。",
       "place_randomly": true,
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -913,9 +969,11 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -934,9 +992,11 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "TOOL",
@@ -959,8 +1019,6 @@
       "RADIOSIGNAL_3"
     ],
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -981,6 +1039,10 @@
       "friendly_msg": "杀人机器人上线，并想你期望的那样旋转它的链锯。",
       "place_randomly": true,
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -1000,9 +1062,11 @@
     ],
     "weight": "430000 g",
     "volume": "187500 ml",
-    "bashing": 10,
-    "cutting": 6,
-    "to_hit": -2
+    "to_hit": -2,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -1021,9 +1085,11 @@
     ],
     "weight": "430000 g",
     "volume": "187500 ml",
-    "bashing": 10,
-    "cutting": 6,
-    "to_hit": -2
+    "to_hit": -2,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 6
+    }
   },
   {
     "type": "TOOL",
@@ -1046,8 +1112,6 @@
     ],
     "weight": "430000 g",
     "volume": "187500 ml",
-    "bashing": 10,
-    "cutting": 6,
     "to_hit": -2,
     "max_charges": 0,
     "initial_charges": 0,
@@ -1068,6 +1132,10 @@
       "friendly_msg": "杀戮机器复活了。",
       "place_randomly": true,
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 10,
+      "cut": 6
     }
   },
   {
@@ -1087,9 +1155,11 @@
     ],
     "weight": "1223850 g",
     "volume": "875 L",
-    "bashing": 20,
-    "cutting": 15,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 20,
+      "cut": 15
+    }
   },
   {
     "type": "GENERIC",
@@ -1108,9 +1178,11 @@
     ],
     "weight": "1223850 g",
     "volume": "875 L",
-    "bashing": 20,
-    "cutting": 15,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 20,
+      "cut": 15
+    }
   },
   {
     "type": "TOOL",
@@ -1133,8 +1205,6 @@
     ],
     "weight": "1223850 g",
     "volume": "875 L",
-    "bashing": 20,
-    "cutting": 15,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -1155,6 +1225,10 @@
       "friendly_msg": "无畏级机器人的系统启动，它开始加速引擎。",
       "place_randomly": true,
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 20,
+      "cut": 15
     }
   },
   {
@@ -1174,9 +1248,11 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -1195,9 +1271,11 @@
     ],
     "weight": "140000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
-    "to_hit": -3
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
+    }
   },
   {
     "type": "TOOL",
@@ -1220,8 +1298,6 @@
     ],
     "weight": "100000 g",
     "volume": "62500 ml",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "max_charges": 0,
     "initial_charges": 0,
@@ -1242,6 +1318,10 @@
       "friendly_msg": "清洁机器人充满电，开始冒起含有有毒化学物质的水泡。",
       "place_randomly": true,
       "moves": 200
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   }
 ]

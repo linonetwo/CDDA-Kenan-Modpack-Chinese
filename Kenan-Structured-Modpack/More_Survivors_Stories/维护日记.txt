@@ -1,0 +1,96 @@
+微风9.8适配至实验版10-3
+
+"维护1"
+  添加
+  "npc_add_var": "2",
+  "type": "time",
+  "context": "1",
+  "time": true
+  替换成
+  "math": [ "n_time_1_2", "=", "time('now')" ]
+  
+  检测
+  "npc_compare_time_since_var": "2",
+  "type": "tiem",
+  "context": "1",
+  "op": ">",
+  "time": "xxx day"
+  替换成
+  "math": [ "time_since(n_time_1_2)", ">", "time('xxx d')" ]
+  
+  检测
+  "days_since_cataclysm": 120,
+  替换成
+  "math": [ "time_since('cataclysm') >= time('120 days')" ],
+  
+"维护2"
+  添加
+  "npc_adjust_var": "3",
+  "type": "1",
+  "context": "2",
+  "adjustment": "1"
+  替换成
+  "math": ["n_1_2_3","++"]
+  
+  检测
+  "u_compare_var": "3",
+  "type": "1",
+  "context": "2",
+  "op": ">=",
+  "value": xx
+  替换成其中一个
+  "math": [ "u_1_2_3", ">=", "xx" ]
+  "compare_string": [ "xx", { "npc_val": "1_2_3" } ]
+  
+  
+  
+"维护3"
+  添加
+  "u_add_var": "3",
+  "type": "1",
+  "context": "2",
+  "value": "yes"
+  替换成
+  "u_add_var": "1_2_3", "value": "yes"
+  
+  检测
+  "npc_has_var": "3",
+  "type": "1",
+  "context": "2",
+  "value": "yes"
+  替换成其中一个
+  "npc_has_var": "1_2_3", "value": "yes"
+  "compare_string": [ "yes", { "npc_val": "1_2_3" } ]
+  
+  
+  
+"维护4"
+  删除
+  "u_lose_var": "3",
+  "type": "1",
+  "context": "2"
+  替换成
+  "u_lose_var": "1_2_3"
+  
+  
+  
+"维护5"
+  跟自由商人对话无法获得任务"MISSION_EVAC_SHOPKEEP_status见过自由商会的商人"
+  "TALK_EVAC_MERCHANT"替换成"TALK_FREE_MERCHANTS_MERCHANT"
+  
+  任务物品缺失
+  "MISSION_lead_scientist_22ch_2找到微型反应堆1"的"minireactor"替换成"compact_ASRG_containment"先进斯特林放射性同位素发电机（未连接）
+  "MISSION_mad_scientist_1蜘蛛卵"的"spider_egg"替换成"egg_chicken"鸡蛋
+  
+  
+  
+"维护6"
+  派系"faction"的"food_supply"替换成"fac_food_supply"
+  
+  
+  
+"维护7"
+  地形"t_gutter_west"和"t_gutter_north"替换成"t_gutter"
+  注释了部分东西可搜//维护
+
+共维护44个文件 感谢abandon和某名支持

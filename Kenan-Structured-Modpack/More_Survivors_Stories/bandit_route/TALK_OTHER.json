@@ -7,16 +7,12 @@
       {
         "text": "你和我一起去。收拾好东西，我们走。",
         "condition": {
-          "u_has_var": "hh_reward_chick",
-          "type": "generic",
-          "context": "reward",
+          "u_has_var": "generic_reward_hh_reward_chick",
           "value": "yes"
         },
         "effect": [
           {
-            "u_lose_var": "hh_reward_chick",
-            "type": "generic",
-            "context": "reward"
+            "u_lose_var": "generic_reward_hh_reward_chick"
           },
           "follow"
         ],

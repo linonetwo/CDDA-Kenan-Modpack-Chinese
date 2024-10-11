@@ -9,7 +9,6 @@
     "weight": "1110 g",
     "color": "red",
     "to_hit": -2,
-    "bashing": 13,
     "techniques": [
       "BRUTAL"
     ],
@@ -25,7 +24,10 @@
       "UNARMED_WEAPON",
       "DURABLE_MELEE"
     ],
-    "category": "weapons"
+    "category": "weapons",
+    "melee_damage": {
+      "bash": 13
+    }
   },
   {
     "type": "GENERIC",
@@ -46,8 +48,6 @@
       "VORPAL"
     ],
     "volume": "500 ml",
-    "bashing": 18,
-    "cutting": 12,
     "flags": [
       "UNARMED_WEAPON",
       "UNBREAKABLE_MELEE"
@@ -63,7 +63,11 @@
         "BUTCHER",
         12
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 18,
+      "cut": 12
+    }
   },
   {
     "type": "GENERIC",
@@ -84,10 +88,8 @@
       "VORPAL"
     ],
     "volume": "750 ml",
-    "cutting": 24,
     "flags": [
       "SHEATH_KNIFE",
-      "STAB",
       "UNARMED_WEAPON",
       "UNBREAKABLE_MELEE"
     ],
@@ -102,7 +104,10 @@
         "BUTCHER",
         22
       ]
-    ]
+    ],
+    "melee_damage": {
+      "stab": 24
+    }
   },
   {
     "type": "GENERIC",
@@ -124,8 +129,6 @@
       "WBLOCK_1"
     ],
     "volume": "2250 ml",
-    "bashing": 3,
-    "cutting": 38,
     "looks_like": "longsword",
     "flags": [
       "DURABLE_MELEE"
@@ -141,7 +144,11 @@
         "BUTCHER",
         -12
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 38
+    }
   },
   {
     "type": "GENERIC",
@@ -164,16 +171,17 @@
       "VORPAL"
     ],
     "volume": "1500 ml",
-    "bashing": 5,
-    "cutting": 9,
     "category": "weapons",
     "looks_like": "grapnel",
     "flags": [
-      "STAB",
       "REACH_ATTACK",
       "NONCONDUCTIVE"
     ],
-    "price": 300
+    "price": 300,
+    "melee_damage": {
+      "bash": 5,
+      "stab": 9
+    }
   },
   {
     "type": "TOOL",
@@ -193,7 +201,6 @@
       "BELT_CLIP"
     ],
     "volume": "500 ml",
-    "bashing": 5,
     "category": "weapons",
     "pocket_data": [
       {
@@ -227,7 +234,10 @@
         "moves": 10
       },
       "OXYTORCH"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "laser_sword_on_vo",
@@ -257,7 +267,6 @@
     ],
     "weight": "1200 g",
     "volume": "500 ml",
-    "cutting": 28,
     "to_hit": 4,
     "pocket_data": [
       {
@@ -291,7 +300,10 @@
         "noise": 5,
         "noise_chance": 75
       }
-    ]
+    ],
+    "melee_damage": {
+      "cut": 28
+    }
   },
   {
     "id": "plutonium_sword_vo",
@@ -315,8 +327,6 @@
     ],
     "weight": "4000 g",
     "volume": "3750 ml",
-    "bashing": 30,
-    "cutting": 46,
     "max_charges": 1,
     "charges_per_use": 1,
     "category": "weapons",
@@ -340,6 +350,10 @@
         "time": "12 h",
         "regenerate_ammo": true
       }
+    },
+    "melee_damage": {
+      "bash": 30,
+      "cut": 46
     }
   }
 ]

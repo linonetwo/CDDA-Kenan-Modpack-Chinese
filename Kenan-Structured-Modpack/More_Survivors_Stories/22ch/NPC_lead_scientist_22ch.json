@@ -174,9 +174,7 @@
         "text": "你现在知道如何使用仿生学了吗？",
         "topic": "TALK_lead_scientist_22ch_bionics",
         "condition": {
-          "npc_has_var": "u_helped_lead_scientist_22ch",
-          "type": "general",
-          "context": "meeting",
+          "npc_has_var": "general_meeting_u_helped_lead_scientist_22ch",
           "value": "yes"
         }
       },
@@ -211,17 +209,13 @@
       {
         "text": "现在呢？",
         "condition": {
-          "npc_has_var": "u_helped_lead_scientist_22ch",
-          "type": "general",
-          "context": "meeting",
+          "npc_has_var": "general_meeting_u_helped_lead_scientist_22ch",
           "value": "yes"
         },
         "trial": {
           "type": "CONDITION",
           "condition": {
-            "npc_has_var": "lead_scientist_22ch_teach",
-            "type": "general",
-            "context": "meeting",
+            "npc_has_var": "general_meeting_lead_scientist_22ch_teach",
             "value": "yes"
           }
         },
@@ -231,9 +225,7 @@
               "u_spawn_item": "iv_mutagen_medical"
             },
             {
-              "npc_add_var": "lead_scientist_22ch_teach",
-              "type": "general",
-              "context": "meeting",
+              "npc_add_var": "general_meeting_lead_scientist_22ch_teach",
               "value": "no"
             }
           ],
@@ -312,9 +304,7 @@
               "not": "mission_complete"
             },
             {
-              "u_has_var": "lead_scientist_22ch_finished",
-              "type": "general",
-              "context": "meeting",
+              "u_has_var": "general_meeting_lead_scientist_22ch_finished",
               "value": "yes"
             }
           ]
@@ -333,9 +323,7 @@
           "and": [
             "mission_complete",
             {
-              "u_has_var": "lead_scientist_22ch_finished",
-              "type": "general",
-              "context": "meeting",
+              "u_has_var": "general_meeting_lead_scientist_22ch_finished",
               "value": "yes"
             }
           ]
@@ -355,9 +343,7 @@
             "mission_complete",
             {
               "not": {
-                "u_has_var": "lead_scientist_22ch_finished",
-                "type": "general",
-                "context": "meeting",
+                "u_has_var": "general_meeting_lead_scientist_22ch_finished",
                 "value": "yes"
               }
             }
@@ -472,11 +458,11 @@
     "type": "mission_definition",
     "has_generic_rewards": false,
     "name": {
-      "str": "找到微型反应堆1"
+      "str": "找到先进斯特林放射性同位素发电机（未连接）1"
     },
-    "description": "找到微型反应堆1",
+    "description": "找到先进斯特林放射性同位素发电机（未连接）1",
     "goal": "MGOAL_FIND_ITEM",
-    "item": "minireactor",
+    "item": "compact_ASRG_containment",
     "count": 1,
     "difficulty": 0,
     "value": 1000,
@@ -576,9 +562,7 @@
     "value": 1000,
     "end": {
       "effect": {
-        "u_add_var": "22ch_ai",
-        "type": "flag",
-        "context": "ai",
+        "u_add_var": "flag_ai_22ch_ai",
         "value": "yes"
       }
     },
@@ -654,9 +638,7 @@
           "npc_first_topic": "TALK_lead_scientist_22ch_transmitters"
         },
         {
-          "u_add_var": "lead_scientist_22ch_need_time",
-          "type": "general",
-          "context": "meeting",
+          "u_add_var": "general_meeting_rlead_scientist_22ch_need_time",
           "value": "yes"
         }
       ]
@@ -696,9 +678,7 @@
     "start": {
       "effect": [
         {
-          "u_add_var": "22ch_ai",
-          "type": "flag",
-          "context": "ai",
+          "u_add_var": "flag_ai_22ch_ai",
           "value": "no"
         },
         {
@@ -733,15 +713,11 @@
           "npc_first_topic": "TALK_lead_scientist_22ch_1"
         },
         {
-          "npc_add_var": "u_helped_lead_scientist_22ch",
-          "type": "general",
-          "context": "meeting",
+          "npc_add_var": "general_meeting_u_helped_lead_scientist_22ch",
           "value": "yes"
         },
         {
-          "npc_add_var": "lead_scientist_22ch_teach",
-          "type": "general",
-          "context": "meeting",
+          "npc_add_var": "general_meeting_lead_scientist_22ch_teach",
           "value": "yes"
         }
       ]

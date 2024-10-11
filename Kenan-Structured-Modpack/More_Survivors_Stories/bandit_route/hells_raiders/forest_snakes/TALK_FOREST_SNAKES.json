@@ -12,9 +12,7 @@
       "TALK_FOREST_SNAKES_WORK_3_DONE"
     ],
     "dynamic_line": {
-      "npc_has_var": "ally_transfered",
-      "type": "flag",
-      "context": "transfered",
+      "npc_has_var": "flag_transfered_ally_transfered",
       "value": "fs",
       "yes": "嘿，<name_g>。森林蛇没问题。这里有很多很酷的人。怎么了？",
       "no": "迷路，<name_b>。"
@@ -29,11 +27,11 @@
               "u_has_mission": "MISSION_bandit_fs_leader_3"
             },
             {
-              "u_compare_var": "leader_lend_bandits",
-              "type": "flag",
-              "context": "bandits_fs",
-              "op": ">",
-              "value": 0
+              "math": [
+                "u_flag_bandits_fs_leader_lend_bandits",
+                ">",
+                "0"
+              ]
             }
           ]
         }
@@ -43,9 +41,7 @@
           "true": "What have you asked for again?",
           "false": "Wanna help with building the fence?",
           "condition": {
-            "npc_has_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "npc_has_var": "flag_search_for_help_bandit_camp_help",
             "value": "yes"
           }
         },
@@ -56,31 +52,23 @@
               "u_has_mission": "MISSION_bandit_fs_recruiter_2"
             },
             {
-              "u_has_var": "bandit_camp_helpers",
-              "type": "count",
-              "context": "help_count",
+              "u_has_var": "count_help_count_bandit_camp_helpers",
               "value": "2"
             },
             {
               "not": {
-                "npc_has_var": "bandit_camp_help",
-                "type": "flag",
-                "context": "search_for_help",
+                "npc_has_var": "flag_search_for_help_bandit_camp_help",
                 "value": "done"
               }
             },
             {
               "or": [
                 {
-                  "u_has_var": "bandit_camp_help",
-                  "type": "flag",
-                  "context": "search_for_help",
+                  "u_has_var": "flag_search_for_help_bandit_camp_help",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "bandit_camp_help",
-                  "type": "flag",
-                  "context": "search_for_help",
+                  "npc_has_var": "flag_search_for_help_bandit_camp_help",
                   "value": "yes"
                 }
               ]
@@ -93,9 +81,7 @@
           "true": "What have you asked for again?",
           "false": "Wanna help with building the fence?",
           "condition": {
-            "npc_has_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "npc_has_var": "flag_search_for_help_bandit_camp_help",
             "value": "yes"
           }
         },
@@ -106,31 +92,23 @@
               "u_has_mission": "MISSION_bandit_fs_recruiter_2"
             },
             {
-              "u_has_var": "bandit_camp_helpers",
-              "type": "count",
-              "context": "help_count",
+              "npc_has_var": "count_help_count_bandit_camp_helpers",
               "value": "1"
             },
             {
               "not": {
-                "npc_has_var": "bandit_camp_help",
-                "type": "flag",
-                "context": "search_for_help",
+                "npc_has_var": "flag_search_for_help_bandit_camp_help",
                 "value": "done"
               }
             },
             {
               "or": [
                 {
-                  "u_has_var": "bandit_camp_help",
-                  "type": "flag",
-                  "context": "search_for_help",
+                  "u_has_var": "flag_search_for_help_bandit_camp_help",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "bandit_camp_help",
-                  "type": "flag",
-                  "context": "search_for_help",
+                  "npc_has_var": "flag_search_for_help_bandit_camp_help",
                   "value": "yes"
                 }
               ]
@@ -143,9 +121,7 @@
           "true": "What have you asked for again?",
           "false": "Wanna help with building the fence?",
           "condition": {
-            "npc_has_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "npc_has_var": "flag_search_for_help_bandit_camp_help",
             "value": "yes"
           }
         },
@@ -156,31 +132,23 @@
               "u_has_mission": "MISSION_bandit_fs_recruiter_2"
             },
             {
-              "u_has_var": "bandit_camp_helpers",
-              "type": "count",
-              "context": "help_count",
+              "u_has_var": "count_help_count_bandit_camp_helpers",
               "value": "0"
             },
             {
               "not": {
-                "npc_has_var": "bandit_camp_help",
-                "type": "flag",
-                "context": "search_for_help",
+                "npc_has_var": "flag_search_for_help_bandit_camp_help",
                 "value": "done"
               }
             },
             {
               "or": [
                 {
-                  "u_has_var": "bandit_camp_help",
-                  "type": "flag",
-                  "context": "search_for_help",
+                  "u_has_var": "flag_search_for_help_bandit_camp_help",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "bandit_camp_help",
-                  "type": "flag",
-                  "context": "search_for_help",
+                  "npc_has_var": "flag_search_for_help_bandit_camp_help",
                   "value": "yes"
                 }
               ]
@@ -202,9 +170,7 @@
     "type": "talk_topic",
     "id": "TALK_FOREST_SNAKES_BACKGROUND",
     "dynamic_line": {
-      "npc_has_var": "ally_transfered",
-      "type": "flag",
-      "context": "transfered",
+      "npc_has_var": "flag_transfered_ally_transfered",
       "value": "fs",
       "yes": "我不确定我是否能忍受这样的生活。",
       "no": [
@@ -238,10 +204,10 @@
             "add_mission": "MISSION_FOREST_SNAKES_0"
           },
           {
-            "u_adjust_var": "leader_lend_bandits",
-            "type": "flag",
-            "context": "bandits_fs",
-            "adjustment": -1
+            "math": [
+              "u_flag_bandits_fs_leader_lend_bandits",
+              "--"
+            ]
           },
           {
             "npc_first_topic": "TALK_FOREST_SNAKES_FOLLOW"
@@ -286,9 +252,7 @@
     "type": "talk_topic",
     "id": "TALK_FOREST_SNAKES_WORK_1",
     "dynamic_line": {
-      "npc_has_var": "bandit_camp_help",
-      "type": "flag",
-      "context": "search_for_help",
+      "npc_has_var": "flag_search_for_help_bandit_camp_help",
       "value": "yes",
       "yes": "两块烟，我一天都是你的。没有双关语。",
       "no": "<no>, <okay>？我什么也不做，除非我给自己弄点烟。如果你给我拿两块烟，我会考虑的。"
@@ -296,15 +260,11 @@
     "speaker_effect": {
       "effect": [
         {
-          "npc_add_var": "bandit_camp_help",
-          "type": "flag",
-          "context": "search_for_help",
+          "npc_add_var": "flag_search_for_help_bandit_camp_help",
           "value": "yes"
         },
         {
-          "u_lose_var": "bandit_camp_help",
-          "type": "flag",
-          "context": "search_for_help"
+          "u_lose_var": "flag_search_for_help_bandit_camp_help"
         }
       ]
     },
@@ -324,21 +284,17 @@
             "count": 400
           },
           {
-            "npc_add_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "npc_add_var": "flag_search_for_help_bandit_camp_help",
             "value": "done"
           },
           {
-            "u_adjust_var": "bandit_camp_helpers",
-            "type": "count",
-            "context": "help_count",
-            "adjustment": 1
+            "math": [
+              "u_count_help_count_bandit_camp_helpers",
+              "++"
+            ]
           },
           {
-            "u_add_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "u_add_var": "flag_search_for_help_bandit_camp_help",
             "value": "yes"
           }
         ]
@@ -349,9 +305,7 @@
     "type": "talk_topic",
     "id": "TALK_FOREST_SNAKES_WORK_2",
     "dynamic_line": {
-      "npc_has_var": "bandit_camp_help",
-      "type": "flag",
-      "context": "search_for_help",
+      "npc_has_var": "flag_search_for_help_bandit_camp_help",
       "value": "yes",
       "yes": "一副牌，我一天都是你的。没有双关语。",
       "no": "<no>, <okay>？当<name_b>他看到我们在玩的时候，那把我的牌烧了，我不会为他做任何事，除非我给自己买一个新的。如果你给我一副新牌，我会考虑的。"
@@ -359,15 +313,11 @@
     "speaker_effect": {
       "effect": [
         {
-          "npc_add_var": "bandit_camp_help",
-          "type": "flag",
-          "context": "search_for_help",
+          "npc_add_var": "flag_search_for_help_bandit_camp_help",
           "value": "yes"
         },
         {
-          "u_lose_var": "bandit_camp_help",
-          "type": "flag",
-          "context": "search_for_help"
+          "u_lose_var": "flag_search_for_help_bandit_camp_help"
         }
       ]
     },
@@ -383,21 +333,17 @@
             "u_sell_item": "deck_of_cards"
           },
           {
-            "npc_add_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "npc_add_var": "flag_search_for_help_bandit_camp_help",
             "value": "done"
           },
           {
-            "u_adjust_var": "bandit_camp_helpers",
-            "type": "count",
-            "context": "help_count",
-            "adjustment": 1
+            "math": [
+              "u_count_help_count_bandit_camp_helpers",
+              "++"
+            ]
           },
           {
-            "u_add_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "u_add_var": "flag_search_for_help_bandit_camp_help",
             "value": "yes"
           }
         ]
@@ -408,9 +354,7 @@
     "type": "talk_topic",
     "id": "TALK_FOREST_SNAKES_WORK_3",
     "dynamic_line": {
-      "npc_has_var": "bandit_camp_help",
-      "type": "flag",
-      "context": "search_for_help",
+      "npc_has_var": "flag_search_for_help_bandit_camp_help",
       "value": "yes",
       "yes": "一片胸甲，我就属于你一天。没有双关语。",
       "no": "<no>, <okay>？外面有很多丧尸，我什么也不做，除非我能得到一些保护。我想要一些结实又酷的…嘿，金属盔甲怎么样？我将是无敌的对<zombies>，就像在电影。如果你给我带个金属胸甲，我会考虑的。不需要什么花哨的东西，一个废品就够了。"
@@ -418,15 +362,11 @@
     "speaker_effect": {
       "effect": [
         {
-          "npc_add_var": "bandit_camp_help",
-          "type": "flag",
-          "context": "search_for_help",
+          "npc_add_var": "flag_search_for_help_bandit_camp_help",
           "value": "yes"
         },
         {
-          "u_lose_var": "bandit_camp_help",
-          "type": "flag",
-          "context": "search_for_help"
+          "u_lose_var": "flag_search_for_help_bandit_camp_help"
         }
       ]
     },
@@ -442,21 +382,17 @@
             "u_sell_item": "cuirass_scrap"
           },
           {
-            "npc_add_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "npc_add_var": "flag_search_for_help_bandit_camp_help",
             "value": "done"
           },
           {
-            "u_adjust_var": "bandit_camp_helpers",
-            "type": "count",
-            "context": "help_count",
-            "adjustment": 1
+            "math": [
+              "u_count_help_count_bandit_camp_helpers",
+              "++"
+            ]
           },
           {
-            "u_add_var": "bandit_camp_help",
-            "type": "flag",
-            "context": "search_for_help",
+            "u_add_var": "flag_search_for_help_bandit_camp_help",
             "value": "yes"
           }
         ]
@@ -510,10 +446,10 @@
     },
     "fail": {
       "effect": {
-        "u_adjust_var": "lend_bandits_fs",
-        "type": "count",
-        "context": "death",
-        "adjustment": 1
+        "math": [
+          "u_count_death_lend_bandits_fs",
+          "++"
+        ]
       }
     }
   }

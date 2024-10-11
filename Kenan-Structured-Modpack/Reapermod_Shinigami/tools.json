@@ -11,8 +11,6 @@
     "weight": "2151 g",
     "price": "200 USD",
     "to_hit": 1,
-    "bashing": 5,
-    "cutting": 28,
     "material": [
       "steel",
       "wood"
@@ -37,7 +35,11 @@
     ],
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 28
+    }
   },
   {
     "id": "scythe_war_perfected",
@@ -51,8 +53,6 @@
     "weight": "2121 g",
     "price": "350 USD",
     "to_hit": 1,
-    "bashing": 8,
-    "cutting": 37,
     "material": [
       "steel",
       "wood"
@@ -78,7 +78,11 @@
     "flags": [
       "DURABLE_MELEE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 37
+    }
   },
   {
     "id": "scythe_diamond",
@@ -92,8 +96,6 @@
     "weight": "2110 g",
     "price": "350 USD",
     "to_hit": 1,
-    "bashing": 9,
-    "cutting": 49,
     "material": [
       "steel",
       "wood",
@@ -121,7 +123,11 @@
       "UNBREAKABLE_MELEE",
       "TRADER_AVOID",
       "NO_SALVAGE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9,
+      "cut": 49
+    }
   },
   {
     "id": "scythe_fire_off",
@@ -135,8 +141,6 @@
     "weight": "2151 g",
     "price": "350 USD",
     "to_hit": 1,
-    "bashing": 10,
-    "cutting": 37,
     "material": [
       "steel",
       "wood"
@@ -185,7 +189,11 @@
         "success_message": "You ignite the blade of the God Fire.",
         "lacks_fuel_message": "The ignition feeder is out of gasoline."
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 37
+    }
   },
   {
     "id": "scythe_fire_on",
@@ -199,8 +207,6 @@
     "weight": "2151 g",
     "price": "350 USD",
     "to_hit": 1,
-    "bashing": 10,
-    "cutting": 37,
     "material": [
       "steel",
       "wood"
@@ -258,7 +264,11 @@
         "type": "firestarter",
         "moves": 25
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 37
+    }
   },
   {
     "id": "scythe_relic",
@@ -272,8 +282,6 @@
     "weight": "2222 g",
     "price": "750 USD",
     "to_hit": 1,
-    "bashing": 10,
-    "cutting": 37,
     "material": [
       "steel",
       "wood"
@@ -319,6 +327,10 @@
           ]
         }
       ]
+    },
+    "melee_damage": {
+      "bash": 10,
+      "cut": 37
     }
   },
   {
@@ -333,8 +345,6 @@
     "weight": "3000 g",
     "price": "4000 USD",
     "to_hit": -1,
-    "bashing": 26,
-    "cutting": 15,
     "material": [
       "gold",
       "diamond",
@@ -382,6 +392,10 @@
           ]
         }
       ]
+    },
+    "melee_damage": {
+      "bash": 26,
+      "cut": 15
     }
   },
   {
@@ -396,8 +410,6 @@
     "weight": "2400 g",
     "price": "200 USD",
     "to_hit": 1,
-    "bashing": 5,
-    "cutting": 25,
     "material": [
       "bone",
       "steel"
@@ -422,6 +434,10 @@
     ],
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 25
+    }
   }
 ]

@@ -22,7 +22,6 @@
     "weight": "1000 g",
     "volume": "1750 ml",
     "longest_side": "1020 mm",
-    "bashing": 12,
     "to_hit": 0,
     "dispersion": 180,
     "durability": 6,
@@ -85,7 +84,10 @@
           "light_plus_battery_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "hotspot",
@@ -109,7 +111,6 @@
     "weight": "1250 g",
     "volume": "3000 ml",
     "longest_side": "1020 mm",
-    "bashing": 19,
     "to_hit": -2,
     "dispersion": 220,
     "sight_dispersion": 80,
@@ -191,7 +192,10 @@
           "heavy_plus_battery_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 19
+    }
   },
   {
     "id": "mixmaster",
@@ -215,7 +219,6 @@
     "weight": "1250 g",
     "volume": "3000 ml",
     "longest_side": "1020 mm",
-    "bashing": 19,
     "to_hit": -2,
     "dispersion": 220,
     "sight_dispersion": 80,
@@ -285,6 +288,9 @@
           "light_plus_battery_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 19
+    }
   }
 ]

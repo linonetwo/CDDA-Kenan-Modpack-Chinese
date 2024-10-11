@@ -27,8 +27,6 @@
       "WATERPROOF_GUN",
       "MOUNTED_GUN"
     ],
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "durability": 10,
     "clip_size": 100,
@@ -42,7 +40,11 @@
         }
       }
     ],
-    "reload": 0
+    "reload": 0,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "id": "nanoturret",
@@ -66,9 +68,11 @@
     ],
     "volume": "250 ml",
     "weight": "200 g",
-    "bashing": 0,
-    "cutting": 0,
-    "to_hit": 0
+    "to_hit": 0,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "id": "nanoturret_shredder",
@@ -390,15 +394,17 @@
       "nanite"
     ],
     "volume": "2000 ml",
-    "bashing": 1,
-    "cutting": 0,
     "category": "veh_parts",
     "flags": [
       "UNBREAKABLE_MELEE",
       "NONCONDUCTIVE",
       "TRADER_AVOID"
     ],
-    "price": 600000
+    "price": 600000,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -416,15 +422,17 @@
       "nanite"
     ],
     "volume": "2000 ml",
-    "bashing": 1,
-    "cutting": 0,
     "category": "veh_parts",
     "flags": [
       "UNBREAKABLE_MELEE",
       "NONCONDUCTIVE",
       "TRADER_AVOID"
     ],
-    "price": 600000
+    "price": 600000,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -449,8 +457,10 @@
       "NONCONDUCTIVE",
       "TRADER_AVOID"
     ],
-    "bashing": 1,
-    "cutting": 0
+    "melee_damage": {
+      "bash": 1,
+      "cut": 0
+    }
   },
   {
     "id": "nanotech_battery",
@@ -502,7 +512,6 @@
     "volume": "6250 ml",
     "price": "755 USD",
     "to_hit": -3,
-    "bashing": 30,
     "material": [
       "nanite"
     ],
@@ -520,6 +529,9 @@
     "symbol": "]",
     "color": "white",
     "diameter": 60,
-    "width": 30
+    "width": 30,
+    "melee_damage": {
+      "bash": 30
+    }
   }
 ]

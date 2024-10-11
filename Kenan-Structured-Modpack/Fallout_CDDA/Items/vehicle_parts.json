@@ -14,10 +14,12 @@
       "steel"
     ],
     "volume": "5 L",
-    "bashing": 8,
     "category": "veh_parts",
     "price": "1200 USD",
-    "insulation": 2
+    "insulation": 2,
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "type": "GENERIC",
@@ -34,10 +36,12 @@
       "steel"
     ],
     "volume": "5 L",
-    "bashing": 8,
     "category": "veh_parts",
     "price": "1400 USD",
-    "insulation": 4
+    "insulation": 4,
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "type": "GENERIC",
@@ -55,10 +59,12 @@
       "plastic"
     ],
     "volume": "50 L",
-    "bashing": 2,
     "category": "veh_parts",
     "price": "400 USD",
-    "insulation": 2
+    "insulation": 2,
+    "melee_damage": {
+      "bash": 2
+    }
   },
   {
     "type": "GENERIC",
@@ -76,10 +82,12 @@
       "plastic"
     ],
     "volume": "50 L",
-    "bashing": 2,
     "category": "veh_parts",
     "price": "400 USD",
-    "insulation": 4
+    "insulation": 4,
+    "melee_damage": {
+      "bash": 2
+    }
   },
   {
     "type": "GENERIC",
@@ -113,10 +121,12 @@
     ],
     "weight": "22600 g",
     "volume": "3 L",
-    "bashing": 5,
     "to_hit": -5,
     "category": "veh_parts",
-    "price": 800
+    "price": 800,
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "wheel_monster",
@@ -129,7 +139,6 @@
     "weight": "45200 g",
     "volume": "100 L",
     "price": "340 USD",
-    "bashing": 17,
     "to_hit": -1,
     "material": [
       "steel",
@@ -138,7 +147,10 @@
     "symbol": "]",
     "color": "dark_gray",
     "diameter": 66,
-    "width": 14
+    "width": 14,
+    "melee_damage": {
+      "bash": 17
+    }
   },
   {
     "type": "WHEEL",
@@ -151,7 +163,6 @@
     "weight": "24500 g",
     "volume": "17500 ml",
     "price": "340 USD",
-    "bashing": 17,
     "to_hit": -1,
     "material": [
       "qt_steel",
@@ -160,7 +171,10 @@
     "symbol": "]",
     "color": "green",
     "diameter": 32,
-    "width": 20
+    "width": 20,
+    "melee_damage": {
+      "bash": 17
+    }
   },
   {
     "abstract": "engine_nuka",

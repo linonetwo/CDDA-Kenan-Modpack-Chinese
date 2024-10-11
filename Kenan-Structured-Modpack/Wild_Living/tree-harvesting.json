@@ -115,11 +115,13 @@
     ],
     "volume": "1500 ml",
     "weight": "2721 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -143,12 +145,14 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "TOOL",
@@ -166,8 +170,6 @@
     ],
     "volume": "3000 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "use_action": {
@@ -179,10 +181,15 @@
       "moves": 50,
       "container": "clay_plant_pot",
       "target": "apple_sapling"
+    },
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "apple_cutting_potted",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -328,12 +335,14 @@
     ],
     "volume": "1500 ml",
     "weight": "2721 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -357,12 +366,14 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "TOOL",
@@ -380,8 +391,6 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "use_action": {
@@ -393,10 +402,15 @@
       "moves": 50,
       "container": "clay_plant_pot",
       "target": "pear_sapling"
+    },
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "pear_cutting_potted",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -536,12 +550,14 @@
     ],
     "volume": "1500 ml",
     "weight": "2721 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -565,12 +581,14 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "TOOL",
@@ -588,8 +606,6 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "use_action": {
@@ -601,10 +617,15 @@
       "moves": 50,
       "container": "clay_plant_pot",
       "target": "cherry_sapling"
+    },
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "cherry_cutting_potted",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -744,12 +765,14 @@
     ],
     "volume": "1500 ml",
     "weight": "2721 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -773,12 +796,14 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "TOOL",
@@ -796,8 +821,6 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "use_action": {
@@ -809,10 +832,15 @@
       "moves": 50,
       "container": "clay_plant_pot",
       "target": "peach_sapling"
+    },
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "peach_cutting_potted",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -952,12 +980,14 @@
     ],
     "volume": "1500 ml",
     "weight": "2721 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -981,12 +1011,14 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "TOOL",
@@ -1004,8 +1036,6 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "use_action": {
@@ -1017,10 +1047,15 @@
       "moves": 50,
       "container": "clay_plant_pot",
       "target": "apricot_sapling"
+    },
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "apricot_cutting_potted",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -1160,12 +1195,14 @@
     ],
     "volume": "1500 ml",
     "weight": "2721 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -1189,12 +1226,14 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "TOOL",
@@ -1212,8 +1251,6 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "use_action": {
@@ -1225,10 +1262,15 @@
       "moves": 50,
       "container": "clay_plant_pot",
       "target": "plum_sapling"
+    },
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "plum_cutting_potted",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -1360,12 +1402,14 @@
     ],
     "volume": "1500 ml",
     "weight": "2721 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -1389,12 +1433,14 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "charges": 1,
-    "stack_size": 100
+    "stack_size": 100,
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
+    }
   },
   {
     "type": "TOOL",
@@ -1412,8 +1458,6 @@
     ],
     "volume": "4500 ml",
     "weight": "5443 g",
-    "bashing": 0,
-    "cutting": 0,
     "to_hit": 0,
     "phase": "solid",
     "use_action": {
@@ -1425,10 +1469,15 @@
       "moves": 50,
       "container": "clay_plant_pot",
       "target": "coffee_sapling"
+    },
+    "melee_damage": {
+      "bash": 0,
+      "cut": 0
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "coffee_cutting_potted",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_OTHER",
@@ -1468,15 +1517,18 @@
       "stone"
     ],
     "volume": "3000 ml",
-    "bashing": 2,
-    "cutting": 0,
     "flags": [
       "NO_SALVAGE"
     ],
-    "price": 3500
+    "price": 3500,
+    "melee_damage": {
+      "bash": 2,
+      "cut": 0
+    }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "clay_plant_pot",
     "id_suffix": "WL_recipes",
     "category": "CC_OTHER",

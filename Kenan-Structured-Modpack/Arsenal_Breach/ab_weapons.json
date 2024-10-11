@@ -11,7 +11,6 @@
     "longest_side": "200 mm",
     "price": "8500 USD",
     "to_hit": -2,
-    "bashing": 5,
     "material": [
       "steel",
       "plastic"
@@ -71,7 +70,10 @@
     "flags": [
       "NEVER_JAMS",
       "NO_UNLOAD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "ABlaser_carbine",
@@ -85,7 +87,6 @@
     "longest_side": "900 mm",
     "price": "11000 USD",
     "to_hit": -1,
-    "bashing": 8,
     "material": [
       "steel",
       "plastic"
@@ -161,7 +162,10 @@
     "flags": [
       "NEVER_JAMS",
       "NO_UNLOAD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "ABlaser_sniper",
@@ -175,7 +179,6 @@
     "longest_side": "1230 mm",
     "price": "18500 USD",
     "to_hit": -1,
-    "bashing": 11,
     "material": [
       "steel",
       "plastic"
@@ -246,7 +249,10 @@
     "flags": [
       "NEVER_JAMS",
       "NO_UNLOAD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 11
+    }
   },
   {
     "id": "ABlaser_shotgun",
@@ -260,7 +266,6 @@
     "longest_side": "920 mm",
     "price": "11000 USD",
     "to_hit": -1,
-    "bashing": 8,
     "material": [
       "steel",
       "plastic"
@@ -331,6 +336,9 @@
     "flags": [
       "NEVER_JAMS",
       "NO_UNLOAD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   }
 ]

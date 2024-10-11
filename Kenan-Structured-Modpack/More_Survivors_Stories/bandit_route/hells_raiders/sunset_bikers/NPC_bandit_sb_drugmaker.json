@@ -95,9 +95,7 @@
     ],
     "type": "talk_topic",
     "dynamic_line": {
-      "u_has_var": "bandit_dump_unlocked",
-      "type": "flag",
-      "context": "missions_sb",
+      "u_has_var": "flag_missions_sb_bandit_dump_unlocked",
       "value": "yes",
       "yes": "你好。",
       "no": "我很忙。晚点再跟我说。"
@@ -120,21 +118,21 @@
     ],
     "type": "talk_topic",
     "dynamic_line": {
-      "npc_compare_time_since_var": "wait_for_farm",
-      "type": "time",
-      "context": "open_mission",
-      "op": ">",
-      "time": "14 days",
+      "math": [
+        "time_since(n_time_open_mission_wait_for_farm)",
+        ">",
+        "time('14 d')"
+      ],
       "yes": "哟，<name_g>，你看到我的<very>大农场了吗？那些奴隶努力工作！现在我可以开始把这些东西卖给我周围的<name_b>了。另一方面，正如我们所讨论的，你将拥有我们收入的50%。如果你想买的话，还有一个特别的折扣，他说。",
       "no": "<greet>"
     },
     "speaker_effect": {
       "condition": {
-        "npc_compare_time_since_var": "wait_for_farm",
-        "type": "time",
-        "context": "open_mission",
-        "op": ">",
-        "time": "14 days"
+        "math": [
+          "time_since(n_time_open_mission_wait_for_farm)",
+          ">",
+          "time('14 d')"
+        ]
       },
       "effect": [
         {
@@ -146,21 +144,18 @@
           "om_terrain": "ws_biker_dump_0_2"
         },
         {
-          "npc_lose_var": "wait_for_farm",
-          "type": "time",
-          "context": "open_mission"
+          "npc_lose_var": "time_open_mission_wait_for_farm"
         },
         {
-          "u_add_var": "sb_narc_farm",
-          "type": "switch",
-          "context": "farm_status",
+          "u_add_var": "switch_farm_status_sb_narc_farm",
           "value": "working"
         },
         {
-          "npc_add_var": "wait_for_m4",
-          "type": "time",
-          "context": "open_mission",
-          "time": true
+          "math": [
+            "n_time_open_mission_wait_for_m4",
+            "=",
+            "time('now')"
+          ]
         }
       ]
     },
@@ -196,20 +191,20 @@
             "and": [
               {
                 "not": {
-                  "npc_compare_time_since_var": "wait_for_m4",
-                  "type": "time",
-                  "context": "open_mission",
-                  "op": "<",
-                  "time": "12 days"
+                  "math": [
+                    "time_since(n_time_open_mission_wait_for_m4)",
+                    "<",
+                    "time('12 d')"
+                  ]
                 }
               },
               {
                 "not": {
-                  "npc_compare_time_since_var": "wait_for_farm",
-                  "type": "time",
-                  "context": "open_mission",
-                  "op": "<",
-                  "time": "14 days"
+                  "math": [
+                    "time_since(n_time_open_mission_wait_for_farm)",
+                    "<",
+                    "time('14 d')"
+                  ]
                 }
               }
             ]
@@ -218,9 +213,7 @@
         "success": {
           "effect": [
             {
-              "npc_lose_var": "wait_for_m4",
-              "type": "time",
-              "context": "open_mission"
+              "npc_lose_var": "time_open_mission_wait_for_m4"
             }
           ],
           "topic": "TALK_MISSION_LIST"
@@ -232,9 +225,7 @@
       {
         "text": "让我们交易吧。",
         "condition": {
-          "u_has_var": "sb_narc_farm",
-          "type": "switch",
-          "context": "farm_status",
+          "u_has_var": "switch_farm_status_sb_narc_farm",
           "value": "working"
         },
         "topic": "TALK_bandit_sb_drugmaker1",
@@ -269,11 +260,11 @@
             {
               "and": [
                 {
-                  "u_compare_var": "slaves_for_sb",
-                  "type": "count",
-                  "context": "alive",
-                  "op": ">",
-                  "value": 0
+                  "math": [
+                    "u_count_alive_slaves_for_sb",
+                    ">",
+                    "0"
+                  ]
                 },
                 {
                   "not": {
@@ -295,11 +286,11 @@
         "condition": {
           "and": [
             {
-              "u_compare_var": "slaves_for_sb",
-              "type": "count",
-              "context": "dead",
-              "op": ">",
-              "value": 0
+              "math": [
+                "u_count_dead_slaves_for_sb",
+                ">",
+                "0"
+              ]
             },
             {
               "not": {
@@ -327,25 +318,20 @@
           "mission_success",
           "clear_mission",
           {
-            "u_lose_var": "slaves_for_sb",
-            "type": "count",
-            "context": "dead"
+            "u_lose_var": "count_dead_slaves_for_sb"
           },
           {
-            "u_lose_var": "slaves_for_sb",
-            "type": "count",
-            "context": "alive"
+            "u_lose_var": "count_alive_slaves_for_sb"
           },
           {
-            "u_lose_var": "gs_take_slaves",
-            "type": "count",
-            "context": "take_slaves"
+            "u_lose_var": "count_take_slaves_gs_take_slaves"
           },
           {
-            "npc_add_var": "wait_for_farm",
-            "type": "time",
-            "context": "open_mission",
-            "time": true
+            "math": [
+              "n_time_open_mission_wait_for_farm",
+              "=",
+              "time('now')"
+            ]
           }
         ]
       }
@@ -523,9 +509,7 @@
           "u_spawn_item": "mask_gas"
         },
         {
-          "u_add_var": "sb_narc_farm",
-          "type": "switch",
-          "context": "farm_status",
+          "u_add_var": "switch_farm_status_sb_narc_farm",
           "value": "burned"
         }
       ]

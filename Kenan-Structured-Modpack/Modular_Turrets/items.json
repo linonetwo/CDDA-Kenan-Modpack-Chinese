@@ -12,7 +12,6 @@
     "price": "400 USD",
     "price_postapoc": "100 USD",
     "to_hit": 1,
-    "bashing": 5,
     "material": [
       "plastic",
       "aluminum"
@@ -39,7 +38,10 @@
           "light_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   },
   {
     "id": "bot_chickenbot",
@@ -54,7 +56,6 @@
     "volume": "250 L",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -72,6 +73,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -87,7 +91,6 @@
     "volume": "250 L",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -105,6 +108,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -334,13 +340,15 @@
     "weight": "1507 g",
     "volume": "3 L",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel",
       "plastic"
     ],
     "symbol": ";",
-    "looks_like": "bot_turret"
+    "looks_like": "bot_turret",
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "bot_turret_disarmed",
@@ -882,7 +890,6 @@
     "volume": "500 ml",
     "price": "10 USD",
     "to_hit": -3,
-    "bashing": 1,
     "material": [
       "glass"
     ],
@@ -895,6 +902,9 @@
     "use_action": {
       "type": "deploy_furn",
       "furn_type": "f_gnome"
+    },
+    "melee_damage": {
+      "bash": 1
     }
   },
   {

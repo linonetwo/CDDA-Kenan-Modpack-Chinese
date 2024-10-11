@@ -1,7 +1,7 @@
 [
   {
     "id": "heavy_rail_rifle",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -14,7 +14,6 @@
     "price": "9000 USD",
     "price_postapoc": "90 USD",
     "to_hit": -1,
-    "bashing": 12,
     "material": [
       "steel",
       "plastic"
@@ -85,11 +84,14 @@
     ],
     "flags": [
       "RELOAD_ONE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "rebar_rifle",
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "name": {
@@ -102,7 +104,6 @@
     "price": "5500 USD",
     "price_postapoc": "60 USD",
     "to_hit": -3,
-    "bashing": 10,
     "material": [
       "steel",
       "wood"
@@ -165,6 +166,9 @@
     "ammo_effects": [
       "INCENDIARY",
       "TRAIL"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   }
 ]

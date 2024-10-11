@@ -9,7 +9,6 @@
     "weight": "470 g",
     "volume": "300 ml",
     "price": "250 USD",
-    "bashing": 1,
     "material": [
       "steel"
     ],
@@ -27,7 +26,10 @@
     "effects": [
       "COOKOFF",
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "550_incendiary",
@@ -87,7 +89,6 @@
     "weight": "900 g",
     "volume": "500 ml",
     "price": "700 USD",
-    "bashing": 1,
     "material": [
       "steel"
     ],
@@ -106,7 +107,10 @@
     "effects": [
       "COOKOFF",
       "NEVER_MISFIRES"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "9x39",
@@ -118,7 +122,6 @@
     "weight": "259 g",
     "volume": "430 ml",
     "price": "750 USD",
-    "bashing": 1,
     "material": [
       "steel"
     ],
@@ -137,7 +140,10 @@
     "effects": [
       "NEVER_MISFIRES",
       "COOKOFF"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "id": "cannonball",
@@ -149,7 +155,6 @@
     "weight": "1500 g",
     "volume": "600 ml",
     "price": "700 USD",
-    "bashing": 5,
     "material": [
       "steel"
     ],
@@ -168,6 +173,9 @@
       "EXPLOSIVE",
       "MUZZLE_SMOKE",
       "NO_ITEM_DAMAGE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5
+    }
   }
 ]

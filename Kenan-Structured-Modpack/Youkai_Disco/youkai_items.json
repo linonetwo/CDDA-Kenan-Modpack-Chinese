@@ -16,12 +16,14 @@
     ],
     "weight": "1000000 g",
     "volume": "750 L",
-    "bashing": 45,
-    "cutting": 10,
     "to_hit": -11,
     "flags": [
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 45,
+      "cut": 10
+    }
   },
   {
     "type": "COMESTIBLE",
@@ -84,7 +86,6 @@
       "SWEEP"
     ],
     "volume": "2500 ml",
-    "bashing": 13,
     "to_hit": -1,
     "price": "120 USD",
     "qualities": [
@@ -92,6 +93,9 @@
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 13
+    }
   }
 ]

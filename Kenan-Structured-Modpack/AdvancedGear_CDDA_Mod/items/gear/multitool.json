@@ -16,8 +16,6 @@
     ],
     "weight": "3680 g",
     "volume": "250 ml",
-    "bashing": 3,
-    "cutting": 12,
     "to_hit": 1,
     "flags": [
       "BELT_CLIP",
@@ -156,7 +154,11 @@
         "LOCKPICK",
         50
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 12
+    }
   },
   {
     "id": "nanite_multitool_large",
@@ -175,8 +177,6 @@
     ],
     "weight": "3680 g",
     "volume": "2000 ml",
-    "bashing": 16,
-    "cutting": 6,
     "to_hit": 2,
     "flags": [
       "BELT_CLIP",
@@ -251,7 +251,11 @@
         "LOCKPICK",
         50
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 6
+    }
   },
   {
     "id": "nanite_multitool_weld",
@@ -270,8 +274,6 @@
     ],
     "weight": "3680 g",
     "volume": "500 ml",
-    "bashing": 8,
-    "cutting": 0,
     "to_hit": 0,
     "flags": [
       "FIRE",
@@ -340,6 +342,10 @@
         "WELD",
         4
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 0
+    }
   }
 ]

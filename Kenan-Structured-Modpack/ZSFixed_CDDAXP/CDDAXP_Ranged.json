@@ -10,8 +10,6 @@
     "volume": "7500 ml",
     "price": "10000 USD",
     "to_hit": -2,
-    "bashing": 15,
-    "cutting": 0,
     "material": [
       "superalloy",
       "qt_steel"
@@ -68,6 +66,10 @@
     "flags": [
       "MODE_BURST",
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15,
+      "cut": 0
+    }
   }
 ]

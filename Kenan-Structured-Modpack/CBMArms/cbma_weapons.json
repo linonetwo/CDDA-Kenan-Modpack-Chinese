@@ -36,7 +36,6 @@
       "superalloy"
     ],
     "volume": "250 ml",
-    "cutting": 7,
     "flags": [
       "SHEATH_KNIFE",
       "TRADER_AVOID"
@@ -54,7 +53,10 @@
         "BUTCHER",
         22
       ]
-    ]
+    ],
+    "melee_damage": {
+      "cut": 7
+    }
   },
   {
     "id": "cbma_mono_knife",
@@ -75,7 +77,6 @@
       "superalloy"
     ],
     "volume": "750 ml",
-    "cutting": 24,
     "techniques": [
       "RAPID"
     ],
@@ -93,7 +94,10 @@
         "BUTCHER",
         22
       ]
-    ]
+    ],
+    "melee_damage": {
+      "cut": 24
+    }
   },
   {
     "id": "cbma_mono_sword",
@@ -113,7 +117,6 @@
       "superalloy"
     ],
     "volume": "1500 ml",
-    "cutting": 45,
     "techniques": [
       "RAPID",
       "WBLOCK_2"
@@ -133,7 +136,10 @@
         "BUTCHER",
         22
       ]
-    ]
+    ],
+    "melee_damage": {
+      "cut": 45
+    }
   },
   {
     "id": "cbma_mono_spear",
@@ -154,8 +160,6 @@
       "superalloy"
     ],
     "volume": "2 L",
-    "bashing": 8,
-    "cutting": 38,
     "techniques": [
       "IMPALE",
       "WIDE",
@@ -168,7 +172,11 @@
       "SPEAR",
       "REACH_ATTACK",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 38
+    }
   },
   {
     "id": "cbma_alloy_pile",
@@ -188,13 +196,15 @@
       "superalloy"
     ],
     "volume": "4 L",
-    "bashing": 28,
-    "cutting": 8,
     "flags": [
       "UNBREAKABLE_MELEE",
       "ALWAYS_TWOHAND",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 28,
+      "cut": 8
+    }
   },
   {
     "id": "cbma_mono_throw_dagger",
@@ -208,7 +218,6 @@
     "weight": "250 g",
     "volume": "500 ml",
     "price": 200,
-    "cutting": 4,
     "material": [
       "steel",
       "superalloy"
@@ -232,6 +241,9 @@
       "DURABLE_MELEE",
       "NOGIB",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "cut": 4
+    }
   }
 ]

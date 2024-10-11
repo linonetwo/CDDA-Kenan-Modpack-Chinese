@@ -12,8 +12,6 @@
     "volume": "500 ml",
     "price": "450 USD",
     "to_hit": 3,
-    "bashing": 5,
-    "cutting": 15,
     "thrown_damage": [
       {
         "damage_type": "stab",
@@ -43,7 +41,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_KNIFE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 15
+    }
   },
   {
     "id": "chalikar",
@@ -58,7 +60,6 @@
     "volume": "1000 ml",
     "price": "600 USD",
     "to_hit": 5,
-    "cutting": 20,
     "thrown_damage": [
       {
         "damage_type": "cut",
@@ -82,7 +83,10 @@
     ],
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "cut": 20
+    }
   },
   {
     "id": "razor_sword",
@@ -96,7 +100,6 @@
     "volume": "1200 ml",
     "price": "900 USD",
     "to_hit": 4,
-    "cutting": 30,
     "material": [
       "steel",
       "leather"
@@ -117,7 +120,10 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "cut": 30
+    }
   },
   {
     "id": "razor_whip",
@@ -131,7 +137,6 @@
     "volume": "1800 ml",
     "price": "900 USD",
     "to_hit": 4,
-    "cutting": 50,
     "material": [
       "steel",
       "leather"
@@ -153,7 +158,10 @@
       "REACH_ATTACK",
       "REACH3",
       "WHIP"
-    ]
+    ],
+    "melee_damage": {
+      "cut": 50
+    }
   },
   {
     "id": "boomerang",
@@ -167,7 +175,6 @@
     "volume": "875 ml",
     "price": "500 USD",
     "to_hit": 2,
-    "bashing": 15,
     "thrown_damage": [
       {
         "damage_type": "bash",
@@ -181,6 +188,9 @@
     "color": "brown",
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 15
+    }
   }
 ]

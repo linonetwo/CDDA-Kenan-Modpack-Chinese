@@ -377,11 +377,11 @@
     "type": "talk_topic",
     "id": "TALK_police_teacher_working",
     "dynamic_line": {
-      "npc_compare_time_since_var": "police_teacher_work",
-      "type": "general",
-      "context": "flag",
-      "op": ">",
-      "time": "2 days",
+      "math": [
+        "time_since(n_general_flag_police_teacher_work)",
+        ">",
+        "time('2 d')"
+      ],
       "yes": "我完成了。",
       "no": "我还在努力，<name_g>。"
     },
@@ -391,11 +391,11 @@
         "topic": "TALK_DONE",
         "condition": {
           "not": {
-            "npc_compare_time_since_var": "police_teacher_work",
-            "type": "general",
-            "context": "flag",
-            "op": ">",
-            "time": "2 days"
+            "math": [
+              "time_since(n_general_flag_police_teacher_work)",
+              ">",
+              "time('2 d')"
+            ]
           }
         }
       },
@@ -403,11 +403,11 @@
         "text": "很好，<name_g>。",
         "topic": "TALK_police_teacher_1",
         "condition": {
-          "npc_compare_time_since_var": "police_teacher_work",
-          "type": "test",
-          "context": "var_time_test",
-          "op": ">",
-          "time": "2 days"
+          "math": [
+            "time_since(n_test_var_time_test_police_teacher_work)",
+            ">",
+            "time('2 d')"
+          ]
         },
         "effect": [
           {

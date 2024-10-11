@@ -19,8 +19,6 @@
       "IMPALE"
     ],
     "volume": "3 L",
-    "bashing": 5,
-    "cutting": 19,
     "looks_like": "pike",
     "flags": [
       "DURABLE_MELEE",
@@ -35,7 +33,11 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 19
+    }
   },
   {
     "type": "GENERIC",
@@ -57,8 +59,6 @@
       "IMPALE"
     ],
     "volume": "3 L",
-    "bashing": 5,
-    "cutting": 39,
     "looks_like": "pike",
     "flags": [
       "DURABLE_MELEE",
@@ -73,7 +73,11 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 39
+    }
   },
   {
     "type": "GENERIC",
@@ -87,8 +91,6 @@
     "volume": "250 ml",
     "price": 250,
     "to_hit": 1,
-    "bashing": 2,
-    "cutting": 9,
     "material": [
       "steel"
     ],
@@ -110,10 +112,13 @@
       ]
     ],
     "flags": [
-      "STAB",
       "SHEATH_KNIFE",
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "stab": 9
+    }
   },
   {
     "type": "GENERIC",
@@ -137,7 +142,6 @@
       "SWEEP"
     ],
     "volume": "2500 ml",
-    "bashing": 180,
     "looks_like": "hammer_sledge",
     "price": "1200 USD",
     "qualities": [
@@ -145,7 +149,10 @@
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 180
+    }
   },
   {
     "id": "machete_gladius",
@@ -159,14 +166,14 @@
     "volume": "1 L",
     "price": "28 USD",
     "to_hit": 2,
-    "bashing": 6,
-    "cutting": 30,
     "material": [
       "steel"
     ],
     "symbol": "/",
     "color": "dark_gray",
-    "techniques": "WBLOCK_2",
+    "techniques": [
+      "WBLOCK_2"
+    ],
     "qualities": [
       [
         "CUT",
@@ -180,7 +187,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 30
+    }
   },
   {
     "type": "GENERIC",
@@ -211,8 +222,6 @@
     ],
     "weight": "2200 g",
     "volume": "3 L",
-    "bashing": 25,
-    "cutting": 20,
     "category": "weapons",
     "to_hit": 3,
     "qualities": [
@@ -220,7 +229,11 @@
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 25,
+      "cut": 20
+    }
   },
   {
     "id": "sword_revolutionary",
@@ -245,8 +258,6 @@
     ],
     "weight": "1814 g",
     "volume": "2750 ml",
-    "bashing": 4,
-    "cutting": 38,
     "to_hit": 2,
     "category": "weapons",
     "qualities": [
@@ -258,7 +269,11 @@
         "BUTCHER",
         8
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "cut": 38
+    }
   },
   {
     "id": "sword_chinese",
@@ -282,8 +297,6 @@
     ],
     "weight": "1360 g",
     "volume": "2 L",
-    "bashing": 14,
-    "cutting": 31,
     "to_hit": 1,
     "category": "weapons",
     "looks_like": "katana",
@@ -296,7 +309,11 @@
         "BUTCHER",
         8
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 31
+    }
   },
   {
     "id": "sword_chinese_shock",
@@ -326,8 +343,6 @@
     ],
     "weight": "1360 g",
     "volume": "2 L",
-    "bashing": 14,
-    "cutting": 31,
     "to_hit": 1,
     "category": "weapons",
     "qualities": [
@@ -354,7 +369,11 @@
           "medium_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 31
+    }
   },
   {
     "type": "GENERIC",
@@ -372,8 +391,6 @@
     "material": [
       "steel"
     ],
-    "bashing": 1,
-    "cutting": 16,
     "techniques": [
       "BRUTAL",
       "WBLOCK_2"
@@ -392,7 +409,11 @@
         "BUTCHER",
         14
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "cut": 16
+    }
   },
   {
     "type": "GENERIC",
@@ -414,8 +435,10 @@
     ],
     "weight": "1000 g",
     "volume": "500 ml",
-    "bashing": 1,
-    "to_hit": 1
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    }
   },
   {
     "type": "GENERIC",
@@ -443,8 +466,10 @@
     ],
     "weight": "2000 g",
     "volume": "500 ml",
-    "bashing": 20,
-    "to_hit": 1
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 20
+    }
   },
   {
     "type": "GENERIC",
@@ -471,8 +496,10 @@
     ],
     "weight": "4000 g",
     "volume": "500 ml",
-    "bashing": 30,
-    "to_hit": 1
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 30
+    }
   },
   {
     "type": "GENERIC",
@@ -501,7 +528,9 @@
     ],
     "weight": "6000 g",
     "volume": "500 ml",
-    "bashing": 45,
-    "to_hit": 1
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 45
+    }
   }
 ]

@@ -16,9 +16,7 @@
     ],
     "type": "talk_topic",
     "dynamic_line": {
-      "u_has_var": "bandit_camp_unlocked",
-      "type": "flag",
-      "context": "missions_fs",
+      "u_has_var": "flag_missions_fs_bandit_camp_unlocked",
       "value": "yes",
       "yes": "你好。",
       "no": "我很忙。晚点再跟我说。"
@@ -28,9 +26,7 @@
         "text": "嗨。",
         "topic": "TALK_bandit_fs_trapper1",
         "condition": {
-          "u_has_var": "bandit_camp_unlocked",
-          "type": "flag",
-          "context": "missions_fs",
+          "u_has_var": "flag_missions_fs_bandit_camp_unlocked",
           "value": "yes"
         },
         "effect": {
@@ -69,20 +65,22 @@
           "type": "CONDITION",
           "condition": {
             "not": {
-              "npc_compare_time_since_var": "hunting",
-              "type": "time",
-              "context": "wait",
-              "op": "<",
-              "time": "7 days"
+              "math": [
+                "time_since(n_time_wait_hunting)",
+                "<",
+                "time('7 d')"
+              ]
             }
           }
         },
         "success": {
           "effect": [
             {
-              "npc_lose_var": "hunting",
-              "type": "time",
-              "context": "wait"
+              "math": [
+                "n_time_wait_hunting",
+                "=",
+                "time('now')"
+              ]
             }
           ],
           "topic": "TALK_MISSION_LIST"
@@ -94,9 +92,7 @@
       {
         "text": "让我们交易吧。",
         "condition": {
-          "npc_has_var": "trade",
-          "type": "flag",
-          "context": "open_trade",
+          "npc_has_var": "flag_open_trade_trade",
           "value": "yes"
         },
         "topic": "TALK_bandit_fs_trapper1",
@@ -105,17 +101,17 @@
       {
         "text": "那奖励呢？",
         "condition": {
-          "npc_compare_var": "reward",
-          "type": "count",
-          "context": "missions_rewards",
-          "op": ">",
-          "value": 0
+          "math": [
+            "npc_count_missions_rewards_reward",
+            ">",
+            "0"
+          ]
         },
         "effect": {
-          "npc_adjust_var": "reward",
-          "type": "count",
-          "context": "missions_rewards",
-          "adjustment": -1
+          "math": [
+            "n_count_missions_rewards_reward",
+            "--"
+          ]
         },
         "topic": "TALK_bandit_fs_trapper_reward"
       },
@@ -202,16 +198,14 @@
     "end": {
       "effect": [
         {
-          "npc_add_var": "trade",
-          "type": "flag",
-          "context": "open_trade",
+          "npc_add_var": "flag_open_trade_trade",
           "value": "yes"
         },
         {
-          "npc_adjust_var": "reward",
-          "type": "count",
-          "context": "missions_rewards",
-          "adjustment": 1
+          "math": [
+            "n_count_missions_rewards_reward",
+            "++"
+          ]
         }
       ]
     },
@@ -246,10 +240,10 @@
     "end": {
       "effect": [
         {
-          "npc_adjust_var": "reward",
-          "type": "count",
-          "context": "missions_rewards",
-          "adjustment": 1
+          "math": [
+            "n_count_missions_rewards_reward",
+            "++"
+          ]
         }
       ]
     },
@@ -304,16 +298,18 @@
     "end": {
       "effect": [
         {
-          "npc_add_var": "hunting",
-          "type": "time",
-          "context": "wait",
-          "time": true
+          "math": [
+            "n_time_wait_hunting",
+            "=",
+            "time('now')"
+          ]
         },
         {
-          "npc_adjust_var": "reward",
-          "type": "count",
-          "context": "missions_rewards",
-          "adjustment": 2
+          "math": [
+            "n_count_missions_rewards_reward",
+            "+=",
+            "2"
+          ]
         },
         {
           "u_spawn_item": "remington700_270"
@@ -374,16 +370,17 @@
     "end": {
       "effect": [
         {
-          "npc_add_var": "hunting",
-          "type": "time",
-          "context": "wait",
-          "time": true
+          "math": [
+            "n_time_wait_hunting",
+            "=",
+            "time('now')"
+          ]
         },
         {
-          "npc_adjust_var": "reward",
-          "type": "count",
-          "context": "missions_rewards",
-          "adjustment": 1
+          "math": [
+            "n_count_missions_rewards_reward",
+            "++"
+          ]
         }
       ]
     },

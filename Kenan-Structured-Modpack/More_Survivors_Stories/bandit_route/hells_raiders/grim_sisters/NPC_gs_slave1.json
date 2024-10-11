@@ -26,10 +26,11 @@
         "text": "还没有。",
         "topic": "TALK_DONE",
         "effect": {
-          "npc_add_var": "annoy_player",
-          "type": "time",
-          "context": "annoy_player_like_really_a_lot_at_least_i_want_to_do_it_that_way",
-          "time": true
+          "math": [
+            "n_time_annoy_player_like_really_a_lot_at_least_i_want_to_do_it_that_way_annoy_player",
+            "=",
+            "time('now')"
+          ]
         },
         "switch": true
       }
@@ -58,9 +59,7 @@
     ],
     "type": "talk_topic",
     "dynamic_line": {
-      "u_has_var": "sb_narc_farm",
-      "type": "switch",
-      "context": "farm_status",
+      "u_has_var": "switch_farm_status_sb_narc_farm",
       "value": "burned",
       "yes": "农场被烧毁了，所以我在这附近没什么事可做。我只是在消磨时间赌博喝酒。",
       "no": "太阳升起，我自己在工作，太阳落山，我自己在跳舞。每一天，我新生活的每一天…"
@@ -71,9 +70,7 @@
           "true": "Don't worry, they will find you a new task to work on.",
           "false": "Work hard, and some day, you'll earn your freedom. *chuckle*",
           "condition": {
-            "u_has_var": "sb_narc_farm",
-            "type": "switch",
-            "context": "farm_status",
+            "u_has_var": "switch_farm_status_sb_narc_farm",
             "value": "burned"
           }
         },

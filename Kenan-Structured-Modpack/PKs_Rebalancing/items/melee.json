@@ -15,12 +15,14 @@
     "volume": "1750 ml",
     "weight": "748 g",
     "longest_side": "75 cm",
-    "bashing": 12,
-    "cutting": 4,
     "to_hit": 1,
     "techniques": [
       "WBLOCK_1"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12,
+      "cut": 4
+    }
   },
   {
     "id": "ax",
@@ -35,8 +37,6 @@
     "longest_side": "72 cm",
     "price": "105 USD",
     "to_hit": 1,
-    "bashing": 20,
-    "cutting": 25,
     "material": [
       "wood",
       "steel"
@@ -65,7 +65,11 @@
     "flags": [
       "NONCONDUCTIVE",
       "SHEATH_AXE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 25
+    }
   },
   {
     "id": "battleaxe",
@@ -81,8 +85,6 @@
     "longest_side": "75 cm",
     "price": "400 USD",
     "to_hit": 1,
-    "bashing": 20,
-    "cutting": 30,
     "material": [
       "steel",
       "wood"
@@ -112,7 +114,11 @@
       "DURABLE_MELEE",
       "NONCONDUCTIVE",
       "SHEATH_AXE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 30
+    }
   },
   {
     "id": "battletorch",
@@ -127,7 +133,6 @@
     "volume": "2 L",
     "price": "160 USD",
     "to_hit": 3,
-    "bashing": 18,
     "material": [
       "wood",
       "nomex"
@@ -138,7 +143,10 @@
     ],
     "flags": [
       "DURABLE_MELEE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 18
+    }
   },
   {
     "id": "battletorch_lit",
@@ -154,7 +162,6 @@
     "volume": "2 L",
     "price": "160 USD",
     "to_hit": 3,
-    "bashing": 18,
     "material": [
       "wood",
       "nomex"
@@ -171,7 +178,10 @@
       "FLAMING",
       "DURABLE_MELEE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 18
+    }
   },
   {
     "id": "broadfire_off",
@@ -187,8 +197,6 @@
     "volume": "2250 ml",
     "price": "1200 USD",
     "to_hit": 1,
-    "bashing": 8,
-    "cutting": 35,
     "material": [
       "steel"
     ],
@@ -222,7 +230,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 35
+    }
   },
   {
     "id": "broadfire_on",
@@ -238,8 +250,6 @@
     "volume": "2250 ml",
     "price": "1200 USD",
     "to_hit": 1,
-    "bashing": 8,
-    "cutting": 35,
     "material": [
       "steel"
     ],
@@ -286,7 +296,11 @@
       "FLAMING",
       "DURABLE_MELEE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 35
+    }
   },
   {
     "id": "broadsword",
@@ -302,8 +316,6 @@
     "longest_side": "75 cm",
     "price": "1200 USD",
     "to_hit": 2,
-    "bashing": 8,
-    "cutting": 35,
     "material": [
       "steel"
     ],
@@ -326,7 +338,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 35
+    }
   },
   {
     "id": "copper_ax",
@@ -340,8 +356,6 @@
     "volume": "3500 ml",
     "longest_side": "65 cm",
     "price": "55 USD",
-    "bashing": 28,
-    "cutting": 18,
     "material": [
       "wood",
       "copper"
@@ -369,7 +383,11 @@
     "flags": [
       "NONCONDUCTIVE",
       "SHEATH_AXE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 28,
+      "cut": 18
+    }
   },
   {
     "id": "crowbar",
@@ -384,8 +402,6 @@
     "longest_side": "35 cm",
     "price": "13 USD",
     "to_hit": 2,
-    "bashing": 22,
-    "cutting": 1,
     "material": [
       "steel"
     ],
@@ -412,7 +428,11 @@
     ],
     "flags": [
       "BELT_CLIP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 22,
+      "cut": 1
+    }
   },
   {
     "id": "cutlass",
@@ -429,8 +449,6 @@
     "longest_side": "55 cm",
     "price": "960 USD",
     "to_hit": 2,
-    "bashing": 7,
-    "cutting": 27,
     "material": [
       "steel"
     ],
@@ -454,7 +472,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7,
+      "cut": 27
+    }
   },
   {
     "id": "fire_ax",
@@ -469,8 +491,6 @@
     "price": "200 USD",
     "longest_side": "90 cm",
     "to_hit": 1,
-    "bashing": 20,
-    "cutting": 20,
     "material": [
       "steel",
       "wood"
@@ -516,7 +536,11 @@
         ],
         "holster": true
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 20
+    }
   },
   {
     "id": "machete",
@@ -532,8 +556,6 @@
     "longest_side": "30 cm",
     "price": "28 USD",
     "to_hit": 2,
-    "bashing": 5,
-    "cutting": 22,
     "material": [
       "steel"
     ],
@@ -558,7 +580,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 22
+    }
   },
   {
     "id": "firemachete_off",
@@ -574,8 +600,6 @@
     "volume": "1500 ml",
     "price": "280 USD",
     "to_hit": 1,
-    "bashing": 6,
-    "cutting": 20,
     "material": [
       "steel"
     ],
@@ -613,7 +637,11 @@
       "FIRE",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 20
+    }
   },
   {
     "id": "firemachete_on",
@@ -629,8 +657,6 @@
     "volume": "1500 ml",
     "price": "280 USD",
     "to_hit": 1,
-    "bashing": 6,
-    "cutting": 20,
     "material": [
       "steel"
     ],
@@ -681,7 +707,11 @@
       "FLAMING",
       "DURABLE_MELEE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 20
+    }
   },
   {
     "id": "firekatana_off",
@@ -696,8 +726,6 @@
     "weight": "1400 g",
     "volume": "2250 ml",
     "price": "980 USD",
-    "bashing": 4,
-    "cutting": 31,
     "material": [
       "steel"
     ],
@@ -733,7 +761,11 @@
       "FIRE",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "cut": 31
+    }
   },
   {
     "id": "firekatana_on",
@@ -748,8 +780,6 @@
     "weight": "1400 g",
     "volume": "2250 ml",
     "price": "980 USD",
-    "bashing": 4,
-    "cutting": 31,
     "material": [
       "steel"
     ],
@@ -785,7 +815,11 @@
         "charges_extinguish_message": "The Light Fades.",
         "water_extinguish_message": "Your sword hisses in the water and goes out."
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "cut": 31
+    }
   },
   {
     "id": "halligan",
@@ -800,8 +834,6 @@
     "longest_side": "45 cm",
     "price": "75 USD",
     "to_hit": 2,
-    "bashing": 43,
-    "cutting": 5,
     "material": [
       "steel"
     ],
@@ -836,9 +868,12 @@
     "flags": [
       "DURABLE_MELEE",
       "BELT_CLIP",
-      "STAB",
       "SHEATH_AXE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 43,
+      "stab": 5
+    }
   },
   {
     "id": "hammer",
@@ -852,7 +887,6 @@
     "volume": "315 ml",
     "price": "7 USD",
     "to_hit": 1,
-    "bashing": 9,
     "material": [
       "steel",
       "wood"
@@ -883,7 +917,10 @@
     "flags": [
       "BELT_CLIP",
       "NONCONDUCTIVE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9
+    }
   },
   {
     "id": "iceaxe",
@@ -898,8 +935,6 @@
     "longest_side": "25 cm",
     "price": "50 USD",
     "to_hit": 2,
-    "bashing": 24,
-    "cutting": 7,
     "material": [
       "steel"
     ],
@@ -931,7 +966,11 @@
       "DURABLE_MELEE",
       "BELT_CLIP",
       "SHEATH_AXE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 24,
+      "cut": 7
+    }
   },
   {
     "id": "katana",
@@ -947,8 +986,6 @@
     "longest_side": "65 cm",
     "price": "980 USD",
     "to_hit": 1,
-    "bashing": 5,
-    "cutting": 31,
     "material": [
       "steel"
     ],
@@ -974,7 +1011,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 31
+    }
   },
   {
     "id": "knife_combat",
@@ -991,8 +1032,6 @@
     "longest_side": "15 cm",
     "price": "100 USD",
     "to_hit": 1,
-    "bashing": 7,
-    "cutting": 24,
     "material": [
       "steel",
       "plastic"
@@ -1038,11 +1077,14 @@
       ]
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_KNIFE",
       "NPC_THROWN"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7,
+      "stab": 24
+    }
   },
   {
     "id": "knife_hunting",
@@ -1059,7 +1101,6 @@
     "volume": "250 ml",
     "longest_side": "10 cm",
     "price": "40 USD",
-    "cutting": 16,
     "material": [
       "steel",
       "leather"
@@ -1085,7 +1126,10 @@
     ],
     "flags": [
       "SHEATH_KNIFE"
-    ]
+    ],
+    "melee_damage": {
+      "cut": 16
+    }
   },
   {
     "id": "knife_rambo",
@@ -1102,8 +1146,6 @@
     "volume": "1 L",
     "longest_side": "15 cm",
     "price": "20 USD",
-    "bashing": 6,
-    "cutting": 20,
     "material": [
       "steel",
       "plastic"
@@ -1134,9 +1176,12 @@
       ]
     ],
     "flags": [
-      "STAB",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "stab": 20
+    }
   },
   {
     "id": "knife_rm42",
@@ -1153,8 +1198,6 @@
     "longest_side": "15 cm",
     "price": "450 USD",
     "to_hit": 2,
-    "bashing": 4,
-    "cutting": 22,
     "material": [
       "ceramic",
       "plastic"
@@ -1201,11 +1244,14 @@
       ]
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_KNIFE",
       "NO_CVD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "stab": 22
+    }
   },
   {
     "id": "knife_trench",
@@ -1222,8 +1268,6 @@
     "longest_side": "10 cm",
     "price": "110 USD",
     "to_hit": 2,
-    "bashing": 6,
-    "cutting": 19,
     "material": [
       "steel",
       "wood"
@@ -1250,9 +1294,12 @@
     ],
     "flags": [
       "DURABLE_MELEE",
-      "STAB",
       "SHEATH_KNIFE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "stab": 19
+    }
   },
   {
     "id": "kris",
@@ -1269,8 +1316,6 @@
     "longest_side": "30 cm",
     "price": "90 USD",
     "to_hit": 1,
-    "bashing": 8,
-    "cutting": 24,
     "material": [
       "steel"
     ],
@@ -1293,10 +1338,13 @@
       ]
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "stab": 24
+    }
   },
   {
     "id": "kukri",
@@ -1312,8 +1360,6 @@
     "longest_side": "30 cm",
     "price": "80 USD",
     "to_hit": 1,
-    "bashing": 8,
-    "cutting": 25,
     "material": [
       "steel",
       "plastic"
@@ -1342,7 +1388,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_KNIFE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "cut": 25
+    }
   },
   {
     "id": "l-stick",
@@ -1359,7 +1409,6 @@
     "longest_side": "145 cm",
     "price": "50 USD",
     "to_hit": 3,
-    "bashing": 23,
     "material": [
       "superalloy",
       "steel"
@@ -1401,7 +1450,10 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SPEAR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 23
+    }
   },
   {
     "id": "l-stick_on",
@@ -1418,7 +1470,6 @@
     "longest_side": "145 cm",
     "price": "80 USD",
     "to_hit": 3,
-    "bashing": 23,
     "material": [
       "superalloy",
       "steel"
@@ -1461,7 +1512,10 @@
       "DURABLE_MELEE",
       "TRADER_AVOID",
       "SHEATH_SPEAR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 23
+    }
   },
   {
     "id": "makeshift_hammer",
@@ -1474,7 +1528,6 @@
     "weight": "1020 g",
     "volume": "500 ml",
     "price": "0 cent",
-    "bashing": 9,
     "material": [
       "steel",
       "wood"
@@ -1496,7 +1549,10 @@
     "flags": [
       "NONCONDUCTIVE",
       "BELT_CLIP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9
+    }
   },
   {
     "id": "mop",
@@ -1511,7 +1567,6 @@
     "longest_side": "115 cm",
     "price": "10 USD",
     "to_hit": -1,
-    "bashing": 6,
     "material": [
       "wood"
     ],
@@ -1523,7 +1578,10 @@
     ],
     "use_action": [
       "MOP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "pickaxe",
@@ -1538,8 +1596,6 @@
     "longest_side": "61 cm",
     "price": "160 USD",
     "to_hit": -3,
-    "bashing": 20,
-    "cutting": 10,
     "material": [
       "wood",
       "steel"
@@ -1560,7 +1616,11 @@
       "NONCONDUCTIVE",
       "DIG_TOOL",
       "SHEATH_AXE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 10
+    }
   },
   {
     "id": "primitive_axe",
@@ -1574,8 +1634,6 @@
     "volume": "1 L",
     "longest_side": "63 cm",
     "price": "0 cent",
-    "bashing": 9,
-    "cutting": 15,
     "material": [
       "wood",
       "stone"
@@ -1602,7 +1660,11 @@
     "flags": [
       "BELT_CLIP",
       "SHEATH_AXE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9,
+      "cut": 15
+    }
   },
   {
     "id": "primitive_hammer",
@@ -1616,7 +1678,6 @@
     "volume": "400 ml",
     "longest_side": "15 cm",
     "price": "0 cent",
-    "bashing": 14,
     "material": [
       "stone",
       "wood"
@@ -1637,7 +1698,10 @@
     ],
     "use_action": [
       "HAMMER"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "id": "rapier",
@@ -1653,8 +1717,6 @@
     "longest_side": "75 cm",
     "price": "980 USD",
     "to_hit": 2,
-    "bashing": 2,
-    "cutting": 29,
     "material": [
       "steel"
     ],
@@ -1677,10 +1739,13 @@
       ]
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "stab": 29
+    }
   },
   {
     "id": "scalpel",
@@ -1694,7 +1759,6 @@
     "volume": "15 ml",
     "price": "10 USD",
     "to_hit": -3,
-    "cutting": 7,
     "material": [
       "steel"
     ],
@@ -1719,7 +1783,10 @@
     ],
     "flags": [
       "SPEAR"
-    ]
+    ],
+    "melee_damage": {
+      "cut": 7
+    }
   },
   {
     "id": "shock_staff",
@@ -1736,7 +1803,6 @@
     "longest_side": "145 cm",
     "price": "80 USD",
     "to_hit": 3,
-    "bashing": 29,
     "material": [
       "wood",
       "iron"
@@ -1776,7 +1842,10 @@
       "NO_UNLOAD",
       "RECHARGE",
       "NONCONDUCTIVE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 29
+    }
   },
   {
     "id": "shocktonfa_off",
@@ -1793,7 +1862,6 @@
     "longest_side": "30 cm",
     "price": "170 USD",
     "to_hit": 2,
-    "bashing": 17,
     "material": [
       "plastic",
       "steel"
@@ -1833,7 +1901,10 @@
       "RECHARGE",
       "NONCONDUCTIVE",
       "BELT_CLIP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 17
+    }
   },
   {
     "id": "shocktonfa_on",
@@ -1850,7 +1921,6 @@
     "longest_side": "30 cm",
     "price": "170 USD",
     "to_hit": 2,
-    "bashing": 14,
     "material": [
       "plastic",
       "steel"
@@ -1893,7 +1963,10 @@
       "TRADER_AVOID",
       "NONCONDUCTIVE",
       "BELT_CLIP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14
+    }
   },
   {
     "id": "shovel",
@@ -1908,8 +1981,6 @@
     "longest_side": "105 cm",
     "price": "20 USD",
     "to_hit": 3,
-    "bashing": 14,
-    "cutting": 3,
     "material": [
       "steel",
       "wood"
@@ -1937,7 +2008,11 @@
     ],
     "flags": [
       "NONCONDUCTIVE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 3
+    }
   },
   {
     "id": "hoe",
@@ -1952,8 +2027,6 @@
     "longest_side": "105 cm",
     "price": "20 USD",
     "to_hit": 3,
-    "bashing": 10,
-    "cutting": 6,
     "material": [
       "steel",
       "wood"
@@ -1966,7 +2039,11 @@
     "color": "brown",
     "use_action": [
       "MAKEMOUND"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -1992,7 +2069,9 @@
     ],
     "weight": "3100 g",
     "volume": "1 L",
-    "bashing": 16
+    "melee_damage": {
+      "bash": 16
+    }
   },
   {
     "id": "switchblade",
@@ -2008,7 +2087,6 @@
     "longest_side": "7 cm",
     "price": "20 USD",
     "to_hit": -2,
-    "cutting": 16,
     "material": [
       "steel",
       "plastic"
@@ -2033,9 +2111,10 @@
         14
       ]
     ],
-    "flags": [
-      "STAB"
-    ]
+    "flags": [],
+    "melee_damage": {
+      "stab": 16
+    }
   },
   {
     "id": "tanto",
@@ -2051,8 +2130,6 @@
     "longest_side": "30 cm",
     "price": "180 USD",
     "to_hit": 2,
-    "bashing": 1,
-    "cutting": 22,
     "material": [
       "steel"
     ],
@@ -2077,10 +2154,13 @@
       ]
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_KNIFE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "stab": 22
+    }
   },
   {
     "id": "torch",
@@ -2095,14 +2175,16 @@
     "volume": "750 ml",
     "price": "0 cent",
     "to_hit": 1,
-    "bashing": 8,
     "material": [
       "wood"
     ],
     "techniques": [
       "WBLOCK_1",
       "repose"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "torch_lit",
@@ -2117,7 +2199,6 @@
     "volume": "750 ml",
     "price": "0 cent",
     "to_hit": 1,
-    "bashing": 8,
     "material": [
       "wood"
     ],
@@ -2131,7 +2212,10 @@
       "CHARGEDIM",
       "FLAMING",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "wakizashi",
@@ -2148,8 +2232,6 @@
     "longest_side": "45 cm",
     "price": "178 USD",
     "to_hit": 1,
-    "bashing": 3,
-    "cutting": 24,
     "material": [
       "steel"
     ],
@@ -2174,7 +2256,11 @@
     "flags": [
       "DURABLE_MELEE",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 24
+    }
   },
   {
     "id": "wrench",
@@ -2189,7 +2275,6 @@
     "volume": "500 ml",
     "price": "12 USD",
     "to_hit": 1,
-    "bashing": 9,
     "material": [
       "steel"
     ],
@@ -2214,7 +2299,10 @@
     ],
     "flags": [
       "BELT_CLIP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9
+    }
   },
   {
     "type": "GENERIC",
@@ -2242,14 +2330,16 @@
     ],
     "volume": "2500 ml",
     "longest_side": "35 cm",
-    "bashing": 9999,
     "price": "120 USD",
     "qualities": [
       [
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 9999
+    }
   },
   {
     "id": "bokken",
@@ -2279,10 +2369,12 @@
     "volume": "2 L",
     "longest_side": "75 cm",
     "//": "MA reference I used held that a bokken crushes rather than cuts (or impales) but is otherwise just as damaging as a katana.  Nerfed by popular demand.",
-    "bashing": 25,
-    "cutting": 1,
     "to_hit": 1,
-    "category": "weapons"
+    "category": "weapons",
+    "melee_damage": {
+      "bash": 25,
+      "cut": 1
+    }
   },
   {
     "type": "GENERIC",
@@ -2311,8 +2403,10 @@
     ],
     "volume": "600 ml",
     "longest_side": "35 cm",
-    "bashing": 8,
-    "price": "10 USD"
+    "price": "10 USD",
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "type": "GENERIC",
@@ -2341,9 +2435,11 @@
     "weight": "1400 g",
     "volume": "3 L",
     "longest_side": "145 cm",
-    "bashing": 25,
     "category": "weapons",
-    "to_hit": 3
+    "to_hit": 3,
+    "melee_damage": {
+      "bash": 25
+    }
   },
   {
     "type": "GENERIC",
@@ -2375,7 +2471,6 @@
     "weight": "2200 g",
     "volume": "3 L",
     "longest_side": "145 cm",
-    "bashing": 30,
     "category": "weapons",
     "to_hit": 3,
     "qualities": [
@@ -2383,7 +2478,10 @@
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 30
+    }
   },
   {
     "type": "GENERIC",
@@ -2415,9 +2513,11 @@
     "weight": "2500 g",
     "volume": "6500 ml",
     "longest_side": "145 cm",
-    "bashing": 4,
-    "cutting": 26,
-    "to_hit": 2
+    "to_hit": 2,
+    "melee_damage": {
+      "bash": 4,
+      "cut": 26
+    }
   },
   {
     "type": "GENERIC",
@@ -2444,8 +2544,6 @@
     "weight": "907 g",
     "volume": "775 ml",
     "longest_side": "25 cm",
-    "bashing": 14,
-    "cutting": 25,
     "flags": [
       "DURABLE_MELEE",
       "BELT_CLIP",
@@ -2475,7 +2573,11 @@
         "BUTCHER",
         16
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 14,
+      "cut": 25
+    }
   },
   {
     "type": "GENERIC",
@@ -2493,8 +2595,6 @@
     "volume": "1250 ml",
     "longest_side": "55 cm",
     "weight": "900 g",
-    "bashing": 5,
-    "cutting": 9,
     "to_hit": 1,
     "flags": [
       "SPEAR"
@@ -2509,7 +2609,11 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 9
+    }
   },
   {
     "type": "GENERIC",
@@ -2532,9 +2636,11 @@
       "repose"
     ],
     "volume": "1250 ml",
-    "bashing": 4,
     "price": "24 USD",
-    "price_postapoc": "0 cent"
+    "price_postapoc": "0 cent",
+    "melee_damage": {
+      "bash": 4
+    }
   },
   {
     "type": "GENERIC",
@@ -2562,14 +2668,16 @@
     ],
     "volume": "1250 ml",
     "longest_side": "55 cm",
-    "bashing": 45,
     "price": "120 USD",
     "qualities": [
       [
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 45
+    }
   },
   {
     "type": "GENERIC",
@@ -2592,12 +2700,12 @@
     ],
     "volume": "1750 ml",
     "longest_side": "65 cm",
-    "bashing": 23,
-    "cutting": 6,
-    "flags": [
-      "STAB"
-    ],
-    "price": "160 USD"
+    "flags": [],
+    "price": "160 USD",
+    "melee_damage": {
+      "bash": 23,
+      "stab": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -2625,9 +2733,11 @@
     ],
     "volume": "2 L",
     "longest_side": "65 cm",
-    "bashing": 23,
-    "cutting": 5,
-    "price": "200 USD"
+    "price": "200 USD",
+    "melee_damage": {
+      "bash": 23,
+      "cut": 5
+    }
   },
   {
     "type": "GENERIC",
@@ -2659,15 +2769,17 @@
     ],
     "volume": "1250 ml",
     "longest_side": "85 cm",
-    "bashing": 22,
-    "cutting": 23,
     "price": "160 USD",
     "qualities": [
       [
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 22,
+      "cut": 23
+    }
   },
   {
     "type": "GENERIC",
@@ -2691,13 +2803,14 @@
     ],
     "volume": "1250 ml",
     "longest_side": "65 cm",
-    "bashing": 33,
-    "cutting": 2,
     "flags": [
-      "STAB",
       "NONCONDUCTIVE"
     ],
-    "price": "80 USD"
+    "price": "80 USD",
+    "melee_damage": {
+      "bash": 33,
+      "stab": 2
+    }
   },
   {
     "type": "GENERIC",
@@ -2723,8 +2836,10 @@
     ],
     "volume": "2250 ml",
     "longest_side": "25 cm",
-    "bashing": 11,
-    "price": "10 USD"
+    "price": "10 USD",
+    "melee_damage": {
+      "bash": 11
+    }
   },
   {
     "type": "GENERIC",
@@ -2756,8 +2871,10 @@
       "DURABLE_MELEE"
     ],
     "volume": "1750 ml",
-    "bashing": 19,
-    "price": "180 USD"
+    "price": "180 USD",
+    "melee_damage": {
+      "bash": 19
+    }
   },
   {
     "type": "GENERIC",
@@ -2789,8 +2906,10 @@
       "DURABLE_MELEE"
     ],
     "volume": "1750 ml",
-    "bashing": 20,
-    "price": "160 USD"
+    "price": "160 USD",
+    "melee_damage": {
+      "bash": 20
+    }
   },
   {
     "id": "spear_knife",
@@ -2806,8 +2925,6 @@
     "longest_side": "95 cm",
     "price": "14 USD",
     "to_hit": 1,
-    "bashing": 6,
-    "cutting": 18,
     "material": [
       "wood",
       "iron"
@@ -2834,7 +2951,11 @@
       "NONCONDUCTIVE",
       "FRAGILE_MELEE",
       "SHEATH_SPEAR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 18
+    }
   },
   {
     "type": "GENERIC",
@@ -2857,8 +2978,6 @@
     ],
     "volume": "1250 ml",
     "longest_side": "115 cm",
-    "bashing": 3,
-    "cutting": 15,
     "flags": [
       "SPEAR",
       "REACH_ATTACK",
@@ -2871,7 +2990,11 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 15
+    }
   },
   {
     "type": "GENERIC",
@@ -2895,8 +3018,6 @@
     ],
     "volume": "1500 ml",
     "longest_side": "145 cm",
-    "bashing": 6,
-    "cutting": 18,
     "flags": [
       "SPEAR",
       "REACH_ATTACK",
@@ -2909,7 +3030,11 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 18
+    }
   },
   {
     "type": "GENERIC",
@@ -2935,8 +3060,6 @@
     ],
     "volume": "3 L",
     "longest_side": "145 cm",
-    "bashing": 5,
-    "cutting": 29,
     "flags": [
       "DURABLE_MELEE",
       "SPEAR",
@@ -2950,7 +3073,11 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 5,
+      "cut": 29
+    }
   },
   {
     "type": "GENERIC",
@@ -2975,8 +3102,6 @@
     ],
     "volume": "1250 ml",
     "longest_side": "115 cm",
-    "bashing": 6,
-    "cutting": 25,
     "flags": [
       "SPEAR",
       "REACH_ATTACK",
@@ -2988,7 +3113,11 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6,
+      "cut": 25
+    }
   },
   {
     "type": "GENERIC",
@@ -3016,8 +3145,6 @@
     ],
     "volume": "2500 ml",
     "longest_side": "145 cm",
-    "bashing": 4,
-    "cutting": 28,
     "flags": [
       "SPEAR",
       "REACH_ATTACK",
@@ -3030,7 +3157,11 @@
         "COOK",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "cut": 28
+    }
   },
   {
     "type": "GENERIC",
@@ -3065,8 +3196,10 @@
       "msg": "你折好你的甩棍。"
     },
     "volume": "750 ml",
-    "bashing": 18,
-    "price": "175 USD"
+    "price": "175 USD",
+    "melee_damage": {
+      "bash": 18
+    }
   },
   {
     "type": "GENERIC",
@@ -3095,14 +3228,16 @@
     "volume": "1250 ml",
     "longest_side": "55 cm",
     "//": "Same total damage and slightly higher weight than a morningstar - exchanged.",
-    "bashing": 37,
     "price": "1 kUSD",
     "qualities": [
       [
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 37
+    }
   },
   {
     "type": "GENERIC",
@@ -3126,8 +3261,6 @@
     ],
     "volume": "1500 ml",
     "longest_side": "55 cm",
-    "bashing": 35,
-    "cutting": 10,
     "flags": [
       "DURABLE_MELEE",
       "SPEAR",
@@ -3139,7 +3272,11 @@
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 35,
+      "cut": 10
+    }
   },
   {
     "type": "GENERIC",
@@ -3160,10 +3297,7 @@
       "repose"
     ],
     "volume": "500 ml",
-    "bashing": 8,
-    "cutting": 16,
     "flags": [
-      "STAB",
       "UNARMED_WEAPON",
       "NO_UNWIELD",
       "UNBREAKABLE_MELEE",
@@ -3178,7 +3312,11 @@
         "BUTCHER",
         12
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8,
+      "stab": 16
+    }
   },
   {
     "type": "GENERIC",
@@ -3199,10 +3337,7 @@
       "repose"
     ],
     "volume": "250 ml",
-    "bashing": 2,
-    "cutting": 14,
     "flags": [
-      "STAB",
       "UNARMED_WEAPON",
       "DURABLE_MELEE",
       "SHEATH_KNIFE"
@@ -3217,7 +3352,11 @@
         "BUTCHER",
         14
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "stab": 14
+    }
   },
   {
     "type": "GENERIC",
@@ -3239,8 +3378,6 @@
     "techniques": [
       "repose"
     ],
-    "bashing": 2,
-    "cutting": 15,
     "flags": [
       "UNARMED_WEAPON",
       "DURABLE_MELEE"
@@ -3255,7 +3392,11 @@
         "BUTCHER",
         14
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "cut": 15
+    }
   },
   {
     "type": "GENERIC",
@@ -3278,12 +3419,14 @@
     ],
     "volume": "500 ml",
     "weight": "970 g",
-    "bashing": 7,
     "flags": [
       "UNARMED_WEAPON",
       "DURABLE_MELEE",
       "NONCONDUCTIVE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 7
+    }
   },
   {
     "type": "GENERIC",
@@ -3311,8 +3454,10 @@
       "DURABLE_MELEE"
     ],
     "volume": "1275 ml",
-    "bashing": 18,
-    "price": "195 USD"
+    "price": "195 USD",
+    "melee_damage": {
+      "bash": 18
+    }
   },
   {
     "type": "GENERIC",
@@ -3340,8 +3485,10 @@
       "BELT_CLIP"
     ],
     "volume": "1575 ml",
-    "bashing": 18,
-    "price": "195 USD"
+    "price": "195 USD",
+    "melee_damage": {
+      "bash": 18
+    }
   },
   {
     "type": "GENERIC",
@@ -3378,8 +3525,10 @@
     },
     "volume": "2 L",
     "longest_side": "35 cm",
-    "bashing": 22,
-    "price": "300 USD"
+    "price": "300 USD",
+    "melee_damage": {
+      "bash": 22
+    }
   },
   {
     "//": "Id retained to avoid breaking anything, same reason as with the makeshift glaive.",
@@ -3406,10 +3555,12 @@
     ],
     "volume": "2250 ml",
     "longest_side": "45 cm",
-    "bashing": 7,
-    "cutting": 14,
     "price": "59 USD",
-    "price_postapoc": "20 USD"
+    "price_postapoc": "20 USD",
+    "melee_damage": {
+      "bash": 7,
+      "cut": 14
+    }
   },
   {
     "id": "fencing_foil",
@@ -3429,8 +3580,6 @@
     "weight": "450 g",
     "volume": "1250 ml",
     "longest_side": "75 cm",
-    "bashing": 1,
-    "cutting": 2,
     "to_hit": 2,
     "techniques": [
       "PRECISE",
@@ -3439,9 +3588,12 @@
       "repose"
     ],
     "flags": [
-      "STAB",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "stab": 2
+    }
   },
   {
     "id": "fencing_epee",
@@ -3461,8 +3613,6 @@
     "weight": "650 g",
     "volume": "1250 ml",
     "longest_side": "75 cm",
-    "bashing": 3,
-    "cutting": 7,
     "to_hit": 2,
     "techniques": [
       "PRECISE",
@@ -3471,9 +3621,12 @@
       "repose"
     ],
     "flags": [
-      "STAB",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "stab": 7
+    }
   },
   {
     "id": "fencing_sabre",
@@ -3493,8 +3646,6 @@
     "weight": "400 g",
     "volume": "1250 ml",
     "longest_side": "75 cm",
-    "bashing": 1,
-    "cutting": 6,
     "to_hit": 2,
     "techniques": [
       "PRECISE",
@@ -3503,9 +3654,12 @@
       "repose"
     ],
     "flags": [
-      "STAB",
       "SHEATH_SWORD"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 1,
+      "stab": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -3530,14 +3684,16 @@
     "weight": "1007 g",
     "volume": "500 ml",
     "longest_side": "5 cm",
-    "bashing": 8,
     "to_hit": -1,
     "qualities": [
       [
         "HAMMER",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "cutlass_fake",
@@ -3566,10 +3722,12 @@
     "weight": "634 g",
     "volume": "1750 ml",
     "longest_side": "65 cm",
-    "bashing": 9,
-    "cutting": 2,
     "to_hit": 2,
-    "category": "weapons"
+    "category": "weapons",
+    "melee_damage": {
+      "bash": 9,
+      "cut": 2
+    }
   },
   {
     "id": "cutlass_inferior",
@@ -3594,8 +3752,6 @@
     "weight": "955 g",
     "volume": "1250 ml",
     "longest_side": "65 cm",
-    "bashing": 22,
-    "cutting": 9,
     "flags": [
       "SHEATH_SWORD"
     ],
@@ -3610,7 +3766,11 @@
         "BUTCHER",
         9
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 22,
+      "cut": 9
+    }
   },
   {
     "id": "katana_fake",
@@ -3639,10 +3799,12 @@
     "weight": "753 g",
     "volume": "2 L",
     "longest_side": "65 cm",
-    "bashing": 6,
-    "cutting": 2,
     "to_hit": 1,
-    "category": "weapons"
+    "category": "weapons",
+    "melee_damage": {
+      "bash": 6,
+      "cut": 2
+    }
   },
   {
     "id": "katana_inferior",
@@ -3671,8 +3833,6 @@
     "weight": "1133 g",
     "volume": "2 L",
     "longest_side": "65 cm",
-    "bashing": 17,
-    "cutting": 8,
     "to_hit": 1,
     "category": "weapons",
     "qualities": [
@@ -3684,7 +3844,11 @@
         "BUTCHER",
         9
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 17,
+      "cut": 8
+    }
   },
   {
     "id": "rapier_fake",
@@ -3714,10 +3878,12 @@
     "weight": "660 g",
     "volume": "1500 ml",
     "longest_side": "75 cm",
-    "bashing": 9,
-    "cutting": 2,
     "to_hit": 2,
-    "category": "weapons"
+    "category": "weapons",
+    "melee_damage": {
+      "bash": 9,
+      "cut": 2
+    }
   },
   {
     "id": "wakizashi_fake",
@@ -3747,10 +3913,12 @@
     "weight": "557 g",
     "volume": "1500 ml",
     "longest_side": "45 cm",
-    "bashing": 8,
-    "cutting": 2,
     "to_hit": 1,
-    "category": "weapons"
+    "category": "weapons",
+    "melee_damage": {
+      "bash": 8,
+      "cut": 2
+    }
   },
   {
     "id": "wakizashi_inferior",
@@ -3779,8 +3947,6 @@
     "weight": "835 g",
     "volume": "1500 ml",
     "longest_side": "45 cm",
-    "bashing": 17,
-    "cutting": 7,
     "to_hit": 1,
     "category": "weapons",
     "qualities": [
@@ -3792,7 +3958,11 @@
         "BUTCHER",
         13
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 17,
+      "cut": 7
+    }
   },
   {
     "id": "kris_fake",
@@ -3818,14 +3988,16 @@
     "weight": "558 g",
     "volume": "750 ml",
     "longest_side": "30 cm",
-    "bashing": 2,
-    "cutting": 2,
     "flags": [
       "SHEATH_SWORD",
       "FRAGILE_MELEE"
     ],
     "to_hit": 1,
-    "category": "weapons"
+    "category": "weapons",
+    "melee_damage": {
+      "bash": 2,
+      "cut": 2
+    }
   },
   {
     "id": "estoc",
@@ -3847,15 +4019,12 @@
       "repose"
     ],
     "flags": [
-      "STAB",
       "DURABLE_MELEE",
       "SHEATH_SWORD"
     ],
     "weight": "1814 g",
     "volume": "2750 ml",
     "longest_side": "100 cm",
-    "bashing": 4,
-    "cutting": 38,
     "to_hit": 2,
     "category": "weapons",
     "qualities": [
@@ -3867,7 +4036,11 @@
         "BUTCHER",
         8
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "stab": 38
+    }
   },
   {
     "id": "estoc_fake",
@@ -3896,10 +4069,12 @@
     "weight": "939 g",
     "volume": "2750 ml",
     "longest_side": "100 cm",
-    "bashing": 14,
-    "cutting": 2,
     "to_hit": 2,
-    "category": "weapons"
+    "category": "weapons",
+    "melee_damage": {
+      "bash": 14,
+      "cut": 2
+    }
   },
   {
     "id": "pipe_solid",
@@ -3915,7 +4090,6 @@
     "price": "75 USD",
     "price_postapoc": "17 USD",
     "to_hit": -2,
-    "bashing": 26,
     "material": [
       "iron",
       "steel"
@@ -3931,7 +4105,10 @@
     "flags": [
       "DURABLE_MELEE",
       "REACH_ATTACK"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 26
+    }
   },
   {
     "id": "pipe_solid_spear",
@@ -3947,8 +4124,6 @@
     "price": "75 USD",
     "price_postapoc": "51 USD",
     "to_hit": -1,
-    "bashing": 26,
-    "cutting": 8,
     "material": [
       "iron",
       "steel"
@@ -3966,6 +4141,10 @@
       "DURABLE_MELEE",
       "REACH_ATTACK",
       "SPEAR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 26,
+      "cut": 8
+    }
   }
 ]

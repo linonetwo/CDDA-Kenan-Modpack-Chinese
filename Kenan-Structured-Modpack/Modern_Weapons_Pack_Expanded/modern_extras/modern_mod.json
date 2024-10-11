@@ -51,7 +51,6 @@
     "volume": "500 ml",
     "price": "30 USD",
     "install_time": "30 m",
-    "bashing": 6,
     "to_hit": -1,
     "material": [
       "steel"
@@ -70,7 +69,10 @@
         2
       ]
     ],
-    "dispersion_modifier": -35
+    "dispersion_modifier": -35,
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "neck_strap",
@@ -195,7 +197,6 @@
     "integral_volume": "250 ml",
     "price": "1400 USD",
     "install_time": "1 m",
-    "bashing": 3,
     "to_hit": 1,
     "material": [
       "aluminum",
@@ -215,7 +216,10 @@
     "handling_modifier": 1,
     "flags": [
       "IRREMOVABLE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3
+    }
   },
   {
     "id": "six12_mod",

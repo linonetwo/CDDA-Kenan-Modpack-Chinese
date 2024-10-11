@@ -3,6 +3,7 @@
     "result": "rosin",
     "id_suffix": "WL_recipes",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_CHEM",
     "subcategory": "CSC_CHEM_OTHER",
     "skill_used": "cooking",
@@ -50,6 +51,7 @@
   {
     "result": "turpentine",
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "category": "CC_CHEM",
     "subcategory": "CSC_CHEM_OTHER",
     "skill_used": "cooking",
@@ -96,6 +98,7 @@
   },
   {
     "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
     "id": "turpentine",
     "copy-from": "rosin",
     "weight": "15 g",
@@ -108,6 +111,7 @@
   },
   {
     "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
     "id": "oilcloth_paint",
     "name": {
       "str": "油布漆"
@@ -200,6 +204,7 @@
   },
   {
     "type": "COMESTIBLE",
+    "comestible_type": "DRINK",
     "id": "canola_oil",
     "copy-from": "cooking_oil",
     "name": {
@@ -209,6 +214,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "canola_oil",
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_OTHER",
@@ -247,6 +253,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "oilcloth_paint",
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_OTHER",
@@ -301,6 +308,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "canvas",
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_OTHER",
@@ -340,6 +348,7 @@
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "drying_oilcloth_frame",
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_OTHER",
@@ -440,6 +449,7 @@
   {
     "result": "oilcloth_canvas_dry",
     "type": "uncraft",
+    "activity_level": "LIGHT_EXERCISE",
     "time": "1m",
     "components": [
       [
@@ -467,7 +477,6 @@
     "volume": "2800 ml",
     "price": "150 USD",
     "to_hit": -3,
-    "bashing": 4,
     "material": [
       "oilcloth",
       "wood"
@@ -482,10 +491,14 @@
       "floor": "f_groundsheet",
       "door_opened": "f_canvas_door_o",
       "door_closed": "f_canvas_door"
+    },
+    "melee_damage": {
+      "bash": 4
     }
   },
   {
     "type": "recipe",
+    "activity_level": "LIGHT_EXERCISE",
     "result": "selfmade_tent_kit",
     "category": "CC_OTHER",
     "subcategory": "CSC_OTHER_TOOLS",

@@ -27,7 +27,6 @@
     ],
     "weight": "2110 g",
     "volume": "2 L",
-    "bashing": 6,
     "to_hit": -1,
     "ranged_damage": {
       "damage_type": "stab",
@@ -76,7 +75,10 @@
         "underbarrel",
         1
       ]
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "airbower",
@@ -107,7 +109,6 @@
     ],
     "weight": "3100 g",
     "volume": "1500 ml",
-    "bashing": 12,
     "ranged_damage": {
       "damage_type": "stab",
       "amount": 22,
@@ -161,6 +162,9 @@
       "type": "transform",
       "target": "airbower_succ",
       "msg": "自动空气压缩机已就绪，发出一声轻轻的咔哒声。"
+    },
+    "melee_damage": {
+      "bash": 12
     }
   },
   {
@@ -204,7 +208,6 @@
     ],
     "weight": "2100 g",
     "volume": "1 L",
-    "bashing": 6,
     "ranged_damage": {
       "damage_type": "stab",
       "amount": 20,
@@ -270,6 +273,9 @@
       "RELOAD_ONE",
       "WATERPROOF_GUN",
       "NEVER_JAMS"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   }
 ]

@@ -122,7 +122,6 @@
     "volume": "2 L",
     "price": "10 USD",
     "price_postapoc": "10 USD",
-    "bashing": 8,
     "material": [
       "paper"
     ],
@@ -133,7 +132,10 @@
     "max_level": 10,
     "intelligence": 13,
     "time": 55,
-    "fun": 0
+    "fun": 0,
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "mag_robotics",
@@ -217,7 +219,6 @@
     ],
     "weight": "19310 g",
     "volume": "55 L",
-    "bashing": 8,
     "to_hit": -3,
     "ammo": [
       "battery"
@@ -378,7 +379,10 @@
           "medium_disposable_cell"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "type": "TOOL",
@@ -399,13 +403,15 @@
     ],
     "weight": "9310 g",
     "volume": "55 L",
-    "bashing": 6,
-    "cutting": 6,
     "to_hit": -3,
     "use_action": {
       "type": "place_monster",
       "monster_id": "mon_autoarmor_light",
       "moves": 100
+    },
+    "melee_damage": {
+      "bash": 6,
+      "cut": 6
     }
   },
   {
@@ -455,14 +461,16 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 4,
-    "cutting": 4,
     "material": [
       "aluminum",
       "plastic"
     ],
     "symbol": ";",
-    "color": "light_green"
+    "color": "light_green",
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    }
   },
   {
     "id": "bot_light_hack",
@@ -596,8 +604,6 @@
     ],
     "weight": "62650 g",
     "volume": "30 L",
-    "bashing": 4,
-    "cutting": 4,
     "to_hit": -3,
     "symbol": ";",
     "color": "light_green",
@@ -605,7 +611,11 @@
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    }
   },
   {
     "id": "bot_eyebot_heater",
@@ -679,7 +689,6 @@
     "weight": "140 kg",
     "volume": "62500 ml",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel",
       "aluminum"
@@ -690,7 +699,10 @@
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "bot_utilibot_blob",
@@ -787,14 +799,16 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 6,
     "symbol": ";",
     "color": "dark_gray",
     "flags": [
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "bot_medibot_assassin",
@@ -878,14 +892,16 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 6,
     "symbol": ";",
     "color": "dark_gray",
     "flags": [
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 6
+    }
   },
   {
     "id": "bot_skitterbot_rat",
@@ -962,14 +978,16 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 8,
     "symbol": ";",
     "color": "dark_gray",
     "flags": [
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "bot_cyborg_necro",
@@ -1007,14 +1025,16 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 8,
     "symbol": ";",
     "color": "light_gray",
     "flags": [
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "bot_defbot_cowboy",
@@ -1092,14 +1112,16 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 8,
     "symbol": ";",
     "color": "light_gray",
     "flags": [
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "bot_milbot_308",
@@ -1218,9 +1240,11 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 8,
     "symbol": ";",
-    "color": "light_gray"
+    "color": "light_gray",
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "bot_advbot_glitter",
@@ -1279,14 +1303,16 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 8,
     "symbol": ";",
     "color": "red",
     "flags": [
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "bot_chickenbot_horror",
@@ -1365,13 +1391,15 @@
     ],
     "weight": "430000 g",
     "volume": "187500 ml",
-    "bashing": 10,
-    "cutting": 6,
     "to_hit": -2,
     "flags": [
       "TRADER_AVOID",
       "NO_REPAIR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 6
+    }
   },
   {
     "type": "GENERIC",
@@ -1390,13 +1418,15 @@
     ],
     "weight": "1023850 g",
     "volume": "1100 L",
-    "bashing": 20,
-    "cutting": 15,
     "to_hit": -3,
     "flags": [
       "TRADER_AVOID",
       "NO_REPAIR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 15
+    }
   },
   {
     "type": "GENERIC",
@@ -1415,13 +1445,15 @@
     ],
     "weight": "1223850 g",
     "volume": "875 L",
-    "bashing": 20,
-    "cutting": 15,
     "to_hit": -3,
     "flags": [
       "TRADER_AVOID",
       "NO_REPAIR"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 20,
+      "cut": 15
+    }
   },
   {
     "id": "bot_tripod",
@@ -1435,7 +1467,6 @@
     "volume": "92500 ml",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -1453,6 +1484,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -1468,7 +1502,6 @@
     "volume": "250 L",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -1486,6 +1519,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -1501,7 +1537,6 @@
     "volume": "250 L",
     "price": "1000000 USD",
     "to_hit": -3,
-    "bashing": 8,
     "material": [
       "steel"
     ],
@@ -1519,6 +1554,9 @@
         "electronics",
         "computer"
       ]
+    },
+    "melee_damage": {
+      "bash": 8
     }
   },
   {
@@ -1606,14 +1644,16 @@
     "price": "100 USD",
     "price_postapoc": "100 USD",
     "to_hit": -3,
-    "bashing": 8,
     "symbol": ";",
     "color": "light_gray",
     "flags": [
       "LEAK_DAM",
       "RADIOACTIVE",
       "TRADER_AVOID"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 8
+    }
   },
   {
     "id": "bot_tankbot_king",

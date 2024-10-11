@@ -23,7 +23,6 @@
     ],
     "weight": "7430 g",
     "volume": "5 L",
-    "bashing": 10,
     "to_hit": -3,
     "dispersion": 300,
     "durability": 5,
@@ -38,7 +37,10 @@
           "firework": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "firework_launcher_beggar",
@@ -64,7 +66,6 @@
     ],
     "weight": "7430 g",
     "volume": "5 L",
-    "bashing": 10,
     "to_hit": -5,
     "dispersion": 400,
     "durability": 5,
@@ -79,7 +80,10 @@
           "firework": 3
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   },
   {
     "id": "cannon_ancient",
@@ -106,7 +110,6 @@
     ],
     "weight": "5220 g",
     "volume": "6 L",
-    "bashing": 12,
     "to_hit": -3,
     "dispersion": 300,
     "durability": 7,
@@ -139,7 +142,10 @@
           "cannonball": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   },
   {
     "id": "cannon_makeshift",
@@ -166,7 +172,6 @@
     ],
     "weight": "5220 g",
     "volume": "6 L",
-    "bashing": 12,
     "to_hit": -3,
     "dispersion": 300,
     "durability": 5,
@@ -199,6 +204,9 @@
           "cannonball": 1
         }
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 12
+    }
   }
 ]

@@ -93,9 +93,6 @@
     "fear_triggers": [
       "FIRE"
     ],
-    "placate_triggers": [
-      "MEAT"
-    ],
     "attack_effs": [
       {
         "id": "grabbed",
@@ -159,9 +156,6 @@
       "FIRE",
       "SOUND",
       "HURT"
-    ],
-    "placate_triggers": [
-      "MEAT"
     ],
     "attack_effs": [
       {
@@ -233,9 +227,13 @@
         "SMASH",
         100
       ],
-      { "id": "ranged_pull", "cooldown":10
+      {
+        "id": "ranged_pull",
+        "cooldown": 10
       },
-      { "id": "grab_drag", "cooldown":10
+      {
+        "id": "grab_drag",
+        "cooldown": 10
       },
       {
         "type": "leap",
@@ -296,9 +294,13 @@
         "SMASH",
         30
       ],
-      { "id": "ranged_pull", "cooldown":10
+      {
+        "id": "ranged_pull",
+        "cooldown": 10
       },
-      { "id": "grab_drag", "cooldown":10
+      {
+        "id": "grab_drag",
+        "cooldown": 10
       },
       {
         "type": "leap",

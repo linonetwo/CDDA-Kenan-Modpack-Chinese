@@ -56,16 +56,12 @@
           "condition": {
             "or": [
               {
-                "u_has_var": "hell_hound",
-                "type": "switch",
-                "context": "alive_dead",
+                "u_has_var": "switch_alive_dead_hell_hound",
                 "value": "dead"
               },
               {
                 "not": {
-                  "npc_has_var": "busy",
-                  "type": "flag",
-                  "context": "lock_missions",
+                  "npc_has_var": "flag_lock_missions_busy",
                   "value": "yes"
                 }
               }
@@ -91,9 +87,7 @@
       {
         "text": "稀有商品呢？",
         "condition": {
-          "npc_has_var": "open_rare_trade",
-          "type": "flag",
-          "context": "open_orders",
+          "npc_has_var": "flag_open_orders_open_rare_trade",
           "value": "yes"
         },
         "trial": {
@@ -102,45 +96,31 @@
             "not": {
               "or": [
                 {
-                  "npc_has_var": "ordered_rm51",
-                  "type": "flag",
-                  "context": "ordered_weapon",
+                  "npc_has_var": "flag_ordered_weapon_ordered_rm51",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "ordered_rm11b",
-                  "type": "flag",
-                  "context": "ordered_weapon",
+                  "npc_has_var": "flag_ordered_weapon_ordered_rm11b",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "ordered_rm103a",
-                  "type": "flag",
-                  "context": "ordered_weapon",
+                  "npc_has_var": "flag_ordered_weapon_ordered_rm103a",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "ordered_rm120c",
-                  "type": "flag",
-                  "context": "ordered_weapon",
+                  "npc_has_var": "flag_ordered_weapon_ordered_rm120c",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "ordered_rm2000",
-                  "type": "flag",
-                  "context": "ordered_weapon",
+                  "npc_has_var": "flag_ordered_weapon_ordered_rm2000",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "ordered_20x66",
-                  "type": "flag",
-                  "context": "ordered_weapon",
+                  "npc_has_var": "flag_ordered_weapon_ordered_20x66",
                   "value": "yes"
                 },
                 {
-                  "npc_has_var": "ordered_8x40",
-                  "type": "flag",
-                  "context": "ordered_weapon",
+                  "npc_has_var": "flag_ordered_weapon_ordered_8x40",
                   "value": "yes"
                 }
               ]
@@ -185,24 +165,18 @@
         "text": "现在谁负责？",
         "topic": "TALK_bandit_rs_merchant_questions_leader",
         "condition": {
-          "u_has_var": "hell_hound",
-          "type": "switch",
-          "context": "alive_dead",
+          "u_has_var": "switch_alive_dead_hell_hound",
           "value": "dead"
         }
       },
       {
         "text": "我是康斯坦特的。你同意什么了吗？",
         "condition": {
-          "u_has_var": "fs_leader_mission_khh",
-          "type": "count",
-          "context": "unmarked_mission_progress",
+          "u_has_var": "count_unmarked_mission_progress_fs_leader_mission_khh",
           "value": "3"
         },
         "effect": {
-          "u_add_var": "fs_leader_mission_khh",
-          "type": "count",
-          "context": "unmarked_mission_progress",
+          "u_add_var": "count_unmarked_mission_progress_fs_leader_mission_khh",
           "value": "4"
         },
         "topic": "TALK_bandit_rs_merchant_questions_hh_deal"
@@ -210,9 +184,7 @@
       {
         "text": "你的人说他们不喜欢他们的新领导。是真的吗？",
         "condition": {
-          "u_has_var": "fs_leader_mission_khh",
-          "type": "count",
-          "context": "unmarked_mission_progress",
+          "u_has_var": "count_unmarked_mission_progress_fs_leader_mission_khh",
           "value": "2"
         },
         "topic": "TALK_bandit_rs_merchant_questions_hh"
@@ -222,16 +194,14 @@
         "condition": {
           "and": [
             {
-              "u_compare_var": "fs_leader_mission_khh",
-              "type": "count",
-              "context": "unmarked_mission_progress",
-              "op": ">=",
-              "value": 3
+              "math": [
+                "u_count_unmarked_mission_progress_fs_leader_mission_khh",
+                ">=",
+                "3"
+              ]
             },
             {
-              "u_has_var": "poison_agreed",
-              "type": "flag",
-              "context": "agreed",
+              "u_has_var": "flag_agreed_poison_agreed",
               "value": "yes"
             },
             {
@@ -264,7 +234,7 @@
     "type": "talk_topic",
     "id": "TALK_bandit_rs_merchant_questions_leader",
     "dynamic_line": {
-      "and": [
+      "concatenate": [
         "Well, I.",
         {
           "npc_has_var": "open_rare_trade",
@@ -272,11 +242,11 @@
           "context": "open_orders",
           "value": "yes",
           "no": {
-            "u_compare_var": "fs_leader_mission_khh",
-            "type": "count",
-            "context": "unmarked_mission_progress",
-            "op": ">=",
-            "value": 3,
+            "math": [
+              "u_count_unmarked_mission_progress_fs_leader_mission_khh",
+              ">=",
+              "3"
+            ],
             "yes": "  By the way, my guys were recently able to recapture our old weapons depot from <zombies>.  Since you have helped us a lot, I can sell you some of our premium merchandise.  With some delays in delivery, though."
           }
         }
@@ -285,16 +255,14 @@
     "speaker_effect": {
       "sentinel": "opened_r_t",
       "condition": {
-        "u_compare_var": "fs_leader_mission_khh",
-        "type": "count",
-        "context": "unmarked_mission_progress",
-        "op": ">=",
-        "value": 3
+        "math": [
+          "u_count_unmarked_mission_progress_fs_leader_mission_khh",
+          ">=",
+          "3"
+        ]
       },
       "effect": {
-        "npc_add_var": "open_rare_trade",
-        "type": "flag",
-        "context": "open_orders",
+        "npc_add_var": "flag_open_orders_open_rare_trade",
         "value": "yes"
       }
     }
@@ -332,14 +300,10 @@
       "sentinel": "know_sc",
       "effect": [
         {
-          "u_lose_var": "poison_agreed",
-          "type": "flag",
-          "context": "agreed"
+          "u_lose_var": "flag_agreed_poison_agreed"
         },
         {
-          "u_add_var": "rs_scientist_poison",
-          "type": "flag",
-          "context": "open_option",
+          "u_add_var": "flag_open_option_rs_scientist_poison",
           "value": "yes"
         }
       ]
@@ -403,15 +367,14 @@
         },
         "effect": [
           {
-            "npc_add_var": "ordered",
-            "type": "time",
-            "context": "wait_order",
-            "time": true
+            "math": [
+              "n_time_wait_order_ordered",
+              "=",
+              "time('now')"
+            ]
           },
           {
-            "npc_add_var": "ordered_rm120c",
-            "type": "flag",
-            "context": "ordered_weapon",
+            "npc_add_var": "flag_ordered_weapon_ordered_rm120c",
             "value": "yes"
           },
           {
@@ -438,15 +401,14 @@
         },
         "effect": [
           {
-            "npc_add_var": "ordered",
-            "type": "time",
-            "context": "wait_order",
-            "time": true
+            "math": [
+              "n_time_wait_order_ordered",
+              "=",
+              "time('now')"
+            ]
           },
           {
-            "npc_add_var": "ordered_rm103a",
-            "type": "flag",
-            "context": "ordered_weapon",
+            "npc_add_var": "flag_ordered_weapon_ordered_rm103a",
             "value": "yes"
           },
           {
@@ -473,15 +435,14 @@
         },
         "effect": [
           {
-            "npc_add_var": "ordered",
-            "type": "time",
-            "context": "wait_order",
-            "time": true
+            "math": [
+              "n_time_wait_order_ordered",
+              "=",
+              "time('now')"
+            ]
           },
           {
-            "npc_add_var": "ordered_rm11b",
-            "type": "flag",
-            "context": "ordered_weapon",
+            "npc_add_var": "flag_ordered_weapon_ordered_rm11b",
             "value": "yes"
           },
           {
@@ -508,15 +469,14 @@
         },
         "effect": [
           {
-            "npc_add_var": "ordered",
-            "type": "time",
-            "context": "wait_order",
-            "time": true
+            "math": [
+              "n_time_wait_order_ordered",
+              "=",
+              "time('now')"
+            ]
           },
           {
-            "npc_add_var": "ordered_rm2000",
-            "type": "flag",
-            "context": "ordered_weapon",
+            "npc_add_var": "flag_ordered_weapon_ordered_rm2000",
             "value": "yes"
           },
           {
@@ -543,15 +503,14 @@
         },
         "effect": [
           {
-            "npc_add_var": "ordered",
-            "type": "time",
-            "context": "wait_order",
-            "time": true
+            "math": [
+              "n_time_wait_order_ordered",
+              "=",
+              "time('now')"
+            ]
           },
           {
-            "npc_add_var": "ordered_rm51",
-            "type": "flag",
-            "context": "ordered_weapon",
+            "npc_add_var": "flag_ordered_weapon_ordered_rm51",
             "value": "yes"
           },
           {
@@ -578,15 +537,14 @@
         },
         "effect": [
           {
-            "npc_add_var": "ordered",
-            "type": "time",
-            "context": "wait_order",
-            "time": true
+            "math": [
+              "n_time_wait_order_ordered",
+              "=",
+              "time('now')"
+            ]
           },
           {
-            "npc_add_var": "ordered_8x40",
-            "type": "flag",
-            "context": "ordered_weapon",
+            "npc_add_var": "flag_ordered_weapon_ordered_8x40",
             "value": "yes"
           },
           {
@@ -606,15 +564,14 @@
         },
         "effect": [
           {
-            "npc_add_var": "ordered",
-            "type": "time",
-            "context": "wait_order",
-            "time": true
+            "math": [
+              "n_time_wait_order_ordered",
+              "=",
+              "time('now')"
+            ]
           },
           {
-            "npc_add_var": "ordered_20x66",
-            "type": "flag",
-            "context": "ordered_weapon",
+            "npc_add_var": "flag_ordered_weapon_ordered_20x66",
             "value": "yes"
           },
           {
@@ -656,100 +613,86 @@
     "type": "talk_topic",
     "id": "TALK_bandit_rs_merchant_rare_goods_get",
     "dynamic_line": {
-      "npc_has_var": "ordered_rm2000",
-      "type": "flag",
-      "context": "ordered_weapon",
+      "npc_has_var": "flag_ordered_weapon_ordered_rm2000",
       "value": "yes",
       "yes": {
-        "npc_compare_time_since_var": "ordered",
-        "type": "time",
-        "context": "wait_order",
-        "op": ">",
-        "time": "20 days",
+        "math": [
+          "time_since(n_time_wait_order_ordered)",
+          ">",
+          "time('20 d')"
+        ],
         "yes": "这是你的RM2000冲锋枪，和刚出厂一样新。",
         "no": "还在等你的订单。"
       },
       "no": {
-        "npc_has_var": "ordered_rm51",
-        "type": "flag",
-        "context": "ordered_weapon",
+        "npc_has_var": "flag_ordered_weapon_ordered_rm51",
         "value": "yes",
         "yes": {
-          "npc_compare_time_since_var": "ordered",
-          "type": "time",
-          "context": "wait_order",
-          "op": ">",
-          "time": "18 days",
+          "math": [
+            "time_since(n_time_wait_order_ordered)",
+            ">",
+            "time('18 d')"
+          ],
           "yes": "这是你的RM51突击步枪，和刚出厂一样新。",
           "no": "还在等你的订单。"
         },
         "no": {
-          "npc_has_var": "ordered_rm11b",
-          "type": "flag",
-          "context": "ordered_weapon",
+          "npc_has_var": "flag_ordered_weapon_ordered_rm11b",
           "value": "yes",
           "yes": {
-            "npc_compare_time_since_var": "ordered",
-            "type": "time",
-            "context": "wait_order",
-            "op": ">",
-            "time": "24 days",
+            "math": [
+              "time_since(n_time_wait_order_ordered)",
+              ">",
+              "time('24 d')"
+            ],
             "yes": "这是您的RM11B，刚出厂的。",
             "no": "还在等你的订单。"
           },
           "no": {
-            "npc_has_var": "ordered_rm103a",
-            "type": "flag",
-            "context": "ordered_weapon",
+            "npc_has_var": "flag_ordered_weapon_ordered_rm103a",
             "value": "yes",
             "yes": {
-              "npc_compare_time_since_var": "ordered",
-              "type": "time",
-              "context": "wait_order",
-              "op": ">",
-              "time": "10 days",
+              "math": [
+                "time_since(n_time_wait_order_ordered)",
+                ">",
+                "time('10 d')"
+              ],
               "yes": "这是你的103A令吉，刚出厂。",
               "no": "还在等你的订单。"
             },
             "no": {
-              "npc_has_var": "ordered_rm120c",
-              "type": "flag",
-              "context": "ordered_weapon",
+              "npc_has_var": "flag_ordered_weapon_ordered_rm120c",
               "value": "yes",
               "yes": {
-                "npc_compare_time_since_var": "ordered",
-                "type": "time",
-                "context": "wait_order",
-                "op": ">",
-                "time": "8 days",
+                "math": [
+                  "time_since(n_time_wait_order_ordered)",
+                  ">",
+                  "time('8 d')"
+                ],
                 "yes": "这是你的RM120c霰弹枪，和刚出厂一样新。",
                 "no": "还在等你的订单。"
               },
               "no": {
-                "npc_has_var": "ordered_20x66",
-                "type": "flag",
-                "context": "ordered_weapon",
+                "npc_has_var": "flag_ordered_weapon_ordered_20x66",
                 "value": "yes",
                 "yes": {
-                  "npc_compare_time_since_var": "ordered",
-                  "type": "time",
-                  "context": "wait_order",
-                  "op": ">",
-                  "time": "5 days",
+                  "math": [
+                    "time_since(n_time_wait_order_ordered)",
+                    ">",
+                    "time('5 d')"
+                  ],
                   "yes": "这是你的弹药，和刚出厂一样新。",
                   "no": "还在等你的订单。"
                 },
                 "no": {
-                  "npc_has_var": "ordered_8x40",
-                  "type": "flag",
-                  "context": "ordered_weapon",
+                  "npc_has_var": "flag_ordered_weapon_ordered_8x40",
                   "value": "yes",
                   "yes": {
-                    "npc_compare_time_since_var": "ordered",
-                    "type": "time",
-                    "context": "wait_order",
-                    "op": ">",
-                    "time": "5 days",
+                    "math": [
+                      "time_since(n_time_wait_order_ordered)",
+                      ">",
+                      "time('5 d')"
+                    ],
                     "yes": "这是你的弹药，和刚出厂一样新。",
                     "no": "还在等你的订单。"
                   }
@@ -765,17 +708,15 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "ordered_rm2000",
-              "type": "flag",
-              "context": "ordered_weapon",
+              "npc_has_var": "flag_ordered_weapon_ordered_rm2000",
               "value": "yes"
             },
             {
-              "npc_compare_time_since_var": "ordered",
-              "type": "time",
-              "context": "wait_order",
-              "op": ">",
-              "time": "20 days"
+              "math": [
+                "time_since(n_time_wait_order_ordered)",
+                ">",
+                "time('20 d')"
+              ]
             }
           ]
         },
@@ -788,14 +729,10 @@
             "count": 50
           },
           {
-            "npc_lose_var": "ordered_rm2000",
-            "type": "flag",
-            "context": "ordered_weapon"
+            "npc_lose_var": "flag_ordered_weapon_ordered_rm2000"
           },
           {
-            "npc_lose_var": "ordered",
-            "type": "time",
-            "context": "wait_order"
+            "npc_lose_var": "time_wait_order_ordered"
           }
         ]
       },
@@ -803,17 +740,15 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "ordered_rm51",
-              "type": "flag",
-              "context": "ordered_weapon",
+              "npc_has_var": "flag_ordered_weapon_ordered_rm51",
               "value": "yes"
             },
             {
-              "npc_compare_time_since_var": "ordered",
-              "type": "time",
-              "context": "wait_order",
-              "op": ">",
-              "time": "18 days"
+              "math": [
+                "time_since(n_time_wait_order_ordered)",
+                ">",
+                "time('18 d')"
+              ]
             }
           ]
         },
@@ -826,14 +761,10 @@
             "count": 100
           },
           {
-            "npc_lose_var": "ordered_rm51",
-            "type": "flag",
-            "context": "ordered_weapon"
+            "npc_lose_var": "flag_ordered_weapon_ordered_rm51"
           },
           {
-            "npc_lose_var": "ordered",
-            "type": "time",
-            "context": "wait_order"
+            "npc_lose_var": "time_wait_order_ordered"
           }
         ]
       },
@@ -841,17 +772,15 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "ordered_rm11b",
-              "type": "flag",
-              "context": "ordered_weapon",
+              "npc_has_var": "flag_ordered_weapon_ordered_rm11b",
               "value": "yes"
             },
             {
-              "npc_compare_time_since_var": "ordered",
-              "type": "time",
-              "context": "wait_order",
-              "op": ">",
-              "time": "24 days"
+              "math": [
+                "time_since(n_time_wait_order_ordered)",
+                ">",
+                "time('24 d')"
+              ]
             }
           ]
         },
@@ -864,14 +793,10 @@
             "count": 20
           },
           {
-            "npc_lose_var": "ordered_rm11b",
-            "type": "flag",
-            "context": "ordered_weapon"
+            "npc_lose_var": "flag_ordered_weapon_ordered_rm11b"
           },
           {
-            "npc_lose_var": "ordered",
-            "type": "time",
-            "context": "wait_order"
+            "npc_lose_var": "time_wait_order_ordered"
           }
         ]
       },
@@ -879,17 +804,15 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "ordered_rm103a",
-              "type": "flag",
-              "context": "ordered_weapon",
+              "npc_has_var": "flag_ordered_weapon_ordered_rm103a",
               "value": "yes"
             },
             {
-              "npc_compare_time_since_var": "ordered",
-              "type": "time",
-              "context": "wait_order",
-              "op": ">",
-              "time": "10 days"
+              "math": [
+                "time_since(n_time_wait_order_ordered)",
+                ">",
+                "time('10 d')"
+              ]
             }
           ]
         },
@@ -902,14 +825,10 @@
             "count": 20
           },
           {
-            "npc_lose_var": "ordered_rm103a",
-            "type": "flag",
-            "context": "ordered_weapon"
+            "npc_lose_var": "flag_ordered_weapon_ordered_rm103a"
           },
           {
-            "npc_lose_var": "ordered",
-            "type": "time",
-            "context": "wait_order"
+            "npc_lose_var": "time_wait_order_ordered"
           }
         ]
       },
@@ -917,17 +836,15 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "ordered_rm120c",
-              "type": "flag",
-              "context": "ordered_weapon",
+              "npc_has_var": "flag_ordered_weapon_ordered_rm120c",
               "value": "yes"
             },
             {
-              "npc_compare_time_since_var": "ordered",
-              "type": "time",
-              "context": "wait_order",
-              "op": ">",
-              "time": "8 days"
+              "math": [
+                "time_since(n_time_wait_order_ordered)",
+                ">",
+                "time('8 d')"
+              ]
             }
           ]
         },
@@ -940,14 +857,10 @@
             "count": 10
           },
           {
-            "npc_lose_var": "ordered_rm120c",
-            "type": "flag",
-            "context": "ordered_weapon"
+            "npc_lose_var": "flag_ordered_weapon_ordered_rm120c"
           },
           {
-            "npc_lose_var": "ordered",
-            "type": "time",
-            "context": "wait_order"
+            "npc_lose_var": "time_wait_order_ordered"
           }
         ]
       },
@@ -955,17 +868,15 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "ordered_20x66",
-              "type": "flag",
-              "context": "ordered_weapon",
+              "npc_has_var": "flag_ordered_weapon_ordered_rm20x66",
               "value": "yes"
             },
             {
-              "npc_compare_time_since_var": "ordered",
-              "type": "time",
-              "context": "wait_order",
-              "op": ">",
-              "time": "5 days"
+              "math": [
+                "time_since(n_time_wait_order_ordered)",
+                ">",
+                "time('5 d')"
+              ]
             }
           ]
         },
@@ -975,14 +886,10 @@
             "count": 25
           },
           {
-            "npc_lose_var": "ordered_20x66",
-            "type": "flag",
-            "context": "ordered_weapon"
+            "npc_lose_var": "flag_ordered_weapon_ordered_20x66"
           },
           {
-            "npc_lose_var": "ordered",
-            "type": "time",
-            "context": "wait_order"
+            "npc_lose_var": "time_wait_order_ordered"
           }
         ]
       },
@@ -990,17 +897,15 @@
         "condition": {
           "and": [
             {
-              "npc_has_var": "ordered_8x40",
-              "type": "flag",
-              "context": "ordered_weapon",
+              "npc_has_var": "flag_ordered_weapon_ordered_8x40",
               "value": "yes"
             },
             {
-              "npc_compare_time_since_var": "ordered",
-              "type": "time",
-              "context": "wait_order",
-              "op": ">",
-              "time": "5 days"
+              "math": [
+                "time_since(n_time_wait_order_ordered)",
+                ">",
+                "time('5 d')"
+              ]
             }
           ]
         },
@@ -1010,14 +915,10 @@
             "count": 100
           },
           {
-            "npc_lose_var": "ordered_8x40",
-            "type": "flag",
-            "context": "ordered_weapon"
+            "npc_lose_var": "flag_ordered_weapon_ordered_8x40"
           },
           {
-            "npc_lose_var": "ordered",
-            "type": "time",
-            "context": "wait_order"
+            "npc_lose_var": "time_wait_order_ordered"
           }
         ]
       }
@@ -1033,9 +934,7 @@
         "condition": {
           "and": [
             {
-              "u_has_var": "bandit_sb_leader_pay",
-              "type": "flag",
-              "context": "payment",
+              "u_has_var": "flag_payment_bandit_sb_leader_pay",
               "value": "4"
             },
             {
@@ -1053,9 +952,7 @@
             "count": 60
           },
           {
-            "u_lose_var": "bandit_sb_leader_pay",
-            "type": "flag",
-            "context": "payment"
+            "u_lose_var": "flag_payment_bandit_sb_leader_pay"
           }
         ],
         "topic": "TALK_MISSION_SUCCESS",
@@ -1066,11 +963,11 @@
           "true": "He don't want to pay not even want to budge.",
           "false": "What payment?  I thought you discussed that with him.",
           "condition": {
-            "u_compare_var": "bandit_sb_leader_pay",
-            "type": "flag",
-            "context": "payment",
-            "op": ">=",
-            "value": 2
+            "math": [
+              "u_flag_payment_bandit_sb_leader_pay",
+              ">=",
+              "2"
+            ]
           }
         },
         "topic": "TALK_bandit_rs_merchant_mission2_ask",
@@ -1086,11 +983,11 @@
     "type": "talk_topic",
     "id": "TALK_bandit_rs_merchant_mission2_ask",
     "dynamic_line": {
-      "u_compare_var": "bandit_sb_leader_pay",
-      "type": "flag",
-      "context": "payment",
-      "op": ">=",
-      "value": 2,
+      "math": [
+        "u_flag_payment_bandit_sb_leader_pay",
+        ">=",
+        "2"
+      ],
       "yes": "你什么都没说？<name_b>又无缘无故地制造麻烦。告诉他，如果他不付钱的话，我就炸掉<name_b>的<swear> <shitty>，把他的名字放在里面！",
       "no": "什么？你应该为那个包裹付钱的。把钱还给他收回来，<name_b>。"
     },
@@ -1098,31 +995,25 @@
       {
         "sentinel": "mission2_ask1",
         "condition": {
-          "u_compare_var": "bandit_sb_leader_pay",
-          "type": "flag",
-          "context": "payment",
-          "op": "<",
-          "value": 1
+          "math": [
+            "u_flag_payment_bandit_sb_leader_pay",
+            "<",
+            "1"
+          ]
         },
         "effect": {
-          "u_add_var": "bandit_sb_leader_pay",
-          "type": "flag",
-          "context": "payment",
+          "u_add_var": "flag_payment_bandit_sb_leader_pay",
           "value": "1"
         }
       },
       {
         "sentinel": "mission2_ask2",
         "condition": {
-          "u_has_var": "bandit_sb_leader_pay",
-          "type": "flag",
-          "context": "payment",
+          "u_has_var": "flag_payment_bandit_sb_leader_pay",
           "value": "2"
         },
         "effect": {
-          "u_add_var": "bandit_sb_leader_pay",
-          "type": "flag",
-          "context": "payment",
+          "u_add_var": "flag_payment_bandit_sb_leader_pay",
           "value": "3"
         }
       }
@@ -1224,9 +1115,7 @@
     },
     "end": {
       "effect": {
-        "npc_add_var": "busy",
-        "type": "flag",
-        "context": "lock_missions",
+        "npc_add_var": "flag_lock_missions_busy",
         "value": "yes"
       },
       "opinion": {
@@ -1296,9 +1185,7 @@
         "value": 2
       },
       "effect": {
-        "u_lose_var": "bandit_sb_leader_pay",
-        "type": "flag",
-        "context": "payment"
+        "u_lose_var": "flag_payment_bandit_sb_leader_pay"
       }
     },
     "origins": [

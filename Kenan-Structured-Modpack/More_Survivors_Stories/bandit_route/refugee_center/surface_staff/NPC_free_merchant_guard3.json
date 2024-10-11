@@ -168,9 +168,7 @@
         "text": "一定会成功的。",
         "topic": "TALK_DONE",
         "effect": {
-          "u_add_var": "rc_search_for_bandit",
-          "type": "count",
-          "context": "unmarked_mission_progress",
+          "u_add_var": "count_unmarked_mission_progress_rc_search_for_bandit",
           "value": "1"
         }
       }
@@ -279,18 +277,14 @@
           "npc_change_faction": "forest_snakes"
         },
         {
-          "u_add_var": "evac_bandit_safe",
-          "type": "flag",
-          "context": "safe",
+          "u_add_var": "flag_safe_evac_bandit_safe",
           "value": "yes"
         }
       ]
     },
     "fail": {
       "effect": {
-        "u_add_var": "evac_bandit_safe",
-        "type": "flag",
-        "context": "safe",
+        "u_add_var": "flag_safe_evac_bandit_safe",
         "value": "no"
       }
     },

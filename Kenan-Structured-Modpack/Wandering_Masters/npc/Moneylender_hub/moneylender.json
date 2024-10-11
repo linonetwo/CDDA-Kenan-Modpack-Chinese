@@ -501,10 +501,10 @@
               "u_consume_item": "collector_book"
             },
             {
-              "npc_adjust_var": "moneylender_job",
-              "type": "flag",
-              "context": "meeting",
-              "adjustment": 1
+              "math": [
+                "n_flag_meeting_moneylender_job",
+                "++"
+              ]
             }
           ]
         }
@@ -517,11 +517,11 @@
               "u_has_item": "bot_crows_m240"
             },
             {
-              "npc_compare_var": "moneylender_job_turret",
-              "type": "flag",
-              "context": "meeting",
-              "op": ">=",
-              "value": 0
+              "math": [
+                "u_flag_meeting_moneylender_job_turret",
+                ">=",
+                "0"
+              ]
             }
           ]
         },
@@ -531,10 +531,10 @@
             "u_consume_item": "bot_crows_m240"
           },
           {
-            "npc_adjust_var": "moneylender_job_turret",
-            "type": "flag",
-            "context": "meeting",
-            "adjustment": 1
+            "math": [
+              "umn_flag_meeting_moneylender_job_turret",
+              "++"
+            ]
           }
         ]
       },
@@ -570,11 +570,11 @@
           "type": "CONDITION",
           "condition": {
             "not": {
-              "npc_compare_time_since_var": "moneylender_premium_wait",
-              "type": "flag",
-              "context": "meeting",
-              "op": "<",
-              "time": "2 days"
+              "math": [
+                "time_since(n_flag_meeting_moneylender_premium_wait)",
+                "<",
+                "time('2 d')"
+              ]
             }
           }
         },
@@ -775,11 +775,11 @@
         "text": "不错。",
         "topic": "TALK_NONE",
         "condition": {
-          "npc_compare_var": "moneylender_job_turret",
-          "type": "flag",
-          "context": "meeting",
-          "op": ">=",
-          "value": 6
+          "math": [
+            "u_flag_meeting_moneylender_job_turret",
+            ">=",
+            "6"
+          ]
         },
         "effect": {
           "mapgen_update": "moneylender_share_turret",
@@ -968,10 +968,10 @@
             "time": true
           },
           {
-            "npc_adjust_var": "moneylender_premium_item",
-            "type": "flag",
-            "context": "meeting",
-            "adjustment": 1
+            "math": [
+              "n_flag_meeting_moneylender_premium_item",
+              "++"
+            ]
           },
           {
             "u_sell_item": "FMCNote",
@@ -1009,10 +1009,10 @@
             "time": true
           },
           {
-            "npc_adjust_var": "moneylender_premium_item",
-            "type": "flag",
-            "context": "meeting",
-            "adjustment": 1
+            "math": [
+              "n_flag_meeting_moneylender_premium_item",
+              "++"
+            ]
           },
           {
             "u_sell_item": "FMCNote",

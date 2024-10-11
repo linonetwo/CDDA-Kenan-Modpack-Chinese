@@ -628,11 +628,11 @@
     "description": "他看起来像个好人。也许你不该让他死？",
     "goal": "MGOAL_CONDITION",
     "goal_condition": {
-      "npc_compare_time_since_var": "test_232_test_time",
-      "type": "general",
-      "context": "meeting",
-      "op": ">=",
-      "time": "2 hours"
+      "math": [
+        "time_since(npc_general_meeting_test_232_test_time)",
+        ">=",
+        "time('2 h')"
+      ]
     },
     "difficulty": 0,
     "value": 0,

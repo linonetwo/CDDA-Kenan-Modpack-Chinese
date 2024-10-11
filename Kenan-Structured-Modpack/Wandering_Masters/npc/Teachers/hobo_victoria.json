@@ -104,16 +104,18 @@
         "condition": {
           "and": [
             {
-              "u_has_skill": {
-                "skill": "dodge",
-                "level": 3
-              }
+              "math": [
+                "u_skill('dodge')",
+                ">=",
+                "3"
+              ]
             },
             {
-              "u_has_skill": {
-                "skill": "unarmed",
-                "level": 3
-              }
+              "math": [
+                "u_skill('unarmed')",
+                ">=",
+                "3"
+              ]
             },
             {
               "not": {

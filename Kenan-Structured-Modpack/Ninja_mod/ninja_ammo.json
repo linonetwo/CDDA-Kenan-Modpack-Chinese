@@ -11,8 +11,10 @@
     "volume": "250 ml",
     "price": 600,
     "to_hit": 2,
-    "bashing": 1,
-    "cutting": 9,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 9
+    },
     "material": [
       "steel"
     ],
@@ -54,8 +56,10 @@
     "volume": "250 ml",
     "price": 700,
     "to_hit": 2,
-    "bashing": 2,
-    "cutting": 15,
+    "melee_damage": {
+      "bash": 2,
+      "cut": 15
+    },
     "material": [
       "steel"
     ],
@@ -97,8 +101,10 @@
     "volume": "5 ml",
     "price": 100,
     "to_hit": -1,
-    "bashing": 1,
-    "cutting": 1,
+    "melee_damage": {
+      "bash": 1,
+      "cut": 1
+    },
     "material": [
       "paper"
     ],
@@ -130,7 +136,9 @@
     "weight": "70 g",
     "volume": "250 ml",
     "price": 500,
-    "bashing": 1,
+    "melee_damage": {
+      "bash": 1
+    },
     "material": [
       "powder"
     ],

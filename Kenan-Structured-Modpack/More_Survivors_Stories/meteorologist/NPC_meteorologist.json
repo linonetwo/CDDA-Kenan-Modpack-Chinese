@@ -156,9 +156,7 @@
       "value": "yes",
       "yes": "跑，我要跑，跑哪…",
       "no": {
-        "npc_has_var": "u_met_meteorologist",
-        "type": "general",
-        "context": "meeting",
+        "npc_has_var": "general_meeting_u_met_meteorologist",
         "value": "yes",
         "yes": "气温，降水量，但是…哦，对不起，我没注意到你。你好。",
         "no": "我好久没见到活人了。很高兴看到另一个幸存者。你好，<name_g>。"
@@ -168,9 +166,7 @@
       "sentinel": "u_met_meteorologist",
       "effect": [
         {
-          "npc_add_var": "u_met_meteorologist",
-          "type": "general",
-          "context": "meeting",
+          "npc_add_var": "general_meeting_u_met_meteorologist",
           "value": "yes"
         }
       ]
@@ -189,9 +185,7 @@
         "text": "也许我能帮你解决你的问题？",
         "topic": "TALK_meteorologist_safety",
         "condition": {
-          "npc_has_var": "u_helped_meteorologist",
-          "type": "flag",
-          "context": "mission",
+          "npc_has_var": "flag_mission_u_helped_meteorologist",
           "value": "yes"
         },
         "switch": true
@@ -203,20 +197,18 @@
           "type": "CONDITION",
           "condition": {
             "not": {
-              "npc_compare_time_since_var": "meteorologist_wait",
-              "type": "time",
-              "context": "mission",
-              "op": "<",
-              "time": "2 days"
+              "math": [
+                "time_since(n_time_mission_meteorologist_wait)",
+                "<",
+                "time('2 d')"
+              ]
             }
           }
         },
         "success": {
           "effect": [
             {
-              "npc_lose_var": "meteorologist_wait",
-              "type": "time",
-              "context": "mission"
+              "npc_lose_var": "time_mission_meteorologist_wait"
             }
           ],
           "topic": "TALK_MISSION_LIST"
@@ -439,10 +431,11 @@
     "end": {
       "effect": [
         {
-          "npc_add_var": "meteorologist_wait",
-          "type": "time",
-          "context": "mission",
-          "time": true
+          "math": [
+            "n_time_mission_meteorologist_wait",
+            "=",
+            "time('now')"
+          ]
         },
         {
           "u_spawn_item": "textbook_electronics"
@@ -569,9 +562,7 @@
     "end": {
       "effect": [
         {
-          "npc_add_var": "u_helped_meteorologist",
-          "type": "flag",
-          "context": "mission",
+          "npc_add_var": "flag_mission_u_helped_meteorologist",
           "value": "yes"
         }
       ],

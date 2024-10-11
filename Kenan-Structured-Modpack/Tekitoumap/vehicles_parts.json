@@ -15,9 +15,11 @@
       "DEF_DISARM"
     ],
     "volume": "10 L",
-    "bashing": 15,
     "category": "veh_parts",
-    "price": 40000
+    "price": 40000,
+    "melee_damage": {
+      "bash": 15
+    }
   },
   {
     "type": "vehicle_part",
@@ -110,10 +112,12 @@
       "steel"
     ],
     "volume": "500 ml",
-    "bashing": 8,
-    "cutting": 2,
     "category": "veh_parts",
-    "price": 15000
+    "price": 15000,
+    "melee_damage": {
+      "bash": 8,
+      "cut": 2
+    }
   },
   {
     "type": "vehicle_part",

@@ -14,8 +14,6 @@
     ],
     "volume": "250 ml",
     "weight": "73 g",
-    "bashing": 3,
-    "cutting": 2,
     "ammo_type": "arrow",
     "damage": {
       "damage_type": "stab",
@@ -28,7 +26,11 @@
     "count": 10,
     "effects": [
       "INCENDIARY"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 2
+    }
   },
   {
     "type": "AMMO",
@@ -45,8 +47,6 @@
     ],
     "volume": "250 ml",
     "weight": "100 g",
-    "bashing": 3,
-    "cutting": 2,
     "ammo_type": "arrow",
     "range": 4,
     "dispersion": 90,
@@ -55,7 +55,11 @@
     "stack_size": 10,
     "effects": [
       "LARGE_BEANBAG"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 2
+    }
   },
   {
     "type": "AMMO",
@@ -72,8 +76,6 @@
     ],
     "volume": "250 ml",
     "weight": "100 g",
-    "bashing": 3,
-    "cutting": 2,
     "ammo_type": "arrow",
     "range": 4,
     "dispersion": 90,
@@ -82,7 +84,11 @@
     "stack_size": 10,
     "effects": [
       "EMP"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 2
+    }
   },
   {
     "type": "AMMO",
@@ -100,8 +106,6 @@
     ],
     "volume": "250 ml",
     "weight": "60 g",
-    "bashing": 3,
-    "cutting": 2,
     "ammo_type": "arrow",
     "casing": "smart_arrow",
     "damage": {
@@ -116,6 +120,10 @@
     "stack_size": 10,
     "effects": [
       "WIDE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 3,
+      "cut": 2
+    }
   }
 ]

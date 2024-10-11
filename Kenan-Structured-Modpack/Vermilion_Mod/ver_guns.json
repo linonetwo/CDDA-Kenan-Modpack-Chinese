@@ -12,8 +12,6 @@
     "longest_side": "1230 mm",
     "price": "780 USD",
     "to_hit": -3,
-    "bashing": 16,
-    "cutting": 21,
     "material": [
       "steel",
       "superalloy",
@@ -104,7 +102,11 @@
     "ammo_effects": [
       "TRAIL",
       "WIDE"
-    ]
+    ],
+    "melee_damage": {
+      "bash": 16,
+      "cut": 21
+    }
   },
   {
     "id": "ptrs41",
@@ -112,7 +114,7 @@
     "name": {
       "str": "PTRS-41 反坦克步枪"
     },
-    "looks_like": "ar15",
+    "looks_like": "modular_ar15",
     "copy-from": "rifle_base",
     "symbol": "(",
     "color": "dark_gray",
@@ -126,7 +128,6 @@
     "volume": "3500 ml",
     "longest_side": "2108 mm",
     "to_hit": -1,
-    "bashing": 10,
     "ammo": [
       "145x114mm"
     ],
@@ -153,6 +154,9 @@
           "145x114mm_mag"
         ]
       }
-    ]
+    ],
+    "melee_damage": {
+      "bash": 10
+    }
   }
 ]

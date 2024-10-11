@@ -17,9 +17,11 @@
     ],
     "flags": "NONCONDUCTIVE",
     "volume": "1500 ml",
-    "bashing": 50,
     "price": 500,
-    "to_hit": 5
+    "to_hit": 5,
+    "melee_damage": {
+      "bash": 50
+    }
   },
   {
     "type": "GENERIC",
@@ -35,9 +37,11 @@
       "aluminum"
     ],
     "volume": "500 ml",
-    "cutting": 10,
     "price": 50,
-    "to_hit": -2
+    "to_hit": -2,
+    "melee_damage": {
+      "cut": 10
+    }
   },
   {
     "type": "GENERIC",
@@ -57,10 +61,12 @@
       "BRUTAL"
     ],
     "volume": "250000 L",
-    "bashing": 250,
-    "cutting": 1000,
     "price": "50000 USD",
-    "to_hit": -100
+    "to_hit": -100,
+    "melee_damage": {
+      "bash": 250,
+      "cut": 1000
+    }
   },
   {
     "type": "GENERIC",
@@ -76,9 +82,11 @@
       "scale_plutonium_material"
     ],
     "volume": "1750 ml",
-    "cutting": 75,
-    "bashing": 10,
     "price": "5000 USD",
-    "to_hit": 1
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 10,
+      "cut": 75
+    }
   }
 ]

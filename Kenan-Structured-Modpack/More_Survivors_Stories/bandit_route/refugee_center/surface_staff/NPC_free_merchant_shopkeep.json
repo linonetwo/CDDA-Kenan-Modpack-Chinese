@@ -7,9 +7,7 @@
         "text": "我在这里救了你的人，他说有报酬。",
         "topic": "TALK_EVAC_MERCHANT_SCAV_REWARD",
         "condition": {
-          "u_has_var": "unlucky_scavenger_safe",
-          "type": "flag",
-          "context": "safe",
+          "u_has_var": "flag_safe_unlucky_scavenger_safe",
           "value": "yes"
         }
       }
@@ -29,9 +27,7 @@
             "u_faction_rep": -100
           },
           {
-            "u_lose_var": "unlucky_scavenger_safe",
-            "type": "flag",
-            "context": "safe"
+            "u_lose_var": "flag_flag_unlucky_scavenger_safe"
           }
         ]
       }

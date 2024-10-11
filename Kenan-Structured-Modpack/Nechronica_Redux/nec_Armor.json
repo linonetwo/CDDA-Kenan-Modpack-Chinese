@@ -10,7 +10,6 @@
     "volume": "2 L",
     "price": "300 USD",
     "to_hit": -1,
-    "bashing": 28,
     "material": [
       "steel"
     ],
@@ -55,7 +54,10 @@
         ]
       }
     ],
-    "material_thickness": 2
+    "material_thickness": 2,
+    "melee_damage": {
+      "bash": 28
+    }
   },
   {
     "id": "nec_coffin",
@@ -68,7 +70,6 @@
     "volume": "12500 ml",
     "price": "800 USD",
     "to_hit": -3,
-    "bashing": 40,
     "material": [
       "steel",
       "wood"
@@ -109,7 +110,10 @@
         ]
       }
     ],
-    "material_thickness": 3
+    "material_thickness": 3,
+    "melee_damage": {
+      "bash": 40
+    }
   },
   {
     "id": "nec_ribbon",
