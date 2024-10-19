@@ -39,7 +39,7 @@
             "id": "kaenbyou_corpseexplosion_chain_explode", 
             "effect": [ 
               { "u_message": "CHAINED", "type": "mixed" },
-              { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_val('weight') / 1000000 ) / 2 ) * rng( 0.75, 1.25 ) )" ] },
+              { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_weight() / 1000000 ) / 2 ) * rng( 0.75, 1.25 ) )" ] },
               "npc_die",
               { "math": [ "var_corpseexplosion_chain_aoe", "=", "1 + rand(1)" ] },
               { "u_cast_spell": { "id": "kaenbyou_corpseexplosion4" }, "loc": { "global_val": "var_corpseexplosion_chain_loc" } },

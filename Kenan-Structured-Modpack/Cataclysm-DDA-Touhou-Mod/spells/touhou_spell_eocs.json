@@ -565,7 +565,7 @@
               { 
                 "id": "kaenbyou_corpseexplosion_explode", 
                 "effect": [ 
-                  { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_val('weight') / 1000000 ) / 2 ) * 100 * rng( 0.75, 1.25 ) )" ] },
+                  { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_weight() / 1000000 ) / 2 ) * 100 * rng( 0.75, 1.25 ) )" ] },
                   "npc_die",
                   { "math": [ "var_corpseexplosion_aoe", "=", "1 + rand(1)" ] },
                   { "u_cast_spell": { "id": "kaenbyou_corpseexplosion2" }, "loc": { "global_val": "var_corpseexplosion_loc" } },
@@ -1659,7 +1659,7 @@
         "run_eocs": [ 
           {
             "id": "nitori_extendo_arm_pulling_1",
-            "condition": { "math": [ "n_val('weight')", ">=", "u_val('weight')" ] },
+            "condition": { "math": [ "n_weight()", ">=", "u_val('weight')" ] },
             "effect": [ 
               { "u_cast_spell": { "id": "nitori_extendo_arm2" } },
               { "npc_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_creature_loc" } },
@@ -1693,7 +1693,7 @@
         "true_eocs": [ 
           {
             "id": "nitori_extendo_arm_pulling_2",
-            "condition": { "math": [ "u_val('weight')", ">=", "n_val('weight')" ] },
+            "condition": { "math": [ "u_val('weight')", ">=", "n_weight()" ] },
             "effect": [ 
               { "u_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
               { "u_message": "You pull your target towards you!", "type": "good" },
@@ -3252,7 +3252,7 @@
                 "run_eocs": [ 
                   {
                     "id": "yamame_damnedrope_pulling_1",
-                    "condition": { "math": [ "( n_val('weight') * 2 )", ">=", "u_val('weight')" ] },
+                    "condition": { "math": [ "( n_weight() * 2 )", ">=", "u_val('weight')" ] },
                     "effect": [ 
                       { "u_cast_spell": { "id": "yamame_damnedrope3" } },
                       { "npc_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_creature_loc" } },
@@ -3307,7 +3307,7 @@
                 "run_eocs": [ 
                   {
                     "id": "yamame_damnedrope_pulling_2",
-                    "condition": { "math": [ "( u_val('weight') * 2 )", ">=", "n_val('weight')" ] },
+                    "condition": { "math": [ "( u_val('weight') * 2 )", ">=", "n_weight()" ] },
                     "effect": [ 
                       { "u_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_loc" } },
                       { "u_message": "You pull your target towards you!", "type": "good" },

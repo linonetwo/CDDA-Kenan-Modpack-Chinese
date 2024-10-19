@@ -94,7 +94,7 @@
               { "math": [ "var_melee_all_dmg", "=", "n_melee_damage('ALL')" ] },
               { "math": [ "var_melee_phys_dmg", "=", "var_melee_bash_dmg + var_melee_cut_dmg + var_melee_stab_dmg" ] },
               { "math": [ "var_gun_dmg", "=", "n_gun_damage('ALL')" ] },
-              { "math": [ "var_weapon_weight_kg", "=", "( n_val('weight') / 1000000 )" ] }
+              { "math": [ "var_weapon_weight_kg", "=", "( n_weight() / 1000000 )" ] }
             ]
           }
         ]
@@ -659,8 +659,8 @@
                             "id": "seiga_corpsecursed_kill_monster_check_3",
                             "condition": {
                               "or": [
-                                { "math": [ "n_val('volume')", ">=", "65000" ] },
-                                { "math": [ "n_val('weight')", ">=", "65000" ] }
+                                { "math": [ "n_volume()", ">=", "65000" ] },
+                                { "math": [ "n_weight()", ">=", "65000" ] }
                               ]
                             },
                             "effect": [ 
