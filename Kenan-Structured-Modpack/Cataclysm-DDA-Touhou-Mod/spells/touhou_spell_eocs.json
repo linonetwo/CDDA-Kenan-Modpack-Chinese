@@ -1659,7 +1659,7 @@
         "run_eocs": [ 
           {
             "id": "nitori_extendo_arm_pulling_1",
-            "condition": { "math": [ "n_weight()", ">=", "u_val('weight')" ] },
+            "condition": { "math": [ "n_weight()", ">=", "u_weight()" ] },
             "effect": [ 
               { "u_cast_spell": { "id": "nitori_extendo_arm2" } },
               { "npc_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_creature_loc" } },
@@ -1693,7 +1693,7 @@
         "true_eocs": [ 
           {
             "id": "nitori_extendo_arm_pulling_2",
-            "condition": { "math": [ "u_val('weight')", ">=", "n_weight()" ] },
+            "condition": { "math": [ "u_weight()", ">=", "n_weight()" ] },
             "effect": [ 
               { "u_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
               { "u_message": "You pull your target towards you!", "type": "good" },
@@ -3252,7 +3252,7 @@
                 "run_eocs": [ 
                   {
                     "id": "yamame_damnedrope_pulling_1",
-                    "condition": { "math": [ "( n_weight() * 2 )", ">=", "u_val('weight')" ] },
+                    "condition": { "math": [ "( n_weight() * 2 )", ">=", "u_weight()" ] },
                     "effect": [ 
                       { "u_cast_spell": { "id": "yamame_damnedrope3" } },
                       { "npc_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_creature_loc" } },
@@ -3307,7 +3307,7 @@
                 "run_eocs": [ 
                   {
                     "id": "yamame_damnedrope_pulling_2",
-                    "condition": { "math": [ "( u_val('weight') * 2 )", ">=", "n_weight()" ] },
+                    "condition": { "math": [ "( u_weight() * 2 )", ">=", "n_weight()" ] },
                     "effect": [ 
                       { "u_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_loc" } },
                       { "u_message": "You pull your target towards you!", "type": "good" },
