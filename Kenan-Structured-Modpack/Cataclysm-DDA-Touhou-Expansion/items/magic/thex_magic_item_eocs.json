@@ -431,13 +431,21 @@
   {
     "id": "thorny_box_eoc",
     "type": "effect_on_condition",
+    "condition": { "not": { "u_has_trait": "PROF_KASEN" } },
     "effect": [
       { "u_add_effect": "thorny_box_effect", "duration": "1440 m" },
       { "math": [ "u_var_thorny_box", "+=", "1" ] },
-      { "math": [ "u_var_thorny_box_timer", "+=", "120" ] }, 
+      { "math": [ "u_var_thorny_box_timer", "+=", "24 + rand(48)" ] }, 
       { "run_eocs": [ "thorny_box_timer_eoc" ] },
       { "u_message": "You drink from the box.", "type": "mixed" }
-    ]
+    ],
+    "false_effect": [ 
+      { "u_add_effect": "thorny_box_effect", "duration": "1440 m" },
+      { "u_message": "You drink from the box.", "type": "mixed" }
+    ],
+    "//": "First checks if whoever drinks it is not Kasen. Then it adds the healing effect for 24 h, adds var_DRANK and the var_TIMER for ~48 h on average, and runs the timer EOC below",
+    "//2": "This allows the demerit to stack if the box is continuously drank from, otherwise the duration just refreshes",
+    "//3": "If it was Kasen who drank from the box, it just adds the positive effect. Because well, she's..."
   },
   {
     "id": "thorny_box_timer_eoc",
@@ -450,7 +458,8 @@
     "false_effect": [ 
       { "math": [ "u_var_thorny_box", "=", "0" ] },
       { "u_lose_effect": "thorny_box_demerit_effect" }
-    ]
+    ],
+    "//": "This runs as long as there's var_TIMER. It adds the demerit effect with at least x2 duration of the healing effect, and queues the var_TIMER -1 EOC below every 1 h"
   },
   {
     "id": "thorny_box_timer2_eoc",

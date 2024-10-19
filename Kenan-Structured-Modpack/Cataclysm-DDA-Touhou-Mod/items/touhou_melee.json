@@ -19,7 +19,7 @@
     "color": "red_white",
     "environmental_protection": 2,
     "warmth": 30,
-    "use_action": { "type": "transform", "msg": "You loosen your %s.", "target": "iku_long_scarf_loose", "menu_text": "Loosen" },
+    "use_action": { "type": "transform", "target": "iku_long_scarf_loose", "menu_text": "Loosen", "msg": "You loosen your %s." },
     "armor": [ { "covers": [ "mouth" ], "coverage": 85, "encumbrance": [ 4, 8 ] } ],
     "weapon_category": [ "WHIPS" ],
     "flags": [ "DURABLE_MELEE", "MAGIC_FOCUS", "OUTER", "OVERSIZE", "REACH_ATTACK", "REACH3", "WHIP" ]
@@ -44,7 +44,7 @@
     "color": "red_white",
     "environmental_protection": 1,
     "warmth": 15,
-    "use_action": { "type": "transform", "msg": "You wrap your scarf tighter.", "target": "iku_long_scarf", "menu_text": "Wrap tighter" },
+    "use_action": { "type": "transform", "target": "iku_long_scarf", "menu_text": "Wrap tighter", "msg": "You wrap your scarf tighter." },
     "revert_to": "iku_long_scarf",
     "armor": [ { "covers": [ "mouth" ], "coverage": 35, "encumbrance": [ 0, 2 ] } ],
     "weapon_category": [ "WHIPS" ],
@@ -143,7 +143,7 @@
     "looks_like": "baton",
     "color": "yellow",
     "techniques": [ "WBLOCK_1" ],
-    "use_action": { "type": "transform", "menu_text": "Summon Sword", "msg": "You summon your sword.", "target": "tenshi_jian_extended" },
+    "use_action": { "type": "transform", "target": "tenshi_jian_extended", "menu_text": "Summon Sword", "msg": "You summon your sword." },
     "flags": [ "DURABLE_MELEE", "MAGIC_FOCUS", "TRADER_AVOID" ]
   },
   {

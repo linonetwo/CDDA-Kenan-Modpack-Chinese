@@ -20,13 +20,13 @@
     "use_action": [ 
       {
         "type": "effect_on_conditions",
-        "description": "Drink",
+        "menu_text": "Drink from the box",
+        "description": "Drink from the box.",
         "effect_on_conditions": [ "thorny_box_eoc" ]
       } 
     ],
     "flags": [ "NO_RELOAD", "TARDIS", "TRADER_AVOID", "UNBREAKABLE" ],
-    "//": "Should always have the same recharge time as oni_gourd ",
-    "//2": "MAGAZINE cannot be drinked from, it has to be a CONTAINER, but charge_info requires MAGAZINE to work. The spell should be replaced by a custom sake that adds the healing effect"
+    "//": "MAGAZINE cannot be drinked from, it has to be a CONTAINER, but charge_info requires MAGAZINE to work. The spell should be replaced by a custom sake that adds the healing effect"
   },
   {
     "id": "thorny_box_spell",

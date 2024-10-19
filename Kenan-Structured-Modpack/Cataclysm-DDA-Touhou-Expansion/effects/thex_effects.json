@@ -242,7 +242,8 @@
           { "value": "STRENGTH", "add": { "math": [ "var_posessed_trumpet_str" ] } }
         ]
       }
-    ]
+    ],
+    "//": "This has to be an effect_type instead of an enchantment so it can be granted by the EOC"
   },
   {
     "id": "shrieking_slow_effect",
@@ -284,6 +285,35 @@
     "max_intensity": 1,
     "max_effective_intensity": 1,
     "//": "Dummy effect so it can be used as condition for skinwalker witch transformation"
+  },
+  {
+    "id": "spider_charm_effect",
+    "type": "effect_type",
+    "name": [ "Earth spider protection" ],
+    "desc": [ "You feel strangely healthy." ],
+    "rating": "good",
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "removes_effects": [
+      "bloodworms",
+      "brainworms",
+      "common_cold",
+      "dermatik",
+      "flu",
+      "foodpoison",
+      "fungus",
+      "infected",
+      "paincysts",
+      "rat_bite_fever",
+      "rat",
+      "spores",
+      "tapeworm",
+      "tetanus",
+      "toxin_buildup",
+      "icy_pyrexia",
+      "scarlet_plague",
+      "volatile_rot"      
+    ]
   },
   {
     "id": "sprint_effect",

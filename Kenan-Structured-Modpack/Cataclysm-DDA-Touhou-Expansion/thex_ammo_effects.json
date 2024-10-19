@@ -9,8 +9,8 @@
   {
     "id": "473x33_TEST_spell",
     "type": "SPELL",
-    "name": { "str": " " },
-    "description": " ",
+    "name": { "str": "" },
+    "description": "",
     "spell_class": "NONE",
     "valid_targets": [ "ally", "hostile" ],
     "effect": "attack",
@@ -27,8 +27,8 @@
   {
     "id": "473x33_TEST_spell2",
     "type": "SPELL",
-    "name": { "str": " " },
-    "description": " ",
+    "name": { "str": "" },
+    "description": "",
     "spell_class": "NONE",
     "valid_targets": [ "ally", "hostile" ],
     "effect": "attack",
@@ -40,5 +40,266 @@
     "difficulty": -50,
     "message": "",
     "flags": [ "NO_FAIL" ]
+  },
+  {
+    "id": "impurity_ammo_effect",
+    "type": "ammo_effect",
+    "eoc": [ "impurity_ammo_eoc" ]
+  },
+  {
+    "id": "impurity_ammo_eoc",
+    "type": "effect_on_condition",
+    "condition": "has_beta",
+    "effect": [
+      {
+        "run_eocs": [
+          {
+            "id": "impurity_ammo_character_eoc",
+            "condition": "npc_is_character",
+            "effect": [ { "math": [ "n_vitamin('impurity')", "+=", "25 + rand(25)" ] } ]
+          },
+          {
+            "id": "impurity_ammo_monster_eoc",
+            "condition": "npc_is_monster",
+            "effect": [ 
+              {
+                "if": { "math": [ "rand(2)", "==", "0" ] },
+                "then": [ { "math": [ "n_var_impurity", "+=", "1" ] } ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "//": "When creatures are hit by ammo, they run this EOC as n_ , and add impurity to themselves",
+    "//2": "This was tested with a debug monster eating being shot until it had a nice amount of impurity, then spawning a mon_impurity_mine dealing x100 times its current dmg, and checking the debug monster's HP",
+    "//3": "The condition is required as the ammo procs the eoc even if hitting ground, which causes a warning"
+  },
+  {
+    "id": "lunar_bousan_eoc",
+    "type": "effect_on_condition",
+    "condition": { "math": [ "var_bousan_pump", "<", "3" ] },
+    "effect": [
+      { "turn_cost": 0.25 },
+      { "math": [ "var_bousan_pump", "+=", "1" ] },
+      { "u_message": "You pump the Bousan." }
+    ],
+    "false_effect": [ 
+      { "math": [ "var_bousan_pump", "=", "0" ] },
+      { "u_message": "The vacuum defaults to atmospheric pressure.", "type": "mixed" }
+    ],
+    "//WIP": "This has to be item-specific"
+  },
+  {
+    "id": "ammo_lunar_bousan_effect",
+    "type": "ammo_effect",
+    "aoe": {
+      "field_type": "fd_thex_dummy",
+      "intensity_min": 1,
+      "intensity_max": 1,
+      "radius": 0,
+      "radius_z": 0,
+      "chance": 100,
+      "size": 0,
+      "check_passable": false,
+      "check_sees": true,
+      "check_sees_radius": 0
+    },
+    "eoc": [ "ammo_lunar_bousan_eoc" ]
+  },
+  {
+    "id": "ammo_lunar_bousan_eoc",
+    "type": "effect_on_condition",
+    "effect": [ 
+      { "u_location_variable": { "global_val": "ammo_lunar_bousan_loc" }, "field": "fd_thex_dummy", "target_max_radius": 21 },
+      { "math": [ "var_lunar_bousan_distance", "=", "( distance('u', ammo_lunar_bousan_loc) )"] },
+      {
+        "if": { "map_field_id": "fd_thex_dummy", "loc": { "global_val": "ammo_lunar_bousan_loc" } },
+        "then": [ 
+          { "u_transform_radius": 21, "ter_furn_transform": "remove_dummy_field" },
+          { "run_eoc_with": "ammo_lunar_bousan_check_1_eoc", "alpha_talker": "avatar" }
+        ]
+      }
+    ],
+    "//": "This set ups the dummy field (to mark where the character shooted the weapon), the distance to the target (used in spells), and tries to remove the dummy field",
+    "//2": "If the field is removed, the checks below are done to do different effects, according to the shooting mode"
+  },
+  {
+    "id": "ammo_lunar_bousan_check_1_eoc",
+    "type": "effect_on_condition",
+    "condition": { "u_has_wielded_with_flag": "BOUSAN_BLAST_FLAG" },
+    "effect": [ 
+      { "math": [ "var_bousan_pump", "=", "0" ] },
+      { "u_cast_spell": { "id": "ammo_lunar_bousan_blast" }, "loc": { "global_val": "ammo_lunar_bousan_loc" } }
+    ],
+    "false_effect": [ { "run_eocs": [ "ammo_lunar_bousan_check_2_eoc" ] } ]
+  },
+  {
+    "id": "ammo_lunar_bousan_blast",
+    "type": "SPELL",
+    "name": { "str": "Bousan BLAST (dmg)" },
+    "description": "",
+    "spell_class": "NONE",
+    "teachable": false,
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "effect": "attack",
+    "extra_effects": [ { "id": "ammo_lunar_bousan_blast2" }, { "id": "ammo_lunar_bousan_blast_stun" } ],
+    "shape": "cone",
+    "damage_type": "bash",
+    "min_damage": { "math": [ "( 20 + ( var_bousan_pump * 15 ) )" ] },
+    "max_damage": { "math": [ "( 30 + ( var_bousan_pump * 25 ) )" ] },
+    "min_range": 7,
+    "max_range": 7,
+    "min_aoe": 45,
+    "max_aoe": 45,
+    "difficulty": -50,
+    "message": "",
+    "max_level": 1,
+    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "SILENT" ],
+    "//": "min dmg (20 - 65), max dmg (30 - 105)",
+    "//2": "+1 range as qol"
+  },
+  {
+    "id": "ammo_lunar_bousan_blast2",
+    "type": "SPELL",
+    "name": { "str": "Bousan BLAST (bash)" },
+    "description": "",
+    "spell_class": "NONE",
+    "valid_targets": [ "ground", "item" ],
+    "effect": "bash",
+    "shape": "cone",
+    "damage_type": "bash",
+    "min_damage": { "math": [ "( 120 + ( var_bousan_pump * 60 ) )" ] },
+    "max_damage": { "math": [ "( 180 + ( var_bousan_pump * 100 ) )" ] },
+    "min_range": 7,
+    "max_range": 7,
+    "min_aoe": 45,
+    "max_aoe": 45,
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "flags": [ "IGNORE_WALLS", "NO_EXPLOSION_SFX", "NO_LEGS", "RANDOM_DAMAGE", "SILENT" ],
+    "//": "min bash (120 - 300), max dmg (180 - 480)",
+    "//2": "+1 range as qol"
+  },
+  {
+    "id": "ammo_lunar_bousan_blast_stun",
+    "type": "SPELL",
+    "name": { "str": "Bousan BLAST (stun)" },
+    "description": "",
+    "spell_class": "NONE",
+    "valid_targets": [ "ally", "hostile", "ground", "item" ],
+    "effect": "mod_moves",
+    "extra_effects": [ { "id": "ammo_lunar_bousan_blast_knockback" } ],
+    "shape": "cone",
+    "damage_type": "pure",
+    "min_damage": -100,
+    "max_damage": -100,
+    "min_range": 7,
+    "max_range": 7,
+    "min_aoe": 45,
+    "max_aoe": 45,
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "flags": [ "NO_EXPLOSION_SFX", "NO_FAIL", "NO_HANDS", "NO_LEGS", "SILENT" ],
+    "//": "+1 range as qol"
+  },
+  {
+    "id": "ammo_lunar_bousan_blast_knockback",
+    "type": "SPELL",
+    "name": { "str": "Bousan BLAST (knockback)" },
+    "description": "",
+    "spell_class": "NONE",
+    "valid_targets": [ "ally", "hostile", "ground", "item" ],
+    "effect": "directed_push",
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_damage": { "math": [ "( (-0.4) * var_lunar_bousan_distance ) + 4.4 " ] },
+    "max_damage": { "math": [ "( (-0.4) * var_lunar_bousan_distance ) + 4.4 " ] },
+    "min_range": 6,
+    "max_range": 6,
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "flags": [ "NO_EXPLOSION_SFX",  "NO_FAIL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "SILENT" ],
+    "//": "Knockback goes from 4 - 2, decaying with distance"
+  },
+  {
+    "id": "ammo_lunar_bousan_check_2_eoc",
+    "type": "effect_on_condition",
+    "condition": { "u_has_wielded_with_flag": "BOUSAN_PROJ_FLAG" },
+    "effect": [ 
+      { "math": [ "var_bousan_pump", "=", "0" ] },
+      { "u_cast_spell": { "id": "ammo_lunar_bousan_proj" }, "loc": { "global_val": "ammo_lunar_bousan_loc" } }
+    ]
+  },
+  {
+    "id": "ammo_lunar_bousan_proj",
+    "type": "SPELL",
+    "name": { "str": "Bousan shot (dmg)" },
+    "description": "",
+    "spell_class": "NONE",
+    "teachable": false,
+    "valid_targets": [ "ally", "ground", "hostile" ],
+    "effect": "attack",
+    "extra_effects": [ { "id": "ammo_lunar_bousan_proj_stun" } ],
+    "shape": "cone",
+    "damage_type": "bash",
+    "min_damage": { "math": [ "( (-14) * max( 5, var_lunar_bousan_distance ) + 300 ) * 0.95 " ] },
+    "max_damage": { "math": [ "( (-14) * max( 5, var_lunar_bousan_distance ) + 300 ) * 1.05 " ] },
+    "min_range": { "math": [ "( var_lunar_bousan_distance )" ] },
+    "max_range": { "math": [ "( var_lunar_bousan_distance )" ] },
+    "min_aoe": 20,
+    "max_aoe": 20,
+    "difficulty": -50,
+    "message": "",
+    "max_level": 1,
+    "flags": [ "NO_EXPLOSION_SFX", "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "SILENT" ],
+    "//": "max dmg is calculated around the (intended) 20 dmg * 13 pellet = 230 at close enough distance",
+    "//2": "It decays with distance beyond 5 tiles away"
+  },
+  {
+    "id": "ammo_lunar_bousan_proj_stun",
+    "type": "SPELL",
+    "name": { "str": "Bousan shot (stun)" },
+    "description": "",
+    "spell_class": "NONE",
+    "valid_targets": [ "ally", "hostile", "ground", "item" ],
+    "effect": "mod_moves",
+    "extra_effects": [ { "id": "ammo_lunar_bousan_proj_knockback" } ],
+    "shape": "cone",
+    "damage_type": "pure",
+    "min_damage": -100,
+    "max_damage": -100,
+    "min_range": 5,
+    "max_range": 5,
+    "min_aoe": 20,
+    "max_aoe": 20,
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "flags": [ "NO_EXPLOSION_SFX", "NO_FAIL", "NO_HANDS", "NO_LEGS", "SILENT" ],
+    "//": "Reduced range relative to shooting it in blast mode"
+  },
+  {
+    "id": "ammo_lunar_bousan_proj_knockback",
+    "type": "SPELL",
+    "name": { "str": "Bousan shot (knockback)" },
+    "description": "",
+    "spell_class": "NONE",
+    "valid_targets": [ "ally", "hostile", "ground", "item" ],
+    "effect": "directed_push",
+    "shape": "blast",
+    "damage_type": "bash",
+    "min_damage": { "math": [ "( (-0.5) * var_lunar_bousan_distance ) + 3.5 " ] },
+    "max_damage": { "math": [ "( (-0.5) * var_lunar_bousan_distance ) + 3.5 " ] },
+    "min_range": 5,
+    "max_range": 5,
+    "max_level": 1,
+    "difficulty": -50,
+    "message": "",
+    "flags": [ "NO_EXPLOSION_SFX",  "NO_FAIL", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "SILENT" ],
+    "//": "Knockback goes from 4 - 2, decaying with distance. Reduced knockback relative to shooting it in blast mode"
   }
 ]

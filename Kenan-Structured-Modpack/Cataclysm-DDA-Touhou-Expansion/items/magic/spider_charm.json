@@ -14,14 +14,8 @@
     "symbol": "🕷",
     "looks_like": "mon_spider_cellar_small",
     "color": "brown",
-    "relic_data": { 
-      "passive_effects": [ 
-        { 
-          "condition": "ALWAYS", 
-          "mutations": [ "spider_charm_mut" ] 
-        } 
-      ] 
-    },
-    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ]
+    "relic_data": { "passive_effects": [ { "id": "ench_spider_charm" } ] },
+    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ],
+    "//": "The ench grants the effect, so a condition can be used, else it's more complex to do"
   }
 ]

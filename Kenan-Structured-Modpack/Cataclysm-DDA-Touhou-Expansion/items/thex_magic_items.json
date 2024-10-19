@@ -105,8 +105,8 @@
       {
         "target": "art_lampad_torch_lit",
         "type": "transform",
-        "msg": "You light the torch. ",
         "menu_text": "Light torch",
+        "msg": "You light the torch. ",
         "active": true,
         "need_fire": 0
       }
@@ -136,8 +136,8 @@
       {
         "target": "art_lampad_torch",
         "type": "transform",
-        "msg": "THE torch is extinguished…",
         "menu_text": "Extinguish",
+        "msg": "THE torch is extinguished…",
         "active": false
       }
     ],
@@ -175,7 +175,6 @@
     "symbol": ")",
     "looks_like": "bottle_gourd",
     "color": "magenta",
-    "use_action": [ { "type": "cast_spell", "spell_id": "oni_gourd_sake", "no_fail": true, "level": 1 } ],
     "flags": [ "NO_RELOAD", "NO_UNLOAD", "TARDIS", "TRADER_AVOID", "UNBREAKABLE" ]
   },
   {
@@ -194,13 +193,6 @@
     "symbol": "-",
     "looks_like": "trumpet",
     "color": "yellow",
-    "use_action": [
-      {
-        "type": "effect_on_conditions",
-        "description": "Play the trumpet.",
-        "effect_on_conditions": [ "possessed_trumpet_eoc" ]
-      }
-    ],
     "flags": [ "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
   },
   {
@@ -244,7 +236,6 @@
       { "covers": [ "hand_l", "hand_r" ], "coverage": 20, "encumbrance": 1 },
       { "covers": [ "head" ], "coverage": 20, "encumbrance": 1 }
     ],
-    "relic_data": { "passive_effects": [ { "condition": "ALWAYS", "has": "WORN", "mutations": [ "CANNIBAL", "skinwalker_pelt_mut" ] } ] },
     "flags": [ "ALLOWS_NATURAL_ATTACKS", "OUTER", "OVERSIZE" ]
   },
   {
@@ -279,14 +270,6 @@
     "symbol": "🕷",
     "looks_like": "mon_spider_cellar_small",
     "color": "brown",
-    "relic_data": { 
-      "passive_effects": [
-        { 
-          "condition": "ALWAYS", 
-          "mutations": [ "spider_charm_mut" ]
-        } 
-      ]
-    },
     "flags": [ "TRADER_AVOID", "UNBREAKABLE" ]
   },
   {

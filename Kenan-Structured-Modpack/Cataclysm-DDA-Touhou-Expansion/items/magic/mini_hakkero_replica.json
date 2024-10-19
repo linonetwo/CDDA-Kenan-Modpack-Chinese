@@ -22,14 +22,15 @@
       {
         "type": "transform",
         "target": "mini_hakkero_replica_on",
-        "msg": "You use the mini hakkero as a light source.",
         "menu_text": "Turn on",
+        "msg": "You use the mini hakkero as a light source.",
         "active": true,
         "ammo_scale": 0
       },
       {
         "type": "effect_on_conditions",
-        "description": "Cast spell.",
+        "menu_text": "Cast spell",
+        "description": "Use the mini hakkero to cast a spell.",
         "effect_on_conditions": [ "mini_hakkero_replica_eoc" ]
       }
     ],
@@ -48,8 +49,8 @@
       {
         "type": "transform",
         "target": "mini_hakkero_replica",
-        "msg": "You turn off the mini hakkero.",
         "menu_text": "Turn off",
+        "msg": "You turn off the mini hakkero.",
         "ammo_scale": 0
       }
     ],

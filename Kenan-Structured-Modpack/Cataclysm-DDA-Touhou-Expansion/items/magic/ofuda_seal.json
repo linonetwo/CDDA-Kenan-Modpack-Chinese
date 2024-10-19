@@ -1,0 +1,29 @@
+[
+  {
+    "id": "ofuda_seal",
+    "type": "ARMOR",
+    "name": { "str": "ofuda earring", "str_pl": "ofuda earrings" },
+    "description": "A piece of paper, with intricate writing.",
+    "volume": "1 ml",
+    "weight": "1 g",
+    "//integral_volume": "1 ml",
+    "//integral_weight": "1 g",
+    "longest_side": "10 cm",
+    "//integral_longest_side": "10 cm",
+    "price_postapoc": 25000,
+    "to_hit": { "balance": "neutral", "grip": "solid", "length": "hand", "surface": "any" },
+    "melee_damage": { "soul": 3 },
+    "//install_time": "2 s",
+    "material": [ "steel" ],
+    "symbol": "☯",
+    "looks_like": "paper",
+    "color": "light_red",
+    "//location": "accessories",
+    "//min_skills": [ [ "weapon", 0 ] ],
+    "//mod_targets": [ "bow", "crossbow", "launcher", "pistol", "rifle", "shotgun", "slingshot", "smg" ],
+    "relic_data": { "passive_effects": [ { "id": "ench_ofuda_seal" } ] },
+    "flags": [ "FANCY", "NO_WEAR_EFFECT", "TRADER_AVOID", "UNBREAKABLE" ],
+    "//note": "Should be GUNMOD but if attached to the weapon it doesn't apply the enchant to the player. It's earrings for now",
+    "//note2": "Should be paper but it burns, so it's the default and trusty steel"
+  }
+]

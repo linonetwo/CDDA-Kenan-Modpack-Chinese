@@ -18,10 +18,10 @@
     "melee_damage": { "bash": 8 },
     "use_action": [
       {
-        "target": "ibm5100_lit",
         "type": "transform",
-        "msg": "You turn on the computer.",
+        "target": "ibm5100_lit",
         "menu_text": "Turn on",
+        "msg": "You turn on the computer.",
         "active": true
       }
     ],
@@ -33,7 +33,7 @@
     "name": { "str": "IBM 5100 (ON)", "str_pl": "IBM 5100 (ON)" },
     "copy-from": "ibm5100",
     "description": "Despite not being connected to a power outlet, this device can be turned on.  Strange…",
-    "use_action": [ { "target": "ibm5100", "type": "transform", "msg": "You turn off the computer.", "menu_text": "Turn off" } ],
+    "use_action": [ { "type": "transform", "target": "ibm5100", "menu_text": "Turn off", "msg": "You turn off the computer." } ],
     "flags": [ "LIGHT_20", "TRADER_AVOID", "WATCH", "WATER_BREAK" ]
   }
 ]

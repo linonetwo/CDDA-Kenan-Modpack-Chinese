@@ -64,7 +64,8 @@
       { "type": "firestarter", "moves": 100 },
       {
         "type": "effect_on_conditions",
-        "description": "Trigger sphere",
+        "menu_text": "Trigger sphere",
+        "description": "Trigger the fire ball, cause it to go unstable.",
         "effect_on_conditions": [
           {
             "id": "mokou_fireball_eoc",
@@ -117,8 +118,8 @@
       {
         "type": "transform",
         "target": "mokou_fireball4",
-        "msg": "You cause the ball to go out of control.",
         "menu_text": "Trigger sphere",
+        "msg": "You cause the ball to go out of control.",
         "need_wielding": true,
         "target_timer": "5 s",
         "active": true
@@ -180,7 +181,8 @@
     "weapon_category": [ "POLEARMS" ],
     "use_action": {
       "type": "effect_on_conditions",
-      "description": "Dismiss the Gungnir",
+      "menu_text": "Dismiss the Gungnir",
+      "description": "Dismiss the Gungnir, restoring some mana.",
       "effect_on_conditions": [ "remilia_gungnir_dismiss_eoc" ]
     },
     "flags": [

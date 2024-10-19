@@ -6,7 +6,7 @@
     "copy-from": "egg_anomalocaris",
     "description": "A clump of Aegirocassis eggs.",
     "color": "pink",
-    "rot_spawn": "GROUP_EGG_AEGIROCASSIS",
+    "rot_spawn": { "group": "GROUP_EGG_AEGIROCASSIS" },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -16,7 +16,7 @@
     "copy-from": "egg_carnufex",
     "description": "An Anatosuchus egg.",
     "proportional": { "volume": 0.25, "weight": 0.25, "quench": 0.25, "calories": 0.25 },
-    "rot_spawn": "GROUP_EGG_ANATOSUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_ANATOSUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -37,8 +37,7 @@
     "healthy": 0,
     "calories": 240,
     "fun": -20,
-    "rot_spawn": "GROUP_EGG_ANOMALOCARIS",
-    "rot_spawn_chance": 66,
+    "rot_spawn": { "group": "GROUP_EGG_ANOMALOCARIS", "chance": 66 },
     "vitamins": [ [ "calcium", 5 ], [ "iron", 12 ], [ "vitA", 12 ], [ "vitB", 42 ] ],
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ],
     "//": "Based on egg_insect but reduced"
@@ -50,7 +49,7 @@
     "copy-from": "egg_anomalocaris",
     "description": "A clump of Arthropleura eggs.",
     "color": "brown",
-    "rot_spawn": "GROUP_EGG_ARTHROPLEURA",
+    "rot_spawn": { "group": "GROUP_EGG_ARTHROPLEURA" },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -59,7 +58,7 @@
     "name": { "str": "ancient arthropod eggs" },
     "copy-from": "egg_anomalocaris",
     "description": "A clump of ancient arthropod eggs.",
-    "rot_spawn": "GROUP_EGG_ARTHROPODAQUATIC_SMALL",
+    "rot_spawn": { "group": "GROUP_EGG_ARTHROPODAQUATIC_SMALL" },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -68,7 +67,7 @@
     "name": { "str": "barinasuchus egg" },
     "copy-from": "egg_erythrosuchus",
     "description": "A Barinasuchus egg.",
-    "rot_spawn": "GROUP_EGG_BARINASUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_BARINASUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -77,7 +76,7 @@
     "name": { "str": "belodon egg" },
     "copy-from": "egg_carnufex",
     "description": "A Belodon egg.",
-    "rot_spawn": "GROUP_EGG_BELODON",
+    "rot_spawn": { "group": "GROUP_EGG_BELODON" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -86,7 +85,7 @@
     "name": { "str": "boverisuchus egg" },
     "copy-from": "egg_carnufex",
     "description": "A Boverisuchus egg.",
-    "rot_spawn": "GROUP_EGG_BOVERISUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_BOVERISUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -96,7 +95,7 @@
     "copy-from": "egg_erythrosuchus",
     "description": "A Carbonemys egg.",
     "comestible_type": "FOOD",
-    "rot_spawn": "GROUP_EGG_CARBONEMYS",
+    "rot_spawn": { "group": "GROUP_EGG_CARBONEMYS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -117,8 +116,7 @@
     "healthy": 1,
     "calories": 180,
     "fun": -12,
-    "rot_spawn": "GROUP_EGG_CARNUFEX",
-    "rot_spawn_chance": 90,
+    "rot_spawn": { "group": "GROUP_EGG_CARNUFEX", "chance": 90 },
     "vitamins": [ [ "egg_allergen", 1 ] ],
     "flags": [ "FREEZERBURN", "RAW" ],
     "//": "Stats from egg_reptile ",
@@ -130,6 +128,7 @@
     "name": { "str": "cotylorhynchus egg" },
     "copy-from": "egg_dimetrodon",
     "description": "A Cotylorhynchus egg.",
+    "rot_spawn": { "group": "GROUP_EGG_COTYLORHYNCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -150,8 +149,7 @@
     "healthy": 1,
     "calories": 360,
     "fun": -16,
-    "rot_spawn": "GROUP_EGG_DIMETRODON",
-    "rot_spawn_chance": 90,
+    "rot_spawn": { "group": "GROUP_EGG_DIMETRODON", "chance": 90 },
     "vitamins": [ [ "calcium", "56 mg" ], [ "iron", "1800 μg" ], [ "egg_allergen", 1 ] ],
     "flags": [ "FREEZERBURN", "RAW" ],
     "//": "Based on scaling up egg_carnufex , nutritional facts from egg_chicken x2 "
@@ -173,8 +171,7 @@
     "healthy": 4,
     "stack_size": 12,
     "proportional": { "volume": 2, "weight": 2, "quench": 2, "calories": 2 },
-    "rot_spawn": "GROUP_EGG_DIPLOCAULUS",
-    "rot_spawn_chance": 90,
+    "rot_spawn": { "group": "GROUP_EGG_DIPLOCAULUS", "chance": 90 },
     "vitamins": [ [ "calcium", 2 ], [ "iron", 4 ], [ "vitA", 2 ], [ "vitB", 12 ], [ "vitC", 1 ], [ "egg_allergen", 1 ] ],
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
@@ -197,8 +194,7 @@
     "healthy": 2,
     "quench": 6,
     "stack_size": 1,
-    "rot_spawn": "GROUP_EGG_DODO",
-    "rot_spawn_chance": 75,
+    "rot_spawn": { "group": "GROUP_EGG_DODO", "chance": 75 },
     "vitamins": [ [ "calcium", "117 mg" ], [ "iron", "6 mg" ], [ "egg_allergen", 1 ] ],
     "flags": [ "FREEZERBURN", "RAW" ],
     "//": "Based on egg_turkey x2. There's no confirmed data about dodo eggs."
@@ -209,8 +205,7 @@
     "name": { "str": "ectopistes egg" },
     "copy-from": "egg_pigeon",
     "description": "An Ectopistes egg.",
-    "rot_spawn": "GROUP_EGG_ECTOPISTES",
-    "rot_spawn_chance": 90
+    "rot_spawn": { "group": "GROUP_EGG_ECTOPISTES", "chance": 90 }
   },
   {
     "id": "egg_eryops",
@@ -230,8 +225,7 @@
     "healthy": 1,
     "calories": 360,
     "fun": -20,
-    "rot_spawn": "GROUP_EGG_ERYOPS",
-    "rot_spawn_chance": 90,
+    "rot_spawn": { "group": "GROUP_EGG_ERYOPS", "chance": 90 },
     "vitamins": [ [ "egg_allergen", 1 ] ],
     "flags": [ "FREEZERBURN", "RAW" ],
     "//": "Based on scaling up egg_carnufex , nutritional facts from egg_chicken x2 "
@@ -242,7 +236,7 @@
     "name": { "str": "erythrosuchus egg" },
     "copy-from": "egg_smilosuchus",
     "description": "An Erythrosuchus egg.",
-    "rot_spawn": "GROUP_EGG_ERYTHROSUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_ERYTHROSUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -254,8 +248,7 @@
     "comestible_type": "FOOD",
     "color": "cyan",
     "looks_like": "spider_egg",
-    "rot_spawn": "GROUP_EGG_EURYPTERID",
-    "rot_spawn_chance": 66,
+    "rot_spawn": { "group": "GROUP_EGG_EURYPTERID", "chance": 66 },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -265,7 +258,7 @@
     "copy-from": "egg_eurypterid",
     "description": "A clump of Eurypterid eggs.",
     "proportional": { "volume": 0.1, "weight": 0.1, "calories": 0.2 },
-    "rot_spawn": "GROUP_EGG_EURYPTERID_SMALL",
+    "rot_spawn": { "group": "GROUP_EGG_EURYPTERID_SMALL" },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -274,7 +267,7 @@
     "name": { "str": "fasolasuchus egg" },
     "copy-from": "egg_erythrosuchus",
     "description": "A Fasolasuchus egg.",
-    "rot_spawn": "GROUP_EGG_FASOLASUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_FASOLASUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -283,8 +276,7 @@
     "name": { "str": "ancient roe" },
     "copy-from": "egg_fish",
     "description": "Common roe from an unknown ancient fish.",
-    "rot_spawn": "GROUP_EGG_FISHANCIENT_MEDIUM",
-    "rot_spawn_chance": 80,
+    "rot_spawn": { "group": "GROUP_EGG_FISHANCIENT_MEDIUM", "chance": 80 },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -293,8 +285,7 @@
     "name": { "str": "ancient roe" },
     "copy-from": "egg_fish",
     "description": "Common roe from an unknown ancient fish.",
-    "rot_spawn": "GROUP_EGG_FISHANCIENT_SMALL",
-    "rot_spawn_chance": 80,
+    "rot_spawn": { "group": "GROUP_EGG_FISHANCIENT_SMALL", "chance": 80 },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -303,7 +294,7 @@
     "name": { "str": "garganornis egg" },
     "copy-from": "egg_dodo",
     "description": "A Garganornis egg.",
-    "rot_spawn": "GROUP_EGG_GARGANORNIS",
+    "rot_spawn": { "group": "GROUP_EGG_GARGANORNIS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -312,7 +303,7 @@
     "name": { "str": "hesperosuchus egg" },
     "copy-from": "egg_anatosuchus",
     "description": "A Hesperosuchus egg.",
-    "rot_spawn": "GROUP_EGG_HESPEROSUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_HESPEROSUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -321,7 +312,7 @@
     "name": { "str": "icadyptes egg" },
     "copy-from": "egg_dodo",
     "description": "An Icadyptes egg.",
-    "rot_spawn": "GROUP_EGG_ICADYPTES",
+    "rot_spawn": { "group": "GROUP_EGG_ICADYPTES" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -342,8 +333,7 @@
     "healthy": 1,
     "calories": 360,
     "fun": -16,
-    "rot_spawn": "GROUP_EGG_INOSTRANCEVIA",
-    "rot_spawn_chance": 90,
+    "rot_spawn": { "group": "GROUP_EGG_INOSTRANCEVIA", "chance": 90 },
     "vitamins": [ [ "calcium", "56 mg" ], [ "iron", "1800 μg" ], [ "egg_allergen", 1 ] ],
     "flags": [ "FREEZERBURN", "RAW" ],
     "//": "Mostly the same as egg_dimetrodon values"
@@ -355,7 +345,7 @@
     "copy-from": "egg_carnufex",
     "description": "A Lotosaurus egg.",
     "comestible_type": "FOOD",
-    "rot_spawn": "GROUP_EGG_LOTOSAURUS",
+    "rot_spawn": { "group": "GROUP_EGG_LOTOSAURUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -365,7 +355,7 @@
     "copy-from": "egg_dimetrodon",
     "description": "A Lystrosaurus egg.",
     "proportional": { "volume": 0.5, "weight": 0.5, "calories": 0.5 },
-    "rot_spawn": "GROUP_EGG_LYSTROSAURUS",
+    "rot_spawn": { "group": "GROUP_EGG_LYSTROSAURUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -374,7 +364,7 @@
     "name": { "str": "mazothairos egg" },
     "copy-from": "egg_meganeura",
     "description": "A clump of Mazothairos eggs.",
-    "rot_spawn": "GROUP_EGG_MAZOTHAIROS",
+    "rot_spawn": { "group": "GROUP_EGG_MAZOTHAIROS", "chance": 50 },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -384,8 +374,7 @@
     "copy-from": "egg_anomalocaris",
     "description": "A clump of Meganeura eggs.",
     "color": "green",
-    "rot_spawn": "GROUP_EGG_MEGANEURA",
-    "rot_spawn_chance": 50,
+    "rot_spawn": { "group": "GROUP_EGG_MEGANEURA", "chance": 50 },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -406,8 +395,7 @@
     "quench": 80,
     "healthy": 4,
     "fun": -20,
-    "rot_spawn": "GROUP_EGG_MOA",
-    "rot_spawn_chance": 90,
+    "rot_spawn": { "group": "GROUP_EGG_MOA", "chance": 90 },
     "vitamins": [ [ "iron", "60 mg" ], [ "calcium", "1560 mg" ], [ "egg_allergen", 1 ] ],
     "flags": [ "FREEZERBURN", "RAW" ],
     "//": "Based on ostrich egg data from 10.3923/jas.2010.1405.1412 , otherwise x20 egg_turkey values due weight proportionality"
@@ -418,7 +406,7 @@
     "name": { "str": "ancient mollusk eggs" },
     "copy-from": "egg_mollusk_small",
     "description": "A clump of ancient mollusk eggs.",
-    "rot_spawn": "GROUP_EGG_MOLLUSK_LARGE",
+    "rot_spawn": { "group": "GROUP_EGG_MOLLUSK_LARGE" },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -428,7 +416,7 @@
     "copy-from": "egg_anomalocaris",
     "description": "A clump of ancient mollusk eggs.",
     "color": "light_gray",
-    "rot_spawn": "GROUP_EGG_MOLLUSK_SMALL",
+    "rot_spawn": { "group": "GROUP_EGG_MOLLUSK_SMALL" },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -437,7 +425,7 @@
     "name": { "str": "moschorhinus egg" },
     "copy-from": "egg_pristerognathus",
     "description": "A Moschorhinus egg.",
-    "rot_spawn": "GROUP_EGG_MOSCHORHINUS",
+    "rot_spawn": { "group": "GROUP_EGG_MOSCHORHINUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -446,7 +434,7 @@
     "name": { "str": "nochnitsa egg" },
     "copy-from": "egg_pristerognathus",
     "description": "A Nochnitsa egg.",
-    "rot_spawn": "GROUP_EGG_NOCHNITSA",
+    "rot_spawn": { "group": "GROUP_EGG_NOCHNITSA" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -455,7 +443,7 @@
     "name": { "str": "pampaphoneus egg" },
     "copy-from": "egg_inostrancevia",
     "description": "A Pampaphoneus egg.",
-    "rot_spawn": "GROUP_EGG_PAMPAPHONEUS",
+    "rot_spawn": { "group": "GROUP_EGG_PAMPAPHONEUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -465,8 +453,7 @@
     "copy-from": "egg_eryops",
     "description": "A clump of Pederpes eggs.",
     "proportional": { "volume": 0.1, "weight": 0.1, "calories": 0.1 },
-    "rot_spawn": "GROUP_EGG_PEDERPES",
-    "rot_spawn_chance": 66,
+    "rot_spawn": { "group": "GROUP_EGG_PEDERPES", "chance": 66 },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -475,7 +462,7 @@
     "name": { "str": "pholiderpeton egg" },
     "copy-from": "egg_prionosuchus",
     "description": "A clump of Pholiderpeton eggs.",
-    "rot_spawn": "GROUP_EGG_PHOLIDERPETON",
+    "rot_spawn": { "group": "GROUP_EGG_PHOLIDERPETON" },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -484,7 +471,7 @@
     "name": { "str": "phytosaurus egg" },
     "copy-from": "egg_carnufex",
     "description": "A Phytosaurus egg.",
-    "rot_spawn": "GROUP_EGG_PHYTOSAURUS",
+    "rot_spawn": { "group": "GROUP_EGG_PHYTOSAURUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -493,7 +480,7 @@
     "name": { "str": "platyoposaurus egg" },
     "copy-from": "egg_prionosuchus",
     "description": "A clump of Platyoposaurus eggs.",
-    "rot_spawn": "GROUP_EGG_PLATYOPOSAURUS",
+    "rot_spawn": { "group": "GROUP_EGG_PLATYOPOSAURUS" },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -502,7 +489,7 @@
     "name": { "str": "prestosuchus egg" },
     "copy-from": "egg_carnufex",
     "description": "A Prestosuchus egg.",
-    "rot_spawn": "GROUP_EGG_PRESTOSUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_PRESTOSUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -511,8 +498,7 @@
     "name": { "str": "prionosuchus egg" },
     "copy-from": "egg_eryops",
     "description": "A clump of Prionosuchus eggs.",
-    "rot_spawn": "GROUP_EGG_PRIONOSUCHUS",
-    "rot_spawn_chance": 80,
+    "rot_spawn": { "group": "GROUP_EGG_PRIONOSUCHUS", "chance": 80 },
     "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
   },
   {
@@ -522,7 +508,7 @@
     "copy-from": "egg_dimetrodon",
     "description": "A Pristerognathus egg.",
     "proportional": { "volume": 0.5, "weight": 0.5, "quench": 0.5, "calories": 0.5 },
-    "rot_spawn": "GROUP_EGG_PRISTEROGNATHUS",
+    "rot_spawn": { "group": "GROUP_EGG_PRISTEROGNATHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -531,7 +517,7 @@
     "name": { "str": "redondasaurus egg" },
     "copy-from": "egg_smilosuchus",
     "description": "A Redondasaurus egg.",
-    "rot_spawn": "GROUP_EGG_REDONDASAURUS",
+    "rot_spawn": { "group": "GROUP_EGG_REDONDASAURUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -542,7 +528,7 @@
     "description": "A Scutosaurus egg.",
     "healthy": 1,
     "proportional": { "volume": 0.5, "weight": 0.5, "quench": 0.5, "calories": 0.5 },
-    "rot_spawn": "GROUP_EGG_SCUTOSAURUS",
+    "rot_spawn": { "group": "GROUP_EGG_SCUTOSAURUS" },
     "flags": [ "FREEZERBURN", "RAW" ],
     "//": "Proportional end values of egg_carnufex "
   },
@@ -552,7 +538,7 @@
     "name": { "str": "simosuchus egg" },
     "copy-from": "egg_anatosuchus",
     "description": "A Simosuchus egg.",
-    "rot_spawn": "GROUP_EGG_SIMOSUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_SIMOSUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -564,7 +550,7 @@
     "price_postapoc": 35,
     "healthy": 2,
     "proportional": { "volume": 2, "weight": 2, "quench": 2, "calories": 2 },
-    "rot_spawn": "GROUP_EGG_SMILOSUCHUS",
+    "rot_spawn": { "group": "GROUP_EGG_SMILOSUCHUS" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -573,7 +559,7 @@
     "name": { "str": "typothorax egg" },
     "copy-from": "egg_carnufex",
     "description": "A Typothorax egg.",
-    "rot_spawn": "GROUP_EGG_TYPOTHORAX",
+    "rot_spawn": { "group": "GROUP_EGG_TYPOTHORAX" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -582,7 +568,7 @@
     "name": { "str": "viatkogorgon egg" },
     "copy-from": "egg_pristerognathus",
     "description": "A Viatkogorgon egg.",
-    "rot_spawn": "GROUP_EGG_VIATKOGORGON",
+    "rot_spawn": { "group": "GROUP_EGG_VIATKOGORGON" },
     "flags": [ "FREEZERBURN", "RAW" ]
   },
   {
@@ -592,8 +578,7 @@
     "copy-from": "egg_chicken",
     "description": "A Weigeltisaurus egg.",
     "proportional": { "volume": 0.17, "weight": 0.17, "calories": 0.17 },
-    "rot_spawn": "GROUP_EGG_WEIGELTISAURUS",
-    "rot_spawn_chance": 75,
+    "rot_spawn": { "group": "GROUP_EGG_WEIGELTISAURUS", "chance": 75 },
     "flags": [ "FREEZERBURN", "RAW" ]
   }
 ]
