@@ -537,11 +537,11 @@
     "extend": { "items": [ [ "greatsword_makeshift", 5 ] ] }
   },
   {
-    "id": "guns_pistol_improvised",
-    "copy-from": "guns_pistol_improvised",
+    "id": "guns_pistol_common",
+    "copy-from": "guns_pistol_common",
     "type": "item_group",
     "extend": {
-      "items": [ [ "unbio_laser_gun", 5 ], { "item": "surv_battery_pistol", "prob": 25, "charges-min": 0, "charges-max": 50 } ]
+      "items": [ [ "unbio_laser_gun", 2 ], { "item": "surv_battery_pistol", "prob": 10, "charges-min": 0, "charges-max": 50 } ]
     }
   },
   {
