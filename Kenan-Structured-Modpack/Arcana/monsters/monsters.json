@@ -65,7 +65,7 @@
       "WARM",
       "FIREPROOF",
       "SEES",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_1",
       "STUN_IMMUNE",
       "PRIORITIZE_TARGETS"
     ]
@@ -110,7 +110,6 @@
       }
     ],
     "death_drops": "mon_moruboru_death_drops",
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
     "flags": [
       "SEES",
       "SMELLS",
@@ -120,7 +119,7 @@
       "POISON",
       "NO_BREATHE",
       "PARALYZEVENOM",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "PRIORITIZE_TARGETS"
     ],
     "//": "Boss-level essence and an item"
@@ -193,7 +192,6 @@
     ],
     "//": "Here, have some chalice-specific loot",
     "death_drops": "mon_archon_death_drops",
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
     "flags": [
       "ELECTRIC",
       "SEES",
@@ -201,7 +199,7 @@
       "SMELLS",
       "WARM",
       "HUMAN",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "CAN_OPEN_DOORS",
       "PRIORITIZE_TARGETS",
       "HARDTOSHOOT",
@@ -315,7 +313,7 @@
     ],
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
     "death_drops": {  },
-    "extend": { "flags": [ "SEES", "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_MOUNTABLE" ] },
+    "extend": { "flags": [ "SEES", "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_MOUNTABLE" ] },
     "delete": { "flags": [ "ACIDTRAIL", "SUNDEATH", "BASHES", "BORES" ] }
   },
   {
@@ -334,7 +332,7 @@
     "regeneration_modifiers": [ [ "dazed", -1 ] ],
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
     "death_drops": {  },
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
     "delete": { "upgrades": { "half_life": 8, "into": "mon_zombie_brute" } }
   },
   {
@@ -353,7 +351,7 @@
     "regeneration_modifiers": [ [ "dazed", -1 ] ],
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
     "death_drops": {  },
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_MOUNTABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_MOUNTABLE" ] },
     "delete": { "flags": [ "BASHES", "DESTROYS", "ATTACKMON" ] }
   },
   {
@@ -371,7 +369,7 @@
     "regeneration_modifiers": [ [ "dazed", -1 ] ],
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
     "death_drops": {  },
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
     "delete": { "flags": [ "BASHES", "GROUP_BASH" ] }
   },
   {
@@ -391,7 +389,7 @@
     "regeneration_modifiers": [ [ "dazed", -1 ] ],
     "death_drops": {  },
     "special_attacks": [ { "id": "ranged_pull", "cooldown": 20 }, [ "LUNGE", 10 ] ],
-    "extend": { "flags": [ "SEES", "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_MOUNTABLE" ] },
+    "extend": { "flags": [ "SEES", "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_MOUNTABLE" ] },
     "delete": { "flags": [ "BASHES", "GROUP_BASH", "ATTACKMON" ] }
   },
   {
@@ -409,7 +407,7 @@
     "regeneration_modifiers": [ [ "dazed", -1 ] ],
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
     "death_drops": {  },
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "CANPLAY", "PET_HARNESSABLE" ] }
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "CANPLAY", "PET_HARNESSABLE" ] }
   },
   {
     "id": "mon_skeleton_summoned",
@@ -428,7 +426,7 @@
     "attack_effs": [ { "id": "stunned", "duration": 5, "chance": 30 } ],
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
     "death_drops": {  },
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
     "delete": { "upgrades": { "half_life": 15, "into": "mon_skeleton_hulk" } }
   },
   {
@@ -447,7 +445,7 @@
     "melee_damage": [ { "damage_type": "electric", "amount": 10 } ],
     "regenerates": 10,
     "regeneration_modifiers": [ [ "dazed", -10 ] ],
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "CANPLAY" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "CANPLAY" ] },
     "delete": { "flags": [ "STUMBLES" ] }
   },
   {
@@ -475,7 +473,7 @@
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
     "death_drops": "mon_bound_glyph_death_drops_universal",
     "revert_to_itype": "summon_yugg_bound",
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_MOUNTABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_MOUNTABLE" ] },
     "delete": { "flags": [ "BASHES", "DESTROYS", "DIGS" ] }
   },
   {
@@ -493,8 +491,7 @@
     "special_attacks": [ { "type": "bite", "cooldown": 15 } ],
     "regenerates": 1,
     "regeneration_modifiers": [ [ "dazed", -1 ] ],
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "CANPLAY", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_2", "PRIORITIZE_TARGETS", "CANPLAY", "PET_HARNESSABLE" ] },
     "delete": { "flags": [ "BASHES" ] }
   },
   {
@@ -524,7 +521,7 @@
       }
     ],
     "attack_effs": [ { "id": "venom_dmg", "duration": 500, "affect_hit_bp": true } ],
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
     "delete": { "flags": [ "BASHES", "GROUP_BASH" ] }
   },
   {
@@ -545,7 +542,7 @@
     "death_drops": {  },
     "special_attacks": [ { "type": "bite", "cooldown": 5 } ],
     "special_when_hit": [ "ZAPBACK", 50 ],
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
     "delete": { "flags": [ "ATTACKMON" ] }
   },
   {
@@ -566,7 +563,7 @@
     "armor": { "electric": 1, "stab": 10, "bullet": 10 },
     "death_drops": "mon_bound_glyph_death_drops_universal",
     "revert_to_itype": "summon_hunting_horror_bound",
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "ELECTRIC", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "ELECTRIC", "PET_HARNESSABLE" ] },
     "delete": { "flags": [ "SUNDEATH", "HIT_AND_RUN" ] }
   },
   {
@@ -603,7 +600,7 @@
     "death_drops": "mon_bound_glyph_death_drops_universal",
     "revert_to_itype": "summon_flying_polyp_bound",
     "special_attacks": [ { "type": "bite", "cooldown": 20, "damage_max_instance": [ { "damage_type": "cold", "amount": 20 } ] } ],
-    "extend": { "flags": [ "SEES", "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "SEES", "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
     "delete": { "flags": [ "BASHES", "ATTACKMON" ] }
   },
   {
@@ -621,7 +618,7 @@
     "regeneration_modifiers": [ [ "dazed", -5 ] ],
     "death_drops": "mon_bound_glyph_death_drops_universal",
     "revert_to_itype": "summon_shoggoth_bound",
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] },
     "special_attacks": [ { "id": "slam", "cooldown": 25, "damage_max_instance": [ { "damage_type": "acid", "amount": 35 } ] } ]
   },
   {
@@ -642,7 +639,7 @@
     "death_drops": {  },
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
     "special_attacks": [ [ "PARROT", 900 ] ],
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "CANPLAY" ] },
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "CANPLAY" ] },
     "delete": { "flags": [ "SUNDEATH", "HEARS", "GOODHEARING", "SMELLS", "HIT_AND_RUN", "ELECTRIC" ] }
   },
   {
@@ -687,7 +684,7 @@
     "path_settings": { "max_dist": 10, "avoid_traps": true, "avoid_dangerous_fields": true },
     "regenerates_in_dark": true,
     "special_attacks": [ [ "PARROT", 900 ] ],
-    "extend": { "flags": [ "FLIES", "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "CANPLAY" ] },
+    "extend": { "flags": [ "FLIES", "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "CANPLAY" ] },
     "delete": { "flags": [ "SUNDEATH", "SMELLS" ] }
   },
   {
@@ -730,7 +727,7 @@
     "upgrades": {  },
     "death_drops": {  },
     "death_function": { "message": "The %s's body melts away.", "corpse_type": "NO_CORPSE" },
-    "extend": { "flags": [ "PATH_AVOID_DANGER", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] }
+    "extend": { "flags": [ "PATH_AVOID_DANGER_1", "PRIORITIZE_TARGETS", "PET_HARNESSABLE" ] }
   },
   {
     "id": "mon_seraphic_shade",
@@ -804,9 +801,8 @@
     ],
     "death_drops": "mon_seraphic_shade_death_drops",
     "death_function": { "message": "The %s's body evaporates.", "corpse_type": "NO_CORPSE" },
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
     "flags": [
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "CAN_OPEN_DOORS",
       "PRIORITIZE_TARGETS",
       "SEES",
@@ -864,10 +860,9 @@
       [ "PARROT", 80 ]
     ],
     "death_function": { "message": "The %s's wavers and vanishes, dispelling the illusion.", "corpse_type": "NO_CORPSE" },
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
     "flags": [
       "PACIFIST",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "PRIORITIZE_TARGETS",
       "SEES",
       "FLIES",
@@ -910,7 +905,6 @@
     "mech_battery": "arcana_mech_power_cell",
     "mech_weapon": "arcana_mech_laser",
     "death_function": { "corpse_type": "BROKEN" },
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
     "flags": [
       "SEES",
       "MECH_RECON_VISION",
@@ -927,7 +921,7 @@
       "RIDEABLE_MECH",
       "HARDTOSHOOT",
       "PRIORITIZE_TARGETS",
-      "PATH_AVOID_DANGER"
+      "PATH_AVOID_DANGER_2"
     ]
   },
   {
@@ -1005,7 +999,7 @@
       "NO_BREATHE",
       "HARDTOSHOOT",
       "PRIORITIZE_TARGETS",
-      "PATH_AVOID_DANGER"
+      "PATH_AVOID_DANGER_1"
     ]
   },
   {
@@ -1049,7 +1043,7 @@
     "zombify_into": "mon_zombie_shady",
     "anger_triggers": [ "FRIEND_DIED", "PLAYER_CLOSE" ],
     "fear_triggers": [ "HURT" ],
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "BASHES", "GROUP_BASH", "HUMAN", "CAN_OPEN_DOORS", "PATH_AVOID_DANGER" ]
+    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "BASHES", "GROUP_BASH", "HUMAN", "CAN_OPEN_DOORS", "PATH_AVOID_DANGER_1" ]
   },
   {
     "id": "mon_feral_magehunter",
