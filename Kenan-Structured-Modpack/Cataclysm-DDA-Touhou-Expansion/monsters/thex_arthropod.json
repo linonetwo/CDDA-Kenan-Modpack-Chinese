@@ -30,7 +30,7 @@
     "vision_day": 8,
     "path_settings": { "max_dist": 6 },
     "anger_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_aegirocassis" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_aegirocassis", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Aegirocassis sp. No weight or reproductive data"
@@ -89,9 +89,9 @@
     "vision_day": 8,
     "path_settings": { "max_dist": 6 },
     "anger_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_anomalocaris" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_anomalocaris", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_FOOD", { "math": [ "25 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_FOOD", 35 ] ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "EATS", "FISHABLE", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Anomalocaris sp. No weight or reproductive data"
   },
@@ -149,9 +149,9 @@
     "vision_day": 10,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_arthropleura" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_arthropleura", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "25 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 35 ] ],
     "flags": [ "ANIMAL", "ARTHROPOD_BLOOD", "EATS", "SEES", "SMELLS" ],
     "//2": "Based on Arthropleura sp. No reproductive data, was probably herbivore"
   },
@@ -196,8 +196,8 @@
     "stomach_size": 10,
     "anger_triggers": [ "HURT" ],
     "fear_triggers": [  ],
-    "special_attacks": [ [ "EAT_FOOD", { "math": [ "25 + rand(20)" ] } ] ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_arthropod_aquatic_small" }, "baby_count": 12, "baby_timer": 240 },
+    "special_attacks": [ [ "EAT_FOOD", 35 ] ],
+    "reproduction": { "baby_egg": "egg_arthropod_aquatic_small", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "EATS", "FISHABLE", "SEES", "SMELLS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Chasmataspis sp. No weight or reproductive data"
@@ -256,11 +256,11 @@
     "vision_night": 6,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_eurypterid" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_eurypterid", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "25 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "25 + rand(20)" ] } ],
+      [ "EAT_CARRION", 35 ], 
+      [ "EAT_FOOD", 35 ],
       { 
         "id": "mon_eusarcana_1", 
         "type": "spell", 
@@ -274,7 +274,7 @@
             ] 
           } 
         },
-        "cooldown": { "math": [ "3 + rand(3)" ] } 
+        "cooldown": 5 
       }
     ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "EATS", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
@@ -333,7 +333,7 @@
     "vision_day": 8,
     "path_settings": { "max_dist": 6 },
     "fear_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_arthropod_aquatic_small" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_arthropod_aquatic_small", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "FISHABLE", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Hurdia sp. No weight or reproductive data"
@@ -392,9 +392,9 @@
     "vision_night": 6,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_eurypterid" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_eurypterid", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_FOOD", 50 ] ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "EATS", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Jaekelopterus sp."
   },
@@ -451,9 +451,9 @@
     "vision_night": 12,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_mazothairos" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_mazothairos", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "PARROT", { "math": [ "4 + rand(2)" ] } ] ],
+    "special_attacks": [ [ "PARROT", 5 ] ],
     "flags": [ "ANIMAL", "ARTHROPOD_BLOOD", "FLIES", "SEES" ],
     "//2": "Based on Mazothairos sp. No reproductive data"
   },
@@ -513,9 +513,9 @@
     "vision_night": 6,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_eurypterid" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_eurypterid", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "25 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "25 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 35 ], [ "EAT_FOOD", 35 ] ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "EATS", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Megalograptus sp. 'Medium-sized' eurypterid for c:dda purposes, actually quite big relative to ancient eurypterids"
   },
@@ -572,9 +572,9 @@
     "vision_night": 12,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_meganeura" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_meganeura", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "PARROT", { "math": [ "4 + rand(2)" ] } ] ],
+    "special_attacks": [ [ "PARROT", 5 ] ],
     "flags": [ "ANIMAL", "ARTHROPOD_BLOOD", "FLIES", "SEES" ],
     "//2": "Based on Meganeura sp. No reproductive data"
   },
@@ -633,7 +633,7 @@
     "vision_day": 8,
     "path_settings": { "max_dist": 6 },
     "fear_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_arthropod_aquatic_small" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_arthropod_aquatic_small", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "FISHABLE", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//2": "Based on Opabinia sp., this one's slightly oversized. No weight or reproductive data"
@@ -691,9 +691,9 @@
     "vision_day": 4,
     "path_settings": { "max_dist": 4 },
     "anger_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_arthropod_aquatic_small" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_arthropod_aquatic_small", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "25 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 35 ] ],
     "flags": [ "ANIMAL", "AQUATIC", "ARTHROPOD_BLOOD", "EATS", "FISHABLE", "SEES", "SMELLS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Pambdelurion sp. No weight or reproductive data"
   },
@@ -751,9 +751,9 @@
     "vision_day": 12,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_eurypterid_small" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_eurypterid_small", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "25 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 35 ] ],
     "flags": [ "ANIMAL", "ARTHROPOD_BLOOD", "EATS", "SEES", "SMELLS" ],
     "//": "Based on Parastylonurus sp. According to Paleos' image (http://palaeos.com/metazoa/arthropoda/eurypterida/eurypterida.html) this was 21 cm long, that's not very menacing so values are for a bigger one"
   },

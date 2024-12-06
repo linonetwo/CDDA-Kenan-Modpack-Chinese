@@ -10,6 +10,7 @@
     "starting_trait": false,
     "valid": false,
     "armor": [ { "parts": "ALL", "bash": 8, "cut": 8, "stab": 8, "bullet": 16, "acid": 8, "cold": 8, "electric": 8, "heat": 8 } ],
+    "stamina_regen_modifier": 0.25,
     "wet_protection": [
       { "part": "LEG_L", "neutral": 3 },
       { "part": "LEG_R", "neutral": 3 },
@@ -20,13 +21,12 @@
     "enchantments": [ 
       { 
         "condition": "ALWAYS", 
-        "values": [ 
-          { "value": "STAMINA_REGEN_MOD", "add": 0.25 }
-        ],
         "mutations": [ "CELESTIAL_CONSTITUTION" ]
       } 
     ],
-    "cancels": [ "FLIMSY", "FLIMSY2", "FLIMSY3", "PAINRESIST", "THICKSKIN", "THINSKIN", "TOUGH", "TOUGH2", "TOUGH3" ]
+    "cancels": [ "FLIMSY", "FLIMSY2", "FLIMSY3", "PAINRESIST", "THICKSKIN", "THINSKIN", "TOUGH", "TOUGH2", "TOUGH3" ],
+    "//0.H": "STAMINA_REGEN_MOD + WEAKNESS_TO_WATER + WEAKNESS_TO_WATER + MOVECOST_OBSTACLE_MOD -> moved to their specific fields , SLEEPINESS_X -> FATIGUE_X PAIN_PENALTY_MOD_X + NIGHT_VIS removed",
+    "//0.H2": "The enchantment values are intended"
   },
   {
     "id": "CELESTIAL_CONSTITUTION",
@@ -41,12 +41,7 @@
       { 
         "condition": "ALWAYS", 
         "values": [ 
-          { "value": "PAIN", "multiply": -0.33 },
-          { "value": "PAIN_PENALTY_MOD_DEX", "multiply": -0.33 },
-          { "value": "PAIN_PENALTY_MOD_INT", "multiply": -0.33 },
-          { "value": "PAIN_PENALTY_MOD_PER", "multiply": -0.33 },
-          { "value": "PAIN_PENALTY_MOD_STR", "multiply": -0.33 },
-          { "value": "PAIN_PENALTY_MOD_SPEED", "multiply": -0.66 }
+          { "value": "PAIN", "multiply": -0.33 }
         ]
       }
     ]
@@ -98,8 +93,7 @@
           { "value": "PERCEPTION", "add": 2 },
           { "value": "BONUS_DODGE", "add": 1 },
           { "value": "CARRY_WEIGHT", "multiply": -0.2 },
-          { "value": "MOVE_COST", "multiply": -0.1 },
-          { "value": "NIGHT_VIS", "multiply": 2 }
+          { "value": "MOVE_COST", "multiply": -0.1 }
         ],
         "mutations": [ "GYOKUTO_CONSTITUTION" ]
       }
@@ -137,11 +131,7 @@
       { 
         "condition": "ALWAYS", 
         "values": [ 
-          { "value": "PAIN_PENALTY_MOD_DEX", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_INT", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_PER", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_STR", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_SPEED", "multiply": -0.66 }
+          
         ]
       }
     ]
@@ -208,6 +198,8 @@
     "starting_trait": false,
     "valid": false,
     "armor": [ { "parts": "ALL", "heat": 2 } ],
+    "sweat_multiplier": -1,
+    "weakness_to_water": 1,
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -216,9 +208,7 @@
           { "value": "MAX_MANA", "add": 200 },
           { "value": "ARMOR_HEAT", "multiply": -0.66 },
           { "value": "CLIMATE_CONTROL_CHILL", "add": 20 },
-          { "value": "MOVE_COST", "multiply": -0.2 },
-          { "value": "WEAKNESS_TO_WATER", "add": 0.0166 },
-          { "value": "SWEAT_MULTIPLIER", "multiply": -1 }
+          { "value": "MOVE_COST", "multiply": -0.2 }
         ]
       }
     ]
@@ -298,12 +288,7 @@
       { 
         "condition": "ALWAYS", 
         "values": [ 
-          { "value": "PAIN", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_DEX", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_INT", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_PER", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_STR", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_SPEED", "multiply": -0.66 }
+          { "value": "PAIN", "multiply": -0.25 }
         ]
       }
     ]
@@ -318,14 +303,8 @@
     "purifiable": false,
     "starting_trait": false,
     "valid": false,
-    "enchantments": [
-      {
-        "values": [
-          { "value": "MENDING_MODIFIER", "multiply": 1 },
-          { "value": "REGEN_HP_AWAKE", "multiply": 2 }
-        ]
-      }
-    ],
+    "healing_awake": 2,
+    "mending_modifier": 2,
     "cancels": [ 
       "ASTHMA", 
       "CHAOTIC_BAD", 
@@ -369,11 +348,7 @@
       { 
         "condition": "ALWAYS", 
         "values": [ 
-          { "value": "PAIN_PENALTY_MOD_DEX", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_INT", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_PER", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_STR", "multiply": -0.25 },
-          { "value": "PAIN_PENALTY_MOD_SPEED", "multiply": -0.66 }
+          
         ]
       }
     ]
@@ -389,6 +364,8 @@
     "starting_trait": false,
     "valid": false,
     "active": true,
+    "movecost_swim_modifier": 0.66,
+    "crafting_speed_multiplier": 0.8,
     "visibility": 2,
     "wet_protection": [
       { "part": "head", "ignored": 12 },
@@ -408,8 +385,6 @@
         "values": [
           { "value": "ARMOR_COLD", "multiply": -0.33 },
           { "value": "ARMOR_HEAT", "multiply": 0.33 },
-          { "value": "CRAFTING_SPEED_MULTIPLIER", "multiply": 0.2 },
-          { "value": "MOVECOST_SWIM_MOD", "multiply": -0.33 },
           { "value": "SOCIAL_INTIMIDATE", "add": -4 },
           { "value": "SOCIAL_PERSUADE", "add": 2 },
           { "value": "THIRST", "multiply": 0.33 }
@@ -430,8 +405,10 @@
     "starting_trait": false,
     "valid": false,
     "active": true,
+    "sweat_multiplier": -1,
     "ugliness": 4,
     "visibility": 4,
+    "weakness_to_water": 1,
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -439,9 +416,7 @@
           { "value": "ARMOR_COLD", "multiply": 0.33 },
           { "value": "ARMOR_HEAT", "multiply": -0.33 },
           { "value": "CLIMATE_CONTROL_CHILL", "add": 20 },
-          { "value": "FALL_DAMAGE", "multiply": -0.33 },
-          { "value": "WEAKNESS_TO_WATER", "add": 0.0166 },
-          { "value": "SWEAT_MULTIPLIER", "multiply": -1 }
+          { "value": "FALL_DAMAGE", "multiply": -0.33 }
         ]
       }
     ],
@@ -459,7 +434,10 @@
     "ugliness": 0,
     "visibility": 0,
     "encumbrance_always": [ [ "hand_l", 30 ], [ "hand_r", 30 ] ],
-    "override_look": { "id": "mon_cat_black", "tile_category": "monster" },
+    "//override_look": { "id": "mon_cat_black", "tile_category": "monster" },
+    "stamina_regen_modifier": 0.2,
+    "sweat_multiplier": -1,
+    "weakness_to_water": 2,
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -473,16 +451,13 @@
           { "value": "MELEE_DAMAGE", "multiply": -0.5 },
           { "value": "METABOLISM", "multiply": -0.5 },
           { "value": "MOVE_COST", "multiply": -0.1 },
-          { "value": "SOCIAL_PERSUADE", "add": -4 },
-          { "value": "STAMINA_REGEN_MOD", "add": 0.2 },
-          { "value": "WEAKNESS_TO_WATER", "add": 0.0333 },
-          { "value": "SWEAT_MULTIPLIER", "multiply": -1 }
+          { "value": "SOCIAL_PERSUADE", "add": -4 }
         ]
       },
       { 
         "condition": { "not": "u_has_weapon" }, 
-        "melee_damage_bonus": [ 
-          { "type": "cut", "add": { "math": [ "rng( 2, 4 )" ] } } 
+        "values": [
+          { "value": "ITEM_DAMAGE_CUT", "add": { "math": [ "rng( 2, 4 )" ] } }
         ]
       } 
     ],
@@ -640,6 +615,7 @@
     "starting_trait": false,
     "valid": false,
     "armor": [ { "parts": "ALL", "bash": -2 } ],
+    "stamina_regen_modifier": 0.25,
     "ugliness": -1,
     "enchantments": [
       {
@@ -648,8 +624,7 @@
           { "value": "DEXTERITY", "add": 2 },
           { "value": "INTELLIGENCE", "add": 1 },
           { "value": "CARRY_WEIGHT", "multiply": -0.2 },
-          { "value": "MOVE_COST", "multiply": -0.2 },
-          { "value": "STAMINA_REGEN_MOD", "add": 0.25 }
+          { "value": "MOVE_COST", "multiply": -0.2 }
         ],
         "mutations": [ "TOLERANCE" ]
       }
@@ -684,6 +659,8 @@
     "copy-from": "TSUCHIGUMO_SPECIES",
     "description": "You're a spider youkai originating from caves and dark places in the Earth.  Currently, you're (partially) transformed into your youkai form, revealing your hidden legs.  Activate the mutation to switch to human form.",
     "active": true,
+    "movecost_obstacle_modifier": 0.5,
+    "movecost_swim_modifier": 1.5,
     "ugliness": 6,
     "visibility": 8,
     "enchantments": [
@@ -691,8 +668,6 @@
         "condition": "ALWAYS",
         "values": [
           { "value": "METABOLISM", "multiply": 0.33 },
-          { "value": "MOVECOST_OBSTACLE_MOD", "multiply": -0.5 },
-          { "value": "MOVECOST_SWIM_MOD", "multiply": 1.5 },
           { "value": "SOCIAL_INTIMIDATE", "add": 4 },
           { "value": "SOCIAL_PERSUADE", "add": -4 }
         ],
@@ -712,9 +687,13 @@
     "purifiable": false,
     "starting_trait": false,
     "valid": false,
+    "healing_awake": 2,
+    "mending_modifier": 2,
+    "sweat_multiplier": -1,
     "ugliness": -4,
     "visibility": 1,
     "vitamins_absorb_multi": [ [ "veggy", [ [ "vitA", 0.33 ], [ "vitB", 0.33 ], [ "vitC", 0.33 ], [ "calcium", 0.33 ], [ "iron", 0.33 ] ] ] ],
+    "weakness_to_water": 1,
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -724,14 +703,9 @@
           { "value": "PERCEPTION", "add": 2 },
           { "value": "STRENGTH", "add": 2 },
           { "value": "ARMOR_STAB", "multiply": 1 },
-          { "value": "MENDING_MODIFIER", "multiply": 1 },
-          { "value": "NIGHT_VIS", "multiply": 7 },
-          { "value": "REGEN_HP_AWAKE", "multiply": 2 },
           { "value": "SOCIAL_INTIMIDATE", "add": 4 },
           { "value": "SOCIAL_PERSUADE", "add": 4 },
-          { "value": "SPEED", "multiply": 0.2 },
-          { "value": "WEAKNESS_TO_WATER", "add": 0.0333 },
-          { "value": "SWEAT_MULTIPLIER", "multiply": -1 }
+          { "value": "SPEED", "multiply": 0.2 }
         ],
         "mutations": [ "YOUKAI_CONSTITUTION" ]
       }
@@ -768,7 +742,7 @@
         "id": "YAMAME_COUNTER_MUT_eoc",
         "effect": [
           { "u_lose_trait": "YAMAME_COUNTER_MUT" },
-          { "run_eocs": [ "yamame_miasmaburst_stored_eoc" ], "time_in_future": "30 s" }
+          { "queue_eocs": [ "yamame_miasmaburst_stored_eoc" ], "time_in_future": "30 s" }
         ]
       }
     ],
@@ -789,7 +763,6 @@
       { 
         "condition": "ALWAYS", 
         "values": [ 
-          { "value": "NIGHT_VIS", "multiply": 2 },
           { "value": "SOCIAL_INTIMIDATE", "add": 4 }
         ],
         "mutations": [ "YOUKAI_CONSTITUTION" ]
@@ -813,11 +786,7 @@
       { 
         "condition": "ALWAYS", 
         "values": [ 
-          { "value": "PAIN_PENALTY_MOD_DEX", "multiply": -0.66 },
-          { "value": "PAIN_PENALTY_MOD_INT", "multiply": -0.66 },
-          { "value": "PAIN_PENALTY_MOD_PER", "multiply": -0.66 },
-          { "value": "PAIN_PENALTY_MOD_STR", "multiply": -0.66 },
-          { "value": "PAIN_PENALTY_MOD_SPEED", "multiply": -0.66 }
+          
         ]
       }
     ]
@@ -894,7 +863,7 @@
     "valid": false,
     "active": true,
     "activated_eocs": [ "wings_activate_eoc" ],
-    "activation_msg": "",
+    "//activation_msg": "",
     "ugliness": 1,
     "visibility": 8,
     "cancels": [ "WINGS_BAT", "WINGS_BIRD", "WINGS_BUTTERFLY", "WINGS_INSECT", "WINGS_STUB" ]
@@ -910,7 +879,7 @@
     "ugliness": 3,
     "visibility": -2,
     "encumbrance_always": [ [ "hand_l", 50 ], [ "hand_r", 50 ] ],
-    "override_look": { "id": "mon_bat", "tile_category": "monster" },
+    "//override_look": { "id": "mon_bat", "tile_category": "monster" },
     "enchantments": [
       {
         "condition": "ALWAYS",
@@ -936,7 +905,7 @@
     "valid": false,
     "active": true,
     "activated_eocs": [ "wings_activate_eoc" ],
-    "activation_msg": "",
+    "//activation_msg": "",
     "ugliness": 2,
     "visibility": 8,
     "cancels": [ "WINGS_BAT", "WINGS_BIRD", "WINGS_BUTTERFLY", "WINGS_INSECT", "WINGS_STUB" ]
@@ -953,7 +922,7 @@
     "valid": false,
     "active": true,
     "activated_eocs": [ "wings_activate_eoc" ],
-    "activation_msg": "",
+    "//activation_msg": "",
     "visibility": 4,
     "cancels": [ "WINGS_BAT", "WINGS_BIRD", "WINGS_BUTTERFLY", "WINGS_INSECT", "WINGS_STUB" ]
   },
@@ -1019,11 +988,9 @@
     "enchantments": [
       {
         "condition": "ALWAYS",
-        "melee_damage_bonus": [ 
-          { "type": "bash", "add": { "math": [ "rng( 0.75, 2.25 )" ] } } 
-        ],
         "values": [
           { "value": "STRENGTH", "add": 2 },
+          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "rng( 0.75, 2.25 )" ] } },
           { "value": "OVERKILL_DAMAGE", "multiply": -4 }
         ]
       }
@@ -1087,8 +1054,8 @@
       },
       {
         "condition": { "not": "u_has_weapon" },
-        "melee_damage_bonus": [ 
-          { "type": "bash", "add": { "math": [ "u_skill('unarmed') * 2" ] } } 
+        "values": [ 
+          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "u_skill('unarmed') * 2" ] } }
         ]
       }
     ],
@@ -1121,15 +1088,8 @@
     "purifiable": false,
     "starting_trait": false,
     "valid": false,
+    "cardio_multiplier": 1.25,
     "initial_ma_styles": [ "style_kokoro" ],
-    "enchantments": [ 
-      { 
-        "condition": "ALWAYS", 
-        "values": [ 
-          { "value": "CARDIO_MULTIPLIER", "multiply": 0.25 }
-        ]
-      } 
-    ],
     "cancels": [ "JEKYLL", "SEASONAL_AFFECTIVE", "GOODCARDIO", "GOODCARDIO2", "OPTIMISTIC", "BADKNEES", "REALLYBADKNEES", "BADCARDIO", "BADTEMPER", "MOODSWINGS" ],
     "flags": [ "KOKORO_WEBS" ]
   },
@@ -1196,21 +1156,21 @@
     "purifiable": false,
     "starting_trait": false,
     "valid": false,
+    "fatigue_modifier": 1.25,
+    "fatigue_regen_modifier": 1.25,
     "initial_ma_styles": [ "style_meiling" ],
     "enchantments": [
       {
         "condition": "ALWAYS",
         "values": [
-          { "value": "SLEEPINESS_REGEN", "multiply": 0.25 },
-          { "value": "SLEEPINESS", "multiply": 0.25 },
           { "value": "SLEEPY", "add": 25 }
         ],
         "mutations": [ "DEFT", "HEAVYSLEEPER" ]
       },
       {
         "condition": { "not": "u_has_weapon" },
-        "melee_damage_bonus": [ 
-          { "type": "bash", "add": { "math": [ "( u_skill('swimming') + u_skill('melee') + u_skill('unarmed') ) * 0.5" ] } } 
+        "values": [ 
+          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "( u_skill('swimming') + u_skill('melee') + u_skill('unarmed') ) * 0.5" ] } }
         ]
       }
     ],
@@ -1234,17 +1194,13 @@
       {
         "condition": "ALWAYS",
         "values": [ 
-          { "value": "PAIN_PENALTY_MOD_DEX", "multiply": -0.5 },
-          { "value": "PAIN_PENALTY_MOD_INT", "multiply": -0.5 },
-          { "value": "PAIN_PENALTY_MOD_PER", "multiply": -0.5 },
-          { "value": "PAIN_PENALTY_MOD_STR", "multiply": -0.5 },
-          { "value": "PAIN_PENALTY_MOD_SPEED", "multiply": -0.66 }
+          
         ]
       },
       {
         "condition": { "not": "u_has_weapon" },
-        "melee_damage_bonus": [ 
-          { "type": "bash", "add": { "math": [ "( u_skill('melee') + u_skill('unarmed') + (u_pain() * 0.25 ) )" ] } } 
+        "values": [ 
+          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "( u_skill('melee') + u_skill('unarmed') + (u_pain() * 0.25 ) )" ] } }
         ]
       }
     ],
@@ -1364,15 +1320,7 @@
     "points": 0,
     "player_display": false,
     "purifiable": false,
-    "valid": false,
-    "enchantments": [ 
-      { 
-        "condition": "ALWAYS", 
-        "values": [ 
-          { "value": "NIGHT_VIS", "multiply": 1 }
-        ] 
-      } 
-    ]
+    "valid": false
   },
   {
     "id": "PROF_YAMAME",

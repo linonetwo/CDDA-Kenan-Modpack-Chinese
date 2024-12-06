@@ -36,7 +36,7 @@
         "type": "spell", 
         "spell_data": { "id": "death_ball_lightning", "hit_self": true }, 
         "condition": { "one_in_chance": 20 },
-        "cooldown": { "math": [ "31 + rand(61)" ] }, 
+        "cooldown": 61, 
         "monster_message": "The ball lightning explodes!" 
       },
       { 
@@ -44,7 +44,7 @@
         "type": "spell", 
         "spell_data": { "id": "ball_lightning_aoe" }, 
         "condition": { "math": [ "distance('u', 'npc')", "<", "2" ] },
-        "cooldown": { "math": [ "3 + rand(5)" ] }, 
+        "cooldown": 5, 
         "monster_message": "The ball lightning flares!" 
       },
       { 
@@ -52,7 +52,7 @@
         "type": "spell", 
         "spell_data": { "id": "ball_lightning_BLAST" }, 
         "condition": { "math": [ "distance('u', 'npc')", ">=", "3" ] },
-        "cooldown": { "math": [ "3 + rand(5)" ] }, 
+        "cooldown": 5, 
         "monster_message": "The ball lightning discharges!" 
       }
     ],
@@ -70,7 +70,6 @@
       "NOHEAD",
       "NO_BREATHE",
       "PACIFIST",
-      "QUIETMOVES",
       "SEES",
       "STUN_IMMUNE",
       "SWARMS",
@@ -122,7 +121,7 @@
         "type": "spell", 
         "spell_data": { "id": "reposition_12", "hit_self": true }, 
         "condition": { "one_in_chance": 3 }, 
-        "cooldown": { "math": [ "3 + rand(5)" ] }, 
+        "cooldown": 5, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
@@ -140,7 +139,6 @@
       "NO_BREATHE",
       "NIGHT_INVISIBILITY",
       "PACIFIST",
-      "QUIETMOVES",
       "SEES",
       "SILENT_DISAPPEAR",
       "STUN_IMMUNE",

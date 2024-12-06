@@ -48,7 +48,7 @@
         "id": "mon_banshee_1", 
         "type": "spell", 
         "spell_data": { "id": "shrieking_40" }, 
-        "cooldown": { "math": [ "11 + rand(13)" ] }, 
+        "cooldown": 17, 
         "allow_no_target": true, 
         "monster_message": ""
       },
@@ -56,7 +56,7 @@
         "id": "mon_banshee_2", 
         "type": "spell", 
         "spell_data": { "id": "wailing_24" }, 
-        "cooldown": { "math": [ "11 + rand(19)" ] }, 
+        "cooldown": 20, 
         "allow_no_target": true, 
         "monster_message": "",
         "//": "No msg or anything, as this is casted closer than shrieking_40 , which already adds sound"
@@ -80,20 +80,20 @@
     "vision_day": 16,
     "vision_night": 16,
     "special_attacks": [
-      [ "PARROT", { "math": [ "11 + rand(7)" ] } ],
+      [ "PARROT", 14 ],
       { 
         "id": "mon_lallorona_1", 
         "type": "spell", 
         "spell_data": { "id": "reposition_24", "hit_self": true }, 
         "condition": { "one_in_chance": 2 },
-        "cooldown": { "math": [ "23 + rand(11)" ] }, 
+        "cooldown": 28, 
         "monster_message": "" 
       },
       { 
         "id": "mon_lallorona_2", 
         "type": "spell", 
         "spell_data": { "id": "wailing_24" }, 
-        "cooldown": { "math": [ "11 + rand(19)" ] }, 
+        "cooldown": 20, 
         "allow_no_target": true, 
         "monster_message": "You hear a disturbing wail!"
       }
@@ -119,7 +119,7 @@
         "id": "mon_white_lady_1", 
         "type": "spell", 
         "spell_data": { "id": "white_lady_demoralize" }, 
-        "cooldown": { "math": [ "13 + rand(17)" ] }, 
+        "cooldown": 21, 
         "allow_no_target": true, 
         "monster_message": "You feel tense."
       },
@@ -147,12 +147,12 @@
     "vision_day": 32,
     "vision_night": 32,
     "special_attacks": [ 
-      [ "PARROT_AT_DANGER", { "math": [ "7 + rand(11)" ] } ], 
+      [ "PARROT_AT_DANGER", 12 ], 
       { 
         "id": "mon_white_lady_1", 
         "type": "spell", 
         "spell_data": { "id": "white_lady_demoralize" }, 
-        "cooldown": { "math": [ "7 + rand(13)" ] }, 
+        "cooldown": 13, 
         "allow_no_target": true, 
         "monster_message": "You feel disturbed!"
       },
@@ -161,7 +161,7 @@
         "type": "spell", 
         "spell_data": { "id": "reposition_24", "hit_self": true }, 
         "condition": { "one_in_chance": 2 },
-        "cooldown": { "math": [ "23 + rand(11)" ] }, 
+        "cooldown": 28, 
         "monster_message": "" 
       }
     ],

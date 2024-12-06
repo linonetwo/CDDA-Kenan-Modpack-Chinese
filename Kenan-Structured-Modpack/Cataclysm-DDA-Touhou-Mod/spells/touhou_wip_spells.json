@@ -39,7 +39,7 @@
             "id": "kaenbyou_corpseexplosion_chain_explode", 
             "effect": [ 
               { "u_message": "CHAINED", "type": "mixed" },
-              { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_weight() / 1000000 ) / 2 ) * rng( 0.75, 1.25 ) )" ] },
+              { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_val('weight') / 1000000 ) / 2 ) * rng( 0.75, 1.25 ) )" ] },
               "npc_die",
               { "math": [ "var_corpseexplosion_chain_aoe", "=", "1 + rand(1)" ] },
               { "u_cast_spell": { "id": "kaenbyou_corpseexplosion4" }, "loc": { "global_val": "var_corpseexplosion_chain_loc" } },
@@ -165,10 +165,10 @@
       { "math": [ "var_nitoriweather_p", "=", "weather('pressure')" ] },
       { "math": [ "var_nitoriweather_t", "=", "weather('temperature')" ] },
       { "math": [ "var_nitoriweather_w", "=", "weather('windpower')" ] },
-      { "run_eocs": [ "nitori_weathermissile_launch_eoc" ], "time_in_future": "2 s" }
+      { "queue_eocs": [ "nitori_weathermissile_launch_eoc" ], "time_in_future": "2 s" }
     ],
     "false_effect": [ 
-      { "run_eocs": [ "nitori_weathermissile_ps_eoc" ], "time_in_future": "2 s" }
+      { "queue_eocs": [ "nitori_weathermissile_ps_eoc" ], "time_in_future": "2 s" }
     ]
   },
   {
@@ -177,7 +177,7 @@
     "global": true,
     "effect": [
       { "u_cast_spell": { "id": "nitori_weathermissile_vfx" }, "targeted": false },
-      { "run_eocs": [ "nitori_weathermissile_cloudy_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_cloudy_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
     ]
   },
   {
@@ -203,7 +203,7 @@
       { "u_message": "CLOUDY_FALSE", "type": "mixed" },
       { "math": [ "var_nitori_weather", "=", "1" ] },
       { "run_eocs": [ "touhou_next_weather_eoc" ] },
-      { "run_eocs": [ "nitori_weathermissile_cloudy_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_cloudy_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
     ]
   },
   {
@@ -229,7 +229,7 @@
       { "u_message": "L_DRIZZLE_FALSE", "type": "mixed" },
       { "math": [ "var_nitori_weather", "=", "2" ] },
       { "run_eocs": [ "touhou_next_weather_eoc" ] },
-      { "run_eocs": [ "nitori_weathermissile_ldrizzle_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_ldrizzle_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
     ]
   },
   {
@@ -255,7 +255,7 @@
       { "u_message": "DRIZZLE_FALSE", "type": "mixed" },
       { "math": [ "var_nitori_weather", "=", "3" ] },
       { "run_eocs": [ "touhou_next_weather_eoc" ] },
-      { "run_eocs": [ "nitori_weathermissile_drizzle_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_drizzle_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
     ]
   },
   {
@@ -281,13 +281,13 @@
     },
     "effect": [
       { "u_message": "RAIN_EFFECT", "type": "mixed" },
-      { "run_eocs": [ "nitori_weathermissile_end_eoc" ], "time_in_future": [ "10 m", "10 m" ] }
+      { "queue_eocs": [ "nitori_weathermissile_end_eoc" ], "time_in_future": [ "10 m", "10 m" ] }
     ],
     "false_effect": [ 
       { "u_message": "RAIN_FALSE", "type": "mixed" },
       { "math": [ "var_nitori_weather", "=", "4" ] },
       { "run_eocs": [ "touhou_next_weather_eoc" ] },
-      { "run_eocs": [ "nitori_weathermissile_rain_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_rain_eoc" ], "time_in_future": [ "2 s", "2 s" ] }
     ]
   },
   {
@@ -309,7 +309,7 @@
     "global": true,
     "effect": [
       { "u_cast_spell": { "id": "nitori_weathermissile_vfx" }, "targeted": false },
-      { "run_eocs": [ "nitori_weathermissile_ps_cancel_eoc" ], "time_in_future": [ "25 s", "55 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_ps_cancel_eoc" ], "time_in_future": [ "25 s", "55 s" ] }
     ]
   },
   {
@@ -332,7 +332,7 @@
     "global": true,
     "effect": [
       { "u_cast_spell": { "id": "nitori_weathermissile_vfx" }, "targeted": false },
-      { "run_eocs": [ "nitori_weathermissile_cloudy_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_cloudy_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
     ]
   },
   {
@@ -369,7 +369,7 @@
       { "u_message": "<global_val:var_W> var_W 2", "type": "mixed" },
       { "u_message": "<global_val:var_T> var_T 2", "type": "mixed" },
       
-      { "run_eocs": [ "nitori_weathermissile_cloudy_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_cloudy_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
     ],
     "//": "This does not work with base weather, but it partially does with custom weather. Use a var_CUSTOM to force it instead",
     "//2": "Read the comment at nitori_weathermissile_eoc "
@@ -399,7 +399,7 @@
       { "u_message": "<global_val:var_W> var_W", "type": "mixed" },
       { "u_message": "<global_val:var_T> var_T", "type": "mixed" },
       
-      { "run_eocs": [ "nitori_weathermissile_ldrizzle_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_ldrizzle_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
     ]
   },
   {
@@ -427,7 +427,7 @@
       { "u_message": "<global_val:var_W> var_W", "type": "mixed" },
       { "u_message": "<global_val:var_T> var_T", "type": "mixed" },
       
-      { "run_eocs": [ "nitori_weathermissile_drizzle_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_drizzle_eoc_WIP" ], "time_in_future": [ "2 s", "2 s" ] }
     ]
   },
   {
@@ -437,7 +437,7 @@
     "condition": { "is_weather": "rain" },
     "effect": [
       { "u_message": "RAIN_EFFECT", "type": "mixed" },
-      { "run_eocs": [ "nitori_weathermissile_end_eoc_WIP" ], "time_in_future": [ "4 m", "4 m" ] }
+      { "queue_eocs": [ "nitori_weathermissile_end_eoc_WIP" ], "time_in_future": [ "4 m", "4 m" ] }
     ],
     "false_effect": [ 
       { "u_message": "RAIN_FALSE", "type": "mixed" },
@@ -455,7 +455,7 @@
       { "u_message": "<global_val:var_W> var_W", "type": "mixed" },
       { "u_message": "<global_val:var_T> var_T", "type": "mixed" },
       
-      { "run_eocs": [ "nitori_weathermissile_end_eoc_WIP" ], "time_in_future": [ "60 m", "120 m" ] }
+      { "queue_eocs": [ "nitori_weathermissile_end_eoc_WIP" ], "time_in_future": [ "60 m", "120 m" ] }
     ]
   },
   {
@@ -478,7 +478,7 @@
     "global": true,
     "effect": [
       { "u_cast_spell": { "id": "nitori_weathermissile_vfx" }, "targeted": false },
-      { "run_eocs": [ "nitori_weathermissile_ps_cancel_eoc_WIP" ], "time_in_future": [ "25 s", "55 s" ] }
+      { "queue_eocs": [ "nitori_weathermissile_ps_cancel_eoc_WIP" ], "time_in_future": [ "25 s", "55 s" ] }
     ]
   },
   {
@@ -739,7 +739,7 @@
       { "math": [ "u_val('mana')", "-=", "( 133 / ( var_timestop_duration / 100 ) )" ] },
       { "u_add_effect": "sakuya_timestop_effect", "duration": "2 s" },
       { "u_cast_spell": { "id": "sakuya_timestop2" }, "targeted": false },
-      { "run_eocs": [ "sakuya_timestop_cycle1" ], "time_in_future": "1 s" }
+      { "queue_eocs": [ "sakuya_timestop_cycle1" ], "time_in_future": "1 s" }
     ],
     "false_effect": [ { "run_eocs": [ "sakuya_timestop_end" ] } ]
   },
@@ -818,10 +818,10 @@
     "condition": { "math": [ "var_corpsecurse", "==", "1" ] },
     "effect": [
       { "u_cast_spell": { "id": "seiga_corpsecurse4" } },
-      { "run_eocs": [ "seiga_corpsecurse_rezzed_timer_1" ], "time_in_future": "1 s" }
+      { "queue_eocs": [ "seiga_corpsecurse_rezzed_timer_1" ], "time_in_future": "1 s" }
     ],
     "false_effect": [ 
-      { "run_eocs": [ "seiga_corpsecurse_rezzed_timer_1" ], "time_in_future": "1 s" }
+      { "queue_eocs": [ "seiga_corpsecurse_rezzed_timer_1" ], "time_in_future": "1 s" }
     ]
   },
   {
@@ -910,7 +910,7 @@
     "type": "effect_on_condition",
     "effect": [
       { 
-        "u_location_variable": { "global_val": "var_detectrad_field_1" }, "field": "fd_nuke_gas", "target_min_radius": 0, "target_max_radius": 32,
+        "u_location_variable": { "global_val": "var_detectrad_field_1" }, "//field": "fd_nuke_gas", "target_min_radius": 0, "target_max_radius": 32,
         "true_eocs": [
           {
             "id": "var_detectrad_field_1_eoc",
@@ -919,6 +919,7 @@
         ]
       }
     ],
+    "//0.H": "",
     "//": "These only detect the first field, furniture or terrain under the aoe (top left)",
     "//2": "Important: these center the u_LOC_VAR on the player, and search for the type:id around"
   },
@@ -945,16 +946,11 @@
           {
             "id": "var_detectrad_furn_TEST_2_eoc",
             "effect": [ 
-              {
-                "if": { "map_furniture_id": "f_bench", "loc": { "global_val": "var_detectrad_furn_TEST_2" } },
-                "then": [
-                  { "u_set_field": "fd_clairvoyant2", "radius": 0, "intensity": 1, "target_var": { "global_val": "var_detectrad_furn_TEST_2" } },
-                  { "message": "<global_val:var_detectrad_furn_TEST_2> BBB", "type": "mixed" }
-                ]
-              }
+              
             ]
           }
-        ]
+        ],
+        "//0.H": "Removed the effect as it relies on map_furniture_id "
       },
       { 
         "u_location_variable": { "global_val": "var_detectrad_furn_1" }, "furniture": "ap_compact_ASRG_containment", "target_min_radius": 0, "target_max_radius": 32,
@@ -1175,7 +1171,7 @@
     "effect": [
       { "message": "TIMER_1", "type": "mixed" },
       { "math": [ "u_var_disease_timer_1", "+=", "100" ] },
-      { "run_eocs": [ "yamame_disease_timer_1_2_OLD" ], "time_in_future": "1 s" }
+      { "queue_eocs": [ "yamame_disease_timer_1_2_OLD" ], "time_in_future": "1 s" }
     ],
     "false_effect": [ 
       { "message": "TIMER_1", "type": "mixed" },

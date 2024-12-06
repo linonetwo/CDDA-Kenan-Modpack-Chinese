@@ -47,7 +47,7 @@
     "passive_mult_procgen_values": [
       { "weight": 100, "min_value": 0.05, "max_value": 0.2, "type": "ATTACK_SPEED", "increment": 0.05, "power_per_increment": 100 },
       { "weight": 100, "min_value": 0.05, "max_value": 0.2, "type": "MOVE_COST", "increment": 0.05, "power_per_increment": 100 },
-      { "weight": 100, "min_value": 0.05, "max_value": 0.2, "type": "SLEEPINESS", "increment": 0.05, "power_per_increment": 100 }
+      { "weight": 100, "min_value": 0.05, "max_value": 0.2, "type": "FATIGUE", "increment": 0.05, "power_per_increment": 100 }
     ],
     "type_weights": [
       { "weight": 100, "value": "active_enchantment" },
@@ -224,17 +224,13 @@
       { "weight": 100, "min_value": -8, "max_value": -1, "type": "ARMOR_ACID", "increment": 1, "power_per_increment": 100 },
       { "weight": 100, "min_value": 8, "max_value": 1, "type": "EFFECTIVE_HEALTH_MOD", "increment": 1, "power_per_increment": 100 },
       { "weight": 100, "min_value": -8, "max_value": -1, "type": "FALL_DAMAGE", "increment": 1, "power_per_increment": 100 },
-      { "weight": 100, "min_value": -8, "max_value": -1, "type": "FOOTSTEP_NOISE", "increment": 1, "power_per_increment": 100 },
-      { "weight": 100, "min_value": 1, "max_value": 1, "type": "HEALTHY_RATE", "increment": 0.1, "power_per_increment": 100 },
-      { "weight": 100, "min_value": -1, "max_value": 0, "type": "MOVECOST_OBSTACLE_MOD", "increment": 0.1, "power_per_increment": 10 }
-    ],
-    "passive_mult_procgen_values": [
-      { "weight": 100, "min_value": -8, "max_value": -1, "type": "VOMIT_MUL", "increment": 0.1, "power_per_increment": 100 }
+      { "weight": 100, "min_value": -8, "max_value": -1, "type": "FOOTSTEP_NOISE", "increment": 1, "power_per_increment": 100 }
     ],
     "type_weights": [
       { "weight": 100, "value": "passive_enchantment_add" },
       { "weight": 100, "value": "passive_enchantment_mult" }
-    ]
+    ],
+    "//0.H": "Removed HEALTHY_RATE + MOVECOST_OBSTACLE_MOD + VOMIT_MUL (mult)"
   },
   {
     "id": "strong_ice",

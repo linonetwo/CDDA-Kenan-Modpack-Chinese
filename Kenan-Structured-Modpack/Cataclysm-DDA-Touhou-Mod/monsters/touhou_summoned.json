@@ -37,7 +37,7 @@
         "id": "darksphere_2",
         "type": "spell",
         "spell_data": { "id": "darksphere_speed" },
-        "cooldown": { "math": [ "6 + rand(6)" ] },
+        "cooldown": 9,
         "allow_no_target": true
       }
     ],
@@ -53,7 +53,8 @@
       "SEES",
       "SILENT_DISAPPEAR",
       "STUN_IMMUNE"
-    ]
+    ],
+    "//0.H": "Removed 'math'-based cooldowns, the PATH_AVOID_DANGER -> PATH_AVOID_DANGER_1 or _2 and removed path_settings field supporting options"
   },
   {
     "id": "mon_houso",
@@ -82,7 +83,7 @@
         "ignore_dest_danger": true,
         "message": "Houso leaps!"
       },
-      { "id": "mon_houso_1",  "type": "spell", "spell_data": { "id": "houso_slash" }, "cooldown": { "math": [ "2 + rand(2)" ] } }
+      { "id": "mon_houso_1",  "type": "spell", "spell_data": { "id": "houso_slash" }, "cooldown": 3 }
     ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "delete": { "dissect": "dissect_feline_sample_small", "zombify_into": "mon_ziger" },
@@ -92,7 +93,7 @@
       "GOODHEARING", 
       "NO_BREED", 
       "NOT_HALLUCINATION", 
-      "PATH_AVOID_DANGER", 
+      "PATH_AVOID_DANGER_1", 
       "PLASTIC", 
       "PUSH_MON", 
       "SEES", 
@@ -123,7 +124,7 @@
     "vision_night": 12,
     "path_settings": { "max_dist": 5 },
     "special_attacks": [ 
-      { "id": "mon_kanda_1",  "type": "spell", "spell_data": { "id": "kanda_zoom" }, "cooldown": { "math": [ "2 + rand(2)" ] } }
+      { "id": "mon_kanda_1",  "type": "spell", "spell_data": { "id": "kanda_zoom" }, "cooldown": 3 }
     ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "delete": { "dissect": "dissect_bird_sample_small", "zombify_into": "mon_meat_cocoon_small" },
@@ -135,7 +136,7 @@
       "NO_BREED", 
       "NOT_HALLUCINATION", 
       "PACIFIST", 
-      "PATH_AVOID_DANGER", 
+      "PATH_AVOID_DANGER_1", 
       "PLASTIC", 
       "PUSH_MON", 
       "SEES", 
@@ -173,7 +174,7 @@
     "path_settings": { "max_dist": 5 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
     "special_attacks": [ 
-      { "id": "mon_koutei_1",  "type": "spell", "spell_data": { "id": "koutei_breath" }, "cooldown": { "math": [ "2 + rand(2)" ] } }
+      { "id": "mon_koutei_1",  "type": "spell", "spell_data": { "id": "koutei_breath" }, "cooldown": 3 }
     ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "flags": [ 
@@ -184,7 +185,7 @@
       "NO_BREED", 
       "NOT_HALLUCINATION", 
       "PACIFIST", 
-      "PATH_AVOID_DANGER", 
+      "PATH_AVOID_DANGER_1", 
       "PLASTIC", 
       "PUSH_MON", 
       "SEES", 
@@ -222,7 +223,7 @@
     "path_settings": { "max_dist": 5 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
     "special_attacks": [ 
-      { "id": "mon_mukou_1",  "type": "spell", "spell_data": { "id": "mukou_discharge" }, "cooldown": { "math": [ "2 + rand(2)" ] } }
+      { "id": "mon_mukou_1",  "type": "spell", "spell_data": { "id": "mukou_discharge" }, "cooldown": 3 }
     ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "" },
     "flags": [ 
@@ -232,7 +233,7 @@
       "NO_BREED", 
       "NOT_HALLUCINATION", 
       "PACIFIST", 
-      "PATH_AVOID_DANGER", 
+      "PATH_AVOID_DANGER_1", 
       "PLASTIC", 
       "SEES", 
       "SMELLS", 
@@ -318,7 +319,7 @@
     "vision_night": 8,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
-    "special_attacks": [ [ "grab", { "math": [ "6 + rand(8)" ] } ] ],
+    "special_attacks": [ [ "grab", 10 ] ],
     "death_function": {
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "death_blood3", "hit_self": true },
@@ -360,9 +361,9 @@
     "vision_night": 8,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
-    "special_attacks": [ [ "grab", { "math": [ "6 + rand(8)" ] } ] ],
+    "special_attacks": [ [ "grab", 10 ] ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s dissipates." },
-    "flags": [ "GRABS", "GROUP_MORALE", "HEARS", "NO_BREATHE", "PATH_AVOID_DANGER", "SEES", "SOULDMG_EXTRA" ]
+    "flags": [ "GRABS", "GROUP_MORALE", "HEARS", "NO_BREATHE", "PATH_AVOID_DANGER_1", "SEES", "SOULDMG_EXTRA" ]
   },
   {
     "id": "mon_sakuya_alternate",
@@ -384,7 +385,7 @@
     "morale": 99,
     "dodge": 8,
     "luminance": 1,
-    "path_settings": { "max_dist": 3, "avoid_traps": true, "avoid_dangerous_fields": true },
+    "path_settings": { "max_dist": 3 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT" ],
     "fear_triggers": [ "PLAYER_CLOSE" ],
     "starting_ammo": { "alternate_knife_knife": 12 },
@@ -394,7 +395,7 @@
         "type": "gun",
         "description": "The maid throws a knife!",
         "ammo_type": "alternate_knife_knife",
-        "cooldown": { "math": [ "2 + rand(1)" ] },
+        "cooldown": 2,
         "fake_dex": 11,
         "fake_skills": [ [ "throw", 7 ] ],
         "max_ammo": 12,
@@ -413,7 +414,7 @@
       "NO_BREATHE",
       "NOT_HALLUCINATION",
       "PACIFIST",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "PET_WONT_FOLLOW",
       "RANGED_ATTACKER",
       "SEES",
@@ -439,7 +440,6 @@
     "morale": 99,
     "dodge": 8,
     "luminance": 1,
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
     "starting_ammo": { "ammo_lunar_small_1_illusionary": 1 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT" ],
     "special_attacks": [
@@ -465,7 +465,7 @@
       "NO_BREATHE",
       "NOT_HALLUCINATION",
       "PACIFIST",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "PET_WONT_FOLLOW",
       "RANGED_ATTACKER",
       "SEES",
@@ -568,14 +568,14 @@
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
     "starting_ammo": { "chasm_ammo_ammo": 999 },
     "special_attacks": [ 
-      [ "grab", { "math": [ "4 + rand(5)" ] } ], 
-      [ "PARROT_AT_DANGER", { "math": [ "10 + rand(10)" ] } ],
+      [ "grab", 6 ], 
+      [ "PARROT_AT_DANGER", 15 ],
       {
         "gun_type": "chasm_gun",
         "type": "gun",
         "description": "",
         "ammo_type": "chasm_ammo_ammo",
-        "cooldown": { "math": [ "3 + rand(3)" ] },
+        "cooldown": 4,
         "fake_dex": 4,
         "fake_skills": [ [ "gun", 1 ], [ "smg", 1 ] ],
         "max_ammo": 99,
@@ -632,12 +632,12 @@
     "bleed_rate": 0,
     "grab_strength": 8,
     "vision_night": 8,
-    "path_settings": { "max_dist": 20, "avoid_traps": true, "avoid_dangerous_fields": true },
+    "path_settings": { "max_dist": 20 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
     "special_attacks": [ 
-      [ "grab", { "math": [ "6 + rand(8)" ] } ], 
-      [ "PARROT_AT_DANGER", { "math": [ "10 + rand(10)" ] } ], 
-      [ "vs_stab2d2", { "math": [ "4 + rand(2)" ] } ]
+      [ "grab", 10 ], 
+      [ "PARROT_AT_DANGER", 15 ], 
+      [ "vs_stab2d2", 5 ]
     ],
     "death_function": {
       "corpse_type": "NO_CORPSE",
@@ -654,7 +654,7 @@
       "HEARS",
       "NO_BREATHE",
       "NOT_HALLUCINATION",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "SEES", 
       "SOULDMG_EXTRA",
       "STUN_IMMUNE",
@@ -695,7 +695,7 @@
     "vision_night": 8,
     "path_settings": { "max_dist": 20 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
-    "special_attacks": [ [ "grab", { "math": [ "4 + rand(5)" ] } ], [ "PARROT_AT_DANGER", { "math": [ "10 + rand(10)" ] } ], [ "vs_stab2d2", { "math": [ "4 + rand(2)" ] } ] ],
+    "special_attacks": [ [ "grab", 6 ], [ "PARROT_AT_DANGER", 15 ], [ "vs_stab2d2", 5 ] ],
     "death_function": {
       "corpse_type": "NO_CORPSE",
       "effect": { "id": "kaenbyou_vsrelease2", "hit_self": true },
@@ -709,7 +709,7 @@
       "GROUP_MORALE",
       "HEARS",
       "NOT_HALLUCINATION",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_1",
       "SEES", 
       "SOULDMG_EXTRA",
       "WARM"
@@ -748,7 +748,7 @@
         "id": "yoshika_nails_1",
         "type": "spell", 
         "spell_data": { "id": "yoshika_nails" },
-        "cooldown": { "math": [ "2 + rand(6)" ] },
+        "cooldown": 5,
         "monster_message" : ""
       },
       { 
@@ -767,7 +767,7 @@
       }
     ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "%s's talisman safeguard activates just before she receives the last hit, immediately pulling her back to your Senkai." },
-    "flags": [ "CLIMBS", "GRABS", "HEARS", "NOT_HALLUCINATION", "PATH_AVOID_DANGER", "SEES", "SOULDMG_EXTRA" ]
+    "flags": [ "CLIMBS", "GRABS", "HEARS", "NOT_HALLUCINATION", "PATH_AVOID_DANGER_1", "SEES", "SOULDMG_EXTRA" ]
   },
   {
     "id": "mon_youmumyon",
@@ -792,7 +792,7 @@
     "melee_damage": [ { "damage_type": "cut", "amount": 8 }, { "damage_type": "soul", "amount": 8 } ],
     "dodge": 8,
     "luminance": 1,
-    "path_settings": { "max_dist": 6, "avoid_traps": true, "avoid_dangerous_fields": true },
+    "path_settings": { "max_dist": 6 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT" ],
     "fear_triggers": [ "PLAYER_CLOSE" ],
     "special_attacks": [
@@ -819,7 +819,7 @@
       }
     ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "Your phantom half returns to your side." },
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "CLIMBS", "FLIES", "NO_BREATHE", "NOT_HALLUCINATION", "PATH_AVOID_DANGER", "SEES" ]
+    "flags": [ "BASHES", "CAN_OPEN_DOORS", "CLIMBS", "FLIES", "NO_BREATHE", "NOT_HALLUCINATION", "PATH_AVOID_DANGER_2", "SEES" ]
   },
   {
     "id": "mon_youmumyon2",
@@ -840,7 +840,7 @@
     "morale": 99,
     "dodge": 6,
     "luminance": 2,
-    "path_settings": { "max_dist": 4, "avoid_traps": true, "avoid_dangerous_fields": true },
+    "path_settings": { "max_dist": 4 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT" ],
     "fear_triggers": [ "PLAYER_CLOSE" ],
     "starting_ammo": { "myon_bullet_bullet": 20 },
@@ -869,7 +869,7 @@
         "type": "gun",
         "description": "",
         "ammo_type": "myon_bullet_bullet",
-        "cooldown": { "math": [ "2 + rand(2)" ] },
+        "cooldown": 3,
         "fake_dex": 11,
         "fake_skills": [ [ "gun", 6 ] ],
         "max_ammo": 99,
@@ -889,7 +889,7 @@
       "NOHEAD",
       "NOT_HALLUCINATION",
       "PACIFIST",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "PLASTIC",
       "RANGED_ATTACKER",
       "SEES"

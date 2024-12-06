@@ -87,8 +87,8 @@
         "name": "the mouth",
         "coverage": 24,
         "armor_mult": { "all": 0.75 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
-
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_mandible",

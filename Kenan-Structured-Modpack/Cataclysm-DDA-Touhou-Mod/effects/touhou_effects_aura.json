@@ -11,12 +11,10 @@
     "enchantments": [
       {
         "condition": { "u_has_worn_with_flag": "UTSUHO_ROD_FLAG" },
-        "melee_damage_bonus": [
-          { "type": "bash", "add": { "math": [ "rng( ( (u_skill('dodge') + 10 ) / 2 ), ( (u_skill('dodge') + 10 ) ) )" ] } },
-          { "type": "heat", "add": { "math": [ "rng( ( (u_skill('dodge') + 10 ) / 2 ), ( (u_skill('dodge') + 10 ) ) )" ] } }
-        ],
         "values": [ 
-          { "value": "LUMINATION", "add": 16 }
+          { "value": "LUMINATION", "add": 16 },
+          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "rng( ( (u_skill('dodge') + 10 ) / 2 ), ( (u_skill('dodge') + 10 ) ) )" ] } },
+          { "value": "ITEM_DAMAGE_HEAT", "add": { "math": [ "rng( ( (u_skill('dodge') + 10 ) / 2 ), ( (u_skill('dodge') + 10 ) ) )" ] } }
         ]
       }
     ],
@@ -115,12 +113,10 @@
     "enchantments": [ 
       {
         "condition": { "not": "u_has_weapon" },
-        "melee_damage_bonus": [ 
-          { "type": "bash", "add": { "math": [ "( u_skill('swimming') + u_skill('melee') + u_skill('unarmed') ) * 0.5" ] } } 
-        ],
         "values": [ 
           { "value": "LUMINATION", "add": 8 },
-          { "value": "REGEN_MANA", "multiply": -9 }
+          { "value": "REGEN_MANA", "multiply": -9 },
+          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "( u_skill('swimming') + u_skill('melee') + u_skill('unarmed') ) * 0.5" ] } }
         ]
       }
     ],
@@ -139,14 +135,12 @@
     "enchantments": [ 
       {
         "condition": { "not": "u_has_weapon" },
-        "melee_damage_bonus": [
-          { "type": "cut", "add": { "math": [ "rng( ( (u_skill('stabbing') * 0.525 ) + (u_skill('melee') * 0.525 ) + 1.3 ), ( (u_skill('stabbing') * 1.050 ) + (u_skill('melee') * 1.050 ) + 2.6 ) )" ] } } 
-        ],
         "values": [
           { "value": "ARMOR_BASH", "add": 2 },
           { "value": "ARMOR_CUT", "add": 2 },
           { "value": "ARMOR_STAB", "add": 2 },
-          { "value": "ARMOR_BULLET", "add": 2 }
+          { "value": "ARMOR_BULLET", "add": 2 },
+          { "value": "ITEM_DAMAGE_CUT", "add": { "math": [ "rng( ( (u_skill('stabbing') * 0.525 ) + (u_skill('melee') * 0.525 ) + 1.3 ), ( (u_skill('stabbing') * 1.050 ) + (u_skill('melee') * 1.050 ) + 2.6 ) )" ] } }
         ],
         "//": "ARMOR_X add +n REDUCES armor for n value, this is intended here as the aura increases melee dmg while reducing defense"
       }

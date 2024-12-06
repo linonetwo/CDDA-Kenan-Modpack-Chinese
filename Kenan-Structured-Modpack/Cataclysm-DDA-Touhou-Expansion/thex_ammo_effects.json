@@ -2,9 +2,10 @@
   {
     "id": "473x33_TEST",
     "type": "ammo_effect",
-    "spell_data": { "id": "473x33_TEST_spell" },
-    "always_cast_spell": true,
-    "//": "This works as intended: bullet + spell dmg x2. Do not test this with the debug monster! It works properly with default zombies and deals the expected dmg"
+    "//spell_data": { "id": "473x33_TEST_spell" },
+    "//always_cast_spell": true,
+    "//": "This works as intended: bullet + spell dmg x2. Do not test this with the debug monster! It works properly with default zombies and deals the expected dmg",
+    "//0.H": "Fields spell_data and always_cast_spell "
   },
   {
     "id": "473x33_TEST_spell",
@@ -44,7 +45,8 @@
   {
     "id": "impurity_ammo_effect",
     "type": "ammo_effect",
-    "eoc": [ "impurity_ammo_eoc" ]
+    "//eoc": [ "impurity_ammo_eoc" ],
+    "//0.H": ""
   },
   {
     "id": "impurity_ammo_eoc",
@@ -80,7 +82,7 @@
     "type": "effect_on_condition",
     "condition": { "math": [ "var_bousan_pump", "<", "3" ] },
     "effect": [
-      { "turn_cost": 0.25 },
+
       { "math": [ "var_bousan_pump", "+=", "1" ] },
       { "u_message": "You pump the Bousan." }
     ],
@@ -88,7 +90,8 @@
       { "math": [ "var_bousan_pump", "=", "0" ] },
       { "u_message": "The vacuum defaults to atmospheric pressure.", "type": "mixed" }
     ],
-    "//WIP": "This has to be item-specific"
+    "//WIP": "This has to be item-specific",
+    "//0.H": "Removed turn_cost as it requires #70791 "
   },
   {
     "id": "ammo_lunar_bousan_effect",
@@ -105,24 +108,21 @@
       "check_sees": true,
       "check_sees_radius": 0
     },
-    "eoc": [ "ammo_lunar_bousan_eoc" ]
+    "//eoc": [ "ammo_lunar_bousan_eoc" ],
+    "//0.H": ""
   },
   {
     "id": "ammo_lunar_bousan_eoc",
     "type": "effect_on_condition",
     "effect": [ 
-      { "u_location_variable": { "global_val": "ammo_lunar_bousan_loc" }, "field": "fd_thex_dummy", "target_max_radius": 21 },
-      { "math": [ "var_lunar_bousan_distance", "=", "( distance('u', ammo_lunar_bousan_loc) )"] },
-      {
-        "if": { "map_field_id": "fd_thex_dummy", "loc": { "global_val": "ammo_lunar_bousan_loc" } },
-        "then": [ 
-          { "u_transform_radius": 21, "ter_furn_transform": "remove_dummy_field" },
-          { "run_eocs": "ammo_lunar_bousan_check_1_eoc", "alpha_talker": "avatar" }
-        ]
-      }
+      
+      { "math": [ "var_lunar_bousan_distance", "=", "( distance('u', ammo_lunar_bousan_loc) )"] }
+      
     ],
     "//": "This set ups the dummy field (to mark where the character shooted the weapon), the distance to the target (used in spells), and tries to remove the dummy field",
-    "//2": "If the field is removed, the checks below are done to do different effects, according to the shooting mode"
+    "//2": "If the field is removed, the checks below are done to do different effects, according to the shooting mode",
+    "//0.H": "Removed u_location_variable line as it relies on detecting field , which wasn't backported",
+    "//0.H2": "Removed the if-then chunk as it has relies on map_field_id , which wasn't backported"
   },
   {
     "id": "ammo_lunar_bousan_check_1_eoc",

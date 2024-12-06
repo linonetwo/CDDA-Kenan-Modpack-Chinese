@@ -32,20 +32,20 @@
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "SOUND" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_amphicyon_cub" }, "baby_count": 3, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_amphicyon_cub", "baby_count": 3, "baby_timer": 240 },
     "baby_flags": [ "SPRING" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(20)" ] } ],
+      [ "EAT_CARRION", 75 ], 
+      [ "EAT_FOOD", 75 ],
       { 
         "id": "sprint", 
         "spell_data": { "id": "sprint_spell_5_f", "hit_self": true },  
         "type": "spell", 
-        "cooldown": { "math": [ "10 + rand(10)" ] }, 
+        "cooldown": 15, 
         "monster_message": "" 
       } 
     ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "KEENNOSE", "HEARS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "WARM" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "KEENNOSE", "HEARS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "WARM" ],
     "//": "Amphicyon ingens taken as reference when possible, because one exemplar had an estimated of 570 Kg which is a bit too much. No reproductive data",
     "//2": "BTW these are oversized wolves, not bears with wolf characteristics"
   },
@@ -105,21 +105,21 @@
     "path_settings": { "max_dist": 16 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "fear_triggers": [ "SOUND" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_andrewsarchus_calf" }, "baby_count": 2, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_andrewsarchus_calf", "baby_count": 2, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ],
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ],
       { 
         "id": "sprint", 
         "spell_data": { "id": "sprint_spell_7_f", "hit_self": true }, 
         "type": "spell", 
-        "cooldown": { "math": [ "11 + rand(11)" ] }, 
+        "cooldown": 16, 
         "monster_message": "" 
       }  
     ],
     "biosignature": { "biosig_item": "feces_manure", "biosig_timer": 12 },
-    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "SMELLS", "WARM" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "SMELLS", "WARM" ],
     "//": "Andrewsarchus mongoliensis used as reference. No reproductive data"
   },
   {
@@ -172,15 +172,15 @@
     "stomach_size": 10000,
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "SOUND" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_castoroides_cub" }, "baby_count": 4, "baby_timer": 84 },
+    "reproduction": { "baby_monster": "mon_castoroides_cub", "baby_count": 4, "baby_timer": 84 },
     "baby_flags": [ "WINTER" ],
-    "special_attacks": [ [ "EAT_FOOD", { "math": [ "25 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_FOOD", 35 ] ],
     "flags": [
       "ANIMAL",
       "BASHES",
       "EATS",
       "HEARS",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_1",
       "PUSH_MON",
       "SEES",
       "SMELLS",
@@ -247,21 +247,21 @@
     "path_settings": { "max_dist": 16 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT", "PLAYER_CLOSE", "PLAYER_WEAK" ],
     "fear_triggers": [ "SOUND" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_daeodon_piglet" }, "baby_count": 4, "baby_timer": 76 },
+    "reproduction": { "baby_monster": "mon_daeodon_piglet", "baby_count": 4, "baby_timer": 76 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "50 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "50 + rand(20)" ] } ], 
+      [ "EAT_CARRION", 60 ], 
+      [ "EAT_FOOD", 60 ], 
       { 
         "id": "sprint", 
         "spell_data": { "id": "sprint_spell_7_f", "hit_self": true }, 
         "type": "spell", 
-        "cooldown": { "math": [ "11 + rand(11)" ] }, 
+        "cooldown": 16, 
         "monster_message": "" 
       } 
     ],
     "biosignature": { "biosig_item": "feces_manure", "biosig_timer": 6 },
-    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "SMELLS", "WARM" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "SMELLS", "WARM" ],
     "//": "Daeodon shoshonensis used as reference. The white marks on their faces is probably made up but sounds cool for a giant murderous boar"
   },
   {
@@ -321,15 +321,15 @@
     "path_settings": { "max_dist": 16 },
     "grab_strength": 16,
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_dinopithecus_baby" }, "baby_count": 3, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_dinopithecus_baby", "baby_count": 3, "baby_timer": 240 },
     "baby_flags": [ "SPRING" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_CROP", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ],
-      { "id": "grab", "cooldown": { "math": [ "6 + rand(4)" ] } }       
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_CROP", 85 ], 
+      [ "EAT_FOOD", 85 ],
+      { "id": "grab", "cooldown": 8 }       
     ],
-    "flags": [ "ANIMAL", "BASHES", "CLIMBS", "EATS", "GROUP_BASH", "SMELLS", "HEARS", "PATH_AVOID_DANGER", "SEES", "WARM" ],
+    "flags": [ "ANIMAL", "BASHES", "CLIMBS", "EATS", "GROUP_BASH", "SMELLS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "WARM" ],
     "//": "Dinopithecus sp. used as reference. No reproductive data"
   },
   {
@@ -387,10 +387,10 @@
     "vision_night": 12,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_glossotherium_cub" }, "baby_count": 1, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_glossotherium_cub", "baby_count": 1, "baby_timer": 240 },
     "baby_flags": [ "SPRING" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "65 + rand(40)" ] } ], [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "KEENNOSE", "HEARS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "WARM" ],
+    "special_attacks": [ [ "EAT_CROP", 85 ], [ "EAT_FOOD", 85 ] ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "KEENNOSE", "HEARS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "WARM" ],
     "//2": "Glossotherium sp. used as reference. No reproductive data",
     "//3": "Would be cool for these to dig and live around mini-dungeon paleoburrows"
   },
@@ -449,19 +449,19 @@
     "vision_night": 6,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_glyptodont_baby" }, "baby_count": 2, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_glyptodont_baby", "baby_count": 2, "baby_timer": 240 },
     "baby_flags": [ "SPRING" ],
     "special_attacks": [ 
-      [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ], 
+      [ "EAT_CROP", 50 ], 
       { 
         "id": "sprint", 
         "spell_data": { "id": "sprint_spell_3", "hit_self": true }, 
         "type": "spell", 
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       } 
     ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "KEENNOSE", "HEARS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "WARM" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "KEENNOSE", "HEARS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "WARM" ],
     "//2": "Glyptodont sp. used as reference. No reproductive data",
     "//3": "Would be cool for these to dig and live around mini-dungeon paleoburrows"
   },
@@ -512,10 +512,10 @@
     "stomach_size": 8,
     "anger_triggers": [ "FRIEND_ATTACKED" ],
     "fear_triggers": [ "HURT", "PLAYER_CLOSE" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_herpetotherium_cub" }, "baby_count": 8, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_herpetotherium_cub", "baby_count": 8, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "20 + rand(10)" ] } ], [ "EAT_FOOD", { "math": [ "20 + rand(10)" ] } ] ],
-    "flags": [ "ANIMAL", "CLIMBS", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMALL_HIDER", "SMELLS", "WARM" ],
+    "special_attacks": [ [ "EAT_CROP", 25 ], [ "EAT_FOOD", 25 ] ],
+    "flags": [ "ANIMAL", "CLIMBS", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMALL_HIDER", "SMELLS", "WARM" ],
     "//": "Tried to use Herpetotherium sp. as reference, but there's basically no data, so it's mostly copied from mon_opossum and mon_black_rat . No reproductive data"
   },
   {
@@ -573,10 +573,10 @@
     "vision_night": 12,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_megatherium_cub" }, "baby_count": 1, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_megatherium_cub", "baby_count": 1, "baby_timer": 240 },
     "baby_flags": [ "SPRING" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "100 + rand(40)" ] } ], [ "EAT_FOOD", { "math": [ "100 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "KEENNOSE", "HEARS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "WARM" ],
+    "special_attacks": [ [ "EAT_CROP", 120 ], [ "EAT_FOOD", 120 ] ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "KEENNOSE", "HEARS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "WARM" ],
     "//2": "Megatherium americanum used as reference. No reproductive data",
     "//3": "Would be cool for these to dig and live around mini-dungeon paleoburrows"
   },
@@ -633,19 +633,19 @@
     "vision_night": 6,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "STALK" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_pakicetus_pup" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_pakicetus_pup", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_FOOD", { "math": [ "80 + rand(40)" ] } ], 
+      [ "EAT_FOOD", 100 ], 
       { 
         "id": "sprint", 
         "spell_data": { "id": "sprint_spell_5", "hit_self": true }, 
         "type": "spell",  
-        "cooldown": { "math": [ "10 + rand(10)" ] }, 
+        "cooldown": 15, 
         "monster_message": "" 
       }  
     ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWIMS", "WARM" ]
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWIMS", "WARM" ]
   },
   {
     "id": "mon_pakicetus_pup",
@@ -696,20 +696,19 @@
     "dodge": 3,
     "armor": { "bash": 4, "cut": 4, "stab": 4, "bullet": 4 },
     "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_ungulate" ],
-    "weakpoint_sets": [ "wps_animal_quadruped" ],
     "stomach_size": 12000,
     "vision_night": 6,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_sivatherium_baby" }, "baby_count": 1, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_sivatherium_baby", "baby_count": 1, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN" ],
     "special_attacks": [ 
-      [ "EAT_CROP", { "math": [ "100 + rand(40)" ] } ], 
+      [ "EAT_CROP", 120 ], 
       { 
         "id": "sprint", 
         "spell_data": { "id": "sprint_spell_7_f", "hit_self": true }, 
         "type": "spell", 
-        "cooldown": { "math": [ "11 + rand(11)" ] }, 
+        "cooldown": 16, 
         "monster_message": "" 
       }  
     ],
@@ -719,7 +718,7 @@
       "CORNERED_FIGHTER",
       "EATS",
       "HEARS",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_1",
       "PATH_AVOID_FIRE",
       "PUSH_MON",
       "SEES",
@@ -770,14 +769,14 @@
     },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "SOUND" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_taeniolabis_cub" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_taeniolabis_cub", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_FOOD", 50 ] ],
     "flags": [
       "ANIMAL",
       "EATS",
       "HEARS",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_1",
       "SEES",
       "SMELLS",
       "SWIMS",
@@ -839,23 +838,23 @@
     "vision_night": 16,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_NEAR_BABY" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_thylacine_pup" }, "baby_count": 3, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_thylacine_pup", "baby_count": 3, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CROP", { "math": [ "80 + rand(40)" ] } ], 
-      [ "EAT_CARRION", { "math": [ "80 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "80 + rand(40)" ] } ], 
-      [ "PARROT", { "math": [ "3 + rand(3)" ] } ], 
+      [ "EAT_CROP", 100 ], 
+      [ "EAT_CARRION", 100 ], 
+      [ "EAT_FOOD", 100 ], 
+      [ "PARROT", 5 ], 
       { 
         "id": "sprint", 
         "spell_data": { "id": "sprint_spell_5_f", "hit_self": true }, 
         "type": "spell", 
-        "cooldown": { "math": [ "10 + rand(10)" ] }, 
+        "cooldown": 15, 
         "monster_message": "" 
       }  
     ],
     "biosignature": { "biosig_item": "feces_thylacine", "biosig_timer": 8 },
-    "flags": [ "ANIMAL", "EATS", "GROUP_MORALE", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "SEES", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "GROUP_MORALE", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "SEES", "SWARMS", "WARM" ],
     "//": " 'Previously extinct in the Outside world, they were passively transferred to Gensokyo at some point in the past.' ",
     "//2": "These technically should have zombie versions, but I don't like that"
   },

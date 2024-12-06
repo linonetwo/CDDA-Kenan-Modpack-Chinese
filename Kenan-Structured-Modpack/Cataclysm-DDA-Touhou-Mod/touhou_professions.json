@@ -44,7 +44,7 @@
     "name": "Hourai Incarnate",
     "description": "Your immortal rival that you've been killing constantly (and vice-versa) has mysteriously vanished during the Cataclysm, along with everyone else that you knew.  You face the post-Cataclysm world alone with lots and lots of fire.",
     "points": 4,
-    "proficiencies": [ "prof_food_prep", "prof_wound_care" ],
+    "proficiencies": [ "prof_food_prep", "prof_forage_cooking", "prof_wound_care", "prof_unarmed_pro" ],
     "skills": [
       { "level": 2, "name": "cooking" },
       { "level": 3, "name": "dodge" },
@@ -85,6 +85,7 @@
     "name": "Expressive Poker Face",
     "description": "It was time to retrieve a fancy new costume the Puppeteer crafted for your show next week.  On your way through the forest, a human attacked you without declaring a duel.  Given they were wearing clothes from the Outside, you defended yourself… pretty sure you didn't hit them that hard.  You're also pretty sure this isn't the Forest at all.",
     "points": 4,
+    "proficiencies": [ "prof_athlete_basic", "prof_polearms_familiar" ],
     "skills": [ 
       { "level": 4, "name": "dodge" }, 
       { "level": 4, "name": "melee" } 
@@ -123,7 +124,7 @@
     "name": "Gatekeeper of the Devil",
     "description": "Another uneventful day: holding the gates, doing repeats, not napping… The Mistress called you, very unusual for her to be awake at daytime.  She asked to lock down everything and go track the head maid for \"security reasons\".  You complied, almost caught up, really just at the boundary of your vision, when she… vanished?  Seems that you lost yourself too, you can't recall the last time humans walked without qi.",
     "points": 4,
-    "proficiencies": [ "prof_food_prep" ],
+    "proficiencies": [ "prof_athlete_basic", "prof_food_prep", "prof_unarmed_pro" ],
     "skills": [
       { "level": 2, "name": "cooking" },
       { "level": 2, "name": "dodge" },
@@ -165,6 +166,7 @@
     "name": "Oarfish Messenger",
     "description": "The last day was very busy.  First, you were given a message to deliver to the head of the Hinanawi.  After reaching the clan however, you were told by them and your superiors to find Tenshi as soon as possible.  You followed her down in Earth, when the event struck.  Now you don't only have to complete your mission, but you also seem to be stuck here.",
     "points": 4,
+    "proficiencies": [ "prof_athlete_basic" ],
     "skills": [
       { "level": 2, "name": "bashing" },
       { "level": 2, "name": "cutting" },
@@ -208,7 +210,7 @@
     "name": "One-Armed Horned Hermit",
     "description": "At first, you thought it was some sort of prank or plot coming from her, to get you involved in the next incident.  Curiosity caused you to go check for yourself, and just when you crossed the second Barrier, you realized something was wrong.  It's just you now.",
     "points": 4,
-    "proficiencies": [ "prof_food_prep" ],
+    "proficiencies": [ "prof_athlete_basic", "prof_food_prep", "prof_unarmed_pro" ],
     "skills": [
       { "level": 2, "name": "dodge" },
       { "level": 4, "name": "melee" },
@@ -253,6 +255,21 @@
     "name": "Lateral-Thinking Kappa",
     "description": "WIP.  This could be a good opportunity to see firsthand what Outside world humans are capable of.",
     "points": 4,
+    "proficiencies": [ 
+      "prof_metallurgy", 
+      "prof_elec_soldering", 
+      "prof_elec_circuits", 
+      "prof_elec_semiconductors", 
+      "prof_elec_integrated_circuits", 
+      "prof_electromagnetics", 
+      "prof_basic_engines", 
+      "prof_high_pressure_systems", 
+      "prof_pneumatics", 
+      "prof_metalworking", 
+      "prof_welding", 
+      "prof_plumbing", 
+      "prof_appliance_repair" 
+    ],
     "skills": [
       { "level": 3, "name": "dodge" },
       { "level": 4, "name": "electronics" },
@@ -297,7 +314,15 @@
     "name": "Lunatic Moon Rabbit",
     "description": "The weekly lesson you were being given by your Master was promptly interrupted after receiving some kind of message (from the Moon?).  Shortly after, she returned with a serious face and lots of letters directed to the faction leaders.  You finished the errand when you noticed you got lost.  For some reason, the Network is silent too.",
     "points": 4,
-    "proficiencies": [ "prof_intro_biology", "prof_intro_chemistry", "prof_inorganic_chemistry", "prof_pharmaceutical" ],
+    "proficiencies": [ 
+      "prof_intro_biology", 
+      "prof_intro_chemistry", 
+      "prof_inorganic_chemistry", 
+      "prof_pharmaceutical", 
+      "prof_auto_rifles_pro", 
+      "prof_auto_pistols_pro", 
+      "prof_spotting" 
+    ],
     "skills": [
       { "level": 3, "name": "dodge" },
       { "level": 3, "name": "firstaid" },
@@ -346,6 +371,7 @@
     "name": "Moon Rabbit Recruit",
     "description": "You were accompanying the Watatsuki sisters on their visit to Earth when the Cataclysm struck! In the chaos and panic that followed the collapse of the Barrier (or that's what you heard from them), you got separated and left alone.  To make things worse, you can't contact your peers by use of the Gyokuto network.  You've got some skills from your Lunar Defense Corps training, but you'll need more than that to survive…",
     "points": 4,
+    "proficiencies": [ "prof_auto_rifles_familiar", "prof_auto_pistols_familiar", "prof_spotting" ],
     "skills": [
       { "level": 2, "name": "dodge" },
       { "level": 3, "name": "gun" },
@@ -386,6 +412,7 @@
     "name": "Scarlet Devil",
     "description": "That scheming youkai refusing to elaborate was part of her plan for you to move.  Both sides knew that, but that's a custom when dealing important matters to you, so you didn't mind.  What pisses you off is that innocent parties are involved with this much of a threat.  This better be interesting.",
     "points": 4,
+    "proficiencies": [ "prof_polearms_master", "prof_spears_master" ],
     "skills": [
       { "level": 4, "name": "dodge" },
       { "level": 4, "name": "melee" },
@@ -443,7 +470,6 @@
       { "level": 1, "id": "kaenbyou_soulshard_fuel" },
       { "level": 1, "id": "kaenbyou_soulshatter" },
       { "level": 1, "id": "kaenbyou_vssummon" },
-      { "level": 1, "id": "kaenbyou_vspossess" },
       { "level": 1, "id": "kaenbyou_vsrelease" },
       { "level": 1, "id": "kaenbyou_zz_soulshard" }
     ],
@@ -462,7 +488,8 @@
       "male": [ "boxer_shorts" ],
       "female": [ "bra", "panties" ]
     },
-    "flags": [ "SCEN_ONLY" ]
+    "flags": [ "SCEN_ONLY" ],
+    "//0.H": "Removed kaenbyou_vspossess as it requires #71222 to detect nearby friendly monsters"
   },
   {
     "id": "sakuya_izayoi",
@@ -470,7 +497,14 @@
     "name": "Maid of the Scarlet Devil",
     "description": "Despite being suspicious of the errand your Mistress' gave you outside the Barrier, you went to carry it out.  The Cataclysm struck in the middle of that, interrumpting you.  How annoying.",
     "points": 4,
-    "proficiencies": [ "prof_food_prep", "prof_knife_skills" ],
+    "proficiencies": [ 
+      "prof_food_prep", 
+      "prof_knife_skills", 
+      "prof_baking", 
+      "prof_baking_desserts_1", 
+      "prof_frying", 
+      "prof_knives_pro" 
+    ],
     "skills": [
       { "level": 6, "name": "cooking" },
       { "level": 4, "name": "cutting" },
@@ -521,7 +555,17 @@
     "name": "Wicked Hermit",
     "description": "You're a wicked, amoral hermit with the ability to pass through walls and enslave the undead.  You never really cared about anyone else, only seeing fit to manipulate them for your own ends. Surviving the Cataclysm should be… interesting.",
     "points": 4,
-    "proficiencies": [ "prof_intro_biology", "prof_intro_chemistry", "prof_lockpicking", "prof_pharmaceutical", "prof_physiology" ],
+    "proficiencies": [ 
+      "prof_intro_biology", 
+      "prof_intro_chemistry", 
+      "prof_organic_chemistry", 
+      "prof_inorganic_chemistry", 
+      "prof_biochemistry", 
+      "prof_physiology", 
+      "prof_pharmaceutical", 
+      "prof_lockpicking", 
+      "prof_dissect_humans" 
+    ],
     "skills": [
       { "level": 3, "name": "chemistry" },
       { "level": 2, "name": "dodge" },
@@ -542,8 +586,7 @@
       { "level": 1, "id": "seiga_hermitwalk" },
       { "level": 1, "id": "seiga_shikaisenritual" },
       { "level": 1, "id": "seiga_raisechild" },
-      { "level": 1, "id": "seiga_wallwalk" },
-      { "level": 1, "id": "seiga_yoshika_summon" }
+      { "level": 1, "id": "seiga_wallwalk" }
     ],
     "traits": [ "WICKED_HERMIT", "PROF_SEIGA", "SPIRIT_HERMIT", "eye_blue_touhou", "FACIAL_HAIR_NONE", "hair_seiga" ],
     "items": {
@@ -562,7 +605,8 @@
       "female": [ "bra", "panties" ]
     },
     "flags": [ "SCEN_ONLY" ],
-    "//": "HERMIT_SPECIES + LIAR + PSYCHOPATH + SPIRITUAL -> WICKED_HERMIT "
+    "//": "HERMIT_SPECIES + LIAR + PSYCHOPATH + SPIRITUAL -> WICKED_HERMIT ",
+    "//0.H": "Removed seiga_yoshika_summon as it requires #71222 to detect friendly monsters, and I cannot think of a way to summon only one Yoshika at any time"
   },
   {
     "id": "tenshi_hinanawi",
@@ -570,6 +614,7 @@
     "name": "Celestial Delinquent",
     "description": "Feeling bored doing basically noting in Heaven, you came down to visit the Shrine and your friends.  Something happened in the meantime though.  At first you were amused, then became slightly worried, then very, very curious.  The Outside world looks… different now.",
     "points": 4,
+    "proficiencies": [ "prof_medium_swords_familiar", "prof_short_swords_familiar" ],
     "skills": [
       { "level": 4, "name": "bashing" },
       { "level": 4, "name": "cutting" },
@@ -651,6 +696,7 @@
     "name": "Friendly Youkai of the Cave",
     "description": "It was sales day at the nearby market, so you left home at the entrance to try that new \"coffee\" product, perhaps share it at the weekly danmaku exhibitions, or at the hotsprings.  However, you somehow lost yourself on the way back, not recognizing any landmarks.",
     "points": 4,
+    "proficiencies": [ "prof_parkour", "prof_athlete_basic" ],
     "skills": [
       { "level": 3, "name": "dodge" },
       { "level": 4, "name": "fabrication" },
@@ -694,6 +740,7 @@
     "name": "Phantom Gardener",
     "description": "You were preparing tea for your Mistress when the shikigami of the Gap Youkai came to deliver an urgent private message.  Your Mistress then gave you some cryptic errand at the Shrine, and to \"take care\".  You didn't understand the last part, until you didn't recognize your surroundings minutes before reaching the Shrine.",
     "points": 4,
+    "proficiencies": [ "prof_medium_swords_pro", "prof_short_swords_pro", "prof_long_swords_pro" ],
     "skills": [
       { "level": 4, "name": "cooking" },
       { "level": 5, "name": "cutting" },

@@ -33,7 +33,7 @@
     "path_settings": { "max_dist": 32 },
 	"grab_strength": 16,
     "special_attacks": [ 
-      [ "shock_15", { "math": [ "1 + rand(2)" ] } ], 
+      [ "shock_15", 2 ], 
       { 
         "id": "mon_computer_possessed_1", 
         "type": "spell", 
@@ -44,7 +44,7 @@
             { "not": { "npc_has_effect": "entangle_effect" } }
           ]
         },
-        "cooldown": { "math": [ "7 + rand(5)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       } 
     ],
@@ -76,7 +76,7 @@
       "hp": 0.5
     },
     "special_attacks": [ 
-      [ "shock_11", { "math": [ "1 + rand(2)" ] } ],
+      [ "shock_11", 2 ],
       { 
         "id": "mon_computer_laptop_possessed_1", 
         "type": "spell", 
@@ -87,7 +87,7 @@
             { "not": { "npc_has_effect": "entangle_effect" } }
           ]
         },
-        "cooldown": { "math": [ "7 + rand(5)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       } 
     ],
@@ -148,7 +148,7 @@
     "vision_day": 24,
     "vision_night": 24,
     "path_settings": { "max_dist": 32 },
-	"special_attacks": [ [ "claw_17", { "math": [ "1 + rand(2)" ] } ] ],
+	"special_attacks": [ [ "claw_17", 2 ] ],
     "flags": [ "BASHES", "HEARS", "NOGIB", "NO_BREATHE", "PATH_AVOID_FALL", "PATH_AVOID_FIRE", "SEES" ]
   },
   {
@@ -183,7 +183,7 @@
     "vision_night": 24,
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "path_settings": { "max_dist": 32 },
-    "special_attacks": [ [ "claw_17_heat", { "math": [ "1 + rand(2)" ] } ] ],
+    "special_attacks": [ [ "claw_17_heat", 2 ] ],
     "death_drops": "scarecrow_drops_burnt",
     "flags": [ "BASHES", "HEARS", "NOGIB", "NO_BREATHE", "PATH_AVOID_FALL", "SEES" ]
   },

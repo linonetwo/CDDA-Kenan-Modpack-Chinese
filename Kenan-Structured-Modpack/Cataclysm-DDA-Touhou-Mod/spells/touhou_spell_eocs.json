@@ -235,7 +235,7 @@
         "then": [
           { "math": [ "var_ayafanwind_dur", "=", "( ( (u_skill('dodge') * 100 ) + 200 ) - 100 )" ] },
           { "u_cast_spell": { "id": "aya_fanwind3" }, "loc": { "global_val": "var_aya_fanwind_loc" } },
-          { "run_eocs": "aya_fanwind_delay_eoc", "variables": { "aya_fanwind_loc": "var_aya_fanwind_loc" } }
+          { "run_eoc_with": "aya_fanwind_delay_eoc", "variables": { "aya_fanwind_loc": "var_aya_fanwind_loc" } }
         ],
         "else": [
           { "math": [ "u_val('mana')", "+=", "50" ] },
@@ -256,7 +256,7 @@
     "effect": [
       { "math": [ "var_ayafanwind_dur", "-=", "100" ] },
       { "u_cast_spell": { "id": "aya_fanwind2" }, "loc": { "global_val": "var_aya_fanwind_loc" } },
-      { "run_eocs": [ "aya_fanwind_delay_eoc" ], "time_in_future": "1 s" }
+      { "queue_eocs": [ "aya_fanwind_delay_eoc" ], "time_in_future": "1 s" }
     ],
     "false_effect": [ 
       { "math": [ "var_ayafanwind_dur", "=", "0" ] }
@@ -511,7 +511,7 @@
         },
         "then": [
           { 
-            "run_eocs": "kaenbyou_blazingwheel_delay_eoc", 
+            "queue_eoc_with": "kaenbyou_blazingwheel_delay_eoc", 
             "variables": { "kaenbyou_blazingwheel_loc": "var_kaenbyou_blazingwheel_loc" }, 
             "time_in_future": "1 s" 
           }
@@ -565,7 +565,7 @@
               { 
                 "id": "kaenbyou_corpseexplosion_explode", 
                 "effect": [ 
-                  { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_weight() / 1000000 ) / 2 ) * 100 * rng( 0.75, 1.25 ) )" ] },
+                  { "math": [ "var_corpseexplosion_dmg", "=", "( ( ( n_val('weight') / 1000000 ) / 2 ) * 100 * rng( 0.75, 1.25 ) )" ] },
                   "npc_die",
                   { "math": [ "var_corpseexplosion_aoe", "=", "1 + rand(1)" ] },
                   { "u_cast_spell": { "id": "kaenbyou_corpseexplosion2" }, "loc": { "global_val": "var_corpseexplosion_loc" } },
@@ -693,22 +693,31 @@
     "condition": {
       "and": [
         { "math": [ "u_val('mana')", "<=", "u_val('mana_max')" ] },
-        { "math": [ "u_calories()", ">=", "5500" ] },
+        { "math": [ "u_val('stored_kcal')", ">=", "5500" ] },
         { "math": [ "var_kasencalorieburn", ">", "0" ] },
         { "math": [ "var_kasencalorieburn", "<", "2" ] }
       ]
     },
     "effect": [
       { "math": [ "u_val('mana')", "+=", "6 + rand(8)" ] },
-      { "math": [ "u_calories()", "-=", "110 + rand(110)" ] },
+      { "math": [ "u_val('stored_kcal')", "-=", "110 + rand(110)" ] },
       { "u_add_effect": "kasen_calorieburn", "duration": "5 s" },
-      { "run_eocs": [ "kasen_calorieburn_cycle1" ], "time_in_future": [ "2 s", "5 s" ] }
+      { "queue_eocs": [ "kasen_calorieburn_cycle1" ], "time_in_future": [ "2 s", "5 s" ] }
     ],
     "false_effect": [
       { "math": [ "var_kasencalorieburn", "=", "0" ] },
       { "u_lose_effect": "kasen_calorieburn" }
     ],
-    "//": "Assuming a mana pool of 1000 and the default of 55000 cal, this burns 90% of the stored energy for ~3000 mana over (400 - 1000) s"
+    "//": "Assuming a mana pool of 1000 and the default of 55000 cal, this burns 90% of the stored energy for ~3000 mana over (400 - 1000) s",
+    "//0.H": " u_val('stored_kcal') -> u_calories() "
+  },
+  {
+    "id": "kasen_fangshu_place_eoc",
+    "type": "effect_on_condition",
+    "effect": [
+      { "u_location_variable": { "global_val": "var_kasen_fangshu" } }
+    ],
+    "//0.H": "This and below replace kasen_fangshu_selector_eoc "
   },
   {
     "id": "kasen_fangshu_selector_eoc",
@@ -845,39 +854,20 @@
     "id": "kasen_fangshu_set_1",
     "type": "effect_on_condition",
     "effect": [ 
-      {
-        "set_string_var": "Exit point 1",
-        "string_input": {
-          "title": { "i18n": true, "str": "Input exit point name:" },
-          "description": { "i18n": true, "str": "Exit point 1 name:" },
-          "//default_text": { "i18n": true, "str": "First exit" },
-          "width": 35,
-          "identifier": ""
-        },
-        "target_var": { "u_val": "u_var_kasen_fangshu_1_name" }
-      },
+
       { "u_location_variable": { "global_val": "var_kasen_fangshu_1" } },
       { "u_message": "You set an exit point at the location.", "type": "mixed" },
       { "math": [ "u_var_kasen_fangshu_placed_1", "=", "1" ] },
       { "math": [ "u_val('mana')", "-=", "133" ] }
     ],
-    "//": "Not exaclty sure how, but thankfully the u_VAR_NAMEs get reset when kasen_fangshu_delete_eoc is run. I'm assuming it's because they're stored as u_ , but still why?"
+    "//": "Not exaclty sure how, but thankfully the u_VAR_NAMEs get reset when kasen_fangshu_delete_eoc is run. I'm assuming it's because they're stored as u_ , but still why?",
+    "//0.H": "The empty lines (here and below) is where set_string_var should be, not present in 0.H"
   },
   {
     "id": "kasen_fangshu_set_2",
     "type": "effect_on_condition",
     "effect": [ 
-      {
-        "set_string_var": "Exit point 2",
-        "string_input": {
-          "title": { "i18n": true, "str": "Input exit point name:" },
-          "description": { "i18n": true, "str": "Exit point 2 name:" },
-          "//default_text": { "i18n": true, "str": "Second exit" },
-          "width": 35,
-          "identifier": ""
-        },
-        "target_var": { "u_val": "u_var_kasen_fangshu_2_name" }
-      },
+
       { "u_location_variable": { "global_val": "var_kasen_fangshu_2" } },
       { "u_message": "You set an exit point at the location.", "type": "mixed" },
       { "math": [ "u_var_kasen_fangshu_placed_2", "=", "1" ] },
@@ -888,17 +878,7 @@
     "id": "kasen_fangshu_set_3",
     "type": "effect_on_condition",
     "effect": [ 
-      {
-        "set_string_var": "Exit point 3",
-        "string_input": {
-          "title": { "i18n": true, "str": "Input exit point name:" },
-          "description": { "i18n": true, "str": "Exit point 3 name:" },
-          "//default_text": { "i18n": true, "str": "Third exit" },
-          "width": 35,
-          "identifier": ""
-        },
-        "target_var": { "u_val": "u_var_kasen_fangshu_3_name" }
-      },
+
       { "u_location_variable": { "global_val": "var_kasen_fangshu_3" } },
       { "u_message": "You set an exit point at the location.", "type": "mixed" },
       { "math": [ "u_var_kasen_fangshu_placed_3", "=", "1" ] },
@@ -950,7 +930,7 @@
       { "math": [ "u_var_kasenparry", "=", "1" ] },
       { "u_add_effect": "parry_effect", "duration": "2 s" },
       {
-        "run_eocs": [
+        "queue_eocs": [
           {
             "id": "kasen_parry_timer",
             "effect": [
@@ -979,12 +959,12 @@
         "then": [
           { "u_cast_spell": { "id": "kasen_rainboworb2" }, "loc": { "global_val": "var_kasen_rainboworb_loc" } },
           { 
-            "run_eocs": "kasen_rainboworb_delay", 
+            "queue_eoc_with": "kasen_rainboworb_delay", 
             "variables": { "rainboworb_loc": "var_kasen_rainboworb_loc" }, 
             "time_in_future": "2 s" 
           },
           { 
-            "run_eocs": "kasen_rainboworb_delay", 
+            "queue_eoc_with": "kasen_rainboworb_delay", 
             "variables": { "rainboworb_loc": "var_kasen_rainboworb_loc" }, 
             "time_in_future": "3 s" 
           },
@@ -1010,6 +990,14 @@
     "type": "effect_on_condition",
     "condition": {
       "or": [
+        { "not": { "u_has_effect": "kasen_summon_pet_1_2_effect" } },
+        { "not": { "u_has_effect": "kasen_summon_pet_2_2_effect" } },
+        { "not": { "u_has_effect": "kasen_summon_pet_3_2_effect" } },
+        { "not": { "u_has_effect": "kasen_summon_pet_4_2_effect" } }
+      ]
+    },
+    "//condition": {
+      "or": [
         { "math": [ "u_monsters_nearby('mon_houso', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
         { "math": [ "u_monsters_nearby('mon_kanda', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
         { "math": [ "u_monsters_nearby('mon_koutei', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
@@ -1033,7 +1021,8 @@
       { "math": [ "u_val('mana')", "+=", "50" ] }
     ],
     "//": "This EOC checks if ALL her pets have been summoned, if at least one is missing it runs the next EOC",
-    "//2": "The next is a repeater, which randomly runs one of four 'check if this pet is missing, if it is then summon it, if it not missing re-run the repeater'"
+    "//2": "The next is a repeater, which randomly runs one of four 'check if this pet is missing, if it is then summon it, if it not missing re-run the repeater'",
+    "//0.H": ""
   },
   {
     "id": "kasen_summon_pet_check_repeater",
@@ -1052,28 +1041,32 @@
   {
     "id": "kasen_summon_pet_check_1",
     "type": "effect_on_condition",
-    "condition": { "math": [ "u_monsters_nearby('mon_houso', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
+    "condition": { "not": { "u_has_effect": "kasen_summon_pet_1_2_effect" } },
+    "//condition": { "math": [ "u_monsters_nearby('mon_houso', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
     "effect": [ { "u_cast_spell": { "id": "kasen_summon_pet_1" }, "loc": { "global_val": "var_kasen_summon_pet_loc" } } ],
     "false_effect": [ { "run_eocs": [ "kasen_summon_pet_check_repeater" ] } ]
   },
   {
     "id": "kasen_summon_pet_check_2",
     "type": "effect_on_condition",
-    "condition": { "math": [ "u_monsters_nearby('mon_kanda', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
+    "condition": { "not": { "u_has_effect": "kasen_summon_pet_2_2_effect" } },
+    "//condition": { "math": [ "u_monsters_nearby('mon_kanda', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
     "effect": [ { "u_cast_spell": { "id": "kasen_summon_pet_2" }, "loc": { "global_val": "var_kasen_summon_pet_loc" } } ],
     "false_effect": [ { "run_eocs": [ "kasen_summon_pet_check_repeater" ] } ]
   },
   {
     "id": "kasen_summon_pet_check_3",
     "type": "effect_on_condition",
-    "condition": { "math": [ "u_monsters_nearby('mon_koutei', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
+    "condition": { "not": { "u_has_effect": "kasen_summon_pet_3_2_effect" } },
+    "//condition": { "math": [ "u_monsters_nearby('mon_koutei', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
     "effect": [ { "u_cast_spell": { "id": "kasen_summon_pet_3" }, "loc": { "global_val": "var_kasen_summon_pet_loc" } } ],
     "false_effect": [ { "run_eocs": [ "kasen_summon_pet_check_repeater" ] } ]
   },
   {
     "id": "kasen_summon_pet_check_4",
     "type": "effect_on_condition",
-    "condition": { "math": [ "u_monsters_nearby('mon_mukou', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
+    "condition": { "not": { "u_has_effect": "kasen_summon_pet_4_2_effect" } },
+    "//condition": { "math": [ "u_monsters_nearby('mon_mukou', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
     "effect": [ { "u_cast_spell": { "id": "kasen_summon_pet_4" }, "loc": { "global_val": "var_kasen_summon_pet_loc" } } ],
     "false_effect": [ { "run_eocs": [ "kasen_summon_pet_check_repeater" ] } ]
   },
@@ -1102,7 +1095,7 @@
   {
     "id": "kokoro_backsweep_check",
     "type": "effect_on_condition",
-    "condition": {
+    "//condition": {
       "and": [
         { "math": [ "var_melee_bash_dmg", ">=", "var_melee_cut_dmg" ] },
         { "math": [ "var_melee_bash_dmg", ">=", "var_melee_stab_dmg" ] }
@@ -1112,7 +1105,8 @@
       { "u_cast_spell": { "id": "kokoro_backsweep2_bash" }, "targeted": true }
     ],
     "false_effect": [ { "run_eocs": [ "kokoro_backsweep_check2" ] } ],
-    "//": "These chained EOCs check which of bash, cut or stab is higher, and casts a different spell accordingly"
+    "//": "These chained EOCs check which of bash, cut or stab is higher, and casts a different spell accordingly",
+    "//0.H": "Disabled condition as it requires #71234 "
   },
   {
     "id": "kokoro_backsweep_check2",
@@ -1216,7 +1210,7 @@
       { "math": [ "var_spirit_naginata", "+=", "1" ] },
       { "u_message": "You materialize your spirit naginata.", "type": "good" },
       { "u_cast_spell": { "id": "kokoro_spirit_naginata2" } },
-      { "run_eocs": [ "kokoro_spirit_naginata_timer_eoc" ], "time_in_future": { "math": [ "( ( ( (u_skill('stabbing') * 90 ) + (u_skill('melee') * 90 ) + 240 ) * var_kokoro_melancholy_mod ) / 100 ) - 1" ] } }
+      { "queue_eocs": [ "kokoro_spirit_naginata_timer_eoc" ], "time_in_future": { "math": [ "( ( ( (u_skill('stabbing') * 90 ) + (u_skill('melee') * 90 ) + 240 ) * var_kokoro_melancholy_mod ) / 100 ) - 1" ] } }
     ],
     "false_effect": [ 
       { "u_message": "Your naginata is already materialized.", "type": "mixed" }
@@ -1467,7 +1461,7 @@
       { "math": [ "u_var_mountainbreak", "=", "1" ] },
       { "u_add_effect": "parry_effect", "duration": "2 s" },
       {
-        "run_eocs": [
+        "queue_eocs": [
           {
             "id": "meiling_mountainbreak_timer",
             "effect": [
@@ -1519,7 +1513,7 @@
     "condition": { "math": [ "var_meiling_tigerrelease", ">", "0" ] },
     "effect": [ 
       { "u_add_effect": "aura_tigerrelease", "duration": "2 s" },
-      { "run_eocs": [ "meiling_tigerrelease_cycle1" ], "time_in_future": "1 s" } 
+      { "queue_eocs": [ "meiling_tigerrelease_cycle1" ], "time_in_future": "1 s" } 
     ],
     "false_effect": [ 
       { "math": [ "var_meiling_tigerrelease", "=", "0" ] },
@@ -1550,7 +1544,7 @@
     "effect": [
       { "math": [ "var_mokou_combustion", "+=", "1" ] },
       { "math": [ "u_pain()", "-=", "2" ] },
-      { "run_eocs": [ "mokou_combustion_cycle1" ], "time_in_future": "3 s" }
+      { "queue_eocs": [ "mokou_combustion_cycle1" ], "time_in_future": "3 s" }
     ]
   },
   {
@@ -1567,17 +1561,17 @@
         },
         "then": [
           { 
-            "run_eocs": "nitori_aerialtorpedoes_impact", 
+            "queue_eoc_with": "nitori_aerialtorpedoes_impact", 
             "variables": { "atorpedo_loc": "var_nitori_atorpedo_loc" }, 
             "time_in_future": "3 s" 
           },
           { 
-            "run_eocs": "nitori_aerialtorpedoes_impact2", 
+            "queue_eoc_with": "nitori_aerialtorpedoes_impact2", 
             "variables": { "atorpedo_loc": "var_nitori_atorpedo_loc" }, 
             "time_in_future": "5 s" 
           },
           { 
-            "run_eocs": "nitori_aerialtorpedoes_impact3", 
+            "queue_eoc_with": "nitori_aerialtorpedoes_impact3", 
             "variables": { "atorpedo_loc": "var_nitori_atorpedo_loc" }, 
             "time_in_future": "7 s" 
           },
@@ -1659,7 +1653,7 @@
         "run_eocs": [ 
           {
             "id": "nitori_extendo_arm_pulling_1",
-            "condition": { "math": [ "n_weight()", ">=", "u_weight()" ] },
+            "condition": { "math": [ "n_val('weight')", ">=", "u_val('weight')" ] },
             "effect": [ 
               { "u_cast_spell": { "id": "nitori_extendo_arm2" } },
               { "npc_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_creature_loc" } },
@@ -1693,7 +1687,7 @@
         "true_eocs": [ 
           {
             "id": "nitori_extendo_arm_pulling_2",
-            "condition": { "math": [ "u_weight()", ">=", "n_weight()" ] },
+            "condition": { "math": [ "u_val('weight')", ">=", "n_val('weight')" ] },
             "effect": [ 
               { "u_cast_spell": { "id": "nitori_extendo_arm_pull" }, "loc": { "global_val": "var_extendo_arm_loc" } },
               { "u_message": "You pull your target towards you!", "type": "good" },
@@ -1778,7 +1772,7 @@
       { "math": [ "var_nitoricamouflage_fail", "+=", "1 + rand(9)" ] },
       { "math": [ "u_val('mana')", "-=", "3" ] },
       { "u_add_effect": "nitori_camouflage", "duration": "3 s" },
-      { "run_eocs": [ "nitori_opticalcamouflage_cycle1" ], "time_in_future": "2 s" }
+      { "queue_eocs": [ "nitori_opticalcamouflage_cycle1" ], "time_in_future": "2 s" }
     ],
     "false_effect": [
       { "math": [ "var_nitoricamouflage", "=", "0" ] },
@@ -1860,7 +1854,7 @@
       { "math": [ "var_nitoricamouflage_fail_timer", "+=", "1" ] },
       { "math": [ "u_val('mana')", "-=", "1.5" ] },
       { "u_add_effect": "nitori_camouflage_fake", "duration": "2 s" },
-      { "run_eocs": [ "nitori_opticalcamouflage_fail_1" ], "time_in_future": "1 s" }
+      { "queue_eocs": [ "nitori_opticalcamouflage_fail_1" ], "time_in_future": "1 s" }
     ],
     "false_effect": [
       { "math": [ "var_nitoricamouflage", "=", "0" ] },
@@ -1979,7 +1973,7 @@
   {
     "id": "remilia_darkdrain3_eoc",
     "type": "effect_on_condition",
-    "effect": [ { "run_eocs": [ "remilia_darkdrain_heal" ], "time_in_future": "3 s" } ],
+    "effect": [ { "queue_eocs": [ "remilia_darkdrain_heal" ], "time_in_future": "3 s" } ],
     "//": "This runs at the same time (shortly after) the previous EOC. It just delays the self-heal spell by 3 s"
   },
   {
@@ -1999,7 +1993,7 @@
       { "math": [ "var_gungnir", "+=", "1" ] },
       { "u_message": "You summon the Gungnir!", "type": "good" },
       { "u_cast_spell": { "id": "remilia_gungnir2" } },
-      { "run_eocs": [ "remilia_gungnir_timer_eoc" ], "time_in_future": { "math": [ "( (u_skill('stabbing') * 21 ) + (u_skill('melee') * 21 ) + 12 ) - 1" ] } }
+      { "queue_eocs": [ "remilia_gungnir_timer_eoc" ], "time_in_future": { "math": [ "( (u_skill('stabbing') * 21 ) + (u_skill('melee') * 21 ) + 12 ) - 1" ] } }
     ],
     "false_effect": [ 
       { "u_message": "Your Gungnir is already summoned.", "type": "mixed" }
@@ -2084,7 +2078,7 @@
     "type": "effect_on_condition",
     "condition": { "u_has_effect": "aura_vampiric" },
     "effect": [ 
-      { "run_eocs": [ "remilia_vampiricaura_cycle1" ], "time_in_future": "1 s" }
+      { "queue_eocs": [ "remilia_vampiricaura_cycle1" ], "time_in_future": "1 s" }
     ],
     "false_effect": [ 
       { "u_lose_effect": "aura_vampiric" }
@@ -2101,8 +2095,8 @@
           { "id": "silver_knife" },
           { "id": "sakuya_knife" },
           { "id": "knife_combat" },
-          { "id": "knife_huge" },
-          { "id": "knife_small" },
+          { "id": "knife_butcher" },
+          { "id": "knife_steak" },
           { "id": "knife_large" },
           { "id": "knife_cleaver" },
           { "id": "knife_folding" },
@@ -2200,7 +2194,7 @@
     "effect": [
       { "math": [ "u_val('stamina')", "+=", "1" ] },
       { "u_add_effect": "sakuya_maidsecret_effect", "duration": "3 s" },
-      { "run_eocs": [ "sakuya_maidsecret_cycle1" ], "time_in_future": "2 s" }
+      { "queue_eocs": [ "sakuya_maidsecret_cycle1" ], "time_in_future": "2 s" }
     ],
     "false_effect": [
       { "u_message": "You lose your concentration.", "type": "mixed" },
@@ -2216,7 +2210,7 @@
       { "math": [ "var_sakuya_ve_casted", "+=", "1" ] },
       { "u_location_variable": { "global_val": "var_sakuya_ve_loc" } },
       { "u_cast_spell": { "id": "sakuya_vanishingeverything2" }, "targeted": true },
-      { "run_eocs": [ "sakuya_vanishingeverything_off" ], "time_in_future": "3 s" }
+      { "queue_eocs": [ "sakuya_vanishingeverything_off" ], "time_in_future": "3 s" }
     ],
     "false_effect": [ 
       { "math": [ "var_sakuya_ve_casted", "=", "0" ] },
@@ -2423,7 +2417,7 @@
             "effect": [ 
               { "u_message": "You begin performing the ritual…", "type": "mixed" },
               "npc_die",
-              { "turn_cost": "5 m" },
+
               { "u_cast_spell": { "id": "seiga_shikaisenritual2" }, "loc": { "global_val": "var_shikaisenritual_loc" } },
               { "u_add_effect": "seiga_shikaisen_effect", "duration": "PERMANENT" },
               { "u_message": "The ritual is completed.  Your replacement is ready, in case you need it.", "type": "good" },
@@ -2441,7 +2435,8 @@
           }
         ]
       }
-    ]
+    ],
+    "//0.H": "Removed turn_cost as it requires #70791 "
   },
   {
     "id": "seiga_shikaisenritual_bed_none",
@@ -2493,7 +2488,7 @@
   {
     "id": "seiga_yoshika_summon_eoc",
     "type": "effect_on_condition",
-    "condition": { "math": [ "u_monsters_nearby('mon_yoshika', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
+    "//condition": { "math": [ "u_monsters_nearby('mon_yoshika', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
     "effect": [
       {
         "run_eocs": [
@@ -2517,7 +2512,8 @@
       { "u_cast_spell": { "id": "seiga_yoshika_summon3" }, "targeted": false }
     ],
     "//": "This EOC checks if there's not a Yoshika 'nearby', if that's the case it checks for mana and spawns a mon_yoshika ",
-    "//2": "Otherwise, if there's a Yoshika nearby, it casts the tp spell (targeted to Yoshika) to teleport her"
+    "//2": "Otherwise, if there's a Yoshika nearby, it casts the tp spell (targeted to Yoshika) to teleport her",
+    "//0.H": "Disabled condition as it requires #71222 "
   },
   {
     "id": "seiga_yoshika_tp_eoc",
@@ -2556,7 +2552,8 @@
   {
     "id": "udonge_disbeliefaspect_eoc",
     "type": "effect_on_condition",
-    "condition": { "math": [ "u_monsters_nearby('mon_udonge_firing_squad', 'radius': 16, 'attitude': 'friendly')", "==", "0" ] },
+    "condition": { "not": { "u_has_effect": "udonge_disbeliefaspect_effect" } },
+    "//condition": { "math": [ "u_monsters_nearby('mon_udonge_firing_squad', 'radius': 16, 'attitude': 'friendly')", "==", "0" ] },
     "effect": [
       { "u_cast_spell": { "id": "udonge_disbeliefaspect_spawn" }, "targeted": false }
     ],
@@ -2564,8 +2561,9 @@
       { "math": [ "u_val('mana')", "+=", "100" ] },
       { "u_cast_spell": { "id": "udonge_disbeliefaspect_tp" }, "targeted": true }
     ],
-    "//": "Simple EOC just checks if there is any Udonge firing squad around. If there isn't then she spawns some and consumes some mana, otherwise she casts the random tp",
-    "//2": "Thank you so much andrei8l for #71222"
+    "//": "Thank you so much andrei8l for #71222",
+    "//2": "Simple EOC just checks if there is any Udonge firing squad around. If there isn't then she spawns some and consumes some mana, otherwise she casts the random tp",
+    "//0.H": ""
   },
   {
     "id": "udonge_gunwaveBLAST_eoc",
@@ -2623,7 +2621,7 @@
     "effect": [
       { "math": [ "u_val('mana')", "-=", "1" ] },
       { "u_add_effect": "udonge_insight", "duration": "3 s" },
-      { "run_eocs": [ "udonge_waveinsight_cycle1" ], "time_in_future": "2 s" }
+      { "queue_eocs": [ "udonge_waveinsight_cycle1" ], "time_in_future": "2 s" }
     ],
     "false_effect": { "run_eocs": "udonge_wave_oom" },
     "//": "Checks if Udonge has enough mana to keep the aura bonus, and reduces mana. If she runs out of mana it runs the oom EOC instead"
@@ -2689,7 +2687,7 @@
     "effect": [
       { "math": [ "u_val('mana')", "-=", "6" ] },
       { "u_add_effect": "udonge_mfortitude", "duration": "3 s" },
-      { "run_eocs": [ "udonge_wavemfortitude_cycle1" ], "time_in_future": "2 s" }
+      { "queue_eocs": [ "udonge_wavemfortitude_cycle1" ], "time_in_future": "2 s" }
     ],
     "false_effect": { "run_eocs": "udonge_wave_oom" }
   },
@@ -2736,7 +2734,7 @@
     "effect": [
       { "math": [ "u_val('mana')", "-=", "6" ] },
       { "u_add_effect": "udonge_perception", "duration": "3 s" },
-      { "run_eocs": [ "udonge_waveperception_cycle1" ], "time_in_future": "2 s" }
+      { "queue_eocs": [ "udonge_waveperception_cycle1" ], "time_in_future": "2 s" }
     ],
     "false_effect": { "run_eocs": "udonge_wave_oom" }
   },
@@ -2783,7 +2781,7 @@
     "effect": [
       { "math": [ "u_val('mana')", "-=", "10" ] },
       { "u_add_effect": "udonge_stealth", "duration": "3 s" },
-      { "run_eocs": [ "udonge_wavestealth_cycle1" ], "time_in_future": "2 s" }
+      { "queue_eocs": [ "udonge_wavestealth_cycle1" ], "time_in_future": "2 s" }
     ],
     "false_effect": { "run_eocs": "udonge_wave_oom" }
   },
@@ -2903,7 +2901,7 @@
     },
     "effect": [
       { "math": [ "u_val('mana')", "-=", "11" ] },
-      { "run_eocs": [ "utsuho_fissionaura_cycle1" ], "time_in_future": "3 s" }
+      { "queue_eocs": [ "utsuho_fissionaura_cycle1" ], "time_in_future": "3 s" }
     ],
     "false_effect": { "run_eocs": "utsuho_fissionaura_oom" }
   },
@@ -2928,7 +2926,7 @@
     },
     "effect": [
       { "math": [ "u_val('mana')", "-=", "11 + rand(6)" ] },
-      { "run_eocs": [ "utsuho_fissionaura_cycle1" ], "time_in_future": [ "2 s", "4 s" ] }
+      { "queue_eocs": [ "utsuho_fissionaura_cycle1" ], "time_in_future": [ "2 s", "4 s" ] }
     ],
     "false_effect": { "run_eocs": "utsuho_fissionaura_oom" }
   },
@@ -2985,7 +2983,7 @@
     "effect": [
       { "math": [ "u_val('mana')", "-=", "2" ] },
       { "u_add_effect": "aura_fusionblade", "duration": "2 s" },
-      { "run_eocs": [ "utsuho_fusionblade_cycle1" ], "time_in_future": "1 s" }
+      { "queue_eocs": [ "utsuho_fusionblade_cycle1" ], "time_in_future": "1 s" }
     ],
     "false_effect": { "run_eocs": "utsuho_fusionblade_oom" },
     "//": "-2 mana/s equals +8 min of keeping this active"
@@ -3061,7 +3059,7 @@
         },
         "then": [
           { 
-            "run_eocs": "utsuho_nuke_delay_eoc", 
+            "queue_eoc_with": "utsuho_nuke_delay_eoc", 
             "variables": { "utsuho_nuke_loc": "var_utsuho_nuke_loc" }, 
             "time_in_future": "3 s" 
           }
@@ -3100,7 +3098,7 @@
         },
         "then": [
           { 
-            "run_eocs": "utsuho_ugeyser_delay_1", 
+            "queue_eoc_with": "utsuho_ugeyser_delay_1", 
             "variables": { "utsuho_ugeyser_loc": "var_utsuho_ugeyser_loc" }, 
             "time_in_future": "3 s" 
           }
@@ -3121,7 +3119,7 @@
         },
         "then": [
           { 
-            "run_eocs": "utsuho_ugeyser_delay_2", 
+            "queue_eoc_with": "utsuho_ugeyser_delay_2", 
             "variables": { "utsuho_ugeyser_loc": "var_utsuho_ugeyser_loc" }, 
             "time_in_future": [ "2 s", "5 s" ] 
           }
@@ -3254,7 +3252,7 @@
                 "run_eocs": [ 
                   {
                     "id": "yamame_damnedrope_pulling_1",
-                    "condition": { "math": [ "( n_weight() * 2 )", ">=", "u_weight()" ] },
+                    "condition": { "math": [ "( n_val('weight') * 2 )", ">=", "u_val('weight')" ] },
                     "effect": [ 
                       { "u_cast_spell": { "id": "yamame_damnedrope3" } },
                       { "npc_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_creature_loc" } },
@@ -3309,7 +3307,7 @@
                 "run_eocs": [ 
                   {
                     "id": "yamame_damnedrope_pulling_2",
-                    "condition": { "math": [ "( u_weight() * 2 )", ">=", "n_weight()" ] },
+                    "condition": { "math": [ "( u_val('weight') * 2 )", ">=", "n_val('weight')" ] },
                     "effect": [ 
                       { "u_cast_spell": { "id": "yamame_damnedrope_pull" }, "loc": { "global_val": "var_damnedrope_loc" } },
                       { "u_message": "You pull your target towards you!", "type": "good" },
@@ -3402,7 +3400,7 @@
     "condition": { "math": [ "var_miasmaburst_dmg", ">", "0" ] },
     "effect": [ 
       { "math": [ "var_miasmaburst_dmg", "-=", "2" ] },
-      { "run_eocs": [ "yamame_miasmaburst_stored_eoc"  ], "time_in_future": "7 s" }
+      { "queue_eocs": [ "yamame_miasmaburst_stored_eoc"  ], "time_in_future": "7 s" }
     ],
     "//": "Reduces var_miasmaburst_dmg every 7 s"
   },
@@ -3461,7 +3459,7 @@
   {
     "id": "youmu_doublewheel_eoc",
     "type": "effect_on_condition",
-    "condition": {
+    "//condition": {
       "and": [
         { "math": [ "u_monsters_nearby('mon_youmumyon', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
         { "math": [ "u_monsters_nearby('mon_youmumyon2', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] }
@@ -3490,12 +3488,13 @@
       { "u_cast_spell": { "id": "youmu_phantom_tp" }, "targeted": false }
     ],
     "//": "This EOC checks if Youmu hasn't casted a spell with her half-phantom half yet, if that's the case it checks for mana and spawns a mon_youmumyon ",
-    "//2": "Otherwise, if she has already casted her one, it casts the tp spell to teleport her"
+    "//2": "Otherwise, if she has already casted her one, it casts the tp spell to teleport her",
+    "//0.H": "Disabled condition as it requires #71222 -> will always run the effect and ignore the false_effect "
   },
   {
     "id": "youmu_halfbody_eoc",
     "type": "effect_on_condition",
-    "condition": {
+    "//condition": {
       "and": [
         { "math": [ "u_monsters_nearby('mon_youmumyon', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] },
         { "math": [ "u_monsters_nearby('mon_youmumyon2', 'radius': 960, 'attitude': 'friendly')", "==", "0" ] }
@@ -3522,7 +3521,8 @@
     "false_effect": [ 
       { "u_message": "You move your other half to your side.", "type": "good" },
       { "u_cast_spell": { "id": "youmu_phantom_tp" }, "targeted": false }
-    ]
+    ],
+    "//0.H": "Disabled condition as it requires #71222 -> will always run the effect and ignore the false_effect "
   },
   {
     "id": "youmu_phantom_tp_eoc",
@@ -3549,7 +3549,7 @@
       { "math": [ "u_var_insightfulsword", "=", "1" ] },
       { "u_add_effect": "parry_effect", "duration": "2 s" },
       {
-        "run_eocs": [
+        "queue_eocs": [
           {
             "id": "youmu_insightfulsword_timer",
             "effect": [

@@ -44,7 +44,7 @@
             "condition": { "u_has_trait": "HELLRAVEN_SPECIES" },
             "effect": [
               { "u_add_effect": "flight_hellraven_effect", "duration": "3 s" },
-              { "run_eocs": [ "wings_cycle_1_eoc" ], "time_in_future": "2 s" }
+              { "queue_eocs": [ "wings_cycle_1_eoc" ], "time_in_future": "2 s" }
             ]
           }
         ]
@@ -56,7 +56,7 @@
             "condition": { "u_has_trait": "TENGUCROW_SPECIES" },
             "effect": [
               { "u_add_effect": "flight_tengucrow_effect", "duration": "3 s" },
-              { "run_eocs": [ "wings_cycle_1_eoc" ], "time_in_future": "2 s" }
+              { "queue_eocs": [ "wings_cycle_1_eoc" ], "time_in_future": "2 s" }
             ]
           }
         ]
@@ -68,7 +68,7 @@
             "condition": { "u_has_trait": "VAMPIRE_SPECIES" },
             "effect": [
               { "u_add_effect": "flight_vampire_effect", "duration": "3 s" },
-              { "run_eocs": [ "wings_cycle_1_eoc" ], "time_in_future": "2 s" }
+              { "queue_eocs": [ "wings_cycle_1_eoc" ], "time_in_future": "2 s" }
             ]
           }
         ]

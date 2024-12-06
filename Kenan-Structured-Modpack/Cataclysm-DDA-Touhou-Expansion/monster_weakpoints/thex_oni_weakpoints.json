@@ -75,7 +75,8 @@
         "coverage": 15,
         "coverage_mult": { "broad": 0.65 },
         "crit_mult": { "all": 0.65 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           { "effect": "staggered", "chance": 35, "message": "The %s is knocked off-balance!", "damage_required": [ 11, 24 ] },
           {

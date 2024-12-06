@@ -22,7 +22,7 @@
                     "id": "thex_weather_purifying_check_eoc",
                     "condition": {
                       "and": [
-                        { "math": [ "time_since('cataclysm', 'unit':'days')", ">=", "86" ] },
+                        { "math": [ "u_val('time_since_cataclysm: days')", ">=", "86" ] },
                         { "math": [ "weather_purifying_queued", "==", "0" ] },
                         { "math": [ "weather_purifying_active", "==", "0" ] },
                         { "math": [ "weather_purifying_ended", "==", "0" ] }
@@ -31,14 +31,14 @@
                     "effect": [ 
                       { "math": [ "weather_purifying_queued", "=", "1" ] },
                       {
-                        "run_eocs": [
+                        "queue_eocs": [
                           {
                             "id": "thex_weather_purifying_success_eoc",
                             "effect": [ 
                               { "math": [ "weather_purifying_queued", "=", "0" ] },
                               { "math": [ "weather_purifying_active", "=", "1" ] },
                               {
-                                "run_eocs": [
+                                "queue_eocs": [
                                   {
                                     "id": "thex_weather_purifying_disable_eoc",
                                     "effect": [ 
@@ -87,20 +87,20 @@
                         { "x_in_y_chance": { "x": 1, "y": 10 } },
                         { "math": [ "weather_carnian_active", "==", "0" ] },
                         { "math": [ "weather_carnian_cd", "==", "0" ] },
-                        { "math": [ "time_since('cataclysm', 'unit':'days')", ">=", "30" ] }
+                        { "math": [ "u_val('time_since_cataclysm: days')", ">=", "30" ] }
                       ]
                     },
                     "effect": [ 
                       { "math": [ "weather_carnian_active", "=", "1" ] },
                       {
-                        "run_eocs": [
+                        "queue_eocs": [
                           {
                             "id": "thex_weather_carnian_disable_eoc",
                             "effect": [ 
                               { "math": [ "weather_carnian_active", "=", "0" ] },
                               { "math": [ "weather_carnian_cd", "=", "1" ] },
                               {
-                                "run_eocs": [
+                                "queue_eocs": [
                                   {
                                     "id": "thex_weather_carnian_restore_eoc",
                                     "effect": [ { "math": [ "weather_carnian_cd", "=", "0" ] } ]
@@ -169,9 +169,9 @@
     "id": "thex_event_night_parade_queue_eoc",
     "type": "effect_on_condition",
     "effect": [ 
-      { "run_eocs": [ "thex_event_night_parade_check_eoc" ], "time_in_future": { "math": [ "time_until('night_time')" ] } } 
+      { "queue_eocs": [ "thex_event_night_parade_check_eoc" ], "time_in_future": "20 h" } 
     ],
-    "//": "If the daily chance for the event was true, this queues the EOC at the intended time of the day (night), and then checks the actual event's conditions"
+    "//": "If the daily chance for the event was true, this queues the EOC at ~the intended time of the day (night), and then checks the actual event's conditions"
   },
   {
     "id": "thex_event_night_parade_check_eoc",
@@ -208,7 +208,7 @@
       { "math": [ "weather_night_parade_active", "=", "1" ] },
       { "run_eocs": "thex_event_night_parade_start_message_eoc" },
       {
-        "run_eocs": [
+        "queue_eocs": [
           {
             "id": "thex_event_night_parade_disable_eoc",
             "effect": [ 
@@ -216,7 +216,7 @@
               { "math": [ "weather_night_parade_cd", "=", "1" ] },
               "next_weather",
               {
-                "run_eocs": [
+                "queue_eocs": [
                   {
                     "id": "thex_event_night_parade_restore_eoc",
                     "effect": [ { "math": [ "weather_night_parade_cd", "=", "0" ] } ]
@@ -227,7 +227,7 @@
             ]
           }
         ],
-        "time_in_future": { "math": [ "time_until('daylight_time')" ] }
+        "time_in_future": "8 h" 
       }
     ],
     "//": "Night parade runs if: it's night_time AND it's not raining AND there's no portal storm AND the event isn't already running/queued AND the player is not underground",
@@ -243,7 +243,7 @@
     "condition": {
       "and": [
         { "is_weather": "night_parade" },
-        { "math": [ "u_monsters_nearby('radius': 48, 'attitude': 'hostile' )", "<", "25" ] },
+        { "math": [ "u_monsters_nearby('radius': 48 )", "<", "35" ] },
         { "math": [ "u_val('pos_z')", ">=", "0" ] }
       ]
     },
@@ -270,7 +270,7 @@
         "outdoor_only": true,
         "min_radius": 20,
         "max_radius": 36,
-        "temporary_drop_items": true,
+        "//temporary_drop_items": true,
         "lifespan": [ "12 h", "16 h" ]
       }
     ]
@@ -286,7 +286,7 @@
         "outdoor_only": true,
         "min_radius": 20,
         "max_radius": 36,
-        "temporary_drop_items": true,
+        "//temporary_drop_items": true,
         "lifespan": [ "12 h", "16 h" ]
       }
     ]
@@ -302,7 +302,7 @@
         "outdoor_only": true,
         "min_radius": 20,
         "max_radius": 36,
-        "temporary_drop_items": true,
+        "//temporary_drop_items": true,
         "lifespan": [ "12 h", "16 h" ]
       }
     ]
@@ -318,10 +318,11 @@
         "outdoor_only": true,
         "min_radius": 20,
         "max_radius": 36,
-        "temporary_drop_items": true,
+        "//temporary_drop_items": true,
         "lifespan": [ "12 h", "16 h" ]
       }
-    ]
+    ],
+    "//0.H": ""
   },
   {
     "id": "thex_event_night_parade_start_message_eoc",
@@ -411,7 +412,7 @@
     "id": "thex_event_silence_hour_queue_eoc",
     "type": "effect_on_condition",
     "effect": [ 
-      { "run_eocs": [ "thex_event_silence_hour_check_eoc" ], "time_in_future": { "math": [ "rand(86399)" ] } } 
+      { "queue_eocs": [ "thex_event_silence_hour_check_eoc" ], "time_in_future": { "math": [ "rand(86399)" ] } } 
     ],
     "//": "If the daily chance for the event was true, this queues the EOC at the intended time of the day (random), and then checks the actual event's conditions"
   },
@@ -449,7 +450,7 @@
       { "math": [ "weather_silence_hour_active", "=", "1" ] },
       { "u_message": "silence_hour_snippet", "snippet": true, "type": "warning" },
       {
-        "run_eocs": [
+        "queue_eocs": [
           {
             "id": "thex_event_silence_hour_disable_eoc",
             "effect": [ 

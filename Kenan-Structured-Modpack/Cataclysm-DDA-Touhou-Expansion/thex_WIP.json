@@ -102,74 +102,13 @@
     "effect": [
       {
         "if": {
-          "and": [
+          "or": [
             { "math": [ "cause_portal_storm", "==", "1" ] },
-            { "math": [ "distance(_weather_location, portal_storm_center)", "<=", "value_or(portal_storm_distance, 50)" ] }
+            { "math": [ "cause_early_portal_storm", "==", "1" ] }
           ]
         },
         "then": [ 
-          {
-            "if": { "is_weather": "portal_storm" },
-            "then": { "u_message": "Something's wrong.", "type": "bad" }
-          },
-          {
-            "if": { "not": { "is_weather": "portal_storm" } },
-            "then": { "u_message": "Something's off…", "type": "mixed" }
-          }
-        ]
-      },
-      {
-        "if": {
-          "and": [
-            { "math": [ "cause_portal_storm", "==", "1" ] },
-            { "math": [ "distance(_weather_location, portal_storm_center)", "<=", "value_or(portal_storm_close_distance, 100)" ] }
-          ]
-        },
-        "then": [ 
-          {
-            "if": { "is_weather": "close_portal_storm" },
-            "then": { "u_message": "Something's wrong.", "type": "bad" }
-          },
-          {
-            "if": { "not": { "is_weather": "close_portal_storm" } },
-            "then": { "u_message": "Something's off…", "type": "mixed" }
-          }
-        ]
-      },
-      {
-        "if": {
-          "and": [
-            { "math": [ "cause_portal_storm", "==", "1" ] },
-            { "math": [ "distance(_weather_location, portal_storm_center)", "<=", "value_or(portal_storm_distant_distance, 200)" ] }
-          ]
-        },
-        "then": [ 
-          {
-            "if": { "is_weather": "distant_portal_storm" },
-            "then": { "u_message": "Something's wrong.", "type": "bad" }
-          },
-          {
-            "if": { "not": { "is_weather": "distant_portal_storm" } },
-            "then": { "u_message": "Something's off…", "type": "mixed" }
-          }
-        ]
-      },
-      {
-        "if": {
-          "and": [
-            { "math": [ "cause_early_portal_storm", "==", "1" ] },
-            { "math": [ "distance(_weather_location, portal_storm_center)", "<=", "value_or(portal_storm_distant_distance, 200)" ] }
-          ]
-        },
-        "then": [ 
-          {
-            "if": { "is_weather": "early_portal_storm" },
-            "then": { "u_message": "Something's wrong.", "type": "bad" }
-          },
-          {
-            "if": { "not": { "is_weather": "early_portal_storm" } },
-            "then": { "u_message": "Something's off…", "type": "mixed" }
-          }
+          { "u_message": "Something's off…", "type": "mixed" } 
         ]
       },
       {

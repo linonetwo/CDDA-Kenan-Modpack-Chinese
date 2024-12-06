@@ -9,8 +9,8 @@
     "effect": "attack",
     "shape": "line",
     "damage_type": "electric",
-    "min_damage": { "math": [ "( (u_skill('dodge') * 1.5 ) + (u_skill('unarmed') * 1.5 ) + 9 )" ] },
-    "max_damage": 45,
+    "min_damage": { "math": [ "( (u_skill('dodge') * 1.5 ) + (u_skill('unarmed') * 1.5 ) + var_iku_bonus + 9 )" ] },
+    "max_damage": 90,
     "min_range": 3,
     "max_range": 3,
     "field_id": "fd_electricity",
@@ -36,8 +36,8 @@
     "effect": "attack",
     "shape": "line",
     "damage_type": "stab",
-    "min_damage": { "math": [ "( var_melee_phys_dmg * 0.9 )" ] },
-    "max_damage": { "math": [ "( var_melee_phys_dmg * 1.3 )" ] },
+    "min_damage": { "math": [ "( ( 24 + var_iku_bonus ) * 0.9 )" ] },
+    "max_damage": { "math": [ "( ( 24 + var_iku_bonus ) * 1.3 )" ] },
     "min_pierce": { "math": [ "( (u_skill('dodge') * 0.6 ) + (u_skill('melee') * 0.6 ) - 0.8 )" ] },
     "max_pierce": 12,
     "min_range": 1,
@@ -49,7 +49,8 @@
     "energy_source": "MANA",
     "flags": [ "NO_LEGS", "SOMATIC", "RANDOM_DAMAGE" ],
     "//": "This is procced automatically by MA techniques",
-    "//2": "dmg is ~1.1x weapon dmg, min pierce 4"
+    "//2": "dmg is ~1.1x weapon dmg, min pierce 4",
+    "//0.H": "Replaced all var_melee_phys_dmg by 24 (based on iku_long_scarf total dmg)"
   },
   {
     "id": "iku_slap_elec",
@@ -61,8 +62,8 @@
     "effect": "attack",
     "shape": "blast",
     "damage_type": "electric",
-    "min_damage": { "math": [ "( ( var_melee_all_dmg * 0.9 ) )" ] },
-    "max_damage": { "math": [ "( ( var_melee_all_dmg * 1.1 ) )" ] },
+    "min_damage": { "math": [ "( 24 + var_iku_bonus * 0.9 )" ] },
+    "max_damage": { "math": [ "( 24 + var_iku_bonus * 1.1 )" ] },
     "min_range": 1,
     "max_range": 1,
     "max_level": 1,
@@ -71,7 +72,8 @@
     "base_energy_cost": 0,
     "energy_source": "MANA",
     "flags": [ "IGNITE_FLAMMABLE", "NO_LEGS", "RANDOM_DAMAGE", "SOMATIC" ],
-    "//": "dmg is ~1x weapon dmg"
+    "//": "dmg is ~1x weapon dmg",
+    "//0.H": "Replaced all var_melee_all_dmg by 24 (based on iku_long_scarf total dmg)"
   },
   {
     "id": "iku_step",
@@ -83,8 +85,8 @@
     "effect": "attack",
     "shape": "blast",
     "damage_type": "electric",
-    "min_damage": { "math": [ "( (u_skill('melee') * 1.25 ) + (u_skill('dodge') * 1.25 ) + 10 )" ] },
-    "max_damage": 45,
+    "min_damage": { "math": [ "( (u_skill('melee') * 1.25 ) + (u_skill('dodge') * 1.25 ) + var_iku_bonus + 10 )" ] },
+    "max_damage": 90,
     "min_range": 0,
     "max_range": 0,
     "min_aoe": 1,

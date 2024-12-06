@@ -72,7 +72,8 @@
         "name": "the arm",
         "//": "Gives you a higher chance of hitting the arm if the enemy is grabbing you.",
         "coverage": 16,
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           { "effect": "staggered", "chance": 16, "message": "The %s is knocked off-balance!", "damage_required": [ 9, 29 ] },
           {
@@ -154,7 +155,8 @@
         "coverage": 5,
         "armor_mult": { "all": 0.35 },
         "difficulty": { "melee": 2, "ranged": 3 },
-        "condition": { "u_has_any_effect": [ "frame_breakthrough" ] }
+        "//condition": { "u_has_any_effect": [ "frame_breakthrough" ] },
+        "required_effects": [ "grabbing" ]
       },
       {
         "id": "arm",
@@ -178,7 +180,8 @@
         "//": "Gives you a higher chance of hitting the arm if the enemy is grabbing you.",
         "coverage": 16,
         "crit_mult": { "all": 0.65 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           { "effect": "staggered", "chance": 16, "message": "The %s is knocked off-balance!", "damage_required": [ 9, 29 ] },
           {

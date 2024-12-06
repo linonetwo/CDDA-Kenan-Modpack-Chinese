@@ -3,11 +3,13 @@
     "id": "baku_plushie_eoc",
     "type": "effect_on_condition",
     "eoc_type": "EVENT",
-    "required_event": "character_falls_asleep",
+    "required_event": "character_wakes_up",
+    "//required_event": "character_falls_asleep",
     "effect": [
       { "math": [ "var_baku_plushie_active", "=", "1" ] },
       { "u_location_variable": { "global_val": "var_baku_plushie" } }
-    ]
+    ],
+    "//0.H": "The event character_falls_asleep isn't active, so this is replaced for character_wakes_up instead"
   },
   {
     "id": "baku_plushie_return_eoc",
@@ -453,7 +455,7 @@
     "condition": { "math": [ "u_var_thorny_box_timer", ">=", "1" ] },
     "effect": [
       { "u_add_effect": "thorny_box_demerit_effect", "duration": "2880 m" },
-      { "run_eocs": [ "thorny_box_timer2_eoc" ], "time_in_future": "60 m" }
+      { "queue_eocs": [ "thorny_box_timer2_eoc" ], "time_in_future": "60 m" }
     ],
     "false_effect": [ 
       { "math": [ "u_var_thorny_box", "=", "0" ] },
@@ -477,7 +479,7 @@
       { "math": [ "var_wind_blessing_int", "=", "rand(6)" ] },
       { "math": [ "var_wind_blessing_per", "=", "rand(6)" ] },
       { "math": [ "var_wind_blessing_str", "=", "rand(6)" ] },
-      { "run_eocs": [ "wind_blessing_eoc" ], "time_in_future": "30 m" }
+      { "queue_eocs": [ "wind_blessing_eoc" ], "time_in_future": "30 m" }
     ],
     "//note": "Adding a condition doesn't work as it never returns TRUE. Other than that, this grants the random stats every 30 min or so. The condition is required only to disable it from self-queueing all the time"
   }

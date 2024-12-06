@@ -232,7 +232,7 @@
         "description": "The %s shoots!",
         "condition": { "and": [ { "not": { "u_has_effect": "maimed_arm" } }, { "not": { "u_has_effect": "disarmed" } } ] },
         "ammo_type": "9mmfairy",
-        "cooldown": { "math": [ "6 + rand(2)" ] },
+        "cooldown": 7,
         "fake_dex": 8,
 		"fake_skills": [ [ "gun", 1 ], [ "pistol", 1 ] ],
         "max_ammo": 99,
@@ -269,7 +269,7 @@
         "id": "mon_fairy_urban3_1", 
         "type": "spell", 
         "spell_data": { "id": "firefighter_fairy_fire" }, 
-        "cooldown": { "math": [ "6 + rand(2)" ] }, 
+        "cooldown": 7, 
         "monster_message": "The fire fighter fairy shoots fire!" 
       } 
     ],

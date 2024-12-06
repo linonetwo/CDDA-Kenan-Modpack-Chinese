@@ -56,116 +56,61 @@
     "id": "gap_generator_move_tag_1_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_1", "loc": { "global_val": "var_gap_generator_move_loc" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_picked_1", "=", "1" ] },
-          { "run_eocs": [ "gap_generator_move_repeater_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_move_tag_2_eoc" ] }
-      }
+      
     ],
     "//": "This checks which one of the f_gap markers has been placed at the location, and adds the 'tag' var_PICKED_# ",
     "//2": "If that's not the furniture marker #, it runs the other EOCs to find which one is",
     "//3": "After it finds the correct marker, it runs the repeater EOC",
-    "//4": "Again, this has to be done as math cannot check coordinate variables (throws error, if used as condition it always returns TRUE), so the furniture markers are checked instead"
+    "//4": "Again, this has to be done as math cannot check coordinate variables (throws error, if used as condition it always returns TRUE), so the furniture markers are checked instead",
+    "//0.H": "These effects are empty because they require map_furniture_id , and it wasn't backported"
   },
   {
     "id": "gap_generator_move_tag_2_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_2", "loc": { "global_val": "var_gap_generator_move_loc" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_picked_2", "=", "1" ] },
-          { "run_eocs": [ "gap_generator_move_repeater_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_move_tag_3_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_move_tag_3_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_3", "loc": { "global_val": "var_gap_generator_move_loc" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_picked_3", "=", "1" ] },
-          { "run_eocs": [ "gap_generator_move_repeater_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_move_tag_4_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_move_tag_4_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_4", "loc": { "global_val": "var_gap_generator_move_loc" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_picked_4", "=", "1" ] },
-          { "run_eocs": [ "gap_generator_move_repeater_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_move_tag_5_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_move_tag_5_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_5", "loc": { "global_val": "var_gap_generator_move_loc" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_picked_5", "=", "1" ] },
-          { "run_eocs": [ "gap_generator_move_repeater_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_move_tag_6_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_move_tag_6_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_6", "loc": { "global_val": "var_gap_generator_move_loc" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_picked_6", "=", "1" ] },
-          { "run_eocs": [ "gap_generator_move_repeater_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_move_tag_7_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_move_tag_7_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_7", "loc": { "global_val": "var_gap_generator_move_loc" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_picked_7", "=", "1" ] },
-          { "run_eocs": [ "gap_generator_move_repeater_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_move_tag_8_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_move_tag_8_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_8", "loc": { "global_val": "var_gap_generator_move_loc" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_picked_8", "=", "1" ] },
-          { "run_eocs": [ "gap_generator_move_repeater_eoc" ] }
-        ],
-        "else": { "u_message": "There is no gap at the location.", "type": "mixed" }
-      }
+      
     ]
   },
   {
@@ -363,15 +308,8 @@
               {
                 "if": { "math": [ "var_gap_generator_counter", "<=", "8" ] },
                 "then": [ 
-                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_1", "target_var": { "global_val": "var_gap_generator_loc_1" } },
-                  {
-                    "if": { "map_furniture_id": "f_gap_1", "loc": { "global_val": "var_gap_generator_loc_1" } },
-                    "then": [ 
-                      { "math": [ "var_gap_generator_placed_1", "=", "1" ] },
-                      { "math": [ "var_gap_generator_counter", "+=", "1" ] }
-                    ],
-                    "else": { "u_message": "You can't open a gap at the location.", "type": "mixed" }
-                  }
+                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_1", "target_var": { "global_val": "var_gap_generator_loc_1" } }
+                  
                 ],
                 "else": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
               }
@@ -388,7 +326,8 @@
     "//4": "The var_LOCATION_# is only valid if its var_PLACED_# is also set, otherwise it does nothing",
     "//5": "Every time the var_PLACED_# check fails (because it already exists), it checks for the next one",
     "//6": "The next EOC is gap_generator_move_check_eoc ",
-    "//7": "Currently, math cannot check coordinate variables (throws error, if used as condition it always returns TRUE), so 8 different var_PLACED_# checks have to be done instead"
+    "//7": "Currently, math cannot check coordinate variables (throws error, if used as condition it always returns TRUE), so 8 different var_PLACED_# checks have to be done instead",
+    "//0.H": "The missing lines are the if-then conditions using map_furniture_id , which wasn't backported"
   },
   {
     "id": "gap_generator_place_2_eoc",
@@ -410,15 +349,8 @@
               {
                 "if": { "math": [ "var_gap_generator_counter", "<=", "8" ] },
                 "then": [ 
-                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_2", "target_var": { "global_val": "var_gap_generator_loc_2" } },
-                  {
-                    "if": { "map_furniture_id": "f_gap_2", "loc": { "global_val": "var_gap_generator_loc_2" } },
-                    "then": [ 
-                      { "math": [ "var_gap_generator_placed_2", "=", "1" ] },
-                      { "math": [ "var_gap_generator_counter", "+=", "1" ] }
-                    ],
-                    "else": { "u_message": "You can't open a gap at the location.", "type": "mixed" }
-                  }
+                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_2", "target_var": { "global_val": "var_gap_generator_loc_2" } }
+                  
                 ],
                 "else": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
               }
@@ -450,15 +382,8 @@
               {
                 "if": { "math": [ "var_gap_generator_counter", "<=", "8" ] },
                 "then": [ 
-                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_3", "target_var": { "global_val": "var_gap_generator_loc_3" } },
-                  {
-                    "if": { "map_furniture_id": "f_gap_3", "loc": { "global_val": "var_gap_generator_loc_3" } },
-                    "then": [ 
-                      { "math": [ "var_gap_generator_placed_3", "=", "1" ] },
-                      { "math": [ "var_gap_generator_counter", "+=", "1" ] }
-                    ],
-                    "else": { "u_message": "You can't open a gap at the location.", "type": "mixed" }
-                  }
+                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_3", "target_var": { "global_val": "var_gap_generator_loc_3" } }
+                  
                 ],
                 "else": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
               }
@@ -490,15 +415,8 @@
               {
                 "if": { "math": [ "var_gap_generator_counter", "<=", "8" ] },
                 "then": [ 
-                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_4", "target_var": { "global_val": "var_gap_generator_loc_4" } },
-                  {
-                    "if": { "map_furniture_id": "f_gap_4", "loc": { "global_val": "var_gap_generator_loc_4" } },
-                    "then": [ 
-                      { "math": [ "var_gap_generator_placed_4", "=", "1" ] },
-                      { "math": [ "var_gap_generator_counter", "+=", "1" ] }
-                    ],
-                    "else": { "u_message": "You can't open a gap at the location.", "type": "mixed" }
-                  }
+                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_4", "target_var": { "global_val": "var_gap_generator_loc_4" } }
+                  
                 ],
                 "else": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
               }
@@ -530,15 +448,8 @@
               {
                 "if": { "math": [ "var_gap_generator_counter", "<=", "8" ] },
                 "then": [ 
-                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_5", "target_var": { "global_val": "var_gap_generator_loc_5" } },
-                  {
-                    "if": { "map_furniture_id": "f_gap_5", "loc": { "global_val": "var_gap_generator_loc_5" } },
-                    "then": [ 
-                      { "math": [ "var_gap_generator_placed_5", "=", "1" ] },
-                      { "math": [ "var_gap_generator_counter", "+=", "1" ] }
-                    ],
-                    "else": { "u_message": "You can't open a gap at the location.", "type": "mixed" }
-                  }
+                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_5", "target_var": { "global_val": "var_gap_generator_loc_5" } }
+                  
                 ],
                 "else": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
               }
@@ -570,15 +481,8 @@
               {
                 "if": { "math": [ "var_gap_generator_counter", "<=", "8" ] },
                 "then": [ 
-                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_6", "target_var": { "global_val": "var_gap_generator_loc_6" } },
-                  {
-                    "if": { "map_furniture_id": "f_gap_6", "loc": { "global_val": "var_gap_generator_loc_6" } },
-                    "then": [ 
-                      { "math": [ "var_gap_generator_placed_6", "=", "1" ] },
-                      { "math": [ "var_gap_generator_counter", "+=", "1" ] }
-                    ],
-                    "else": { "u_message": "You can't open a gap at the location.", "type": "mixed" }
-                  }
+                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_6", "target_var": { "global_val": "var_gap_generator_loc_6" } }
+                  
                 ],
                 "else": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
               }
@@ -610,15 +514,8 @@
               {
                 "if": { "math": [ "var_gap_generator_counter", "<=", "8" ] },
                 "then": [ 
-                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_7", "target_var": { "global_val": "var_gap_generator_loc_7" } },
-                  {
-                    "if": { "map_furniture_id": "f_gap_7", "loc": { "global_val": "var_gap_generator_loc_7" } },
-                    "then": [ 
-                      { "math": [ "var_gap_generator_placed_7", "=", "1" ] },
-                      { "math": [ "var_gap_generator_counter", "+=", "1" ] }
-                    ],
-                    "else": { "u_message": "You can't open a gap at the location.", "type": "mixed" }
-                  }
+                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_7", "target_var": { "global_val": "var_gap_generator_loc_7" } }
+                  
                 ],
                 "else": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
               }
@@ -650,15 +547,8 @@
               {
                 "if": { "math": [ "var_gap_generator_counter", "<=", "8" ] },
                 "then": [ 
-                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_8", "target_var": { "global_val": "var_gap_generator_loc_8" } },
-                  {
-                    "if": { "map_furniture_id": "f_gap_8", "loc": { "global_val": "var_gap_generator_loc_8" } },
-                    "then": [ 
-                      { "math": [ "var_gap_generator_placed_8", "=", "1" ] },
-                      { "math": [ "var_gap_generator_counter", "+=", "1" ] }
-                    ],
-                    "else": { "u_message": "You can't open a gap at the location.", "type": "mixed" }
-                  }
+                  { "u_transform_radius": 0, "ter_furn_transform": "gap_fur_8", "target_var": { "global_val": "var_gap_generator_loc_8" } }
+                  
                 ],
                 "else": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
               }
@@ -697,115 +587,60 @@
     "id": "gap_generator_remove_1_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_1", "loc": { "global_val": "var_gap_generator_remove" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_placed_1", "=", "0" ] },
-          { "run_eocs": [ "gap_generator_remove_end_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_remove_2_eoc" ] }
-      }
+      
     ],
     "//": "These check which one of the f_gap marker # is present at the location",
     "//2": "When the correct marker is found, it resets the var_PLACED_# (so it's free to place again), and runs the ter_furn_transform EOC",
-    "//3": "Again, this has to be done as math cannot check coordinate variables (throws error, if used as condition it always returns TRUE), so the furniture markers are checked instead"
+    "//3": "Again, this has to be done as math cannot check coordinate variables (throws error, if used as condition it always returns TRUE), so the furniture markers are checked instead",
+    "//0.H": "The missing lines are if-then conditions using map_furniture_id , which wasn't backported"
   },
   {
     "id": "gap_generator_remove_2_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_2", "loc": { "global_val": "var_gap_generator_remove" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_placed_2", "=", "0" ] },
-          { "run_eocs": [ "gap_generator_remove_end_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_remove_3_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_remove_3_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_3", "loc": { "global_val": "var_gap_generator_remove" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_placed_3", "=", "0" ] },
-          { "run_eocs": [ "gap_generator_remove_end_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_remove_4_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_remove_4_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_4", "loc": { "global_val": "var_gap_generator_remove" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_placed_4", "=", "0" ] },
-          { "run_eocs": [ "gap_generator_remove_end_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_remove_5_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_remove_5_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_5", "loc": { "global_val": "var_gap_generator_remove" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_placed_5", "=", "0" ] },
-          { "run_eocs": [ "gap_generator_remove_end_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_remove_6_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_remove_6_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_6", "loc": { "global_val": "var_gap_generator_remove" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_placed_6", "=", "0" ] },
-          { "run_eocs": [ "gap_generator_remove_end_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_remove_7_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_remove_7_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_7", "loc": { "global_val": "var_gap_generator_remove" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_placed_7", "=", "0" ] },
-          { "run_eocs": [ "gap_generator_remove_end_eoc" ] }
-        ],
-        "else": { "run_eocs": [ "gap_generator_remove_8_eoc" ] }
-      }
+      
     ]
   },
   {
     "id": "gap_generator_remove_8_eoc",
     "type": "effect_on_condition",
     "effect": [
-      {
-        "if": { "map_furniture_id": "f_gap_8", "loc": { "global_val": "var_gap_generator_remove" } },
-        "then": [ 
-          { "math": [ "var_gap_generator_placed_8", "=", "0" ] },
-          { "run_eocs": [ "gap_generator_remove_end_eoc" ] }
-        ],
-        "else": { "u_message": "There is no gap at the location.", "type": "mixed" }
-      }
+      
     ]
   },
   {

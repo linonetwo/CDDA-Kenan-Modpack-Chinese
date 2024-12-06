@@ -22,11 +22,11 @@
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ], 
-      [ "grab", { "math": [ "15 + rand(10)" ] } ] 
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ], 
+      [ "grab", 20 ] 
     ],
-    "flags": [ "ANIMAL", "EATS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
+    "flags": [ "ANIMAL", "EATS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Note: for ALL Temnospondyli, it's supposed they had bad hearing during the Carboniferous, decent enough towards the end of the Early Permian",
     "//2": "Did you know modern amphibians have the best night vision of all animals?"
   },
@@ -62,9 +62,9 @@
     "vision_night": 24,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_diplocaulus" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_diplocaulus", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_FOOD", 50 ] ],
     "flags": [ "ANIMAL", "EATS", "HEARS", "SEES", "SMELLS", "SWIMS" ],
     "//": "Based on Diplocaulus sp. No reproductive data"
   },
@@ -123,9 +123,9 @@
     "vision_night": 32,
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_eryops" }, "baby_count": 8, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_eryops", "baby_count": 8, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_FOOD", 50 ] ],
     "flags": [ "ANIMAL", "EATS", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Eryops megacephalus. No reproductive data. Weight based on 10.1111/pala.12629 ",
     "//3": "Add 'grasping bite' attack"
@@ -185,9 +185,9 @@
     "vision_night": 24,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_pederpes" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_pederpes", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_FOOD", 50 ] ],
     "flags": [ "ANIMAL", "EATS", "SEES", "SMALL_HIDER", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Based on Pederpes finneyae. I couldn't find almost anything other than the size at 1 m average so most numbers are estimates",
     "//2": "These tetrapods were more or less stem-tetrapods, a sister clade of actual tetrapods (containing amphibians + amniots + a bunch of other salamander slash frog animals), instead of being 'true' amphibians"
@@ -229,11 +229,11 @@
     "melee_skill": 5,
     "stomach_size": 20000,
     "vision_night": 6,
-    "reproduction": { "baby_type": { "baby_egg": "egg_pholiderpeton" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_pholiderpeton", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(20)" ] } ],
+      [ "EAT_CARRION", 75 ], 
+      [ "EAT_FOOD", 75 ],
       { 
         "id": "sprint", 
         "type": "spell", 
@@ -245,7 +245,7 @@
             { "not": { "u_has_effect": "ambush_effect3" } }
           ]
         },
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       },
       { 
@@ -261,7 +261,7 @@
             { "not": { "u_has_effect": "sprint_effect" } }
           ]
         },
-        "cooldown": { "math": [ "1 + rand(1)" ] }, 
+        "cooldown": 2, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
@@ -308,11 +308,11 @@
     "melee_damage": [ { "damage_type": "cut", "amount": 7 } ],
     "stomach_size": 25000,
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_platyoposaurus" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_platyoposaurus", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(20)" ] } ],
+      [ "EAT_CARRION", 75 ], 
+      [ "EAT_FOOD", 75 ],
       { 
         "id": "sprint", 
         "type": "spell", 
@@ -324,7 +324,7 @@
             { "not": { "u_has_effect": "ambush_effect3" } }
           ]
         },
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       },
       { 
@@ -340,7 +340,7 @@
             { "not": { "u_has_effect": "sprint_effect" } }
           ]
         },
-        "cooldown": { "math": [ "1 + rand(1)" ] }, 
+        "cooldown": 2, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
@@ -391,11 +391,11 @@
     "dodge": 4,
     "stomach_size": 20000,
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_prionosuchus" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_prionosuchus", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ],
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ],
       { 
         "id": "sprint", 
         "type": "spell", 
@@ -407,7 +407,7 @@
             { "not": { "u_has_effect": "ambush_effect3" } }
           ]
         },
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       },
       { 
@@ -423,7 +423,7 @@
             { "not": { "u_has_effect": "sprint_effect" } }
           ]
         },
-        "cooldown": { "math": [ "1 + rand(1)" ] }, 
+        "cooldown": 2, 
         "allow_no_target": true, 
         "monster_message": "" 
       }

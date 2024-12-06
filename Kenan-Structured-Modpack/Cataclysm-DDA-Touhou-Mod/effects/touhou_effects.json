@@ -1027,7 +1027,8 @@
     "apply_message": "You make use of your ability to take a quick rest.",
     "remove_message": "Your quick rest has ended",
     "rating": "good",
-    "base_mods": { "sleepiness_amount": [ -100 ], "pkill_amount": [ 1 ], "stamina_amount": [ 1000 ], "stim_amount": [ 2 ] }
+    "base_mods": { "fatigue_amount": [ -100 ], "pkill_amount": [ 1 ], "stamina_amount": [ 1000 ], "stim_amount": [ 2 ] },
+    "//0.H": " sleepiness_amount -> fatigue_amount "
   },
   {
     "id": "sakuya_timestop_effect",
@@ -1272,5 +1273,50 @@
         ]
       }
     ]
+  },
+  {
+    "id": "udonge_disbeliefaspect_effect",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "//": "Dummy effect, used by udonge_disbeliefaspect_eoc "
+  },
+  {
+    "id": "kasen_summon_pet_1_2_effect",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "//": "Dummy effect, used by kasen_summon_pet_eoc "
+  },
+  {
+    "id": "kasen_summon_pet_2_2_effect",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "//": "Dummy effect, used by kasen_summon_pet_eoc "
+  },
+  {
+    "id": "kasen_summon_pet_3_2_effect",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "//": "Dummy effect, used by kasen_summon_pet_eoc "
+  },
+  {
+    "id": "kasen_summon_pet_4_2_effect",
+    "type": "effect_type",
+    "name": [ "" ],
+    "desc": [ "" ],
+    "max_intensity": 1,
+    "max_effective_intensity": 1,
+    "//": "Dummy effect, used by kasen_summon_pet_eoc "
   }
 ]

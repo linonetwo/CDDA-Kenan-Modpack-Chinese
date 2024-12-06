@@ -30,14 +30,14 @@
     "vision_night": 12,
     "path_settings": { "max_dist": 16 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_chupacabra_young" }, "baby_count": 3, "baby_timer": 60 },
+    "reproduction": { "baby_monster": "mon_chupacabra_young", "baby_count": 3, "baby_timer": 60 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "slash_15", { "math": [ "1 + rand(2)" ] } ] 
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_FOOD", 50 ], 
+      [ "slash_15", 2 ] 
     ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "WARM" ],
     "//": "These are what show up when you google 'chupacabra mange'. Former dogs/dog-sized canids, now at the boundary of being diseased animals and newborn youkai"
   },
   {
@@ -93,11 +93,11 @@
     "path_settings": { "max_dist": 32 },
     "anger_triggers": [ "HURT" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "slash_15", { "math": [ "1 + rand(2)" ] } ] 
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_FOOD", 50 ], 
+      [ "slash_15", 2 ] 
     ],
-    "flags": [ "CLIMBS", "EATS", "HEARS", "HIT_AND_RUN", "PATH_AVOID_DANGER", "SEES", "SMALL_HIDER", "SMELLS", "WARM" ],
+    "flags": [ "CLIMBS", "EATS", "HEARS", "HIT_AND_RUN", "PATH_AVOID_DANGER_1", "SEES", "SMALL_HIDER", "SMELLS", "WARM" ],
     "//": "Implement ALCOHOL as placate_triggers...",
     "//2": "These are the actual chupacabra cryptids, if a very small version"
   },
@@ -136,11 +136,11 @@
     "path_settings": { "max_dist": 32 },
     "anger_triggers": [ "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "special_attacks": [ 
-      [ "ABSORB_MEAT", { "math": [ "50 + rand(20)" ] } ], 
+      [ "ABSORB_MEAT", 60 ], 
       {
         "type": "leap",
         "condition": { "not": { "u_has_effect": "maimed_leg" } },
-        "cooldown": { "math": [ "9 + rand(11)" ] },
+        "cooldown": 14,
         "move_cost": 100,
         "min_consider_range": 3,
         "max_range": 4,
@@ -148,7 +148,7 @@
         "message": "The beast charges!"
       }
     ],
-    "flags": [ "BASHES", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "WARM" ]
+    "flags": [ "BASHES", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "WARM" ]
   },
   {
     "id": "mon_gevaudan",
@@ -182,23 +182,23 @@
     "weakpoint_sets": [ "wps_doglike_body" ],
     "stomach_size": 68000,
     "vision_night": 32,
-    "path_settings": { "max_dist": 32, "avoid_traps": true, "avoid_dangerous_fields": true },
+    "path_settings": { "max_dist": 32 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "LUNGE", { "math": [ "7 + rand(17)" ] } ],
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_FOOD", 50 ], 
+      [ "LUNGE", 15 ],
       { 
         "id": "mon_gevaudan_1", 
         "type": "spell", 
         "spell_data": { "id": "gevaudan_heal", "hit_self": true }, 
         "condition": { "not": { "u_has_effect": "gevaudan_noregen" } },
-        "cooldown": { "math": [ "11 + rand(11)" ] }, 
+        "cooldown": 16, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
     ],
-    "flags": [ "BASHES", "CLIMBS", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "SEES", "WARM" ]
+    "flags": [ "BASHES", "CLIMBS", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_2", "SEES", "WARM" ]
   },
   {
     "id": "mon_jackalope",
@@ -226,11 +226,11 @@
     "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_youkai" ],
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "leg_gore_10", { "math": [ "1 + rand(2)" ] } ] 
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_FOOD", 50 ], 
+      [ "leg_gore_10", 2 ] 
     ],
-    "flags": [ "EATS", "GOODHEARING", "PATH_AVOID_DANGER", "SEES", "SMELLS", "WARM" ]
+    "flags": [ "EATS", "GOODHEARING", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "WARM" ]
   },
   {
     "id": "mon_jinmenken",
@@ -263,15 +263,15 @@
     "vision_night": 8,
     "path_settings": { "max_dist": 12 },
     "fear_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_jinmenken_young" }, "baby_count": 2, "baby_timer": 30 },
+    "reproduction": { "baby_monster": "mon_jinmenken_young", "baby_count": 2, "baby_timer": 30 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ], 
-      [ "PARROT", { "math": [ "25 + rand(10)" ] } ], 
-      [ "PARROT_AT_DANGER", { "math": [ "15 + rand(10)" ] } ] 
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_CROP", 50 ], 
+      [ "PARROT", 30 ], 
+      [ "PARROT_AT_DANGER", 20 ] 
     ],
-    "flags": [ "CORNERED_FIGHTER", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "WARM" ]
+    "flags": [ "CORNERED_FIGHTER", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "WARM" ]
   },
   {
     "id": "mon_jinmenken_young",
@@ -328,8 +328,8 @@
     "path_settings": { "max_dist": 32 },
     "anger_triggers": [ "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
     "special_attacks": [
-      { "id": "mon_kunekune_1", "type": "spell", "spell_data": { "id": "fear_paralyze" }, "cooldown": { "math": [ "25 + rand(20)" ] }, "monster_message": "" },
-      { "id": "mon_kunekune_2", "type": "spell", "spell_data": { "id": "stare" }, "cooldown": { "math": [ "25 + rand(10)" ] }, "monster_message": "" }
+      { "id": "mon_kunekune_1", "type": "spell", "spell_data": { "id": "fear_paralyze" }, "cooldown": 35, "monster_message": "" },
+      { "id": "mon_kunekune_2", "type": "spell", "spell_data": { "id": "stare" }, "cooldown": 30, "monster_message": "" }
     ],
     "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s dissipates into air." },
     "flags": [ "HEARS", "IMMOBILE", "KEENNOSE", "SEES" ]
@@ -365,10 +365,10 @@
     "vision_night": 32,
     "path_settings": { "max_dist": 32 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_CLOSE", "STALK" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_nightcrawler_young" }, "baby_count": 2, "baby_timer": 13 },
+    "reproduction": { "baby_monster": "mon_nightcrawler_young", "baby_count": 2, "baby_timer": 13 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "ABSORB_MEAT", { "math": [ "80 + rand(40)" ] } ] ],
-    "flags": [ "CLIMBS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS" ],
+    "special_attacks": [ [ "ABSORB_MEAT", 100 ] ],
+    "flags": [ "CLIMBS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS" ],
     "//": "Fresno Nightcrawler"
   },
   {
@@ -426,20 +426,20 @@
     "vision_night": 24,
     "path_settings": { "max_dist": 32 },
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ], 
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_CROP", 50 ], 
       { 
         "id": "mon_olgoi_1", 
         "type": "spell", 
         "spell_data": { "id": "olgoi_poison" }, 
-        "cooldown": { "math": [ "1 + rand(2)" ] }, 
+        "cooldown": 2, 
         "monster_message": "The deathworm spits poison!" 
       },
       { 
         "id": "mon_olgoi_2", 
         "type": "spell", 
         "spell_data": { "id": "olgoi_shock" }, 
-        "cooldown": { "math": [ "1 + rand(2)" ] }, 
+        "cooldown": 2, 
         "monster_message": "" 
       }
     ],
@@ -479,7 +479,7 @@
     "path_settings": { "max_dist": 32 },
     "anger_triggers": [ "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT" ],
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "GOODHEARING", "KEENNOSE", "PATH_AVOID_DANGER", "SEES", "WARM" ]
+    "flags": [ "BASHES", "CAN_OPEN_DOORS", "GOODHEARING", "KEENNOSE", "PATH_AVOID_DANGER_1", "SEES", "WARM" ]
   },
   {
     "id": "mon_mapinguari",
@@ -513,7 +513,7 @@
     "path_settings": { "max_dist": 32 },
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY", "PLAYER_WEAK" ],
     "fear_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED" ],
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "GOODHEARING", "KEENNOSE", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "WARM" ],
+    "flags": [ "BASHES", "CAN_OPEN_DOORS", "GOODHEARING", "KEENNOSE", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "WARM" ],
 	"//": "Hybrid between bigfoot, yeti and the two giant sloths, considered closer to sasquatch for behavior purposes, its true taxonomy should be vague"
   },
   {
@@ -536,7 +536,7 @@
     },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT", "PLAYER_WEAK", "STALK" ],
     "fear_triggers": [ "FRIEND_DIED" ],
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "GROUP_BASH", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "SEES", "WARM" ],
+    "flags": [ "BASHES", "CAN_OPEN_DOORS", "GROUP_BASH", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "SEES", "WARM" ],
     "//": "Should only show up during WINTER, also should have a mi-go (true) component?"
   },
   {
@@ -574,8 +574,8 @@
     "path_settings": { "max_dist": 32 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT", "PLAYER_NEAR_BABY", "STALK" ],
     "fear_triggers": [ "FRIEND_DIED" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ] ],
-    "flags": [ "BASHES", "EATS", "GOODHEARING", "GROUP_BASH", "KEENNOSE", "PATH_AVOID_DANGER", "SEES", "SWIMS" ]
+    "special_attacks": [ [ "EAT_CARRION", 50 ] ],
+    "flags": [ "BASHES", "EATS", "GOODHEARING", "GROUP_BASH", "KEENNOSE", "PATH_AVOID_DANGER_1", "SEES", "SWIMS" ]
   },
   {
     "id": "mon_squonk",
@@ -607,7 +607,7 @@
     "anger_triggers": [ "HURT", "PLAYER_CLOSE" ],
     "fear_triggers": [ "FRIEND_ATTACKED" ],
     "special_attacks": [ 
-      [ "ABSORB_MEAT", { "math": [ "80 + rand(40)" ] } ], 
+      [ "ABSORB_MEAT", 100 ], 
       { 
         "id": "mon_squonk_1", 
         "type": "spell", 
@@ -620,7 +620,7 @@
     "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s dissolves in its own tears!" },
     "death_drops": "squonk_drops",
     "biosignature": { "biosig_item": "water", "biosig_timer": 4 },
-    "flags": [ "HEARS", "PATH_AVOID_DANGER", "PACIFIST", "SEES", "SMALL_HIDER", "SMELLS", "WARM" ],
+    "flags": [ "HEARS", "PATH_AVOID_DANGER_1", "PACIFIST", "SEES", "SMALL_HIDER", "SMELLS", "WARM" ],
     "//": "The squonk should go around, and dissolve itself if it gets any of the anger_triggers or if the player gets too close",
     "//2": "Can't figure out how to make it die + leave a water puddle + not print the 'The squonk dies!' message"
   },
@@ -649,7 +649,7 @@
     "dodge": 1,
     "vision_day": 50,
     "vision_night": 35,
-    "path_settings": { "max_dist": 20, "avoid_traps": true, "avoid_dangerous_fields": true },
+    "path_settings": { "max_dist": 20 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ],
     "special_attacks": [ [ "PARROT_AT_DANGER", 33 ], [ "SEARCHLIGHT", 50 ] ],
     "death_function": { "corpse_type": "NORMAL", "message": "The %s dies!" },
@@ -665,7 +665,7 @@
       "GROUP_MORALE",
       "HEARS",
       "HUMAN",
-      "PATH_AVOID_DANGER",
+      "PATH_AVOID_DANGER_2",
       "RANGED_ATTACKER",
       "SEES",
       "WARM"

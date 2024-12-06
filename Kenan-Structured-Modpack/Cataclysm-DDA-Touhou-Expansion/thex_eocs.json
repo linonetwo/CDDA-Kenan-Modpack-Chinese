@@ -4,30 +4,36 @@
     "type": "effect_on_condition",
     "eoc_type": "SCENARIO_SPECIFIC",
     "effect": [
-      { "run_eocs": [ "daily_randomization_eoc" ] },
+      { "run_eocs": [ "daily_randomization_12_eoc" ] },
       { "run_eocs": [ "impurity_start_eoc" ] },
       { "run_eocs": [ "wind_blessing_eoc" ] }
     ]
   },
   {
-    "id": "daily_randomization_eoc",
+    "id": "daily_randomization_12_eoc",
+    "type": "effect_on_condition",
+    "effect": [ { "queue_eocs": [ "daily_randomization_24_eoc" ], "time_in_future": "12 h" } ],
+    "//0.H": "Queues once at 12:00 + 12 h = 00:00:00, then at 24 h, for use in custom events"
+  },
+  {
+    "id": "daily_randomization_24_eoc",
     "type": "effect_on_condition",
     "effect": [
       {
         "run_eocs": [
           {
-            "id": "thex_event_night_parade_eoc",
+            "id": "thex_event_night_parade_24_eoc",
             "condition": { "x_in_y_chance": { "x": 1, "y": 11 } },
             "effect": [ { "run_eocs": [ "thex_event_night_parade_queue_eoc" ] } ]
           },
           {
-            "id": "thex_event_silence_hour_eoc",
+            "id": "thex_event_silence_hour_24_eoc",
             "condition": { "x_in_y_chance": { "x": 1, "y": 11 } },
             "effect": [ { "run_eocs": [ "thex_event_silence_hour_queue_eoc" ] } ]
           }
         ]
       },
-      { "run_eocs": [ "daily_randomization_eoc" ], "time_in_future": { "math": [ "86400 - time_since('midnight', 'unit': 'seconds')" ] } }
+      { "queue_eocs": [ "daily_randomization_24_eoc" ], "time_in_future": "24 h" }
     ],
     "//": "Re-rolls daily at 00:00:00, for use in custom events",
     "//2": "tl;dr this checks the event's chance every day -> runs EVENT_queue (at event-specific queued time) -> runs EVENT_check (if event conditions are adequate) -> sets var_EVENT_active which is used at each weather_type -> runs EVENT_disable to reset related vars -> runs EVENT_cd to set a cooldown (if necessary, to prevent repeating the event the following day)",
@@ -62,10 +68,10 @@
       ]
     },
     "effect": { "run_eocs": "EOC_CAUSE_EARLY_PORTAL_STORM" },
-    "false_effect": [ { "run_eocs": [ "EOC_CAUSE_EARLY_PORTAL_STORM_retry" ], "time_in_future": "6 h" } ],
+    "false_effect": [ { "queue_eocs": [ "EOC_CAUSE_EARLY_PORTAL_STORM_retry" ], "time_in_future": "6 h" } ],
     "//": "This blocks portal storms if a custom weather is running",
     "//2": "Otherwise, it runs the false_effect, which tries again 6 h later, and keeps queueing until it succeeds",
-    "//mod_interactions": "Some mainlined mods disable portal storms by default, this is handled by the mod_interactions folder"
+    "//mod_interactions": "Some mainlined mods disable portal storms by default. This would've been handled by the mod_interactions folder, however I cannot make it work in 0.H"
   },
   {
     "id": "EOC_CAUSE_EARLY_PORTAL_STORM_retry",
@@ -92,7 +98,7 @@
       ]
     },
     "effect": { "run_eocs": "EOC_CAUSE_EARLY_PORTAL_STORM" },
-    "false_effect": [ { "run_eocs": [ "EOC_CAUSE_EARLY_PORTAL_STORM_retry" ], "time_in_future": "6 h" } ]
+    "false_effect": [ { "queue_eocs": [ "EOC_CAUSE_EARLY_PORTAL_STORM_retry" ], "time_in_future": "6 h" } ]
   },
   {
     "id": "gevaudan_attacked_melee_eoc",
@@ -107,7 +113,7 @@
     },
     "effect": [ 
       { "npc_location_variable": { "global_val": "var_gevaudan_loc" } },
-      { "run_eocs": "gevaudan_attacked_check_eoc", "beta_loc": { "global_val": "var_gevaudan_loc" } }
+      { "run_eoc_with": "gevaudan_attacked_check_eoc", "beta_loc": { "global_val": "var_gevaudan_loc" } }
     ],
     "//note": "I don't know how to track the dmg mon_gevaudan receives with silver-based materials",
     "//2": "This alternative instead prevents it from self-healing if damaged by a silver-based weapon",
@@ -122,7 +128,7 @@
     "condition": { "compare_string": [ "mon_gevaudan", { "context_val": "victim_type" } ] },
     "effect": [ 
       { "npc_location_variable": { "global_val": "var_gevaudan_loc" } },
-      { "run_eocs": "gevaudan_attacked_check_eoc", "beta_loc": { "global_val": "var_gevaudan_loc" } }
+      { "run_eoc_with": "gevaudan_attacked_check_eoc", "beta_loc": { "global_val": "var_gevaudan_loc" } }
     ]
   },
   {

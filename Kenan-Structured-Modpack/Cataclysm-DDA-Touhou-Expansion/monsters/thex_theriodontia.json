@@ -31,19 +31,19 @@
     "vision_night": 6,
     "path_settings": { "max_dist": 12 },
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_5_f", "hit_self": true }, 
-        "cooldown": { "math": [ "10 + rand(10)" ] }, 
+        "cooldown": 15, 
         "monster_message": "" 
       }
     ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_inostrancevia" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_inostrancevia", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "WARM" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "WARM" ],
     "//": "Based on Inostrancevia sp., larger values than the real animal. No reproductive data, I'm assuming these laid eggs"
   },
   {
@@ -103,19 +103,19 @@
     "anger_triggers": [ "HURT", "PLAYER_WEAK" ],
     "fear_triggers": [ "FRIEND_ATTACKED" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(20)" ] } ], 
+      [ "EAT_CARRION", 75 ], 
+      [ "EAT_FOOD", 75 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_7_f", "hit_self": true }, 
-        "cooldown": { "math": [ "14 + rand(14)" ] }, 
+        "cooldown": 21, 
         "monster_message": "" 
       } 
     ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_moschorhinus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_moschorhinus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "HIT_AND_RUN", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "HIT_AND_RUN", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS", "WARM" ],
     "//": "Based on Moschorhinus kitchingi. No reproductive data, I'm assuming these laid eggs. Somewhat sprawling yet not fully erect posture, big headed"
   },
   {
@@ -174,10 +174,10 @@
     "anger_triggers": [ "HURT" ],
     "fear_triggers": [ "PLAYER_CLOSE" ],
     "placate_triggers": [ "PLAYER_WEAK" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ] ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_nochnitsa" }, "baby_count": 4, "baby_timer": 240 },
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_FOOD", 50 ] ],
+    "reproduction": { "baby_egg": "egg_nochnitsa", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "HIT_AND_RUN", "PATH_AVOID_DANGER", "SEES", "SMALL_HIDER", "SMELLS",  "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "HIT_AND_RUN", "PATH_AVOID_DANGER_1", "SEES", "SMALL_HIDER", "SMELLS",  "SWARMS", "WARM" ],
     "//": "Based on Nochnitsa sp. and mon_cat . No reproductive data, I'm assuming these laid eggs. Between a cat and a large rat in size, kind of sprawls instead of having an erect posture, big headed"
   },
   {
@@ -236,12 +236,12 @@
     "fear_triggers": [ "HURT" ],
     "stomach_size": 3000,
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(20)" ] } ] 
+      [ "EAT_CARRION", 75 ], 
+      [ "EAT_FOOD", 75 ] 
     ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_pristerognathus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_pristerognathus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "SEES", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "SEES", "SWARMS", "WARM" ],
     "//": "Based on Pristerognathus sp. and mon_wolf . No reproductive data, I'm assuming these laid eggs. Dog-sized but kind of sprawls instead of having an erect posture, with different body part ratios too"
   },
   {
@@ -278,12 +278,12 @@
     "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology" ],
     "weakpoint_sets": [ "wps_gorgonopsid_body" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(20)" ] } ] 
+      [ "EAT_CARRION", 75 ], 
+      [ "EAT_FOOD", 75 ] 
     ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_viatkogorgon" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_viatkogorgon", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS", "WARM" ],
     "//": "Based on Viatkogorgon sp. and mon_coyote . No reproductive data, I'm assuming these laid eggs. Less than more the size of a coyote"
   },
   {

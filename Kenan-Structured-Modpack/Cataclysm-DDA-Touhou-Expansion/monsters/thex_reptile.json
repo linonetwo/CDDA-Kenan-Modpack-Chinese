@@ -17,8 +17,8 @@
     "weakpoint_sets": [ "wps_suchia_body" ],
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ]
+    "special_attacks": [ [ "EAT_CARRION", 85 ], [ "EAT_FOOD", 85 ] ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ]
   },
   {
     "abstract": "mon_pseudosuchia_runner",
@@ -53,8 +53,8 @@
     "path_settings": { "max_dist": 16 },
     "anger_triggers": [ "HURT", "PLAYER_CLOSE", "PLAYER_WEAK" ],
     "fear_triggers": [ "FIRE" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWIMS" ]
+    "special_attacks": [ [ "EAT_CARRION", 85 ], [ "EAT_FOOD", 85 ] ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWIMS" ]
   },
   {
     "id": "mon_anatosuchus",
@@ -89,10 +89,10 @@
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "STALK" ],
     "fear_triggers": [ "FIRE", "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_anatosuchus" }, "baby_count": 12, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_anatosuchus", "baby_count": 12, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "65 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "65 + rand(20)" ] } ] ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS" ],
+    "special_attacks": [ [ "EAT_CARRION", 75 ], [ "EAT_FOOD", 75 ] ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS" ],
     "//": "Based on Anatosuchus sp.. No reproductive data."
   },
   {
@@ -139,11 +139,11 @@
     "dodge": 4,
     "armor": { "bash": 4, "cut": 4, "stab": 4, "bullet": 4, "electric": 4, "heat": 4 },
     "stomach_size": 80000,
-    "reproduction": { "baby_type": { "baby_egg": "egg_barinasuchus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_barinasuchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
@@ -155,7 +155,7 @@
             { "not": { "u_has_effect": "ambush_effect3" } }
           ]
         },
-        "cooldown": { "math": [ "14 + rand(14)" ] }, 
+        "cooldown": 21, 
         "monster_message": "" 
       },
       { 
@@ -171,12 +171,12 @@
             { "not": { "u_has_effect": "sprint_effect" } }
           ]
         },
-        "cooldown": { "math": [ "1 + rand(1)" ] }, 
+        "cooldown": 2, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
     ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "SMELLS" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "SMELLS" ],
     "//": "Based on Barinasuchus sp. No reproductive data"
   },
   {
@@ -227,12 +227,12 @@
     "stomach_size": 35000, 
     "anger_triggers": [ "FIRE", "FRIEND_DIED", "HURT" ],
     "fear_triggers": [ "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_belodon" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_belodon", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "//3": "anger and fear flags are inverted",
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "60 + rand(25)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "60 + rand(25)" ] } ], 
+      [ "EAT_CARRION", 72 ], 
+      [ "EAT_FOOD", 72 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
@@ -244,7 +244,7 @@
             { "not": { "u_has_effect": "ambush_effect3" } }
           ]
         },
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       },
       { 
@@ -260,7 +260,7 @@
             { "not": { "u_has_effect": "sprint_effect" } }
           ]
         },
-        "cooldown": { "math": [ "1 + rand(1)" ] }, 
+        "cooldown": 2, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
@@ -305,20 +305,20 @@
     "dodge": 4,
     "armor": { "bash": 6, "cut": 6, "stab": 6, "bullet": 6, "electric": 6, "heat": 6 },
     "anger_triggers": [ "PLAYER_WEAK", "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_boverisuchus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_boverisuchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_7_f", "hit_self": true }, 
-        "cooldown": { "math": [ "11 + rand(11)" ] }, 
+        "cooldown": 16, 
         "monster_message": "" 
       }  
     ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS" ],
     "//": "Based on Boverisuchus sp. No reproductive data"
   },
   {
@@ -376,13 +376,13 @@
     "path_settings": { "max_dist": 6 },
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "FIRE" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_carbonemys" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_carbonemys", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CROP", { "math": [ "65 + rand(40)" ] } ],
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ]
+      [ "EAT_CROP", 85 ],
+      [ "EAT_FOOD", 85 ]
     ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "SMELLS" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "SMELLS" ],
     "//": "Based on Carbonemys sp, assuming 1 ton. No reproductive data",
     "//2": "Add 'defensive mode' at some point lol, also reduce the hp after that"
   },
@@ -416,21 +416,21 @@
     "name": { "str": "carnufex", "str_pl": "carnufex" },
     "copy-from": "mon_pseudosuchia_runner",
     "description": "This curious animal looks like a crocodile, but it's leaner, bipedal and it can run.  It also has two functional, if short, arms to hold prey while it takes chunks from it.",
-    "reproduction": { "baby_type": { "baby_egg": "egg_carnufex" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_carnufex", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ], 
-      [ "grab", { "math": [ "15 + rand(10)" ] } ], 
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ], 
+      [ "grab", 20 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_7_f", "hit_self": true }, 
-        "cooldown": { "math": [ "11 + rand(11)" ] }, 
+        "cooldown": 16, 
         "monster_message": "" 
       }  
     ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS" ],
     "//": "Based on Carnufex sp. No reproductive data"
   },
   {
@@ -478,20 +478,20 @@
     "dodge": 2,
     "weakpoint_sets": [ "wps_crocodylomorpha_body", "wps_bigheaded" ],
     "stomach_size": 80000,
-    "reproduction": { "baby_type": { "baby_egg": "egg_erythrosuchus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_erythrosuchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "100 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "100 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 120 ], 
+      [ "EAT_FOOD", 120 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_3", "hit_self": true }, 
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       } 
     ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "SMELLS" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "SMELLS" ],
     "//": "Based on Erythrosuchus sp. No reproductive data"
   },
   {
@@ -538,20 +538,20 @@
     "melee_damage": [ { "damage_type": "cut", "amount": 8 } ],
     "dodge": 4,
     "stomach_size": 80000,
-    "reproduction": { "baby_type": { "baby_egg": "egg_fasolasuchus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_fasolasuchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_7_f", "hit_self": true }, 
-        "cooldown": { "math": [ "11 + rand(11)" ] }, 
+        "cooldown": 16, 
         "monster_message": "" 
       }  
     ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "SMELLS" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "SMELLS" ],
     "//": "Based on Fasolasuchus sp. No reproductive data"
   },
   {
@@ -601,20 +601,20 @@
     "dodge": 4,
     "armor": { "bash": 1, "cut": 1, "stab": 1, "bullet": 1, "electric": 1, "heat": 1 },
     "stomach_size": 2000,
-    "reproduction": { "baby_type": { "baby_egg": "egg_hesperosuchus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_hesperosuchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_5_f", "hit_self": true }, 
-        "cooldown": { "math": [ "10 + rand(10)" ] }, 
+        "cooldown": 15, 
         "monster_message": "" 
       } 
     ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS" ],
     "//": "Based on Hesperosuchus sp. No reproductive data"
   },
   {
@@ -672,14 +672,14 @@
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT", "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "FRIEND_DIED" ],
     "stomach_size": 15000, 
-    "reproduction": { "baby_type": { "baby_monster": "mon_ichthyosaurus_baby" }, "baby_count": 1, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_ichthyosaurus_baby", "baby_count": 1, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "80 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "80 + rand(40)" ] } ], 
-      [ "PARROT", { "math": [ "10 + rand(4)" ] } ] 
+      [ "EAT_CARRION", 100 ], 
+      [ "EAT_FOOD", 100 ], 
+      [ "PARROT", 12 ] 
     ],
-    "flags": [ "ANIMAL", "AQUATIC", "EATS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWIMS", "WARM", "WATER_CAMOUFLAGE" ],
+    "flags": [ "ANIMAL", "AQUATIC", "EATS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWIMS", "WARM", "WATER_CAMOUFLAGE" ],
     "//": "Ichthyosaurus communis used as reference. Don't know if they had vocalizations but that's how I imagine them to be",
     "//2": "Coprolites include fish and squid, and the big characteristic eyes indicate it could hunt in low light conditions, with great depths included"
   },
@@ -738,9 +738,9 @@
     "path_settings": { "max_dist": 6 },
     "anger_triggers": [ "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "FRIEND_ATTACKED", "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_lotosaurus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_lotosaurus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "65 + rand(40)" ] } ] ],
+    "special_attacks": [ [ "EAT_CROP", 85 ] ],
     "flags": [ "ANIMAL", "EATS", "HEARS", "SEES", "SMELLS", "SWARMS" ],
     "//": "Based on Lotosaurus sp. No reproductive data"
   },
@@ -777,11 +777,11 @@
     "aggression": -5,
     "morale": 10,
     "dodge": 2,
-    "reproduction": { "baby_type": { "baby_egg": "egg_phytosaurus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_phytosaurus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ],
+      [ "EAT_CROP", 50 ], 
+      [ "EAT_FOOD", 50 ],
       { 
         "id": "sprint", 
         "type": "spell", 
@@ -793,7 +793,7 @@
             { "not": { "u_has_effect": "ambush_effect3" } }
           ]
         },
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       },
       { 
@@ -809,7 +809,7 @@
             { "not": { "u_has_effect": "sprint_effect" } }
           ]
         },
-        "cooldown": { "math": [ "1 + rand(1)" ] }, 
+        "cooldown": 2, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
@@ -870,9 +870,9 @@
     "stomach_size": 15000, 
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "FRIEND_DIED" ],
-    "reproduction": { "baby_type": { "baby_monster": "mon_plesiosaurus_baby" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_monster": "mon_plesiosaurus_baby", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "25 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "25 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 35 ], [ "EAT_FOOD", 35 ] ],
     "flags": [ "ANIMAL", "AQUATIC", "EATS", "SEES", "SMELLS", "SWIMS", "WATER_CAMOUFLAGE" ],
     "//": "Plesiosaurus dolichodeirus used as reference, Plesiosaurus is a wastebasket taxon"
   },
@@ -917,20 +917,20 @@
     "melee_damage": [ { "damage_type": "stab", "amount": 4 } ],
     "dodge": 4,
     "stomach_size": 50000,
-    "reproduction": { "baby_type": { "baby_egg": "egg_prestosuchus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_prestosuchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_7_f", "hit_self": true }, 
-        "cooldown": { "math": [ "11 + rand(11)" ] }, 
+        "cooldown": 16, 
         "monster_message": "" 
       }  
     ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS" ],
     "//": "Based on Prestosuchus sp. No reproductive data"
   },
   {
@@ -974,11 +974,11 @@
     "dodge": 2,
     "armor": { "bash": 6, "cut": 6, "stab": 6, "bullet": 6, "electric": 6, "heat": 6 },
     "stomach_size": 80000, 
-    "reproduction": { "baby_type": { "baby_egg": "egg_redondasaurus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_redondasaurus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "100 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "100 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 120 ], 
+      [ "EAT_FOOD", 120 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
@@ -990,7 +990,7 @@
             { "not": { "u_has_effect": "ambush_effect3" } }
           ]
         },
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       },
       { 
@@ -1006,7 +1006,7 @@
             { "not": { "u_has_effect": "sprint_effect" } }
           ]
         },
-        "cooldown": { "math": [ "1 + rand(1)" ] }, 
+        "cooldown": 2, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
@@ -1067,9 +1067,9 @@
     "stomach_size": 100000, 
     "anger_triggers": [ "HURT", "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "FRIEND_ATTACKED" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_scutosaurus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_scutosaurus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "80 + rand(40)" ] } ] ],
+    "special_attacks": [ [ "EAT_CROP", 100 ] ],
     "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "PUSH_MON", "SEES", "SMELLS" ],
     "//": "Based on Scutosaurus sp. No reproductive data. Probably lived alone?"
   },
@@ -1123,10 +1123,10 @@
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "PLAYER_NEAR_BABY", "STALK" ],
     "fear_triggers": [ "FIRE", "FRIEND_DIED", "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_simosuchus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_simosuchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS" ],
+    "special_attacks": [ [ "EAT_CARRION", 85 ], [ "EAT_FOOD", 85 ] ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS" ],
     "//": "Based on Simosuchus sp. No reproductive data"
   },
   {
@@ -1175,11 +1175,11 @@
     "dodge": 2,
     "armor": { "bash": 6, "cut": 6, "stab": 6, "bullet": 6, "electric": 6, "heat": 6 },
     "stomach_size": 80000, 
-    "reproduction": { "baby_type": { "baby_egg": "egg_smilosuchus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_smilosuchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "100 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "100 + rand(40)" ] } ], 
+      [ "EAT_CARRION", 120 ], 
+      [ "EAT_FOOD", 120 ], 
       { 
         "id": "sprint", 
         "type": "spell", 
@@ -1191,7 +1191,7 @@
             { "not": { "u_has_effect": "ambush_effect3" } }
           ]
         },
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       },
       { 
@@ -1207,7 +1207,7 @@
             { "not": { "u_has_effect": "sprint_effect" } }
           ]
         },
-        "cooldown": { "math": [ "1 + rand(1)" ] }, 
+        "cooldown": 2, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
@@ -1270,10 +1270,10 @@
     "path_settings": { "max_dist": 12 },
     "anger_triggers": [ "PLAYER_NEAR_BABY" ],
     "fear_triggers": [ "FRIEND_ATTACKED", "HURT" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_typothorax" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_typothorax", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "65 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "EATS", "GROUP_MORALE", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS" ],
+    "special_attacks": [ [ "EAT_CROP", 85 ] ],
+    "flags": [ "ANIMAL", "EATS", "GROUP_MORALE", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS" ],
     "//": "Based on Typothorax sp. No reproductive data"
   },
   {
@@ -1328,10 +1328,10 @@
     "weakpoint_sets": [ "wps_bird_body" ],
     "stomach_size": 45, 
     "fear_triggers": [ "FIRE", "FRIEND_ATTACKED", "HURT", "PLAYER_CLOSE", "SOUND" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_weigeltisaurus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_weigeltisaurus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "special_attacks": [ [ "EAT_FOOD", { "math": [ "80 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "FLIES", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS" ],
+    "special_attacks": [ [ "EAT_FOOD", 100 ] ],
+    "flags": [ "ANIMAL", "FLIES", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS" ],
     "//": "Based on Weigeltisaurus sp.. No reproductive data"
   },
   {

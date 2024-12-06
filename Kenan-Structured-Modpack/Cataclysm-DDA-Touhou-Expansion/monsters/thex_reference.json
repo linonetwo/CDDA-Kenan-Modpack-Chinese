@@ -27,8 +27,8 @@
     "vision_night": 6,
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "PLAYER_NEAR_BABY", "STALK" ],
-    "special_attacks": [ [ "EAT_FOOD", { "math": [ "80 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "SEES", "SMELLS", "WARM" ],
+    "special_attacks": [ [ "EAT_FOOD", 100 ] ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "WARM" ],
     "//": "Generic Ezou wolf, from mon_wolf . These were ~1.5 times heavier. Seemed to ignore humans except under arduous circumstances",
     "//2": "Probably only the youkai version should spawn as they're a higher risk for the player",
     "//3": "These technically should have zombie versions, but I don't like that"
@@ -65,8 +65,8 @@
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "PLAYER_CLOSE", "PLAYER_NEAR_BABY","PLAYER_WEAK", "STALK" ],
     "fear_triggers": [ "HURT" ],
-    "special_attacks": [ [ "EAT_FOOD", { "math": [ "80 + rand(40)" ] } ] ],
-    "flags": [ "ANIMAL", "EATS", "GROUP_MORALE", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "SEES", "SMELLS", "WARM" ],
+    "special_attacks": [ [ "EAT_FOOD", 100 ] ],
+    "flags": [ "ANIMAL", "EATS", "GROUP_MORALE", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "WARM" ],
     "//": "Generic Japanese non-Ezou wolf",
     "//2": "Probably only the youkai version should spawn as they're a higher risk for the player",
     "//3": "These technically should have zombie versions, but I don't like that"

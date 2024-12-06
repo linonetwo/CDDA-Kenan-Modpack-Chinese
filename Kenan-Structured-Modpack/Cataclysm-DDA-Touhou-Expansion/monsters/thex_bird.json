@@ -38,11 +38,11 @@
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT" ],
     "fear_triggers": [ "FIRE", "FRIEND_DIED" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_CROP", 50 ] ],
     "biosignature": { "biosig_item": "feces_bird", "biosig_timer": 8 },
-    "reproduction": { "baby_type": { "baby_egg": "egg_dodo" }, "baby_count": 1, "baby_timer": 14 },
+    "reproduction": { "baby_egg": "egg_dodo", "baby_count": 1, "baby_timer": 14 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "SMELLS", "PATH_AVOID_DANGER", "SEES", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "SMELLS", "PATH_AVOID_DANGER_1", "SEES", "SWARMS", "WARM" ],
     "//": "Most data about the dodo is unknown. Used mon_turkey as reference"
   },
   {
@@ -100,11 +100,11 @@
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT" ],
     "fear_triggers": [ "FIRE", "FRIEND_DIED", "PLAYER_CLOSE", "SOUND" ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_ectopistes" }, "baby_count": 4, "baby_timer": 32 },
+    "reproduction": { "baby_egg": "egg_ectopistes", "baby_count": 4, "baby_timer": 32 },
     "baby_flags": [ "SPRING" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ], [ "PARROT", { "math": [ "6 + rand(24)" ] } ] ],
+    "special_attacks": [ [ "EAT_CROP", 50 ], [ "PARROT", 18 ] ],
     "biosignature": { "biosig_item": "feces_bird", "biosig_timer": 6 },
-    "flags": [ "ANIMAL", "EATS", "FLIES", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMALL_HIDER", "SMELLS", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "FLIES", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMALL_HIDER", "SMELLS", "SWARMS", "WARM" ],
     "//": "From mon_pigeon "
   },
   {
@@ -160,11 +160,11 @@
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT", "PLAYER_CLOSE" ],
     "fear_triggers": [ "FIRE", "FRIEND_DIED" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ], [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CROP", 50 ], [ "EAT_FOOD", 50 ] ],
     "biosignature": { "biosig_item": "feces_bird", "biosig_timer": 16 },
-    "reproduction": { "baby_type": { "baby_egg": "egg_garganornis" }, "baby_count": 1, "baby_timer": 32 },
+    "reproduction": { "baby_egg": "egg_garganornis", "baby_count": 1, "baby_timer": 32 },
     "baby_flags": [ "SPRING", "SUMMER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "GROUP_MORALE", "PATH_AVOID_DANGER", "PATH_AVOID_FIRE", "PET_WONT_FOLLOW", "SEES", "SWARMS", "SWIMS", "WARM" ]
+    "flags": [ "ANIMAL", "EATS", "HEARS", "GROUP_MORALE", "PATH_AVOID_DANGER_1", "PATH_AVOID_FIRE", "PET_WONT_FOLLOW", "SEES", "SWARMS", "SWIMS", "WARM" ]
   },
   {
     "id": "mon_garganornis_chick",
@@ -220,11 +220,11 @@
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT" ],
     "fear_triggers": [ "FIRE", "FRIEND_DIED" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_CROP", 50 ] ],
     "biosignature": { "biosig_item": "feces_bird", "biosig_timer": 10 },
-    "reproduction": { "baby_type": { "baby_egg": "egg_icadyptes" }, "baby_count": 1, "baby_timer": 32 },
+    "reproduction": { "baby_egg": "egg_icadyptes", "baby_count": 1, "baby_timer": 32 },
     "baby_flags": [ "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "SMELLS", "PATH_AVOID_DANGER", "SEES", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "SMELLS", "PATH_AVOID_DANGER_1", "SEES", "SWARMS", "WARM" ],
     "//2": "Based on Icadyptes salasi. No data about its reproduction habits, that part is based on Aptenodytes forsteri "
   },
   {
@@ -282,11 +282,11 @@
     "path_settings": { "max_dist": 8 },
     "anger_triggers": [ "HURT" ],
     "fear_triggers": [ "FIRE", "FRIEND_DIED" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ] ],
+    "special_attacks": [ [ "EAT_CROP", 50 ] ],
     "biosignature": { "biosig_item": "feces_bird", "biosig_timer": 10 },
-    "reproduction": { "baby_type": { "baby_egg": "egg_moa" }, "baby_count": 1, "baby_timer": 32 },
+    "reproduction": { "baby_egg": "egg_moa", "baby_count": 1, "baby_timer": 32 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "SMELLS", "PATH_AVOID_DANGER", "SEES", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "SMELLS", "PATH_AVOID_DANGER_1", "SEES", "SWARMS", "WARM" ],
     "//2": "Based on Dinornis novaezealandiae. No data about its reproduction habits"
   },
   {

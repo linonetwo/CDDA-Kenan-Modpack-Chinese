@@ -271,8 +271,8 @@
     "extra_effects": [ { "id": "nitori_toolswing_eoc2_2" } ],
     "shape": "line",
     "damage_type": "bash",
-    "min_damage": { "math": [ "( ( var_melee_phys_dmg * ( (u_skill('mechanics') * 0.09 ) + 0.74 ) ) * 0.95 )" ] },
-    "max_damage": { "math": [ "( ( var_melee_phys_dmg * ( (u_skill('mechanics') * 0.09 ) + 0.74 ) ) * 1.05 )" ] },
+    "min_damage": { "math": [ "( ( 20 * ( (u_skill('mechanics') * 0.09 ) + 0.74 ) ) * 0.95 )" ] },
+    "max_damage": { "math": [ "( ( 20 * ( (u_skill('mechanics') * 0.09 ) + 0.74 ) ) * 1.05 )" ] },
     "min_range": 1,
     "max_range": 1,
     "max_level": 1,
@@ -281,7 +281,8 @@
     "base_energy_cost": 0,
     "energy_source": "MANA",
     "flags": [ "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "SOMATIC" ],
-    "//": "Deals x1.1 - 2 weapon dmg with ± 5% variance"
+    "//": "Deals x1.1 - 2 weapon dmg with ± 5% variance",
+    "//0.H": "Replaced all var_melee_phys_dmg by 20 (based on kappa_wrench total dmg)"
   },
   {
     "id": "nitori_toolswing_eoc2_2",
@@ -336,8 +337,8 @@
     "effect": "attack",
     "shape": "line",
     "damage_type": "bash",
-    "min_damage": { "math": [ "( ( var_melee_phys_dmg * ( (u_skill('mechanics') * 0.09 ) + 0.74 ) ) * 0.95 )" ] },
-    "max_damage": { "math": [ "( ( var_melee_phys_dmg * ( (u_skill('mechanics') * 0.09 ) + 0.74 ) ) * 1.05 )" ] },
+    "min_damage": { "math": [ "( ( 20 * ( (u_skill('mechanics') * 0.09 ) + 0.74 ) ) * 0.95 )" ] },
+    "max_damage": { "math": [ "( ( 20 * ( (u_skill('mechanics') * 0.09 ) + 0.74 ) ) * 1.05 )" ] },
     "min_range": 1,
     "max_range": 1,
     "max_level": 1,

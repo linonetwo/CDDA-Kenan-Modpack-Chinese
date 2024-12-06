@@ -313,7 +313,6 @@
       "shore_extendable_overmap_terrain": [ "forest", "forest_thick", "forest_water", "field" ],
       "shore_extendable_overmap_terrain_aliases": [
         { "om_terrain": "island_forest", "om_terrain_match_type": "TYPE", "alias": "forest" },
-        { "om_terrain": "island_forest_thick", "om_terrain_match_type": "TYPE", "alias": "forest_thick" },
         { "om_terrain": "island_forest_water", "om_terrain_match_type": "TYPE", "alias": "forest_water" },
         { "om_terrain": "island_field", "om_terrain_match_type": "TYPE", "alias": "field" }
       ]
@@ -337,7 +336,7 @@
       "river_floodplain_buffer_distance_min": 3,
       "river_floodplain_buffer_distance_max": 15
     },
-    "overmap_connection_settings": {
+    "//overmap_connection_settings": {
       "intra_city_road_connection": "local_road",
       "inter_city_road_connection": "local_road",
       "trail_connection": "forest_trail",
@@ -345,6 +344,7 @@
       "subway_connection": "subway_tunnel",
       "rail_connection": "local_railroad"
     },
+    "//0.H": "",
     "forest_mapgen_settings": {
       "forest": {
         "terrains": [ "forest", "special_forest" ],
@@ -380,32 +380,10 @@
       },
       "forest_thick": {
         "terrains": [
-          "anthill",
-          "bandit_cabin",
-          "bandit_garage_1",
-          "bandit_garage_2",
-          "campsite",
-          "campsite_a",
-          "campsite_cabin_incomplete",
-          "campsite_field_biker",
-          "campsite_field_biker_destroyed",
           "cave",
           "central_lab_entrance",
-          "corpse_tentacle_surface_entry",
-          "derelict_property",
-          "desolatebarn",
           "forest_thick",
-          "forest_trail",
-          "forest_trail_intersection",
-          "homelesscamp",
-          "island_forest",
-          "island_forest_thick",
           "lake_shore",
-          "moonshine_still",
-          "moonshine_still_1",
-          "moonshine_still_2",
-          "natural_spring",
-          "river",
           "river_c_not_ne",
           "river_c_not_nw",
           "river_c_not_se",
@@ -417,16 +395,7 @@
           "river_sw",
           "slimepit_top",
           "special_forest_thick",
-          "spider_pit",
-          "standing_stones",
-          "stream",
-          "stream_corner",
-          "stream_end",
-          "survivor_forest_camp",
-          "triffid_grove",
-          "triffid_field",
-          "ws_giant_sinkhole_1",
-          "ws_survivor_bunker_f0"
+          "standing_stones"
         ],
         "sparseness_adjacency_factor": 4,
         "item_group": "forest",
@@ -464,7 +433,7 @@
         "terrain_furniture": {  }
       },
       "forest_water": {
-        "terrains": [ "forest_water", "hunter_shack", "hunter_shack_1", "shipwreck_river_1", "shipwreck_river_2" ],
+        "terrains": [ "forest_water" ],
         "sparseness_adjacency_factor": 2,
         "item_group": "forest",
         "item_group_chance": 60,

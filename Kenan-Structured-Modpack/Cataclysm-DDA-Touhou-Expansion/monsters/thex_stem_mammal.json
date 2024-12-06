@@ -30,10 +30,10 @@
     "vision_night": 4,
     "path_settings": { "max_dist": 8 },
     "fear_triggers": [ "FRIEND_ATTACKED", "HURT" ],
-    "special_attacks": [ [ "EAT_CROP", { "math": [ "80 + rand(40)" ] } ] ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_cotylorhynchus" }, "baby_count": 4, "baby_timer": 240 },
+    "special_attacks": [ [ "EAT_CROP", 100 ] ],
+    "reproduction": { "baby_egg": "egg_cotylorhynchus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS", "WARM" ],
     "//": "Cotylorhynchus sp. taken as reference. No reproductive data, I'm assuming these laid eggs"
   },
   {
@@ -91,19 +91,19 @@
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT", "STALK" ],
     "fear_triggers": [ "FRIEND_DIED" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "80 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "80 + rand(40)" ] } ],
+      [ "EAT_CARRION", 100 ], 
+      [ "EAT_FOOD", 100 ],
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_3_f", "hit_self": true }, 
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       }      
     ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_dimetrodon" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_dimetrodon", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER" ],
-    "flags": [ "ANIMAL", "EATS", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "SMELLS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "SMELLS", "WARM" ],
     "//": "Dimetrodon limbatus taken as reference when possible. No reproductive data, I'm assuming these laid eggs. It is unknown if these had smooth skin or not"
   },
   {
@@ -162,10 +162,10 @@
     "vision_night": 12,
     "path_settings": { "max_dist": 8 },
     "fear_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT", "STALK" ],
-    "special_attacks": [ [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], [ "EAT_CROP", { "math": [ "40 + rand(20)" ] } ] ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_lystrosaurus" }, "baby_count": 8, "baby_timer": 240 },
+    "special_attacks": [ [ "EAT_CARRION", 50 ], [ "EAT_CROP", 50 ] ],
+    "reproduction": { "baby_egg": "egg_lystrosaurus", "baby_count": 8, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS", "WARM" ],
+    "flags": [ "ANIMAL", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS", "WARM" ],
     "//": "Lystrosaurus sp. taken as reference. No reproductive data. I think these laid eggs, but I'm not sure",
     "//2": "Should do something related to digging and burrowing their nests"
   },
@@ -224,19 +224,19 @@
     "vision_night": 6,
     "path_settings": { "max_dist": 12 },
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "65 + rand(40)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "65 + rand(40)" ] } ],
+      [ "EAT_CARRION", 85 ], 
+      [ "EAT_FOOD", 85 ],
       { 
         "id": "sprint", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_3_f", "hit_self": true }, 
-        "cooldown": { "math": [ "6 + rand(6)" ] }, 
+        "cooldown": 9, 
         "monster_message": "" 
       }       
     ],
-    "reproduction": { "baby_type": { "baby_egg": "egg_pampaphoneus" }, "baby_count": 4, "baby_timer": 240 },
+    "reproduction": { "baby_egg": "egg_pampaphoneus", "baby_count": 4, "baby_timer": 240 },
     "baby_flags": [ "SPRING", "SUMMER", "AUTUMN", "WINTER" ],
-    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER", "PUSH_MON", "SEES", "WARM" ],
+    "flags": [ "ANIMAL", "BASHES", "EATS", "HEARS", "KEENNOSE", "PATH_AVOID_DANGER_1", "PUSH_MON", "SEES", "WARM" ],
     "//": "Based on Pampaphoneus sp. and mostly copied from mon_inostrancevia . No reproductive data, I'm assuming these laid eggs"
   },
   {

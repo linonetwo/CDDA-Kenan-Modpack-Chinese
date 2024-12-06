@@ -73,7 +73,8 @@
         "name": "the appendages",
         "coverage": 16,
         "armor_mult": { "all": 0.75 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_appendage",
@@ -181,7 +182,8 @@
         "name": "the appendages",
         "coverage": 16,
         "armor_mult": { "all": 0.75 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_appendage",
@@ -407,7 +409,8 @@
         "name": "the chelicera",
         "coverage": 10,
         "armor_mult": { "all": 1.25 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_chelicera",

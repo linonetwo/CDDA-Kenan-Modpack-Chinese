@@ -73,7 +73,8 @@
         "name": "the mouth",
         "coverage": 25,
         "armor_mult": { "all": 0.75 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_snout",
@@ -229,7 +230,8 @@
         "name": "the mouth",
         "coverage": 16,
         "armor_mult": { "all": 0.75 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_snout",
@@ -395,7 +397,8 @@
         "name": "the mouth",
         "coverage": 16,
         "armor_mult": { "all": 0.75 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_snout",

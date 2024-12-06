@@ -32,12 +32,12 @@
     "path_settings": { "max_dist": 24 },
     "anger_triggers": [ "FRIEND_ATTACKED", "HURT" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "oni_SMASH_46", { "math": [ "2 + rand(11)" ] } ] 
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_FOOD", 50 ], 
+      [ "oni_SMASH_46", 7 ] 
     ],
     "death_drops": [ { "group": "oni_drops", "prob": 100 } ],
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS", "WARM" ],
+    "flags": [ "BASHES", "CAN_OPEN_DOORS", "EATS", "HEARS", "PATH_AVOID_DANGER_1", "SEES", "SMELLS", "SWARMS", "WARM" ],
     "//": "Template only"
   },
   {
@@ -60,9 +60,9 @@
     "anger_triggers": [ "HURT" ],
     "fear_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED" ],
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "oni_SMASH_36", { "math": [ "2 + rand(11)" ] } ] 
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_FOOD", 50 ], 
+      [ "oni_SMASH_36", 7 ] 
     ],
     "death_drops": [ { "group": "oni_drops", "prob": 100 } ],
     "flags": [ "BASHES", "CAN_OPEN_DOORS", "EATS", "HEARS", "SEES", "SMELLS", "SWARMS", "WARM" ],
@@ -152,14 +152,13 @@
     "stomach_size": 5000,
     "anger_triggers": [ "HURT" ],
     "vision_night": 12,
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
     "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "oni_SMASH_46", { "math": [ "3 + rand(9)" ] } ] 
+      [ "EAT_CARRION", 50 ], 
+      [ "EAT_FOOD", 50 ], 
+      [ "oni_SMASH_46", 7 ] 
     ],
     "death_drops": [ { "group": "oni_humanoid_drops", "prob": 100 } ],
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "WARM" ],
+    "flags": [ "BASHES", "CAN_OPEN_DOORS", "EATS", "HEARS", "PATH_AVOID_DANGER_2", "SEES", "SMELLS", "WARM" ],
     "//": "Human-oni hybrid"
   },
   {

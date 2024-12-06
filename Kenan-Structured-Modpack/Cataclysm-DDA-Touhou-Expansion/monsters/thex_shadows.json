@@ -55,30 +55,29 @@
     "copy-from": "mon_shadow_th",
     "description": "A shadow, vaguely shaped like a person.",
     "special_attacks": [
-      [ "PARROT", { "math": [ "27 + rand(11)" ] } ],
+      [ "PARROT", 32 ],
       { 
         "id": "mon_shadow_th_person_1_1", 
         "type": "spell", 
         "spell_data": { "id": "reposition_24", "hit_self": true }, 
-        "cooldown": { "math": [ "47 + rand(29)" ] }, 
+        "cooldown": 61, 
         "monster_message": "" 
       },
       { 
         "id": "mon_shadow_th_person_1_2", 
         "type": "spell", 
         "spell_data": { "id": "shadow_demoralize" }, 
-        "cooldown": { "math": [ "17 + rand(30)" ] }, 
+        "cooldown": 32, 
         "monster_message": "The temperature suddenly drops around you." 
       },
       { 
         "id": "mon_shadow_th_person_1_3", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_3", "hit_self": true },  
-        "cooldown": { "math": [ "5 + rand(17)" ] }, 
+        "cooldown": 13, 
         "monster_message": "" 
       }
-    ],
-    "extend": { "flags": [ "QUIETMOVES" ] }
+    ]
   },
   {
     "id": "mon_shadow_th_person_2",
@@ -87,26 +86,26 @@
     "copy-from": "mon_shadow_th",
     "description": "A shadow, vaguely shaped like a person.",
     "special_attacks": [
-      [ "PARROT", { "math": [ "27 + rand(11)" ] } ],
+      [ "PARROT", 32 ],
       { 
         "id": "mon_shadow_th_person_2_1", 
         "type": "spell", 
         "spell_data": { "id": "reposition_24", "hit_self": true }, 
-        "cooldown": { "math": [ "47 + rand(29)" ] }, 
+        "cooldown": 61, 
         "monster_message": "" 
       },
       { 
         "id": "mon_shadow_th_person_2_2", 
         "type": "spell", 
         "spell_data": { "id": "shadow_demoralize" }, 
-        "cooldown": { "math": [ "17 + rand(30)" ] }, 
+        "cooldown": 32, 
         "monster_message": "The temperature suddenly drops around you." 
       },
       { 
         "id": "mon_shadow_th_person_2_3", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_3", "hit_self": true },  
-        "cooldown": { "math": [ "5 + rand(17)" ] }, 
+        "cooldown": 13, 
         "monster_message": "" 
       }
     ],
@@ -119,26 +118,26 @@
     "copy-from": "mon_shadow_th",
     "description": "A shadow, vaguely shaped like a person.",
     "special_attacks": [
-      [ "PARROT", { "math": [ "27 + rand(11)" ] } ],
+      [ "PARROT", 32 ],
       { 
         "id": "mon_shadow_th_person_3_1", 
         "type": "spell", 
         "spell_data": { "id": "reposition_24", "hit_self": true }, 
-        "cooldown": { "math": [ "47 + rand(29)" ] }, 
+        "cooldown": 61, 
         "monster_message": "" 
       },
       { 
         "id": "mon_shadow_th_person_3_2", 
         "type": "spell", 
         "spell_data": { "id": "shadow_demoralize" }, 
-        "cooldown": { "math": [ "17 + rand(30)" ] }, 
+        "cooldown": 32, 
         "monster_message": "The temperature suddenly drops around you." 
       },
       { 
         "id": "mon_shadow_th_person_3_3", 
         "type": "spell", 
         "spell_data": { "id": "sprint_spell_3", "hit_self": true },  
-        "cooldown": { "math": [ "5 + rand(17)" ] }, 
+        "cooldown": 13, 
         "monster_message": "" 
       }
     ],
@@ -259,7 +258,7 @@
         "id": "mon_shadow_th_fume_2_4", 
         "type": "spell", 
         "spell_data": { "id": "monster_invisibility_touhou", "hit_self": true }, 
-        "cooldown": { "math": [ "11 + rand(4)" ] }, 
+        "cooldown": 13, 
         "allow_no_target": true, 
         "monster_message": "" 
       }
@@ -285,11 +284,10 @@
         "id": "mon_shadow_th_hatman_1", 
         "type": "spell", 
         "spell_data": { "id": "reposition_24", "hit_self": true }, 
-        "cooldown": { "math": [ "23 + rand(23)" ] }, 
+        "cooldown": 34, 
         "monster_message": "" 
       }
     ],
-    "extend": { "flags": [ "QUIETMOVES" ] },
     "//": "Cognitohazard"
   },
   {

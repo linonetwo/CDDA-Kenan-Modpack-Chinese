@@ -78,7 +78,8 @@
         "name": "the appendages",
         "coverage": 8,
         "difficulty": { "melee": 2, "ranged": 5 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_appendage",
@@ -184,7 +185,8 @@
         "name": "the appendages",
         "coverage": 12,
         "difficulty": { "melee": 2, "ranged": 5 },
-        "condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "//condition": { "npc_has_any_effect": [ "grabbing" ] },
+        "required_effects": [ "grabbing" ],
         "effects": [
           {
             "effect": "maimed_appendage",

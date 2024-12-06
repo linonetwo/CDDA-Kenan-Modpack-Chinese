@@ -173,12 +173,12 @@
           { "value": "ARMOR_BIO", "multiply": -1 },
           { "value": "ARMOR_COLD", "multiply": -1 },
           { "value": "ARMOR_ELEC", "multiply": -1 },
-          { "value": "ARMOR_HEAT", "multiply": -1 },
-          { "value": "ARMOR_ALL", "add": -1 }
+          { "value": "ARMOR_HEAT", "multiply": -1 }
         ],
         "//": "ARMOR_X add -n ADDS armor for n value"
       }
-    ]
+    ],
+    "//0.H": "Removed ARMOR_ALL "
   },
   {
     "id": "lavender_grimoire_airbarrier_effect",
@@ -198,12 +198,12 @@
           { "value": "ARMOR_BULLET", "multiply": -1 },
           { "value": "ARMOR_BASH", "multiply": -1 },
           { "value": "ARMOR_CUT", "multiply": -1 },
-          { "value": "ARMOR_STAB", "multiply": -1 },
-          { "value": "ARMOR_ALL", "add": -1 }
+          { "value": "ARMOR_STAB", "multiply": -1 }
         ],
         "//": "ARMOR_X add -n ADDS armor for n value"
       }
-    ]
+    ],
+    "//0.H": "Removed ARMOR_ALL "
   },
   {
     "id": "monster_vanish_delay_effect",
@@ -385,10 +385,8 @@
             "effects": [ 
               { "spell_effects": [ { "id": "thorny_box_spell" } ], "frequency": "1016 s" }
             ] 
-          },
-        "values": [ 
-          { "value": "MENDING_MODIFIER", "multiply": 10 }
-        ] 
+          }
+        
       }
     ],
     "removes_effects": [
@@ -412,7 +410,8 @@
       "volatile_rot"      
     ],
     "//": "Heals 85 hp, over 24 h = 1440 m = 86400 s (1 hp / 1016 s). PD: when you're not sitting or anything",
-    "//2": "Tried using REGEN_HP between 35 and 50 to restore full hp over 24 h, but seems it's not lineal, it relies on another external variable (sitting? thirst? hunger?)"
+    "//2": "Tried using REGEN_HP between 35 and 50 to restore full hp over 24 h, but seems it's not lineal, it relies on another external variable (sitting? thirst? hunger?)",
+    "//0.H": "Removed MENDING_MODIFIER "
   },
   {
     "id": "thorny_box_demerit_effect",
@@ -424,27 +423,23 @@
     "enchantments": [
       {
         "condition": "ALWAYS",
-        "melee_damage_bonus": [ 
-          { "type": "bash", "add": { "math": [ "( u_var_thorny_box * 3 )" ] } } 
-        ],
         "values": [ 
           { "value": "BONUS_BLOCK", "add": { "math": [ " - ( u_var_thorny_box )" ] } },
           { "value": "BONUS_DODGE", "add": { "math": [ " - ( u_var_thorny_box )" ] } },
           { "value": "DEXTERITY", "add": { "math": [ " - ( u_var_thorny_box )" ] } },
-          { "value": "EQUIPMENT_DAMAGE_CHANCE", "multiply": { "math": [ "( u_var_thorny_box * 5 )" ] } },
           { "value": "FOOTSTEP_NOISE", "multiply": { "math": [ "( u_var_thorny_box / 2 )" ] } },
           { "value": "HUNGER", "multiply": { "math": [ "( u_var_thorny_box / 3 )" ] } },
-          { "value": "NIGHT_VIS", "add": { "math": [ "( u_var_thorny_box * 2 )" ] } },
+          { "value": "ITEM_DAMAGE_BASH", "add": { "math": [ "( u_var_thorny_box * 3 )" ] } },
           { "value": "OVERKILL_DAMAGE", "multiply": { "math": [ " - ( u_var_thorny_box )" ] } },
           { "value": "SOCIAL_INTIMIDATE", "add": { "math": [ " ( u_var_thorny_box * 5 )" ] } },
           { "value": "SOCIAL_LIE", "add": -99 },
           { "value": "SOCIAL_PERSUADE", "multiply": { "math": [ " - ( u_var_thorny_box * 5 )" ] } },
-          { "value": "STOMACH_SIZE_MULTIPLIER", "multiply": { "math": [ "( u_var_thorny_box / 3 )" ] } },
           { "value": "WEAPON_DISPERSION", "add": { "math": [ "( u_var_thorny_box * 5 )" ] } },
           { "value": "STRENGTH", "add": { "math": [ " ( u_var_thorny_box )" ] } },
           { "value": "INTELLIGENCE", "add": { "math": [ " - ( u_var_thorny_box )" ] } }
         ] 
       }
-    ]
+    ],
+    "//0.H": "Removed EQUIPMENT_DAMAGE_CHANCE + NIGHT_VIS + STOMACH_SIZE_MULTIPLIER , melee_damage_bonus -> ITEM_DAMAGE_BASH"
   }
 ]

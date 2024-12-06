@@ -1,10 +1,12 @@
 [
   {
     "type": "effect_on_condition",
-    "id": "EOC_PORTAL_STORM_WARN_OR_CAUSE_RECURRING",
+    "id": "EOC_PORTAL_STORM_WARN_OR_CAUSE_RECURRING_2",
     "recurrence": [ "10 days", "11 days" ],
     "global": true,
+    "condition": { "mod_is_loaded": "backrooms" },
     "effect": [  ],
-    "//thex": "The mod backrooms disables portal storms by default"
+    "//thex": "The mod backrooms disables portal storms by default",
+    "//0.H": "Couldn't figure out how to make this work in 0.H"
   }
 ]
