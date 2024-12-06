@@ -58,8 +58,8 @@
     "copy-from": "turret",
     "type": "vehicle_part",
     "name": { "str": "AK74 turret" },
-    "item": "ak74_semi",
-    "breaks_into": [ { "item": "ak74_semi", "prob": 50 } ],
+    "item": "ak74",
+    "breaks_into": [ { "item": "ak74", "prob": 50 } ],
     "requirements": {
       "install": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
       "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "45 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
@@ -306,12 +306,12 @@
     }
   },
   {
-    "id": "mounted_sl8",
+    "id": "mounted_hk_g36",
     "copy-from": "turret",
     "type": "vehicle_part",
-    "name": { "str": "SL8 civilian rifle" },
-    "item": "sl8",
-    "breaks_into": [ { "item": "sl8", "prob": 50 } ],
+    "name": { "str": "G36 civilian rifle" },
+    "item": "hk_g36",
+    "breaks_into": [ { "item": "hk_g36", "prob": 50 } ],
     "requirements": {
       "install": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
       "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "45 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
@@ -362,8 +362,8 @@
     "copy-from": "turret",
     "type": "vehicle_part",
     "name": { "str": "H&K UMP45 turret" },
-    "item": "modular_ump",
-    "breaks_into": [ { "item": "modular_ump", "prob": 50 } ],
+    "item": "hk_ump45",
+    "breaks_into": [ { "item": "hk_ump45", "prob": 50 } ],
     "requirements": {
       "install": { "skills": [ [ "mechanics", 3 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
       "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "45 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
