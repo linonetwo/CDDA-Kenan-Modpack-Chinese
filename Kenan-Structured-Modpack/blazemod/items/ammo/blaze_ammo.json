@@ -115,8 +115,7 @@
     "count": 10,
     "ammo_type": "harpoon",
     "damage": { "damage_type": "stab", "amount": 40, "armor_penetration": 10 },
-    "recovery_chance": 3,
-    "effects": [ "NEVER_MISFIRES" ]
+    "effects": [ "NEVER_MISFIRES", "RECOVER_3" ]
   },
   {
     "abstract": "hbolt_generic",
@@ -199,7 +198,7 @@
     "ammo_type": "hbolt",
     "range": 10,
     "damage": { "damage_type": "stab", "amount": 35, "armor_penetration": 35 },
-    "recovery_chance": 3
+    "effects": [ "RECOVER_3" ]
   },
   {
     "id": "hbolt_nuke",
@@ -236,7 +235,7 @@
     "ammo_type": "hbolt",
     "range": 10,
     "damage": { "damage_type": "stab", "amount": 20, "armor_penetration": 20 },
-    "recovery_chance": 5
+    "effects": [ "RECOVER_5" ]
   },
   {
     "id": "rebar_rail",
@@ -456,8 +455,7 @@
     "ammo_type": "h_projectile",
     "range": 3,
     "damage": { "damage_type": "stab", "amount": 50 },
-    "recovery_chance": 20,
-    "effects": [ "LARGE_BEANBAG" ]
+    "effects": [ "LARGE_BEANBAG", "RECOVER_20" ]
   },
   {
     "id": "ripdisk",
@@ -475,8 +473,7 @@
     "ammo_type": "ripdisk",
     "range": 6,
     "damage": { "damage_type": "stab", "amount": 25, "armor_penetration": 5 },
-    "recovery_chance": 3,
-    "effects": [ "NEVER_MISFIRES" ]
+    "effects": [ "NEVER_MISFIRES", "RECOVER_3" ]
   },
   {
     "id": "shards",
@@ -505,7 +502,6 @@
     "range": 6,
     "damage": { "damage_type": "stab", "amount": 23 },
     "dispersion": 30,
-    "recovery_chance": 10,
-    "effects": [ "BEANBAG" ]
+    "effects": [ "BEANBAG", "RECOVER_10" ]
   }
 ]
