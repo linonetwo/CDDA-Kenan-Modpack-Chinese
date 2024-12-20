@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_TUINA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"ウチは大人のれでーやで！",
+    "responses":[
+      { "text": "仲間になってください(仲間に勧誘)", "topic": "TALK_TUINA_SAN_2" },
+      { "text": "うーん…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_TUINA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"よっしゃ！それじゃ、いってみよー！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

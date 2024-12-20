@@ -1,0 +1,14 @@
+[
+  {
+    "type": "effect_on_condition",
+    "id": "EOC_zunda_arrow_kills_monster",
+    "eoc_type": "EVENT",
+    "required_event": "character_kills_monster",
+    "condition": { "u_has_wielded_with_flag": "ZUNDA_ARROW" },
+    "effect": [
+          { "u_location_variable": { "context_val": "loc" } },
+          { "map_spawn_item": "voiro_zundamochi", "loc": { "context_val": "loc" } },
+          { "u_message": "美味しいずんだ餅が出来上がりました！", "type": "good" }
+    ]
+  }
+]

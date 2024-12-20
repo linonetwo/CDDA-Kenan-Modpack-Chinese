@@ -1,0 +1,594 @@
+[
+  {
+    "id": "nikki_1",
+    "type": "TOOL",
+    "name": "★日記(月読アイ)",
+    "copy-from": "leather_journal",
+    "description": "誰かの日記のようです。使用すると…?",
+    "volume": "300 ml",
+    "weight": "150 g",
+    "price": 600000,
+    "use_action": {
+      "type": "place_npc",
+      "npc_class_id": "ai",
+      "summon_msg": "日記を読むと突然何かが現れました！",
+      "place_randomly": false,
+      "moves": 50
+    },
+    "flags": [ "SINGLE_USE" ]
+  },
+  {
+    "id": "nikki_2",
+    "type": "TOOL",
+    "name": "★日記(月読ショウタ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": {
+      "type": "place_npc",
+      "npc_class_id": "shota",
+      "summon_msg": "日記を読むと突然何かが現れました！",
+      "place_randomly": false,
+      "moves": 50
+    }
+  },
+  {
+    "id": "nikki_3",
+    "type": "TOOL",
+    "name": "★日記(吉田)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "katuwo",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_4",
+    "type": "TOOL",
+    "name": "★日記(弦巻マキ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "maki",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_5",
+    "type": "TOOL",
+    "name": "★日記(結月ゆかり)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "yukari",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_6",
+    "type": "TOOL",
+    "name": "★日記(東北ずん子)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "touhoku_junko",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_7",
+    "type": "TOOL",
+    "name": "★日記(さとうささら)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "sasara",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_8",
+    "type": "TOOL",
+    "name": "★日記(すずきつづみ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "tsuzumi",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_9",
+    "type": "TOOL",
+    "name": "★日記(タカハシ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "takahashi",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_10",
+    "type": "TOOL",
+    "name": "★日記(琴葉茜)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "akane",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_11",
+    "type": "TOOL",
+    "name": "★日記(琴葉葵)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "aoi",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_12",
+    "type": "TOOL",
+    "name": "★日記(ギャラ子)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "galaco",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_13",
+    "type": "TOOL",
+    "name": "★日記(ONE)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "one",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_14",
+    "type": "TOOL",
+    "name": "★日記(IA)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "ia",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_15",
+    "type": "TOOL",
+    "name": "★日記(水奈瀬コウ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "kou",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_16",
+    "type": "TOOL",
+    "name": "★日記(京町セイカ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "seika",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_17",
+    "type": "TOOL",
+    "name": "★日記(東北きりたん)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "kiritan",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_18",
+    "type": "TOOL",
+    "name": "★日記(音街ウナ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "una",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_19",
+    "type": "TOOL",
+    "name": "★日記(紲星あかり)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "kizuna_akari",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_20",
+    "type": "TOOL",
+    "name": "★日記(桜乃そら)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "sora",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_21",
+    "type": "TOOL",
+    "name": "★日記(東北イタコ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "itako",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_22",
+    "type": "TOOL",
+    "name": "★日記(鳴花ヒメ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "hime",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_23",
+    "type": "TOOL",
+    "name": "★日記(鳴花ミコト)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "mikoto",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_24",
+    "type": "TOOL",
+    "name": "★日記(えんのついな)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "tuina",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_25",
+    "type": "TOOL",
+    "name": "★日記(のぞみ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "nozomi",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_26",
+    "type": "TOOL",
+    "name": "★日記(伊織弓鶴)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "yuzuru",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_27",
+    "type": "TOOL",
+    "name": "★日記(flower)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "flower",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_28",
+    "type": "TOOL",
+    "name": "★日記(初音ミク)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "miku",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_29",
+    "type": "TOOL",
+    "name": "★日記(ずんだもん)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "sundamon",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_30",
+    "type": "TOOL",
+    "name": "★日記(四国めたん)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "metan",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_31",
+    "type": "TOOL",
+    "name": "★日記(春日部つむぎ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "tumugi",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_32",
+    "type": "TOOL",
+    "name": "★日記(雨晴はう)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "hau",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_33",
+    "type": "TOOL",
+    "name": "★日記(波音リツ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "rithu",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_34",
+    "type": "TOOL",
+    "name": "★日記(冥鳴ひまり)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "himari",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_35",
+    "type": "TOOL",
+    "name": "★日記(九州そら)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "sora2",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_36",
+    "type": "TOOL",
+    "name": "★日記(小春六花)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "rikka",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  },
+  {
+    "id": "nikki_37",
+    "type": "TOOL",
+    "name": "★日記(モチノ・キョウコ)",
+    "copy-from": "nikki_1",
+    "description": "誰かの日記のようです。使用すると…?",
+    "use_action": [
+      {
+        "type": "place_npc",
+        "npc_class_id": "mochiko",
+        "summon_msg": "日記を読むと突然何かが現れました！",
+        "place_randomly": false,
+        "moves": 50
+      }
+    ]
+  }
+]

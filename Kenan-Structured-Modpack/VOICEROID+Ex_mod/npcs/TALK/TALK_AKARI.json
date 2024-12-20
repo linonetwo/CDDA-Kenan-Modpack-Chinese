@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_AKARI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"あの、ご飯持ってませんか?",
+    "responses":[
+      { "text": "ごはんならまだ余裕があったな…(仲間に勧誘)", "topic": "TALK_AKARI_SAN_2" },
+      { "text": "怪しい…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_AKARI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"やったー！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

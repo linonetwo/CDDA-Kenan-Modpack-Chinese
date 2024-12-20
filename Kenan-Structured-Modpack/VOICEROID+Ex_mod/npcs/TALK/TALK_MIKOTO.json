@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_MIKOTO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"愚かな人間どもよ!",
+    "responses":[
+      { "text": "仲間になってください(仲間に勧誘)", "topic": "TALK_MIKOTO_SAN_2" },
+      { "text": "怪しい子だ…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_MIKOTO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"しょうがないなー",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

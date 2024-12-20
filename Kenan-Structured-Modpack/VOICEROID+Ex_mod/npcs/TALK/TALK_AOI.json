@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_AOI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"お姉ちゃん…どこ?",
+    "responses":[
+      { "text": "一緒に探してあげよう", "topic": "TALK_AOI_SAN_2" },
+      { "text": "知らん", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_AOI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"ありがとう！お姉ちゃんは私と同じ格好をしてるはずだからすぐわかると思うよ",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

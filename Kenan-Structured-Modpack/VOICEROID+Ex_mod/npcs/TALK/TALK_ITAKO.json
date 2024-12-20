@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_ITAKO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"はぁ～……楽してお金稼ぎたいですわ～……。",
+    "responses":[
+      { "text": "一緒にお金を稼ぎましょう！(仲間に勧誘)", "topic": "TALK_ITAKO_SAN_2" },
+      { "text": "うーん…お金かあ", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_ITAKO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"妖狐の力、見せてさしあげますわ！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

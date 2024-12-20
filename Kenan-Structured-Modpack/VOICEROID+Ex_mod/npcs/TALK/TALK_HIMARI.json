@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_HIMARI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"ど、どなたですか・・？",
+    "responses":[
+      { "text": "仲間になってください", "topic": "TALK_HIMARI_SAN_2" },
+      { "text": "うーん…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_HIMARI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"よろしくお願いします",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

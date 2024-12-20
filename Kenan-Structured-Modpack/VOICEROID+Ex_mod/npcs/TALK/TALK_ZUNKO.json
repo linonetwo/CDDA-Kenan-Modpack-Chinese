@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_ZUNKO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"あら、こんなとこに人が来るなんて珍しいですね、ずんだ餅でもどうです？",
+    "responses":[
+      { "text": "いただきます(仲間に勧誘)", "topic": "TALK_ZUNKO_SAN_2" },
+      { "text": "ずんだ餅はちょっと…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_ZUNKO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"うふふ、気に入ってくれたなら毎日ずんだ餅を作ってあげますからね♪",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

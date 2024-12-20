@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_KATUWO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"…",
+    "responses":[
+      { "text": "仲間になってー", "topic": "TALK_KATUWO_SAN_2" },
+      { "text": "怪しい…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_KATUWO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"…",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

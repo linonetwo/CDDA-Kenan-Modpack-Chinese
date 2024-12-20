@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_IA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"ああ、他にも生きてる人がいたんだ…！",
+    "responses":[
+      { "text": "大丈夫?手助けが必要かな？(仲間に勧誘)", "topic": "TALK_IA_SAN_2" },
+      { "text": "知らん", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_IA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"助かった…ありがとう！あ、当分は一緒に行動させてもらうね！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

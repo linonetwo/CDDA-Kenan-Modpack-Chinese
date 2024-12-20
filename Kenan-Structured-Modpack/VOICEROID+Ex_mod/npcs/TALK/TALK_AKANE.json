@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_AKANESAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"あんた誰や？そうそう、葵って子知らんか？うちみたいな見た目の子なんやけど",
+    "responses":[
+      { "text": "一緒に探してあげよう", "topic": "TALK_AKANESAN_2" },
+      { "text": "知らん", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_AKANESAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"よっしゃ、ほな頼むで、葵―！どこやー！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

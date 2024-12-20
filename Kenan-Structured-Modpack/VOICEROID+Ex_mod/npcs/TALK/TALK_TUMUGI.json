@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_TUMUGI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"あーしは春日部つむぎだよ",
+    "responses":[
+      { "text": "仲間になってください", "topic": "TALK_TUMUGI_SAN_2" },
+      { "text": "うーん…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_TUMUGI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"あーしに任せて！あ、今日のご飯はカレーでヨロシクー♪",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

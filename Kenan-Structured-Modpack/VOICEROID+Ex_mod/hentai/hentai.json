@@ -1,0 +1,54 @@
+[
+  {
+    "//": "部位指定しておかないと破かれない。被服率も100%にして破かれやすくした。",
+    "id": "hentai_band_aid",
+    "type": "ARMOR",
+    "copy-from": "voiro_sarashi",
+    "category" : "tools",
+    "name": "ニプレス(絆創膏)[voiro]",
+    "description": "胸の突起を隠す目的や、衣服との摩擦で痛みや出血が起きるのを防ぐために使用する保護器具です。使用する事で、少し下に貼り直せます。",
+    "weight": "4 g",
+    "volume": "40 ml",
+    "price": 200,
+    "armor": [
+      { "coverage": 5, "covers": [ "torso" ] }
+    ],
+    "use_action": {
+        "type": "transform",
+        "menu_text": "貼り直す",
+        "msg": "少し下に貼り直しました。",
+        "target": "hentai_band_aid2"
+    },
+    "flags": [ "SKINTIGHT" ]
+  },
+  {
+    "id": "hentai_band_aid2",
+    "type": "ARMOR",
+    "category" : "tools",
+    "copy-from": "hentai_band_aid",
+    "name": "ニプレス(絆創膏)[voiro]",
+    "description": "胸の突起を隠す目的や、衣服との摩擦で痛みや出血が起きるのを防ぐために使用する保護器具です。使用する事で、少し上に貼り直せます。",
+    "use_action": {
+        "type": "transform",
+        "menu_text": "貼り直す",
+        "msg": "少し上に貼り直しました。。",
+        "target": "hentai_band_aid"
+    },
+    "flags": [ "SKINTIGHT" ]
+  },
+  {
+    "id": "hentai_band_aid3",
+    "type": "ARMOR",
+    "category" : "tools",
+    "copy-from": "hentai_band_aid",
+    "name": "ニプレス(絆創膏)[voiro]",
+    "description": "人類の英知にして尊厳を守る最後の砦です。",
+    "weight": "2 g",
+    "volume": "20 ml",
+    "price": 100,
+    "armor": [
+      { "coverage": 5, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] }
+    ],
+    "flags": [ "SKINTIGHT" ]
+  }
+]

@@ -1,0 +1,27 @@
+[
+  {
+    "id":"TALK_AI_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"お兄ちゃん…？",
+    "responses":[
+      { "text": "子供がこんなとこにいるなんて…保護しなきゃ", "topic": "TALK_AI_SAN_2" },
+      { "text": "今連れていくのは危険だ…もう少しここで待っててもらおう", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_AI_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"お兄ちゃんどこいったんだろう…",
+    "responses":[ 
+      { 
+        "text": "…",
+        "effect": [ 
+          "follow", { "npc_first_topic": "    TALK_FRIEND" },
+          { "math": [ "n_val('age')", "=", "5" ] },
+          { "math": [ "n_val('height')", "=", "100" ] }
+        ], 
+        "topic": "TALK_DONE" 
+      }
+    ] 
+  }
+] 

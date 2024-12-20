@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_YUKARISAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"ゆかりさんは天才ですから仲間になってあげてもいいですよ？",
+    "responses":[
+      { "text": "仲間になってください", "topic": "TALK_YUKARISAN_2" },
+      { "text": "うーん…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_YUKARISAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"これから仲良くしましょうね",
+    "responses":[ 
+      { "text": "やったね","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

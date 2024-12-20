@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_GALACO_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"アンタさー、どこかで農業に適した土地知らない？",
+    "responses":[
+      { "text": "一緒に探してあげよう", "topic": "TALK_GALACO_SAN_2" },
+      { "text": "知らん", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_GALACO_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"サンキュー！見つけたら教えてくれよな",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

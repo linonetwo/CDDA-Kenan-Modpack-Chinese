@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_METAN_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"ふるさと女学院、高等部2年生。ずん子のクラスメイトよ。",
+    "responses":[
+      { "text": "仲間になってください", "topic": "TALK_METAN_SAN_2" },
+      { "text": "うーん…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_METAN_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"さあ、わたくしの前にひれ伏しなさい！",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

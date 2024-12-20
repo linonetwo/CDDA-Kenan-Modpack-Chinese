@@ -1,0 +1,19 @@
+[
+  {
+    "type" : "AMMO",
+    "id" : "voiro_arrow_zunda",
+    "copy-from": "arrow_wood",
+    "price" : 10000,
+    "name": { "str": "矢(木/ずんだ)[voiro]" },
+    "description" : "矢尻にずんだをたっぷり盛ったずんだアロー専用の矢です。命中精度と引き替えに何故か高い貫通性能と飛距離を誇ります。放った矢は射手の元に戻ります。ずんだの力によって稀に矢が増殖します。",
+    "material" : [ "wood", "veggy" ],
+    "weight" : "58 g",
+    "casing": "voiro_arrow_zunda",
+    "damage": { "damage_type": "stab", "armor_penetration": 3 },
+    "range" : 14,
+    "dispersion" : 160,
+    "loudness": 0,
+    "count" : 1,
+    "effects": [ "RECOVER_2" ]
+  }
+]

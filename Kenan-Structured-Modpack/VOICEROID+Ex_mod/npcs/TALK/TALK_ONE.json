@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_ONE_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"ちょっと！そこの君、私の妹知らない?",
+    "responses":[
+      { "text": "一緒に探してあげよう", "topic": "TALK_ONE_SAN_2" },
+      { "text": "知らん", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_ONE_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"せっかくだからついていくね、あ、何かお菓子持ってない?",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

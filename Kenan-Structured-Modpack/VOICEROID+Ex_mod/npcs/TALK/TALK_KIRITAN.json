@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_KIRITAN_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"ずんねえさま検定1級、きりたんです。",
+    "responses":[
+      { "text": "仲間になってー", "topic": "TALK_KIRITAN_SAN_2" },
+      { "text": "怪しい…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_KIRITAN_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"うぇーい。あ、ずんねえさま探してくださいずんねえさま、ずん姉さま成分が現在不足してるんですよ",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

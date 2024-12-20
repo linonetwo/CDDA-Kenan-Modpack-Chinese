@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_SASARA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"ちょっと、つづみちゃん知らない？あとタカハシも",
+    "responses":[
+      { "text": "一緒に探そうか?", "topic": "TALK_SASARA_SAN_2" },
+      { "text": "…", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_SASARA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"まったく、二人はどこに行っちゃったんだろう…",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 

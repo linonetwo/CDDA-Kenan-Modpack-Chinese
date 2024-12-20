@@ -1,0 +1,19 @@
+[
+  {
+    "id":"TALK_SEIKA_SAN_1",
+    "type":"talk_topic",
+    "dynamic_line":"おや、こんなとこに人が来るなんて珍しいこともありますね、…お酒持ってないですか？",
+    "responses":[
+      { "text": "ありますよ(仲間に勧誘)", "topic": "TALK_SEIKA_SAN_2" },
+      { "text": "いいや、ないよ", "topic": "TALK_DONE" }
+    ] 
+  },
+  {
+    "id":"TALK_SEIKA_SAN_2",
+    "type":"talk_topic",
+    "dynamic_line":"やった！これでまたお酒にありつけそうです。",
+    "responses":[ 
+      { "text": "…","effect": [ "follow", { "npc_first_topic": "    TALK_FRIEND" } ], "topic": "TALK_DONE" }
+    ] 
+  }
+] 
