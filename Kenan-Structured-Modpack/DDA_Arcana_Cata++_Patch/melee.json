@@ -1,0 +1,54 @@
+[
+  {
+    "type": "GENERIC",
+    "category": "weapons",
+    "id": "unbio_kinetic_amplifier_weapon",
+    "name": {
+      "str_sp": "回收的动能放大装置"
+    },
+    "description": "一个用钢带制成的指虎，上面蚀刻着奇怪的标记。改装自CBM。当它作为徒手武器使用时，它可以使你的攻击能让敌人飞起来，并提升伤害和穿甲。它的攻击有可能释放出闪光弹效果，如果没有防护，这种武器就会成为一把双刃剑",
+    "color": "light_gray",
+    "symbol": "{",
+    "looks_like": "knuckle_steel",
+    "material": [
+      "steel"
+    ],
+    "price": "400 USD",
+    "price_postapoc": "20 USD",
+    "volume": "250 ml",
+    "weight": "500 g",
+    "melee_damage": {
+      "bash": 24
+    },
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "TRADER_AVOID"
+    ],
+    "qualities": [
+      [
+        "HAMMER",
+        1
+      ]
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "tec_weapon_kinetic_knockback"
+    ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WIELD",
+          "condition": "ALWAYS",
+          "hit_you_effect": [
+            {
+              "id": "arcana_react_kinetic_amplifier_flashbang",
+              "once_in": 10,
+              "message": "你的动能与炫目的闪光和雷鸣般的声音产生共振！",
+              "npc_message": "%1$s 突然发出炫目的闪光和雷鸣般的声音！"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

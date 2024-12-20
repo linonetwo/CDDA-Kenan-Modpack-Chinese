@@ -2,33 +2,39 @@
   {
     "type": "speech",
     "speaker": "mon_gloople",
-    "sound": "\"SQUEE!\"",
+    "sound": "“SQUEE！”",
     "volume": 50
   },
   {
     "type": "speech",
     "speaker": "mon_oozle",
-    "sound": "\"SQUEE!\"",
+    "sound": "“SQUEE！”",
     "volume": 50
   },
   {
     "type": "speech",
     "speaker": "mon_gray",
-    "sound": "\"SQUEE!\"",
+    "sound": "“SQUEE！”",
     "volume": 50
   },
   {
     "id": "mon_gloople",
     "type": "MONSTER",
-    "name": { "str_sp": "gelatinous mass" },
-    "description": "An escaping noisy blob, catch it before it brings in every zombie for miles!",
+    "name": {
+      "str_sp": "凝胶变形怪"
+    },
+    "description": "一个正在逃跑的吵闹的变形怪，在它引过来方圆好几里内的所有丧尸之前赶紧抓住它！",
     "default_faction": "slime",
-    "species": [ "SLIME" ],
+    "species": [
+      "SLIME"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
     "hp": 1,
     "speed": 60,
-    "material": [ "slime" ],
+    "material": [
+      "slime"
+    ],
     "symbol": "o",
     "color": "light_green",
     "phase": "LIQUID",
@@ -38,25 +44,50 @@
     "melee_dice": 1,
     "melee_dice_sides": 4,
     "dodge": 0,
-    "armor": { "bash": 0, "cut": 0, "bullet": 0 },
+    "armor": {
+      "bash": 0,
+      "cut": 0,
+      "bullet": 0
+    },
     "revert_to_itype": "gloople",
-    "special_attacks": [ [ "PARROT", 0 ] ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
     "harvest": "exempt",
-    "flags": [ "HEARS", "GOODHEARING", "NOHEAD", "POISON", "NO_BREATHE", "ACIDPROOF" ]
+    "flags": [
+      "HEARS",
+      "GOODHEARING",
+      "NOHEAD",
+      "POISON",
+      "NO_BREATHE",
+      "ACIDPROOF"
+    ]
   },
   {
     "id": "mon_gray",
     "type": "MONSTER",
-    "name": { "str_sp": "gray mass" },
-    "description": "An escaping noisy blob, catch it before it brings in every zombie for miles!",
+    "name": {
+      "str_sp": "灰色变形怪"
+    },
+    "description": "一个正在逃跑的吵闹的变形怪，在它引过来方圆好几里内的所有丧尸之前赶紧抓住它！",
     "default_faction": "slime",
-    "species": [ "SLIME" ],
+    "species": [
+      "SLIME"
+    ],
     "volume": "875000 ml",
     "weight": "200 kg",
     "hp": 1,
     "speed": 60,
-    "material": [ "slime" ],
+    "material": [
+      "slime"
+    ],
     "symbol": "O",
     "color": "light_gray",
     "phase": "LIQUID",
@@ -66,25 +97,50 @@
     "melee_dice": 1,
     "melee_dice_sides": 4,
     "dodge": 0,
-    "armor": { "bash": 0, "cut": 0, "bullet": 0 },
+    "armor": {
+      "bash": 0,
+      "cut": 0,
+      "bullet": 0
+    },
     "revert_to_itype": "gray",
-    "special_attacks": [ [ "PARROT", 0 ] ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
     "harvest": "exempt",
-    "flags": [ "HEARS", "GOODHEARING", "NOHEAD", "POISON", "NO_BREATHE", "ACIDPROOF" ]
+    "flags": [
+      "HEARS",
+      "GOODHEARING",
+      "NOHEAD",
+      "POISON",
+      "NO_BREATHE",
+      "ACIDPROOF"
+    ]
   },
   {
     "id": "mon_oozle",
     "type": "MONSTER",
-    "name": { "str_sp": "gelatinous mass" },
-    "description": "An escaping noisy blob, catch it before it brings in every zombie for miles!",
+    "name": {
+      "str_sp": "凝胶变形怪"
+    },
+    "description": "一个正在逃跑的吵闹的变形怪，在它引过来方圆好几里内的所有丧尸之前赶紧抓住它！",
     "default_faction": "slime",
-    "species": [ "SLIME" ],
+    "species": [
+      "SLIME"
+    ],
     "volume": "92500 ml",
     "weight": "120 kg",
     "hp": 1,
     "speed": 60,
-    "material": [ "slime" ],
+    "material": [
+      "slime"
+    ],
     "symbol": "O",
     "color": "green",
     "phase": "LIQUID",
@@ -94,11 +150,30 @@
     "melee_dice": 1,
     "melee_dice_sides": 4,
     "dodge": 0,
-    "armor": { "bash": 0, "cut": 0, "bullet": 0 },
+    "armor": {
+      "bash": 0,
+      "cut": 0,
+      "bullet": 0
+    },
     "revert_to_itype": "oozle",
-    "special_attacks": [ [ "PARROT", 0 ] ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
+    "special_attacks": [
+      [
+        "PARROT",
+        0
+      ]
+    ],
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
     "harvest": "exempt",
-    "flags": [ "HEARS", "GOODHEARING", "NOHEAD", "POISON", "NO_BREATHE", "ACIDPROOF" ]
+    "flags": [
+      "HEARS",
+      "GOODHEARING",
+      "NOHEAD",
+      "POISON",
+      "NO_BREATHE",
+      "ACIDPROOF"
+    ]
   }
 ]

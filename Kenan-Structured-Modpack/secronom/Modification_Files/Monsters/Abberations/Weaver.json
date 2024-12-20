@@ -3,15 +3,23 @@
     "id": "mon_fleshweaver",
     "looks_like": "mon_kreck",
     "type": "MONSTER",
-    "name": { "str": "flesh weaver" },
-    "description": "A large, beetle-like creature with broad set of claws and appendages, odd to its vile yet pacifistic nature.",
+    "name": {
+      "str": "肉织工"
+    },
+    "description": "一种类似甲虫的大型生物，有着广泛的爪子和附属物，与其邪恶而和平的本性不同。",
     "default_faction": "fleshweaver",
-    "species": [ "ABERRATION", "SECROSPEC" ],
+    "species": [
+      "ABERRATION",
+      "SECROSPEC"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 160,
     "speed": 85,
-    "material": [ "flesh", "bone" ],
+    "material": [
+      "flesh",
+      "bone"
+    ],
     "symbol": "⨣",
     "color": "light_blue",
     "aggression": -100,
@@ -19,30 +27,64 @@
     "melee_skill": 4,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 6 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
     "attack_cost": 115,
     "dodge": 1,
     "harvest": "arachnid",
-    "armor": { "bash": 6, "cut": 12, "bullet": 10, "stab": 10, "acid": 1, "heat": 1 },
+    "armor": {
+      "bash": 6,
+      "cut": 12,
+      "bullet": 10,
+      "stab": 10,
+      "acid": 1,
+      "heat": 1
+    },
     "vision_day": 24,
     "vision_night": 8,
     "petfood": {
-      "food": [ "SECRO_FWEAVERFOOD" ],
+      "food": [
+        "SECRO_FWEAVERFOOD"
+      ],
       "feed": "The %s consumes the \"petfood\".",
       "pet": "The %s's antennae flicks rapidly."
     },
-    "chat_topics": [ "TALK_SECRO_FWEAVER_main" ],
+    "chat_topics": [
+      "TALK_SECRO_FWEAVER_main"
+    ],
     "special_attacks": [
-      [ "PARROT_AT_DANGER", 10 ],
+      [
+        "PARROT_AT_DANGER",
+        10
+      ],
       {
         "type": "spell",
-        "spell_data": { "id": "mon_fleshweaver_vscratch" },
+        "spell_data": {
+          "id": "mon_fleshweaver_vscratch"
+        },
         "cooldown": 33,
-        "monster_message": "<color_yellow>%1$s injects %3$s with a volatile fluid!</color>"
+        "monster_message": "<color_yellow>%1$s向%3$s注入了一些挥发性的液体！</color>"
       }
     ],
-    "placate_triggers": [ "PLAYER_CLOSE" ],
-    "anger_triggers": [ "HURT", "HOSTILE_SEEN" ],
-    "flags": [ "HEARS", "SEES", "SMELLS", "WARM", "CAN_OPEN_DOORS", "CLIMBS", "PATH_AVOID_DANGER_1" ]
+    "placate_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "anger_triggers": [
+      "HURT",
+      "HOSTILE_SEEN"
+    ],
+    "flags": [
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "WARM",
+      "CAN_OPEN_DOORS",
+      "CLIMBS",
+      "PATH_AVOID_DANGER_1"
+    ]
   }
 ]

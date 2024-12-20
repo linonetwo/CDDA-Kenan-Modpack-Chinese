@@ -2,17 +2,17 @@
   {
     "type": "mutation_category",
     "id": "BIO-WEAPON",
-    "name": "Bio-Weapon",
+    "name": "生物武器",
     "threshold_mut": "THRESH_BIO-WEAPON",
-    "mutagen_message": "This is a bug, report to Noctifer if you see this.",
-    "memorial_message": "All your enhancements came short of immortality."
+    "mutagen_message": "如果你看见这条文字，说明出BUG了！请报告给Noctifer。",
+    "memorial_message": "你的生化插件并未让你成为不朽。"
   },
   {
     "type": "mutation",
     "id": "THRESH_BIO-WEAPON",
-    "name": "Bio-Weapon",
+    "name": "生物武器",
     "points": 0,
-    "description": "You are not human.  You can't even remember anymore, whether you were ever human to begin with.  What matters is that now, you are more than human.",
+    "description": "你不是人类。你甚至都不记得自己一开始是不是人类了。但现在重要的是，你比人类更强。",
     "valid": false,
     "purifiable": false,
     "threshold": true
@@ -20,19 +20,22 @@
   {
     "type": "mutation_category",
     "id": "SUPER_SOLDIER",
-    "name": "Sentinel",
+    "name": "哨兵",
     "threshold_mut": "THRESH_SUPER_SOLDIER",
-    "mutagen_message": "You're left reeling as the chemicals make your biology reach new heights.",
-    "memorial_message": "You found your comrades and regrouped in hell."
+    "mutagen_message": "化学药剂改造身体会使你感到头晕目眩。",
+    "memorial_message": "你找到了你的战友，在地狱里重新集结。"
   },
   {
     "type": "mutation",
     "id": "THRESH_SUPER_SOLDIER",
-    "name": "Sentinel",
+    "name": "哨兵",
     "points": 0,
-    "description": "You have transcended your humanity in both mind and body; your biology freed from the shackles of living flesh.  Now a warrior with battle running through your veins, you are what humanity would consider the next step in evolution.",
+    "description": "你已经改造了你的心智和肉体；你的身体从血肉的枷锁中解放出来。现在你是一个血管里流淌着战斗的战士，你就是人类进化的下一步。",
     "valid": false,
     "purifiable": false,
-    "threshold": true
+    "threshold": true,
+    "allowed_category": [
+      "SUPER_SOLDIER"
+    ]
   }
 ]

@@ -2,1277 +2,1016 @@
   {
     "id": "ARTIFICER",
     "type": "mutation",
-    "copy-from": "ARTIFICER",
-    "name": { "str": "Artificer" },
+    "name": {
+      "str": "机关术师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "With the mechanically-minded Technomancer and the sheer power of lightning from a Stormshaper, the Artificer has a unique confluence of skills and spells to be perfect for invention.  While modern inventions and machines have won out in a modern society, after a Cataclysm one has a chance to go back to roots of things.  To make weird gadgets that are just as likely to explode as explode the thing you're pointing at.",
-    "prereqs": [ "STORMSHAPER", "TECHNOMANCER" ],
-    "spells_learned": [ [ "spy_wasp", 5 ], [ "artificer_toolkit", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ALCHEMIST",
-        "BIOTEK",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE"
+    "description": "作为同时拥有了机械思维的科技法师和拥有闪电力量的风暴塑造者，机关术师所掌握的技艺和法术在发明方面完美而独特的汇合在一起。虽然现代发明和机器已经在现代社会中取得了胜利，但在经历了一场大灾变之后，人们终于能有机会回归事物的本源。你制造出的各类奇怪小玩意自身就和被你所瞄准的东西一样容易爆炸。",
+    "prereqs": [
+      "STORMSHAPER",
+      "TECHNOMANCER"
+    ],
+    "spells_learned": [
+      [
+        "spy_wasp",
+        5
+      ],
+      [
+        "artificer_toolkit",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "crafting_speed_multiplier": 1.2,
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "ALCHEMIST",
     "type": "mutation",
-    "copy-from": "ALCHEMIST",
-    "name": { "str": "Alchemist" },
+    "name": {
+      "str": "炼金术士"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The alchemist comes from the technomancer's skills with unliving matter combined with the animist's grasp on the ambient ley lines.  It requires magical talent and lots of time, but is invaluable for creating powerful magical effects in a storable, accessible form.",
-    "prereqs": [ "ANIMIST", "TECHNOMANCER" ],
-    "spells_learned": [ [ "alchemist_make_potion_starter", 5 ], [ "alchemist_make_potion_bomb", 5 ], [ "alchemist_make_potion_trap", 5 ] ],
-    "integrated_armor": [ "alchemist_pocket" ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "EARTH_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "SUN_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "炼金术士来自于科技法师处理无机物的技能，加上泛灵师对周围魔法灵脉的掌握。掌握它需要魔法天赋和大量时间，但对于将魔法能量以可存储、便于使用的形式创造更强大的法术效果来说是无价的。",
+    "prereqs": [
+      "ANIMIST",
+      "TECHNOMANCER"
+    ],
+    "spells_learned": [
+      [
+        "alchemist_make_potion_starter",
+        5
+      ],
+      [
+        "alchemist_make_potion_bomb",
+        5
+      ],
+      [
+        "alchemist_make_potion_trap",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "BIOTEK",
     "type": "mutation",
-    "copy-from": "BIOTEK",
-    "name": { "str": "Biotek" },
+    "name": {
+      "str": "生化技师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Biotek is quite simply the marriage of technology and flesh.  It was not even discovered as an attunement until recent times due to the great advancements in technology in the last 50 years.  The Biotek is unique as it is the only known attunement that warps the Aethereum in such a way as to allow cybernetics to coincide with magical abilities, to an extent.",
-    "prereqs": [ "BIOMANCER", "TECHNOMANCER" ],
-    "spells_learned": [ [ "nitro_boost", 5 ], [ "biotek_healing", 5 ] ],
-    "bionic_slot_bonuses": { "torso": 20 },
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "生化技师是技术和肉体的简单结合。由于科技在过去50年中的巨大进步，直到最近人们才发现了魔法调谐现象。生化技师是独一无二的，因为它是唯一已知能够在某种程度上扭曲以太的魔法调谐，从而让生化插件与魔法能力在某种程度上融合一致。",
+    "prereqs": [
+      "BIOMANCER",
+      "TECHNOMANCER"
+    ],
+    "spells_learned": [
+      [
+        "nitro_boost",
+        5
+      ],
+      [
+        "biotek_healing",
+        5
       ]
+    ],
+    "bionic_mana_penalty": 0.5,
+    "bionic_slot_bonuses": {
+      "torso": 20
     },
-    "flags": [ "ATTUNEMENT", "UNCANNY_DODGE" ]
+    "flags": [
+      "ATTUNEMENT",
+      "UNCANNY_DODGE"
+    ]
   },
   {
     "id": "BLOOD_MAGE",
     "type": "mutation",
-    "copy-from": "BLOOD_MAGE",
-    "name": { "str": "Blood Mage" },
+    "name": {
+      "str": "血法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "Animists are known for their blood magic, and being a Biomancer you are able to take it another step further by strengthening your blood.  The dark arts have opened to you, and while dangerous, are incredible to behold.",
-    "prereqs": [ "BIOMANCER", "ANIMIST" ],
-    "spells_learned": [ [ "banishment_greater", 5 ], [ "demonic_possession", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ALCHEMIST",
-        "BIOTEK",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "泛灵师以他们的血魔法而闻名，作为一名生化术士，你可以通过强化自身血液而更进一步。黑魔法的大门已经向你敞开了，虽然危险，却让人欲罢不能。",
+    "prereqs": [
+      "BIOMANCER",
+      "ANIMIST"
+    ],
+    "enchantments": [
+      "BLOOD_MAGE_HEALING"
+    ],
+    "spells_learned": [
+      [
+        "banishment_greater",
+        5
+      ],
+      [
+        "demonic_possession",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "BLEED_IMMUNE" ]
+    ],
+    "flags": [
+      "ATTUNEMENT",
+      "BLEED_IMMUNE"
+    ]
   },
   {
     "id": "BOREAL_MAGE",
     "type": "mutation",
-    "copy-from": "BOREAL_MAGE",
-    "name": { "str": "Boreal Mage" },
+    "name": {
+      "str": "北寒法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "Named for the auroras that grace the poles of the earth, the Boreal mage specializes in auras that protect ethereally.  Boreal mages definitely know their way around cold spells, but their real strength is protection.",
-    "prereqs": [ "KELVINIST", "TECHNOMANCER" ],
-    "spells_learned": [ [ "auroral_wave", 5 ], [ "borealmage_auroral_guard", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE"
+    "description": "以优雅地照亮了地球的两极的极光命名，北寒法师专门研究魔法保护的光环。北寒法师当然也很了解寒冷法术，但他们真正强大之处还是在于防护。",
+    "enchantments": [
+      "BOREAL_MAGE"
+    ],
+    "prereqs": [
+      "KELVINIST",
+      "TECHNOMANCER"
+    ],
+    "spells_learned": [
+      [
+        "auroral_wave",
+        5
+      ],
+      [
+        "borealmage_auroral_guard",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "CLEANSING_FLAME",
     "type": "mutation",
-    "copy-from": "CLEANSING_FLAME",
-    "name": { "str": "Cleansing Flame" },
+    "name": {
+      "str": "净火法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Cleansing Flame is the fire that burns away the chaff, in preparation for the regrowth of new life.",
-    "spells_learned": [ [ "immolate", 5 ], [ "cleansingflame_hermes_heal", 5 ], [ "burning_trail", 5 ] ],
-    "prereqs": [ "DRUID", "KELVINIST" ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "净化之火是能够燃尽一切污秽的火焰，为生命的新生做准备。",
+    "enchantments": [
+      "CLEANSING_FLAME"
+    ],
+    "spells_learned": [
+      [
+        "immolate",
+        5
+      ],
+      [
+        "cleansingflame_hermes_heal",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "INFECTION_IMMUNE" ]
+    ],
+    "prereqs": [
+      "DRUID",
+      "KELVINIST"
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "CRUSADER",
     "type": "mutation",
-    "copy-from": "CRUSADER",
-    "name": { "str": "Crusader" },
+    "name": {
+      "str": "圣战法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Crusader attunement is a clashing dichotomy of Man and Nature.  Utilizing man's propensity for tools and nature's resilience, the Crusader is a juggernaut in armed combat.",
-    "prereqs": [ "DRUID", "TECHNOMANCER" ],
-    "spells_learned": [ [ "holy_shield", 5 ], [ "judgement_sword", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "TUNDRA_MAGE",
-        "VULCANIST",
-        "WITHER_MAGE"
+    "description": "圣战法师魔法调谐中专注于人与自然的矛盾二分法。圣战法师同时利用人类使用工具的倾向和以及自然的复原能力，是武装近战中的佼佼者。",
+    "prereqs": [
+      "DRUID",
+      "TECHNOMANCER"
+    ],
+    "spells_learned": [
+      [
+        "holy_shield",
+        5
+      ],
+      [
+        "judgement_sword",
+        5
       ]
+    ],
+    "passive_mods": {
+      "dex_mod": 5
     },
-    "flags": [ "ATTUNEMENT" ]
+    "hp_modifier": 1,
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "EARTH_ELEMENTAL",
     "type": "mutation",
-    "copy-from": "EARTH_ELEMENTAL",
-    "name": { "str": "Earth Elemental" },
+    "name": {
+      "str": "土系法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "Stone is superior to flesh.  You have allowed this axiom into your life, and work to correct your own weakness with biomancy.  The strength of the Earth rushed up to meet you with open arms.",
-    "prereqs": [ "BIOMANCER", "EARTHSHAPER" ],
-    "spells_learned": [ [ "quake", 5 ], [ "rock_blast", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "FIRE_ELEMENTAL",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "TUNDRA_MAGE",
-        "VULCANIST",
-        "WITHER_MAGE"
+    "description": "石胜于肉。你将句话作为你的座右铭，并努力用你的生化术士能力来纠正自身血肉的不足。大地的力量张开双臂迎接向你。",
+    "prereqs": [
+      "BIOMANCER",
+      "EARTHSHAPER"
+    ],
+    "spells_learned": [
+      [
+        "quake",
+        5
+      ],
+      [
+        "rock_blast",
+        5
       ]
+    ],
+    "armor": [
+      {
+        "parts": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head"
+        ],
+        "cut": 15
+      }
+    ],
+    "passive_mods": {
+      "str_mod": 5
     },
-    "flags": [ "ATTUNEMENT", "ELECTRIC_IMMUNE" ]
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "FIRE_ELEMENTAL",
     "type": "mutation",
-    "copy-from": "FIRE_ELEMENTAL",
-    "name": { "str": "Fire Elemental" },
+    "name": {
+      "str": "火系法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "You have used your expertise in Biomancy to change your body more toward your affinity for fire as a Kelvinist.  Fire doesn't bother you as much anymore, and your blood is flammable when it touches the air, resulting in a gout of flame when something hurts you.  You are also starting to study more spells that focus on using your own body's affinity for fire.",
-    "spells_learned": [ [ "flareup", 5 ], [ "flarewhip", 5 ] ],
-    "prereqs": [ "BIOMANCER", "KELVINIST" ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "通过你所掌握的生化术士的力量，你已经改变了你的身体，提升了自身炽霜法师对火的魔法亲和度。火焰不再那么让你烦恼了，而且你的血液一旦接触到空气就会燃烧，这使你受到任何伤害时，就会喷出一道火焰。你也开始研究更多专注于你身体内在与火的魔法亲和度的魔法。",
+    "enchantments": [
+      "FIRE_ELEMENTAL"
+    ],
+    "spells_learned": [
+      [
+        "flareup",
+        5
+      ],
+      [
+        "flarewhip",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "prereqs": [
+      "BIOMANCER",
+      "KELVINIST"
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "FORCE_MAGE",
-    "type": "mutation",
     "copy-from": "FORCE_MAGE",
-    "name": { "str": "Force Mage" },
+    "type": "mutation",
+    "name": {
+      "str": "原力法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "Force = Mass x Acceleration.  This is the typical thing that people think of nowadays when the word is used, but Force Mages have a different meaning, coming from traditional roots: untyped magical damage appears to be a ghostly \"force.\"  This might be the effect of the attunement, but the cause is even more intriguing: they appear to turn Newton's Third Law on its head.  Magical scholars of the 21st century have theorized that this isn't really the case; instead of the opposite reaction happening on this plane of existence, a Force Mage uses the Aetherium's alternate Laws to rebound the force back upon itself, effectively doubling the force in the same direction instead.  However this ability comes with limitations, as the Force Mage can only do this for melee damage.",
-    "prereqs": [ "MAGUS", "STORMSHAPER" ],
-    "spells_learned": [ [ "force_blade", 5 ], [ "force_magical_armor", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CLEANSING_FLAME",
-        "FIRE_ELEMENTAL",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "力=质量x加速度。这是当今人们在提到“力”这个词时所想到的典型公式，但对原力法师而言，“力”有着不同的含义，来自于传统的根源：看起来像是幽灵“力”一般的无属性魔法伤害。这可能是魔法调谐的结果，但造成此现象的原因更为有趣：它们看起来完全违背了牛顿第三定律。21世纪的魔法理论研究家们认为另有原因；反作用力并未产生于物体所在位面，原力法师利用以太交换定律，将反作用力重新于作用力结合，结果等效于引力强度在相同方向上翻倍了。然而这项魔法也有其内在限制，因此原力法师只能操纵及影响近战伤害。",
+    "prereqs": [
+      "MAGUS",
+      "STORMSHAPER"
+    ],
+    "spells_learned": [
+      [
+        "force_blade",
+        5
+      ],
+      [
+        "force_magical_armor",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ],
+    "enchantments": [
+      "FORCE_MAGE"
+    ]
   },
   {
     "id": "GAIAS_CHOSEN",
     "type": "mutation",
-    "copy-from": "GAIAS_CHOSEN",
-    "name": { "str": "Gaia's Chosen" },
+    "name": {
+      "str": "盖娅神选者"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Champion of the Earth, Gaia's Chosen is blessed on all things nature, animate and inanimate.",
-    "prereqs": [ "DRUID", "EARTHSHAPER" ],
-    "spells_learned": [ [ "gaiaschosen_samsara", 5 ], [ "dust_reborn", 5 ], [ "terra_armor", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "TUNDRA_MAGE",
-        "VULCANIST",
-        "WITHER_MAGE"
+    "description": "大地的捍卫者，盖亚的神选民，你被大自然中一切有生与无生之物所祝福。",
+    "enchantments": [
+      "GAIAS_CHOSEN"
+    ],
+    "prereqs": [
+      "DRUID",
+      "EARTHSHAPER"
+    ],
+    "spells_learned": [
+      [
+        "gaiaschosen_samsara",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "GLACIER_MAGE",
     "type": "mutation",
-    "copy-from": "GLACIER_MAGE",
-    "name": { "str": "Glacier Mage" },
+    "name": {
+      "str": "冰川法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The power of a Glacier Mage is backed by a thousand tons of ice and snow, with a brutal might in their spells.  While they are skilled with cold spells, their greatest strength is in offense.",
-    "prereqs": [ "EARTHSHAPER", "KELVINIST" ],
-    "spells_learned": [ [ "ice_clave", 5 ], [ "frozen_winds", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE"
+    "description": "冰川法师的魔法威力得到了上千吨冰雪的支持，他们所施放的法术充满了这种野蛮的力量。虽然他们擅长寒冷法术，但他们真正强大之处还是在于进攻。",
+    "prereqs": [
+      "EARTHSHAPER",
+      "KELVINIST"
+    ],
+    "enchantments": [
+      "GLACIER_MAGE"
+    ],
+    "spells_learned": [
+      [
+        "ice_clave",
+        5
+      ],
+      [
+        "frozen_winds",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "GOLEMANCER",
     "type": "mutation",
-    "copy-from": "GOLEMANCER",
-    "name": { "str": "Golemancer" },
+    "name": {
+      "str": "魔像师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Golemancer is the ancient myth of the clay golem, made reality from constant use of Animist summons and Earthshaper self-strengthening spells.  Takes some traits from the golems they create, such as immunity to slowing effects.",
-    "prereqs": [ "ANIMIST", "EARTHSHAPER" ],
-    "spells_learned": [ [ "golem_push", 5 ], [ "summon_golem_clay", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "EARTH_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "SUN_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "enchantments": [
+      "GOLEMANCER_BLOCK"
+    ],
+    "description": "魔像师是神话故事中操纵粘土傀儡的人，他使用泛灵师召唤物和塑地者强化法术。他们也从傀儡造物中习得了一些特质，例如免疫减速效果。",
+    "prereqs": [
+      "ANIMIST",
+      "EARTHSHAPER"
+    ],
+    "spells_learned": [
+      [
+        "golem_push",
+        5
+      ],
+      [
+        "summon_golem_clay",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "STEADY" ]
+    ],
+    "flags": [
+      "ATTUNEMENT",
+      "STEADY"
+    ]
   },
   {
     "id": "GRAVITY_MAGE",
     "type": "mutation",
-    "copy-from": "GRAVITY_MAGE",
-    "name": { "str": "Gravity Mage" },
+    "name": {
+      "str": "重力法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The fundamental Laws of the universe are thought of as the end-all-be-all in magical circles, and the Gravity Mage is a result of mages mucking around with those laws.  Unfortunately, this attunement does not give supreme control over gravity as a fundamental force, though the affinity is prominent and comes with some non-negligible benefits.",
-    "prereqs": [ "MAGUS", "EARTHSHAPER" ],
-    "spells_learned": [ [ "gravitymage_graviton", 5 ], [ "gravity_mage_leap", 5 ], [ "gravity_mage_melee", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "EARTH_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "OVERCLOCKER",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "SUN_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "宇宙的基本定律被认为是魔法圈的终极法则，而重力法师则是魔法师中爱折腾这些定律的结果。不幸的是，这种魔法调谐并没能完全控制及利用重力这一基本力量，不过魔力亲和度获得了显著提升，并带来了一些不可忽视的增益。",
+    "prereqs": [
+      "MAGUS",
+      "EARTHSHAPER"
+    ],
+    "spells_learned": [
+      [
+        "gravitymage_graviton",
+        5
+      ],
+      [
+        "gravity_mage_leap",
+        5
+      ],
+      [
+        "gravity_mage_melee",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "CLIMB_NO_LADDER" ]
+    ],
+    "enchantments": [
+      "GRAVITY_MAGE"
+    ],
+    "weight_capacity_modifier": 2,
+    "flags": [
+      "ATTUNEMENT",
+      "CLIMB_NO_LADDER"
+    ]
   },
   {
     "id": "OVERCLOCKER",
     "type": "mutation",
-    "copy-from": "OVERCLOCKER",
-    "name": { "str": "Overclocker" },
+    "name": {
+      "str": "超频法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Technomancer specializes in augmenting humans without actually modifying them; and the Overclocker takes the heat aptitude of a Kelvinist and puts that to work.  You are able to think significantly faster, and are able to align your ley lines for spellcasting faster as a result.",
-    "prereqs": [ "KELVINIST", "TECHNOMANCER" ],
-    "spells_learned": [ [ "overaccelerate", 5 ], [ "overclocker_drive", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE"
-      ]
+    "description": "科技法师擅长于在不完全抛弃肉体的情况下增强自身；而超频法师利用了炽霜法师对高热的适应，并将其付诸实践。这让你能够更快地思考，并且能够更迅速地调节你的灵脉提升施法速度。",
+    "prereqs": [
+      "KELVINIST",
+      "TECHNOMANCER"
+    ],
+    "passive_mods": {
+      "int_mod": 5
     },
-    "flags": [ "ATTUNEMENT" ]
+    "casting_time_multiplier": 0.75,
+    "spells_learned": [
+      [
+        "overaccelerate",
+        5
+      ],
+      [
+        "overclocker_drive",
+        5
+      ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "ICE_ELEMENTAL",
     "type": "mutation",
-    "copy-from": "ICE_ELEMENTAL",
-    "name": { "str": "Ice Elemental" },
+    "name": {
+      "str": "冰系法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "Through your power in Biomancy, you have changed your body towards your Kelvinist affinity for ice.  Extreme cold has less effect on you, and your superchilled skin causes frostbite when touching others.  You're also starting to research more magic that focuses on your body's inherent ice affinity.",
-    "spells_learned": [ [ "summon_subzero_talons", 5 ], [ "cold_heart", 5 ], [ "iceelemental_frostcrystal", 5 ] ],
-    "prereqs": [ "BIOMANCER", "KELVINIST" ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "OVERCLOCKER",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "通过你所掌握的生化术士的力量，你已经改变了你的身体，提升了自身炽霜法师对冰的魔法亲和度。极端寒冷对你的影响更小，而当你接触他人时，你的超冷皮肤会瞬间造成冻伤。你也开始研究更多专注于你身体内在与冰的魔法亲和度的魔法。",
+    "enchantments": [
+      "ICE_ELEMENTAL"
+    ],
+    "spells_learned": [
+      [
+        "summon_subzero_talons",
+        5
+      ],
+      [
+        "cold_heart",
+        5
+      ],
+      [
+        "iceelemental_frostcrystal",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "prereqs": [
+      "BIOMANCER",
+      "KELVINIST"
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "ILLUSIONIST",
     "type": "mutation",
-    "copy-from": "ILLUSIONIST",
-    "name": { "str": "Illusionist" },
+    "name": {
+      "str": "幻术师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "Through the fine manipulation of light, an Illusionist might craft deceptively convincing and dangerous illusions.  An Illusionist excels at avoiding direct confrontation, instead relying on decoys and traps to slip by undetected.",
-    "spells_learned": [ [ "spear_of_light", 5 ], [ "illusionist_hologram", 5 ], [ "illusionist_transposition", 5 ] ],
-    "prereqs": [ "MAGUS", "TECHNOMANCER" ],
-    "ugliness": -7,
-    "social_modifiers": { "persuade": 10, "lie": 10, "intimidate": 10 },
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "EARTH_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "SUN_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "通过对光的精细操控，幻术师可能会制造出具有欺骗性的、令人信服的、而且十分危险的幻象。幻术师擅长于避免直接对抗，而是依靠投影和陷阱在未被察觉的情况下溜走。",
+    "spells_learned": [
+      [
+        "spear_of_light",
+        5
+      ],
+      [
+        "illusionist_hologram",
+        5
+      ],
+      [
+        "illusionist_transposition",
+        5
       ]
+    ],
+    "prereqs": [
+      "MAGUS",
+      "TECHNOMANCER"
+    ],
+    "ugliness": -7,
+    "social_modifiers": {
+      "persuade": 10,
+      "lie": 10,
+      "intimidate": 10
     },
-    "flags": [ "ATTUNEMENT", "HARDTOHIT" ]
+    "flags": [
+      "ATTUNEMENT",
+      "HARDTOHIT"
+    ]
   },
   {
     "id": "MAGNETISM_MAGE",
     "type": "mutation",
-    "copy-from": "MAGNETISM_MAGE",
-    "name": { "str": "Magnetism Mage" },
+    "name": {
+      "str": "磁力法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
     "description": "",
-    "prereqs": [ "STORMSHAPER", "EARTHSHAPER" ],
-    "spells_learned": [ [ "railgun", 5 ], [ "magnetismmage_electrolaser", 5 ], [ "robot_disabler_explosion", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE"
+    "enchantments": [
+      "MAGNETISM_MAGE"
+    ],
+    "prereqs": [
+      "STORMSHAPER",
+      "EARTHSHAPER"
+    ],
+    "spells_learned": [
+      [
+        "railgun",
+        5
+      ],
+      [
+        "magnetismmage_electrolaser",
+        5
+      ],
+      [
+        "robot_disabler_explosion",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "ELECTRIC_IMMUNE" ]
+    ],
+    "flags": [
+      "ATTUNEMENT",
+      "ELECTRIC_IMMUNE"
+    ]
   },
   {
     "id": "PERMAFROST_MAGE",
     "type": "mutation",
-    "copy-from": "PERMAFROST_MAGE",
-    "name": { "str": "Permafrost Mage" },
+    "name": {
+      "str": "永霜法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
     "description": "",
-    "prereqs": [ "KELVINIST", "MAGUS" ],
-    "spells_learned": [ [ "cold_energy", 5 ], [ "permafrost_mage_ice_age", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CLEANSING_FLAME",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "prereqs": [
+      "KELVINIST",
+      "MAGUS"
+    ],
+    "spells_learned": [
+      [
+        "cold_energy",
+        5
+      ],
+      [
+        "permafrost_mage_ice_age",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "COLD_ENERGY_IMMUNE" ]
+    ],
+    "flags": [
+      "ATTUNEMENT",
+      "COLD_ENERGY_IMMUNE"
+    ]
   },
   {
     "id": "RADIATION_MAGE",
     "type": "mutation",
-    "copy-from": "RADIATION_MAGE",
-    "name": { "str": "Radiation Mage" },
+    "name": {
+      "str": "辐射法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Radiation mage was discovered as an attunement in the 20th century, closely guarded as a military secret in close relation to the Manhattan Project.  It was declassified in 1989 as a part of the attunement awareness movement, but it is still poorly understood even by the very few researchers that wrote books on attunements.",
-    "prereqs": [ "STORMSHAPER", "ANIMIST" ],
-    "spells_learned": [ [ "shortwave", 5 ], [ "gamma_burst", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CLEANSING_FLAME",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "辐射法师在 20 世纪作为一种魔法调谐被发现，由于其发现过程与曼哈顿计划密切相关，因此一直被作为军事机密严密保管。但在 1989 年，它作为魔法调谐全民科普运动的一部分而被解密，但是至今仍未有研究者彻底理解其原理，即使对于极少数写过魔法调谐专著的研究者也是如此。",
+    "prereqs": [
+      "STORMSHAPER",
+      "ANIMIST"
+    ],
+    "spells_learned": [
+      [
+        "shortwave",
+        5
+      ],
+      [
+        "gamma_burst",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "SHAMAN",
     "type": "mutation",
-    "copy-from": "SHAMAN",
-    "name": { "str": "Shaman" },
+    "name": {
+      "str": "萨满巫师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "Deeply attuned to the spiritual fabric that shapes and nurtures the natural world, shamans call upon the primeval spirits of nature for aid and advice.  Be careful however, for ancient spirits are fickle and unknowable things.",
-    "prereqs": [ "ANIMIST", "DRUID" ],
-    "spells_learned": [ [ "butterfly_swarm", 5 ], [ "summon_shambling_mound", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "体内魔法深深地调谐适应了塑造和培育了这个自然世界的精神体系。萨满巫师向大自然的原始精魂寻求帮助和建议。不过要小心，因为古灵是变幻莫测的不可知之物。",
+    "prereqs": [
+      "ANIMIST",
+      "DRUID"
+    ],
+    "spells_learned": [
+      [
+        "butterfly_swarm",
+        5
+      ],
+      [
+        "summon_shambling_mound",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "enchantments": [
+      "SHAMAN_MANA_REGEN"
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "SHAPESHIFTER",
     "type": "mutation",
-    "copy-from": "SHAPESHIFTER",
-    "name": { "str": "Shapeshifter" },
+    "name": {
+      "str": "变形者"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The shapeshifter is the Biomancer refined - able to use a flicker of mana to change shape at the drop of a hat to make yourself more inviting or shape others into desired shapes.",
-    "spells_learned": [ [ "shapeshifter_alkahest", 5 ], [ "biomechanic", 5 ] ],
-    "prereqs": [ "BIOMANCER", "MAGUS" ],
-    "//": "Purposefully omits torso, head, etc.",
-    "encumbrance_multiplier_always": { "arm_l": 0.4, "arm_r": 0.4, "hand_l": 0.4, "hand_r": 0.4, "leg_l": 0.4, "leg_r": 0.4, "mouth": 0.4 },
-    "ugliness": -7,
-    "social_modifiers": { "persuade": 10, "lie": 10, "intimidate": 10 },
-    "delete": {
-      "cancels": [
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "变形者是一位精益求精的生化术士，摘帽瞬间就能仅用少许的魔力改变自身形状，将你自己变的更迷人或其他想要的体型。",
+    "prereqs": [
+      "BIOMANCER",
+      "MAGUS"
+    ],
+    "spells_learned": [
+      [
+        "shapeshifter_alkahest",
+        5
+      ],
+      [
+        "biomechanic",
+        5
       ]
+    ],
+    "//": "Purposefully omits torso, head, etc.",
+    "encumbrance_multiplier_always": {
+      "arm_l": 0.4,
+      "arm_r": 0.4,
+      "hand_l": 0.4,
+      "hand_r": 0.4,
+      "leg_l": 0.4,
+      "leg_r": 0.4,
+      "mouth": 0.4
     },
-    "flags": [ "ATTUNEMENT", "ALKAHEST_IMMUNE" ]
+    "ugliness": -7,
+    "social_modifiers": {
+      "persuade": 10,
+      "lie": 10,
+      "intimidate": 10
+    },
+    "flags": [
+      "ATTUNEMENT",
+      "ALKAHEST_IMMUNE"
+    ]
   },
   {
     "id": "SOULFIRE",
     "type": "mutation",
-    "copy-from": "SOULFIRE",
-    "name": { "str": "Soulfire" },
+    "name": {
+      "str": "魂火法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Soulfire is a phenomena of the caster's spirit binding to a fragment of a spirit of flame.  This makes it possible for the Soulfire to use its namesake as an element - much like fire, it does burn, but it burns away at the soul instead of the flesh.",
-    "spells_learned": [ [ "burn_at_both_ends", 5 ], [ "soul_afterburner", 5 ] ],
-    "prereqs": [ "KELVINIST", "ANIMIST" ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CLEANSING_FLAME",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "WITHER_MAGE"
+    "description": "灵魂之火是施法者将自身部分灵魂与火焰碎片结合而成的现象。这使得魂火法师可以像使用火焰一样使用这种命名了自身魔法调谐的元素，它确实能够燃烧，但它燃烧的是你的灵魂而非肉体。",
+    "spells_learned": [
+      [
+        "burn_at_both_ends",
+        5
+      ],
+      [
+        "soul_afterburner",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "enchantments": [
+      "SOULFIRE"
+    ],
+    "prereqs": [
+      "KELVINIST",
+      "ANIMIST"
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "STORM_ELEMENTAL",
     "type": "mutation",
-    "copy-from": "STORM_ELEMENTAL",
-    "name": { "str": "Storm Elemental" },
+    "name": {
+      "str": "暴风术师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "You've used your knowledge of Biomancy to change your body into a form befitting a Stormshaper.  You can better withstand the power of electricity, and sparks leap from your skin when something hits you.  You're beginning to study spells that utilize your body's affinity for the electric.",
-    "prereqs": [ "STORMSHAPER", "BIOMANCER" ],
-    "spells_learned": [ [ "storm_chain_master", 5 ], [ "storm_elemental_electric_melee", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "通过你所掌握的生化术士的力量，你已经改变了你的身体，提升了自身风暴塑造者对电的魔法亲和度。你能更好地承受电的力量，被物体击中后皮肤还会迸发出电火花。你也开始研究更多专注于你身体内在与电的魔法亲和度的魔法。",
+    "prereqs": [
+      "STORMSHAPER",
+      "BIOMANCER"
+    ],
+    "enchantments": [
+      "STORM_ELEMENTAL"
+    ],
+    "spells_learned": [
+      [
+        "storm_chain_master",
+        5
+      ],
+      [
+        "storm_elemental_electric_melee",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "ELECTRIC_IMMUNE" ]
+    ],
+    "flags": [
+      "ATTUNEMENT",
+      "ELECTRIC_IMMUNE"
+    ]
   },
   {
     "id": "STORMCALLER",
     "type": "mutation",
-    "copy-from": "STORMCALLER",
-    "name": { "str": "Stormcaller" },
+    "name": {
+      "str": "唤风者"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "A stormcaller is a stormshaper with an additional affinity toward the weather in a localized area.  Historians agree that the druid requirement has something to do with the Druid's affinity for nature, just like their ability to summon animals.  You will know a stormcaller is in the room if your ears pop and your hair stands straight on end.  Stormcallers are not known for their subtlety.",
-    "prereqs": [ "STORMSHAPER", "DRUID" ],
-    "spells_learned": [ [ "electric_demon", 5 ], [ "electric_turret", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "唤风者是对本地区的天气有额外魔法亲和度的风暴塑造者。历史学家一致认为德鲁伊的前置需求与德鲁伊对自然的魔法亲和相关，就像他们召唤动物的能力一样。当你开始耳鸣，毛发竖立之时，你就知道房间里来了位唤风者。唤风者从来不当隐姓埋名之辈。",
+    "prereqs": [
+      "STORMSHAPER",
+      "DRUID"
+    ],
+    "spells_learned": [
+      [
+        "electric_demon",
+        5
+      ],
+      [
+        "electric_turret",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "ELECTRIC_IMMUNE" ]
+    ],
+    "flags": [
+      "ATTUNEMENT",
+      "ELECTRIC_IMMUNE"
+    ]
   },
   {
     "id": "SUN_MAGE",
     "type": "mutation",
-    "copy-from": "SUN_MAGE",
-    "name": { "str": "Sun Mage" },
+    "name": {
+      "str": "日炎法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The Sun Mage has been studying the Laws governing heat, and has attained a special relationship with that life-giving yellow orb in the sky.  Glimpses of the Sun meet its foes, and its own burning light pierces the darkness.",
-    "prereqs": [ "MAGUS", "KELVINIST" ],
-    "spells_learned": [ [ "solar_beam", 5 ], [ "sunmage_pocket_sun", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CLEANSING_FLAME",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
-      ]
+    "description": "日炎法师通过长期研究热量传导规律，与天空中那个造就生命的黄色火球产生了特殊的联系。太阳的光辉将击穿黑暗，使任何瞥见这光芒的敌人畏惧。",
+    "prereqs": [
+      "MAGUS",
+      "KELVINIST"
+    ],
+    "passive_mods": {
+      "per_mod": 5
     },
-    "flags": [ "ATTUNEMENT" ]
+    "enchantments": [
+      "SUN_MAGE"
+    ],
+    "spells_learned": [
+      [
+        "solar_beam",
+        5
+      ],
+      [
+        "sunmage_pocket_sun",
+        5
+      ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "TUNDRA_MAGE",
     "type": "mutation",
-    "copy-from": "TUNDRA_MAGE",
-    "name": { "str": "Tundra Mage" },
+    "name": {
+      "str": "苔原法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "The barren cold of the world's far reaches flows through the Tundra Mage.  They find power in the all-pervasive frost of the North and in the creatures that defy its deathly chill.",
-    "prereqs": [ "DRUID", "KELVINIST" ],
-    "spells_learned": [ [ "cold_snap", 5 ], [ "summon_winter_wolf", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "VOID_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "源自世界上遥远荒原的寒冷流淌在苔原法师的体内。他们在北方无所不在的霜冻以及那些不畏严寒的生物身上找到了力量。",
+    "prereqs": [
+      "DRUID",
+      "KELVINIST"
+    ],
+    "enchantments": [
+      "TUNDRA_MAGE"
+    ],
+    "spells_learned": [
+      [
+        "cold_snap",
+        5
+      ],
+      [
+        "summon_winter_wolf",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "VOID_MAGE",
     "type": "mutation",
-    "copy-from": "VOID_MAGE",
-    "name": { "str": "Void Mage" },
+    "name": {
+      "str": "虚空法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "Where there is nothing, there is still power, and the Void Mages embody that power.  The ability to wield emptiness itself is at their fingertips, and no living creature can withstand the call of the void.",
-    "prereqs": [ "ANIMIST", "KELVINIST" ],
-    "spells_learned": [ [ "voidmage_final_grasp", 5 ], [ "voidmage_horizon_vortex", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BLOOD_MAGE",
-        "BOREAL_MAGE",
-        "CLEANSING_FLAME",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VULCANIST",
-        "SOULFIRE",
-        "WITHER_MAGE"
+    "description": "在一无所有之中，仍有魔力，而虚空法师的体内饱含着这一力量。掌控虚空本身的能力就在他们指尖，没有任何活物能够抵挡虚空的召唤。",
+    "prereqs": [
+      "ANIMIST",
+      "KELVINIST"
+    ],
+    "spells_learned": [
+      [
+        "voidmage_final_grasp",
+        5
+      ],
+      [
+        "voidmage_horizon_vortex",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "enchantments": [
+      "VOID_MAGE"
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   },
   {
     "id": "VULCANIST",
     "type": "mutation",
-    "copy-from": "VULCANIST",
-    "name": { "str": "Vulcanist" },
+    "name": {
+      "str": "火山法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "One of the most destructive forces on earth, a Volcano Mage takes some aspect of its namesake.  Their spells tend to be a little slow, but their resilience in proximity to a volcano is legendary.",
-    "spells_learned": [ [ "lava_bomb_main", 5 ], [ "vulcanist_pyroclastic_flow", 5 ] ],
-    "prereqs": [ "EARTHSHAPER", "KELVINIST" ],
-    "delete": {
-      "cancels": [
-        "ARTIFICER",
-        "ALCHEMIST",
-        "BIOTEK",
-        "BOREAL_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GLACIER_MAGE",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "OVERCLOCKER",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "MAGNETISM_MAGE",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "SOULFIRE"
+    "description": "火山是地球上最具有破坏性的力量之一，而火山法师也正如其名字一般采用了火山的力量。他们的法术施展起来较为缓慢，但是他们在火山附近时的坚韧却已经成为传说。",
+    "spells_learned": [
+      [
+        "lava_bomb_main",
+        5
+      ],
+      [
+        "vulcanist_pyroclastic_flow",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT", "HEAT_IMMUNE" ]
+    ],
+    "prereqs": [
+      "EARTHSHAPER",
+      "KELVINIST"
+    ],
+    "enchantments": [
+      "VULCANIST"
+    ],
+    "flags": [
+      "ATTUNEMENT",
+      "HEAT_IMMUNE"
+    ]
   },
   {
     "id": "WITHER_MAGE",
     "type": "mutation",
-    "copy-from": "WITHER_MAGE",
-    "name": { "str": "Wither Mage" },
+    "name": {
+      "str": "枯萎法师"
+    },
     "points": 8,
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "description": "While biomancers focus on both life and death; Wither Mages set their sights on the transitional period between these two stages.  They wield entropy and decay hand and hand, using it to enhance their combat prowess to surgical precision.  This confluence of abilities are what lead to assassin mages gaining this attunement.",
-    "prereqs": [ "DRUID", "MAGUS" ],
-    "spells_learned": [ [ "assassin_strike", 5 ], [ "life_drain", 5 ] ],
-    "delete": {
-      "cancels": [
-        "ALCHEMIST",
-        "BIOTEK",
-        "BLOOD_MAGE",
-        "CRUSADER",
-        "CLEANSING_FLAME",
-        "EARTH_ELEMENTAL",
-        "FIRE_ELEMENTAL",
-        "FORCE_MAGE",
-        "GAIAS_CHOSEN",
-        "GOLEMANCER",
-        "GRAVITY_MAGE",
-        "ICE_ELEMENTAL",
-        "ILLUSIONIST",
-        "PERMAFROST_MAGE",
-        "RADIATION_MAGE",
-        "SHAMAN",
-        "SHAPESHIFTER",
-        "STORM_ELEMENTAL",
-        "STORMCALLER",
-        "SUN_MAGE",
-        "TUNDRA_MAGE",
-        "VOID_MAGE",
-        "SOULFIRE"
+    "description": "生化术士将注意力放在生命和死亡之上，而枯萎法师却专注于生与死之间的转换。他们通过熵和衰老的力量增强他们的战斗精度直至外科手术一般。正是这种能力的汇集使得刺客法师获得这种魔法调谐。",
+    "prereqs": [
+      "DRUID",
+      "MAGUS"
+    ],
+    "enchantments": [
+      "WITHER_MAGE_AP",
+      "WITHER_MAGE_WITHERING"
+    ],
+    "spells_learned": [
+      [
+        "assassin_strike",
+        5
+      ],
+      [
+        "life_drain",
+        5
       ]
-    },
-    "flags": [ "ATTUNEMENT" ]
+    ],
+    "flags": [
+      "ATTUNEMENT"
+    ]
   }
 ]

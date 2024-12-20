@@ -23,50 +23,120 @@
     "type": "talk_topic",
     "responses": [
       {
-        "text": "Thank you.  I think I've gathered enough information, I should go bring this back to the person who sent me.",
+        "text": "非常感谢。我想我已经收集了足够的信息，我应该把这个拿回来给送我的人。",
         "effect": [
-          { "u_add_var": "johnathan_prelude_data_5", "value": "yes" },
-          { "npc_add_var": "johnathan_prelude_mid", "value": "yes" }
+          {
+            "u_add_var": "johnathan_prelude_data_5",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "johnathan_prelude_mid",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
-        "condition": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_4" } ] },
+        "condition": {
+          "u_has_var": "johnathan_prelude_data_4",
+          "type": "mission",
+          "context": "rural_church",
+          "value": "yes"
+        },
         "switch": true,
         "topic": "TALK_DONE"
       },
       {
-        "text": "That should help.  I'll see if anyone else knows more, maybe one more report should help.",
+        "text": "这应该有帮助。我看看有没有其他人知道的更多，也许多一份报告应该会有帮助。",
         "effect": [
-          { "u_add_var": "johnathan_prelude_data_4", "value": "yes" },
-          { "npc_add_var": "johnathan_prelude_mid", "value": "yes" }
+          {
+            "u_add_var": "johnathan_prelude_data_4",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "johnathan_prelude_mid",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
-        "condition": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_3" } ] },
+        "condition": {
+          "u_has_var": "johnathan_prelude_data_3",
+          "type": "mission",
+          "context": "rural_church",
+          "value": "yes"
+        },
         "switch": true,
         "topic": "TALK_DONE"
       },
       {
-        "text": "Thanks!  I'll keep asking around, just in case anyone else knows of any other attacks.",
+        "text": "谢谢！我会四处打听，以防有人知道其他袭击事件。",
         "effect": [
-          { "u_add_var": "johnathan_prelude_data_3", "value": "yes" },
-          { "npc_add_var": "johnathan_prelude_mid", "value": "yes" }
+          {
+            "u_add_var": "johnathan_prelude_data_3",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "johnathan_prelude_mid",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
-        "condition": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_2" } ] },
+        "condition": {
+          "u_has_var": "johnathan_prelude_data_2",
+          "type": "mission",
+          "context": "rural_church",
+          "value": "yes"
+        },
         "switch": true,
         "topic": "TALK_DONE"
       },
       {
-        "text": "That helps, I'll see if anyone else knows of other attacks that might be connected.",
+        "text": "这有帮助，我会看看是否有人知道其他可能与之相关的攻击。",
         "effect": [
-          { "u_add_var": "johnathan_prelude_data_2", "value": "yes" },
-          { "npc_add_var": "johnathan_prelude_mid", "value": "yes" }
+          {
+            "u_add_var": "johnathan_prelude_data_2",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "johnathan_prelude_mid",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
-        "condition": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_1" } ] },
+        "condition": {
+          "u_has_var": "johnathan_prelude_data_1",
+          "type": "mission",
+          "context": "rural_church",
+          "value": "yes"
+        },
         "switch": true,
         "topic": "TALK_DONE"
       },
       {
-        "text": "That should help, I'll keep asking around to see if anyone has more information.",
+        "text": "那会有帮助的，我会继续询问周围是否有人有更多的信息。",
         "effect": [
-          { "u_add_var": "johnathan_prelude_data_1", "value": "yes" },
-          { "npc_add_var": "johnathan_prelude_mid", "value": "yes" }
+          {
+            "u_add_var": "johnathan_prelude_data_1",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "johnathan_prelude_mid",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
         "switch": true,
         "default": true,

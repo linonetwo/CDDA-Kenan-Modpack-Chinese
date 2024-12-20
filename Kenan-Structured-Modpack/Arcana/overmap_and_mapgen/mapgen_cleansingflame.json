@@ -2,7 +2,9 @@
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "curious_structure_roof" ],
+    "om_terrain": [
+      "curious_structure_roof"
+    ],
     "weight": 300,
     "object": {
       "fill_ter": "t_open_air",
@@ -32,13 +34,18 @@
         "  =__________________=  ",
         "  =__________________=  "
       ],
-      "terrain": { "=": "t_rock_wall_half", "_": "t_rock_floor_no_roof" }
+      "terrain": {
+        "=": "t_rock_wall_half",
+        "_": "t_rock_floor_no_roof"
+      }
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "curious_structure_roof_2" ],
+    "om_terrain": [
+      "curious_structure_roof_2"
+    ],
     "weight": 300,
     "object": {
       "fill_ter": "t_open_air",
@@ -68,13 +75,18 @@
         "        =______=        ",
         "        ========        "
       ],
-      "terrain": { "=": "t_rock_wall_half", "_": "t_rock_floor_no_roof" }
+      "terrain": {
+        "=": "t_rock_wall_half",
+        "_": "t_rock_floor_no_roof"
+      }
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "curious_structure" ],
+    "om_terrain": [
+      "curious_structure"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -103,7 +115,9 @@
         ",,#...+...|__|...+...#,,",
         ",,#P..|...|__|...|..s#,,"
       ],
-      "palettes": [ "arcana_palette" ],
+      "palettes": [
+        "arcana_palette"
+      ],
       "terrain": {
         "#": "t_rock",
         "{": "t_floor",
@@ -113,20 +127,70 @@
         "l": "t_rock_floor",
         "p": "t_floor"
       },
-      "furniture": { "P": "f_bench", "l": "f_locker" },
-      "items": {
-        "{": [ { "item": "gear_survival", "chance": 50, "repeat": 3 } ],
-        "l": [ { "item": "cleaning", "chance": 50, "repeat": 2 } ],
-        "n": [ { "item": "rural_church_medical_items", "chance": 50, "repeat": 2 } ]
+      "furniture": {
+        "P": "f_bench",
+        "l": "f_locker"
       },
-      "place_loot": [ { "item": "holy_symbol", "x": 11, "y": 6 }, { "item": "note_flame", "x": 12, "y": 6 } ],
-      "place_monster": [ { "group": "GROUP_CHURCH_ZOMBIE", "x": [ 3, 20 ], "y": [ 5, 18 ], "repeat": [ 4, 6 ] } ]
+      "items": {
+        "{": [
+          {
+            "item": "gear_survival",
+            "chance": 50,
+            "repeat": 3
+          }
+        ],
+        "l": [
+          {
+            "item": "cleaning",
+            "chance": 50,
+            "repeat": 2
+          }
+        ],
+        "n": [
+          {
+            "item": "rural_church_medical_items",
+            "chance": 50,
+            "repeat": 2
+          }
+        ]
+      },
+      "place_loot": [
+        {
+          "item": "holy_symbol",
+          "x": 11,
+          "y": 6
+        },
+        {
+          "item": "note_flame",
+          "x": 12,
+          "y": 6
+        }
+      ],
+      "place_monster": [
+        {
+          "group": "GROUP_CHURCH_ZOMBIE",
+          "x": [
+            3,
+            20
+          ],
+          "y": [
+            5,
+            18
+          ],
+          "repeat": [
+            4,
+            6
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "curious_structure_2" ],
+    "om_terrain": [
+      "curious_structure_2"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -155,27 +219,106 @@
         ",,,,,,,,###++###,,,,,,,,",
         ",,,,,,,,,,,,,,,,,,,,,,,,"
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "#": "t_rock", "E": "t_floor", "H": "t_floor", "P": "t_floor", "R": "t_floor" },
-      "furniture": { "E": "f_table", "F": "f_fireplace", "H": "f_chair", "P": "f_bench", "R": "f_rack_coat" },
+      "palettes": [
+        "arcana_palette"
+      ],
+      "terrain": {
+        "#": "t_rock",
+        "E": "t_floor",
+        "H": "t_floor",
+        "P": "t_floor",
+        "R": "t_floor"
+      },
+      "furniture": {
+        "E": "f_table",
+        "F": "f_fireplace",
+        "H": "f_chair",
+        "P": "f_bench",
+        "R": "f_rack_coat"
+      },
       "items": {
-        "]": [ { "item": "homebooks", "chance": 50, "repeat": 2 }, { "item": "cleansing_flame_books", "chance": 25 } ],
-        "d": [ { "item": "office_mess", "chance": 50, "repeat": 2 } ]
+        "]": [
+          {
+            "item": "homebooks",
+            "chance": 50,
+            "repeat": 2
+          },
+          {
+            "item": "cleansing_flame_books",
+            "chance": 25
+          }
+        ],
+        "d": [
+          {
+            "item": "office_mess",
+            "chance": 50,
+            "repeat": 2
+          }
+        ]
       },
       "place_loot": [
-        { "item": "CF_golden_scale", "x": 19, "y": 16, "chance": 50, "repeat": 3 },
-        { "item": "note_flame_tenet", "x": [ 19, 20 ], "y": 16 },
-        { "group": "produce", "x": 2, "y": 15, "chance": 80, "repeat": 4 },
-        { "group": "oven", "x": 2, "y": 17, "chance": 40, "repeat": 2 },
-        { "group": "cannedfood", "x": 2, "y": 18, "chance": 80, "repeat": 5 }
+        {
+          "item": "CF_golden_scale",
+          "x": 19,
+          "y": 16,
+          "chance": 50,
+          "repeat": 3
+        },
+        {
+          "item": "note_flame_tenet",
+          "x": [
+            19,
+            20
+          ],
+          "y": 16
+        },
+        {
+          "group": "produce",
+          "x": 2,
+          "y": 15,
+          "chance": 80,
+          "repeat": 4
+        },
+        {
+          "group": "oven",
+          "x": 2,
+          "y": 17,
+          "chance": 40,
+          "repeat": 2
+        },
+        {
+          "group": "cannedfood",
+          "x": 2,
+          "y": 18,
+          "chance": 80,
+          "repeat": 5
+        }
       ],
-      "place_monster": [ { "group": "GROUP_CHURCH_ZOMBIE", "x": [ 3, 20 ], "y": [ 5, 18 ], "repeat": [ 4, 6 ] } ]
+      "place_monster": [
+        {
+          "group": "GROUP_CHURCH_ZOMBIE",
+          "x": [
+            3,
+            20
+          ],
+          "y": [
+            5,
+            18
+          ],
+          "repeat": [
+            4,
+            6
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "curious_structure_b" ],
+    "om_terrain": [
+      "curious_structure_b"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -204,33 +347,199 @@
         "####{....{#...#{....{###",
         "####{....{#...#{....{###"
       ],
-      "palettes": [ "arcana_palette" ],
-      "items": { "]": [ { "item": "cleansing_flame_books", "chance": 50, "repeat": 2 } ] },
-      "place_loot": [
-        { "item": "arcanemap", "x": [ 16, 18 ], "y": 7, "chance": 75 },
-        { "item": "book_magicfordummies", "x": [ 16, 18 ], "y": 7, "chance": 75 },
-        { "group": "cleansing_flame_spells", "x": 17, "y": [ 9, 13 ], "chance": 10, "repeat": 2 },
-        { "group": "office_mess", "x": 9, "y": 15, "chance": 50, "repeat": 5 },
-        { "group": "office_mess", "x": 15, "y": 15, "chance": 50, "repeat": 5 },
-        { "group": "cleansing_flame_crafting", "x": 9, "y": [ 17, 19 ], "chance": 75, "repeat": 5 },
-        { "item": "CF_golden_scale", "x": 9, "y": [ 17, 19 ], "chance": 30, "repeat": 3 },
-        { "group": "cleansing_flame_crafting", "x": 15, "y": [ 17, 19 ], "chance": 75, "repeat": 5 },
-        { "item": "CF_golden_scale", "x": 15, "y": [ 17, 19 ], "chance": 30, "repeat": 3 },
-        { "group": "cleansing_flame_gear", "x": 9, "y": [ 21, 23 ], "chance": 40, "repeat": 3 },
-        { "group": "cleansing_flame_gear", "x": 15, "y": [ 21, 23 ], "chance": 40, "repeat": 3 },
-        { "group": "cleansing_flame_gear_consumables", "x": 4, "y": [ 17, 19 ], "chance": 40, "repeat": 3 },
-        { "group": "cleansing_flame_gear_consumables", "x": 20, "y": [ 17, 19 ], "chance": 40, "repeat": 3 },
-        { "group": "cleansing_flame_gear_magic", "x": 4, "y": [ 21, 23 ], "chance": 25, "repeat": 3 },
-        { "group": "cleansing_flame_gear_magic", "x": 20, "y": [ 21, 23 ], "chance": 25, "repeat": 3 },
-        { "group": "cleansing_flame_casualties", "x": [ 11, 13 ], "y": [ 6, 23 ], "repeat": 4 }
+      "palettes": [
+        "arcana_palette"
       ],
-      "place_monster": [ { "group": "GROUP_CF_BASEMENT", "x": [ 5, 19 ], "y": [ 17, 23 ], "repeat": [ 3, 5 ] } ]
+      "items": {
+        "]": [
+          {
+            "item": "cleansing_flame_books",
+            "chance": 50,
+            "repeat": 2
+          }
+        ]
+      },
+      "place_loot": [
+        {
+          "item": "arcanemap",
+          "x": [
+            16,
+            18
+          ],
+          "y": 7,
+          "chance": 75
+        },
+        {
+          "item": "book_magicfordummies",
+          "x": [
+            16,
+            18
+          ],
+          "y": 7,
+          "chance": 75
+        },
+        {
+          "group": "cleansing_flame_spells",
+          "x": 17,
+          "y": [
+            9,
+            13
+          ],
+          "chance": 10,
+          "repeat": 2
+        },
+        {
+          "group": "office_mess",
+          "x": 9,
+          "y": 15,
+          "chance": 50,
+          "repeat": 5
+        },
+        {
+          "group": "office_mess",
+          "x": 15,
+          "y": 15,
+          "chance": 50,
+          "repeat": 5
+        },
+        {
+          "group": "cleansing_flame_crafting",
+          "x": 9,
+          "y": [
+            17,
+            19
+          ],
+          "chance": 75,
+          "repeat": 5
+        },
+        {
+          "item": "CF_golden_scale",
+          "x": 9,
+          "y": [
+            17,
+            19
+          ],
+          "chance": 30,
+          "repeat": 3
+        },
+        {
+          "group": "cleansing_flame_crafting",
+          "x": 15,
+          "y": [
+            17,
+            19
+          ],
+          "chance": 75,
+          "repeat": 5
+        },
+        {
+          "item": "CF_golden_scale",
+          "x": 15,
+          "y": [
+            17,
+            19
+          ],
+          "chance": 30,
+          "repeat": 3
+        },
+        {
+          "group": "cleansing_flame_gear",
+          "x": 9,
+          "y": [
+            21,
+            23
+          ],
+          "chance": 40,
+          "repeat": 3
+        },
+        {
+          "group": "cleansing_flame_gear",
+          "x": 15,
+          "y": [
+            21,
+            23
+          ],
+          "chance": 40,
+          "repeat": 3
+        },
+        {
+          "group": "cleansing_flame_gear_consumables",
+          "x": 4,
+          "y": [
+            17,
+            19
+          ],
+          "chance": 40,
+          "repeat": 3
+        },
+        {
+          "group": "cleansing_flame_gear_consumables",
+          "x": 20,
+          "y": [
+            17,
+            19
+          ],
+          "chance": 40,
+          "repeat": 3
+        },
+        {
+          "group": "cleansing_flame_gear_magic",
+          "x": 4,
+          "y": [
+            21,
+            23
+          ],
+          "chance": 25,
+          "repeat": 3
+        },
+        {
+          "group": "cleansing_flame_gear_magic",
+          "x": 20,
+          "y": [
+            21,
+            23
+          ],
+          "chance": 25,
+          "repeat": 3
+        },
+        {
+          "group": "cleansing_flame_casualties",
+          "x": [
+            11,
+            13
+          ],
+          "y": [
+            6,
+            23
+          ],
+          "repeat": 4
+        }
+      ],
+      "place_monster": [
+        {
+          "group": "GROUP_CF_BASEMENT",
+          "x": [
+            5,
+            19
+          ],
+          "y": [
+            17,
+            23
+          ],
+          "repeat": [
+            3,
+            5
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "curious_structure_b_2" ],
+    "om_terrain": [
+      "curious_structure_b_2"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -259,21 +568,78 @@
         "########################",
         "########################"
       ],
-      "palettes": [ "arcana_palette" ],
-      "furniture": { ">": "f_blade_upright" },
-      "set": [ { "point": "trap", "id": "tr_portal", "x": [ 8, 16 ], "y": [ 8, 9 ] } ],
-      "place_loot": [
-        { "group": "tools_blacksmith", "x": 13, "y": 7, "chance": 50, "repeat": 3 },
-        { "item": "candle_warding_active", "x": 13, "y": 7, "chance": 50 },
-        { "group": "cleansing_flame_casualties", "x": [ 8, 16 ], "y": [ 12, 14 ], "repeat": 4 }
+      "palettes": [
+        "arcana_palette"
       ],
-      "place_monster": [ { "group": "GROUP_CF_BASEMENT", "x": [ 8, 16 ], "y": [ 8, 14 ], "repeat": [ 3, 5 ] } ]
+      "furniture": {
+        ">": "f_blade_upright"
+      },
+      "set": [
+        {
+          "point": "trap",
+          "id": "tr_portal",
+          "x": [
+            8,
+            16
+          ],
+          "y": [
+            8,
+            9
+          ]
+        }
+      ],
+      "place_loot": [
+        {
+          "group": "tools_blacksmith",
+          "x": 13,
+          "y": 7,
+          "chance": 50,
+          "repeat": 3
+        },
+        {
+          "item": "candle_warding_active",
+          "x": 13,
+          "y": 7,
+          "chance": 50
+        },
+        {
+          "group": "cleansing_flame_casualties",
+          "x": [
+            8,
+            16
+          ],
+          "y": [
+            12,
+            14
+          ],
+          "repeat": 4
+        }
+      ],
+      "place_monster": [
+        {
+          "group": "GROUP_CF_BASEMENT",
+          "x": [
+            8,
+            16
+          ],
+          "y": [
+            8,
+            14
+          ],
+          "repeat": [
+            3,
+            5
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "curious_structure_b2" ],
+    "om_terrain": [
+      "curious_structure_b2"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -302,22 +668,79 @@
         "###========...========##",
         "###=========.=========##"
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "#": "t_rock", "=": [ "t_rock", [ "t_wall_resin", 2 ] ], ".": [ "t_rock_floor", [ "t_floor_resin", 2 ] ] },
+      "palettes": [
+        "arcana_palette"
+      ],
+      "terrain": {
+        "#": "t_rock",
+        "=": [
+          "t_rock",
+          [
+            "t_wall_resin",
+            2
+          ]
+        ],
+        ".": [
+          "t_rock_floor",
+          [
+            "t_floor_resin",
+            2
+          ]
+        ]
+      },
       "place_loot": [
-        { "group": "cleansing_flame_casualties_inferno", "x": [ 10, 14 ], "y": [ 8, 12 ], "chance": 75, "repeat": 3 },
-        { "item": "hand_of_armok", "x": 12, "y": 4 }
+        {
+          "group": "cleansing_flame_casualties_inferno",
+          "x": [
+            10,
+            14
+          ],
+          "y": [
+            8,
+            12
+          ],
+          "chance": 75,
+          "repeat": 3
+        },
+        {
+          "item": "hand_of_armok",
+          "x": 12,
+          "y": 4
+        }
       ],
       "place_monster": [
-        { "group": "GROUP_NETHER_LAVA", "x": [ 2, 22 ], "y": [ 5, 17 ], "repeat": [ 5, 10 ] },
-        { "monster": "mon_spirit_of_fire", "x": [ 10, 14 ], "y": 3 }
+        {
+          "group": "GROUP_NETHER_LAVA",
+          "x": [
+            2,
+            22
+          ],
+          "y": [
+            5,
+            17
+          ],
+          "repeat": [
+            5,
+            10
+          ]
+        },
+        {
+          "monster": "mon_spirit_of_fire",
+          "x": [
+            10,
+            14
+          ],
+          "y": 3
+        }
       ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "curious_structure_b2_2" ],
+    "om_terrain": [
+      "curious_structure_b2_2"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -346,23 +769,84 @@
         "########################",
         "########################"
       ],
-      "palettes": [ "arcana_palette" ],
+      "palettes": [
+        "arcana_palette"
+      ],
       "terrain": {
         "#": "t_rock",
-        "=": [ "t_rock", [ "t_wall_resin", 2 ] ],
-        "_": [ "t_rock_floor", [ "t_floor_resin", 2 ] ],
-        "%": [ "t_rock_floor", [ "t_floor_resin", 2 ] ]
+        "=": [
+          "t_rock",
+          [
+            "t_wall_resin",
+            2
+          ]
+        ],
+        "_": [
+          "t_rock_floor",
+          [
+            "t_floor_resin",
+            2
+          ]
+        ],
+        "%": [
+          "t_rock_floor",
+          [
+            "t_floor_resin",
+            2
+          ]
+        ]
       },
-      "furniture": { "%": "f_rubble_rock", "C": "f_coffin_c" },
-      "mapping": { "%": { "item": [ { "item": "rock", "repeat": [ 5, 10 ] } ] } },
+      "furniture": {
+        "%": "f_rubble_rock",
+        "C": "f_coffin_c"
+      },
+      "mapping": {
+        "%": {
+          "item": [
+            {
+              "item": "rock",
+              "repeat": [
+                5,
+                10
+              ]
+            }
+          ]
+        }
+      },
       "items": {
-        "C": [ { "item": "cleansing_flame_casualties_old", "chance": 100 } ],
-        "a": [ { "item": "curious_structure_tomb_offerings", "chance": 90 } ]
+        "C": [
+          {
+            "item": "cleansing_flame_casualties_old",
+            "chance": 100
+          }
+        ],
+        "a": [
+          {
+            "item": "curious_structure_tomb_offerings",
+            "chance": 90
+          }
+        ]
       },
       "place_loot": [
-        { "group": "cleansing_flame_casualties_old", "x": 8, "y": 12 },
-        { "item": "splinter", "x": 8, "y": 12, "chance": 50, "repeat": 20 },
-        { "group": "curious_structure_tomb_offerings", "x": 9, "y": 12, "chance": 50, "repeat": 2 }
+        {
+          "group": "cleansing_flame_casualties_old",
+          "x": 8,
+          "y": 12
+        },
+        {
+          "item": "splinter",
+          "x": 8,
+          "y": 12,
+          "chance": 50,
+          "repeat": 20
+        },
+        {
+          "group": "curious_structure_tomb_offerings",
+          "x": 9,
+          "y": 12,
+          "chance": 50,
+          "repeat": 2
+        }
       ]
     }
   }

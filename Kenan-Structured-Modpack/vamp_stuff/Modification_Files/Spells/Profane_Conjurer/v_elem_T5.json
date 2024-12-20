@@ -2,9 +2,13 @@
   {
     "id": "t5_elem_firebane",
     "type": "SPELL",
-    "name": { "str": "Firebane" },
-    "description": "Conjures a profane fireball to strike the foe. Upon impact, it explodes, dealing <color_red>fire damage</color> and spreads cursed flames on that area.\n\nThis is a <color_red>tier 5</color> spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "火炭"
+    },
+    "description": "召唤一个邪恶的火球来打击敌人。撞击后，它爆炸，造成<color_red>点火焰伤害</color>，并在该区域传播诅咒火焰。\n\n这是一个<color_red>第5层<color>咒语。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "base_energy_cost": 600,
@@ -22,16 +26,24 @@
     "field_id": "fd_fire_curse",
     "min_field_intensity": 1,
     "max_field_intensity": 1,
-    "flags": [ "SOMATIC", "VERBAL", "NO_LEGS" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
     "base_casting_time": 175,
     "damage_type": "heat"
   },
   {
     "id": "t5_elem_icebane",
     "type": "SPELL",
-    "name": { "str": "Icebane" },
-    "description": "Conjures a profane ball of fiery ice to strike the foe. Upon impact, it shatters, dealing <color_white>cold damage</color> and spreads frostburn on that area.\n\nThis is a <color_red>tier 5</color> spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "冰山"
+    },
+    "description": "召唤一个神圣的火冰球打击敌人。撞击后，它粉碎，造成<color_white>点冷伤害</color>点并在该区域传播冻伤。\n\n这是一个<color_red>第5层的咒语。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "base_energy_cost": 600,
@@ -49,7 +61,11 @@
     "field_id": "fd_fire_frost",
     "min_field_intensity": 1,
     "max_field_intensity": 1,
-    "flags": [ "SOMATIC", "VERBAL", "NO_LEGS" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
     "base_casting_time": 175,
     "damage_type": "heat"
   }

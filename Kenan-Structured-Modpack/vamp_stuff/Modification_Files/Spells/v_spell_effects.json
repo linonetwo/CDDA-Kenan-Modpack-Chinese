@@ -6,137 +6,316 @@
   {
     "type": "effect_type",
     "id": "v_spell_bloodcurl",
-    "name": [ "Blood Curled" ],
-    "desc": [ "You feel yourself very stiff." ],
+    "name": [
+      "血液蜷曲"
+    ],
+    "desc": [
+      "你感觉自己很僵硬。"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -180 ] }
+    "base_mods": {
+      "speed_mod": [
+        -180
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_clot",
-    "name": [ "Clotting" ],
-    "desc": [ "Blood clots are actively seeking for bleeding body parts to repair." ],
-    "removes_effects": [ "bleed" ],
-    "blocks_effects": [ "bleed" ],
+    "name": [
+      "凝血"
+    ],
+    "desc": [
+      "血凝块正在积极寻找出血的身体部位进行修复。"
+    ],
+    "removes_effects": [
+      "bleed"
+    ],
+    "blocks_effects": [
+      "bleed"
+    ],
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "v_spell_bloodpuddle",
-    "name": [ "Ensnared" ],
+    "name": [
+      "诱捕"
+    ],
     "max_duration": 15,
-    "desc": [ "Viscous blood sticks to your body!" ],
+    "desc": [
+      "粘稠的血液粘在你身上！"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -80 ] }
+    "base_mods": {
+      "speed_mod": [
+        -80
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_crimsonhaze",
-    "name": [ "Crimson Hazed" ],
-    "desc": [ "Sticky vapors of blood takes a firm hold of your body!" ],
+    "name": [
+      "深红朦胧"
+    ],
+    "desc": [
+      "粘稠的血液蒸气紧紧地抓住你的身体！"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -55 ] }
+    "base_mods": {
+      "speed_mod": [
+        -55
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_bloodsurge",
-    "name": [ "Blood Surge" ],
-    "desc": [ "Surge of blood flows through your vessel!" ],
+    "name": [
+      "血涌"
+    ],
+    "desc": [
+      "血液涌动流过你的血管！"
+    ],
     "show_in_info": true,
-    "base_mods": { "str_mod": [ 3 ], "dex_mod": [ 2 ], "speed_mod": [ 10 ], "stamina_min": [ 20 ], "stamina_chance": [ 2, 6 ] },
-    "removes_effects": [ "winded" ],
-    "blocks_effects": [ "winded" ]
+    "base_mods": {
+      "str_mod": [
+        3
+      ],
+      "dex_mod": [
+        2
+      ],
+      "speed_mod": [
+        10
+      ],
+      "stamina_min": [
+        20
+      ],
+      "stamina_chance": [
+        2,
+        6
+      ]
+    },
+    "removes_effects": [
+      "winded"
+    ],
+    "blocks_effects": [
+      "winded"
+    ]
   },
   {
     "type": "effect_type",
     "id": "v_spell_desolation",
-    "name": [ "Withering" ],
-    "desc": [ "Pressence of a vile aura drains you submissively!" ],
+    "name": [
+      "萎缩"
+    ],
+    "desc": [
+      "卑鄙光环的压迫使你屈服！"
+    ],
     "show_in_info": true,
     "max_duration": 3,
-    "base_mods": { "speed_mod": [ -20 ], "hurt_min": [ 2 ], "hurt_max": [ 3 ] }
+    "base_mods": {
+      "speed_mod": [
+        -20
+      ],
+      "hurt_min": [
+        2
+      ],
+      "hurt_max": [
+        3
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_arcanebinding",
-    "name": [ "Binded" ],
-    "desc": [ "You can't even move an inch." ],
+    "name": [
+      "紧缚"
+    ],
+    "desc": [
+      "你连一寸都动不了。"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -300 ] }
+    "base_mods": {
+      "speed_mod": [
+        -300
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_etherealstrike",
-    "name": [ "Ethereal Grasp" ],
-    "desc": [ "You're held by an etherean silhouette." ],
+    "name": [
+      "幽影攫抓"
+    ],
+    "desc": [
+      "你被一个以太之影所吸引。"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -125 ] }
+    "base_mods": {
+      "speed_mod": [
+        -125
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_manasurge",
-    "name": [ "Mana Surge" ],
-    "desc": [ "Unholy surge of mana flows through you!" ],
+    "name": [
+      "法力激增"
+    ],
+    "desc": [
+      "邪恶的法力涌动流过你！"
+    ],
     "show_in_info": true,
-    "base_mods": { "str_mod": [ 3 ], "speed_mod": [ 1 ] }
+    "base_mods": {
+      "str_mod": [
+        3
+      ],
+      "speed_mod": [
+        1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_megamagic_exhaust",
-    "name": [ "Exhausted" ],
-    "desc": [ "That blast really packs a punch!" ],
+    "name": [
+      "精疲力尽"
+    ],
+    "desc": [
+      "那次爆炸真是一记重拳！"
+    ],
     "show_in_info": true,
-    "base_mods": { "str_mod": [ -4 ], "speed_mod": [ -12 ] }
+    "base_mods": {
+      "str_mod": [
+        -4
+      ],
+      "speed_mod": [
+        -12
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_darkpillar",
-    "name": [ "Ethereal Shock" ],
-    "desc": [ "You've seen alot of things. Now you suffer from it!" ],
+    "name": [
+      "空灵休克"
+    ],
+    "desc": [
+      "你见过很多东西。现在你受够了！"
+    ],
     "main_parts_only": true,
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -130 ], "hurt_min": [ 25 ], "hurt_max": [ 30 ] }
+    "base_mods": {
+      "speed_mod": [
+        -130
+      ],
+      "hurt_min": [
+        25
+      ],
+      "hurt_max": [
+        30
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_monspell_doom",
-    "name": [ "Doomed" ],
-    "desc": [ "The glowing marks around your body doesn't seem to be friendly..." ],
+    "name": [
+      "注定的"
+    ],
+    "desc": [
+      "你身体周围的发光痕迹似乎不友好…"
+    ],
     "show_in_info": true,
-    "base_mods": { "hurt_min": [ 60 ], "hurt_max": [ 125 ], "hurt_chance": [ 101 ] }
+    "base_mods": {
+      "hurt_min": [
+        60
+      ],
+      "hurt_max": [
+        125
+      ],
+      "hurt_chance": [
+        101
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "onfire",
-    "removes_effects": [ "v_spell_elem_freeze", "v_spell_elem_flashfreeze", "v_spell_elem_flame_curse" ]
+    "removes_effects": [
+      "v_spell_elem_freeze",
+      "v_spell_elem_flashfreeze",
+      "v_spell_elem_flame_curse"
+    ]
   },
   {
     "type": "effect_type",
     "id": "hit_by_player",
     "//": "Freezing effects are removed with just a hit.",
-    "removes_effects": [ "v_spell_elem_freeze", "v_spell_elem_flashfreeze" ]
+    "removes_effects": [
+      "v_spell_elem_freeze",
+      "v_spell_elem_flashfreeze"
+    ]
   },
   {
     "type": "effect_type",
     "id": "v_spell_elem_curse",
-    "name": [ "Cursed" ],
-    "desc": [ "You take more elemental damage!" ],
+    "name": [
+      "诅咒"
+    ],
+    "desc": [
+      "你受到更多的元素伤害！"
+    ],
     "show_in_info": true,
-    "base_mods": { "per_mod": [ -2 ], "dex_mod": [ -2 ], "str_mod": [ -2 ] }
+    "base_mods": {
+      "per_mod": [
+        -2
+      ],
+      "dex_mod": [
+        -2
+      ],
+      "str_mod": [
+        -2
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "v_spell_elem_freeze",
-    "name": [ "Freezed" ],
-    "desc": [ "Can't move at all!" ],
+    "name": [
+      "冻结"
+    ],
+    "desc": [
+      "一点也不能动！"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -1000 ] },
-    "removes_effects": [ "hit_by_player", "onfire", "v_spell_elem_flashfreeze", "v_spell_elem_flame_curse" ]
+    "base_mods": {
+      "speed_mod": [
+        -1000
+      ]
+    },
+    "removes_effects": [
+      "hit_by_player",
+      "onfire",
+      "v_spell_elem_flashfreeze",
+      "v_spell_elem_flame_curse"
+    ]
   },
   {
     "type": "effect_type",
     "id": "v_spell_elem_null",
-    "removes_effects": [ "onfire", "zapped", "cold", "hot", "v_spell_elem_flame_curse", "v_spell_elem_freeze", "v_spell_elem_flashfreeze" ]
+    "removes_effects": [
+      "onfire",
+      "zapped",
+      "cold",
+      "hot",
+      "v_spell_elem_flame_curse",
+      "v_spell_elem_freeze",
+      "v_spell_elem_flashfreeze"
+    ]
   },
   {
     "type": "effect_type",
@@ -155,32 +334,86 @@
   {
     "type": "effect_type",
     "id": "v_spell_elem_flame_curse",
-    "name": [ "On Fire - Cursed Flames" ],
-    "desc": [ "The baneful flames melt you internally! OMFG!" ],
+    "name": [
+      "着火-咒焰"
+    ],
+    "desc": [
+      "邪恶的火焰将你内在融化！天哪！"
+    ],
     "main_parts_only": true,
     "show_in_info": true,
     "max_duration": "40 s",
-    "base_mods": { "hurt_min": [ 1 ], "hurt_max": [ 4 ], "hurt_chance": [ 2 ] },
-    "removes_effects": [ "v_spell_elem_freeze", "v_spell_elem_flashfreeze", "onfire", "v_spell_elem_flame_frost" ]
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        4
+      ],
+      "hurt_chance": [
+        2
+      ]
+    },
+    "removes_effects": [
+      "v_spell_elem_freeze",
+      "v_spell_elem_flashfreeze",
+      "onfire",
+      "v_spell_elem_flame_frost"
+    ]
   },
   {
     "type": "effect_type",
     "id": "v_spell_elem_flashfreeze",
-    "name": [ "Frozen" ],
-    "desc": [ "It is impossible to move!" ],
+    "name": [
+      "冻结"
+    ],
+    "desc": [
+      "不可能移动！"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -10000 ] },
-    "removes_effects": [ "hit_by_player", "v_spell_elem_freeze", "onfire", "v_spell_elem_flame_curse" ]
+    "base_mods": {
+      "speed_mod": [
+        -10000
+      ]
+    },
+    "removes_effects": [
+      "hit_by_player",
+      "v_spell_elem_freeze",
+      "onfire",
+      "v_spell_elem_flame_curse"
+    ]
   },
   {
     "type": "effect_type",
     "id": "v_spell_elem_flame_frost",
-    "name": [ "On Fire - Frostburn" ],
-    "desc": [ "Your body suffers from scalding cold! OMFG!" ],
+    "name": [
+      "着火-霜燃"
+    ],
+    "desc": [
+      "你的身体遭受着灼热的冰寒！天哪！"
+    ],
     "main_parts_only": true,
     "show_in_info": true,
     "max_duration": "30 s",
-    "base_mods": { "hurt_min": [ 1 ], "hurt_max": [ 2 ], "speed_mod": [ -30 ], "hurt_chance": [ 2 ] },
-    "removes_effects": [ "v_spell_elem_freeze", "v_spell_elem_flashfreeze", "onfire", "v_spell_elem_flame_curse" ]
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        2
+      ],
+      "speed_mod": [
+        -30
+      ],
+      "hurt_chance": [
+        2
+      ]
+    },
+    "removes_effects": [
+      "v_spell_elem_freeze",
+      "v_spell_elem_flashfreeze",
+      "onfire",
+      "v_spell_elem_flame_curse"
+    ]
   }
 ]

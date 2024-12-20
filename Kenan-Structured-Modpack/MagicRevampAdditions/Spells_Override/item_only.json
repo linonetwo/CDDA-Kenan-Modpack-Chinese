@@ -2,11 +2,20 @@
   {
     "id": "twisted_restore",
     "type": "SPELL",
-    "name": { "str": "Twisted Restoration" },
+    "name": {
+      "str": "扭曲恢复"
+    },
     "//": "Used for potion of Twisted Restoration, not castable",
-    "description": "This spell overclocks your heart, generating new flesh and muscle.  It is unwise to use this in immediate danger, and may be fatal if done in critical condition.",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT", "NO_LEGS", "NO_HANDS", "NO_PROJECTILE" ],
+    "description": "这个法术会超载加速你的心脏，以再生皮肤和肌肉。这个法术不应在危险来临时使用，否则可能会造成致命性后果。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
     "max_level": 1,
     "min_damage": 10,
     "max_damage": 10,
@@ -20,22 +29,43 @@
     "base_casting_time": 30000,
     "base_energy_cost": 2,
     "extra_effects": [
-      { "id": "light_healing" },
-      { "id": "pain_damage" },
-      { "id": "pain_damage" },
-      { "id": "stamina_damage" },
-      { "id": "stamina_damage" },
-      { "id": "stamina_damage" }
+      {
+        "id": "light_healing"
+      },
+      {
+        "id": "pain_damage"
+      },
+      {
+        "id": "pain_damage"
+      },
+      {
+        "id": "stamina_damage"
+      },
+      {
+        "id": "stamina_damage"
+      },
+      {
+        "id": "stamina_damage"
+      }
     ]
   },
   {
     "id": "twisted_restore_improved",
     "type": "SPELL",
-    "name": { "str": "Improved Twisted Restoration" },
+    "name": {
+      "str": "改良扭曲恢复"
+    },
     "//": "Used for Animist-exclusive potion, not castable",
-    "description": "This spell overclocks your heart, generating new flesh and muscle.  It is unwise to use this in immediate danger, and may be fatal if done in critical condition.  Improved brewing mitigates the strain of the spell.",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT", "NO_LEGS", "NO_HANDS", "NO_PROJECTILE" ],
+    "description": "这个法术会超载加速你的心脏，以再生皮肤和肌肉。这个法术不应在危险来临时使用，否则可能会造成致命性后果。改良的制药方式降低了法术对身体的负担。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE"
+    ],
     "max_level": 1,
     "min_damage": 8,
     "max_damage": 8,
@@ -48,18 +78,35 @@
     "energy_source": "HP",
     "base_casting_time": 12000,
     "base_energy_cost": 2,
-    "extra_effects": [ { "id": "light_healing" }, { "id": "pain_damage" }, { "id": "stamina_damage" }, { "id": "stamina_damage" } ]
+    "extra_effects": [
+      {
+        "id": "light_healing"
+      },
+      {
+        "id": "pain_damage"
+      },
+      {
+        "id": "stamina_damage"
+      },
+      {
+        "id": "stamina_damage"
+      }
+    ]
   },
   {
     "id": "conj_throwing_blade3",
     "type": "SPELL",
-    "name": { "str": "Conjure Throwing Blade I" },
-    "description": "conjures 3 throwing knives",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "召唤飞刃 I"
+    },
+    "description": "召唤三把飞刀",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "throwing_knife",
     "shape": "blast",
-    "message": "You activate your ring and three throwing knives appear, ready to throw!",
+    "message": "你激活了你的戒指，三把飞刀随之产生，随时可以投掷！",
     "spell_class": "NONE",
     "max_level": 1,
     "min_damage": 3,
@@ -72,10 +119,16 @@
     "id": "conj_mag_throw_blade_group",
     "type": "SPELL",
     "//": "In future summoned knives should give temp buff to throwing skill",
-    "name": { "str": "Conjure Random Magical Throwing Blade" },
-    "description": "conjures a magical throwing knife, one of the spells specified in extra effects",
-    "valid_targets": [ "self" ],
-    "flags": [ "WONDER" ],
+    "name": {
+      "str": "召唤随机魔法飞刀"
+    },
+    "description": "召唤一把魔法飞刀，这是特效中指定的法术之一",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "WONDER"
+    ],
     "effect": "none",
     "message": "",
     "shape": "blast",
@@ -84,32 +137,62 @@
     "max_damage": 1,
     "base_casting_time": 30,
     "extra_effects": [
-      { "id": "conj_mag_throw_blade_1" },
-      { "id": "conj_mag_throw_blade_1" },
-      { "id": "conj_mag_throw_blade_1" },
-      { "id": "conj_mag_throw_blade_1" },
-      { "id": "conj_mag_throw_blade_fire" },
-      { "id": "conj_mag_throw_blade_fire" },
-      { "id": "conj_mag_throw_blade_cold" },
-      { "id": "conj_mag_throw_blade_cold" },
-      { "id": "conj_mag_throw_blade_cut" },
-      { "id": "conj_mag_throw_blade_cut" },
-      { "id": "conj_mag_throw_blade_biological" },
-      { "id": "conj_mag_throw_blade_biological" },
-      { "id": "magical_throwing_knife_pure_special" }
+      {
+        "id": "conj_mag_throw_blade_1"
+      },
+      {
+        "id": "conj_mag_throw_blade_1"
+      },
+      {
+        "id": "conj_mag_throw_blade_1"
+      },
+      {
+        "id": "conj_mag_throw_blade_1"
+      },
+      {
+        "id": "conj_mag_throw_blade_fire"
+      },
+      {
+        "id": "conj_mag_throw_blade_fire"
+      },
+      {
+        "id": "conj_mag_throw_blade_cold"
+      },
+      {
+        "id": "conj_mag_throw_blade_cold"
+      },
+      {
+        "id": "conj_mag_throw_blade_cut"
+      },
+      {
+        "id": "conj_mag_throw_blade_cut"
+      },
+      {
+        "id": "conj_mag_throw_blade_biological"
+      },
+      {
+        "id": "conj_mag_throw_blade_biological"
+      },
+      {
+        "id": "magical_throwing_knife_pure_special"
+      }
     ]
   },
   {
     "id": "conj_mag_throw_blade_1",
     "type": "SPELL",
     "//": "In future summoned knives will give temp buff to throwing skill",
-    "name": { "str": "Conjure Magical Throwing Blade I" },
-    "description": "conjures 1 magical throwing knife",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "召唤魔法飞刀 I"
+    },
+    "description": "召唤1把神奇的投掷刀",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "magical_throwing_knife",
     "shape": "blast",
-    "message": "You activate your bag and a throwing knife appears, ready to throw!",
+    "message": "你激活了你的袋子，一把飞刀随之产生，随时可以投掷！",
     "spell_class": "NONE",
     "min_damage": 1,
     "max_damage": 1,
@@ -120,13 +203,17 @@
     "id": "conj_mag_throw_blade_fire",
     "type": "SPELL",
     "//": "In future summoned knives will give temp buff to throwing skill",
-    "name": { "str": "Conjure Magical Throwing Blade Fire" },
-    "description": "conjures 1 magical throwing knife",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "召唤魔法飞刀（火焰）"
+    },
+    "description": "召唤1把神奇的投掷刀",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "magical_throwing_knife_fire",
     "shape": "blast",
-    "message": "You activate your bag and a throwing knife wrapped in ethereal flames appears, ready to throw!",
+    "message": "你激活了你的袋子，一把包裹着永恒之焰的魔法飞刀随之产生，随时可以投掷！",
     "spell_class": "NONE",
     "max_level": 1,
     "min_damage": 1,
@@ -138,13 +225,17 @@
     "id": "conj_mag_throw_blade_cold",
     "type": "SPELL",
     "//": "In future summoned knives will give temp buff to throwing skill",
-    "name": { "str": "Conjure Magical Throwing Blade Cold" },
-    "description": "conjures 1 magical throwing knife",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "召唤魔法飞刀（冰霜）"
+    },
+    "description": "召唤1把神奇的投掷刀",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "magical_throwing_knife_cold",
     "shape": "blast",
-    "message": "You activate your bag and a throwing knife emanating cold appears, ready to throw!",
+    "message": "你激活了你的袋子，一把散发着寒气的魔法飞刀随之产生，随时可以投掷！",
     "spell_class": "NONE",
     "max_level": 1,
     "min_damage": 1,
@@ -156,13 +247,17 @@
     "id": "conj_mag_throw_blade_cut",
     "type": "SPELL",
     "//": "In future summoned knives will give temp buff to throwing skill",
-    "name": { "str": "Conjure Magical Throwing Blade Cut" },
-    "description": "conjures 1 magical throwing knife",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "召唤魔法飞刀（斩击）"
+    },
+    "description": "召唤1把神奇的投掷刀",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "magical_throwing_knife_cut",
     "shape": "blast",
-    "message": "You activate your bag and a throwing knife with unnaturally sharp edges appears, ready to throw!",
+    "message": "你激活了你的袋子，一把异常锋利的魔法飞刀随之产生，随时可以投掷！",
     "spell_class": "NONE",
     "max_level": 1,
     "min_damage": 1,
@@ -174,13 +269,17 @@
     "id": "conj_mag_throw_blade_biological",
     "type": "SPELL",
     "//": "In future summoned knives will give temp buff to throwing skill",
-    "name": { "str": "Conjure Magical Throwing Blade Biological" },
-    "description": "conjures 1 magical throwing knife",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "召唤魔法飞刀（生化）"
+    },
+    "description": "召唤1把神奇的投掷刀",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "magical_throwing_knife_biological",
     "shape": "blast",
-    "message": "You activate your bag and a throwing knife covered in dark ooze appears, ready to throw!",
+    "message": "你激活了你的袋子，一把包裹着黑色软泥的魔法飞刀随之产生，随时可以投掷！",
     "spell_class": "NONE",
     "max_level": 1,
     "min_damage": 1,
@@ -192,13 +291,17 @@
     "id": "magical_throwing_knife_pure_special",
     "type": "SPELL",
     "//": "In future summoned knives will give temp buff to throwing skill",
-    "name": { "str": "Conjure Magical Throwing Blade Pure" },
-    "description": "conjures 1 magical throwing knife",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "召唤魔法飞刀（真实）"
+    },
+    "description": "召唤1把神奇的投掷刀",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "magical_throwing_knife_pure_special",
     "shape": "blast",
-    "message": "You activate your bag and with a flash magical energies coalescence in your hand into a shape of knife.  It seems vastly more powerful than other knives that appear from the bag!",
+    "message": "你激活了你的袋子，一瞬间纯净的魔法能量在你的手上汇聚成飞刀的形状。它看起来比袋子里的其他飞刀威力要大得多！",
     "spell_class": "NONE",
     "max_level": 1,
     "min_damage": 1,
@@ -209,52 +312,79 @@
   {
     "id": "potion_recover_mana",
     "type": "SPELL",
-    "name": { "str": "Recover Mana" },
-    "description": "You regain mana.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "魔力恢复"
+    },
+    "description": "你正恢复魔力。",
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 250,
-    "damage_increment": 50.0,
+    "damage_increment": 50,
     "max_damage": 3000,
     "max_level": 50,
     "effect": "recover_energy",
     "effect_str": "MANA",
     "shape": "blast",
     "spell_class": "NONE",
-    "message": "You start regenerating mana!",
+    "message": "你开始恢复魔力！",
     "energy_source": "MANA",
     "base_energy_cost": 0,
     "energy_increment": 0,
     "final_energy_cost": 0,
-    "flags": [ "SILENT", "NO_LEGS" ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS"
+    ],
     "difficulty": 3
   },
   {
     "id": "mana_doping",
     "type": "SPELL",
-    "name": { "str": "Pain" },
-    "description": "Increases pain",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT", "NO_LEGS", "NO_HANDS" ],
+    "name": {
+      "str": "疼痛"
+    },
+    "description": "提升疼痛",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS"
+    ],
     "//": "Listed as a recover energy effect with a negative modifier that decreases with each level of the spell, which makes it cause damage instead.",
     "min_damage": -25,
     "max_damage": -335,
-    "damage_increment": -50.0,
+    "damage_increment": -50,
     "max_level": 15,
     "effect": "recover_energy",
     "effect_str": "PAIN",
     "shape": "blast",
     "spell_class": "NONE",
-    "message": "Your veins feel like they are on fire!\nYou start regenerating mana!",
-    "extra_effects": [ { "id": "potion_recover_mana" } ]
+    "message": "你的血管感觉像是着火了！\n你开始恢复魔力！",
+    "extra_effects": [
+      {
+        "id": "potion_recover_mana"
+      }
+    ]
   },
   {
     "id": "lupercalia",
     "type": "SPELL",
-    "name": { "str": "Lupercalian Release" },
+    "name": {
+      "str": "狼人变身"
+    },
     "//": "Used for wolfshead cufflinks not castable",
-    "description": "This spell transforms you into a werewolf.  There may be some cons to this.",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT", "NO_LEGS", "NO_HANDS" ],
+    "description": "这个法术把你变成狼人。这可能造成一些不可预料的后果。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_LEGS",
+      "NO_HANDS"
+    ],
     "effect": "spawn_item",
     "effect_str": "aura_werewolf",
     "shape": "blast",
@@ -273,10 +403,17 @@
   {
     "id": "wolfsbane",
     "type": "SPELL",
-    "name": { "str": "Wolfsbane" },
-    "description": "The tip of the spear glows white hot as you strike.",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "NO_HANDS", "NO_LEGS" ],
+    "name": {
+      "str": "狼牙棒"
+    },
+    "description": "在你挥舞时，矛尖发出炽热的白光。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
     "damage_type": "heat",
     "min_damage": 35,
     "min_range": 2,

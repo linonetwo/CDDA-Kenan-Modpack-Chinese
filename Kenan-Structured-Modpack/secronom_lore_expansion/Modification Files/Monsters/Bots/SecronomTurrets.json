@@ -2,100 +2,169 @@
   {
     "id": "mon_secro_laserturret",
     "type": "MONSTER",
-    "name": { "str": "laser beam turret" },
-    "description": "SDP-L1, also known as Secronom Defense Project Type \"Laser\", is an advanced laser turret based from the miniature TX-5LR Cerberus. Its autonomous laser cannon fires a concentrated beam of pure heat that pierces through targets. Every shot requires an immensive power from its source.",
+    "name": {
+      "str": "激光束炮台"
+    },
+    "description": "SDP-L1，也被称为Secronom防御项目类型“激光”，是一种基于微型TX-5LR Cerberus的先进激光炮塔。它的自动激光炮发射一束聚热能光束穿透目标。每一次射击都需要从其能源消耗巨大的能量。",
     "default_faction": "secro_defense_bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "diff": 20,
     "volume": "60000 ml",
     "weight": "172 kg",
     "hp": 50,
     "speed": 100,
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "2",
     "color": "light_red",
     "aggression": 100,
     "morale": 100,
-    "armor": { "bash": 10, "cut": 10, "bullet": 10, "stab": 10 },
+    "armor": {
+      "bash": 10,
+      "cut": 10,
+      "bullet": 10,
+      "stab": 10
+    },
     "luminance": 5,
     "vision_day": 15,
     "vision_night": 5,
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_secro_laserturret_heatray" },
+        "spell_data": {
+          "id": "mon_secro_laserturret_heatray"
+        },
         "cooldown": 5,
-        "monster_message": "<color_yellow>%1$s shoots a ray of heat at %3$s!</color>"
+        "monster_message": "<color_yellow>%1$s向%3$s射出了一道热能射线！</color>"
       }
     ],
-    "death_drops": {  },
-    "death_function": { "corpse_type": "BROKEN" },
-    "flags": [ "SEES", "NOHEAD", "ELECTRIC", "ELECTRONIC", "COLDPROOF", "IMMOBILE", "NO_BREATHE" ]
+    "death_drops": {},
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "flags": [
+      "SEES",
+      "NOHEAD",
+      "ELECTRIC",
+      "ELECTRONIC",
+      "COLDPROOF",
+      "IMMOBILE",
+      "NO_BREATHE"
+    ]
   },
   {
     "id": "mon_secro_electurret",
     "type": "MONSTER",
-    "name": { "str": "electroshock turret" },
-    "description": "SDP-E3, a highly modified turret developed for immobilizing nearby creatures with the use of its electrifying tesla-coil. Its 360 degree AI sensor cam allows it to identify foes and discharge the turret automatically. Firmly embedded to the terrain, it requires a huge amount of power from its source to operate.",
+    "name": {
+      "str": "电击炮塔"
+    },
+    "description": "SDP-E3，一种经过高度改装的炮塔，利用其通电的特斯拉线圈来击晕附近的生物。它的360度人工智能传感器凸轮允许它自动识别附近敌人和发射炮塔。它牢牢地嵌入地形，需要从其能源获取巨大的能量来运作。",
     "default_faction": "secro_defense_bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "diff": 20,
     "volume": "60000 ml",
     "weight": "172 kg",
     "hp": 50,
     "speed": 100,
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "2",
     "color": "cyan",
     "aggression": 100,
     "morale": 100,
-    "armor": { "bash": 12, "cut": 12, "bullet": 12, "stab": 12 },
+    "armor": {
+      "bash": 12,
+      "cut": 12,
+      "bullet": 12,
+      "stab": 12
+    },
     "luminance": 5,
     "vision_day": 5,
     "vision_night": 5,
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_secro_electurret_target" },
+        "spell_data": {
+          "id": "mon_secro_electurret_target"
+        },
         "cooldown": 3,
-        "monster_message": "<color_yellow>%1$s sends an electric current!</color>"
+        "monster_message": "<color_yellow>%1$s发送出一串电流！</color>"
       }
     ],
-    "death_drops": {  },
-    "death_function": { "corpse_type": "BROKEN" },
-    "flags": [ "SEES", "NOHEAD", "ELECTRIC", "ELECTRONIC", "COLDPROOF", "IMMOBILE", "NO_BREATHE" ]
+    "death_drops": {},
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "flags": [
+      "SEES",
+      "NOHEAD",
+      "ELECTRIC",
+      "ELECTRONIC",
+      "COLDPROOF",
+      "IMMOBILE",
+      "NO_BREATHE"
+    ]
   },
   {
     "id": "mon_secro_gravturret",
     "type": "MONSTER",
-    "name": { "str": "graviton turret" },
-    "description": "SDP-G7P, a small turret that disorient movements of its target using strong magnetic fields that is generated under its large, gaping barrel. The turret is slow to recharge and the generated field doesn't last long, as it is a prototype version of its predecessor.",
+    "name": {
+      "str": "引力子炮塔"
+    },
+    "description": "SDP-G7P，一种小型炮塔，利用其巨大的、张开的炮筒下产生的超强磁场使目标失去方向。炮塔的充电速度很慢，产生的能量场也不会持续太久，因为它是它的前身的原型版本。",
     "default_faction": "secro_defense_bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "diff": 20,
     "volume": "30000 ml",
     "weight": "40750 g",
     "hp": 20,
     "speed": 100,
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "2",
     "color": "magenta",
     "aggression": 100,
     "morale": 100,
-    "armor": { "bash": 7, "cut": 7, "bullet": 7, "stab": 7 },
+    "armor": {
+      "bash": 7,
+      "cut": 7,
+      "bullet": 7,
+      "stab": 7
+    },
     "luminance": 5,
     "vision_day": 15,
     "vision_night": 5,
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_secro_gravturret_energize" },
+        "spell_data": {
+          "id": "mon_secro_gravturret_energize"
+        },
         "cooldown": 20,
-        "monster_message": "<color_magenta>%1$s generates a energized field under %3$s!</color>"
+        "monster_message": "<color_magenta>%1$s在%3$s所在处创造了一个电场！</color>"
       }
     ],
-    "death_drops": {  },
-    "death_function": { "corpse_type": "BROKEN" },
-    "flags": [ "SEES", "NOHEAD", "ELECTRIC", "ELECTRONIC", "COLDPROOF", "IMMOBILE", "NO_BREATHE" ]
+    "death_drops": {},
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "flags": [
+      "SEES",
+      "NOHEAD",
+      "ELECTRIC",
+      "ELECTRONIC",
+      "COLDPROOF",
+      "IMMOBILE",
+      "NO_BREATHE"
+    ]
   }
 ]

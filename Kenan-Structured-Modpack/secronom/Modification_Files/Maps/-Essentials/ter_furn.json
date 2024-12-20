@@ -3,114 +3,211 @@
     "type": "terrain",
     "id": "t_vector",
     "looks_like": "t_fungus",
-    "name": "vector bed",
-    "description": "Thick, light blue foliage lay low on the ground, writhing in harmony with the wind.",
+    "name": "载体床",
+    "description": "一颗有着奇怪颜色的树，浓密的淡蓝色树叶垂落在地面上，随风摇摆着。",
     "symbol": ".",
     "light_emitted": 1,
     "color": "light_blue",
     "move_cost": 3,
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "DIGGABLE", "NOCOLLIDE", "VECTOR", "EMITTER" ],
-    "emissions": [ "secro_vector_small" ],
-    "bash": { "sound": "smash", "ter_set": "t_null", "str_min": 20, "str_max": 400, "str_min_supported": 50 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "DIGGABLE",
+      "NOCOLLIDE",
+      "VECTOR",
+      "EMITTER"
+    ],
+    "emissions": [
+      "secro_vector_small"
+    ],
+    "bash": {
+      "sound": "smash",
+      "ter_set": "t_null",
+      "str_min": 20,
+      "str_max": 400,
+      "str_min_supported": 50
+    }
   },
   {
     "type": "terrain",
     "id": "t_shrub_vector",
     "looks_like": "t_shrub_fungal",
-    "name": "vector shrub",
-    "description": "A vague reminiscence of a shrub, with large outgrowths of branches and leaves that blooms in vector dust.",
+    "name": "载体灌木丛",
+    "description": "一种灌木的模糊追忆在这过度生长的枝叶中，于病毒载体尘中盛开着。",
     "symbol": "#",
     "color": "blue",
     "move_cost": 8,
-    "emissions": [ "secro_vector_smol_seeding" ],
+    "emissions": [
+      "secro_vector_smol_seeding"
+    ],
     "light_emitted": 3,
     "coverage": 40,
-    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "THIN_OBSTACLE", "PLACE_ITEM", "SHRUB", "VECTOR", "EMITTER", "SHORT" ],
-    "bash": { "str_min": 4, "str_max": 60, "sound": "crunch.", "sound_fail": "oof!", "ter_set": "t_vector" }
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "PLACE_ITEM",
+      "SHRUB",
+      "VECTOR",
+      "EMITTER",
+      "SHORT"
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 60,
+      "sound": "crunch.",
+      "sound_fail": "oof!",
+      "ter_set": "t_vector"
+    }
   },
   {
     "type": "terrain",
     "id": "t_tree_vector_young",
     "looks_like": "t_tree_fungal_young",
-    "name": "young vector tree",
-    "description": "An immature tree, infested by vector dust.",
+    "name": "载体小树",
+    "description": "一颗未成熟的树，已经被载体尘所侵蚀。",
     "symbol": "1",
-    "emissions": [ "secro_vector_smol_seeding" ],
+    "emissions": [
+      "secro_vector_smol_seeding"
+    ],
     "color": "blue",
     "light_emitted": 3,
     "move_cost": 4,
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "NOITEM", "VECTOR", "YOUNG", "EMITTER", "REDUCE_SCENT" ],
-    "bash": { "str_min": 4, "str_max": 50, "sound": "crunch!", "sound_fail": "oof!", "ter_set": "t_vector" }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "VECTOR",
+      "YOUNG",
+      "EMITTER",
+      "REDUCE_SCENT"
+    ],
+    "bash": {
+      "str_min": 4,
+      "str_max": 50,
+      "sound": "crunch!",
+      "sound_fail": "oof!",
+      "ter_set": "t_vector"
+    }
   },
   {
     "type": "terrain",
     "id": "t_tree_vector",
     "looks_like": "t_tree_fungal",
-    "name": "vector tree",
-    "description": "Infested by vector dust, this tree luminates the surroundings with its leaves, bark stripes and falling starlights.",
+    "name": "载体树",
+    "description": "这棵树已经被病毒载体尘所感染。它正用它的叶子，树皮以及从树上散落下来的星光照亮着周围的一切。",
     "symbol": "7",
     "color": "light_blue",
     "light_emitted": 10,
     "move_cost": 0,
     "coverage": 80,
-    "emissions": [ "secro_vector_smol_seeding" ],
-    "flags": [ "FLAMMABLE_ASH", "NOITEM", "VECTOR", "EMITTER", "TREE", "REDUCE_SCENT" ],
-    "bash": { "str_min": 40, "str_max": 180, "sound": "crunch!", "sound_fail": "oof!", "ter_set": "t_vector" }
+    "emissions": [
+      "secro_vector_smol_seeding"
+    ],
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "VECTOR",
+      "EMITTER",
+      "TREE",
+      "REDUCE_SCENT"
+    ],
+    "bash": {
+      "str_min": 40,
+      "str_max": 180,
+      "sound": "crunch!",
+      "sound_fail": "oof!",
+      "ter_set": "t_vector"
+    }
   },
   {
     "type": "furniture",
     "id": "f_floral_vector",
     "looks_like": "f_lily",
-    "name": "floral vector",
-    "description": "A once colorful flower, now just a monochromatic blue in every angle.",
+    "name": "载体花丛",
+    "description": "一朵曾经五颜六色的花，而现在从各个角度来看只剩下单一的蓝色。",
     "symbol": "f",
     "color": "blue",
     "move_cost_mod": 0,
-    "emissions": [ "secro_vector_smol_seeding" ],
+    "emissions": [
+      "secro_vector_smol_seeding"
+    ],
     "required_str": -1,
     "light_emitted": 2,
-    "flags": [ "TRANSPARENT", "TINY", "FLAMMABLE_ASH", "NOCOLLIDE", "FLOWER", "VECTOR", "EMITTER" ],
-    "bash": { "str_min": 2, "str_max": 6, "sound": "oof!.", "sound_fail": "whish." }
+    "flags": [
+      "TRANSPARENT",
+      "TINY",
+      "FLAMMABLE_ASH",
+      "NOCOLLIDE",
+      "FLOWER",
+      "VECTOR",
+      "EMITTER"
+    ],
+    "bash": {
+      "str_min": 2,
+      "str_max": 6,
+      "sound": "oof!.",
+      "sound_fail": "whish."
+    }
   },
   {
     "type": "terrain",
     "id": "t_ladder",
-    "name": "ladder",
-    "description": "A ladder leading through vertical directionas.",
+    "name": "梯子",
+    "description": "一个垂直向上的梯子",
     "symbol": "x",
     "color": "dark_gray",
     "move_cost": 2,
-    "flags": [ "TRANSPARENT", "GOES_DOWN", "GOES_UP", "PLACE_ITEM", "DIFFICULT_Z" ]
+    "flags": [
+      "TRANSPARENT",
+      "GOES_DOWN",
+      "GOES_UP",
+      "PLACE_ITEM",
+      "DIFFICULT_Z"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_ramp_down",
-    "name": "ramp way (down)",
-    "description": "A ramp way leading down.",
+    "name": "下行坡道",
+    "description": "一个下行坡道。",
     "symbol": ">",
     "color": "white",
     "move_cost": 2,
-    "flags": [ "TRANSPARENT", "PLACE_ITEM", "GOES_DOWN", "SEEN_FROM_ABOVE" ]
+    "flags": [
+      "TRANSPARENT",
+      "PLACE_ITEM",
+      "GOES_DOWN",
+      "SEEN_FROM_ABOVE"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_ramp_up",
-    "name": "ramp way (up)",
-    "description": "A ramp way leading up.",
+    "name": "上行坡道",
+    "description": "一个上行坡道。",
     "symbol": "<",
     "color": "white",
     "move_cost": 2,
-    "flags": [ "TRANSPARENT", "PLACE_ITEM", "RAMP", "GOES_UP" ]
+    "flags": [
+      "TRANSPARENT",
+      "PLACE_ITEM",
+      "RAMP",
+      "GOES_UP"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_metal_hatch_c",
-    "name": "closed metal hatch",
-    "description": "A closed metal hatch connected to the structure below.",
+    "name": "封闭的金属舱口盖",
+    "description": "与下面的结构相连的封闭金属舱口。",
     "symbol": "+",
     "color": "cyan",
     "move_cost": 2,
-    "flags": [ "TRANSPARENT" ],
+    "flags": [
+      "TRANSPARENT"
+    ],
     "open": "t_secro_metal_hatch_o",
     "bash": {
       "str_min": 30,
@@ -121,22 +218,43 @@
       "sound_fail": "clang!",
       "ter_set": "t_ladder_down",
       "items": [
-        { "item": "steel_chunk", "count": [ 1, 4 ] },
-        { "item": "scrap", "count": [ 3, 12 ] },
-        { "item": "hinge", "count": [ 1, 2 ] }
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            3,
+            12
+          ]
+        },
+        {
+          "item": "hinge",
+          "count": [
+            1,
+            2
+          ]
+        }
       ]
     }
   },
   {
     "type": "terrain",
     "id": "t_secro_metal_hatch_o",
-    "name": "open metal hatch",
-    "description": "An opened metal hatch connected to the structure below. It reveals a hollow set of ladders leading downwards.",
+    "name": "打开的金属舱口盖。",
+    "description": "一个打开的金属舱口盖，与下面的结构相连。打开它之后可以看到一个向下延伸的中空梯子。",
     "symbol": ">",
     "looks_like": "t_door_metal_o",
     "color": "cyan",
     "move_cost": 2,
-    "flags": [ "TRANSPARENT", "GOES_DOWN" ],
+    "flags": [
+      "TRANSPARENT",
+      "GOES_DOWN"
+    ],
     "close": "t_secro_metal_hatch_c",
     "bash": {
       "str_min": 20,
@@ -147,9 +265,27 @@
       "sound_fail": "clang!",
       "ter_set": "t_ladder_down",
       "items": [
-        { "item": "steel_chunk", "count": [ 1, 4 ] },
-        { "item": "scrap", "count": [ 3, 12 ] },
-        { "item": "hinge", "count": [ 1, 2 ] }
+        {
+          "item": "steel_chunk",
+          "count": [
+            1,
+            4
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            3,
+            12
+          ]
+        },
+        {
+          "item": "hinge",
+          "count": [
+            1,
+            2
+          ]
+        }
       ]
     }
   }

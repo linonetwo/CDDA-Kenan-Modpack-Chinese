@@ -2,10 +2,19 @@
   {
     "type": "SPELL",
     "id": "mon_szombie_vessel_blades",
-    "name": { "str": "Armament - Blades" },
+    "name": {
+      "str": "Armament - Blades"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster augments their arms into sharp, bone blades.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "mon_szombie_vessel_arma_blades",
@@ -16,10 +25,19 @@
   {
     "type": "SPELL",
     "id": "mon_szombie_vessel_tents",
-    "name": { "str": "Armament - Tentacles" },
+    "name": {
+      "str": "Armament - Tentacles"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's body sprouts several strong and slender tentacles.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "mon_szombie_vessel_arma_tents",
@@ -30,10 +48,19 @@
   {
     "type": "SPELL",
     "id": "mon_szombie_vessel_biters",
-    "name": { "str": "Armament - Biters" },
+    "name": {
+      "str": "Armament - Biters"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster augments their arms into arm biters.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "mon_szombie_vessel_arma_biters",
@@ -44,11 +71,21 @@
   {
     "id": "mon_szombie_vessel_spitter",
     "type": "SPELL",
-    "name": { "str": "Acid Spit" },
+    "name": {
+      "str": "酸液"
+    },
     "description": "Spell casted by an item. If you're seeing this, then read this one instead:\n'Caster's spitter armament spits acid at the target.'",
     "message": "",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_DURATION" ],
-    "valid_targets": [ "hostile" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "secro_blood_acid",
@@ -62,11 +99,23 @@
   {
     "id": "mon_szombie_vessel_spitter_cs",
     "type": "SPELL",
-    "name": { "str": "Crimson Shower" },
+    "name": {
+      "str": "深红色淋浴"
+    },
     "description": "Spell casted by an item. If you're seeing this, then read this one instead:\n'Caster's spitter armament performs crimson shower at the target - dealing acid damage and spreading blood acid fields.'",
     "message": "",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_DURATION" ],
-    "valid_targets": [ "hostile", "ally", "ground" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "cone",
     "effect_str": "secro_blood_acid",
@@ -85,19 +134,41 @@
   {
     "type": "SPELL",
     "id": "mon_szombie_vessel_range_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "咒语"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "message": "The sight of <npcname> locks onto its target...",
     "extra_effects": [
-      { "id": "mon_szombie_vessel_spitter_cs" },
-      { "id": "mon_szombie_vessel_spitter" },
-      { "id": "mon_szombie_vessel_spitter" },
-      { "id": "mon_szombie_vessel_spitter" },
-      { "id": "mon_szombie_vessel_spitter" },
-      { "id": "mon_szombie_vessel_spitter" }
+      {
+        "id": "mon_szombie_vessel_spitter_cs"
+      },
+      {
+        "id": "mon_szombie_vessel_spitter"
+      },
+      {
+        "id": "mon_szombie_vessel_spitter"
+      },
+      {
+        "id": "mon_szombie_vessel_spitter"
+      },
+      {
+        "id": "mon_szombie_vessel_spitter"
+      },
+      {
+        "id": "mon_szombie_vessel_spitter"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,
@@ -108,16 +179,32 @@
   {
     "type": "SPELL",
     "id": "mon_szombie_vessel_fite_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "咒语"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "message": "The sight of <npcname> locks onto its target...",
     "extra_effects": [
-      { "id": "mon_szombie_vessel_biters" },
-      { "id": "mon_szombie_vessel_tents" },
-      { "id": "mon_szombie_vessel_blades" }
+      {
+        "id": "mon_szombie_vessel_biters"
+      },
+      {
+        "id": "mon_szombie_vessel_tents"
+      },
+      {
+        "id": "mon_szombie_vessel_blades"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,
@@ -128,12 +215,30 @@
   {
     "type": "SPELL",
     "id": "mon_szombie_vessel_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "咒语"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "message": "The sight of <npcname> locks onto its target...",
-    "extra_effects": [ { "id": "mon_szombie_vessel_fite_target_random" }, { "id": "mon_szombie_vessel_range_target_random" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "extra_effects": [
+      {
+        "id": "mon_szombie_vessel_fite_target_random"
+      },
+      {
+        "id": "mon_szombie_vessel_range_target_random"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,

@@ -3,288 +3,633 @@
     "id": "laser_rifle_secrodragon",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "SS laser rifle" },
-    "description": "Thought it was known inferior to A7 laser rifle, SS laser rifle displays efficiency in barraging shots for cheap UPS charges, along with its reduced weight and volume.",
+    "name": {
+      "str": "S-Slr 激光步枪"
+    },
+    "description": "虽然它被认为不如A7激光步枪，党卫军激光步枪显示效率在弹幕射击廉价的UPS费用，以及其重量和体积减少。",
     "weight": "520 g",
     "volume": "750 ml",
     "price": "6100 USD",
-    "melee_damage": { "bash": 5 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -2,
+    "melee_damage": {
+      "bash": 5
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "magenta",
     "skill": "rifle",
     "range": 40,
-    "ranged_damage": { "damage_type": "stab", "amount": 7, "armor_penetration": 14 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 7,
+      "armor_penetration": 14
+    },
     "dispersion": 1000,
     "durability": 10,
     "loudness": 10,
-    "ammo_effects": [ "PSEUDO", "LASER", "INCENDIARY" ],
-    "flags": [ "NEVER_JAMS" ]
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ]
   },
   {
     "id": "SS_grenade_launchersecrodragon",
     "type": "GUN",
-    "name": { "str": "SS grenade launcher" },
-    "description": "A simple grenade launcher for the use of exceptional SS grenades.",
+    "name": {
+      "str": "SS-gl 下挂式榴弹发射器"
+    },
+    "description": "一个使用定制口径的专用下挂式榴弹发射器。",
     "weight": "2654 g",
     "volume": "1500 ml",
     "price": "5220 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": ")",
     "color": "light_red",
     "skill": "launcher",
     "range": 50,
-    "ranged_damage": { "damage_type": "bash", "amount": 10 },
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 10
+    },
     "dispersion": 1000,
     "durability": 10,
     "reload": 500,
-    "ammo_effects": [ "PSEUDO", "EXPLOSIVE" ],
-    "flags": [ "NEVER_JAMS" ]
+    "ammo_effects": [
+      "EXPLOSIVE"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ]
   },
   {
     "id": "SS_pershield",
     "type": "GUN",
-    "name": { "str": "perimeter shield" },
-    "description": "It sends a highly damaging current to whoever gets close to the entity equipped with this. May shock the user too.",
+    "name": {
+      "str": "周边防护罩"
+    },
+    "description": "它向任何接近装备了它的实体的人发送一个极具破坏性的电流。可能也会让用户震惊。",
     "weight": "10000 g",
     "volume": "2500 ml",
     "price": "1 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": ")",
     "color": "light_red",
     "skill": "launcher",
     "range": 1,
-    "ranged_damage": { "damage_type": "electric", "amount": 8 },
+    "ranged_damage": {
+      "damage_type": "electric",
+      "amount": 8
+    },
     "dispersion": 1000,
     "durability": 10,
     "reload": 100,
-    "ammo_effects": [ "PSEUDO", "LIGHTNING", "BEANBAG", "WIDE" ],
+    "ammo_effects": [
+      "LIGHTNING",
+      "BEANBAG",
+      "WIDE"
+    ],
     "//": "Will stun its primary target.",
-    "flags": [ "NEVER_JAMS" ]
+    "flags": [
+      "NEVER_JAMS"
+    ]
   },
   {
     "id": "squirtler_bulb",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "squirting bulb" },
-    "description": "Bulb of the squirtler.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NO_DAMAGE_SCALING", "DRAW_AS_LINE" ],
+    "name": {
+      "str": "喷射灯泡"
+    },
+    "description": "喷射器的灯泡。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NO_DAMAGE_SCALING",
+      "DRAW_AS_LINE"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 10,
-    "modes": [ [ "N", "near", 5 ], [ "M", "mid", 2 ], [ "L", "far", 1 ] ],
+    "modes": [
+      [
+        "N",
+        "near",
+        5
+      ],
+      [
+        "M",
+        "mid",
+        2
+      ],
+      [
+        "L",
+        "far",
+        1
+      ]
+    ],
     "dispersion": 1000,
-    "ranged_damage": { "damage_type": "acid", "amount": 2 }
+    "ranged_damage": {
+      "damage_type": "acid",
+      "amount": 2
+    }
   },
   {
     "id": "shifter_shadows",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "shapeshifter's shadows" },
-    "description": "An internal something-something that splits thick, errant shadows.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "SECRO_SHIFTERFOG_EXPLODE" ],
+    "name": {
+      "str": "变形者的阴影"
+    },
+    "description": "一种内部的东西，它能分裂出浓密的、错乱的阴影。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "SECRO_SHIFTERFOG_EXPLODE"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 25,
-    "modes": [ [ "N", "near", 4 ], [ "M", "mid", 2 ], [ "L", "far", 1 ] ],
+    "modes": [
+      [
+        "N",
+        "near",
+        4
+      ],
+      [
+        "M",
+        "mid",
+        2
+      ],
+      [
+        "L",
+        "far",
+        1
+      ]
+    ],
     "dispersion": 5000,
-    "ranged_damage": { "damage_type": "pure", "amount": 1 }
+    "ranged_damage": {
+      "damage_type": "pure",
+      "amount": 1
+    }
   },
   {
     "id": "shifter_illu_shadows",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "shapeshifter's shadows" },
-    "description": "An internal something-something that splits thick, errant shadows. This is much less efficient.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "SECRO_SHIFTERFOG_SMALL_EXPLODE" ],
+    "name": {
+      "str": "变形者的阴影"
+    },
+    "description": "一种内部的东西，它能分裂出浓密的、错乱的阴影。这样效率要低得多。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "SECRO_SHIFTERFOG_SMALL_EXPLODE"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 25,
-    "modes": [ [ "N", "near", 2 ], [ "M", "mid", 1 ] ],
+    "modes": [
+      [
+        "N",
+        "near",
+        2
+      ],
+      [
+        "M",
+        "mid",
+        1
+      ]
+    ],
     "dispersion": 10000,
-    "ranged_damage": { "damage_type": "pure", "amount": 1 }
+    "ranged_damage": {
+      "damage_type": "pure",
+      "amount": 1
+    }
   },
   {
     "id": "fleshknot_tent_cluster",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "fleshknot tentacle cluster" },
-    "description": "A cluster of tentacles sent by fleshknot to snare targets.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "SECRO_FLESHKNOT_TENT_BIG" ],
+    "name": {
+      "str": "血肉疣触手簇"
+    },
+    "description": "一簇血肉疣伸出用来诱捕目标的触手",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "SECRO_FLESHKNOT_TENT_BIG"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 20,
-    "modes": [ [ "N", "near", 2 ], [ "M", "mid", 1 ] ],
+    "modes": [
+      [
+        "N",
+        "near",
+        2
+      ],
+      [
+        "M",
+        "mid",
+        1
+      ]
+    ],
     "dispersion": 2500,
-    "ranged_damage": { "damage_type": "stab", "amount": 16, "armor_multiplier": 0.5 }
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 16,
+      "armor_multiplier": 0.5
+    }
   },
   {
     "id": "fleshknot_tent_striker",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "fleshknot tentacle" },
-    "description": "A single tentacle thrust performed by the fleshknot.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "SECRO_FLESHKNOT_TENT" ],
+    "name": {
+      "str": "血肉疣触手"
+    },
+    "description": "由血肉疣驱动的一只触手",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "SECRO_FLESHKNOT_TENT"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 20,
-    "modes": [ [ "N", "near", 4 ], [ "M", "mid", 2 ] ],
+    "modes": [
+      [
+        "N",
+        "near",
+        4
+      ],
+      [
+        "M",
+        "mid",
+        2
+      ]
+    ],
     "dispersion": 1000,
-    "ranged_damage": { "damage_type": "stab", "amount": 8, "armor_multiplier": 0.5 }
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 8,
+      "armor_multiplier": 0.5
+    }
   },
   {
     "id": "grubbyzed_spit",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "grubby zombie's mouth" },
-    "description": "Spits globs of tainted goo infested with parasites.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "SECRO_GRUBBYZED_SPIT" ],
+    "name": {
+      "str": "肮脏丧尸的嘴"
+    },
+    "description": "吐出一团团沾满寄生虫的污浊粘液。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "SECRO_GRUBBYZED_SPIT"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 11,
     "dispersion": 2000,
-    "modes": [ [ "N", "near", 3 ], [ "M", "mid", 2 ] ],
-    "ranged_damage": { "damage_type": "bash", "amount": 4 }
+    "modes": [
+      [
+        "N",
+        "near",
+        3
+      ],
+      [
+        "M",
+        "mid",
+        2
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 4
+    }
   },
   {
     "id": "grubbyzed_spit_big",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "grubby zombie's bloated mouth" },
-    "description": "Spits larger globs of tainted goo infested with parasites.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "SECRO_GRUBBYZED_SPIT_BIG" ],
+    "name": {
+      "str": "肮脏丧尸肿胀的嘴"
+    },
+    "description": "吐出更大的沾有寄生虫的粘糊糊。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "SECRO_GRUBBYZED_SPIT_BIG"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 5,
     "dispersion": 4000,
-    "modes": [ [ "N", "near", 4 ], [ "M", "mid", 2 ] ],
-    "ranged_damage": { "damage_type": "bash", "amount": 12 }
+    "modes": [
+      [
+        "N",
+        "near",
+        4
+      ],
+      [
+        "M",
+        "mid",
+        2
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 12
+    }
   },
   {
     "id": "snatcher_mouth",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "snatcher zombie's mouth" },
-    "description": "Sends off a long-ranged tongue with precise accuracy, stopping the target's movement. Takes a long time to replenish before firing a new one.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "SECRO_SNATCHER" ],
+    "name": {
+      "str": "掠夺丧尸的嘴"
+    },
+    "description": "以精确的精度发射远程舌头，阻止目标的移动。在发射一个新的之前需要很长时间来补充能量。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "SECRO_SNATCHER"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 30,
     "dispersion": 10,
-    "ranged_damage": { "damage_type": "bash", "amount": 3 }
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 3
+    }
   },
   {
     "id": "pellucid_mouth",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "pellucid zombie's mouth" },
-    "description": "An acid-dribbing mouth of a pellucid zombie. Spits concentrated acid.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "SECRO_PELLUCID_SPIT" ],
+    "name": {
+      "str": "透明丧尸的嘴"
+    },
+    "description": "一个透明丧尸滴酸的嘴，喷吐高浓度的酸液。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "SECRO_PELLUCID_SPIT"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 13,
     "dispersion": 1000,
-    "ranged_damage": { "damage_type": "acid", "amount": 4 }
+    "ranged_damage": {
+      "damage_type": "acid",
+      "amount": 4
+    }
   },
   {
     "id": "wriggly_tentacle",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "writhing horror's tentacle" },
-    "description": "Tentacles covering the writhing horror. Will reach out to its targets.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES" ],
+    "name": {
+      "str": "扭动恐怖的触角"
+    },
+    "description": "触手覆盖着扭曲的恐怖。将接触到它的目标。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 10,
     "dispersion": 2000,
-    "modes": [ [ "N", "near", 5 ], [ "M", "mid", 2 ] ],
-    "ranged_damage": { "damage_type": "stab", "amount": 10 }
+    "modes": [
+      [
+        "N",
+        "near",
+        5
+      ],
+      [
+        "M",
+        "mid",
+        2
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 10
+    }
   },
   {
     "id": "mawy_mouth",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "sinister maw's mouth" },
-    "description": "Sinister maw's mouth. It spews out fleshy webbings.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "SECRO_MAWYFLESH" ],
+    "name": {
+      "str": "阴险的嘴巴"
+    },
+    "description": "阴险的嘴巴。它吐出肉质的蹼。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "SECRO_MAWYFLESH"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 13,
     "dispersion": 4000,
-    "modes": [ [ "N", "near", 2 ], [ "M", "mid", 1 ] ],
-    "ranged_damage": { "damage_type": "bash", "amount": 3 }
+    "modes": [
+      [
+        "N",
+        "near",
+        2
+      ],
+      [
+        "M",
+        "mid",
+        1
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 3
+    }
   },
   {
     "id": "cordev_mouth",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "corrupted devourer's mouth" },
-    "description": "Mouths of corrupted devourer. Spit corrupted acid.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "SECRO_CORDEV" ],
+    "name": {
+      "str": "腐败的吞食者的嘴"
+    },
+    "description": "腐败吞食者的嘴。吐出腐蚀的酸。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "SECRO_CORDEV"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 9,
     "dispersion": 3000,
-    "modes": [ [ "N", "near", 1 ] ],
-    "ranged_damage": { "damage_type": "acid", "amount": 5 }
+    "modes": [
+      [
+        "N",
+        "near",
+        1
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "acid",
+      "amount": 5
+    }
   },
   {
     "id": "fleshysnaky_bn_shower",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "flesilisk's bone needles (shower)" },
-    "description": "Bone needles that forms around the flesilisk's in-between scales. This one showers it upclose.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "DRAW_AS_LINE", "NO_DAMAGE_SCALING" ],
+    "name": {
+      "str": "Flesilik骨针（淋浴）"
+    },
+    "description": "在“鳞片”之间的Flesilik周围形成的骨针。这一个是近距离淋浴。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "DRAW_AS_LINE"
+    ],
     "skill": "rifle",
     "durability": 10,
-    "range": 22,
-    "dispersion": 10000,
-    "modes": [ [ "N", "near", 30 ] ],
-    "ranged_damage": { "damage_type": "stab", "amount": 3, "armor_penetration": 12 }
+    "range": 11,
+    "dispersion": 33333,
+    "modes": [
+      [
+        "N",
+        "near",
+        25
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 6,
+      "armor_penetration": 3
+    }
   },
   {
     "id": "equinox_hole",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "equinox' hole" },
-    "description": "Equinox' gaping hole. Necrotic skin shoots out of it.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "SECRO_EQUINOX" ],
+    "name": {
+      "str": "春分点洞"
+    },
+    "description": "春分点的大洞。坏死的皮肤从里面冒出来。",
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "SECRO_EQUINOX"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 12,
     "dispersion": 200000,
-    "modes": [ [ "N", "near", 3 ] ],
-    "ranged_damage": { "damage_type": "bash", "amount": 25 }
+    "modes": [
+      [
+        "N",
+        "near",
+        3
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bash",
+      "amount": 25
+    }
   },
   {
     "id": "tentawraith_tentgun",
     "type": "GUN",
     "copy-from": "fake_item",
-    "name": { "str": "wraith's swollen arm" },
+    "name": {
+      "str": "wraith's swollen arm"
+    },
     "description": "This is the swollen proportion of the wraith. Shoots tentacles.",
-    "flags": [ "NEVER_JAMS" ],
-    "ammo_effects": [ "PSEUDO", "NEVER_MISFIRES", "NO_PENETRATE_OBSTACLES", "DRAW_AS_LINE" ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES",
+      "NO_PENETRATE_OBSTACLES",
+      "DRAW_AS_LINE"
+    ],
     "skill": "rifle",
     "durability": 10,
     "range": 7,
     "dispersion": 12500,
-    "modes": [ [ "N", "near", 5 ] ],
-    "ranged_damage": { "damage_type": "stab", "amount": 7, "armor_penetration": 2, "armor_multiplier": 0.95 }
+    "modes": [
+      [
+        "N",
+        "near",
+        5
+      ]
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": 7,
+      "armor_penetration": 2,
+      "armor_multiplier": 0.95
+    }
   }
 ]

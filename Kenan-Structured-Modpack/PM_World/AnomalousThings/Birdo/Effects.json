@@ -49,11 +49,8 @@
     "id": "feather_throwing_ench",
     "has": "WIELD",
     "condition": "ALWAYS",
-    "skills": [ { "value": "throw", "add": 2 } ],
     "values": [
-      { "value": "THROW_STR", "add": { "math": [ "1 - u_vitamin('SIN') / 2" ] } },
-      { "value": "THROW_DAMAGE", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } },
-      { "value": "MELEE_DAMAGE", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } }
+      { "value": "STRENGTH", "add": { "math": [ "0 + (u_vitamin('SIN') / 2)" ] } }
     ]
   },
   {
@@ -61,12 +58,17 @@
     "id": "feather_red_throwing_ench",
     "has": "WIELD",
     "condition": "ALWAYS",
-    "skills": [ { "value": "throw", "add": 5 } ],
     "values": [
-      { "value": "THROW_STR", "add": { "math": [ "3 - u_vitamin('SIN') " ] } },
-      { "value": "THROW_DAMAGE", "add": { "math": [ "0 + u_vitamin('SIN')" ] } },
-      { "value": "MELEE_DAMAGE", "add": { "math": [ "0 + u_vitamin('SIN') / 10" ] } },
-      { "value": "ARMOR_ALL", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } }
+      { "value": "STRENGTH", "add": { "math": [ "0 + u_vitamin('SIN') / 10" ] } },
+      { "value": "ARMOR_ACID", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } },
+      { "value": "ARMOR_BASH", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } },
+      { "value": "ARMOR_BIO", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } },
+      { "value": "ARMOR_BULLET", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } },
+      { "value": "ARMOR_COLD", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } },
+      { "value": "ARMOR_CUT", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } },
+      { "value": "ARMOR_ELEC", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } },
+      { "value": "ARMOR_HEAT", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } },
+      { "value": "ARMOR_STAB", "add": { "math": [ "0.5 * u_vitamin('SIN')" ] } }
     ]
   },
   {
@@ -115,7 +117,15 @@
     "values": [
       { "value": "KNOCKBACK_RESIST", "add": { "math": [ "100 - u_vitamin('SIN') * 10" ] } },
       { "value": "KNOCKDOWN_RESIST", "add": { "math": [ "100 - u_vitamin('SIN') * 10" ] } },
-      { "value": "ARMOR_ALL", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } }
+      { "value": "ARMOR_ACID", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } },
+      { "value": "ARMOR_BASH", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } },
+      { "value": "ARMOR_BIO", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } },
+      { "value": "ARMOR_BULLET", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } },
+      { "value": "ARMOR_COLD", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } },
+      { "value": "ARMOR_CUT", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } },
+      { "value": "ARMOR_ELEC", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } },
+      { "value": "ARMOR_HEAT", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } },
+      { "value": "ARMOR_STAB", "multiply": { "math": [ "1 + u_vitamin('SIN') / 20" ] } }
     ],
     "hit_me_effect": [ { "id": "sin_strike" } ]
   },
@@ -144,9 +154,8 @@
     "id": "beak_pistol_3",
     "has": "WIELD",
     "condition": { "u_has_var": "beak_ego_w_3_unlocked", "value": "true" },
-    "skills": [ { "value": "pistol", "add": 2 }, { "value": "gun", "add": 2 } ],
     "values": [
-      { "value": "BLEED_STOP_BONUS", "add": { "math": [ "1 - u_vitamin('SIN')" ] } },
+      { "value": "PERCEPTION", "add": 2 },
       { "value": "PAIN", "add": { "math": [ "5 * u_vitamin('SIN') - 20 " ] } }
     ]
   },

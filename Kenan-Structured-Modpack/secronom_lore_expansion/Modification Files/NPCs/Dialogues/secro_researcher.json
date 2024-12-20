@@ -4,132 +4,218 @@
     "id": "TALK_SECRO_RESEARCHER_main",
     "dynamic_line": {
       "u_has_effect": "secro_scientist_mission1_progress",
-      "no": "You are not authorized to this area.",
+      "no": "你无权进入这个区域。",
       "yes": {
         "u_has_effect": "secro_researcher_mission1_help",
-        "no": "What is it?",
+        "no": "干什么？",
         "yes": {
           "u_has_effect": "secro_scientist_partake_mission1",
-          "no": "You better get going.",
+          "no": "你最好得走了。",
           "yes": {
             "u_has_effect": "secro_researcher_mission1_help_done",
-            "no": "Great job, survivor. I never expect an outsider help us with our dilemma, yet here you are.",
-            "yes": "What do you want?"
+            "no": "干得好，幸存者。我从不指望外人帮我们解决困境，但你来了。",
+            "yes": "你想要什么？"
           }
         }
       }
     },
     "responses": [
       {
-        "text": "We need to go.",
+        "text": "我们得走了。",
         "topic": "TALK_SECRO_RESEARCHER_mission1_progress",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_researcher_mission1_help" } },
-            { "u_has_effect": "secro_scientist_mission1_progress" }
+            {
+              "not": {
+                "u_has_effect": "secro_researcher_mission1_help"
+              }
+            },
+            {
+              "u_has_effect": "secro_scientist_mission1_progress"
+            }
           ]
         }
       },
       {
-        "text": "Yeah, and I want to know more about your plans.",
+        "text": "是的，我想了解更多关于你的计划。",
         "topic": "TALK_DONE",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_researcher_mission1_help_done" } },
-            { "u_has_effect": "secro_scientist_partake_mission1" }
+            {
+              "not": {
+                "u_has_effect": "secro_researcher_mission1_help_done"
+              }
+            },
+            {
+              "u_has_effect": "secro_scientist_partake_mission1"
+            }
           ]
         },
-        "effect": [ { "duration": "PERMANENT", "u_add_effect": "secro_researcher_mission1_help_done" }, "stop_following" ]
+        "effect": [
+          {
+            "duration": "PERMANENT",
+            "u_add_effect": "secro_researcher_mission1_help_done"
+          },
+          "stop_following"
+        ]
       },
       {
         "truefalsetext": {
-          "condition": { "u_has_effect": "secro_guard_mission1_gonnastart" },
+          "condition": {
+            "u_has_effect": "secro_guard_mission1_gonnastart"
+          },
           "true": "The guard told me you need assistance.",
           "false": "What's your plan?"
         },
         "topic": "TALK_SECRO_RESEARCHER_guard_mission1_gonnastart",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_guard_mission1_startnow" } },
-            { "u_has_effect": "secro_researcher_mission1_help_done" }
+            {
+              "not": {
+                "u_has_effect": "secro_guard_mission1_startnow"
+              }
+            },
+            {
+              "u_has_effect": "secro_researcher_mission1_help_done"
+            }
           ]
         },
-        "effect": { "duration": 2880, "npc_add_effect": "secro_researcher_searching_shapeshifter" }
+        "effect": {
+          "duration": 2880,
+          "npc_add_effect": "secro_researcher_searching_shapeshifter"
+        }
       },
       {
-        "text": "We've clear the enigma chamber.",
+        "text": "我们已经清理了神秘密室。",
         "topic": "TALK_SECRO_RESEARCHER_guard_mission1_done",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_researcher_guard_mission1_done" } },
-            { "u_has_effect": "secro_guard_backfrom_mission1" }
+            {
+              "not": {
+                "u_has_effect": "secro_researcher_guard_mission1_done"
+              }
+            },
+            {
+              "u_has_effect": "secro_guard_backfrom_mission1"
+            }
           ]
         },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_researcher_guard_mission1_done" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_researcher_guard_mission1_done"
+        }
       },
       {
-        "text": "Anything else I can do?",
+        "text": "我还能做什么？",
         "topic": "TALK_SECRO_RESEARCHER_mission1",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_researcher_mission1_gonnastart" } },
-            { "u_has_effect": "secro_researcher_guard_mission1_done" },
-            { "not": { "u_has_effect": "secro_researcher_mission1_progress" } }
+            {
+              "not": {
+                "u_has_effect": "secro_researcher_mission1_gonnastart"
+              }
+            },
+            {
+              "u_has_effect": "secro_researcher_guard_mission1_done"
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_researcher_mission1_progress"
+              }
+            }
           ]
         }
       },
       {
-        "text": "How's the search for specimen?",
+        "text": "标本搜寻得怎么样了？",
         "topic": "TALK_SECRO_RESEARCHER_mission1_notyet",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_researcher_searching_shapeshifter" },
-            { "u_has_effect": "secro_researcher_mission1_gonnastart" },
-            { "not": { "u_has_effect": "secro_researcher_mission1_progress" } }
+            {
+              "u_has_effect": "secro_researcher_searching_shapeshifter"
+            },
+            {
+              "u_has_effect": "secro_researcher_mission1_gonnastart"
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_researcher_mission1_progress"
+              }
+            }
           ]
         }
       },
       {
-        "text": "How's the search for specimen?",
+        "text": "标本搜寻得怎么样了？",
         "topic": "TALK_SECRO_RESEARCHER_mission1_start",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_researcher_searching_shapeshifter" } },
-            { "u_has_effect": "secro_researcher_mission1_gonnastart" }
+            {
+              "not": {
+                "u_has_effect": "secro_researcher_searching_shapeshifter"
+              }
+            },
+            {
+              "u_has_effect": "secro_researcher_mission1_gonnastart"
+            }
           ]
         }
       },
       {
-        "truefalsetext": { "condition": { "u_has_effect": "secro_scientist_mission1_progress" }, "true": "Nothing.", "false": "Bye then..." },
+        "truefalsetext": {
+          "condition": {
+            "u_has_effect": "secro_scientist_mission1_progress"
+          },
+          "true": "Nothing.",
+          "false": "Bye then..."
+        },
         "topic": "TALK_DONE",
-        "condition": { "not": { "u_has_effect": "secro_researcher_mission1_help" } }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_researcher_mission1_help"
+          }
+        }
       },
       {
-        "text": "I am.",
+        "text": "我是。",
         "topic": "TALK_DONE",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_scientist_partake_mission1" } },
-            { "u_has_effect": "secro_researcher_mission1_help" }
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_partake_mission1"
+              }
+            },
+            {
+              "u_has_effect": "secro_researcher_mission1_help"
+            }
           ]
         }
       },
       {
-        "text": "Nothing.",
+        "text": "没有什么。",
         "topic": "TALK_DONE",
-        "condition": { "u_has_effect": "secro_researcher_mission1_help_done" }
+        "condition": {
+          "u_has_effect": "secro_researcher_mission1_help_done"
+        }
       }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_mission1_progress",
-    "dynamic_line": "I know. Just lead us all to that chamber.",
+    "dynamic_line": "我知道。带我们去那个房间。",
     "responses": [
       {
-        "text": "Okay.",
+        "text": "好的。",
         "topic": "TALK_DONE",
-        "effect": [ { "duration": "PERMANENT", "u_add_effect": "secro_researcher_mission1_help" }, "follow_only" ]
+        "effect": [
+          {
+            "duration": "PERMANENT",
+            "u_add_effect": "secro_researcher_mission1_help"
+          },
+          "follow_only"
+        ]
       }
     ]
   },
@@ -138,90 +224,144 @@
     "id": "TALK_SECRO_RESEARCHER_guard_mission1_gonnastart",
     "dynamic_line": {
       "u_has_effect": "secro_guard_mission1_gonnastart",
-      "no": "Since you've proven yourself worthy for our future plans, I'll be glad if you help me with this rather odd request.",
-      "yes": "Yes, since you've proven yourself worthy for our plans, I'll be glad if you help me with this rather odd request."
+      "no": "既然你证明了你对我们未来的计划是有价值的，我很高兴你能帮我处理这个奇怪的请求。",
+      "yes": "是的，既然你证明了你对我们的计划是有价值的，我很高兴你能帮我处理这个奇怪的请求。"
     },
     "responses": [
       {
-        "text": "Tell me.",
+        "text": "告诉我。",
         "topic": "TALK_SECRO_RESEARCHER_guard_mission1_start",
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_guard_mission1_start" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_guard_mission1_start"
+        }
       }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_guard_mission1_start",
-    "dynamic_line": "But first, let me tell you a subtle understanding on our facility. There are a total of 3 specimen variants: the failed, BOW and enigma, each in their respective rooms.",
+    "dynamic_line": "但首先，让我告诉你一个关于我们设施的微妙理解。一共有3个样本变种：失败的，弓和谜，每个在各自的房间。",
     "responses": [
-      { "text": "Failed? BOW? Enigma? What are those?", "topic": "TALK_SECRO_RESEARCHER_guard_mission1_start_info" },
-      { "text": "Just describe what needs to be done.", "topic": "TALK_SECRO_RESEARCHER_guard_mission1_start_now" }
+      {
+        "text": "失败？鞠躬？谜？那些是什么？",
+        "topic": "TALK_SECRO_RESEARCHER_guard_mission1_start_info"
+      },
+      {
+        "text": "描述一下需要做什么。",
+        "topic": "TALK_SECRO_RESEARCHER_guard_mission1_start_now"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_guard_mission1_start_info",
-    "dynamic_line": "Failed specimens are the results of unsuccessful mutations, otherwise they are called BOWs. Enigmas, on the other hand, were formed using potent mutagens.",
-    "responses": [ { "text": "So what should I do?", "topic": "TALK_SECRO_RESEARCHER_guard_mission1_start_now" } ]
+    "dynamic_line": "失败的标本是不成功突变的结果，否则称为弓形突变。另一方面，谜团是使用强效诱变剂形成的。",
+    "responses": [
+      {
+        "text": "那我该怎么办？",
+        "topic": "TALK_SECRO_RESEARCHER_guard_mission1_start_now"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_guard_mission1_start_now",
-    "dynamic_line": "Clear out the enigma chamber. That room were locked down due to extremely anomalous threats, and you'll need authorization from someone to open it up. If you're ready, talk to the guard about this.",
+    "dynamic_line": "清理神秘密室。那个房间因为异常的威胁被封锁了，你需要有人授权才能打开它。如果你准备好了，跟警卫谈谈。",
     "responses": [
       {
-        "text": "Okay. I will go now",
+        "text": "可以。我现在就去",
         "topic": "TALK_DONE",
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_guard_mission1_startnow" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_guard_mission1_startnow"
+        }
       }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_guard_mission1_done",
-    "dynamic_line": "Excellent. Have you found anything of interest?",
-    "responses": [ { "text": "Nope.", "topic": "TALK_SECRO_RESEARCHER_enigma_none" } ]
+    "dynamic_line": "真棒。你找到什么有趣的东西了吗？",
+    "responses": [
+      {
+        "text": "不行。",
+        "topic": "TALK_SECRO_RESEARCHER_enigma_none"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_enigma_none",
-    "dynamic_line": "If you notice anything strange, just ask me and I'll tell everything I know about that.",
-    "responses": [ { "text": "Okay.", "topic": "TALK_SECRO_RESEARCHER_main" }, { "text": "Okay. Bye.", "topic": "TALK_DONE" } ]
+    "dynamic_line": "如果你发现什么奇怪的事，就问我，我会告诉你我所知道的一切。",
+    "responses": [
+      {
+        "text": "好的。",
+        "topic": "TALK_SECRO_RESEARCHER_main"
+      },
+      {
+        "text": "可以。再见。",
+        "topic": "TALK_DONE"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_mission1",
-    "dynamic_line": "Well, I'm curious about a mysterious, wandering specimen. Its the result of our recent experiment using a highly unstable mutagen who, I believe, takes form of a human.",
-    "responses": [ { "text": "What do you from it?", "topic": "TALK_SECRO_RESEARCHER_mission1_info" } ]
+    "dynamic_line": "嗯，我对一个神秘的流浪标本很好奇。这是我们最近用一种高度不稳定的诱变剂进行实验的结果，我相信，这种诱变剂是人类的形式。",
+    "responses": [
+      {
+        "text": "你从中得到了什么？",
+        "topic": "TALK_SECRO_RESEARCHER_mission1_info"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_mission1_info",
-    "dynamic_line": "Unlike other enigmas, its genetic structure is of unknown form, and I need a sample from it for deeper understanding of this otherworldly creature.",
-    "responses": [ { "text": "So where can I find it?", "topic": "TALK_SECRO_RESEARCHER_mission1_where" } ]
+    "dynamic_line": "与其他谜团不同的是，它的基因结构是未知的，我需要一个样本来更深入地了解这个超凡脱俗的生物。",
+    "responses": [
+      {
+        "text": "我在哪能找到它？",
+        "topic": "TALK_SECRO_RESEARCHER_mission1_where"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_mission1_where",
-    "dynamic_line": "That's not necessary, as while you were dealing with the enigma chamber, I've sent a scout drone to search for that specimen using a tracker device, and it may take a while for its report.",
+    "dynamic_line": "这是没有必要的，因为当你在处理神秘密室的时候，我已经派了一架侦察机去用追踪装置搜索那个标本，它的报告可能需要一段时间。",
     "responses": [
       {
-        "text": "Okay... I'll wait for it.",
+        "text": "可以…我会等的。",
         "topic": "TALK_SECRO_RESEARCHER_main",
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_researcher_mission1_gonnastart" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_researcher_mission1_gonnastart"
+        }
       }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_mission1_notyet",
-    "dynamic_line": "The drone's still on the search...",
-    "responses": [ { "text": "Okay...", "topic": "TALK_SECRO_RESEARCHER_main" } ]
+    "dynamic_line": "无人机还在搜索中…",
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "TALK_SECRO_RESEARCHER_main"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_RESEARCHER_mission1_start",
-    "dynamic_line": "The drone has revealed the location of our target.",
-    "responses": [ { "text": "Okay, what should I do?", "topic": "TALK_MISSION_OFFER" } ]
+    "dynamic_line": "无人机显示了我们目标的位置。",
+    "responses": [
+      {
+        "text": "好吧，我该怎么办？",
+        "topic": "TALK_MISSION_OFFER"
+      }
+    ]
   }
 ]

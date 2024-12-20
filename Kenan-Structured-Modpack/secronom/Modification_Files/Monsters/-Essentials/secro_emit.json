@@ -121,11 +121,34 @@
     "chance": 10
   },
   {
+    "id": "secro_shout",
+    "type": "emit",
+    "field": "fd_disser_scream",
+    "intensity": 1,
+    "qty": 150,
+    "chance": 15
+  },
+  {
+    "id": "secro_scream",
+    "type": "emit",
+    "field": "fd_disser_scream",
+    "intensity": 1,
+    "qty": 30,
+    "chance": 80
+  },
+  {
     "id": "emit_jolt_blanket",
     "type": "emit",
     "field": "fd_electricity",
     "qty": 30,
     "intensity": 2
+  },
+  {
+    "id": "emit_jolt_ing",
+    "type": "emit",
+    "field": "fd_jolt_elec",
+    "qty": 5,
+    "intensity": 3
   },
   {
     "id": "emit_bolt_crackle_smol",
@@ -320,10 +343,24 @@
     "intensity": 1
   },
   {
+    "id": "emit_flesh_wall_limitation",
+    "type": "emit",
+    "field": "fd_sflesh_wall_limit",
+    "qty": 1,
+    "intensity": 1
+  },
+  {
     "id": "emit_veinstalk_spawn",
     "type": "emit",
     "field": "fd_sflesh_veinstalk_popup",
     "qty": 9,
+    "intensity": 1
+  },
+  {
+    "id": "emit_veinstalk_limiter",
+    "type": "emit",
+    "field": "fd_sflesh_veinstalk_limiter",
+    "qty": 1,
     "intensity": 1
   },
   {
@@ -344,6 +381,29 @@
     "id": "emit_secro_power_armor_flesh_link",
     "type": "emit",
     "field": "fd_secro_power_armor_flesh_link",
+    "qty": 1,
+    "intensity": 1
+  },
+  {
+    "id": "emit_sflesh_fleshling_birth",
+    "type": "emit",
+    "field": "fd_sflesh_fleshling_birth",
+    "qty": 1,
+    "intensity": 1,
+    "chance": 1
+  },
+  {
+    "id": "emit_sflesh_fleshling_scavengy_forms",
+    "type": "emit",
+    "field": "fd_sflesh_fleshling_scavengy_forms",
+    "qty": 1,
+    "intensity": 1,
+    "chance": 10
+  },
+  {
+    "id": "emit_sflesh_fleshling_scavengy_forms_limit",
+    "type": "emit",
+    "field": "fd_sflesh_fleshling_scavengy_forms_limit",
     "qty": 1,
     "intensity": 1
   },
@@ -450,11 +510,5 @@
     "field": "fd_secrozombie_rot",
     "intensity": 1,
     "qty": 7
-  },
-  {
-    "id": "secro_uruxis_fog",
-    "type": "emit",
-    "field": "fd_shadow",
-    "qty": 5
   }
 ]

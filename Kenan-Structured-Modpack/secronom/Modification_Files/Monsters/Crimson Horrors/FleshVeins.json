@@ -3,16 +3,23 @@
     "//": "Vein that deals cutting damage.",
     "id": "mon_sflesh_vbeast",
     "type": "MONSTER",
-    "name": { "str": "vein beast" },
-    "description": "A cluster of veins formed into a horrendous creeping abomination. Thick strands of membranous vine-like tendrils reaches out of its beating core.",
+    "name": {
+      "str": "脉兽"
+    },
+    "description": "一大簇蠕动的脉管，看上去十分可怕，令人厌恶地爬行着。密集的网状触须从它跳动的核心漫延出来。",
     "default_faction": "secro_flesh",
     "bodytype": "migo",
-    "species": [ "SFLESH", "ABERRATION" ],
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
     "volume": "92500 ml",
     "weight": "120000 g",
     "hp": 140,
     "speed": 85,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⨳",
     "color": "light_red",
     "aggression": 100,
@@ -20,37 +27,73 @@
     "melee_skill": 6,
     "melee_dice": 0,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 6 } ],
-    "armor": { "bash": 10, "cut": 3, "bullet": 3, "stab": 8 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor": {
+      "bash": 10,
+      "cut": 3,
+      "bullet": 3,
+      "stab": 8
+    },
     "vision_day": 10,
     "vision_night": 10,
     "weakpoints": [
       {
         "name": "its core",
-        "difficulty": { "melee": 3 },
+        "difficulty": {
+          "melee": 3
+        },
         "coverage": 5,
-        "damage_mult": { "all": 2.0 }
+        "damage_mult": {
+          "all": 2
+        }
       }
     ],
-    "special_attacks": [ [ "secro_sflesh_vbeast_wlace", 18 ] ],
+    "special_attacks": [
+      [
+        "secro_sflesh_vbeast_wlace",
+        18
+      ]
+    ],
     "harvest": "exempt",
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
-    "flags": [ "SEES", "WARM", "POISON", "NO_BREATHE", "STUN_IMMUNE", "CLIMBS" ]
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "STUN_IMMUNE",
+      "CLIMBS"
+    ]
   },
   {
     "//": "Vein that deals bashing damage.",
     "id": "mon_sflesh_vrumbler",
     "type": "MONSTER",
-    "name": { "str": "rumbler" },
-    "description": "A thick group of veins unified into a crawling nightmare. Large, amalgous core is visible to its predominant limb, and tendrils seemingly gathers around it.",
+    "name": {
+      "str": "血筒"
+    },
+    "description": "密密麻麻的一组血管组成了一个爬行的梦魇。它的优势肢可以看到巨大的、聚集的核心，卷须似乎聚集在它周围。",
     "default_faction": "secro_flesh",
     "bodytype": "migo",
-    "species": [ "SFLESH", "ABERRATION" ],
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
     "volume": "92500 ml",
     "weight": "120000 g",
     "hp": 185,
     "speed": 85,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⩮",
     "color": "light_red",
     "aggression": 100,
@@ -58,20 +101,44 @@
     "melee_skill": 6,
     "melee_dice": 6,
     "melee_dice_sides": 4,
-    "armor": { "bash": 10, "cut": 3, "bullet": 3, "stab": 8 },
+    "armor": {
+      "bash": 10,
+      "cut": 3,
+      "bullet": 3,
+      "stab": 8
+    },
     "vision_day": 10,
     "vision_night": 10,
     "weakpoints": [
       {
         "name": "its core",
-        "difficulty": { "melee": 3 },
+        "difficulty": {
+          "melee": 3
+        },
         "coverage": 15,
-        "damage_mult": { "all": 1.66 }
+        "damage_mult": {
+          "all": 1.66
+        }
       }
     ],
-    "special_attacks": [ [ "secro_flesh_vrumbler_thrash", 24 ] ],
+    "special_attacks": [
+      [
+        "secro_flesh_vrumbler_thrash",
+        24
+      ]
+    ],
     "harvest": "exempt",
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
-    "flags": [ "SEES", "WARM", "POISON", "NO_BREATHE", "STUN_IMMUNE", "CLIMBS" ]
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "STUN_IMMUNE",
+      "CLIMBS"
+    ]
   }
 ]

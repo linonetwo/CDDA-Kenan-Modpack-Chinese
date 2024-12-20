@@ -15,7 +15,6 @@
     "has": "WORN",
     "condition": { "u_has_var": "soda_ego_a_1_unlocked", "value": "true" },
     "values": [
-      { "value": "SCENT_MASK", "add": { "math": [ "0 + u_vitamin('cheers') " ] } },
       { "value": "STRENGTH", "add": { "math": [ "1 + u_vitamin('cheers') / 100 " ] } }
     ]
   },
@@ -35,7 +34,6 @@
     "has": "WORN",
     "condition": { "u_has_var": "soda_ego_a_3_unlocked", "value": "true" },
     "values": [
-      { "value": "CARDIO_MULTIPLIER", "add": { "math": [ "0.25 * u_vitamin('cheers') / 5 " ] } },
       { "value": "PERCEPTION", "add": { "math": [ "1 + u_vitamin('cheers') / 100" ] } }
     ],
     "hit_me_effect": [ { "id": "sin_strike" } ]
@@ -59,7 +57,6 @@
     "id": "soda_pistol_3",
     "has": "WIELD",
     "condition": { "u_has_var": "soda_ego_w_3_unlocked", "value": "true" },
-    "skills": [ { "value": "pistol", "add": 1 } ],
     "values": [ { "value": "RANGE", "add": { "math": [ "0 + u_vitamin('cheers') / 50" ] } } ]
   },
   {
@@ -67,14 +64,13 @@
     "id": "soda_gift_1",
     "has": "WORN",
     "condition": { "u_has_var": "soda_ego_g_1_unlocked", "value": "true" },
-    "values": [ { "value": "FAT_TO_MAX_HP", "multiply": { "math": [ "0 + u_vitamin('cheers') / 100" ] } } ]
+    "values": [ { "value": "REGEN_HP", "multiply": { "math": [ "0 + u_vitamin('cheers') / 100" ] } } ]
   },
   {
     "type": "enchantment",
     "id": "soda_gift_2",
     "has": "WORN",
-    "condition": { "u_has_var": "soda_ego_g_2_unlocked", "value": "true" },
-    "values": [ { "value": "KCAL", "multiply": { "math": [ " 0 + u_vitamin('cheers') / 1000" ] } } ]
+    "condition": { "u_has_var": "soda_ego_g_2_unlocked", "value": "true" }
   },
   {
     "type": "enchantment",

@@ -2,7 +2,7 @@
   {
     "type": "faction",
     "id": "cleansing_flame",
-    "name": "The Cleansing Flame",
+    "name": "净化圣火",
     "likes_u": 0,
     "respects_u": 0,
     "known_by_u": false,
@@ -37,16 +37,38 @@
         "lets you in": true,
         "knows your voice": true
       },
-      "sanguine_order_remnant": { "kill on sight": true, "knows your voice": true }
+      "sanguine_order_remnant": {
+        "kill on sight": true,
+        "knows your voice": true
+      }
     },
     "epilogues": [
-      { "power_min": 0, "power_max": 102, "id": "epilogue_faction_cleansing_flame_0" },
-      { "power_min": 103, "power_max": 110, "id": "epilogue_faction_cleansing_flame_103" },
-      { "power_min": 111, "power_max": 115, "id": "epilogue_faction_cleansing_flame_111" },
-      { "power_min": 116, "power_max": 127, "id": "epilogue_faction_cleansing_flame_116" },
-      { "power_min": 128, "id": "epilogue_faction_cleansing_flame_128" }
+      {
+        "power_min": 0,
+        "power_max": 102,
+        "id": "epilogue_faction_cleansing_flame_0"
+      },
+      {
+        "power_min": 103,
+        "power_max": 110,
+        "id": "epilogue_faction_cleansing_flame_103"
+      },
+      {
+        "power_min": 111,
+        "power_max": 115,
+        "id": "epilogue_faction_cleansing_flame_111"
+      },
+      {
+        "power_min": 116,
+        "power_max": 127,
+        "id": "epilogue_faction_cleansing_flame_116"
+      },
+      {
+        "power_min": 128,
+        "id": "epilogue_faction_cleansing_flame_128"
+      }
     ],
-    "description": "A local syncretic religious order, from some time before the cataclysm.  Now, remnants of them are dedicated to hunting down dangerous magic and otherworldly monsters."
+    "description": "一个当地的各宗教融合的组织，在大灾变前就已经存在。现在，他们的残党致力于封存危险的魔法，追捕异域怪物。"
   },
   {
     "type": "faction",
@@ -92,7 +114,7 @@
   {
     "type": "faction",
     "id": "keeper_remnant",
-    "name": "Lone Hermit",
+    "name": "孤独的隐士",
     "likes_u": 0,
     "respects_u": 0,
     "known_by_u": false,
@@ -118,19 +140,30 @@
         "lets you in": true,
         "knows your voice": true
       },
-      "cleansing_flame": { "knows your voice": true },
-      "sanguine_order_remnant": { "knows your voice": true }
+      "cleansing_flame": {
+        "knows your voice": true
+      },
+      "sanguine_order_remnant": {
+        "knows your voice": true
+      }
     },
     "epilogues": [
-      { "power_min": 22, "power_max": 33, "id": "epilogue_faction_keeper_remnant_22" },
-      { "power_min": 34, "id": "epilogue_faction_keeper_remnant_34" }
+      {
+        "power_min": 22,
+        "power_max": 33,
+        "id": "epilogue_faction_keeper_remnant_22"
+      },
+      {
+        "power_min": 34,
+        "id": "epilogue_faction_keeper_remnant_34"
+      }
     ],
-    "description": "A lone survivor, who seems to only be interested in living a quiet life away from the ruins of the old world.  Something seems off about him, though…"
+    "description": "一个孤独的幸存者，似乎只对远离旧世界废墟的平静生活感兴趣。不过，他似乎有些不对劲…"
   },
   {
     "type": "faction",
     "id": "sanguine_order_remnant",
-    "name": "Sanguine Remnant",
+    "name": "猩红教派残党",
     "likes_u": -5,
     "respects_u": -5,
     "known_by_u": false,
@@ -148,15 +181,20 @@
         "defends your space": true,
         "knows your voice": true
       },
-      "your_followers": { "knows your voice": true },
-      "cleansing_flame": { "kill on sight": true, "knows your voice": true }
+      "your_followers": {
+        "knows your voice": true
+      },
+      "cleansing_flame": {
+        "kill on sight": true,
+        "knows your voice": true
+      }
     },
-    "description": "The broken leftovers of a bloodthirsty pseudo-cult, from before the cataclysm.  The remainder still pursue the studies that led them down their murderous path, gleaming what little they can from past failures."
+    "description": "大灾变前嗜血的伪邪教的残存者。剩下的人仍在继续追求引导他们走上杀戮之路的研究，从过去的失败中汲取一点微光。"
   },
   {
     "type": "faction",
     "id": "sanguine_shrike_splinter",
-    "name": "Sanguine Shrike Splinter Cell",
+    "name": "猩红屠猎者分裂组织",
     "likes_u": -1,
     "respects_u": -1,
     "known_by_u": false,
@@ -174,10 +212,17 @@
         "defends your space": true,
         "knows your voice": true
       },
-      "your_followers": { "knows your voice": true },
-      "sanguine_order_remnant": { "kill on sight": true, "knows your voice": true },
-      "cleansing_flame": { "knows your voice": true }
+      "your_followers": {
+        "knows your voice": true
+      },
+      "sanguine_order_remnant": {
+        "kill on sight": true,
+        "knows your voice": true
+      },
+      "cleansing_flame": {
+        "knows your voice": true
+      }
     },
-    "description": "A handful of survivors who served as the elite \"hunters of hunters\" for a now-broken murderous cult.  Acting contrary to the norm for their order, their motives are unclear."
+    "description": "曾是一个现已支离破碎的杀人邪教的精英“猎人的猎人”的少数幸存者。他们的行为违背了给予他们的指令，动机尚不清楚。"
   }
 ]

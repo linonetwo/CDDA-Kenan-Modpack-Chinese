@@ -5,37 +5,51 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 1 token for every 15 essences you bring to me.",
+      "yes": "你每给我带来15个源质，我就给你一个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 205$ for every 15 essences you bring to me.",
+        "yes": "你每给我带来15种香精，我就给你205美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 90$ for every 15 essences you bring to me.",
-          "no": "I will give you 30$ and 1 token for every 15 essences you bring to me."
+          "yes": "你每给我带来15种香精，我就给你90美元。",
+          "no": "你每给我带来15种香精，我就给你30美元和1个代币。"
         }
       }
     },
-    "responses": [ { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeriessenceval" } } ]
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriessenceval"
+        }
+      }
+    ]
   },
   {
     "id": "VAMP_ASEEKER_item_bloodessence",
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 1 token for every 8 blood essences you bring to me.",
+      "yes": "你每给我带来8种血精，我就给你1个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 265$ for every 8 blood essences you bring to me.",
+        "yes": "你每带8个猩血源质给我，我会付你265美元作为报酬。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 90$ for every 8 blood essences you bring to me.",
-          "no": "I will give you 55$ and 1 token for every 8 blood essences you bring to me."
+          "yes": "你每带8个猩血源质给我，我会付你90美元作为报酬。",
+          "no": "你每带8个猩血源质给我，我会付你55美元和一个代币作为报酬。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeribloodessenceval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeribloodessenceval"
+        }
+      }
     ]
   },
   {
@@ -43,19 +57,25 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 1 token for every 22 dull essences you bring to me.",
+      "yes": "你每给我带来22个阴黯源质，我就给你一个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 305$ for every 22 dull essences you bring to me.",
+        "yes": "你每给我带22种无趣的香精，我就给你305美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 105$ for every 22 dull essences you bring to me.",
-          "no": "I will give you 75$ and 1 token for every 22 dull essences you bring to me."
+          "yes": "你每给我带22个阴黯源质，我就给你105美元。",
+          "no": "你每带22个阴黯源质给我，我会付你75美元和1个代币作为报酬。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeridullessenceval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeridullessenceval"
+        }
+      }
     ]
   },
   {
@@ -63,19 +83,25 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 5 token for each crystallized essence you bring to me.",
+      "yes": "你每带给我1个璀璨源质，我会付你5个代币作为报酬。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 515$ for each crystallized essence you bring to me.",
+        "yes": "你每带给我1个璀璨源质，我会付你515美元作为报酬。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 190$ for each crystallized essence you bring to me.",
-          "no": "I will give you 105$ and 5 token for each crystallized essence you bring to me."
+          "yes": "你每带1个璀璨源质给我，我会付你190美元作为报酬。",
+          "no": "你每带给我1个璀璨源质，我会付你105美元和5个代币作为报酬。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeripureessenceval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeripureessenceval"
+        }
+      }
     ]
   },
   {
@@ -83,19 +109,25 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 4 tokens for each wind fragment you bring to me.",
+      "yes": "你带给我的每一块风碎片我都会给你4个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 315$ for each wind fragment you bring to me.",
+        "yes": "你带给我的每一块风碎片我都会给你315美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 110$ for each wind fragment you bring to me.",
-          "no": "I will give you 35$ and 4 tokens for each wind fragment you bring to me."
+          "yes": "你带给我的每一片风，我就给你110美元。",
+          "no": "我会给你35美元和4个代币为你带来的每一个风碎片给我。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeriwindfragmentval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriwindfragmentval"
+        }
+      }
     ]
   },
   {
@@ -103,37 +135,51 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 3 tokens for each amorphous amber you bring to me.",
+      "yes": "你给我带来的每一个无定形琥珀，我就给你3个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 245$ for each amorphous amber you bring to me.",
+        "yes": "我会给你245美元买一个你带给我的无定形琥珀。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 95$ for each amorphous amber you bring to me.",
-          "no": "I will give you 45$ and 3 tokens for each amorphous amber you bring to me."
+          "yes": "你带给我的每一个无定形的琥珀我给你95美元。",
+          "no": "我会给你45美元和3个代币为您带来的每一个无定形琥珀给我。"
         }
       }
     },
-    "responses": [ { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeriblobgemval" } } ]
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriblobgemval"
+        }
+      }
+    ]
   },
   {
     "id": "VAMP_ASEEKER_item_monstertear",
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 5 tokens for each crystallized tear you bring to me.",
+      "yes": "你带给我的每一滴蓝色晶泪，我都会给你5个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 400$ for each crystallized tear you bring to me.",
+        "yes": "你带给我的每一滴蓝色晶泪，我就给你400美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 110$ for each crystallized tear you bring to me.",
-          "no": "I will give you 50$ and 5 tokens for each crystallized tear you bring to me."
+          "yes": "你每带给我一个蓝色晶泪我就会给你110美元。",
+          "no": "我会给你50美元和5个代币为你带来的每一个蓝色晶泪给我。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekerimonstertearval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerimonstertearval"
+        }
+      }
     ]
   },
   {
@@ -141,37 +187,51 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 6 tokens for each shadow gem you bring to me.",
+      "yes": "你带给我的每颗暗影宝石，我都会给你6个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 455$ for each shadow gem you bring to me.",
+        "yes": "你给我带来的每一块暗影宝石我就给你455美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 135$ for each shadow gem you bring to me.",
-          "no": "I will give you 70$ and 6 tokens for each shadow gem you bring to me."
+          "yes": "你带给我的每一块暗影宝石我都会给你135美元。",
+          "no": "我会给你70美元和6个代币为你带来的每一个影子宝石给我。"
         }
       }
     },
-    "responses": [ { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekerishadowgemval" } } ]
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerishadowgemval"
+        }
+      }
+    ]
   },
   {
     "id": "VAMP_ASEEKER_item_bonetwisted",
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 3 tokens for each twisted bone you bring to me.",
+      "yes": "你带给我的每一根扭曲的骨头，我都会给你3个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 195$ for each twisted bone you bring to me.",
+        "yes": "我会给你195美元买你带给我的每根扭曲的骨头。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 85$ for each twisted bone you bring to me.",
-          "no": "I will give you 25$ and 3 tokens for each twisted bone you bring to me."
+          "yes": "你带给我的每一根扭曲的骨头我给你85美元。",
+          "no": "我会给你25美元和3个代币，你给我的每一个扭曲的骨头。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeribonetwistedval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeribonetwistedval"
+        }
+      }
     ]
   },
   {
@@ -179,22 +239,24 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 3 tokens for each cracked knucklebone you bring to me.",
+      "yes": "你带给我的每根指节骨裂开，我就给你3个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 170$ for each cracked knucklebone you bring to me.",
+        "yes": "我会给你170美元买你带给我的每一块断裂的指节骨。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 70$ for each cracked knucklebone you bring to me.",
-          "no": "I will give you 20$ and 3 tokens for each cracked knucklebone you bring to me."
+          "yes": "我给你70美元买你带给我的每一根断裂的指节骨。",
+          "no": "我会给你20美元和3个代币，你给我的每一个关节骨折。"
         }
       }
     },
     "responses": [
       {
-        "text": "Okay...",
+        "text": "好吧……",
         "topic": "VAMP_ASEEKER_questinquire",
-        "effect": { "npc_add_trait": "vaseekerigrackenknucklesval" }
+        "effect": {
+          "npc_add_trait": "vaseekerigrackenknucklesval"
+        }
       }
     ]
   },
@@ -203,19 +265,25 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 3 tokens for each wyrmskin fragment you bring to me.",
+      "yes": "你给我带来的每一块wyrmskin碎片我会给你3个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 170$ for each wyrmskin fragment you bring to me.",
+        "yes": "你带给我的每一块wyrmskin碎片我会给你170美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 70$ for each wyrmskin fragment you bring to me.",
-          "no": "I will give you 20$ and 3 tokens for each wyrmskin fragment you bring to me."
+          "yes": "你带给我的每一块wyrmskin碎片我给你70美元。",
+          "no": "我会给你20美元和3个代币，每wyrmskin碎片你带来给我。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeriwyrmskinpieceval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriwyrmskinpieceval"
+        }
+      }
     ]
   },
   {
@@ -223,19 +291,25 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 2 tokens for each monstrous fang you bring to me.",
+      "yes": "你给我带来的每一个大毒牙，我就给你两个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 120$ for each monstrous fang you bring to me.",
+        "yes": "你给我带来的每一个大毒牙我就给你120美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 30$ for each monstrous fang you bring to me.",
-          "no": "I will give you 25$ and 2 tokens for each monstrous fang you bring to me."
+          "yes": "你给我带来的每一个大毒牙我就给你30美元。",
+          "no": "我会给你25美元和2个代币为你带来的每一个可怕的牙给我。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekerimonsterfangval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerimonsterfangval"
+        }
+      }
     ]
   },
   {
@@ -243,22 +317,24 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 4 tokens for each iridescent plate you bring to me.",
+      "yes": "你带给我的每一个彩虹色的盘子，我会给你4个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 365$ for each iridescent plate you bring to me.",
+        "yes": "你带给我的每一个彩虹色的盘子我给你365美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 50$ for each iridescent plate you bring to me.",
-          "no": "I will give you 35$ and 4 tokens for each iridescent plate you bring to me."
+          "yes": "你带给我的每一个彩虹色的盘子我给你50美元。",
+          "no": "我会给你35美元和4个代币为您带来的每一个彩虹板给我。"
         }
       }
     },
     "responses": [
       {
-        "text": "Okay...",
+        "text": "好吧……",
         "topic": "VAMP_ASEEKER_questinquire",
-        "effect": { "npc_add_trait": "vaseekeriiridescentplateval" }
+        "effect": {
+          "npc_add_trait": "vaseekeriiridescentplateval"
+        }
       }
     ]
   },
@@ -267,19 +343,25 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 15 tokens for each engraved stone you bring to me.",
+      "yes": "你带给我的每一块刻石，我都会给你15个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 785$ for each engraved stone you bring to me.",
+        "yes": "你带给我的每一块雕刻的石头我给你785美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 120$ for each engraved stone you bring to me.",
-          "no": "I will give you 90$ and 15 tokens for each engraved stone you bring to me."
+          "yes": "你带给我的每一块雕刻的石头我给你120美元。",
+          "no": "我会给你90美元和15代币，每刻石头你带来给我。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeriengravedstoneval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriengravedstoneval"
+        }
+      }
     ]
   },
   {
@@ -287,19 +369,25 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 20 tokens for each petrified heart you bring to me.",
+      "yes": "你带给我的每一颗石化的心，我都会给你20个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 885$ for each petrified heart you bring to me.",
+        "yes": "你带给我的每一颗石化的心，我都会给你885美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 190$ for each petrified heart you bring to me.",
-          "no": "I will give you 115$ and 20 tokens for each petrified heart you bring to me."
+          "yes": "你带给我的每一颗石化的心，我都会给你190美元。",
+          "no": "我会给你115美元和20个代币，每一个石化的心你带给我。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeridraconicheartval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeridraconicheartval"
+        }
+      }
     ]
   },
   {
@@ -307,37 +395,51 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 25 tokens for each incorruptible sword you bring to me.",
+      "yes": "你给我带来的每把不朽剑，我都要给你25个记号。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 960$ for each incorruptible sword you bring to me.",
+        "yes": "你给我带来的每把不朽之剑，我就给你960块钱。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 220$ for each incorruptible sword you bring to me.",
-          "no": "I will give you 125$ and 25 tokens for each incorruptible sword you bring to me."
+          "yes": "你给我带来的每把不朽之剑，我要给你220元。",
+          "no": "你给我带来的每把不朽之剑，我要给你125美元和25个代币。"
         }
       }
     },
-    "responses": [ { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekerisun_swordval" } } ]
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerisun_swordval"
+        }
+      }
+    ]
   },
   {
     "id": "VAMP_ASEEKER_item_hexenhammer",
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 22 tokens for each hammer of the hunter you bring to me.",
+      "yes": "你带给我的猎人的每把锤子我都会给你22个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 905$ for each hammer of the hunter you bring to me.",
+        "yes": "你带给我的猎人的每把锤子我给你905美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 195$ for each hammer of the hunter you bring to me.",
-          "no": "I will give you 110$ and 22 tokens for each hammer of the hunter you bring to me."
+          "yes": "你给我带来的猎人的每把锤子我给你195美元。",
+          "no": "你每带给我一把猎人的锤子我就给你110美元和22个代币。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekerihexenhammerval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekerihexenhammerval"
+        }
+      }
     ]
   },
   {
@@ -345,22 +447,24 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 10 tokens for each spear of pestilence you bring to me.",
+      "yes": "你每拿一支瘟疫枪给我，我就给你十个记号。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 675$ for each spear of pestilence you bring to me.",
+        "yes": "你给我带来的每一支瘟疫矛，我就给你675美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 155$ for each spear of pestilence you bring to me.",
-          "no": "I will give you 70$ and 10 tokens for each spear of pestilence you bring to me."
+          "yes": "你每给我一支瘟疫矛，我就给你155美元。",
+          "no": "你每给我带来一支瘟疫矛，我就给你70块钱和10个代币。"
         }
       }
     },
     "responses": [
       {
-        "text": "Okay...",
+        "text": "好吧……",
         "topic": "VAMP_ASEEKER_questinquire",
-        "effect": { "npc_add_trait": "vaseekerispear_pestilenceval" }
+        "effect": {
+          "npc_add_trait": "vaseekerispear_pestilenceval"
+        }
       }
     ]
   },
@@ -369,19 +473,25 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 15 tokens for each druidic staff you bring to me.",
+      "yes": "你给我带来的每根德鲁伊杖我都会给你15个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 720$ for each druidic staff you bring to me.",
+        "yes": "我会给你720美元每德鲁伊工作人员你带来给我。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 130$ for each druidic staff you bring to me.",
-          "no": "I will give you 80$ and 15 tokens for each druidic staff you bring to me."
+          "yes": "我会给你130美元每德鲁伊工作人员你带来给我。",
+          "no": "我会给你80美元和15代币，每德鲁伊工作人员你带来给我。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeristaff_druidicval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeristaff_druidicval"
+        }
+      }
     ]
   },
   {
@@ -389,27 +499,39 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_trait": "vaseekerrewardingcollabitems",
-      "yes": "I will give you 20 tokens for each cursed blade you bring to me.",
+      "yes": "你每给我带来一把被诅咒的剑，我就给你20个代币。",
       "no": {
         "npc_has_trait": "vaseekerrewardingcollabmoney",
-        "yes": "I will give you 815$ for each cursed blade you bring to me.",
+        "yes": "你带给我的每一把诅咒之刃，我都会给你815美元。",
         "no": {
           "npc_has_trait": "vaseekernorewardcollab",
-          "yes": "I will give you 110$ for each cursed blade you bring to me.",
-          "no": "I will give you 75$ and 20 tokens for each cursed blade you bring to me."
+          "yes": "你带给我的每一把诅咒之刃，我都会给你110美元。",
+          "no": "你带给我的每一把诅咒之刃，我都会给你75美元和20个代币。"
         }
       }
     },
     "responses": [
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeristormbringerval" } }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeristormbringerval"
+        }
+      }
     ]
   },
   {
     "id": "VAMP_ASEEKER_item_veilblade",
     "type": "talk_topic",
-    "dynamic_line": "I don't know if I can accept that thing...",
+    "dynamic_line": "我不知道我能不能接受…",
     "responses": [
-      { "text": "Oh, okay...", "topic": "VAMP_ASEEKER_questinquire", "effect": { "npc_add_trait": "vaseekeriveilbladeval" } }
+      {
+        "text": "哦，好吧…",
+        "topic": "VAMP_ASEEKER_questinquire",
+        "effect": {
+          "npc_add_trait": "vaseekeriveilbladeval"
+        }
+      }
     ]
   }
 ]

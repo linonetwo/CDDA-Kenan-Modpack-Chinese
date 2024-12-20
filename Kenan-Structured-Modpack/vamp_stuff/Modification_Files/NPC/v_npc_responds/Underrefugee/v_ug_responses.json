@@ -2,29 +2,59 @@
   {
     "id": "TALK_VAMP_UNDERGUARD1",
     "type": "talk_topic",
-    "dynamic_line": { "u_is_wearing": "blood_necklace", "yes": "You look important.", "no": "Mortal... You're up to nothing?" },
+    "dynamic_line": {
+      "u_is_wearing": "blood_necklace",
+      "yes": "你看起来很重要。",
+      "no": "人类...你在无所事事？"
+    },
     "responses": [
       {
-        "text": "Tell me about yourself.",
+        "text": "跟我说说你的情况吧。",
         "topic": "TALK_VAMP_UNDERGUARD1_introduce",
-        "condition": { "not": { "npc_has_trait": "underguard1talkedintroduce" } },
-        "effect": { "npc_add_trait": "underguard1talkedintroduce" }
+        "condition": {
+          "not": {
+            "npc_has_trait": "underguard1talkedintroduce"
+          }
+        },
+        "effect": {
+          "npc_add_trait": "underguard1talkedintroduce"
+        }
       },
       {
-        "text": "Tell me about yourself.",
+        "text": "跟我说说你的情况吧。",
         "topic": "TALK_VAMP_UNDERGUARD1_introduceagain",
         "condition": {
-          "and": [ { "npc_has_trait": "underguard1talkedintroduce" }, { "not": { "npc_has_trait": "underguard1talkedintroduceagain" } } ]
+          "and": [
+            {
+              "npc_has_trait": "underguard1talkedintroduce"
+            },
+            {
+              "not": {
+                "npc_has_trait": "underguard1talkedintroduceagain"
+              }
+            }
+          ]
         },
-        "effect": { "npc_add_trait": "underguard1talkedintroduceagain" }
+        "effect": {
+          "npc_add_trait": "underguard1talkedintroduceagain"
+        }
       },
       {
-        "text": "Where am I?",
+        "text": "我现在在哪里？",
         "topic": "TALK_VAMP_UNDERGUARD1_direction",
-        "condition": { "not": { "npc_has_trait": "underguard1talkeddirection" } },
-        "effect": { "npc_add_trait": "underguard1talkeddirection" }
+        "condition": {
+          "not": {
+            "npc_has_trait": "underguard1talkeddirection"
+          }
+        },
+        "effect": {
+          "npc_add_trait": "underguard1talkeddirection"
+        }
       },
-      { "text": "I'd be going now...", "topic": "TALK_DONE" }
+      {
+        "text": "我现在要走了...",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
@@ -32,164 +62,290 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_is_wearing": "blood_necklace",
-      "yes": "Just an assigned guard here, nothing happened 'till you came in.",
-      "no": "Why should I? If you want answers, go ask my partner."
+      "yes": "这里只有一个被派来的探索者而已，在你来之前没什么别的事情发生。",
+      "no": "为什么问我？如果你有问题就去问我旁边那位。"
     },
     "responses": [
-      { "text": "I like you.", "topic": "TALK_VAMP_UNDERGUARD1_flirt" },
-      { "text": "Okay then...", "topic": "TALK_VAMP_UNDERGUARD1" }
+      {
+        "text": "因为我喜欢你...",
+        "topic": "TALK_VAMP_UNDERGUARD1_flirt"
+      },
+      {
+        "text": "好吧...继续",
+        "topic": "TALK_VAMP_UNDERGUARD1"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD1_introduceagain",
     "type": "talk_topic",
-    "dynamic_line": "You think I'm a dummy? Stop repeating your question, kid!",
-    "responses": [ { "text": "Sorry...", "topic": "TALK_VAMP_UNDERGUARD1" } ]
+    "dynamic_line": "你以为我是个傻子吗？别再重复你的问题了，孩子！",
+    "responses": [
+      {
+        "text": "对不起。",
+        "topic": "TALK_VAMP_UNDERGUARD1"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD1_direction",
     "type": "talk_topic",
-    "dynamic_line": "I know you know where you are. *grins*.",
+    "dynamic_line": "我知道你知道你现在在哪里 *笑*。",
     "responses": [
-      { "text": "Geez, don't show that to me.", "topic": "TALK_VAMP_UNDERGUARD1_teeth" },
-      { "text": "Okay, okay.", "topic": "TALK_VAMP_UNDERGUARD1" },
-      { "text": "Now I know where we are.", "topic": "TALK_DONE" }
+      {
+        "text": "天，别来这一套。",
+        "topic": "TALK_VAMP_UNDERGUARD1_teeth"
+      },
+      {
+        "text": "OK，OK。",
+        "topic": "TALK_VAMP_UNDERGUARD1"
+      },
+      {
+        "text": "我现在知道我们在哪里了。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD1_flirt",
     "type": "talk_topic",
-    "dynamic_line": "Shut up mortal, everyone does like me.",
-    "responses": [ { "text": "Oh...", "topic": "TALK_VAMP_UNDERGUARD1" } ]
+    "dynamic_line": "闭嘴，人类，这里每个人都喜欢我。",
+    "responses": [
+      {
+        "text": "哦...",
+        "topic": "TALK_VAMP_UNDERGUARD1"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD1_teeth",
     "type": "talk_topic",
-    "dynamic_line": "If you're here to fuck us up, I'd really need to slay you immediately!",
+    "dynamic_line": "如果你是来这里捣乱了，我可是真会干掉你的！",
     "responses": [
-      { "text": "I apologize for my mistake.", "topic": "TALK_VAMP_UNDERGUARD1" },
-      { "text": "YEAH GIRL! BRING IT!", "effect": "insult_combat", "topic": "TALK_DONE" }
+      {
+        "text": "我很抱歉...",
+        "topic": "TALK_VAMP_UNDERGUARD1"
+      },
+      {
+        "text": "当然，妹子！ 来啊！",
+        "effect": "insult_combat",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD2",
     "type": "talk_topic",
-    "dynamic_line": { "u_is_wearing": "blood_necklace", "yes": "Damn, you managed to wear that.", "no": "Mortal, You look dazzled?" },
+    "dynamic_line": {
+      "u_is_wearing": "blood_necklace",
+      "yes": "该死，你居然穿上了。",
+      "no": "凡人，你看起来眼花缭乱？"
+    },
     "responses": [
       {
-        "text": "Tell me who you are.",
+        "text": "告诉我你是谁？",
         "topic": "TALK_VAMP_UNDERGUARD2_introduce",
-        "condition": { "not": { "npc_has_trait": "underguard2talkedcommand" } },
-        "effect": { "npc_add_trait": "underguard2talkedcommand" }
+        "condition": {
+          "not": {
+            "npc_has_trait": "underguard2talkedcommand"
+          }
+        },
+        "effect": {
+          "npc_add_trait": "underguard2talkedcommand"
+        }
       },
       {
-        "text": "Where am I?",
+        "text": "我现在在哪里？",
         "topic": "TALK_VAMP_UNDERGUARD2_direction",
-        "condition": { "not": { "npc_has_trait": "underguard2talkedcata" } },
-        "effect": { "npc_add_trait": "underguard2talkedcata" }
+        "condition": {
+          "not": {
+            "npc_has_trait": "underguard2talkedcata"
+          }
+        },
+        "effect": {
+          "npc_add_trait": "underguard2talkedcata"
+        }
       },
       {
-        "text": "I'm vacant for jobs.",
+        "text": "我现在没有活干。",
         "topic": "TALK_VAMP_UNDERGUARD2_job",
-        "condition": { "not": { "npc_has_trait": "underguard2talkedjob" } },
-        "effect": { "npc_add_trait": "underguard2talkedjob" }
+        "condition": {
+          "not": {
+            "npc_has_trait": "underguard2talkedjob"
+          }
+        },
+        "effect": {
+          "npc_add_trait": "underguard2talkedjob"
+        }
       },
-      { "text": "Bye...", "topic": "TALK_DONE" }
+      {
+        "text": "拜拜。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD2_job",
     "type": "talk_topic",
-    "dynamic_line": "I don't actually have a problem, but others could have.",
-    "responses": [ { "text": "I'll ask them.", "topic": "TALK_VAMP_UNDERGUARD2" } ]
+    "dynamic_line": "我没什么问题了，不过其他人可能有。",
+    "responses": [
+      {
+        "text": "我去问问他们",
+        "topic": "TALK_VAMP_UNDERGUARD2"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD2_introduce",
     "type": "talk_topic",
-    "dynamic_line": "I'm a guardian, defending our cave from unwelcome intruders like you.",
+    "dynamic_line": "我是一名守卫，保护我们的洞穴不受你这样不受欢迎的入侵者的侵扰。",
     "responses": [
-      { "text": "Whoa, I'm not here to pick fights.", "topic": "TALK_VAMP_UNDERGUARD2_fight" },
-      { "text": "Nice...", "topic": "TALK_VAMP_UNDERGUARD2" }
+      {
+        "text": "哦...我不是来找麻烦的",
+        "topic": "TALK_VAMP_UNDERGUARD2_fight"
+      },
+      {
+        "text": "棒极了...",
+        "topic": "TALK_VAMP_UNDERGUARD2"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD2_direction",
     "type": "talk_topic",
-    "dynamic_line": "You're on the vampire cove, a refugee itself. This is our place with peace and sure living for centuries for us all. After that magical outbreak, we are forced to eat and drink certain foodstuff like animal meat chunks and its blood, but we never tried to consume rotten flesh from those frenzied humans.",
+    "dynamic_line": "你现在在吸血鬼湾，一个难民营，这是一个和平地带，可以让我们安稳地生活几个世纪。在那个魔法爆发之后，我们不得已去吃喝某些食物，比如动物的肉块和血液，但是我们从来没有试图吃那些发疯的人类的腐肉。",
     "responses": [
-      { "text": "It's not magical, it's Cataclysm.", "topic": "TALK_VAMP_UNDERGUARD2_cata" },
-      { "text": "Oh great.", "topic": "TALK_VAMP_UNDERGUARD2" }
+      {
+        "text": "那不是魔法，那是大灾变",
+        "topic": "TALK_VAMP_UNDERGUARD2_cata"
+      },
+      {
+        "text": "哦，好吧。",
+        "topic": "TALK_VAMP_UNDERGUARD2"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD2_fight",
     "type": "talk_topic",
-    "dynamic_line": "You should be. We never, EVER let any humans come into our beloved home. Until we are commanded to accompany with your kind.",
+    "dynamic_line": "你应该是。在我们收到命令允许你之前，我们绝不会让任何人进入我们心爱的家。",
     "responses": [
-      { "text": "Who commanded you?", "topic": "TALK_VAMP_UNDERGUARD2_command" },
-      { "text": "Oh... Seems you are forced to talk with me.", "topic": "TALK_VAMP_UNDERGUARD2" }
+      {
+        "text": "谁命令你？",
+        "topic": "TALK_VAMP_UNDERGUARD2_command"
+      },
+      {
+        "text": "哦... 看来你正被强迫和我说话。",
+        "topic": "TALK_VAMP_UNDERGUARD2"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD2_cata",
     "type": "talk_topic",
-    "dynamic_line": "Cataclysm? So you humans made those thingies... Well, I can't blame you for that.",
-    "responses": [ { "text": "You're right...", "topic": "TALK_VAMP_UNDERGUARD2" } ]
+    "dynamic_line": "大灾变？所以是你们人类制造了这些东西...不过我不能怪你。",
+    "responses": [
+      {
+        "text": "你是对的...",
+        "topic": "TALK_VAMP_UNDERGUARD2"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD2_command",
     "type": "talk_topic",
-    "dynamic_line": "You look concerned, but I'll never let a word come out from my mouth about HIM.",
-    "responses": [ { "text": "Never knew you're loyal...", "topic": "TALK_VAMP_UNDERGUARD2" } ]
+    "dynamic_line": "你看起来很关心啊，但我决不会从我的口中说出任何关于“他”的话。",
+    "responses": [
+      {
+        "text": "我不知道你是如此的忠诚...",
+        "topic": "TALK_VAMP_UNDERGUARD2"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD3",
     "type": "talk_topic",
-    "dynamic_line": { "npc_has_trait": "underguard3fear", "yes": "...", "no": "What do you need?." },
+    "dynamic_line": {
+      "npc_has_trait": "underguard3fear",
+      "yes": "…",
+      "no": "你需要什么？。"
+    },
     "responses": [
-      { "text": "Nothing...", "topic": "TALK_DONE" },
       {
-        "text": "What are you doing here?",
-        "topic": "TALK_VAMP_UNDERGUARD3_here",
-        "condition": { "not": { "npc_has_trait": "underguard3fear" } }
+        "text": "没事...",
+        "topic": "TALK_DONE"
       },
       {
-        "text": "What are you doing here?",
+        "text": "你在这里干什么？",
+        "topic": "TALK_VAMP_UNDERGUARD3_here",
+        "condition": {
+          "not": {
+            "npc_has_trait": "underguard3fear"
+          }
+        }
+      },
+      {
+        "text": "你在这里干什么？",
         "topic": "TALK_VAMP_UNDERGUARD3_hereever",
-        "condition": { "or": [ { "npc_has_trait": "underguard3fear" }, { "u_has_trait": "undertradervampmark" } ] }
+        "condition": {
+          "or": [
+            {
+              "npc_has_trait": "underguard3fear"
+            },
+            {
+              "u_has_trait": "undertradervampmark"
+            }
+          ]
+        }
       }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD3_here",
     "type": "talk_topic",
-    "dynamic_line": "I was tasked to watch over the two rampaging kindreds in their cages.",
+    "dynamic_line": "我的任务是看管关在笼子里的两个暴怒的家族。",
     "responses": [
-      { "text": "Oh, okay...", "topic": "TALK_DONE" },
       {
-        "text": "May I kill those two vampires?.",
+        "text": "哦，好吧...",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "我可以杀了这两个吸血鬼吗？。",
         "topic": "TALK_VAMP_UNDERGUARD3_killthem",
-        "condition": { "u_has_mission": "VAMP_UNDERTRADER_quest" }
+        "condition": {
+          "u_has_mission": "VAMP_UNDERTRADER_quest"
+        }
       }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD3_killthem",
     "type": "talk_topic",
-    "dynamic_line": "Ofcourse, you can! We already have lost our faith on them to fight back their rabid sickness.",
+    "dynamic_line": "当然，你可以，我们已经失去了对他们抗击这种狂躁病症的信心。",
     "responses": [
       {
-        "text": "That's too bad...",
+        "text": "这可真糟...",
         "topic": "TALK_DONE",
-        "effect": { "npc_add_trait": "underguard3fear" },
-        "opinion": { "trust": 2, "anger": -2 }
+        "effect": {
+          "npc_add_trait": "underguard3fear"
+        },
+        "opinion": {
+          "trust": 2,
+          "anger": -2
+        }
       }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERGUARD3_hereever",
     "type": "talk_topic",
-    "dynamic_line": "Just staying in the darkness... Away from the horrifying magic.",
-    "responses": [ { "text": "I guess you're afraid of Cataclysm...", "effect": "end_conversation", "topic": "TALK_DONE" } ]
+    "dynamic_line": "呆在黑暗中…远离可怕的魔法。",
+    "responses": [
+      {
+        "text": "我猜你很害怕大灾变...",
+        "effect": "end_conversation",
+        "topic": "TALK_DONE"
+      }
+    ]
   }
 ]

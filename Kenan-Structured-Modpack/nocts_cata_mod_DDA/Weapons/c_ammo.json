@@ -3,22 +3,37 @@
     "id": "flintlock_ammo_mine",
     "copy-from": "flintlock_ammo",
     "type": "AMMO",
-    "name": { "str": "paper Minie ball cartridge" },
+    "name": {
+      "str": "纸卷米涅弹"
+    },
     "//": "meant as a companion to the Survivor's Flintlock Sniper.",
-    "description": "A paper cartridge containing black powder and a Minie ball.  A paper enclosed version of the historic projectile of the USA Civil war.  The Minie ball is still as deadly and accurate as ever.",
+    "description": "一颗纸卷弹，里面填充有预先称量好的黑火药和一颗米林弹。美国南北战争历史上使用的弹丸的纸卷弹版本。米涅弹仍然像以前一样致命和准确。",
     "weight": "55 g",
     "price": "25 USD",
     "price_postapoc": "15 USD",
-    "damage": { "damage_type": "bullet", "armor_penetration": 12 },
-    "proportional": { "range": 2.0, "dispersion": 0.89, "recoil": 2.0 },
-    "extend": { "effects": [ "RECYCLED" ] }
+    "damage": {
+      "damage_type": "bullet",
+      "armor_penetration": 12
+    },
+    "proportional": {
+      "range": 4,
+      "dispersion": 0.89,
+      "recoil": 2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    }
   },
   {
     "id": "c_hydrogen_gas",
     "type": "AMMO",
-    "name": { "str_sp": "hydrogen gas" },
+    "name": {
+      "str_sp": "氢气"
+    },
     "category": "chems",
-    "description": "A light, flammable gas compressed for use as fuel.  Quite energy dense, but also requiring a lot of energy to produce, even moreso without pre-cataclysm industry.",
+    "description": "一种轻的可燃气体，压缩后可用作燃料。能源密度高，但需要大量的能源来生产，更何况没有灾前工业。",
     "//": "Roughly 23 kg per cubic meter at the lower end of pressure for compressed hydrogen.",
     "weight": "2300 mg",
     "volume": "1000 ml",
@@ -26,24 +41,37 @@
     "price_postapoc": "5 cent",
     "symbol": "=",
     "color": "white",
-    "damage": { "damage_type": "heat", "amount": 9, "armor_penetration": 2 },
+    "damage": {
+      "damage_type": "heat",
+      "amount": 9,
+      "armor_penetration": 2
+    },
     "range": 6,
     "dispersion": 120,
     "stack_size": 10,
-    "material": [ "c_hydrogen_gas" ],
+    "material": [
+      "c_hydrogen_gas"
+    ],
     "phase": "liquid",
     "ammo_type": "c_hydrogen",
-    "effects": [ "INCENDIARY" ],
-    "flags": [ "NO_DROP", "IRREMOVABLE" ]
+    "effects": [
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NO_DROP",
+      "IRREMOVABLE"
+    ]
   },
   {
     "type": "AMMO",
     "id": "c_bioampoule",
     "category": "other",
-    "name": { "str": "bio-ampoule" },
+    "name": {
+      "str": "生物安瓿"
+    },
     "symbol": "=",
     "color": "cyan",
-    "description": "A thin-walled capsule formed of strange resin filled with a strange liquid, used by exotic autoinjector mechanisms.",
+    "description": "一种填充奇怪的液体的异界树脂制成的薄壁胶囊，用于异界自动注射器。",
     "volume": "100 ml",
     "weight": "1 g",
     "ammo_type": "c_bioampoule_type"
@@ -52,30 +80,50 @@
     "type": "AMMO",
     "id": "c_alien_resin_bullet",
     "price_postapoc": "20 cent",
-    "name": { "str": "resin bullet" },
+    "name": {
+      "str": "树脂子弹"
+    },
     "symbol": "=",
     "color": "green",
     "description": "A glassy green pellet of alien resin, molded in a shape resembling an elongated rifle bullet.  Designed for an exotic pneumatic weapon.",
-    "material": [ "alien_resin" ],
+    "material": [
+      "alien_resin"
+    ],
     "volume": "250 ml",
     "weight": "3 g",
     "ammo_type": "c_alien_resin_bullet_type",
-    "damage": { "damage_type": "stab", "amount": 20, "armor_penetration": 10 },
+    "damage": {
+      "damage_type": "stab",
+      "amount": 20,
+      "armor_penetration": 10
+    },
     "range": 45,
     "loudness": 2,
     "count": 20,
-    "effects": [ "NEVER_MISFIRES", "NON_FOULING", "RECOVER_10" ]
+    "effects": [
+      "NEVER_MISFIRES",
+      "NON_FOULING",
+      "RECOVER_10"
+    ]
   },
   {
     "type": "AMMO",
     "id": "c_alien_resin_bullet_makeshift",
     "copy-from": "c_alien_resin_bullet",
-    "name": { "str": "molded projector bullet" },
+    "name": {
+      "str": "molded projector bullet"
+    },
     "color": "light_gray",
-    "description": "A molded metal projectile for an exotic pneumatic weapon, resembling an elongated rifle bullet.  Inferior to purpose-built resin bullets, but easier to make.",
-    "material": [ "iron" ],
+    "description": "一种用于气动武器的模制金属弹丸，类似于拉长的步枪子弹。 比专门制造的树脂子弹差，但更容易制造。",
+    "material": [
+      "iron"
+    ],
     "weight": "5 g",
-    "damage": { "damage_type": "bullet", "amount": 20, "armor_penetration": 5 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 20,
+      "armor_penetration": 5
+    },
     "range": 30,
     "dispersion": 100
   },
@@ -83,18 +131,46 @@
     "id": "36navy_makeshift_magnum",
     "copy-from": "36navy",
     "type": "AMMO",
-    "name": { "str": ".36 paper overpressure cartridge" },
-    "description": "A paper cartridge containing an increased measure of any available powder, and a .36 projectile for the Colt M1861 Navy.  A bit more powerful but less accurate, and potentially unreliable.",
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 1.25 }, "range": 1.1, "dispersion": 1.5, "recoil": 2.0 },
-    "extend": { "effects": [ "RECYCLED" ] }
+    "name": {
+      "str": ".36 超量纸卷弹"
+    },
+    "description": "一颗纸卷弹，里面填充有超量的黑火药和一颗.36口径弹头。可用于柯尔特 M1861 海军型左轮手枪。威力更大但准确度不高，并且可能不太可靠。",
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.25
+      },
+      "range": 1.1,
+      "dispersion": 1.5,
+      "recoil": 2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    }
   },
   {
     "id": "44army_makeshift_magnum",
     "copy-from": "44army",
     "type": "AMMO",
-    "name": { "str": ".44 paper overpressure cartridge" },
-    "description": "A paper cartridge containing an increased measure of any available powder, and a .44 projectile for the Colt M1860 Army.  A bit more powerful but less accurate, and potentially unreliable.",
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 1.25 }, "range": 1.1, "dispersion": 1.5, "recoil": 2.0 },
-    "extend": { "effects": [ "RECYCLED" ] }
+    "name": {
+      "str": ".44 超量纸卷弹"
+    },
+    "description": "一颗纸卷弹，里面填充有超量的黑火药和一颗.44口径弹头。可用于柯尔特 M1860 陆军型左轮手枪。威力更大但准确度不高，并且可能不太可靠。",
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 1.25
+      },
+      "range": 1.1,
+      "dispersion": 1.5,
+      "recoil": 2
+    },
+    "extend": {
+      "effects": [
+        "RECYCLED"
+      ]
+    }
   }
 ]

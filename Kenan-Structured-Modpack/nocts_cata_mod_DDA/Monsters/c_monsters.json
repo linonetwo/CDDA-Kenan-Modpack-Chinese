@@ -2,15 +2,21 @@
   {
     "id": "mon_zombie_failed_weapon",
     "type": "MONSTER",
-    "name": { "str": "zombie augmented abomination" },
-    "description": "A zombified, heavily-augmented mutant of some sort.  Dangerous on its own, but even more so in groups.",
+    "name": {
+      "str": "生物武器丧尸"
+    },
+    "description": "丧尸化的生物武器。它本身很危险，成群结队就更危险了。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 150,
     "speed": 90,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -18,23 +24,70 @@
     "melee_skill": 4,
     "melee_dice": 3,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
     "dodge": 0,
-    "armor": { "bash": 4, "cut": 6, "stab": 4, "bullet": 5, "acid": 4, "heat": 3 },
+    "armor": {
+      "bash": 4,
+      "cut": 6,
+      "stab": 4,
+      "bullet": 5,
+      "acid": 4,
+      "heat": 3
+    },
     "vision_day": 40,
     "vision_night": 3,
     "luminance": 12,
     "regenerates": 4,
-    "regeneration_modifiers": [ [ "onfire", -2 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -2
+      ]
+    ],
     "regen_morale": true,
     "harvest": "CBM_FAILED_BIO_ZOMBIE",
     "dissect": "dissect_CBM_FAILED_BIO_ZOMBIE",
-    "special_attacks": [ [ "SHOCKSTORM", 10 ], [ "PARROT", 50 ], { "type": "bite", "cooldown": 5 } ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "fear_triggers": [ "FIRE" ],
+    "special_attacks": [
+      [
+        "SHOCKSTORM",
+        10
+      ],
+      [
+        "PARROT",
+        50
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
     "death_drops": "wild_bio_weapom_item",
-    "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
+    "death_function": {
+      "message": "The %s's body leaks acid.",
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    },
     "flags": [
       "REVIVES",
       "SEES",
@@ -55,15 +108,21 @@
   {
     "id": "mon_failed_weapon",
     "type": "MONSTER",
-    "name": { "str": "augmented abomination" },
-    "description": "A heavily-augmented mutant of some sort, deformed from its enhancements.  It seems even more indiscriminate in its rampage than the undead.",
+    "name": {
+      "str": "生物武器"
+    },
+    "description": "一只因改造而失去了理智的生物武器。现在，他会猎杀一切生命体。",
     "default_faction": "fbio_weapon",
-    "species": [ "FBIO-WEAPON" ],
+    "species": [
+      "FBIO-WEAPON"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 200,
     "speed": 100,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "B",
     "color": "red_cyan",
     "aggression": 5,
@@ -71,39 +130,100 @@
     "melee_skill": 6,
     "melee_dice": 4,
     "melee_dice_sides": 5,
-    "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
     "dodge": 2,
-    "armor": { "bash": 8, "cut": 12, "stab": 8, "bullet": 10, "acid": 8, "heat": 6 },
+    "armor": {
+      "bash": 8,
+      "cut": 12,
+      "stab": 8,
+      "bullet": 10,
+      "acid": 8,
+      "heat": 6
+    },
     "vision_day": 40,
     "vision_night": 3,
-    "path_settings": { "max_dist": 50 },
+    "path_settings": {
+      "max_dist": 50
+    },
     "luminance": 14,
     "regenerates": 5,
-    "regeneration_modifiers": [ [ "onfire", -3 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -3
+      ]
+    ],
     "regen_morale": true,
     "harvest": "CBM_FAILED_BIO",
     "dissect": "dissect_CBM_FAILED_BIO",
-    "special_attacks": [ [ "SHOCKSTORM", 15 ], [ "PARROT", 80 ] ],
-    "special_when_hit": [ "ZAPBACK", 75 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "fear_triggers": [ "FIRE" ],
+    "special_attacks": [
+      [
+        "SHOCKSTORM",
+        15
+      ],
+      [
+        "PARROT",
+        80
+      ]
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      75
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
     "death_drops": "wild_bio_weapom_item",
-    "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "HUMAN", "ELECTRIC", "BASHES", "PUSH_VEH", "PATH_AVOID_DANGER_1" ]
+    "death_function": {
+      "message": "The %s's body leaks acid.",
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "HUMAN",
+      "ELECTRIC",
+      "BASHES",
+      "PUSH_VEH",
+      "PATH_AVOID_DANGER_1"
+    ]
   },
   {
     "id": "hulk_weapon",
     "type": "MONSTER",
-    "name": { "str": "Bio-Weapon Apophis" },
-    "description": "The ultimate bionic mutant.  Only God knows why it exists.  With incredible power, armor and bionics on its side, victory won't come easy.",
+    "name": {
+      "str": "生物武器-阿波菲斯"
+    },
+    "description": "终极的仿生突变体，超级士兵计划所赐的最强产物，只有天知道他的由来。在它的不可思议的力量与近乎完美的再生装甲皮肤和生化插件的加成下，胜利变得来之不易。",
     "default_faction": "fbio_weapon",
-    "species": [ "BIO-WEAPON" ],
+    "species": [
+      "BIO-WEAPON"
+    ],
     "diff": 50,
     "volume": "875000 ml",
     "weight": "200 kg",
     "hp": 5000,
     "speed": 80,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "A",
     "color": "red_cyan",
     "aggression": 100,
@@ -111,45 +231,95 @@
     "melee_skill": 10,
     "melee_dice": 8,
     "melee_dice_sides": 10,
-    "melee_damage": [ { "damage_type": "cut", "amount": 20 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 20
+      }
+    ],
     "dodge": 2,
-    "armor": { "bash": 30, "cut": 40, "stab": 20, "bullet": 60, "acid": 35, "heat": 20 },
+    "armor": {
+      "bash": 30,
+      "cut": 40,
+      "stab": 20,
+      "bullet": 60,
+      "acid": 35,
+      "heat": 20
+    },
     "vision_day": 50,
     "vision_night": 30,
-    "path_settings": { "max_dist": 50 },
+    "path_settings": {
+      "max_dist": 50
+    },
     "luminance": 30,
     "regenerates": 10,
-    "regeneration_modifiers": [ [ "onfire", -5 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -5
+      ]
+    ],
     "harvest": "CBM_APOPHIS",
     "dissect": "dissect_CBM_APOPHIS",
     "special_attacks": [
-      [ "SHOCKSTORM", 15 ],
-      [ "TAZER", 15 ],
-      [ "PARROT", 80 ],
-      [ "SMASH", 20 ],
-      { "id": "bio_op_takedown", "cooldown": 10 },
+      [
+        "SHOCKSTORM",
+        15
+      ],
+      [
+        "TAZER",
+        15
+      ],
+      [
+        "PARROT",
+        80
+      ],
+      [
+        "SMASH",
+        20
+      ],
+      {
+        "id": "bio_op_takedown",
+        "cooldown": 10
+      },
       {
         "type": "gun",
-        "cooldown": 5,
+        "cooldown": 10,
         "move_cost": 100,
         "gun_type": "bio_laser_minigun_monster",
         "fake_str": 8,
         "fake_dex": 10,
         "fake_per": 10,
-        "ranges": [ [ 3, 30, "DEFAULT" ] ],
+        "max_ammo": 1000,
+        "ranges": [
+          [
+            3,
+            20,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
         "targeting_cost": 50,
-        "targeting_sound": "chunk…whirr!",
-        "targeting_volume": 30,
-        "description": "Apophis fires its gatling laser!",
-        "no_ammo_sound": "clickclickclick!"
+        "targeting_sound": "swoosh…click!",
+        "targeting_volume": 20,
+        "description": "阿波菲斯发射了加特林激光！",
+        "no_ammo_sound": "咔嚓咔嚓！"
       }
     ],
-    "special_when_hit": [ "ZAPBACK", 75 ],
+    "special_when_hit": [
+      "ZAPBACK",
+      75
+    ],
     "death_drops": "apophis_bio_weapom_item",
-    "death_function": { "message": "%s leaks acid and explodes!", "effect": { "id": "c_death_explosion_hulk_weapon", "hit_self": true } },
+    "death_function": {
+      "message": "%s leaks acid and explodes!",
+      "effect": {
+        "id": "c_death_explosion_hulk_weapon",
+        "hit_self": true
+      }
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -169,15 +339,21 @@
   {
     "id": "mon_fungus_failed_weapon",
     "type": "MONSTER",
-    "name": { "str": "fungal augmented abomination" },
-    "description": "This… thing is a failed experiment of science, whose biology has been overtaken by the fungus.  Has various enhancements, both mutagenic and bionic, that it uses to serve its new overlord(s).",
+    "name": {
+      "str": "真菌生物武器"
+    },
+    "description": "这个……东西是一个失败的改造实验产物，它的躯体与思维已经被真菌取而代之。身体经过生化插件和突变改造，现在用来服务于它的新主人。",
     "default_faction": "fungus",
-    "species": [ "FUNGUS" ],
+    "species": [
+      "FUNGUS"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 80,
-    "material": [ "veggy" ],
+    "material": [
+      "veggy"
+    ],
     "symbol": "F",
     "color": "red_cyan",
     "aggression": 0,
@@ -185,50 +361,121 @@
     "melee_skill": 2,
     "melee_dice": 2,
     "melee_dice_sides": 2,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 0,
-    "armor": { "bash": 8, "cut": 12, "stab": 8, "bullet": 10, "acid": 8, "heat": 6 },
+    "armor": {
+      "bash": 8,
+      "cut": 12,
+      "stab": 8,
+      "bullet": 10,
+      "acid": 8,
+      "heat": 6
+    },
     "vision_day": 40,
     "vision_night": 3,
     "luminance": 5,
     "harvest": "CBM_FAILED_BIO",
     "dissect": "dissect_CBM_FAILED_BIO",
     "regenerates": 4,
-    "regeneration_modifiers": [ [ "onfire", -2 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -2
+      ]
+    ],
     "regen_morale": true,
     "special_attacks": [
-      [ "SHOCKSTORM", 10 ],
-      [ "PARROT", 50 ],
-      [ "FUNGUS", 200 ],
-      { "type": "bite", "cooldown": 5 },
-      [ "FUNGUS_HAZE", 25 ],
-      [ "FUNGUS_INJECT", 40 ],
-      [ "FUNGUS_BRISTLE", 40 ]
+      [
+        "SHOCKSTORM",
+        10
+      ],
+      [
+        "PARROT",
+        50
+      ],
+      [
+        "FUNGUS",
+        200
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      },
+      [
+        "FUNGUS_HAZE",
+        25
+      ],
+      [
+        "FUNGUS_INJECT",
+        40
+      ],
+      [
+        "FUNGUS_BRISTLE",
+        40
+      ]
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "fear_triggers": [ "FIRE" ],
-    "placate_triggers": [ "PLAYER_WEAK" ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "fear_triggers": [
+      "FIRE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
     "death_drops": "mon_fungus_failed_weapon_death_drops",
     "death_function": {
       "message": "%s leaks acid and a cloud of spores!",
-      "effect": { "id": "c_death_explosion_mon_fungus_failed_weapon", "hit_self": true }
+      "effect": {
+        "id": "c_death_explosion_mon_fungus_failed_weapon",
+        "hit_self": true
+      }
     },
-    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "ELECTRIC", "ATTACKMON", "BASHES", "PUSH_MON", "PUSH_VEH", "FILTHY" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "ELECTRIC",
+      "ATTACKMON",
+      "BASHES",
+      "PUSH_MON",
+      "PUSH_VEH",
+      "FILTHY"
+    ]
   },
   {
     "id": "mon_zombie_bio_dormant_unarmed",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_op",
-    "name": { "str": "zombie augmented soldier" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  It staggers with an unsteady mechanical gait, as though hindered by its augmentations.",
+    "name": {
+      "str": "超级士兵丧尸"
+    },
+    "description": "一个装备精良的特种军人，但是仍在大灾变中变成了丧尸的一员。它以不稳定的步态蹒跚而行，寻找一切'目标'。",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 80,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -236,39 +483,94 @@
     "melee_skill": 3,
     "melee_dice": 2,
     "melee_dice_sides": 5,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 5, "cut": 10, "stab": 10, "bullet": 15, "acid": 5, "heat": 10 },
+    "armor": {
+      "bash": 5,
+      "cut": 10,
+      "stab": 10,
+      "bullet": 15,
+      "acid": 5,
+      "heat": 10
+    },
     "vision_day": 40,
     "vision_night": 15,
     "luminance": 2,
     "regenerates": 1,
-    "regeneration_modifiers": [ [ "onfire", -1 ], [ "corroding", -1 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -1
+      ],
+      [
+        "corroding",
+        -1
+      ]
+    ],
     "regen_morale": true,
     "harvest": "CBM_SOLDAT_ZOMBIE_GENERIC",
     "dissect": "dissect_CBM_SOLDAT_ZOMBIE_GENERIC",
-    "special_attacks": [ { "id": "grab", "cooldown": 10 } ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "placate_triggers": [ "PLAYER_WEAK" ],
+    "special_attacks": [
+      {
+        "id": "grab",
+        "cooldown": 10
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
     "death_drops": "mon_zombie_bio_dormant_unarmed_death_drops",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "upgrades": { "half_life": 28, "into": "mon_zombie_bio_knife" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "STUMBLES", "BASHES" ]
+    "upgrades": {
+      "half_life": 28,
+      "into": "mon_zombie_bio_knife"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "STUMBLES",
+      "BASHES"
+    ]
   },
   {
     "id": "mon_zombie_bio_dormant_armed",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_op",
-    "name": { "str": "zombie augmented soldier" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  It staggers under the weight of its gear, an unsteady mechanical march hinting at its augmentations.",
+    "name": {
+      "str": "超级士兵丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽的丧尸大军。它正以迷乏的步态蹒跚而行，背后挂着被裹好的不知什么枪;看着挺厉害，如果你能杀掉它的话能有个不小的惊喜.......",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 80,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -276,60 +578,151 @@
     "melee_skill": 3,
     "melee_dice": 2,
     "melee_dice_sides": 5,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 5, "cut": 10, "stab": 10, "bullet": 15, "acid": 5, "heat": 10 },
+    "armor": {
+      "bash": 5,
+      "cut": 10,
+      "stab": 10,
+      "bullet": 15,
+      "acid": 5,
+      "heat": 10
+    },
     "vision_day": 40,
     "vision_night": 15,
     "luminance": 2,
     "regenerates": 1,
-    "regeneration_modifiers": [ [ "onfire", -1 ], [ "corroding", -1 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -1
+      ],
+      [
+        "corroding",
+        -1
+      ]
+    ],
     "regen_morale": true,
     "harvest": "CBM_SOLDAT_ZOMBIE_GENERIC",
     "dissect": "dissect_CBM_SOLDAT_ZOMBIE_GENERIC",
-    "special_attacks": [ { "id": "grab", "cooldown": 10 } ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "placate_triggers": [ "PLAYER_WEAK" ],
+    "special_attacks": [
+      {
+        "id": "grab",
+        "cooldown": 10
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
     "death_drops": "mon_zombie_bio_dormant_armed_death_drops",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "upgrades": { "half_life": 28, "into_group": "GROUP_ZOMBIE_SUPER_SOLDIER_UPGRADE" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "STUMBLES", "BASHES" ]
+    "upgrades": {
+      "half_life": 28,
+      "into_group": "GROUP_ZOMBIE_SUPER_SOLDIER_UPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "STUMBLES",
+      "BASHES"
+    ]
   },
   {
     "id": "mon_zombie_bio_knife",
     "type": "MONSTER",
     "copy-from": "mon_zombie_bio_dormant_unarmed",
     "looks_like": "mon_zombie_bio_op2",
-    "name": { "str": "zombie augmented prowler" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one moves with purpose and clarity, knife in hand as though it still remembers how to use it.",
+    "name": {
+      "str": "超级巡游者丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽丧尸大军。正以诡异的步伐快速突进，它的手中仍出于本能紧握着生前想自我了结的军用匕首;当现在却在灵巧的把弄着，更恐怖的是看上去他还知道如何使用它.......",
     "speed": 100,
     "dodge": 4,
     "melee_skill": 5,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 10 } ],
-    "path_settings": { "max_dist": 20 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 10
+      }
+    ],
+    "path_settings": {
+      "max_dist": 20
+    },
     "vision_night": 20,
-    "special_attacks": [ { "id": "grab", "cooldown": 10 }, { "id": "bio_op_takedown", "cooldown": 30 }, [ "LUNGE", 20 ] ],
+    "special_attacks": [
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      {
+        "id": "bio_op_takedown",
+        "cooldown": 30
+      },
+      [
+        "LUNGE",
+        20
+      ]
+    ],
     "death_drops": "mon_zombie_bio_knife_death_drops",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "flags": [ "HARDTOSHOOT", "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "PATH_AVOID_DANGER_1" ],
-    "delete": { "upgrades": { "half_life": 28, "into": "mon_zombie_bio_knife" } }
+    "flags": [
+      "HARDTOSHOOT",
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "PATH_AVOID_DANGER_1"
+    ],
+    "delete": {
+      "upgrades": {
+        "half_life": 28,
+        "into": "mon_zombie_bio_knife"
+      }
+    }
   },
   {
     "id": "mon_zombie_bio_infantry_rifle",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_infantry",
-    "name": { "str": "zombie augmented rifleman" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one is wielding some kind of rifle, and appears to recall how to use it.",
+    "name": {
+      "str": "超级特战丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽的丧尸大军。它手中仍出于本能的紧握住生前的特殊实验性激光步枪，更恐怖的是看上去他还知道如何使用它......",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "diff": 10,
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 100,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -337,24 +730,49 @@
     "melee_skill": 5,
     "melee_dice": 2,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 10, "cut": 20, "stab": 20, "bullet": 30, "acid": 5, "heat": 20 },
+    "armor": {
+      "bash": 10,
+      "cut": 20,
+      "stab": 20,
+      "bullet": 30,
+      "acid": 5,
+      "heat": 20
+    },
     "vision_day": 40,
     "vision_night": 15,
-    "path_settings": { "max_dist": 10 },
+    "path_settings": {
+      "max_dist": 10
+    },
     "luminance": 2,
     "regenerates": 1,
-    "regeneration_modifiers": [ [ "onfire", -1 ], [ "corroding", -1 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -1
+      ],
+      [
+        "corroding",
+        -1
+      ]
+    ],
     "regen_morale": true,
-    "starting_ammo": { "battery": 100 },
+    "starting_ammo": {
+      "battery": 100
+    },
     "harvest": "CBM_SOLDAT_ZOMBIE",
     "dissect": "dissect_CBM_SOLDAT_ZOMBIE",
     "special_attacks": [
       {
         "type": "gun",
-        "cooldown": 5,
-        "move_cost": 200,
+        "cooldown": 3,
+        "move_cost": 300,
         "gun_type": "arc_laser_rifle_monster",
         "ammo_type": "battery",
         "fake_str": 4,
@@ -362,40 +780,87 @@
         "fake_per": 3,
         "fake_int": 1,
         "max_ammo": 100,
-        "ranges": [ [ 5, 25, "DEFAULT" ], [ 5, 25, "BURST" ], [ 5, 25, "AUTO" ] ],
+        "ranges": [
+          [
+            5,
+            20,
+            "DEFAULT"
+          ],
+          [
+            5,
+            20,
+            "BURST"
+          ],
+          [
+            5,
+            20,
+            "AUTO"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
-        "targeting_cost": 200,
+        "targeting_cost": 100,
         "targeting_sound": "argh!",
-        "targeting_volume": 20,
-        "description": "The super soldier fires its ARC rifle!",
-        "no_ammo_sound": "beep-beep-beep!"
+        "targeting_volume": 5,
+        "description": "超级战士丧尸的激光步枪开火了！",
+        "no_ammo_sound": "哔-哔-哔！"
       },
-      { "id": "grab", "cooldown": 10 },
-      { "id": "bio_op_takedown", "cooldown": 30 }
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      {
+        "id": "bio_op_takedown",
+        "cooldown": 30
+      }
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "placate_triggers": [ "PLAYER_WEAK" ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
     "death_drops": "wild_bio_infantry_rifle",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "PATH_AVOID_DANGER_1" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "PATH_AVOID_DANGER_1"
+    ]
   },
   {
     "id": "mon_zombie_bio_infantry_shotgun",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_infantry",
-    "name": { "str": "zombie augmented shotgunner" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one is wielding some kind of shotgun, and appears to recall how to use it.",
+    "name": {
+      "str": "超级CBQ丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽的丧尸大军。它手中仍出于本能的紧握住生前的特殊实验性脉冲散射枪，更恐怖的是看上去他还知道如何使用它......",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "diff": 10,
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 100,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -403,24 +868,49 @@
     "melee_skill": 5,
     "melee_dice": 2,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 10, "cut": 20, "stab": 20, "bullet": 30, "acid": 5, "heat": 20 },
+    "armor": {
+      "bash": 10,
+      "cut": 20,
+      "stab": 20,
+      "bullet": 30,
+      "acid": 5,
+      "heat": 20
+    },
     "vision_day": 40,
     "vision_night": 15,
-    "path_settings": { "max_dist": 10 },
+    "path_settings": {
+      "max_dist": 10
+    },
     "luminance": 2,
     "regenerates": 1,
-    "regeneration_modifiers": [ [ "onfire", -1 ], [ "corroding", -1 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -1
+      ],
+      [
+        "corroding",
+        -1
+      ]
+    ],
     "regen_morale": true,
-    "starting_ammo": { "battery": 100 },
+    "starting_ammo": {
+      "battery": 100
+    },
     "harvest": "CBM_SOLDAT_ZOMBIE",
     "dissect": "dissect_CBM_SOLDAT_ZOMBIE",
     "special_attacks": [
       {
         "type": "gun",
-        "cooldown": 5,
-        "move_cost": 200,
+        "cooldown": 3,
+        "move_cost": 300,
         "gun_type": "xarm_laser_shotgun_monster",
         "ammo_type": "battery",
         "fake_str": 4,
@@ -428,40 +918,82 @@
         "fake_per": 3,
         "fake_int": 1,
         "max_ammo": 100,
-        "ranges": [ [ 2, 10, "DEFAULT" ], [ 2, 10, "BURST" ] ],
+        "ranges": [
+          [
+            2,
+            10,
+            "DEFAULT"
+          ],
+          [
+            2,
+            10,
+            "BURST"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
-        "targeting_cost": 200,
+        "targeting_cost": 100,
         "targeting_sound": "argh!",
-        "targeting_volume": 20,
-        "description": "The super soldier fires its XARM scattergun!",
-        "no_ammo_sound": "beep-beep-beep!"
+        "targeting_volume": 5,
+        "description": "超级战士丧尸的脉冲散射枪开火了！",
+        "no_ammo_sound": "哔-哔-哔！"
       },
-      { "id": "grab", "cooldown": 10 },
-      { "id": "bio_op_takedown", "cooldown": 30 }
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      {
+        "id": "bio_op_takedown",
+        "cooldown": 30
+      }
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "placate_triggers": [ "PLAYER_WEAK" ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
     "death_drops": "wild_bio_infantry_shotgun",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "PATH_AVOID_DANGER_1" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "PATH_AVOID_DANGER_1"
+    ]
   },
   {
     "id": "mon_zombie_bio_knight_lmg",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_knight",
-    "name": { "str": "zombie augmented juggernaut" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one is relatively well-armored, wielding some sort of LMG as though it recalls how to use it.",
+    "name": {
+      "str": "超级主宰丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽的丧尸大军。它手中仍出于本能的紧握住生前的特殊实验性激光轻机枪，更恐怖的是看上去他还知道如何使用它......",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "diff": 20,
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 80,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -469,63 +1001,139 @@
     "melee_skill": 7,
     "melee_dice": 3,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 }, { "damage_type": "electric", "amount": 4 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      },
+      {
+        "damage_type": "electric",
+        "amount": 4
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 15, "cut": 30, "stab": 30, "bullet": 45, "acid": 5, "heat": 30 },
+    "armor": {
+      "bash": 15,
+      "cut": 30,
+      "stab": 30,
+      "bullet": 45,
+      "acid": 5,
+      "heat": 30
+    },
     "vision_day": 40,
     "vision_night": 3,
     "luminance": 2,
     "regenerates": 3,
-    "regeneration_modifiers": [ [ "onfire", -2 ], [ "corroding", -2 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -2
+      ],
+      [
+        "corroding",
+        -2
+      ]
+    ],
     "regen_morale": true,
-    "starting_ammo": { "battery": 200 },
+    "starting_ammo": {
+      "battery": 200
+    },
     "harvest": "CBM_SOLDAT_KNIGHT_ZOMBIE",
     "dissect": "dissect_CBM_SOLDAT_KNIGHT_ZOMBIE",
     "special_attacks": [
       {
         "type": "gun",
         "cooldown": 5,
-        "move_cost": 200,
+        "move_cost": 350,
         "gun_type": "krx_laser_lmg_monster",
         "ammo_type": "battery",
         "fake_str": 4,
         "fake_dex": 3,
         "fake_per": 3,
         "max_ammo": 200,
-        "ranges": [ [ 10, 30, "DEFAULT" ], [ 10, 30, "BURST" ], [ 10, 30, "AUTO" ] ],
+        "ranges": [
+          [
+            10,
+            25,
+            "DEFAULT"
+          ],
+          [
+            10,
+            25,
+            "BURST"
+          ],
+          [
+            10,
+            25,
+            "AUTO"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
         "targeting_cost": 200,
-        "targeting_sound": "argh!",
+        "targeting_sound": "swoosh…click!",
         "targeting_volume": 20,
-        "description": "The super soldier fires its LMG!",
-        "no_ammo_sound": "beep-beep-beep!"
+        "description": "超级主宰丧尸的激光轻机枪开火了。",
+        "no_ammo_sound": "哔-哔-哔！"
       },
-      { "id": "grab_drag", "cooldown": 10 },
-      [ "SMASH", 30 ],
-      { "id": "slam" }
+      {
+        "id": "grab_drag",
+        "cooldown": 10
+      },
+      [
+        "SMASH",
+        30
+      ],
+      {
+        "id": "slam"
+      }
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "HURT", "PLAYER_CLOSE", "STALK" ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
     "death_drops": "wild_bio_knight_lmg",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "BASHES", "PUSH_MON", "PUSH_VEH", "PATH_AVOID_FIRE" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "BASHES",
+      "PUSH_MON",
+      "PUSH_VEH",
+      "PATH_AVOID_FIRE"
+    ]
   },
   {
     "id": "mon_zombie_bio_knight_lauhcher",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_knight",
-    "name": { "str": "zombie augmented juggernaut" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one is relatively well-armored, and the anti-tank weapon it's carrying looks to be in working order.  Run.",
+    "name": {
+      "str": "超级主宰丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽的丧尸大军。它手中仍出于本能的紧握住生前的特殊的实验性重武器，更恐怖的是看上去他还知道如何使用它......",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "diff": 25,
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 80,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -533,64 +1141,130 @@
     "melee_skill": 7,
     "melee_dice": 3,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 }, { "damage_type": "electric", "amount": 4 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      },
+      {
+        "damage_type": "electric",
+        "amount": 4
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 15, "cut": 30, "stab": 30, "bullet": 45, "acid": 5, "heat": 30 },
+    "armor": {
+      "bash": 15,
+      "cut": 30,
+      "stab": 30,
+      "bullet": 45,
+      "acid": 5,
+      "heat": 30
+    },
     "vision_day": 40,
     "vision_night": 3,
     "luminance": 2,
     "regenerates": 3,
-    "regeneration_modifiers": [ [ "onfire", -2 ], [ "corroding", -2 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -2
+      ],
+      [
+        "corroding",
+        -2
+      ]
+    ],
     "regen_morale": true,
-    "starting_ammo": { "battery": 5 },
+    "starting_ammo": {
+      "battery": 5
+    },
     "harvest": "CBM_SOLDAT_KNIGHT_ZOMBIE",
     "dissect": "dissect_CBM_SOLDAT_KNIGHT_ZOMBIE",
     "special_attacks": [
       {
         "type": "gun",
         "cooldown": 5,
-        "move_cost": 200,
+        "move_cost": 400,
         "gun_type": "mk_ionic_cannon_monster",
         "ammo_type": "battery",
         "fake_str": 4,
         "fake_dex": 3,
         "fake_per": 3,
         "max_ammo": 5,
-        "ranges": [ [ 15, 40, "DEFAULT" ] ],
+        "ranges": [
+          [
+            15,
+            30,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
         "laser_lock": true,
         "targeting_cost": 200,
-        "targeting_sound": "argh!",
+        "targeting_sound": "swoosh…click!",
         "targeting_volume": 20,
-        "description": "The super soldier fires its launcher!",
-        "no_ammo_sound": "beep-beep-beep!"
+        "description": "超级主宰丧尸的实验性重武器开火了！",
+        "no_ammo_sound": "哔-哔-哔！"
       },
-      { "id": "grab_drag", "cooldown": 10 },
-      [ "SMASH", 30 ],
-      { "id": "slam" }
+      {
+        "id": "grab_drag",
+        "cooldown": 10
+      },
+      [
+        "SMASH",
+        30
+      ],
+      {
+        "id": "slam"
+      }
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "HURT", "PLAYER_CLOSE", "STALK" ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
     "death_drops": "wild_bio_knight_launcher",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "BASHES", "PUSH_MON", "PUSH_VEH", "PATH_AVOID_FIRE" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "BASHES",
+      "PUSH_MON",
+      "PUSH_VEH",
+      "PATH_AVOID_FIRE"
+    ]
   },
   {
     "id": "mon_zombie_bio_scout_sniper",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_scout",
-    "name": { "str": "zombie augmented scout" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one is wielding what seems to be a sniper rifle, and it seems unusually alert for a zombie…",
+    "name": {
+      "str": "超级侦察兵丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽的丧尸大军。它手中仍出于本能的紧握住生前的特殊实验性激光狙击枪，更恐怖的是看上去他还知道如何使用它......",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "diff": 25,
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 100,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -598,66 +1272,130 @@
     "melee_skill": 5,
     "melee_dice": 2,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 5, "cut": 10, "stab": 10, "bullet": 15, "acid": 5, "heat": 10 },
+    "armor": {
+      "bash": 5,
+      "cut": 10,
+      "stab": 10,
+      "bullet": 15,
+      "acid": 5,
+      "heat": 10
+    },
     "vision_day": 40,
     "vision_night": 40,
-    "path_settings": { "max_dist": 20 },
+    "path_settings": {
+      "max_dist": 20
+    },
     "luminance": 2,
     "regenerates": 1,
-    "regeneration_modifiers": [ [ "onfire", -1 ], [ "corroding", -1 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -1
+      ],
+      [
+        "corroding",
+        -1
+      ]
+    ],
     "regen_morale": true,
-    "starting_ammo": { "battery": 50 },
+    "starting_ammo": {
+      "battery": 50
+    },
     "harvest": "CBM_SOLDAT_SNIPER_ZOMBIE",
     "dissect": "dissect_CBM_SOLDAT_SNIPER_ZOMBIE",
     "special_attacks": [
       {
         "type": "gun",
-        "cooldown": 5,
-        "move_cost": 200,
+        "cooldown": 3,
+        "move_cost": 400,
         "gun_type": "laser_sniper_monster",
         "ammo_type": "battery",
         "fake_str": 4,
         "fake_dex": 5,
         "fake_per": 4,
         "max_ammo": 50,
-        "ranges": [ [ 10, 40, "DEFAULT" ] ],
+        "ranges": [
+          [
+            10,
+            30,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
         "laser_lock": true,
         "targeting_cost": 200,
-        "targeting_sound": "argh!",
-        "targeting_volume": 20,
-        "description": "The super scout fires its rifle!",
-        "no_ammo_sound": "beep-beep-beep!"
+        "targeting_sound": "hhhmmmmm",
+        "targeting_volume": 5,
+        "description": "超级侦察兵丧尸的激光狙击枪开火了！",
+        "no_ammo_sound": "哔-哔-哔！"
       },
-      { "id": "grab", "cooldown": 10 },
-      { "id": "bio_op_takedown", "cooldown": 30 },
-      [ "LUNGE", 20 ]
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      {
+        "id": "bio_op_takedown",
+        "cooldown": 30
+      },
+      [
+        "LUNGE",
+        20
+      ]
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "HURT", "PLAYER_CLOSE", "STALK" ],
-    "placate_triggers": [ "PLAYER_WEAK" ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "HURT",
+      "PLAYER_CLOSE",
+      "STALK"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
     "death_drops": "wild_bio_scout_sniper",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "PATH_AVOID_DANGER_1" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "PATH_AVOID_DANGER_1"
+    ]
   },
   {
     "id": "mon_zombie_bio_tool_pistol",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_tool",
-    "name": { "str": "zombie augmented bio-engineer" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one is wielding some kind of pistol, and appears to recall how to use it.",
+    "name": {
+      "str": "超级B.A.M.R.U丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽的丧尸大军。它手中仍出于本能的紧握住生前的特殊实验性激光手枪，更恐怖的是看上去他还知道如何使用它......",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "diff": 5,
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 100,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -665,64 +1403,126 @@
     "melee_skill": 3,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 5, "cut": 10, "stab": 10, "bullet": 15, "acid": 5, "heat": 10 },
+    "armor": {
+      "bash": 5,
+      "cut": 10,
+      "stab": 10,
+      "bullet": 15,
+      "acid": 5,
+      "heat": 10
+    },
     "vision_day": 40,
     "vision_night": 15,
-    "path_settings": { "max_dist": 30 },
+    "path_settings": {
+      "max_dist": 30
+    },
     "luminance": 2,
     "regenerates": 3,
-    "regeneration_modifiers": [ [ "onfire", -2 ], [ "corroding", -2 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -2
+      ],
+      [
+        "corroding",
+        -2
+      ]
+    ],
     "regen_morale": true,
-    "starting_ammo": { "battery": 25 },
+    "starting_ammo": {
+      "battery": 25
+    },
     "harvest": "CBM_SOLDAT_TOOL_ZOMBIE",
     "dissect": "dissect_CBM_SOLDAT_TOOL_ZOMBIE",
     "special_attacks": [
       {
         "type": "gun",
-        "cooldown": 5,
-        "move_cost": 200,
+        "cooldown": 1,
+        "move_cost": 150,
         "gun_type": "neo_laser_pistol_monster",
         "ammo_type": "battery",
         "fake_str": 3,
         "fake_dex": 4,
         "fake_per": 5,
         "max_ammo": 25,
-        "ranges": [ [ 1, 15, "DEFAULT" ] ],
+        "ranges": [
+          [
+            1,
+            10,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
-        "targeting_cost": 200,
+        "targeting_cost": 100,
         "targeting_sound": "argh!",
-        "targeting_volume": 20,
-        "description": "The super soldier fires its pistol!",
-        "no_ammo_sound": "beep-beep-beep!"
+        "targeting_volume": 5,
+        "description": "超级B.A.M.R.U丧尸的激光手枪开火了！",
+        "no_ammo_sound": "哔-哔-哔！"
       },
-      { "id": "grab", "cooldown": 10 },
-      [ "scratch", 20 ]
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      [
+        "scratch",
+        20
+      ]
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "placate_triggers": [ "PLAYER_WEAK" ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
     "death_drops": "wild_bio_tool_pistol",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "PATH_AVOID_DANGER_1" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "PATH_AVOID_DANGER_2"
+    ]
   },
   {
     "id": "mon_zombie_bio_tool_smg",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_tool",
-    "name": { "str": "zombie augmented bio-engineer" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one is wielding some kind of submachine gun, and appears to recall how to use it.",
+    "name": {
+      "str": "超级B.A.M.R.U丧尸"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽的丧尸大军。它手中仍出于本能的紧握住生前的特殊实验性激光冲锋枪，更恐怖的是看上去他还知道如何使用它......",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "diff": 10,
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 100,
     "speed": 100,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "aggression": 0,
@@ -730,63 +1530,135 @@
     "melee_skill": 3,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 3,
-    "armor": { "bash": 5, "cut": 10, "stab": 10, "bullet": 15, "acid": 5, "heat": 10 },
+    "armor": {
+      "bash": 5,
+      "cut": 10,
+      "stab": 10,
+      "bullet": 15,
+      "acid": 5,
+      "heat": 10
+    },
     "vision_day": 40,
     "vision_night": 15,
-    "path_settings": { "max_dist": 30 },
+    "path_settings": {
+      "max_dist": 30
+    },
     "luminance": 2,
     "regenerates": 3,
-    "regeneration_modifiers": [ [ "onfire", -2 ], [ "corroding", -2 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -2
+      ],
+      [
+        "corroding",
+        -2
+      ]
+    ],
     "regen_morale": true,
-    "starting_ammo": { "battery": 50 },
+    "starting_ammo": {
+      "battery": 50
+    },
     "harvest": "CBM_SOLDAT_TOOL_ZOMBIE",
     "dissect": "dissect_CBM_SOLDAT_TOOL_ZOMBIE",
     "special_attacks": [
       {
         "type": "gun",
-        "cooldown": 5,
-        "move_cost": 200,
+        "cooldown": 1,
+        "move_cost": 150,
         "gun_type": "akro_laser_smg_monster",
         "ammo_type": "battery",
         "fake_str": 3,
         "fake_dex": 4,
         "fake_per": 5,
         "max_ammo": 50,
-        "ranges": [ [ 3, 15, "DEFAULT" ], [ 3, 15, "BURST" ], [ 3, 15, "AUTO" ] ],
+        "ranges": [
+          [
+            3,
+            15,
+            "DEFAULT"
+          ],
+          [
+            3,
+            15,
+            "BURST"
+          ],
+          [
+            3,
+            15,
+            "AUTO"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
-        "targeting_cost": 200,
+        "targeting_cost": 100,
         "targeting_sound": "argh!",
-        "targeting_volume": 20,
-        "description": "The super soldier fires its smg!",
-        "no_ammo_sound": "beep-beep-beep!"
+        "targeting_volume": 5,
+        "description": "超级B.A.M.R.U丧尸的激光冲锋枪开火了！",
+        "no_ammo_sound": "哔-哔-哔！"
       },
-      { "id": "grab", "cooldown": 10 },
-      [ "scratch", 20 ]
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      [
+        "scratch",
+        20
+      ]
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
-    "anger_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED", "HURT", "STALK", "PLAYER_CLOSE" ],
-    "placate_triggers": [ "PLAYER_WEAK" ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
+    "anger_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED",
+      "HURT",
+      "STALK",
+      "PLAYER_CLOSE"
+    ],
+    "placate_triggers": [
+      "PLAYER_WEAK"
+    ],
     "death_drops": "wild_bio_tool_smg",
     "zombify_into": "mon_zombie_bio_reanimated",
-    "flags": [ "SEES", "HEARS", "SMELLS", "POISON", "NO_BREATHE", "FILTHY", "PATH_AVOID_DANGER_1" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "PATH_AVOID_DANGER_2"
+    ]
   },
   {
     "id": "mon_zombie_bio_reanimated",
     "type": "MONSTER",
     "looks_like": "mon_zombie_bio_dormant_unarmed",
-    "name": { "str": "reanimated augmented soldier" },
-    "description": "An advanced, well-equipped member of the military that still succumbed to the cataclysm.  This one has no sign of its signature weaponry and its armor is in tatters, yet it still marches on with unnerving confidence and speed.",
+    "name": {
+      "str": "复活的超级士兵"
+    },
+    "description": "一个装备精良的特种军人，但仍在大灾变中加入了无尽丧尸大军。它的手中似乎没有持有武器并且盔甲破烂不堪，但它仍然以令人不安的速度前进。",
     "default_faction": "super_soldat",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 90,
     "speed": 110,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Z",
     "color": "red_cyan",
     "//": "It has long since been aggro'd at this point.",
@@ -795,26 +1667,68 @@
     "melee_skill": 5,
     "melee_dice": 2,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "path_settings": { "max_dist": 20 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "path_settings": {
+      "max_dist": 20
+    },
     "dodge": 5,
-    "armor": { "bash": 5, "cut": 5, "stab": 5, "bullet": 10, "acid": 5, "heat": 5 },
+    "armor": {
+      "bash": 5,
+      "cut": 5,
+      "stab": 5,
+      "bullet": 10,
+      "acid": 5,
+      "heat": 5
+    },
     "vision_day": 40,
     "vision_night": 15,
     "luminance": 2,
     "regenerates": 1,
-    "regeneration_modifiers": [ [ "onfire", -1 ], [ "corroding", -1 ] ],
+    "regeneration_modifiers": [
+      [
+        "onfire",
+        -1
+      ],
+      [
+        "corroding",
+        -1
+      ]
+    ],
     "regen_morale": true,
     "harvest": "CBM_SOLDAT_ZOMBIE_GENERIC",
     "dissect": "dissect_CBM_SOLDAT_ZOMBIE_GENERIC",
     "special_attacks": [
-      { "type": "leap", "cooldown": 10, "max_range": 5 },
-      { "id": "grab", "cooldown": 5 },
-      { "id": "bio_op_takedown", "cooldown": 20 },
-      [ "scratch", 15 ],
-      { "type": "bite", "cooldown": 5 }
+      {
+        "type": "leap",
+        "cooldown": 10,
+        "max_range": 5
+      },
+      {
+        "id": "grab",
+        "cooldown": 5
+      },
+      {
+        "id": "bio_op_takedown",
+        "cooldown": 20
+      },
+      [
+        "scratch",
+        15
+      ],
+      {
+        "type": "bite",
+        "cooldown": 5
+      }
     ],
-    "special_when_hit": [ "ZAPBACK", 60 ],
+    "special_when_hit": [
+      "ZAPBACK",
+      60
+    ],
     "flags": [
       "HARDTOSHOOT",
       "REVIVES",

@@ -3,13 +3,29 @@
     "id": "javelin_stone",
     "copy-from": "javelin",
     "type": "GENERIC",
-    "name": { "str": "stone javelin" },
-    "description": "A throwing spear with a stone spearhead.",
-    "material": [ "wood", "stone" ],
+    "name": {
+      "str": "石尖标枪"
+    },
+    "description": "一根带石质矛头的标枪。",
+    "material": [
+      "wood",
+      "stone"
+    ],
     "weight": "700 g",
     "color": "light_gray",
-    "melee_damage": { "stab": 13 },
-    "thrown_damage": [ { "damage_type": "bash", "amount": 5 }, { "damage_type": "stab", "amount": 14 } ],
+    "melee_damage": {
+      "stab": 13
+    },
+    "thrown_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 5
+      },
+      {
+        "damage_type": "stab",
+        "amount": 14
+      }
+    ],
     "price": "20 USD",
     "price_postapoc": 275
   },
@@ -17,13 +33,29 @@
     "id": "javelin_copper",
     "copy-from": "javelin_iron",
     "type": "GENERIC",
-    "name": { "str": "copper javelin" },
-    "description": "A copper-tipped throwing spear.",
-    "material": [ "wood", "copper" ],
+    "name": {
+      "str": "铜尖标枪"
+    },
+    "description": "一根铜尖标枪。",
+    "material": [
+      "wood",
+      "copper"
+    ],
     "weight": "1100 g",
     "color": "light_red",
-    "melee_damage": { "stab": 16 },
-    "thrown_damage": [ { "damage_type": "bash", "amount": 5 }, { "damage_type": "stab", "amount": 16 } ],
+    "melee_damage": {
+      "stab": 16
+    },
+    "thrown_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 5
+      },
+      {
+        "damage_type": "stab",
+        "amount": 16
+      }
+    ],
     "price": "90 USD",
     "price_postapoc": 500
   },
@@ -31,14 +63,20 @@
     "id": "log_frame_item",
     "category": "veh_parts",
     "type": "GENERIC",
-    "name": { "str": "log frame" },
-    "description": "A heavy section of frame carved from a log, can be used for making sturdy wooden vehicle structures.  Also usable for a raft, log canoe, outriggers for a boat, etc due to its buoyancy.",
+    "name": {
+      "str": "木架"
+    },
+    "description": "从原木上雕凿而成的一段很重的木框架，可以用来制作坚固的木制车辆结构。由于其浮力，也可用于木筏、独木舟、船的支腿等。",
     "weight": "12 kg",
     "volume": "22500 ml",
     "price": "1 USD",
-    "melee_damage": { "bash": 8 },
+    "melee_damage": {
+      "bash": 8
+    },
     "to_hit": -8,
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "symbol": "]",
     "color": "brown"
   },
@@ -46,31 +84,43 @@
     "type": "TOOL",
     "id": "makeshift_sled_frame_item",
     "sub": "frame_wood_light",
-    "name": { "str": "light woven frame" },
-    "description": "A flexible frame made from wooden crosspieces lashed together.",
+    "name": {
+      "str": "轻型板条车架"
+    },
+    "description": "用长条木板绑在一起的可弯曲的木框架。",
     "weight": "4000 g",
     "to_hit": -2,
     "color": "brown",
     "symbol": "]",
     "looks_like": "frame_wood_light",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "volume": "3750 ml",
-    "melee_damage": { "bash": 5 },
+    "melee_damage": {
+      "bash": 5
+    },
     "category": "veh_parts",
     "price": 500
   },
   {
     "type": "GENERIC",
     "id": "makeshift_sled_basket_item",
-    "name": { "str": "woven storage basket" },
-    "description": "A folding basket made from woven straw or birchbark, supported by a wooden framework.",
+    "name": {
+      "str": "编织储物篮"
+    },
+    "description": "用稻草或桦树皮来编制制成的可折叠的篮子，由木制框架来支撑。",
     "weight": "3000 g",
     "to_hit": -5,
     "color": "cyan",
     "symbol": "]",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "volume": "5 L",
-    "melee_damage": { "bash": 3 },
+    "melee_damage": {
+      "bash": 3
+    },
     "category": "veh_parts",
     "price": 1000
   },
@@ -80,31 +130,63 @@
     "symbol": "o",
     "color": "brown",
     "looks_like": "boat_board",
-    "name": { "str": "birchbark panel" },
-    "description": "A tightly-woven panel made of birch bark, for vehicle use.  It could be used for makeshift aisles and roofing, or with some waterproofing it could help keep a canoe afloat.",
+    "name": {
+      "str": "桦皮半隔板"
+    },
+    "description": "由桦树皮紧密编织制成的厚板，用作载具部件。可以充当简易的过道或车顶，与一些防水材料一起使用还可以帮助独木舟漂浮。",
     "price": "40 USD",
     "price_postapoc": "50 cent",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "weight": "1500 g",
     "volume": "4 L",
     "category": "veh_parts"
   },
   {
+    "id": "beehive_empty",
+    "type": "GENERIC",
+    "name": {
+      "str": "蜂箱（空）"
+    },
+    "description": "一个有多个滑动框架的封闭的大木箱.如果里面有了能吸引蜜蜂的东西，就可以用来建造人工蜂巢了。",
+    "weight": "10000 g",
+    "volume": "20 L",
+    "price": "92 USD",
+    "material": [
+      "wood"
+    ],
+    "symbol": "-",
+    "color": "brown"
+  },
+  {
     "id": "cordage_6_leather",
     "copy-from": "string_6",
     "type": "GENERIC",
-    "name": { "str": "short leather cord" },
-    "description": "A 6-inch (or about 15 cm) long piece of rawhide or leather cord.  Useful for some purposes, but not as strong or flexible as proper string.",
-    "proportional": { "price": 0.5 },
-    "material": [ "leather" ]
+    "name": {
+      "str": "短皮绳"
+    },
+    "description": "一根六英寸（约15厘米）长的生皮或皮革绳。可用于某些制造配方，但柔韧性不如正规生产的棉线。",
+    "proportional": {
+      "price": 0.5
+    },
+    "material": [
+      "leather"
+    ]
   },
   {
     "id": "cordage_36_leather",
     "copy-from": "string_36",
     "type": "GENERIC",
-    "name": { "str": "long leather cord" },
-    "description": "A 3-foot (or about 90 cm) long piece of rawhide or leather cord.  Useful for some purposes, but not as strong or flexible as proper string.",
-    "proportional": { "price": 0.5 },
-    "material": [ "leather" ]
+    "name": {
+      "str": "长皮绳"
+    },
+    "description": "一根三英尺（约90厘米）长的生皮或皮革绳。可用于某些制造配方，但强度和柔韧性不如正规生产的棉线。",
+    "proportional": {
+      "price": 0.5
+    },
+    "material": [
+      "leather"
+    ]
   }
 ]

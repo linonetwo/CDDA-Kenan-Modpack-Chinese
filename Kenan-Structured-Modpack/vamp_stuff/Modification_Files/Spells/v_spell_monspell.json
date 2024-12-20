@@ -3,11 +3,23 @@
     "//": "Spells that are casted by monsters. Seperated from monster_magic.json, for as it is casted by allied minions.",
     "type": "SPELL",
     "id": "mon_ether_shadow_spell_target",
-    "name": { "str": "a spell" },
-    "description": "Casted upon monster's LOS and within the predefined range. ALSO WHEN IT IS NOT ON COOLDOWN.",
-    "extra_effects": [ { "id": "mon_ether_shadow_spell" } ],
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "在怪物的视距和预定范围内施法。当它没有冷却的时候。",
+    "extra_effects": [
+      {
+        "id": "mon_ether_shadow_spell"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_magic_target",
@@ -19,47 +31,87 @@
   {
     "id": "mon_ether_shadow_spell",
     "type": "SPELL",
-    "name": { "str": "Warlock Spell" },
-    "description": "Picks a tier level of spell: 3/6 - tier 1, 2/6 - tier 2, 1/6 - tier 3.",
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "术士咒语"
+    },
+    "description": "选择法术等级：3/6-1级，2/6-2级，1/6-3级。",
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "extra_effects": [
-      { "id": "mon_ether_shadow_spell_bolt" },
-      { "id": "mon_ether_shadow_spell_bolt" },
-      { "id": "mon_ether_shadow_spell_bolt" },
-      { "id": "mon_ether_shadow_spell_beam" },
-      { "id": "mon_ether_shadow_spell_beam" },
-      { "id": "mon_ether_shadow_spell_blast" }
+      {
+        "id": "mon_ether_shadow_spell_bolt"
+      },
+      {
+        "id": "mon_ether_shadow_spell_bolt"
+      },
+      {
+        "id": "mon_ether_shadow_spell_bolt"
+      },
+      {
+        "id": "mon_ether_shadow_spell_beam"
+      },
+      {
+        "id": "mon_ether_shadow_spell_beam"
+      },
+      {
+        "id": "mon_ether_shadow_spell_blast"
+      }
     ],
     "min_damage": 1,
     "max_damage": 1,
-    "flags": [ "WONDER", "NO_PROJECTILE" ]
+    "flags": [
+      "WONDER",
+      "NO_PROJECTILE"
+    ]
   },
   {
     "id": "mon_ether_shadow_spell_bolt",
     "type": "SPELL",
-    "name": { "str": "Dark Bolt" },
-    "description": "A magical burst of profane mana strikes at your foe, dealing <color_light_gray>pure damage</color>.\n\nThis is a <color_light_gray>tier 1</color> spell.",
-    "message": "The etherean silhouette casts Dark Bolt!",
-    "valid_targets": [ "hostile" ],
-    "extra_effects": [ { "id": "v_sacrifice_spell", "hit_self": true } ],
+    "name": {
+      "str": "黑暗法球"
+    },
+    "description": "一道魔法般的世俗法力冲击你的敌人，造成<color_light_gray>点纯伤害</color>。\n\n这是一个<color_light_gray>一阶</color>法术。",
+    "message": "以太的轮廓投射出黑暗的闪电！",
+    "valid_targets": [
+      "hostile"
+    ],
+    "extra_effects": [
+      {
+        "id": "v_sacrifice_spell",
+        "hit_self": true
+      }
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 10,
     "max_damage": 40,
     "max_range": 10,
-    "flags": [ "RANDOM_DAMAGE" ],
+    "flags": [
+      "RANDOM_DAMAGE"
+    ],
     "damage_type": "pure"
   },
   {
     "id": "mon_ether_shadow_spell_beam",
     "type": "SPELL",
-    "name": { "str": "Dark Beam" },
-    "description": "A profane mana beam bursts violently, striking your foes within a line that deals <color_light_gray>pure damage</color>.\n\nThis is a <color_light_gray>tier 2</color> spell.",
-    "message": "The etherean silhouette casts Dark Beam!",
-    "valid_targets": [ "hostile", "ground" ],
-    "extra_effects": [ { "id": "v_sacrifice_spell", "hit_self": true } ],
+    "name": {
+      "str": "黑暗射线"
+    },
+    "description": "一道亵渎的法力束猛烈爆发，在一条线内打击你的敌人，造成<color_light_gray>点纯伤害</color>。\n\n这是一个<color_light_gray>二阶</color>法术。",
+    "message": "以太的轮廓投射出黑暗的光芒！",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "v_sacrifice_spell",
+        "hit_self": true
+      }
+    ],
     "effect": "attack",
     "shape": "line",
     "min_damage": 10,
@@ -68,36 +120,62 @@
     "max_range": 10,
     "min_aoe": 2,
     "max_aoe": 2,
-    "flags": [ "RANDOM_DAMAGE" ],
+    "flags": [
+      "RANDOM_DAMAGE"
+    ],
     "damage_type": "pure"
   },
   {
     "id": "mon_ether_shadow_spell_blast",
     "type": "SPELL",
-    "name": { "str": "Dark Blast" },
-    "description": "Conjures a volatile profane magic to the targeted area then explodes, dealing <color_light_gray>pure damage</color> to the surrounding foes.\n\nThis is a <color_white>tier 3</color> spell.",
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "The etherean silhouette casts Dark Blast!",
+    "name": {
+      "str": "黑暗冲击"
+    },
+    "description": "对目标区域施展一种易变的世俗魔法，然后爆炸，对周围的敌人造成<color_light_gray>点纯伤害</color>点。\n\n这是<color_white>三阶</color>法术。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "message": "以太的轮廓投射出黑暗的爆炸！",
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "v_sacrifice_spell", "hit_self": true } ],
+    "extra_effects": [
+      {
+        "id": "v_sacrifice_spell",
+        "hit_self": true
+      }
+    ],
     "min_damage": 10,
     "max_damage": 40,
     "min_range": 10,
     "max_range": 10,
     "min_aoe": 4,
     "max_aoe": 4,
-    "flags": [ "RANDOM_DAMAGE" ],
+    "flags": [
+      "RANDOM_DAMAGE"
+    ],
     "damage_type": "pure"
   },
   {
     "type": "SPELL",
     "id": "mon_idol_vex_spell_target",
-    "name": { "str": "a spell" },
-    "description": "Casted upon monster's LOS and within the predefined range. ALSO WHEN IT IS NOT ON COOLDOWN.",
-    "extra_effects": [ { "id": "mon_idol_vex_spell" } ],
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "在怪物的视距和预定范围内施法。当它没有冷却的时候。",
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_spell"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_magic_target",
@@ -109,55 +187,101 @@
   {
     "id": "mon_idol_vex_spell",
     "type": "SPELL",
-    "name": { "str": "Vex Spell" },
-    "description": "Picks a random spell. Everything got flat chances.",
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "烦恼咒语"
+    },
+    "description": "随机选择一个咒语。一切都没有机会。",
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "extra_effects": [
-      { "id": "mon_idol_vex_calamity_combo" },
-      { "id": "mon_idol_vex_impendingdoom_combo" },
-      { "id": "mon_idol_vex_etherealshockwave_combo" },
-      { "id": "mon_idol_vex_etherealharbringer_combo" }
+      {
+        "id": "mon_idol_vex_calamity_combo"
+      },
+      {
+        "id": "mon_idol_vex_impendingdoom_combo"
+      },
+      {
+        "id": "mon_idol_vex_etherealshockwave_combo"
+      },
+      {
+        "id": "mon_idol_vex_etherealharbringer_combo"
+      }
     ],
     "min_damage": 1,
     "max_damage": 1,
-    "flags": [ "WONDER", "NO_PROJECTILE" ]
+    "flags": [
+      "WONDER",
+      "NO_PROJECTILE"
+    ]
   },
   {
     "id": "mon_idol_vex_calamity_combo",
     "type": "SPELL",
-    "name": { "str": "Calamity Combo" },
-    "description": "Combines all essential spells.",
-    "valid_targets": [ "none" ],
-    "flags": [ "NO_PROJECTILE" ],
+    "name": {
+      "str": "灾祸连击"
+    },
+    "description": "结合所有基本法术。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "NO_PROJECTILE"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "message": "The Vex casts Calamity!\nExplosions of profane magic errupts from beneath the earth!",
-    "extra_effects": [ { "id": "mon_idol_vex_calamity" }, { "id": "mon_idol_vex_spell_car", "hit_self": true } ]
+    "message": "烦恼带来灾难！\n世俗魔法的爆炸从地下爆发！",
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_calamity"
+      },
+      {
+        "id": "mon_idol_vex_spell_car",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "mon_idol_vex_calamity",
     "type": "SPELL",
-    "name": { "str": "Calamity" },
-    "description": "3-10 Explosions.",
-    "valid_targets": [ "hostile", "ground" ],
+    "name": {
+      "str": "灾难"
+    },
+    "description": "释放3-10次爆炸。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "mon_idol_vex_calamity_exp" } ],
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_calamity_exp"
+      }
+    ],
     "min_damage": 3,
     "max_damage": 10,
     "min_range": 13,
     "max_range": 13,
-    "flags": [ "RANDOM_DAMAGE", "WONDER" ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "WONDER"
+    ],
     "damage_type": "pure"
   },
   {
     "id": "mon_idol_vex_calamity_exp",
     "type": "SPELL",
-    "name": { "str": "Explosions" },
-    "description": "Underground bombardments of pure damage.",
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "爆炸"
+    },
+    "description": "纯粹破坏的地下轰炸。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 30,
@@ -166,27 +290,52 @@
     "max_range": 13,
     "min_aoe": 2,
     "max_aoe": 4,
-    "flags": [ "RANDOM_DAMAGE", "RANDOM_TARGET", "RANDOM_AOE" ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET",
+      "RANDOM_AOE"
+    ],
     "damage_type": "pure"
   },
   {
     "id": "mon_idol_vex_impendingdoom_combo",
     "type": "SPELL",
-    "name": { "str": "Impending Doom Combo" },
-    "description": "Combines all essential spells.",
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "即将到来的厄运连击"
+    },
+    "description": "结合所有基本法术。",
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "message": "The Vex casts Impending Doom!",
-    "extra_effects": [ { "id": "mon_idol_vex_impendingdoom", "hit_self": true }, { "id": "mon_idol_vex_spell_car", "hit_self": true } ]
+    "message": "烦恼带来了即将到来的厄运！",
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_impendingdoom",
+        "hit_self": true
+      },
+      {
+        "id": "mon_idol_vex_spell_car",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "mon_idol_vex_impendingdoom",
     "type": "SPELL",
-    "name": { "str": "Impending Doom" },
-    "description": "Marks all surrounding foes with impending doom. 1/101 chance for their mark to implode, dealing 60-125 damage over the duration.",
-    "flags": [ "SILENT", "RANDOM_DURATION" ],
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "末日"
+    },
+    "description": "用即将到来的厄运标记周围的所有敌人。他们的印记有1/101的几率内爆，在持续时间内造成60-125点伤害。",
+    "flags": [
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_monspell_doom",
@@ -198,37 +347,68 @@
   {
     "id": "mon_idol_vex_etherealshockwave_combo",
     "type": "SPELL",
-    "name": { "str": "Ethereal Shockwave Combo" },
-    "description": "Combines all essential spells.",
-    "valid_targets": [ "none" ],
-    "flags": [ "NO_PROJECTILE" ],
+    "name": {
+      "str": "空灵冲击波组合"
+    },
+    "description": "结合所有基本法术。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "NO_PROJECTILE"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "message": "The Vex casts Ethereal Shockwave!",
-    "extra_effects": [ { "id": "mon_idol_vex_etherealshockwave" }, { "id": "mon_idol_vex_spell_car", "hit_self": true } ]
+    "message": "烦恼投射出空灵的冲击波！",
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_etherealshockwave"
+      },
+      {
+        "id": "mon_idol_vex_spell_car",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "mon_idol_vex_etherealshockwave",
     "type": "SPELL",
-    "name": { "str": "Ethereal Shockwave" },
-    "description": "1-4 Shockwaves.",
-    "valid_targets": [ "hostile", "ground" ],
+    "name": {
+      "str": "空灵冲击波"
+    },
+    "description": "发射1-4个冲击波。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "mon_idol_vex_etherealshockwave_wave" } ],
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_etherealshockwave_wave"
+      }
+    ],
     "min_damage": 1,
     "max_damage": 4,
     "min_range": 13,
     "max_range": 13,
-    "flags": [ "RANDOM_DAMAGE", "WONDER" ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "WONDER"
+    ],
     "damage_type": "pure"
   },
   {
     "id": "mon_idol_vex_etherealshockwave_wave",
     "type": "SPELL",
-    "name": { "str": "Ethereal Shockwave Wave" },
-    "description": "Resonating wave of pure damage.",
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "空灵冲击波"
+    },
+    "description": "纯损伤的共振波。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "cone",
     "min_damage": 30,
@@ -237,28 +417,56 @@
     "max_range": 13,
     "min_aoe": 15,
     "max_aoe": 60,
-    "flags": [ "RANDOM_DAMAGE", "RANDOM_TARGET", "RANDOM_AOE" ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET",
+      "RANDOM_AOE"
+    ],
     "damage_type": "pure"
   },
   {
     "id": "mon_idol_vex_etherealharbringer_combo",
     "type": "SPELL",
-    "name": { "str": "Ethereal Harbringer Combo" },
-    "description": "Combines all essential spells.",
-    "valid_targets": [ "none" ],
-    "flags": [ "NO_PROJECTILE" ],
+    "name": {
+      "str": "空灵使者组合"
+    },
+    "description": "结合所有基本法术。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "NO_PROJECTILE"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "message": "The Vex casts Ethereal Harbringer!",
-    "extra_effects": [ { "id": "mon_idol_vex_etherealharbringer" }, { "id": "mon_idol_vex_spell_car", "hit_self": true } ]
+    "message": "烦恼铸成了空灵的使者！",
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_etherealharbringer"
+      },
+      {
+        "id": "mon_idol_vex_spell_car",
+        "hit_self": true
+      }
+    ]
   },
   {
     "type": "SPELL",
     "id": "mon_idol_vex_etherealharbringer",
-    "name": { "str": "Ethereal Harbinger" },
-    "description": "Summons 2-5 ethereal harbringers.",
-    "flags": [ "SILENT", "RANDOM_DAMAGE", "RANDOM_TARGET", "NO_PROJECTILE" ],
-    "valid_targets": [ "hostile", "ground" ],
+    "name": {
+      "str": "空灵的预兆"
+    },
+    "description": "召唤2-5个空灵使者。",
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "min_damage": 2,
     "max_damage": 5,
     "min_range": 13,
@@ -274,10 +482,17 @@
   {
     "type": "SPELL",
     "id": "mon_idol_vex_spell_car",
-    "name": { "str": "Cast-and-Run" },
-    "description": "Imitates hit-and-run. Lasts for until their spell ceases from cooling down.",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "铸造和运行"
+    },
+    "description": "模仿肇事逃逸。持续到他们的法术停止冷却。",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "run",
@@ -287,11 +502,23 @@
   {
     "type": "SPELL",
     "id": "mon_idol_vex_etherhar_spell_target",
-    "name": { "str": "a spell" },
-    "description": "Casted upon monster's LOS and within the predefined range. ALSO WHEN IT IS NOT ON COOLDOWN.",
-    "extra_effects": [ { "id": "mon_idol_vex_etherhar_spell" } ],
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "在怪物的视距和预定范围内施法。当它没有冷却的时候。",
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_etherhar_spell"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_magic_target",
@@ -303,47 +530,94 @@
   {
     "id": "mon_idol_vex_etherhar_spell",
     "type": "SPELL",
-    "name": { "str": "Vex Spell" },
-    "description": "Picks a random spell. Everything got flat chances.",
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "烦恼咒语"
+    },
+    "description": "随机选择一个咒语。一切都没有机会。",
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "mon_idol_vex_etherhar_scatterbeam_combo" }, { "id": "mon_idol_vex_etherhar_implosion_combo" } ],
+    "extra_effects": [
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam_combo"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_implosion_combo"
+      }
+    ],
     "min_damage": 1,
     "max_damage": 1,
-    "flags": [ "WONDER", "NO_PROJECTILE" ]
+    "flags": [
+      "WONDER",
+      "NO_PROJECTILE"
+    ]
   },
   {
     "id": "mon_idol_vex_etherhar_scatterbeam_combo",
     "type": "SPELL",
-    "name": { "str": "Scatterbeam Combo" },
-    "description": "Combines all essential spells.",
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "散射光束组合"
+    },
+    "description": "结合所有基本法术。",
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "message": "The ethereal harbringer bursts out ethereal beams!",
+    "message": "空灵的使者爆发出空灵的光芒！",
     "extra_effects": [
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "mon_idol_vex_etherhar_scatterbeam" },
-      { "id": "v_sacrifice_spell", "hit_self": true }
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "mon_idol_vex_etherhar_scatterbeam"
+      },
+      {
+        "id": "v_sacrifice_spell",
+        "hit_self": true
+      }
     ],
     "min_damage": 5,
     "max_damage": 5,
-    "flags": [ "WONDER", "NO_PROJECTILE" ]
+    "flags": [
+      "WONDER",
+      "NO_PROJECTILE"
+    ]
   },
   {
     "id": "mon_idol_vex_etherhar_scatterbeam",
     "type": "SPELL",
-    "name": { "str": "Scatterbeam" },
-    "description": "1/10 chance to stop and die from barraging beams.",
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "散射光束"
+    },
+    "description": "1/10的机会停止和死亡的障碍梁。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "min_damage": 8,
@@ -352,53 +626,102 @@
     "max_range": 6,
     "min_aoe": 1,
     "max_aoe": 3,
-    "flags": [ "RANDOM_DAMAGE", "RANDOM_TARGET", "RANDOM_AOE" ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET",
+      "RANDOM_AOE"
+    ],
     "damage_type": "pure"
   },
   {
     "id": "mon_idol_vex_etherhar_implosion_combo",
     "type": "SPELL",
-    "name": { "str": "Implosion Combo" },
-    "description": "Combines all essential spells.",
-    "valid_targets": [ "none" ],
-    "flags": [ "NO_PROJECTILE" ],
+    "name": {
+      "str": "内爆组合体"
+    },
+    "description": "结合所有基本法术。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "NO_PROJECTILE"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "message": "The ethereal harbringer implodes!",
+    "message": "空灵的使者内爆了！",
     "extra_effects": [
-      { "id": "mon_idol_vex_etherhar_implosion_pull", "hit_self": true },
-      { "id": "mon_idol_vex_etherhar_implosion", "hit_self": true },
-      { "id": "mon_idol_vex_etherhar_implosion_pull", "hit_self": true },
-      { "id": "mon_idol_vex_etherhar_implosion", "hit_self": true },
-      { "id": "mon_idol_vex_etherhar_implosion_pull", "hit_self": true },
-      { "id": "mon_idol_vex_etherhar_implosion", "hit_self": true },
-      { "id": "v_sacrifice_spell", "hit_self": true }
+      {
+        "id": "mon_idol_vex_etherhar_implosion_pull",
+        "hit_self": true
+      },
+      {
+        "id": "mon_idol_vex_etherhar_implosion",
+        "hit_self": true
+      },
+      {
+        "id": "mon_idol_vex_etherhar_implosion_pull",
+        "hit_self": true
+      },
+      {
+        "id": "mon_idol_vex_etherhar_implosion",
+        "hit_self": true
+      },
+      {
+        "id": "mon_idol_vex_etherhar_implosion_pull",
+        "hit_self": true
+      },
+      {
+        "id": "mon_idol_vex_etherhar_implosion",
+        "hit_self": true
+      },
+      {
+        "id": "v_sacrifice_spell",
+        "hit_self": true
+      }
     ]
   },
   {
     "id": "mon_idol_vex_etherhar_implosion",
     "type": "SPELL",
-    "name": { "str": "Implosion" },
-    "description": "3 waves of implosions.",
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "内爆"
+    },
+    "description": "进行三次内爆。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 15,
     "max_damage": 30,
     "min_aoe": 3,
     "max_aoe": 6,
-    "flags": [ "RANDOM_DAMAGE", "RANDOM_AOE" ],
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
     "damage_type": "pure"
   },
   {
     "id": "mon_idol_vex_etherhar_implosion_pull",
     "type": "SPELL",
-    "name": { "str": "Implosion Pull" },
-    "description": "3 waves of pulling nearby foes.",
+    "name": {
+      "str": "内爆拉力"
+    },
+    "description": "拉扯附近的敌人3次。",
     "effect": "area_pull",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "min_aoe": 6,
     "max_aoe": 6
   }

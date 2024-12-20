@@ -2,20 +2,31 @@
   {
     "type": "SPELL",
     "id": "acid_claw",
-    "name": { "str": "Acid Claw" },
-    "description": "Your claws glow with yellow acid energy, and as you swipe your claw a wave of acid sweeps forth from it.",
-    "valid_targets": [ "hostile", "ground" ],
-    "flags": [ "SOMATIC", "VERBAL", "LOUD" ],
+    "name": {
+      "str": "酸液之爪"
+    },
+    "description": "你的爪子散发出黄色的酸液魔法光芒，当你挥动爪子时，一股酸液从中飞溅出来。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "LOUD"
+    ],
     "spell_class": "NONE",
     "effect": "attack",
     "effect_str": "dragon_acidburn",
     "shape": "cone",
-    "affected_body_parts": [ "torso" ],
+    "affected_body_parts": [
+      "torso"
+    ],
     "damage_type": "acid",
     "max_level": 7,
     "min_damage": 5,
     "max_damage": 97,
-    "damage_increment": 15.0,
+    "damage_increment": 15,
     "min_range": 3,
     "max_range": 7,
     "range_increment": 0.5,
@@ -36,20 +47,30 @@
   {
     "type": "SPELL",
     "id": "acid_bite",
-    "name": { "str": "Acid Bite" },
-    "description": "Your maw drips with acid as you make a bite attack.",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "VERBAL", "NO_HANDS", "LOUD" ],
+    "name": {
+      "str": "酸液噬咬"
+    },
+    "description": "当你咬人时，你的大嘴能够分泌出酸液。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "VERBAL",
+      "NO_HANDS",
+      "LOUD"
+    ],
     "spell_class": "NONE",
     "effect": "attack",
     "effect_str": "dragon_acidburn",
     "shape": "blast",
-    "affected_body_parts": [ "torso" ],
+    "affected_body_parts": [
+      "torso"
+    ],
     "damage_type": "acid",
     "max_level": 7,
     "min_damage": 15,
     "max_damage": 100,
-    "damage_increment": 15.0,
+    "damage_increment": 15,
     "min_range": 1,
     "max_range": 1,
     "difficulty": 0,
@@ -58,14 +79,22 @@
     "casting_time_increment": -9,
     "energy_source": "MANA",
     "base_energy_cost": 350,
-    "extra_effects": [ { "id": "dragon_bite" } ]
+    "extra_effects": [
+      {
+        "id": "dragon_bite"
+      }
+    ]
   },
   {
     "type": "SPELL",
     "id": "dragon_bite",
-    "name": { "str": "Dragon's Bite" },
-    "description": "The bite damage in Acid Bite.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "巨龙噬咬"
+    },
+    "description": "酸液噬咬造成的咬伤。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "stab",
@@ -75,9 +104,13 @@
   {
     "id": "dragon_shell_black",
     "type": "SPELL",
-    "name": { "str": "Black Dragon Shell" },
-    "description": "You channel your inner draconic magic to protect yourself from damage and reflect some back as acid damage.",
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "黑龙外鳞"
+    },
+    "description": "你引导体内的龙族魔力来保护你自己不受伤害，并将一些伤害以酸液伤害的形式反弹给敌人。",
+    "valid_targets": [
+      "none"
+    ],
     "min_range": 0,
     "max_range": 0,
     "min_damage": 1,
@@ -87,7 +120,9 @@
     "shape": "blast",
     "energy_source": "MANA",
     "spell_class": "NONE",
-    "flags": [ "CONCENTRATE" ],
+    "flags": [
+      "CONCENTRATE"
+    ],
     "difficulty": 1,
     "max_level": 22,
     "base_casting_time": 200,
@@ -99,20 +134,29 @@
   {
     "id": "dragon_shell_retaliation_black",
     "type": "SPELL",
-    "name": { "str": "Black Dragon Shell Retaliation" },
-    "description": "Acid burst that punishes attackers.",
+    "name": {
+      "str": "黑龙外鳞反弹"
+    },
+    "description": "能反弹回攻击者的酸液伤害。",
     "effect": "attack",
     "effect_str": "dragon_acidburn",
     "shape": "blast",
-    "affected_body_parts": [ "torso" ],
-    "valid_targets": [ "hostile" ],
+    "affected_body_parts": [
+      "torso"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "min_damage": 0,
     "max_damage": 10,
-    "damage_increment": 1.0,
-    "flags": [ "RANDOM_DAMAGE", "RANDOM_AOE" ],
+    "damage_increment": 1,
+    "flags": [
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
     "min_aoe": 0,
     "max_aoe": 3,
-    "aoe_increment": 1.0,
+    "aoe_increment": 1,
     "min_range": 1,
     "max_range": 1,
     "spell_class": "NONE",
@@ -121,13 +165,20 @@
   {
     "id": "dragon_terror",
     "type": "SPELL",
-    "name": { "str": "Dragon Terror" },
-    "description": "With an ear piercing roar, you channel the inner power of dragons and strike fear into those who stand before you, slowing their escape from your terror.",
-    "valid_targets": [ "hostile", "ground" ],
+    "name": {
+      "str": "巨龙恐惧"
+    },
+    "description": "伴随着一声刺耳的咆哮，你引导体内的龙族魔力，让那些站在你面前的敌人恐惧不已，降低他们逃离你恐怖力量的速度。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "effect_str": "dragon_terror_debuff",
     "shape": "blast",
-    "affected_body_parts": [ "torso" ],
+    "affected_body_parts": [
+      "torso"
+    ],
     "max_level": 7,
     "min_damage": 0,
     "max_damage": 0,
@@ -143,18 +194,35 @@
     "base_energy_cost": 400,
     "energy_source": "MANA",
     "difficulty": 0,
-    "flags": [ "LOUD", "NO_HANDS", "NO_LEGS" ]
+    "flags": [
+      "LOUD",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
   },
   {
     "id": "dragon_boost",
     "type": "SPELL",
-    "name": { "str": "Dragon Boost" },
-    "description": "You let out a mighty roar as you infuse yourself with the power of Dragons.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "巨龙注能"
+    },
+    "description": "伴随着一声刺耳的咆哮，你把龙族魔力灌注进自己体内。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "effect_str": "dragon_boost",
     "shape": "blast",
-    "extra_effects": [ { "id": "health_recovery", "hit_self": true }, { "id": "stamina_recovery", "hit_self": true } ],
+    "extra_effects": [
+      {
+        "id": "health_recovery",
+        "hit_self": true
+      },
+      {
+        "id": "stamina_recovery",
+        "hit_self": true
+      }
+    ],
     "max_level": 7,
     "min_range": 1,
     "max_range": 1,
@@ -165,48 +233,77 @@
     "base_energy_cost": 150,
     "energy_source": "MANA",
     "difficulty": 0,
-    "flags": [ "LOUD", "NO_HANDS", "NO_LEGS" ]
+    "flags": [
+      "LOUD",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
   },
   {
     "type": "SPELL",
     "id": "health_recovery",
-    "name": { "str": "Health recovery" },
-    "description": "minor health recovery spell associated with Dragon Boost.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "生命恢复"
+    },
+    "description": "巨龙注能相关的小型生命恢复法术。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 0,
     "max_damage": -10,
-    "flags": [ "SILENT", "RANDOM_DAMAGE" ]
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "type": "SPELL",
     "id": "stamina_recovery",
-    "name": { "str": "Stamina recovery" },
-    "description": "minor stamina recovery spell associated with Dragon Boost.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "耐力恢复"
+    },
+    "description": "巨龙注能相关的小型耐力恢复法术。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "recover_energy",
     "effect_str": "STAMINA",
     "shape": "blast",
     "min_damage": 0,
     "max_damage": 500,
-    "flags": [ "SILENT", "RANDOM_DAMAGE" ]
+    "flags": [
+      "SILENT",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "dragon_spit_acid",
     "type": "SPELL",
-    "name": { "str": "Dragon Acid Spit" },
-    "description": "You conjur up acidic spittle that you can shoot long distances as you close on your terrified prey.",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "LOUD", "VERBAL", "NO_HANDS", "NO_LEGS" ],
+    "name": {
+      "str": "巨龙酸液喷射"
+    },
+    "description": "在你步步紧逼被你吓坏的猎物时，你能够喷射出一股远距离攻击的酸液。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "LOUD",
+      "VERBAL",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "acid",
     "effect_str": "lesser_dragon_acidburn",
-    "affected_body_parts": [ "torso" ],
+    "affected_body_parts": [
+      "torso"
+    ],
     "min_damage": 10,
     "max_damage": 70,
-    "damage_increment": 10.0,
+    "damage_increment": 10,
     "min_range": 5,
     "max_range": 15,
     "range_increment": 2,
@@ -221,14 +318,20 @@
   {
     "type": "SPELL",
     "id": "dragon_breath_acid",
-    "name": { "str": "Black Dragon Breath" },
-    "description": "Spews a line of acid from your mouth.",
-    "valid_targets": [ "hostile", "ally", "ground" ],
+    "name": {
+      "str": "黑龙之息"
+    },
+    "description": "从你的口中喷出一道酸液。",
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground"
+    ],
     "damage_type": "acid",
     "max_level": 7,
     "min_damage": 5,
     "max_damage": 65,
-    "damage_increment": 10.0,
+    "damage_increment": 10,
     "min_range": 8,
     "max_range": 14,
     "range_increment": 1,
@@ -242,6 +345,11 @@
     "base_casting_time": 200,
     "energy_source": "MANA",
     "base_energy_cost": 200,
-    "flags": [ "VERBAL", "NO_HANDS", "NO_LEGS", "LOUD" ]
+    "flags": [
+      "VERBAL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "LOUD"
+    ]
   }
 ]

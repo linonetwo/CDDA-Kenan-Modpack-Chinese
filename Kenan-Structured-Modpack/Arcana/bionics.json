@@ -2,47 +2,98 @@
   {
     "id": "bio_electrothermal_arc_projector",
     "type": "bionic",
-    "name": { "str": "Electrothermal Arc Projector" },
-    "description": "Integrated into your left arm is a device capable of firing exotic bolts of energy that bounce from target to target, electrocuting with explosive bursts of lightning and immolating them.",
-    "occupied_bodyparts": [ [ "arm_l", 4 ] ],
+    "name": {
+      "str": "电热电弧发射器"
+    },
+    "description": "一个植入你左臂的装置，能够发射奇异能量，会从一个目标弹跳到另一个目标，并用爆发性的闪电电击和烧焦他们。",
+    "occupied_bodyparts": [
+      [
+        "arm_l",
+        4
+      ]
+    ],
     "fake_weapon": "bio_electrothermal_arc_projector_gun",
-    "flags": [ "BIONIC_GUN", "BIONIC_NPC_USABLE" ]
+    "flags": [
+      "BIONIC_GUN",
+      "BIONIC_NPC_USABLE"
+    ]
   },
   {
     "id": "bio_rift_focus_projector",
     "type": "bionic",
-    "name": { "str": "Rift Focus Projector" },
-    "description": "Integrated into your right hand is a device capable of creating small holes in reality, focusing them into beams of supernatural energy.  Reasonably potent with good range, but utterly useless against robotic targets, and some otherworldly monsters are also immune to it.  Its shots also carry a risk of creating temporary rifts in reality.",
-    "occupied_bodyparts": [ [ "hand_r", 1 ] ],
+    "name": {
+      "str": "裂痕聚焦发射器"
+    },
+    "description": "一个植入你右手的装置，能够在现实中创造出小孔，将其聚焦为超自然能量的光束。具有合理的效能和良好的射程，但对机械目标完全无用，一些异域的怪物也对它免疫。发射后有在现实产生临时裂缝的风险。",
+    "occupied_bodyparts": [
+      [
+        "hand_r",
+        1
+      ]
+    ],
     "fake_weapon": "bio_rift_focus_projector_gun",
-    "flags": [ "BIONIC_GUN", "BIONIC_NPC_USABLE" ]
+    "flags": [
+      "BIONIC_GUN",
+      "BIONIC_NPC_USABLE"
+    ]
   },
   {
     "id": "bio_essence_surge_cell",
     "type": "bionic",
-    "name": { "str": "Surge Cell - Essence" },
-    "description": "A miniaturized reactor of exotic manufacture, with separate chambers to store and consume one of four different types of essence at the same time.  This component will draw on any stored standard essence.",
-    "occupied_bodyparts": [ [ "torso", 10 ] ],
-    "fuel_options": [ "arcana_fuel_essence" ],
-    "fuel_efficiency": 1.0,
+    "name": {
+      "str": "浪涌电池 – 源质"
+    },
+    "description": "一种以独特工艺制造的微型反应堆，具有单独的腔室，可同时储存和消耗四种不同类型的源质中的一种。该组件能利用任何存储的源质。",
+    "occupied_bodyparts": [
+      [
+        "torso",
+        10
+      ]
+    ],
+    "fuel_options": [
+      "arcana_fuel_essence"
+    ],
+    "fuel_efficiency": 1,
     "time": "1 s",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE" ],
-    "included_bionics": [ "bio_essence_blood_surge_cell", "bio_essence_dull_surge_cell", "bio_essence_pure_surge_cell" ],
-    "passive_pseudo_items": [ "internal_essence_tank" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_POWER_SOURCE",
+      "BIONIC_NPC_USABLE"
+    ],
+    "included_bionics": [
+      "bio_essence_blood_surge_cell",
+      "bio_essence_dull_surge_cell",
+      "bio_essence_pure_surge_cell"
+    ],
+    "passive_pseudo_items": [
+      "internal_essence_tank"
+    ]
   },
   {
     "id": "internal_essence_tank",
     "type": "GENERIC",
     "category": "container",
-    "name": { "str": "internal essence tank" },
-    "description": "Internal tank for Surge Cell - Essence bionic.",
+    "name": {
+      "str": "内置源质罐"
+    },
+    "description": "内置浪涌电池罐 – 源质",
     "volume": "501 ml",
     "weight": "1 g",
     "price": 0,
-    "material": [ "plastic" ],
+    "material": [
+      "plastic"
+    ],
     "symbol": "(",
     "color": "magenta",
-    "flags": [ "INTEGRATED", "UNBREAKABLE", "PERSONAL", "NO_REPAIR", "ALLOWS_NATURAL_ATTACKS", "BIONIC_FUEL_SOURCE", "TARDIS" ],
+    "flags": [
+      "INTEGRATED",
+      "UNBREAKABLE",
+      "PERSONAL",
+      "NO_REPAIR",
+      "ALLOWS_NATURAL_ATTACKS",
+      "BIONIC_FUEL_SOURCE",
+      "TARDIS"
+    ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -51,35 +102,59 @@
         "max_contains_volume": "500 ml",
         "max_item_volume": "32 ml",
         "max_contains_weight": "1 kg",
-        "material_restriction": [ "arcana_fuel_essence" ]
+        "material_restriction": [
+          "arcana_fuel_essence"
+        ]
       }
     ]
   },
   {
     "id": "bio_essence_blood_surge_cell",
     "type": "bionic",
-    "name": { "str": "Surge Cell - Blood Essence" },
-    "description": "A miniaturized reactor of exotic manufacture, with separate chambers to store and consume one of four different types of essence at the same time.  This component will draw on any stored blood essence.",
-    "fuel_options": [ "arcana_fuel_essence_blood" ],
-    "fuel_efficiency": 1.0,
+    "name": {
+      "str": "浪涌电池 – 猩血源质"
+    },
+    "description": "一种以独特工艺制造的微型反应堆，具有单独的腔室，可同时储存和消耗四种不同类型的源质中的一种。该组件能利用任何存储的猩血源质。",
+    "fuel_options": [
+      "arcana_fuel_essence_blood"
+    ],
+    "fuel_efficiency": 1,
     "time": "1 s",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE" ],
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_POWER_SOURCE",
+      "BIONIC_NPC_USABLE"
+    ],
     "included": true,
-    "passive_pseudo_items": [ "internal_essence_blood_tank" ]
+    "passive_pseudo_items": [
+      "internal_essence_blood_tank"
+    ]
   },
   {
     "id": "internal_essence_blood_tank",
     "type": "GENERIC",
     "category": "container",
-    "name": { "str": "internal blood essence tank" },
-    "description": "Internal tank for Surge Cell - Blood Essence bionic.",
+    "name": {
+      "str": "内置猩血源质罐"
+    },
+    "description": "内置浪涌电池罐 – 猩血源质",
     "volume": "501 ml",
     "weight": "1 g",
     "price": 0,
-    "material": [ "plastic" ],
+    "material": [
+      "plastic"
+    ],
     "symbol": "(",
     "color": "magenta",
-    "flags": [ "INTEGRATED", "UNBREAKABLE", "PERSONAL", "NO_REPAIR", "ALLOWS_NATURAL_ATTACKS", "BIONIC_FUEL_SOURCE", "TARDIS" ],
+    "flags": [
+      "INTEGRATED",
+      "UNBREAKABLE",
+      "PERSONAL",
+      "NO_REPAIR",
+      "ALLOWS_NATURAL_ATTACKS",
+      "BIONIC_FUEL_SOURCE",
+      "TARDIS"
+    ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -88,35 +163,59 @@
         "max_contains_volume": "750 ml",
         "max_item_volume": "32 ml",
         "max_contains_weight": "1 kg",
-        "material_restriction": [ "arcana_fuel_essence_blood" ]
+        "material_restriction": [
+          "arcana_fuel_essence_blood"
+        ]
       }
     ]
   },
   {
     "id": "bio_essence_dull_surge_cell",
     "type": "bionic",
-    "name": { "str": "Surge Cell - Dull Essence" },
-    "description": "A miniaturized reactor of exotic manufacture, with separate chambers to store and consume one of four different types of essence at the same time.  This component will draw on any stored dull essence.",
-    "fuel_options": [ "arcana_fuel_essence_dull" ],
-    "fuel_efficiency": 1.0,
+    "name": {
+      "str": "浪涌电池 – 阴黯源质"
+    },
+    "description": "一种以独特工艺制造的微型反应堆，具有单独的腔室，可同时储存和消耗四种不同类型的源质中的一种。该组件能利用任何存储的阴黯源质。",
+    "fuel_options": [
+      "arcana_fuel_essence_dull"
+    ],
+    "fuel_efficiency": 1,
     "time": "1 s",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE" ],
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_POWER_SOURCE",
+      "BIONIC_NPC_USABLE"
+    ],
     "included": true,
-    "passive_pseudo_items": [ "internal_essence_dull_tank" ]
+    "passive_pseudo_items": [
+      "internal_essence_dull_tank"
+    ]
   },
   {
     "id": "internal_essence_dull_tank",
     "type": "GENERIC",
     "category": "container",
-    "name": { "str": "internal dull essence tank" },
-    "description": "Internal tank for Surge Cell - Dull Essence bionic.",
+    "name": {
+      "str": "内置阴黯源质罐"
+    },
+    "description": "内置浪涌电池罐 – 阴黯源质",
     "volume": "501 ml",
     "weight": "1 g",
     "price": 0,
-    "material": [ "plastic" ],
+    "material": [
+      "plastic"
+    ],
     "symbol": "(",
     "color": "magenta",
-    "flags": [ "INTEGRATED", "UNBREAKABLE", "PERSONAL", "NO_REPAIR", "ALLOWS_NATURAL_ATTACKS", "BIONIC_FUEL_SOURCE", "TARDIS" ],
+    "flags": [
+      "INTEGRATED",
+      "UNBREAKABLE",
+      "PERSONAL",
+      "NO_REPAIR",
+      "ALLOWS_NATURAL_ATTACKS",
+      "BIONIC_FUEL_SOURCE",
+      "TARDIS"
+    ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -125,35 +224,59 @@
         "max_contains_volume": "1500 ml",
         "max_item_volume": "32 ml",
         "max_contains_weight": "1 kg",
-        "material_restriction": [ "arcana_fuel_essence_dull" ]
+        "material_restriction": [
+          "arcana_fuel_essence_dull"
+        ]
       }
     ]
   },
   {
     "id": "bio_essence_pure_surge_cell",
     "type": "bionic",
-    "name": { "str": "Surge Cell - Crystallized Essence" },
-    "description": "A miniaturized reactor of exotic manufacture, with separate chambers to store and consume one of four different types of essence at the same time.  This component will draw on any stored crystallized essence.",
-    "fuel_options": [ "arcana_fuel_essence_pure" ],
-    "fuel_efficiency": 1.0,
+    "name": {
+      "str": "浪涌电池 – 璀璨源质"
+    },
+    "description": "一种以独特工艺制造的微型反应堆，具有单独的腔室，可同时储存和消耗四种不同类型的源质中的一种。该组件能利用任何存储的璀璨源质。",
+    "fuel_options": [
+      "arcana_fuel_essence_pure"
+    ],
+    "fuel_efficiency": 1,
     "time": "1 s",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE" ],
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_POWER_SOURCE",
+      "BIONIC_NPC_USABLE"
+    ],
     "included": true,
-    "passive_pseudo_items": [ "internal_essence_pure_tank" ]
+    "passive_pseudo_items": [
+      "internal_essence_pure_tank"
+    ]
   },
   {
     "id": "internal_essence_pure_tank",
     "type": "GENERIC",
     "category": "container",
-    "name": { "str": "internal crystallized essence tank" },
-    "description": "Internal tank for Surge Cell - Crystallized Essence bionic.",
+    "name": {
+      "str": "内置璀璨源质罐"
+    },
+    "description": "内置浪涌电池罐 – 璀璨源质",
     "volume": "501 ml",
     "weight": "1 g",
     "price": 0,
-    "material": [ "plastic" ],
+    "material": [
+      "plastic"
+    ],
     "symbol": "(",
     "color": "magenta",
-    "flags": [ "INTEGRATED", "UNBREAKABLE", "PERSONAL", "NO_REPAIR", "ALLOWS_NATURAL_ATTACKS", "BIONIC_FUEL_SOURCE", "TARDIS" ],
+    "flags": [
+      "INTEGRATED",
+      "UNBREAKABLE",
+      "PERSONAL",
+      "NO_REPAIR",
+      "ALLOWS_NATURAL_ATTACKS",
+      "BIONIC_FUEL_SOURCE",
+      "TARDIS"
+    ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -162,18 +285,47 @@
         "max_contains_volume": "75 ml",
         "max_item_volume": "32 ml",
         "max_contains_weight": "1 kg",
-        "material_restriction": [ "arcana_fuel_essence_pure" ]
+        "material_restriction": [
+          "arcana_fuel_essence_pure"
+        ]
       }
     ]
   },
   {
     "id": "bio_temporal_stimulation",
     "type": "bionic",
-    "name": { "str": "Temporal Stimulation" },
-    "description": "A network of emitters that distort time to a limited extent when activated, increasing your speed and stamina in exchange for greatly increased hunger, thirst, and fatigue.",
-    "occupied_bodyparts": [ [ "torso", 8 ], [ "arm_l", 3 ], [ "arm_r", 3 ], [ "leg_l", 4 ], [ "leg_r", 4 ] ],
-    "enchantments": [ "ENCH_CBM_TEMPORAL_STIMULATION" ],
-    "flags": [ "BIONIC_TOGGLED" ],
+    "name": {
+      "str": "时间刺激"
+    },
+    "description": "一个发射网络，激活时会在有限程度上扭曲时间，增加你的速度和耐力，以换取大大增加的饥饿、口渴和疲劳。",
+    "occupied_bodyparts": [
+      [
+        "torso",
+        8
+      ],
+      [
+        "arm_l",
+        3
+      ],
+      [
+        "arm_r",
+        3
+      ],
+      [
+        "leg_l",
+        4
+      ],
+      [
+        "leg_r",
+        4
+      ]
+    ],
+    "enchantments": [
+      "ENCH_CBM_TEMPORAL_STIMULATION"
+    ],
+    "flags": [
+      "BIONIC_TOGGLED"
+    ],
     "act_cost": "1 kJ",
     "react_cost": "1 kJ",
     "time": "1 s"
@@ -181,11 +333,22 @@
   {
     "id": "bio_life_sign_suppression",
     "type": "bionic",
-    "name": { "str": "Life Sign Suppression" },
-    "description": "An exotic device that radiates disruptive energies when active, creating a shroud that blinds the undead to your presence.  In exchange it sickens the body steadily, plus wildlife will sense that something is off…",
-    "occupied_bodyparts": [ [ "torso", 5 ] ],
-    "enchantments": [ "ENCH_CBM_LIFE_SIGN_SUPPRESSION" ],
-    "flags": [ "BIONIC_TOGGLED" ],
+    "name": {
+      "str": "生命体征抑制"
+    },
+    "description": "一种奇特的装置，当激活时会放射出破坏性的能量，制造一个裹尸布，使不死生物对你的存在视而不见。作为交换，它会使身体不断生病，再加上野生动物会感觉到有什么东西掉了…",
+    "occupied_bodyparts": [
+      [
+        "torso",
+        5
+      ]
+    ],
+    "enchantments": [
+      "ENCH_CBM_LIFE_SIGN_SUPPRESSION"
+    ],
+    "flags": [
+      "BIONIC_TOGGLED"
+    ],
     "act_cost": "750 J",
     "react_cost": "750 J",
     "time": "1 s"
@@ -193,11 +356,27 @@
   {
     "id": "bio_kinetic_amplifier",
     "type": "bionic",
-    "name": { "str": "Kinetic Amplifier" },
+    "name": {
+      "str": "动能放大装置"
+    },
     "description": "Implanted in one arm is a device that weaponizes kinetic energy through anomalous means.  When deployed, it can give your punches a powerful knockback effect while amplifying damage and armor penetration.  It comes with the side effect of your punches sometimes giving off a blinding flashbang effect.",
-    "occupied_bodyparts": [ [ "arm_r", 2 ], [ "hand_r", 1 ] ],
+    "occupied_bodyparts": [
+      [
+        "arm_r",
+        2
+      ],
+      [
+        "hand_r",
+        1
+      ]
+    ],
     "act_cost": "50 J",
     "fake_weapon": "bio_kinetic_amplifier_weapon",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "USES_BIONIC_POWER", "BIONIC_NPC_USABLE" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_WEAPON",
+      "USES_BIONIC_POWER",
+      "BIONIC_NPC_USABLE"
+    ]
   }
 ]

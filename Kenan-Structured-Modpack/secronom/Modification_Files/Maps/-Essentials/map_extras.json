@@ -2,51 +2,86 @@
   {
     "id": "mx_secro_carrion_spawn",
     "type": "map_extra",
-    "name": { "str": "Carrions" },
-    "description": "Carrions are here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_carrion" }
+    "name": {
+      "str": "腐肉"
+    },
+    "description": "这里有腐肉。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_carrion"
+    }
   },
   {
     "id": "mx_secro_carrion_massacre_spawn",
     "type": "map_extra",
-    "name": { "str": "Carrions" },
-    "description": "Carrions have invaded here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_carrion_massacre" }
+    "name": {
+      "str": "腐肉"
+    },
+    "description": "腐肉入侵了这里。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_carrion_massacre"
+    }
   },
   {
     "id": "mx_secro_carrion_massacre_smol_spawn",
     "type": "map_extra",
-    "name": { "str": "Carrions" },
-    "description": "Carrions have invaded here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_carrion_massacre_smol" }
+    "name": {
+      "str": "腐肉"
+    },
+    "description": "腐肉入侵了这里。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_carrion_massacre_smol"
+    }
   },
   {
     "id": "mx_secro_vector_spawn",
     "type": "map_extra",
-    "name": { "str": "Vectors" },
-    "description": "A vector cluster is here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_vector" }
+    "name": {
+      "str": "载体"
+    },
+    "description": "这里有一个载体簇。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_vector"
+    }
   },
   {
     "id": "mx_secro_fleshweaver_spawn",
     "type": "map_extra",
-    "name": { "str": "Flesh Weaver" },
-    "description": "A flesh weaver was here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_fleshweaver" }
+    "name": {
+      "str": "肉织工"
+    },
+    "description": "一个血肉织工在这里。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_fleshweaver"
+    }
   },
   {
     "id": "mx_flesh_biome_extra_spawn",
     "type": "map_extra",
-    "name": { "str": "Flesh Tumours" },
-    "description": "Odd fleshy structures are here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_flesh_biome_extra" }
+    "name": {
+      "str": "肌肉肿瘤"
+    },
+    "description": "这里有奇怪的血肉建筑",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_flesh_biome_extra"
+    }
   },
   {
     "id": "mx_secro_saddler_victims_spawn",
     "type": "map_extra",
-    "name": { "str": "Corpses" },
-    "description": "Headless corpses are here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_saddler_victims" },
+    "name": {
+      "str": "尸体"
+    },
+    "description": "无头尸体在这里。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_saddler_victims"
+    },
     "sym": "S",
     "color": "green",
     "autonote": true
@@ -54,40 +89,80 @@
   {
     "id": "mx_secro_saddler_infest_spawn",
     "type": "map_extra",
-    "name": { "str": "Saddlers" },
-    "description": "Saddlers have infested this area.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_saddler_infest" }
+    "name": {
+      "str": "鞍具"
+    },
+    "description": "鞍具遍布了这个地区。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_saddler_infest"
+    },
+    "sym": "S",
+    "color": "light_green",
+    "autonote": true
   },
   {
     "id": "mx_secro_fleshbuilding_spawn",
     "type": "map_extra",
-    "name": { "str": "Flesh" },
-    "description": "It is overrun by flesh.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_fleshbuilding" },
+    "name": {
+      "str": "肉"
+    },
+    "description": "它被血肉所覆盖。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_fleshbuilding"
+    },
     "sym": "&",
     "color": "light_red",
     "autonote": true
   },
   {
+    "id": "mx_secro_snatcherzed_spawn",
+    "type": "map_extra",
+    "name": {
+      "str": "诱拐者"
+    },
+    "description": "这里有一个掠夺丧尸。",
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_snatcherzed"
+    }
+  },
+  {
     "id": "mx_secro_ssf_carrier",
     "type": "map_extra",
-    "name": { "str": "SS Carrier" },
+    "name": {
+      "str": "SS Carrier"
+    },
     "description": "Secronom Project's specimen trailer was left here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_ssf" }
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_ssf"
+    }
   },
   {
     "id": "mx_secro_ssb_carrier",
     "type": "map_extra",
-    "name": { "str": "SS Carrier" },
+    "name": {
+      "str": "SS Carrier"
+    },
     "description": "Secronom Project's specimen trailer was left here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_secro_ssb" }
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_secro_ssb"
+    }
   },
   {
     "id": "mx_secro_flesh_core",
     "type": "map_extra",
-    "name": { "str": "The Flesh" },
+    "name": {
+      "str": "The Flesh"
+    },
     "description": "The flesh has overrun this city.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_flesh_core_extra" },
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_flesh_core_extra"
+    },
     "sym": "&",
     "color": "light_red",
     "autonote": true
@@ -95,8 +170,13 @@
   {
     "id": "mx_secro_flesh_random",
     "type": "map_extra",
-    "name": { "str": "Crimson Horrors" },
+    "name": {
+      "str": "Crimson Horrors"
+    },
     "description": "Crimson horrors are here.",
-    "generator": { "generator_method": "update_mapgen", "generator_id": "mx_flesh_random_extra" }
+    "generator": {
+      "generator_method": "update_mapgen",
+      "generator_id": "mx_flesh_random_extra"
+    }
   }
 ]

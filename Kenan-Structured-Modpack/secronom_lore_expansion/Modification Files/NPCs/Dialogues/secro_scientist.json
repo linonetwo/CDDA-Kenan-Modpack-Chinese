@@ -4,20 +4,23 @@
     "id": "TALK_SECRO_SCIENTIST_main",
     "dynamic_line": {
       "u_has_effect": "secro_scientist_asked_all",
-      "no": "A survivor? What are you doing here despite the raging chaos?\nAnyway, you'll be safe in here.",
+      "no": "幸存者？你在这里干什么？不管怎样，你在这里很安全。",
       "yes": {
         "u_has_effect": "secro_scientist_asked_lab_secret",
-        "no": "You need to know more information?",
+        "no": "你需要知道更多的信息吗？",
         "yes": {
           "u_has_effect": "secro_scientist_mission1_progress",
-          "no": "Perhaps I've told you everything I know...",
+          "no": "也许我已经告诉你了我所知道的一切…",
           "yes": {
             "u_has_effect": "secro_scientist_partake_mission1",
-            "no": "No, this is not the BOW chamber...",
+            "no": "不，这不是弓室…",
             "yes": {
               "u_has_effect": "secro_scientist_udisgustcoldblood",
-              "no": "Now that we're here, we won't be bothered by those shambling maneaters... for now.",
-              "yes": [ "What do you need, survivor?", "You need something?" ]
+              "no": "既然我们到了，我们就不会被那些蹒跚而行的食人族打扰了…现在。",
+              "yes": [
+                "你需要什么，幸存者？",
+                "有何需求？"
+              ]
             }
           }
         }
@@ -25,168 +28,300 @@
     },
     "responses": [
       {
-        "text": "Who are you?",
+        "text": "你是谁？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_all" } }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_all"
+          }
+        }
       },
       {
-        "text": "What is this place?",
+        "text": "这是哪里？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_lab_secret" } }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_lab_secret"
+          }
+        }
       },
       {
-        "text": "So what are your future plans?",
+        "text": "那么你未来的计划是什么？",
         "topic": "TALK_SECRO_SCIENTIST_plans",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_asked_all" },
-            { "u_has_effect": "secro_scientist_asked_lab_secret" },
-            { "not": { "u_has_effect": "secro_scientist_mission1_progress" } },
-            { "not": { "u_has_effect": "secro_scientist_hold_mission1" } }
+            {
+              "u_has_effect": "secro_scientist_asked_all"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_lab_secret"
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_mission1_progress"
+              }
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_hold_mission1"
+              }
+            }
           ]
         }
       },
       {
-        "text": "I'm ready to push forward.",
+        "text": "我准备向前推进。",
         "topic": "TALK_SECRO_SCIENTIST_plans_yes",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_hold_mission1" },
-            { "not": { "u_has_effect": "secro_scientist_mission1_progress" } }
+            {
+              "u_has_effect": "secro_scientist_hold_mission1"
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_mission1_progress"
+              }
+            }
           ]
         }
       },
       {
-        "text": "I'd like to know more about the secronom project.",
+        "text": "我想了解更多关于secronom项目的情况。",
         "topic": "TALK_SECRO_SCIENTIST_secronom_what",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_partake_mission1" },
-            { "not": { "u_has_effect": "secro_scientist_udisgustcoldblood" } }
+            {
+              "u_has_effect": "secro_scientist_partake_mission1"
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_udisgustcoldblood"
+              }
+            }
           ]
         }
       },
       {
-        "text": "Is there anything I can do to help?",
+        "text": "有什么我可以帮忙的？",
         "topic": "TALK_SECRO_SCIENTIST_uhelp",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_partake_mission1" },
-            { "not": { "u_has_effect": "secro_scientist_mission2_progress" } }
+            {
+              "u_has_effect": "secro_scientist_partake_mission1"
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_mission2_progress"
+              }
+            }
           ]
         }
       },
       {
-        "text": "I'm ready for the job.",
+        "text": "我已经准备好了。",
         "topic": "TALK_SECRO_SCIENTIST_uhelp_turret",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_hold_mission2" },
-            { "not": { "u_has_effect": "secro_scientist_mission1_progress" } }
+            {
+              "u_has_effect": "secro_scientist_hold_mission2"
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_mission1_progress"
+              }
+            }
           ]
         }
       },
       {
-        "text": "About the repairs...",
+        "text": "关于修理…",
         "topic": "TALK_SECRO_SCIENTIST_repair",
-        "condition": { "u_has_effect": "secro_scientist_partake_mission2" }
+        "condition": {
+          "u_has_effect": "secro_scientist_partake_mission2"
+        }
       },
-      { "text": "Bye.", "topic": "TALK_DONE", "condition": { "u_has_effect": "secro_scientist_partake_mission1" } }
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE",
+        "condition": {
+          "u_has_effect": "secro_scientist_partake_mission1"
+        }
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whoisme",
-    "dynamic_line": "I'm a researcher.",
+    "dynamic_line": "我是个研究员。",
     "responses": [
-      { "text": "Of what exactly?", "topic": "TALK_SECRO_SCIENTIST_whoisme_srsly" },
-      { "text": "...", "topic": "TALK_SECRO_SCIENTIST_main" }
+      {
+        "text": "到底是什么？",
+        "topic": "TALK_SECRO_SCIENTIST_whoisme_srsly"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whoisme_srsly",
-    "dynamic_line": "Its not important, but if you wish to know, I don't mind ... since everything's messed up already.",
+    "dynamic_line": "这不重要，但如果你想知道，我不介意…因为一切都搞砸了。",
     "responses": [
-      { "text": "Then tell me your secrets.", "topic": "TALK_SECRO_SCIENTIST_whoisme_secret" },
-      { "text": "Lets talk about that later.", "topic": "TALK_SECRO_SCIENTIST_main" }
+      {
+        "text": "那就告诉我你的秘密。",
+        "topic": "TALK_SECRO_SCIENTIST_whoisme_secret"
+      },
+      {
+        "text": "我们稍后再谈。",
+        "topic": "TALK_SECRO_SCIENTIST_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whoisme_secret",
-    "dynamic_line": "... Its the secronom project, a project that involves human augmentation using animal and alien genetics.",
+    "dynamic_line": "... 这就是secronom项目，一个利用动物和外星基因强化人类的项目。",
     "responses": [
       {
-        "text": "And what's the purpose of the secronom project?",
+        "text": "那么secronom项目的目的是什么？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_secro",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_secro" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_secro" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_secro"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_secro"
+        }
       },
       {
-        "text": "Human augmentation?",
+        "text": "人类增强？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_augment",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_augment" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_augment" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_augment"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_augment"
+        }
       },
       {
-        "text": "What about genetics?",
+        "text": "遗传学呢？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_gene",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_gene" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_gene" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_gene"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_gene"
+        }
       },
       {
-        "text": "I guess I've asked everything...",
+        "text": "我想我什么都问过了…",
         "topic": "TALK_SECRO_SCIENTIST_main",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_asked_secro" },
-            { "u_has_effect": "secro_scientist_asked_augment" },
-            { "u_has_effect": "secro_scientist_asked_gene" }
+            {
+              "u_has_effect": "secro_scientist_asked_secro"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_augment"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_gene"
+            }
           ]
         },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_all" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_all"
+        }
       },
-      { "text": "...", "topic": "TALK_SECRO_SCIENTIST_main" }
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whoisme_secret_secro",
-    "dynamic_line": "For military, yet I'm not sure if there's beyond that case. I don't know what it is, but the ones who can answer that are not in here anymore.",
+    "dynamic_line": "对于军队来说，我不确定是否还有其他的。我不知道是什么，但能回答的人已经不在这里了。",
     "responses": [
       {
-        "text": "Human augmentation?",
+        "text": "人类增强？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_augment",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_augment" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_augment" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_augment"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_augment"
+        }
       },
       {
-        "text": "What about genetics?",
+        "text": "遗传学呢？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_gene",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_gene" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_gene" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_gene"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_gene"
+        }
       },
       {
-        "text": "I guess I've asked everything...",
+        "text": "我想我什么都问过了…",
         "topic": "TALK_SECRO_SCIENTIST_main",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_asked_secro" },
-            { "u_has_effect": "secro_scientist_asked_augment" },
-            { "u_has_effect": "secro_scientist_asked_gene" }
+            {
+              "u_has_effect": "secro_scientist_asked_secro"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_augment"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_gene"
+            }
           ]
         },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_all" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_all"
+        }
       },
       {
-        "text": "...",
+        "text": "…",
         "topic": "TALK_SECRO_SCIENTIST_main",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_scientist_asked_secro" } },
-            { "not": { "u_has_effect": "secro_scientist_asked_augment" } },
-            { "not": { "u_has_effect": "secro_scientist_asked_gene" } }
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_secro"
+              }
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_augment"
+              }
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_gene"
+              }
+            }
           ]
         }
       }
@@ -195,40 +330,75 @@
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whoisme_secret_augment",
-    "dynamic_line": "You heard it. The government permits this project to perform human experimentation. Don't worry, the subjects here are outlaws of the society.",
+    "dynamic_line": "你听到了。政府允许这个项目进行人体实验。别担心，这里的人都是社会上的不法分子。",
     "responses": [
       {
-        "text": "And what's the purpose of secronom?",
+        "text": "那么secronom的目的是什么？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_secro",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_secro" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_secro" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_secro"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_secro"
+        }
       },
       {
-        "text": "What about genetics?",
+        "text": "遗传学呢？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_gene",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_gene" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_gene" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_gene"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_gene"
+        }
       },
       {
-        "text": "I guess I've asked everything...",
+        "text": "我想我什么都问过了…",
         "topic": "TALK_SECRO_SCIENTIST_main",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_asked_secro" },
-            { "u_has_effect": "secro_scientist_asked_augment" },
-            { "u_has_effect": "secro_scientist_asked_gene" }
+            {
+              "u_has_effect": "secro_scientist_asked_secro"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_augment"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_gene"
+            }
           ]
         },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_all" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_all"
+        }
       },
       {
-        "text": "... but they didn't deserve this.",
+        "text": "... 但他们不配。",
         "topic": "TALK_SECRO_SCIENTIST_main",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_scientist_asked_secro" } },
-            { "not": { "u_has_effect": "secro_scientist_asked_augment" } },
-            { "not": { "u_has_effect": "secro_scientist_asked_gene" } }
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_secro"
+              }
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_augment"
+              }
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_gene"
+              }
+            }
           ]
         }
       }
@@ -237,40 +407,75 @@
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whoisme_secret_gene",
-    "dynamic_line": "We've extracted the genes of an animal, then mixed with a catalyst. The catalyst is a classified object, so I can't tell you what it is.",
+    "dynamic_line": "我们提取了一个动物的基因，然后和某一种催化剂混合。这个催化剂是一个机密物品，所以我不能告诉你它是什么。",
     "responses": [
       {
-        "text": "And what's the purpose of secronom?",
+        "text": "那么secronom的目的是什么？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_secro",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_secro" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_secro" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_secro"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_secro"
+        }
       },
       {
-        "text": "Human augmentation?",
+        "text": "人类增强？",
         "topic": "TALK_SECRO_SCIENTIST_whoisme_secret_augment",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_augment" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_augment" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_augment"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_augment"
+        }
       },
       {
-        "text": "I guess I've asked everything...",
+        "text": "我想我什么都问过了…",
         "topic": "TALK_SECRO_SCIENTIST_main",
         "condition": {
           "and": [
-            { "u_has_effect": "secro_scientist_asked_secro" },
-            { "u_has_effect": "secro_scientist_asked_augment" },
-            { "u_has_effect": "secro_scientist_asked_gene" }
+            {
+              "u_has_effect": "secro_scientist_asked_secro"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_augment"
+            },
+            {
+              "u_has_effect": "secro_scientist_asked_gene"
+            }
           ]
         },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_all" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_all"
+        }
       },
       {
-        "text": "...",
+        "text": "…",
         "topic": "TALK_SECRO_SCIENTIST_main",
         "condition": {
           "and": [
-            { "not": { "u_has_effect": "secro_scientist_asked_secro" } },
-            { "not": { "u_has_effect": "secro_scientist_asked_augment" } },
-            { "not": { "u_has_effect": "secro_scientist_asked_gene" } }
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_secro"
+              }
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_augment"
+              }
+            },
+            {
+              "not": {
+                "u_has_effect": "secro_scientist_asked_gene"
+              }
+            }
           ]
         }
       }
@@ -279,97 +484,152 @@
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whereisme",
-    "dynamic_line": "This is the secronom bunker, built solely as our last option for survival.",
+    "dynamic_line": "这是secronom掩体，完全是我们生存的最后选择。",
     "responses": [
       {
-        "text": "So why won't you escape this place?",
+        "text": "那你为什么不逃出这个地方？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme_escape",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_escape" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_escape" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_escape"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_escape"
+        }
       },
       {
-        "text": "Why is it connected to the lab?",
+        "text": "为什么连接到实验室？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme_lab",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_lab" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_lab" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_lab"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_lab"
+        }
       },
       {
-        "text": "Well? What have you earned for doing those?",
+        "text": "好？你做这些赚了多少钱？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme_lab",
-        "condition": { "u_has_effect": "secro_scientist_asked_lab" }
+        "condition": {
+          "u_has_effect": "secro_scientist_asked_lab"
+        }
       },
-      { "text": "Okay.", "topic": "TALK_SECRO_SCIENTIST_main" }
+      {
+        "text": "好的。",
+        "topic": "TALK_SECRO_SCIENTIST_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whereisme_escape",
-    "dynamic_line": "I know escaping is our best option, but what lies beyond the wastelands is our main reason why we shouldn't travel.",
+    "dynamic_line": "我知道逃跑是我们最好的选择，但是荒地之外的东西是我们不应该旅行的主要原因。",
     "responses": [
       {
-        "text": "So why is it connected to the lab?",
+        "text": "那它为什么和实验室相连呢？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme_lab",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_lab" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_lab" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_lab"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_lab"
+        }
       },
       {
-        "text": "Well? What have you earned for doing those?",
+        "text": "好？你做这些赚了多少钱？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme_lab",
-        "condition": { "u_has_effect": "TALK_SECRO_SCIENTIST_whereisme_lab_result" }
+        "condition": {
+          "u_has_effect": "TALK_SECRO_SCIENTIST_whereisme_lab_result"
+        }
       },
-      { "text": "(pussies)", "topic": "TALK_SECRO_SCIENTIST_main" }
+      {
+        "text": "（娘娘腔）",
+        "topic": "TALK_SECRO_SCIENTIST_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whereisme_lab",
-    "dynamic_line": "That's because we work in there, and performing scientific experiments and discovering newfound technologies is our foundation.",
+    "dynamic_line": "那是因为我们在那里工作，进行科学实验，发现新发现的技术是我们的基础。",
     "responses": [
       {
-        "text": "Why won't you escape this place?",
+        "text": "你为什么不逃出这个地方？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme_escape",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_escape" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_escape" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_escape"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_escape"
+        }
       },
       {
-        "text": "Well? What have you earned for doing those?",
+        "text": "好？你做这些赚了多少钱？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme_lab_result",
-        "condition": { "u_has_effect": "secro_scientist_asked_lab" }
+        "condition": {
+          "u_has_effect": "secro_scientist_asked_lab"
+        }
       },
-      { "text": "Okay.", "topic": "TALK_SECRO_SCIENTIST_main" }
+      {
+        "text": "好的。",
+        "topic": "TALK_SECRO_SCIENTIST_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whereisme_lab_result",
-    "dynamic_line": "Regrets. I know you have encountered those ugly bastards, but they are the result of our experiments. And the tech? All of them are incomplete.",
+    "dynamic_line": "遗憾。我知道你遇到过那些丑陋的混蛋，但他们是我们实验的结果。技术呢？它们都是不完整的。",
     "responses": [
       {
-        "text": "... So, is there anything else I need to know about the lab?",
+        "text": "... 那么，关于实验室我还需要了解什么吗？",
         "topic": "TALK_SECRO_SCIENTIST_whereisme_lab_secret"
       },
-      { "text": "That's unfortunate, but there's nothing I can do.", "topic": "TALK_SECRO_SCIENTIST_main" }
+      {
+        "text": "那很不幸，但我无能为力。",
+        "topic": "TALK_SECRO_SCIENTIST_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_whereisme_lab_secret",
-    "dynamic_line": "Well, if you're interested, I can tell you one thing... Deep below this facility is a weapon of mass destruction, created for military \"use\".",
+    "dynamic_line": "如果你有兴趣，我可以告诉你一件事…在这个设施的深处是一种大规模杀伤性武器，是为军事“使用”而制造的。",
     "responses": [
       {
-        "text": "Thanks for the info, I guess...",
+        "text": "谢谢你的消息，我想…",
         "topic": "TALK_SECRO_SCIENTIST_main",
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_lab_secret" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_lab_secret"
+        }
       }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_plans",
-    "dynamic_line": "My plan is a bit risky, and I'll need you to guide us all.",
+    "dynamic_line": "我的计划有点冒险，我需要你来指导我们大家。",
     "responses": [
-      { "text": "I'm in for that!", "topic": "TALK_SECRO_SCIENTIST_plans_yes" },
-      { "text": "Maybe later.", "topic": "TALK_SECRO_SCIENTIST_main" }
+      {
+        "text": "我受够了！",
+        "topic": "TALK_SECRO_SCIENTIST_plans_yes"
+      },
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_SECRO_SCIENTIST_main"
+      }
     ]
   },
   {
@@ -377,25 +637,38 @@
     "id": "TALK_SECRO_SCIENTIST_plans_yes",
     "dynamic_line": {
       "u_has_effect": "secro_scientist_mission1_progress",
-      "no": "Good. We need you to help us take over the BOW's chamber. With that, we can once again perform scientific experiments solely for our survival.",
-      "yes": "Now, let's plow through the horde!"
+      "no": "很好。我们需要你帮我们接管船首的舱室。这样，我们就可以再次进行科学实验，完全为了生存。",
+      "yes": "现在，让我们穿过部落！"
     },
     "responses": [
       {
-        "text": "Lets go!",
+        "text": "我们走！",
         "topic": "TALK_MISSION_OFFER",
-        "condition": { "not": { "u_has_effect": "secro_scientist_mission1_progress" } }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_mission1_progress"
+          }
+        }
       },
       {
-        "text": "... later, I need to gear up.",
+        "text": "... 稍后，我需要准备一下。",
         "topic": "TALK_SECRO_SCIENTIST_main",
-        "condition": { "not": { "u_has_effect": "secro_scientist_mission1_progress" } },
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_hold_mission1" }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_mission1_progress"
+          }
+        },
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_hold_mission1"
+        }
       },
       {
-        "text": "I'll lead the way!",
+        "text": "我来带路！",
         "topic": "TALK_DONE",
-        "condition": { "u_has_effect": "secro_scientist_mission1_progress" }
+        "condition": {
+          "u_has_effect": "secro_scientist_mission1_progress"
+        }
       }
     ]
   },
@@ -404,57 +677,92 @@
     "id": "TALK_SECRO_SCIENTIST_secronom_what",
     "dynamic_line": {
       "u_has_effect": "secro_scientist_asked_secronom_spread",
-      "no": "What's on your mind?",
+      "no": "你在想什么？",
       "yes": {
         "u_has_effect": "secro_scientist_asked_secronom_wanderers",
-        "no": "I see, you're curious about our \"unexpecting\" creations...",
-        "yes": "This is science, you see? You may think we're the gruesome ones, but what we want is to open up new discoveries for us all. Yes, we messed up, but we're still here, struggling and helping each other to survive this nightmare.\nI can't change your opinion towards us, but if you want to know more about the secronom project, talk to our researcher."
+        "no": "我明白了，你对我们的“意外”创造很好奇…",
+        "yes": "这就是科学，明白吗？你可能认为我们是可怕的，但我们想要的是为我们所有人打开新的发现。是的，我们搞砸了，但我们仍然在这里，努力和帮助对方度过这场噩梦。\n我不能改变你对我们的看法，但如果你想了解更多关于secronom项目的信息，请与我们的研究人员联系。"
       }
     },
     "responses": [
       {
-        "text": "Are those mutants in the city were the result of secronom project?",
+        "text": "城市里的那些变种人是secronom计划的结果吗？",
         "topic": "TALK_SECRO_SCIENTIST_secronom_what_cityzeds",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_secronom_spread" } }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_secronom_spread"
+          }
+        }
       },
       {
-        "text": "Are there some other threats this project has created that I need to be aware of?",
+        "text": "我还需要注意这个项目造成的其他威胁吗？",
         "topic": "TALK_SECRO_SCIENTIST_secronom_what_wanderers",
-        "condition": { "not": { "u_has_effect": "secro_scientist_asked_secronom_wanderers" } }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_asked_secronom_wanderers"
+          }
+        }
       },
       {
-        "truefalsetext": { "condition": { "u_has_effect": "secro_scientist_asked_secronom_wanderers" }, "true": "....", "false": "Maybe later." },
-        "trial": { "type": "CONDITION", "condition": { "u_has_trait": "secro_scientist_asked_secronom_wanderers" } },
-        "success": { "topic": "TALK_DONE", "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_udisgustcoldblood" } },
-        "failure": { "topic": "TALK_SECRO_SCIENTIST_main" }
+        "truefalsetext": {
+          "condition": {
+            "u_has_effect": "secro_scientist_asked_secronom_wanderers"
+          },
+          "true": "....",
+          "false": "Maybe later."
+        },
+        "trial": {
+          "type": "CONDITION",
+          "condition": {
+            "u_has_trait": "secro_scientist_asked_secronom_wanderers"
+          }
+        },
+        "success": {
+          "topic": "TALK_DONE",
+          "effect": {
+            "duration": "PERMANENT",
+            "u_add_effect": "secro_scientist_udisgustcoldblood"
+          }
+        },
+        "failure": {
+          "topic": "TALK_SECRO_SCIENTIST_main"
+        }
       }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_secronom_what_cityzeds",
-    "dynamic_line": "What? That can't be good...\nYou know, secronom has an extreme potency of alteration once it comes in contact with a viable victim. If mixed with the catalyst, this will turn one's body into an adaptive living weapon, but that doesn't always end to the same result.",
-    "responses": [ { "text": "So how did it spread?", "topic": "TALK_SECRO_SCIENTIST_secronom_what_cityzeds_how" } ]
+    "dynamic_line": "什么？那可不好…\n你知道，一旦与一个有生存能力的受害者接触，secronom就有极大的改变能力。如果与催化剂混合，这将把一个人的身体变成一个适应性活武器，但这并不总是以相同的结果结束。",
+    "responses": [
+      {
+        "text": "那它是怎么传播的呢？",
+        "topic": "TALK_SECRO_SCIENTIST_secronom_what_cityzeds_how"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_secronom_what_cityzeds_how",
-    "dynamic_line": "It is an unstable pathogen - evolving more by time, and due to the outbreak, this facility falls into chaos; everyone panics, and got their body ripped to shred. Secronom were doomed to spread throughout the world in that incident.",
+    "dynamic_line": "它是一种不稳定的病原体——随着时间的推移，它会进化得越来越快，由于爆发，这个设施陷入混乱；每个人都惊慌失措，把自己的身体撕成碎片。在那次事件中，秘密注定会扩散到全世界。",
     "responses": [
       {
-        "text": "...",
+        "text": "…",
         "topic": "TALK_SECRO_SCIENTIST_secronom_what",
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_secronom_spread" }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_asked_secronom_spread"
+        }
       }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_secronom_what_wanderers",
-    "dynamic_line": "Actually, there are 3 that we've discovered so far and maybe there's more to appear.",
+    "dynamic_line": "实际上，到目前为止，我们已经发现了3个，也许还有更多。",
     "responses": [
       {
-        "text": "Where are they? And what do you mean by \"discovered\"?",
+        "text": "他们在哪里？你说的“发现”是什么意思？",
         "topic": "TALK_SECRO_SCIENTIST_secronom_what_wanderers_wtf"
       }
     ]
@@ -462,14 +770,20 @@
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_secronom_what_wanderers_wtf",
-    "dynamic_line": "Those mutants think different than a zombified egghead, and probably they're in the woods, having a stroll.\nWe discovered them by applying a super concentrated type of mutagen into each of our subjects, and the results, few of them transformed into these abominations, while the rest died... which is unfortunate, as our team thought their masculine body can handle such potential power.",
+    "dynamic_line": "这些变种人的思维方式和丧尸蛋头不同，他们可能在树林里散步。\n我们通过在每个受试者身上应用一种超浓缩的诱变剂发现了它们，结果，其中很少有人转化成这些可憎的东西，而其余的人都死了…这是不幸的，因为我们的团队认为他们男性化的身体可以处理这种潜在的力量。",
     "responses": [
       {
-        "text": "Well, now I know your team did an inhumane act...",
+        "text": "好吧，现在我知道你的团队做了一个不人道的行为…",
         "topic": "TALK_SECRO_SCIENTIST_secronom_what",
         "effect": [
-          { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_secronom_wanderers" },
-          { "duration": "PERMANENT", "u_add_effect": "secro_scientist_asked_secronom_spread" }
+          {
+            "duration": "PERMANENT",
+            "u_add_effect": "secro_scientist_asked_secronom_wanderers"
+          },
+          {
+            "duration": "PERMANENT",
+            "u_add_effect": "secro_scientist_asked_secronom_spread"
+          }
         ]
       }
     ]
@@ -477,33 +791,51 @@
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_uhelp",
-    "dynamic_line": "There is something I want to work on for our defenses, but they require time and vast amounts of materials for the process.",
-    "responses": [ { "text": "Defenses? You mean turrets?", "topic": "TALK_SECRO_SCIENTIST_uhelp_turret" } ]
+    "dynamic_line": "我想为我们的防御系统做点什么，但这需要时间和大量的材料。",
+    "responses": [
+      {
+        "text": "防御？你是说炮塔？",
+        "topic": "TALK_SECRO_SCIENTIST_uhelp_turret"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST_uhelp_turret",
     "dynamic_line": {
       "u_has_effect": "secro_scientist_mission2_progress",
-      "no": "Yes, the autonomous turrets that you saw on the bunker is what I want to acquire. Do you accept my request?",
-      "yes": "Take your time while you gather them."
+      "no": "是的，我想要的就是你在碉堡上看到的那个自动炮塔。你要接受我的任务吗？",
+      "yes": "在你收集它们的时候慢慢来。"
     },
     "responses": [
       {
-        "text": "Yes.",
+        "text": "是。",
         "topic": "TALK_MISSION_OFFER",
-        "condition": { "not": { "u_has_effect": "secro_scientist_mission2_progress" } }
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_mission2_progress"
+          }
+        }
       },
       {
-        "text": "I'll do it later.",
+        "text": "我待会再做。",
         "topic": "TALK_SECRO_SCIENTIST_main",
-        "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_hold_mission2" },
-        "condition": { "not": { "u_has_effect": "secro_scientist_mission2_progress" } }
+        "effect": {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_hold_mission2"
+        },
+        "condition": {
+          "not": {
+            "u_has_effect": "secro_scientist_mission2_progress"
+          }
+        }
       },
       {
-        "text": "I will.",
+        "text": "我会的。",
         "topic": "TALK_DONE",
-        "condition": { "u_has_effect": "secro_scientist_mission2_progress" }
+        "condition": {
+          "u_has_effect": "secro_scientist_mission2_progress"
+        }
       }
     ]
   }

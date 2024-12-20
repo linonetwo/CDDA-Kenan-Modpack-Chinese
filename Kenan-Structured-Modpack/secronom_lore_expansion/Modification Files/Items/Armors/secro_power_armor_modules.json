@@ -3,14 +3,21 @@
     "id": "secro_power_armor_module_core",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Core\"" },
-    "description": "A set of power armor modules that installs a power core. It is linked to the suit for energy distribution, but can be detached anytime. Module implant type \"Core\" enables the user to activate/deactivate the power armor and take full control of it, only if the suit has no feature otherwise it is useless.",
+    "name": {
+      "str": "Secronom模块植入“核心”"
+    },
+    "description": "安装电源核心的一组电源装甲模块。它与能量分配服相连，但可以随时拆卸。模块植入类型“核心”使用户能够激活/停用动力装甲并完全控制它，只有当套装没有功能时，否则它是无用的。",
     "weight": "500 g",
     "volume": "125 ml",
     "price": "6200 USD",
     "price_postapoc": "620 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "red",
@@ -18,14 +25,16 @@
     "charges_per_use": 1,
     "use_action": {
       "target": "secro_power_armor_module_core_act",
-      "msg": "\"Vessel\" module - <color_light_green>ONLINE",
+      "msg": "“脉管”模块 - <color_light_green>在线",
       "type": "transform",
       "active": true,
-      "menu_text": "Activate \"Core\" module",
+      "menu_text": "启动“核心”模块",
       "need_charges": 1,
-      "need_charges_msg": "\"Core\" module - <color_yellow>LOW POWER"
+      "need_charges_msg": "“核心”模块 - <color_yellow>低功耗"
     },
-    "ammo": [ "battery" ],
+    "ammo": [
+      "battery"
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -33,42 +42,71 @@
         "holster": true,
         "max_contains_volume": "20 L",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "secro_power_armor_battery_cell" ]
+        "item_restriction": [
+          "secro_power_armor_battery_cell"
+        ]
       }
     ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "POWERARMOR_COMPATIBLE", "NO_UNLOAD" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "POWERARMOR_COMPATIBLE",
+      "NO_UNLOAD"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   },
   {
     "id": "secro_power_armor_module_core_act",
     "copy-from": "secro_power_armor_module_core",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Core\"" },
-    "description": "A set of power armor modules that installs a power core. It is linked to the suit for energy distribution, but can be detached anytime. Module implant type \"Core\" enables the user to activate/deactivate the power armor and take full control of it, only if the suit has no feature otherwise it is useless.",
+    "name": {
+      "str": "Secronom模块植入“核心”"
+    },
+    "description": "安装电源核心的一组电源装甲模块。它与能量分配服相连，但可以随时拆卸。模块植入类型“核心”使用户能够激活/停用动力装甲并完全控制它，只有当套装没有功能时，否则它是无用的。",
     "looks_like": "power_armor_frame",
     "turns_per_charge": 10,
     "revert_to": "secro_power_armor_module_core",
     "color": "red_yellow",
     "use_action": {
       "target": "secro_power_armor_module_core",
-      "msg": "\"Vessel\" module - <color_red>OFFLINE",
+      "msg": "“脉管”模块- <color_red>离线",
       "type": "transform",
-      "menu_text": "Deactivate \"Vessel\" module"
+      "menu_text": "停用“容器”模块"
     }
   },
   {
     "id": "secro_power_armor_module_vessel",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Vessel\"" },
-    "description": "A set of power armor modules that installs a transmission device located on the back of the wearer's head stretching down through the spine. Module implant type \"Vessel\" prevent the user from succumbing to the flesh by using a neural link to unify the suit and its wearer. Uses a built-in UPS.",
+    "name": {
+      "str": "Secronom模块植入“血管”"
+    },
+    "description": "一套动力装甲模块，在佩戴者的后脑勺安装一个传动装置，通过脊柱向下延伸。模块植入式“血管”通过使用神经链接来统一服装及其穿着者，从而防止使用者屈服于肌肉。使用内置不间断电源。",
     "weight": "1900 g",
     "volume": "790 ml",
     "price": "6200 USD",
     "price_postapoc": "620 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "red",
@@ -76,28 +114,61 @@
     "charges_per_use": 1,
     "use_action": {
       "target": "secro_power_armor_module_vessel_act",
-      "msg": "\"Vessel\" module - <color_light_green>online",
+      "msg": "“船舶”模块-<color_light_green>在线",
       "type": "transform",
       "active": true,
-      "menu_text": "Activate \"Vessel\" module"
+      "menu_text": "激活“容器”模块"
     },
     "ammo": "battery",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "ELECTRIC_IMMUNE", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   },
   {
     "id": "secro_power_armor_module_vessel_act",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Vessel\"" },
-    "description": "A set of power armor modules that installs a transmission device located on the back of the wearer's head stretching down through the spine. Module implant type \"Vessel\" prevent the user from succumbing to the flesh by using a neural link to unify the suit and its wearer. Uses a built-in UPS.",
+    "name": {
+      "str": "Secronom模块植入“血管”"
+    },
+    "description": "一套动力装甲模块，在佩戴者的后脑勺安装一个传动装置，通过脊柱向下延伸。模块植入式“血管”通过使用神经链接来统一服装及其穿着者，从而防止使用者屈服于肌肉。使用内置不间断电源。",
     "weight": "1900 g",
     "volume": "790 ml",
     "price": "6200 USD",
     "price_postapoc": "620 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "red_white",
@@ -107,9 +178,9 @@
     "revert_to": "secro_power_armor_module_vessel",
     "use_action": {
       "target": "secro_power_armor_module_vessel",
-      "msg": "\"Vessel\" module - <color_red>offline",
+      "msg": "“船只”模块- <color_red>离线",
       "type": "transform",
-      "menu_text": "Deactivate \"Vessel\" module"
+      "menu_text": "停用“容器”模块"
     },
     "relic_data": {
       "passive_effects": [
@@ -117,28 +188,73 @@
           "has": "WORN",
           "condition": "ALWAYS",
           "intermittent_activation": {
-            "effects": [ { "frequency": "5 seconds", "spell_effects": [ { "id": "secro_power_armor_module_vessel_act_link" } ] } ]
+            "effects": [
+              {
+                "frequency": "5 seconds",
+                "spell_effects": [
+                  {
+                    "id": "secro_power_armor_module_vessel_act_link"
+                  }
+                ]
+              }
+            ]
           }
         }
       ]
     },
     "ammo": "battery",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "NO_TAKEOFF", "RECHARGE", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "NO_TAKEOFF",
+      "RECHARGE",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   },
   {
     "id": "secro_power_armor_module_electric",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Shock\"" },
-    "description": "A set of power armor modules that installs a pair of augmented gloves. Module implant type \"Shock\" allows the power armor to send electric discharges whenever the user performs an attack. Uses a built-in UPS.",
+    "name": {
+      "str": "Secronom模块植入“冲击”"
+    },
+    "description": "一套安装了一副增强手套的动力装甲模块。模块植入式“电击”允许动力装甲在用户发动攻击时发出放电。使用内置不间断电源。",
     "weight": "3005 g",
     "volume": "2 L",
     "price": "11000 USD",
     "price_postapoc": "1100 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "cyan",
@@ -146,28 +262,61 @@
     "charges_per_use": 1,
     "use_action": {
       "target": "secro_power_armor_module_electric_act",
-      "msg": "\"Shock\" module - <color_light_green>online",
+      "msg": "“电击”模块 - <color_light_green>在线",
       "type": "transform",
       "active": true,
-      "menu_text": "Activate \"Shock\" module"
+      "menu_text": "启动“电击”模块"
     },
     "ammo": "battery",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "ELECTRIC_IMMUNE", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   },
   {
     "id": "secro_power_armor_module_electric_act",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Shock\"" },
-    "description": "A set of power armor modules that installs a pair of augmented gloves. Module implant type \"Shock\" allows the power armor to send electric discharges whenever the user performs an attack. Uses a built-in UPS.",
+    "name": {
+      "str": "Secronom模块植入“冲击”"
+    },
+    "description": "一套安装了一副增强手套的动力装甲模块。模块植入式“电击”允许动力装甲在用户发动攻击时发出放电。使用内置不间断电源。",
     "weight": "3005 g",
     "volume": "2 L",
     "price": "11000 USD",
     "price_postapoc": "1100 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "cyan_white",
@@ -177,9 +326,9 @@
     "revert_to": "secro_power_armor_module_electric",
     "use_action": {
       "target": "secro_power_armor_module_electric",
-      "msg": "\"Shock\" module - <color_red>offline",
+      "msg": "“电击”模块 - <color_red>离线",
       "type": "transform",
-      "menu_text": "Deactivate \"Shock\" module"
+      "menu_text": "关闭“电击”模块"
     },
     "relic_data": {
       "passive_effects": [
@@ -191,37 +340,73 @@
               "id": "secro_power_armor_module_electric_act_shockdischarge",
               "hit_self": false,
               "once_in": 10,
-              "message": "Your power gloves shocked %2$s!",
-              "npc_message": "%1$s's power gloves %2$s!"
+              "message": "你的动力手套震慑了%2$s！",
+              "npc_message": "%1$s的能量包住了%2$s！"
             },
             {
               "id": "secro_power_armor_module_electric_act_random",
               "hit_self": false,
               "once_in": 200,
-              "message": "Your power gloves generated several high-powered electric discharges!",
-              "npc_message": "%1$s's power gloves overcharged!"
+              "message": "你的动力手套产生了几次高功率放电！",
+              "npc_message": "%1$s的动力手套过载了！"
             }
           ]
         }
       ]
     },
     "ammo": "battery",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "NO_TAKEOFF", "RECHARGE", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "NO_TAKEOFF",
+      "RECHARGE",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   },
   {
     "id": "secro_power_armor_module_pulsar",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Pulsar\"" },
-    "description": "A set of power armor modules that installs a pair of prototype shockwave generators located on the shoulder joints. Module implant type \"Pulsar\" emits a powerful, short-ranged pulse in every direction - which can stun affected creatures - whenever the user is disturbed by physical force. Uses a built-in UPS.",
+    "name": {
+      "str": "Secronom模块植入“脉冲星”"
+    },
+    "description": "一套动力装甲模块，在肩关节处安装一对原型冲击波发生器。模块植入式“脉冲星”向每个方向发射一个强大的短程脉冲——只要用户受到物理力的干扰，它就能击昏受影响的生物。使用内置不间断电源。",
     "weight": "4225 g",
     "volume": "3 L",
     "price": "7300 USD",
     "price_postapoc": "730 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "dark_gray",
@@ -229,28 +414,61 @@
     "charges_per_use": 1,
     "use_action": {
       "target": "secro_power_armor_module_pulsar_act",
-      "msg": "\"Pulsar\" module - <color_light_green>online",
+      "msg": "“脉冲星”模块 - <color_light_green>在线",
       "type": "transform",
       "active": true,
-      "menu_text": "Activate \"Pulsar\" module"
+      "menu_text": "启动“脉冲星”模块"
     },
     "ammo": "battery",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "ELECTRIC_IMMUNE", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   },
   {
     "id": "secro_power_armor_module_pulsar_act",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Pulsar\"" },
-    "description": "A set of power armor modules that installs a pair of prototype shockwave generators located on the shoulder joints. Module implant type \"Pulsar\" emits a powerful, short-ranged pulse in every direction - which can stun affected creatures - whenever the user is disturbed by physical force. Uses a built-in UPS.",
+    "name": {
+      "str": "Secronom模块植入“脉冲星”"
+    },
+    "description": "一套动力装甲模块，在肩关节处安装一对原型冲击波发生器。模块植入式“脉冲星”向每个方向发射一个强大的短程脉冲——只要用户受到物理力的干扰，它就能击昏受影响的生物。使用内置不间断电源。",
     "weight": "4225 g",
     "volume": "3 L",
     "price": "7300 USD",
     "price_postapoc": "730 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "dark_gray_white",
@@ -260,9 +478,9 @@
     "revert_to": "secro_power_armor_module_pulsar",
     "use_action": {
       "target": "secro_power_armor_module_pulsar",
-      "msg": "\"Pulsar\" module - <color_red>offline",
+      "msg": "“脉冲星”模块 - <color_red>离线",
       "type": "transform",
-      "menu_text": "Deactivate \"Pulsar\" module"
+      "menu_text": "关闭“脉冲星”模块"
     },
     "relic_data": {
       "passive_effects": [
@@ -274,30 +492,66 @@
               "id": "secro_power_armor_module_pulsar_act_pulse",
               "hit_self": true,
               "once_in": 15,
-              "message": "Your power armor generates a shockwave!",
-              "npc_message": "%1$s's power armor formed a shockwave!"
+              "message": "你的能量护甲会产生冲击波！",
+              "npc_message": "%1$s的能量装甲形成了一个冲击波！"
             }
           ]
         }
       ]
     },
     "ammo": "battery",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "NO_TAKEOFF", "RECHARGE", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "NO_TAKEOFF",
+      "RECHARGE",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   },
   {
     "id": "secro_power_armor_module_optics",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Optics\"" },
+    "name": {
+      "str": "Secronom模块植入“光学”"
+    },
     "description": "A set of power armor modules that installs various advanced targeting systems to the eyes. Module implant type \"Optics\" significantly increases perception. Uses a built-in UPS.",
     "weight": "4225 g",
     "volume": "3 L",
     "price": "6000 USD",
     "price_postapoc": "600 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "dark_gray",
@@ -305,28 +559,61 @@
     "charges_per_use": 1,
     "use_action": {
       "target": "secro_power_armor_module_optics_act",
-      "msg": "\"Optics\" module - <color_light_green>online",
+      "msg": "“光学”模块 - <color_light_green>在线",
       "type": "transform",
       "active": true,
-      "menu_text": "Activate \"Optics\" module"
+      "menu_text": "启动“光学”模块"
     },
     "ammo": "battery",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "ELECTRIC_IMMUNE", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   },
   {
     "id": "secro_power_armor_module_optics_act",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom module implant \"Optics\"" },
+    "name": {
+      "str": "Secronom模块植入“光学”"
+    },
     "description": "A set of power armor modules that installs various advanced targeting systems to the eyes. Module implant type \"Optics\" significantly increases perception. Uses a built-in UPS.\n\nModule implant type \"Optics\" provides:\n<color_white>Perception: <color_light_green>+6</color>\nSight range: <color_light_green>+4</color></color>",
     "weight": "4225 g",
     "volume": "3 L",
     "price": "7300 USD",
     "price_postapoc": "730 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_frame",
     "color": "dark_gray_white",
@@ -336,22 +623,56 @@
     "revert_to": "secro_power_armor_module_optics",
     "use_action": {
       "target": "secro_power_armor_module_optics",
-      "msg": "\"Optics\" module - <color_red>offline",
+      "msg": "“光学”模块 - <color_red>离线",
       "type": "transform",
-      "menu_text": "Deactivate \"Optics\" module"
+      "menu_text": "关闭“光学”模块"
     },
     "relic_data": {
       "passive_effects": [
         {
           "has": "WORN",
           "condition": "ALWAYS",
-          "values": [ { "value": "PERCEPTION", "add": 3 } ]
+          "values": [
+            {
+              "value": "PERCEPTION",
+              "add": 3
+            }
+          ]
         }
       ]
     },
     "ammo": "battery",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } } ],
-    "flags": [ "WATERPROOF", "OUTER", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "NO_TAKEOFF", "RECHARGE", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 10, "coverage": 10, "material": [ "superalloy" ], "material_thickness": 1 } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      }
+    ],
+    "flags": [
+      "WATERPROOF",
+      "OUTER",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "NO_TAKEOFF",
+      "RECHARGE",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 10,
+        "coverage": 10,
+        "material": [
+          "superalloy"
+        ],
+        "material_thickness": 1
+      }
+    ]
   }
 ]

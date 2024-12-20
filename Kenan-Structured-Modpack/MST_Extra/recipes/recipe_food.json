@@ -1,28 +1,167 @@
 [
   {
+    "type": "recipe",
+    "result": "tea_willow",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_DRINKS",
+    "skill_used": "cooking",
+    "skills_required": [
+      "survival",
+      5
+    ],
+    "difficulty": 4,
+    "time": "12 m",
+    "batch_time_factors": [
+      80,
+      4
+    ],
+    "book_learn": [
+      [
+        "textbook_survival",
+        4
+      ],
+      [
+        "atomic_survival",
+        4
+      ],
+      [
+        "survival_book",
+        3
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "BOIL",
+        "level": 1
+      },
+      {
+        "id": "CUT",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "water_boiling_heat",
+          8,
+          "LIST"
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "water",
+          1
+        ],
+        [
+          "water_clean",
+          1
+        ]
+      ],
+      [
+        [
+          "willowbark",
+          2
+        ]
+      ]
+    ]
+  },
+  {
     "result": "offal_canned",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "clay",
-    "byproducts": [ [ "water", 10 ] ],
+    "byproducts": [
+      [
+        "water",
+        10
+      ]
+    ],
     "container": "jar_clay",
     "contained": true,
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_MEAT",
-    "skills_required": [ "survival", 4 ],
+    "skills_required": [
+      "survival",
+      4
+    ],
     "skill_used": "cooking",
     "difficulty": 4,
     "time": "30 m",
-    "batch_time_factors": [ 83, 5 ],
+    "batch_time_factors": [
+      83,
+      5
+    ],
     "autolearn": true,
     "result_mult": 2,
-    "using": [ [ "waterproofing", 1 ] ],
-    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "COOK", "level": 3 } ],
-    "tools": [ [ [ "surface_heat", 100, "LIST" ] ], [ [ "pot_canning", -1 ] ] ],
+    "using": [
+      [
+        "waterproofing",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      },
+      {
+        "id": "COOK",
+        "level": 3
+      }
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          100,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "pot_canning",
+          -1
+        ]
+      ]
+    ],
     "components": [
-      [ [ "water", 11 ], [ "water_clean", 11 ] ],
-      [ [ "jar_clay", 1 ] ],
-      [ [ "offal", 2 ], [ "liver", 5 ], [ "sweetbread", 5 ], [ "kidney", 5 ] ]
+      [
+        [
+          "water",
+          11
+        ],
+        [
+          "water_clean",
+          11
+        ]
+      ],
+      [
+        [
+          "jar_clay",
+          1
+        ]
+      ],
+      [
+        [
+          "offal",
+          2
+        ],
+        [
+          "liver",
+          5
+        ],
+        [
+          "sweetbread",
+          5
+        ],
+        [
+          "kidney",
+          5
+        ]
+      ]
     ]
   },
   {
@@ -30,69 +169,257 @@
     "result": "meat_canned",
     "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "clay",
-    "byproducts": [ [ "water", 10 ] ],
+    "byproducts": [
+      [
+        "water",
+        10
+      ]
+    ],
     "container": "jar_clay",
     "contained": true,
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_MEAT",
-    "skills_required": [ "survival", 4 ],
+    "skills_required": [
+      "survival",
+      4
+    ],
     "skill_used": "cooking",
     "difficulty": 4,
     "time": "30 m",
     "autolearn": true,
-    "batch_time_factors": [ 83, 5 ],
+    "batch_time_factors": [
+      83,
+      5
+    ],
     "result_mult": 2,
-    "using": [ [ "waterproofing", 1 ] ],
-    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "COOK", "level": 3 } ],
-    "tools": [ [ [ "surface_heat", 100, "LIST" ] ], [ [ "pot_canning", -1 ] ] ],
-    "components": [ [ [ "water", 11 ], [ "water_clean", 11 ] ], [ [ "jar_clay", 1 ] ], [ [ "meat_red_raw", 2, "LIST" ] ] ]
+    "using": [
+      [
+        "waterproofing",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      },
+      {
+        "id": "COOK",
+        "level": 3
+      }
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          100,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "pot_canning",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "water",
+          11
+        ],
+        [
+          "water_clean",
+          11
+        ]
+      ],
+      [
+        [
+          "jar_clay",
+          1
+        ]
+      ],
+      [
+        [
+          "meat_red_raw",
+          2,
+          "LIST"
+        ]
+      ]
+    ]
   },
   {
     "type": "recipe",
     "result": "fish_canned",
     "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "clay",
-    "byproducts": [ [ "water", 10 ] ],
+    "byproducts": [
+      [
+        "water",
+        10
+      ]
+    ],
     "container": "jar_clay",
     "contained": true,
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_MEAT",
-    "skills_required": [ "survival", 4 ],
+    "skills_required": [
+      "survival",
+      4
+    ],
     "skill_used": "cooking",
     "difficulty": 4,
     "time": "30 m",
     "result_mult": 2,
     "autolearn": true,
-    "batch_time_factors": [ 83, 5 ],
-    "using": [ [ "waterproofing", 1 ] ],
-    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "COOK", "level": 3 } ],
-    "tools": [ [ [ "surface_heat", 100, "LIST" ] ], [ [ "pot_canning", -1 ] ] ],
-    "components": [ [ [ "water", 11 ], [ "water_clean", 11 ] ], [ [ "jar_clay", 1 ] ], [ [ "fish", 2 ] ] ]
+    "batch_time_factors": [
+      83,
+      5
+    ],
+    "using": [
+      [
+        "waterproofing",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      },
+      {
+        "id": "COOK",
+        "level": 3
+      }
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          100,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "pot_canning",
+          -1
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "water",
+          11
+        ],
+        [
+          "water_clean",
+          11
+        ]
+      ],
+      [
+        [
+          "jar_clay",
+          1
+        ]
+      ],
+      [
+        [
+          "fish",
+          2
+        ]
+      ]
+    ]
   },
   {
     "type": "recipe",
     "result": "veggy_canned",
     "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "clay",
-    "byproducts": [ [ "water", 10 ] ],
+    "byproducts": [
+      [
+        "water",
+        10
+      ]
+    ],
     "container": "jar_clay",
     "contained": true,
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_VEGGI",
-    "skills_required": [ "survival", 4 ],
+    "skills_required": [
+      "survival",
+      4
+    ],
     "skill_used": "cooking",
     "difficulty": 4,
     "time": "30 m",
     "result_mult": 2,
     "autolearn": true,
-    "batch_time_factors": [ 83, 5 ],
-    "using": [ [ "waterproofing", 1 ] ],
-    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "COOK", "level": 3 } ],
-    "tools": [ [ [ "surface_heat", 100, "LIST" ] ], [ [ "pot_canning", -1 ] ] ],
+    "batch_time_factors": [
+      83,
+      5
+    ],
+    "using": [
+      [
+        "waterproofing",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      },
+      {
+        "id": "COOK",
+        "level": 3
+      }
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          100,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "pot_canning",
+          -1
+        ]
+      ]
+    ],
     "components": [
-      [ [ "water", 11 ], [ "water_clean", 11 ] ],
-      [ [ "jar_clay", 1 ] ],
-      [ [ "mushroom", 4 ], [ "veggy_any_uncooked", 2, "LIST" ] ]
+      [
+        [
+          "water",
+          11
+        ],
+        [
+          "water_clean",
+          11
+        ]
+      ],
+      [
+        [
+          "jar_clay",
+          1
+        ]
+      ],
+      [
+        [
+          "mushroom",
+          4
+        ],
+        [
+          "veggy_any_uncooked",
+          2,
+          "LIST"
+        ]
+      ]
     ]
   },
   {
@@ -100,26 +427,90 @@
     "result": "apple_canned",
     "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "clay",
-    "byproducts": [ [ "water", 10 ] ],
+    "byproducts": [
+      [
+        "water",
+        10
+      ]
+    ],
     "container": "jar_clay",
     "contained": true,
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_VEGGI",
-    "skills_required": [ "survival", 4 ],
+    "skills_required": [
+      "survival",
+      4
+    ],
     "skill_used": "cooking",
     "difficulty": 4,
     "time": "30 m",
     "result_mult": 2,
     "autolearn": true,
-    "batch_time_factors": [ 83, 5 ],
-    "using": [ [ "waterproofing", 1 ] ],
-    "qualities": [ { "id": "CUT", "level": 1 }, { "id": "COOK", "level": 3 } ],
-    "tools": [ [ [ "surface_heat", 100, "LIST" ] ], [ [ "pot_canning", -1 ] ] ],
+    "batch_time_factors": [
+      83,
+      5
+    ],
+    "using": [
+      [
+        "waterproofing",
+        1
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      },
+      {
+        "id": "COOK",
+        "level": 3
+      }
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          100,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "pot_canning",
+          -1
+        ]
+      ]
+    ],
     "components": [
-      [ [ "water", 11 ], [ "water_clean", 11 ] ],
-      [ [ "jar_clay", 1 ] ],
-      [ [ "sweet_fruit", 4, "LIST" ] ],
-      [ [ "sugar", 20 ] ]
+      [
+        [
+          "water",
+          11
+        ],
+        [
+          "water_clean",
+          11
+        ]
+      ],
+      [
+        [
+          "jar_clay",
+          1
+        ]
+      ],
+      [
+        [
+          "sweet_fruit",
+          4,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "sugar",
+          20
+        ]
+      ]
     ]
   },
   {
@@ -127,19 +518,49 @@
     "result": "salt",
     "activity_level": "LIGHT_EXERCISE",
     "id_suffix": "distillation",
-    "byproducts": [ [ "water_clean" ] ],
+    "byproducts": [
+      [
+        "water_clean"
+      ]
+    ],
     "category": "CC_FOOD",
     "subcategory": "CSC_FOOD_DRINKS",
     "skill_used": "cooking",
     "difficulty": 1,
-    "skills_required": [ "survival", 1 ],
+    "skills_required": [
+      "survival",
+      1
+    ],
     "time": "10 m",
     "autolearn": true,
-    "batch_time_factors": [ 80, 4 ],
+    "batch_time_factors": [
+      80,
+      4
+    ],
     "charges": 10,
-    "qualities": [ { "id": "DISTILL", "level": 1 } ],
-    "tools": [ [ [ "water_boiling_heat", 3, "LIST" ] ] ],
-    "components": [ [ [ "salt_water", 1 ] ] ]
+    "qualities": [
+      {
+        "id": "DISTILL",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "water_boiling_heat",
+          3,
+          "LIST"
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "salt_water",
+          1
+        ]
+      ]
+    ]
   },
   {
     "result": "posca",
@@ -149,38 +570,77 @@
     "subcategory": "CSC_FOOD_DRINKS",
     "skill_used": "cooking",
     "difficulty": 1,
-    "time": "5 m",
-    "batch_time_factors": [ 80, 4 ],
+    "time": "1 m",
+    "batch_time_factors": [
+      80,
+      4
+    ],
     "autolearn": true,
-    "charges": 6,
-    "qualities": [ { "id": "BOIL", "level": 1 } ],
-    "tools": [ [ [ "water_boiling_heat", 5, "LIST" ] ] ],
+    "result_mult": 5,
+    "qualities": [
+      {
+        "id": "BOIL",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "water_boiling_heat",
+          3,
+          "LIST"
+        ]
+      ]
+    ],
     "components": [
-      [ [ "water", 5 ], [ "water_clean", 5 ] ],
-      [ [ "vinegar", 10 ] ],
-      [ [ "sugar_standard_half", 5, "LIST" ] ],
-      [ [ "wild_herbs", 10 ], [ "cinnamon", 10 ] ]
-    ]
-  },
-  {
-    "result": "posca_hard",
-    "type": "recipe",
-    "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_FOOD",
-    "subcategory": "CSC_FOOD_DRINKS",
-    "skill_used": "cooking",
-    "difficulty": 1,
-    "time": "5 m",
-    "batch_time_factors": [ 80, 4 ],
-    "autolearn": true,
-    "charges": 6,
-    "qualities": [ { "id": "BOIL", "level": 1 } ],
-    "tools": [ [ [ "water_boiling_heat", 5, "LIST" ] ] ],
-    "components": [
-      [ [ "water", 5 ], [ "water_clean", 5 ] ],
-      [ [ "cheap_wine", 5, "LIST" ] ],
-      [ [ "sugar_standard_half", 5, "LIST" ] ],
-      [ [ "wild_herbs", 10 ], [ "cinnamon", 10 ] ]
+      [
+        [
+          "water",
+          4
+        ],
+        [
+          "water_clean",
+          4
+        ]
+      ],
+      [
+        [
+          "bum_wine",
+          6
+        ],
+        [
+          "fruit_wine",
+          3
+        ],
+        [
+          "dandelion_wine",
+          3
+        ],
+        [
+          "pine_wine",
+          3
+        ]
+      ],
+      [
+        [
+          "honey_bottled",
+          3
+        ],
+        [
+          "honey_glassed",
+          1
+        ],
+        [
+          "sugar",
+          10
+        ]
+      ],
+      [
+        [
+          "wild_herbs",
+          10
+        ]
+      ]
     ]
   },
   {
@@ -191,23 +651,151 @@
     "subcategory": "CSC_FOOD_MEAT",
     "skill_used": "cooking",
     "difficulty": 3,
-    "skills_required": [ "survival", 2 ],
+    "skills_required": [
+      "survival",
+      2
+    ],
     "time": "1 h",
     "charges": 1,
     "autolearn": true,
-    "batch_time_factors": [ 83, 5 ],
-    "tools": [ [ [ "surface_heat", 10, "LIST" ] ] ],
+    "batch_time_factors": [
+      83,
+      5
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          10,
+          "LIST"
+        ]
+      ]
+    ],
     "components": [
       [
-        [ "salt_water", 1 ],
-        [ "saline", 1 ],
-        [ "salt", 1 ],
-        [ "soysauce", 1 ],
-        [ "seasoning_salt", 1 ],
-        [ "pepper", 2 ],
-        [ "chem_saltpetre", 1 ]
+        [
+          "salt_water",
+          1
+        ],
+        [
+          "saline",
+          1
+        ],
+        [
+          "salt",
+          1
+        ],
+        [
+          "soysauce",
+          1
+        ],
+        [
+          "seasoning_salt",
+          1
+        ],
+        [
+          "pepper",
+          2
+        ],
+        [
+          "chem_saltpetre",
+          1
+        ]
       ],
-      [ [ "meat_offal", 1, "LIST" ] ]
+      [
+        [
+          "meat_offal",
+          1,
+          "LIST"
+        ]
+      ]
+    ]
+  },
+  {
+    "type": "recipe",
+    "result": "potted_meat",
+    "activity_level": "LIGHT_EXERCISE",
+    "category": "CC_FOOD",
+    "subcategory": "CSC_FOOD_MEAT",
+    "skill_used": "cooking",
+    "difficulty": 3,
+    "time": "60 m",
+    "batch_time_factors": [
+      80,
+      4
+    ],
+    "autolearn": [
+      [
+        "cooking",
+        4
+      ]
+    ],
+    "book_learn": [
+      [
+        "family_cookbook",
+        3
+      ],
+      [
+        "scots_cookbook",
+        2
+      ]
+    ],
+    "qualities": [
+      {
+        "id": "CUT",
+        "level": 1
+      },
+      {
+        "id": "BOIL",
+        "level": 1
+      },
+      {
+        "id": "COOK",
+        "level": 2
+      },
+      {
+        "id": "CONTAIN",
+        "level": 1
+      }
+    ],
+    "tools": [
+      [
+        [
+          "surface_heat",
+          20,
+          "LIST"
+        ]
+      ]
+    ],
+    "components": [
+      [
+        [
+          "edible_tallow_lard",
+          1,
+          "LIST"
+        ],
+        [
+          "any_butter",
+          5,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "meat_red_raw",
+          1,
+          "LIST"
+        ],
+        [
+          "fish",
+          1
+        ],
+        [
+          "meat_offal",
+          1,
+          "LIST"
+        ]
+      ]
     ]
   }
 ]

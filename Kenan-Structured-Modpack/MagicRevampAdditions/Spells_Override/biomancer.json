@@ -2,12 +2,17 @@
   {
     "id": "light_healing",
     "type": "SPELL",
-    "name": { "str": "Cure Light Wounds" },
-    "description": "Heals a little bit of damage on the target.",
-    "valid_targets": [ "self", "ally" ],
+    "name": {
+      "str": "治疗轻伤"
+    },
+    "description": "治疗一点点目标所受的伤害。",
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
     "min_damage": -5,
     "max_damage": -30,
-    "damage_increment": -1.0,
+    "damage_increment": -1,
     "max_level": 22,
     "min_range": 0,
     "max_range": 6,
@@ -16,7 +21,11 @@
     "shape": "blast",
     "base_casting_time": 300,
     "base_energy_cost": 800,
-    "flags": [ "SOMATIC", "VERBAL", "NO_PROJECTILE" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_PROJECTILE"
+    ],
     "spell_class": "BIOMANCER",
     "difficulty": 2,
     "energy_source": "MANA"
@@ -24,15 +33,23 @@
   {
     "id": "pain_split",
     "type": "SPELL",
-    "name": { "str": "Pain Split" },
-    "description": "Evens out damage among your limbs.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "伤痛分流"
+    },
+    "description": "平摊各个肢体受到的伤害。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "pain_split",
     "shape": "blast",
     "base_casting_time": 100,
     "base_energy_cost": 800,
     "energy_source": "MANA",
-    "flags": [ "SOMATIC", "NO_LEGS", "CONCENTRATE" ],
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
     "spell_class": "BIOMANCER",
     "difficulty": 4,
     "max_level": 1
@@ -40,9 +57,13 @@
   {
     "id": "vicious_tentacle",
     "type": "SPELL",
-    "name": { "str": "Vicious Tentacle" },
-    "description": "This spell extrudes a long nasty whiplike tentacle of sharp bones and oozing acid from your body, it has a long reach attack and vicious damage.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "残暴之鞭"
+    },
+    "description": "这个法术会从你的身体中伸出一个由锋利的骨头和渗出酸液组成的长而凶猛的鞭状触须，它有很长的攻击距离和很高的伤害。",
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "effect": "spawn_item",
@@ -55,17 +76,26 @@
     "duration_increment": 24000,
     "difficulty": 6,
     "max_level": 22,
-    "flags": [ "SOMATIC", "LOUD" ],
+    "flags": [
+      "SOMATIC",
+      "LOUD"
+    ],
     "spell_class": "BIOMANCER",
-    "learn_spells": { "vicious_tentacle_plus": 15 },
+    "learn_spells": {
+      "vicious_tentacle_plus": 15
+    },
     "energy_source": "MANA"
   },
   {
     "id": "vicious_tentacle_plus",
     "type": "SPELL",
-    "name": { "str": "Evolved Vicious Tentacle" },
+    "name": {
+      "str": "Evolved Vicious Tentacle"
+    },
     "description": "This spell extrudes a long nasty whiplike tentacle of sharp bones and oozing acid from your body, it has a long reach attack and vicious damage.  Now you know this spell like the back of your hand, and start to design your own version.",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "effect": "spawn_item",
@@ -82,16 +112,22 @@
     "duration_increment": 72000,
     "difficulty": 7,
     "max_level": 37,
-    "flags": [ "LOUD" ],
+    "flags": [
+      "LOUD"
+    ],
     "spell_class": "BIOMANCER",
     "energy_source": "MANA"
   },
   {
     "id": "bio_grotesque",
     "type": "SPELL",
-    "name": { "str": "Grotesque Enhancement" },
-    "description": "A spell that warps your body in alien ways to increase your physical abilities and strength.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "扭曲强化"
+    },
+    "description": "这个法术能以怪异的方式将你的躯体完全扭曲，并增强你的力量及感知。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "effect_str": "bio_boost",
     "shape": "blast",
@@ -99,13 +135,16 @@
     "casting_time_increment": -2.5,
     "final_casting_time": 50,
     "base_energy_cost": 250,
-    "energy_increment": -5.0,
+    "energy_increment": -5,
     "final_energy_cost": 100,
     "energy_source": "MANA",
     "spell_class": "BIOMANCER",
     "difficulty": 6,
     "max_level": 30,
-    "flags": [ "SOMATIC", "LOUD" ],
+    "flags": [
+      "SOMATIC",
+      "LOUD"
+    ],
     "//": "duration is in moves",
     "min_duration": 6000,
     "max_duration": 90000,
@@ -114,9 +153,15 @@
   {
     "id": "bio_acidicspray",
     "type": "SPELL",
-    "name": { "str": "Acidic Spray" },
-    "description": "When cast, the mage opens his mouth and sprays acid in a wide cone to dissolve his foes into goo.  Just imagine what he'll do with the goo.",
-    "valid_targets": [ "ally", "hostile", "ground" ],
+    "name": {
+      "str": "酸液喷射"
+    },
+    "description": "当施法时，法师张开他的嘴，向前方扇形范围内的敌人喷射腐蚀性酸液，将它们溶解成粘液。想象一下他该怎么处理这些粘糊糊的玩意。",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "effect_str": "bio_acidburn",
     "shape": "cone",
@@ -128,22 +173,29 @@
     "max_level": 30,
     "min_damage": 8,
     "max_damage": 97,
-    "damage_increment": 4.0,
+    "damage_increment": 4,
     "damage_type": "acid",
     "min_range": 3,
     "max_range": 8,
-    "flags": [ "VERBAL", "NO_HANDS" ],
+    "flags": [
+      "VERBAL",
+      "NO_HANDS"
+    ],
     "range_increment": 0.25,
     "min_aoe": 25,
     "max_aoe": 90,
-    "aoe_increment": 5.0
+    "aoe_increment": 5
   },
   {
     "id": "bio_fleshpouch",
     "type": "SPELL",
-    "name": { "str": "Flesh Pouch" },
-    "description": "This spell grows a large pouch out of your skin on your back, allowing you to store your gear in it.",
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "肉身成袋"
+    },
+    "description": "这个法术会在你的背部皮肤长出一个大袋子，可以让你存储物品。",
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "effect": "spawn_item",
@@ -156,16 +208,24 @@
     "duration_increment": 520000,
     "difficulty": 4,
     "max_level": 30,
-    "flags": [ "NO_HANDS", "NO_LEGS", "SOMATIC" ],
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "SOMATIC"
+    ],
     "spell_class": "BIOMANCER",
     "energy_source": "MANA"
   },
   {
     "id": "bio_bonespear",
     "type": "SPELL",
-    "name": { "str": "Conjure Bonespear" },
-    "description": "This spell creates a long shaft of bone with a wicked point and blades along its length.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "召唤骨矛"
+    },
+    "description": "这个法术可以召唤出一只邪恶的骨矛，拥有长长的手柄及尖锐的刀刃。",
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "effect": "spawn_item",
@@ -178,17 +238,26 @@
     "duration_increment": 24000,
     "difficulty": 8,
     "max_level": 22,
-    "flags": [ "LOUD", "SOMATIC" ],
+    "flags": [
+      "LOUD",
+      "SOMATIC"
+    ],
     "spell_class": "BIOMANCER",
-    "learn_spells": { "bio_bonespear_plus": 15 },
+    "learn_spells": {
+      "bio_bonespear_plus": 15
+    },
     "energy_source": "MANA"
   },
   {
     "id": "bio_bonespear_plus",
     "type": "SPELL",
-    "name": { "str": "Evolved Conjure Bonespear" },
+    "name": {
+      "str": "Evolved Conjure Bonespear"
+    },
     "description": "This spell creates a long shaft of bone with a wicked point and blades along its length.  Now you know this spell like the back of your hand, and start to design your own version.",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "effect": "spawn_item",
@@ -205,16 +274,22 @@
     "duration_increment": 72000,
     "difficulty": 9,
     "max_level": 37,
-    "flags": [ "LOUD" ],
+    "flags": [
+      "LOUD"
+    ],
     "spell_class": "BIOMANCER",
     "energy_source": "MANA"
   },
   {
     "id": "create_rune_biomancer",
     "type": "SPELL",
-    "name": { "str": "Biomancer Rune" },
-    "description": "This ritual creates a small pebble attuned to Biomancers.  You can use the rune as a catalyst for recipes.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "生化术士符文"
+    },
+    "description": "这仪式会创造出一块与生化术士共鸣的小石块。你可以将符文作为催化剂用于制造其它物品。",
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "effect": "spawn_item",
@@ -229,18 +304,30 @@
     "max_level": 0,
     "spell_class": "BIOMANCER",
     "energy_source": "MANA",
-    "flags": [ "PERMANENT", "NO_LEGS", "CONCENTRATE" ]
+    "flags": [
+      "PERMANENT",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ]
   },
   {
     "id": "biomancer_paralytic_dart",
     "type": "SPELL",
-    "name": { "str": "Paralytic Dart" },
-    "description": "Spits a warped needle of sinew and bone, carrying with it a sting that slows your victim.",
-    "valid_targets": [ "ally", "hostile" ],
+    "name": {
+      "str": "麻痹毒刺"
+    },
+    "description": "喷射出一根由筋腱与骨头纠缠而成的扭曲细针，它造成的螫刺会迟缓受害者。",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
     "effect": "attack",
     "effect_str": "biomancer_dart_venom",
     "shape": "blast",
-    "flags": [ "VERBAL", "NO_HANDS" ],
+    "flags": [
+      "VERBAL",
+      "NO_HANDS"
+    ],
     "spell_class": "BIOMANCER",
     "energy_source": "MANA",
     "difficulty": 3,
@@ -261,14 +348,31 @@
   {
     "id": "biomancer_visceral_projection",
     "type": "SPELL",
-    "name": { "str": "Visceral Projection" },
-    "description": "Projects a spray of acrid blood and gore all around you, growing to ensnare your prey in in a field of twitching poisonous tendrils.",
-    "valid_targets": [ "ally", "hostile", "ground" ],
+    "name": {
+      "str": "脏腑四射"
+    },
+    "description": "在你四周喷射出辛辣刺鼻的血肉，不断生长并将你的猎物捕获进一片有毒的卷须之中。",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "effect_str": "badpoison",
     "shape": "blast",
-    "extra_effects": [ { "id": "biomancer_visceral_paralyze" }, { "id": "biomancer_visceral_backlash", "hit_self": true } ],
-    "flags": [ "VERBAL", "NO_HANDS" ],
+    "extra_effects": [
+      {
+        "id": "biomancer_visceral_paralyze"
+      },
+      {
+        "id": "biomancer_visceral_backlash",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "VERBAL",
+      "NO_HANDS"
+    ],
     "spell_class": "BIOMANCER",
     "energy_source": "MANA",
     "difficulty": 4,
@@ -291,13 +395,20 @@
   {
     "id": "biomancer_visceral_paralyze",
     "type": "SPELL",
-    "name": { "str": "Visceral Paralysis" },
-    "description": "Paralytic side effect of Projection.",
-    "valid_targets": [ "ally", "hostile" ],
+    "name": {
+      "str": "脏腑麻痹"
+    },
+    "description": "由于脏腑四射导致的麻痹副作用。",
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
     "effect": "attack",
     "effect_str": "biomancer_dart_venom",
     "shape": "blast",
-    "flags": [ "SILENT" ],
+    "flags": [
+      "SILENT"
+    ],
     "max_level": 30,
     "min_aoe": 2,
     "max_aoe": 9,
@@ -314,26 +425,39 @@
   {
     "id": "biomancer_visceral_backlash",
     "type": "SPELL",
-    "name": { "str": "Visceral Backlash" },
-    "description": "Hits the user with side effects too.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "脏腑反噬"
+    },
+    "description": "施法者也同时收到副作用影响。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "effect_str": "biomancer_visceral_side_effects",
     "shape": "blast",
-    "flags": [ "VERBAL" ],
+    "flags": [
+      "VERBAL"
+    ],
     "min_duration": 600,
     "max_duration": 600
   },
   {
     "id": "biomancer_coagulant_weave",
     "type": "SPELL",
-    "name": { "str": "Coagulant Weave" },
-    "description": "Turns your biological mastery inwards, medically enhancing your flesh.  Rather than strength of healing, it staves off blood loss and purges wounds before they can turn septic, at the cost of increased hunger and thirst.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "凝结组织"
+    },
+    "description": "将你对生化魔法的掌握转化至体内，增强你的肉体。与医疗能量不同，它通过防止失血，在伤口化脓之前消除伤口，代价是加速新陈代谢，容易饥饿及口渴。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "effect_str": "bio_weave",
     "shape": "blast",
-    "flags": [ "SOMATIC", "VERBAL" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL"
+    ],
     "energy_source": "MANA",
     "spell_class": "BIOMANCER",
     "difficulty": 5,
@@ -347,15 +471,22 @@
   {
     "id": "corrosive_aura_spell",
     "type": "SPELL",
-    "name": { "str": "Caustic Feedback" },
-    "description": "This is a sub-spell of the Caustic Aura spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "腐蚀反击"
+    },
+    "description": "这只是腐蚀光环附属的法术。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "acid",
     "min_damage": 3,
     "max_damage": 3,
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "sound_type": "combat",
     "sound_description": "acidic sizzle!",
     "min_range": 2,
@@ -368,13 +499,20 @@
   {
     "id": "biomancer_caustic_aura",
     "type": "SPELL",
-    "name": { "str": "Caustic Aura" },
-    "description": "This spell suspends acid in a layer around you, corroding melee attackers when struck and enhancing your melee damage.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "腐蚀光环"
+    },
+    "description": "这个法术在你身体周围召唤出一个酸液光环，腐蚀攻击你的敌人，并增加你的近战伤害。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "aura_caustic",
     "shape": "blast",
-    "flags": [ "SOMATIC", "CONCENTRATE" ],
+    "flags": [
+      "SOMATIC",
+      "CONCENTRATE"
+    ],
     "components": "spell_components_causticaura",
     "energy_source": "MANA",
     "spell_class": "BIOMANCER",
@@ -389,18 +527,26 @@
     "min_duration": 24000,
     "max_duration": 52000,
     "duration_increment": 24000,
-    "learn_spells": { "biomancer_caustic_aura_plus": 15 }
+    "learn_spells": {
+      "biomancer_caustic_aura_plus": 15
+    }
   },
   {
     "id": "biomancer_caustic_aura_plus",
     "type": "SPELL",
-    "name": { "str": "Improved Caustic Aura" },
+    "name": {
+      "str": "Improved Caustic Aura"
+    },
     "description": "This spell suspends acid in a layer around you, corroding melee attackers when struck and enhancing your melee damage.  Now you know this spell like the back of your hand, and start to design your own version.",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "spawn_item",
     "effect_str": "aura_caustic",
     "shape": "blast",
-    "flags": [ "SOMATIC" ],
+    "flags": [
+      "SOMATIC"
+    ],
     "components": "spell_components_causticaura",
     "energy_source": "MANA",
     "spell_class": "BIOMANCER",
@@ -423,11 +569,19 @@
   {
     "id": "biomancer_swim_frog",
     "type": "SPELL",
-    "name": { "str": "Limbs of the Frog" },
+    "name": {
+      "str": "Limbs of the Frog"
+    },
     "description": "Grow webbing on your hands and feet, making quick swimming a breeze.",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "spell_class": "BIOMANCER",
-    "flags": [ "CONCENTRATE", "VERBAL", "SOMATIC" ],
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "SOMATIC"
+    ],
     "effect": "attack",
     "effect_str": "effect_biomancer_swim_speed",
     "shape": "blast",
@@ -443,11 +597,20 @@
   {
     "id": "biomancer_cure_disease_minor",
     "type": "SPELL",
-    "name": { "str": "Cure Disease, Minor" },
+    "name": {
+      "str": "Cure Disease, Minor"
+    },
     "description": "Cure any flu or common cold you might be suffering from.  This is one of the few biomantic cure spells that is castable on other people.",
-    "valid_targets": [ "self", "ally" ],
+    "valid_targets": [
+      "self",
+      "ally"
+    ],
     "spell_class": "BIOMANCER",
-    "flags": [ "CONCENTRATE", "VERBAL", "SOMATIC" ],
+    "flags": [
+      "CONCENTRATE",
+      "VERBAL",
+      "SOMATIC"
+    ],
     "effect": "attack",
     "effect_str": "effect_biomancer_cure_disease_minor",
     "shape": "blast",

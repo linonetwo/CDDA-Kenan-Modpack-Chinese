@@ -4,22 +4,33 @@
     "subtype": "collection",
     "id": "SSmutant_drop",
     "//": "Dreadful mutation caused their patient dress to rip, leaving only a garbage",
-    "entries": [ { "item": "rag" } ]
+    "entries": [
+      {
+        "item": "rag"
+      }
+    ]
   },
   {
     "//": "Failed specimens. Unwanted creatures of secronom lab, now the ravaging wanderers inside.",
     "id": "mon_zedfail_seeker",
     "type": "MONSTER",
-    "name": { "str": "seeker" },
-    "description": "Alluring large skin in shape of a starfish and mouth slits nibbles near every tip. Its abdomen is infused with gigantic lizard eye, eager to seek its prey.",
+    "name": {
+      "str": "追寻者"
+    },
+    "description": "有着迷人的海星形状的大皮肤。嘴上的裂口在每一个尖端附近轻轻地啃咬着。它的腹部被一个巨大的蜥蜴眼装满了，渴望地寻找着猎物。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 95,
     "speed": 105,
     "diff": 1,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "✫",
     "color": "green",
     "aggression": 100,
@@ -27,42 +38,80 @@
     "melee_skill": 4,
     "melee_dice": 1,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
     "dodge": 1,
-    "armor": { "bash": 4, "cut": 2, "bullet": 2, "heat": 2 },
+    "armor": {
+      "bash": 4,
+      "cut": 2,
+      "bullet": 2,
+      "heat": 2
+    },
     "vision_day": 50,
     "vision_night": 10,
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "special_attacks": [
-      [ "LUNGE", 15 ],
+      [
+        "LUNGE",
+        15
+      ],
       {
         "type": "bite",
         "cooldown": 6,
         "min_mul": 0.5,
-        "max_mul": 1.0,
+        "max_mul": 1,
         "infection_chance": 5,
         "damage_max_instance": [
-          { "damage_type": "cut", "amount": 4, "armor_multiplier": 0.6 },
-          { "damage_type": "stab", "amount": 2, "armor_multiplier": 0.8 }
+          {
+            "damage_type": "cut",
+            "amount": 4,
+            "armor_multiplier": 0.6
+          },
+          {
+            "damage_type": "stab",
+            "amount": 2,
+            "armor_multiplier": 0.8
+          }
         ]
       }
     ],
     "death_drops": "SSmutant_drop",
-    "flags": [ "SEES", "SMELLS", "STUMBLES", "WARM", "FILTHY", "BASHES", "POISON", "NO_BREATHE", "REVIVES" ]
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "FILTHY",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES"
+    ]
   },
   {
     "id": "mon_zedfail_floral",
     "type": "MONSTER",
-    "name": { "str": "flora" },
-    "description": "A human body with its head mutated and deformed into a flowery petal mouth. It shows hundreds of teeth and a centered eye whenever it opens.",
+    "name": {
+      "str": "弗洛拉"
+    },
+    "description": "一具头部变异变形成花瓣状的大嘴的人体。这个花瓣状的嘴打开的时候，显出了数百颗牙齿以及中间那一只大眼睛。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 90,
     "speed": 100,
     "diff": 1,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⚵",
     "color": "green",
     "aggression": 100,
@@ -70,38 +119,75 @@
     "melee_skill": 4,
     "melee_dice": 2,
     "melee_dice_sides": 5,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 1,
-    "armor": { "bash": 5, "cut": 2, "bullet": 2 },
-    "harvest": "zombie_humanoid",
+    "armor": {
+      "bash": 5,
+      "cut": 2,
+      "bullet": 2
+    },
+    "harvest": "zombie",
     "special_attacks": [
-      [ "LUNGE", 20 ],
+      [
+        "LUNGE",
+        20
+      ],
       {
         "type": "bite",
         "cooldown": 10,
-        "min_mul": 1.0,
+        "min_mul": 1,
         "damage_max_instance": [
-          { "damage_type": "bash", "amount": 15, "armor_multiplier": 0.8 },
-          { "damage_type": "stab", "amount": 5, "armor_multiplier": 0.4 }
+          {
+            "damage_type": "bash",
+            "amount": 15,
+            "armor_multiplier": 0.8
+          },
+          {
+            "damage_type": "stab",
+            "amount": 5,
+            "armor_multiplier": 0.4
+          }
         ]
       }
     ],
     "death_drops": "SSmutant_drop",
-    "flags": [ "SEES", "SMELLS", "STUMBLES", "WARM", "BASHES", "POISON", "FILTHY", "NO_BREATHE", "REVIVES" ]
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "FILTHY",
+      "NO_BREATHE",
+      "REVIVES"
+    ]
   },
   {
     "id": "mon_zedfail_twistcrawl",
     "type": "MONSTER",
-    "name": { "str": "distorted crawler" },
-    "description": "A twisted body with various attachments of human anatomy, resulting into a nightmarish agile crawler. Its head ruptured into a horrid mouth and a fiendish eye inside, constantly opens and close to survey its vicinity.",
+    "name": {
+      "str": "扭曲爬行者"
+    },
+    "description": "一个带有各种人体器官的扭曲身躯，形成了一个噩梦般敏捷的爬虫。它的头裂成了一张可怕的嘴，里面有一只恶魔般的眼睛，不停地张开闭合着，探知着周围。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
     "hp": 50,
     "speed": 120,
     "diff": 2,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⚺",
     "color": "green",
     "aggression": 100,
@@ -109,39 +195,80 @@
     "melee_skill": 4,
     "melee_dice": 1,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 1,
-    "armor": { "bash": 1, "cut": 4, "bullet": 3, "heat": 1 },
-    "harvest": "zombie_humanoid",
+    "armor": {
+      "bash": 1,
+      "cut": 4,
+      "bullet": 3,
+      "heat": 1
+    },
+    "harvest": "zombie",
     "special_attacks": [
-      [ "LUNGE", 12 ],
+      [
+        "LUNGE",
+        12
+      ],
       {
         "type": "bite",
         "cooldown": 13,
         "min_mul": 0.5,
         "damage_max_instance": [
-          { "damage_type": "cut", "amount": 10, "armor_multiplier": 0.7, "armor_penetration": 14 },
-          { "damage_type": "stab", "amount": 4, "armor_multiplier": 0.5 }
+          {
+            "damage_type": "cut",
+            "amount": 10,
+            "armor_multiplier": 0.7,
+            "armor_penetration": 14
+          },
+          {
+            "damage_type": "stab",
+            "amount": 4,
+            "armor_multiplier": 0.5
+          }
         ]
       }
     ],
     "death_drops": "SSmutant_drop",
-    "flags": [ "SEES", "SMELLS", "HEARS", "STUMBLES", "WARM", "BASHES", "POISON", "FILTHY", "NO_BREATHE", "REVIVES", "HARDTOSHOOT" ]
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "HEARS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "FILTHY",
+      "NO_BREATHE",
+      "REVIVES",
+      "HARDTOSHOOT"
+    ]
   },
   {
     "id": "mon_zedfail_chomp",
     "type": "MONSTER",
-    "name": { "str": "chomper" },
-    "description": "Headless humanoid monster, with its rib ruptured into a torsal eyed mouth. The arms are gone, yet it is a threat not to be misjudged.",
+    "name": {
+      "str": "食人花"
+    },
+    "description": "一只无头的人形怪物，肋骨裂成一个圆眼睛的嘴。它没有胳膊，但这绝对是一个不可小觑的威胁。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 75,
     "speed": 90,
     "diff": 5,
-    "harvest": "zombie_humanoid",
-    "material": [ "flesh" ],
+    "harvest": "zombie",
+    "material": [
+      "flesh"
+    ],
     "symbol": "⪝",
     "color": "green",
     "aggression": 100,
@@ -149,36 +276,70 @@
     "melee_skill": 4,
     "melee_dice": 0,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "armor": { "bash": 2, "cut": 4, "bullet": 2 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 2,
+      "cut": 4,
+      "bullet": 2
+    },
     "special_attacks": [
       {
         "type": "bite",
         "cooldown": 10,
         "min_mul": 0.5,
         "damage_max_instance": [
-          { "damage_type": "cut", "amount": 3, "armor_multiplier": 0.6 },
-          { "damage_type": "stab", "amount": 14, "armor_multiplier": 0.5 }
+          {
+            "damage_type": "cut",
+            "amount": 3,
+            "armor_multiplier": 0.6
+          },
+          {
+            "damage_type": "stab",
+            "amount": 14,
+            "armor_multiplier": 0.5
+          }
         ]
       }
     ],
     "death_drops": "SSmutant_drop",
-    "flags": [ "SEES", "SMELLS", "STUMBLES", "WARM", "BASHES", "POISON", "NO_BREATHE", "FILTHY", "REVIVES", "NOHEAD" ]
+    "flags": [
+      "SEES",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "REVIVES",
+      "NOHEAD"
+    ]
   },
   {
     "id": "mon_zedfail_squirtler",
     "type": "MONSTER",
-    "name": { "str": "squirtler" },
-    "description": "Attached to the terrain, this irregular patch of large, pale skin features a swollen, bulbous mouth, oozing in greenish liquid.",
+    "name": {
+      "str": "喷吐者"
+    },
+    "description": "依附于地形，这种不规则的巨大，拥有苍白皮肤的生物的特点是肿胀的肉体，球状的嘴，以及它不断渗出的绿色液体。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE" ],
+    "species": [
+      "ZOMBIE"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 75,
     "speed": 50,
     "diff": 20,
     "harvest": "exempt",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⩅",
     "color": "green",
     "aggression": 100,
@@ -186,7 +347,11 @@
     "melee_skill": 0,
     "melee_dice": 0,
     "melee_dice_sides": 0,
-    "armor": { "bash": 4, "cut": 4, "bullet": 2 },
+    "armor": {
+      "bash": 4,
+      "cut": 4,
+      "bullet": 2
+    },
     "vision_day": 20,
     "special_attacks": [
       {
@@ -195,12 +360,45 @@
         "move_cost": 50,
         "gun_type": "squirtler_bulb",
         "require_targeting_player": false,
-        "description": "The squirtler spew a stream of acid!",
-        "ranges": [ [ 1, 2, "N" ], [ 3, 5, "M" ], [ 6, 10, "L" ] ]
+        "description": "喷吐者喷出一股酸液！",
+        "ranges": [
+          [
+            1,
+            2,
+            "N"
+          ],
+          [
+            3,
+            5,
+            "M"
+          ],
+          [
+            6,
+            10,
+            "L"
+          ]
+        ]
       }
     ],
     "//": "The acid is very strong (cuz of headshot).",
-    "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
-    "flags": [ "SEES", "IMMOBILE", "WARM", "POISON", "NO_BREATHE", "FILTHY", "REVIVES", "NOHEAD", "ACIDPROOF", "ACID_BLOOD" ]
+    "death_function": {
+      "message": "The %s's body leaks acid.",
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    },
+    "flags": [
+      "SEES",
+      "IMMOBILE",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "FILTHY",
+      "REVIVES",
+      "NOHEAD",
+      "ACIDPROOF",
+      "ACID_BLOOD"
+    ]
   }
 ]

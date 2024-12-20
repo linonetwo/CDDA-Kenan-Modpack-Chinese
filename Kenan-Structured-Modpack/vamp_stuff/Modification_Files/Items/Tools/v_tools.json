@@ -1,12 +1,17 @@
 [
   {
     "ammo": "battery",
-    "melee_damage": { "bash": 4 },
-    "charges_per_use": 2,
+    "melee_damage": {
+      "bash": 4
+    },
+    "charges_per_use": 100,
     "color": "red",
-    "description": "A primitive tool used in vampiric crafts. This is much like of a normal forge, but it requires the correct materials to work with it. Uses normal batteries whatsoever.",
+    "description": "吸血鬼工艺品中使用的原始工具。感觉就是一个普通的锻造台，但它需要正确的材料来工作。不管怎么说，装上普通电池吧。",
     "id": "blood_forge_infuse",
-    "material": [ "steel", "glass" ],
+    "material": [
+      "steel",
+      "glass"
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -15,28 +20,53 @@
         "max_contains_weight": "20 kg",
         "item_restriction": [
           "light_minus_disposable_cell",
+          "light_disposable_cell",
           "light_minus_battery_cell",
-          "light_battery_cell"
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
         ]
       }
     ],
-    "name": { "str": "blood infusing forge" },
+    "name": {
+      "str": "血液灌注锻造台"
+    },
     "price": "0 cent",
     "price_postapoc": "1500 USD",
-    "qualities": [ [ "BINFUSING", 1 ], [ "HAMMER", 3 ], [ "CHISEL", 3 ] ],
+    "qualities": [
+      [
+        "BINFUSING",
+        1
+      ],
+      [
+        "HAMMER",
+        3
+      ],
+      [
+        "CHISEL",
+        3
+      ]
+    ],
     "symbol": "Q",
+    "to_hit": -2,
     "type": "TOOL",
     "volume": "3750 ml",
     "weight": "14500 g"
   },
   {
     "ammo": "battery",
-    "melee_damage": { "bash": 3 },
-    "charges_per_use": 1,
+    "melee_damage": {
+      "bash": 3
+    },
+    "charges_per_use": 25,
     "color": "red",
-    "description": "A small, heating container used in extracting water components from blood, turning it into a powder speckles. It uses common batteries.",
+    "description": "一种小型加热容器，用于从血液中提取水成分，使之变成粉末状或斑点状。它使用普通电池。",
     "id": "bloodextractor",
-    "material": [ "steel", "glass" ],
+    "material": [
+      "steel",
+      "glass"
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -45,28 +75,45 @@
         "max_contains_weight": "20 kg",
         "item_restriction": [
           "light_minus_disposable_cell",
+          "light_disposable_cell",
           "light_minus_battery_cell",
-          "light_battery_cell"
+          "light_battery_cell",
+          "light_plus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
         ]
       }
     ],
-    "name": { "str": "blood extractor" },
+    "name": {
+      "str": "采血器"
+    },
     "price": "0 cent",
     "price_postapoc": "1000 USD",
-    "qualities": [ [ "BREFINING", 1 ] ],
+    "qualities": [
+      [
+        "BREFINING",
+        1
+      ]
+    ],
     "symbol": "g",
+    "to_hit": -1,
     "type": "TOOL",
     "volume": "1250 ml",
     "weight": "1150 g"
   },
   {
     "ammo": "battery",
-    "melee_damage": { "bash": 3 },
-    "charges_per_use": 15,
+    "melee_damage": {
+      "bash": 3
+    },
+    "charges_per_use": 150,
     "color": "red",
-    "description": "A large, essential compressing tool to make blood compacts from vast amounts of powders. The tiny tissue filaments of human cells will be reinforced into a strong and tough, leathery sheets, which is then be tailored into clothing. High battery consumption per use.",
+    "description": "一种巨大的，必不可少的压缩工具，它可以从大量的粉末中压缩血液制成血块。人体细胞的微小组织细丝将被强化成坚韧的，类似皮革的血片，然后用来制作各种衣服。每次使用电池消耗高。",
     "id": "bloodcompressor",
-    "material": [ "steel", "glass" ],
+    "material": [
+      "steel",
+      "glass"
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -74,26 +121,48 @@
         "holster": true,
         "max_contains_volume": "20 L",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "medium_battery_cell" ]
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
       }
     ],
-    "name": { "str": "blood compressor" },
+    "name": {
+      "str": "血液压缩机"
+    },
     "price": "0 cent",
     "price_postapoc": "1500 USD",
-    "qualities": [ [ "BCOMPRESSING", 1 ], [ "CUT", 3 ] ],
+    "qualities": [
+      [
+        "BCOMPRESSING",
+        1
+      ],
+      [
+        "CUT",
+        3
+      ]
+    ],
     "symbol": "H",
+    "to_hit": -1,
     "type": "TOOL",
     "volume": "3250 ml",
     "weight": "5350 g"
   },
   {
     "ammo": "battery",
-    "melee_damage": { "bash": 3 },
-    "charges_per_use": 2,
+    "melee_damage": {
+      "bash": 3
+    },
+    "charges_per_use": 10,
     "color": "red",
-    "description": "A simple blood chemistry set, much look like a copied version of human's. It has the complete tools in making chemicals and adhesives for essential projects.",
+    "description": "一个简单的血液化学装置，很像人类的复制品。它有一套完整的工具来制造重要项目的化学物质和粘合剂。",
     "id": "bloodchem",
-    "material": [ "steel", "glass" ],
+    "material": [
+      "steel",
+      "glass"
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -101,14 +170,39 @@
         "holster": true,
         "max_contains_volume": "20 L",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "medium_battery_cell" ]
+        "item_restriction": [
+          "medium_battery_cell",
+          "medium_plus_battery_cell",
+          "medium_atomic_battery_cell",
+          "medium_disposable_cell"
+        ]
       }
     ],
-    "name": { "str": "blood chemistry" },
+    "name": {
+      "str": "血液化合器"
+    },
     "price": "0 cent",
     "price_postapoc": "1500 USD",
-    "qualities": [ [ "BCHEMISTRY", 1 ], [ "DISTILL", 1 ], [ "CHEM", 3 ], [ "BOIL", 1 ] ],
+    "qualities": [
+      [
+        "BCHEMISTRY",
+        1
+      ],
+      [
+        "DISTILL",
+        1
+      ],
+      [
+        "CHEM",
+        3
+      ],
+      [
+        "BOIL",
+        1
+      ]
+    ],
     "symbol": "&",
+    "to_hit": -1,
     "type": "TOOL",
     "volume": "3250 ml",
     "weight": "4850 g"

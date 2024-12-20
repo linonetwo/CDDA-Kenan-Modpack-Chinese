@@ -8,47 +8,89 @@
         "u_has_trait": "wrsgoing",
         "yes": {
           "u_has_trait": "wrsdone",
-          "yes": "Bye now...",
-          "no": "Don't waste your time talking to me at this point, just focus on the road!"
+          "yes": "再见...",
+          "no": "别浪费时间和我说话了，把注意力集中在路上！"
         },
-        "no": "Are you going to bring me there now?"
+        "no": "你现在要带我去那里吗？"
       },
-      "no": "Well hi there? Its been a while since I see a living human walking in this damned world!"
+      "no": "嗨，你好吗？我好久没看见一个活人在这个该死的世界上行走了！"
     },
     "responses": [
       {
-        "text": "We need your help in operating a radio tower.",
+        "text": "我们需要你帮忙操作无线电塔。",
         "topic": "TALK_HUMAN_RS_talked",
-        "condition": { "not": { "u_has_trait": "wrsgo" } }
-      },
-      {
-        "text": "Yes. I will.",
-        "topic": "TALK_MISSION_LIST",
         "condition": {
-          "and": [ { "u_has_trait": "wrsgo" }, { "not": { "u_has_trait": "wrsgoing" } }, { "not": { "u_has_trait": "wrsdone" } } ]
+          "not": {
+            "u_has_trait": "wrsgo"
+          }
         }
       },
       {
-        "text": "Okay! I'll do it!",
-        "topic": "TALK_DONE",
-        "condition": { "and": [ { "u_has_trait": "wrsgoing" }, { "not": { "u_has_trait": "wrsdone" } } ] }
+        "text": "好，我来吧。",
+        "topic": "TALK_MISSION_LIST",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "wrsgo"
+            },
+            {
+              "not": {
+                "u_has_trait": "wrsgoing"
+              }
+            },
+            {
+              "not": {
+                "u_has_trait": "wrsdone"
+              }
+            }
+          ]
+        }
       },
       {
-        "text": "Bye.",
+        "text": "好，我会去做的！",
         "topic": "TALK_DONE",
-        "effect": { "npc_change_class": "HUMAN_RADIOSPEC_WORKING" },
-        "condition": { "u_has_trait": "wrsdone" }
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "wrsgoing"
+            },
+            {
+              "not": {
+                "u_has_trait": "wrsdone"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "npc_change_class": "HUMAN_RADIOSPEC_WORKING"
+        },
+        "condition": {
+          "u_has_trait": "wrsdone"
+        }
       }
     ]
   },
   {
     "id": "TALK_HUMAN_RS_talked",
     "type": "talk_topic",
-    "dynamic_line": "Radios are too simple to use, why'd would you want me to do it myself?",
+    "dynamic_line": "无线电用起来太简单了，你为什么要我去做呢？",
     "responses": [
-      { "text": "To ease the job?", "topic": "TALK_HUMAN_RS_nvm" },
-      { "text": "Increase the efficiency of our radio?", "topic": "TALK_HUMAN_RS_nvm" },
-      { "text": "Its a complicated thing for us...", "topic": "TALK_HUMAN_RS_nvm" }
+      {
+        "text": "减轻工作负担？",
+        "topic": "TALK_HUMAN_RS_nvm"
+      },
+      {
+        "text": "提高无线电的效率？",
+        "topic": "TALK_HUMAN_RS_nvm"
+      },
+      {
+        "text": "对我们来说其实是件复杂的事情...",
+        "topic": "TALK_HUMAN_RS_nvm"
+      }
     ]
   },
   {
@@ -56,16 +98,28 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_trait": "wrsgo",
-      "yes": "We better get going.",
-      "no": "Forget it, I will come for as long as I gain benefits from doing this crap! Besides, I am grateful that you've came to pick me up."
+      "yes": "我们得走了。",
+      "no": "算了，只要我能从这堆废话中得到好处，我就会来的！另外，我很感激你来接我。"
     },
     "responses": [
-      { "text": "Lets go!", "topic": "TALK_DONE", "condition": { "u_has_trait": "wrsgo" } },
       {
-        "text": "Okay.",
+        "text": "我们走吧！",
+        "topic": "TALK_DONE",
+        "condition": {
+          "u_has_trait": "wrsgo"
+        }
+      },
+      {
+        "text": "好的。",
         "topic": "TALK_MISSION_OFFER",
-        "effect": { "u_add_trait": "wrsgo" },
-        "condition": { "not": { "u_has_trait": "wrsgo" } }
+        "effect": {
+          "u_add_trait": "wrsgo"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wrsgo"
+          }
+        }
       }
     ]
   }

@@ -4,37 +4,81 @@
     "type": "talk_topic",
     "responses": [
       {
-        "text": "[MISSION] I've been asked to find information on shipments between laboratories that may have been handling anomalies.  Can you help me with that?",
+        "text": "[任务]我被要求寻找可能处理异常情况的实验室之间货物的信息。你能帮我吗？",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_1",
         "condition": {
-          "and": [ { "not": { "compare_string": [ "yes", { "u_val": "nicholas_mission_2_mid" } ] } }, { "u_has_mission": "MISSION_CF_PURIFIER_1_2" } ]
+          "and": [
+            {
+              "not": {
+                "u_has_var": "nicholas_mission_2_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_PURIFIER_1_2"
+            }
+          ]
         }
       },
       {
-        "text": "I've been sent to ask about recent attacks on survivors by anomalous creatures.  Know anything about that?",
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
         "condition": {
           "and": [
-            { "compare_string": [ "yes", { "u_val": "johnathan_prelude_mid" } ] },
-            { "not": { "compare_string": [ "yes", { "npc_val": "johnathan_prelude_mid" } ] } },
-            { "not": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_5" } ] } }
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            }
           ]
         },
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_GM_PRELUDE"
       },
       {
-        "text": "Do you know of any other settlements in the region?",
+        "text": "你知道这个地区还有其他定居点吗？",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF",
         "effect": [
-          { "npc_add_effect": "rural_church_aware", "duration": "PERMANENT" },
-          { "u_add_effect": "rural_church_aware", "duration": "PERMANENT" }
+          {
+            "npc_add_effect": "rural_church_aware",
+            "duration": "PERMANENT"
+          },
+          {
+            "u_add_effect": "rural_church_aware",
+            "duration": "PERMANENT"
+          }
         ],
-        "condition": { "not": { "npc_has_effect": "rural_church_aware" } }
+        "condition": {
+          "not": {
+            "npc_has_effect": "rural_church_aware"
+          }
+        }
       },
       {
-        "text": "Do you know of any other settlements in the region?",
+        "text": "你知道这个地区还有其他定居点吗？",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF",
         "effect": [
-          { "u_add_effect": "rural_church_aware", "duration": "PERMANENT" },
+          {
+            "u_add_effect": "rural_church_aware",
+            "duration": "PERMANENT"
+          },
           {
             "mapgen_update": "arcana_dummy",
             "om_terrain": "cf_church_4",
@@ -42,35 +86,74 @@
             "reveal_radius": 3
           }
         ],
-        "condition": { "and": [ { "not": { "u_has_effect": "rural_church_aware" } }, { "npc_has_effect": "rural_church_aware" } ] }
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_effect": "rural_church_aware"
+              }
+            },
+            {
+              "npc_has_effect": "rural_church_aware"
+            }
+          ]
+        }
       },
       {
-        "text": "[MISSION] Sofia sent me with the latest inventory for trading.",
+        "text": "[任务]索菲亚给我送来了最新的存货清单。",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION",
         "condition": {
           "and": [
-            { "u_has_item": "cf_rep_trade_arrangement" },
-            { "u_has_mission": "MISSION_CF_REP_2" },
-            { "not": { "npc_has_effect": "cf_mission_receipt" } }
+            {
+              "u_has_item": "cf_rep_trade_arrangement"
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_2"
+            },
+            {
+              "not": {
+                "npc_has_effect": "cf_mission_receipt"
+              }
+            }
           ]
         }
       },
       {
-        "text": "[MISSION] Can you print another copy of the receipt?",
+        "text": "[任务]你能再打印一份收据吗？",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_RECEIPT",
         "condition": {
           "and": [
-            { "not": { "u_has_item": "cf_rep_trade_receipt" } },
-            { "u_has_mission": "MISSION_CF_REP_2" },
-            { "npc_has_effect": "cf_mission_receipt" }
+            {
+              "not": {
+                "u_has_item": "cf_rep_trade_receipt"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_2"
+            },
+            {
+              "npc_has_effect": "cf_mission_receipt"
+            }
           ]
         }
       },
       {
-        "text": "[MISSION] Sofia asked me to recruit traders or other assistance.  Do you know of anyone looking for work?",
+        "text": "[任务]索菲亚让我招募商人或其他援助。你知道有人在找工作吗？",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_REP_MISSION_4",
         "condition": {
-          "and": [ { "not": { "compare_string": [ "yes", { "u_val": "sofia_allies_secured" } ] } }, { "u_has_mission": "MISSION_CF_REP_4" } ]
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
         }
       }
     ]
@@ -80,194 +163,393 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_is_wearing": "badge_marshal",
-      "yes": "I don't know how much help I'll be with that, Marshal.  The Old Guard would likely know more, especially given how you've helped them out before.  However, I did hear something recently that might lead in the right direction, if you'd like to hear it",
-      "no": "I don't know how much help I'll be with that.  The doctor over there might be able to help, not sure.  However, I did hear something recently that might lead in the right direction, if you'd like to hear it."
+      "yes": "我不知道我能帮上多少忙，警长。永生守卫人可能知道得更多，尤其是考虑到你以前是如何帮助他们的。然而，我最近确实听到了一些可能指向正确方向的东西，如果你想听的话。",
+      "no": "我不知道我能帮多少忙。那边的医生也许能帮忙，不确定。不过，如果你愿意的话，我最近确实听到了一些可能朝着正确方向发展的建议。"
     },
     "responses": [
-      { "text": "Worth a shot, what'd you find out?", "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_2" },
-      { "text": "I'll ask around.", "topic": "TALK_DONE" }
+      {
+        "text": "值得一试，你发现了什么？",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_2"
+      },
+      {
+        "text": "我四处问问。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_2",
     "type": "talk_topic",
-    "dynamic_line": "Recently we lost contact with a caravan that had been coming back from exploring one of the labs.  They mentioned something about some paperwork that they were going to use to plan their next outing.  I'm willing to bet that will help the both of us.",
+    "dynamic_line": "最近，我们与一个从实验室探险回来的车队失去了联系。他们提到了一些将用来计划他们的下一次探险的笔记。我敢打赌这对我们俩都有帮助。",
     "responses": [
-      { "text": "What happened to them?", "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_3" },
-      { "text": "What do you need me to do?", "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_4" },
-      { "text": "Maybe later.", "topic": "TALK_DONE" }
+      {
+        "text": "他们怎么了？",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_3"
+      },
+      {
+        "text": "要我干什么?",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_4"
+      },
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_3",
     "type": "talk_topic",
-    "dynamic_line": "The last we heard from them, they had just fended off some raiders and broke camp at a small cave to treat their wounded and recover.  We haven't heard from them since.  I'd like you to do something for me, if you go after them.",
+    "dynamic_line": "我们最后一次听到他们的消息时，他们刚刚击退了一些袭击者，在一个小山洞里扎营，救治伤员并康复。从那以后我们就再也没有他们的消息了。如果你去追他们的话，我希望你能为我做点什么。",
     "responses": [
-      { "text": "And that would be?", "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_4" },
-      { "text": "I'm not sure I'm up for this.", "topic": "TALK_DONE" }
+      {
+        "text": "那将会是？",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_4"
+      },
+      {
+        "text": "我不确定我能胜任。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_4",
     "type": "talk_topic",
-    "dynamic_line": "Whoever you're getting this information for, I'd like for you to send it our way too.  We've been leery of sending teams anywhere near the labs because it's high risk and unknown reward.  If we had an idea what we'll find, we could make sure to steer clear of dangerous areas and investigate the ones that might be profitable to explore.",
+    "dynamic_line": "不管你为什么得到这个信息，我希望你能把它也发给我们。我们一直对在实验室附近派遣团队持保守态度，因为这是高风险的行为，也无法保证将获得足够的回报。如果我们知道我们将遭遇什么，我们可以确保避开危险区域，并调查那些可能便于探索的区域。",
     "responses": [
       {
-        "text": "I can make sure both you and Sofia's people get it.  Deal.",
+        "text": "我可以确保你和索菲亚的人都得到它。成交。",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_ACCEPT"
       },
       {
-        "text": "I need to bring it to one of Sofia's people first.",
+        "text": "我得先把它带给索菲亚。",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_5"
       },
-      { "text": "I'll think about it.", "topic": "TALK_DONE" }
+      {
+        "text": "我会考虑的。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_5",
     "type": "talk_topic",
-    "dynamic_line": "Didn't expect Sofia's group to have much interest in old science facilities.  Well, not my business.  So long as we get that information too, I hope that won't be a problem?",
+    "dynamic_line": "没想到索菲亚的团队对旧世界的科学设施这么感兴趣。这不关我的事。只要我们也能得到这些信息，我希望这不是问题吧？",
     "responses": [
-      { "text": "It should be fine.  Go ahead.", "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_ACCEPT" },
-      { "text": "I'll think about it.", "topic": "TALK_DONE" }
+      {
+        "text": "应该没事的。继续。",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_ACCEPT"
+      },
+      {
+        "text": "我会考虑的。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_NICHOLAS_ACCEPT",
     "type": "talk_topic",
-    "dynamic_line": "Here's directions to the last location where we heard from them.  Be ready for anything, I have no idea what happened after we lost contact.  You'll want to look for some kind of paperwork, something about shipments between locations.  That's about all I know.",
-    "speaker_effect": [ { "effect": { "add_mission": "MISSION_CF_PURIFIER_1_INTERLUDE_2" } } ],
+    "dynamic_line": "这是我们最后一次听到他们消息的地方。做好一切准备，我不知道我们失去联系后发生了什么。你会想找一些关于不同地点之间的运输文件。我就知道这么多。",
+    "speaker_effect": [
+      {
+        "effect": {
+          "add_mission": "MISSION_CF_PURIFIER_1_INTERLUDE_2"
+        }
+      }
+    ],
     "responses": [
-      { "text": "Thanks!  Before I go…", "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk" },
-      { "text": "Thanks, I'll be back later!", "topic": "TALK_DONE" }
+      {
+        "text": "谢谢！在我走之前…",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk"
+      },
+      {
+        "text": "谢谢，我晚点回来！",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_GM_PRELUDE",
     "type": "talk_topic",
     "dynamic_line": {
-      "compare_string": [ "yes", { "u_val": "knowledge_flag_tacoma_started" } ],
-      "yes": "So you're investigating the recent rash of attacks we've had.  This is more scattered and a lot weirder than the last rash of bandits I heard your boys went after.  Most recent assault was on a caravan running supplies to the commune.  It was in the daytime so they had no trouble, got a good look.  Bunch of strange living shadows or something.  Might be worth checking with the people in the ranch, too.",
-      "no": "So you're investigating the recent rash of attacks we've had.  This is more scattered and a lot weirder than the last rash of bandits I heard your boys went after.  Most recent assault was on a scavenger party sent out to bring supplies back for us.  It was almost dawn, they lost a couple boys before losing the attacks once thesun was high enough.  Give them hell, if you can get to the bottom of this."
+      "u_has_var": "tacoma_started",
+      "type": "knowledge",
+      "context": "flag",
+      "value": "yes",
+      "yes": "所以你在调查我们最近发生的一连串袭击事件。这比上次我听说你们的人追杀的强盗更分散，更奇怪。最近的一次袭击是对一个为公社供应物资的商队。那是在白天，所以他们没有麻烦，看得很清楚。一堆奇怪的活生生的影子什么的。也许也值得和农场里的人商量一下。",
+      "no": "所以你在调查我们最近发生的一连串袭击事件。这比上次我听说你们的人追杀的强盗更分散，更奇怪。最近的一次袭击发生在一个为我们带回补给的清道夫队伍上。天快亮了，他们失去了几个男孩，然后在太阳足够高的时候失去了攻击。给他们下地狱吧，如果你能弄清真相的话。"
     }
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF",
     "type": "talk_topic",
-    "dynamic_line": "Not many holdouts large enough to call a settlement, but there is activity out there at least.  We have our own work on getting something set up.  There's also a small group that occasionally sends traders to visit us, they're holed up in some old rural church.  The church's deacon stops by here fairly often though, should be out in the hallway.  Talk to him and he might be able to give you directions.",
-    "responses": [ { "text": "Thank you.  I'll be back later.", "topic": "TALK_DONE" } ]
+    "dynamic_line": "没有多少人坚持到可以达成和解，但至少在那里有活动。我们有自己的工作来安排一些事情。还有一个小团体，偶尔会派商人来拜访我们，他们躲在一个古老的乡村教堂里。教堂的执事经常来这里，应该在走廊里。跟他谈谈，他也许能给你指路。",
+    "responses": [
+      {
+        "text": "非常感谢。我一会儿回来。",
+        "topic": "TALK_DONE"
+      }
+    ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION",
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_effect": "rural_church_aware",
-      "yes": "Interesting to see they hired you to help out.  Well then, hope they informed you of the details.  Payment's in advance, twenty of their scale coins.  Nowhere near as valuable these days, but it's not completely useless, and I trust what they bring to actually be twenty-four carat.",
-      "no": "Huh, usually Sofia's the one to deliver their invoice.  Alright, hopefully she told you how this works.  Payment's in advance, twenty of their scale coins.  Nowhere near as valuable these days, but it's not completely useless, and at least they can confirm it's not half brass or whatever."
+      "yes": "很高兴看到他们雇你帮忙。好吧，希望他们告诉你细节。提前付款，是他们的20个比例尺硬币。如今，它的价值远不及它的价值，但它并非完全没有用处，我相信它们带来的实际价值是24克拉。",
+      "no": "嗯，通常索菲亚是送发票的人。好吧，希望她告诉你这是怎么回事。提前付款，是他们的20个比例尺硬币。如今，它的价值远不及它的价值，但它并不是完全无用的，至少他们可以确认它不是半黄铜或其他东西。"
     },
     "responses": [
       {
-        "text": "Here you go!",
+        "text": "干得好！",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
-        "condition": { "u_has_items": { "item": "CF_golden_scale", "count": 20 } },
-        "effect": [ { "u_consume_item": "cf_rep_trade_arrangement" }, { "u_consume_item": "CF_golden_scale", "count": 20 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "CF_golden_scale",
+            "count": 20
+          }
+        },
+        "effect": [
+          {
+            "u_consume_item": "cf_rep_trade_arrangement"
+          },
+          {
+            "u_consume_item": "CF_golden_scale",
+            "count": 20
+          }
+        ]
       },
       {
-        "text": "How about 15 scales?",
-        "condition": { "u_has_items": { "item": "CF_golden_scale", "count": 15 } },
-        "trial": { "type": "PERSUADE", "difficulty": 10 },
+        "text": "15磅怎么样？",
+        "condition": {
+          "u_has_items": {
+            "item": "CF_golden_scale",
+            "count": 15
+          }
+        },
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 10
+        },
         "success": {
           "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
-          "effect": [ { "u_consume_item": "cf_rep_trade_arrangement" }, { "u_consume_item": "CF_golden_scale", "count": 15 } ]
+          "effect": [
+            {
+              "u_consume_item": "cf_rep_trade_arrangement"
+            },
+            {
+              "u_consume_item": "CF_golden_scale",
+              "count": 15
+            }
+          ]
         },
-        "failure": { "opinion": { "value": -1 }, "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_NODEAL" }
+        "failure": {
+          "opinion": {
+            "value": -1
+          },
+          "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_NODEAL"
+        }
       },
       {
-        "text": "What about other sources of gold and silver?",
+        "text": "其他金银来源呢？",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_SCRAP"
       },
-      { "text": "What about cash?", "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_CASH" },
       {
-        "text": "I don't have enough on hand on the moment.  I'll deal with this later.",
-        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk",
-        "condition": { "not": { "u_has_items": { "item": "CF_golden_scale", "count": 20 } } }
+        "text": "现金呢？",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_CASH"
       },
-      { "text": "I'll deal with this later, bye for now.", "topic": "TALK_DONE" }
+      {
+        "text": "我手头上没有足够的钱。我稍后再处理。",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk",
+        "condition": {
+          "not": {
+            "u_has_items": {
+              "item": "CF_golden_scale",
+              "count": 20
+            }
+          }
+        }
+      },
+      {
+        "text": "我稍后再处理，再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_SCRAP",
     "type": "talk_topic",
-    "dynamic_line": "Afraid I can't.  The main reason I'm willing to honor their deal is because those things they use are reliable.  25 grams of three-nines-fine gold, edge reeding, the works.  I doubt they have the means to make any more, but for now they're more useful for trade than any old melted jewelry.",
+    "dynamic_line": "恐怕不行。我愿意遵守他们的协议的主要原因是他们使用的东西是可靠的。25克三九精金，棱纹，作品。我怀疑他们是否有能力制造更多的珠宝，但就目前而言，它们在贸易上比任何旧的熔化的珠宝都有用。",
     "responses": [
       {
-        "text": "Okay, here are the coins.",
+        "text": "好的，这是硬币。",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
-        "condition": { "u_has_items": { "item": "CF_golden_scale", "count": 20 } },
-        "effect": [ { "u_consume_item": "cf_rep_trade_arrangement" }, { "u_consume_item": "CF_golden_scale", "count": 20 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "CF_golden_scale",
+            "count": 20
+          }
+        },
+        "effect": [
+          {
+            "u_consume_item": "cf_rep_trade_arrangement"
+          },
+          {
+            "u_consume_item": "CF_golden_scale",
+            "count": 20
+          }
+        ]
       },
       {
-        "text": "Could you accept 15 instead?",
-        "condition": { "u_has_items": { "item": "CF_golden_scale", "count": 15 } },
-        "trial": { "type": "PERSUADE", "difficulty": 10 },
+        "text": "你能接受15英镑吗？",
+        "condition": {
+          "u_has_items": {
+            "item": "CF_golden_scale",
+            "count": 15
+          }
+        },
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 10
+        },
         "success": {
           "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
-          "effect": [ { "u_consume_item": "cf_rep_trade_arrangement" }, { "u_consume_item": "CF_golden_scale", "count": 15 } ]
+          "effect": [
+            {
+              "u_consume_item": "cf_rep_trade_arrangement"
+            },
+            {
+              "u_consume_item": "CF_golden_scale",
+              "count": 15
+            }
+          ]
         },
-        "failure": { "opinion": { "value": -1 }, "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_NODEAL" }
+        "failure": {
+          "opinion": {
+            "value": -1
+          },
+          "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_NODEAL"
+        }
       },
-      { "text": "What about cash?", "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_CASH" },
-      { "text": "Nevermind.  I'll come back later.", "topic": "TALK_DONE" }
+      {
+        "text": "现金呢？",
+        "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_CASH"
+      },
+      {
+        "text": "没有关系。我晚点再来。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_CASH",
     "type": "talk_topic",
-    "dynamic_line": "If you have the cash, sure.  I've accepted that group's offers mostly since they've been reliable customers.  I've been honoring their deals pretty close to what they figure it at, so 175 Merch should cover it.",
+    "dynamic_line": "如果你有现金，当然。我接受了那家公司的报价，因为他们是可靠的客户。我一直在履行他们的交易，与他们的预期相当接近，所以175个商品交易所应该会包括在内。",
     "responses": [
       {
-        "text": "You have a deal.",
+        "text": "你说好了。",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
-        "condition": { "u_has_items": { "item": "FMCNote", "count": 175 } },
-        "effect": [ { "u_consume_item": "cf_rep_trade_arrangement" }, { "u_consume_item": "FMCNote", "count": 175 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "FMCNote",
+            "count": 175
+          }
+        },
+        "effect": [
+          {
+            "u_consume_item": "cf_rep_trade_arrangement"
+          },
+          {
+            "u_consume_item": "FMCNote",
+            "count": 175
+          }
+        ]
       },
       {
-        "text": "On second thought, I'll pay in scales.  Here you go.",
+        "text": "再想一想，我会按比例付款。干得好。",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
         "condition": {
           "and": [
-            { "u_has_items": { "item": "FMCNote", "count": 175 } },
-            { "u_has_items": { "item": "CF_golden_scale", "count": 20 } }
+            {
+              "u_has_items": {
+                "item": "FMCNote",
+                "count": 175
+              }
+            },
+            {
+              "u_has_items": {
+                "item": "CF_golden_scale",
+                "count": 20
+              }
+            }
           ]
         },
-        "effect": [ { "u_consume_item": "cf_rep_trade_arrangement" }, { "u_consume_item": "CF_golden_scale", "count": 20 } ]
+        "effect": [
+          {
+            "u_consume_item": "cf_rep_trade_arrangement"
+          },
+          {
+            "u_consume_item": "CF_golden_scale",
+            "count": 20
+          }
+        ]
       },
       {
-        "text": "I don't have enough cash, so I'll pay in gold.",
+        "text": "我没有足够的现金，所以我用黄金支付。",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
         "condition": {
           "and": [
-            { "not": { "u_has_items": { "item": "FMCNote", "count": 175 } } },
-            { "u_has_items": { "item": "CF_golden_scale", "count": 20 } }
+            {
+              "not": {
+                "u_has_items": {
+                  "item": "FMCNote",
+                  "count": 175
+                }
+              }
+            },
+            {
+              "u_has_items": {
+                "item": "CF_golden_scale",
+                "count": 20
+              }
+            }
           ]
         },
-        "effect": [ { "u_consume_item": "cf_rep_trade_arrangement" }, { "u_consume_item": "CF_golden_scale", "count": 20 } ]
+        "effect": [
+          {
+            "u_consume_item": "cf_rep_trade_arrangement"
+          },
+          {
+            "u_consume_item": "CF_golden_scale",
+            "count": 20
+          }
+        ]
       },
-      { "text": "Nevermind.  I'll be back later.", "topic": "TALK_DONE" }
+      {
+        "text": "没有关系。我一会儿回来。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
     "type": "talk_topic",
-    "dynamic_line": "Pleasure doing business with you.  I'll have my men set up the next caravan with the usual instructions and put together their inventory based on Sofia's recommendations.  Let me print up the receipt.",
+    "dynamic_line": "很高兴和你做生意。我会让我的人按照通常的指示安排下一个车队，并根据索菲亚的建议整理他们的库存。让我把收据打印出来。",
     "responses": [
       {
-        "text": "Thank you.  I'll bring this back to her.",
+        "text": "非常感谢。我会把这个还给她。",
         "topic": "TALK_DONE",
         "effect": [
-          { "npc_add_effect": "cf_mission_receipt", "duration": "PERMANENT" },
-          { "u_add_effect": "cf_mission_receipt", "duration": "PERMANENT" },
-          { "u_spawn_item": "cf_rep_trade_receipt" }
+          {
+            "npc_add_effect": "cf_mission_receipt",
+            "duration": "PERMANENT"
+          },
+          {
+            "u_add_effect": "cf_mission_receipt",
+            "duration": "PERMANENT"
+          },
+          {
+            "u_spawn_item": "cf_rep_trade_receipt"
+          }
         ]
       }
     ]
@@ -275,26 +557,39 @@
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_NODEAL",
     "type": "talk_topic",
-    "dynamic_line": "Sorry, 20 golden scales is as low as I can.  Gold's not as handy now that the world's ended. I'm already taking their offer just about at face value.",
+    "dynamic_line": "对不起，20个金鳞片已经够低了。世界末日，黄金不再那么方便了。我已经根据表面价值接受了他们的报价。",
     "responses": [
       {
-        "text": "Okay, here you go.",
+        "text": "好的，给你。",
         "topic": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_DEAL",
-        "condition": { "u_has_items": { "item": "CF_golden_scale", "count": 20 } },
-        "effect": { "u_consume_item": "CF_golden_scale", "count": 20 }
+        "condition": {
+          "u_has_items": {
+            "item": "CF_golden_scale",
+            "count": 20
+          }
+        },
+        "effect": {
+          "u_consume_item": "CF_golden_scale",
+          "count": 20
+        }
       },
-      { "text": "Nevermind, I'll be back later on.", "topic": "TALK_DONE" }
+      {
+        "text": "别客气，我一会儿回来。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_MISSION_RECEIPT",
     "type": "talk_topic",
-    "dynamic_line": "Alright.  Try not to lose this one.",
+    "dynamic_line": "好吧。尽量不要失去这个。",
     "responses": [
       {
-        "text": "Thank you, I'll go bring this to her.",
+        "text": "谢谢，我去拿这个给她。",
         "topic": "TALK_DONE",
-        "effect": { "u_spawn_item": "cf_rep_trade_receipt" }
+        "effect": {
+          "u_spawn_item": "cf_rep_trade_receipt"
+        }
       }
     ]
   },
@@ -302,10 +597,18 @@
     "id": "TALK_FREE_MERCHANTS_MERCHANT_Talk_CF_REP_MISSION_4",
     "type": "talk_topic",
     "dynamic_line": {
-      "compare_string": [ "yes", { "u_val": "knowledge_flag_tacoma_started" } ],
-      "yes": "Well, guess they're doing rather well for themselves if our arrangement isn't enough anymore.  The Old Guard representative might know a bit, anyone else dealing in trade here could too.  You can also try the ranch, with people heading there looking for work, they might be willing to try their fortunes some place with more security.  My caravan runners have told me plenty enough to suspect Ms. McKinnon's group can hold their own.",
-      "no": "Well, guess they're doing rather well for themselves if our arrangement isn't enough anymore.  The Old Guard representative might know a bit, anyone else dealing in trade here could too.  People aren't very eager to go out and risk getting killed, but they might be convinced if they saw that it was safe.  I've heard enough from my caravans to suggest that Ms. McKinnon's group can take care of themselves, at least."
+      "u_has_var": "tacoma_started",
+      "type": "knowledge",
+      "context": "flag",
+      "value": "yes",
+      "yes": "好吧，如果我们的安排还不够的话，我想他们会做得很好。旧世守护者代表可能知道一点，任何其他在这里做生意的人也知道。你也可以试试牧场，因为人们都到那里找工作，他们可能愿意在一个更安全的地方试试运气。我的车队司机告诉我很多事情，足以让我怀疑麦金农女士的团队能保住自己的队伍。",
+      "no": "好吧，如果我们的安排还不够的话，我想他们会做得很好。旧世守护者代表可能知道一点，任何其他在这里做生意的人也知道。人们并不急于出门冒着被杀的危险，但如果他们看到这里是安全的，他们可能会确信这是安全的。我从我的商队那里听到的已经足够多了，至少麦金农女士的团队可以自理。"
     },
-    "responses": [ { "text": "Thank you.  I'll see what I can do.", "topic": "TALK_DONE" } ]
+    "responses": [
+      {
+        "text": "非常感谢。我看看我能做些什么。",
+        "topic": "TALK_DONE"
+      }
+    ]
   }
 ]

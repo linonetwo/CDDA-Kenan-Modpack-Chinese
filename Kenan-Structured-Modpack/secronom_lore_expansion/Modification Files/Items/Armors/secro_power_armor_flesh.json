@@ -3,14 +3,21 @@
     "id": "secro_power_armor_flesh_starter",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel" },
-    "description": "It is currently not merged with anything. Activate to permanently merge with it.\n\nA complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
+    "name": {
+      "str": "脉管装甲"
+    },
+    "description": "目前它还未与任何东西合并。激活后将永久与之合并。\n\n这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
     "weight": "18400 g",
     "volume": "21 L",
     "price": "323000 USD",
     "price_postapoc": "3000 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "secro_flesh_reinforced" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "red",
@@ -18,22 +25,46 @@
     "use_action": [
       {
         "target": "secro_power_armor_flesh_starter_act",
-        "msg": "<color_light_green>The flesh vessel merges with your skin!",
+        "msg": "<color_light_green>脉管装甲与你的皮肤融合在一起了！",
         "type": "transform",
         "active": true,
         "need_worn": true,
-        "menu_text": "Merge with the flesh vessel"
+        "menu_text": "与脉管装甲融为一体"
       }
     ],
-    "qualities": [ [ "GLARE", 1 ] ],
-    "flags": [ "TRADER_KEEP", "WATERPROOF", "STURDY", "NO_UNLOAD", "OVERSIZE" ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "flags": [
+      "TRADER_KEEP",
+      "WATERPROOF",
+      "STURDY",
+      "NO_UNLOAD",
+      "OVERSIZE"
+    ],
     "material_thickness": 9,
     "environmental_protection": 6,
     "armor": [
       {
         "encumbrance": 50,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ]
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ]
       }
     ]
   },
@@ -42,14 +73,21 @@
     "copy-from": "secro_power_armor_flesh_starter",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel" },
-    "description": "It is currently not merged with anything. Activate to permanently merge with it.\n\nA complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
+    "name": {
+      "str": "脉管装甲"
+    },
+    "description": "目前它还未与任何东西合并。激活后将永久与之合并。\n\n这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
     "looks_like": "power_armor_light",
     "color": "red",
     "initial_charges": 1,
     "max_charges": 1,
     "turns_per_charge": 1,
-    "use_action": { "type": "cast_spell", "spell_id": "secro_power_armor_flesh_give_target", "no_fail": true, "level": 0 },
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "secro_power_armor_flesh_give_target",
+      "no_fail": true,
+      "level": 0
+    },
     "flags": [
       "TRADER_AVOID",
       "TRADER_KEEP",
@@ -68,7 +106,16 @@
         {
           "has": "WORN",
           "condition": "ACTIVE",
-          "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 50 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 50 } ]
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 50
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 50
+            }
+          ]
         }
       ]
     }
@@ -78,19 +125,31 @@
     "id": "secro_power_armor_flesh_npc",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
+    "name": {
+      "str": "脉管装甲"
+    },
+    "description": "这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
     "weight": "18400 g",
     "volume": "21 L",
     "price": "323000 USD",
     "price_postapoc": "3000 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "secro_flesh_reinforced" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "red",
     "warmth": 30,
-    "qualities": [ [ "GLARE", 1 ] ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
     "flags": [
       "TRADER_AVOID",
       "TRADER_KEEP",
@@ -111,7 +170,16 @@
         {
           "has": "WORN",
           "condition": "ACTIVE",
-          "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 50 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 50 } ]
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 50
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 50
+            }
+          ]
         }
       ]
     },
@@ -121,7 +189,20 @@
       {
         "encumbrance": 10,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ]
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ]
       }
     ]
   },
@@ -129,14 +210,21 @@
     "id": "secro_power_armor_flesh",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
+    "name": {
+      "str": "脉管装甲"
+    },
+    "description": "这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
     "weight": "18400 g",
     "volume": "21 L",
     "price": "323000 USD",
     "price_postapoc": "3000 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "secro_flesh_reinforced" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "red",
@@ -144,13 +232,18 @@
     "use_action": [
       {
         "target": "secro_power_armor_flesh_act",
-        "msg": "<color_light_green>You took control of the flesh vessel.",
+        "msg": "<color_light_green>你控制了脉管装甲。",
         "type": "transform",
         "active": true,
-        "menu_text": "Activate flesh vessel"
+        "menu_text": "激活脉管装甲"
       }
     ],
-    "qualities": [ [ "GLARE", 1 ] ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
     "flags": [
       "TRADER_AVOID",
       "TRADER_KEEP",
@@ -170,7 +263,16 @@
         {
           "has": "WORN",
           "condition": "ACTIVE",
-          "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 50 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 50 } ]
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 50
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 50
+            }
+          ]
         }
       ]
     },
@@ -180,7 +282,20 @@
       {
         "encumbrance": 50,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ]
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ]
       }
     ]
   },
@@ -189,16 +304,19 @@
     "copy-from": "secro_power_armor_flesh",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel (on)", "str_pl": "flesh vessels (on)" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
-    "power_draw": "400 W",
+    "name": {
+      "str": "flesh vessel （on）",
+      "str_pl": "flesh vessels （on）"
+    },
+    "description": "这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
+    "power_draw": "4 kW",
     "revert_to": "secro_power_armor_flesh",
     "use_action": [
       {
         "target": "secro_power_armor_flesh",
-        "msg": "<color_light_red>The flesh vessel felt heavier as it powers down",
+        "msg": "<color_light_red>当关闭了脉管装甲后，感觉它更重了。",
         "type": "transform",
-        "menu_text": "Deactivate flesh vessel"
+        "menu_text": "关闭脉管装甲"
       }
     ],
     "flags": [
@@ -220,7 +338,20 @@
       {
         "encumbrance": 10,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ]
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ]
       }
     ]
   },
@@ -229,16 +360,21 @@
     "copy-from": "secro_power_armor_flesh",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
-    "proportional": { "weight": 1.1, "volume": 1.1 },
+    "name": {
+      "str": "脉管装甲"
+    },
+    "description": "这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
+    "proportional": {
+      "weight": 1.1,
+      "volume": 1.1
+    },
     "use_action": [
       {
         "target": "secro_power_armor_flesh2_act",
-        "msg": "<color_light_green>You took control of the flesh vessel.",
+        "msg": "<color_light_green>你控制了脉管装甲。",
         "type": "transform",
         "active": true,
-        "menu_text": "Activate flesh vessel"
+        "menu_text": "激活脉管装甲"
       }
     ],
     "material_thickness": 10
@@ -248,16 +384,19 @@
     "copy-from": "secro_power_armor_flesh2",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel (on)", "str_pl": "flesh vessels (on)" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
-    "power_draw": "400 W",
+    "name": {
+      "str": "flesh vessel （on）",
+      "str_pl": "flesh vessels （on）"
+    },
+    "description": "这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
+    "power_draw": "4 kW",
     "revert_to": "secro_power_armor_flesh2",
     "use_action": [
       {
         "target": "secro_power_armor_flesh2",
-        "msg": "<color_light_red>The flesh vessel felt heavier as it powers down",
+        "msg": "<color_light_red>当关闭了脉管装甲后，感觉它更重了。",
         "type": "transform",
-        "menu_text": "Deactivate flesh vessel"
+        "menu_text": "关闭脉管装甲"
       }
     ],
     "flags": [
@@ -279,7 +418,20 @@
       {
         "encumbrance": 10,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ]
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ]
       }
     ]
   },
@@ -288,16 +440,21 @@
     "copy-from": "secro_power_armor_flesh2",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
-    "proportional": { "weight": 1.1, "volume": 1.1 },
+    "name": {
+      "str": "脉管装甲"
+    },
+    "description": "这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
+    "proportional": {
+      "weight": 1.1,
+      "volume": 1.1
+    },
     "use_action": [
       {
         "target": "secro_power_armor_flesh3_act",
-        "msg": "<color_light_green>You took control of the flesh vessel.",
+        "msg": "<color_light_green>你控制了脉管装甲。",
         "type": "transform",
         "active": true,
-        "menu_text": "Activate flesh vessel"
+        "menu_text": "激活脉管装甲"
       }
     ],
     "material_thickness": 11
@@ -307,16 +464,19 @@
     "copy-from": "secro_power_armor_flesh3",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel (on)", "str_pl": "flesh vessels (on)" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel\" takes advantage of the flesh's adaptive cell structure and its capability to respond from one's mind.",
-    "power_draw": "400 W",
+    "name": {
+      "str": "flesh vessel （on）",
+      "str_pl": "flesh vessels （on）"
+    },
+    "description": "这是一个利用最新技术成果打造的复杂战斗服。Secronom外骨骼型号“脉管”利用了细胞结构适应肉体，并且其从一个人的思维中做出反应。",
+    "power_draw": "4 kW",
     "revert_to": "secro_power_armor_flesh3",
     "use_action": [
       {
         "target": "secro_power_armor_flesh3",
-        "msg": "<color_light_red>The flesh vessel felt heavier as it powers down",
+        "msg": "<color_light_red>当关闭了脉管装甲后，感觉它更重了。",
         "type": "transform",
-        "menu_text": "Deactivate flesh vessel"
+        "menu_text": "关闭脉管装甲"
       }
     ],
     "flags": [
@@ -338,7 +498,20 @@
       {
         "encumbrance": 10,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ]
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ]
       }
     ]
   }

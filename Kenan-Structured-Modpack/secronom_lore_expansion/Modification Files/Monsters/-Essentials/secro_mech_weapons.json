@@ -1,133 +1,285 @@
 [
   {
     "id": "secro_fleshmech_gun_spikes",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
-    "name": { "str": "SPEMF bone launcher" },
-    "description": "This is a rather vague integral weapon system for the Secronom Project's Experimental Mech \"Flesh\". Possesses wide variety of bio-organic guns to shoot different projectiles which consumes flesh as ammunition. Mech's hand have currently turned into a bone launcher, which volleys bone spikes at a high rate.",
+    "name": {
+      "str": "SPEMF骨骼发射器"
+    },
+    "description": "这是一个相当模糊的整体武器系统的Secronom项目的实验机械“肉”。拥有种类繁多的生物有机枪，可射击以肉为弹药的各种射弹。机甲的手现在变成了一个骨发射器，可以高速截击骨钉。",
     "weight": "43220 g",
     "volume": "15 L",
-    "melee_damage": { "bash": 8 },
-    "material": [ "superalloy", "secro_flesh_reinforced" ],
+    "to_hit": -4,
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "superalloy",
+      "secro_flesh_reinforced"
+    ],
     "symbol": "(",
     "color": "light_blue",
     "skill": "secro_flesh_combat",
     "range": 18,
-    "ranged_damage": { "damage_type": "stab", "amount": 8 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 8
+    },
     "dispersion": 100,
     "durability": 8,
     "loudness": 2,
-    "ammo": [ "secro_flesh" ],
+    "ammo": [
+      "secro_flesh"
+    ],
     "clip_size": 10,
     "energy_drain": "6 kJ",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh": 10 } } ],
-    "valid_mod_locations": [ [ "SPEMF accessories", 1 ], [ "SPEMF gun morphs", 2 ] ],
-    "default_mods": [ "secro_fleshmech_gun_acid", "secro_fleshmech_gun_acid_large", "secro_fleshmech_gun_spikes_large" ],
-    "modes": [ [ "DEFAULT", "semi-auto", 2 ], [ "AUTO", "high auto", 5 ] ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh": 10
+        }
+      }
+    ],
+    "valid_mod_locations": [
+      [
+        "SPEMF accessories",
+        1
+      ],
+      [
+        "SPEMF gun morphs",
+        2
+      ]
+    ],
+    "default_mods": [
+      "secro_fleshmech_gun_acid",
+      "secro_fleshmech_gun_acid_large",
+      "secro_fleshmech_gun_spikes_large"
+    ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        2
+      ],
+      [
+        "AUTO",
+        "high auto",
+        5
+      ]
+    ],
     "relic_data": {
       "passive_effects": [
         {
           "has": "WIELD",
           "condition": "ALWAYS",
           "values": [
-            { "value": "ARMOR_BASH", "add": -33 },
-            { "value": "ARMOR_CUT", "add": -22 },
-            { "value": "ARMOR_STAB", "add": -24 },
-            { "value": "ARMOR_BULLET", "add": -24 },
-            { "value": "ARMOR_ACID", "add": -8 }
+            {
+              "value": "ARMOR_BASH",
+              "add": -33
+            },
+            {
+              "value": "ARMOR_CUT",
+              "add": -22
+            },
+            {
+              "value": "ARMOR_STAB",
+              "add": -24
+            },
+            {
+              "value": "ARMOR_BULLET",
+              "add": -24
+            },
+            {
+              "value": "ARMOR_ACID",
+              "add": -8
+            }
           ],
-          "ench_effects": [ { "effect": "controlled", "intensity": 1 } ]
+          "ench_effects": [
+            {
+              "effect": "controlled",
+              "intensity": 1
+            }
+          ]
         }
       ]
     },
-    "flags": [ "NO_UNLOAD", "NEVER_JAMS", "NO_UNWIELD", "NO_SALVAGE", "NO_REPAIR", "UNBREAKABLE_MELEE", "NON_FOULING", "USE_UPS" ]
+    "flags": [
+      "NO_UNLOAD",
+      "NEVER_JAMS",
+      "NO_UNWIELD",
+      "NO_SALVAGE",
+      "NO_REPAIR",
+      "UNBREAKABLE_MELEE",
+      "NON_FOULING",
+      "USE_UPS"
+    ]
   },
   {
     "id": "secro_fleshmech_gun_spikes_large",
     "type": "GUNMOD",
-    "name": { "str": "SPEMF bone cannon" },
-    "description": "Morphs the mech's hands into bone cannons which launches and sprays bone spikes. Consumes chunks of flesh.",
+    "name": {
+      "str": "骨炮"
+    },
+    "description": "将机械手臂变形成骨炮，发射并喷射骨钉。它消耗血肉块。",
     "weight": "1 g",
     "volume": "0 ml",
-    "mod_targets": [ "rifle" ],
+    "mod_targets": [
+      "rifle"
+    ],
     "price": "850 USD",
     "price_postapoc": "0 cent",
     "install_time": "0 s",
-    "material": [ "secro_flesh_reinforced" ],
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "(",
     "color": "light_red",
     "location": "SPEMF gun morphs",
     "gun_data": {
       "skill": "secro_flesh_combat",
       "range": 7,
-      "ranged_damage": { "damage_type": "stab", "amount": 40 },
+      "ranged_damage": {
+        "damage_type": "stab",
+        "amount": 40
+      },
       "dispersion": 225,
       "durability": 10,
       "energy_drain": "40 kJ",
-      "ammo_effects": [ "SHOT" ],
-      "ammo": [ "secro_flesh_large" ],
+      "ammo_effects": [
+        "SHOT"
+      ],
+      "ammo": [
+        "secro_flesh_large"
+      ],
       "clip_size": 2
     },
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh_large": 2 } } ],
-    "flags": [ "IRREMOVABLE", "USE_UPS" ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh_large": 2
+        }
+      }
+    ],
+    "flags": [
+      "IRREMOVABLE",
+      "USE_UPS"
+    ]
   },
   {
     "id": "secro_fleshmech_gun_acid_large",
     "type": "GUNMOD",
-    "name": { "str": "SPEMF acid launcher" },
-    "description": "Morphs the mech's hands into heavy acid launchers, allowing one to spray large amounts of blood acid. Consumes chunks of flesh.",
+    "name": {
+      "str": "SPEMF酸发射器"
+    },
+    "description": "将机械手变形成重酸发射器，可以喷射大量血酸。它消耗血肉块。",
     "weight": "1 g",
     "volume": "0 ml",
-    "mod_targets": [ "rifle" ],
+    "mod_targets": [
+      "rifle"
+    ],
     "price": "850 USD",
     "price_postapoc": "0 cent",
     "install_time": "0 s",
-    "material": [ "secro_flesh_reinforced" ],
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "(",
     "color": "light_red",
     "location": "SPEMF gun morphs",
     "gun_data": {
       "skill": "secro_flesh_combat",
       "range": 5,
-      "ranged_damage": { "damage_type": "acid", "amount": 22 },
+      "ranged_damage": {
+        "damage_type": "acid",
+        "amount": 22
+      },
       "dispersion": 500,
       "durability": 10,
       "energy_drain": "130 kJ",
-      "ammo_effects": [ "SECRO_BLOODACID_BIG" ],
-      "ammo": [ "secro_flesh_large" ],
+      "ammo_effects": [
+        "SECRO_BLOODACID_BIG"
+      ],
+      "ammo": [
+        "secro_flesh_large"
+      ],
       "clip_size": 2
     },
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh_large": 2 } } ],
-    "flags": [ "IRREMOVABLE", "USE_UPS" ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh_large": 2
+        }
+      }
+    ],
+    "flags": [
+      "IRREMOVABLE",
+      "USE_UPS"
+    ]
   },
   {
     "id": "secro_fleshmech_gun_acid",
     "type": "GUNMOD",
-    "name": { "str": "SPEMF acid spitter" },
-    "description": "A large, elongated limb-like proboscis that sprouts from the back of the mech when activated. Bursts globs of blood acid.",
+    "name": {
+      "str": "SPEMF酸吐器"
+    },
+    "description": "一种大的、细长的四肢状的长鼻，当机械装置被激活时从它的后部长出。爆发出血酸球。",
     "weight": "1 g",
     "volume": "0 ml",
-    "mod_targets": [ "rifle" ],
+    "mod_targets": [
+      "rifle"
+    ],
     "price": "850 USD",
     "price_postapoc": "0 cent",
     "install_time": "0 s",
-    "material": [ "secro_flesh_reinforced" ],
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "(",
     "color": "light_red",
     "location": "SPEMF accessories",
     "gun_data": {
       "skill": "secro_flesh_combat",
       "range": 15,
-      "ranged_damage": { "damage_type": "acid", "amount": 6 },
+      "ranged_damage": {
+        "damage_type": "acid",
+        "amount": 6
+      },
       "dispersion": 100,
       "durability": 10,
       "energy_drain": "32 kJ",
-      "modes": [ [ "DEFAULT", "semi-auto", 3 ] ],
-      "ammo_effects": [ "SECRO_BLOODACID_SMOL" ],
-      "ammo": [ "secro_flesh" ],
+      "modes": [
+        [
+          "DEFAULT",
+          "semi-auto",
+          3
+        ]
+      ],
+      "ammo_effects": [
+        "SECRO_BLOODACID_SMOL"
+      ],
+      "ammo": [
+        "secro_flesh"
+      ],
       "clip_size": 6
     },
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh": 6 } } ],
-    "flags": [ "IRREMOVABLE", "USE_UPS" ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh": 6
+        }
+      }
+    ],
+    "flags": [
+      "IRREMOVABLE",
+      "USE_UPS"
+    ]
   }
 ]

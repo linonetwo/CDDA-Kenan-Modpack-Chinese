@@ -2,13 +2,17 @@
   {
     "type": "terrain",
     "id": "t_secro_flat_roof_flesh",
-    "name": "fleshed flat roof",
-    "description": "A flat, rooftop, covered in gorey flesh.",
+    "name": "血肉平面屋顶",
+    "description": "一个平坦的屋顶，被厚厚的血肉覆盖着。",
     "symbol": ".",
     "color": "red",
     "//": "Flesh version of terrains has +3 move cost.",
     "move_cost": 5,
-    "flags": [ "TRANSPARENT", "FLAT", "S_FLESH" ],
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH"
+    ],
     "bash": {
       "//": "Flesh terrains' str_min and _max has +5 bash resistance.",
       "str_min": 8,
@@ -22,31 +26,49 @@
   {
     "type": "terrain",
     "id": "t_secro_wall_flesh",
-    "name": "fleshed wall",
-    "description": "A typical wall, now covered in membranous veins, flesh and swollen warts of some sort.",
+    "name": "血肉墙",
+    "description": "一面典型的墙壁，现在覆盖着膜状血管、血肉和某种肿胀的疣。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE", "NOITEM", "SUPPORTS_ROOF", "WALL", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_wall" }
+    "flags": [
+      "FLAMMABLE",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_wall"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_window_flesh",
-    "name": "fleshed window",
-    "description": "Webs of vein blocks the entirety of the glass, making it useless to see through unless you break it.",
+    "name": "血肉窗户",
+    "description": "血管构成的网阻塞了整个玻璃使其无法透光，除非你打破它。",
     "symbol": "\"",
     "color": "light_red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "FLAMMABLE", "NOITEM", "REDUCE_SCENT", "BARRICADABLE_WINDOW", "BLOCK_WIND", "S_FLESH" ],
+    "flags": [
+      "FLAMMABLE",
+      "NOITEM",
+      "REDUCE_SCENT",
+      "BARRICADABLE_WINDOW",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
     "bash": {
       "str_min": 8,
       "str_max": 16,
@@ -55,14 +77,22 @@
       "sound_vol": 16,
       "sound_fail_vol": 10,
       "ter_set": "t_secro_window_frame_flesh",
-      "items": [ { "item": "glass_shard", "count": [ 34, 50 ] } ]
+      "items": [
+        {
+          "item": "glass_shard",
+          "count": [
+            34,
+            50
+          ]
+        }
+      ]
     }
   },
   {
     "type": "terrain",
     "id": "t_secro_window_frame_flesh",
-    "name": "fleshed window frame",
-    "description": "A window frame, splattered with blood and ripped veins in its jagged shards of glass.",
+    "name": "血肉窗框",
+    "description": "一个窗框，溅满了鲜血，上面依然留有锯齿状的玻璃碎片",
     "symbol": "0",
     "color": "light_red",
     "move_cost": 11,
@@ -76,458 +106,816 @@
       "sound_vol": 12,
       "sound_fail_vol": 8,
       "ter_set": "t_window_empty",
-      "items": [ { "item": "glass_shard", "count": [ 6, 10 ] } ]
+      "items": [
+        {
+          "item": "glass_shard",
+          "count": [
+            6,
+            10
+          ]
+        }
+      ]
     },
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "SHARP", "FLAMMABLE", "NOITEM", "MOUNTABLE", "SMALL_PASSAGE", "S_FLESH" ]
+    "flags": [
+      "TRANSPARENT",
+      "SHARP",
+      "FLAMMABLE",
+      "NOITEM",
+      "MOUNTABLE",
+      "CONNECT_TO_WALL",
+      "SMALL_PASSAGE",
+      "S_FLESH"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_door_flesh",
-    "name": "fleshed wood door",
-    "description": "A standard door that is covered in thick, fleshy veins.",
+    "name": "血肉木门",
+    "description": "覆盖着厚厚的肉质血管的木门。",
     "symbol": "+",
     "color": "red",
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "FLAMMABLE_ASH", "DOOR", "NOITEM", "BARRICADABLE_DOOR", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splat!", "sound_fail": "splat!", "ter_set": "t_door_c" }
+    "flags": [
+      "FLAMMABLE_ASH",
+      "DOOR",
+      "NOITEM",
+      "BARRICADABLE_DOOR",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splat!",
+      "sound_fail": "splat!",
+      "ter_set": "t_door_c"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_door_locked_flesh",
-    "name": "fleshed wood door",
-    "description": "A standard door that is covered in thick, fleshy veins. You can barely see a deadbolt keyhole, though you can't do anything without removing all the gore sticking into it.",
+    "name": "血肉木门",
+    "description": "覆盖着厚厚的肉质血管的标准门。你甚至看不到这个门的锁孔，除非你把上面沾着的所有粘血清理干净。",
     "symbol": "+",
     "color": "red",
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
     "flags": [
       "FLAMMABLE_ASH",
       "NOITEM",
       "OPENCLOSE_INSIDE",
       "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
       "BARRICADABLE_DOOR",
       "BLOCK_WIND",
       "S_FLESH"
     ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_door_locked" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_door_locked"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_floor_flesh",
-    "name": "fleshed floor",
-    "description": "This floor has been infested by flesh strands, like roots digging deep in small gaps.",
+    "name": "血肉地板",
+    "description": "这地板上布满了肉缕，就像深挖土缝的根茎一般。",
     "symbol": ".",
     "color": "light_red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "ROAD", "NOCOLLIDE", "S_FLESH" ],
-    "bash": { "sound": "splash!", "ter_set": "t_floor", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_HARD",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "FLAT",
+      "ROAD",
+      "NOCOLLIDE",
+      "S_FLESH"
+    ],
+    "bash": {
+      "sound": "splash!",
+      "ter_set": "t_floor",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_rock_floor_flesh",
-    "name": "fleshed rock floor",
-    "description": "Sticky webs of flesh strand reaches down from the ceiling into the floor.",
+    "name": "血肉石地板",
+    "description": "黏糊糊的肉串缕从天花板一直延伸到地板。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "INDOORS", "COLLAPSES", "SUPPORTS_ROOF", "FLAT", "ROAD", "NOCOLLIDE", "S_FLESH" ],
-    "bash": { "ter_set": "t_rock_floor", "str_min": 8, "str_max": 16, "bash_below": true }
+    "flags": [
+      "TRANSPARENT",
+      "INDOORS",
+      "COLLAPSES",
+      "SUPPORTS_ROOF",
+      "FLAT",
+      "ROAD",
+      "NOCOLLIDE",
+      "S_FLESH"
+    ],
+    "bash": {
+      "ter_set": "t_rock_floor",
+      "str_min": 8,
+      "str_max": 16,
+      "bash_below": true
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_stairs_down_flesh",
-    "name": "fleshed stairs",
-    "description": "A flight of stairs leading down, except the fact that it is overrun by flesh.",
+    "name": "血肉楼梯",
+    "description": "一段向下的楼梯，被血肉彻底堵住了。",
     "symbol": ">",
     "color": "red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "GOES_DOWN", "INDOORS", "PLACE_ITEM", "S_FLESH" ]
+    "flags": [
+      "TRANSPARENT",
+      "GOES_DOWN",
+      "INDOORS",
+      "PLACE_ITEM",
+      "S_FLESH"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_stairs_up_flesh",
-    "name": "fleshed stairs",
-    "description": "A flight of stairs leading up, except the fact that it is overrun by flesh.",
+    "name": "血肉楼梯",
+    "description": "一段向上的楼梯，被血肉彻底堵住了。",
     "symbol": "<",
     "color": "red",
     "move_cost": 5,
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "GOES_UP", "INDOORS", "PLACE_ITEM", "S_FLESH" ]
+    "flags": [
+      "TRANSPARENT",
+      "GOES_UP",
+      "INDOORS",
+      "PLACE_ITEM",
+      "S_FLESH"
+    ]
   },
   {
     "//": "Since terrains are not capable to act as emitters, we use an invincible, but flammable furniture for the solution.",
     "type": "furniture",
     "id": "f_secro_fleshknot_emitter",
-    "name": "flesh wart",
-    "description": "A tiny wart, but for its size, it can spread a vast amount of noxious gas into the air. Destroying it is a challenge, as it grows back on the spot.",
+    "name": "血肉疣",
+    "description": "一个很小的疣，不过相对于它的小体积而言，它可以释放大量有害气体到空气中。摧毁它是一项艰巨的挑战，因为它会就地生长。",
     "symbol": ",",
     "color": "light_red",
     "move_cost_mod": 1,
     "required_str": -1,
-    "emissions": [ "emit_fleshknot_gas_terrains" ],
-    "flags": [ "TRANSPARENT", "FLAMMABLE", "NOCOLLIDE", "S_FLESH", "EMITTER" ]
+    "emissions": [
+      "emit_fleshknot_gas_terrains"
+    ],
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE",
+      "NOCOLLIDE",
+      "S_FLESH",
+      "EMITTER"
+    ]
   },
   {
     "//": "Starting here are the furnitures and terrains seen in flesh forest.",
     "type": "terrain",
     "id": "t_secro_dirt_flesh",
-    "name": "fleshed dirt",
-    "description": "It's dirt, but covered in bloody veins.",
+    "name": "血肉污垢",
+    "description": "这是一层覆盖了血脉的泥土",
     "symbol": ".",
     "color": "light_red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE", "TRANSPARENT", "FLAT", "S_FLESH" ],
-    "bash": { "sound": "splash", "ter_set": "t_dirt", "str_min": 8, "str_max": 16, "bash_below": true }
+    "flags": [
+      "FLAMMABLE",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH"
+    ],
+    "bash": {
+      "sound": "splash",
+      "ter_set": "t_dirt",
+      "str_min": 8,
+      "str_max": 16,
+      "bash_below": true
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_grass_flesh",
-    "name": "fleshed grass",
-    "description": "A cluster of tiny tentacles used to be the wild patch of living grass.",
+    "name": "血肉草丛",
+    "description": "曾经是野草，而现在则是一簇细小的触角。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE", "TRANSPARENT", "FLAT", "S_FLESH" ],
-    "bash": { "sound": "splash", "ter_set": "t_grass", "str_min": 8, "str_max": 16, "bash_below": true }
+    "flags": [
+      "FLAMMABLE",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH"
+    ],
+    "bash": {
+      "sound": "splash",
+      "ter_set": "t_grass",
+      "str_min": 8,
+      "str_max": 16,
+      "bash_below": true
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_grass_long_flesh",
-    "name": "fleshed long grass",
-    "description": "A cluster of long, writhing tendrils about shin high.",
+    "name": "血肉长草",
+    "description": "一簇长长的，胫骨高的触手，不断地扭动着。",
     "symbol": ",",
     "color": "red",
     "move_cost": 6,
-    "flags": [ "FLAMMABLE", "TRANSPARENT", "FLAT", "S_FLESH" ],
-    "bash": { "sound": "splash", "ter_set": "t_grass_long", "str_min": 8, "str_max": 16, "bash_below": true }
+    "flags": [
+      "FLAMMABLE",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH"
+    ],
+    "bash": {
+      "sound": "splash",
+      "ter_set": "t_grass_long",
+      "str_min": 8,
+      "str_max": 16,
+      "bash_below": true
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_grass_tall_flesh",
-    "name": "fleshed tall grass",
-    "description": "A cluster of tall, writhing tendrils about head high.",
+    "name": "血肉高草",
+    "description": "一簇有正常人高度的触手，不断地扭动着。",
     "symbol": "'",
     "color": "red",
     "move_cost": 8,
     "coverage": 50,
-    "flags": [ "FLAMMABLE", "TRANSPARENT", "FLAT", "S_FLESH" ],
-    "bash": { "sound": "splash", "ter_set": "t_grass_tall", "str_min": 8, "str_max": 16, "bash_below": true }
+    "flags": [
+      "FLAMMABLE",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH"
+    ],
+    "bash": {
+      "sound": "splash",
+      "ter_set": "t_grass_tall",
+      "str_min": 8,
+      "str_max": 16,
+      "bash_below": true
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_shrub_flesh",
-    "name": "fleshed shrub",
-    "description": "A small shrub, now a dense tendril cluster.",
+    "name": "血肉灌木",
+    "description": "以前是一种小灌木，现在则是一簇茂密的触手丛。",
     "symbol": "#",
     "color": "red",
     "move_cost": 8,
     "coverage": 40,
-    "flags": [ "TRANSPARENT", "CONTAINER", "FLAMMABLE_ASH", "THIN_OBSTACLE", "PLACE_ITEM", "SHRUB", "SHORT", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash.", "sound_fail": "splat.", "ter_set": "t_shrub" }
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "FLAMMABLE_ASH",
+      "THIN_OBSTACLE",
+      "PLACE_ITEM",
+      "SHRUB",
+      "SHORT",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash.",
+      "sound_fail": "splat.",
+      "ter_set": "t_shrub"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_tree_young_flesh",
-    "name": "fleshed young tree",
-    "description": "Devoured by the flesh, this young sapling has its twigs covered in membranous veins and blood-dripping gore as its leaves.",
+    "name": "血肉小树",
+    "description": "这颗小树已经被血肉侵蚀了。嫩枝上覆盖着膜状血管，叶子上滴着血。",
     "symbol": "1",
-    "color": [ "red", "light_red", "red", "red" ],
+    "color": [
+      "red",
+      "light_red",
+      "red",
+      "red"
+    ],
     "move_cost": 7,
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "NOITEM", "YOUNG", "REDUCE_SCENT", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_tree_young" }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "YOUNG",
+      "REDUCE_SCENT",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_tree_young"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_tree_flesh",
-    "name": "fleshed tree",
-    "description": "A fully grown tree, standing tall even though its already been overwhelmed by the flesh.",
+    "name": "血肉树",
+    "description": "一棵完全长成的树，尽管它已经被血肉覆盖了，却依然挺立着。",
     "symbol": "7",
-    "color": [ "red", "light_red", "red", "red" ],
+    "color": [
+      "red",
+      "light_red",
+      "red",
+      "red"
+    ],
     "move_cost": 0,
     "coverage": 80,
-    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "REDUCE_SCENT", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_tree" }
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "REDUCE_SCENT",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_tree"
+    }
   },
   {
     "type": "furniture",
     "id": "f_secro_flower_flesh",
-    "name": "fleshed flower",
-    "description": "This flower has fallen to the grasp of the crimson horrors.",
+    "name": "血肉花",
+    "description": "这朵花已经陷入了深红色的恐怖之中。",
     "symbol": "f",
     "color": "red",
     "move_cost_mod": 0,
     "required_str": -1,
-    "flags": [ "FLAMMABLE_ASH", "TRANSPARENT", "TINY", "FLAMMABLE_ASH", "NOCOLLIDE", "FLOWER", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash.", "sound_fail": "whish." }
+    "flags": [
+      "FLAMMABLE_ASH",
+      "TRANSPARENT",
+      "TINY",
+      "FLAMMABLE_ASH",
+      "NOCOLLIDE",
+      "FLOWER",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash.",
+      "sound_fail": "whish."
+    }
   },
   {
     "type": "furniture",
     "id": "f_secro_boulder_small_flesh",
-    "name": "fleshed small boulder",
-    "description": "A small rock that has succumbed to the flesh.",
+    "name": "血肉小圆石",
+    "description": "一块屈服于血肉的圆形石头。",
     "symbol": "o",
     "color": "dark_gray",
     "move_cost_mod": 3,
     "coverage": 30,
     "required_str": 10,
     "crafting_pseudo_item": "boulder_anvil",
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "S_FLESH", "UNSTABLE", "MOUNTABLE", "TINY" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat." }
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "S_FLESH",
+      "UNSTABLE",
+      "MOUNTABLE",
+      "TINY"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat."
+    }
   },
   {
     "type": "furniture",
     "id": "f_secro_boulder_medium_flesh",
-    "name": "fleshed medium boulder",
-    "description": "A rock that has succumbed to the flesh.",
+    "name": "血肉中圆石",
+    "description": "一块屈服于血肉的圆形石头。",
     "symbol": "0",
     "color": "dark_gray",
     "move_cost_mod": 6,
     "coverage": 45,
     "required_str": 16,
     "crafting_pseudo_item": "boulder_anvil",
-    "flags": [ "FLAMMABLE_HARD", "NOITEM", "TRANSPARENT", "S_FLESH", "UNSTABLE", "MOUNTABLE", "SHORT", "BASHABLE" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat." }
+    "flags": [
+      "FLAMMABLE_HARD",
+      "NOITEM",
+      "TRANSPARENT",
+      "S_FLESH",
+      "UNSTABLE",
+      "MOUNTABLE",
+      "SHORT",
+      "BASHABLE"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat."
+    }
   },
   {
     "type": "furniture",
     "id": "f_secro_boulder_large_flesh",
-    "name": "fleshed large boulder",
-    "description": "A large rock that has succumbed to the flesh.",
+    "name": "血肉大圆石",
+    "description": "一块屈服于血肉的大圆石。",
     "symbol": "O",
     "color": "dark_gray",
     "move_cost_mod": -1,
     "coverage": 65,
     "required_str": 32,
-    "flags": [ "FLAMMABLE_HARD", "NOITEM", "S_FLESH", "BASHABLE", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat." }
+    "flags": [
+      "FLAMMABLE_HARD",
+      "NOITEM",
+      "S_FLESH",
+      "BASHABLE",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat."
+    }
   },
   {
     "//": "Flesh forest's terrestrial body parts. Here we encounter LOTS of FF's abominations.",
     "type": "terrain",
     "id": "t_secro_flesh",
-    "name": "flesh",
-    "description": "Disgusting mounds of meat, slimy and organic as it seems to live. This pinkish flesh is rotten to the core, and setting it on fire may not be the cure.",
+    "name": "血肉",
+    "description": "由肉块，糊状物和有机物组成的恶心肉堆，看上仿佛是活的。这种粉红色的肉腐烂到核心了，纵火焚烧并不是一个解决掉它的好办法。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_wall",
-    "name": "flesh wall",
-    "description": "Disgusting wall of meat, slimy and organic as it seems to live. This compact lumps of flesh is sinister to the core, and setting it on fire may not be the cure.",
+    "name": "肉山",
+    "description": "由肉块，糊状物和有机物组成的恶心肉墙，看上仿佛是活的。这种粉红色的肉腐烂到核心了，纵火焚烧并不是一个解决掉它的好办法。",
     "symbol": "#",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
-    "bash": { "str_min": 100, "str_max": 300, "sound": "splash!", "sound_fail": "splat.", "ter_set": "t_secro_flesh" },
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE_HARD", "NOITEM", "SUPPORTS_ROOF", "WALL", "AUTO_WALL_SYMBOL", "S_FLESH", "BLOCK_WIND" ]
+    "bash": {
+      "str_min": 100,
+      "str_max": 300,
+      "sound": "splash!",
+      "sound_fail": "splat.",
+      "ter_set": "t_secro_flesh"
+    },
+    "flags": [
+      "FLAMMABLE_HARD",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "AUTO_WALL_SYMBOL",
+      "S_FLESH",
+      "BLOCK_WIND"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_wall_veins",
     "looks_like": "t_secro_flesh_wall",
-    "name": "vein wall",
-    "description": "A wall composed of vein-like tendrils, seemingly made on the fly.",
+    "name": "脉壁",
+    "description": "由叶脉状的触手组成的墙，仿佛匆忙编织而成。",
     "symbol": "#",
     "color": "red",
     "move_cost": 0,
     "coverage": 90,
-    "bash": { "str_min": 10, "str_max": 30, "sound": "splook!", "sound_fail": "splat.", "ter_set": "t_secro_flesh" },
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE_HARD", "NOITEM", "SUPPORTS_ROOF", "WALL", "AUTO_WALL_SYMBOL", "S_FLESH", "BLOCK_WIND" ]
+    "bash": {
+      "str_min": 10,
+      "str_max": 30,
+      "sound": "splook!",
+      "sound_fail": "splat.",
+      "ter_set": "t_secro_flesh"
+    },
+    "flags": [
+      "FLAMMABLE_HARD",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "AUTO_WALL_SYMBOL",
+      "S_FLESH",
+      "BLOCK_WIND"
+    ]
   },
   {
     "type": "furniture",
     "id": "f_secro_tree_flesh_atk",
-    "name": "fleshed tree",
-    "description": "A fully grown tree, standing tall even though its already been overwhelmed by the flesh. Within a closer look, its branches and stems seem to move independently.",
+    "name": "血肉树",
+    "description": "一棵完全长成的树，尽管它已经被血肉压垮了，却依然挺立着。仔细观察，它的枝干似乎是独立运动的。",
     "symbol": "7",
-    "color": [ "red", "light_red", "red", "red" ],
+    "color": [
+      "red",
+      "light_red",
+      "red",
+      "red"
+    ],
     "move_cost_mod": -1,
     "required_str": -1,
     "coverage": 95,
-    "emissions": [ "emit_flesh_tree_grab" ],
-    "flags": [ "FLAMMABLE_ASH", "NOITEM", "SUPPORTS_ROOF", "REDUCE_SCENT", "S_FLESH", "EMITTER" ],
-    "bash": { "str_min": 16, "str_max": 24, "sound": "splash!", "sound_fail": "splat!" }
+    "emissions": [
+      "emit_flesh_tree_grab"
+    ],
+    "flags": [
+      "FLAMMABLE_ASH",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "REDUCE_SCENT",
+      "S_FLESH",
+      "EMITTER"
+    ],
+    "bash": {
+      "str_min": 16,
+      "str_max": 24,
+      "sound": "splash!",
+      "sound_fail": "splat!"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_entrance_close",
-    "name": "flesh",
-    "description": "Disgusting mounds of meat, slimy and organic as it seems to live. This pinkish flesh is rotten to the core, and setting it on fire may not be the cure.",
+    "name": "血肉",
+    "description": "由肉块，糊状物和有机物组成的恶心肉堆，看上仿佛是活的。这种粉红色的肉腐烂到核心了，纵火焚烧并不是一个解决掉它的好办法。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "FF_ENTRANCE" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "FF_ENTRANCE"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_entrance_open",
-    "name": "veinhole",
-    "description": "A dead veinhole, now a harmless opening revealing a hollow hole. Sure it is gross, but there's no other way...",
+    "name": "脉孔",
+    "description": "一个死掉的脉孔，现在这个无害的孔露出了一个凹洞。虽然很恶心，但是也没办法…",
     "symbol": "O",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "GOES_DOWN" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "GOES_DOWN"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_entrance_up",
-    "name": "veinhole",
-    "description": "A dead veinhole's inner orifice that leads to the surface. Sure it is gross, but there's no other way...",
+    "name": "脉孔",
+    "description": "一个死掉的，从内向外直通表面的脉孔，虽然很恶心，但是也没办法…",
     "symbol": "O",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "GOES_UP" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "GOES_UP"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_cave_entrance_open",
     "looks_like": "t_secro_flesh_entrance_open",
-    "name": "veinhole",
-    "description": "An immature veinhole. It throbs calmly. Sure it is gross, but there's no other way...",
+    "name": "脉孔",
+    "description": "一个未成熟的脉孔，它平静的跳动着，虽然它很恶心，但是没有别的路了…",
     "symbol": "o",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "GOES_DOWN" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "GOES_DOWN"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_cave_entrance_up",
     "looks_like": "t_secro_flesh_entrance_up",
-    "name": "veinhole",
-    "description": "An immature veinhole's inner orifice that leads to the surface. Sure it is gross, but there's no other way...",
+    "name": "脉孔",
+    "description": "一个引向地表的未成熟的脉孔，虽然它很恶心，但是没有别的路了…",
     "symbol": "o",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "GOES_UP" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "GOES_UP"
+    ]
   },
   {
     "type": "furniture",
     "id": "f_secro_tendril_cluster",
-    "name": "tendril cluster",
-    "description": "A patch of large, writhing tentacles sprouting from both ground and ceiling. Within a closer look, these tentacles are trying to form into one. You may want to destroy it as soon as possible.",
+    "name": "触手簇",
+    "description": "从地面以及天花板上长出的一片巨大而扭动的触角。如果你仔细观察，会发现这些触须正试图融为一体。你最好赶紧毁了它。",
     "symbol": "&",
     "color": "light_red",
     "move_cost_mod": 1,
     "required_str": -1,
     "coverage": 5,
-    "emissions": [ "emit_flesh_tentclus" ],
-    "flags": [ "FLAMMABLE", "TRANSPARENT", "S_FLESH", "EMITTER" ],
-    "bash": { "str_min": 15, "str_max": 30, "sound": "splook!", "sound_fail": "splat!" }
+    "emissions": [
+      "emit_flesh_tentclus"
+    ],
+    "flags": [
+      "FLAMMABLE",
+      "TRANSPARENT",
+      "S_FLESH",
+      "EMITTER"
+    ],
+    "bash": {
+      "str_min": 15,
+      "str_max": 30,
+      "sound": "splook!",
+      "sound_fail": "splat!"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_inside_down",
-    "name": "mouth slit",
-    "description": "A mouth slit. With enough courage, you can slip through it and will lead you to the depths.",
+    "name": "口缝",
+    "description": "一个口形状的裂缝。 如果你有足够的勇气，可以穿过它，它会将你带入深渊。",
     "symbol": "O",
     "color": "light_red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "GOES_DOWN" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "GOES_DOWN"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_inside_up",
-    "name": "mouth slit",
-    "description": "A mouth slit. With enough courage, you can climb up by grabbing at its flabby, slimy flesh edges.",
+    "name": "口缝",
+    "description": "一个口形状的裂缝。 如果你有足够的勇气，可以抓住它松弛且黏糊的肉边向上攀爬。",
     "symbol": "O",
     "color": "light_red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "GOES_UP" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "GOES_UP"
+    ]
   },
   {
     "type": "furniture",
     "id": "f_secro_flesh_bones",
-    "name": "bony outgrowths",
-    "description": "A mound of flesh full of prickly sharp bones, emerging from underneath, so watch where you step!",
+    "name": "骨生长物",
+    "description": "一大坨堆满了带刺骨头的肉，从下面冒出来，所以走路的时候请小心！",
     "symbol": "^",
     "color": "white",
     "move_cost_mod": 1,
     "required_str": -1,
-    "emissions": [ "emit_flesh_bones" ],
-    "flags": [ "FLAMMABLE", "TRANSPARENT", "S_FLESH", "ROUGH", "EMITTER", "FF_BIOHAZARD" ],
-    "bash": { "str_min": 10, "str_max": 20, "sound": "splash!", "sound_fail": "splook!" }
+    "emissions": [
+      "emit_flesh_bones"
+    ],
+    "flags": [
+      "FLAMMABLE",
+      "TRANSPARENT",
+      "S_FLESH",
+      "ROUGH",
+      "EMITTER",
+      "FF_BIOHAZARD"
+    ],
+    "bash": {
+      "str_min": 10,
+      "str_max": 20,
+      "sound": "splash!",
+      "sound_fail": "splook!"
+    }
   },
   {
     "type": "furniture",
     "id": "f_secro_flesh_tent",
-    "name": "tendril outgrowths",
-    "description": "A patch of densely-crowded tendrils. These are short, but can grab firmly so watch where you step!",
+    "name": "触手丛",
+    "description": "一片密集的触手。虽然这些触手都很短，但可以把你的脚牢牢抓住，所以走路的时候请小心！",
     "symbol": "^",
     "color": "light_red",
     "move_cost_mod": 2,
     "required_str": -1,
-    "emissions": [ "emit_flesh_tendrils" ],
-    "flags": [ "FLAMMABLE", "TRANSPARENT", "S_FLESH", "EMITTER", "FF_BIOHAZARD" ],
-    "bash": { "str_min": 7, "str_max": 14, "sound": "splook!", "sound_fail": "splat!" }
+    "emissions": [
+      "emit_flesh_tendrils"
+    ],
+    "flags": [
+      "FLAMMABLE",
+      "TRANSPARENT",
+      "S_FLESH",
+      "EMITTER",
+      "FF_BIOHAZARD"
+    ],
+    "bash": {
+      "str_min": 7,
+      "str_max": 14,
+      "sound": "splook!",
+      "sound_fail": "splat!"
+    }
   },
   {
     "//": "Another type of floor augmented with traps by the flesh.",
     "looks_like": "t_secro_flesh",
     "type": "furniture",
     "id": "f_secro_flesh",
-    "name": "flesh",
-    "description": "A thick layer of meat that throbs at a faster rate, yet shares similarities to the normal flesh.",
+    "name": "血肉",
+    "description": "一堆相对较厚。 且搏动速度更快的血肉，和普通的血肉大体相似。",
     "symbol": ".",
     "color": "red",
     "move_cost_mod": 1,
     "required_str": -1,
-    "flags": [ "FLAMMABLE", "TRANSPARENT", "S_FLESH", "FF_BIOHAZARD" ]
+    "flags": [
+      "FLAMMABLE",
+      "TRANSPARENT",
+      "S_FLESH",
+      "FF_BIOHAZARD"
+    ]
   },
   {
     "looks_like": "t_secro_flesh_wall",
     "type": "furniture",
     "id": "f_secro_flesh_wall",
-    "name": "flesh wall",
-    "description": "Disgusting wall of meat, slimy and organic as it seems to live. This compact lumps of flesh is sinister to the core, and setting it on fire may not be the cure.",
+    "name": "肉山",
+    "description": "由肉块，糊状物和有机物组成的恶心肉墙，看上仿佛是活的。这种粉红色的肉腐烂到核心了，纵火焚烧并不是一个解决掉它的好办法。",
     "symbol": "#",
     "color": "red",
     "move_cost_mod": -1,
     "required_str": -1,
     "coverage": 100,
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE_HARD", "NOITEM", "SUPPORTS_ROOF", "WALL", "AUTO_WALL_SYMBOL", "S_FLESH", "BLOCK_WIND", "FF_BIOHAZARD" ],
-    "bash": { "str_min": 4, "str_max": 12, "sound": "splash!", "sound_fail": "splat!" }
+    "flags": [
+      "FLAMMABLE_HARD",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "AUTO_WALL_SYMBOL",
+      "S_FLESH",
+      "BLOCK_WIND",
+      "FF_BIOHAZARD"
+    ]
   },
   {
     "looks_like": "t_secro_flesh_wall",
     "type": "furniture",
     "id": "f_secro_flesh_wall_spawning",
-    "name": "flesh wall",
-    "description": "Disgusting wall of meat, slimy and organic as it seems to live. This compact lumps of flesh is sinister to the core, and setting it on fire may not be the cure.",
+    "name": "肉山",
+    "description": "由肉块，糊状物和有机物组成的恶心肉墙，看上仿佛是活的。这种粉红色的肉腐烂到核心了，纵火焚烧并不是一个解决掉它的好办法。",
     "symbol": "#",
     "color": "red",
     "move_cost_mod": -1,
     "required_str": -1,
     "coverage": 100,
-    "emissions": [ "emit_flesh_wall" ],
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
+    "emissions": [
+      "emit_flesh_wall"
+    ],
     "flags": [
       "FLAMMABLE_HARD",
       "NOITEM",
@@ -544,84 +932,142 @@
     "looks_like": "t_secro_flesh",
     "type": "terrain",
     "id": "t_secro_flesh_inside_up_close",
-    "name": "flesh",
-    "description": "Disgusting mounds of meat, slimy and organic as it seems to live. This pinkish flesh is rotten to the core, and setting it on fire may not be the cure.",
+    "name": "血肉",
+    "description": "由肉块，糊状物和有机物组成的恶心肉堆，看上仿佛是活的。这种粉红色的肉腐烂到核心了，纵火焚烧并不是一个解决掉它的好办法。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "FF_EXIT" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "FF_EXIT"
+    ]
   },
   {
     "looks_like": "t_secro_flesh",
     "type": "furniture",
     "id": "f_secro_biome",
-    "name": "flesh",
-    "description": "Disgusting mounds of meat, slimy and organic as it seems to live. This pinkish flesh is rotten to the core, and setting it on fire may not be the cure.",
+    "name": "血肉",
+    "description": "由肉块，糊状物和有机物组成的恶心肉堆，看上仿佛是活的。这种粉红色的肉腐烂到核心了，纵火焚烧并不是一个解决掉它的好办法。",
     "symbol": ".",
     "color": "red",
     "move_cost_mod": 1,
     "required_str": -1,
-    "emissions": [ "emit_flesh_biome" ],
-    "flags": [ "TRANSPARENT", "FLAMMABLE", "S_FLESH", "EMITTER" ]
+    "emissions": [
+      "emit_flesh_biome"
+    ],
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE",
+      "S_FLESH",
+      "EMITTER"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_flesh_wall_weak",
-    "name": "flesh wall",
-    "description": "Disgusting wall of meat, slimy and organic as it seems to live. This compact lumps of flesh is sinister to the core. This flesh is underdeveloped, and a simple bash would take it down.",
+    "name": "肉山",
+    "description": "恶心的肉墙，粘糊糊的，有机的，因为它似乎生活。这密集的肉块是邪恶的核心。这肉还没发育好，一个简单的猛击就能把它取下来。",
     "symbol": "#",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE_HARD", "NOITEM", "SUPPORTS_ROOF", "WALL", "AUTO_WALL_SYMBOL", "S_FLESH", "BLOCK_WIND", "FF_BIOHAZARD" ],
-    "bash": { "str_min": 4, "str_max": 12, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_secro_flesh" }
+    "flags": [
+      "FLAMMABLE_HARD",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "AUTO_WALL_SYMBOL",
+      "S_FLESH",
+      "BLOCK_WIND",
+      "FF_BIOHAZARD"
+    ],
+    "bash": {
+      "str_min": 10,
+      "str_max": 20,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_secro_flesh"
+    }
   },
   {
     "looks_like": "t_secro_flesh_inside_up_close",
     "type": "terrain",
     "id": "t_secro_flesh_exit_closed",
-    "name": "flesh",
-    "description": "Disgusting mounds of meat, slimy and organic as it seems to live. This pinkish flesh is rotten to the core, and setting it on fire may not be the cure.",
+    "name": "血肉",
+    "description": "由肉块，糊状物和有机物组成的恶心肉堆，看上仿佛是活的。这种粉红色的肉腐烂到核心了，纵火焚烧并不是一个解决掉它的好办法。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "FLAMMABLE_HARD", "TRANSPARENT", "FLAT", "S_FLESH", "FC_EXIT" ]
+    "flags": [
+      "FLAMMABLE_HARD",
+      "TRANSPARENT",
+      "FLAT",
+      "S_FLESH",
+      "FC_EXIT"
+    ]
   },
   {
     "//": "Destroy these to prevent them from spawning veinstalks.",
     "type": "furniture",
     "id": "f_secro_veinstalk",
-    "name": "veinbush",
-    "description": "A short, compact bush of living eyed tentacles bursting out of the ground. It stares ominously at the surroundings...",
+    "name": "触手灌从",
+    "description": "从地上伸出的一种短而紧凑的触角丛，这些触手上长了满了眼睛，不祥地凝视着周围的环境…",
     "symbol": "s",
     "color": "red",
     "move_cost_mod": 1,
     "required_str": -1,
     "coverage": 10,
-    "flags": [ "FLAMMABLE", "S_FLESH", "EMITTER" ],
-    "emissions": [ "emit_veinstalk_spawn" ],
-    "bash": { "str_min": 12, "str_max": 22, "sound": "splook!", "sound_fail": "splat!" }
+    "flags": [
+      "FLAMMABLE",
+      "S_FLESH",
+      "EMITTER"
+    ],
+    "emissions": [
+      "emit_veinstalk_spawn"
+    ],
+    "bash": {
+      "str_min": 12,
+      "str_max": 22,
+      "sound": "splook!",
+      "sound_fail": "splat!"
+    }
   },
   {
     "type": "furniture",
     "id": "f_secro_flesh_gas_emitter",
-    "name": "gangrenous tumor",
-    "description": "A large tumor sprouting from the flesh, reeking horrible stench that spreads through a wide area.",
+    "name": "坏疽瘤",
+    "description": "一个从血肉中长出来的大肿瘤，在很大范围内散发着恐怖臭气",
     "symbol": "i",
     "color": "pink",
     "move_cost_mod": 1,
     "required_str": -1,
-    "bash": { "str_min": 11, "str_max": 21, "sound": "splook!", "sound_fail": "splat!" },
-    "emissions": [ "emit_sflesh_gas_spread_low", "emit_sflesh_gas_spread_med", "emit_sflesh_gas_spread_high" ],
-    "flags": [ "TRANSPARENT", "FLAMMABLE", "NOCOLLIDE", "S_FLESH", "EMITTER" ]
+    "bash": {
+      "str_min": 11,
+      "str_max": 21,
+      "sound": "splook!",
+      "sound_fail": "splat!"
+    },
+    "emissions": [
+      "emit_sflesh_gas_spread_low",
+      "emit_sflesh_gas_spread_med",
+      "emit_sflesh_gas_spread_high"
+    ],
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE",
+      "NOCOLLIDE",
+      "S_FLESH",
+      "EMITTER"
+    ]
   },
   {
     "type": "furniture",
     "id": "f_secro_flesh_core",
-    "name": "flesh core",
-    "description": "A large slab of flesh that shines a faint, ominous crimson hue.",
+    "name": "血肉核心",
+    "description": "一大块血肉，散发出着微弱的而又不祥的深红色光芒。",
     "symbol": "o",
     "color": "red",
     "move_cost_mod": 1,
@@ -631,354 +1077,646 @@
       "str_max": 23,
       "sound": "splook!",
       "sound_fail": "splat!",
-      "items": [ { "item": "secro_flesh_core", "count": [ 1, 2 ] } ]
+      "items": [
+        {
+          "item": "secro_flesh_core",
+          "count": [
+            1,
+            2
+          ]
+        }
+      ]
     },
-    "flags": [ "NOITEM", "S_FLESH" ]
+    "flags": [
+      "NOITEM",
+      "S_FLESH"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_wall_w_flesh",
-    "name": "fleshed white wall",
-    "description": "Wall painted white, adorned by gore and veins.",
+    "name": "血肉白墙",
+    "description": "一块染上白色油漆的墙壁，布满了凝固的血液和血管。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE", "NOITEM", "SUPPORTS_ROOF", "WALL", "CHIP", "S_FLESH", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_wall_w" }
+    "flags": [
+      "FLAMMABLE",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "CHIP",
+      "S_FLESH",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_wall_w"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_wall_g_flesh",
-    "name": "fleshed green wall",
-    "description": "Wall painted green, adorned by gore and veins.",
+    "name": "血肉绿墙",
+    "description": "一块染上绿色油漆的墙壁，布满了凝固的血液和血管。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE", "NOITEM", "SUPPORTS_ROOF", "WALL", "CHIP", "S_FLESH", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_wall_g" }
+    "flags": [
+      "FLAMMABLE",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "CHIP",
+      "S_FLESH",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_wall_g"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_wall_r_flesh",
-    "name": "fleshed red wall",
-    "description": "Wall painted red, adorned by gore and veins.",
+    "name": "血肉红墙",
+    "description": "一块染上红色油漆的墙壁，布满了凝固的血液和血管。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE", "NOITEM", "SUPPORTS_ROOF", "WALL", "CHIP", "S_FLESH", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_wall_r" }
+    "flags": [
+      "FLAMMABLE",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "CHIP",
+      "S_FLESH",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_wall_r"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_wall_b_flesh",
-    "name": "fleshed blue wall",
-    "description": "Wall painted blue, adorned by gore and veins.",
+    "name": "血肉蓝墙",
+    "description": "一块染上蓝色油漆的墙壁，布满了凝固的血液和血管。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE", "NOITEM", "SUPPORTS_ROOF", "WALL", "CHIP", "S_FLESH", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_wall_b" }
+    "flags": [
+      "FLAMMABLE",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "CHIP",
+      "S_FLESH",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_wall_b"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_rock_wall_flesh",
-    "name": "fleshed stone wall",
-    "description": "An even sturdier stone wall covered by the flesh.",
+    "name": "血肉石墙",
+    "description": "被血肉覆盖，而更坚固的石墙。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "S_FLESH",
+      "WALL",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
     "connects_to": "WALL",
-    "flags": [ "NOITEM", "SUPPORTS_ROOF", "S_FLESH", "WALL", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_rock_wall" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_rock_wall"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_bars_flesh",
-    "name": "fleshed metal bars",
-    "description": "Heavy bars overrun by the flesh. Nearly impenetrable due to the thick veins covering it.",
+    "name": "血肉金属杆",
+    "description": "被血肉堆压得满满当当的粗铁条。由于其覆盖着厚厚的肉质血管，几乎无法穿透",
     "symbol": "\"",
     "color": "red",
     "move_cost": 0,
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "TRANSPARENT", "NOITEM", "PERMEABLE", "THIN_OBSTACLE", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_bars" }
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "PERMEABLE",
+      "CONNECT_TO_WALL",
+      "THIN_OBSTACLE",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_bars"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_wall_glass_flesh",
-    "name": "fleshed glass wall",
-    "description": "A wall of glass with flesh covering the entirety of its surface, blocking the vision through it.",
+    "name": "血肉玻璃墙",
+    "description": "一堵玻璃墙，不过它的整个表面覆盖着血肉，使其无法透光。",
     "symbol": "LINE_OXOX",
     "color": "light_red",
     "move_cost": 0,
     "coverage": 90,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "NOITEM", "WALL", "AUTO_WALL_SYMBOL", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_wall_glass" }
+    "flags": [
+      "NOITEM",
+      "WALL",
+      "AUTO_WALL_SYMBOL",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_wall_glass"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_door_glass_flesh",
-    "name": "fleshed glass door",
-    "description": "A glass door overrun by the flesh. You can't go through it unless...",
+    "name": "血肉玻璃门",
+    "description": "一扇布满了血肉的玻璃门。你不能通过它，除非…",
     "symbol": "+",
     "color": "light_red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "S_FLESH", "NOITEM", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_door_glass_c" }
+    "flags": [
+      "S_FLESH",
+      "NOITEM",
+      "CONNECT_TO_WALL",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_door_glass_c"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_concrete_flesh",
-    "name": "fleshed concrete",
-    "description": "A concrete with thick, membranous veins all over it.",
+    "name": "血肉混凝土",
+    "description": "满是厚厚的膜状血管的混凝土。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "TRANSPARENT", "FLAT", "ROAD", "MINEABLE", "NOCOLLIDE", "S_FLESH" ],
-    "bash": { "ter_set": "t_concrete", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "ROAD",
+      "MINEABLE",
+      "NOCOLLIDE",
+      "S_FLESH"
+    ],
+    "bash": {
+      "ter_set": "t_concrete",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_sidewalk_flesh",
-    "name": "fleshed sidewalk",
-    "description": "A pavement infected with flesh, with thick veins digging through the cracks.",
+    "name": "血肉人行横道",
+    "description": "布满血肉的人形横道，密密麻麻的血管从裂缝中钻出来。",
     "symbol": ".",
     "color": "light_red",
     "move_cost": 5,
-    "flags": [ "TRANSPARENT", "FLAT", "ROAD", "MINEABLE", "NOCOLLIDE", "S_FLESH" ],
-    "bash": { "ter_set": "t_sidewalk", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "ROAD",
+      "MINEABLE",
+      "NOCOLLIDE",
+      "S_FLESH"
+    ],
+    "bash": {
+      "ter_set": "t_sidewalk",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_pavement_flesh",
-    "name": "fleshed pavement",
+    "name": "血肉路面",
     "connects_to": "PAVEMENT",
-    "description": "A segment of asphalt, with thick veins running across the cracks.",
+    "description": "一段沥青路面，裂缝上有这一层厚厚的血管。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "TRANSPARENT", "FLAT", "ROAD", "S_FLESH", "NOCOLLIDE", "MINEABLE" ],
-    "bash": { "ter_set": "t_pavement", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "ROAD",
+      "S_FLESH",
+      "NOCOLLIDE",
+      "MINEABLE"
+    ],
+    "bash": {
+      "ter_set": "t_pavement",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_pavement_y_flesh",
-    "name": "fleshed yellow pavement",
+    "name": "血肉黄色路面",
     "connects_to": "PAVEMENT",
-    "description": "The lines of yellow marks are barely visible underneath the thick membranous veins.",
+    "description": "厚厚的膜状血管之下，几乎看不到任何黄色的痕迹。",
     "symbol": ".",
     "color": "light_red",
     "move_cost": 5,
-    "flags": [ "TRANSPARENT", "FLAT", "ROAD", "S_FLESH", "NOCOLLIDE", "MINEABLE" ],
-    "bash": { "ter_set": "t_pavement_y", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAT",
+      "ROAD",
+      "S_FLESH",
+      "NOCOLLIDE",
+      "MINEABLE"
+    ],
+    "bash": {
+      "ter_set": "t_pavement_y",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_thconc_floor_flesh",
-    "name": "fleshed concrete floor",
-    "description": "A concrete floor with flesh all over it.",
+    "name": "血肉混凝土地板",
+    "description": "被血肉覆盖的混凝土地板",
     "symbol": ".",
     "color": "light_red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "FLAT", "NOCOLLIDE", "ROAD", "S_FLESH" ],
-    "bash": { "sound": "splash!", "ter_set": "t_thconc_floor", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "FLAT",
+      "NOCOLLIDE",
+      "ROAD",
+      "S_FLESH"
+    ],
+    "bash": {
+      "sound": "splash!",
+      "ter_set": "t_thconc_floor",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "//": "These are used in flesh cities to keep players from climbing a building (rooftops are complicated)",
     "type": "terrain",
     "id": "t_secro_ladder_broken_flesh",
-    "name": "fleshed ladder",
-    "description": "A ladder with gore and veins blocking the way.",
+    "name": "血肉梯子",
+    "description": "一个梯子，不过被凝固的血与血管挡住了路。",
     "symbol": "<",
     "color": "red",
     "move_cost": 5,
-    "flags": [ "TRANSPARENT", "PLACE_ITEM" ]
+    "flags": [
+      "TRANSPARENT",
+      "PLACE_ITEM"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_stairs_broken_flesh",
-    "name": "fleshed stairs",
-    "description": "A flight of stairs heavily infested by the flesh. The path is blocked, and is impossible to go through.",
+    "name": "血肉楼梯",
+    "description": "一段被满满的血肉占据的楼梯。这条路被堵住了，不可能通过。",
     "symbol": "<",
     "color": "red",
     "move_cost": 5,
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "INDOORS", "PLACE_ITEM", "S_FLESH" ]
+    "flags": [
+      "TRANSPARENT",
+      "INDOORS",
+      "PLACE_ITEM",
+      "S_FLESH"
+    ]
   },
   {
     "type": "terrain",
     "id": "t_secro_gutter_downspout_flesh",
-    "name": "fleshed downspout",
-    "description": "A gutter with overgrown tendrils groping from top to bottom. Its slimy texture makes it slippery.",
+    "name": "血肉落水管",
+    "description": "一个自上而下长满了触手的排水管道，其黏性让它十分的滑。",
     "symbol": "|",
     "color": "light_red",
     "move_cost": 6,
-    "flags": [ "TRANSPARENT", "S_FLESH", "THIN_OBSTACLE", "UNSTABLE" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat.", "ter_set": "t_gutter_downspout" }
+    "flags": [
+      "TRANSPARENT",
+      "S_FLESH",
+      "THIN_OBSTACLE",
+      "UNSTABLE"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat.",
+      "ter_set": "t_gutter_downspout"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_railing_flesh",
-    "name": "railing",
-    "description": "A wooden railing infested by the flesh.",
+    "name": "栏杆",
+    "description": "一个被血肉侵蚀的木栏杆",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 6,
-    "connect_groups": "RAILING",
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "THIN_OBSTACLE",
+      "MOUNTABLE",
+      "SHORT",
+      "AUTO_WALL_SYMBOL",
+      "BURROWABLE",
+      "S_FLESH"
+    ],
     "connects_to": "RAILING",
-    "flags": [ "TRANSPARENT", "NOITEM", "THIN_OBSTACLE", "MOUNTABLE", "SHORT", "AUTO_WALL_SYMBOL", "BURROWABLE", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat.", "ter_set": "t_railing" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat.",
+      "ter_set": "t_railing"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_door_metal_flesh",
-    "name": "fleshed metal door",
-    "description": "A steel door that can withstand more punishment with the flesh covering it.",
+    "name": "血肉金属门",
+    "description": "一扇覆盖满了血肉，可以承受更多暴力行为的铁门。",
     "symbol": "+",
     "color": "red",
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "NOITEM", "S_FLESH", "MINEABLE", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_door_metal_c" }
+    "flags": [
+      "NOITEM",
+      "S_FLESH",
+      "CONNECT_TO_WALL",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_door_metal_c"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_door_metal_locked_flesh",
-    "name": "fleshed metal door",
-    "description": "A steel door that can withstand more punishment with the flesh covering it. It is also locked.",
+    "name": "血肉金属门",
+    "description": "一扇覆盖满了血肉，可以承受更多暴力行为的铁门。注意，它被锁住了。",
     "symbol": "+",
     "color": "red",
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "NOITEM", "REDUCE_SCENT", "MINEABLE", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_door_metal_locked" }
+    "flags": [
+      "NOITEM",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_door_metal_locked"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_carpet_red_flesh",
-    "name": "fleshed red carpet",
-    "description": "Soft red carpet overrun by gore and veins.",
+    "name": "血肉红地毯",
+    "description": "覆盖了血液和血管的红色地毯。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "NOCOLLIDE", "S_FLESH", "FLAT" ],
-    "bash": { "sound": "splash!", "ter_set": "t_carpet_red", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_HARD",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "NOCOLLIDE",
+      "S_FLESH",
+      "FLAT"
+    ],
+    "bash": {
+      "sound": "splash!",
+      "ter_set": "t_carpet_red",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_carpet_yellow_flesh",
-    "name": "fleshed yellow carpet",
-    "description": "Soft yellow carpet overrun by gore and veins.",
+    "name": "血肉黄地毯",
+    "description": "覆盖了血液和血管的黄色地毯。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "NOCOLLIDE", "S_FLESH", "FLAT" ],
-    "bash": { "sound": "splash!", "ter_set": "t_carpet_yellow", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_HARD",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "NOCOLLIDE",
+      "S_FLESH",
+      "FLAT"
+    ],
+    "bash": {
+      "sound": "splash!",
+      "ter_set": "t_carpet_yellow",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_carpet_green_flesh",
-    "name": "fleshed green carpet",
-    "description": "Soft green carpet overrun by gore and veins.",
+    "name": "血肉绿地毯",
+    "description": "覆盖了血液和血管的绿色地毯。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "NOCOLLIDE", "S_FLESH", "FLAT" ],
-    "bash": { "sound": "splash!", "ter_set": "t_carpet_green", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_HARD",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "NOCOLLIDE",
+      "S_FLESH",
+      "FLAT"
+    ],
+    "bash": {
+      "sound": "splash!",
+      "ter_set": "t_carpet_green",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_carpet_purple_flesh",
-    "name": "fleshed purple carpet",
-    "description": "Soft purple carpet overrun by gore and veins.",
+    "name": "血肉紫地毯",
+    "description": "覆盖了血液和血管的紫色地毯。",
     "symbol": ".",
     "color": "red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "FLAMMABLE_HARD", "SUPPORTS_ROOF", "COLLAPSES", "NOCOLLIDE", "INDOORS", "S_FLESH", "FLAT" ],
-    "bash": { "sound": "splash!", "ter_set": "t_carpet_purple", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_HARD",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "NOCOLLIDE",
+      "INDOORS",
+      "S_FLESH",
+      "FLAT"
+    ],
+    "bash": {
+      "sound": "splash!",
+      "ter_set": "t_carpet_purple",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_linoleum_white_flesh",
-    "name": "fleshed linoleum tile",
-    "description": "A tough, white, rubbery floor infested by flesh.",
+    "name": "血肉油毡地砖",
+    "description": "一块覆盖了肉的，坚固的白色橡胶质的地砖。",
     "symbol": ".",
     "color": "light_red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "NOCOLLIDE", "S_FLESH", "FLAT", "ROAD" ],
-    "bash": { "sound": "splash!", "ter_set": "t_linoleum_white", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "NOCOLLIDE",
+      "S_FLESH",
+      "FLAT",
+      "ROAD"
+    ],
+    "bash": {
+      "sound": "splash!",
+      "ter_set": "t_linoleum_white",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_linoleum_gray_flesh",
-    "name": "fleshed linoleum tile",
+    "name": "血肉油毡地砖",
     "roof": "t_secro_flat_roof_flesh",
-    "description": "A tough, gray, rubbery floor infested by flesh.",
+    "description": "一块覆盖了肉的，坚固的灰色橡胶质的地砖。",
     "symbol": ".",
     "color": "light_red",
     "move_cost": 5,
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "SUPPORTS_ROOF", "COLLAPSES", "INDOORS", "NOCOLLIDE", "S_FLESH", "FLAT", "ROAD" ],
-    "bash": { "sound": "splash!", "ter_set": "t_linoleum_gray", "str_min": 8, "str_max": 16 }
+    "flags": [
+      "TRANSPARENT",
+      "SUPPORTS_ROOF",
+      "COLLAPSES",
+      "INDOORS",
+      "NOCOLLIDE",
+      "S_FLESH",
+      "FLAT",
+      "ROAD"
+    ],
+    "bash": {
+      "sound": "splash!",
+      "ter_set": "t_linoleum_gray",
+      "str_min": 8,
+      "str_max": 16
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_fence_flesh",
-    "name": "fleshed picket fence",
-    "description": "A barrier made of wood, it's nothing complicated.  Mildly suggests where not to go.",
+    "name": "血肉尖桩围栏",
+    "description": "一扇木制的栅栏，并不复杂。和善地提醒你此路不通。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 6,
-    "connect_groups": "WOODFENCE",
-    "connects_to": "WOODFENCE",
-    "rotates_to": "INDOORFLOOR",
     "flags": [
       "TRANSPARENT",
       "DIGGABLE",
@@ -992,151 +1730,280 @@
       "BURROWABLE",
       "S_FLESH"
     ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash.", "sound_fail": "splat.", "ter_set": "t_fence" }
+    "connects_to": "WOODFENCE",
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash.",
+      "sound_fail": "splat.",
+      "ter_set": "t_fence"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_column_flesh",
-    "name": "fleshed column",
-    "description": "A concrete column, covered in flesh.",
+    "name": "血肉支柱",
+    "description": "一块混凝土支柱，覆满了血肉。",
     "symbol": "1",
     "color": "light_red",
     "move_cost": 0,
     "coverage": 80,
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "WALL", "MINEABLE", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_column" }
+    "flags": [
+      "WALL",
+      "MINEABLE",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_column"
+    }
   },
   {
     "type": "furniture",
     "id": "f_secro_console_broken_flesh",
     "looks_like": "f_console_broken",
-    "name": "fleshed broken console",
-    "description": "This is a standalone computer terminal that is beyond broken. Veins crawl through the monitor.",
+    "name": "血肉电脑（损坏）",
+    "description": "这是一个独立的的计算机终端，已经完全坏掉了。血管从显示器里面向外蠕动着。",
     "symbol": "6",
     "color": "light_red",
     "move_cost_mod": -1,
     "coverage": 50,
     "required_str": -1,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "INDOORS",
+      "SHORT",
+      "PERMEABLE"
+    ],
     "connect_groups": "COUNTER",
     "connects_to": "COUNTER",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "NOITEM", "INDOORS", "SHORT", "PERMEABLE" ],  
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "furn_set": "f_console_broken" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "furn_set": "f_console_broken"
+    }
   },
   {
     "type": "furniture",
     "id": "f_secro_console_flesh",
     "looks_like": "f_console",
-    "name": "fleshed computer console",
-    "description": "This is a standalone computer terminal. Veins crawl through the monitor, but seems to work in its current condition.",
+    "name": "血肉电脑",
+    "description": "这是一个独立的的计算机终端。 血管正在监视器中蠕动，但在当前情况下似乎还可以工作。",
     "symbol": "6",
     "color": "red",
     "move_cost_mod": -1,
     "coverage": 50,
     "required_str": -1,
     "light_emitted": 10,
+    "flags": [
+      "TRANSPARENT",
+      "CONSOLE",
+      "S_FLESH",
+      "NOITEM",
+      "INDOORS",
+      "SHORT",
+      "PERMEABLE"
+    ],
     "connect_groups": "COUNTER",
     "connects_to": "COUNTER",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "CONSOLE", "S_FLESH", "NOITEM", "INDOORS", "SHORT", "PERMEABLE" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "furn_set": "f_console" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "furn_set": "f_console"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_gates_mech_control_flesh",
-    "name": "fleshed mechanical winch",
-    "description": "This is a gate control winch. Thich tendrils cover the handle, if removed, it may be usable.",
+    "name": "血肉机械绞盘",
+    "description": "这是一个控制门的机械绞盘。柄的上面覆盖了触手。如果把这些触手拿掉大概就可以使用了。",
     "symbol": "6",
     "color": "red",
     "move_cost": 0,
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "NOITEM", "INDOORS", "PERMEABLE", "THIN_OBSTACLE", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_gates_mech_control" }
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "INDOORS",
+      "PERMEABLE",
+      "THIN_OBSTACLE",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_gates_mech_control"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_gates_control_concrete_flesh",
-    "name": "fleshed mechanical winch",
-    "description": "This is a gate control winch. Thich tendrils cover the handle, if removed, it may be usable.",
+    "name": "血肉机械绞盘",
+    "description": "这是一个控制门的机械绞盘。柄的上面覆盖了触手。如果把这些触手拿掉大概就可以使用了。",
     "symbol": "6",
     "color": "cyan_red",
     "move_cost": 0,
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "NOITEM", "INDOORS", "PERMEABLE", "THIN_OBSTACLE", "S_FLESH" ],
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "INDOORS",
+      "PERMEABLE",
+      "THIN_OBSTACLE",
+      "S_FLESH"
+    ],
     "examine_action": "controls_gate",
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_gates_control_concrete" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_gates_control_concrete"
+    }
+  },
+  {
+    "type": "terrain",
+    "id": "t_secro_atm_flesh",
+    "name": "血肉ATM机",
+    "description": "整个机器都覆盖上了血肉块，根本没法使用了...",
+    "symbol": "&",
+    "color": "red",
+    "move_cost": 0,
+    "coverage": 55,
+    "flags": [
+      "TRANSPARENT",
+      "NOITEM",
+      "REDUCE_SCENT",
+      "PERMEABLE"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_atm"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_window_stained_green_flesh",
-    "name": "flesh high stained glass window",
-    "description": "An emerald-stained window covered in flesh.",
+    "name": "血肉镶花玻璃窗",
+    "description": "一扇被肉覆盖满的的翡翠色窗户。",
     "symbol": "\"",
     "color": "red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "BARRICADABLE_WINDOW", "MINEABLE", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_window_stained_green" }
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "BARRICADABLE_WINDOW",
+      "CONNECT_TO_WALL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_window_stained_green"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_window_stained_red_flesh",
-    "name": "flesh high stained glass window",
-    "description": "A ruby-stained window covered in flesh.",
+    "name": "血肉镶花玻璃窗",
+    "description": "一扇满是肉的红色窗户。",
     "symbol": "\"",
     "color": "red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "BARRICADABLE_WINDOW", "MINEABLE", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_window_stained_red" }
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "BARRICADABLE_WINDOW",
+      "CONNECT_TO_WALL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_window_stained_red"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_window_stained_blue_flesh",
-    "name": "flesh high stained glass window",
-    "description": "An sapphire-stained window covered in flesh.",
+    "name": "血肉镶花玻璃窗",
+    "description": "一扇满是肉的蓝色窗户。",
     "symbol": "\"",
     "color": "red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "BARRICADABLE_WINDOW", "MINEABLE", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_window_stained_blue" }
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "BARRICADABLE_WINDOW",
+      "CONNECT_TO_WALL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_window_stained_blue"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_window_bars_flesh",
-    "name": "fleshed window frame with metal bars",
-    "description": "A windom frame with steel bars and a giant sheet of glass shrouded in bloody veins.",
+    "name": "血肉铁条窗框",
+    "description": "一个被血管覆盖的，用钢条以及大玻璃片构成的窗框。",
     "symbol": "#",
     "color": "light_red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "NOITEM", "THIN_OBSTACLE", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_window_bars" }
+    "flags": [
+      "NOITEM",
+      "CONNECT_TO_WALL",
+      "THIN_OBSTACLE",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_window_bars"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_chainfence_flesh",
-    "name": "fleshed chain link fence",
-    "description": "A chain link fence with its patterned holes blocked with thick flesh.",
+    "name": "血肉勾花围栏",
+    "description": "一种铁丝网围栏，其带有花纹的网孔已经被厚厚的血肉塞满了。",
     "symbol": "LINE_OXOX",
     "color": "light_red",
     "move_cost": 0,
-    "connect_groups": "CHAINFENCE",
-    "connects_to": "CHAINFENCE",
     "flags": [
       "TRANSPARENT",
       "NOITEM",
@@ -1148,201 +2015,353 @@
       "BURROWABLE",
       "S_FLESH"
     ],
+    "connects_to": "CHAINFENCE",
     "examine_action": "chainfence",
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_chainfence" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_chainfence"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_chaingate_l_flesh",
-    "name": "fleshed wire gate",
-    "description": "A chain gate with flesh covering most of the hole. It has a visible padlock mechanism, and opening it may require you to remove all the gore in it.",
+    "name": "血肉铁丝大门",
+    "description": "一个铁丝大门，网孔已经被血肉堵住，它有一个明显的锁孔，要打开它的话，可能需要你移除上面所有的血肉。",
     "symbol": "+",
     "color": "red",
     "move_cost": 0,
-    "connect_groups": "CHAINFENCE",
+    "flags": [
+      "TRANSPARENT",
+      "PERMEABLE",
+      "THIN_OBSTACLE",
+      "BURROWABLE",
+      "S_FLESH"
+    ],
     "connects_to": "CHAINFENCE",
-    "flags": [ "TRANSPARENT", "PERMEABLE", "THIN_OBSTACLE", "BURROWABLE", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_chaingate_l" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_chaingate_l"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_chaingate_c_flesh",
-    "name": "fleshed wire gate",
-    "description": "A chain gate with flesh covering most of the hole.",
+    "name": "血肉铁丝大门",
+    "description": "一个铁丝大门，网孔已经被血肉堵住。",
     "symbol": "+",
     "color": "red",
     "move_cost": 0,
-    "connect_groups": "CHAINFENCE",
+    "flags": [
+      "TRANSPARENT",
+      "PERMEABLE",
+      "THIN_OBSTACLE",
+      "BURROWABLE",
+      "S_FLESH"
+    ],
     "connects_to": "CHAINFENCE",
-    "flags": [ "TRANSPARENT", "PERMEABLE", "THIN_OBSTACLE", "BURROWABLE", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_chaingate_c" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_chaingate_c"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_wall_p_flesh",
-    "name": "fleshed pink wall",
-    "description": "Wall painted pink, adorned by gore and veins.",
+    "name": "血肉粉墙",
+    "description": "一块染上粉色油漆的墙壁，布满了凝固的血液和血管。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "FLAMMABLE", "NOITEM", "SUPPORTS_ROOF", "WALL", "CHIP", "S_FLESH", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_wall_p" }
+    "flags": [
+      "FLAMMABLE",
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "CHIP",
+      "S_FLESH",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_wall_p"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_reinforced_door_glass_flesh",
-    "name": "fleshed reinforced glass door",
-    "description": "A reinforced glass door infested by flesh. Opening it might be a minor problem...",
+    "name": "血肉强化玻璃门",
+    "description": "布满肉的强化玻璃门。如何打开它可能是个小问题…",
     "symbol": "+",
     "color": "red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "NOITEM", "MINEABLE", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_reinforced_door_glass_c" }
+    "flags": [
+      "NOITEM",
+      "CONNECT_TO_WALL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_reinforced_door_glass_c"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_brick_wall_flesh",
-    "name": "fleshed brick wall",
-    "description": "A sturdy brick wall with veins digging through the gaps, forming odd patterns.",
+    "name": "血肉砖墙",
+    "description": "一种坚固的砖墙，血管从其缝隙中挖掘着，形成了一种诡异的图案。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
     "connects_to": "WALL",
-    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_brick_wall" }
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_brick_wall"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_concrete_wall_flesh",
-    "name": "fleshed concrete wall",
-    "description": "An already unpleasant wall infected by the flesh.",
+    "name": "血肉混凝土墙",
+    "description": "一面已经被血肉侵蚀的令人不快的墙壁。",
     "symbol": "LINE_OXOX",
     "color": "red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "S_FLESH", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_concrete_wall" }
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "S_FLESH",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_concrete_wall"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_wall_metal_flesh",
-    "name": "fleshed metal wall",
-    "description": "A thick, blast-proof metal wall overrun by the flesh. Now you've got more time to take it down.",
+    "name": "血肉金属墙",
+    "description": "被肉覆盖住的一面厚厚的防爆金属墙。现在你有更多的时间把它取下来。",
     "symbol": "LINE_OXOX",
     "color": "light_red",
     "move_cost": 0,
     "coverage": 100,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "NOITEM", "SUPPORTS_ROOF", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "S_FLESH", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_wall_metal" }
+    "flags": [
+      "NOITEM",
+      "SUPPORTS_ROOF",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "S_FLESH",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_wall_metal"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_metal_floor_flesh",
     "looks_like": "t_secro_concrete_flesh",
-    "name": "fleshed metal floor",
-    "description": "A metal floor overrun by horrid crimson flesh.",
+    "name": "血肉金属地板",
+    "description": "被可怕的深红色肉覆盖的金属地板。",
     "symbol": ".",
     "color": "light_red",
     "move_cost": 5,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "INDOORFLOOR",
-    "flags": [ "TRANSPARENT", "INDOORS", "FLAT", "ROAD", "SFLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_metal_floor" }
+    "flags": [
+      "TRANSPARENT",
+      "INDOORS",
+      "FLAT",
+      "ROAD",
+      "SFLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_metal_floor"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_reinforced_glass_flesh",
-    "name": "fleshed reinforced glass",
-    "description": "Thick, durable pane of reinforced glass infested by flesh. Not only it is tough, it completely blocks the vision through it.",
+    "name": "血肉强化玻璃",
+    "description": "一块厚而耐用的强化玻璃板，布满了肉。它不仅十分坚固，而且还可以完全阻挡光线透过。",
     "symbol": "LINE_OXOX",
     "color": "light_red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "NOITEM", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "S_FLESH", "BLOCK_WIND" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_reinforced_glass" }
+    "flags": [
+      "NOITEM",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "S_FLESH",
+      "BLOCK_WIND"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_reinforced_glass"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_water_dispenser_flesh",
-    "name": "fleshed water dispenser",
-    "description": "A machine with several taps that dispenses clean water. Although, the flesh clogs the dispenser, rendering it useless.",
+    "name": "血肉饮水机",
+    "description": "一种装有数个水龙头的机器，用来提供干净的水。不过，血肉堵塞了里面的取水装置，使其无法工作。",
     "symbol": "W",
     "color": "light_red",
     "move_cost": 0,
     "coverage": 40,
-    "flags": [ "TRANSPARENT", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat.", "ter_set": "t_water_dispenser" }
+    "flags": [
+      "TRANSPARENT",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat.",
+      "ter_set": "t_water_dispenser"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_ballistic_glass_flesh",
-    "name": "fleshed ballistic glass",
+    "name": "血肉防弹玻璃",
     "looks_like": "t_reinforced_glass",
-    "description": "Overrun by the flesh, this stacked up laminated glass is much tougher than before.",
+    "description": "正因为上面盖满了肉，这种层叠的玻璃比以前坚固得多。",
     "symbol": "LINE_OXOX",
     "color": "light_red",
     "move_cost": 0,
     "roof": "t_secro_flat_roof_flesh",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "NOITEM", "WALL", "NO_SCENT", "AUTO_WALL_SYMBOL", "MINEABLE", "BLOCK_WIND", "S_FLESH" ],
-    "bash": { "str_min": 8, "str_max": 16, "sound": "splash!", "sound_fail": "splat!", "ter_set": "t_ballistic_glass" }
+    "flags": [
+      "NOITEM",
+      "WALL",
+      "NO_SCENT",
+      "AUTO_WALL_SYMBOL",
+      "MINEABLE",
+      "BLOCK_WIND",
+      "S_FLESH"
+    ],
+    "bash": {
+      "str_min": 8,
+      "str_max": 16,
+      "sound": "splash!",
+      "sound_fail": "splat!",
+      "ter_set": "t_ballistic_glass"
+    }
   },
   {
     "type": "terrain",
     "id": "t_secro_card_flesh",
-    "name": "card reader",
-    "description": "This is a smartcard reader. Engraved is a text saying \"Secronom Project\" underneath a biohazard symbol. You'll definitely need a special keycard of some sort to unlock the door.",
+    "name": "读卡器",
+    "description": "这是智能读卡器，在一个生物危险标志的下面刻着一行字，上面写着“Secronom项目”，你肯定需要某种特殊的钥匙卡才能开门。",
     "//": "Secronom. You'll find the keycard in the secronom lab.",
     "symbol": "6",
     "color": "pink",
     "move_cost": 0,
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "NOITEM" ],
+    "flags": [
+      "NOITEM",
+      "CONNECT_TO_WALL"
+    ],
     "bash": {
       "str_min": 18,
       "str_max": 180,
       "sound": "crunch!",
       "sound_fail": "whack!",
       "ter_set": "t_card_reader_broken",
-      "items": [ { "item": "plastic_chunk", "count": [ 0, 2 ] }, { "item": "scrap", "prob": 50 } ]
+      "items": [
+        {
+          "item": "plastic_chunk",
+          "count": [
+            0,
+            2
+          ]
+        },
+        {
+          "item": "scrap",
+          "prob": 50
+        }
+      ]
     }
   },
   {
     "type": "terrain",
     "id": "t_secro_door_metal_secrofrr",
-    "name": "biohazard metal door",
-    "description": "A galvanized steel door, forged to withstand punishment and impede anyone or anything. Typically used in conjunction with automated electronic locking mechanisms that require an external source to unlock. It has a biohazard symbol and a card reader embedded to the door labeled \"Level 1 clearance\".",
+    "name": "金属门 <生物危害>",
+    "description": "一个镀锌钢门，能够阻挡任何人或事物对其进行的破坏。它通常与需要外部电源解锁的自动电子锁定机结合使用。门的上面有一个生物危害标记，以及一个嵌入门上的读卡器，标有“1级许可”的字样。",
     "symbol": "+",
     "looks_like": "t_secro_door_metal_secrofv",
     "color": "cyan",
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_flat_roof",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "NOITEM", "REDUCE_SCENT", "INDOORS", "LOCKED", "MINEABLE", "BLOCK_WIND" ],
+    "flags": [
+      "NOITEM",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "LOCKED",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
     "bash": {
       "str_min": 120,
       "str_max": 350,
@@ -1350,17 +2369,32 @@
       "sound_fail": "clang!",
       "ter_set": "t_mdoor_frame",
       "items": [
-        { "item": "scrap", "count": [ 15, 30 ] },
-        { "item": "steel_plate", "prob": 80 },
-        { "item": "hinge", "count": [ 1, 4 ] }
+        {
+          "item": "scrap",
+          "count": [
+            15,
+            30
+          ]
+        },
+        {
+          "item": "steel_plate",
+          "prob": 80
+        },
+        {
+          "item": "hinge",
+          "count": [
+            1,
+            4
+          ]
+        }
       ]
     }
   },
   {
     "type": "terrain",
     "id": "t_secro_door_metal_secrofv",
-    "name": "biohazard metal door",
-    "description": "A galvanized steel door, forged to withstand punishment and impede anyone or anything. Typically used in conjunction with automated electronic locking mechanisms that require an external source to unlock. It has a biohazard symbol depicting something unearthly on the other side... as the flesh fibers crawl out of the edges. A card reader is embedded to the door, and it requires a special key card for it to open.",
+    "name": "金属门 <生物危害>",
+    "description": "一个镀锌钢门，能够阻挡任何人或事物对其进行的破坏。它通常与需要外部电源解锁的自动电子锁定机结合使用。门的上面有一个生物危害标记，这说明门的另一边有一些异常的东西，比如正从门的边缘向外缓慢爬出的血肉纤维... 门上嵌着一个读卡器，需要一个特殊的钥匙卡才能打开。",
     "//": "Actually locked, as in, LOCKED",
     "symbol": "+",
     "looks_like": "t_door_metal_c",
@@ -1368,10 +2402,14 @@
     "move_cost": 0,
     "coverage": 95,
     "roof": "t_flat_roof",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "rotates_to": "INDOORFLOOR",
-    "flags": [ "NOITEM", "REDUCE_SCENT", "INDOORS", "LOCKED", "MINEABLE", "BLOCK_WIND" ],
+    "flags": [
+      "NOITEM",
+      "REDUCE_SCENT",
+      "CONNECT_TO_WALL",
+      "LOCKED",
+      "MINEABLE",
+      "BLOCK_WIND"
+    ],
     "bash": {
       "str_min": 120,
       "str_max": 350,
@@ -1379,26 +2417,44 @@
       "sound_fail": "clang!",
       "ter_set": "t_mdoor_frame",
       "items": [
-        { "item": "scrap", "count": [ 15, 30 ] },
-        { "item": "steel_plate", "prob": 80 },
-        { "item": "hinge", "count": [ 1, 4 ] }
+        {
+          "item": "scrap",
+          "count": [
+            15,
+            30
+          ]
+        },
+        {
+          "item": "steel_plate",
+          "prob": 80
+        },
+        {
+          "item": "hinge",
+          "count": [
+            1,
+            4
+          ]
+        }
       ]
     }
   },
   {
     "type": "terrain",
     "id": "t_secro_experiment_vat",
-    "name": "experimental vat",
-    "description": "A large vat full of yellowish solution. Flesh seems to surround the glass tube, as if they are concealing something...",
+    "name": "实验罐",
+    "description": "一个装满了黄色溶液的大罐子。玻璃管周围似乎布满了肉，好像它们在隐藏着些什么…",
     "symbol": "0",
     "color": "light_red",
     "looks_like": "t_vat",
     "move_cost": 0,
     "coverage": 40,
     "roof": "t_flat_roof",
-    "connect_groups": "WALL",
-    "connects_to": "WALL",
-    "flags": [ "TRANSPARENT", "SEALED", "PLACE_ITEM", "WALL" ],
+    "flags": [
+      "TRANSPARENT",
+      "SEALED",
+      "PLACE_ITEM",
+      "WALL"
+    ],
     "bash": {
       "str_min": 12,
       "str_max": 90,
@@ -1407,7 +2463,22 @@
       "sound_vol": 16,
       "sound_fail_vol": 12,
       "ter_set": "t_floor",
-      "items": [ { "item": "glass_shard", "count": [ 42, 84 ] }, { "item": "scrap", "count": [ 0, 2 ] } ]
+      "items": [
+        {
+          "item": "glass_shard",
+          "count": [
+            42,
+            84
+          ]
+        },
+        {
+          "item": "scrap",
+          "count": [
+            0,
+            2
+          ]
+        }
+      ]
     }
   }
 ]

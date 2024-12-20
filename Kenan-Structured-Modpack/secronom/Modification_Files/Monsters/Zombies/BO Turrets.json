@@ -2,199 +2,391 @@
   {
     "id": "mon_sflesh_camp_turret",
     "type": "MONSTER",
-    "name": { "str": "flesh heap" },
-    "description": "A heap of conglomerated flesh, with several tube-like orifices scattered around its surface. Its body seeps with blood acid.",
+    "name": {
+      "str": "肉堆"
+    },
+    "description": "一个混合肉堆，表面散布着几个管状孔。其身体渗出血酸。",
     "default_faction": "secro_flesh3",
-    "species": [ "SFLESH", "ABERRATION" ],
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
     "volume": "300 L",
     "weight": "3125 kg",
     "hp": 300,
     "speed": 100,
-    "material": [ "flesh" ],
-    "symbol": "⧻",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⧻",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
     "color": "red",
     "aggression": 100,
     "morale": 100,
     "melee_skill": 4,
     "melee_dice": 3,
     "melee_dice_sides": 8,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "armor": { "bash": 5 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 5
+    },
     "harvest": "exempt",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_sflesh_camp_turret_target" },
+        "spell_data": {
+          "id": "mon_sflesh_camp_turret_target"
+        },
         "cooldown": 8,
-        "monster_message": "<color_light_red>%1$s pulsates…</color>"
+        "monster_message": "<color_light_red>%1$s脉动着...</color>"
       }
     ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "POISON", "NO_BREATHE", "IMMOBILE", "PACIFIST" ]
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "IMMOBILE",
+      "PACIFIST"
+    ]
   },
   {
     "id": "mon_sflesh_camp_turret_blade",
     "type": "MONSTER",
-    "name": { "str": "flesh heap (blade)" },
-    "description": "A heap of conglomerated flesh infused with blade core. Its body is filled with hundreds of bone outgrowths, and new ones keep on growing. And growing.",
+    "name": {
+      "str": "刀锋肉堆"
+    },
+    "description": "一个与刀锋丧尸核心相结合的混合肉堆。它的身体充满了成百上千的骨头，新的骨头还在不断生长着...",
     "default_faction": "secro_flesh3",
-    "species": [ "SFLESH", "ABERRATION" ],
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
     "volume": "300 L",
     "weight": "3125 kg",
     "hp": 300,
     "speed": 100,
-    "material": [ "flesh" ],
-    "symbol": "⧻",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⧻",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
     "color": "red_white",
     "aggression": 100,
     "morale": 100,
     "melee_skill": 4,
     "melee_dice": 3,
     "melee_dice_sides": 8,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "armor": { "bash": 12, "cut": 2, "bullet": 2 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 12,
+      "cut": 2,
+      "bullet": 2
+    },
     "harvest": "exempt",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_sflesh_camp_turret_blade_target" },
+        "spell_data": {
+          "id": "mon_sflesh_camp_turret_blade_target"
+        },
         "cooldown": 6,
-        "monster_message": "<color_light_red>%1$s undulates</color>"
+        "monster_message": "<color_light_red>%1$s上下起伏着...</color>"
       }
     ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "POISON", "NO_BREATHE", "IMMOBILE", "PACIFIST" ]
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "IMMOBILE",
+      "PACIFIST"
+    ]
   },
   {
     "id": "mon_sflesh_camp_turret_tendril",
     "type": "MONSTER",
-    "name": { "str": "flesh heap (tendril)" },
-    "description": "A heap of conglomerated flesh infused with tendril core. Several tendril outgrowths writhe incessantly around its surface, varying in density scales.",
+    "name": {
+      "str": "触手肉堆"
+    },
+    "description": "一个与卷须丧尸核心相结合的混合肉堆。几根触手在其表面不停地扭动，密度大小不一。",
     "default_faction": "secro_flesh3",
-    "species": [ "SFLESH", "ABERRATION" ],
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
     "volume": "300 L",
     "weight": "3125 kg",
     "hp": 300,
     "speed": 100,
-    "material": [ "flesh" ],
-    "symbol": "⧻",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⧻",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
     "color": "red_green",
     "aggression": 100,
     "morale": 100,
     "melee_skill": 4,
     "melee_dice": 3,
     "melee_dice_sides": 8,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "armor": { "bash": 8 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 8
+    },
     "harvest": "exempt",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_sflesh_camp_turret_tendril_target" },
+        "spell_data": {
+          "id": "mon_sflesh_camp_turret_tendril_target"
+        },
         "cooldown": 5,
-        "monster_message": "<color_light_red>%1$s writhes!</color>"
+        "monster_message": "<color_light_red>%1$s扭动着！</color>"
       }
     ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "POISON", "NO_BREATHE", "IMMOBILE", "PACIFIST" ]
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "IMMOBILE",
+      "PACIFIST"
+    ]
   },
   {
     "id": "mon_sflesh_camp_turret_mouth",
     "type": "MONSTER",
-    "name": { "str": "flesh heap (mouthswell)" },
-    "description": "A heap of conglomerated flesh infused with mouthswell core. Jawed mouths form a choir of shrieks and screeches as it blankly skims through its surroundings.",
+    "name": {
+      "str": "肿口肉堆"
+    },
+    "description": "一堆团块的肉，充满了肿口核心。当它茫然地掠过周围的环境时，下颚的嘴形成了一个尖叫和尖叫的合唱团。",
     "default_faction": "secro_flesh3",
-    "species": [ "SFLESH", "ABERRATION" ],
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
     "volume": "300 L",
     "weight": "3125 kg",
     "hp": 500,
     "speed": 100,
-    "material": [ "flesh" ],
-    "symbol": "⧻",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⧻",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
     "color": "light_red",
     "aggression": 100,
     "morale": 100,
     "melee_skill": 4,
     "melee_dice": 3,
     "melee_dice_sides": 8,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "armor": { "bash": 10 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 10
+    },
     "harvest": "exempt",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_sflesh_camp_turret_mouth_target" },
+        "spell_data": {
+          "id": "mon_sflesh_camp_turret_mouth_target"
+        },
         "cooldown": 30,
-        "monster_message": "<color_light_red>%1$s shakes erratically…</color>"
+        "monster_message": "<color_light_red>%1$s不规则地颤动着...</color>"
       }
     ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "POISON", "NO_BREATHE", "IMMOBILE", "PACIFIST" ]
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "IMMOBILE",
+      "PACIFIST"
+    ]
   },
   {
     "id": "mon_sflesh_camp_turret_unify",
     "type": "MONSTER",
-    "name": { "str": "flesh heap (unifier)" },
-    "description": "A heap of conglomerated flesh infused with unifier core. Its swollen portions throb in a constant beat, accompanied by numerous wriggly tentacles.",
+    "name": {
+      "str": "整合体肉堆"
+    },
+    "description": "一个与整合体丧尸核心相结合的混合肉堆。它肿胀的部位，随着无数蠕动的触手一起不断跳动着。",
     "default_faction": "secro_flesh3",
-    "species": [ "SFLESH", "ABERRATION" ],
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
     "volume": "300 L",
     "weight": "3125 kg",
     "hp": 300,
     "speed": 100,
-    "material": [ "flesh" ],
-    "symbol": "⧻",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⧻",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
     "color": "red_yellow",
     "aggression": 100,
     "morale": 100,
     "melee_skill": 4,
     "melee_dice": 3,
     "melee_dice_sides": 8,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "armor": { "bash": 12, "cut": 2, "bullet": 2 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 12,
+      "cut": 2,
+      "bullet": 2
+    },
     "harvest": "exempt",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_sflesh_camp_turret_unify_target" },
+        "spell_data": {
+          "id": "mon_sflesh_camp_turret_unify_target"
+        },
         "cooldown": 35,
-        "monster_message": "<color_light_red>%1$s trembles!</color>"
+        "monster_message": "<color_light_red>%1$s抖动着...！</color>"
       }
     ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "POISON", "NO_BREATHE", "IMMOBILE", "PACIFIST" ]
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "IMMOBILE",
+      "PACIFIST"
+    ]
   },
   {
     "id": "mon_sflesh_camp_turret_hravager",
     "type": "MONSTER",
-    "name": { "str": "ravager flesh heap" },
-    "description": "A heap of conglomerated flesh infused with several cores. This hybrid turret takes advantage on the tendril's relentless assaults and the blade's formation of sharp bone outgrowths.",
+    "name": {
+      "str": "掠夺者肉堆"
+    },
+    "description": "一个与多种核心相结合的混合肉堆。这种混合炮塔既可以利用其触手，也可以利用其快速生长形成的尖锐骨刀来进行攻击。",
     "default_faction": "secro_flesh3",
-    "species": [ "SFLESH", "ABERRATION" ],
+    "species": [
+      "SFLESH",
+      "ABERRATION"
+    ],
     "volume": "300 L",
     "weight": "3125 kg",
     "hp": 300,
     "speed": 100,
-    "material": [ "flesh" ],
-    "symbol": "⧻",
+    "material": [
+      "flesh"
+    ],
+    "symbol": "⧻",
+    "emit_fields": [
+      "emit_down_immunity"
+    ],
     "color": "light_red_red",
     "aggression": 100,
     "morale": 100,
     "melee_skill": 4,
     "melee_dice": 3,
     "melee_dice_sides": 8,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "armor": { "bash": 12, "cut": 2, "bullet": 2 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 12,
+      "cut": 2,
+      "bullet": 2
+    },
     "harvest": "exempt",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_sflesh_camp_turret_hravager_target" },
+        "spell_data": {
+          "id": "mon_sflesh_camp_turret_hravager_target"
+        },
         "cooldown": 8,
-        "monster_message": "<color_yellow>%1$s writhes wildly!</color>"
+        "monster_message": "<color_yellow>%1$s疯狂地扭动着！</color>"
       }
     ],
-    "death_function": { "corpse_type": "NO_CORPSE", "message": "The %s melts away." },
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "POISON", "NO_BREATHE", "IMMOBILE", "PACIFIST" ]
+    "death_function": {
+      "corpse_type": "NO_CORPSE",
+      "message": "The %s melts away."
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "POISON",
+      "NO_BREATHE",
+      "IMMOBILE",
+      "PACIFIST"
+    ]
   }
 ]

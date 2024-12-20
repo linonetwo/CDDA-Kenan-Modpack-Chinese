@@ -2,14 +2,21 @@
   {
     "id": "mon_zombie_bloodcompact",
     "type": "MONSTER",
-    "name": { "str": "blood compact zombie" },
-    "description": "From the old graveyard it arised. This zombie's age cause its blood to solidify into thick, rock-like armor, but somehow maintains natural speed. With odd-looking teeth lining and stony claws, its threat is impeccable.",
+    "name": {
+      "str": "血块丧尸"
+    },
+    "description": "它从古老的墓地中爬起。这个丧尸的年龄导致它的血液凝固成厚厚的，岩石般的盔甲。但不知何故能保持正常的速度。它有着奇怪的牙齿衬里和石爪，它的威胁度非常的高。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "ELDERZED" ],
+    "species": [
+      "ZOMBIE",
+      "ELDERZED"
+    ],
     "hp": 185,
     "bodytype": "human",
     "speed": 85,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "B",
     "color": "red",
     "aggression": 100,
@@ -17,27 +24,66 @@
     "melee_skill": 4,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
-    "armor": { "bash": 3, "cut": 9, "bullet": 6 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
+    "armor": {
+      "bash": 3,
+      "cut": 9,
+      "bullet": 6
+    },
     "vision_day": 30,
     "vision_night": 4,
-    "harvest": "zombie_humanoid",
-    "special_attacks": [ { "type": "bite", "cooldown": 10 }, { "id": "grab", "cooldown": 6 } ],
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 10
+      },
+      {
+        "id": "grab",
+        "cooldown": 6
+      }
+    ],
     "death_drops": "elderzombie",
-    "upgrades": { "half_life": 6, "into_group": "GROUP_CRYPTIES_UPGRADE" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "WARM", "BASHES", "GROUP_BASH", "POISON", "NO_BREATHE", "REVIVES" ]
+    "upgrades": {
+      "half_life": 6,
+      "into_group": "GROUP_CRYPTIES_UPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES"
+    ]
   },
   {
     "id": "mon_zombie_blooddefused",
     "type": "MONSTER",
-    "name": { "str": "blood defused zombie" },
-    "description": "This hollowed zombie's blood melts away and cause a minor mutation, such as long claws and immensive fangs. Lackness of weight provides swiftness and good reflexes, but in most cases, its fragility makes it easy to take down.",
+    "name": {
+      "str": "中空丧尸"
+    },
+    "description": "这个被挖空的丧尸的液会融化并导致一些小规模的变异。比如长长的爪子和巨大的尖牙。较轻的体重提供了快速和良好的反应，但在大多数情况下，它很脆弱，所以很容易干掉。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "ELDERZED" ],
+    "species": [
+      "ZOMBIE",
+      "ELDERZED"
+    ],
     "bodytype": "human",
     "hp": 85,
     "speed": 135,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "B",
     "color": "white",
     "aggression": 100,
@@ -45,28 +91,66 @@
     "melee_skill": 5,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
-    "armor": { "bash": 2, "cut": 6, "bullet": 4 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor": {
+      "bash": 2,
+      "cut": 6,
+      "bullet": 4
+    },
     "dodge": 3,
     "vision_day": 35,
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "vision_night": 5,
-    "special_attacks": [ { "type": "bite", "cooldown": 6 }, { "id": "grab", "cooldown": 9 } ],
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 6
+      },
+      {
+        "id": "grab",
+        "cooldown": 9
+      }
+    ],
     "death_drops": "elderzombie",
-    "upgrades": { "half_life": 6, "into_group": "GROUP_CRYPTIES_DEFUSEDUPGRADE" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "BASHES", "GROUP_BASH", "POISON", "NO_BREATHE", "REVIVES" ]
+    "upgrades": {
+      "half_life": 6,
+      "into_group": "GROUP_CRYPTIES_DEFUSEDUPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES"
+    ]
   },
   {
     "id": "mon_zombie_bloodinfused",
     "type": "MONSTER",
-    "name": { "str": "blood infused zombie" },
-    "description": "Once a compact zombie, but its blood has soaked and caused to mutate into a dangerous oversized bone plates and spikes, leaving its fleshy skin saggy. The bone scythes on its hands are symmetrical as a pair while its sharpened teeth potrudes from its jaw, but despite fearsome looks, its weight causes it to stumble... often.",
+    "name": {
+      "str": "血液灌注丧尸"
+    },
+    "description": "这只丧尸的血液曾经很紧实，但现在它被浸泡并变异出了危险的超大骨板和骨刺，使其肉质皮肤下垂。它手上有一对对称的骨镰刀，锋利的牙齿从它的下巴凹陷，尽管它有着可怕的外观，但是它的重量导致它经常...绊倒。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "ELDERZED" ],
+    "species": [
+      "ZOMBIE",
+      "ELDERZED"
+    ],
     "bodytype": "human",
     "hp": 265,
     "speed": 65,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "B",
     "color": "black",
     "aggression": 100,
@@ -74,27 +158,66 @@
     "melee_skill": 4,
     "melee_dice": 4,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
-    "armor": { "bash": 5, "cut": 15, "bullet": 12 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor": {
+      "bash": 5,
+      "cut": 15,
+      "bullet": 12
+    },
     "vision_day": 13,
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "vision_night": 3,
-    "special_attacks": [ { "type": "bite", "cooldown": 9 }, { "id": "grab", "cooldown": 7 } ],
+    "special_attacks": [
+      {
+        "type": "bite",
+        "cooldown": 9
+      },
+      {
+        "id": "grab",
+        "cooldown": 7
+      }
+    ],
     "death_drops": "elderzombie",
-    "upgrades": { "half_life": 6, "into_group": "GROUP_CRYPTIES_INFUSEDUPGRADE" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "WARM", "BASHES", "GROUP_BASH", "POISON", "NO_BREATHE", "REVIVES" ]
+    "upgrades": {
+      "half_life": 6,
+      "into_group": "GROUP_CRYPTIES_INFUSEDUPGRADE"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES"
+    ]
   },
   {
     "id": "mon_zombie_bonetitan",
     "type": "MONSTER",
-    "name": { "str": "bone titan zombie" },
-    "description": "An enlarged skeleton mutant with extremely thick bone platings around its body. It walks slowly from carrying itself up.",
+    "name": {
+      "str": "泰坦骨尸"
+    },
+    "description": "一种身体周围有非常厚的骨板的巨大骨骼变种。它爬行起来极其缓慢。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "ELDERZED" ],
+    "species": [
+      "ZOMBIE",
+      "ELDERZED"
+    ],
     "bodytype": "human",
     "hp": 355,
     "speed": 60,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "B",
     "color": "black_magenta",
     "aggression": 100,
@@ -102,26 +225,62 @@
     "melee_skill": 6,
     "melee_dice": 6,
     "melee_dice_sides": 5,
-    "melee_damage": [ { "damage_type": "cut", "amount": 5 } ],
-    "armor": { "bash": 8, "cut": 24, "bullet": 18 },
-    "harvest": "zombie_humanoid",
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "armor": {
+      "bash": 8,
+      "cut": 24,
+      "bullet": 18
+    },
+    "harvest": "zombie",
     "vision_day": 35,
     "vision_night": 5,
-    "special_attacks": [ [ "heavygrab", 20 ], { "id": "grab", "cooldown": 10 } ],
+    "special_attacks": [
+      [
+        "heavygrab",
+        20
+      ],
+      {
+        "id": "grab",
+        "cooldown": 10
+      }
+    ],
     "death_drops": "default_zombie_death_drops",
-    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "WARM", "BASHES", "GROUP_BASH", "POISON", "NO_BREATHE", "REVIVES" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES"
+    ]
   },
   {
     "id": "mon_zombie_bonewraith",
     "type": "MONSTER",
-    "name": { "str": "bone wraith zombie" },
-    "description": "A skeleton mutant with symmetrical slender thin bone growths on its back, similar to spider's, but appears to be unused in its movement. Being almost weightless, it is quick and lethal alone.",
+    "name": {
+      "str": "幽灵骨尸"
+    },
+    "description": "一种背部长有对称细长骨骼的骨骼变种，与蜘蛛相似，但似乎在运动中未被使用。由于几乎基本没有重量，它速度极快而且很致命。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "ELDERZED" ],
+    "species": [
+      "ZOMBIE",
+      "ELDERZED"
+    ],
     "bodytype": "human",
     "hp": 105,
     "speed": 145,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "B",
     "color": "white_magenta",
     "aggression": 100,
@@ -129,14 +288,42 @@
     "melee_skill": 6,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 6 } ],
-    "armor": { "bash": 4, "cut": 12, "bullet": 8 },
-    "harvest": "zombie_humanoid",
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor": {
+      "bash": 4,
+      "cut": 12,
+      "bullet": 8
+    },
+    "harvest": "zombie",
     "vision_day": 35,
     "vision_night": 5,
     "dodge": 4,
-    "special_attacks": [ [ "tentaclebones", 10 ], { "id": "grab", "cooldown": 10 } ],
+    "special_attacks": [
+      [
+        "tentaclebones",
+        10
+      ],
+      {
+        "id": "grab",
+        "cooldown": 10
+      }
+    ],
     "death_drops": "default_zombie_death_drops",
-    "flags": [ "SEES", "HEARS", "SMELLS", "WARM", "BASHES", "GROUP_BASH", "POISON", "NO_BREATHE", "REVIVES" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WARM",
+      "BASHES",
+      "GROUP_BASH",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES"
+    ]
   }
 ]

@@ -2,9 +2,16 @@
   {
     "id": "gravitymage_graviton_damage",
     "type": "SPELL",
-    "name": { "str": "Graviton Polarization Damage" },
-    "description": "handles the damage part of Graviton Polarization - if you see this something went wrong",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
+    "name": {
+      "str": "引力子极化伤害"
+    },
+    "description": "处理引力子极化的部分伤害 - 如果你看到这个说明出了bug。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "max_level": 43,
@@ -18,15 +25,26 @@
     "min_range": 5,
     "max_range": 20,
     "range_increment": 0.5,
-    "flags": [ "LOUD" ]
+    "flags": [
+      "LOUD"
+    ]
   },
   {
     "id": "gravitymage_graviton",
     "type": "SPELL",
     "spell_class": "GRAVITY_MAGE",
-    "name": { "str": "Graviton Polarization" },
-    "description": "Changes and amplifies gravitational pull towards a point you choose even through walls.  Pulls in items and deals bashing damage in its center.",
-    "valid_targets": [ "self", "ally", "hostile", "ground", "item", "field" ],
+    "name": {
+      "str": "引力子极化"
+    },
+    "description": "操控万有引力，将其放大并导向你选择的点，甚至能穿过墙壁。能将物体吸到中心并造成钝击伤害。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground",
+      "item",
+      "field"
+    ],
     "effect": "area_pull",
     "shape": "blast",
     "base_casting_time": 600,
@@ -44,16 +62,37 @@
     "min_range": 5,
     "max_range": 23,
     "range_increment": 0.5,
-    "extra_effects": [ { "id": "gravitymage_graviton_damage" }, { "id": "gravitymage_graviton_centerdamage" } ],
-    "flags": [ "SOMATIC", "VERBAL", "CONCENTRATE", "NO_PROJECTILE", "IGNORE_WALLS", "LOUD" ],
+    "extra_effects": [
+      {
+        "id": "gravitymage_graviton_damage"
+      },
+      {
+        "id": "gravitymage_graviton_centerdamage"
+      }
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE",
+      "NO_PROJECTILE",
+      "IGNORE_WALLS",
+      "LOUD"
+    ],
     "sound_description": "a crack"
   },
   {
     "id": "gravitymage_graviton_centerdamage",
     "type": "SPELL",
-    "name": { "str": "Graviton Polarization centerdamage" },
-    "description": "handles damage in the extreme center of the Graviton",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
+    "name": {
+      "str": "引力子极化中心伤害"
+    },
+    "description": "处理位于引力中心的额外伤害。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "max_level": 43,
@@ -67,6 +106,8 @@
     "min_range": 5,
     "max_range": 20,
     "range_increment": 0.5,
-    "flags": [ "LOUD" ]
+    "flags": [
+      "LOUD"
+    ]
   }
 ]

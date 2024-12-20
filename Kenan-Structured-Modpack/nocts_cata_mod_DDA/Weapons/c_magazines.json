@@ -2,352 +2,585 @@
   {
     "id": "surv_223_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's .223 magazine" },
+    "name": {
+      "str": "幸存者 .223 弹匣"
+    },
     "//": "Allows more storage options.",
-    "description": "A magazine built for the survivor's .223 assault rifle.  Although well-made, it does not fit STANAG specifications.",
+    "description": "一个自制弹匣，可用于幸存者 .223 突击步枪。虽然制作精良，但并不符合STANAG规格。",
     "weight": "400 g",
     "volume": "500 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "223" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "223": 20 } } ],
+    "ammo_type": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "223": 20
+        }
+      }
+    ],
     "capacity": 20,
     "reload_time": 100,
-    "flags": [ "MAG_COMPACT" ]
+    "flags": [
+      "MAG_COMPACT"
+    ]
   },
   {
     "id": "surv_762_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's 7.62x39 magazine" },
-    "description": "A magazine built for the survivor's 7.62x39 assault rifle.  A rough simplification of the AKM magazine pattern, its makeshift design makes it incompatible with factory AK-pattern rifles.",
+    "name": {
+      "str": "幸存者 7.62x39 弹匣"
+    },
+    "description": "一个自制弹匣，可用于幸存者 7.62x39 突击步枪。简化的AKM规格弹匣，它的自制设计使它与工厂的AK式步枪不兼容。",
     "weight": "400 g",
     "volume": "500 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "762" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "762": 20 } } ],
+    "ammo_type": [
+      "762"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "762": 20
+        }
+      }
+    ],
     "capacity": 20,
     "reload_time": 100,
-    "flags": [ "MAG_COMPACT" ]
+    "flags": [
+      "MAG_COMPACT"
+    ]
   },
   {
     "id": "surv_308_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's .308 magazine" },
-    "description": "A magazine built for the survivor's .308 battle rifle.  Based on the design of the venerable M14's magazine, its makeshift design makes it incompatible with factory rifles.",
+    "name": {
+      "str": "幸存者 .308 弹匣"
+    },
+    "description": "为幸存者. 308步枪设计的弹匣。基于古老的M14弹匣的设计，它的自制设计使其与工厂步枪不兼容。",
     "weight": "400 g",
     "volume": "500 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "308" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "308": 20 } } ],
+    "ammo_type": [
+      "308"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "308": 20
+        }
+      }
+    ],
     "capacity": 20,
     "reload_time": 100,
-    "flags": [ "MAG_COMPACT" ]
+    "flags": [
+      "MAG_COMPACT"
+    ]
   },
   {
     "id": "surv_762R_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's 7.62x54 magazine" },
-    "description": "A magazine built for the survivor's 7.62x54 battle rifle.  Vaguely based off the magazine design used by the SVT-40, its handmade design makes it incompatible with any production firearm.",
+    "name": {
+      "str": "幸存者 7.62x54 弹匣"
+    },
+    "description": "一个自制弹匣，可用于幸存者 7.62x54 战斗步枪。根据SVT-40使用的弹匣设计，虽然制作精良，但它的自制设计使它与工厂生产的步枪不兼容。",
     "weight": "400 g",
     "volume": "500 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "762R" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "762R": 20 } } ],
+    "ammo_type": [
+      "762R"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "762R": 20
+        }
+      }
+    ],
     "capacity": 20,
     "reload_time": 100,
-    "flags": [ "MAG_COMPACT" ]
-  },
-  {
-    "id": "surv_3006_mag",
-    "type": "MAGAZINE",
-    "name": { "str": "survivor's .30-06 magazine" },
-    "description": "A magazine built for the survivor's .30-06 battle rifle.  A rough copy of the Browning Automatic Rifle's standard magazine.",
-    "weight": "400 g",
-    "volume": "500 ml",
-    "price": "80 USD",
-    "price_postapoc": "4 USD",
-    "material": [ "steel" ],
-    "symbol": "#",
-    "color": "light_gray",
-    "ammo_type": [ "3006" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "3006": 20 } } ],
-    "capacity": 20,
-    "reload_time": 100,
-    "flags": [ "MAG_COMPACT" ]
+    "flags": [
+      "MAG_COMPACT"
+    ]
   },
   {
     "id": "surv_12_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's 12 gauge magazine" },
+    "name": {
+      "str": "幸存者 12 号口径霰弹弹匣"
+    },
     "//": "Requires special pouch.",
-    "description": "A magazine built for the survivor's full auto shotgun.  A well-made simplification of the Saiga 12's variant of the AK pattern, it still won't fit to factory specifications.",
+    "description": "一个自制弹匣，可用于幸存者全自动霰弹枪。一种为AK型Saiga-12的精心设计的简化方案，但它仍然不符合工厂规格。",
     "weight": "450 g",
     "volume": "750 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "shot" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "shot": 15 } } ],
+    "ammo_type": [
+      "shot"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shot": 15
+        }
+      }
+    ],
     "capacity": 15,
     "reload_time": 100,
-    "flags": [ "MAG_BULKY" ]
+    "flags": [
+      "MAG_BULKY"
+    ]
   },
   {
     "id": "surv_9mm_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's 9mm magazine" },
-    "description": "A magazine built for the survivor's 9mm SMG.  Uses a similar simplification as seen by handmade magazines for the STEN submachine gun, albeit lacking in compatibility.",
+    "name": {
+      "str": "幸存者 9mm 冲锋枪弹匣"
+    },
+    "description": "一个自制弹匣，可用于幸存者 9mm 冲锋枪。使用与STEN冲锋枪自制弹匣类似的简化方法，尽管缺乏兼容性。",
     "weight": "200 g",
     "volume": "250 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "9mm" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "9mm": 30 } } ],
+    "ammo_type": [
+      "9mm"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "9mm": 30
+        }
+      }
+    ],
     "capacity": 30,
     "reload_time": 100,
-    "flags": [ "MAG_COMPACT" ]
+    "flags": [
+      "MAG_COMPACT"
+    ]
   },
   {
     "id": "surv_45_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's .45 magazine" },
-    "description": "A magazine built for the survivor's .45 SMG.  Roughly modeled after the MAC-10 magazine in design, it's decently-made but not designed for any known factory-made model of firearm.",
+    "name": {
+      "str": "幸存者 .45 冲锋枪弹匣"
+    },
+    "description": "为幸存者. 45 冲锋枪制作的弹匣。设计上大致仿照MAC-10弹匣，制作精良，但不是为任何已知的工厂制造的枪支型号设计的。",
     "weight": "200 g",
     "volume": "250 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "45" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "45": 30 } } ],
+    "ammo_type": [
+      "45"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "45": 30
+        }
+      }
+    ],
     "capacity": 30,
     "reload_time": 100,
-    "flags": [ "MAG_COMPACT" ]
+    "flags": [
+      "MAG_COMPACT"
+    ]
   },
   {
     "id": "surv_22_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's .22 magazine" },
-    "description": "A magazine built for the survivor's .22 SMG.  Although well-made, it isn't compatible with any production firearm.",
+    "name": {
+      "str": "幸存者.22 冲锋枪弹匣"
+    },
+    "description": "一个自制弹匣，可用于幸存者 .22 冲锋枪。虽然制作精良，但无法装填入工厂生产的枪械中。",
     "weight": "200 g",
     "volume": "250 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "22" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "22": 30 } } ],
+    "ammo_type": [
+      "22"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "22": 30
+        }
+      }
+    ],
     "capacity": 30,
     "reload_time": 100,
-    "flags": [ "MAG_COMPACT" ]
+    "flags": [
+      "MAG_COMPACT"
+    ]
   },
   {
     "id": "surv_belt_223",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's .223 ammo belt" },
-    "description": "An ammo belt for the survivor's .223 LMG, using canvas and steel wire to form non-disintegrating links.  Not as effective as factory-made ammunition belts, and more awkward to reload too.",
+    "name": {
+      "str": "幸存者 .223 弹链"
+    },
+    "description": "一条自制弹链，可用于幸存者 .223 轻机枪，使用使用帆布和钢丝来链接弹药，不像工厂生产的弹药带那样可靠，而且装填起来也更繁琐。",
     "weight": "200 g",
     "volume": "1 L",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "223" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "223": 80 } } ],
+    "ammo_type": [
+      "223"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "223": 80
+        }
+      }
+    ],
     "capacity": 80,
     "reload_time": 200,
-    "armor_data": { "armor": [ { "encumbrance": 10, "coverage": 5, "covers": [ "torso" ], "material": [ "steel" ] } ] },
-    "flags": [ "BELTED", "OVERSIZE" ]
+    "armor_data": {
+      "armor": [
+        {
+          "encumbrance": 10,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "material": [
+            "steel"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE"
+    ]
   },
   {
     "id": "surv_belt_762",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's 7.62x39 ammo belt" },
-    "description": "An ammo belt for the survivor's 7.62x39 LMG, using canvas and steel wire to form non-disintegrating links.  Not as effective as factory-made ammunition belts, and more awkward to reload too.",
+    "name": {
+      "str": "幸存者 7.62x39 弹链"
+    },
+    "description": "一条自制弹链，可用于幸存者 7.62x39 轻机枪，使用使用帆布和钢丝来链接弹药，不像工厂生产的弹药带那样可靠，而且装填起来也更繁琐。",
     "weight": "200 g",
     "volume": "1 L",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "762" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "762": 80 } } ],
+    "ammo_type": [
+      "762"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "762": 80
+        }
+      }
+    ],
     "capacity": 80,
     "reload_time": 200,
-    "armor_data": { "armor": [ { "encumbrance": 10, "coverage": 5, "covers": [ "torso" ], "material": [ "steel" ] } ] },
-    "flags": [ "BELTED", "OVERSIZE" ]
+    "armor_data": {
+      "armor": [
+        {
+          "encumbrance": 10,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "material": [
+            "steel"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE"
+    ]
   },
   {
     "id": "surv_belt_308",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's .308 ammo belt" },
-    "description": "An ammo belt for the survivor's .308 GPMG, using canvas and steel wire to form non-disintegrating links.  Not as effective as factory-made ammunition belts, and more awkward to reload too.",
+    "name": {
+      "str": "幸存者 .308 弹链"
+    },
+    "description": "一条自制弹链，可用于幸存者 .308 轻机枪，使用使用帆布和钢丝来链接弹药，不像工厂生产的弹药带那样可靠，而且装填起来也更繁琐。",
     "weight": "200 g",
     "volume": "1 L",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "308" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "308": 80 } } ],
+    "ammo_type": [
+      "308"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "308": 80
+        }
+      }
+    ],
     "capacity": 80,
     "reload_time": 200,
-    "armor_data": { "armor": [ { "encumbrance": 10, "coverage": 5, "covers": [ "torso" ], "material": [ "steel" ] } ] },
-    "flags": [ "BELTED", "OVERSIZE" ]
+    "armor_data": {
+      "armor": [
+        {
+          "encumbrance": 10,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "material": [
+            "steel"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE"
+    ]
   },
   {
     "id": "surv_belt_762R",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's 7.62x54 ammo belt" },
-    "description": "An ammo belt for the survivor's 7.62x54 GPMG, using canvas and steel wire to form non-disintegrating links.  Not as effective as factory-made ammunition belts, and more awkward to reload too.",
+    "name": {
+      "str": "幸存者 7.62x54 弹链"
+    },
+    "description": "一条自制弹链，可用于幸存者 7.62x54 通用机枪，使用使用帆布和钢丝来链接弹药，不像工厂生产的弹药带那样可靠，而且装填起来也更繁琐。",
     "weight": "200 g",
     "volume": "1 L",
     "looks_like": "surv_belt_308",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "762R" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "762R": 80 } } ],
+    "ammo_type": [
+      "762R"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "762R": 80
+        }
+      }
+    ],
     "capacity": 80,
     "reload_time": 200,
-    "armor_data": { "armor": [ { "encumbrance": 10, "coverage": 5, "covers": [ "torso" ], "material": [ "steel" ] } ] },
-    "flags": [ "BELTED", "OVERSIZE" ]
-  },
-  {
-    "id": "surv_belt_3006",
-    "type": "MAGAZINE",
-    "name": { "str": "survivor's .30-06 ammo belt" },
-    "description": "An ammo belt for the survivor's .30-06 GPMG, using canvas and steel wire to form non-disintegrating links.  Not as effective as factory-made ammunition belts, and more awkward to reload too.",
-    "weight": "200 g",
-    "volume": "1 L",
-    "looks_like": "surv_belt_308",
-    "material": [ "steel" ],
-    "symbol": "#",
-    "color": "light_gray",
-    "ammo_type": [ "3006" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "3006": 80 } } ],
-    "capacity": 80,
-    "reload_time": 200,
-    "armor_data": { "armor": [ { "encumbrance": 10, "coverage": 5, "covers": [ "torso" ], "material": [ "steel" ] } ] },
-    "flags": [ "BELTED", "OVERSIZE" ]
+    "armor_data": {
+      "armor": [
+        {
+          "encumbrance": 10,
+          "coverage": 5,
+          "covers": [
+            "torso"
+          ],
+          "material": [
+            "steel"
+          ]
+        }
+      ]
+    },
+    "flags": [
+      "BELTED",
+      "OVERSIZE"
+    ]
   },
   {
     "id": "surv_50_mag",
     "type": "MAGAZINE",
-    "name": { "str": "survivor's .50 magazine" },
-    "description": "A magazine built for the survivor's .50 automatic AMR.  Vaguely resembling the magazine from the Barrett M107A1 but bulkier, it is clearly not designed to factory specifications.",
+    "name": {
+      "str": "幸存者 .50 弹匣"
+    },
+    "description": "一个自制弹匣，可用于幸存者 .50 自动反器材步枪。有点像巴雷特M107A1的弹匣，但体积更大，显然不是按照工厂规格设计的。",
     "weight": "450 g",
     "volume": "750 ml",
     "price": "80 USD",
     "price_postapoc": "4 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "50" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "50": 15 } } ],
+    "ammo_type": [
+      "50"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "50": 15
+        }
+      }
+    ],
     "capacity": 15,
     "reload_time": 100,
-    "flags": [ "MAG_BULKY" ]
+    "flags": [
+      "MAG_BULKY"
+    ]
   },
   {
     "id": "rifle_crank_battery_cell",
     "type": "MAGAZINE",
-    "category": "battery",
-    "name": { "str": "crank rifle capacitor bank" },
-    "description": "This is a homemade power cell made from household batteries along with a series of capacitors, designed to translate mechanical force into enough voltage to more efficiently power a survivor's crank rifle.  It's a wonder this thing isn't an electrocution hazard.",
+    "category": "spare_parts",
+    "name": {
+      "str": "曲柄步枪电容器组"
+    },
+    "description": "一个由家用电池和一系列电容器组成的自制动力电池，旨在将普通电压转化为足够高的电压，从而更有效地为幸存者曲柄步枪提供动力。体积更大，不太可靠，奇怪的是，这东西没有触电的危险。",
     "weight": "500 g",
     "volume": "600 ml",
     "price": "50 USD",
     "price_postapoc": "3 USD",
-    "material": [ "iron", "plastic" ],
+    "material": [
+      "iron",
+      "plastic"
+    ],
     "symbol": "=",
     "color": "yellow",
-    "ammo_type": [ "battery" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 10 } } ],
+    "ammo_type": [
+      "battery"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 10
+        }
+      }
+    ],
     "capacity": 10,
     "looks_like": "battery",
-    "flags": [ "NO_SALVAGE", "NO_UNLOAD", "RECHARGE", "MAG_COMPACT" ]
+    "flags": [
+      "NO_SALVAGE",
+      "NO_UNLOAD",
+      "RECHARGE",
+      "MAG_COMPACT"
+    ]
   },
-
-
   {
     "id": "light_atomic_battery_cell_rechargeable",
-    "//": "Can no longer streamline these with copy-from because DDA is not allowed to have nice things, they deleted the item this and medium cells used to inherit from.",
+    "copy-from": "light_atomic_battery_cell",
     "type": "MAGAZINE",
-    "category": "tool_magazine",
-    "name": { "str": "light rechargeable plutonium cell" },
-    "description": "This battery uses a thin plutonium-244 rod to stabilize multiple proprietary exotic compounds.  Designed by Omnitech for a military contract, this modified plutonium battery is rechargeable, but as it made for military purposes there is very little this is compatible with.",
-    "weight": "160 g",
-    "volume": "35 ml",
-    "price": "500 USD",
-    "price_postapoc": "4 USD",
-    "material": [ "iron", "plastic" ],
-    "symbol": "=",
-    "color": "green",
-    "ammo_type": [ "battery" ],
-    "count": 1000,
-    "capacity": 1000,
-    "looks_like": "battery",
-    "flags": [ "NO_SALVAGE", "NO_UNLOAD", "NO_RELOAD", "LEAK_DAM", "RADIOACTIVE", "BATTERY_LIGHT", "RECHARGE", "MAG_COMPACT" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 1000 } } ]
+    "category": "spare_parts",
+    "name": {
+      "str": "可再充钚燃料电池（轻型）"
+    },
+    "description": "这种电池使用一根钚-244棒来稳定多种奇特的复合材料。Omnitech为军事合同改良设计的可再充钚燃料电池，但由于它是为军事目的而制造的，因此与之兼容的很少。",
+    "extend": {
+      "flags": [
+        "RECHARGE",
+        "MAG_COMPACT"
+      ]
+    }
   },
   {
     "id": "medium_atomic_battery_cell_rechargeable",
+    "copy-from": "medium_atomic_battery_cell",
     "type": "MAGAZINE",
-    "category": "tool_magazine",
-    "name": { "str": "light rechargeable plutonium cell" },
-    "description": "This battery uses a thin plutonium-244 rod to stabilize multiple proprietary exotic compounds.  Designed by Omnitech for a military contract, this modified plutonium battery is rechargeable, but as it made for military purposes there is very little this is compatible with.",
-    "weight": "1000 g",
-    "volume": "525 ml",
-    "price": "1 kUSD",
-    "price_postapoc": "10 USD",
-    "material": [ "iron", "plastic" ],
-    "symbol": "=",
-    "color": "green",
-    "ammo_type": [ "battery" ],
-    "count": 5000,
-    "capacity": 5000,
-    "looks_like": "battery",
-    "flags": [ "NO_SALVAGE", "NO_UNLOAD", "NO_RELOAD", "LEAK_DAM", "RADIOACTIVE", "BATTERY_MEDIUM", "RECHARGE", "MAG_COMPACT" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 5000 } } ]
+    "category": "spare_parts",
+    "name": {
+      "str": "可再充钚燃料电池（中型）"
+    },
+    "description": "这种电池使用一根钚-244棒来稳定多种奇特的复合材料。Omnitech为军事合同改良设计的可再充钚燃料电池，但由于它是为军事目的而制造的，因此与之兼容的很少。",
+    "extend": {
+      "flags": [
+        "RECHARGE",
+        "MAG_COMPACT"
+      ]
+    }
   },
   {
     "id": "heavy_atomic_battery_cell_rechargeable",
+    "copy-from": "heavy_atomic_battery_cell",
     "type": "MAGAZINE",
-    "category": "tool_magazine",
-    "name": { "str": "heavy rechargeable plutonium cell" },
-    "description": "This battery uses a thin plutonium-244 rod to stabilize multiple proprietary exotic compounds.  Designed by Omnitech for a military contract, this modified plutonium battery is rechargeable, but as it made for military purposes there is very little this is compatible with.",
-    "weight": "1600 g",
-    "volume": "1500 ml",
-    "price": "1 kUSD",
-    "price_postapoc": "15 USD",
-    "material": [ "iron", "plastic" ],
-    "symbol": "=",
-    "color": "green",
-    "ammo_type": [ "battery" ],
-    "count": 10000,
-    "capacity": 10000,
-    "looks_like": "battery",
-    "flags": [ "NO_SALVAGE", "NO_UNLOAD", "NO_RELOAD", "LEAK_DAM", "RADIOACTIVE", "BATTERY_HEAVY", "RECHARGE", "MAG_BULKY" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 10000 } } ]
+    "category": "spare_parts",
+    "name": {
+      "str": "可再充钚燃料电池（重型）"
+    },
+    "description": "这种电池使用一根钚-244棒来稳定多种奇特的复合材料。Omnitech为军事合同改良设计的可再充钚燃料电池，但由于它是为军事目的而制造的，因此与之兼容的很少。",
+    "extend": {
+      "flags": [
+        "RECHARGE",
+        "MAG_BULKY"
+      ]
+    }
   }
 ]

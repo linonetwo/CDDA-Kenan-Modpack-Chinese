@@ -2,108 +2,220 @@
   {
     "type": "talk_topic",
     "id": "TALK_CF_DEACON",
-    "dynamic_line": { "u_is_wearing": "badge_marshal", "yes": "Hello, Marshal.  How may I help you?", "no": "Hello.  How may I help you?" },
+    "dynamic_line": {
+      "u_is_wearing": "badge_marshal",
+      "yes": "你好，执法官。需要我为你做些什么？",
+      "no": "你好。我能帮你什么忙？"
+    },
     "responses": [
       {
-        "text": "I've been sent to ask about recent attacks on survivors by anomalous creatures.  Know anything about that?",
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
         "condition": {
           "and": [
-            { "compare_string": [ "yes", { "u_val": "johnathan_prelude_mid" } ] },
-            { "not": { "compare_string": [ "yes", { "npc_val": "johnathan_prelude_mid" } ] } },
-            { "not": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_5" } ] } }
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            }
           ]
         },
         "topic": "TALK_CF_DEACON_GM_PRELUDE"
       },
       {
-        "text": "[MISSION] I spoke with Sofia.  They're doing alright, so far.",
+        "text": "[任务]我和索菲亚谈过了。到目前为止，他们做得还不错。",
         "condition": {
           "and": [
-            { "u_has_effect": "sofia_deacon_message" },
-            { "not": { "u_has_mission": "MISSION_CF_DEACON_1" } },
-            { "not": { "npc_has_effect": "rural_church_aware" } }
+            {
+              "u_has_effect": "sofia_deacon_message"
+            },
+            {
+              "not": {
+                "u_has_mission": "MISSION_CF_DEACON_1"
+              }
+            },
+            {
+              "not": {
+                "npc_has_effect": "rural_church_aware"
+              }
+            }
           ]
         },
         "topic": "TALK_CF_DEACON_MISSION_BACKDOOR"
       },
       {
-        "text": "[MISSION] Sofia asked me to find additional trade partners and labor to help build the outpost they're working on.  Can you give me any advice?",
+        "text": "[任务]索菲亚要求我寻找更多的贸易伙伴和劳动力，帮助他们建立前哨站。你能给我一些建议吗？",
         "topic": "TALK_CF_DEACON_MISSION_CF_4",
         "condition": {
           "and": [
-            { "not": { "compare_string": [ "yes", { "u_val": "sofia_allies_secured" } ] } },
-            { "not": { "compare_string": [ "yes", { "npc_val": "sofia_refugee_convinced" } ] } },
-            { "u_has_mission": "MISSION_CF_REP_4" }
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "npc_has_var": "sofia_refugee_convinced",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
           ]
         }
       },
-      { "text": "Who are you?", "topic": "TALK_CF_DEACON_WHO" },
-      { "text": "What do you do here?", "topic": "TALK_CF_DEACON_DO" },
       {
-        "text": "Need help with anything?",
-        "condition": { "not": { "u_has_effect": "already_asked_deacon" } },
+        "text": "你是谁？",
+        "topic": "TALK_CF_DEACON_WHO"
+      },
+      {
+        "text": "你在这里做什么？",
+        "topic": "TALK_CF_DEACON_DO"
+      },
+      {
+        "text": "能帮你什么忙吗？",
+        "condition": {
+          "not": {
+            "u_has_effect": "already_asked_deacon"
+          }
+        },
         "topic": "TALK_CF_DEACON_HELP"
       },
-      { "text": "Well, bye.", "topic": "TALK_DONE" }
+      {
+        "text": "好的，再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_CF_DEACON_GM_PRELUDE",
     "type": "talk_topic",
-    "dynamic_line": "I assume that Sofia or one of her compatriots has asked you to look into this matter.  I recently had to administer the Viaticum to an gravely injured man, the only survivor of an attack a few miles down the road.  They were in too much shock to recount what happened, but I recognized the signs of deep frostbite around the neck and chest, even through his armor, and severe fractures without lacerations or bruises.  Consistent with the other attacks, at night within the same wide range as the others."
+    "dynamic_line": "我想索菲亚或者她的一个同胞要求你调查这件事。我最近不得不给一个严重受伤的人开高架桥，他是在几英里外的一次袭击中唯一的幸存者。他们太震惊了，无法叙述发生的事情，但我发现颈部和胸部有严重冻伤的迹象，甚至连盔甲都没有，严重的骨折没有裂伤或瘀伤。与其他袭击一致，在夜间与其他袭击范围相同。"
   },
   {
     "id": "TALK_CF_DEACON_MISSION_CF_4",
     "type": "talk_topic",
-    "dynamic_line": "I heard they were building up around it, yes.  Suppose it's necessary to ensure their survival.  You could try talking to some of the staff here, some of the regular visitors, or the refugees in the back.",
+    "dynamic_line": "我听说他们在附近建房子，是的。假设有必要确保他们的生存。你可以试着和这里的一些工作人员，一些常客，或者后面的难民谈谈。",
     "responses": [
-      { "text": "Would any of the staff be able to help?", "topic": "TALK_CF_DEACON_MISSION_CF_4_STAFF" },
-      { "text": "Think any of the visitors would be interested?", "topic": "TALK_CF_DEACON_MISSION_CF_4_VISITORS" },
-      { "text": "What about the refugees?", "topic": "TALK_CF_DEACON_MISSION_CF_4_REFUGEES" },
-      { "text": "I'll see what I can do.", "topic": "TALK_CF_DEACON" }
+      {
+        "text": "有人能帮忙吗？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_STAFF"
+      },
+      {
+        "text": "你觉得有人会感兴趣吗？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_VISITORS"
+      },
+      {
+        "text": "难民怎么办？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_REFUGEES"
+      },
+      {
+        "text": "我看看能做些什么。",
+        "topic": "TALK_CF_DEACON"
+      }
     ]
   },
   {
     "id": "TALK_CF_DEACON_MISSION_CF_4_STAFF",
     "type": "talk_topic",
-    "dynamic_line": "The local merchant already has some sort of deal going on with Ms. McKinnon, so I doubt that will work.  Not many travelers stop by the doctor, but worth asking.  That just leaves the broker in the back room.  Might be worth a shot, but any trade deal would be risky without ensuring we already have a stable food supply.",
+    "dynamic_line": "当地的商人已经和麦金农女士达成了某种协议，所以我怀疑这是否行得通。没有多少旅行者会去看医生，但值得一问。那只会把经纪人留在后面的房间里。或许值得一试，但如果不确保我们已经有稳定的粮食供应，任何贸易协议都是有风险的。",
     "responses": [
-      { "text": "Think any of the visitors would be interested?", "topic": "TALK_CF_DEACON_MISSION_CF_4_VISITORS" },
-      { "text": "What about the refugees?", "topic": "TALK_CF_DEACON_MISSION_CF_4_REFUGEES" },
-      { "text": "Thanks, I'll see what I can do.", "topic": "TALK_CF_DEACON" },
-      { "text": "That's all for now then.", "topic": "TALK_DONE" }
+      {
+        "text": "你觉得有人会感兴趣吗？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_VISITORS"
+      },
+      {
+        "text": "难民怎么办？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_REFUGEES"
+      },
+      {
+        "text": "谢谢，我看看我能做些什么。",
+        "topic": "TALK_CF_DEACON"
+      },
+      {
+        "text": "现在到此为止。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_CF_DEACON_MISSION_CF_4_VISITORS",
     "type": "talk_topic",
-    "dynamic_line": "There's a government official of some sort who seems to have been assigned here by somebody, I'm guessing whoever's actually in charge might know something.  Other than that there's just a local scavenger or two, possibly worth inquiring with them anyway.",
+    "dynamic_line": "有一个政府官员好像是被人派来的，我猜谁是真正的负责人可能知道些什么。除此之外，这里只有一两个当地的拾荒者，可能值得去问问他们。",
     "responses": [
-      { "text": "Would any of the staff be able to help?", "topic": "TALK_CF_DEACON_MISSION_CF_4_STAFF" },
-      { "text": "What about the refugees?", "topic": "TALK_CF_DEACON_MISSION_CF_4_REFUGEES" },
-      { "text": "I'll see what I can do.", "topic": "TALK_CF_DEACON" }
+      {
+        "text": "有人能帮忙吗？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_STAFF"
+      },
+      {
+        "text": "难民怎么办？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_REFUGEES"
+      },
+      {
+        "text": "我看看能做些什么。",
+        "topic": "TALK_CF_DEACON"
+      }
     ]
   },
   {
     "id": "TALK_CF_DEACON_MISSION_CF_4_REFUGEES",
     "type": "talk_topic",
-    "dynamic_line": "I doubt any of them would be willing to venture out there to find work, even if Sofia might be more welcoming than the staff here.  But if you ask the right questions, someone surely has to know someone else, or might be willing to keep an eye out and assist with winning local traders and scavengers over.  I could help do the same if you would like.",
+    "dynamic_line": "我怀疑他们中有谁会愿意冒险去那里找工作，即使索菲亚可能比这里的员工更热情。但如果你问对了问题，肯定会有人认识其他人，或者愿意留心，协助争取当地商人和拾荒者。如果你愿意，我可以帮你做同样的事。",
     "responses": [
-      { "text": "Sure, that would help.", "topic": "TALK_CF_DEACON_MISSION_CF_4_DEAL" },
-      { "text": "Would any of the staff be able to help?", "topic": "TALK_CF_DEACON_MISSION_CF_4_STAFF" },
-      { "text": "Think any of the visitors would be interested?", "topic": "TALK_CF_DEACON_MISSION_CF_4_VISITORS" },
-      { "text": "I'll figure something out.  Thanks, though.", "topic": "TALK_CF_DEACON" }
+      {
+        "text": "当然，那会有帮助的。",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_DEAL"
+      },
+      {
+        "text": "有人能帮忙吗？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_STAFF"
+      },
+      {
+        "text": "你觉得有人会感兴趣吗？",
+        "topic": "TALK_CF_DEACON_MISSION_CF_4_VISITORS"
+      },
+      {
+        "text": "我会想办法的。不过，谢谢。",
+        "topic": "TALK_CF_DEACON"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_CF_DEACON_MISSION_CF_4_DEAL",
-    "dynamic_line": "I'll do what I can to speak with other scavengers that stop by.  I would suggest continuing to check with other people here, the more of us working to attract local traders, the more likely that this will succeed.  While I trust that Sofia's people can take care of any unwanted attention this may attract, the main concern is talking people into visiting a settlement that's relatively unknown.",
+    "dynamic_line": "我会尽我所能和其他过来的拾荒者谈谈。我建议继续和这里的其他人商量一下，我们越是努力吸引当地商人，就越有可能成功。虽然我相信索菲亚的人可以处理任何不必要的注意，这可能会吸引，主要的担心是说服人们访问一个相对未知的定居点。",
     "responses": [
       {
-        "text": "Thank you.  I've already convinced a couple others to help, I should go check with Sofia for now.",
+        "text": "非常感谢。我已经说服其他几个人帮忙了，我现在应该去找索菲亚问问。",
         "effect": [
-          { "u_add_var": "sofia_allies_secured", "value": "yes" },
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
           {
             "mapgen_update": "arcana_cf_4_wasteland_scavengers_1",
             "om_terrain": "cf_church_1",
@@ -133,25 +245,55 @@
             "search_range": 256
           }
         ],
-        "condition": { "compare_string": [ "yes", { "u_val": "sofia_ally_seeking_2" } ] },
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_2",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
         "switch": true,
         "topic": "TALK_DONE"
       },
       {
-        "text": "Thanks, I'll look around a bit more and see if anyone else can help with this.",
+        "text": "谢谢，我再四处看看，看看有没有人能帮忙。",
         "effect": [
-          { "u_add_var": "sofia_ally_seeking_2", "value": "yes" },
-          { "npc_add_var": "sofia_refugee_convinced", "value": "yes" }
+          {
+            "u_add_var": "sofia_ally_seeking_2",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
-        "condition": { "compare_string": [ "yes", { "u_val": "sofia_ally_seeking_1" } ] },
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_1",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
         "switch": true,
         "topic": "TALK_DONE"
       },
       {
-        "text": "I'll keep asking around, then.  Thanks.",
+        "text": "那我继续四处打听。谢谢。",
         "effect": [
-          { "u_add_var": "sofia_ally_seeking_1", "value": "yes" },
-          { "npc_add_var": "sofia_refugee_convinced", "value": "yes" }
+          {
+            "u_add_var": "sofia_ally_seeking_1",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
         "switch": true,
         "default": true,
@@ -162,23 +304,36 @@
   {
     "id": "TALK_CF_DEACON_WHO",
     "type": "talk_topic",
-    "dynamic_line": "A deacon from a local parish church.  The priest unfortunately left sometime before all this started and I've never heard from him since.  I fear the worst may have happened, but as it is there is already so much to tend to.",
+    "dynamic_line": "当地牧区教堂的执事。不幸的是，神父在这一切开始之前离开了，我从此再也没有他的消息。我担心最坏的情况可能已经发生，但事实上已经有太多的事情要做了。",
     "responses": [
-      { "text": "What is there to tend to?", "topic": "TALK_CF_DEACON_DO" },
-      { "text": "I see.", "topic": "TALK_CF_DEACON" }
+      {
+        "text": "有什么倾向？",
+        "topic": "TALK_CF_DEACON_DO"
+      },
+      {
+        "text": "我懂了。",
+        "topic": "TALK_CF_DEACON"
+      }
     ]
   },
   {
     "id": "TALK_CF_DEACON_DO",
     "type": "talk_topic",
-    "dynamic_line": "Many of the people here are struggling to get by and survive, and there is little that one man can do to help that.  What I can do however is help keep their spirits up, tend to the dead and dying best as I'm able as well.  I am at their service as best as I am able, no matter their faith.",
+    "dynamic_line": "这里的许多人都在挣扎着生存下去，而一个人却无能为力。但我能做的就是帮助他们振作起来，尽我所能照顾好死去的人。不管他们的信仰如何，我都会尽我所能为他们服务。",
     "responses": [
       {
-        "text": "Need help with anything?",
-        "condition": { "not": { "u_has_effect": "already_asked_deacon" } },
+        "text": "能帮你什么忙吗？",
+        "condition": {
+          "not": {
+            "u_has_effect": "already_asked_deacon"
+          }
+        },
         "topic": "TALK_CF_DEACON_HELP"
       },
-      { "text": "Oh, okay.", "topic": "TALK_CF_DEACON" }
+      {
+        "text": "哦，好的。",
+        "topic": "TALK_CF_DEACON"
+      }
     ]
   },
   {
@@ -186,16 +341,30 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_effect": "rural_church_aware",
-      "yes": "No doubt the others here have ample work to be done.  As for myself, I'll manage.  I feel a bit bad having left the parish unattended though.  There's a group of survivors who knew Father Alexander currently sheltering there, and they likely will be have work to be done too.  I could direct you there if you'd like, in case you wish to visit them yourself.",
-      "no": "No doubt the others here have ample work to be done.  As for myself, I'll manage.  I feel a bit bad having left the parish unattended though.  There's a group of survivors who knew Father Alexander currently sheltering there, and while I'm confident they can take care of themselves, I'm still worried about them."
+      "yes": "毫无疑问，这里的其他人还有很多工作要做。至于我自己，我会处理的。不过，离开教区无人看管我有点难过。有一群幸存者知道亚历山大神父目前在那里避难，他们可能也有工作要做。如果你愿意的话，我可以带你去那里，以防你自己去拜访他们。",
+      "no": "毫无疑问，这里的其他人还有很多工作要做。至于我自己，我会处理的。不过，离开教区无人看管我有点难过。有一群幸存者知道亚历山大神父目前在那里避难，虽然我有信心他们能自理，但我仍然担心他们。"
     },
     "responses": [
       {
-        "text": "Okay, go ahead.",
-        "condition": { "and": [ { "npc_has_effect": "rural_church_aware" }, { "not": { "u_has_effect": "already_asked_deacon" } } ] },
+        "text": "好吧，说吧。",
+        "condition": {
+          "and": [
+            {
+              "npc_has_effect": "rural_church_aware"
+            },
+            {
+              "not": {
+                "u_has_effect": "already_asked_deacon"
+              }
+            }
+          ]
+        },
         "switch": true,
         "effect": [
-          { "u_add_effect": "already_asked_deacon", "duration": "PERMANENT" },
+          {
+            "u_add_effect": "already_asked_deacon",
+            "duration": "PERMANENT"
+          },
           {
             "mapgen_update": "arcana_dummy",
             "om_terrain": "cf_church_4",
@@ -206,11 +375,23 @@
         "topic": "TALK_CF_DEACON_DESCRIBE"
       },
       {
-        "text": "Perhaps I could check on them for you?",
-        "condition": { "and": [ "has_no_available_mission", { "not": { "u_has_effect": "already_asked_deacon" } } ] },
+        "text": "也许我可以帮你查一下？",
+        "condition": {
+          "and": [
+            "has_no_available_mission",
+            {
+              "not": {
+                "u_has_effect": "already_asked_deacon"
+              }
+            }
+          ]
+        },
         "switch": true,
         "effect": [
-          { "u_add_effect": "already_asked_deacon", "duration": "PERMANENT" },
+          {
+            "u_add_effect": "already_asked_deacon",
+            "duration": "PERMANENT"
+          },
           {
             "mapgen_update": "arcana_dummy",
             "om_terrain": "cf_church_4",
@@ -221,12 +402,19 @@
         "topic": "TALK_CF_DEACON_DESCRIBE"
       },
       {
-        "text": "Any way I could do to help with that?",
-        "condition": { "not": { "u_has_effect": "already_asked_deacon" } },
+        "text": "我能帮上忙吗？",
+        "condition": {
+          "not": {
+            "u_has_effect": "already_asked_deacon"
+          }
+        },
         "switch": true,
         "topic": "TALK_MISSION_LIST"
       },
-      { "text": "I see.", "topic": "TALK_CF_DEACON" }
+      {
+        "text": "我懂了。",
+        "topic": "TALK_CF_DEACON"
+      }
     ]
   },
   {
@@ -234,19 +422,33 @@
     "type": "talk_topic",
     "dynamic_line": {
       "npc_has_effect": "rural_church_aware",
-      "yes": "It's a rural church off the side of the road.  I'll mark it on your map as best as I can, though you'll have to reach it yourself.  Look for a woman there by the name of Sofia McKinnon, she should have work for you if you wish to help them out.",
-      "no": "I haven't been able to check back with them in a while, and I know they need all the help they can get.  If you can take the time to pay them a visit, speak with Sofia.  She leads the group of survivors sheltering there, and she may have work for you.  I'll go ahead and mark it on your map as best as I can, but you'll need to find it on your own."
+      "yes": "这是路边的一个乡村教堂。我会尽我所能在你的地图上标出它，不过你得自己去。在那里找一个叫索菲亚·麦金农的女人，如果你想帮他们，她应该会为你工作的。",
+      "no": "我已经有一段时间没能和他们联系了，我知道他们需要尽可能多的帮助。如果你能抽出时间去拜访他们，和索菲亚谈谈。她带领一群幸存者在那里避难，她可能会为你工作。我会尽我所能在你的地图上标出它，但你得自己找。"
     },
-    "responses": [ { "text": "We'll see, then.", "topic": "TALK_CF_DEACON" } ]
+    "responses": [
+      {
+        "text": "那我们拭目以待吧。",
+        "topic": "TALK_CF_DEACON"
+      }
+    ]
   },
   {
     "id": "TALK_CF_DEACON_MISSION_BACKDOOR",
     "type": "talk_topic",
-    "dynamic_line": "Thank you.  I'm hopeful they'll be able to take care of themselves, for now I plan to stay here and help out as best as I can.  I know this isn't much, but here.  It's the least I could do.",
+    "dynamic_line": "非常感谢。我希望他们能照顾好自己，现在我计划留在这里，尽我所能帮助他们。我知道这不算多，但在这里。这是我至少能做的。",
     "responses": [
       {
-        "text": "Thank you!",
-        "effect": [ { "u_spawn_item": "FMCNote", "count": 5 }, { "npc_add_effect": "rural_church_aware", "duration": "PERMANENT" } ],
+        "text": "嗯，谢了！",
+        "effect": [
+          {
+            "u_spawn_item": "FMCNote",
+            "count": 5
+          },
+          {
+            "npc_add_effect": "rural_church_aware",
+            "duration": "PERMANENT"
+          }
+        ],
         "topic": "TALK_CF_DEACON"
       }
     ]

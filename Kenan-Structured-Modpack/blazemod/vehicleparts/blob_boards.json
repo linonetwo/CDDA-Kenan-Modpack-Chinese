@@ -2,25 +2,51 @@
   {
     "id": "frostie_wall",
     "type": "vehicle_part",
-    "name": { "str": "icy windshield" },
+    "name": {
+      "str": "变形怪冰川挡风玻璃"
+    },
     "item": "frostie",
     "location": "center",
-    "variants": [ { "symbols": "\"", "symbols_broken": "0" } ],
+    "variants": [
+      {
+        "symbols": "\"",
+        "symbols_broken": "0"
+      }
+    ],
     "color": "light_blue",
     "broken_color": "light_blue",
     "durability": 500,
     "damage_modifier": 80,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "frostiegrow" } ],
-    "description": "A living blob, existing in a super-cooled state.  It is transparent, and can be used to see out of the vehicle.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "OBSTACLE", "WINDOW" ]
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的载具部件。它全身透明，能够透过它看到车外。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "WINDOW"
+    ]
   },
   {
     "id": "gloopleboard_board",
     "copy-from": "base_board_abstract",
     "type": "vehicle_part",
-    "name": { "str": "gel panel" },
+    "name": {
+      "str": "凝胶侧板"
+    },
     "item": "gloople",
     "location": "center",
     "color": "light_green",
@@ -28,15 +54,35 @@
     "durability": 250,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "glooplegrow" } ],
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "OPAQUE", "OBSTACLE", "FULL_BOARD" ]
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OPAQUE",
+      "OBSTACLE",
+      "FULL_BOARD"
+    ]
   },
   {
     "id": "grayboard_horizontal",
     "copy-from": "base_board_abstract",
     "type": "vehicle_part",
-    "name": { "str": "gray wall" },
+    "name": {
+      "str": "灰色墙壁"
+    },
     "item": "gray",
     "location": "center",
     "color": "light_gray",
@@ -44,16 +90,36 @@
     "durability": 1000,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "graygrow" } ],
-    "description": "A living blob, formed into a vehicle wall.  Keeps zombies outside the vehicle and prevents people from seeing through it.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "OPAQUE", "OBSTACLE", "FULL_BOARD" ]
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的隔板。能够阻挡丧尸和其他人的视线。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OPAQUE",
+      "OBSTACLE",
+      "FULL_BOARD"
+    ]
   },
   {
     "id": "halfgloopleboard_board",
     "copy-from": "base_board_abstract",
     "type": "vehicle_part",
-    "name": { "str": "gel quarterpanel" },
+    "name": {
+      "str": "凝胶半隔板"
+    },
     "item": "gloople",
     "location": "center",
     "color": "light_green",
@@ -61,16 +127,35 @@
     "durability": 250,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "glooplegrow" } ],
-    "description": "A living blob, formed into a half-height vehicle wall.  Keeps zombies outside the vehicle but allows people to see over it.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "OBSTACLE", "HALF_BOARD" ]
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的半高隔板。能够阻挡丧尸但是无法阻挡其他人的视线。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "HALF_BOARD"
+    ]
   },
   {
     "id": "halfgrayboard_board",
     "copy-from": "base_board_abstract",
     "type": "vehicle_part",
-    "name": { "str": "gray barricade" },
+    "name": {
+      "str": "灰色路障"
+    },
     "item": "gray",
     "location": "center",
     "color": "light_gray",
@@ -78,16 +163,35 @@
     "durability": 1000,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "graygrow" } ],
-    "description": "A living blob, formed into a half-height vehicle wall.  Keeps zombies outside the vehicle but allows people to see over it.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "OBSTACLE", "HALF_BOARD" ]
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的半高隔板。能够阻挡丧尸但是无法阻挡其他人的视线。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "HALF_BOARD"
+    ]
   },
   {
     "id": "halfoozleboard_board",
     "copy-from": "base_board_abstract",
     "type": "vehicle_part",
-    "name": { "str": "ooze screen" },
+    "name": {
+      "str": "软泥屏风"
+    },
     "item": "oozle",
     "location": "center",
     "color": "green",
@@ -95,16 +199,35 @@
     "durability": 500,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "oozlegrow" } ],
-    "description": "A living blob, formed into a half-height vehicle wall.  Keeps zombies outside the vehicle but allows people to see over it.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "OBSTACLE", "HALF_BOARD" ]
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的半高隔板。能够阻挡丧尸但是无法阻挡其他人的视线。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "HALF_BOARD"
+    ]
   },
   {
     "id": "oozleboard_board",
     "copy-from": "base_board_abstract",
     "type": "vehicle_part",
-    "name": { "str": "ooze barrier" },
+    "name": {
+      "str": "软泥屏障"
+    },
     "item": "oozle",
     "location": "center",
     "color": "green",
@@ -112,9 +235,27 @@
     "durability": 500,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "oozlegrow" } ],
-    "description": "A living blob, formed into a vehicle wall.  Keeps zombies outside the vehicle and prevents people from seeing through it.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "OPAQUE", "OBSTACLE", "FULL_BOARD" ]
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成的隔板。能够阻挡丧尸和其他人的视线。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OPAQUE",
+      "OBSTACLE",
+      "FULL_BOARD"
+    ]
   }
 ]

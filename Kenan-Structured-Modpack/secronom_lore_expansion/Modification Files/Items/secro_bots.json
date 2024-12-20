@@ -2,23 +2,33 @@
   {
     "id": "bot_secro_laserturret_mod",
     "type": "TOOL",
-    "name": { "str": "inactive laser beam turret" },
-    "description": "An inactive SDP-L1 turret. Use to place it.",
+    "name": {
+      "str": "无效激光束转台"
+    },
+    "description": "一个未激活的SDP-L1炮塔。激活以放置它。",
     "volume": "60000 ml",
     "weight": "172 kg",
     "price": "200 USD",
-    "melee_damage": { "bash": 10 },
-    "material": [ "steel" ],
+    "to_hit": -5,
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "2",
     "color": "light_red",
     "use_action": {
       "type": "place_monster",
       "monster_id": "mon_secro_laserturret_mod",
-      "friendly_msg": "The SPD-L1 emits a beeping sound, then scans the vicinity...",
-      "hostile_msg": "Oh no...",
+      "friendly_msg": "SPD-L1 发出嘟嘟声，然后扫描附近...",
+      "hostile_msg": "哦，不...",
       "difficulty": 0,
       "moves": 250,
-      "skills": [ "electronics", "computer" ]
+      "skills": [
+        "electronics",
+        "computer"
+      ]
     }
   },
   {
@@ -26,89 +36,156 @@
     "id": "broken_bot_secroinforcer",
     "symbol": ",",
     "color": "green",
-    "name": { "str": "broken reinforcer bot" },
+    "name": {
+      "str": "破损的强化机器人"
+    },
     "category": "other",
-    "description": "A reinforcer bot broken beyond repair. Can be gutted for parts.",
+    "description": "一个破损到无法修复的强化机器人。可以从里面挖出一些零件。",
     "price": "10 USD",
     "price_postapoc": "1 USD",
-    "material": [ "steel", "plastic" ],
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "volume": "190 L",
     "weight": "290 kg",
-    "melee_damage": { "bash": 10 },
-    "flags": [ "TRADER_AVOID", "NO_REPAIR" ]
+    "melee_damage": {
+      "bash": 10
+    },
+    "to_hit": -4,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
   },
   {
     "type": "GENERIC",
     "id": "broken_bot_secroshocker",
     "symbol": ",",
     "color": "white",
-    "name": { "str": "broken shocker bot" },
+    "name": {
+      "str": "破损的放电机器人"
+    },
     "category": "other",
-    "description": "A shocker bot broken beyond repair. Can be gutted for parts.",
+    "description": "令人震惊的机器人坏得无法修复。可以挖出零件。",
     "price": "10 USD",
     "price_postapoc": "1 USD",
-    "material": [ "steel", "plastic" ],
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
-    "melee_damage": { "bash": 4, "cut": 4 },
-    "flags": [ "TRADER_AVOID", "NO_REPAIR" ]
+    "melee_damage": {
+      "bash": 4,
+      "cut": 4
+    },
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
   },
   {
     "type": "GENERIC",
     "id": "broken_bot_secroriflewalker",
     "symbol": ",",
     "color": "white",
-    "name": { "str": "broken walker bot" },
+    "name": {
+      "str": "破损的步行机器人"
+    },
     "category": "other",
-    "description": "A walker bot broken beyond repair. Can be gutted for parts.",
+    "description": "无法修复的步行机器人。可以挖出零件。",
     "price": "10 USD",
     "price_postapoc": "1 USD",
-    "material": [ "steel", "plastic" ],
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
-    "melee_damage": { "bash": 3 },
-    "flags": [ "TRADER_AVOID", "NO_REPAIR" ]
+    "melee_damage": {
+      "bash": 3
+    },
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
   },
   {
     "type": "GENERIC",
     "id": "broken_bot_secrolauncher",
     "symbol": ",",
     "color": "white",
-    "name": { "str": "broken launcher bot" },
+    "name": {
+      "str": "破损的发射器机器人"
+    },
     "category": "other",
-    "description": "A launcher bot broken beyond repair. Can be gutted for parts.",
+    "description": "一个发射机器人坏得无法修复。可以挖出零件。",
     "price": "10 USD",
     "price_postapoc": "1 USD",
-    "material": [ "steel", "plastic" ],
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
-    "melee_damage": { "bash": 3 },
-    "flags": [ "TRADER_AVOID", "NO_REPAIR" ]
+    "melee_damage": {
+      "bash": 3
+    },
+    "to_hit": -3,
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
   },
   {
     "type": "GENERIC",
     "id": "broken_secro_fleshmech_unlink",
-    "name": { "str": "broken flesh mech" },
-    "description": "This is a broken flesh exoskeleton suit, it looks beyond repair.",
+    "name": {
+      "str": "破碎的血肉外骨骼装甲"
+    },
+    "description": "这是一套破损的皮肉外骨骼服，看起来无法修复。",
     "weight": "1480388 g",
     "volume": "250 L",
-    "melee_damage": { "bash": 8 },
-    "material": [ "superalloy", "secro_flesh_reinforced" ],
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "superalloy",
+      "secro_flesh_reinforced"
+    ],
     "symbol": ";",
     "color": "light_red",
-    "flags": [ "TRADER_AVOID", "NO_REPAIR" ]
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
   },
   {
     "type": "GENERIC",
     "id": "broken_secro_fleshmech",
-    "name": { "str": "broken flesh mech" },
-    "description": "This is a broken flesh exoskeleton suit, it looks beyond repair.",
+    "name": {
+      "str": "破碎的血肉外骨骼装甲"
+    },
+    "description": "这是一套破损的皮肉外骨骼服，看起来无法修复。",
     "weight": "1480388 g",
     "volume": "250 L",
-    "melee_damage": { "bash": 8 },
-    "material": [ "superalloy", "secro_flesh_reinforced" ],
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "superalloy",
+      "secro_flesh_reinforced"
+    ],
     "symbol": ";",
     "color": "light_red",
-    "flags": [ "TRADER_AVOID", "NO_REPAIR" ]
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
   }
 ]

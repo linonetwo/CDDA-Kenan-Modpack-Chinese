@@ -2,82 +2,121 @@
   {
     "type": "material",
     "id": "essencemat",
-    "name": "Magical Energy",
+    "name": "魔法能量",
     "density": 1,
-    "resist": { "bash": 20, "cut": 20, "bullet": 20, "acid": 99, "heat": 99, "electric": 99 },
+    "resist": {
+      "bash": 20,
+      "cut": 20,
+      "bullet": 20,
+      "acid": 99,
+      "heat": 99,
+      "electric": 99
+    },
     "chip_resist": 99,
     "soft": true,
     "breathability": "SECOND_SKIN",
-    "dmg_adj": [ "lightly damaged", "damaged", "very damaged", "thoroughly damaged" ],
-    "bash_dmg_verb": "damaged",
-    "cut_dmg_verb": "damaged",
-    "fuel_data": { "energy": "1000 kJ" },
+    "dmg_adj": [
+      "轻微损坏",
+      "损坏",
+      "严重损坏",
+      "彻底损坏"
+    ],
+    "bash_dmg_verb": "损坏",
+    "cut_dmg_verb": "损坏",
+    "fuel_data": {
+      "energy": "1000 kJ"
+    },
     "repair_difficulty": 3
   },
   {
     "type": "material",
     "id": "arcana_fuel_essence",
     "copy-from": "essencemat",
-    "name": "Essence",
-    "fuel_data": { "energy": "15000 kJ" }
+    "name": "源质",
+    "fuel_data": {
+      "energy": "15000 kJ"
+    }
   },
   {
     "type": "material",
     "id": "arcana_fuel_essence_blood",
     "copy-from": "essencemat",
-    "name": "Blood Essence",
-    "fuel_data": { "energy": "10000 kJ" }
+    "name": "猩血源质",
+    "fuel_data": {
+      "energy": "10000 kJ"
+    }
   },
   {
     "type": "material",
     "id": "arcana_fuel_essence_dull",
     "copy-from": "essencemat",
-    "name": "Dull Essence",
-    "fuel_data": { "energy": "5000 kJ" }
+    "name": "阴黯源质",
+    "fuel_data": {
+      "energy": "5000 kJ"
+    }
   },
   {
     "type": "material",
     "id": "arcana_fuel_essence_pure",
     "copy-from": "essencemat",
-    "name": "Crystallized Essence",
-    "fuel_data": { "energy": "100000 kJ" }
+    "name": "璀璨源质",
+    "fuel_data": {
+      "energy": "100000 kJ"
+    }
   },
   {
     "type": "material",
     "id": "wyrmskin",
     "copy-from": "leather",
-    "name": "Wyrmskin",
-    "resist": { "bash": 1, "cut": 3, "acid": 99, "heat": 2, "bullet": 2 }
+    "name": "龙之硬肤",
+    "resist": {
+      "bash": 1,
+      "cut": 3,
+      "acid": 99,
+      "heat": 2,
+      "bullet": 2
+    }
   },
   {
     "type": "material",
     "id": "clay",
     "copy-from": "clay",
-    "name": "Clay",
+    "name": "黏土",
     "repaired_with": "clay_lump"
   },
   {
     "type": "material",
     "id": "stone",
     "copy-from": "stone",
-    "name": "Stone",
+    "name": "石",
     "repaired_with": "rock"
   },
   {
     "type": "material",
     "id": "dragon_scale",
     "//": "double of Hardened Chitin",
-    "name": "Dragon Scales",
+    "name": "龙鳞",
     "density": 2.9,
     "specific_heat_liquid": 4.186,
     "specific_heat_solid": 2.108,
     "latent_heat": 333,
-    "resist": { "bash": 5, "cut": 8, "bullet": 2.8, "acid": 12, "heat": 5 },
+    "resist": {
+      "bash": 5,
+      "cut": 8,
+      "bullet": 2.8,
+      "acid": 12,
+      "heat": 5
+    },
     "chip_resist": 28,
     "breathability": "GOOD",
     "wind_resist": 90,
-    "dmg_adj": [ "scratched", "cut", "cracked", "shattered" ],
-    "bash_dmg_verb": "cracked",
-    "cut_dmg_verb": "chipped"
+    "dmg_adj": [
+      "刮花",
+      "斩击",
+      "裂纹",
+      "破碎"
+    ],
+    "bash_dmg_verb": "裂纹",
+    "cut_dmg_verb": "缺口"
   }
 ]

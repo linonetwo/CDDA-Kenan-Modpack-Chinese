@@ -2,23 +2,47 @@
   {
     "id": "t5_blood_vampiricoutrage",
     "type": "SPELL",
-    "name": { "str": "Vampiric Outrage" },
-    "description": "Sets you in catastrophic madness, consuming own's life force in exchange of barraging random attacks.\n* For every damage, you randomly attack foes with 25 (<color_magenta>bash</color>, cut or <color_light_red>stab</color>) damage within a 12 tile radius. There's a 1/10 chance to suck the target's life force, dealing up to <color_green>10 biological damage</color> and heals you by <color_green>5</color>.\n\nThis is a <color_red>tier 5</color> spell.",
-    "message": "<color_light_red>Dread fills your mind and body...</color>\nAs you stand, blood tendrils emerges from you!",
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "吸血鬼之怒"
+    },
+    "description": "让你陷入灾难性的疯狂，消耗自己的生命力量来交换弹幕式的随机攻击。\n*每造成一点伤害，你在12个方圆内随机攻击敌人25点伤害（<color_magenta>击</color>，砍或<color_light_red>刺）。有1/10的几率吸取目标的生命力，造成最多<color_green>10点生物伤害，并通过<color_green>5治疗你。\n\n这是一个<color_red>第5层的咒语。",
+    "message": "<color_light_red>恐惧充满了你的身心……</color>\n你站起身后，血凝成的卷须从你体内窜出！",
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "extra_effects": [
-      { "id": "t5_blood_outrage_bash" },
-      { "id": "t5_blood_outrage_bash" },
-      { "id": "t5_blood_outrage_bash" },
-      { "id": "t5_blood_outrage_cut" },
-      { "id": "t5_blood_outrage_cut" },
-      { "id": "t5_blood_outrage_cut" },
-      { "id": "t5_blood_outrage_stab" },
-      { "id": "t5_blood_outrage_stab" },
-      { "id": "t5_blood_outrage_stab" },
-      { "id": "t5_blood_outrage_drain" }
+      {
+        "id": "t5_blood_outrage_bash"
+      },
+      {
+        "id": "t5_blood_outrage_bash"
+      },
+      {
+        "id": "t5_blood_outrage_bash"
+      },
+      {
+        "id": "t5_blood_outrage_cut"
+      },
+      {
+        "id": "t5_blood_outrage_cut"
+      },
+      {
+        "id": "t5_blood_outrage_cut"
+      },
+      {
+        "id": "t5_blood_outrage_stab"
+      },
+      {
+        "id": "t5_blood_outrage_stab"
+      },
+      {
+        "id": "t5_blood_outrage_stab"
+      },
+      {
+        "id": "t5_blood_outrage_drain"
+      }
     ],
     "base_energy_cost": 0,
     "energy_increment": 3,
@@ -29,15 +53,25 @@
     "min_damage": 0,
     "max_damage": 0,
     "damage_increment": 3,
-    "flags": [ "SOMATIC", "CONCENTRATE", "NO_LEGS", "WONDER", "NO_PROJECTILE" ],
+    "flags": [
+      "SOMATIC",
+      "CONCENTRATE",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE"
+    ],
     "base_casting_time": 500
   },
   {
     "id": "t5_blood_essencepull",
     "type": "SPELL",
-    "name": { "str": "Essence Pull" },
-    "description": "Attempts to instantly kill the target by draining every ounce of their life force, dealing immensive <color_green>biological damage</color>.\n\nThis is a <color_red>tier 5</color> spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "源质牵引"
+    },
+    "description": "试图通过耗尽目标的每一盎司生命力来立即杀死目标，造成巨大的<color_green>生物伤害</color>。\n\n这是一个<color_red>第5层的咒语。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "base_energy_cost": 0,
@@ -52,7 +86,11 @@
     "damage_increment": 125,
     "min_range": 1,
     "max_range": 1,
-    "flags": [ "SOMATIC", "NO_LEGS", "NO_PROJECTILE" ],
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
     "base_casting_time": 125,
     "damage_type": "biological"
   }

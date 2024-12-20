@@ -2,7 +2,9 @@
   {
     "type": "COMESTIBLE",
     "id": "caveyot_helmet_plump",
-    "name": { "str": "dark truffle" },
+    "name": {
+      "str": "黑松露菌"
+    },
     "weight": "120 g",
     "color": "magenta",
     "spoils_in": "270 days",
@@ -11,18 +13,23 @@
     "quench": -4,
     "healthy": -1,
     "calories": 125,
-    "description": "A mushroom vaguely resembling a black truffle, with a noticeable purple coloration instead.  It seems to be edible raw, albeit bittersweet, and might be tastier cooked.",
+    "description": "一种蘑菇，有点像黑松露，带有显眼的的紫色。它看起来可以生吃（尽管吃起来一言难尽），烹饪后可能更加美味。",
     "price": "1 USD",
     "material": "mushroom",
     "volume": "250 ml",
-    "flags": [ "EATEN_HOT", "EDIBLE_FROZEN", "NUTRIENT_OVERRIDE" ],
-    "fun": -1,
-    "vitamins": [ [ "vitC", 4 ], [ "iron", 7 ] ]
+    "flags": [
+      "EATEN_HOT",
+      "EDIBLE_FROZEN",
+      "NUTRIENT_OVERRIDE"
+    ],
+    "fun": -1
   },
   {
     "type": "COMESTIBLE",
     "id": "caveyot_helmet_plump_cooked",
-    "name": { "str": "cooked dark truffle" },
+    "name": {
+      "str": "熟黑松露菌"
+    },
     "weight": "120 g",
     "color": "magenta",
     "spoils_in": "180 days",
@@ -31,68 +38,94 @@
     "quench": 2,
     "healthy": -1,
     "calories": 200,
-    "description": "A mushroom vaguely resembling a black truffle, with a noticeable purple coloration instead.  Much better now that it's been cooked.",
+    "description": "一种蘑菇，有点像黑松露，带有显眼的的紫色。现在经过了烹饪，看起来好多了。",
     "price": "2 USD",
     "material": "mushroom",
     "volume": "250 ml",
-    "flags": [ "EATEN_HOT", "EDIBLE_FROZEN", "NUTRIENT_OVERRIDE" ]
+    "flags": [
+      "EATEN_HOT",
+      "EDIBLE_FROZEN",
+      "NUTRIENT_OVERRIDE"
+    ]
   },
   {
     "type": "COMESTIBLE",
     "id": "caveyot_pod_sweet",
-    "name": { "str": "vibrant bulb" },
+    "name": {
+      "str": "活力鳞茎"
+    },
     "weight": "115 g",
     "color": "red",
     "spoils_in": "360 days",
     "comestible_type": "FOOD",
     "symbol": "%",
-    "description": "A bright red bulb resembling an onion, far more scarlet than the purple of any earthly red onion.  Though it gives off a sweet aroma, its layers are tough and difficult to peel, making it inedible as-is.",
+    "description": "一种类似洋葱的鲜红色鳞茎，颜色比地球上任何红色洋葱都要深。虽然它散发出甜甜的香气，但它的表皮很硬，很难剥开，因此无法食用。",
     "price": "150 cent",
-    "material": [ "mushroom", "wood" ],
+    "material": [
+      "mushroom",
+      "wood"
+    ],
     "volume": "250 ml"
   },
   {
     "type": "COMESTIBLE",
     "id": "caveyot_wheat_cave",
-    "name": { "str": "cloudy brush", "str_pl": "cloudy brushes" },
+    "name": {
+      "str": "云朵蘑菇",
+      "str_pl": "云朵蘑菇"
+    },
     "weight": "120 g",
     "color": "white",
     "comestible_type": "FOOD",
     "symbol": ",",
-    "description": "A long stalk covered with fluffy clumps of powdery growth, vaguely resembling cotton bolls.  The resemblance is merely visual, as it simply crumbles into powder if pulled apart.",
+    "description": "一种蘑菇，长长的菌柄顶端长着粉状蓬松团块，看起来像是棉铃一样，但这种相似性仅仅是视觉上的，因为如果把它拉开，它只会碎裂成粉末。",
     "price": "300 cent",
-    "material": [ "mushroom", "powder" ],
+    "material": [
+      "mushroom",
+      "powder"
+    ],
     "volume": "250 ml"
   },
   {
     "type": "COMESTIBLE",
     "id": "caveyot_tails_pig",
-    "name": { "str": "spiral stalk" },
+    "name": {
+      "str": "螺旋蘑菇"
+    },
     "weight": "120 g",
     "color": "light_gray",
     "comestible_type": "FOOD",
     "symbol": ",",
-    "description": "A stalk of plantlike growth that naturally curls in on itself in a spiral, covered with short, thin leaves.  Every part of the \"plant\" is tough and stringy.",
+    "description": "一种长得像植物一样的菌柄，自然卷曲成螺旋状，长着薄薄的短叶。这种“植物”的每一部分都很坚韧的。",
     "price": "400 cent",
-    "material": [ "mushroom", "powder" ],
+    "material": [
+      "mushroom",
+      "powder"
+    ],
     "volume": "250 ml"
   },
   {
     "type": "COMESTIBLE",
     "id": "caveyot_bush_quarry",
-    "name": { "str": "hardened bramble branch", "str_pl": "hardened bramble branches" },
+    "name": {
+      "str": "硬豆荚菌",
+      "str_pl": "硬豆荚菌"
+    },
     "weight": "200 g",
     "color": "brown",
     "comestible_type": "FOOD",
     "symbol": "/",
-    "description": "A woody, tangled branch covered in pods resembling overgrown pecans.  Some of the growths are smaller, softer, and greener in color, but the whole thing seems inedible and useless as-is.",
+    "description": "一种木质的、缠绕在一起的菌柄，上面长满类似成熟山核桃的豆荚。其中一些豆荚更小，更柔软，颜色更绿，但整个东西似乎不能吃也没有别的用处。",
     "price": "2 USD",
     "volume": "250 ml"
   },
   {
     "type": "COMESTIBLE",
     "id": "caveyot_bush_quarry_cooked",
-    "name": { "str_sp": "roasted bramble nuts" },
+    "name": {
+      "str": "一把烤硬豆荚菌",
+      "str_pl": "烤黑莓坚果"
+    },
     "looks_like": "hickory_nut_roasted",
     "weight": "120 g",
     "color": "brown",
@@ -100,13 +133,19 @@
     "comestible_type": "FOOD",
     "symbol": "%",
     "quench": -4,
-    "calories": 400,
-    "description": "A handful of pods stripped from a strange branch, roasted in their shells due to how rock-hard they were.  Doing so softened and split open the shells, leaving nuts that seem to have been fried in the pod's own oil.",
+    "calories": 200,
+    "description": "从奇怪的树枝上剥下来的一小把豆荚，硬的只能连壳烹饪。当壳软到可以打开的时候就能吃了，而且果仁似乎是被自己的油炸熟的。",
     "price": "150 cent",
-    "material": [ "mushroom", "nut" ],
+    "material": [
+      "mushroom",
+      "nut"
+    ],
     "volume": "125 ml",
-    "flags": [ "EATEN_HOT", "EDIBLE_FROZEN", "NUTRIENT_OVERRIDE" ],
-    "fun": 2,
-    "vitamins": [ [ "calcium", 2 ], [ "iron", 4 ] ]
+    "flags": [
+      "EATEN_HOT",
+      "EDIBLE_FROZEN",
+      "NUTRIENT_OVERRIDE"
+    ],
+    "fun": 2
   }
 ]

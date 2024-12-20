@@ -4,14 +4,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Mechanics" },
-    "description": "The mechanics volume of the Rebuilding Civilization encyclopedia.  This book contains everything from simple machines to the inner workings of submarine engines in extremely fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：机械学"
+    },
+    "description": "《重建文明百科全书》中的机械学主卷。这本书包含了从简单的机器到潜艇引擎的内部工作的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "mechanics",
@@ -21,9 +27,22 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_basic_engines", "time_factor": 0.7, "fail_factor": 0.5 },
-      { "proficiency": "prof_pneumatics", "time_factor": 0.7, "fail_factor": 0.5 },
-      { "proficiency": "prof_welding", "time_factor": 0.25, "fail_factor": 0.3, "include_prereqs": true }
+      {
+        "proficiency": "prof_basic_engines",
+        "time_factor": 0.7,
+        "fail_factor": 0.5
+      },
+      {
+        "proficiency": "prof_pneumatics",
+        "time_factor": 0.7,
+        "fail_factor": 0.5
+      },
+      {
+        "proficiency": "prof_welding",
+        "time_factor": 0.25,
+        "fail_factor": 0.3,
+        "include_prereqs": true
+      }
     ]
   },
   {
@@ -31,14 +50,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Fabrication" },
+    "name": {
+      "str_sp": "重建文明：制造"
+    },
     "description": "The fabrication volume of the Rebuilding Civilization encyclopedia.  This book contains everything from creating how to create simple stone tools to the creation of the pyramids of Egypt in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "fabrication",
@@ -48,15 +73,54 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_armorsmithing", "time_factor": 0.2, "fail_factor": 0.3, "include_prereqs": false },
-      { "proficiency": "prof_bowyery", "time_factor": 0.15, "fail_factor": 0.5 },
-      { "proficiency": "prof_carpentry_basic", "time_factor": 0.2, "fail_factor": 0.2, "include_prereqs": true },
-      { "proficiency": "prof_fletching", "time_factor": 0.15, "fail_factor": 0.35 },
-      { "proficiency": "prof_glassblowing", "time_factor": 0.7, "fail_factor": 0.5 },
-      { "proficiency": "prof_handloading", "time_factor": 0.8, "fail_factor": 0.5 },
-      { "proficiency": "prof_plasticworking", "time_factor": 0.6, "fail_factor": 0.5 },
-      { "proficiency": "prof_pottery", "time_factor": 0.15, "fail_factor": 0.15 },
-      { "proficiency": "prof_welding", "time_factor": 0.25, "fail_factor": 0.3, "include_prereqs": true }
+      {
+        "proficiency": "prof_armorsmithing",
+        "time_factor": 0.2,
+        "fail_factor": 0.3,
+        "include_prereqs": false
+      },
+      {
+        "proficiency": "prof_bowyery",
+        "time_factor": 0.15,
+        "fail_factor": 0.5
+      },
+      {
+        "proficiency": "prof_carpentry_basic",
+        "time_factor": 0.2,
+        "fail_factor": 0.2,
+        "include_prereqs": true
+      },
+      {
+        "proficiency": "prof_fletching",
+        "time_factor": 0.15,
+        "fail_factor": 0.35
+      },
+      {
+        "proficiency": "prof_glassblowing",
+        "time_factor": 0.7,
+        "fail_factor": 0.5
+      },
+      {
+        "proficiency": "prof_handloading",
+        "time_factor": 0.8,
+        "fail_factor": 0.5
+      },
+      {
+        "proficiency": "prof_plasticworking",
+        "time_factor": 0.6,
+        "fail_factor": 0.5
+      },
+      {
+        "proficiency": "prof_pottery",
+        "time_factor": 0.15,
+        "fail_factor": 0.15
+      },
+      {
+        "proficiency": "prof_welding",
+        "time_factor": 0.25,
+        "fail_factor": 0.3,
+        "include_prereqs": true
+      }
     ]
   },
   {
@@ -64,14 +128,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Archery" },
+    "name": {
+      "str_sp": "重建文明：弓术"
+    },
     "description": "The archery volume of the Rebuilding Civilization encyclopedia.  This book contains everything from correct positioning to the usage of advanced bows in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "archery",
@@ -86,14 +156,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Bashing Weapons" },
+    "name": {
+      "str_sp": "重建文明：钝击"
+    },
     "description": "The bashing weapons volume of the Rebuilding Civilization encyclopedia.  This book contains everything from self defense with a pipe to the proper swinging technique for a sledge hammer in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "bashing",
@@ -108,14 +184,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Applied Science" },
-    "description": "The applied science volume of the Rebuilding Civilization encyclopedia.  This book contains everything from cooking small game to acid-base reactions to polymer synthesis in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：应用科学"
+    },
+    "description": "《重建文明百科全书》中的应用科学主卷。这本书包含了从烹饪小游戏到酸碱反应，再到聚合物合成的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "chemistry",
@@ -125,14 +207,46 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_chem_synth", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_distilling", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_inorganic_chemistry", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_intro_biology", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_intro_chemistry", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_intro_chem_synth", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_metallurgy", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_organic_chemistry", "time_factor": 0.25, "fail_factor": 0.25 }
+      {
+        "proficiency": "prof_chem_synth",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_distilling",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_inorganic_chemistry",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_intro_biology",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_intro_chemistry",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_intro_chem_synth",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_metallurgy",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_organic_chemistry",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      }
     ]
   },
   {
@@ -140,14 +254,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Computers" },
-    "description": "The computer volume of the Rebuilding Civilization encyclopedia.  This book contains everything from basic programming to cyber security algorithms in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：计算机学"
+    },
+    "description": "《重建文明百科全书》中的计算机学主卷。本书详细介绍了从基本编程到网络安全算法的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "computer",
@@ -162,14 +282,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Food Handling" },
-    "description": "The food handling volume of the Rebuilding Civilization encyclopedia.  This book contains everything from cooking small game to gourmet meal preparation in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：食品加工"
+    },
+    "description": "《重建文明百科全书》中的食品加工主卷。这本书包含了从烹饪小游戏到美食准备的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "cooking",
@@ -179,15 +305,51 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_baking", "time_factor": 0.25, "fail_factor": 0.2 },
-      { "proficiency": "prof_baking_bread", "time_factor": 0.25, "fail_factor": 0.2 },
-      { "proficiency": "prof_brewing", "time_factor": 0.25, "fail_factor": 0.5 },
-      { "proficiency": "prof_cheesemaking_1", "time_factor": 0.1, "fail_factor": 0.4 },
-      { "proficiency": "prof_fermenting", "time_factor": 0.1, "fail_factor": 0.25 },
-      { "proficiency": "prof_food_canning", "time_factor": 0.1, "fail_factor": 0.4 },
-      { "proficiency": "prof_forage_cooking", "time_factor": 0.1, "fail_factor": 0.25 },
-      { "proficiency": "prof_frying", "time_factor": 0.1, "fail_factor": 0.2 },
-      { "proficiency": "prof_preservation", "time_factor": 0.1, "fail_factor": 0.1 }
+      {
+        "proficiency": "prof_baking",
+        "time_factor": 0.25,
+        "fail_factor": 0.2
+      },
+      {
+        "proficiency": "prof_baking_bread",
+        "time_factor": 0.25,
+        "fail_factor": 0.2
+      },
+      {
+        "proficiency": "prof_brewing",
+        "time_factor": 0.25,
+        "fail_factor": 0.5
+      },
+      {
+        "proficiency": "prof_cheesemaking_1",
+        "time_factor": 0.1,
+        "fail_factor": 0.4
+      },
+      {
+        "proficiency": "prof_fermenting",
+        "time_factor": 0.1,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_food_canning",
+        "time_factor": 0.1,
+        "fail_factor": 0.4
+      },
+      {
+        "proficiency": "prof_forage_cooking",
+        "time_factor": 0.1,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_frying",
+        "time_factor": 0.1,
+        "fail_factor": 0.2
+      },
+      {
+        "proficiency": "prof_preservation",
+        "time_factor": 0.1,
+        "fail_factor": 0.1
+      }
     ]
   },
   {
@@ -195,14 +357,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Cutting Weapons" },
+    "name": {
+      "str_sp": "重建文明：斩击"
+    },
     "description": "The cutting weapons volume of the Rebuilding Civilization encyclopedia.  This book contains everything from using a glass shiv to medieval swordsmanship in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "cutting",
@@ -217,14 +385,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Dodging" },
+    "name": {
+      "str_sp": "重建文明：闪避"
+    },
     "description": "The dodging volume of the Rebuilding Civilization encyclopedia.  This book contains everything from dancing for beginners to parkour in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "dodge",
@@ -239,14 +413,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Vehicles" },
-    "description": "The vehicles volume of the Rebuilding Civilization encyclopedia.  This book contains everything from acquiring a driving license to professional racing in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：驾驶"
+    },
+    "description": "《重建文明百科全书》中的驾驶主卷。这本书包含了从获得驾驶执照到专业比赛的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "driving",
@@ -261,14 +441,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Electronics" },
+    "name": {
+      "str_sp": "重建文明：电子学"
+    },
     "description": "The electronics volume of the Rebuilding Civilization encyclopedia.  This book contains everything from simple circuits to military robotics in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "electronics",
@@ -278,9 +464,21 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_elec_circuits", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_electromagnetics", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_elec_soldering", "time_factor": 0.25, "fail_factor": 0.25 }
+      {
+        "proficiency": "prof_elec_circuits",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_electromagnetics",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_elec_soldering",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      }
     ]
   },
   {
@@ -288,14 +486,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Health Care" },
-    "description": "The health care volume of the Rebuilding Civilization encyclopedia.  This book contains everything from proper bandage application to exploratory surgery in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：医疗"
+    },
+    "description": "《重建文明百科全书》中的医疗主卷。本书详细介绍了从正确的绷带应用到探索性手术的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "firstaid",
@@ -305,8 +509,16 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_wound_care", "time_factor": 0.75, "fail_factor": 0.5 },
-      { "proficiency": "prof_wound_care_expert", "time_factor": 0.75, "fail_factor": 0.5 }
+      {
+        "proficiency": "prof_wound_care",
+        "time_factor": 0.75,
+        "fail_factor": 0.5
+      },
+      {
+        "proficiency": "prof_wound_care_expert",
+        "time_factor": 0.75,
+        "fail_factor": 0.5
+      }
     ]
   },
   {
@@ -314,14 +526,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Marksmanship" },
+    "name": {
+      "str_sp": "重建文明：枪法"
+    },
     "description": "The marksmanship volume of the Rebuilding Civilization encyclopedia.  This book contains everything from proper iron sight aiming to military sniper techniques in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "gun",
@@ -336,14 +554,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Launchers" },
+    "name": {
+      "str_sp": "重建文明：重武器"
+    },
     "description": "The launchers volume of the Rebuilding Civilization encyclopedia.  This book contains everything from the use of spraycan flamethrowers to recoiless rifles in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "launcher",
@@ -358,14 +582,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Melee Combat" },
+    "name": {
+      "str_sp": "重建文明：近战"
+    },
     "description": "The melee combat volume of the Rebuilding Civilization encyclopedia.  This book contains everything from using a branch to martial arts techniques in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "melee",
@@ -380,14 +610,21 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str": "Rebuilding Civilization: Pistols", "str_pl": "Rebuilding Civilization: Pistols" },
+    "name": {
+      "str": "重建文明：手枪",
+      "str_pl": "重建文明：手枪"
+    },
     "description": "The pistols volume of the Rebuilding Civilization encyclopedia.  This book contains everything from using zip pistols to laser pistols in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "pistol",
@@ -402,14 +639,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Rifles" },
+    "name": {
+      "str_sp": "重建文明：步枪"
+    },
     "description": "The rifles volume of the Rebuilding Civilization encyclopedia.  This book contains everything from using zip rifles to laser rifles in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "rifle",
@@ -424,14 +667,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Shotguns" },
+    "name": {
+      "str_sp": "重建文明：霰弹枪"
+    },
     "description": "The shotguns volume of the Rebuilding Civilization encyclopedia.  This book contains everything from using zip shotguns to laser scatter guns in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "shotgun",
@@ -446,14 +695,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Sub Machineguns" },
+    "name": {
+      "str_sp": "重建文明：冲锋枪"
+    },
     "description": "The sub machineguns volume of the Rebuilding Civilization encyclopedia.  This book contains everything from using makeshift smgs to automatic laser carbines in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "smg",
@@ -468,14 +723,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Social" },
-    "description": "The social volume of the Rebuilding Civilization encyclopedia.  This book contains everything from recruiting survivors to running for political office in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：社交"
+    },
+    "description": "《重建文明百科全书》中的社交主卷。这本书详细介绍了从招募幸存者到竞选政治领袖的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "speech",
@@ -490,14 +751,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Piercing Weapons" },
+    "name": {
+      "str_sp": "重建文明：刺击"
+    },
     "description": "The piercing weapons volume of the Rebuilding Civilization encyclopedia.  This book contains everything from using switchblades to spear combat in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "stabbing",
@@ -512,14 +779,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Survival" },
+    "name": {
+      "str_sp": "重建文明：生存"
+    },
     "description": "The survival volume of the Rebuilding Civilization encyclopedia.  This book contains everything from camping to survival on a deserted island in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "survival",
@@ -529,12 +802,36 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_fibers", "time_factor": 0.15, "fail_factor": 0.15 },
-      { "proficiency": "prof_fibers_rope", "time_factor": 0.15, "fail_factor": 0.15 },
-      { "proficiency": "prof_knapping", "time_factor": 0.15, "fail_factor": 0.15 },
-      { "proficiency": "prof_knapping_speed", "time_factor": 0.15, "fail_factor": 0.15 },
-      { "proficiency": "prof_tanning_basic", "time_factor": 0.15, "fail_factor": 0.15 },
-      { "proficiency": "prof_tanning", "time_factor": 0.15, "fail_factor": 0.15 }
+      {
+        "proficiency": "prof_fibers",
+        "time_factor": 0.15,
+        "fail_factor": 0.15
+      },
+      {
+        "proficiency": "prof_fibers_rope",
+        "time_factor": 0.15,
+        "fail_factor": 0.15
+      },
+      {
+        "proficiency": "prof_knapping",
+        "time_factor": 0.15,
+        "fail_factor": 0.15
+      },
+      {
+        "proficiency": "prof_knapping_speed",
+        "time_factor": 0.15,
+        "fail_factor": 0.15
+      },
+      {
+        "proficiency": "prof_tanning_basic",
+        "time_factor": 0.15,
+        "fail_factor": 0.15
+      },
+      {
+        "proficiency": "prof_tanning",
+        "time_factor": 0.15,
+        "fail_factor": 0.15
+      }
     ]
   },
   {
@@ -542,14 +839,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Athletics" },
-    "description": "The athletics volume of the Rebuilding Civilization encyclopedia.  This book contains everything from recreational swimming to crossing rivers in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：运动"
+    },
+    "description": "《重建文明百科全书》中的运动主卷。这本书包含了从休闲游泳到轻松过河的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "swimming",
@@ -564,14 +867,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Tailoring" },
+    "name": {
+      "str_sp": "重建文明：缝纫"
+    },
     "description": "The tailoring volume of the Rebuilding Civilization encyclopedia.  This book contains everything from fixing clothing tears to fashion designing in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "tailor",
@@ -581,11 +890,31 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_closures", "time_factor": 0.2, "fail_factor": 0.1 },
-      { "proficiency": "prof_knitting", "time_factor": 0.15, "fail_factor": 0.1 },
-      { "proficiency": "prof_leatherworking_basic", "time_factor": 0.1, "fail_factor": 0.1 },
-      { "proficiency": "prof_leatherworking", "time_factor": 0.1, "fail_factor": 0.1 },
-      { "proficiency": "prof_plasticworking", "time_factor": 0.1, "fail_factor": 0.1 }
+      {
+        "proficiency": "prof_closures",
+        "time_factor": 0.2,
+        "fail_factor": 0.1
+      },
+      {
+        "proficiency": "prof_knitting",
+        "time_factor": 0.15,
+        "fail_factor": 0.1
+      },
+      {
+        "proficiency": "prof_leatherworking_basic",
+        "time_factor": 0.1,
+        "fail_factor": 0.1
+      },
+      {
+        "proficiency": "prof_leatherworking",
+        "time_factor": 0.1,
+        "fail_factor": 0.1
+      },
+      {
+        "proficiency": "prof_plasticworking",
+        "time_factor": 0.1,
+        "fail_factor": 0.1
+      }
     ]
   },
   {
@@ -593,14 +922,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Throwing" },
+    "name": {
+      "str_sp": "重建文明：投掷"
+    },
     "description": "The throwing volume of the Rebuilding Civilization encyclopedia.  This book contains everything from throwing stones to spear hunting in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "throw",
@@ -615,14 +950,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Devices" },
-    "description": "The traps volume of the Rebuilding Civilization encyclopedia.  This book contains everything from lockpicking to disarming landmines in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
+    "name": {
+      "str_sp": "重建文明：操控装置"
+    },
+    "description": "《重建文明百科全书》中的陷阱主卷。这本书包含了从开锁到拆除地雷的一切内容。这本书技术性很强，冗长枯燥，即使是书虫和一目十行的读者也会觉得很难阅读。从这个角度上讲，任何其他关于这个主题的书都是一种更有效的学习方式，但如果你所拥有的书缺少这部分内容，那么在找到更好的书之前，这是一个很好的替代品。",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "traps",
@@ -632,11 +973,31 @@
     "time": "180 m",
     "fun": -5,
     "proficiencies": [
-      { "proficiency": "prof_disarming", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_lockpicking", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_spotting", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_traps", "time_factor": 0.25, "fail_factor": 0.25 },
-      { "proficiency": "prof_trapsetting", "time_factor": 0.25, "fail_factor": 0.25 }
+      {
+        "proficiency": "prof_disarming",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_lockpicking",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_spotting",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_traps",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      },
+      {
+        "proficiency": "prof_trapsetting",
+        "time_factor": 0.25,
+        "fail_factor": 0.25
+      }
     ]
   },
   {
@@ -644,14 +1005,20 @@
     "type": "BOOK",
     "category": "manuals",
     "looks_like": "textbook_chemistry",
-    "name": { "str_sp": "Rebuilding Civilization: Unarmed Combat" },
+    "name": {
+      "str_sp": "重建文明：徒手格斗"
+    },
     "description": "The unarmed volume of the Rebuilding Civilization encyclopedia.  This book contains everything from self defense techniques to MMA fighting in fine detail.  This book is so technical, longwinded and dry that even bookworms and fast readers would find it hard to read.  Literally any other book on the subject would be a more efficient way to learn but if the books you have are missing specific information then this is a good substitute until you find something better.",
     "weight": "1800 g",
     "volume": "2000 ml",
     "price": "100 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "paper" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "blue",
     "skill": "unarmed",
@@ -665,13 +1032,18 @@
     "id": "evil_invitation",
     "type": "BOOK",
     "category": "manuals",
-    "name": { "str": "introduction packet - classified", "str_pl": "introduction packets - classified" },
+    "name": {
+      "str": "宣传数据-机密",
+      "str_pl": "宣传数据-机密"
+    },
     "description": "This is a journal with what seems to be an invitation of some sort from some unknown organization.  While its contents are rather boring to read, some bits offer promises of 'forbidden knowledge' and that said contents are 'just a taste of true power'…  Science has definitely gone too far…",
     "weight": "1700 g",
     "volume": "500 ml",
     "price": "500 USD",
     "price_postapoc": "10 USD",
-    "material": [ "paper" ],
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "light_red",
     "skill": "fabrication",
@@ -685,13 +1057,17 @@
     "id": "omnitech_weapon_ups_manual",
     "type": "BOOK",
     "category": "manuals",
-    "name": { "str": "Omnitech UPS conversion manual" },
-    "description": "This is a booklet dealing the instructions on how to convert an Omnitech laser weapon from using atomic batteries to use UPS power.  If you can find one of the kits mentioned, you could replicate the steps on this booklet.",
+    "name": {
+      "str": "Omnitech UPS转换手册"
+    },
+    "description": "一本介绍如何将Omnitech激光武器从使用钚燃料电池转换为使用UPS电源的小册子。如果你能找到其中提到的工具包，你可以复制本手册上的步骤。",
     "weight": "1700 g",
     "volume": "500 ml",
     "price": "500 USD",
     "price_postapoc": "10 USD",
-    "material": [ "paper" ],
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "light_red",
     "skill": "fabrication",
@@ -708,10 +1084,14 @@
     "category": "books",
     "symbol": ",",
     "color": "white",
-    "name": { "str": "printed note" },
+    "name": {
+      "str": "打印便笺"
+    },
     "snippet_category": "note_apophis",
-    "description": "A scrap of paper.  Something's been printed on it.",
-    "material": [ "paper" ],
+    "description": "一张废纸。上面印着什么东西。",
+    "material": [
+      "paper"
+    ],
     "flags": "TRADER_AVOID",
     "weight": "3 g",
     "volume": "1 ml"
@@ -723,10 +1103,14 @@
     "category": "books",
     "symbol": ",",
     "color": "white",
-    "name": { "str": "folded note" },
+    "name": {
+      "str": "折叠便笺"
+    },
     "snippet_category": "note_sketchy_cabin",
-    "description": "A scrap of paper, hastily folded up.  Something's been scribbled on it.",
-    "material": [ "paper" ],
+    "description": "一张废纸，匆匆折起来。上面写了些东西。",
+    "material": [
+      "paper"
+    ],
     "flags": "TRADER_AVOID",
     "weight": "3 g",
     "volume": "1 ml"

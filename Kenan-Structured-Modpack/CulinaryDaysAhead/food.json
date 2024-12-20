@@ -2,7 +2,9 @@
   {
     "type": "COMESTIBLE",
     "id": "soup_ketchup",
-    "name": { "str": "ketchup soup" },
+    "name": {
+      "str": "番茄羹"
+    },
     "weight": "257 g",
     "color": "red",
     "spoils_in": "6 days 16 hours",
@@ -12,21 +14,41 @@
     "quench": 15,
     "healthy": 1,
     "calories": 90,
-    "description": "It smells of tomatoes, but it's ketchup.",
+    "description": "闻起来像番茄，但这是番茄酱（ketchup）。",
     "price": "4 USD",
     "price_postapoc": "1 USD",
-    "material": [ "tomato" ],
+    "material": [
+      "tomato"
+    ],
     "volume": "250 ml",
     "phase": "liquid",
-    "flags": [ "EATEN_HOT", "USE_EAT_VERB" ],
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ],
     "charges": 1,
-    "vitamins": [ [ "vitC", 10 ], [ "calcium", 1 ], [ "iron", 4 ] ],
+    "vitamins": [
+      [
+        "vitC",
+        10
+      ],
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
     "fun": 1
   },
   {
     "type": "COMESTIBLE",
     "id": "soup_hotdog",
-    "name": { "str": "hotdog soup" },
+    "name": {
+      "str": "热狗汤"
+    },
     "weight": "350 g",
     "color": "red",
     "spoils_in": "6 days 16 hours",
@@ -36,21 +58,42 @@
     "quench": 15,
     "healthy": 1,
     "calories": 350,
-    "description": "It smells of Hot dog, but it's just ketchup and sausage. quite filling.",
+    "description": "闻起来像热狗，但其实只有番茄酱和香肠。很能充饥。",
     "price": "4 USD",
     "price_postapoc": "1 USD",
-    "material": [ "tomato", "flesh" ],
+    "material": [
+      "tomato",
+      "flesh"
+    ],
     "volume": "250 ml",
     "phase": "liquid",
     "charges": 1,
-    "flags": [ "EATEN_HOT", "USE_EAT_VERB" ],
-    "vitamins": [ [ "vitC", 10 ], [ "calcium", 1 ], [ "iron", 4 ] ],
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        10
+      ],
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
     "fun": 5
   },
   {
     "type": "COMESTIBLE",
     "id": "eggs_glassed",
-    "name": { "str": "glassed eggs" },
+    "name": {
+      "str": "皮蛋"
+    },
     "//": "https://imgur.com/gallery/M4G4HMd",
     "weight": "350 g",
     "color": "red",
@@ -61,66 +104,107 @@
     "quench": 0,
     "healthy": 1,
     "calories": 350,
-    "description": "Eggs water glassed using lime water, they will last forever.",
+    "description": "石灰水制成的皮蛋，可永久保存",
     "price": "4 USD",
     "price_postapoc": "1 USD",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "volume": "250 ml",
     "phase": "liquid",
     "charges": 1,
-    "flags": [ "EATEN_HOT", "USE_EAT_VERB" ],
-    "vitamins": [ [ "vitC", 10 ], [ "calcium", 1 ], [ "iron", 4 ] ],
+    "flags": [
+      "EATEN_HOT",
+      "USE_EAT_VERB"
+    ],
+    "vitamins": [
+      [
+        "vitC",
+        10
+      ],
+      [
+        "calcium",
+        1
+      ],
+      [
+        "iron",
+        4
+      ]
+    ],
     "fun": 0
   },
   {
     "type": "COMESTIBLE",
     "id": "omelette",
-    "name": { "str": "omelette" },
+    "name": {
+      "str": "蛋饼"
+    },
     "weight": "300 g",
     "copy-from": "egg_chicken",
     "color": "yellow",
     "spoils_in": "2 days",
     "symbol": "%",
-    "description": "Delicious seasoned cuisine, made from beaten eggs.",
+    "description": "美味的炒蛋配上香料。",
     "price": "4 USD",
     "price_postapoc": "2 USD",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "volume": "250 ml",
-    "flags": [ "EATEN_HOT", "FREEZERBURN" ],
+    "flags": [
+      "EATEN_HOT",
+      "FREEZERBURN"
+    ],
     "fun": 5
   },
   {
     "type": "COMESTIBLE",
     "id": "omelette_deluxe",
-    "name": { "str": "deluxe omelettes" },
+    "name": {
+      "str": "豪华蛋饼"
+    },
     "weight": "350 g",
     "copy-from": "egg_chicken",
     "color": "yellow",
     "spoils_in": "2 days",
     "symbol": "%",
-    "description": "Delicious seasoned cuisine, made from beaten eggs with delicious melting cheese filling inside.",
+    "description": "由炒蛋和融化奶酪制成的美食",
     "price": "4 USD",
     "price_postapoc": "2 USD",
-    "material": [ "egg", "cheese" ],
+    "material": [
+      "egg",
+      "cheese"
+    ],
     "volume": "250 ml",
-    "flags": [ "EATEN_HOT", "FREEZERBURN" ],
+    "flags": [
+      "EATEN_HOT",
+      "FREEZERBURN"
+    ],
     "fun": 8
   },
   {
     "type": "COMESTIBLE",
     "id": "french_toast_fruity",
-    "name": { "str": "Fruity French toast" },
+    "name": {
+      "str": "果粒法式吐司"
+    },
     "weight": "350 g",
     "copy-from": "johnnycake",
     "color": "yellow",
     "spoils_in": "2 days",
     "symbol": "%",
-    "description": "Also known as poor knight, this delicious toast is made from soft egg-soaked bread fried on a flat metal surface with fruit and sweets added.",
+    "description": "这种美味的吐司面包又名可怜骑士(Poor Knight)，用浸泡了鸡蛋的软面包在铁板上炸制而成，并加入了糖和水果。",
     "price": "4 USD",
     "price_postapoc": "2 USD",
-    "material": [ "wheat", "fruit" ],
+    "material": [
+      "wheat",
+      "fruit"
+    ],
     "volume": "250 ml",
-    "flags": [ "EATEN_HOT", "FREEZERBURN" ],
+    "flags": [
+      "EATEN_HOT",
+      "FREEZERBURN"
+    ],
     "fun": 10
   }
 ]

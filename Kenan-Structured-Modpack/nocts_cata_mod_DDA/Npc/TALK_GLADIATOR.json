@@ -5,31 +5,47 @@
     "dynamic_line": {
       "u_has_trait": "PROF_GLADIATOR",
       "yes": [
-        "Huh, where'd the guard go…",
-        "Grab a weapon, we might have a chance to bust out of here.",
-        "Not a good time for this, fresh meat.  What's wrong?",
-        "You sure we have time to talk?  What is it?",
-        "I don't know what's going on, but we might be able to get out of here."
+        "呃，警卫去哪了……",
+        "拿起武器，我们也许有机会逃出去。",
+        "现在不是时候，新人。出什么事了？",
+        "你确定我们有时间谈谈吗?是什么?",
+        "我不知道发生了什么，但我们也许能离开这里。"
       ],
       "no": [
-        "I don't know what you're here for, but you've got good timing.",
-        "Hey you!  You've got to help us, please…",
-        "You're not one of the guards, don't look like one of their so-called clients either.  What are you here for?",
-        "Hey, you're not one of them …can you help us?",
-        "You've got to get us out of here!"
+        "我不知道你来这里是为了什么，但你来的正好。",
+        "嘿，你！你一定要帮助我们，求你了……",
+        "你不是警卫，也不像他们所谓的客户。你来这里干什么？",
+        "嘿，你不是他们中的一员……你能帮助我们吗？",
+        "你一定要带我们离开这里啊！"
       ]
     },
     "responses": [
-      { "text": "What's going on?", "topic": "TALK_GLADIATOR_SITUATION" },
-      { "text": "Why are the others attacking us?", "topic": "TALK_GLADIATOR_HOSTILE" },
       {
-        "text": "Follow my lead, I'll get us out of here.",
-        "condition": { "u_has_trait": "PROF_GLADIATOR" },
+        "text": "发生什么事？",
+        "topic": "TALK_GLADIATOR_SITUATION"
+      },
+      {
+        "text": "为什么其他人要攻击我们？",
+        "topic": "TALK_GLADIATOR_HOSTILE"
+      },
+      {
+        "text": "听从我的指挥，我会带大家离开这里。",
+        "condition": {
+          "u_has_trait": "PROF_GLADIATOR"
+        },
         "switch": true,
         "topic": "TALK_GLADIATOR_RECRUIT"
       },
-      { "text": "I'll help get you out of here.", "switch": true, "default": true, "topic": "TALK_GLADIATOR_RECRUIT" },
-      { "text": "Bye.", "topic": "TALK_DONE" }
+      {
+        "text": "我会帮你离开这里的。",
+        "switch": true,
+        "default": true,
+        "topic": "TALK_GLADIATOR_RECRUIT"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
@@ -38,17 +54,22 @@
     "dynamic_line": {
       "u_has_trait": "PROF_GLADIATOR",
       "yes": [
-        "Guard set the cells to unlock themselves and left.  Something's going on, and we might be able to escape.",
-        "Fucking riot or something, bastards cut both cell blocks loose.  If we don't get eaten alive by the others we might be able to escape.",
-        "I'm not sure, but what matters is the fact they let the other animals out too."
+        "守卫解锁牢房并离开了。有什么事发生了，我们也许能逃脱。",
+        "他妈的暴动什么的，混蛋把两个牢房都打开了。如果我们没被其他人生吞活剥也许能逃脱。",
+        "我不确定，但重要的是他们把其他动物也放了出来。"
       ],
       "no": [
-        "We've been stuck down here for months fighting for the amusement of a bunch of sick fucks.  Guard running the place remotely unlocked all of our cells and abandoned us.",
-        "I don't know.  We've been stuck down here for so long, but if we can get out …maybe you help us?",
-        "Are you with the police?  Please, they've had us trapped down here for their fucking pit fights."
+        "我们被困在这里几个月了，一群恶心的混蛋看我们战斗来取乐。管理这个地方的守卫远程解锁了我们所有的牢房，并抛弃了我们。",
+        "我不知道。我们被困在这里太久了，如果我们能逃出去……也许你能帮助我们？",
+        "你和警察在一起吗？拜托，他们把我们困在这里让我们互相决斗。"
       ]
     },
-    "responses": [ { "text": "I see…", "topic": "TALK_GLADIATOR" } ]
+    "responses": [
+      {
+        "text": "我明白了……",
+        "topic": "TALK_GLADIATOR"
+      }
+    ]
   },
   {
     "type": "talk_topic",
@@ -56,17 +77,22 @@
     "dynamic_line": {
       "u_has_trait": "PROF_GLADIATOR",
       "yes": [
-        "That's why you should be glad you're fresh meat.  They move you to Red Team if you survive long enough, and the shit they do to you afterward turns you into an animal.",
-        "They're little better than animals, after all the shit they do to people survive enough fights.",
-        "They stage these fights pitting one cell block against the other, eventually the ones that snap get used to trying to kill anyone else not on their side…"
+        "这就是为什么你应该庆幸自己是新人。如果你活得足够久，他们就会把你调到红队，然后对你进行残酷的实验，把你变成野兽。",
+        "经历了那些残忍的对待之后，他们和动物也没什么两样了，只是为了在足够多的战斗中生存。",
+        "他们让牢房的人进行角斗，最终那些崩溃的人会习惯于试图杀死任何不站在他们一边的人......"
       ],
       "no": [
-        "They're the ones that have been held captive long enough to get used to being a fucking pit dog.",
-        "They're the other team in the fucking death matches these assholes would stage for their amusement.  They're the ones that've been here long enough to actually get into it…",
-        "They've been running this blood sport long enough that some of us can't even remember the surface."
+        "他们被囚禁了足够长的时间，已经成为了麻木不仁的斗犬，只知道搏斗。",
+        "他们是这场该死的死亡竞赛中的另一支队伍，这些混蛋会为他们的娱乐而表演。他们在这里待了很长时间，能够真正进入状态……",
+        "他们进行这项血腥的运动已经很久了，以至于我们中的一些人甚至忘记了地表的模样。"
       ]
     },
-    "responses": [ { "text": "Oh.", "topic": "TALK_GLADIATOR" } ]
+    "responses": [
+      {
+        "text": "哦。",
+        "topic": "TALK_GLADIATOR"
+      }
+    ]
   },
   {
     "type": "talk_topic",
@@ -74,18 +100,24 @@
     "dynamic_line": {
       "u_has_trait": "PROF_GLADIATOR",
       "yes": [
-        "Alright.  Let's give Red Team their final rest and see if we can escape…",
-        "To glory and death.",
-        "There has to be a way out of here.  Lead the way.",
-        "Fine by me.  Let's go."
+        "好吧。让我们给红队最后休息一次，看看我们能不能逃脱……",
+        "荣耀与死亡。",
+        "一定有办法离开这里。你来带路吧。",
+        "我没问题。一起走吧。"
       ],
       "no": [
-        "Thank you!  I'll follow your lead.",
-        "Alright.  Watch out for the others from Red Team.",
-        "Any place has to be better than this.  Lead on!",
-        "You're really getting me out of here?  Thank you…"
+        "谢谢！我会听从你的指挥。",
+        "好吧。小心红队的人。",
+        "任何地方都要比这好。带路吧！",
+        "你真的要带我离开这里吗？谢谢你……"
       ]
     },
-    "responses": [ { "text": "Let's go!", "topic": "TALK_DONE", "effect": "follow" } ]
+    "responses": [
+      {
+        "text": "我们走吧！",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
   }
 ]

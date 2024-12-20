@@ -3,14 +3,19 @@
     "id": "dusksword",
     "copy-from": "longsword",
     "type": "TOOL",
-    "name": { "str_sp": "Dusk" },
+    "name": {
+      "str_sp": "暗暮之剑"
+    },
     "//": "This was an old, debug-only item that someone asked me to add a long time ago, in response to getting ideas and advice from them.",
-    "description": "A longsword, made out of a very dark, almost black metal.  It seems to hold a greater edge than usual steel blades and feels …more comfortable in the hand.  While the blade is made out of this dark metal, the crossguard and the pommel seem to be made out of a brighter material, which feels abnormally cool to the touch.",
+    "description": "一把长剑，由某种很暗几乎全黑的金属制成。似乎比普通钢刀有更大的锋利的边缘，手感……也更舒适。虽然刀刃是用黑暗金属制成的，护手和剑柄由更明亮的材料制成，其手感异常凉爽。",
     "weight": "2653 g",
     "volume": "2750 ml",
     "price": 260000,
     "to_hit": 2,
-    "melee_damage": { "bash": 17, "cut": 42 },
+    "melee_damage": {
+      "bash": 17,
+      "cut": 42
+    },
     "material": "superalloy",
     "color": "dark_gray"
   },
@@ -19,18 +24,38 @@
     "type": "TOOL",
     "category": "weapons",
     "looks_like": "sword_forged",
-    "name": { "str": "gladius", "str_pl": "gladii" },
-    "description": "A thrusting sword adopted by Ancient Rome during the conquest of the Iberian Peninsula, the \"gladius hispaniensis\" supplanted the hasta as the most common weapon of the Roman Legions, until the shift towards the longer spatha during the later days of the Empire.",
+    "name": {
+      "str": "罗马短剑",
+      "str_pl": "罗马短剑"
+    },
+    "description": "古罗马在征服伊比利亚半岛时使用的一种刺剑，“西班牙的短剑(gladius hispaniensis)”取代了罗马长矛(Hasta)，成为罗马军团最常用的武器，直到帝国后期转为较长的罗马剑(Spatha)。",
     "weight": "750 g",
     "volume": "1750 ml",
     "price": 12000,
     "to_hit": 2,
-    "melee_damage": { "bash": 6, "stab": 24 },
+    "melee_damage": {
+      "bash": 6,
+      "stab": 24
+    },
     "material": "steel",
     "symbol": "!",
     "color": "light_gray",
-    "techniques": [ "WBLOCK_2" ],
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 8 ] ],
-    "flags": [ "SHEATH_SWORD", "DURABLE_MELEE" ]
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        8
+      ]
+    ],
+    "flags": [
+      "SHEATH_SWORD",
+      "DURABLE_MELEE"
+    ]
   }
 ]

@@ -1,68 +1,109 @@
 [
   {
-    "dynamic_line": [ "Good to see ya, bud!", "Hello there traveler!", "Interested in my wares?!" ],
+    "dynamic_line": [
+      "老兄，很高兴见到你！",
+      "你好，旅行者！",
+      "对我的商品感兴趣吗？！"
+    ],
     "id": "TALK_HUMAN_JUNKSHOP_maintalk",
     "responses": [
       {
-        "condition": { "not": { "npc_has_trait": "wastehumanjshoptalkedtohere" } },
-        "text": "Who and what are you doing here?.",
+        "condition": {
+          "not": {
+            "npc_has_trait": "wastehumanjshoptalkedtohere"
+          }
+        },
+        "text": "你是谁？ 在这里做什么？。",
         "topic": "TALK_HUMAN_JUNKSHOP_here"
       },
       {
         "condition": {
           "and": [
-            { "npc_has_trait": "wastehumanjshoptalkedtohere" },
-            { "not": { "npc_has_trait": "wastehumanjshoptalkedtohereagain" } }
+            {
+              "npc_has_trait": "wastehumanjshoptalkedtohere"
+            },
+            {
+              "not": {
+                "npc_has_trait": "wastehumanjshoptalkedtohereagain"
+              }
+            }
           ]
         },
-        "text": "Who and what are you doing here?.",
+        "text": "你是谁？ 在这里做什么？。",
         "topic": "TALK_HUMAN_JUNKSHOP_hereagain"
       },
       {
-        "condition": { "not": { "npc_has_trait": "wastehumanjshoptalkedjoblol" } },
-        "effect": { "npc_add_trait": "wastehumanjshoptalkedjoblol" },
-        "text": "Any job to offer?.",
+        "condition": {
+          "not": {
+            "npc_has_trait": "wastehumanjshoptalkedjoblol"
+          }
+        },
+        "effect": {
+          "npc_add_trait": "wastehumanjshoptalkedjoblol"
+        },
+        "text": "有什么可以做的工作吗？。",
         "topic": "TALK_HUMAN_JUNKSHOP_joblol"
       },
-      { "effect": "start_trade", "text": "I want your junk...", "topic": "TALK_HUMAN_JUNKSHOP_maintalk" },
-      { "text": "Bye.", "topic": "TALK_DONE" }
+      {
+        "effect": "start_trade",
+        "text": "我想要你的垃圾...",
+        "topic": "TALK_HUMAN_JUNKSHOP_maintalk"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "Just a silly guy collecting garbage outside, somewhere far from those frenzied walkers. There are times my job put me into risks, so I only bring few of them back here.",
+    "dynamic_line": "只是一个远离那些疯狂的步行者，在外面捡垃圾的傻子。 有时我的工作会让我陷入危险之中，所以我只会带了很少的东西回来",
     "id": "TALK_HUMAN_JUNKSHOP_here",
-    "responses": [ { "text": "And... How's the living here?", "topic": "TALK_HUMAN_JUNKSHOP_there" } ],
+    "responses": [
+      {
+        "text": "对了...住在这里怎么样？",
+        "topic": "TALK_HUMAN_JUNKSHOP_there"
+      }
+    ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "Peaceful as always. But you see, life's been easier living along with these vampires. They offer us protection from all sorts of threat while us humans do the usual chores outside.",
+    "dynamic_line": "一如既往的平静。但是你看，和这些吸血鬼一起让生活变得更容易。它们为我们提供保护，使我们免受各种威胁，而我们人类则在外面做这些日常的工作。",
     "id": "TALK_HUMAN_JUNKSHOP_there",
     "responses": [
       {
-        "effect": { "npc_add_trait": "wastehumanjshoptalkedtohere" },
-        "text": "I guess they're friendly afterall...",
+        "effect": {
+          "npc_add_trait": "wastehumanjshoptalkedtohere"
+        },
+        "text": "我猜他们挺友好的...",
         "topic": "TALK_HUMAN_JUNKSHOP_maintalk"
       }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "I have said my words clearly, or you like to repeat one's answer for fun?",
+    "dynamic_line": "我已经说得很清楚了，还是说你喜欢重复询问来取乐？",
     "id": "TALK_HUMAN_JUNKSHOP_hereagain",
     "responses": [
       {
-        "effect": { "npc_add_trait": "wastehumanjshoptalkedtohereagain" },
-        "text": "Sorry about that...",
+        "effect": {
+          "npc_add_trait": "wastehumanjshoptalkedtohereagain"
+        },
+        "text": "抱歉...",
         "topic": "TALK_HUMAN_JUNKSHOP_maintalk"
       }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "Hey buddy, I sell stuff here. Do you think I have a problem?\n*Points a finger to his face*",
+    "dynamic_line": "嘿，伙计，我在这里卖东西。你觉得我有什么问题吗？\n *用手指指着他的脸*",
     "id": "TALK_HUMAN_JUNKSHOP_joblol",
-    "responses": [ { "text": "Ummm... No.", "topic": "TALK_HUMAN_JUNKSHOP_maintalk" } ],
+    "responses": [
+      {
+        "text": "额...没。",
+        "topic": "TALK_HUMAN_JUNKSHOP_maintalk"
+      }
+    ],
     "type": "talk_topic"
   }
 ]

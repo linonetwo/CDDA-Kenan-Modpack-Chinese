@@ -2,23 +2,68 @@
   {
     "type": "vehicle_part",
     "id": "blob_turret_mount",
-    "name": { "str": "inert core" },
+    "name": {
+      "str": "无活性核心"
+    },
     "color": "red",
     "broken_color": "red",
     "damage_modifier": 80,
     "durability": 400,
-    "description": "A sleeping amorphous core, acting as a rotating, universal mount for a weapon.  If your hands are empty, you can stand next to a tentacle and 'f'ire the weapon by selecting the tile.",
+    "description": "一个休眠中的变形怪无定形核心，能够作为自由旋转的通用武器炮塔底座使用。你空着双手紧挨着核心时，按射击键操作它上面所安装的武器开火。",
     "folded_volume": "2500 ml",
     "item": "queen",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "20 m" },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "10 m" },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "5 m", "using": [ [ "blobrep", 1 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "20 m"
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "10 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
     },
-    "flags": [ "TURRET_MOUNT" ],
-    "breaks_into": [ { "item": "queengrow" } ],
-    "damage_reduction": { "all": 54 },
-    "variants": [ { "symbols": "X", "symbols_broken": "X" } ]
+    "flags": [
+      "TURRET_MOUNT"
+    ],
+    "breaks_into": [
+      {
+        "item": "queengrow"
+      }
+    ],
+    "damage_reduction": {
+      "all": 54
+    },
+    "variants": [
+      {
+        "symbols": "X",
+        "symbols_broken": "X"
+      }
+    ]
   },
   {
     "abstract": "blob_turret",
@@ -28,180 +73,319 @@
     "location": "on_roof",
     "folded_volume": "2500 ml",
     "requirements": {
-      "install": { "time": "100 s" },
-      "removal": { "time": "50 s" },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "5 m", "using": [ [ "blobrep", 1 ] ] }
+      "install": {
+        "time": "100 s"
+      },
+      "removal": {
+        "time": "50 s"
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
     },
-    "description": "A living blob turned into a heavy vehicle weapon.",
-    "flags": [ "TURRET" ],
-    "variants": [ { "symbols": "t", "symbols_broken": "#" } ]
+    "description": "一只活的变形怪变成的重型车载武器。",
+    "flags": [
+      "TURRET"
+    ],
+    "variants": [
+      {
+        "symbols": "t",
+        "symbols_broken": "#"
+      }
+    ]
   },
   {
     "id": "mounted_biter",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "biting blob" },
+    "name": {
+      "str": "变形怪咬人炮"
+    },
     "item": "biter",
     "location": "center",
     "color": "blue",
     "broken_color": "blue",
     "durability": 400,
-    "breaks_into": [ { "item": "bitergrow" } ],
-    "flags": [ "TURRET", "OBSTACLE" ]
+    "breaks_into": [
+      {
+        "item": "bitergrow"
+      }
+    ],
+    "flags": [
+      "TURRET",
+      "OBSTACLE"
+    ]
   },
   {
     "id": "mounted_clutter",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "gel shooter" },
+    "name": {
+      "str": "变形怪凝胶炮"
+    },
     "item": "clutter",
     "color": "magenta",
     "broken_color": "magenta",
-    "breaks_into": [ { "item": "cluttergrow" } ]
+    "breaks_into": [
+      {
+        "item": "cluttergrow"
+      }
+    ]
   },
   {
     "id": "mounted_freezie",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "frost lancer" },
+    "name": {
+      "str": "变形怪冰矛炮"
+    },
     "item": "freezie",
     "color": "light_blue",
     "broken_color": "light_blue",
-    "breaks_into": [ { "item": "freeziegrow" } ],
-    "description": "A living blob, existing in a super-cooled state and transformed into a heavy vehicle weapon."
+    "breaks_into": [
+      {
+        "item": "freeziegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的重型车载武器。"
   },
   {
     "id": "mounted_fuzzle",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "snapping ooze" },
+    "name": {
+      "str": "变形怪牙齿炮"
+    },
     "item": "fuzzle",
     "location": "center",
     "color": "brown",
     "broken_color": "brown",
     "durability": 600,
     "damage_modifier": 10,
-    "breaks_into": [ { "item": "fuzzlegrow" } ],
-    "flags": [ "TURRET", "OBSTACLE" ]
+    "breaks_into": [
+      {
+        "item": "fuzzlegrow"
+      }
+    ],
+    "flags": [
+      "TURRET",
+      "OBSTACLE"
+    ]
   },
   {
     "id": "mounted_horror",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "blobsaw" },
+    "name": {
+      "str": "变形怪锯"
+    },
     "item": "horror",
     "location": "center",
     "color": "blue",
     "broken_color": "blue",
     "durability": 1000,
     "damage_modifier": 10,
-    "breaks_into": [ { "item": "horrorgrow" } ],
-    "flags": [ "TURRET", "OBSTACLE" ]
+    "breaks_into": [
+      {
+        "item": "horrorgrow"
+      }
+    ],
+    "flags": [
+      "TURRET",
+      "OBSTACLE"
+    ]
   },
   {
     "id": "mounted_inkie",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "fuel puffer" },
+    "name": {
+      "str": "变形怪汽油炮"
+    },
     "item": "inkie",
     "color": "brown",
     "broken_color": "brown",
-    "breaks_into": [ { "item": "inkiegrow" } ],
-    "flags": [ "TURRET", "USE_TANKS" ]
+    "breaks_into": [
+      {
+        "item": "inkiegrow"
+      }
+    ],
+    "flags": [
+      "TURRET",
+      "USE_TANKS"
+    ]
   },
   {
     "id": "mounted_meltie",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "acid puffer" },
+    "name": {
+      "str": "变形怪酸液炮"
+    },
     "item": "meltie",
     "color": "light_red",
     "broken_color": "light_red",
-    "breaks_into": [ { "item": "meltiegrow" } ],
-    "flags": [ "TURRET", "USE_TANKS" ]
+    "breaks_into": [
+      {
+        "item": "meltiegrow"
+      }
+    ],
+    "flags": [
+      "TURRET",
+      "USE_TANKS"
+    ]
   },
   {
     "id": "mounted_spouterqueen",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "gel spouter" },
+    "name": {
+      "str": "变形怪喷水炮"
+    },
     "item": "spouterqueen",
     "looks_like": "clutter",
     "color": "red",
     "broken_color": "red",
-    "breaks_into": [ { "item": "queengrow" } ],
-    "flags": [ "TURRET", "USE_TANKS" ]
+    "breaks_into": [
+      {
+        "item": "queengrow"
+      }
+    ],
+    "flags": [
+      "TURRET",
+      "USE_TANKS"
+    ]
   },
   {
     "id": "mounted_razorqueen",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "gel spiker" },
+    "name": {
+      "str": "变形怪尖刺炮"
+    },
     "item": "razorqueen",
     "color": "cyan",
     "broken_color": "cyan",
-    "breaks_into": [ { "item": "razorqueengrow" } ]
+    "breaks_into": [
+      {
+        "item": "razorqueengrow"
+      }
+    ]
   },
   {
     "id": "mounted_sharp",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "gel lancer" },
+    "name": {
+      "str": "变形怪长矛炮"
+    },
     "item": "sharp",
     "color": "light_blue",
     "broken_color": "light_blue",
-    "breaks_into": [ { "item": "sharpgrow" } ]
+    "breaks_into": [
+      {
+        "item": "sharpgrow"
+      }
+    ]
   },
   {
     "id": "mounted_gelrazor",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "gel razor" },
+    "name": {
+      "str": "变形怪刀片炮"
+    },
     "item": "gelrazor",
     "color": "blue",
     "broken_color": "blue",
-    "breaks_into": [ { "item": "sicklegrow" } ]
+    "breaks_into": [
+      {
+        "item": "sicklegrow"
+      }
+    ]
   },
   {
     "id": "mounted_sparkie",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "shock bulb" },
+    "name": {
+      "str": "变形怪电击炮"
+    },
     "item": "sparkie",
     "color": "cyan",
     "broken_color": "cyan",
-    "breaks_into": [ { "item": "sparkiegrow" } ]
+    "breaks_into": [
+      {
+        "item": "sparkiegrow"
+      }
+    ]
   },
   {
     "id": "mounted_stickie",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "gel puffer" },
+    "name": {
+      "str": "变形怪胶质炮"
+    },
     "item": "stickie",
     "color": "yellow",
     "broken_color": "yellow",
-    "breaks_into": [ { "item": "stickiegrow" } ],
-    "flags": [ "TURRET", "USE_TANKS" ]
+    "breaks_into": [
+      {
+        "item": "stickiegrow"
+      }
+    ],
+    "flags": [
+      "TURRET",
+      "USE_TANKS"
+    ]
   },
   {
     "id": "mounted_torchie",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "fire puffer" },
+    "name": {
+      "str": "变形怪火焰炮"
+    },
     "item": "torchie",
     "color": "light_red",
     "broken_color": "light_red",
-    "breaks_into": [ { "item": "torchiegrow" } ],
-    "flags": [ "TURRET", "USE_TANKS" ]
+    "breaks_into": [
+      {
+        "item": "torchiegrow"
+      }
+    ],
+    "flags": [
+      "TURRET",
+      "USE_TANKS"
+    ]
   },
   {
     "id": "mounted_voideater",
     "copy-from": "blob_turret",
     "type": "vehicle_part",
-    "name": { "str": "spark blight" },
+    "name": {
+      "str": "变形怪电流炮"
+    },
     "item": "voideater",
     "color": "cyan",
     "broken_color": "cyan",
-    "breaks_into": [ { "item": "voideatergrow" } ]
+    "breaks_into": [
+      {
+        "item": "voideatergrow"
+      }
+    ]
   }
 ]

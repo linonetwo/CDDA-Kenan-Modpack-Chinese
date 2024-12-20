@@ -2,65 +2,121 @@
   {
     "id": "bb_hopper",
     "type": "MAGAZINE",
-    "name": { "str": "BB hopper" },
-    "description": "An improvised magazine for a vehicle mounted weapon.  A simple metal box with some plastic guide rails, it acts as a gravity fed hopper to drop a small round shot into the weapon's chamber below.  It is not very reliable, but quick to reload.",
+    "name": {
+      "str": "BB弹漏匣"
+    },
+    "description": "一个简易的车载武器用弹药漏匣。结构简单，一个底部开口的金属匣子，配上一些塑料导轨，圆形的弹药依靠重力掉落在导轨上并送进下方的武器发射槽中。虽然看上去不是很可靠，但装填起来很快。",
     "weight": "1840 g",
     "volume": "3 L",
     "price": "166 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "BB" ],
+    "ammo_type": [
+      "BB"
+    ],
     "capacity": 250,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "BB": 250 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "BB": 250
+        }
+      }
+    ],
     "reload_time": 15
   },
   {
     "id": "bolt_hopper",
     "type": "MAGAZINE",
-    "name": { "str": "bolt hopper" },
-    "description": "An improvised magazine for a vehicle mounted crossbow.  A simple metal box with some plastic guide rails, it acts as a gravity fed hopper to drop a crossbow bolt into the weapon below.  It is awkward to reload and not especially reliable.",
+    "name": {
+      "str": "弩矢漏匣"
+    },
+    "description": "一个简易的车载武器用弩矢漏匣。结构简单，一个底部开口的金属匣子，配上一些塑料导轨，弩矢依靠重力掉落在导轨上并送进下方的武器发射槽中。装填起来很麻烦，而且可靠性也不高。",
     "weight": "1840 g",
     "volume": "3 L",
     "price": "166 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "bolt" ],
+    "ammo_type": [
+      "bolt"
+    ],
     "capacity": 60,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "bolt": 60 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bolt": 60
+        }
+      }
+    ],
     "reload_time": 150
   },
   {
     "id": "cannister_rack",
     "type": "MAGAZINE",
-    "name": { "str": "canister rack" },
-    "description": "An improvised magazine for a vehicle mounted weapon.  A simple metal box with some plastic guide rails, it acts as a gravity fed hopper to drop a heavy canister into the weapon below.  It is awkward to reload and not especially reliable.",
+    "name": {
+      "str": "大炸弹弹药架"
+    },
+    "description": "一个简易的车载武器用抛射物弹药架。结构简单，一个底部开口的金属匣子，配上一些塑料导轨，炸弹等抛射物依靠重力掉落在导轨上并送进下方的武器发射槽中。装填起来很麻烦，而且可靠性也不高。",
     "weight": "1840 g",
     "volume": "3 L",
     "price": "166 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "h_projectile" ],
+    "ammo_type": [
+      "h_projectile"
+    ],
     "capacity": 8,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "h_projectile": 8 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "h_projectile": 8
+        }
+      }
+    ],
     "reload_time": 150
   },
   {
     "id": "pebble_hopper",
     "type": "MAGAZINE",
-    "name": { "str": "pebble hopper" },
-    "description": "An improvised magazine for a vehicle mounted weapon.  A simple metal box with some plastic guide rails, it acts as a gravity fed hopper to drop a small round shot into the weapon's chamber below.  It is not very reliable, but quick to reload.",
+    "name": {
+      "str": "小石子漏匣"
+    },
+    "description": "一个简易的车载武器用弹药漏匣。结构简单，一个底部开口的金属匣子，配上一些塑料导轨，圆形的弹药依靠重力掉落在导轨上并送进下方的武器发射槽中。虽然看上去不是很可靠，但装填起来很快。",
     "weight": "1840 g",
     "volume": "3 L",
     "price": "166 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "pebble" ],
+    "ammo_type": [
+      "pebble"
+    ],
     "capacity": 250,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "pebble": 250 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "pebble": 250
+        }
+      }
+    ],
     "reload_time": 15
   }
 ]

@@ -2,11 +2,18 @@
   {
     "id": "vgen",
     "type": "vehicle_part",
-    "name": { "str": "vortex generator" },
+    "name": {
+      "str": "涡旋发电机"
+    },
     "item": "vgen2",
     "location": "engine_block",
     "fuel_type": "vpower",
-    "variants": [ { "symbols": "8", "symbols_broken": "x" } ],
+    "variants": [
+      {
+        "symbols": "8",
+        "symbols_broken": "x"
+      }
+    ],
     "color": "magenta",
     "broken_color": "magenta",
     "durability": 400,
@@ -15,29 +22,119 @@
     "epower": "37300 W",
     "damage_modifier": 10,
     "breaks_into": [
-      { "item": "spiral_stone" },
-      { "item": "foot_crank", "count": [ 0, 2 ] },
-      { "item": "chain", "count": [ 0, 4 ] },
-      { "item": "hose", "count": [ 0, 4 ] },
-      { "item": "scrap", "count": [ 4, 12 ] },
-      { "item": "steel_chunk", "count": [ 2, 5 ] },
-      { "item": "plastic_chunk", "count": [ 2, 8 ] }
+      {
+        "item": "spiral_stone"
+      },
+      {
+        "item": "foot_crank",
+        "count": [
+          0,
+          2
+        ]
+      },
+      {
+        "item": "chain",
+        "count": [
+          0,
+          4
+        ]
+      },
+      {
+        "item": "hose",
+        "count": [
+          0,
+          4
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          4,
+          12
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          2,
+          5
+        ]
+      },
+      {
+        "item": "plastic_chunk",
+        "count": [
+          2,
+          8
+        ]
+      }
     ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "45 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 7 ] ], "time": "25 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "45 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "REACTOR", "PERPETUAL" ]
+    "flags": [
+      "REACTOR",
+      "PERPETUAL"
+    ]
   },
   {
     "id": "vgen2",
     "type": "vehicle_part",
-    "name": { "str": "vortex engine" },
+    "name": {
+      "str": "涡旋引擎"
+    },
     "item": "vgen",
     "location": "engine_block",
     "fuel_type": "vpower",
-    "variants": [ { "symbols": "8", "symbols_broken": "x" } ],
+    "variants": [
+      {
+        "symbols": "8",
+        "symbols_broken": "x"
+      }
+    ],
     "color": "magenta",
     "broken_color": "magenta",
     "durability": 400,
@@ -47,18 +144,97 @@
     "m2c": 90,
     "damage_modifier": 10,
     "breaks_into": [
-      { "item": "spiral_stone" },
-      { "item": "foot_crank", "count": [ 0, 2 ] },
-      { "item": "chain", "count": [ 0, 2 ] },
-      { "item": "hose", "count": [ 0, 4 ] },
-      { "item": "scrap", "count": [ 4, 12 ] },
-      { "item": "plastic_chunk", "count": [ 2, 8 ] }
+      {
+        "item": "spiral_stone"
+      },
+      {
+        "item": "foot_crank",
+        "count": [
+          0,
+          2
+        ]
+      },
+      {
+        "item": "chain",
+        "count": [
+          0,
+          2
+        ]
+      },
+      {
+        "item": "hose",
+        "count": [
+          0,
+          4
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          4,
+          12
+        ]
+      },
+      {
+        "item": "plastic_chunk",
+        "count": [
+          2,
+          8
+        ]
+      }
     ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "45 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 7 ] ], "time": "25 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "45 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "ENGINE", "E_STARTS_INSTANTLY", "E_HIGHER_SKILL", "E_ALTERNATOR" ]
+    "flags": [
+      "ENGINE",
+      "E_STARTS_INSTANTLY",
+      "E_HIGHER_SKILL",
+      "E_ALTERNATOR"
+    ]
   }
 ]

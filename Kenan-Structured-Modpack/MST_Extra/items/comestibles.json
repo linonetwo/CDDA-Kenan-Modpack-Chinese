@@ -1,8 +1,58 @@
 [
   {
     "type": "COMESTIBLE",
+    "id": "tea_willow",
+    "copy-from": "tea",
+    "name": {
+      "str_sp": "柳树茶"
+    },
+    "container": "bottle_glass",
+    "healthy": -1,
+    "stim": 0,
+    "description": "柳树皮制成的苦茶，从古代就开始用作温和的止痛药了。",
+    "price": "1250 cent",
+    "fun": -3,
+    "use_action": {
+      "type": "consume_drug",
+      "effects": [
+        {
+          "id": "pkill1",
+          "duration": 90
+        }
+      ]
+    }
+  },
+  {
+    "id": "tar_oil",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "name": {
+      "str_sp": "松馏油"
+    },
+    "description": "一种从桦树皮或松树中干馏制成的粘稠的、液状的松馏油。在历史上有着各种各样的用途，它在过去常常被用作消毒防腐剂。",
+    "weight": "40 g",
+    "volume": "250 ml",
+    "material": [
+      "oil"
+    ],
+    "symbol": "~",
+    "color": "yellow",
+    "phase": "liquid",
+    "charges": 5,
+    "use_action": {
+      "type": "heal",
+      "disinfectant_power": 2,
+      "bleed": 2,
+      "bite": 0.75,
+      "move_cost": 100
+    }
+  },
+  {
+    "type": "COMESTIBLE",
     "id": "oil_garlic",
-    "name": { "str_sp": "garlic oil" },
+    "name": {
+      "str_sp": "大蒜油"
+    },
     "weight": "25 g",
     "color": "white",
     "container": "bottle_glass",
@@ -10,80 +60,95 @@
     "symbol": "~",
     "quench": -8,
     "healthy": 4,
-    "description": "A strong-tasting extract made from garlic, traditionally used to help resist infection, especially in Eastern Europe.  Not as powerful as modern full-strength antibiotics, but better than nothing.  Use once every 12 hours.",
+    "description": "一种味道浓烈的大蒜提取物，具有强力杀菌作用。在历史上用于帮助抵抗病菌感染，特别是在东欧。虽然不如现代的广谱抗生素那么有效，但总比没有强。每12小时使用一次。",
     "charges": 6,
     "price": "10 USD",
-    "material": [ "garlic" ],
+    "material": [
+      "garlic"
+    ],
     "volume": "250 ml",
     "phase": "liquid",
     "fun": -8,
     "use_action": "WEAK_ANTIBIOTIC",
-    "flags": [ "NPC_SAFE", "NUTRIENT_OVERRIDE" ]
+    "flags": [
+      "NPC_SAFE",
+      "NUTRIENT_OVERRIDE"
+    ]
   },
   {
     "id": "makeshift_poultice",
     "type": "COMESTIBLE",
     "comestible_type": "MED",
-    "name": { "str": "makeshift poultice" },
-    "description": "A primitive poultice using improvised antiseptic, held in place by a cloth or leather wrap.  Applied loosely, it is designed to stave off infection but can still help staunch bleeding.",
+    "name": {
+      "str": "简易膏药"
+    },
+    "description": "一种由天然的消毒防腐剂制成的手工药膏，用布条或皮革包裹起来。这种药膏应用宽广，虽然目的是为了避免感染，但也能帮助止血。",
     "weight": "70 g",
     "volume": "25 ml",
     "price": "3 USD",
-    "material": [ "veggy" ],
+    "material": [
+      "veggy"
+    ],
     "symbol": "!",
     "color": "light_gray",
-    "use_action": { "type": "heal", "bandages_power": 3, "bleed": 8, "bite": 0.75, "move_cost": 300 }
+    "use_action": {
+      "type": "heal",
+      "bandages_power": 3,
+      "bleed": 8,
+      "bite": 0.75,
+      "move_cost": 300
+    }
   },
   {
-    "type": "COMESTIBLE",
     "id": "posca",
-    "comestible_type": "DRINK",
-    "name": { "str_sp": "posca" },
-    "description": "A traditional Roman drink made of water mixed with a bit of vinegar, then spiced up with herbs and honey.  A good way to quench one's thirst on a long march.",
-    "volume": "250 ml",
-    "weight": "250 g",
-    "symbol": "~",
-    "color": "light_red",
-    "looks_like": "vinegar",
-    "price": "3 USD",
-    "price_postapoc": "75 cent",
-    "material": "water",
-    "phase": "liquid",
-    "calories": 75,
-    "quench": 50,
-    "healthy": 2,
-    "fun": 3,
-    "charges": 1,
-    "container": "waterskin",
-    "flags": [ "EATEN_COLD" ]
-  },
-  {
+    "copy-from": "fruit_wine",
     "type": "COMESTIBLE",
-    "id": "posca_hard",
-    "copy-from": "posca",
-    "name": { "str_sp": "hard posca" },
-    "description": "A traditional Roman drink made of water mixed with a bit of sour wine, then spiced up with herbs and honey.  Good for unwinding after a long march.",
-    "price": "4 USD",
-    "price_postapoc": "1 USD",
-    "material": [ "water", "alcohol" ],
-    "calories": 110,
+    "name": {
+      "str_sp": "波斯卡酒"
+    },
+    "description": "历史悠久的罗马酒，罗马军团行军时常常携带着，由廉价且味酸的葡萄酒兑水冲淡而成。通常会混合着香草和蜂蜜来增添风味。",
+    "weight": "230 g",
+    "charges": 1,
     "healthy": 0,
-    "fun": 6,
-    "stim": -2,
-    "addiction_type": "alcohol",
-    "addiction_potential": 1,
-    "use_action": "ALCOHOL_WEAK",
-    "extend": { "flags": [ "NO_AUTO_CONSUME" ] }
+    "price": "250 cent",
+    "container": "waterskin",
+    "vitamins": [
+      [
+        "vitA",
+        10
+      ],
+      [
+        "vitC",
+        6
+      ],
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        1
+      ]
+    ],
+    "calories": 60,
+    "quench": 40,
+    "stim": -1,
+    "fun": 3,
+    "addiction_potential": 1
   },
   {
     "id": "jerky_offal",
     "copy-from": "jerky",
     "type": "COMESTIBLE",
-    "name": { "str_sp": "jerked offal" },
-    "description": "Salty dried organ meat.  Smells a bit like dog food, but will last a long time.",
+    "name": {
+      "str_sp": "烤干杂碎"
+    },
+    "description": "没怎么处理，只经过普通风干，又咸又干的各种内脏。闻起来像狗粮一样糟糕，但可以很好的长期储存。",
     "fun": -2,
     "healthy": -1,
     "calories": 92,
-    "proportional": { "price": 0.8 }
+    "proportional": {
+      "price": 0.8
+    }
   }
 ]

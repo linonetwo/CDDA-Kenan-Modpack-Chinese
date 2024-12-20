@@ -2,31 +2,59 @@
   {
     "id": "bloodstinger_barrel",
     "type": "GUNMOD",
-    "name": { "str": "bloodstinger barrel" },
-    "description": "Odd barrel extension specialized for blood stinger rifles. It has a vented metal end point that pressurizes liquid before firing, increasing damage, accuracy and aiming time.",
+    "name": {
+      "str": "血螫步枪-桶"
+    },
+    "description": "这个步枪有着专门设计的怪异的枪管。这种枪管有一个通风的金属端点可以在发射前对液体加压，从而增加伤害，精确度，但也会增加瞄准时间。",
     "weight": "650 g",
     "volume": "1 L",
     "price": "0 cent",
     "install_time": "15 m",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "watertight": true, "rigid": true, "ammo_restriction": { "ammoblood": 10 } } ],
-    "to_hit": { "grip": "weapon", "length": "hand", "surface": "every", "balance": "good" },
-    "melee_damage": { "bash": 5 },
-    "material": [ "steel", "compactblood" ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ammoblood": 10
+        }
+      }
+    ],
+    "to_hit": 2,
+    "melee_damage": {
+      "bash": 5
+    },
+    "material": [
+      "steel",
+      "compactblood"
+    ],
     "symbol": ":",
     "color": "red",
     "location": "barrel",
-    "mod_targets": [ "rifle" ],
+    "mod_targets": [
+      "rifle"
+    ],
     "gun_data": {
       "ammo": "ammoblood",
       "skill": "rifle",
-      "ranged_damage": { "damage_type": "stab", "amount": 1 },
+      "ranged_damage": {
+        "damage_type": "stab",
+        "amount": 1
+      },
       "dispersion": 170,
       "durability": 8,
       "clip_size": 10,
       "reload": 100
     },
     "dispersion_modifier": -70,
-    "flags": [ "IRREMOVABLE" ],
-    "min_skills": [ [ "weapon", 6 ] ]
+    "flags": [
+      "IRREMOVABLE"
+    ],
+    "min_skills": [
+      [
+        "weapon",
+        6
+      ]
+    ]
   }
 ]

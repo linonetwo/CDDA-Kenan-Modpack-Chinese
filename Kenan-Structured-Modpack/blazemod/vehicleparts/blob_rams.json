@@ -2,18 +2,43 @@
   {
     "id": "frostie_ram",
     "type": "vehicle_part",
-    "name": { "str": "ice ram" },
+    "name": {
+      "str": "变形怪冰冻撞锤"
+    },
     "item": "frostie",
     "location": "structure",
-    "variants": [ { "symbols": "X", "symbols_broken": "0" } ],
+    "variants": [
+      {
+        "symbols": "X",
+        "symbols_broken": "0"
+      }
+    ],
     "color": "light_blue",
     "broken_color": "light_blue",
     "durability": 1000,
     "damage_modifier": 200,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "frostiegrow" } ],
-    "description": "A living blob, existing in a super-cooled state.  It will absorb damage in a vehicle collision and deliver additional damage to the other object in the collision.  It should be mounted on the edge of the vehicle, preferably the front.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "OBSTACLE", "PROTRUSION", "SHARP" ]
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的载具部件。会大大提升载具碰撞时所造成的伤害。安装在车辆外侧，最好是正前方。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "OBSTACLE",
+      "PROTRUSION",
+      "SHARP"
+    ]
   }
 ]

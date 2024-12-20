@@ -3,16 +3,24 @@
     "//": "This is notable for being infectious.",
     "id": "mon_zombie_scourge",
     "type": "MONSTER",
-    "name": { "str": "scourge zombie" },
-    "description": "A vessel of oozing pus staggering as it walks, dripping filthy liquid on its path.",
+    "name": {
+      "str": "天灾丧尸"
+    },
+    "description": "一个渗出脓液的容器摇摇晃晃地走着，上面滴着肮脏的液体。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_1", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 50,
     "speed": 70,
     "diff": 1,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⚴",
     "color": "yellow",
     "aggression": 100,
@@ -20,27 +28,62 @@
     "melee_skill": 2,
     "melee_dice": 2,
     "melee_dice_sides": 2,
-    "armor": { "bash": 2, "cut": 2, "bullet": 2, "acid": 4 },
+    "armor": {
+      "bash": 2,
+      "cut": 2,
+      "bullet": 2,
+      "acid": 4
+    },
     "vision_day": 22,
     "vision_night": 5,
-    "harvest": "zombie_humanoid",
-    "special_attacks": [ { "id": "grab", "cooldown": 10 }, { "type": "bite", "infection_chance": 5, "cooldown": 18 } ],
-    "upgrades": { "half_life": 12, "into": "mon_zombie_defile" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "POISON", "NO_BREATHE", "REVIVES", "FILTHY" ]
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      {
+        "type": "bite",
+        "infection_chance": 5,
+        "cooldown": 18
+      }
+    ],
+    "upgrades": {
+      "half_life": 12,
+      "into": "mon_zombie_defile"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "FILTHY"
+    ]
   },
   {
     "id": "mon_zombie_defile",
     "type": "MONSTER",
-    "name": { "str": "zombie defiler" },
-    "description": "A heavily deformed corpse, constantly vomiting dark ooze from its swollen cheeks and an endless explosion of pus germinates the surroundings.",
+    "name": {
+      "str": "变异天灾丧尸"
+    },
+    "description": "一具严重变形的尸体，不断地从肿胀的面颊吐出黑色的软泥，周围不断地冒出脓液。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_1", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 70,
     "speed": 65,
     "diff": 5,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⚴",
     "color": "i_yellow",
     "aggression": 100,
@@ -48,27 +91,62 @@
     "melee_skill": 2,
     "melee_dice": 2,
     "melee_dice_sides": 3,
-    "armor": { "bash": 2, "cut": 3, "bullet": 3, "acid": 6 },
+    "armor": {
+      "bash": 2,
+      "cut": 3,
+      "bullet": 3,
+      "acid": 6
+    },
     "vision_day": 25,
     "vision_night": 6,
-    "harvest": "zombie_humanoid",
-    "special_attacks": [ { "id": "grab", "cooldown": 10 }, { "type": "bite", "infection_chance": 20, "cooldown": 15 } ],
-    "upgrades": { "half_life": 16, "into_group": "GROUP_SCOURGE_UPGRADEX" },
-    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "POISON", "NO_BREATHE", "REVIVES", "FILTHY" ]
+    "harvest": "zombie",
+    "special_attacks": [
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      {
+        "type": "bite",
+        "infection_chance": 20,
+        "cooldown": 15
+      }
+    ],
+    "upgrades": {
+      "half_life": 16,
+      "into_group": "GROUP_SCOURGE_UPGRADEX"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "FILTHY"
+    ]
   },
   {
     "id": "mon_zombie_leptiosa",
     "type": "MONSTER",
-    "name": { "str": "lepotitsa" },
-    "description": "A corpse of swollen ichor, as its whole body is embraced in necrotic tissue. Aside from its huge hump lying on its back, its skin is full of fleshy holes, each emits a subtle gas.",
+    "name": {
+      "str": "美人兽"
+    },
+    "description": "一具肿胀的鱼鳞的尸体，因为它的整个身体被坏死的组织包裹。除了仰卧着的巨大驼峰，它的皮肤上布满了肉质的小孔，每一个都散发出一种微妙的气体。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_3", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 330,
     "speed": 65,
     "diff": 15,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⚵",
     "color": "red_yellow",
     "aggression": 100,
@@ -76,26 +154,59 @@
     "melee_skill": 4,
     "melee_dice": 2,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
-    "armor": { "bash": 10, "cut": 18, "bullet": 12, "acid": 10 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 10,
+      "cut": 18,
+      "bullet": 12,
+      "acid": 10
+    },
     "vision_day": 25,
     "vision_night": 6,
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "special_attacks": [
-      { "id": "grab", "cooldown": 10 },
-      { "type": "bite", "infection_chance": 100, "cooldown": 15 },
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      {
+        "type": "bite",
+        "infection_chance": 100,
+        "cooldown": 15
+      },
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_leptiosa_ngas_check" },
+        "spell_data": {
+          "id": "mon_zombie_leptiosa_ngas_check"
+        },
         "cooldown": 44,
-        "monster_message": "<color_yellow>%1$s is accumulating noxious gas!</color>"
+        "monster_message": "<color_yellow>%1$s正在积聚有害气体！</color>"
       }
     ],
     "death_function": {
-      "effect": { "id": "mon_zombie_leptiosa_death", "hit_self": true },
+      "effect": {
+        "id": "mon_zombie_leptiosa_death",
+        "hit_self": true
+      },
       "corpse_type": "NO_CORPSE",
       "message": "A %s explodes!"
     },
-    "flags": [ "SEES", "HEARS", "SMELLS", "STUMBLES", "POISON", "NO_BREATHE", "REVIVES", "FILTHY", "ACIDPROOF", "ACID_BLOOD" ]
+    "flags": [
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "STUMBLES",
+      "POISON",
+      "NO_BREATHE",
+      "REVIVES",
+      "FILTHY",
+      "ACIDPROOF",
+      "ACID_BLOOD"
+    ]
   }
 ]

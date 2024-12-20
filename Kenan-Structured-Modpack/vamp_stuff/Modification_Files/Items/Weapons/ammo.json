@@ -2,13 +2,17 @@
   {
     "id": "bloodyshaky",
     "type": "AMMO",
-    "name": { "str": "shaken blood" },
-    "description": "Blood which has slightly thickened from intense shaking. Almost compatible with vampiric guns if you're desperately need to feed them.",
+    "name": {
+      "str": "震荡血液"
+    },
+    "description": "由于剧烈摇晃而略微增厚的血液。如果你迫切需要喂养吸血鬼枪械，也可以当弹药。",
     "weight": "5 g",
     "volume": "250 ml",
     "price_postapoc": "2 USD",
     "price": "10 USD",
-    "material": [ "hflesh" ],
+    "material": [
+      "hflesh"
+    ],
     "symbol": "=",
     "color": "red",
     "phase": "liquid",
@@ -16,21 +20,31 @@
     "stack_size": 40,
     "ammo_type": "ammoblood",
     "range": 15,
-    "damage": { "damage_type": "stab", "amount": 1, "armor_penetration": 5 },
+    "damage": {
+      "damage_type": "stab",
+      "amount": 1,
+      "armor_penetration": 5
+    },
     "recoil": 100,
     "loudness": 5,
-    "effects": [ "NO_DROP" ]
+    "effects": [
+      "NO_DROP"
+    ]
   },
   {
     "id": "bloodypressure",
     "type": "AMMO",
-    "name": { "str": "pressurized blood" },
-    "description": "Cheap and renewable. This heavily compressed blood ammunition is used specifically with certain vampiric guns.",
+    "name": {
+      "str": "加压血液"
+    },
+    "description": "廉价且可再生资源。这种高浓缩血液弹药专用于某些吸血鬼枪械。",
     "weight": "5 g",
     "volume": "250 ml",
     "price_postapoc": "3 USD",
     "price": "20 USD",
-    "material": [ "hflesh" ],
+    "material": [
+      "hflesh"
+    ],
     "symbol": "=",
     "color": "red",
     "phase": "liquid",
@@ -38,21 +52,32 @@
     "stack_size": 20,
     "ammo_type": "ammoblood",
     "range": 8,
-    "damage": { "damage_type": "stab", "amount": 5, "armor_penetration": 25 },
+    "damage": {
+      "damage_type": "stab",
+      "amount": 5,
+      "armor_penetration": 25
+    },
     "recoil": 450,
     "loudness": 10,
-    "effects": [ "NO_DROP" ]
+    "effects": [
+      "NO_DROP"
+    ]
   },
   {
     "id": "bloodyinfect",
     "type": "AMMO",
-    "name": { "str": "traversed blood" },
-    "description": "Cheap and easy to collect. A combination of pure and infected blood and much more viscous than others.",
+    "name": {
+      "str": "混合血液"
+    },
+    "description": "便宜又容易收集。干净的血和感染的血相混合，比其他血液粘稠得多。",
     "weight": "5 g",
     "volume": "250 ml",
     "price_postapoc": "5 USD",
     "price": "30 USD",
-    "material": [ "hflesh", "flesh" ],
+    "material": [
+      "hflesh",
+      "flesh"
+    ],
     "symbol": "=",
     "color": "green",
     "phase": "liquid",
@@ -60,51 +85,80 @@
     "stack_size": 20,
     "ammo_type": "ammoblood",
     "range": 5,
-    "damage": { "damage_type": "stab", "amount": 10, "armor_penetration": 10 },
+    "damage": {
+      "damage_type": "stab",
+      "amount": 10,
+      "armor_penetration": 10
+    },
     "recoil": 625,
     "loudness": 30,
-    "effects": [ "NO_DROP" ]
+    "effects": [
+      "NO_DROP"
+    ]
   },
   {
     "id": "bloodshot_00",
     "type": "AMMO",
-    "name": { "str": "00 bloodshot" },
-    "description": "Blood pellet-filled shot. Maximizes damage at very short range and will cause spread pellets to explode into sharp bits, dealing additional damage on impact. This is the only shotgun ammuminition developed and overused by vampires due to its overall balancing power.",
+    "name": {
+      "str": "00 血弹"
+    },
+    "description": "充满了血球的子弹。在极短距离内造成最大伤害，散布的弹丸爆炸成锋利的碎片，在撞击时造成额外伤害。这种子弹是专用于猎枪照明而开发的，但由于其整体平衡的能力，被吸血鬼们过度使用。",
     "weight": "35 g",
     "volume": "250 ml",
     "price_postapoc": "60 USD",
     "price": "315 USD",
-    "material": [ "compactblood", "powder" ],
+    "material": [
+      "compactblood",
+      "powder"
+    ],
     "symbol": "=",
     "color": "red",
     "stack_size": 20,
     "ammo_type": "bloodshot",
     "casing": "shot_hull",
     "range": 4,
-    "damage": { "damage_type": "stab", "amount": 65 },
+    "damage": {
+      "damage_type": "stab",
+      "amount": 65
+    },
     "recoil": 2750,
     "loudness": 180,
-    "effects": [ "COOKOFF", "SHOT" ]
+    "effects": [
+      "COOKOFF",
+      "SHOT"
+    ]
   },
   {
     "id": "reloaded_bloodshot_00",
     "type": "AMMO",
-    "name": { "str": "reloaded 00 bloodshot" },
-    "description": "Blood pellet-filled shot. Maximizes damage at very short range and will cause spread pellets to explode into sharp bits, dealing additional damage on impact. This is the only shotgun ammuminition developed and overused by vampires due to its overall balancing power.",
+    "name": {
+      "str": "猎鹿血弹（复装）"
+    },
+    "description": "充满了血球的子弹。在极短距离内造成最大伤害，散布的弹丸爆炸成锋利的碎片，在撞击时造成额外伤害。这种子弹是专用于猎枪照明而开发的，但由于其整体平衡的能力，被吸血鬼们过度使用。",
     "weight": "35 g",
     "volume": "250 ml",
     "price_postapoc": "22 USD",
     "price": "205 USD",
-    "material": [ "compactblood", "powder" ],
+    "material": [
+      "compactblood",
+      "powder"
+    ],
     "symbol": "=",
     "color": "red",
     "stack_size": 20,
     "ammo_type": "bloodshot",
     "casing": "shot_hull",
     "range": 4,
-    "damage": { "damage_type": "stab", "amount": 57 },
+    "damage": {
+      "damage_type": "stab",
+      "amount": 57
+    },
     "recoil": 2650,
     "loudness": 180,
-    "effects": [ "COOKOFF", "SHOT", "RECYCLED" ]
+    "effects": [
+      "COOKOFF",
+      "SHOT",
+      "RECYCLED"
+    ]
   }
 ]

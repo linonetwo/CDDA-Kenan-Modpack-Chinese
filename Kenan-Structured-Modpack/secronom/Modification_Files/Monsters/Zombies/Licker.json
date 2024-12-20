@@ -2,17 +2,24 @@
   {
     "id": "mon_zombie_lick",
     "type": "MONSTER",
-    "name": { "str": "licker zombie" },
-    "description": "A small and agile zombie with slender long tongue twitching violently, and incessantly. The way it moves in four feet makes it more fearsome in a chase.",
+    "name": {
+      "str": "变异舔食者"
+    },
+    "description": "敏捷的丧尸，从嘴里伸出细长的舌头。小而脆弱，其灵活的动作令人畏惧。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_2" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 70,
     "speed": 125,
     "diff": 1,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⟆",
     "color": "pink",
     "aggression": 50,
@@ -20,18 +27,57 @@
     "melee_skill": 4,
     "melee_dice": 0,
     "melee_dice_sides": 2,
-    "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
-    "armor": { "bash": 2, "cut": 4, "bullet": 4, "stab": 4 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
+    "armor": {
+      "bash": 2,
+      "cut": 4,
+      "bullet": 4,
+      "stab": 4
+    },
     "dodge": 3,
     "vision_day": 10,
     "special_attacks": [
-      [ "scratch", 6 ],
-      { "id": "grab", "cooldown": 10 },
-      [ "LUNGE", 20 ],
-      { "type": "leap", "allow_no_target": false, "cooldown": 10, "max_range": 5 }
+      [
+        "scratch",
+        6
+      ],
+      {
+        "id": "grab",
+        "cooldown": 10
+      },
+      [
+        "LUNGE",
+        20
+      ],
+      {
+        "type": "leap",
+        "allow_no_target": false,
+        "cooldown": 10,
+        "max_range": 5
+      }
     ],
-    "death_drops": { "subtype": "collection", "groups": [ [ "default_zombie_clothes", 100 ], [ "child_items", 65 ] ] },
-    "upgrades": { "half_life": 14, "into": "mon_zombie_mlick" },
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_clothes",
+          100
+        ],
+        [
+          "child_items",
+          65
+        ]
+      ]
+    },
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_zombie_mlick"
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -50,17 +96,25 @@
   {
     "id": "mon_zombie_mlick",
     "type": "MONSTER",
-    "name": { "str": "licker zombie" },
-    "description": "An ever dominant licker with much more distinction to its terrific appearance: its skin sheds into a fleshy physique, claws arose awkwardly and its tongue grew much longer.",
+    "name": {
+      "str": "变异舔食者"
+    },
+    "description": "它是一种更强大的舔食者，外表也更为与众不同：它的皮肤蜕变成了肉状，双爪难看地上翘，舌头也长得更长了。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_2", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2",
+      "HUMAN"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 90,
     "speed": 130,
     "diff": 5,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⟆",
     "color": "pink_red",
     "aggression": 50,
@@ -68,18 +122,57 @@
     "melee_skill": 5,
     "melee_dice": 0,
     "melee_dice_sides": 2,
-    "melee_damage": [ { "damage_type": "cut", "amount": 6 } ],
-    "armor": { "bash": 4, "cut": 6, "bullet": 8, "stab": 6 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor": {
+      "bash": 4,
+      "cut": 6,
+      "bullet": 8,
+      "stab": 6
+    },
     "dodge": 4,
     "vision_day": 10,
     "special_attacks": [
-      [ "scratch", 4 ],
-      { "id": "grab", "cooldown": 6 },
-      [ "LUNGE", 14 ],
-      { "type": "leap", "allow_no_target": false, "cooldown": 10, "max_range": 7 }
+      [
+        "scratch",
+        4
+      ],
+      {
+        "id": "grab",
+        "cooldown": 6
+      },
+      [
+        "LUNGE",
+        14
+      ],
+      {
+        "type": "leap",
+        "allow_no_target": false,
+        "cooldown": 10,
+        "max_range": 7
+      }
     ],
-    "death_drops": { "subtype": "collection", "groups": [ [ "default_zombie_clothes", 100 ], [ "child_items", 65 ] ] },
-    "upgrades": { "half_life": 20, "into": "mon_zombie_xlick" },
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_clothes",
+          100
+        ],
+        [
+          "child_items",
+          65
+        ]
+      ]
+    },
+    "upgrades": {
+      "half_life": 20,
+      "into": "mon_zombie_xlick"
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -99,17 +192,25 @@
     "id": "mon_zombie_xlick",
     "looks_like": "mon_zombie_mlick",
     "type": "MONSTER",
-    "name": { "str": "lacerator" },
-    "description": "Covered in tender crimson flesh, this licker has reached its peak. Aside from its larger, tougher body, its flexible blade-like tongue writhes in search of prey.",
+    "name": {
+      "str": "圆盘加速器"
+    },
+    "description": "这只舔食者浑身是嫩红色的肉，已经达到了顶峰。除了它更大、更坚硬的身体外，它灵活的像刀片一样的舌头在寻找猎物时剧烈地扭动",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_3", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3",
+      "HUMAN"
+    ],
     "volume": "95000 ml",
     "weight": "100000 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 125,
     "speed": 135,
     "diff": 15,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⚕",
     "color": "red",
     "aggression": 50,
@@ -117,18 +218,54 @@
     "melee_skill": 6,
     "melee_dice": 0,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 6 } ],
-    "armor": { "bash": 4 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
+    "armor": {
+      "bash": 4
+    },
     "dodge": 5,
     "vision_day": 12,
     "special_attacks": [
-      [ "scratch", 5 ],
-      { "id": "grab", "cooldown": 5 },
-      [ "LUNGE", 15 ],
-      { "type": "leap", "allow_no_target": false, "cooldown": 9, "max_range": 7 },
-      [ "secro_xlicker_pstab", 26 ]
+      [
+        "scratch",
+        5
+      ],
+      {
+        "id": "grab",
+        "cooldown": 5
+      },
+      [
+        "LUNGE",
+        15
+      ],
+      {
+        "type": "leap",
+        "allow_no_target": false,
+        "cooldown": 9,
+        "max_range": 7
+      },
+      [
+        "secro_xlicker_pstab",
+        26
+      ]
     ],
-    "death_drops": { "subtype": "collection", "groups": [ [ "default_zombie_clothes", 100 ], [ "child_items", 65 ] ] },
+    "death_drops": {
+      "subtype": "collection",
+      "groups": [
+        [
+          "default_zombie_clothes",
+          100
+        ],
+        [
+          "child_items",
+          65
+        ]
+      ]
+    },
     "flags": [
       "SEES",
       "HEARS",

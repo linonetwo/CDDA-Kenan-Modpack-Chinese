@@ -4,7 +4,10 @@
     "type": "COMESTIBLE",
     "id": "blood",
     "copy-from": "blood",
-    "name": { "str": "blood", "str_pl": "blood" },
+    "name": {
+      "str": "血液",
+      "str_pl": "血液"
+    },
     "weight": "5 g",
     "color": "red",
     "container": "flask_glass",
@@ -13,9 +16,11 @@
     "quench": 5,
     "healthy": -8,
     "calories": 43,
-    "description": "Blood, possibly that of a human.  Disgusting!",
+    "description": "一些红色的不透明液体，或许是人类的血液。",
     "price": "1 USD",
-    "material": [ "blood" ],
+    "material": [
+      "blood"
+    ],
     "volume": "250 ml",
     "phase": "liquid",
     "fun": -50
@@ -24,13 +29,17 @@
     "id": "melted_bloodrune",
     "type": "GENERIC",
     "category": "spare_parts",
-    "name": { "str": "melted bloodrune stone" },
-    "description": "Finely crushed and extremely heated bloodrune stone. It merely generates a faint glow and seems to maintain its power in its phase.",
+    "name": {
+      "str": "熔化的血符文石"
+    },
+    "description": "碎得很细而且非常热的血符石。它能产生微弱的光芒，并似乎能保持它的能量。",
     "weight": "750 g",
     "volume": "250 ml",
     "price": "0 cent",
     "price_postapoc": "0 cent",
-    "material": [ "compactblood" ],
+    "material": [
+      "compactblood"
+    ],
     "symbol": "~",
     "color": "red"
   },
@@ -38,13 +47,17 @@
     "id": "bloodrune",
     "type": "GENERIC",
     "category": "spare_parts",
-    "name": { "str": "bloodrune stone" },
-    "description": "A pleasant ruby stone, possibly owned by a vampire. Its core mimics a heartbeat with unreadable marks appearing again and again from its outside layer. The strange power seems to be used with certain crafts.",
+    "name": {
+      "str": "血符文石"
+    },
+    "description": "一块吸引人的的红宝石，可能是属于一只吸血鬼的。它的核心模仿心跳，由外而内不断显示出一种不可读的标记。这种奇怪的力量似乎可以用于某些工艺。",
     "weight": "750 g",
     "volume": "250 ml",
     "price": "0 cent",
     "price_postapoc": "5000 USD",
-    "material": [ "compactblood" ],
+    "material": [
+      "compactblood"
+    ],
     "symbol": ".",
     "color": "red"
   },
@@ -52,13 +65,17 @@
     "id": "bigbloodrune",
     "type": "GENERIC",
     "category": "spare_parts",
-    "name": { "str": "large bloodrune stone" },
-    "description": "A large bloodrune stone, seemingly compressed by an unknown source. It trembles by its own, eager to shatter from its shell.",
+    "name": {
+      "str": "大块血符文石"
+    },
+    "description": "一块巨大的血符石，似乎被某种未知的东西压紧了。它颤抖着，渴望破壳而出。",
     "weight": "3000 g",
     "volume": "1750 ml",
     "price": "0 cent",
     "price_postapoc": "25000 USD",
-    "material": [ "compactblood" ],
+    "material": [
+      "compactblood"
+    ],
     "symbol": ".",
     "color": "red"
   },
@@ -66,13 +83,17 @@
     "id": "stickyblood",
     "type": "GENERIC",
     "category": "spare_parts",
-    "name": { "str": "sticky blood" },
-    "description": "A sticky, rounded human blood, as literally. Its adhesiveness is compare to the regular superglues.",
+    "name": {
+      "str": "粘稠血液"
+    },
+    "description": "一种粘稠圆滑的人类血液，正如字面上说的。它的粘附性堪比超级胶。",
     "weight": "250 g",
     "volume": "250 ml",
     "price": "0 cent",
     "price_postapoc": "2000 USD",
-    "material": [ "compactblood" ],
+    "material": [
+      "compactblood"
+    ],
     "symbol": "o",
     "color": "red"
   },
@@ -80,32 +101,42 @@
     "id": "bloodpowder",
     "type": "COMESTIBLE",
     "comestible_type": "FOOD",
-    "name": { "str": "blood powder" },
-    "description": "A powdered human blood. Perfect vampire getaway snacks.",
+    "name": {
+      "str": "血粉"
+    },
+    "description": "一种粉末状的人血。完美的吸血鬼休闲小吃。",
     "weight": "10 g",
     "volume": "3 ml",
     "price": "1 USD",
     "quench": 1,
     "healthy": -3,
     "nutrition": 3,
-    "material": [ "blood" ],
+    "material": [
+      "blood"
+    ],
     "symbol": "'",
     "color": "red",
-    "flags": [ "ZERO_WEIGHT" ]
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
   },
   {
     "id": "bloodextract",
     "type": "COMESTIBLE",
     "comestible_type": "FOOD",
-    "name": { "str": "blood extract" },
-    "description": "A sticky sap after the process of extraction from the blood.",
+    "name": {
+      "str": "血液提取物"
+    },
+    "description": "从血液中提取后粘稠的汁液。",
     "weight": "40 g",
     "volume": "250 ml",
     "price": "0 cent",
     "quench": 5,
     "healthy": -3,
     "nutrition": -2,
-    "material": [ "blood" ],
+    "material": [
+      "blood"
+    ],
     "symbol": "~",
     "color": "pink"
   },
@@ -113,12 +144,16 @@
     "id": "compactsheet",
     "type": "GENERIC",
     "category": "spare_parts",
-    "name": { "str": "blood compact sheet" },
-    "description": "Well compressed leathery sheet. It is known as an aesthetics clothing material, due to its unique reddish appearance. But from now, it was proven superior to armorcraft.",
+    "name": {
+      "str": "血块片"
+    },
+    "description": "良好压缩的类似皮革状的血片。因其独特的淡红色外观，是一种美观的服装材料。但现在，它已经被证明特别适合制作装备。",
     "weight": "250 g",
     "volume": "250 ml",
     "price": "0 cent",
-    "material": [ "compactblood" ],
+    "material": [
+      "compactblood"
+    ],
     "symbol": "#",
     "color": "red"
   },
@@ -126,14 +161,20 @@
     "id": "pelletblood",
     "type": "GENERIC",
     "category": "spare_parts",
-    "name": { "str": "blood pellet" },
-    "description": "A tiny blood pellet, sparkling like bits of fined rubies.",
+    "name": {
+      "str": "血弹"
+    },
+    "description": "一个小小的血球，闪闪发光，像一粒粒精致的红宝石。",
     "weight": "10 g",
     "volume": "3 ml",
     "price": "0 cent",
-    "material": [ "compactblood" ],
+    "material": [
+      "compactblood"
+    ],
     "symbol": ".",
     "color": "red",
-    "flags": [ "ZERO_WEIGHT" ]
+    "flags": [
+      "ZERO_WEIGHT"
+    ]
   }
 ]

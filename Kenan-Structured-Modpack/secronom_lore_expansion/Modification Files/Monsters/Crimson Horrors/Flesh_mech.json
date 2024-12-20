@@ -2,15 +2,24 @@
   {
     "id": "mon_secro_fleshmech_unlink",
     "type": "MONSTER",
-    "name": { "str": "SP Experimental Mech \"Flesh\"" },
-    "description": "This experimental mech type \"Flesh\" is the most recent (and last) mechsuit produced by the engineers of the Secronom Project. Very scarce and limited to military use only, it was designed to take on the main force of the battlefield thanks to its exotic yet nigh indestructible material, especially supplemented with a variety of gun morphs. Unfortunately, it requires one to wear a bio-organic power and link it with the mech to accept you as its rider.",
+    "name": {
+      "str": "实验机械“肉”"
+    },
+    "description": "这种实验性的机械类型“肉”是最新的（也是最后一个）机械西服生产的工程师的Secronom项目。非常稀少，仅限于军事用途，它的设计是采取对战场上的主要力量感谢其异国情调，但几乎坚不可摧的材料，特别是与各种枪支变形补充。不幸的是，它需要一个穿生物有机权力和链接它与机械接受你作为它的骑手。",
     "default_faction": "mech_bot",
-    "species": [ "ROBOT", "ABERRATION", "SFLESH" ],
+    "species": [
+      "ROBOT",
+      "ABERRATION",
+      "SFLESH"
+    ],
     "volume": "1480388 ml",
     "weight": "1480388 g",
     "hp": 885,
     "speed": 0,
-    "material": [ "superalloy", "secro_flesh_reinforced" ],
+    "material": [
+      "superalloy",
+      "secro_flesh_reinforced"
+    ],
     "symbol": "M",
     "color": "light_red",
     "aggression": -50,
@@ -18,14 +27,29 @@
     "melee_skill": 2,
     "melee_dice": 2,
     "melee_dice_sides": 6,
-    "armor": { "bash": 33, "cut": 22, "stab": 24, "bullet": 24, "acid": 8 },
+    "armor": {
+      "bash": 33,
+      "cut": 22,
+      "stab": 24,
+      "bullet": 24,
+      "acid": 8
+    },
     "vision_night": 50,
     "mech_str_bonus": 15,
     "mech_battery": "secro_fleshmech_battery",
     "mech_weapon": "secro_fleshmech_gun_spikes",
     "revert_to_itype": "broken_secro_fleshmech",
-    "death_function": { "corpse_type": "BROKEN" },
-    "death_drops": { "groups": [ [ "robots", 20 ] ] },
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          20
+        ]
+      ]
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -44,9 +68,15 @@
     "id": "mon_secro_fleshmech",
     "copy-from": "mon_secro_fleshmech_unlink",
     "type": "MONSTER",
-    "name": { "str": "SP Experimental Mech \"Flesh\"" },
-    "description": "This experimental mech type \"Flesh\" is the most recent (and last) mechsuit produced by the engineers of the Secronom Project. Very scarce and limited to military use only, it was designed to take on the main force of the battlefield thanks to its exotic yet nigh indestructible material, especially supplemented with a variety of gun morphs.",
+    "name": {
+      "str": "实验机械“肉”"
+    },
+    "description": "这种实验性的机械类型“肉”是最新的（也是最后一个）机械西服生产的工程师的Secronom项目。非常稀少，仅限于军事用途，它的设计是采取对战场上的主要力量感谢其异国情调，但几乎坚不可摧的材料，特别是与各种枪支变形补充。",
     "speed": 60,
-    "extend": { "flags": [ "RIDEABLE_MECH" ] }
+    "extend": {
+      "flags": [
+        "RIDEABLE_MECH"
+      ]
+    }
   }
 ]

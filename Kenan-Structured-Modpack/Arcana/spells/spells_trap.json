@@ -2,29 +2,53 @@
   {
     "type": "SPELL",
     "id": "arcana_trap_archon_shadows",
-    "name": { "str": "Trap: Shadowy Wonder" },
-    "description": "Real or fake?  You'll have to find out yourself!",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "Trap: Shadowy Wonder"
+    },
+    "description": "真的还是假的？你得自己找出来！",
+    "valid_targets": [
+      "hostile"
+    ],
     "message": "",
     "effect": "none",
     "shape": "blast",
-    "flags": [ "WONDER", "SILENT" ],
+    "flags": [
+      "WONDER",
+      "SILENT"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "extra_effects": [
-      { "id": "arcana_trap_archon_shadows_1" },
-      { "id": "arcana_trap_archon_shadows_2" },
-      { "id": "arcana_trap_archon_shadows_3" },
-      { "id": "arcana_trap_archon_shadows_4" }
+      {
+        "id": "arcana_trap_archon_shadows_1"
+      },
+      {
+        "id": "arcana_trap_archon_shadows_2"
+      },
+      {
+        "id": "arcana_trap_archon_shadows_3"
+      },
+      {
+        "id": "arcana_trap_archon_shadows_4"
+      }
     ]
   },
   {
     "id": "arcana_trap_archon_shadows_1",
     "type": "SPELL",
-    "name": { "str": "Trap: Summoned Shadows" },
-    "description": "This creates the real deal.",
-    "valid_targets": [ "ground" ],
-    "flags": [ "HOSTILE_SUMMON", "RANDOM_DAMAGE", "RANDOM_DURATION", "LOUD" ],
+    "name": {
+      "str": "Trap: Summoned Shadows"
+    },
+    "description": "这就创造了真正的交易。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "HOSTILE_SUMMON",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "LOUD"
+    ],
     "min_damage": 2,
     "max_damage": 4,
     "min_aoe": 20,
@@ -40,10 +64,19 @@
   {
     "id": "arcana_trap_archon_shadows_2",
     "type": "SPELL",
-    "name": { "str": "Trap: Summoned Shadows" },
-    "description": "Fake shadow monsters.",
-    "valid_targets": [ "ground" ],
-    "flags": [ "HOSTILE_SUMMON", "RANDOM_DAMAGE", "RANDOM_DURATION", "LOUD" ],
+    "name": {
+      "str": "Trap: Summoned Shadows"
+    },
+    "description": "假影怪物",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "HOSTILE_SUMMON",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "LOUD"
+    ],
     "min_damage": 2,
     "max_damage": 4,
     "min_aoe": 20,
@@ -59,10 +92,19 @@
   {
     "id": "arcana_trap_archon_shadows_3",
     "type": "SPELL",
-    "name": { "str": "Trap: Summoned Shadow Snakes" },
-    "description": "This creates the real deal.",
-    "valid_targets": [ "ground" ],
-    "flags": [ "HOSTILE_SUMMON", "RANDOM_DAMAGE", "RANDOM_DURATION", "LOUD" ],
+    "name": {
+      "str": "Trap: Summoned Shadow Snakes"
+    },
+    "description": "这就创造了真正的交易。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "HOSTILE_SUMMON",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "LOUD"
+    ],
     "min_damage": 1,
     "max_damage": 3,
     "min_aoe": 20,
@@ -78,10 +120,19 @@
   {
     "id": "arcana_trap_archon_shadows_4",
     "type": "SPELL",
-    "name": { "str": "Trap: Fake Shadow Snakes" },
-    "description": "The snek is fek.",
-    "valid_targets": [ "ground" ],
-    "flags": [ "HOSTILE_SUMMON", "RANDOM_DAMAGE", "RANDOM_DURATION", "LOUD" ],
+    "name": {
+      "str": "Trap: Fake Shadow Snakes"
+    },
+    "description": "冷嘲热讽是fek。",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "HOSTILE_SUMMON",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "LOUD"
+    ],
     "min_damage": 1,
     "max_damage": 3,
     "min_aoe": 20,
@@ -97,10 +148,19 @@
   {
     "id": "arcana_trap_archon_hallu",
     "type": "SPELL",
-    "name": { "str": "Trap: Hallu" },
-    "description": "Brain pain.",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "flags": [ "LOUD" ],
+    "name": {
+      "str": "Trap: Hallu"
+    },
+    "description": "脑痛。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "LOUD"
+    ],
     "sound_description": "\"Cast aside the veil of reality…\"",
     "min_aoe": 2,
     "max_aoe": 2,
@@ -110,15 +170,28 @@
     "effect": "attack",
     "shape": "blast",
     "effect_str": "visuals",
-    "extra_effects": [ { "id": "arcana_trap_archon_hallu2" } ]
+    "extra_effects": [
+      {
+        "id": "arcana_trap_archon_hallu2"
+      }
+    ]
   },
   {
     "id": "arcana_trap_archon_hallu2",
     "type": "SPELL",
-    "name": { "str": "Trap: Hallu 2" },
-    "description": "More brain pain.",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "flags": [ "SILENT" ],
+    "name": {
+      "str": "Trap: Hallu 2"
+    },
+    "description": "更多的脑痛。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "sound_description": "",
     "min_aoe": 2,
     "max_aoe": 2,
@@ -131,10 +204,19 @@
   {
     "id": "arcana_trap_archon_chill",
     "type": "SPELL",
-    "name": { "str": "Trap: Chill" },
-    "description": "Real damn cold.",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "flags": [ "LOUD" ],
+    "name": {
+      "str": "Trap: Chill"
+    },
+    "description": "真他妈的冷。",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "LOUD"
+    ],
     "sound_description": "\"You do not belong here…\"",
     "sound_type": "speech",
     "effect": "attack",
@@ -153,12 +235,21 @@
   {
     "id": "arcana_trap_canister_flame",
     "type": "SPELL",
-    "name": { "str": "Trap: Flame Canister" },
+    "name": {
+      "str": "Trap: Flame Canister"
+    },
     "description": "Mimics the effect of one of the blast canister items.",
     "effect": "attack",
     "shape": "blast",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "flags": [ "SILENT" ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "min_damage": 100,
     "max_damage": 100,
     "min_aoe": 2,
@@ -172,12 +263,21 @@
   {
     "id": "arcana_trap_canister_water",
     "type": "SPELL",
-    "name": { "str": "Trap: Water Canister" },
+    "name": {
+      "str": "Trap: Water Canister"
+    },
     "description": "Mimics the effect of one of the blast canister items.",
     "effect": "attack",
     "shape": "blast",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "flags": [ "SILENT" ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "min_damage": 125,
     "max_damage": 125,
     "min_aoe": 2,
@@ -191,12 +291,21 @@
   {
     "id": "arcana_trap_canister_earth",
     "type": "SPELL",
-    "name": { "str": "Trap: Earth Canister" },
+    "name": {
+      "str": "Trap: Earth Canister"
+    },
     "description": "Mimics the effect of one of the blast canister items.",
     "effect": "attack",
     "shape": "blast",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "flags": [ "SILENT" ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "min_damage": 150,
     "max_damage": 150,
     "min_aoe": 2,
@@ -210,12 +319,21 @@
   {
     "id": "arcana_trap_canister_air",
     "type": "SPELL",
-    "name": { "str": "Trap: Air Canister" },
+    "name": {
+      "str": "Trap: Air Canister"
+    },
     "description": "Mimics the effect of one of the blast canister items.",
     "effect": "attack",
     "shape": "blast",
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "flags": [ "SILENT" ],
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "min_damage": 225,
     "max_damage": 225,
     "min_aoe": 2,

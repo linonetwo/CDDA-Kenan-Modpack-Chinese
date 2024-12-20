@@ -2,10 +2,18 @@
   {
     "id": "shortwave",
     "type": "SPELL",
-    "name": { "str": "Shortwave" },
-    "description": "Cook nearby monsters (and yourself to an extent)",
-    "valid_targets": [ "hostile", "ground", "self" ],
-    "flags": [ "SOMATIC" ],
+    "name": {
+      "str": "短波术"
+    },
+    "description": "烤熟附近的怪物（还包括你自己）",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self"
+    ],
+    "flags": [
+      "SOMATIC"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "pure",
@@ -21,21 +29,31 @@
     "max_level": 35,
     "base_casting_time": 120,
     "energy_source": "MANA",
-    "extra_effects": [ { "id": "shortwave_2" } ]
+    "extra_effects": [
+      {
+        "id": "shortwave_2"
+      }
+    ]
   },
   {
     "id": "shortwave_2",
     "type": "SPELL",
-    "name": { "str": "Shortwave 2" },
-    "description": "Cook nearby monsters (and yourself to an extent)",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SOMATIC" ],
+    "name": {
+      "str": "短波术2"
+    },
+    "description": "烤熟附近的怪物（还包括你自己）",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "heat",
     "min_damage": 70,
     "max_damage": 500,
-    "damage_increment": 10.0,
+    "damage_increment": 10,
     "min_range": 3,
     "max_range": 3,
     "min_aoe": 3,
@@ -45,10 +63,18 @@
   {
     "id": "gamma_burst",
     "type": "SPELL",
-    "name": { "str": "Gamma Burst" },
-    "description": "Cause cell damage to everything in a wide area.  Fast to cast, but does damage slowly.",
-    "valid_targets": [ "hostile", "ally" ],
-    "flags": [ "NO_LEGS", "NO_HANDS" ],
+    "name": {
+      "str": "伽马射线"
+    },
+    "description": "在大范围内造成细胞损伤，施放速度快，但见效慢。",
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "NO_HANDS"
+    ],
     "shape": "blast",
     "effect": "attack",
     "damage_type": "pure",

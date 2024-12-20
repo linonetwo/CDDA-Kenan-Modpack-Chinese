@@ -2,17 +2,27 @@
   {
     "id": "overaccelerate",
     "type": "SPELL",
-    "name": { "str": "Overaccelerate" },
-    "description": "This drastically increases one target's metabolism to dangerous levels, causing its body to tear itself apart",
+    "name": {
+      "str": "超速术"
+    },
+    "description": "让目标体内的新陈代谢速度急剧增加至极度危险的水平，使其从内部撕裂躯体。",
     "effect": "attack",
     "effect_str": "neuro_boost",
     "shape": "blast",
-    "valid_targets": [ "ally", "hostile", "self" ],
-    "flags": [ "SOMATIC", "CONCENTRATE", "NO_PROJECTILE" ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "CONCENTRATE",
+      "NO_PROJECTILE"
+    ],
     "max_level": 43,
     "min_damage": 0,
     "max_damage": 43,
-    "damage_increment": 1.0,
+    "damage_increment": 1,
     "min_dot": 15,
     "max_dot": 58,
     "dot_increment": 1,

@@ -2,9 +2,13 @@
   {
     "id": "t1_elem_exerxium",
     "type": "SPELL",
-    "name": { "str": "Exerxium" },
-    "description": "Ignites the foe with ardent profane blaze, dealing <color_red>fire damage</color> and <color_yellow>curses</color> them.\n\nThis is a <color_light_gray>tier 1</color> spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "练习"
+    },
+    "description": "用炽热的亵渎之火点燃敌人，造成<color_red>火焰伤害</color>并<color_yellow>诅咒</color>敌人。\n\n这是一个<color_light_gray>一阶</color>法术。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_spell_elem_curse",
@@ -19,7 +23,13 @@
     "max_level": 30,
     "min_range": 6,
     "max_range": 16,
-    "flags": [ "SOMATIC", "VERBAL", "NO_LEGS", "RANDOM_DURATION", "NO_PROJECTILE" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "NO_PROJECTILE"
+    ],
     "base_casting_time": 125,
     "min_duration": 250,
     "max_duration": 1000,
@@ -28,13 +38,24 @@
   {
     "id": "t1_elem_frost",
     "type": "SPELL",
-    "name": { "str": "Frost" },
-    "description": "Binds the foe by instantly converting the air into ice, dealing <color_white>cold damage</color> and <color_yellow>freezes</color> them.\n\nThis is a <color_light_gray>tier 1</color> spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "霜冻"
+    },
+    "description": "通过瞬间将空气转化为冰来束缚敌人，造成<color_white>寒冷伤害</color>并<color_yellow>冻结</color>敌人。\n\n这是一个<color_light_gray>一阶</color>法术。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_spell_elem_freeze",
-    "affected_body_parts": [ "head", "torso", "arm_l", "arm_r", "leg_l", "leg_r" ],
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "arm_l",
+      "arm_r",
+      "leg_l",
+      "leg_r"
+    ],
     "base_energy_cost": 150,
     "final_energy_cost": 200,
     "energy_source": "MANA",
@@ -46,7 +67,11 @@
     "max_level": 30,
     "min_range": 6,
     "max_range": 16,
-    "flags": [ "SOMATIC", "VERBAL", "NO_LEGS" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
     "base_casting_time": 125,
     "min_duration": 200,
     "max_duration": 600,
@@ -55,9 +80,13 @@
   {
     "id": "t1_elem_elemdis",
     "type": "SPELL",
-    "name": { "str": "Elemental Dissipation" },
-    "description": "Nullifies <color_yellow>elemental blights</color> from you or an ally.\n\nThis is a <color_light_gray>tier 1</color> spell.",
-    "valid_targets": [ "ally" ],
+    "name": {
+      "str": "元素耗散"
+    },
+    "description": "取消你或盟友的<color_yellow>元素枯萎</color>。\n\n这是一个<color_light_gray>一阶</color>法术。",
+    "valid_targets": [
+      "ally"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_spell_elem_null",
@@ -72,6 +101,11 @@
     "min_duration": 75,
     "max_duration": 75,
     "base_casting_time": 150,
-    "flags": [ "SOMATIC", "CONCENTRATE", "NO_LEGS", "NO_PROJECTILE" ]
+    "flags": [
+      "SOMATIC",
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
   }
 ]

@@ -2,20 +2,27 @@
   {
     "id": "dcluster",
     "type": "TOOL",
-    "name": { "str": "diamond cluster" },
-    "description": "A cluster of artificial crystals that have broken off of a diamond matrix.  While the substance usually decays when separated from the catalyst; this cluster seems to be self-sustaining by some unknown mechanism.  ",
+    "name": {
+      "str": "钻石晶簇"
+    },
+    "description": "从钻石晶阵上破碎下来的一簇人工晶体。虽然通常这些物质从催化剂中分离出来时会降解，但是这些碎片不知道因为何种机制可以保持稳定。",
     "weight": "350 g",
     "volume": "250 ml",
     "price": "3 kUSD",
-    "material": [ "diamond" ],
+    "to_hit": -5,
+    "material": [
+      "diamond"
+    ],
     "symbol": "*",
     "color": "white",
     "looks_like": "diamond",
-    "ammo": [ "NULL" ],
+    "ammo": [
+      "NULL"
+    ],
     "revert_to": "dshards",
     "use_action": {
       "target": "dshards",
-      "msg": "The cluster comes apart in your hands.",
+      "msg": "晶簇在你手中分裂了。",
       "target_charges": 25,
       "moves": 0,
       "type": "transform"
@@ -24,19 +31,25 @@
   {
     "id": "spiral_matrix",
     "type": "TOOL",
-    "name": { "str": "diamond matrix", "str_pl": "diamond matrices" },
-    "description": "A sparkling diamond with a dazzling spiral pattern.  Small pieces of glittering crystal form on the edges as you hold it.",
+    "name": {
+      "str": "钻石晶阵",
+      "str_pl": "钻石晶阵"
+    },
+    "description": "一个有着耀眼的螺旋纹理的闪闪发光的钻石。当你握着它的边缘时，小片的闪闪发光的晶体在边缘不断形成。",
     "weight": "250 g",
     "volume": "250 ml",
     "price": "50 kUSD",
-    "material": [ "diamond" ],
+    "to_hit": -5,
+    "material": [
+      "diamond"
+    ],
     "symbol": "*",
     "color": "white",
     "looks_like": "spiral_stone",
     "revert_to": "spiral_matrix",
     "use_action": {
       "target": "spiral_matrix",
-      "msg": "Your senses dull as you gaze into the depths of this gemstone's center…",
+      "msg": "当你深深凝视着宝石的中心时，你的感官都有点迟钝了……",
       "moves": 60000,
       "type": "transform"
     }

@@ -3,11 +3,20 @@
     "//": "Reminder that these appears in the debug spellcasting. Disable the mod if you're testing spell-related stuff!",
     "id": "sacrifice_spell",
     "type": "SPELL",
-    "name": { "str": "Sacrifice" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster deals an instant death damage, sacrificing itself upon casting a spell that's been combined with.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "牺牲"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者造成瞬间死亡伤害，在施法时牺牲自己。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "secro_sacrifice_effect",
@@ -20,51 +29,41 @@
   {
     "type": "SPELL",
     "id": "secro_spell_null",
-    "name": { "str": "null" },
-    "description": "null… just ignore this.",
-    "valid_targets": [ "none" ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
+    "name": {
+      "str": "无效的"
+    },
+    "description": "无效的…别理这个。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
     "message": "",
     "effect": "attack",
     "shape": "blast"
   },
   {
-    "id": "mon_secro_eoc_spell_base",
-    "type": "SPELL",
-    "name": { "str": "EOC base" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Base spell for EOCs.'",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
-    "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": ""
-  },
-  {
-    "id": "mon_zombie_disser_shrieks",
-    "type": "SPELL",
-    "name": { "str": "Disser Shriek Sound" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster shrieks.'",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX" ],
-    "effect": "noise",
-    "min_damage": 256,
-    "max_damage": 256,
-    "sound_id": "shout",
-    "sound_description": "an ear-splitting shriek!",
-    "sound_type": "combat",
-    "sound_variant": "scream",
-    "shape": "blast",
-    "message": ""
-  },
-  {
     "id": "mon_fleshweaver_vexpl",
     "type": "SPELL",
-    "name": { "str": "Vein Explosion" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'The torn up ligament explodes internally, dealing an extra bio damage to the target.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "脉爆"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就读一读：\n“撕裂的韧带内部爆炸，对目标造成额外的生物伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 6,
@@ -78,14 +77,29 @@
   {
     "id": "mon_fleshweaver_vscratch",
     "type": "SPELL",
-    "name": { "str": "Volatile Scratch" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster scratches the target with a claw imbued in volatile bodily fluid, dealing moderate cutting damage that lingers for few turns.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_DURATION", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "无常抓击"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这篇：\n“施法者用充满挥发性体液的爪子抓伤目标，造成中度斩击伤害，几回合。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_DURATION",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "mon_fleshweaver_vexpl" } ],
+    "extra_effects": [
+      {
+        "id": "mon_fleshweaver_vexpl"
+      }
+    ],
     "min_damage": 10,
     "max_damage": 5,
     "min_range": 1,
@@ -99,11 +113,19 @@
   {
     "id": "mon_zombie_stray_w_leaf_stro1_lace",
     "type": "SPELL",
-    "name": { "str": "Lacerate" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'If the target is nearby, caster slashes with a vine, dealing moderate cutting damage. This is casted 2 times.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "撕裂"
+    },
+    "description": "怪物施法的。如果你看到附近有一个施法者在砍，那么这个是一个中等伤害的施法者。这是铸造两次",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 6,
@@ -115,14 +137,31 @@
   {
     "id": "mon_zombie_stray_w_leaf_stro1_razorl",
     "type": "SPELL",
-    "name": { "str": "Razor Leaf" },
-    "description": "(Combo) spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sends its sharp leaves to mince the targets in a line, dealing moderate cutting damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "飞叶快刀"
+    },
+    "description": "（combo）怪物释放的法术。如果你看到了这个，那么请阅读下面的文字：\n“施法者发射出一行锋利的叶子将目标切片，造成中等程度的斩击伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "line",
-    "extra_effects": [ { "id": "mon_zombie_stray_w_leaf_stro1_lace" }, { "id": "mon_zombie_stray_w_leaf_stro1_lace" } ],
+    "extra_effects": [
+      {
+        "id": "mon_zombie_stray_w_leaf_stro1_lace"
+      },
+      {
+        "id": "mon_zombie_stray_w_leaf_stro1_lace"
+      }
+    ],
     "min_damage": 7,
     "max_damage": 14,
     "min_range": 7,
@@ -134,11 +173,20 @@
   {
     "id": "mon_zombie_stray_w_leaf_stro2_sscent",
     "type": "SPELL",
-    "name": { "str": "Sweet Scent" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Floral bloom accompanies the wild outburst, spreading sleep-inducing pollens in the same area.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_AOE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "香甜气息"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“花开伴随着野性的爆发，在同一地区传播催眠花粉。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 14,
@@ -153,15 +201,33 @@
   {
     "id": "mon_zombie_stray_w_leaf_stro2_wildo",
     "type": "SPELL",
-    "name": { "str": "Wild Outgrowth" },
-    "description": "(Combo) spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster channels its body to create an outburst of twisted roots and vines under the target, dealing moderate stabbing damage and ensnares all affected creatures.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE", "RANDOM_DURATION" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "野生生长"
+    },
+    "description": "（combo）怪物释放的法术。如果你看到了这个，那么请阅读下面的文字：\n“施法者引导其身体制造出扭曲的根和藤蔓在目标下方爆开，造成中等程度的刺击伤害并捕获所有受影响的生物。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "rooty_grasp",
-    "extra_effects": [ { "id": "mon_zombie_stray_w_leaf_stro1_razorl" }, { "id": "mon_zombie_stray_w_leaf_stro2_sscent" } ],
+    "extra_effects": [
+      {
+        "id": "mon_zombie_stray_w_leaf_stro1_razorl"
+      },
+      {
+        "id": "mon_zombie_stray_w_leaf_stro2_sscent"
+      }
+    ],
     "min_damage": 12,
     "max_damage": 16,
     "min_range": 14,
@@ -176,16 +242,30 @@
   {
     "type": "SPELL",
     "id": "mon_summon_stray_w_leaf_stro3_triffid",
-    "name": { "str": "Summon 2 Triffids" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster channels its hand to create and send forth 2 triffids, along with the wild outgrowth.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "RANDOM_DURATION", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
-    "extra_effects": [ { "id": "mon_zombie_stray_w_leaf_stro2_wildo" } ],
+    "name": {
+      "str": "召唤2个三尖树"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n“施法者通过它的手创造并发射出2个三尖树，以及野生生物。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "RANDOM_DURATION",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "mon_zombie_stray_w_leaf_stro2_wildo"
+      }
+    ],
     "min_damage": 2,
     "max_damage": 2,
     "min_aoe": 4,
     "max_aoe": 4,
-    "message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_zombie_stray_w_leaf_stro3_triffid",
@@ -197,11 +277,21 @@
   {
     "id": "mon_zombie_stray_w_acid_stro2_atouch",
     "type": "SPELL",
-    "name": { "str": "Acid Touch" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'When upclose, caster then scratches the target with its excess blood, dealing acid damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "NO_PROJECTILE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "强酸之触"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“当接近时，施法者会用多余的血划伤目标，造成酸伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 4,
@@ -213,14 +303,30 @@
   {
     "id": "mon_zombie_stray_w_acid_stro2_acoat",
     "type": "SPELL",
-    "name": { "str": "Acid Coat" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster channels its hands to extract a large amount of acidic fluid from its body, then sends it to the target in a short but wide line, dealing moderate acid damage that lingers overtime.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE", "RANDOM_DURATION" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "酸性涂层"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者通过它的手从身体中提取大量的酸性液体，然后以短而宽的线条将其发送到目标，造成持续时间较长的中度酸性伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "line",
-    "extra_effects": [ { "id": "mon_zombie_stray_w_acid_stro2_atouch" } ],
+    "extra_effects": [
+      {
+        "id": "mon_zombie_stray_w_acid_stro2_atouch"
+      }
+    ],
     "min_damage": 7,
     "max_damage": 14,
     "min_aoe": 2,
@@ -240,11 +346,22 @@
   {
     "id": "mon_zombie_stray_w_acid_stro3_asweep",
     "type": "SPELL",
-    "name": { "str": "Sweepidic" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'If the target is nearby, caster sweeps some of the excess fluids in a small cone, dealing small damage to all creatures.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "扫掠的"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“如果目标在附近，施法者会在一个小圆锥体中清扫一些多余的液体，对所有生物造成很小的伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "cone",
     "min_damage": 3,
@@ -262,14 +379,30 @@
   {
     "id": "mon_zombie_stray_w_acid_stro3_arain",
     "type": "SPELL",
-    "name": { "str": "Acid Rain" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster channels its whole body for a very long time to produce an extremely vast amount of corrosive bodily fluids and sends it up above the target then explodes, dealing tremendous acid damage to all creatures in the vicinity, which lingers within time.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE", "RANDOM_DURATION" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "酸雨"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者将其全身输送很长时间，产生大量腐蚀性体液，并将其输送到目标上方，然后爆炸，对附近所有生物造成巨大的酸伤害，这种伤害会在时间内持续。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "mon_zombie_stray_w_acid_stro3_asweep" } ],
+    "extra_effects": [
+      {
+        "id": "mon_zombie_stray_w_acid_stro3_asweep"
+      }
+    ],
     "min_damage": 9,
     "max_damage": 18,
     "min_range": 14,
@@ -289,11 +422,21 @@
   {
     "id": "mon_unknown_unknown_portal_carrion",
     "type": "SPELL",
-    "name": { "str": "Portal" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'A multi-dimensional portal is made from the collapse. This portal leads the carrion race into the world.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "ally", "self", "ground" ],
-    "message": "",
+    "name": {
+      "str": "传送门"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n'一个多维门户是由坍塌形成的。这个入口引领腐肉种族走向世界",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "self",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_aoe": 2,
@@ -306,11 +449,22 @@
   {
     "id": "mon_unknown_unknown_gcollapse_carrion",
     "type": "SPELL",
-    "name": { "str": "Gravitational Collapse" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'After channeling for a massive amount of time, caster's gravitational force field collapses, creating a supernova, dealing tremendous bash damage to all creatures. Sparkling objects are scattered, which enlightens the area.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "引力坍缩"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n'在通灵了大量时间后，施法者的引力场崩溃，产生了一颗超新星，对所有生物造成巨大的重击伤害。闪闪发光的物体分散开来，照亮了整个地区",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 25,
@@ -329,16 +483,34 @@
   {
     "type": "SPELL",
     "id": "mon_unknown_unknown_carrion_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_unknown_unknown_gcollapse_carrion", "hit_self": true },
-      { "id": "mon_unknown_unknown_portal_carrion", "hit_self": true },
-      { "id": "sacrifice_spell", "hit_self": true }
+      {
+        "id": "mon_unknown_unknown_gcollapse_carrion",
+        "hit_self": true
+      },
+      {
+        "id": "mon_unknown_unknown_portal_carrion",
+        "hit_self": true
+      },
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 5,
@@ -347,14 +519,29 @@
   {
     "id": "mon_unknown_unknown_portal_vector",
     "type": "SPELL",
-    "name": { "str": "Portal" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'A multi-dimensional portal is made from the collapse. This portal leads the vector race into the world.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "ally", "self", "ground" ],
-    "message": "",
+    "name": {
+      "str": "传送门"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n'一个多维门户是由坍塌形成的。这个门户引领着媒介种族走向世界",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "self",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "sacrifice_spell", "hit_self": true } ],
+    "extra_effects": [
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      }
+    ],
     "min_damage": -1,
     "max_damage": -1,
     "min_aoe": 2,
@@ -367,14 +554,29 @@
   {
     "id": "mon_unknown_unknown_gcollapse_vector",
     "type": "SPELL",
-    "name": { "str": "Gravitational Collapse" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'After channeling for a massive amount of time, caster's gravitational force field collapses, creating a supernova, dealing tremendous bash damage to all creatures. Sparkling objects are scattered, which enlightens the area.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "引力坍缩"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n'在通灵了大量时间后，施法者的引力场崩溃，产生了一颗超新星，对所有生物造成巨大的重击伤害。闪闪发光的物体分散开来，照亮了整个地区",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "mon_unknown_unknown_portal_vector" } ],
+    "extra_effects": [
+      {
+        "id": "mon_unknown_unknown_portal_vector"
+      }
+    ],
     "min_damage": 25,
     "max_damage": 35,
     "//": "Basically, an enemy target has to be the center of explosion, so that Spells get casted successfully.",
@@ -391,43 +593,133 @@
   {
     "type": "SPELL",
     "id": "mon_unknown_unknown_vector_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_unknown_unknown_gcollapse_vector", "hit_self": true },
-      { "id": "mon_unknown_unknown_portal_vector", "hit_self": true },
-      { "id": "sacrifice_spell", "hit_self": true }
+      {
+        "id": "mon_unknown_unknown_gcollapse_vector",
+        "hit_self": true
+      },
+      {
+        "id": "mon_unknown_unknown_portal_vector",
+        "hit_self": true
+      },
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 5,
     "max_range": 5
   },
   {
+    "id": "mon_zombie_uruxis_spawn_passive_eff",
+    "type": "SPELL",
+    "name": {
+      "str": "召唤数量"
+    },
+    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caater's ability goes on a cooldown.'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "secro_zombie_uruxis_passive",
+    "min_duration": 60000,
+    "max_duration": 100000
+  },
+  {
     "id": "mon_zombie_uruxis_spawn_passive",
     "type": "SPELL",
-    "name": { "str": "Spawn" },
+    "name": {
+      "str": "生成"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spawns in a zombie.'",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "valid_targets": [
+      "self"
+    ],
+    "extra_effects": [
+      {
+        "id": "mon_zombie_uruxis_spawn_passive_eff",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_EXPLOSION_SFX"
+    ],
     "shape": "blast",
-    "message": "",
     "effect": "effect_on_condition",
     "effect_str": "eoc_secro_mon_zombie_uruxis_passive"
   },
   {
+    "//": "This gives the player (ONLY) a worn debuff item.",
+    "type": "SPELL",
+    "id": "mon_zombie_cling_cling",
+    "name": {
+      "str": "附着于"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者跳到目标的脚上，伤害了他们的整体机动性。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "PERMANENT"
+    ],
+    "extra_effects": [
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      }
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "spawn_item",
+    "shape": "blast",
+    "effect_str": "clinger_clinging",
+    "min_range": 2,
+    "max_range": 2
+  },
+  {
     "type": "SPELL",
     "id": "mon_insect_saddler_baby_potent_grow_scout",
-    "name": { "str": "Morph" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster becomes a saddler scout.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "变形"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者变成了马鞍侦察兵。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 999999,
     "max_damage": 999999,
-    "message": "",
     "effect": "targeted_polymorph",
     "shape": "blast",
     "effect_str": "mon_insect_saddler_scout"
@@ -435,13 +727,21 @@
   {
     "type": "SPELL",
     "id": "mon_insect_saddler_baby_potent_grow_brute",
-    "name": { "str": "Morph" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster becomes a saddler brute.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "变形"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者变成了马鞍兽。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 999999,
     "max_damage": 999999,
-    "message": "",
     "effect": "targeted_polymorph",
     "shape": "blast",
     "effect_str": "mon_insect_saddler_brute"
@@ -449,13 +749,21 @@
   {
     "type": "SPELL",
     "id": "mon_insect_saddler_baby_potent_grow",
-    "name": { "str": "Morph" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster becomes a saddler.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "变形"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者变成了马鞍。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 999999,
     "max_damage": 999999,
-    "message": "",
     "effect": "targeted_polymorph",
     "shape": "blast",
     "effect_str": "mon_insect_saddler"
@@ -463,22 +771,49 @@
   {
     "type": "SPELL",
     "id": "mon_insect_saddler_baby_potent_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
     "extra_effects": [
-      { "id": "mon_insect_saddler_baby_potent_grow_scout" },
-      { "id": "mon_insect_saddler_baby_potent_grow_scout" },
-      { "id": "mon_insect_saddler_baby_potent_grow_brute" },
-      { "id": "mon_insect_saddler_baby_potent_grow_brute" },
-      { "id": "mon_insect_saddler_baby_potent_grow" },
-      { "id": "mon_insect_saddler_baby_potent_grow" },
-      { "id": "mon_insect_saddler_baby_potent_grow" },
-      { "id": "mon_insect_saddler_baby_potent_grow" },
-      { "id": "mon_insect_saddler_baby_potent_grow" }
+      {
+        "id": "mon_insect_saddler_baby_potent_grow_scout"
+      },
+      {
+        "id": "mon_insect_saddler_baby_potent_grow_scout"
+      },
+      {
+        "id": "mon_insect_saddler_baby_potent_grow_brute"
+      },
+      {
+        "id": "mon_insect_saddler_baby_potent_grow_brute"
+      },
+      {
+        "id": "mon_insect_saddler_baby_potent_grow"
+      },
+      {
+        "id": "mon_insect_saddler_baby_potent_grow"
+      },
+      {
+        "id": "mon_insect_saddler_baby_potent_grow"
+      },
+      {
+        "id": "mon_insect_saddler_baby_potent_grow"
+      },
+      {
+        "id": "mon_insect_saddler_baby_potent_grow"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,
@@ -489,12 +824,25 @@
   {
     "type": "SPELL",
     "id": "mon_insect_saddler_baby_potent_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_insect_saddler_baby_potent_target_random" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_insect_saddler_baby_potent_target_random"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 10,
@@ -503,12 +851,26 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "sacrifice_spell", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 20,
@@ -517,11 +879,22 @@
   {
     "id": "mon_sflesh_wall_ing",
     "type": "SPELL",
-    "name": { "str": "Fortify" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster creates a wall on its position.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "IGNORE_WALLS", "NO_PROJECTILE" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "加固"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者在其位置上创建一堵墙。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "ter_transform",
     "shape": "blast",
     "effect_str": "sflesh_flesh_wall"
@@ -529,12 +902,26 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_wall_ing_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_sflesh_wall_ing", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_wall_ing",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 30,
@@ -543,12 +930,30 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_wall_city_ing_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "sacrifice_spell", "hit_self": true }, { "id": "mon_sflesh_wall_ing", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_wall_ing",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 30,
@@ -557,11 +962,20 @@
   {
     "id": "mon_sflesh_zombie_turret_aspit",
     "type": "SPELL",
-    "name": { "str": "Acid Spit" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spews out a glob of acid onto the target, dealing acid damage and creates a blood acid underneath. Casted randomly between 2 to 4 times.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "酸液"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者向目标喷出一团酸液，造成酸液伤害，并在其下方产生血酸。随机铸造2到4次",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 4,
@@ -576,14 +990,28 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_zombie_turret_aspit_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_sflesh_zombie_turret_aspit" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_zombie_turret_aspit"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 2,
     "max_damage": 4,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 10,
@@ -592,11 +1020,20 @@
   {
     "id": "mon_sflesh_zombie_turret_adischarge",
     "type": "SPELL",
-    "name": { "str": "Acid Discharge" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster channels its core, producing large amounts of acid and eventually discharges, dealing acid damage to all affected creatures and creating blood acid in its surroundings.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "酸排放"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者通过核心通道，产生大量的酸并最终排出，对所有受影响的生物造成酸伤害，并在周围产生血酸。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 6,
@@ -612,31 +1049,116 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_zombie_turret_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_zombie_turret_adischarge" },
-      { "id": "mon_sflesh_zombie_turret_aspit_target" },
-      { "id": "mon_sflesh_zombie_turret_aspit_target" }
+      {
+        "id": "mon_sflesh_zombie_turret_adischarge"
+      },
+      {
+        "id": "mon_sflesh_zombie_turret_aspit_target"
+      },
+      {
+        "id": "mon_sflesh_zombie_turret_aspit_target"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 1,
     "max_damage": 1,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 10,
     "max_range": 10
   },
   {
+    "id": "mon_sflesh_zombie_spitter_cspread",
+    "type": "SPELL",
+    "name": {
+      "str": "腐蚀性扩散"
+    },
+    "description": "怪物施法的。如果你看到这个，那就读这篇：\n“施法者的血酸扩散得更远。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "max_range": 8,
+    "min_range": 8,
+    "min_aoe": 4,
+    "max_aoe": 4,
+    "field_id": "fd_blood_acid",
+    "field_chance": 3,
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
+    "//": "In order to recreate the SPIT special attack, we used a spell... Downside is, it is perfectly accurate.",
+    "id": "mon_sflesh_zombie_spitter_cspit",
+    "type": "SPELL",
+    "name": {
+      "str": "腐蚀性唾沫"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n'施法者将一团浓缩的酸液喷到目标上，在撞击时爆炸，在一大片区域内产生血酸。'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_zombie_spitter_cspread"
+      }
+    ],
+    "max_range": 8,
+    "min_range": 8,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "field_id": "fd_blood_acid",
+    "min_field_intensity": 1,
+    "max_field_intensity": 1
+  },
+  {
     "id": "mon_secro_turret_hpdown",
     "type": "SPELL",
-    "name": { "str": "Energy Consumption" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's shot drains their health.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "能源消耗"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者的射击消耗了他们的生命。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,
@@ -645,11 +1167,20 @@
   {
     "id": "mon_secro_electurret_elecshock",
     "type": "SPELL",
-    "name": { "str": "Electroshock" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster discharges a high electric current, shocking all nearby creatures.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ally" ],
-    "message": "",
+    "name": {
+      "str": "电击"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者释放出一个高电流，震惊了附近所有的生物。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 2,
@@ -664,12 +1195,26 @@
   {
     "type": "SPELL",
     "id": "mon_secro_electurret_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_secro_electurret_elecshock", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_secro_electurret_elecshock",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 2,
@@ -678,11 +1223,21 @@
   {
     "id": "mon_secro_gravturret_energize",
     "type": "SPELL",
-    "name": { "str": "Energize" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster shoots the target with its fully-accumulated magnetic field, forming an energized area that magnetizes any creature, which completely immobilizes them in its aoe for 10 turns.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "hostile", "ally", "ground" ],
-    "message": "",
+    "name": {
+      "str": "激励"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者用其完全累积的磁场射击目标，形成一个能磁化任何生物的通电区域，使它们在其aoe中完全固定10圈。'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_aoe": 2,
@@ -696,11 +1251,21 @@
   {
     "id": "mon_secro_laserturret_heatray",
     "type": "SPELL",
-    "name": { "str": "Heat Ray" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster shoots with its concentrated ray of heat, which pierces through the targets.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "hostile", "ally", "ground" ],
-    "message": "",
+    "name": {
+      "str": "热射线"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者用集中的热射线射击，穿透目标。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "line",
     "min_damage": 12,
@@ -712,12 +1277,27 @@
   {
     "id": "mon_secro_laserturret_mod_heatray",
     "type": "SPELL",
-    "name": { "str": "Heat Ray" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster shoots with its concentrated ray of heat, which pierces through the targets.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "hostile", "ally", "ground" ],
-    "extra_effects": [ { "id": "mon_secro_turret_hpdown", "hit_self": true } ],
-    "message": "",
+    "name": {
+      "str": "热射线"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者用集中的热射线射击，穿透目标。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "mon_secro_turret_hpdown",
+        "hit_self": true
+      }
+    ],
     "effect": "attack",
     "shape": "line",
     "min_damage": 12,
@@ -727,15 +1307,191 @@
     "max_range": 25
   },
   {
-    "id": "mon_sflesh_fleshling_tiny_devour",
+    "id": "mon_sflesh_fleshling_stap",
     "type": "SPELL",
-    "name": { "str": "Devour" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster devours its target, dealing biological damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "满足"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者变得温顺。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
+    "effect_str": "secro_flesh_satisfy",
+    "min_duration": 3000,
+    "max_duration": 9000
+  },
+  {
+    "id": "mon_sflesh_fleshling_grow",
+    "type": "SPELL",
+    "name": {
+      "str": "成长"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者在吞食后制造质量。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "secro_flesh_growth",
+    "min_duration": 9000,
+    "max_duration": 12000
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_tiny_evo",
+    "name": {
+      "str": "成长"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读这篇：\n“施法者成长为一个小肉团。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 999999,
+    "max_damage": 999999,
+    "effect": "targeted_polymorph",
+    "shape": "blast",
+    "effect_str": "mon_sflesh_fleshling_smol"
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_tiny_evo_target",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_tiny_evo",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_tiny_evo_target_random",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_tiny_evo_target"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_range": 1,
+    "max_range": 1
+  },
+  {
+    "id": "mon_sflesh_fleshling_tiny_devour",
+    "type": "SPELL",
+    "name": {
+      "str": "吞食"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者吞噬目标，造成生物伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_stap",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_grow",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_tiny_evo_target_random"
+      }
+    ],
     "min_damage": 2,
     "max_damage": 3,
     "min_range": 1,
@@ -744,28 +1500,161 @@
   },
   {
     "type": "SPELL",
-    "id": "mon_sflesh_fleshling_tiny_check",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile" ],
+    "id": "mon_sflesh_fleshling_smol_evo",
+    "name": {
+      "str": "成长"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读这篇：\n“施法者成长为一个小肉团。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 999999,
+    "max_damage": 999999,
+    "effect": "targeted_polymorph",
     "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_tiny_check",
+    "effect_str": "mon_sflesh_fleshling_med"
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_smol_evo_target",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_smol_evo",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_smol_evo_target_random",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_smol_evo_target"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
     "min_range": 1,
     "max_range": 1
   },
   {
     "id": "mon_sflesh_fleshling_smol_devour",
     "type": "SPELL",
-    "name": { "str": "Devour" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster devours its target, dealing biological damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "吞食"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者吞噬目标，造成生物伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
     "effect": "attack",
     "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_stap",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_grow",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_smol_evo_target_random"
+      }
+    ],
     "min_damage": 4,
     "max_damage": 6,
     "min_range": 1,
@@ -774,28 +1663,176 @@
   },
   {
     "type": "SPELL",
-    "id": "mon_sflesh_fleshling_smol_check",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile" ],
+    "id": "mon_sflesh_fleshling_med_evo",
+    "name": {
+      "str": "成长"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读这篇：\n“施法者成长为一个小肉团。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 999999,
+    "max_damage": 999999,
+    "effect": "targeted_polymorph",
     "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_smol_check",
+    "effect_str": "mon_sflesh_fleshling_big"
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_med_evo_target",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_med_evo",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_med_evo_target_random",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_med_evo_target"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
     "min_range": 1,
     "max_range": 1
   },
   {
     "id": "mon_sflesh_fleshling_med_devour",
     "type": "SPELL",
-    "name": { "str": "Devour" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster devours its target, dealing biological damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "吞食"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者吞噬目标，造成生物伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
     "effect": "attack",
     "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_stap",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_grow",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_med_evo_target_random"
+      }
+    ],
     "min_damage": 6,
     "max_damage": 9,
     "min_range": 1,
@@ -804,28 +1841,206 @@
   },
   {
     "type": "SPELL",
-    "id": "mon_sflesh_fleshling_med_check",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile" ],
+    "id": "mon_sflesh_fleshling_big_evo",
+    "name": {
+      "str": "成长"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读这篇：\n“施法者成长为一个小肉团。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "min_damage": 999999,
+    "max_damage": 999999,
+    "effect": "targeted_polymorph",
     "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_med_check",
+    "effect_str": "mon_sflesh_fleshling_huge"
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_big_evo_target",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_big_evo",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 1,
+    "max_range": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_big_evo_target_random",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_big_evo_target"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_damage": 1,
+    "max_damage": 1,
     "min_range": 1,
     "max_range": 1
   },
   {
     "id": "mon_sflesh_fleshling_big_devour",
     "type": "SPELL",
-    "name": { "str": "Devour" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster devours its target, dealing biological damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "吞食"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者吞噬目标，造成生物伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
     "effect": "attack",
     "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_stap",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_grow",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_big_evo_target_random"
+      }
+    ],
     "min_damage": 8,
     "max_damage": 12,
     "min_range": 1,
@@ -833,29 +2048,34 @@
     "damage_type": "pure"
   },
   {
-    "type": "SPELL",
-    "id": "mon_sflesh_fleshling_big_check",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile" ],
-    "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_big_check",
-    "min_range": 1,
-    "max_range": 1
-  },
-  {
     "id": "mon_sflesh_fleshling_huge_devour",
     "type": "SPELL",
-    "name": { "str": "Devour" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster devours its target, dealing biological damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "吞食"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者吞噬目标，造成生物伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
     "effect": "attack",
     "shape": "blast",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_stap",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_fleshling_grow",
+        "hit_self": true
+      }
+    ],
     "min_damage": 10,
     "max_damage": 15,
     "min_range": 1,
@@ -863,55 +2083,22 @@
     "damage_type": "pure"
   },
   {
-    "type": "SPELL",
-    "id": "mon_sflesh_fleshling_huge_check",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile" ],
-    "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_huge_check",
-    "min_range": 1,
-    "max_range": 1
-  },
-  {
-    "type": "SPELL",
-    "id": "mon_sflesh_fleshling_huge_limit",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "self" ],
-    "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_huge_limit",
-    "min_range": 1,
-    "max_range": 1
-  },
-  {
-    "type": "SPELL",
-    "id": "mon_sflesh_fleshling_huge_spawn",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "self" ],
-    "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_huge_spawn",
-    "min_range": 1,
-    "max_range": 1
-  },
-  {
     "id": "mon_sflesh_fleshling_stingy_bb",
     "type": "SPELL",
-    "name": { "str": "Blood Bile" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster pops a bulbous wart that spreads blood acid fields around the target and deals small acid damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_AOE" ],
-    "valid_targets": [ "hostile", "ally", "ground" ],
-    "message": "",
+    "name": {
+      "str": "血胆汁"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读这篇：\n“施法者弹出一个球茎状疣，在目标周围散布血酸场，造成一点酸伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 2,
@@ -929,11 +2116,21 @@
   {
     "id": "mon_sflesh_fleshling_stingy_whiplash",
     "type": "SPELL",
-    "name": { "str": "Whiplash" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster swings a horizontal slash, dealing cutting damage to all affected targets in a wide cone.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_AOE", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "鞭打"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n'施法者摆动一个水平斜杠，对一个大圆锥体中所有受影响的目标造成切割伤害。'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_AOE",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "cone",
     "min_damage": 6,
@@ -947,11 +2144,21 @@
   {
     "id": "mon_sflesh_fleshling_stingy_sting",
     "type": "SPELL",
-    "name": { "str": "Sting" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster thrusts its stinger at its target, dealing stabbing damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_AOE", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "刺"
+    },
+    "description": "此为怪物施法使用的法术。如果你看到了这个，那就改读这个：\n“施法者将毒刺刺刺入目标，造成刺伤伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_AOE",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 7,
@@ -963,17 +2170,65 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_fleshling_stingy_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
     "extra_effects": [
-      { "id": "mon_sflesh_fleshling_stingy_sting" },
-      { "id": "mon_sflesh_fleshling_stingy_sting" },
-      { "id": "mon_sflesh_fleshling_stingy_whiplash" },
-      { "id": "mon_sflesh_fleshling_stingy_bb" }
+      {
+        "id": "mon_sflesh_fleshling_stingy_sting"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_whiplash"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_whiplash"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_whiplash"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_stingy_bb"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,
@@ -982,27 +2237,73 @@
     "max_range": 1
   },
   {
+    "id": "mon_sflesh_fleshling_scavengy_flee",
     "type": "SPELL",
-    "id": "mon_sflesh_fleshling_scavengy_spawn",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "self" ],
+    "name": {
+      "str": "逃跑"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n‘施法者避免与目标接触。’",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
+    "effect": "attack",
     "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_scavengy_spawn",
-    "min_range": 10,
-    "max_range": 10
+    "effect_str": "run",
+    "min_duration": 150,
+    "max_duration": 300
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_fleshling_scavengy_flee_target",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_scavengy_flee",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "min_range": 5,
+    "max_range": 5
   },
   {
     "id": "mon_sflesh_fleshling_scavengy_explosive_pop",
     "type": "SPELL",
-    "name": { "str": "Pop" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster explodes, dealing acid damage and spreads blood acid.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "流行音乐"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n“施法者爆炸，造成酸伤害并传播血酸。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 4,
@@ -1018,15 +2319,30 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_fleshling_scavengy_explosive_pop_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_fleshling_scavengy_explosive_pop", "hit_self": true },
-      { "id": "sacrifice_spell", "hit_self": true }
+      {
+        "id": "mon_sflesh_fleshling_scavengy_explosive_pop",
+        "hit_self": true
+      },
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 1,
@@ -1035,14 +2351,28 @@
   {
     "id": "mon_sflesh_fleshling_scavengy_tent_tentsurprise",
     "type": "SPELL",
-    "name": { "str": "Tentacle Surprise" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster bursts into a small heap of membranous veins tipped with sharpened bone blades, then quickly slashes its target, dealing cutting damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "触角惊喜"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就读一读这篇：\n“施法者冲进一小堆膜状血管，顶端有锋利的骨刃，然后快速地砍向目标，造成切割伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "sacrifice_spell", "hit_self": true } ],
+    "extra_effects": [
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      }
+    ],
     "min_damage": 5,
     "max_damage": 10,
     "min_range": 1,
@@ -1052,12 +2382,26 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_fleshling_scavengy_sticky_sg",
-    "name": { "str": "Sticky Grasp" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sticks to the target.'",
-    "extra_effects": [ { "id": "sacrifice_spell", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DURATION", "NO_PROJECTILE" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "粘性抓握"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n‘施法者粘住目标。’",
+    "extra_effects": [
+      {
+        "id": "sacrifice_spell",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DURATION",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "mon_sflesh_fleshling_scavengy_sticky_stick",
@@ -1069,11 +2413,19 @@
   {
     "id": "mon_sflesh_fleshling_ravagy_outb_cost",
     "type": "SPELL",
-    "name": { "str": "Cost" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster pays the price.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "成本"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“卡斯特付出代价”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "mon_sflesh_fleshling_ravagy_outb_pay"
@@ -1081,11 +2433,21 @@
   {
     "id": "mon_sflesh_fleshling_ravagy_outb",
     "type": "SPELL",
-    "name": { "str": "Outburst" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster channels its body to send its fused limbs to wildly fling themselves in every direction. Targets hit are dealt with high bashing damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "突出"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n'的施法者引导它的身体，让它融合的肢体向各个方向疯狂地投掷自己。被击中的目标受到高打击伤害",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "line",
     "min_damage": 10,
@@ -1101,12 +2463,26 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_fleshling_ravagy_outb_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_sflesh_fleshling_ravagy_outb" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_ravagy_outb"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 2,
@@ -1117,11 +2493,19 @@
   {
     "id": "mon_sflesh_fleshling_ravagy_fburst_cost",
     "type": "SPELL",
-    "name": { "str": "Cost" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster pays the price.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "成本"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“卡斯特付出代价”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "mon_sflesh_fleshling_ravagy_fburst_pay"
@@ -1129,13 +2513,27 @@
   {
     "id": "mon_sflesh_fleshling_ravagy_fburst",
     "type": "SPELL",
-    "name": { "str": "Flesh Burst" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Part of the caster's body explodes, shooting a large chunk of flesh towards the target, dealing bashing damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "肉爆裂"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者身体的一部分爆炸，向目标射出一大块肉，造成重击伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
-    "extra_effects": [ { "id": "mon_sflesh_fleshling_ravagy_fburst_cost", "hit_self": true } ],
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst_cost",
+        "hit_self": true
+      }
+    ],
     "shape": "blast",
     "min_damage": 9,
     "max_damage": 15,
@@ -1146,29 +2544,71 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_fleshling_ravagy_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
     "extra_effects": [
-      { "id": "mon_sflesh_fleshling_ravagy_outb" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "mon_sflesh_fleshling_ravagy_fburst" },
-      { "id": "secro_spell_null" },
-      { "id": "secro_spell_null" },
-      { "id": "secro_spell_null" },
-      { "id": "secro_spell_null" },
-      { "id": "secro_spell_null" }
+      {
+        "id": "mon_sflesh_fleshling_ravagy_outb"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_fburst"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,
@@ -1179,11 +2619,20 @@
   {
     "id": "mon_sflesh_fleshling_ravagy_shred",
     "type": "SPELL",
-    "name": { "str": "Shred" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's bone outgrowth stretches towards adjacent targets, dealing cutting damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "切碎"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者的骨骼向邻近目标伸展，造成切割伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 2,
@@ -1195,44 +2644,57 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_fleshling_ravagy_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_fleshling_ravagy_shred" },
-      { "id": "mon_sflesh_fleshling_ravagy_shred" },
-      { "id": "mon_sflesh_fleshling_ravagy_shred" },
-      { "id": "mon_sflesh_fleshling_ravagy_target_random" }
+      {
+        "id": "mon_sflesh_fleshling_ravagy_shred"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_shred"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_shred"
+      },
+      {
+        "id": "mon_sflesh_fleshling_ravagy_target_random"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 2,
     "max_range": 2
   },
   {
-    "type": "SPELL",
-    "id": "mon_sflesh_fleshling_scavengy_limit",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "self" ],
-    "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_mon_sflesh_fleshling_scavengy_limit",
-    "min_range": 1,
-    "max_range": 1
-  },
-  {
     "id": "mon_sflesh_camp_turret_aspit",
     "type": "SPELL",
-    "name": { "str": "Acid Spit" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spews out a glob of acid onto the target, dealing acid damage and creates a blood acid underneath. Casted randomly between 2 to 4 times.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "酸液"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者向目标喷出一团酸液，造成酸液伤害，并在其下方产生血酸。随机铸造2到4次",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 4,
@@ -1247,14 +2709,28 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_aspit_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_sflesh_camp_turret_aspit" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_camp_turret_aspit"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 2,
     "max_damage": 4,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 10,
@@ -1263,11 +2739,20 @@
   {
     "id": "mon_sflesh_camp_turret_adischarge",
     "type": "SPELL",
-    "name": { "str": "Acid Discharge" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster channels its core, producing large amounts of acid and eventually discharges, dealing acid damage to all affected creatures and creating blood acid in its surroundings.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "酸排放"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者通过核心通道，产生大量的酸并最终排出，对所有受影响的生物造成酸伤害，并在周围产生血酸。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 6,
@@ -1283,18 +2768,34 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_camp_turret_adischarge" },
-      { "id": "mon_sflesh_camp_turret_aspit_target" },
-      { "id": "mon_sflesh_camp_turret_aspit_target" }
+      {
+        "id": "mon_sflesh_camp_turret_adischarge"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_aspit_target"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_aspit_target"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 1,
     "max_damage": 1,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 10,
@@ -1303,11 +2804,21 @@
   {
     "id": "mon_sflesh_camp_turret_blade_swirl",
     "type": "SPELL",
-    "name": { "str": "Swirl" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster swirls, shooting several bone spikes in every direction, dealing stabbing damage to those that are hit.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "旋转"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者旋转，向各个方向射出数个骨钉，对被击中的人造成刺伤。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 8,
@@ -1319,14 +2830,28 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_blade_swirl_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_sflesh_camp_turret_blade_swirl" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_camp_turret_blade_swirl"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 5,
     "max_damage": 10,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 2,
@@ -1335,11 +2860,21 @@
   {
     "id": "mon_sflesh_camp_turret_blade_slice",
     "type": "SPELL",
-    "name": { "str": "Slice" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster swings its blades at the target, dealing cutting damage to all affected creatures in a cone.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE" ],
-    "valid_targets": [ "hostile", "ground" ],
-    "message": "",
+    "name": {
+      "str": "切片"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者向目标挥动刀刃，对锥中所有受影响的生物造成切割伤害。'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "cone",
     "min_damage": 14,
@@ -1353,20 +2888,40 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_blade_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_camp_turret_blade_slice" },
-      { "id": "mon_sflesh_camp_turret_blade_slice" },
-      { "id": "mon_sflesh_camp_turret_blade_slice" },
-      { "id": "mon_sflesh_camp_turret_blade_slice" },
-      { "id": "mon_sflesh_camp_turret_blade_swirl_target" }
+      {
+        "id": "mon_sflesh_camp_turret_blade_slice"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_blade_slice"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_blade_slice"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_blade_slice"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_blade_swirl_target"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 1,
     "max_damage": 1,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 2,
@@ -1375,11 +2930,20 @@
   {
     "id": "mon_sflesh_camp_turret_tendril_thrust",
     "type": "SPELL",
-    "name": { "str": "Tendril Thrust" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster thrusts a tendril into a target, dealing stabbing damage and applies stun for several turns.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "卷须推力"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么改为阅读这一条：\n'施法者将卷须插入目标，造成刺伤伤害并晕眩几圈",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "stunned",
@@ -1394,11 +2958,20 @@
   {
     "id": "mon_sflesh_camp_turret_tendril_slam",
     "type": "SPELL",
-    "name": { "str": "Tendril Slam" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster slams at the target, dealing high bashing damage and applying stun to all affected creatures in a small radius.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "触手猛击"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者猛击目标，造成高打击伤害，并对小范围内所有受影响的生物造成眩晕。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "stunned",
@@ -1415,11 +2988,21 @@
   {
     "id": "mon_sflesh_camp_turret_tendril_swing",
     "type": "SPELL",
-    "name": { "str": "Tendril Swing" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster swings its tendril at the target, dealing bashing damage and applying unstable footing to all affected creatures in a cone.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "触手甩动"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者向目标摆动卷须，造成重击伤害，并对锥中所有受影响的生物施加不稳定的立足点。'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "cone",
     "effect_str": "downed",
@@ -1436,21 +3019,43 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_tendril_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_camp_turret_tendril_swing" },
-      { "id": "mon_sflesh_camp_turret_tendril_swing" },
-      { "id": "mon_sflesh_camp_turret_tendril_swing" },
-      { "id": "mon_sflesh_camp_turret_tendril_slam" },
-      { "id": "mon_sflesh_camp_turret_tendril_slam" },
-      { "id": "mon_sflesh_camp_turret_tendril_thrust" }
+      {
+        "id": "mon_sflesh_camp_turret_tendril_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_tendril_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_tendril_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_tendril_slam"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_tendril_slam"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_tendril_thrust"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 1,
     "max_damage": 3,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 4,
@@ -1459,11 +3064,19 @@
   {
     "id": "mon_sflesh_camp_turret_mouth_crunch",
     "type": "SPELL",
-    "name": { "str": "Crunch" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster bites at the target with its strong jaws, dealing high stabbing damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "嚼"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这篇：\n“施法者用它强壮的下颚咬住目标，造成很高的刺伤伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 15,
@@ -1475,14 +3088,28 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_mouth_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_sflesh_camp_turret_mouth_crunch" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_camp_turret_mouth_crunch"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 1,
     "max_damage": 2,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 1,
@@ -1491,15 +3118,24 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_unify_form_bv",
-    "name": { "str": "Form Blood Vessel" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster forms blood vessel(s).'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_TARGET", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "形成血管"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n‘脚轮形成血管。’",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_TARGET",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "min_range": 2,
     "max_range": 2,
-    "message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_zombie_bloodvessel",
@@ -1509,15 +3145,24 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_unify_form_bf",
-    "name": { "str": "Form Blood Fiend" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster forms blood fiend(s).'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_TARGET", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "形成血魔"
+    },
+    "description": "怪物施法的。如果你看到这个，那就读这篇：\n“施法者形成了血魔”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_TARGET",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "min_range": 2,
     "max_range": 2,
-    "message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_zombie_bloodfiend",
@@ -1527,19 +3172,47 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_unify_form_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_camp_turret_unify_form_bv", "hit_self": true },
-      { "id": "mon_sflesh_camp_turret_unify_form_bv", "hit_self": true },
-      { "id": "mon_sflesh_camp_turret_unify_form_bv", "hit_self": true },
-      { "id": "mon_sflesh_camp_turret_unify_form_bv", "hit_self": true },
-      { "id": "mon_sflesh_camp_turret_unify_form_bv", "hit_self": true },
-      { "id": "mon_sflesh_camp_turret_unify_form_bf", "hit_self": true }
+      {
+        "id": "mon_sflesh_camp_turret_unify_form_bv",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_camp_turret_unify_form_bv",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_camp_turret_unify_form_bv",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_camp_turret_unify_form_bv",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_camp_turret_unify_form_bv",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_camp_turret_unify_form_bf",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 2,
@@ -1550,12 +3223,25 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_unify_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_sflesh_camp_turret_unify_form_target" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_camp_turret_unify_form_target"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 15,
@@ -1564,11 +3250,20 @@
   {
     "id": "mon_sflesh_camp_turret_hravager_thrust",
     "type": "SPELL",
-    "name": { "str": "Decimate" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster performs a fatal blow, dealing massive cutting damage to the target.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "毁灭"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n“施法者造成致命一击，对目标造成巨大的切割伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 20,
@@ -1580,11 +3275,20 @@
   {
     "id": "mon_sflesh_camp_turret_hravager_slam",
     "type": "SPELL",
-    "name": { "str": "Tendril Slash" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster slices its target, dealing cutting damage.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "触手斩"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n“施法者切割目标，造成切割伤害。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 10,
@@ -1596,11 +3300,21 @@
   {
     "id": "mon_sflesh_camp_turret_hravager_swing",
     "type": "SPELL",
-    "name": { "str": "Tendril Swing" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster swings a bladed tendril at the target, dealing cutting damage and applying unstable footing to all affected creatures in a cone.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile" ],
-    "message": "",
+    "name": {
+      "str": "触手甩动"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者向目标挥舞一根带刃卷须，造成切割伤害，并对圆锥体中所有受影响的生物施加不稳定的立足点。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "cone",
     "effect_str": "downed",
@@ -1617,29 +3331,67 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_camp_turret_hravager_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_swing" },
-      { "id": "mon_sflesh_camp_turret_hravager_slam" },
-      { "id": "mon_sflesh_camp_turret_hravager_slam" },
-      { "id": "mon_sflesh_camp_turret_hravager_slam" },
-      { "id": "mon_sflesh_camp_turret_hravager_slam" },
-      { "id": "mon_sflesh_camp_turret_hravager_thrust" }
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_swing"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_slam"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_slam"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_slam"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_slam"
+      },
+      {
+        "id": "mon_sflesh_camp_turret_hravager_thrust"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "min_damage": 1,
     "max_damage": 3,
-    "message": "",
     "effect": "attack",
     "shape": "blast",
     "min_range": 5,
@@ -1648,12 +3400,22 @@
   {
     "id": "mon_secrodragon_woke_armed_deploy_spread",
     "type": "SPELL",
-    "name": { "str": "Spread" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster commands all reinforcer bots to take distance.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "ally", "hostile" ],
-    "targeted_monster_ids": [ "mon_bot_secroinforcer" ],
-    "message": "",
+    "name": {
+      "str": "散布"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就改读这个：\n“施法者命令所有强化机器人保持距离。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_bot_secroinforcer"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "run",
@@ -1665,12 +3427,22 @@
   {
     "id": "mon_secrodragon_woke_armed_deploy_spread_fast",
     "type": "SPELL",
-    "name": { "str": "Quick!" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\nThey also take increased speed.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "ally", "hostile" ],
-    "targeted_monster_ids": [ "mon_bot_secroinforcer" ],
-    "message": "",
+    "name": {
+      "str": "快！"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就改读这个：\n他们也提高了速度。'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_bot_secroinforcer"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "secro_skittyweavy_skit",
@@ -1682,15 +3454,25 @@
   {
     "type": "SPELL",
     "id": "mon_secrodragon_woke_armed_deploy_bots",
-    "name": { "str": "Deploy: Reinforcer Bots" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Two large bots flies from the caster.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "部署：强化机器人"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就改读这个：\n“两个大型机器人从施法者那里飞过。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "min_aoe": 3,
     "max_aoe": 3,
-    "message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_bot_secroinforcer"
@@ -1698,13 +3480,21 @@
   {
     "type": "SPELL",
     "id": "mon_secrodragon_woke_armed_deploy",
-    "name": { "str": "Deploy" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster deploys its reinforcer bots into the field, which will support them in combat. One time use.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "部署"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读读这个：\n的施法者将它的强化机器人部署到战场上，这将在战斗中支持他们。“一次性使用，”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 999999,
     "max_damage": 999999,
-    "message": "",
     "effect": "targeted_polymorph",
     "shape": "blast",
     "effect_str": "mon_secrodragon_woke"
@@ -1712,18 +3502,43 @@
   {
     "type": "SPELL",
     "id": "mon_secrodragon_woke_armed_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "message": "The sight of <npcname> locks onto its target…",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "message": "<npcname>锁定了目标…",
     "extra_effects": [
-      { "id": "mon_secrodragon_woke_armed_deploy_bots", "hit_self": true },
-      { "id": "mon_secrodragon_woke_armed_deploy_bots", "hit_self": true },
-      { "id": "mon_secrodragon_woke_armed_deploy_spread", "hit_self": true },
-      { "id": "mon_secrodragon_woke_armed_deploy_spread_fast", "hit_self": true },
-      { "id": "mon_secrodragon_woke_armed_deploy", "hit_self": true }
+      {
+        "id": "mon_secrodragon_woke_armed_deploy_bots",
+        "hit_self": true
+      },
+      {
+        "id": "mon_secrodragon_woke_armed_deploy_bots",
+        "hit_self": true
+      },
+      {
+        "id": "mon_secrodragon_woke_armed_deploy_spread",
+        "hit_self": true
+      },
+      {
+        "id": "mon_secrodragon_woke_armed_deploy_spread_fast",
+        "hit_self": true
+      },
+      {
+        "id": "mon_secrodragon_woke_armed_deploy",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 15,
@@ -1732,19 +3547,46 @@
   {
     "type": "SPELL",
     "id": "mon_bot_secroinforcer_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_bot_secroinforcer_deploy_push", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_push", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_push", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_target_random", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_cost", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_flee", "hit_self": true }
+      {
+        "id": "mon_bot_secroinforcer_deploy_push",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_push",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_push",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_target_random",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_cost",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_flee",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 20,
@@ -1753,24 +3595,41 @@
   {
     "id": "mon_bot_secroinforcer_deploy_push",
     "type": "SPELL",
-    "name": { "str": "Deployment Zone" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster tries to push away nearby creatures before deploying its robots.'",
-    "message": "",
+    "name": {
+      "str": "部署区域"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读读这个：\n“施法者在部署机器人之前试图推开附近的生物。”",
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "min_aoe": 4,
     "max_aoe": 4
   },
   {
     "id": "mon_bot_secroinforcer_deploy_flee",
     "type": "SPELL",
-    "name": { "str": "Flee" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster then takes distance for half of the cooldown duration.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "逃跑"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读读这个：\n“施法者在一半的冷却时间内保持距离。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "run",
@@ -1780,11 +3639,19 @@
   {
     "id": "mon_bot_secroinforcer_deploy_flee_fast",
     "type": "SPELL",
-    "name": { "str": "Quick!" },
-    "description": "Spell casted by an item. If you're seeing this, then read this one instead:\n'If target's very near, caster gains bonus speed.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "快！"
+    },
+    "description": "由物品施放的法术。如果你看到这个，那就读这个：\n“如果目标非常近，施法者获得额外的速度。”",
     "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "secro_skittyweavy_skit",
@@ -1796,11 +3663,19 @@
   {
     "id": "mon_bot_secroinforcer_deploy_cost",
     "type": "SPELL",
-    "name": { "str": "Cost" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster takes damage as the cost.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "成本"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读读这个：\n“施法者以伤害为代价”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "eff_bot_secroinforcer_deploy_cost"
@@ -1808,15 +3683,25 @@
   {
     "type": "SPELL",
     "id": "mon_bot_secroinforcer_deploy_shocker",
-    "name": { "str": "Deploy: Shocker Bot" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sends out a shocker bot.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "部署：放电机器人"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读读这个：\n“施法者发出一个令人震惊的机器人”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "min_aoe": 2,
     "max_aoe": 2,
-    "message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_bot_secroshocker"
@@ -1824,15 +3709,25 @@
   {
     "type": "SPELL",
     "id": "mon_bot_secroinforcer_deploy_walker",
-    "name": { "str": "Deploy: Walker Bot" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sends out a walker bot.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "部署：步行机器人"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读读这个：\n“施法者发出一个行走机器人”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "min_aoe": 2,
     "max_aoe": 2,
-    "message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_bot_secroriflewalker"
@@ -1840,15 +3735,25 @@
   {
     "type": "SPELL",
     "id": "mon_bot_secroinforcer_deploy_launcher",
-    "name": { "str": "Deploy: Launcher Bot" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sends out a launcher bot.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "部署：发射器机器人"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读读这个：\n“施法者发出一个发射机器人”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "min_aoe": 2,
     "max_aoe": 2,
-    "message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_bot_secrolauncher"
@@ -1856,27 +3761,79 @@
   {
     "type": "SPELL",
     "id": "mon_bot_secroinforcer_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
     "extra_effects": [
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_shocker", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_launcher", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_launcher", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_launcher", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_walker", "hit_self": true }
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_shocker",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_launcher",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_launcher",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_launcher",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_walker",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,
@@ -1885,11 +3842,18 @@
   {
     "id": "mon_bot_secrolauncher_deploy_flee",
     "type": "SPELL",
-    "name": { "str": "Flee" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster then takes distance for most of the cooldown duration.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "逃跑"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读读这个：\n“施法者在大部分冷却时间里都要保持距离。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "run",
@@ -1899,11 +3863,18 @@
   {
     "id": "mon_bot_secrolauncher_deploy_flee_replenish",
     "type": "SPELL",
-    "name": { "str": "Replenish!" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster readies another missile…'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "self" ],
-    "message": "",
+    "name": {
+      "str": "补充！"
+    },
+    "description": "由怪物施放的咒语。如果你看到了这个，那就读这个：\n“施法者准备另一枚导弹……”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "eff_bot_secrolauncher_slow",
@@ -1913,12 +3884,24 @@
   {
     "id": "mon_bot_secrolauncher_deploy_stop",
     "type": "SPELL",
-    "name": { "str": "Stop" },
-    "description": "Spell casted by an item. If you're seeing this, then read this one instead:\n'Caster stops the missiles.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DURATION" ],
-    "valid_targets": [ "ally", "hostile" ],
-    "targeted_monster_ids": [ "mon_bot_secromissile" ],
+    "name": {
+      "str": "住手"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那就读读这个：\n“施法者停止发射导弹”",
     "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_bot_secromissile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "blind",
@@ -1930,12 +3913,23 @@
   {
     "id": "mon_bot_secrolauncher_deploy_limit",
     "type": "SPELL",
-    "name": { "str": "Limit" },
-    "description": "Spell casted by an item. If you're seeing this, then read this one instead:\n'Caster also gives them a health draining effect.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "ally", "hostile" ],
-    "targeted_monster_ids": [ "mon_bot_secromissile" ],
+    "name": {
+      "str": "限制"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那就读读这个吧：\n“施法者也能给他们带来消耗生命的效果。”",
     "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_bot_secromissile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "eff_bot_secromissile_slow",
@@ -1947,15 +3941,25 @@
   {
     "type": "SPELL",
     "id": "mon_bot_secrolauncher_deploy",
-    "name": { "str": "Deploy" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster deploys missiles, These missiles will seek its target after 10-30 turns.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "部署"
+    },
+    "description": "由怪物施放的咒语。如果你看到这个，那就读读这个：\n“施法者部署导弹，这些导弹会在10-30圈后寻找目标。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "min_aoe": 2,
     "max_aoe": 2,
-    "message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_bot_secromissile"
@@ -1963,12 +3967,27 @@
   {
     "type": "SPELL",
     "id": "mon_bot_secrolauncher_deploy_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_bot_secrolauncher_deploy", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
+    "extra_effects": [
+      {
+        "id": "mon_bot_secrolauncher_deploy",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 2,
@@ -1977,19 +3996,46 @@
   {
     "type": "SPELL",
     "id": "mon_bot_secrolauncher_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_bot_secrolauncher_deploy_random", "hit_self": true },
-      { "id": "mon_bot_secrolauncher_deploy_stop", "hit_self": true },
-      { "id": "mon_bot_secrolauncher_deploy_limit", "hit_self": true },
-      { "id": "mon_bot_secroinforcer_deploy_cost", "hit_self": true },
-      { "id": "mon_bot_secrolauncher_deploy_flee", "hit_self": true },
-      { "id": "mon_bot_secrolauncher_deploy_flee_replenish", "hit_self": true }
+      {
+        "id": "mon_bot_secrolauncher_deploy_random",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secrolauncher_deploy_stop",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secrolauncher_deploy_limit",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secroinforcer_deploy_cost",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secrolauncher_deploy_flee",
+        "hit_self": true
+      },
+      {
+        "id": "mon_bot_secrolauncher_deploy_flee_replenish",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
-    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 15,
@@ -1998,56 +4044,44 @@
   {
     "id": "mon_fleshweaver_operate",
     "type": "SPELL",
-    "name": { "str": "Operate" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Both caster and the target become unable to act.'",
-    "valid_targets": [ "self", "ally", "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "运转"
+    },
+    "description": "怪物施法。如果你看到了这一点，那么改为阅读这一条：\n“施法者和目标都无法行动。”",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_EXPLOSION_SFX"
+    ],
     "min_damage": -18000,
     "max_damage": -18000,
     "shape": "blast",
-    "message": "",
     "effect": "mod_moves"
   },
   {
     "id": "mon_fleshweaver_operate_heal",
     "type": "SPELL",
-    "name": { "str": "Operate Heal" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster heals the target.'",
-    "valid_targets": [ "self", "ally", "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "手术治疗"
+    },
+    "description": "怪物施法。如果你看到了这个，那么改为阅读这篇：\n“施法者治愈目标。”",
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_EXPLOSION_SFX"
+    ],
     "min_damage": -25,
     "max_damage": -25,
     "shape": "blast",
-    "message": "",
     "effect": "attack",
     "damage_type": "biological"
-  },
-  {
-    "type": "SPELL",
-    "id": "secro_veinstalk_initial",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "self" ],
-    "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_veinstalk_initial",
-    "min_range": 1,
-    "max_range": 1
-  },
-  {
-    "type": "SPELL",
-    "id": "secro_flesh_wall_initial",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "flags": [ "SILENT", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "self" ],
-    "shape": "blast",
-    "message": "",
-    "effect": "effect_on_condition",
-    "effect_str": "eoc_secro_flesh_wall_initial",
-    "min_range": 1,
-    "max_range": 1
   }
 ]

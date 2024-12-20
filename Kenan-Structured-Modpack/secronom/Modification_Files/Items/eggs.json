@@ -2,39 +2,52 @@
   {
     "type": "COMESTIBLE",
     "id": "saddler_egg",
-    "name": { "str": "saddler egg" },
+    "name": {
+      "str": "萨德勒的卵"
+    },
     "weight": "110 g",
     "color": "green",
     "comestible_type": "FOOD",
     "symbol": "%",
     "quench": -5,
     "nutrition": -30,
-    "description": "Dreadful hairy egg. Dare to eat this!",
+    "description": "一个可怕的卵，谁敢吃这个！",
     "price": "0 cent",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "volume": "250 ml",
     "fun": -50
   },
   {
     "type": "TOOL",
     "id": "hatchingsaddleregg",
-    "name": { "str": "cracked saddler egg" },
+    "name": {
+      "str": "有裂纹的萨德勒卵"
+    },
     "weight": "110 g",
     "color": "green",
     "symbol": "o",
-    "description": "Dreadful hairy egg. Use to break it.",
+    "description": "一个恐怖的卵，激活以来打破它。",
     "price": "0 cent",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "volume": "250 ml",
-    "flags": [ "NO_DROP" ],
+    "flags": [
+      "NO_DROP"
+    ],
     "use_action": {
       "type": "place_monster",
       "monster_id": "mon_insect_saddler_baby",
       "difficulty": 2,
-      "friendly_msg": "A baby saddler skitters!",
-      "hostile_msg": "Turns out to be a bad egg!",
+      "friendly_msg": "一个萨德勒幼崽在轻快地移动！",
+      "hostile_msg": "原来是个坏蛋！",
       "place_randomly": true,
-      "skills": [ "survival", "melee" ]
+      "skills": [
+        "survival",
+        "melee"
+      ]
     }
   },
   {
@@ -43,10 +56,16 @@
     "looks_like": "hatchingsaddleregg",
     "symbol": ",",
     "color": "green",
-    "name": { "str": "hatched saddler egg" },
-    "description": "A hatched egg of a saddler. It's still covered in slimy green goo, but you see nothing of use of it but to throw away.",
-    "material": [ "egg" ],
-    "flags": [ "NO_SALVAGE" ],
+    "name": {
+      "str": "孵化的萨德勒卵"
+    },
+    "description": "一个孵化的萨德勒卵，上面覆盖着粘稠的液体，它除了能扔出去之外什么卵用都没有",
+    "material": [
+      "egg"
+    ],
+    "flags": [
+      "NO_SALVAGE"
+    ],
     "weight": "2 g",
     "volume": "250 ml",
     "category": "spare_parts"

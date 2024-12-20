@@ -4,21 +4,52 @@
     "type": "talk_topic",
     "responses": [
       {
-        "text": "I've been sent to ask about recent attacks on survivors by anomalous creatures.  Know anything about that?",
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
         "condition": {
           "and": [
-            { "compare_string": [ "yes", { "u_val": "johnathan_prelude_mid" } ] },
-            { "not": { "compare_string": [ "yes", { "npc_val": "johnathan_prelude_mid" } ] } },
-            { "not": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_5" } ] } }
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            }
           ]
         },
         "topic": "TALK_RANCH_SCAVENGER_1_GM_PRELUDE"
       },
       {
-        "text": "[MISSION] I've been asked to help attract work for another community of survivors.  Know anyone who could help?",
+        "text": "[任务]我被要求帮助另一个幸存者社区吸引工作。有谁能帮上忙吗？",
         "topic": "TALK_RANCH_SCAVENGER_1_CF_REP_MISSION_4",
         "condition": {
-          "and": [ { "not": { "compare_string": [ "yes", { "u_val": "sofia_allies_secured" } ] } }, { "u_has_mission": "MISSION_CF_REP_4" } ]
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
         }
       }
     ]
@@ -26,40 +57,51 @@
   {
     "id": "TALK_RANCH_SCAVENGER_1_GM_PRELUDE",
     "type": "talk_topic",
-    "dynamic_line": "One of my scouting parties saw movement consistent with some of the strange creatures we've intermittently heard rumors about, the more recent attacks that have hit a few travelers in the area.  I'll send off the information on what happened and where, I guess."
+    "dynamic_line": "我的一个侦察队看到了一些奇怪的生物的活动，我们偶尔听到一些传言，最近的袭击袭击袭击了该地区的一些游客。我想我会把发生的事情和地点的信息发出去。"
   },
   {
     "type": "talk_topic",
     "id": "TALK_RANCH_SCAVENGER_1_CF_REP_MISSION_4",
-    "dynamic_line": "Got a lot of work that needs to be done as it is, and supplies that need moving.  I might be able to work something out with them.",
+    "dynamic_line": "有很多工作要按原样做，还有需要运送的物资。我也许能和他们解决一些问题。",
     "responses": [
       {
-        "text": "They're interested in trade contacts as well, so that might prove useful.",
+        "text": "他们也对贸易往来感兴趣，所以这可能会被证明是有用的。",
         "topic": "TALK_RANCH_SCAVENGER_1_CF_REP_MISSION_4_TRADE"
       },
-      { "text": "I'll keep asking around.", "topic": "TALK_RANCH_SCAVENGER_1" }
+      {
+        "text": "我会四处打听。",
+        "topic": "TALK_RANCH_SCAVENGER_1"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_RANCH_SCAVENGER_1_CF_REP_MISSION_4_TRADE",
-    "dynamic_line": "That works, I guess.  We're close enough to getting on our own two feet that a little trade just might help.  Just give me directions.",
+    "dynamic_line": "我想这很管用。我们离自力更生已经很近了，一点交易可能会有所帮助。给我指路。",
     "responses": [
       {
-        "text": "A local settlement in a fortified roadside church.  It's not too far from the refugee center.",
+        "text": "在一个有防御工事的路边教堂里的当地居民点。离难民中心不远。",
         "topic": "TALK_RANCH_SCAVENGER_1_CF_REP_MISSION_4_DEAL"
       },
-      { "text": "On second thought, I might be back later.", "topic": "TALK_RANCH_SCAVENGER_1" }
+      {
+        "text": "再想一想，我可能晚点回来。",
+        "topic": "TALK_RANCH_SCAVENGER_1"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_RANCH_SCAVENGER_1_CF_REP_MISSION_4_DEAL",
-    "dynamic_line": "Gotcha, I'll have some of my men scout things out and work out a deal with them.  Should be able to direct some recent recruits their way to set things up.",
+    "dynamic_line": "明白了，我会让我手下的人去调查，然后和他们达成协议。应该能够指导一些新来的新兵他们的方式来安排事情。",
     "speaker_effect": [
       {
         "effect": [
-          { "u_add_var": "sofia_allies_secured", "value": "yes" },
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
           {
             "mapgen_update": "arcana_cf_4_tacoma_commune_1b",
             "om_terrain": "cf_church_1",
@@ -91,6 +133,11 @@
         ]
       }
     ],
-    "responses": [ { "text": "Thank you.  I should go check on them.", "topic": "TALK_DONE" } ]
+    "responses": [
+      {
+        "text": "非常感谢。我应该去看看。",
+        "topic": "TALK_DONE"
+      }
+    ]
   }
 ]

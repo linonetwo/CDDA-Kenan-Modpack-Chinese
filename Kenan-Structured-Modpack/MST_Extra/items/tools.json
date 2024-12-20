@@ -2,12 +2,16 @@
   {
     "id": "heavy_snare_kit",
     "type": "TOOL",
-    "name": { "str": "heavy snare kit" },
-    "description": "This is a kit for a simple trap consisting of a rope noose and a snare trigger.  It requires a tree nearby.  It is effective at trapping monsters.",
+    "name": {
+      "str": "大型捕猎陷阱"
+    },
+    "description": "这是由粗绳与有活结的套索组成的一个简单的陷阱，需要附近有一棵树，猎物掉到其中就会被网住。",
     "weight": "1066 g",
     "volume": "250 ml",
     "price": "250 cent",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "symbol": ";",
     "color": "brown",
     "use_action": {
@@ -18,17 +22,23 @@
       "practice": 4,
       "done_message": "You set the snare trap."
     },
-    "flags": [ "SINGLE_USE" ]
+    "flags": [
+      "SINGLE_USE"
+    ]
   },
   {
     "id": "light_snare_kit",
     "type": "TOOL",
-    "name": { "str": "light snare kit" },
-    "description": "This is a kit for a simple trap consisting of a string noose and a snare trigger.  It requires a young tree nearby.  It is effective at trapping and killing some small animals.",
+    "name": {
+      "str": "小型捕猎陷阱"
+    },
+    "description": "这是由细绳与有活结的套索组成的一个简单的陷阱。需要附近有颗小树，用来诱捕可怜且美味的小动物。",
     "weight": "886 g",
     "volume": "250 ml",
     "price": "1 USD",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "symbol": ";",
     "color": "brown",
     "use_action": {
@@ -39,33 +49,52 @@
       "practice": 2,
       "done_message": "You set the snare trap."
     },
-    "flags": [ "SINGLE_USE" ]
+    "flags": [
+      "SINGLE_USE"
+    ]
   },
   {
     "id": "snare_trigger",
     "type": "TOOL",
-    "name": { "str": "snare trigger" },
-    "description": "This is a stick that has been cut into a trigger mechanism for a snare trap.",
+    "name": {
+      "str": "陷阱触发器"
+    },
+    "description": "一只木棍被削成木制的机关，用于制造捕猎陷阱。",
     "weight": "850 g",
     "volume": "250 ml",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "symbol": ";",
     "color": "brown"
   },
   {
     "id": "primitive_hoe",
     "type": "TOOL",
-    "name": { "str": "stone hoe" },
-    "description": "This is a farming implement made with a broad stone blade, that can be used to till earth.",
+    "name": {
+      "str": "石锄"
+    },
+    "description": "一种用一块宽大的石片做成农具，可以用来耕作。",
     "weight": "1300 g",
     "volume": "1 L",
     "price": "10 USD",
     "to_hit": 1,
-    "melee_damage": { "bash": 10, "cut": 5 },
-    "material": [ "stone", "wood" ],
+    "melee_damage": {
+      "bash": 10,
+      "cut": 5
+    },
+    "material": [
+      "stone",
+      "wood"
+    ],
     "symbol": ";",
     "color": "brown",
-    "qualities": [ [ "DIG", 1 ] ],
+    "qualities": [
+      [
+        "DIG",
+        1
+      ]
+    ],
     "use_action": "MAKEMOUND"
   },
   {
@@ -73,15 +102,23 @@
     "type": "TOOL",
     "symbol": "0",
     "color": "light_gray",
-    "name": { "str": "makeshift sled" },
-    "description": "A simple pulk sled and folded framework that can hold a modest amount of gear, traditionally used to drag equipment across snowy terrain.",
+    "name": {
+      "str": "简易雪橇"
+    },
+    "description": "一个简易的手拉雪橇和折叠框架，可以堆放少量的装备，传统上用于拖动设备跨越雪地。",
     "price": "20 USD",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "weight": "9500 g",
     "volume": "11250 ml",
-    "melee_damage": { "bash": 10 },
+    "melee_damage": {
+      "bash": 10
+    },
     "to_hit": -5,
-    "use_action": [ "UNFOLD_GENERIC" ],
+    "use_action": [
+      "UNFOLD_GENERIC"
+    ],
     "variables": {
       "vehicle_name": "Makeshift Sled",
       "folded_parts": "[{\"id\":\"makeshift_sled_frame_part\",\"base\":{\"typeid\":\"makeshift_sled_frame_item\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"makeshift_sled_runner_part\",\"base\":{\"typeid\":\"makeshift_sled_runners_item\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"makeshift_sled_basket_part\",\"base\":{\"typeid\":\"makeshift_sled_basket_item\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0}]"
@@ -92,15 +129,23 @@
     "type": "TOOL",
     "symbol": "0",
     "color": "brown",
-    "name": { "str": "log canoe" },
-    "description": "A traditional dugout boat made from logs burned and carved to shape, along with handmade oars.  Heavy and bulky as it is, it can still be picked up and carried by a reasonably fit person.  Use it to deploy and make ready.",
+    "name": {
+      "str": "独木舟"
+    },
+    "description": "一种传统的独木舟，还有一根手工制作的桨。独木舟直接用一根原木用火烧空中间，不断凿刻而成。虽然它体积庞大，但它仍然可以由一个健康的成年人拿起和携带。使用它以激活。",
     "price": "200 USD",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "weight": "52 kg",
     "volume": "68 L",
-    "melee_damage": { "bash": 20 },
+    "melee_damage": {
+      "bash": 20
+    },
     "to_hit": -10,
-    "use_action": [ "UNFOLD_GENERIC" ],
+    "use_action": [
+      "UNFOLD_GENERIC"
+    ],
     "variables": {
       "vehicle_name": "Log Canoe",
       "folded_parts": "[{\"id\":\"log_frame_part\",\"base\":{\"typeid\":\"log_frame_item\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"hand_paddles\",\"base\":{\"typeid\":\"hand_paddles\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":0},{\"id\":\"log_frame_part\",\"base\":{\"typeid\":\"log_frame_item\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":1},{\"id\":\"log_frame_part\",\"base\":{\"typeid\":\"log_frame_item\",\"item_tags\":[\"VEHICLE\"]},\"mount_dx\":0,\"mount_dy\":-1}]"
@@ -110,30 +155,53 @@
     "id": "mound_distillation",
     "type": "TOOL",
     "copy-from": "fake_item",
-    "name": { "str_sp": "makeshift distillation" },
+    "name": {
+      "str_sp": "简易蒸馏器"
+    },
     "weight": "1 g",
     "volume": "1 ml",
-    "description": "This exists only to allow makeshift stills to provide distilling quality.",
-    "qualities": [ [ "DISTILL", 1 ] ]
+    "description": "这个临时的蒸馏器只能勉强提供蒸馏的功能.",
+    "qualities": [
+      [
+        "DISTILL",
+        1
+      ]
+    ]
   },
   {
     "id": "pulley lifting",
     "type": "TOOL",
     "copy-from": "fake_item",
-    "name": { "str_sp": "pulley lifting" },
+    "name": {
+      "str_sp": "升降滑轮"
+    },
     "weight": "1 g",
     "volume": "1 ml",
-    "description": "This exists only to allow rope and pulley lifters to provide some engineering qualities.",
-    "qualities": [ [ "LIFT", 1 ], [ "JACK", 1 ] ]
+    "description": "这只能给绳索和滑轮升降机搬运多重一些的物品.",
+    "qualities": [
+      [
+        "LIFT",
+        1
+      ],
+      [
+        "JACK",
+        1
+      ]
+    ]
   },
   {
     "type": "TOOL",
     "id": "tarp_raincatcher_leather",
     "copy-from": "tarp_raincatcher",
-    "name": { "str": "leather tarp raincatcher" },
-    "description": "Some sticks and string with a leather tarp, to set up an improvised raincatcher.",
+    "name": {
+      "str": "防水皮革集雨器"
+    },
+    "description": "由一些棍子和绳子加上一块防水的皮革制成的一个简易集雨器.激活以放置.",
     "weight": "4736 g",
-    "material": [ "wood", "leather" ],
+    "material": [
+      "wood",
+      "leather"
+    ],
     "use_action": {
       "type": "place_trap",
       "allow_under_player": true,
@@ -142,19 +210,24 @@
       "practice": 0,
       "done_message": "You set up the raincatcher, waiting to collect water."
     },
-    "flags": [ "SINGLE_USE" ]
+    "flags": [
+      "SINGLE_USE"
+    ]
   },
   {
     "id": "tanning_hide_small",
     "copy-from": "tanning_hide",
     "type": "TOOL",
-    "name": { "str": "scrap of tanning leather", "str_pl": "scraps of tanning leather" },
-    "description": "A small piece of treated animal hide, undergoing the chemical processes required to become leather.  You will be able to activate it to unroll and make use of it when it is done.",
+    "name": {
+      "str": "小块鞣制皮革",
+      "str_pl": "小块鞣制皮革"
+    },
+    "description": "一小块已经经过处理的动物皮，经过一系列必要的化学反应以变成鞣制皮革。当它鞣制完成后你就可以激活以展开并使用。",
     "weight": "80 g",
     "volume": "200 ml",
     "use_action": {
       "target": "leather",
-      "msg": "You carefully unfold the tanning leather scrap and shake it clean.",
+      "msg": "你煞费苦心地展开鞣制中的皮革，把它抖干净。",
       "moves": 150,
       "type": "delayed_transform",
       "transform_age": 5760,
@@ -166,13 +239,16 @@
     "id": "tanning_pelt_small",
     "copy-from": "tanning_pelt",
     "type": "TOOL",
-    "name": { "str": "scrap of tanning fur", "str_pl": "scraps of tanning fur" },
-    "description": "A small piece of treated animal pelt, undergoing the chemical processes required to become fur.  You will be able to activate it to unroll and make use of it when it is done.",
+    "name": {
+      "str": "鞣制毛皮碎片",
+      "str_pl": "小块鞣制毛皮"
+    },
+    "description": "一小块已经经过处理的动物皮，经过一系列必要的化学反应以变成鞣制毛皮。当它鞣制完成后你就可以激活以展开并使用。",
     "weight": "80 g",
     "volume": "200 ml",
     "use_action": {
       "target": "fur",
-      "msg": "You carefully unfold the tanning fur scrap and shake it clean.",
+      "msg": "你煞费苦心地展开鞣制中的毛皮，把它抖干净。",
       "moves": 150,
       "type": "delayed_transform",
       "transform_age": 5760,
@@ -185,19 +261,29 @@
     "copy-from": "tinderbox",
     "sub": "tinderbox",
     "type": "TOOL",
-    "name": { "str": "clay ember carrier" },
-    "description": "This is a small ceramic fire pot, with a lid and small holes for controlled airflow.  It can nurture a smoldering ember for a long time, to start fires without modern tools.",
+    "name": {
+      "str": "陶制火种罐"
+    },
+    "description": "一个用来保存火种的小陶土罐子，带有盖子和通气口，能够让余火保持一段时间，缺乏现代工具时可以用于生火。",
     "material": "clay",
     "color": "brown",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "tinder": 100 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "tinder": 100
+        }
+      }
+    ],
     "use_action": {
       "target": "tinderbox_clay_on",
-      "msg": "You light the tinder.",
+      "msg": "你点燃了引火物。",
       "active": true,
       "need_fire": 1,
       "need_fire_msg": "You need a lighter or fire to light this.",
       "need_charges": 1,
-      "need_charges_msg": "The ember carrier is out of tinder.",
+      "need_charges_msg": "火种罐中已经没有火绒了。",
       "type": "transform"
     }
   },
@@ -206,18 +292,25 @@
     "copy-from": "tinderbox_on",
     "sub": "tinderbox_on",
     "type": "TOOL",
-    "name": { "str": "clay ember carrier (lit)", "str_pl": "clay ember carriers (lit)" },
-    "description": "This is a small ceramic fire pot, with a lid and small holes for controlled airflow.  An ember is smoldering inside it, and can be used to start a campfire.",
+    "name": {
+      "str": "陶制火种罐（点燃）",
+      "str_pl": "陶制火种罐（点燃）"
+    },
+    "description": "一个用来保存火种的小陶土罐，带有盖子和通气口，一小团余烬正在里面闷烧，可以用来生起篝火。",
     "material": "clay",
     "color": "brown",
     "revert_to": "tinderbox_clay",
     "use_action": [
-      { "type": "firestarter", "moves": 200, "moves_slow": 2000 },
+      {
+        "type": "firestarter",
+        "moves": 200,
+        "moves_slow": 2000
+      },
       {
         "target": "tinderbox_clay",
-        "msg": "The ember is extinguished.",
+        "msg": "余烬熄灭了。",
         "active": false,
-        "menu_text": "Extinguish",
+        "menu_text": "熄灭",
         "type": "transform",
         "ammo_scale": 0
       }
@@ -227,104 +320,191 @@
     "id": "hobo_stove_clay",
     "looks_like": "clay_pot",
     "type": "TOOL",
-    "name": { "str": "clay oven" },
-    "description": "This is a ancient style of portable ceramic oven.  Use it to place on the ground, allowing you to keep a small fire safe from wind and rain.",
+    "name": {
+      "str": "陶制烤箱"
+    },
+    "description": "一种古老的便携小陶土烤炉。放置在地上后，能够为你提供一个能保证用火安全以及不怕刮风下雨的小烤炉。",
     "weight": "2500 g",
     "volume": "2 L",
     "price": "40 USD",
     "to_hit": -2,
-    "melee_damage": { "bash": 4 },
+    "melee_damage": {
+      "bash": 4
+    },
     "material": "clay",
     "symbol": ",",
     "color": "brown",
-    "use_action": [ { "type": "deploy_furn", "furn_type": "f_hobo_stove_clay_placed" } ]
+    "use_action": [
+      {
+        "type": "deploy_furn",
+        "furn_type": "f_hobo_stove_clay_placed"
+      }
+    ]
   },
   {
     "id": "misc_repairkit_makeshift",
     "looks_like": "misc_repairkit",
     "type": "TOOL",
-    "name": { "str": "makeshift repair kit" },
-    "description": "This is a portable toolkit, consisting of a primitive knife for carving replacement parts, an adze for more heavy-duty wood cutting, and a patch of soft material for cleaning surfaces.  It can be used to repair certain items if supplied with pitch, though it isn't ideal for complex work.",
+    "name": {
+      "str": "简易修理包"
+    },
+    "description": "一个便携式的简易修理包，包括用于从原材料中替换部件的石刀，用于切割木材的石锛以及用于清洁表面的柔软布条。配合足够的树脂，可勉强胜任于修复部分材质不那么特殊的小物品。",
     "weight": "1800 g",
     "volume": "1500 ml",
     "price": "10 USD",
     "to_hit": -1,
-    "melee_damage": { "bash": 2 },
-    "material": [ "stone", "wood" ],
+    "melee_damage": {
+      "bash": 2
+    },
+    "material": [
+      "stone",
+      "wood"
+    ],
     "symbol": ";",
     "color": "light_gray",
-    "ammo": [ "pitch_wood" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "pitch_wood": 100 } } ],
+    "ammo": [
+      "pitch_wood"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "pitch_wood": 100
+        }
+      }
+    ],
     "charges_per_use": 1,
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 11 ], [ "SAW_W", 1 ] ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        11
+      ],
+      [
+        "SAW_W",
+        1
+      ]
+    ],
     "use_action": [
       {
         "type": "repair_item",
         "item_action_type": "repair_metal",
-        "materials": [ "acidchitin", "bone", "chitin", "paper", "cardboard", "wood", "kevlar_rigid" ],
+        "materials": [
+          "acidchitin",
+          "bone",
+          "chitin",
+          "paper",
+          "cardboard",
+          "wood",
+          "kevlar_rigid"
+        ],
         "skill": "fabrication",
         "tool_quality": 1,
         "cost_scaling": 0.1,
         "move_cost": 2000
       }
     ],
-    "flags": [ "ALLOWS_REMOTE_USE" ]
+    "flags": [
+      "ALLOWS_REMOTE_USE"
+    ]
   },
   {
     "id": "hand_drill_makeshift",
     "copy-from": "hand_drill",
     "type": "TOOL",
-    "name": { "str": "flint drill" },
-    "description": "A prehistoric woodworking tool, little more than a fine sharp blade tipping a makeshift bow drill.  It's rather limited in usage, primarily meant to be used on wood.",
+    "name": {
+      "str": "燧石钻"
+    },
+    "description": "一种早在石器时代便已存在的钻孔工具，大体只是由一块锋利的石头以及一个用于稳定的钻顶组成。效率过低导致了它的用途有限，主要用于木材的钻孔。",
     "price": "2 USD",
-    "material": [ "wood", "stone" ],
-    "qualities": [ [ "DRILL", 1 ] ]
+    "material": [
+      "wood",
+      "stone"
+    ],
+    "qualities": [
+      [
+        "DRILL",
+        1
+      ]
+    ]
   },
   {
     "id": "fire_plough",
     "type": "TOOL",
-    "name": { "str": "fire plough" },
-    "description": "A simple form of primitive firemaking, little more than two pieces of wood with a groove worn into one of them, to light an ember through friction.  Starting a fire with this will be laborious and slow, but it's better than nothing.",
+    "name": {
+      "str": "火犁"
+    },
+    "description": "一种简单的原始取火法，由两块木头组成，其中一块带有一条凹槽，用于另一根木头的摩擦。通过摩擦产生的热量点燃火种，使用这种工具生活十分费力和耗时，聊胜于无。",
     "weight": "1040 g",
     "volume": "2500 ml",
     "price": "0 cent",
-    "material": [ "wood" ],
+    "material": [
+      "wood"
+    ],
     "symbol": ",",
     "color": "brown",
     "initial_charges": 25,
     "max_charges": 25,
     "charges_per_use": 1,
-    "use_action": { "type": "firestarter", "moves": 1000, "moves_slow": 50000 },
-    "flags": [ "FIRESTARTER", "REQUIRES_TINDER" ]
+    "use_action": {
+      "type": "firestarter",
+      "moves": 1000,
+      "moves_slow": 50000
+    },
+    "flags": [
+      "FIRESTARTER"
+    ]
   },
   {
     "id": "char_purifier_fake",
     "type": "TOOL",
-    "name": { "str": "makeshift water purifier" },
-    "description": "This is a pseudo item.",
-    "material": [ "wood", "cotton" ],
+    "name": {
+      "str": "简易净水器"
+    },
+    "description": "这是一个虚拟物品.",
+    "material": [
+      "wood",
+      "cotton"
+    ],
     "weight": "1 g",
     "volume": "1 ml",
     "symbol": ";",
     "color": "light_gray",
     "sub": "water_purifier",
     "ammo": "charcoal",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "charcoal": 500 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "charcoal": 500
+        }
+      }
+    ],
     "charges_per_use": 1,
-    "flags": [ "ALLOWS_REMOTE_USE" ]
+    "flags": [
+      "ALLOWS_REMOTE_USE"
+    ]
   },
   {
     "id": "pot_canning_clay",
     "type": "TOOL",
-    "name": { "str": "clay canning pot" },
+    "name": {
+      "str": "陶制水浴锅"
+    },
     "sub": "pot_canning",
     "looks_like": "pot_canning",
-    "description": "A very large 25 liter earthenware pot, primarily meant for canning food via the water bath method, though it can cook normal foods just as well.  Canning foods with it will require a lot of water.  If you're only canning a couple of jars at a time, you'd fill it up with rocks or something to displace the water above the lids.",
+    "description": "一个容量非常大的25升陶锅，主要用于水浴法制作罐头食品，也可以用做普通厨具来烹饪食物。烹饪罐装食品需要大量的水，如果只是一次性制作几个罐头的话，你需要先放些石头或其他什么东西来抬升水位没过罐头的盖子。",
     "weight": "3251 g",
     "volume": "25005 ml",
     "price": "100 USD",
     "to_hit": -2,
-    "melee_damage": { "bash": 9 },
+    "melee_damage": {
+      "bash": 9
+    },
     "material": "clay",
     "symbol": ")",
     "color": "brown",
@@ -337,7 +517,24 @@
         "max_contains_weight": "25 kg"
       }
     ],
-    "qualities": [ [ "COOK", 3 ], [ "BOIL", 2 ], [ "CONTAIN", 1 ], [ "CHEM", 1 ] ],
+    "qualities": [
+      [
+        "COOK",
+        3
+      ],
+      [
+        "BOIL",
+        2
+      ],
+      [
+        "CONTAIN",
+        1
+      ],
+      [
+        "CHEM",
+        1
+      ]
+    ],
     "use_action": "HEAT_FOOD"
   }
 ]

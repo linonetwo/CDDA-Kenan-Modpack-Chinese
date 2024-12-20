@@ -3,7 +3,9 @@
     "abstract": "artillery_casing",
     "type": "GENERIC",
     "category": "spare_parts",
-    "name": { "str": "large artillery casing" },
+    "name": {
+      "str": "large artillery casing"
+    },
     "stackable": true,
     "material": "steel",
     "symbol": "=",
@@ -13,46 +15,77 @@
     "id": "belt25mm",
     "copy-from": "magazine_belt",
     "type": "MAGAZINE",
-    "name": { "str": "25x137mm ammo belt" },
+    "name": {
+      "str": "25x137mm 机炮弹带"
+    },
     "ammo_type": "25mm",
     "default_ammo": "25mm_hei",
     "capacity": 100,
     "linkage": "ammolink25mm",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "25mm": 100 } } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "25mm": 100
+        }
+      }
+    ]
   },
   {
     "id": "ammolink25mm",
     "copy-from": "ammolink",
     "type": "GENERIC",
-    "name": { "str": "25x137mm autocannon belt linkage" },
+    "name": {
+      "str": "25x137mm 机炮弹带链节"
+    },
     "weight": "6 g",
     "volume": "10ml",
     "stackable": true,
-    "use_action": { "type": "ammobelt", "belt": "belt25mm" }
+    "use_action": {
+      "type": "ammobelt",
+      "belt": "belt25mm"
+    }
   },
   {
     "type": "AMMO",
     "id": "25mm_hei",
     "price": "98 USD",
     "price_postapoc": "15 USD",
-    "name": { "str_sp": "25x137mm M792 HEI" },
+    "name": {
+      "str_sp": "25x137mm M792 高爆燃烧弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 25x137mm autocannon round, high explosive incendiary.  Designed for use against unarmored vehicles and to suppress infantry.",
-    "material": [ "steel", "powder" ],
+    "description": "一种25x137mm机炮使用的高爆燃烧弹。用于对抗非装甲车辆和压制步兵。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "220 ml",
     "weight": "450 g",
     "longest_side": "137 mm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "25mm",
     "casing": "25mm_casing",
-    "damage": { "damage_type": "bullet", "amount": 200, "armor_penetration": 75 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 300,
+      "armor_penetration": 150
+    },
     "range": 60,
     "dispersion": 150,
     "recoil": 49500,
     "count": 15,
-    "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "effects": [ "AMMO_25MM_HEI", "INCENDIARY" ],
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "effects": [
+      "AMMO_25MM_HEI",
+      "INCENDIARY"
+    ],
     "explode_in_fire": true
   },
   {
@@ -60,79 +93,150 @@
     "id": "25mm_apds",
     "price": "49 USD",
     "price_postapoc": "10 USD",
-    "name": { "str_sp": "25x137mm M791 APDS" },
+    "name": {
+      "str_sp": "25x137mm M791 脱壳穿甲弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 25x137mm autocannon round using an armor-piercing, discarding sabot with a tungsten penetrator.  Used primarily against light armored vehicles and aerial targets.",
-    "material": [ "steel", "powder" ],
+    "description": "25x137mm机炮使用的钨合金弹头脱壳穿甲弹。主要应用在打击轻型装甲载具和战机。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "220 ml",
     "weight": "450 g",
     "longest_side": "137 mm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "25mm",
     "casing": "25mm_casing",
-    "damage": { "damage_type": "bullet", "amount": 175, "armor_penetration": 150 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 250,
+      "armor_penetration": 250
+    },
     "range": 60,
     "dispersion": 125,
     "recoil": 43750,
     "count": 15,
-    "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "effects": [ "COOKOFF" ]
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "effects": [
+      "COOKOFF"
+    ]
   },
   {
     "type": "AMMO",
     "id": "25mm_slug",
     "price_postapoc": "10 USD",
-    "name": { "str_sp": "reloaded 25x137mm" },
+    "name": {
+      "str_sp": "25x137mm（复装）"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 25x137mm autocannon round with its primer replaced, and loaded with a basic lead projectile.  Not as effective as the real thing, but still fairly potent.",
-    "material": [ "steel", "powder" ],
+    "description": "一个25x137mm机炮子弹，替换了它的底火，还装了一个铅弹。没有真正的军用弹药那样有效，但使用起来还是具有足够杀伤力。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "1250 ml",
     "weight": "380 g",
     "longest_side": "137 mm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "25mm",
     "casing": "25mm_casing",
-    "damage": { "damage_type": "bullet", "amount": 125, "armor_penetration": 50 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 200,
+      "armor_penetration": 50
+    },
     "range": 30,
     "dispersion": 200,
     "recoil": 52000,
     "count": 10,
-    "effects": [ "COOKOFF", "RECYCLED" ]
+    "effects": [
+      "COOKOFF",
+      "RECYCLED"
+    ]
   },
   {
     "id": "bp_25mm_slug",
     "copy-from": "25mm_slug",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 25x137mm, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "25x137mm（黑火药复装）"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "id": "25mm_he_reloaded",
     "copy-from": "25mm_slug",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 25x137mm HE" },
-    "description": "A 25x137mm autocannon round with its primer replaced, loaded with a homemade explosive round.  Useful against lightly armored targets, though not as effective as the real thing.",
+    "name": {
+      "str_sp": "25x137mm 高爆弹(复装)"
+    },
+    "description": "一个25x137mm的机炮子弹，更换了底火，装有自制炸药。对轻装甲目标有用，没有真正的军用弹药那样有效。",
     "proportional": {
       "price_postapoc": 1.25,
       "weight": 0.9,
-      "damage": { "damage_type": "bullet", "amount": 0.9, "armor_penetration": 0.75 },
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.75,
+        "armor_penetration": 0.75
+      },
       "recoil": 0.75,
       "dispersion": 0.75
     },
-    "extend": { "effects": [ "CUSTOM_EXPLOSION" ] },
+    "extend": {
+      "effects": [
+        "CUSTOM_EXPLOSION"
+      ]
+    },
     "explode_in_fire": true,
-    "explosion": { "power": 50 }
+    "explosion": {
+      "power": 50
+    }
   },
   {
     "id": "bp_25mm_he_reloaded",
     "copy-from": "25mm_he_reloaded",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 25x137mm HE, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "25x137mm 高爆弹(黑火药复装)"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "type": "AMMO",
@@ -140,26 +244,44 @@
     "looks_like": "120mm_usable_heat",
     "price": "1000 USD",
     "price_postapoc": "20 USD",
-    "name": { "str_sp": "105mm M456 HEAT" },
+    "name": {
+      "str_sp": "105mm M456 破甲弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 105mm High Explosive Anti Tank round, designed for older models of tank held in reserve up until the world was on the brink of ending.  Now that the world has gone and ended, it still packs quite a punch.",
-    "material": [ "steel", "powder" ],
+    "description": "一种105mm高爆炸反坦克炮弹，设计用于旧式的坦克，直到世界濒临结束。现在世界已经结束了，它仍然有相当大的威力。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "8 L",
     "weight": "21 kg",
     "longest_side": "100 cm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "105mm",
     "casing": "105mm_casing",
-    "damage": { "damage_type": "bullet", "amount": 2500, "armor_penetration": 1250 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 2500,
+      "armor_penetration": 1250
+    },
     "range": 75,
     "dispersion": 150,
     "recoil": 375000,
     "count": 1,
-    "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "effects": [ "CUSTOM_EXPLOSION" ],
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "effects": [
+      "CUSTOM_EXPLOSION"
+    ],
     "explode_in_fire": true,
-    "explosion": { "power": 1000, "distance_factor": 0.4 }
+    "explosion": {
+      "power": 1000,
+      "distance_factor": 0.4
+    }
   },
   {
     "type": "AMMO",
@@ -167,369 +289,695 @@
     "looks_like": "120mm_usable_ap",
     "price": "1200 USD",
     "price_postapoc": "24 USD",
-    "name": { "str_sp": "105mm M833 APFSDS" },
+    "name": {
+      "str_sp": "105mm M833 尾翼稳定脱壳穿甲弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 105mm Armor-Piercing Fin-Stabilized Discarding Sabot round, no longer commonly used except for hastily supplying obsolete tanks.  Brought out of mothballs or not, its depleted uranium projectile will still give whatever it hits a bad time.",
-    "material": [ "steel", "powder" ],
+    "description": "一枚105mm尾翼稳定脱壳穿甲弹，不再普遍使用，除了临时紧急供应已经过时的坦克。不管是否被封存好了，它的贫铀弹头仍然会给它命中的任何东西带来麻烦。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "8 L",
     "weight": "18 kg",
     "longest_side": "99 cm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "105mm",
     "casing": "105mm_casing",
-    "damage": { "damage_type": "bullet", "amount": 2000, "armor_penetration": 2000 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 2000,
+      "armor_penetration": 2000
+    },
     "range": 85,
     "dispersion": 175,
     "recoil": 350000,
     "count": 1,
-    "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "effects": [ "COOKOFF", "INCENDIARY" ]
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "effects": [
+      "COOKOFF",
+      "INCENDIARY"
+    ]
   },
   {
     "type": "AMMO",
     "id": "105mm_slug",
     "price_postapoc": "10 USD",
-    "name": { "str_sp": "makeshift 105mm slug" },
+    "name": {
+      "str_sp": "自制105mm炮弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 105mm shell with a new electric primer installed, loaded with a large handmade slug.  While hardly ideal, it packs quite a punch.",
-    "material": [ "steel", "powder" ],
+    "description": "一枚安装了新的电子底火的105毫米炮弹，装上了一枚大型手工弹头。 虽然制作的水平不是很理想，但它的威力仍然相当大。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "8 L",
     "weight": "18 kg",
     "longest_side": "55 cm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "105mm",
     "casing": "105mm_casing",
-    "damage": { "damage_type": "bullet", "amount": 1000, "armor_penetration": 250 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 1000,
+      "armor_penetration": 250
+    },
     "range": 50,
     "dispersion": 250,
     "recoil": 300000,
     "count": 1,
-    "effects": [ "COOKOFF", "RECYCLED" ]
+    "effects": [
+      "COOKOFF",
+      "RECYCLED"
+    ]
   },
   {
     "id": "bp_105mm_slug",
     "copy-from": "105mm_slug",
     "type": "AMMO",
-    "name": { "str_sp": "makeshift 105mm slug, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "自制105mm炮弹（黑火药）"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "id": "105mm_he_reloaded",
     "copy-from": "105mm_slug",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 105mm HE" },
-    "description": "A 105mm shell with a new electric primer installed, loaded with a homemade explosive round.  Obsolete or not, it packs quite a punch.",
+    "name": {
+      "str_sp": "105mm 高爆弹(复装)"
+    },
+    "description": "一枚安装了新的电子底火的105毫米炮弹，装上了一枚大型自制爆炸弹。不管它是否过时，它都有相当大的威力。",
     "proportional": {
       "price_postapoc": 1.25,
       "weight": 0.9,
-      "damage": { "damage_type": "bullet", "amount": 0.9, "armor_penetration": 0.75 },
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.75,
+        "armor_penetration": 0.75
+      },
       "recoil": 0.75,
       "dispersion": 0.75
     },
-    "extend": { "effects": [ "CUSTOM_EXPLOSION" ] },
+    "extend": {
+      "effects": [
+        "CUSTOM_EXPLOSION"
+      ]
+    },
     "explode_in_fire": true,
-    "explosion": { "power": 500 }
+    "explosion": {
+      "power": 500
+    }
   },
   {
     "id": "bp_105mm_he_reloaded",
     "copy-from": "105mm_he_reloaded",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 105mm HE, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "105mm 高爆弹(黑火药复装)"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "type": "AMMO",
     "id": "120mm_usable_heat",
     "price": "1000 USD",
     "price_postapoc": "20 USD",
-    "name": { "str_sp": "120mm M830A1 HEAT" },
+    "name": {
+      "str_sp": "120mm M830A1 破甲弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 120mm High Explosive Anti Tank round.  Packs an explosive punch that could ruin anyone's whole day.",
-    "material": [ "steel", "powder" ],
+    "description": "一枚120mm高爆反坦克炮弹。有能毁灭任何敌人的爆炸威力。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "11 L",
     "weight": "22 kg",
     "longest_side": "98 cm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "120mm_usable",
     "casing": "120mm_case_base",
-    "damage": { "damage_type": "bullet", "amount": 4000, "armor_penetration": 2000 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 4000,
+      "armor_penetration": 2000
+    },
     "range": 90,
     "dispersion": 200,
     "recoil": 900000,
     "count": 1,
-    "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "effects": [ "CUSTOM_EXPLOSION" ],
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "effects": [
+      "CUSTOM_EXPLOSION"
+    ],
     "explode_in_fire": true,
-    "explosion": { "power": 1250, "distance_factor": 0.4 }
+    "explosion": {
+      "power": 1250,
+      "distance_factor": 0.4
+    }
   },
   {
     "type": "AMMO",
     "id": "120mm_usable_ap",
     "price": "1200 USD",
     "price_postapoc": "24 USD",
-    "name": { "str_sp": "120mm M829A3 APFSDS" },
+    "name": {
+      "str_sp": "120mm M829A3 尾翼稳定脱壳穿甲弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 120mm Armor-Piercing Fin-Stabilized Discarding Sabot round.  Uses a depleted uranium projectile to give whatever it hits a really bad day.",
-    "material": [ "steel", "powder" ],
+    "description": "一颗120mm 尾翼脱穿弹。使用贫铀弹芯，能给目标狠狠一击。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "11 L",
     "weight": "25 kg",
     "longest_side": "98 cm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "120mm_usable",
     "casing": "120mm_case_base",
-    "damage": { "damage_type": "bullet", "amount": 3000, "armor_penetration": 3000 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 3000,
+      "armor_penetration": 3000
+    },
     "range": 95,
     "dispersion": 225,
     "recoil": 787500,
     "count": 1,
-    "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "effects": [ "COOKOFF", "INCENDIARY" ]
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "effects": [
+      "COOKOFF",
+      "INCENDIARY"
+    ]
   },
   {
     "type": "AMMO",
     "id": "120mm_usable_shot",
     "price_postapoc": "10 USD",
-    "name": { "str_sp": "reloaded 120mm shot" },
+    "name": {
+      "str_sp": "120mm 炮弹（复装）"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A makeshift, rebuilt 120mm shell with a new electric primer installed, filled with a large amount of buckshot.  Effectively similar to no-longer-produced canister shot, but of lower quality.",
-    "material": [ "steel", "powder" ],
+    "description": "一个自制且改装的120毫米炮弹，安装了一个新的电子底火，里面装了大量的弹丸。非常像已经不再生产的罐装弹，但明显这个质量差点意思。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "11 L",
     "weight": "24 kg",
     "longest_side": "65 cm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "120mm_usable",
     "casing": "120mm_casing",
-    "damage": { "damage_type": "bullet", "amount": 1850 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 1850
+    },
     "range": 30,
     "dispersion": 150,
     "recoil": 225000,
     "count": 1,
-    "effects": [ "COOKOFF", "SHOT", "RECYCLED" ]
+    "effects": [
+      "COOKOFF",
+      "SHOT",
+      "RECYCLED"
+    ]
   },
   {
     "id": "bp_120mm_usable_shot",
     "copy-from": "120mm_usable_shot",
     "type": "AMMO",
-    "name": { "str_sp": "makeshift 120mm shot, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "自制155mm榴弹（黑火药）"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "type": "AMMO",
     "id": "120mm_usable_slug",
     "price_postapoc": "10 USD",
-    "name": { "str_sp": "reloaded 120mm slug" },
+    "name": {
+      "str_sp": "120mm 炮弹（复装）"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A makeshift, rebuilt 120mm shell with a new electric primer installed, loaded with a large handmade slug.  While hardly ideal, it packs quite a punch.",
-    "material": [ "steel", "powder" ],
+    "description": "一个自制且改装的120毫米炮弹，安装了一个新的电子底火，装上了一枚大型手工弹头。 虽然制作的水平不是很理想，但它的威力仍然相当大。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "11 L",
     "weight": "24 kg",
     "longest_side": "65 cm",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "120mm_usable",
     "casing": "120mm_casing",
-    "damage": { "damage_type": "bullet", "amount": 1500, "armor_penetration": 375 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 1500,
+      "armor_penetration": 375
+    },
     "range": 60,
     "dispersion": 300,
     "recoil": 450000,
     "count": 1,
-    "effects": [ "COOKOFF", "RECYCLED" ]
+    "effects": [
+      "COOKOFF",
+      "RECYCLED"
+    ]
   },
   {
     "id": "bp_120mm_usable_slug",
     "copy-from": "120mm_usable_slug",
     "type": "AMMO",
-    "name": { "str_sp": "makeshift 120mm slug, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "自制155mm炮弹（黑火药）"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "id": "120mm_usable_he_reloaded",
     "copy-from": "120mm_usable_slug",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 120mm HE" },
-    "description": "A makeshift, rebuilt 120mm shell with a new electric primer installed, loaded with a homemade explosive round.  Packs an explosive punch that could ruin anyone's whole day.",
+    "name": {
+      "str_sp": "120mm 高爆弹(复装)"
+    },
+    "description": "一个自制的120毫米炮弹，安装了新的电起爆器和自制炸药。威力巨大，足以毁掉任何人的一整天",
     "proportional": {
       "price_postapoc": 1.25,
       "weight": 0.9,
-      "damage": { "damage_type": "bullet", "amount": 0.9, "armor_penetration": 0.75 },
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.75,
+        "armor_penetration": 0.75
+      },
       "recoil": 0.75,
       "dispersion": 0.75
     },
-    "extend": { "effects": [ "CUSTOM_EXPLOSION" ] },
+    "extend": {
+      "effects": [
+        "CUSTOM_EXPLOSION"
+      ]
+    },
     "explode_in_fire": true,
-    "explosion": { "power": 1250 }
+    "explosion": {
+      "power": 1250
+    }
   },
   {
     "id": "bp_120mm_usable_he_reloaded",
     "copy-from": "120mm_usable_he_reloaded",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 120mm HE, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "120mm 高爆弹(黑火药复装)"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "type": "AMMO",
     "id": "155mm_heat",
     "price": "1400 USD",
     "price_postapoc": "28 USD",
-    "name": { "str_sp": "155mm M712 HEAT" },
+    "name": {
+      "str_sp": "155mm M712 破甲弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 155mm High Explosive Anti Tank round, normally laser-guided.  Separate-loading, it comes with the requisite fuze installed, a propellant bag, and percussion primer.  As its guidance feature requires a laser designator and has a minimum range of 3 kilometers, using it for direct fire is an astounding display of overkill.",
-    "material": [ "steel", "powder" ],
+    "description": "一枚155mm高爆反坦克弹，通常激光指导。分离式装载，它配备了必要的引信，发射火药，和底火。它的制导功能需要一个激光指示器完成，最小射程为3公里，使用它直接射击将展示其惊人的杀伤力。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "24 L",
     "weight": "62 kg",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "155mm",
-    "damage": { "damage_type": "bullet", "amount": 5000, "armor_penetration": 2500 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 5000,
+      "armor_penetration": 2500
+    },
     "range": 120,
     "dispersion": 275,
     "recoil": 1031250,
     "count": 1,
-    "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "effects": [ "CUSTOM_EXPLOSION" ],
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "effects": [
+      "CUSTOM_EXPLOSION"
+    ],
     "explode_in_fire": true,
-    "explosion": { "power": 7500, "distance_factor": 0.4 }
+    "explosion": {
+      "power": 7500,
+      "distance_factor": 0.4
+    }
   },
   {
     "type": "AMMO",
     "id": "155mm_frag",
     "price": "1400 USD",
     "price_postapoc": "28 USD",
-    "name": { "str_sp": "155mm M795 frag" },
+    "name": {
+      "str_sp": "155mm M795 高爆破片弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A 155mm High Explosive Fragmentation round.  Separate-loading, it comes with the requisite fuze installed, a propellant bag, and percussion primer.  Designed to lob a heavy shell a long distance, using it direct-fire isn't exactly ideal, but it'll still give anything near what you hit a seriously bad time.",
-    "material": [ "steel", "powder" ],
+    "description": "一枚155mm高爆炮弹。分离装载，它配备了必要的引信，发射火药，和底火。它的设计是为了可以远距离发射重型炮弹，使用它的直接射击并不是很理想，但它仍然会给任何被击中的东西造成严重破坏。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "14 L",
     "weight": "45 kg",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "155mm",
-    "damage": { "damage_type": "bullet", "amount": 4500, "armor_penetration": 1125 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 4500,
+      "armor_penetration": 1125
+    },
     "range": 120,
     "dispersion": 300,
     "recoil": 1050000,
     "count": 1,
-    "flags": [ "IRREPLACEABLE_CONSUMABLE" ],
-    "effects": [ "AMMO_155MM_FRAG" ],
+    "flags": [
+      "IRREPLACEABLE_CONSUMABLE"
+    ],
+    "effects": [
+      "AMMO_155MM_FRAG"
+    ],
     "explode_in_fire": true
   },
   {
     "type": "AMMO",
     "id": "155mm_shot",
     "price_postapoc": "12 USD",
-    "name": { "str_sp": "makeshift 155mm shot" },
+    "name": {
+      "str_sp": "自制155mm榴弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A makeshift separate-loading shotshell for 155mm.  Consists of a canister of lead balls, a bag of propellant, and a replacement primer.  Effectively turns a howitzer into a punt gun on steroids.",
-    "material": [ "steel", "powder" ],
+    "description": "自制的155毫米炮分体式填装弹。由一罐小铅球、一袋推进剂和一个替换过的底火组成。 有效地将榴弹炮变成了平底船炮。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "6 L",
     "weight": "24 kg",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "155mm",
-    "damage": { "damage_type": "bullet", "amount": 2500 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 2500
+    },
     "range": 25,
     "dispersion": 200,
     "recoil": 400000,
     "count": 1,
-    "effects": [ "COOKOFF", "SHOT", "RECYCLED" ]
+    "effects": [
+      "COOKOFF",
+      "SHOT",
+      "RECYCLED"
+    ]
   },
   {
     "id": "bp_155mm_shot",
     "copy-from": "155mm_shot",
     "type": "AMMO",
-    "name": { "str_sp": "makeshift 155mm shot, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "自制155mm榴弹（黑火药）"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "type": "AMMO",
     "id": "155mm_slug",
     "price_postapoc": "12 USD",
-    "name": { "str_sp": "makeshift 155mm slug" },
+    "name": {
+      "str_sp": "自制155mm炮弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A makeshift separate-loading round for 155mm.  Consists of a large lead ball, a bag of propellant, and a replacement primer.  Despite the lower effectiveness, whatever it hits is sure to feel it.",
-    "material": [ "steel", "powder" ],
+    "description": "自制的155毫米炮分体式填装弹。由一个大号铅球、一袋推进剂和一个替换过的底火组成。 尽管燃料效率较低，但被这玩意打一下一定是会很有感觉的。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "6 L",
     "weight": "24 kg",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "155mm",
-    "damage": { "damage_type": "bullet", "amount": 2000, "armor_penetration": 500 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 2000,
+      "armor_penetration": 500
+    },
     "range": 75,
     "dispersion": 400,
     "recoil": 800000,
     "count": 1,
-    "effects": [ "COOKOFF", "RECYCLED" ]
+    "effects": [
+      "COOKOFF",
+      "RECYCLED"
+    ]
   },
   {
     "id": "bp_155mm_slug",
     "copy-from": "155mm_slug",
     "type": "AMMO",
-    "name": { "str_sp": "makeshift 155mm slug, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "自制155mm炮弹（黑火药）"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "id": "155mm_he_reloaded",
     "copy-from": "155mm_slug",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 155mm HE" },
-    "description": "A makeshift separate-loading HE round for 155mm.  Consists of a homemade explosive shell with fuze installed, a bag of propellant, and a replacement primer.  Using it for direct-fire isn't ideal, but it should be more than enough to ruin anyone's day.",
+    "name": {
+      "str_sp": "155mm 高爆弹(复装)"
+    },
+    "description": "自制的155毫米炮分体式填装弹。由一个装有引信的自制炸药外壳、一袋推进剂和一个替换过的底火组成。使用它的直接射击并不是很理想，但它应该足以毁掉任何人的一天。",
     "proportional": {
       "price_postapoc": 1.25,
       "weight": 0.9,
-      "damage": { "damage_type": "bullet", "amount": 0.9, "armor_penetration": 0.75 },
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.75,
+        "armor_penetration": 0.75
+      },
       "recoil": 0.75,
       "dispersion": 0.75
     },
-    "extend": { "effects": [ "CUSTOM_EXPLOSION" ] },
+    "extend": {
+      "effects": [
+        "CUSTOM_EXPLOSION"
+      ]
+    },
     "explode_in_fire": true,
-    "explosion": { "power": 2500 }
+    "explosion": {
+      "power": 2500
+    }
   },
   {
     "id": "bp_155mm_he_reloaded",
     "copy-from": "155mm_he_reloaded",
     "type": "AMMO",
-    "name": { "str_sp": "reloaded 155mm HE, black powder" },
-    "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
-    "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
+    "name": {
+      "str_sp": "155mm 高爆弹(复装黑火药)"
+    },
+    "proportional": {
+      "damage": {
+        "damage_type": "bullet",
+        "amount": 0.76,
+        "armor_penetration": 0.5
+      },
+      "recoil": 0.76,
+      "dispersion": 1.2
+    },
+    "extend": {
+      "effects": [
+        "BLACKPOWDER",
+        "MUZZLE_SMOKE"
+      ]
+    }
   },
   {
     "type": "AMMO",
     "id": "155mm_nuke",
     "price_postapoc": "24 USD",
-    "name": { "str_sp": "155mm nuclear shell" },
+    "name": {
+      "str_sp": "155毫米核炮弹"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "A makeshift separate-loading round for 155mm, developed from experimental designs.  Uses a propellant bag and replacement primer to fire a modified mininuke, adapted to fit a howitzer.  Whatever would warrant such awesome firepower would best be engaged from a safe distance.",
-    "material": [ "steel", "powder" ],
+    "description": "自制的155毫米炮分体式填装弹，根据实验设计开发。 使用一个推进剂袋和替换过的底火来发射一个改装的迷你核弹，可以在榴弹炮上发射。 不管是谁，要想尝试发射如此强大的火力，最好是待在安全距离外再发射。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "17 L",
     "weight": "26 kg",
-    "melee_damage": { "bash": 1 },
+    "melee_damage": {
+      "bash": 1
+    },
     "ammo_type": "155mm",
-    "damage": { "damage_type": "bullet", "amount": 2000, "armor_penetration": 20 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 2000,
+      "armor_penetration": 20
+    },
     "range": 50,
     "dispersion": 800,
     "recoil": 800000,
     "count": 1,
-    "effects": [ "COOKOFF", "RECYCLED", "MININUKE_MOD" ]
+    "effects": [
+      "COOKOFF",
+      "RECYCLED",
+      "MININUKE_MOD"
+    ]
   },
   {
     "type": "GENERIC",
     "id": "25mm_casing",
     "copy-from": "artillery_casing",
-    "name": { "str_sp": "25mm casing" },
-    "description": "A canister from a spent 25mm shell.",
+    "name": {
+      "str_sp": "25mm 榴弹弹壳"
+    },
+    "description": "一颗从已经打完的25mm机炮弹获得的弹壳。",
     "volume": "135 ml",
     "weight": "20 g",
     "longest_side": "8 cm"
@@ -539,9 +987,11 @@
     "id": "105mm_casing",
     "copy-from": "artillery_casing",
     "looks_like": "120mm_casing",
-    "name": { "str_sp": "105mm canister" },
+    "name": {
+      "str_sp": "105mm 炮弹弹壳"
+    },
     "color": "dark_gray",
-    "description": "A canister from a spent 105mm shell, now an expensive paperweight.",
+    "description": "一颗从已经打完的105mm炮弹获得的弹壳，现在是昂贵的镇纸。",
     "material": "steel",
     "volume": "5 L",
     "weight": "700 g",
@@ -551,9 +1001,11 @@
     "type": "GENERIC",
     "id": "120mm_case_base",
     "copy-from": "artillery_casing",
-    "name": { "str_sp": "120mm case base" },
+    "name": {
+      "str_sp": "120mm 弹壳基底"
+    },
     "color": "dark_gray",
-    "description": "The steel case base from a spent 120mm shell.  With combustible case walls forming the bulk of the casing itself, what's left is now an expensive paperweight.",
+    "description": "一颗从打完的120mm炮弹获得的弹壳。可燃壳体壁形成了壳体本身的主体，现在剩下的是一个昂贵的镇纸。",
     "material": "steel",
     "volume": "1 L",
     "weight": "300 g",
@@ -563,9 +1015,11 @@
     "type": "GENERIC",
     "id": "120mm_casing",
     "copy-from": "artillery_casing",
-    "name": { "str_sp": "makeshift 120mm canister" },
+    "name": {
+      "str_sp": "自制120mm炮弹弹壳"
+    },
     "color": "dark_gray",
-    "description": "A spent 120mm case base converted into an improved casing, by welding new case walls of appropriate dimensions to the base.  Hopefully the welds are good, or else it might be a better fit for a pipe bomb instead.",
+    "description": "一个用120mm的废弃弹壳改装的弹壳，通过焊接重新达到需要的尺寸要求。希望焊缝是好的，否则它可能是一个很好使的雷管。",
     "material": "steel",
     "volume": "6 L",
     "weight": "900 g",
@@ -578,16 +1032,23 @@
     "category": "spare_parts",
     "price": "30 USD",
     "price_postapoc": 1500,
-    "name": { "str_sp": "electric primer" },
+    "name": {
+      "str_sp": "电子底火"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "Primer for a tank shell.  Seems to use an electric ignition.",
-    "material": [ "steel", "powder" ],
+    "description": "坦克炮弹的底火。 似乎使用的是电动点火装置。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "250 ml",
     "weight": "40 g",
     "ammo_type": "components",
     "count": 10,
-    "effects": [ "COOKOFF" ]
+    "effects": [
+      "COOKOFF"
+    ]
   },
   {
     "type": "AMMO",
@@ -595,16 +1056,23 @@
     "category": "spare_parts",
     "price": "30 USD",
     "price_postapoc": "20 USD",
-    "name": { "str_sp": "artillery primer" },
+    "name": {
+      "str_sp": "火炮炮弹底火"
+    },
     "symbol": "=",
     "color": "dark_gray",
-    "description": "Primer for an artillery shell.  Uses percussion ignition.",
-    "material": [ "steel", "powder" ],
+    "description": "火炮炮弹的底火。 使用冲击力点火。",
+    "material": [
+      "steel",
+      "powder"
+    ],
     "volume": "250 ml",
     "weight": "250 g",
     "ammo_type": "components",
     "count": 5,
-    "effects": [ "COOKOFF" ]
+    "effects": [
+      "COOKOFF"
+    ]
   },
   {
     "id": "25mm_autocannon",
@@ -612,22 +1080,48 @@
     "reload_noise_volume": 10,
     "symbol": "(",
     "color": "dark_gray",
-    "name": { "str_sp": "M242 Bushmaster autocannon" },
+    "name": {
+      "str_sp": "M242 巨蝮机炮"
+    },
     "description": "A chain-driven autocannon chambered in 25x137mm, designed for the Bradley IFV and other ground vehicles, with some naval use as well.  Electric-driven, it would be very difficult to fire if not mounted on a vehicle.",
     "price": "28000 USD",
     "price_postapoc": "75 USD",
-    "material": [ "steel" ],
-    "flags": [ "MOUNTED_GUN", "STR_RELOAD", "USE_UPS" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "MOUNTED_GUN",
+      "STR_RELOAD",
+      "USE_UPS"
+    ],
     "skill": "launcher",
     "ammo": "25mm",
     "weight": "120 kg",
-    "volume": "15 L",
+    "volume": "10 L",
     "longest_side": "265 cm",
-    "melee_damage": { "bash": 12 },
+    "melee_damage": {
+      "bash": 12
+    },
     "to_hit": -1,
     "dispersion": 15,
     "durability": 8,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "BURST", "low auto", 2 ], [ "AUTO", "high auto", 4 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "low auto",
+        2
+      ],
+      [
+        "AUTO",
+        "high auto",
+        4
+      ]
+    ],
     "reload": 500,
     "energy_drain": "10 kJ",
     "pocket_data": [
@@ -636,7 +1130,9 @@
         "holster": true,
         "max_contains_volume": "100 L",
         "max_contains_weight": "100 kg",
-        "item_restriction": [ "belt25mm" ]
+        "item_restriction": [
+          "belt25mm"
+        ]
       }
     ]
   },
@@ -646,34 +1142,75 @@
     "reload_noise_volume": 10,
     "symbol": "(",
     "color": "dark_gray",
-    "name": { "str_sp": "stripped-down 25mm cannon" },
-    "description": "Modified from a M242 Bushmaster autocannon, this pared down weapon has been altered into a makeshift anti-materiel rifle.  Its chain-driven mechanism has been removed, reducing weight in exchange for converting it into a single-shot design.  Still extremely bulky, requiring it to be deployed or mounted on a vehicle.",
+    "name": {
+      "str_sp": "25mm 自制机炮"
+    },
+    "description": "从一个M242布什马斯特自动加农炮修改，这削减武器已被修改成一个临时反物质步枪。它的链式驱动机构已被删除，以减轻重量为交换转换成一个单一的射击设计。仍然非常庞大，需要部署或安装在车辆上。",
     "price": "13000 USD",
     "price_postapoc": "45 USD",
-    "material": [ "steel", "wood" ],
-    "flags": [ "MOUNTED_GUN", "RELOAD_EJECT", "STR_RELOAD" ],
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "flags": [
+      "MOUNTED_GUN",
+      "RELOAD_EJECT",
+      "STR_RELOAD"
+    ],
     "skill": "rifle",
     "ammo": "25mm",
     "weight": "50 kg",
-    "volume": "6 L",
+    "volume": "8250 ml",
     "longest_side": "210 cm",
-    "melee_damage": { "bash": 10 },
+    "melee_damage": {
+      "bash": 10
+    },
     "to_hit": -1,
-    "ranged_damage": { "damage_type": "bullet", "amount": -4 },
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -4
+    },
     "dispersion": 75,
     "durability": 7,
     "valid_mod_locations": [
-      [ "accessories", 2 ],
-      [ "stock", 1 ],
-      [ "grip mount", 1 ],
-      [ "rail mount", 1 ],
-      [ "sights mount", 1 ],
-      [ "underbarrel mount", 1 ]
+      [
+        "accessories",
+        2
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
     ],
     "reload": 250,
     "blackpowder_tolerance": 24,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "25mm": 1 } } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "25mm": 1
+        }
+      }
+    ]
   },
   {
     "id": "25mm_cannon_crude",
@@ -681,20 +1218,34 @@
     "reload_noise_volume": 20,
     "symbol": "(",
     "color": "dark_gray",
-    "name": { "str_sp": "makeshift 25mm cannon" },
+    "name": {
+      "str_sp": "25mm 自制机炮"
+    },
     "description": "A makeshift cannon crudely chambered for 25x137mm, with a short thick-walled barrel and a breechblock fashioned out of hardened steel.  Very unreliable and massively reduces performance, but simpler to install and easier to repair.  Only holds a single shot, and must be deployed or mounted on a vehicle.",
     "price": "8000 USD",
     "price_postapoc": "30 USD",
-    "material": [ "steel" ],
-    "flags": [ "MOUNTED_GUN", "RELOAD_EJECT", "STR_RELOAD" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "MOUNTED_GUN",
+      "RELOAD_EJECT",
+      "STR_RELOAD"
+    ],
     "skill": "launcher",
     "ammo": "25mm",
     "weight": "60 kg",
-    "volume": "7500 ml",
+    "volume": "5 L",
     "longest_side": "160 cm",
-    "melee_damage": { "bash": 10 },
+    "melee_damage": {
+      "bash": 10
+    },
     "to_hit": -1,
-    "ranged_damage": { "damage_type": "bullet", "amount": -5, "armor_penetration": -5 },
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -5,
+      "armor_penetration": -5
+    },
     "range": -15,
     "dispersion": 250,
     "recoil": 40000,
@@ -702,31 +1253,59 @@
     "reload": 1000,
     "blackpowder_tolerance": 12,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "25mm": 1 } } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "25mm": 1
+        }
+      }
+    ]
   },
   {
     "id": "tank_gun_manual",
     "type": "GUN",
     "symbol": "(",
     "color": "green",
-    "name": { "str_sp": "M246 120mm tank gun" },
-    "description": "A version of the Rheinmetall Rh-120, this 120mm cannon is most notably used in the M1 Abhrams.  Uses electric ignition, and obviously needs to be mounted on a vehicle to fire.",
+    "name": {
+      "str_sp": "M246 120mm坦克炮"
+    },
+    "description": "莱茵金属Rh-120的一个版本，这一种120mm火炮最显著地用于M1艾布拉姆斯。采用电动点火装置，显然需要安装在车辆上才能点火。",
     "price": "900000 USD",
     "price_postapoc": "80 USD",
-    "material": [ "steel" ],
-    "flags": [ "NEVER_JAMS", "NO_RELOAD", "MOUNTED_GUN", "STR_RELOAD" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_RELOAD",
+      "MOUNTED_GUN",
+      "STR_RELOAD"
+    ],
     "skill": "launcher",
     "ammo": "120mm_usable",
     "weight": "3000 kg",
-    "volume": "175 L",
+    "volume": "8750 ml",
     "longest_side": "530 cm",
-    "melee_damage": { "bash": 12 },
+    "melee_damage": {
+      "bash": 12
+    },
     "to_hit": -6,
     "range": 40,
     "dispersion": 20,
     "sight_dispersion": 10,
     "durability": 9,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "120mm_usable": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "120mm_usable": 1
+        }
+      }
+    ],
     "blackpowder_tolerance": 24,
     "clip_size": 1,
     "reload": 300,
@@ -737,18 +1316,29 @@
     "type": "GUN",
     "symbol": "(",
     "color": "green",
-    "name": { "str_sp": "XM246E1 autoloading tank gun" },
-    "description": "An experimental variant of the Rheinmetall Rh-120, this 120mm cannon is equipped with a 5-round autoloader.  Uses electric ignition, and obviously needs to be mounted on a vehicle to fire.",
+    "name": {
+      "str_sp": "XM246E1 自动装填坦克炮"
+    },
+    "description": "莱茵金属实验型Rh-120火炮，这门120mm炮配备了一个5发自动装弹机。使用电子点火，显然它需要被安装在车辆上才能开火。",
     "price": "910000 USD",
     "price_postapoc": "100 USD",
-    "material": [ "steel" ],
-    "flags": [ "NO_RELOAD", "MOUNTED_GUN", "STR_RELOAD", "USE_UPS" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "NO_RELOAD",
+      "MOUNTED_GUN",
+      "STR_RELOAD",
+      "USE_UPS"
+    ],
     "skill": "launcher",
     "ammo": "120mm_usable",
     "weight": "3300 kg",
-    "volume": "200 L",
+    "volume": "10 L",
     "longest_side": "550 cm",
-    "melee_damage": { "bash": 12 },
+    "melee_damage": {
+      "bash": 12
+    },
     "to_hit": -6,
     "range": 40,
     "dispersion": 30,
@@ -757,34 +1347,64 @@
     "clip_size": 5,
     "reload": 450,
     "energy_drain": "50 kJ",
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "120mm_usable": 5 } } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "120mm_usable": 5
+        }
+      }
+    ]
   },
   {
     "id": "tank_gun_crude",
     "type": "GUN",
     "symbol": "(",
     "color": "green",
-    "name": { "str_sp": "makeshift 120mm tank gun" },
-    "description": "A makeshift cannon crudely chambered for 120mm tank shells, with a short thick-walled barrel and a breechblock fashioned out of hardened steel.  Very unreliable and massively reduces performance, but simpler to install and easier to repair.  Only holds a single shot, uses electric ignition, and must be mounted on a vehicle to fire.",
+    "name": {
+      "str_sp": "120mm 自制坦克炮"
+    },
+    "description": "一种临时加农炮，简陋地装着120毫米的坦克炮弹，有一个厚壁短筒和一个由淬火钢制成的炮尾座。非常不可靠，性能大大降低，但安装更简单，维修更容易。只有持有一个单一的射击，使用电点火，并必须安装在车辆上开火。",
     "price": "250000 USD",
     "price_postapoc": "40 USD",
-    "material": [ "steel" ],
-    "flags": [ "NO_RELOAD", "MOUNTED_GUN", "STR_RELOAD" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "NO_RELOAD",
+      "MOUNTED_GUN",
+      "STR_RELOAD"
+    ],
     "skill": "launcher",
     "ammo": "120mm_usable",
     "weight": "1000 kg",
-    "volume": "87500 ml",
+    "volume": "4500 ml",
     "longest_side": "312 cm",
-    "melee_damage": { "bash": 12 },
+    "melee_damage": {
+      "bash": 12
+    },
     "to_hit": -6,
-    "ranged_damage": { "damage_type": "bullet", "amount": -15, "armor_penetration": -15 },
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -15,
+      "armor_penetration": -15
+    },
     "range": -15,
     "dispersion": 400,
     "recoil": 180000,
     "durability": 4,
     "blackpowder_tolerance": 12,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "120mm_usable": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "120mm_usable": 1
+        }
+      }
+    ],
     "reload": 1200,
     "energy_drain": "50 kJ"
   },
@@ -794,24 +1414,41 @@
     "type": "GUN",
     "symbol": "(",
     "color": "green",
-    "name": { "str_sp": "M68 105mm tank gun" },
-    "description": "A version of the Royal Ordinance L7, this 105mm rifled cannon is used in various armored vehicles worldwide, many no longer in service, some still in use, and some brought back out of reserve in the desperate last days before the world ended.  Uses electric ignition, and obviously needs to be mounted on a vehicle to fire.",
+    "name": {
+      "str_sp": "M68 105mm 坦克炮"
+    },
+    "description": "作为皇家法令L7的一个版本，这种105mm膛线炮被用于世界各地的各种装甲车辆，其中许多已不再服役，一些仍在使用，还有一些在世界末日前从后备部队中召回。使用电子点火装置，显然需要安装在车辆上才能开火。",
     "price": "800000 USD",
     "price_postapoc": "70 USD",
     "material": "steel",
-    "flags": [ "NEVER_JAMS", "NO_RELOAD", "MOUNTED_GUN", "STR_RELOAD" ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_RELOAD",
+      "MOUNTED_GUN",
+      "STR_RELOAD"
+    ],
     "skill": "launcher",
     "ammo": "105mm",
     "weight": "1500 kg",
-    "volume": "150 L",
+    "volume": "5750 ml",
     "longest_side": "546 cm",
-    "melee_damage": { "bash": 10 },
+    "melee_damage": {
+      "bash": 10
+    },
     "to_hit": -6,
     "range": 45,
     "dispersion": 15,
     "sight_dispersion": 10,
     "durability": 9,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "105mm": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "105mm": 1
+        }
+      }
+    ],
     "blackpowder_tolerance": 24,
     "clip_size": 1,
     "reload": 250,
@@ -822,25 +1459,47 @@
     "type": "GUN",
     "symbol": "(",
     "color": "green",
-    "name": { "str_sp": "makeshift 105mm tank gun" },
-    "description": "A makeshift cannon crudely chambered for 105mm tank shells, with a short thick-walled barrel and a breechblock fashioned out of hardened steel.  Very unreliable and massively reduces performance, but simpler to install and easier to repair.  Only holds a single shot, uses electric ignition, and must be mounted on a vehicle to fire.",
+    "name": {
+      "str_sp": "105mm 自制坦克炮"
+    },
+    "description": "一种临时的加农炮，简陋地装着105毫米的坦克炮弹，有一个短而厚的炮筒和一个由淬火钢制成的炮尾座。非常不可靠，性能大大降低，但安装更简单，维修更容易。只有持有一个单一的射击，使用电点火，并必须安装在车辆上开火。",
     "price": "200000 USD",
     "price_postapoc": "35 USD",
-    "material": [ "steel" ],
-    "flags": [ "NO_RELOAD", "MOUNTED_GUN", "STR_RELOAD" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "NO_RELOAD",
+      "MOUNTED_GUN",
+      "STR_RELOAD"
+    ],
     "skill": "launcher",
     "ammo": "105mm",
     "weight": "750 kg",
-    "volume": "75 L",
+    "volume": "2900 ml",
     "longest_side": "330 cm",
-    "melee_damage": { "bash": 12 },
+    "melee_damage": {
+      "bash": 12
+    },
     "to_hit": -6,
-    "ranged_damage": { "damage_type": "bullet", "amount": -10, "armor_penetration": -10 },
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -10,
+      "armor_penetration": -10
+    },
     "range": -25,
     "dispersion": 300,
     "recoil": 250000,
     "durability": 4,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "105mm": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "105mm": 1
+        }
+      }
+    ],
     "blackpowder_tolerance": 12,
     "clip_size": 1,
     "reload": 1000,
@@ -851,18 +1510,26 @@
     "type": "GUN",
     "symbol": "(",
     "color": "green",
-    "name": { "str_sp": "M284 howitzer" },
-    "description": "A 155mm cannon designed for self-propelled guns such as the M109.  Obviously it needs to be mounted on a vehicle to fire.",
+    "name": {
+      "str_sp": "M284 榴弹炮"
+    },
+    "description": "一门155mm火炮设计应用于自行火炮如M109。显然，它需要安装在车辆上才能开火。",
     "price": "920000 USD",
     "price_postapoc": "85 USD",
     "material": "steel",
-    "flags": [ "NEVER_JAMS", "NO_RELOAD", "MOUNTED_GUN" ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_RELOAD",
+      "MOUNTED_GUN"
+    ],
     "skill": "launcher",
     "ammo": "155mm",
     "weight": "4300 kg",
-    "volume": "200 L",
+    "volume": "10 L",
     "longest_side": "604 cm",
-    "melee_damage": { "bash": 13 },
+    "melee_damage": {
+      "bash": 13
+    },
     "to_hit": -6,
     "range": 70,
     "dispersion": 40,
@@ -870,7 +1537,15 @@
     "durability": 9,
     "clip_size": 1,
     "blackpowder_tolerance": 24,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "155mm": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "155mm": 1
+        }
+      }
+    ],
     "reload": 1500
   },
   {
@@ -878,27 +1553,49 @@
     "type": "GUN",
     "symbol": "(",
     "color": "green",
-    "name": { "str_sp": "makeshift 155mm howitzer" },
-    "description": "A makeshift cannon crudely chambered for 155mm artillery shells, with a short thick-walled barrel and a breechblock fashioned out of hardened steel.  Very unreliable and massively reduces performance, but simpler to install and easier to repair.  Only holds a single shot, and must be mounted on a vehicle to fire.",
+    "name": {
+      "str_sp": "155mm 自制榴弹炮"
+    },
+    "description": "一种临时加农炮，简陋地装着155毫米炮弹，有一个厚壁短筒和一个由淬火钢制成的炮尾座。非常不可靠，性能大大降低，但安装更简单，维修更容易。只有一枪，必须装在车上才能开火。",
     "price": "75000 USD",
     "price_postapoc": "50 USD",
-    "material": [ "steel" ],
-    "flags": [ "NO_RELOAD", "MOUNTED_GUN", "STR_RELOAD" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "NO_RELOAD",
+      "MOUNTED_GUN",
+      "STR_RELOAD"
+    ],
     "skill": "launcher",
     "ammo": "155mm",
     "weight": "1500 kg",
-    "volume": "100 L",
+    "volume": "5 L",
     "longest_side": "370 cm",
-    "melee_damage": { "bash": 12 },
+    "melee_damage": {
+      "bash": 12
+    },
     "to_hit": -6,
-    "ranged_damage": { "damage_type": "bullet", "amount": -20, "armor_penetration": -20 },
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -20,
+      "armor_penetration": -20
+    },
     "range": -12,
     "dispersion": 500,
     "recoil": 200000,
     "durability": 4,
     "blackpowder_tolerance": 12,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "155mm": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "155mm": 1
+        }
+      }
+    ],
     "reload": 4000
   },
   {
@@ -906,41 +1603,69 @@
     "copy-from": "gun_base",
     "looks_like": "atgm_launcher",
     "type": "GUN",
-    "name": { "str_sp": "BGM-71F TOW Under Armor" },
-    "description": "A twin-tube launcher for anti-tank guided missiles, specifically designed for vehicle use.  While fairly accurate, it isn't fire-and-forget.  Obviously it needs to be mounted on a vehicle to fire.",
+    "name": {
+      "str_sp": "BGM-71F 陶式（覆甲）"
+    },
+    "description": "一个双管发射装置用于发射反坦克导弹，专门设计给载具使用。虽然相当准确，但它并不是自动追踪。显然，它需要安装在车辆上才能开火。",
     "weight": "200 kg",
     "volume": "50 L",
     "longest_side": "150 cm",
     "price": "91000 USD",
     "price_postapoc": "50 USD",
     "to_hit": -6,
-    "melee_damage": { "bash": 12 },
+    "melee_damage": {
+      "bash": 12
+    },
     "material": "steel",
-    "ammo": [ "atgm" ],
+    "ammo": [
+      "atgm"
+    ],
     "skill": "launcher",
     "range": 15,
     "sight_dispersion": 10,
     "durability": 9,
     "clip_size": 2,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "atgm": 2 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "atgm": 2
+        }
+      }
+    ],
     "reload": 1200,
     "energy_drain": "75 kJ",
-    "flags": [ "MOUNTED_GUN", "NEVER_JAMS", "NO_RELOAD", "RELOAD_EJECT", "RELOAD_ONE", "USE_UPS" ]
+    "flags": [
+      "MOUNTED_GUN",
+      "NEVER_JAMS",
+      "NO_RELOAD",
+      "RELOAD_EJECT",
+      "RELOAD_ONE",
+      "USE_UPS"
+    ]
   },
   {
     "type": "BOOK",
     "id": "textbook_launcher",
     "category": "manuals",
-    "name": { "str": "Artillery and Field Gunnery", "str_pl": "copies of Artillery and Field Gunnery" },
+    "name": {
+      "str": "弹道学及野战炮术",
+      "str_pl": "弹道学及野战炮术"
+    },
     "max_level": 6,
-    "description": "A textbook on the history of modern artillery, with a number of illustrations and excerpts from various field manuals.  A competent handloader or mechanic might find additional uses for the more technical parts of the text.",
+    "description": "一本现代火炮历史的教科书，附有一系列关于不同野战操作的说明和摘要。一个称职的子弹匠或者机械师也许能给这些技术性的文字中找点用途。",
     "weight": "1120 g",
     "color": "green",
     "intelligence": 8,
     "symbol": "?",
-    "material": [ "paper" ],
+    "material": [
+      "paper"
+    ],
     "volume": "1 L",
-    "melee_damage": { "bash": 8 },
+    "melee_damage": {
+      "bash": 8
+    },
     "time": "30 m",
     "fun": 0,
     "skill": "launcher",
@@ -953,9 +1678,13 @@
     "type": "GUN",
     "symbol": "(",
     "color": "green",
-    "name": { "str": "XM246E1 monster tank gun" },
-    "description": "This exists to alter the dispersion of the new tank drone.  This is a bug if you find one of these.",
-    "material": [ "steel" ],
+    "name": {
+      "str": "XM246E1怪物用坦克炮"
+    },
+    "description": "这是为了改变新型坦克无人机的散布。如果你找到一个，说明出了bug。",
+    "material": [
+      "steel"
+    ],
     "skill": "launcher",
     "ammo": "120mm_usable",
     "weight": "3300 kg",
@@ -966,7 +1695,15 @@
     "durability": 8,
     "clip_size": 5,
     "reload": 450,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "120mm_usable": 5 } } ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "120mm_usable": 5
+        }
+      }
+    ]
   },
   {
     "type": "GENERIC",
@@ -974,30 +1711,49 @@
     "looks_like": "broken_tankbot",
     "symbol": ",",
     "color": "green",
-    "name": { "str": "broken Mini-Tank UAFV" },
+    "name": {
+      "str": "UAFV 微型坦克（损坏）"
+    },
     "category": "other",
-    "description": "A hulking wreck of treads, composite plating, and cold robotic hatred.  Hopefully won't ever be operational again, now only good for parts.",
+    "description": "一堆笨重的踏板、复合镀层和冰冷的机器人残骸，很有可能已经不再能运行了，现在只适合拆解作为零件。",
     "price": "10 USD",
-    "material": [ "steel", "plastic" ],
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "weight": "45000 kg",
     "volume": "900 L",
-    "melee_damage": { "bash": 20, "cut": 15 },
+    "melee_damage": {
+      "bash": 20,
+      "cut": 15
+    },
     "to_hit": -3,
-    "flags": [ "TRADER_AVOID", "NO_REPAIR" ]
+    "flags": [
+      "TRADER_AVOID",
+      "NO_REPAIR"
+    ]
   },
   {
     "id": "tread1",
     "type": "WHEEL",
     "category": "veh_parts",
-    "name": { "str": "rubber caterpillar track" },
-    "description": "A short, interlocking set of hard rubber tracks reinforced by stiff wire held in place by a set of smaller wheels.  Similar with what you might see used on light construction vehicles.  It's significantly stronger than regular tires due to not being at risk of bursting; but is quite heavy.",
-    "weight": "25 kg",
+    "name": {
+      "str": "橡胶履带"
+    },
+    "description": "短履带板环环相扣，由强韧金属丝强化并安装在一组小型负重轮上的硬橡胶履带。类似的东西你可能曾在轻型工程载具上见过。由于没有爆胎的风险，它显然比普通轮胎坚固，但是却相当重。",
+    "weight": "27216 g",
     "volume": "50 L",
     "price": "255 USD",
     "price_postapoc": "8 USD",
     "to_hit": -3,
-    "melee_damage": { "bash": 30 },
-    "material": [ "rubber", "plastic", "steel" ],
+    "melee_damage": {
+      "bash": 30
+    },
+    "material": [
+      "rubber",
+      "plastic",
+      "steel"
+    ],
     "symbol": "]",
     "color": "white",
     "diameter": 30,
@@ -1007,15 +1763,21 @@
     "id": "tread2",
     "type": "WHEEL",
     "category": "veh_parts",
-    "name": { "str": "steel caterpillar track" },
-    "description": "A short, interlocking set of shaped steel tracks held in place by a set of smaller wheels.  Similar with what you might see used on large construction vehicles.  It's significantly stronger than regular tires due to not being at risk of bursting; but is very heavy.",
-    "weight": "63 kg",
+    "name": {
+      "str": "钢制履带"
+    },
+    "description": "短履带板环环相扣，安装在一组小型负重轮上的轧制钢履带。类似的东西你可能曾在大型工程载具上见过。由于没有爆胎的风险，它显然比普通轮胎坚固，但是却非常重。",
+    "weight": "63503 g",
     "volume": "60 L",
     "price": "455 USD",
     "price_postapoc": "10 USD",
     "to_hit": -3,
-    "melee_damage": { "bash": 30 },
-    "material": [ "steel" ],
+    "melee_damage": {
+      "bash": 30
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "]",
     "color": "white",
     "diameter": 50,
@@ -1025,15 +1787,21 @@
     "id": "tread3",
     "type": "WHEEL",
     "category": "veh_parts",
-    "name": { "str": "reinforced caterpillar track" },
-    "description": "A short, interlocking set of shaped steel tracks held in place by a set of smaller wheels.  Similar with what you might see used on APCs and armored vehicles.  It's significantly stronger than regular tires due to not being at risk of bursting; but is extremely heavy.",
-    "weight": "200 kg",
+    "name": {
+      "str": "加固履带"
+    },
+    "description": "短履带板环环相扣，安装在一组小型负重轮上的轧制钢履带。类似的东西你可能曾在运兵车和装甲载具上见过。由于没有爆胎的风险，它显然比普通轮胎坚固，但是却超级重。",
+    "weight": "287824 g",
     "volume": "80 L",
     "price": "755 USD",
     "price_postapoc": "12 USD",
     "to_hit": -3,
-    "melee_damage": { "bash": 30 },
-    "material": [ "steel" ],
+    "melee_damage": {
+      "bash": 30
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "]",
     "color": "white",
     "diameter": 60,

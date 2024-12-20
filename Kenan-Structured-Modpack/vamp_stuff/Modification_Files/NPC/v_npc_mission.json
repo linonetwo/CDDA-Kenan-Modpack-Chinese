@@ -3,161 +3,212 @@
     "//": "Subgoals that you may want to complete or to keep you in the bay for moments.",
     "id": "VAMP_UNDERCOMMANDO_quest1",
     "type": "mission_definition",
-    "name": { "str": "Collect 30 blood" },
-    "description": "Collect <color_light_red>30 human blood</color> then bring it to the commando.",
+    "name": {
+      "str": "收集30份血液"
+    },
+    "description": "采集<color_light_red>30人的血液</color>然后带到突击队。",
     "goal": "MGOAL_NULL",
     "difficulty": 0,
     "value": 100000,
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "followup": "VAMP_UNDERCOMMANDO_quest2",
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "This errand needs you.",
-      "offer": "Blood... Our main food for darkest centuries. Even I almost forgot its taste, I'd like to drink it again. Bring me 30, too much but it is essential in many ways.",
-      "accepted": "Okay, descendant. This won't be hard and take your time.",
-      "rejected": "If only you let me shoot your chest, this will be done easily.",
-      "advice": ".",
-      "inquire": "Drinks? You have the drinks ready?",
-      "success": "These blood certainly are useful. Thanks for this treats, descendant.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*grins*"
+      "describe": "这件差事需要你。",
+      "offer": "血液…我们在最黑暗的世纪的主要食物。即便我几乎忘了它的味道，我还是想再喝一次。带30份给我，数量挺多但在很多方面都很重要。",
+      "accepted": "好的，后代。这不难，慢慢来。",
+      "rejected": "只要你让我射你的胸膛，这件事就容易做了。",
+      "advice": "。",
+      "inquire": "喝点什么？饮料准备好了吗？",
+      "success": "这些血当然有用。谢谢你的款待，后代。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*咧嘴笑*"
     }
   },
   {
     "id": "VAMP_UNDERCOMMANDO_quest2",
     "type": "mission_definition",
-    "name": { "str": "Collect 15 small leech teeth" },
-    "description": "Gather <color_light_red>15 small leech teeth</color> and give them to the commando. They are rarely dropped by <color_magenta>leeches</color> that lives in the <color_light_blue>swamp</color>.",
+    "name": {
+      "str": "收集15颗小水蛭的牙齿"
+    },
+    "description": "收集<color_light_red>15颗小水蛭的牙齿</color>，交给突击队。它们很少被生活在<color_light_blue>沼泽的<color_magenta>只水蛭丢弃。",
     "goal": "MGOAL_NULL",
     "difficulty": 2,
     "value": 200000,
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "followup": "VAMP_UNDERCOMMANDO_quest3",
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "I want you to slay something...",
-      "offer": "Ofcourse you know about the bloodsucking pests on the swamp, we hate those parasites squirming for blood to live. Hand over 15 of their teeth as a proof to succeed this trial.",
-      "accepted": "Slay them in any way you want.",
-      "rejected": "It's just okay.",
-      "advice": "They are blind, and depends on what they hear or smell.",
-      "inquire": "Got 'em?",
-      "success": "Nice work, I guess they won't bother us for a long time.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*slurping*"
+      "describe": "我要你杀些东西…",
+      "offer": "当然，你知道沼泽地上吸血的害虫，我们讨厌那些寄生虫为了生存而蠕动。交出他们的15颗牙齿作为这次试验成功的证据。",
+      "accepted": "你想怎么杀就怎么杀。",
+      "rejected": "没事的。",
+      "advice": "他们是瞎子，取决于他们听到什么或闻到什么。",
+      "inquire": "找到了吗？",
+      "success": "干得好，我想他们不会打扰我们很久的。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*啧啧*"
     }
   },
   {
     "id": "VAMP_UNDERCOMMANDO_quest3",
     "type": "mission_definition",
-    "name": { "str": "Take the blood sac from the giant \"Thing\"" },
-    "description": "Get the <color_light_red>blood sac</color> by slaying the <color_magenta>giant \"Thing\"</color>, then deliver it to the commando.\n<color_red>Going unprepared is a death trap!</color>.",
+    "name": {
+      "str": "从巨大的“东西”上取血囊"
+    },
+    "description": "通过杀死<color_magenta>巨型“东西”获得<color_light_red>血囊</color>，然后将其交给突击队。\n<color_red>毫无准备是一个死亡陷阱！</color>。",
     "goal": "MGOAL_NULL",
     "difficulty": 10,
     "value": 300000,
     "start": {
-      "assign_mission_target": { "om_terrain": "bloodhole", "om_special": "bhole", "reveal_radius": 1, "search_range": 50, "z": 0 },
+      "assign_mission_target": {
+        "om_terrain": "bloodhole",
+        "om_special": "bhole",
+        "reveal_radius": 1,
+        "search_range": 50,
+        "z": 0
+      },
       "update_mapgen": {
-        "place_item": [ { "item": "bigbloodrune", "x": 13, "y": 13 } ],
-        "place_monster": [ { "monster": "mon_insect_devourerleech", "x": 13, "y": 13, "target": true } ]
+        "place_item": [
+          {
+            "item": "bigbloodrune",
+            "x": 13,
+            "y": 13
+          }
+        ],
+        "place_monster": [
+          {
+            "monster": "mon_insect_devourerleech",
+            "x": 13,
+            "y": 13,
+            "target": true
+          }
+        ]
       }
     },
     "followup": "VAMP_UNDERCOMMANDO_quest4",
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "This is pretty much risky to you... Going to do it?",
-      "offer": "There is a peculiar cave with vast blood residue in it and I think its their gathering place. This giant \"thing\" on the depths, you'll need to bring it down as my command.",
-      "accepted": "Bring its blood sac, that would be a nice prize taking it down and as a proof of succeeding this test.",
-      "rejected": "Gather your courage first.",
-      "advice": "It is blind and very slow, slower than a human snail, but it'll devour you and causes deadly injuries getting near it... Now get going!",
-      "inquire": "Killed it?",
-      "success": "Damn kid, that's the mess you wanted to get. And you are still alive after that!",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "Ummm... I want to shoot you."
+      "describe": "这对你来说风险很大…你打算怎么做？",
+      "offer": "这里有一个奇特的洞穴，里面有大量的血迹，我想这是他们聚集的地方。这个巨大的“东西”在深处，你需要按照我的命令把它打倒。",
+      "accepted": "带上它的血囊，这将是一个很好的奖品，把它取下来，作为成功的证明。",
+      "rejected": "先鼓起勇气。",
+      "advice": "它是盲目的，非常缓慢，比人类蜗牛慢，但它会吞噬你，并造成致命的伤害接近它…快走！",
+      "inquire": "杀了它？",
+      "success": "该死的孩子，这就是你想要的。在那之后你还活着！",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "嗯…我想杀了你。"
     }
   },
   {
     "id": "VAMP_UNDERCOMMANDO_quest4",
     "type": "mission_definition",
-    "name": { "str": "Kill 200 zombies" },
-    "description": "Kill <color_light_red>200 zombies</color> then talk to the commando after completion.",
+    "name": {
+      "str": "杀死200个丧尸"
+    },
+    "description": "杀死<color_light_red>200个丧尸</color>，完成后与突击队交谈。",
     "goal": "MGOAL_KILL_MONSTER_SPEC",
     "difficulty": 5,
     "value": 400000,
     "monster_species": "ZOMBIE",
     "monster_kill_goal": 200,
-    "origins": [ "ORIGIN_SECONDARY" ],
-    "end": { "effect": { "npc_add_trait": "commandotestdone" } },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "end": {
+      "effect": {
+        "npc_add_trait": "commandotestdone"
+      }
+    },
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "This is the final test I can give you... Still want to try?",
-      "offer": "I've heard that these \"blobs\" was the cause of all troubles and horrifying events worldwide. As my command, eliminate 200 of these walking corpses to succeed... Later on, I will tell you something after this.",
-      "accepted": "Prepare yourself before jumping into this mess.",
-      "rejected": "Just prepare yourself for this job.",
-      "advice": "Visit some heavily crowded areas.",
-      "inquire": "How is the hunt going?",
-      "success": "Hmm... HE appreciates your doings, my comrade. I thank you for your assistance and giving your precious time dealing with these requests I have made for you...",
-      "success_lie": "What good does this do us?",
-      "failure": "It was a lost cause anyways..."
+      "describe": "这是我能给你的最后一个测试…还想试试吗？",
+      "offer": "我听说这些“斑点”是全世界所有麻烦和恐怖事件的起因。按照我的命令，消灭200具行尸走肉…稍后，我会告诉你一些事情。",
+      "accepted": "在跳进这个烂摊子之前做好准备。",
+      "rejected": "为这份工作做好准备。",
+      "advice": "参观一些拥挤的地区。",
+      "inquire": "狩猎进行的怎么样了？",
+      "success": "隐马尔可夫模型…他很欣赏你的所作所为，我的同志。我感谢你的帮助，并给予你宝贵的时间来处理这些要求，我已经为你…",
+      "success_lie": "你这样做对我们有什么好处？",
+      "failure": "反正是注定要失败的……"
     }
   },
   {
     "id": "VAMP_LONELY_quest1",
     "type": "mission_definition",
-    "name": { "str": "Collect 15 blood" },
-    "description": "Gather <color_light_red>15 human blood</color> then bring it to the vampire.",
+    "name": {
+      "str": "收集15份血液"
+    },
+    "description": "采集<color_light_red>15人的血液</color>然后把它带给吸血鬼。",
     "goal": "MGOAL_NULL",
     "difficulty": 0,
     "value": 100000,
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "followup": "VAMP_LONELY_quest2",
     "dialogue": {
-      "describe": "I want you for this errand.",
-      "offer": "Did you know we have been using blood substitutes for decades? Well, that's a good thing for us. Now, I want you to collect a few human blood, either yours or not... 15, I suppose that will satisfy my pleasure for that taste once again.",
-      "accepted": "You better do this. Sinking my fangs onto your flimsy neck is indeed fatal.",
-      "rejected": "Talk to me again later if you want to help me.",
-      "advice": "Murder someone if you are desperate to collect them.",
-      "inquire": "Did you get my drinks?",
-      "success": "Fascinating work, mortal.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*smilesatyou*"
+      "describe": "我要你帮我办这件事。",
+      "offer": "你知道我们用血液替代品已经有几十年了吗？嗯，这对我们来说是件好事。现在，我要你收集一些人类的血液，不管是不是你的…我想这会再次满足我的口味。",
+      "accepted": "你最好这样做。我的尖牙和你那脆弱的脖子比起来，可是相当致命的。",
+      "rejected": "如果你想帮我的话，以后再跟我说。",
+      "advice": "如果你不顾一切地想收买某人，就杀了他。",
+      "inquire": "你给我拿饮料了吗？",
+      "success": "很有趣的工作，凡人。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*对你微笑*"
     }
   },
   {
     "id": "VAMP_LONELY_quest2",
     "type": "mission_definition",
-    "name": { "str": "Take down 10 elder zombies" },
-    "description": "Slay <color_magenta>10 elder zombies</color> then talk to the vampire after completion.  <color_magenta>Elder zombies</color> are depicted to their stone-like, compact blood and are rarely seen in the <color_light_blue>graveyards</color>.",
+    "name": {
+      "str": "干掉10个老丧尸"
+    },
+    "description": "杀死<color_magenta> 10老丧尸</color>然后谈话吸血鬼完成后。年长的丧尸被描绘成像石头一样紧实的血液，在<color_light_blue>个墓地中很少见到。",
     "goal": "MGOAL_KILL_MONSTER_SPEC",
     "difficulty": 3,
     "value": 300000,
     "monster_species": "ELDERZED",
     "monster_kill_goal": 10,
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "followup": "VAMP_LONELY_quest3",
     "dialogue": {
-      "describe": "This is a little harder...",
-      "offer": "The gravestone in this crypt were built long ago, and the dead bodies has been buried here since before I reside here. Surprisingly, they were resurrected with this odd \"magic\". I want you to take 10 of them down and let their hollow vessel for an eternal rest.",
-      "accepted": "Good. Now go outside and look for them.",
-      "rejected": "Come back later.",
-      "advice": "Their blood has calcified into a shell, and it is distinctive to their appearance.",
-      "inquire": "Now?",
-      "success": "I know you can do it...",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*glares*"
+      "describe": "这有点难…",
+      "offer": "这个墓穴里的墓碑是很久以前建的，尸体在我住这里之前就埋在这里了。令人惊讶的是，他们用这种奇怪的“魔法”复活了。我要你把他们中的10个拿下来，让他们的空容器永远安息。",
+      "accepted": "很好。现在出去找他们。",
+      "rejected": "晚点再来。",
+      "advice": "它们的血液已经钙化成一个贝壳，这与它们的外表不同。",
+      "inquire": "现在？",
+      "success": "我知道你能做到…",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*怒视*"
     }
   },
   {
     "id": "VAMP_LONELY_quest3",
     "type": "mission_definition",
-    "name": { "str": "Bring a bloodrune" },
-    "description": "Get a <color_light_red>bloodrune</color> then deliver it to the vampire.",
+    "name": {
+      "str": "带来一个血符文"
+    },
+    "description": "得到一个<color_light_red>血符文</color>然后把它交给吸血鬼。",
     "goal": "MGOAL_NULL",
     "difficulty": 5,
     "value": 400000,
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "followup": "VAMP_LONELY_quest4",
     "//": "Locating a blended overmap in a world would take forever, so we WILL set a pedestal in random distances. RNG is your enemy here.",
@@ -171,109 +222,152 @@
       }
     },
     "dialogue": {
-      "describe": "This is a bit hard for you. You still want to try?",
-      "offer": "Bloodrune... The vampire's eternal soul. Merely a fact that few of us night creatures turn into an object upon death, yet most resists to that point.\nIn the dark days, bloodrunes are set in a pedestal by elder civilizations, and said that their \"god\" will accept it as a praise, which is not true. Get this rune for me, to honor its soul in a way we normally do.",
-      "accepted": "Good.",
-      "rejected": "Just do it later on.",
-      "advice": "A vampire's death is a big success to those elderly jerks. Well, it is their belief that can't be bothered in any way.",
-      "inquire": "Got it?",
-      "success": "I thank you for this rune.\n*Shatters it by hand*\n",
-      "success_lie": "Just thanks...",
-      "failure": "*smirks*"
+      "describe": "这对你来说有点难。你还想试试吗？",
+      "offer": "血符文…吸血鬼永恒的灵魂。这仅仅是一个事实，我们中很少有夜行生物会在死后变成一个物体，但大多数人都反对这一点。\n在黑暗的日子里，古老文明把血符文放在基座上，说他们的“上帝”会接受它作为赞美，这是不正确的。把这符文给我，用我们平常的方式来纪念它的灵魂。",
+      "accepted": "好。",
+      "rejected": "以后再做吧。",
+      "advice": "吸血鬼之死对那些上了年纪的混蛋来说是个巨大的成功。好吧，这是他们的信仰，不能被任何方式打扰。",
+      "inquire": "知道了？",
+      "success": "谢谢你给我这个符文。\n*手工粉碎*",
+      "success_lie": "谢谢你…",
+      "failure": "*傻笑*"
     }
   },
   {
     "id": "VAMP_LONELY_quest4",
     "type": "mission_definition",
-    "name": { "str": "Take Vampire to the Cove" },
-    "description": "Escort the vampire to the <color_light_blue>vampire cove</color>.",
+    "name": {
+      "str": "带吸血鬼去洞窟"
+    },
+    "description": "护送吸血鬼到<color_light_blue>吸血鬼湾</color>。",
     "goal": "MGOAL_GO_TO_TYPE",
     "difficulty": 2,
     "value": 500000,
     "destination": "vampcave_corridor1",
     "start": {
-      "assign_mission_target": { "om_terrain": "vampcave_entrance", "om_special": "Vampire Cove", "reveal_radius": 3, "search_range": 180, "z": 0 },
-      "effect": [ "follow_only" ]
+      "assign_mission_target": {
+        "om_terrain": "vampcave_entrance",
+        "om_special": "Vampire Cove",
+        "reveal_radius": 3,
+        "search_range": 180,
+        "z": 0
+      },
+      "effect": [
+        "follow_only"
+      ]
     },
-    "end": { "effect": [ "stop_following", { "npc_add_trait": "isolatedtestsdone" } ] },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "end": {
+      "effect": [
+        "stop_following",
+        {
+          "npc_add_trait": "isolatedtestsdone"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "dialogue": {
-      "describe": "This is the last job, you want to do it?",
-      "offer": "Since you've been helping me for a while, I will need you to travel with me to the vampire cove. Being isolated for centuries is a great experience, but seeing a living community of my kind alleviates my frozen body the most.",
-      "accepted": "Good, those tests proved yourself a good descendant. As a reward, I'll protect you along the way.",
-      "rejected": "Just okay, get back later...",
-      "advice": "This may be a long journey. You know I'm a night creature, so you'll have to take care of me in daytime.",
-      "inquire": "What?",
-      "success": "I see my kindred seems alright. Well, it does matter to me, and you've been the key to this. Thank you, descendant.",
-      "success_lie": "Just thanks...",
-      "failure": "*smirks*"
+      "describe": "这是最后一份工作，你想做吗？",
+      "offer": "既然你帮了我一段时间，我需要你陪我去吸血鬼湾。被孤立了几个世纪是一个伟大的经历，但看到一个像我这样的生活社区最能减轻我僵硬的身体。",
+      "accepted": "很好，那些测试证明你是个好后代。作为回报，我会一路保护你。",
+      "rejected": "好吧，晚点回来…",
+      "advice": "这可能是一个漫长的旅程。你知道我是个夜猫子，所以白天你得照顾我。",
+      "inquire": "什么？",
+      "success": "我看我的亲戚似乎没事。嗯，这对我来说很重要，而你是这件事的关键。谢谢你，后人。",
+      "success_lie": "谢谢你…",
+      "failure": "*傻笑*"
     }
   },
   {
     "id": "VAMP_UNDERTRADER_quest",
     "type": "mission_definition",
-    "name": { "str": "Get 2 Corrupt Bloodrune Stone" },
-    "description": "Get the <color_light_red>2 corrupted bloodrune stones</color> that are dropped by killing the <color_magenta>infected vampires</color> then deliver them to the trader.",
+    "name": {
+      "str": "获得2块腐败的血符石"
+    },
+    "description": "获得通过杀死<color_magenta>个被感染的吸血鬼而掉落的<color_light_red>2块被腐蚀的血符石</color>，然后把它们交给交易者。",
     "goal": "MGOAL_NULL",
     "difficulty": 3,
     "value": 100000,
     "item": "corruptbloodrune",
     "count": 2,
     "start": {
-      "assign_mission_target": { "om_terrain": "vampcave_corridor2", "om_special": "Vampire Cove", "reveal_radius": 1, "search_range": 180, "z": -1 }
+      "assign_mission_target": {
+        "om_terrain": "vampcave_corridor2",
+        "om_special": "Vampire Cove",
+        "reveal_radius": 1,
+        "search_range": 180,
+        "z": -1
+      }
     },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "followup": "VAMP_UNDERTRADER_quest2",
     "dialogue": {
-      "describe": "Well, actually we have a problem...",
-      "offer": "Our kin isn't a target of diseases, but those 2 vampires at the back, they really look bad and start raging on its own, so we cage them at early state... Never knew the magic was that strong enough to kill EVEN us. I want you to end the sick vampires as your task and get their corrupted bloodrune. We know we can dispose them easily, but our beliefs prevent us from killing our own kind.",
-      "accepted": "Thank you, now go.",
-      "rejected": "You need to do that later.",
-      "advice": "Serious pain you'll get from breaking into their cage.",
-      "inquire": "What happened there?",
-      "success": "Great, mortal. This oozing bloodrune will now meet its place... Or not at all.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*glaressharply*"
+      "describe": "事实上，我们有个问题...",
+      "offer": "我们的亲属不是疾病的目标，但是后面的那两个吸血鬼，他们看起来真的很糟糕，开始自己肆虐，所以我们把他们关在早期状态...从来不知道魔法如此强大，甚至可以杀死我们。我要你结束那些生病的吸血鬼作为你的任务，得到他们腐败的血液。我们知道我们可以轻松处理它们，但我们的信仰阻止我们杀死自己的同类。",
+      "accepted": "谢谢，现在走吧。",
+      "rejected": "你需要以后再做。",
+      "advice": "闯入他们的笼子会让你很痛苦。",
+      "inquire": "那里发生了什么？",
+      "success": "太好了，凡人。这个渗出鲜血的符文现在将会找到它的位置...或者根本没有。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*刺刺地盯着你*"
     }
   },
   {
     "id": "VAMP_UNDERTRADER_quest2",
     "type": "mission_definition",
-    "name": { "str": "Slay 10 bats" },
-    "description": "Kill <color_magenta>10 bats</color> then talk to the trader after completion. <color_magenta>Bats</color> are commonly seen at <color_gray>nighttime</color> or inside a <color_light_blue>cave</color>.",
+    "name": {
+      "str": "杀死10只蝙蝠"
+    },
+    "description": "杀死<color_magenta> 10只蝙蝠</color>，完成后与交易者交谈。蝙蝠通常出现在晚上<color_gray>点或<color_light_blue>个洞穴里。",
     "goal": "MGOAL_KILL_MONSTER_SPEC",
     "difficulty": 2,
     "value": 200000,
     "monster_species": "VAMPBAT",
     "monster_kill_goal": 10,
-    "origins": [ "ORIGIN_SECONDARY" ],
-    "end": { "effect": { "npc_add_trait": "undertradertestsdone" } },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "end": {
+      "effect": {
+        "npc_add_trait": "undertradertestsdone"
+      }
+    },
     "dialogue": {
-      "describe": "We do appreciate your assistance with our needs.",
-      "offer": "Vampire bats became literal bloodsuckers these passing days and I want you to hunt down 10 of these vermins. We've been swarmed by these creatures lately but gladly we managed to shove them away.",
-      "accepted": "Good. Come back anytime you want.",
-      "rejected": "I guess you're afraid of bats...",
-      "advice": "Bats are nocturnal, and tends to live in dark places like caves.",
-      "inquire": "How is the hunt going?",
-      "success": "Thank you for your help in eradicating some bloodsuckers.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*glaressharply*"
+      "describe": "我们非常感谢您对我们需求的帮助。",
+      "offer": "吸血蝙蝠在过去的几天里变成了真正的吸血鬼，我要你猎杀10只这种蠕虫。最近我们被这些生物包围了，但我们很高兴能设法把它们赶走。",
+      "accepted": "很好。你想什么时候回来都行。",
+      "rejected": "我猜你害怕蝙蝠...",
+      "advice": "蝙蝠是夜间活动的，往往生活在洞穴等黑暗的地方。",
+      "inquire": "狩猎进行的怎么样了？",
+      "success": "谢谢你帮忙铲除了一些吸血鬼。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*刺刺地盯着你*"
     }
   },
   {
     "id": "VAMP_UNDERSEEKER_quest1",
     "type": "mission_definition",
-    "name": { "str": "Go to a forgotten burial site" },
-    "description": " Travel to a <color_light_blue>burial site</color> then talk to the seeker.",
+    "name": {
+      "str": "前往被遗忘的墓地"
+    },
+    "description": "前往<color_light_blue>墓地</color>，然后与探索者交谈。",
     "goal": "MGOAL_GO_TO_TYPE",
     "difficulty": 1,
     "value": 200000,
     "destination": "gravesite1",
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "start": {
-      "effect": [ "follow" ],
+      "effect": [
+        "follow"
+      ],
       "assign_mission_target": {
         "om_terrain": "gravesite1",
         "om_special": "Gravesite - Wild",
@@ -283,81 +377,136 @@
         "must_see": false,
         "z": 0
       },
-      "update_mapgen": { "place_monsters": [ { "monster": "GROUP_CRYPTIES", "x": [ 0, 23 ], "y": [ 0, 23 ], "density": 0.25 } ] }
+      "update_mapgen": {
+        "place_monsters": [
+          {
+            "monster": "GROUP_CRYPTIES",
+            "x": [
+              0,
+              23
+            ],
+            "y": [
+              0,
+              23
+            ],
+            "density": 0.25
+          }
+        ]
+      }
     },
     "followup": "VAMP_UNDERSEEKER_quest2",
     "dialogue": {
-      "describe": "Before we go, the trader asked me a request on this journey.",
-      "offer": "The trader told me to observe the old graveyards we knew from the past. So before we go to the outskirts, we'll get pass through it first.",
-      "accepted": "Off we go, mortal.",
-      "rejected": "Well, that's your choice...",
-      "advice": "Its been a long time since I see those graves...",
-      "inquire": "What now?",
-      "success": "The magic took over the buried corpses? That's unfortunate and the trader would be disappointed about this...",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*glaressharply*"
+      "describe": "在我们走之前，交易者问了我一个关于这次旅行的请求。",
+      "offer": "商人让我观察我们过去知道的旧墓地。所以在我们去郊区之前，我们会先通过它。",
+      "accepted": "我们走吧，凡人。",
+      "rejected": "那是你的选择...",
+      "advice": "我很久没看到那些坟墓了...",
+      "inquire": "现在怎么办？",
+      "success": "魔法接管了掩埋的尸体？这很不幸，交易者会对此感到失望...",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*刺刺地盯着你*"
     }
   },
   {
     "id": "VAMP_UNDERSEEKER_quest2",
     "type": "mission_definition",
-    "name": { "str": "Go to the wasteland outskirts" },
-    "description": "Along with the seeker, travel to the <color_light_blue>wasteland outskirts</color>. Talk to them again after reaching the destination.",
+    "name": {
+      "str": "去荒原郊外"
+    },
+    "description": "与探索者一起，前往<color_light_blue>荒地郊外</color>。到达目的地后再与他们交谈。",
     "goal": "MGOAL_GO_TO_TYPE",
     "difficulty": 2,
     "value": 400000,
     "destination": "wo5",
     "start": {
-      "effect": [ "follow" ],
-      "assign_mission_target": { "om_terrain": "wo5", "om_special": "Wasteland Outskirts", "reveal_radius": 5, "search_range": 180, "z": 0 }
+      "effect": [
+        "follow"
+      ],
+      "assign_mission_target": {
+        "om_terrain": "wo5",
+        "om_special": "Wasteland Outskirts",
+        "reveal_radius": 5,
+        "search_range": 180,
+        "z": 0
+      }
     },
-    "end": { "effect": [ "leave", { "u_add_trait": "underseekerdone" } ] },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "end": {
+      "effect": [
+        "leave",
+        {
+          "u_add_trait": "underseekerdone"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "Are we ready for this trip?",
-      "offer": "We are now going to the outskirts, and I know the commando told you about this place.",
-      "accepted": "Good. Now off we go, mortal.",
-      "rejected": "...",
-      "advice": "I'll give you some details about the outskirts. It is a large structure with barricaded walls and tents placed outside for human survivors. It also has a barn and farm fields that provides descent food, and shopkeepers sell various stuff there.",
-      "inquire": "What?",
-      "success": "\"What else could I do for you\" you say? Don't worry, I have no more requests for you. Ask anyone here if you're curious. When you're done, talk to me.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "Ummm...."
+      "describe": "我们准备好这次旅行了吗？",
+      "offer": "我们现在要去郊外，我知道特种兵跟你说过这个地方。",
+      "accepted": "很好。我们走吧，凡人。",
+      "rejected": "…",
+      "advice": "我会给你一些郊区的细节。这是一个巨大的建筑，外面为人类幸存者设置了路障和帐篷。它还有一个谷仓和农场，提供下种食物，店主在那里卖各种各样的东西。",
+      "inquire": "什么？",
+      "success": "你说“我还能为你做什么”？别担心，我对你没有更多要求了。问问这里你好奇的人。如果你做完了就告诉我。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "嗯...."
     }
   },
   {
     "id": "VAMP_WS2_quest1",
     "type": "mission_definition",
-    "name": { "str": "Recruit Radio Specialist" },
-    "description": "Ask the <color_yellow>Radio Specialist</color> to join, then talk to the guard after they did.",
+    "name": {
+      "str": "招聘无线电专家"
+    },
+    "description": "请<color_yellow>无线电专家</color>加入，然后在他们加入后与守卫交谈。",
     "goal": "MGOAL_RECRUIT_NPC",
     "difficulty": 2,
     "value": 100000,
     "start": {
-      "assign_mission_target": { "om_terrain": "radio_tower", "om_special": "Radio Tower", "reveal_radius": 2, "search_range": 90, "z": 0 },
-      "update_mapgen": { "place_npcs": [ { "class": "HUMAN_RADIOSPEC", "x": 10, "y": 10, "target": true } ] }
+      "assign_mission_target": {
+        "om_terrain": "radio_tower",
+        "om_special": "Radio Tower",
+        "reveal_radius": 2,
+        "search_range": 90,
+        "z": 0
+      },
+      "update_mapgen": {
+        "place_npcs": [
+          {
+            "class": "HUMAN_RADIOSPEC",
+            "x": 10,
+            "y": 10,
+            "target": true
+          }
+        ]
+      }
     },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "followup": "VAMP_WS2_quest2",
     "dialogue": {
-      "describe": "It's easy, I think...",
-      "offer": "First things first, we have to build a radio tower that transmit signals to our fellow survivors out in the wilds which serves as their waypoint to our place. Well, building that cheap structure is simple, but what I want you to do is to find a person with expertise to operate this kind of stuff.",
-      "accepted": "Great. Now move, mortal.",
-      "rejected": "Great! Let this survivors die out of nowhere then...",
-      "advice": "Just bring them in safely.",
-      "inquire": "Where are they?",
-      "success": "I knew you can bring one. Now let this nerd go to work!",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*glares*"
+      "describe": "我认为这很容易...",
+      "offer": "首先，我们必须建立一个无线电发射塔，向野外的幸存者发送信号，作为他们到达我们那里的航路点。嗯，建造那种便宜的结构很简单，但我想让你做的是找到一个有专业知识的人来操作这种东西。",
+      "accepted": "太好了。走开，凡人。",
+      "rejected": "太棒了！让这些幸存者凭空死去吧...",
+      "advice": "把它们安全地带进来。",
+      "inquire": "他们在哪？",
+      "success": "我知道你可以带一个。现在让这个书呆子去上班！",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*怒视*"
     }
   },
   {
     "id": "VAMP_WS2_quest2",
     "type": "mission_definition",
-    "name": { "str": "Slay the succumbed vampire" },
-    "description": "Kill the <color_magenta>succumbed vampire</color> then talk to the guard.\n<color_red>Going unprepared is a death trap!</color>",
+    "name": {
+      "str": "杀死屈服的吸血鬼"
+    },
+    "description": "杀死<color_magenta>吸血鬼</color>然后和守卫谈谈。\n<color_red>毫无准备是一个死亡陷阱！</color>",
     "goal": "MGOAL_KILL_MONSTER",
     "difficulty": 10,
     "value": 100000,
@@ -371,58 +520,87 @@
         "must_see": false,
         "z": 0
       },
-      "update_mapgen": { "place_monster": [ { "monster": "mon_zombie_succumbvampire", "x": 11, "y": 11, "target": true } ] }
+      "update_mapgen": {
+        "place_monster": [
+          {
+            "monster": "mon_zombie_succumbvampire",
+            "x": 11,
+            "y": 11,
+            "target": true
+          }
+        ]
+      }
     },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "It's easy, I think...",
-      "offer": "With the radio working well, we will be able to connect to the outsiders and hope for them to receive our message. Yet there's this vampire I am worried about, wandering the cursed lands and wicked to its vile nature. Our scouting patrol knows the coordinates, and I want you to put it down immediately before it brings wrath to other survivors.",
-      "accepted": "With it wielding the power of an immortal, provoking unprepared is a suicidal act.",
-      "rejected": "The monster does not rest after a kill...",
-      "advice": "Bring guns and keep your distance, us vampires will take down humans for almost instantly.",
-      "inquire": "Is it dead?",
-      "success": "Fascinating job mortal! With its death, others will be safe... A bit.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*glares*"
+      "describe": "我认为这很容易...",
+      "offer": "收音机工作正常后，我们将能够与外界联系，并希望他们能收到我们的信息。然而有一个我很担心的吸血鬼，游荡在被诅咒的土地上，邪恶到它邪恶的本性。我们的侦察巡逻队知道坐标，我希望你在它给其他幸存者带来愤怒之前立即把它放下。",
+      "accepted": "它拥有不朽的力量，毫无准备的挑衅是一种自杀行为。",
+      "rejected": "怪物杀人后不会休息...",
+      "advice": "拿上枪并保持距离，我们吸血鬼几乎可以在一瞬间干掉人类。",
+      "inquire": "它死了吗？",
+      "success": "迷人的工作凡人！随着它的死亡，其他人将会安全...有点。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*怒视*"
     }
   },
   {
     "id": "VAMP_WS2_quest3",
     "type": "mission_definition",
-    "name": { "str": "Destroy the vampirus" },
-    "description": "With the help of the <color_yellow>seeker</color>, locate and destroy the <color_light_blue>vampirus</color>, the place where <color_magenta>infected vampires</color> gather.\n<color_red>Going unprepared is a death trap!</color>",
+    "name": {
+      "str": "摧毁吸血鬼聚集地"
+    },
+    "description": "在<color_yellow>探索者</color>的帮助下，找到并摧毁<color_light_blue>吸血鬼聚集地<color_magenta>，这个被感染的吸血鬼聚集的地方。\n<color_red>毫无准备的前往将会是一个死亡陷阱！</color>",
     "goal": "MGOAL_CONDITION",
-    "goal_condition": { "u_has_trait": "wsg2vampirusdone" },
+    "goal_condition": {
+      "u_has_trait": "wsg2vampirusdone"
+    },
     "difficulty": 10,
     "value": 100000,
-    "start": { "effect": { "u_add_trait": "wsg2vampirushelp" } },
-    "end": { "effect": { "u_lose_trait": "wsg2vampirushelp" } },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "start": {
+      "effect": {
+        "u_add_trait": "wsg2vampirushelp"
+      }
+    },
+    "end": {
+      "effect": {
+        "u_lose_trait": "wsg2vampirushelp"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "It's easy, I think...",
-      "offer": "Unfortunately, that vampire is not alone.\n\nI have recently received a radio message that reveals the pinpoint location of the gathering place owned by those infected vampires. Your task is to find a way to stop and annihilate the entire army of them. I told the seeker about it and she'll help you infiltrate your objective.",
-      "accepted": "Good. Just remind her about it and she'll provide the essential information.",
-      "rejected": "Alright then, let's talk about it again later...",
-      "advice": "Be aware. If alone is dangerous, more so when they're dozen.",
-      "inquire": "Report?",
-      "success": "Unbelievable! You did it, mortal! Our master would be grateful of your doings!",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "*glares*"
+      "describe": "我认为这很容易...",
+      "offer": "不幸的是，那个吸血鬼并不孤单。\n\n我最近收到一条无线电信息，显示了被感染的吸血鬼聚集的精确位置。你的任务是找到一种方法来阻止和消灭他们的整个军队。我告诉探索者了，她会帮你潜入你的目标。",
+      "accepted": "很好。只要提醒她这件事，她就会提供必要的信息。",
+      "rejected": "好吧，我们以后再谈...",
+      "advice": "请注意。如果独自一人是危险的，当他们被打的时候更是如此。",
+      "inquire": "举报？",
+      "success": "难以置信！你做到了，凡人！我们的主人会感激你的所作所为的！",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "*怒视*"
     }
   },
   {
     "id": "VAMP_UNDERSEEKER_quest_vampirus1",
     "type": "mission_definition",
-    "name": { "str": "Travel to the vampirus" },
-    "description": "Along with the seeker, travel to the <color_light_blue>vampirus</color>.",
+    "name": {
+      "str": "前往吸血鬼聚集地"
+    },
+    "description": "和探索者一起前往<color_light_blue>吸血鬼聚集地</color>。",
     "goal": "MGOAL_GO_TO_TYPE",
     "difficulty": 1,
     "value": 1000,
     "destination": "vampirus",
     "start": {
-      "effect": [ "follow_only" ],
+      "effect": [
+        "follow_only"
+      ],
       "assign_mission_target": {
         "om_terrain": "vampirus",
         "om_special": "Vampirus",
@@ -433,144 +611,265 @@
         "z": 0
       }
     },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "followup": "VAMP_UNDERSEEKER_quest_vampirus2",
     "dialogue": {
-      "describe": "Are we ready for this trip?",
-      "offer": "We are now going to the outskirts, and I know the commando told you about this place.",
-      "accepted": "Lead the trail, I'm right behind if you require my assistance.",
-      "rejected": "...",
-      "advice": "Keep an eye out for possible threats along the way.",
-      "inquire": "Are we in our destination?",
-      "success": "Now that we're here, we have to locate the entrance that leads to the depths.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "Ummm...."
+      "describe": "我们准备好这次旅行了吗？",
+      "offer": "我们现在要去郊外，我知道特种兵跟你说过这个地方。",
+      "accepted": "带路，如果你需要我的帮助，我就在后面。",
+      "rejected": "…",
+      "advice": "留意沿途可能的威胁。",
+      "inquire": "我们到达目的地了吗？",
+      "success": "现在我们到了这里，我们必须找到通向深处的入口。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "嗯...."
     }
   },
   {
     "id": "VAMP_UNDERSEEKER_quest_vampirus2",
     "type": "mission_definition",
-    "name": { "str": "Unseal the entrance" },
-    "description": "Protect the seeker from the <color_magenta>zeds</color> attracted to your location.",
+    "name": {
+      "str": "解封入口"
+    },
+    "description": "保护探索者免受<color_magenta> zeds </color>吸引到你的位置。",
     "goal": "MGOAL_CONDITION",
     "goal_condition": {
-      "and": [ { "u_has_trait": "underseekerhelpvampirusunseal" }, { "not": { "npc_has_effect": "underseeker_unsealing" } } ]
+      "and": [
+        {
+          "u_has_trait": "underseekerhelpvampirusunseal"
+        },
+        {
+          "not": {
+            "npc_has_effect": "underseeker_unsealing"
+          }
+        }
+      ]
     },
     "difficulty": 1,
     "value": 1000,
     "start": {
       "effect": [
         "leave",
-        { "u_add_trait": "underseekerhelpvampirusunseal" },
-        { "npc_add_effect": "underseeker_unsealing", "duration": 100 },
-        { "mapgen_update": "vampirus_attracted", "origin_npc": true, "offset_x": 2 },
-        { "mapgen_update": "vampirus_attracted", "origin_npc": true, "offset_x": 1, "offset_y": -2 },
-        { "mapgen_update": "vampirus_attracted", "origin_npc": true, "offset_x": -2 },
-        { "mapgen_update": "vampirus_attracted", "origin_npc": true, "offset_x": -1, "offset_y": 2 },
-        { "mapgen_update": "vampirus_attracted", "origin_npc": true, "offset_y": 2 },
-        { "mapgen_update": "vampirus_attracted", "origin_npc": true, "offset_y": -2 }
+        {
+          "u_add_trait": "underseekerhelpvampirusunseal"
+        },
+        {
+          "npc_add_effect": "underseeker_unsealing",
+          "duration": 100
+        },
+        {
+          "mapgen_update": "vampirus_attracted",
+          "origin_npc": true,
+          "offset_x": 2
+        },
+        {
+          "mapgen_update": "vampirus_attracted",
+          "origin_npc": true,
+          "offset_x": 1,
+          "offset_y": -2
+        },
+        {
+          "mapgen_update": "vampirus_attracted",
+          "origin_npc": true,
+          "offset_x": -2
+        },
+        {
+          "mapgen_update": "vampirus_attracted",
+          "origin_npc": true,
+          "offset_x": -1,
+          "offset_y": 2
+        },
+        {
+          "mapgen_update": "vampirus_attracted",
+          "origin_npc": true,
+          "offset_y": 2
+        },
+        {
+          "mapgen_update": "vampirus_attracted",
+          "origin_npc": true,
+          "offset_y": -2
+        }
       ]
     },
     "end": {
       "effect": [
         "follow_only",
-        { "u_add_trait": "underseekerhelpvampirus_enter" },
-        { "mapgen_update": "vampirus_unsealing", "origin_npc": true }
+        {
+          "u_add_trait": "underseekerhelpvampirus_enter"
+        },
+        {
+          "mapgen_update": "vampirus_unsealing",
+          "origin_npc": true
+        }
       ]
     },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "...",
-      "offer": "Yes, I can unseal it at this point.",
-      "accepted": "I do not guarantee our safety from breaking the seal, so you'll need to guard me as I break it.",
-      "rejected": "...",
-      "advice": "With the smell of blood coming out of the vampirus, zombies are attracted towards our location.",
-      "inquire": "...",
-      "success": "And now that the seal is broken, we can go through it.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "Ummm...."
+      "describe": "…",
+      "offer": "是的，我现在可以解封了。",
+      "accepted": "我不能保证我们打破封印的安全，所以当我打破封印的时候你需要保护我。",
+      "rejected": "…",
+      "advice": "吸血鬼聚集地散发着鲜血的气味，丧尸们会被吸引到我们这里来。",
+      "inquire": "…",
+      "success": "现在封印被打破了，我们可以穿过它。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "嗯...."
     }
   },
   {
     "id": "HUMAN_RADIOSPEC_quest",
     "type": "mission_definition",
-    "name": { "str": "Bring Radio Specialist to the outskirts" },
-    "description": "Escort the specialist to the <color_light_blue>wasteland outskirts</color>.",
+    "name": {
+      "str": "把无线电专家带到郊区"
+    },
+    "description": "护送专家到<color_light_blue>荒地郊外</color>。",
     "goal": "MGOAL_GO_TO_TYPE",
     "difficulty": 1,
     "value": 10000,
     "destination": "wo5",
     "start": {
-      "assign_mission_target": { "om_terrain": "wo5", "om_special": "Wasteland Outskirts", "reveal_radius": 2, "search_range": 80 },
-      "effect": [ "follow_only", { "u_add_trait": "wrsgoing" } ],
-      "update_mapgen": { "om_terrain": "wo5", "place_nested": [ { "chunks": [ "wasteland_radio_tower" ], "x": 0, "y": 0 } ] }
+      "assign_mission_target": {
+        "om_terrain": "wo5",
+        "om_special": "Wasteland Outskirts",
+        "reveal_radius": 2,
+        "search_range": 80
+      },
+      "effect": [
+        "follow_only",
+        {
+          "u_add_trait": "wrsgoing"
+        }
+      ],
+      "update_mapgen": {
+        "om_terrain": "wo5",
+        "place_nested": [
+          {
+            "chunks": [
+              "wasteland_radio_tower"
+            ],
+            "x": 0,
+            "y": 0
+          }
+        ]
+      }
     },
-    "end": { "effect": [ "stop_following", { "npc_change_faction": "wastelander" }, { "u_add_trait": "wrsdone" } ] },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "end": {
+      "effect": [
+        "stop_following",
+        {
+          "npc_change_faction": "wastelander"
+        },
+        {
+          "u_add_trait": "wrsdone"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "We're going, right?",
-      "offer": "We have to go to that place and I need you to lead the way.",
-      "accepted": "Just remember to keep everything fine as we go there.",
-      "rejected": "Well, your words are useless...",
-      "advice": "From what direction did you came from? I suppose that's the right way.",
-      "inquire": "What?",
-      "success": "This place looks neat! Now that I'm here, I'll do my job as you have said earlier.",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "Ummm...."
+      "describe": "我们要走了，对吗？",
+      "offer": "我们必须去那个地方，我需要你带路。",
+      "accepted": "只要记得在我们去的时候保持一切正常。",
+      "rejected": "嗯，你的话没用...",
+      "advice": "你是从哪个方向来的？我想这是正确的方法。",
+      "inquire": "什么？",
+      "success": "这个地方看起来很整洁！既然我来了，我就按照你刚才说的做好我的工作。",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "嗯...."
     }
   },
   {
     "id": "HUMAN_VAΜPRISON_quest",
     "type": "mission_definition",
-    "name": { "str": "Bring Prisoner to the outskirts" },
-    "description": "Take the prisoner to the <color_light_blue>wasteland outskirts</color>.",
+    "name": {
+      "str": "把囚犯带到郊区"
+    },
+    "description": "把犯人带到<color_light_blue>荒地的郊外</color>。",
     "goal": "MGOAL_GO_TO_TYPE",
     "difficulty": 3,
     "value": 30000,
     "destination": "wo3",
-    "start": { "assign_mission_target": { "om_terrain": "wo3", "om_special":"Wasteland Outskirts", "reveal_radius": 2, "search_range": 80 }, "effect": [ "follow" ] },
-    "end": { "effect": [ "leave", { "npc_change_faction": "wastelander" } ] },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "wo3",
+        "om_special": "Wasteland Outskirts",
+        "reveal_radius": 2,
+        "search_range": 80
+      },
+      "effect": [
+        "follow"
+      ]
+    },
+    "end": {
+      "effect": [
+        "leave",
+        {
+          "npc_change_faction": "wastelander"
+        }
+      ]
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "has_generic_rewards": false,
     "dialogue": {
-      "describe": "We're going, right?",
-      "offer": "Lead me to that place, then...",
-      "accepted": "Awesome!",
-      "rejected": "Well, atleast you've made me happy before my fate...",
-      "advice": "You need my advice for this? I could say something if I'm already free in the wilderness...",
-      "inquire": "What?",
-      "success": "Damn! This place is like a fortress! But you should've warned me about the vampires living here... They freak me out everytime I see one...",
-      "success_lie": "Well, thank you. *smirks*",
-      "failure": "Ummm...."
+      "describe": "我们要走了，对吗？",
+      "offer": "那带我去那个地方...",
+      "accepted": "嗯，那太好了！",
+      "rejected": "好吧，至少你让我在命运面前快乐...",
+      "advice": "你需要我的建议吗？如果我自由了，我倒是可以说点什么...",
+      "inquire": "什么？",
+      "success": "可恶！这地方像个堡垒！但你应该警告我住在这里的吸血鬼...每次我看到它们，它们都会吓我一跳...",
+      "success_lie": "好吧，谢谢你。*傻笑*",
+      "failure": "嗯...."
     }
   },
   {
     "//": "Missions obtained from starting with the 'Vampire Wannabe' scenario.",
     "id": "SCEN_FIND_CRYPT",
     "type": "mission_definition",
-    "name": { "str": "Reach a memorial crypt" },
-    "description": "Travel to a <color_light_blue>memorial crypt</color> then inspect its surroundings.",
+    "name": {
+      "str": "到达纪念墓穴"
+    },
+    "description": "前往<color_light_blue>纪念地穴</color>，然后检查其周围环境。",
     "goal": "MGOAL_GO_TO_TYPE",
     "destination": "crypt1_b1",
     "difficulty": 1,
     "value": 0,
-    "origins": [ "ORIGIN_GAME_START" ],
+    "origins": [
+      "ORIGIN_GAME_START"
+    ],
     "start": {
-      "assign_mission_target": { "om_terrain": "crypt1", "om_special": "Memorial Crypt", "reveal_radius": 2, "search_range": 90, "z": 0 }
+      "assign_mission_target": {
+        "om_terrain": "crypt1",
+        "om_special": "Memorial Crypt",
+        "reveal_radius": 2,
+        "search_range": 90,
+        "z": 0
+      }
     }
   },
   {
     "//": "From this mission, players will start to progress little by little, by showing quest related structures.",
     "id": "SCEN_RECRUIT_VAMP",
     "type": "mission_definition",
-    "name": { "str": "Dark Descendant" },
-    "description": "Ask a <color_yellow>lone vampire</color> to join your party.\nYou must earn their trust by doing their favor.",
+    "name": {
+      "str": "黑暗后裔"
+    },
+    "description": "邀请<color_yellow>孤独的吸血鬼</color>加入你的队伍。\n你必须通过帮他们的忙来赢得他们的信任。",
     "goal": "MGOAL_RECRUIT_NPC_CLASS",
     "difficulty": 10,
     "value": 0,
-    "origins": [ "ORIGIN_GAME_START" ]
+    "origins": [
+      "ORIGIN_GAME_START"
+    ]
   }
 ]

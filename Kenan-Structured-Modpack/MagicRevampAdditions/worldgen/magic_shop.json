@@ -31,27 +31,24 @@
         ".9..9...^zzzzzzz....9.%.",
         "........%%%%%%%%%%%%%%%."
       ],
-      "place_nested": [ { "chunks": [ [ "roof_6x6_garden_3", 50 ], [ "roof_6x6_garden_4", 50 ] ], "x": 16, "y": 15 } ],
+      "place_nested": [
+        {
+          "chunks": [
+            [
+              "roof_6x6_garden_3",
+              50
+            ],
+            [
+              "roof_6x6_garden_4",
+              50
+            ]
+          ],
+          "x": 16,
+          "y": 15
+        }
+      ],
       "terrain": {
-        ".": [ [ "t_grass", 5 ], [ "t_grass_long", 2 ], "t_dirt", "t_shrub" ],
-        "p": "t_grass_long",
-        "M": "t_grass_long",
-        "b": "t_grass_long",
-        "U": "t_grass_long",
-        "R": "t_grass_long",
-        "|": "t_rock_wall",
-        "z": "t_floor_blue",
-        "#": "t_wall_b",
-        "+": "t_door_red_c",
-        "o": "t_window_domestic",
-        "J": "t_carpet_green",
-        "W": "t_carpet_green",
-        "*": "t_carpet_green",
-        "%": "t_privacy_fence",
-        "<": "t_stairs_up",
         "4": "t_gutter_downspout",
-        "^": "t_privacy_fencegate_c",
-        "s": "t_sidewalk",
         "9": [
           "t_tree_blackjack",
           "t_tree_walnut",
@@ -77,14 +74,55 @@
           "t_tree_hickory",
           "t_tree_almond",
           "t_tree_pecan"
-        ]
+        ],
+        ".": [
+          [
+            "t_grass",
+            5
+          ],
+          [
+            "t_grass_long",
+            2
+          ],
+          "t_dirt",
+          "t_shrub"
+        ],
+        "p": "t_grass_long",
+        "M": "t_grass_long",
+        "b": "t_grass_long",
+        "U": "t_grass_long",
+        "R": "t_grass_long",
+        "|": "t_rock_wall",
+        "z": "t_floor_blue",
+        "#": "t_wall_b",
+        "+": "t_door_red_c",
+        "o": "t_window_domestic",
+        "J": "t_carpet_green",
+        "W": "t_carpet_green",
+        "*": "t_carpet_green",
+        "%": "t_privacy_fence",
+        "<": "t_stairs_up",
+        "^": "t_privacy_fencegate_c",
+        "s": "t_sidewalk"
       },
       "furniture": {
-        "p": [ "f_datura", "f_bluebell", "f_mutpoppy", "f_dahlia", "f_flower_tulip", "f_chamomile", "f_flower_spurge", "f_lily" ],
+        "p": [
+          "f_datura",
+          "f_bluebell",
+          "f_mutpoppy",
+          "f_dahlia",
+          "f_flower_tulip",
+          "f_chamomile",
+          "f_flower_spurge",
+          "f_lily"
+        ],
         "b": "f_birdbath",
         "B": "f_bookcase",
         "Z": "f_bookcase",
-        "y": [ "f_indoor_plant_y", "f_indoor_plant" ],
+        "y": [
+          "f_indoor_plant_y",
+          "f_indoor_plant"
+        ],
         "f": "f_filing_cabinet",
         "?": "f_console_broken",
         "@": "f_sofa",
@@ -105,19 +143,82 @@
         "P": "f_glass_cabinet",
         "S": "f_sink"
       },
-      "toilets": { "&": {  } },
+      "toilets": {
+        "&": {}
+      },
       "items": {
-        "I": { "item": "office", "chance": 30 },
-        "f": { "item": "office_paper", "chance": 30 },
-        "L": { "item": "cleaning", "chance": 30 },
-        "y": { "item": "trash", "chance": 20, "repeat": [ 2, 4 ] },
-        "B": { "item": "magic_shop_books", "chance": 60, "repeat": [ 1, 2 ] },
-        "Z": { "item": "magic_shop_beginner_books", "chance": 100 },
-        "K": { "item": "magic_shop_clothes", "chance": 20, "repeat": [ 1, 2 ] },
-        "H": { "item": "magic_shop_wands", "chance": 20, "repeat": [ 1, 2 ] },
-        "P": { "item": "magic_shop_potions", "chance": 20, "repeat": [ 1, 2 ] },
-        "t": { "item": "magic_shop_books", "chance": 60, "repeat": [ 1, 2 ] },
-        "S": { "item": "softdrugs", "chance": 20, "repeat": [ 1, 2 ] }
+        "I": {
+          "item": "office",
+          "chance": 30
+        },
+        "f": {
+          "item": "office_paper",
+          "chance": 30
+        },
+        "L": {
+          "item": "cleaning",
+          "chance": 30
+        },
+        "y": {
+          "item": "trash",
+          "chance": 20,
+          "repeat": [
+            2,
+            4
+          ]
+        },
+        "B": {
+          "item": "magic_shop_books",
+          "chance": 60,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "Z": {
+          "item": "magic_shop_beginner_books",
+          "chance": 100
+        },
+        "K": {
+          "item": "magic_shop_clothes",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "H": {
+          "item": "magic_shop_wands",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "P": {
+          "item": "magic_shop_potions",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "t": {
+          "item": "magic_shop_books",
+          "chance": 60,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "S": {
+          "item": "softdrugs",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        }
       }
     }
   },
@@ -154,6 +255,7 @@
         "                        "
       ],
       "terrain": {
+        "4": "t_gutter_downspout",
         ".": "t_floor",
         " ": "t_open_air",
         "*": "t_tile_flat_roof",
@@ -162,10 +264,11 @@
         "%": "t_wall_b",
         "+": "t_door_c",
         ">": "t_stairs_down",
-        "#": "t_glass_railing",
-        "4": "t_gutter_downspout"
+        "#": "t_glass_railing"
       },
-      "toilets": { "&": {  } },
+      "toilets": {
+        "&": {}
+      },
       "furniture": {
         "@": "f_bed",
         "t": "f_table",
@@ -182,21 +285,84 @@
         "h": "f_chair",
         "O": "f_oven",
         "F": "f_fridge",
-        "y": [ "f_indoor_plant_y", "f_indoor_plant" ]
+        "y": [
+          "f_indoor_plant_y",
+          "f_indoor_plant"
+        ]
       },
       "items": {
-        "I": { "item": "office", "chance": 30 },
-        "Q": { "item": "shower", "chance": 30 },
-        "S": { "item": "softdrugs", "chance": 30 },
-        "@": { "item": "bed", "chance": 20, "repeat": [ 1, 2 ] },
-        "C": { "item": "kitchen_counters", "chance": 20, "repeat": [ 1, 2 ] },
-        "t": { "item": "dishes_dining", "chance": 30 },
-        "F": { "item": "fridge", "chance": 20, "repeat": [ 1, 2 ] },
-        "O": { "item": "oven", "chance": 20, "repeat": [ 1, 2 ] },
-        "K": { "item": "allclothes", "chance": 20, "repeat": [ 1, 2 ] },
-        "B": { "item": "magic_shop_books", "chance": 60, "repeat": [ 1, 2 ] }
+        "I": {
+          "item": "office",
+          "chance": 30
+        },
+        "Q": {
+          "item": "shower",
+          "chance": 30
+        },
+        "S": {
+          "item": "softdrugs",
+          "chance": 30
+        },
+        "@": {
+          "item": "bed",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "C": {
+          "item": "kitchen_counters",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "t": {
+          "item": "dishes_dining",
+          "chance": 30
+        },
+        "F": {
+          "item": "fridge",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "O": {
+          "item": "oven",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "K": {
+          "item": "allclothes",
+          "chance": 20,
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        "B": {
+          "item": "magic_shop_books",
+          "chance": 60,
+          "repeat": [
+            1,
+            2
+          ]
+        }
       },
-      "place_npcs": [ { "class": "healer_priest", "x": 10, "y": 10 } ]
+      "place_npcs": [
+        {
+          "class": "healer_priest",
+          "x": 10,
+          "y": 10
+        }
+      ]
     }
   },
   {
@@ -231,7 +397,9 @@
         "                        ",
         "                        "
       ],
-      "palettes": [ "roof_palette" ]
+      "palettes": [
+        "roof_palette"
+      ]
     }
   }
 ]

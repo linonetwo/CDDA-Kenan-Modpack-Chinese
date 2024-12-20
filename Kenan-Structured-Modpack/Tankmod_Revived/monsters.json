@@ -3,28 +3,47 @@
     "id": "mon_uafv_xm246e1",
     "looks_like": "mon_tankbot",
     "type": "MONSTER",
-    "name": { "str": "XM246E1 Mini-Tank UAFV" },
-    "description": "An experimental, heavily armored UGV the size of a small vehicle, its structure dominated by a bulky 120mm main gun.  It trundles along on armored treads, ponderous yet implacable.  If it's taking aim at you… run.",
+    "name": {
+      "str": "XM246E1 微型坦克UAFV"
+    },
+    "description": "一辆实验型重甲无人战车，与小汽车一样大，主要结构是一门重型120mm主炮。使用装甲履带移动，沉重而无情。如果它瞄准了你…快逃跑吧。",
     "default_faction": "defense_bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "diff": 45,
     "//": "If it were possible, volume would ideally be ten times this.",
     "volume": "1000 L",
     "weight": "45000 kg",
     "hp": 400,
     "speed": 30,
-    "material": [ "steel", "ceramic" ],
+    "material": [
+      "steel",
+      "ceramic"
+    ],
     "symbol": "R",
     "color": "dark_gray",
     "aggression": 50,
     "morale": 100,
     "melee_dice": 5,
     "melee_dice_sides": 10,
-    "armor": { "bash": 75, "cut": 50, "stab": 100, "bullet": 100, "acid": 10, "heat": 5 },
+    "armor": {
+      "bash": 75,
+      "cut": 50,
+      "stab": 100,
+      "bullet": 100,
+      "acid": 10,
+      "heat": 5
+    },
     "vision_day": 50,
-    "starting_ammo": { "120mm_usable_heat": 25 },
+    "starting_ammo": {
+      "120mm_usable_heat": 25
+    },
     "special_attacks": [
-      [ "PARROT", 20 ],
+      [
+        "PARROT",
+        20
+      ],
       {
         "type": "gun",
         "cooldown": 5,
@@ -32,20 +51,29 @@
         "gun_type": "tank_gun_auto_monster",
         "ammo_type": "120mm_usable",
         "max_ammo": 25,
-        "ranges": [ [ 10, 40, "DEFAULT" ] ],
+        "ranges": [
+          [
+            10,
+            40,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_player": true,
         "require_targeting_npc": true,
         "require_targeting_monster": true,
         "targeting_cost": 100,
         "targeting_sound": "\"120mm HEAT, up.  Targeting.  On the way.\"",
         "targeting_volume": 60,
-        "description": "The mini-tank fires its 120mm gun!",
-        "no_ammo_sound": "a hollow click!"
+        "description": "微型坦克发射了它的120mm机炮！",
+        "no_ammo_sound": "空洞的咔哒声！"
       }
     ],
     "death_function": {
       "corpse_type": "BROKEN",
-      "effect": { "id": "death_explosion_mon_hazmatbot", "hit_self": true },
+      "effect": {
+        "id": "death_explosion_mon_hazmatbot",
+        "hit_self": true
+      },
       "message": "The %s explodes!"
     },
     "flags": [
@@ -61,6 +89,7 @@
       "ELECTRONIC",
       "COLDPROOF",
       "NO_BREATHE",
+      "PATH_AVOID_DANGER_1",
       "LOUDMOVES",
       "DROPS_AMMO"
     ]

@@ -2,9 +2,13 @@
   {
     "id": "t7_elem_desecrate",
     "type": "SPELL",
-    "name": { "str": "Desecrate" },
-    "description": "Channels the underworld to create a rift that engulfs the foe with a towering hellfire, dealing massive <color_red>fire damage</color>, inflicts a long-lasting <color_yellow>curse</color> and leaves an intense cursed flame at that point.\n\nThis is a <color_pink>tier 7</color> spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "亵渎"
+    },
+    "description": "引导冥界制造裂缝，用高耸的地狱火吞没敌人，造成巨大的<color_red>火焰伤害</color>，造成持久的<color_yellow>诅咒，并在那个点留下强烈的诅咒火焰。\n\n这是一个<color_pink>第7层法术。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_spell_elem_curse",
@@ -23,7 +27,13 @@
     "field_id": "fd_fire_curse",
     "min_field_intensity": 3,
     "max_field_intensity": 3,
-    "flags": [ "SOMATIC", "VERBAL", "CONCENTRATE", "NO_LEGS", "RANDOM_DURATION" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE",
+      "NO_LEGS",
+      "RANDOM_DURATION"
+    ],
     "base_casting_time": 175,
     "min_duration": 500,
     "max_duration": 2000,
@@ -32,9 +42,13 @@
   {
     "id": "t7_elem_eternalfrost",
     "type": "SPELL",
-    "name": { "str": "Eternal Frost" },
-    "description": "A blast of sheer wind <color_yellow>flash-freezes</color> all creatures in an area, dealing <color_white>cold damage</color>.\n* Creates a lingering frost fields that freezes any creature that comes in contact.\n\nThis is a <color_pink>tier 7</color> spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "永恒之霜"
+    },
+    "description": "挂起一阵狂风<color_yellow>迅速冻结</color>某个区域内的所有生物，造成<color_white>寒冷伤害</color>。\n *制造一个持续的冰霜领域，冻结任何接触到的生物。\n\n这是一个<color_pink>七阶</color>法术。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "v_spell_elem_curse",
@@ -56,7 +70,13 @@
     "field_id": "fd_fire_curse",
     "min_field_intensity": 3,
     "max_field_intensity": 3,
-    "flags": [ "SOMATIC", "VERBAL", "CONCENTRATE", "NO_LEGS", "RANDOM_DURATION" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE",
+      "NO_LEGS",
+      "RANDOM_DURATION"
+    ],
     "base_casting_time": 175,
     "min_duration": 500,
     "max_duration": 2000,

@@ -2,7 +2,7 @@
   {
     "id": "kawaii_308AM",
     "type": "ammunition_type",
-    "name": ".308 AM",
+    "name": "A&M专用 .308弹",
     "default": "kawaii_308AM"
   },
   {
@@ -10,21 +10,35 @@
     "looks_like": "308",
     "type": "AMMO",
     "ammo_type": "kawaii_308AM",
-    "name": { "str": "A&M Custom .308 Rounds" },
-    "description": "For exclusive use in A&M Products。",
+    "name": {
+      "str": "A&M定制 .308弹"
+    },
+    "description": "A&M产品专用。",
     "weight": "3 g",
     "volume": "3 ml",
     "price": "0 cent",
-    "material": [ "kawaii_amsteel", "powder" ],
+    "material": [
+      "kawaii_amsteel",
+      "powder"
+    ],
     "symbol": "=",
     "color": "yellow",
     "count": 20,
     "stack_size": 20,
     "range": 50,
-    "damage": { "damage_type": "bullet", "amount": 45, "armor_penetration": 20 },
+    "damage": {
+      "damage_type": "bullet",
+      "amount": 45,
+      "armor_penetration": 20
+    },
     "dispersion": 20,
     "recoil": 500,
-    "effects": [ "COOKOFF" ],
-    "flags": [ "UNRECOVERABLE", "NO_SALVAGE" ]
+    "effects": [
+      "COOKOFF"
+    ],
+    "flags": [
+      "UNRECOVERABLE",
+      "NO_SALVAGE"
+    ]
   }
 ]

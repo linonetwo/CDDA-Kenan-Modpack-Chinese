@@ -5,38 +5,67 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_trait": "wsg2meet",
-      "yes": [ "What do you seek?", "What do you want?", "What are you looking for?" ],
-      "no": "Just come in..."
+      "yes": [
+        "你在寻求什么？",
+        "你想要什么？",
+        "您在找什么？"
+      ],
+      "no": "进来吧..."
     },
     "responses": [
       {
-        "text": "Let's talk for a moment.",
+        "text": "让我们谈谈。",
         "topic": "TALK_VAMP_WASTEGUARD2_ohrelly",
-        "effect": { "u_add_trait": "wsg2meet" },
+        "effect": {
+          "u_add_trait": "wsg2meet"
+        },
         "condition": {
           "and": [
-            { "u_has_trait": "undertradervampmark" },
-            { "u_has_trait": "commandovampmark" },
-            { "not": { "u_has_trait": "wsg2meet" } }
+            {
+              "u_has_trait": "undertradervampmark"
+            },
+            {
+              "u_has_trait": "commandovampmark"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg2meet"
+              }
+            }
           ]
         }
       },
       {
         "truefalsetext": {
-          "condition": { "u_has_trait": "wsg2meet" },
+          "condition": {
+            "u_has_trait": "wsg2meet"
+          },
           "true": "I want to talk with you...",
           "false": "Let's talk for a moment."
         },
         "topic": "TALK_VAMP_WASTEGUARD2_ohrelly",
         "condition": {
           "or": [
-            { "not": { "u_has_trait": "undertradervampmark" } },
-            { "not": { "u_has_trait": "commandovampmark" } },
-            { "u_has_trait": "wsg2meet" }
+            {
+              "not": {
+                "u_has_trait": "undertradervampmark"
+              }
+            },
+            {
+              "not": {
+                "u_has_trait": "commandovampmark"
+              }
+            },
+            {
+              "u_has_trait": "wsg2meet"
+            }
           ]
         }
       },
-      { "text": "Okay. Bye.", "topic": "TALK_DONE" }
+      {
+        "text": "好的，再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
@@ -44,267 +73,487 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_trait": "commandovampmark",
-      "yes": { "u_has_trait": "undertradervampmark", "yes": "I guess you're important. What is it?", "no": "No..." },
-      "no": "No!"
+      "yes": {
+        "u_has_trait": "undertradervampmark",
+        "yes": "我想你很重要。 怎么了？",
+        "no": "不..."
+      },
+      "no": "不！"
     },
     "responses": [
       {
-        "text": "Who are you?",
+        "text": "你是谁？",
         "topic": "TALK_VAMP_WASTEGUARD2_whoisyou",
-        "effect": { "u_add_trait": "wsg2who" },
+        "effect": {
+          "u_add_trait": "wsg2who"
+        },
         "condition": {
           "and": [
-            { "u_has_trait": "undertradervampmark" },
-            { "u_has_trait": "commandovampmark" },
-            { "not": { "u_has_trait": "wsg2who" } }
+            {
+              "u_has_trait": "undertradervampmark"
+            },
+            {
+              "u_has_trait": "commandovampmark"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg2who"
+              }
+            }
           ]
         }
       },
       {
-        "text": "The guard told me you need my help.",
+        "text": "那个守卫告诉我你需要帮助",
         "topic": "TALK_VAMP_WASTEGUARD2_wuthelp",
-        "condition": { "and": [ { "u_has_trait": "wsg2who" }, { "not": { "u_has_trait": "wsg2hired" } } ] }
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "wsg2who"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg2hired"
+              }
+            }
+          ]
+        }
       },
       {
-        "text": "Where am I?",
+        "text": "我现在在哪里？",
         "topic": "TALK_VAMP_WASTEGUARD2_whereisme",
-        "effect": { "u_add_trait": "wsg2where" },
+        "effect": {
+          "u_add_trait": "wsg2where"
+        },
         "condition": {
           "and": [
-            { "u_has_trait": "undertradervampmark" },
-            { "u_has_trait": "commandovampmark" },
-            { "not": { "u_has_trait": "wsg2where" } }
+            {
+              "u_has_trait": "undertradervampmark"
+            },
+            {
+              "u_has_trait": "commandovampmark"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg2where"
+              }
+            }
           ]
         }
       },
       {
-        "text": "How's the life here?",
+        "text": "这里的生活怎么样？",
         "topic": "TALK_VAMP_WASTEGUARD2_youliving",
-        "effect": { "u_add_trait": "wsg2life" },
+        "effect": {
+          "u_add_trait": "wsg2life"
+        },
         "condition": {
           "and": [
-            { "u_has_trait": "undertradervampmark" },
-            { "u_has_trait": "commandovampmark" },
-            { "not": { "u_has_trait": "wsg2life" } }
+            {
+              "u_has_trait": "undertradervampmark"
+            },
+            {
+              "u_has_trait": "commandovampmark"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg2life"
+              }
+            }
           ]
         }
       },
-      { "condition": "has_assigned_mission", "text": "About that job...", "topic": "TALK_MISSION_INQUIRE" },
-      { "text": "Something I need to do?", "topic": "TALK_MISSION_LIST", "condition": { "u_has_trait": "wsg2hired" } },
-      { "text": "I better get going...", "topic": "TALK_DONE" }
+      {
+        "condition": "has_assigned_mission",
+        "text": "关于那个任务……",
+        "topic": "TALK_MISSION_INQUIRE"
+      },
+      {
+        "text": "我需要做点什么？",
+        "topic": "TALK_MISSION_LIST",
+        "condition": {
+          "u_has_trait": "wsg2hired"
+        }
+      },
+      {
+        "text": "我得走了...",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_whereisme",
     "type": "talk_topic",
-    "dynamic_line": "You're at the wasteland outskirts, now move, mortal.",
+    "dynamic_line": "你现在在荒地郊区，快走开，人类。",
     "responses": [
-      { "text": "Wait. I want to know more about the places you know...", "topic": "TALK_VAMP_WASTEGUARD2_morelocs" },
-      { "text": "Okay.", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" },
-      { "text": "Okay, I'll move.", "topic": "TALK_DONE" }
+      {
+        "text": "等等，我想从你这了解更多关于这个地方的信息...",
+        "topic": "TALK_VAMP_WASTEGUARD2_morelocs"
+      },
+      {
+        "text": "好的。",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      },
+      {
+        "text": "好吧，我这就走。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_morelocs",
     "type": "talk_topic",
-    "dynamic_line": "Like what?",
+    "dynamic_line": "像是什么？",
     "responses": [
       {
-        "text": "About HIM's location?",
+        "text": "大师在哪里？",
         "topic": "TALK_VAMP_WASTEGUARD2_himloc",
-        "condition": { "u_has_trait": "undertradertalkedhim" }
+        "condition": {
+          "u_has_trait": "undertradertalkedhim"
+        }
       },
-      { "text": "Actually, nevermind...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "实际上...没什么...",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_himloc",
     "type": "talk_topic",
-    "dynamic_line": "I know you've been told its a deep secret, but why do you mind about our master?",
+    "dynamic_line": "我猜有人已经告诉你了这是一个很深的秘密，你为什么这么关注我们的大师呢？",
     "responses": [
       {
-        "text": "I'd like to meet HIM.",
+        "text": "我想见见他。",
         "topic": "TALK_VAMP_WASTEGUARD2_seehimlol",
-        "effect": { "u_add_trait": "wsg2himmeet" },
-        "condition": { "not": { "u_has_trait": "wsg2himmeet" } }
+        "effect": {
+          "u_add_trait": "wsg2himmeet"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himmeet"
+          }
+        }
       },
       {
-        "text": "HE looks questionable.",
+        "text": "他看起来很可疑。",
         "topic": "TALK_VAMP_WASTEGUARD2_lookhimlol",
-        "effect": { "u_add_trait": "wsg2himlook" },
-        "condition": { "not": { "u_has_trait": "wsg2himlook" } }
+        "effect": {
+          "u_add_trait": "wsg2himlook"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himlook"
+          }
+        }
       },
       {
-        "text": "I want to know HIS upcoming actions.",
+        "text": "我想知道他接下来要做什么。",
         "topic": "TALK_VAMP_WASTEGUARD2_actshimlol",
-        "effect": { "u_add_trait": "wsg2himact" },
-        "condition": { "not": { "u_has_trait": "wsg2himact" } }
+        "effect": {
+          "u_add_trait": "wsg2himact"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himact"
+          }
+        }
       },
-      { "text": "Forget it...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "当我没问...",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_seehimlol",
     "type": "talk_topic",
-    "dynamic_line": "In which will never happen to a human.",
+    "dynamic_line": "人类是不可能见到的。",
     "responses": [
       {
-        "text": "HE looks questionable.",
+        "text": "他看起来很可疑。",
         "topic": "TALK_VAMP_WASTEGUARD2_lookhimlol",
-        "effect": { "u_add_trait": "wsg2himlook" },
-        "condition": { "not": { "u_has_trait": "wsg2himlook" } }
+        "effect": {
+          "u_add_trait": "wsg2himlook"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himlook"
+          }
+        }
       },
       {
-        "text": "I want to know HIS upcoming actions.",
+        "text": "我想知道他接下来要做什么。",
         "topic": "TALK_VAMP_WASTEGUARD2_actshimlol",
-        "effect": { "u_add_trait": "wsg2himact" },
-        "condition": { "not": { "u_has_trait": "wsg2himact" } }
+        "effect": {
+          "u_add_trait": "wsg2himact"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himact"
+          }
+        }
       },
       {
-        "text": "I guess I've talked about everything...",
+        "text": "我想我该谈的都谈过了...",
         "topic": "TALK_VAMP_WASTEGUARD2_secrethim",
-        "effect": { "u_add_trait": "wsg2himsecret" },
+        "effect": {
+          "u_add_trait": "wsg2himsecret"
+        },
         "condition": {
           "and": [
-            { "u_has_trait": "wsg2himmeet" },
-            { "u_has_trait": "wsg2himlook" },
-            { "u_has_trait": "wsg2himact" },
-            { "not": { "u_has_trait": "wsg2himsecret" } }
+            {
+              "u_has_trait": "wsg2himmeet"
+            },
+            {
+              "u_has_trait": "wsg2himlook"
+            },
+            {
+              "u_has_trait": "wsg2himact"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg2himsecret"
+              }
+            }
           ]
         }
       },
-      { "text": " That sucks...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "真糟糕...",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_lookhimlol",
     "type": "talk_topic",
-    "dynamic_line": "I know. HE's full of mysteries even me can't talk about.",
+    "dynamic_line": "我明白。他充满了神秘，甚至我都无从谈起。",
     "responses": [
       {
-        "text": "I'd like to meet HIM.",
+        "text": "我想见见他。",
         "topic": "TALK_VAMP_WASTEGUARD2_seehimlol",
-        "effect": { "u_add_trait": "wsg2himmeet" },
-        "condition": { "not": { "u_has_trait": "wsg2himmeet" } }
+        "effect": {
+          "u_add_trait": "wsg2himmeet"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himmeet"
+          }
+        }
       },
       {
-        "text": "I want to know HIS upcoming actions.",
+        "text": "我想知道他接下来要做什么。",
         "topic": "TALK_VAMP_WASTEGUARD2_actshimlol",
-        "effect": { "u_add_trait": "wsg2himact" },
-        "condition": { "not": { "u_has_trait": "wsg2himact" } }
+        "effect": {
+          "u_add_trait": "wsg2himact"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himact"
+          }
+        }
       },
       {
-        "text": "I guess I've talked about everything...",
+        "text": "我想我该谈的都谈过了...",
         "topic": "TALK_VAMP_WASTEGUARD2_secrethim",
-        "effect": { "u_add_trait": "wsg2himsecret" },
+        "effect": {
+          "u_add_trait": "wsg2himsecret"
+        },
         "condition": {
           "and": [
-            { "u_has_trait": "wsg2himmeet" },
-            { "u_has_trait": "wsg2himlook" },
-            { "u_has_trait": "wsg2himact" },
-            { "not": { "u_has_trait": "wsg2himsecret" } }
+            {
+              "u_has_trait": "wsg2himmeet"
+            },
+            {
+              "u_has_trait": "wsg2himlook"
+            },
+            {
+              "u_has_trait": "wsg2himact"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg2himsecret"
+              }
+            }
           ]
         }
       },
-      { "text": "Okay...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "好吧……",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_actshimlol",
     "type": "talk_topic",
-    "dynamic_line": "Trust me, human, HIS movements are for the good cause.",
+    "dynamic_line": "相信我，人类，他的行动只会有好的结果。",
     "responses": [
       {
-        "text": "I'd like to meet HIM.",
+        "text": "我想见见他。",
         "topic": "TALK_VAMP_WASTEGUARD2_seehimlol",
-        "effect": { "u_add_trait": "wsg2himmeet" },
-        "condition": { "not": { "u_has_trait": "wsg2himmeet" } }
+        "effect": {
+          "u_add_trait": "wsg2himmeet"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himmeet"
+          }
+        }
       },
       {
-        "text": "HE looks questionable.",
+        "text": "他看起来很可疑。",
         "topic": "TALK_VAMP_WASTEGUARD2_lookhimlol",
-        "effect": { "u_add_trait": "wsg2himlook" },
-        "condition": { "not": { "u_has_trait": "wsg2himlook" } }
+        "effect": {
+          "u_add_trait": "wsg2himlook"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg2himlook"
+          }
+        }
       },
       {
-        "text": "I guess I've talked about everything...",
+        "text": "我想我该谈的都谈过了...",
         "topic": "TALK_VAMP_WASTEGUARD2_secrethim",
-        "effect": { "u_add_trait": "wsg2himsecret" },
+        "effect": {
+          "u_add_trait": "wsg2himsecret"
+        },
         "condition": {
           "and": [
-            { "u_has_trait": "wsg2himmeet" },
-            { "u_has_trait": "wsg2himlook" },
-            { "u_has_trait": "wsg2himact" },
-            { "not": { "u_has_trait": "wsg2himsecret" } }
+            {
+              "u_has_trait": "wsg2himmeet"
+            },
+            {
+              "u_has_trait": "wsg2himlook"
+            },
+            {
+              "u_has_trait": "wsg2himact"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg2himsecret"
+              }
+            }
           ]
         }
       },
-      { "text": "Oh, okay then...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "哦，好吧...",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_secrethim",
     "type": "talk_topic",
-    "dynamic_line": "Don't worry, mortal. Eventually, you'll meet someone to quench your thirst for deeper answers.",
+    "dynamic_line": "别担心，人类。最终你会遇到一个人来满足你对更深刻答案的渴望",
     "responses": [
-      { "text": "Uhh, okay...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" },
-      { "text": "Uhh, okay... I'll expect that.", "topic": "TALK_DONE" }
+      {
+        "text": "额，好吧...",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      },
+      {
+        "text": "额，好吧... 我会期待着。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_whoisyou",
     "type": "talk_topic",
-    "dynamic_line": "Nah, I'm just a guard here doing my job. If you want to know more, seek the guard in the kitchen.",
+    "dynamic_line": "不，我只是一个守在这里的守卫，如果你想知道更多，去找厨房的警卫。",
     "responses": [
       {
-        "text": "He told me to help you with something.",
+        "text": "他让我帮你做点事。",
         "topic": "TALK_VAMP_WASTEGUARD2_wuthelp",
-        "condition": { "u_has_trait": "wsg1hire" }
+        "condition": {
+          "u_has_trait": "wsg1hire"
+        }
       },
-      { "text": "Okay, I'm going...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "好吧，我走了...",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_wuthelp",
     "type": "talk_topic",
-    "dynamic_line": "So you're interested in helping us out with our problems... But I don't want to get you in trouble.",
+    "dynamic_line": "所以你有兴趣帮我们解决问题…但我不想让你陷入麻烦。",
     "responses": [
-      { "text": "I'll take the risk!", "topic": "TALK_VAMP_WASTEGUARD2_helpaccept", "effect": { "u_add_trait": "wsg2hired" } },
-      { "text": "Forget it, I'm out of that!", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "我愿意冒这个险！",
+        "topic": "TALK_VAMP_WASTEGUARD2_helpaccept",
+        "effect": {
+          "u_add_trait": "wsg2hired"
+        }
+      },
+      {
+        "text": "当我没说，再见！",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_helpaccept",
     "type": "talk_topic",
-    "dynamic_line": "If you insist...",
-    "responses": [ { "text": "Okay.", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" } ]
+    "dynamic_line": "如果你坚持的话...",
+    "responses": [
+      {
+        "text": "好的。",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_youliving",
     "type": "talk_topic",
-    "dynamic_line": "We've got some cows here as our food source and a water nearby for humans to quench their thirst.",
+    "dynamic_line": "我们这里有一些奶牛作为我们的食物来源，附近有水供人类解渴。",
     "responses": [
-      { "text": "I mean what are you vampires drinking?", "topic": "TALK_VAMP_WASTEGUARD2_drunk" },
-      { "text": "Cows? Where'd you get them?", "topic": "TALK_VAMP_WASTEGUARD2_moo" },
-      { "text": "Okay...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "我是说...你们是吸血鬼吧？喝什么来着？",
+        "topic": "TALK_VAMP_WASTEGUARD2_drunk"
+      },
+      {
+        "text": "奶牛？ 你们在哪儿搞到的？",
+        "topic": "TALK_VAMP_WASTEGUARD2_moo"
+      },
+      {
+        "text": "好吧……",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_drunk",
     "type": "talk_topic",
-    "dynamic_line": "Blood, ofcourse! We drink blood from the cows as our substitute to human's. Don't worry about the refugees here, we tend to protect them as ordered.",
+    "dynamic_line": "当然是血液啊！我们喝奶牛的血来代替人的血。别担心这里的难民，我们会按命令保护他们。",
     "responses": [
-      { "text": "Cows? Where'd you get them?", "topic": "TALK_VAMP_WASTEGUARD2_moo" },
-      { "text": "Oh, okay...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "奶牛？ 你们在哪儿搞到的？",
+        "topic": "TALK_VAMP_WASTEGUARD2_moo"
+      },
+      {
+        "text": "哦，好吧...",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_WASTEGUARD2_moo",
     "type": "talk_topic",
-    "dynamic_line": "We herd them from the wilderness. We don't know if they came from the nearest farm, but certainly they are free from infection.",
+    "dynamic_line": "我们把他们从荒野赶了出来。我们不知道他们是否来自附近的农场，但至少肯定没有感染。",
     "responses": [
-      { "text": "I mean what are you vampires drinking?", "topic": "TALK_VAMP_WASTEGUARD2_drunk" },
-      { "text": "Oh, okay...", "topic": "TALK_VAMP_WASTEGUARD2_ohrelly" }
+      {
+        "text": "我是说...你们是吸血鬼吧？喝什么来着？",
+        "topic": "TALK_VAMP_WASTEGUARD2_drunk"
+      },
+      {
+        "text": "哦，好吧...",
+        "topic": "TALK_VAMP_WASTEGUARD2_ohrelly"
+      }
     ]
   }
 ]

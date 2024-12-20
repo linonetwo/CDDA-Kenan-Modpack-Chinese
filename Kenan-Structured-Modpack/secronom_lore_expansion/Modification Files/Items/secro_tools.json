@@ -1,12 +1,20 @@
 [
   {
-    "melee_damage": { "bash": 3 },
-    "charges_per_use": 2,
+    "melee_damage": {
+      "bash": 3
+    },
+    "charges_per_use": 50,
     "color": "red",
-    "description": "An experimental, syringe-like device. Labeled with \"Secronom Project\", it is used to forcefully feed a flesh vessel.",
+    "description": "一种类似注射器的实验装置。它被标记为“Secronom项目”，用于给肉食容器强制喂食。",
     "id": "secro_tool_finfuse",
-    "material": [ "steel", "glass", "plastic" ],
-    "name": { "str": "SP - flesh injector" },
+    "material": [
+      "steel",
+      "glass",
+      "plastic"
+    ],
+    "name": {
+      "str": "SP-喷油器"
+    },
     "price": "50 USD",
     "price_postapoc": "1 USD",
     "pocket_data": [
@@ -17,14 +25,24 @@
         "max_contains_volume": "20 L",
         "max_contains_weight": "20 kg",
         "item_restriction": [
+          "light_disposable_cell",
           "light_minus_disposable_cell",
+          "light_plus_battery_cell",
           "light_battery_cell",
-          "light_minus_battery_cell"
+          "light_minus_battery_cell",
+          "light_atomic_battery_cell",
+          "light_minus_atomic_battery_cell"
         ]
       }
     ],
-    "qualities": [ [ "SECRO_FINFUSE", 1 ] ],
+    "qualities": [
+      [
+        "SECRO_FINFUSE",
+        1
+      ]
+    ],
     "symbol": "o",
+    "to_hit": -1,
     "type": "TOOL",
     "volume": "550 ml",
     "weight": "275 g"

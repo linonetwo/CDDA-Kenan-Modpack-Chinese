@@ -1,33 +1,58 @@
 [
   {
-    "dynamic_line": "Hello outsider",
+    "dynamic_line": "你好，外来者。",
     "id": "TALK_HUMAN_WASTELAND2_talkme",
     "responses": [
-      { "text": "I want to talk.", "topic": "TALK_HUMAN_WASTELAND2_maintalk" },
-      { "text": "Hi and bye.", "topic": "TALK_DONE" }
+      {
+        "text": "我想和你谈一谈",
+        "topic": "TALK_HUMAN_WASTELAND2_maintalk"
+      },
+      {
+        "text": "你好，再见。",
+        "topic": "TALK_DONE"
+      }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "About what?",
+    "dynamic_line": "关于什么？",
     "id": "TALK_HUMAN_WASTELAND2_maintalk",
     "responses": [
-      { "text": "What are you doing here?", "topic": "TALK_HUMAN_WASTELAND2_here" },
-      { "text": "Got a problem?", "topic": "TALK_HUMAN_WASTELAND2_job" },
-      { "text": "Bye.", "topic": "TALK_DONE" }
+      {
+        "text": "你在这里干什么？",
+        "topic": "TALK_HUMAN_WASTELAND2_here"
+      },
+      {
+        "text": "有什么麻烦吗？",
+        "topic": "TALK_HUMAN_WASTELAND2_job"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "I guard here, most of the time. But sometimes I do few things other than that.",
+    "dynamic_line": "我大部分时间都在这里守卫。但有时我也会做一些其他的事情。",
     "id": "TALK_HUMAN_WASTELAND2_here",
-    "responses": [ { "text": "Got it.", "topic": "TALK_HUMAN_WASTELAND2_maintalk" } ],
+    "responses": [
+      {
+        "text": "知道了。",
+        "topic": "TALK_HUMAN_WASTELAND2_maintalk"
+      }
+    ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "Nope.",
+    "dynamic_line": "不行。",
     "id": "TALK_HUMAN_WASTELAND2_job",
-    "responses": [ { "text": "You said it...", "topic": "TALK_HUMAN_WASTELAND2_maintalk" } ],
+    "responses": [
+      {
+        "text": "你已经说过了。",
+        "topic": "TALK_HUMAN_WASTELAND2_maintalk"
+      }
+    ],
     "type": "talk_topic"
   }
 ]

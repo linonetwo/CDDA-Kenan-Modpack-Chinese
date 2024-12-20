@@ -4,36 +4,88 @@
     "type": "talk_topic",
     "responses": [
       {
-        "text": "[MISSION] I've been asked to find information on shipments between laboratories that may have been handling anomalies.  Can you help me with that?",
+        "text": "[任务]我被要求寻找可能处理异常情况的实验室之间货物的信息。你能帮我吗？",
         "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_1",
         "condition": {
           "and": [
-            { "not": { "compare_string": [ "yes", { "u_val": "nicholas_mission_2_mid" } ] } },
-            { "u_has_mission": "MISSION_CF_PURIFIER_1_2" },
-            { "compare_string": [ "yes", { "u_val": "dialogue_intercom_completed_robofac_intercom_1" } ] }
+            {
+              "not": {
+                "u_has_var": "nicholas_mission_2_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_PURIFIER_1_2"
+            },
+            {
+              "u_has_var": "completed_robofac_intercom_1",
+              "type": "dialogue",
+              "context": "intercom",
+              "value": "yes"
+            }
           ]
         }
       },
       {
-        "text": "I've been sent to ask about recent attacks on survivors by anomalous creatures.  Know anything about that?",
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
         "condition": {
           "and": [
-            { "compare_string": [ "yes", { "u_val": "johnathan_prelude_mid" } ] },
-            { "not": { "compare_string": [ "yes", { "npc_val": "johnathan_prelude_mid" } ] } },
-            { "not": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_5" } ] } },
-            { "compare_string": [ "yes", { "u_val": "dialogue_intercom_completed_robofac_intercom_1" } ] }
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_var": "completed_robofac_intercom_1",
+              "type": "dialogue",
+              "context": "intercom",
+              "value": "yes"
+            }
           ]
         },
         "topic": "TALK_ROBOFAC_INTERCOM_GM_PRELUDE"
       },
       {
-        "text": "[MISSION] I've been asked to help attract work for another community of survivors.  Know of anyone who could help with that?",
+        "text": " [任务]有人要求我帮助吸引另一个幸存者社区的工作。有人知道可以提供帮助的人吗？",
         "topic": "TALK_ROBOFAC_INTERCOM_MISSION_4",
         "condition": {
           "and": [
-            { "not": { "compare_string": [ "yes", { "u_val": "sofia_allies_secured" } ] } },
-            { "u_has_mission": "MISSION_CF_REP_4" },
-            { "compare_string": [ "yes", { "u_val": "dialogue_intercom_completed_robofac_intercom_1" } ] }
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            },
+            {
+              "u_has_var": "completed_robofac_intercom_1",
+              "type": "dialogue",
+              "context": "intercom",
+              "value": "yes"
+            }
           ]
         }
       }
@@ -46,7 +98,9 @@
     "responses": [
       {
         "text": "Here's a printout of what we know so far.",
-        "condition": { "u_has_item": "cf_purifier_project_data" },
+        "condition": {
+          "u_has_item": "cf_purifier_project_data"
+        },
         "switch": true,
         "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_2"
       },
@@ -56,26 +110,40 @@
         "default": true,
         "topic": "TALK_DONE"
       },
-      { "text": "Never mind.", "topic": "TALK_ROBOFAC_INTERCOM" }
+      {
+        "text": "算了。",
+        "topic": "TALK_ROBOFAC_INTERCOM"
+      }
     ]
   },
   {
     "id": "TALK_ROBOFAC_INTERCOM_NICHOLAS_2",
     "type": "talk_topic",
     "dynamic_line": "Let's see then.  Well this looks like an absolute mess, I'm not sure where to start with this shitshow.  Wait, you can't be serious.",
-    "responses": [ { "text": "What is it?", "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_3" } ]
+    "responses": [
+      {
+        "text": "干什么？",
+        "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_3"
+      }
+    ]
   },
   {
     "id": "TALK_ROBOFAC_INTERCOM_NICHOLAS_3",
     "type": "talk_topic",
     "dynamic_line": "Whoever put together this wishlist of yours has been following those quacks over in the Y-series anomalous materials research directives.  There's a very low chance they'd have anything of interest to us, but I think can work something out.",
     "responses": [
-      { "text": "If you can help us figure this out, ask away.", "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_4" },
+      {
+        "text": "If you can help us figure this out, ask away.",
+        "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_4"
+      },
       {
         "text": "What can you tell me about this \"research directive\" you mentioned?",
         "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_5"
       },
-      { "text": "Nevermind, I'll find someone else to help with this.", "topic": "TALK_ROBOFAC_INTERCOM" }
+      {
+        "text": "Nevermind, I'll find someone else to help with this.",
+        "topic": "TALK_ROBOFAC_INTERCOM"
+      }
     ]
   },
   {
@@ -84,11 +152,16 @@
     "dynamic_line": "During the riots, arrangements were made to transport sensitive materials away from research facilities deemed at-risk.  This included a few important materials from XEDRA sites in the area, as well as those other pet projects.  We know the location of a small-scale staging area for these arrangements.  The portal storms quickly warranted an adjustment in priorities, but if the site is intact you might find something useful to us.",
     "responses": [
       {
-        "text": "I'll do it!",
+        "text": "[确认]我去做吧！",
         "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_ACCEPT",
-        "effect": { "add_mission": "MISSION_CF_PURIFIER_1_INTERLUDE_3" }
+        "effect": {
+          "add_mission": "MISSION_CF_PURIFIER_1_INTERLUDE_3"
+        }
       },
-      { "text": "Not interested.", "topic": "TALK_DONE" }
+      {
+        "text": "[取消]不感兴趣。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
@@ -96,8 +169,14 @@
     "type": "talk_topic",
     "dynamic_line": "Very little intel worth talking about.  Some of them had minor connections to superportal research and advanced materials departments, but for the most part all we've ever heard from them involved dead-end projects bumbling about with xenomaterials.",
     "responses": [
-      { "text": "Right.  You mentioned having a deal in mind?", "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_4" },
-      { "text": "I'll ask around and see if anyone else can help.", "topic": "TALK_DONE" }
+      {
+        "text": "Right.  You mentioned having a deal in mind?",
+        "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_4"
+      },
+      {
+        "text": "I'll ask around and see if anyone else can help.",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
@@ -105,15 +184,26 @@
     "type": "talk_topic",
     "dynamic_line": "What we're looking for is a sample of something known as t-substrate.  All you need to know is it's a black crystal suspended in acrylic.  Retrieve that if you find any there, and if you're lucky your scavenger friends will find whatever other nonsense they are after.",
     "responses": [
-      { "text": "Got any advice?", "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_ADVICE" },
-      { "text": "I'll be back soon!", "topic": "TALK_DONE" }
+      {
+        "text": "能给点建议吗？",
+        "topic": "TALK_ROBOFAC_INTERCOM_NICHOLAS_ADVICE"
+      },
+      {
+        "text": "我很快就回来！",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_ROBOFAC_INTERCOM_NICHOLAS_ADVICE",
     "type": "talk_topic",
     "dynamic_line": "It's a small topside facility, basically a glorified warehouse with some autonomous security.  Try not to get shot, don't drink anything in unlabeled glass bottles, and I'm sure you're figure out the rest on your own.",
-    "responses": [ { "text": "Got it.", "topic": "TALK_DONE" } ]
+    "responses": [
+      {
+        "text": "知道了。",
+        "topic": "TALK_DONE"
+      }
+    ]
   },
   {
     "id": "TALK_ROBOFAC_INTERCOM_GM_PRELUDE",
@@ -124,6 +214,11 @@
     "id": "TALK_ROBOFAC_INTERCOM_MISSION_4",
     "type": "talk_topic",
     "dynamic_line": "Does it look like we have the means to go gallivanting about across the surface meddling with whatever communities are out there?  If any of our other contacts are loitering around outside, try bothering them.  Just don't waste too much of their time either, we have a lot that needs doing.",
-    "responses": [ { "text": "…", "topic": "TALK_ROBOFAC_INTERCOM" } ]
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_ROBOFAC_INTERCOM"
+      }
+    ]
   }
 ]

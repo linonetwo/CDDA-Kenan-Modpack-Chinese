@@ -3,57 +3,258 @@
     "id": "dboard_board",
     "copy-from": "base_board_abstract",
     "type": "vehicle_part",
-    "name": { "str": "diamond barrier" },
+    "name": {
+      "str": "钻石屏障"
+    },
     "item": "diamondplate",
     "location": "center",
     "color": "white",
     "broken_color": "white",
-    "description": "A transparent, solid sheet of self-sustaining crystals.",
+    "description": "一片透明而坚固的可再生的钻石结晶隔板。",
     "durability": 5000,
-    "breaks_into": [ { "item": "spiral_matrix" }, { "item": "dshards", "count": [ 50, 100 ] }, { "item": "dcluster", "count": [ 2, 6 ] } ],
+    "breaks_into": [
+      {
+        "item": "spiral_matrix"
+      },
+      {
+        "item": "dshards",
+        "count": [
+          50,
+          100
+        ]
+      },
+      {
+        "item": "dcluster",
+        "count": [
+          2,
+          6
+        ]
+      }
+    ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "45 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 7 ] ], "time": "25 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "45 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "OBSTACLE", "WINDOW", "FULL_BOARD" ]
+    "flags": [
+      "OBSTACLE",
+      "WINDOW",
+      "FULL_BOARD"
+    ]
   },
   {
     "id": "dframe_frame",
     "copy-from": "frame_abstract",
     "type": "vehicle_part",
-    "name": { "str": "diamond frame" },
+    "name": {
+      "str": "钻石车架"
+    },
     "item": "diamondframe",
     "location": "structure",
     "color": "white",
     "broken_color": "white",
-    "description": "A framework of super-strong crystal.  Other vehicle components can be mounted on it, and it can be attached to other frames to increase the vehicle's size.",
+    "description": "一个特别坚固的钻石结晶车辆框架。其他载具部件能够安装在它上面，在它四周增加新的车辆框架，就可以增加车辆大小。",
     "durability": 3000,
-    "breaks_into": [ { "item": "spiral_matrix" }, { "item": "dshards", "count": [ 75, 150 ] }, { "item": "dcluster", "count": [ 4, 8 ] } ],
+    "breaks_into": [
+      {
+        "item": "spiral_matrix"
+      },
+      {
+        "item": "dshards",
+        "count": [
+          75,
+          150
+        ]
+      },
+      {
+        "item": "dcluster",
+        "count": [
+          4,
+          8
+        ]
+      }
+    ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "45 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 7 ] ], "time": "25 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "45 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "MOUNTABLE", "INITIAL_PART" ]
+    "flags": [
+      "MOUNTABLE",
+      "INITIAL_PART"
+    ]
   },
   {
     "id": "plating_diamond",
     "type": "vehicle_part",
-    "name": { "str": "diamond plating" },
+    "name": {
+      "str": "钻石装甲板"
+    },
     "item": "diamondplate",
     "location": "armor",
-    "variants": [ { "symbols": ")", "symbols_broken": ")" } ],
+    "variants": [
+      {
+        "symbols": ")",
+        "symbols_broken": ")"
+      }
+    ],
     "color": "white",
     "broken_color": "white",
-    "description": "Transparent crystal armor plate.  Will partially protect other components on the same frame from damage.",
+    "description": "一块透明的钻石结晶装甲板。能够部分保护安装在此处车架的其他部件免受伤害。",
     "durability": 5000,
-    "breaks_into": [ { "item": "spiral_matrix" }, { "item": "dshards", "count": [ 50, 100 ] }, { "item": "dcluster", "count": [ 2, 6 ] } ],
+    "breaks_into": [
+      {
+        "item": "spiral_matrix"
+      },
+      {
+        "item": "dshards",
+        "count": [
+          50,
+          100
+        ]
+      },
+      {
+        "item": "dcluster",
+        "count": [
+          2,
+          6
+        ]
+      }
+    ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 5 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 3 ] ], "time": "45 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 6 ] ], "time": "25 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            5
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "45 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "ARMOR", "WINDOW" ]
+    "flags": [
+      "ARMOR",
+      "WINDOW"
+    ]
   }
 ]

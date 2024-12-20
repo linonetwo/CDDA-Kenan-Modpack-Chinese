@@ -2,89 +2,359 @@
   {
     "id": "tread1",
     "type": "vehicle_part",
-    "name": { "str": "rubber treads" },
+    "name": {
+      "str": "橡胶履带"
+    },
     "item": "tread1",
     "location": "under",
     "color": "dark_gray",
     "broken_color": "light_gray",
     "durability": 2000,
     "damage_modifier": 50,
-    "description": "A section of continuous track, the kind mounted on construction vehicles and military fighting vehicles.  It acts as a wheel, and the broad surface provides plenty of traction to move heavy vehicles off-road, but at the cost of speed due to the heavy weight.",
+    "description": "一条连续履带中的一段，安装在工程载具或是军用载具上的那种。它能够充当车轮，宽阔的接触面让它为重型载具提供更好的越野性能，但是因其重量和增加的阻力会降低载具速度。",
     "breaks_into": [
-      { "item": "steel_lump", "count": [ 2, 4 ] },
-      { "item": "steel_chunk", "count": [ 6, 12 ] },
-      { "item": "scrap", "count": [ 8, 18 ] },
-      { "item": "chunk_rubber", "count": [ 10, 20 ] },
-      { "item": "chain", "count": [ 0, 1 ] }
+      {
+        "item": "steel_lump",
+        "count": [
+          2,
+          4
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          6,
+          12
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          8,
+          18
+        ]
+      },
+      {
+        "item": "plastic_chunk",
+        "count": [
+          50,
+          120
+        ]
+      },
+      {
+        "item": "chain",
+        "count": [
+          1,
+          3
+        ]
+      }
     ],
     "rolling_resistance": 3.5,
-    "wheel_offroad_rating": 1.0,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 1 ], "ROAD": [ 0, 1 ] },
+    "wheel_offroad_rating": 1,
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        1
+      ],
+      "ROAD": [
+        0,
+        1
+      ]
+    },
     "contact_area": 900,
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 4 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 7 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "WHEEL", "UNSTABLE_WHEEL", "VARIABLE_SIZE", "MULTISQUARE", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "flags": [
+      "WHEEL",
+      "UNSTABLE_WHEEL",
+      "VARIABLE_SIZE",
+      "MULTISQUARE",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   },
   {
     "id": "tread2",
     "type": "vehicle_part",
-    "name": { "str": "steel treads" },
+    "name": {
+      "str": "钢履带"
+    },
     "item": "tread2",
     "location": "under",
     "color": "dark_gray",
     "broken_color": "light_gray",
     "durability": 3500,
     "damage_modifier": 50,
-    "description": "A section of continuous track, the kind mounted on construction vehicles and military fighting vehicles.  It acts as a wheel, and the broad surface provides plenty of traction to move heavy vehicles off-road, but at the cost of speed due to the heavy weight.",
+    "description": "一条连续履带中的一段，安装在工程载具或是军用载具上的那种。它能够充当车轮，宽阔的接触面让它为重型载具提供更好的越野性能，但是因其重量和增加的阻力会降低载具速度。",
     "breaks_into": [
-      { "item": "steel_lump", "count": [ 8, 16 ] },
-      { "item": "steel_chunk", "count": [ 20, 40 ] },
-      { "item": "scrap", "count": [ 50, 75 ] },
-      { "item": "chain", "count": [ 0, 1 ] }
+      {
+        "item": "steel_lump",
+        "count": [
+          8,
+          16
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          20,
+          40
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          50,
+          75
+        ]
+      },
+      {
+        "item": "chain",
+        "count": [
+          3,
+          6
+        ]
+      }
     ],
     "rolling_resistance": 3,
-    "wheel_offroad_rating": 1.0,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 1 ], "ROAD": [ 0, 1 ] },
+    "wheel_offroad_rating": 1,
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        1
+      ],
+      "ROAD": [
+        0,
+        1
+      ]
+    },
     "contact_area": 2500,
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 7 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 5 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 8 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            5
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            8
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "WHEEL", "UNSTABLE_WHEEL", "VARIABLE_SIZE", "MULTISQUARE", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "flags": [
+      "WHEEL",
+      "UNSTABLE_WHEEL",
+      "VARIABLE_SIZE",
+      "MULTISQUARE",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   },
   {
     "id": "tread3",
     "type": "vehicle_part",
-    "name": { "str": "tank treads" },
+    "name": {
+      "str": "坦克履带"
+    },
     "item": "tread3",
     "location": "under",
     "color": "dark_gray",
     "broken_color": "light_gray",
     "durability": 5000,
     "damage_modifier": 50,
-    "description": "A section of continuous track, the kind mounted on construction vehicles and military fighting vehicles.  It acts as a wheel, and the broad surface provides plenty of traction to move heavy vehicles off-road, but at the cost of speed due to the heavy weight.",
+    "description": "一条连续履带中的一段，安装在工程载具或是军用载具上的那种。它能够充当车轮，宽阔的接触面让它为重型载具提供更好的越野性能，但是因其重量和增加的阻力会降低载具速度。",
     "breaks_into": [
-      { "item": "steel_lump", "count": [ 12, 30 ] },
-      { "item": "steel_chunk", "count": [ 25, 60 ] },
-      { "item": "scrap", "count": [ 60, 120 ] },
-      { "item": "chain", "count": [ 0, 1 ] }
+      {
+        "item": "steel_lump",
+        "count": [
+          12,
+          30
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          25,
+          60
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          60,
+          120
+        ]
+      },
+      {
+        "item": "chain",
+        "count": [
+          3,
+          4
+        ]
+      }
     ],
     "rolling_resistance": 3,
-    "wheel_offroad_rating": 1.0,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 1 ], "ROAD": [ 0, 1 ] },
+    "wheel_offroad_rating": 1,
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        1
+      ],
+      "ROAD": [
+        0,
+        1
+      ]
+    },
     "contact_area": 3600,
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 7 ] ], "time": "60 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "removal": { "skills": [ [ "mechanics", 5 ] ], "time": "30 m", "using": [ [ "vehicle_wrench_2", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 8 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            7
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            5
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            8
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "WHEEL", "UNSTABLE_WHEEL", "VARIABLE_SIZE", "MULTISQUARE", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "flags": [
+      "WHEEL",
+      "UNSTABLE_WHEEL",
+      "VARIABLE_SIZE",
+      "MULTISQUARE",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   }
 ]

@@ -2,105 +2,133 @@
   {
     "type": "mutation",
     "id": "MAGUS",
-    "copy-from": "MAGUS",
-    "name": { "str": "Magus" },
+    "name": "魔术师",
     "points": 0,
-    "description": "A tradition as old as magic, the Magus focuses on binding and shaping the energy of the universe to their will.",
+    "description": "作为和魔法本身一样古老的魔法流派，魔术师专精于随心所欲结合并塑造宇宙的能量。",
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "delete": { "cancels": [ "ANIMIST" ] },
-    "spells_learned": [ [ "create_rune_magus", 1 ] ]
+    "spells_learned": [
+      [
+        "create_rune_magus",
+        1
+      ]
+    ]
   },
   {
     "type": "mutation",
     "id": "ANIMIST",
-    "copy-from": "ANIMIST",
-    "name": { "str": "Animist" },
+    "name": {
+      "str": "泛灵师"
+    },
     "points": 0,
-    "description": "The animist tradition is a relatively new school of magical thought, formed through combination of many older ways that focus on harmony and connection to the natural world.  This does not mean that animists are passive: the natural world is a savage place.",
+    "description": "泛灵师是一个相对较新的魔法理论流派，它由许多注重与自然世界的联系以及和谐的古老理论融合而成。但这并不意味着泛灵师们只会被动挨打：不要忘了，自然界可是一个野蛮的地方。",
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "delete": { "cancels": [ "MAGUS" ] },
-    "spells_learned": [ [ "create_rune_animist", 1 ] ]
+    "spells_learned": [
+      [
+        "create_rune_animist",
+        1
+      ]
+    ]
   },
   {
     "type": "mutation",
     "id": "KELVINIST",
-    "copy-from": "KELVINIST",
-    "name": { "str": "Kelvinist" },
+    "name": "炽霜法师",
     "points": 0,
-    "description": "Disciples of the great Archwizard Lord Kelvin.  Kelvinists focus their magic on manipulation and control of the temperature of their environment, leading to spectacularly powerful explosions or bone-chilling cold.",
+    "description": "追随大奥术师开尔文勋爵的脚步，炽霜法师们凝聚魔力，操控温度，引发炽烈爆炸，制造刺骨严寒。",
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "delete": { "cancels": [ "STORMSHAPER" ] },
-    "spells_learned": [ [ "create_rune_kelvinist", 1 ] ]
+    "spells_learned": [
+      [
+        "create_rune_kelvinist",
+        1
+      ]
+    ]
   },
   {
     "type": "mutation",
     "id": "STORMSHAPER",
-    "copy-from": "STORMSHAPER",
-    "name": { "str": "Stormshaper" },
+    "name": "风暴塑造者",
     "points": 0,
-    "description": "Stormshapers follow ancient arcane disciplines of meditation and harmony with the winds and tides that shape the planet.  Through their deep connection to these forces, they can request powerful changes.",
+    "description": "风暴塑造者遵循古老的奥术信条，依靠冥想与风暴和潮汐融为一体来改造这个世界。通过他们与这些力量的深入联系，他们可以请求强大力量的改变。",
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "delete": { "cancels": [ "KELVINIST" ] },
-    "spells_learned": [ [ "create_rune_stormshaper", 1 ] ]
+    "spells_learned": [
+      [
+        "create_rune_stormshaper",
+        1
+      ]
+    ]
   },
   {
     "type": "mutation",
     "id": "TECHNOMANCER",
-    "copy-from": "TECHNOMANCER",
-    "name": { "str": "Technomancer" },
+    "name": "科技法师",
     "points": 0,
-    "description": "Technomancers are the new breed of modern magician, blending their arcane might with their advanced knowledge of the fundamental nature of the universe.  They use technology to enhance their magic and vice versa.",
+    "description": "科技法师是现代魔法师的新兴流派，他们将神秘的奥法力量与他们对宇宙基本性质的深入了解结合为一体。他们使用科技来强化他们的魔法，反之亦然。",
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "delete": { "cancels": [ "EARTHSHAPER" ] },
-    "spells_learned": [ [ "create_rune_technomancer", 1 ] ]
+    "spells_learned": [
+      [
+        "create_rune_technomancer",
+        1
+      ]
+    ]
   },
   {
     "type": "mutation",
     "id": "EARTHSHAPER",
-    "copy-from": "EARTHSHAPER",
-    "name": { "str": "Earthshaper" },
+    "name": "塑地者",
     "points": 0,
-    "description": "Earthshapers have allowed their minds to sink deep within the stones and metals of the planet, and become one with its secrets.  To a master Earthshaper, spells can be as permanent as the stones they are created from, and time is measured in geological eras.",
+    "description": "塑地者将自身思想深深地沉入地球的石头和金属之中，并与它的秘密融为一体。对于一位塑地者大师来说，法术可以像他们所创造出来的石头一样持久，而持续时间可以用地质时代来衡量。",
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "delete": { "cancels": [ "TECHNOMANCER" ] },
-    "spells_learned": [ [ "create_rune_earthshaper", 1 ] ]
+    "spells_learned": [
+      [
+        "create_rune_earthshaper",
+        1
+      ]
+    ]
   },
   {
     "type": "mutation",
     "id": "BIOMANCER",
-    "copy-from": "BIOMANCER",
-    "name": { "str": "Biomancer" },
+    "name": {
+      "str": "生化术士"
+    },
     "points": 0,
-    "description": "The Biomancer focuses on manipulating and even absorbing flesh; their own, and that of other living or dead things.  Most other wizards find their powers gross and disturbing, but no one can question the potency of their abilities, and certainly not their adaptability to any situation.",
+    "description": "生化术士着重于操纵甚至吸收血肉：自己的，以及其他活物或者死尸的血肉。大多数魔法师认为他们的法术令人恶心与不安，但没人敢质疑它们的威力，当然也没有人敢质疑他们对各种情况的适应力。",
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "delete": { "cancels": [ "DRUID" ] },
-    "spells_learned": [ [ "create_rune_biomancer", 1 ] ]
+    "spells_learned": [
+      [
+        "create_rune_biomancer",
+        1
+      ]
+    ]
   },
   {
     "type": "mutation",
     "id": "DRUID",
-    "copy-from": "DRUID",
-    "name": { "str": "Druid" },
+    "name": "德鲁伊",
     "points": 0,
-    "description": "Druids follow a wild tradition of allegiance and rebirth within the world of nature, especially the cycle of death and rebirth that is the plant world.  A powerful Druid is as much a part of that world as the human one.",
+    "description": "德鲁伊忠心遵循自然界中重生复苏的野性传统，特别是植物界中所存在的死亡和重生的轮回。一位强大的德鲁伊和那个世界的联系将会和与人类世界的联系一样紧密。",
     "starting_trait": false,
     "purifiable": false,
     "valid": false,
-    "delete": { "cancels": [ "BIOMANCER" ] },
-    "spells_learned": [ [ "create_rune_druid", 1 ] ]
+    "spells_learned": [
+      [
+        "create_rune_druid",
+        1
+      ]
+    ]
   }
 ]

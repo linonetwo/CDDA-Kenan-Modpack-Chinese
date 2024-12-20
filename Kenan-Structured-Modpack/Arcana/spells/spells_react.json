@@ -2,11 +2,18 @@
   {
     "id": "arcana_react_bane_staff_venom",
     "type": "SPELL",
-    "name": { "str": "React: Venom" },
+    "name": {
+      "str": "React: Venom"
+    },
     "description": "Inflicts a bit of biological damage and poison.",
-    "message": "Sickening venom flows from your staff as you strike.",
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION" ],
-    "valid_targets": [ "hostile" ],
+    "message": "当你攻击的时候，令人恶心的毒液从你的手杖里流出来。",
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect_str": "poison",
     "min_range": 1,
     "max_range": 1,
@@ -18,14 +25,22 @@
   {
     "id": "arcana_react_dragonblood_knockdown",
     "type": "SPELL",
-    "name": { "str": "React: Knockdown" },
-    "description": "How about I slap your shit.",
+    "name": {
+      "str": "React: Knockdown"
+    },
+    "description": "我打你一巴掌怎么样。",
     "message": "",
-    "valid_targets": [ "hostile" ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "downed",
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION", "SILENT" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION",
+      "SILENT"
+    ],
     "min_range": 1,
     "max_range": 1,
     "min_duration": 100,
@@ -34,11 +49,19 @@
   {
     "type": "SPELL",
     "id": "arcana_react_evil_mimic",
-    "name": { "str": "React: Addicted To The Power" },
+    "name": {
+      "str": "React: Addicted To The Power"
+    },
     "description": "This adds a random duration of an effect that mimics evil but technically isn't.",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
     "message": "",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "arcana_evil_mimic",
@@ -48,11 +71,19 @@
   {
     "id": "arcana_react_bloodscourge_fire",
     "type": "SPELL",
-    "name": { "str": "React: Immolate Effect" },
+    "name": {
+      "str": "React: Immolate Effect"
+    },
     "description": "This commits the burnening.",
     "message": "",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "onfire",
@@ -64,39 +95,64 @@
   {
     "type": "SPELL",
     "id": "arcana_react_drain_life",
-    "name": { "str": "React: Drain Life Shell" },
+    "name": {
+      "str": "React: Drain Life Shell"
+    },
     "description": "This exists only to trigger on-self effects from an on-hit action.",
-    "valid_targets": [ "hostile" ],
+    "valid_targets": [
+      "hostile"
+    ],
     "message": "",
-    "min_range": 3,
-    "max_range": 3,
+    "min_range": 1,
+    "max_range": 1,
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
-    "extra_effects": [ { "id": "arcana_react_drain_life_2", "hit_self": true } ]
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_react_drain_life_2",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "arcana_react_drain_life_2",
     "type": "SPELL",
-    "name": { "str": "React: Drain Life Effect" },
+    "name": {
+      "str": "React: Drain Life Effect"
+    },
     "description": "This creates the effect that heals the caster.",
     "message": "",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "drain_life_mending",
     "min_damage": -1,
     "max_damage": -3,
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION", "RANDOM_DAMAGE", "SILENT" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION",
+      "RANDOM_DAMAGE",
+      "SILENT"
+    ],
     "min_duration": 500,
     "max_duration": 1000
   },
   {
     "type": "SPELL",
     "id": "arcana_react_drain_life_improved",
-    "name": { "str": "React: Improved Drain Life Shell" },
+    "name": {
+      "str": "React: Improved Drain Life Shell"
+    },
     "description": "This exists only to trigger on-self effects from an on-hit action.",
-    "valid_targets": [ "hostile" ],
+    "valid_targets": [
+      "hostile"
+    ],
     "message": "",
     "effect_str": "arcana_lingering_chill",
     "min_range": 1,
@@ -105,35 +161,63 @@
     "max_duration": 2000,
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
-    "extra_effects": [ { "id": "arcana_react_drain_life_improved_2", "hit_self": true } ]
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_react_drain_life_improved_2",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "arcana_react_drain_life_improved_2",
     "type": "SPELL",
-    "name": { "str": "React: Drain Life Effect" },
+    "name": {
+      "str": "React: Drain Life Effect"
+    },
     "description": "This creates the effect that heals the caster.",
     "message": "",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "sword_mending",
     "min_damage": -3,
     "max_damage": -6,
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION", "RANDOM_DAMAGE", "SILENT" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION",
+      "RANDOM_DAMAGE",
+      "SILENT"
+    ],
     "min_duration": 600,
     "max_duration": 1200
   },
   {
     "type": "SPELL",
     "id": "arcana_react_kinetic_amplifier_flashbang",
-    "name": { "str": "React: Flashbang" },
+    "name": {
+      "str": "React: Flashbang"
+    },
     "description": "Blinding flash on some hits.",
-    "valid_targets": [ "ally", "hostile", "ground", "self" ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground",
+      "self"
+    ],
     "message": "",
     "effect": "flashbang",
     "shape": "blast",
-    "flags": [ "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
     "min_damage": 10,
     "max_damage": 10,
     "min_range": 10,
@@ -144,11 +228,18 @@
   {
     "id": "arcana_react_satchel_attention",
     "type": "SPELL",
-    "name": { "str": "React: Satchel Attention" },
+    "name": {
+      "str": "React: Satchel Attention"
+    },
     "description": "Small amount of nether attention.",
-    "message": "You feel like something is watching you…",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION" ],
+    "message": "你觉得有什么东西在看着你…",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "attention",
@@ -158,24 +249,39 @@
   {
     "type": "SPELL",
     "id": "arcana_react_satchel_teleport",
-    "name": { "str": "React: Satchel Teleport" },
+    "name": {
+      "str": "React: Satchel Teleport"
+    },
     "description": "Get yote.  Safe, but comes with teleglow.",
-    "extra_effects": [ { "id": "arcana_react_satchel_teleglow" } ],
-    "message": "You feel yanked in a non-existent direction!",
+    "extra_effects": [
+      {
+        "id": "arcana_react_satchel_teleglow"
+      }
+    ],
+    "message": "你觉得自己被拉向了一个不存在的方向！",
     "effect": "short_range_teleport",
     "shape": "blast",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "min_range": 10,
     "max_range": 20
   },
   {
     "id": "arcana_react_satchel_teleglow",
     "type": "SPELL",
-    "name": { "str": "React: Satchel Teleglow" },
+    "name": {
+      "str": "React: Satchel Teleglow"
+    },
     "description": "Small amount of teleglow.",
     "message": "",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION" ],
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "teleglow",
@@ -185,9 +291,13 @@
   {
     "type": "SPELL",
     "id": "arcana_react_sanguine_staff_drain",
-    "name": { "str": "React: Life's Bane Shell" },
+    "name": {
+      "str": "React: Life's Bane Shell"
+    },
     "description": "This exists only to trigger on-self effects from an on-hit action.",
-    "valid_targets": [ "hostile" ],
+    "valid_targets": [
+      "hostile"
+    ],
     "message": "",
     "effect_str": "arcana_lingering_chill",
     "min_range": 1,
@@ -196,46 +306,82 @@
     "max_duration": 300,
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
-    "extra_effects": [ { "id": "arcana_react_sanguine_staff_drain_2", "hit_self": true } ]
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_react_sanguine_staff_drain_2",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "arcana_react_sanguine_staff_drain_2",
     "type": "SPELL",
-    "name": { "str": "React: Life's Bane Effect" },
+    "name": {
+      "str": "React: Life's Bane Effect"
+    },
     "description": "This creates the effect that buffs the caster.",
     "message": "",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "sanguine_staff_buff",
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION", "SILENT" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION",
+      "SILENT"
+    ],
     "min_duration": 6000,
     "max_duration": 18000
   },
   {
     "type": "SPELL",
     "id": "arcana_react_moonstone_touch",
-    "name": { "str": "React: Moonstone Touch" },
+    "name": {
+      "str": "React: Moonstone Touch"
+    },
     "description": "Little bit of madness.",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
     "message": "",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "taint",
-    "extra_effects": [ { "id": "arcana_react_moonstone_touch_2" } ],
+    "extra_effects": [
+      {
+        "id": "arcana_react_moonstone_touch_2"
+      }
+    ],
     "min_duration": 15000,
     "max_duration": 45000
   },
   {
     "type": "SPELL",
     "id": "arcana_react_moonstone_touch_2",
-    "name": { "str": "React: Moonstone Touch 2" },
+    "name": {
+      "str": "React: Moonstone Touch 2"
+    },
     "description": "And some sickness to go with the madness.",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
     "message": "",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "arcana_moonstone_touch",
@@ -245,17 +391,26 @@
   {
     "id": "arcana_react_shadowy_shield",
     "type": "SPELL",
-    "name": { "str": "Shadowy Shield Effect" },
+    "name": {
+      "str": "Shadowy Shield Effect"
+    },
     "description": "This creates the effect that strikes your attackers blind.",
-    "message": "Wavering shadows lash out at your attacker!",
-    "valid_targets": [ "hostile", "ground" ],
+    "message": "摇曳的影子向你的攻击者猛击！",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "blind",
     "damage_type": "cold",
     "min_damage": 1,
     "max_damage": 3,
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION", "RANDOM_DAMAGE" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION",
+      "RANDOM_DAMAGE"
+    ],
     "sound_type": "combat",
     "sound_description": "a strange rush of wind!",
     "min_range": 5,
@@ -270,10 +425,17 @@
   {
     "type": "SPELL",
     "id": "arcana_react_nothing",
-    "name": { "str": "React: Nothing" },
+    "name": {
+      "str": "React: Nothing"
+    },
     "description": "Dirty hack to add RNG to react effects.",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
     "message": "",
     "effect": "attack",
     "shape": "blast"
@@ -281,14 +443,21 @@
   {
     "id": "arcana_react_spear_pestilence_poison",
     "type": "SPELL",
-    "name": { "str": "React: Paralysis" },
+    "name": {
+      "str": "React: Paralysis"
+    },
     "description": "The actual poison effect.",
-    "message": "The air around your spear wavers with ethereal force.",
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION" ],
-    "valid_targets": [ "hostile" ],
+    "message": "你的长矛周围的空气飘荡着飘渺的力量。",
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect_str": "paralyzepoison",
-    "min_range": 2,
-    "max_range": 2,
+    "min_range": 1,
+    "max_range": 1,
     "effect": "attack",
     "shape": "blast",
     "min_duration": 1000,
@@ -297,11 +466,19 @@
   {
     "id": "arcana_react_symbol_judgment_zap",
     "type": "SPELL",
-    "name": { "str": "React: Electric Sting" },
-    "description": "Zaps someone in melee.",
-    "message": "Sparks jump from your weapon.",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "React: Electric Sting"
+    },
+    "description": "在近战中杀死某人。",
+    "message": "火花从你的武器上跳了出来。",
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect_str": "zapped",
     "min_range": 1,
     "max_range": 1,
@@ -313,12 +490,21 @@
   {
     "id": "arcana_react_veilblade",
     "type": "SPELL",
-    "name": { "str": "React: Restored Ritual Blade" },
-    "description": "Devours absence and fatigue, stabilizes portals.",
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "React: Restored Ritual Blade"
+    },
+    "description": "吞噬缺席和疲劳，稳定门户。",
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "ter_transform",
     "shape": "blast",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "IGNORE_WALLS", "NO_PROJECTILE" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
     "message": "",
     "effect_str": "arcana_veilblade",
     "min_damage": 1,
@@ -329,11 +515,19 @@
   {
     "id": "arcana_react_shrike_misericorde_chill",
     "type": "SPELL",
-    "name": { "str": "React: Cold Mercy" },
+    "name": {
+      "str": "React: Cold Mercy"
+    },
     "description": "Cold effect on melee.",
     "message": "An unearthly chill radiates from your weapon.",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
-    "valid_targets": [ "hostile" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect_str": "arcana_lingering_chill",
     "min_range": 1,
     "max_range": 1,
@@ -345,18 +539,37 @@
   {
     "id": "arcana_react_phase_shield",
     "type": "SPELL",
-    "name": { "str": "Phase Shield Effect" },
+    "name": {
+      "str": "Phase Shield Effect"
+    },
     "description": "This pushes your attackers away.",
     "message": "",
-    "valid_targets": [ "hostile" ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
     "extra_effects": [
-      { "id": "arcana_react_phase_shield_2", "hit_self": false },
-      { "id": "arcana_react_phase_shield_2", "hit_self": false },
-      { "id": "arcana_react_phase_shield_2", "hit_self": false },
-      { "id": "arcana_react_phase_shield_2", "hit_self": false }
+      {
+        "id": "arcana_react_phase_shield_2",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_react_phase_shield_2",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_react_phase_shield_2",
+        "hit_self": false
+      },
+      {
+        "id": "arcana_react_phase_shield_2",
+        "hit_self": false
+      }
     ],
     "min_range": 5,
     "max_range": 5,
@@ -366,13 +579,20 @@
   {
     "id": "arcana_react_phase_shield_2",
     "type": "SPELL",
-    "name": { "str": "Phase Shield Effect 2" },
+    "name": {
+      "str": "Phase Shield Effect 2"
+    },
     "description": "More pushing!",
     "message": "",
-    "valid_targets": [ "hostile" ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
     "min_range": 5,
     "max_range": 5,
     "min_aoe": 10,

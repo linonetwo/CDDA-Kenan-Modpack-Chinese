@@ -1,112 +1,209 @@
 [
   {
-    "dynamic_line": { "u_has_trait": "wsg1meet", "yes": "What is it, mortal?", "no": "You've come a long way, mortal." },
+    "dynamic_line": {
+      "u_has_trait": "wsg1meet",
+      "yes": "这是什么，人类？",
+      "no": "旅途遥远，人类。"
+    },
     "id": "TALK_VAMP_WASTEGUARD1_talkme",
     "responses": [
       {
-        "text": "I know.",
+        "text": "我知道。",
         "topic": "TALK_VAMP_WASTEGUARD1_maintalk",
-        "effect": { "u_add_trait": "wsg1meet" },
-        "condition": { "not": { "u_has_trait": "wsg1meet" } }
+        "effect": {
+          "u_add_trait": "wsg1meet"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg1meet"
+          }
+        }
       },
       {
-        "text": "Yes, I know.",
+        "text": "是的，我知道。",
         "topic": "TALK_DONE",
-        "effect": { "u_add_trait": "wsg1meet" },
-        "condition": { "not": { "u_has_trait": "wsg1meet" } }
+        "effect": {
+          "u_add_trait": "wsg1meet"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg1meet"
+          }
+        }
       },
       {
-        "text": "I want to talk about something...",
+        "text": "我想谈谈...",
         "topic": "TALK_VAMP_WASTEGUARD1_maintalk",
-        "condition": { "u_has_trait": "wsg1meet" }
+        "condition": {
+          "u_has_trait": "wsg1meet"
+        }
       }
     ],
-    "type": "talk_topic"
-  },
-  {
-    "dynamic_line": { "u_has_trait": "wsg1met", "yes": "Talk about what?", "no": "You should be safe here, so don't do anything stupid." },
-    "id": "TALK_VAMP_WASTEGUARD1_maintalk",
-    "responses": [
-      {
-        "text": "Where am I?.",
-        "topic": "TALK_VAMP_WASTEGUARD1_here",
-        "effect": { "u_add_trait": "wsg1here" },
-        "condition": { "not": { "u_has_trait": "wsg1here" } }
-      },
-      {
-        "truefalsetext": {
-          "condition": { "u_has_trait": "commandovampmark" },
-          "true": "The commando has sent me to this place.",
-          "false": "You know a place like this?"
-        },
-        "topic": "TALK_VAMP_WASTEGUARD1_know",
-        "effect": { "u_add_trait": "wsg1know" },
-        "condition": { "not": { "u_has_trait": "wsg1know" } }
-      },
-      {
-        "text": "You need a volunteer for jobs?",
-        "topic": "TALK_VAMP_WASTEGUARD1_job",
-        "condition": { "and": [ { "u_has_trait": "wsg1here" }, { "not": { "u_has_trait": "wsg1hire" } } ] }
-      },
-      {
-        "text": "Okay. Bye.",
-        "topic": "TALK_DONE",
-        "effect": { "u_add_trait": "wsg1met" },
-        "condition": { "not": { "u_has_trait": "wsg1met" } }
-      },
-      { "text": "Nevermind. I'll be going now...", "topic": "TALK_DONE", "condition": { "u_has_trait": "wsg1met" } }
-    ],
-    "type": "talk_topic"
-  },
-  {
-    "dynamic_line": "You're in the sanctuary for both humans and vampires, the wasteland outskirts. Here, we protect each other from savage entities and serves as an outpost for those luckily survived ones.",
-    "id": "TALK_VAMP_WASTEGUARD1_here",
-    "responses": [ { "text": "Okay, thanks for the info.", "topic": "TALK_VAMP_WASTEGUARD1_maintalk" } ],
     "type": "talk_topic"
   },
   {
     "dynamic_line": {
-      "no": "Yes.",
-      "u_has_trait": "commandovampmark",
-      "yes": "Hmm, so they have sent you here... For what reason? Everything's fine as it is."
+      "u_has_trait": "wsg1met",
+      "yes": "谈些什么？",
+      "no": "你在这里是安全的，不过不要做傻事。"
     },
-    "id": "TALK_VAMP_WASTEGUARD1_know",
+    "id": "TALK_VAMP_WASTEGUARD1_maintalk",
     "responses": [
       {
-        "text": "So... Will you tell me where it is?",
-        "topic": "TALK_VAMP_WASTEGUARD1_where",
-        "condition": { "not": { "u_has_trait": "commandovampmark" } }
+        "text": "我现在在哪里？。",
+        "topic": "TALK_VAMP_WASTEGUARD1_here",
+        "effect": {
+          "u_add_trait": "wsg1here"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg1here"
+          }
+        }
       },
       {
-        "text": "Oh, okay... Is there something I could help you with?",
-        "topic": "TALK_VAMP_WASTEGUARD1_begjob",
-        "condition": { "u_has_trait": "commandovampmark" }
+        "truefalsetext": {
+          "condition": {
+            "u_has_trait": "commandovampmark"
+          },
+          "true": "The commando has sent me to this place.",
+          "false": "You know a place like this?"
+        },
+        "topic": "TALK_VAMP_WASTEGUARD1_know",
+        "effect": {
+          "u_add_trait": "wsg1know"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg1know"
+          }
+        }
+      },
+      {
+        "text": "你有工作给我吗？",
+        "topic": "TALK_VAMP_WASTEGUARD1_job",
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "wsg1here"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg1hire"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "text": "好的，再见。",
+        "topic": "TALK_DONE",
+        "effect": {
+          "u_add_trait": "wsg1met"
+        },
+        "condition": {
+          "not": {
+            "u_has_trait": "wsg1met"
+          }
+        }
+      },
+      {
+        "text": "没什么，我得走了...",
+        "topic": "TALK_DONE",
+        "condition": {
+          "u_has_trait": "wsg1met"
+        }
       }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "No.",
+    "dynamic_line": "你现在位于一个人类和吸血鬼共同的庇护所，荒地郊区。在这里，我们互相保护对方不受那些凶残生物的伤害，并为那些幸存者们充当前哨。",
+    "id": "TALK_VAMP_WASTEGUARD1_here",
+    "responses": [
+      {
+        "text": "好的，谢谢你告诉我这些。",
+        "topic": "TALK_VAMP_WASTEGUARD1_maintalk"
+      }
+    ],
+    "type": "talk_topic"
+  },
+  {
+    "dynamic_line": {
+      "no": "是。",
+      "u_has_trait": "commandovampmark",
+      "yes": "嗯，所以他们派你来了…为什么？一切都很好。"
+    },
+    "id": "TALK_VAMP_WASTEGUARD1_know",
+    "responses": [
+      {
+        "text": "所以…你能告诉我在哪儿吗？",
+        "topic": "TALK_VAMP_WASTEGUARD1_where",
+        "condition": {
+          "not": {
+            "u_has_trait": "commandovampmark"
+          }
+        }
+      },
+      {
+        "text": "哦，好吧…有什么我能帮你的吗？",
+        "topic": "TALK_VAMP_WASTEGUARD1_begjob",
+        "condition": {
+          "u_has_trait": "commandovampmark"
+        }
+      }
+    ],
+    "type": "talk_topic"
+  },
+  {
+    "dynamic_line": "没有。",
     "id": "TALK_VAMP_WASTEGUARD1_where",
-    "responses": [ { "text": "Okay then...", "topic": "TALK_VAMP_WASTEGUARD1_maintalk" } ],
+    "responses": [
+      {
+        "text": "好吧...继续",
+        "topic": "TALK_VAMP_WASTEGUARD1_maintalk"
+      }
+    ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "If you're willing to help us, ask the other guard by the entrance. He might need your assistance in dealing with labor and stuff.",
+    "dynamic_line": "如果你愿意帮助我们，就去问门口的另一个警卫。他可能需要你协助处理劳工和其他事务。",
     "id": "TALK_VAMP_WASTEGUARD1_begjob",
-    "responses": [ { "text": "See ya then!", "topic": "TALK_DONE", "effect": { "u_add_trait": "wsg1hire" } } ],
+    "responses": [
+      {
+        "text": "好的，再见！",
+        "topic": "TALK_DONE",
+        "effect": {
+          "u_add_trait": "wsg1hire"
+        }
+      }
+    ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "I'm just a guard, I have no problems with my position.",
+    "dynamic_line": "我只是个守卫，我这里没有问题。",
     "id": "TALK_VAMP_WASTEGUARD1_job",
     "responses": [
       {
-        "text": "The commando has sent me here.",
+        "text": "突击队派我来的。",
         "topic": "TALK_VAMP_WASTEGUARD1_know",
-        "condition": { "and": [ { "u_has_trait": "commandovampmark" }, { "not": { "u_has_trait": "wsg1hire" } } ] }
+        "condition": {
+          "and": [
+            {
+              "u_has_trait": "commandovampmark"
+            },
+            {
+              "not": {
+                "u_has_trait": "wsg1hire"
+              }
+            }
+          ]
+        }
       },
-      { "text": "Okay...", "topic": "TALK_VAMP_WASTEGUARD1_maintalk" }
+      {
+        "text": "好吧……",
+        "topic": "TALK_VAMP_WASTEGUARD1_maintalk"
+      }
     ],
     "type": "talk_topic"
   }

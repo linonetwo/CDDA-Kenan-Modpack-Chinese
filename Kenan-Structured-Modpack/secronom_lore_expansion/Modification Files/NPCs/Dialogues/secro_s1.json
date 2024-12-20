@@ -2,79 +2,125 @@
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST1_main",
-    "dynamic_line": "\u2026 oh\u2026 yes?",
+    "dynamic_line": "… 哦… 有什么事吗？",
     "responses": [
-      { "text": "What are you working on here?", "topic": "TALK_SECRO_SCIENTIST1_what" },
-      { "text": "So, this is your lab?", "topic": "TALK_SECRO_SCIENTIST1_where" },
-      { "text": "Bye.", "topic": "TALK_DONE" }
+      {
+        "text": "你在这里干什么？",
+        "topic": "TALK_SECRO_SCIENTIST1_what"
+      },
+      {
+        "text": "这是你的实验室吗？",
+        "topic": "TALK_SECRO_SCIENTIST1_where"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST1_what",
-    "dynamic_line": "I'm working on the Flesh. Most of the time.",
+    "dynamic_line": "我绝大部分时间都在研究血肉。",
     "responses": [
-      { "text": "The flesh? So you are kind of a doctor?", "topic": "TALK_SECRO_SCIENTIST1_what_me" },
-      { "text": "\u2026", "topic": "TALK_SECRO_SCIENTIST1_main" }
+      {
+        "text": "血肉？所以你是个医生？",
+        "topic": "TALK_SECRO_SCIENTIST1_what_me"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST1_what_me",
-    "dynamic_line": "Oh not exactly, rather scientist. The Flesh is organic flesh-like matter designed for wide variety of purposes. In short, it can be grown into various tissues with various structure. It can create muscles, bones, organs, glands, even whole self sufficient micro and macro organisms.",
-    "responses": [ { "text": "I see.", "topic": "TALK_SECRO_SCIENTIST1_main" } ]
+    "dynamic_line": "噢，不完全是，更确切地说是科学家。 “血肉”是一种有机的、类似于肉的物质，设计用于各种目的。简而言之，它可以生长成具有各种结构的各种组织。它可以创造肌肉、骨骼、器官、腺体，甚至整个自给自足的微观和宏观生物体。",
+    "responses": [
+      {
+        "text": "我懂了。",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST1_where",
-    "dynamic_line": "My lab and my home. I created this lab long time ago when I decided to do something useful. I believed that research on stem cells, cultured meat and synthetic organs would solve many problems. ",
+    "dynamic_line": "我的实验室和家。很久以前，当我决定做一些有用的事情时，我创建了这个实验室。我相信对干细胞、培养肉和人造器官的研究将能解决许多问题。",
     "responses": [
       {
-        "text": "That sounds interesting, what kind of problems you had on mind?",
+        "text": "听起来很有意思，你在想什么样的问题？",
         "topic": "TALK_SECRO_SCIENTIST1_where_troubles"
       },
-      { "text": "You created this whole lab yourself?", "topic": "TALK_SECRO_SCIENTIST1_where_info" },
-      { "text": "\u2026", "topic": "TALK_SECRO_SCIENTIST1_main" }
+      {
+        "text": "你自己创造了整个实验室？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_info"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST1_where_troubles",
-    "dynamic_line": "Well nothing too specific in particular. Back then, goal of my research was anything from efficient edible meat production, growing organs for transplatology, various therapies with stem cells and most importantly getting funds for my living and playing with life.",
+    "dynamic_line": "没什么特别的。当时，我的研究目标是从高效的可食用肉类生产、为移植术生长器官、用干细胞进行各种治疗，最重要的是为我的生活和玩生活筹集资金。",
     "responses": [
-      { "text": "You created this whole lab yourself?", "topic": "TALK_SECRO_SCIENTIST1_where_info" },
-      { "text": "Okay.", "topic": "TALK_SECRO_SCIENTIST1_main" }
+      {
+        "text": "你自己创造了整个实验室？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_info"
+      },
+      {
+        "text": "好的。",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST1_where_info",
-    "dynamic_line": "Oh yes, it took many years to gather funds, collect gear and set it all up down here. Through years of my research I was leading various projects and collected quite a lot of funds. Later on I had to tightly lock this place and move permanently to other facility.",
+    "dynamic_line": "哦，是的，我花了很多年的时间来筹集资金和收集设备，终于在这里把它建立起来。在此我进行了多年研究，还领导了各种项目，并积攒了大量资金。可后来我不得不把这个地方紧紧地封闭起来，人也永远的神转移到其他地方去了。",
     "responses": [
       {
-        "text": "Quite remarkable achievement, what forced you to move from here?",
+        "text": "相当了不起的成就，是什么迫使你从这里搬走的？",
         "topic": "TALK_SECRO_SCIENTIST1_where_info_more"
       },
       {
-        "text": "That sounds interesting, what kind of problems you had on mind?",
+        "text": "听起来很有意思，你在想什么样的问题？",
         "topic": "TALK_SECRO_SCIENTIST1_where_troubles"
       },
-      { "text": "\u2026", "topic": "TALK_SECRO_SCIENTIST1_main" }
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST1_where_info_more",
-    "dynamic_line": "I could either move with my research to more secured facility or loose control over my research on the Flesh. I wasn't happy by that, boss hovering over my shoulder, evaluating my work was hard to accept. Though considering how it all turned out I'm glad they forced me back then.",
+    "dynamic_line": "我要么把我的研究转移到更安全的设施，要么对我的血肉研究失去控制。我对于上司凌驾于我之上评价我的工作很不高兴，这让我难以接受。但考虑到这一切的成果，我很高兴当时他们强迫我回去。",
     "responses": [
-      { "text": "So the work under someone wasn't so bad?", "topic": "TALK_SECRO_SCIENTIST1_where_info_moar" },
-      { "text": "\u2026", "topic": "TALK_SECRO_SCIENTIST1_main" }
+      {
+        "text": "所以别人手下工作并没有那么糟糕？",
+        "topic": "TALK_SECRO_SCIENTIST1_where_info_moar"
+      },
+      {
+        "text": "…",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_SCIENTIST1_where_info_moar",
-    "dynamic_line": "Oh it was, it's just that when everything went to hell, we had a little accident there. Instead of me having little accident here.",
-    "responses": [ { "text": "I see\u2026", "topic": "TALK_SECRO_SCIENTIST1_main" } ]
+    "dynamic_line": "哦，那当然了，只是当一切都变得一团糟时，我们在那里就发生了一点意外，而不是在这里。",
+    "responses": [
+      {
+        "text": "我明白了……",
+        "topic": "TALK_SECRO_SCIENTIST1_main"
+      }
+    ]
   }
 ]

@@ -2,28 +2,54 @@
   {
     "id": "secro_flesh_splicer",
     "type": "TOOL",
-    "name": { "str": "bio-organic splicer" },
-    "description": "A disk-shaped bio-organic device used in DNA extraction suitable on living (or undead) subjects.",
+    "name": {
+      "str": "生物有机剪接器"
+    },
+    "description": "一种碟状的生物有机装置，适用于提取活人（或不死者）的DNA。",
     "weight": "1330 g",
     "volume": "640 ml",
     "price": "1 USD",
-    "material": [ "flesh", "bone" ],
+    "to_hit": -3,
+    "material": [
+      "flesh",
+      "bone"
+    ],
     "symbol": ":",
     "color": "light_red",
     "charges_per_use": 1,
-    "use_action": { "type": "cast_spell", "spell_id": "secro_flesh_splicer_target", "no_fail": true, "level": 0 },
-    "flags": [ "NONCONDUCTIVE" ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh": 10 } } ]
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "secro_flesh_splicer_target",
+      "no_fail": true,
+      "level": 0
+    },
+    "flags": [
+      "NONCONDUCTIVE"
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh": 10
+        }
+      }
+    ]
   },
   {
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_blade_dna",
     "category": "secro_dna",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "◦",
     "color": "light_red",
-    "name": { "str": "<color_red>spliced DNA</color> (blade zombie)", "str_pl": "<color_red>spliced DNAs</color> (blade zombie)" },
-    "description": "A chunk of flesh infused with the genetic structure of a blade zombie.",
+    "name": {
+      "str": "<color_red>拼接DNA </color>（刀锋丧尸）",
+      "str_pl": "<color_red>拼接DNA </color>（刀锋丧尸）"
+    },
+    "description": "一大块充满了刀锋丧尸遗传结构的血肉。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "200 g",
@@ -33,11 +59,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_WALKINGPOTATO_dna",
     "category": "secro_dna",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "◦",
     "color": "light_red",
-    "name": { "str": "<color_red>spliced DNA</color> (lying body)", "str_pl": "<color_red>spliced DNAs</color> (lying body)" },
-    "description": "A chunk of flesh infused with the genetic structure of a lying body.",
+    "name": {
+      "str": "<color_red>剪接DNA </color>（肉瘤）",
+      "str_pl": "<color_red>拼接DNA </color>（肉瘤）"
+    },
+    "description": "一大块充满了肉瘤遗传结构的血肉。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "200 g",
@@ -47,14 +78,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_mouth_dna",
     "category": "secro_dna",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "◦",
     "color": "light_red",
     "name": {
-      "str": "<color_red>spliced DNA</color> (mouthswell zombie)",
-      "str_pl": "<color_red>spliced DNAs</color> (mouthswell zombie)"
+      "str": "<color_red>剪接DNA </color>（肿口丧尸）",
+      "str_pl": "<color_red>拼接DNA </color>（肿口丧尸）"
     },
-    "description": "A chunk of flesh infused with the genetic structure of a mouthswell zombie.",
+    "description": "一大块充满了肿口丧尸遗传结构的血肉。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "200 g",
@@ -64,14 +97,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_tendril_dna",
     "category": "secro_dna",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "◦",
     "color": "light_red",
     "name": {
-      "str": "<color_red>spliced DNA</color> (tendril zombie)",
-      "str_pl": "<color_red>spliced DNAs</color> (tendril zombie)"
+      "str": "<color_red>拼接DNA </color>（卷须丧尸）",
+      "str_pl": "<color_red>拼接DNA </color>（卷须丧尸）"
     },
-    "description": "A chunk of flesh infused with the genetic structure of a tendril zombie.",
+    "description": "一大块充满了卷须丧尸遗传结构的血肉。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "200 g",
@@ -81,11 +116,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_titan_dna",
     "category": "secro_dna",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "◦",
     "color": "light_red",
-    "name": { "str": "<color_red>spliced DNA</color> (titan)", "str_pl": "<color_red>spliced DNAs</color> (titan)" },
-    "description": "A chunk of flesh infused with the genetic structure of a titan.",
+    "name": {
+      "str": "<color_red>拼接DNA </color>（泰坦）",
+      "str_pl": "<color_red>拼接DNA </color>（泰坦）"
+    },
+    "description": "注入了泰坦基因结构的一块肉。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "200 g",
@@ -95,14 +135,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_unify_dna",
     "category": "secro_dna",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "◦",
     "color": "light_red",
     "name": {
-      "str": "<color_red>spliced DNA</color> (unifier zombie)",
-      "str_pl": "<color_red>spliced DNAs</color> (unifier zombie)"
+      "str": "<color_red>拼接DNA </color>（整合体丧尸）",
+      "str_pl": "<color_red>拼接DNA </color>（整合体丧尸）"
     },
-    "description": "A chunk of flesh infused with the genetic structure of a titan.",
+    "description": "注入了泰坦基因结构的一块肉。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "200 g",
@@ -112,11 +154,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_blade_ccore",
     "category": "secro_ccore",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Q",
     "color": "light_green",
-    "name": { "str": "<color_light_green>core</color> (blade zombie)", "str_pl": "<color_light_green>cores</color> (blade zombie)" },
-    "description": "A heavily compressed flesh of a blade zombie. Contains a potent DNA suitable for replication.",
+    "name": {
+      "str": "<color_light_green>核心</color>（刀锋丧尸）",
+      "str_pl": "<color_light_green>核心</color>（刀锋丧尸）"
+    },
+    "description": "一块被高度压缩的刀锋丧尸的肉。里面包含了适用于拷贝的有效DNA。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "370 g",
@@ -126,11 +173,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_WALKINGPOTATO_ccore",
     "category": "secro_ccore",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Q",
     "color": "light_green",
-    "name": { "str": "<color_light_green>core</color> (lying body)", "str_pl": "<color_light_green>cores</color> (lying body)" },
-    "description": "A heavily compressed flesh of a lying body. Contains a potent DNA suitable for replication.",
+    "name": {
+      "str": "<color_light_green>核心</color>（肉瘤）",
+      "str_pl": "<color_light_green>核心</color>（肉瘤）"
+    },
+    "description": "一块被高度压缩的肉瘤的肉。里面包含了适用于拷贝的有效DNA。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "370 g",
@@ -140,14 +192,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_mouth_ccore",
     "category": "secro_ccore",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Q",
     "color": "light_green",
     "name": {
-      "str": "<color_light_green>core</color> (mouthswell zombie)",
-      "str_pl": "<color_light_green>cores</color> (mouthswell zombie)"
+      "str": "<color_light_green>核心</color>（肿口丧尸）",
+      "str_pl": "<color_light_green>核心</color>（肿口丧尸）"
     },
-    "description": "A heavily compressed flesh of a mouthswell zombie. Contains a potent DNA suitable for replication.",
+    "description": "一块被高度压缩的肿口丧尸的肉。里面包含了适用于拷贝的有效DNA。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "370 g",
@@ -157,14 +211,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_tendril_ccore",
     "category": "secro_ccore",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Q",
     "color": "light_green",
     "name": {
-      "str": "<color_light_green>core</color> (tendril zombie)",
-      "str_pl": "<color_light_green>cores</color> (tendril zombie)"
+      "str": "<color_light_green>核心</color>（卷须丧尸）",
+      "str_pl": "<color_light_green>核心</color>（卷须丧尸）"
     },
-    "description": "A heavily compressed flesh of a tendril zombie. Contains a potent DNA suitable for replication.",
+    "description": "一块被高度压缩的卷须丧尸的肉。里面包含了适用于拷贝的有效DNA。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "370 g",
@@ -174,11 +230,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_titan_ccore",
     "category": "secro_ccore",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Q",
     "color": "light_green",
-    "name": { "str": "<color_light_green>core</color> (titan)", "str_pl": "<color_light_green>cores</color> (titan)" },
-    "description": "A heavily compressed flesh of a titan. Contains a potent DNA suitable for replication.",
+    "name": {
+      "str": "<color_light_green>核心</color>（泰坦丧尸）",
+      "str_pl": "<color_light_green>核心</color>（泰坦）"
+    },
+    "description": "一块被高度压缩的泰坦丧尸的肉。里面包含了适用于拷贝的有效DNA。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "370 g",
@@ -188,14 +249,16 @@
     "type": "GENERIC",
     "id": "secro_flesh_splicer_zombie_unify_ccore",
     "category": "secro_ccore",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Q",
     "color": "light_green",
     "name": {
-      "str": "<color_light_green>core</color> (unifier zombie)",
-      "str_pl": "<color_light_green>cores</color> (unifier zombie)"
+      "str": "<color_light_green>核心</color>（整合体丧尸）",
+      "str_pl": "<color_light_green>核心</color>（整合体丧尸）"
     },
-    "description": "A heavily compressed flesh of a unifier zombie. Contains a potent DNA suitable for replication.",
+    "description": "一块被高度压缩的整合体丧尸的肉。里面包含了适用于拷贝的有效DNA。",
     "price": "1 USD",
     "price_postapoc": "1 USD",
     "weight": "370 g",

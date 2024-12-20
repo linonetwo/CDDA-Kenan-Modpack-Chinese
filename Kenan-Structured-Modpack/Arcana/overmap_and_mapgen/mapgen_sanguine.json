@@ -2,7 +2,9 @@
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "island_temple_roof" ],
+    "om_terrain": [
+      "island_temple_roof"
+    ],
     "weight": 250,
     "object": {
       "fill_ter": "t_open_air",
@@ -32,13 +34,17 @@
         "               _________",
         "               _________"
       ],
-      "terrain": { "_": "t_rock_floor_no_roof" }
+      "terrain": {
+        "_": "t_rock_floor_no_roof"
+      }
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "island_temple_1" ],
+    "om_terrain": [
+      "island_temple_1"
+    ],
     "weight": 250,
     "object": {
       "rows": [
@@ -67,16 +73,48 @@
         "~~;;;;;;;;;;~~,|+|dh_|__",
         ",gggggggggggg,,|_____x_>"
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "~": "t_water_sh", ";": "t_water_dp", "d": "t_floor", "h": "t_floor" },
-      "mapping": { "h": { "items": { "item": "sanguine_cult_casualties", "chance": 50 } } },
-      "place_monster": [ { "group": "GROUP_IMPACT", "x": [ 0, 14 ], "y": [ 0, 14 ], "repeat": [ 2, 4 ] } ]
+      "palettes": [
+        "arcana_palette"
+      ],
+      "terrain": {
+        "~": "t_water_sh",
+        ";": "t_water_dp",
+        "d": "t_floor",
+        "h": "t_floor"
+      },
+      "mapping": {
+        "h": {
+          "items": {
+            "item": "sanguine_cult_casualties",
+            "chance": 50
+          }
+        }
+      },
+      "place_monster": [
+        {
+          "group": "GROUP_IMPACT",
+          "x": [
+            0,
+            14
+          ],
+          "y": [
+            0,
+            14
+          ],
+          "repeat": [
+            2,
+            4
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "island_temple_b_1" ],
+    "om_terrain": [
+      "island_temple_b_1"
+    ],
     "weight": 250,
     "object": {
       "fill_ter": "t_soil",
@@ -106,25 +144,93 @@
         "          =.~~.=X=b..=..",
         "          =.gg.=.....X.<"
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "g": "t_floor_blue" },
-      "mapping": { "b": { "items": { "item": "cult_sacrifice", "chance": 100 } } },
+      "palettes": [
+        "arcana_palette"
+      ],
+      "terrain": {
+        "g": "t_floor_blue"
+      },
+      "mapping": {
+        "b": {
+          "items": {
+            "item": "cult_sacrifice",
+            "chance": 100
+          }
+        }
+      },
       "place_loot": [
-        { "item": "note_sanguine", "x": [ 22, 23 ], "y": [ 22, 23 ] },
-        { "group": "sanguine_ritual", "x": 23, "y": 3 },
-        { "group": "sanguine_cult_books", "x": [ 11, 12 ], "y": [ 8, 12 ], "chance": 50, "repeat": 10 },
-        { "group": "sanguine_cult_spells", "x": [ 11, 12 ], "y": [ 8, 12 ], "chance": 10 }
+        {
+          "item": "note_sanguine",
+          "x": [
+            22,
+            23
+          ],
+          "y": [
+            22,
+            23
+          ]
+        },
+        {
+          "group": "sanguine_ritual",
+          "x": 23,
+          "y": 3
+        },
+        {
+          "group": "sanguine_cult_books",
+          "x": [
+            11,
+            12
+          ],
+          "y": [
+            8,
+            12
+          ],
+          "chance": 50,
+          "repeat": 10
+        },
+        {
+          "group": "sanguine_cult_spells",
+          "x": [
+            11,
+            12
+          ],
+          "y": [
+            8,
+            12
+          ],
+          "chance": 10
+        }
       ],
       "place_monster": [
-        { "group": "GROUP_SANGUINE_BASEMENT", "x": [ 11, 18 ], "y": [ 11, 18 ], "repeat": [ 3, 5 ] },
-        { "monster": "mon_dracolich", "x": 23, "y": 4 }
+        {
+          "group": "GROUP_SANGUINE_BASEMENT",
+          "x": [
+            11,
+            18
+          ],
+          "y": [
+            11,
+            18
+          ],
+          "repeat": [
+            3,
+            5
+          ]
+        },
+        {
+          "monster": "mon_dracolich",
+          "x": 23,
+          "y": 4
+        }
       ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "island_temple_b_2" ],
+    "om_terrain": [
+      "island_temple_b_2"
+    ],
     "weight": 250,
     "object": {
       "fill_ter": "t_soil",
@@ -154,26 +260,78 @@
         "..=..b=X=.~~.=          ",
         "<.X.....=.gg.=          "
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "g": "t_floor_blue" },
-      "set": [ { "point": "trap", "id": "tr_portal", "x": [ 12, 14 ], "y": [ 9, 11 ] } ],
+      "palettes": [
+        "arcana_palette"
+      ],
+      "terrain": {
+        "g": "t_floor_blue"
+      },
+      "set": [
+        {
+          "point": "trap",
+          "id": "tr_portal",
+          "x": [
+            12,
+            14
+          ],
+          "y": [
+            9,
+            11
+          ]
+        }
+      ],
       "mapping": {
         "a": {
           "items": [
-            { "item": "sanguine_cult_consumables", "chance": 40, "repeat": 2 },
-            { "item": "sanguine_cult_gear", "chance": 40, "repeat": 2 },
-            { "item": "sanguine_cult_gear_magic", "chance": 25, "repeat": 2 }
+            {
+              "item": "sanguine_cult_consumables",
+              "chance": 40,
+              "repeat": 2
+            },
+            {
+              "item": "sanguine_cult_gear",
+              "chance": 40,
+              "repeat": 2
+            },
+            {
+              "item": "sanguine_cult_gear_magic",
+              "chance": 25,
+              "repeat": 2
+            }
           ]
         },
-        "b": { "items": { "item": "cult_sacrifice", "chance": 100 } }
+        "b": {
+          "items": {
+            "item": "cult_sacrifice",
+            "chance": 100
+          }
+        }
       },
-      "place_monster": [ { "group": "GROUP_SANGUINE_BASEMENT", "x": [ 5, 12 ], "y": [ 11, 18 ], "repeat": [ 3, 5 ] } ]
+      "place_monster": [
+        {
+          "group": "GROUP_SANGUINE_BASEMENT",
+          "x": [
+            5,
+            12
+          ],
+          "y": [
+            11,
+            18
+          ],
+          "repeat": [
+            3,
+            5
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "island_temple_b_3" ],
+    "om_terrain": [
+      "island_temple_b_3"
+    ],
     "weight": 250,
     "object": {
       "fill_ter": "t_soil",
@@ -203,20 +361,68 @@
         "                        ",
         "                        "
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "g": "t_floor_blue" },
-      "set": [ { "point": "trap", "id": "tr_portal", "x": [ 12, 14 ], "y": [ 9, 11 ] } ],
-      "mapping": {
-        "a": { "items": [ { "item": "sanguine_cult_crafting", "chance": 75, "repeat": 2 } ] },
-        "b": { "items": { "item": "cult_sacrifice", "chance": 100 } }
+      "palettes": [
+        "arcana_palette"
+      ],
+      "terrain": {
+        "g": "t_floor_blue"
       },
-      "place_monster": [ { "group": "GROUP_SANGUINE_BASEMENT", "x": [ 11, 18 ], "y": [ 5, 12 ], "repeat": [ 3, 5 ] } ]
+      "set": [
+        {
+          "point": "trap",
+          "id": "tr_portal",
+          "x": [
+            12,
+            14
+          ],
+          "y": [
+            9,
+            11
+          ]
+        }
+      ],
+      "mapping": {
+        "a": {
+          "items": [
+            {
+              "item": "sanguine_cult_crafting",
+              "chance": 75,
+              "repeat": 2
+            }
+          ]
+        },
+        "b": {
+          "items": {
+            "item": "cult_sacrifice",
+            "chance": 100
+          }
+        }
+      },
+      "place_monster": [
+        {
+          "group": "GROUP_SANGUINE_BASEMENT",
+          "x": [
+            11,
+            18
+          ],
+          "y": [
+            5,
+            12
+          ],
+          "repeat": [
+            3,
+            5
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "island_temple_b_4" ],
+    "om_terrain": [
+      "island_temple_b_4"
+    ],
     "weight": 250,
     "object": {
       "fill_ter": "t_soil",
@@ -246,16 +452,85 @@
         "                        ",
         "                        "
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "g": "t_floor_blue" },
-      "mapping": { "b": { "items": { "item": "cult_sacrifice", "chance": 100 } } },
-      "place_loot": [
-        { "item": "arcanemap", "x": 15, "y": [ 11, 15 ], "chance": 75 },
-        { "item": "note_sanguine_tenet", "x": [ 11, 12 ], "y": [ 11, 15 ], "chance": 90 },
-        { "group": "sanguine_cult_books", "x": [ 11, 12 ], "y": [ 11, 15 ], "chance": 50, "repeat": 10 },
-        { "group": "sanguine_cult_spells", "x": [ 11, 12 ], "y": [ 11, 15 ], "chance": 10 }
+      "palettes": [
+        "arcana_palette"
       ],
-      "place_monster": [ { "group": "GROUP_SANGUINE_BASEMENT", "x": [ 5, 12 ], "y": [ 5, 12 ], "repeat": [ 3, 5 ] } ]
+      "terrain": {
+        "g": "t_floor_blue"
+      },
+      "mapping": {
+        "b": {
+          "items": {
+            "item": "cult_sacrifice",
+            "chance": 100
+          }
+        }
+      },
+      "place_loot": [
+        {
+          "item": "arcanemap",
+          "x": 15,
+          "y": [
+            11,
+            15
+          ],
+          "chance": 75
+        },
+        {
+          "item": "note_sanguine_tenet",
+          "x": [
+            11,
+            12
+          ],
+          "y": [
+            11,
+            15
+          ],
+          "chance": 90
+        },
+        {
+          "group": "sanguine_cult_books",
+          "x": [
+            11,
+            12
+          ],
+          "y": [
+            11,
+            15
+          ],
+          "chance": 50,
+          "repeat": 10
+        },
+        {
+          "group": "sanguine_cult_spells",
+          "x": [
+            11,
+            12
+          ],
+          "y": [
+            11,
+            15
+          ],
+          "chance": 10
+        }
+      ],
+      "place_monster": [
+        {
+          "group": "GROUP_SANGUINE_BASEMENT",
+          "x": [
+            5,
+            12
+          ],
+          "y": [
+            5,
+            12
+          ],
+          "repeat": [
+            3,
+            5
+          ]
+        }
+      ]
     }
   }
 ]

@@ -2,9 +2,14 @@
   {
     "id": "t7_mana_idol_vex",
     "type": "SPELL",
-    "name": { "str": "Idol: <color_blue>Vex</color>" },
-    "description": "Calls forth the ancient idol: <color_light_blue>Vex</color>, the etherean calamity. A deity who fulfills your desire for annihilation with its etherean prowess.\n* Once it is successfully summoned, you are affected with <color_yellow>ancient dread</color>, an enormous penalty to intelligence and movement speed.\n* This minion does not harm with brute strength, but casts one from its numerous unique, crowd-control spells.\n\nThis is a <color_pink>tier 7</color> spell.",
-    "valid_targets": [ "self", "ground" ],
+    "name": {
+      "str": "偶像：<color_blue>Vex</color>"
+    },
+    "description": "召唤古老的偶像:<color_light_blue>维克斯</color>，以太的灾难。一个以其以太般的力量满足你毁灭欲望的神。\n *一旦召唤成功，你将受到<color_yellow>远古恐惧的影响，这是对智力和移动速度的巨大惩罚。\n*这个仆从不会用蛮力伤害人，但会从众多独特的人群控制法术中施放一个。\n\n这是一个<color_pink>第7层法术。",
+    "valid_targets": [
+      "self",
+      "ground"
+    ],
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_idol_vex",
@@ -20,6 +25,12 @@
     "min_duration": 100000,
     "max_duration": 125000,
     "base_casting_time": 12000,
-    "flags": [ "SOMATIC", "VERBAL", "CONCENTRATE", "NO_LEGS", "NO_PROJECTILE" ]
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "CONCENTRATE",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
   }
 ]

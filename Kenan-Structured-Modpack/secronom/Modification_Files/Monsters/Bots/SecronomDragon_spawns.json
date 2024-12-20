@@ -2,15 +2,21 @@
   {
     "id": "mon_bot_secroinforcer",
     "type": "MONSTER",
-    "name": { "str": "reinforcer" },
-    "description": "A large, disk shaped hovering bot deployed by the cyber-dragon. Carries and deploys various combat drones and robots into the field.",
+    "name": {
+      "str": "强化机器人"
+    },
+    "description": "盘旋机器人一种大型盘旋机器人。它的内部空间有各种各样的战斗机器人，周期性地激活并部署到战场上。",
     "default_faction": "defense_bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "volume": "190 L",
     "weight": "290 kg",
     "hp": 300,
     "speed": 20,
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "0",
     "color": "white",
     "aggression": 99,
@@ -18,66 +24,152 @@
     "melee_skill": 3,
     "melee_dice": 4,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 3 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 3
+      }
+    ],
     "dodge": 2,
-    "armor": { "bash": 18, "cut": 24, "bullet": 24, "stab": 24, "heat": 20, "acid": 20 },
+    "armor": {
+      "bash": 18,
+      "cut": 24,
+      "bullet": 24,
+      "stab": 24,
+      "heat": 20,
+      "acid": 20
+    },
     "luminance": 10,
     "vision_day": 50,
     "vision_night": 10,
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_bot_secroinforcer_target" },
+        "spell_data": {
+          "id": "mon_bot_secroinforcer_target"
+        },
         "cooldown": 16,
-        "monster_message": "<color_yellow>%1$s beeps as a robot is deployed!</color>"
+        "monster_message": "<color_yellow>%1$s发出哔哔声表示机器人已部署完成！</color>"
       }
     ],
-    "death_drops": { "groups": [ [ "robots", 1 ] ] },
-    "death_function": { "corpse_type": "BROKEN" },
-    "flags": [ "SEES", "FLIES", "ELECTRONIC", "COLDPROOF", "NO_BREATHE", "PRIORITIZE_TARGETS", "PATH_AVOID_DANGER_2", "LOUDMOVES" ]
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          1
+        ]
+      ]
+    },
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "flags": [
+      "SEES",
+      "FLIES",
+      "ELECTRONIC",
+      "COLDPROOF",
+      "NO_BREATHE",
+      "PRIORITIZE_TARGETS",
+      "PATH_AVOID_DANGER_2",
+      "LOUDMOVES"
+    ]
   },
   {
     "id": "mon_bot_secroshocker",
     "type": "MONSTER",
-    "name": { "str": "shocker" },
-    "description": "A gyrocoptic ball, enveloped in electrical discharges. Deadly sawblades rotate beneath its metallic body.",
+    "name": {
+      "str": "放电机器人"
+    },
+    "description": "一种陀螺球，被噼啪作响的放电包围，金属身体下连着一圈致命的锯片。",
     "default_faction": "bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
-    "emit_fields": [ "emit_shockerbot_crakle" ],
+    "emit_fields": [
+      "emit_shockerbot_crakle"
+    ],
     "hp": 35,
     "speed": 90,
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "o",
     "harvest": "exempt",
     "color": "white",
     "aggression": 100,
     "morale": 100,
-    "melee_damage": [ { "damage_type": "electric", "amount": 4 }, { "damage_type": "cut", "amount": 12 } ],
-    "special_when_hit": [ "ZAPBACK", 30 ],
+    "melee_damage": [
+      {
+        "damage_type": "electric",
+        "amount": 4
+      },
+      {
+        "damage_type": "cut",
+        "amount": 12
+      }
+    ],
+    "special_when_hit": [
+      "ZAPBACK",
+      30
+    ],
     "melee_skill": 2,
     "melee_dice": 2,
     "melee_dice_sides": 2,
-    "armor": { "bash": 3, "cut": 5, "bullet": 5, "stab": 5, "heat": 10, "acid": 8 },
+    "armor": {
+      "bash": 3,
+      "cut": 5,
+      "bullet": 5,
+      "stab": 5,
+      "heat": 10,
+      "acid": 8
+    },
     "luminance": 2,
-    "path_settings": { "max_dist": 15 },
-    "death_drops": { "groups": [ [ "robots", 1 ] ] },
-    "death_function": { "corpse_type": "BROKEN" },
-    "flags": [ "SEES", "HEARS", "FLIES", "ELECTRONIC", "ELECTRIC", "COLDPROOF", "NO_BREATHE", "POISON", "PRIORITIZE_TARGETS" ]
+    "path_settings": {
+      "max_dist": 15
+    },
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          1
+        ]
+      ]
+    },
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "flags": [
+      "SEES",
+      "HEARS",
+      "FLIES",
+      "ELECTRONIC",
+      "ELECTRIC",
+      "COLDPROOF",
+      "NO_BREATHE",
+      "POISON",
+      "PRIORITIZE_TARGETS"
+    ]
   },
   {
     "id": "mon_bot_secroriflewalker",
     "type": "MONSTER",
-    "name": { "str": "walker" },
-    "description": "A four legged, riot suppressing bot with an automated MP5 mounted as its head. Its feet are tipped with tazers for close combat and/or subduing targets.",
+    "name": {
+      "str": "行尸"
+    },
+    "description": "一种四足防暴机器人，头部装有全自动MP5。它的脚上有电击枪，用于近距离战斗/制服目标。",
     "default_faction": "bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
     "hp": 45,
     "speed": 70,
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "x",
     "color": "white",
     "aggression": 100,
@@ -86,20 +178,49 @@
     "melee_skill": 0,
     "melee_dice": 0,
     "melee_dice_sides": 0,
-    "armor": { "bash": 2, "cut": 2, "bullet": 2, "stab": 3, "heat": 10, "acid": 8 },
-    "path_settings": { "max_dist": 15 },
-    "starting_ammo": { "9mm": 30 },
+    "armor": {
+      "bash": 2,
+      "cut": 2,
+      "bullet": 2,
+      "stab": 3,
+      "heat": 10,
+      "acid": 8
+    },
+    "path_settings": {
+      "max_dist": 15
+    },
+    "starting_ammo": {
+      "9mm": 30
+    },
     "special_attacks": [
-      [ "TAZER", 10 ],
+      [
+        "TAZER",
+        10
+      ],
       {
         "type": "gun",
         "cooldown": 2,
         "move_cost": 20,
         "gun_type": "hk_mp5",
         "ammo_type": "9mm",
-        "fake_skills": [ [ "gun", 5 ], [ "smg", 5 ] ],
+        "fake_skills": [
+          [
+            "gun",
+            5
+          ],
+          [
+            "smg",
+            5
+          ]
+        ],
         "fake_dex": 12,
-        "ranges": [ [ 0, 16, "DEFAULT" ] ],
+        "ranges": [
+          [
+            0,
+            16,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_npc": true,
         "require_targeting_monster": true,
         "laser_lock": false,
@@ -107,25 +228,48 @@
         "targeting_timeout_extend": -10,
         "targeting_sound": "a beeping!",
         "targeting_volume": 20,
-        "no_ammo_sound": "a chk!"
+        "no_ammo_sound": "叮！"
       }
     ],
-    "death_drops": { "groups": [ [ "robots", 1 ] ] },
-    "death_function": { "corpse_type": "BROKEN" },
-    "flags": [ "SEES", "ELECTRONIC", "COLDPROOF", "NO_BREATHE", "POISON", "PRIORITIZE_TARGETS", "PATH_AVOID_DANGER_1" ]
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          1
+        ]
+      ]
+    },
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "flags": [
+      "SEES",
+      "ELECTRONIC",
+      "COLDPROOF",
+      "NO_BREATHE",
+      "POISON",
+      "PRIORITIZE_TARGETS",
+      "PATH_AVOID_DANGER_2"
+    ]
   },
   {
     "id": "mon_bot_secrolauncher",
     "type": "MONSTER",
-    "name": { "str": "launcher" },
-    "description": "An automated missile deploying helidrone. It launches homing missiles from its hatch, activating them upon release.",
+    "name": {
+      "str": "发射器"
+    },
+    "description": "部署直升机的自动导弹。它从舱口发射一枚寻的导弹，释放后激活它们。",
     "default_faction": "bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "volume": "30000 ml",
     "weight": "40750 g",
     "hp": 55,
     "speed": 85,
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "H",
     "color": "white",
     "aggression": 100,
@@ -133,34 +277,71 @@
     "melee_skill": 0,
     "melee_dice": 0,
     "melee_dice_sides": 0,
-    "armor": { "bash": 2, "cut": 4, "bullet": 3, "stab": 3, "heat": 10, "acid": 8 },
+    "armor": {
+      "bash": 2,
+      "cut": 4,
+      "bullet": 3,
+      "stab": 3,
+      "heat": 10,
+      "acid": 8
+    },
     "harvest": "exempt",
-    "path_settings": { "max_dist": 15 },
+    "path_settings": {
+      "max_dist": 15
+    },
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_bot_secrolauncher_target" },
+        "spell_data": {
+          "id": "mon_bot_secrolauncher_target"
+        },
         "cooldown": 50,
-        "monster_message": "<color_yellow>%1$s sends out missiles!</color>"
+        "monster_message": "<color_yellow>%1$s发射导弹！</color>"
       }
     ],
-    "death_drops": { "groups": [ [ "robots", 1 ] ] },
-    "death_function": { "corpse_type": "BROKEN" },
-    "flags": [ "SEES", "FLIES", "ELECTRONIC", "COLDPROOF", "NO_BREATHE", "POISON", "PRIORITIZE_TARGETS", "PATH_AVOID_DANGER_1" ]
+    "death_drops": {
+      "groups": [
+        [
+          "robots",
+          1
+        ]
+      ]
+    },
+    "death_function": {
+      "corpse_type": "BROKEN"
+    },
+    "flags": [
+      "SEES",
+      "FLIES",
+      "ELECTRONIC",
+      "COLDPROOF",
+      "NO_BREATHE",
+      "POISON",
+      "PRIORITIZE_TARGETS",
+      "PATH_AVOID_DANGER_2"
+    ]
   },
   {
     "id": "mon_bot_secromissile",
     "type": "MONSTER",
-    "name": { "str": "homing missile" },
-    "description": "A heat-seeking missile, about to explode on its hapless target.",
+    "name": {
+      "str": "寻的导弹"
+    },
+    "description": "一枚热寻的导弹，快要炸上它那不幸的目标了。",
     "default_faction": "bot",
-    "species": [ "ROBOT" ],
+    "species": [
+      "ROBOT"
+    ],
     "volume": "750 ml",
     "weight": "1000 g",
     "hp": 10,
     "speed": 500,
-    "material": [ "steel" ],
-    "emit_fields": [ "emit_secromissile_stream" ],
+    "material": [
+      "steel"
+    ],
+    "emit_fields": [
+      "emit_secromissile_stream"
+    ],
     "symbol": "!",
     "color": "white",
     "aggression": 100,
@@ -171,9 +352,28 @@
     "melee_dice_sides": 0,
     "dodge": 5,
     "vision_day": 69,
-    "starting_ammo": { "SSimpactgrenade": 1 },
-    "special_attacks": [ [ "KAMIKAZE", 0 ] ],
-    "death_function": { "message": "The %s disintegrates!", "corpse_type": "NO_CORPSE" },
-    "flags": [ "SEES", "FLIES", "NOHEAD", "ELECTRONIC", "COLDPROOF", "NO_BREATHE", "POISON", "PRIORITIZE_TARGETS" ]
+    "starting_ammo": {
+      "SSimpactgrenade": 1
+    },
+    "special_attacks": [
+      [
+        "KAMIKAZE",
+        0
+      ]
+    ],
+    "death_function": {
+      "message": "The %s disintegrates!",
+      "corpse_type": "NO_CORPSE"
+    },
+    "flags": [
+      "SEES",
+      "FLIES",
+      "NOHEAD",
+      "ELECTRONIC",
+      "COLDPROOF",
+      "NO_BREATHE",
+      "POISON",
+      "PRIORITIZE_TARGETS"
+    ]
   }
 ]

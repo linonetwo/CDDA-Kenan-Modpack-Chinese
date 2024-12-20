@@ -2,263 +2,574 @@
   {
     "id": "shield_wooden",
     "type": "ARMOR",
-    "name": { "str": "wooden shield" },
+    "name": {
+      "str": "木盾"
+    },
     "category": "armor",
-    "description": "A crude wooden shield, lacking any metal or leather reinforcement.  Tolerable weight but not very tough.",
+    "description": "这是一面粗糙的木盾，没有任何金属或皮革加固。 重量尚可，但并不坚硬。",
     "weight": "3 kg",
     "volume": "3 L",
     "price": "50 USD",
     "price_postapoc": "5 USD",
     "to_hit": -1,
-    "melee_damage": { "bash": 8 },
-    "material": [ "wood", "wood_breathable" ],
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "wood",
+      "wood_breathable"
+    ],
     "symbol": "[",
     "color": "brown",
     "sided": true,
     "material_thickness": 3,
-    "techniques": [ "WBLOCK_2" ],
-    "flags": [ "OVERSIZE", "BELTED", "RESTRICT_HANDS", "BLOCK_WHILE_WORN" ],
-    "armor": [ { "encumbrance": 15, "coverage": 90, "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ] } ]
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BLOCK_WHILE_WORN"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 90,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   },
   {
     "id": "shield_wooden_large",
     "type": "ARMOR",
-    "name": { "str": "large wooden shield" },
+    "name": {
+      "str": "大木盾"
+    },
     "category": "armor",
-    "description": "An crude wooden tower shield, lacking any metal or leather reinforcement.  Bulky, but offers a decent amount of protection.",
+    "description": "简陋的木质塔盾，没有任何金属或皮革加固。 虽然笨重，但能提供不错的保护。",
     "weight": "5 kg",
     "volume": "5 L",
     "price": "60 USD",
     "price_postapoc": "750 cent",
     "to_hit": -2,
-    "melee_damage": { "bash": 10 },
-    "material": [ "wood", "wood_breathable" ],
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "wood",
+      "wood_breathable"
+    ],
     "symbol": "[",
     "color": "brown",
     "sided": true,
     "material_thickness": 3,
-    "techniques": [ "WBLOCK_3" ],
-    "flags": [ "OVERSIZE", "BELTED", "RESTRICT_HANDS", "BLOCK_WHILE_WORN" ],
-    "armor": [ { "encumbrance": 25, "coverage": 90, "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ] } ]
+    "techniques": [
+      "WBLOCK_3"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BLOCK_WHILE_WORN"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 90,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   },
   {
     "id": "shield_leather",
     "type": "ARMOR",
-    "name": { "str": "leather-reinforced shield" },
+    "name": {
+      "str": "皮革钢纹木盾"
+    },
     "category": "armor",
-    "description": "A simple round shield made of wood with leather reinforcement.  Sturdier and stronger than a simple wooden shield, and less encumbering than a metal one.",
+    "description": "木质加固的简易圆盾。 比简单的木盾更坚固，比金属盾更轻便。",
     "weight": "3200 g",
     "volume": "3 L",
     "price": "80 USD",
     "price_postapoc": "8 USD",
     "to_hit": -1,
-    "melee_damage": { "bash": 8 },
+    "melee_damage": {
+      "bash": 8
+    },
     "//": "Wood-only to prevent repairing it via sewing.",
-    "material": [ "wood", "wood_breathable" ],
+    "material": [
+      "wood",
+      "wood_breathable"
+    ],
     "looks_like": "shield_wooden",
     "symbol": "[",
     "color": "blue",
     "sided": true,
     "material_thickness": 4,
-    "techniques": [ "WBLOCK_2" ],
-    "flags": [ "OVERSIZE", "BELTED", "RESTRICT_HANDS", "BLOCK_WHILE_WORN", "STURDY" ],
-    "armor": [ { "encumbrance": 16, "coverage": 90, "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ] } ]
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BLOCK_WHILE_WORN",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 16,
+        "coverage": 90,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   },
   {
     "id": "shield_banded",
     "type": "ARMOR",
-    "name": { "str": "banded shield" },
+    "name": {
+      "str": "钢纹木盾"
+    },
     "category": "armor",
-    "description": "A simple round shield made of wood with bands of steel reinforcing it.  Stronger than a simple wooden shield, but also more encumbering.",
+    "description": "一种用木头制成的简单的圆形盾牌，用钢带加固。比简单的木质盾牌更坚固，但也更笨重。",
     "weight": "3400 g",
     "volume": "3 L",
     "price": "100 USD",
     "price_postapoc": "10 USD",
     "to_hit": -1,
-    "melee_damage": { "bash": 8 },
-    "material": [ "wood", "wood_breathable", "steel", "steel_breathable" ],
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "wood",
+      "wood_breathable",
+      "steel",
+      "steel_breathable"
+    ],
     "looks_like": "shield_wooden",
     "symbol": "[",
     "color": "blue",
     "sided": true,
     "material_thickness": 3,
-    "techniques": [ "WBLOCK_2" ],
-    "flags": [ "OVERSIZE", "BELTED", "RESTRICT_HANDS", "BLOCK_WHILE_WORN", "NONCONDUCTIVE", "STURDY" ],
-    "armor": [ { "encumbrance": 20, "coverage": 90, "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ] } ]
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BLOCK_WHILE_WORN",
+      "NONCONDUCTIVE",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 90,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   },
   {
     "id": "shield_leather_large",
     "copy-from": "shield_leather",
     "looks_like": "shield_wooden_large",
     "type": "ARMOR",
-    "name": { "str": "large leather-reinforced shield" },
-    "description": "A large shield made of wood with leather reinforcement.  Sturdier and stronger than a basic wooden shield, and less encumbering than a metal one.",
+    "name": {
+      "str": "大型皮革钢纹木盾"
+    },
+    "description": "用皮革加固的木制大盾牌。 它比基本的木盾更坚固结实，也没有金属盾那么笨重。",
     "volume": "5 L",
     "weight": "5200 g",
     "price": "80 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 10 },
-    "techniques": [ "WBLOCK_3" ],
-    "extend": { "flags": [ "STURDY" ] },
-    "armor": [ { "encumbrance": 26, "coverage": 90, "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ] } ]
+    "melee_damage": {
+      "bash": 10
+    },
+    "techniques": [
+      "WBLOCK_3"
+    ],
+    "extend": {
+      "flags": [
+        "STURDY"
+      ]
+    },
+    "armor": [
+      {
+        "encumbrance": 26,
+        "coverage": 90,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   },
   {
     "id": "shield_banded_large",
     "copy-from": "shield_banded",
     "looks_like": "shield_wooden_large",
     "type": "ARMOR",
-    "name": { "str": "large banded shield" },
-    "description": "A large shield made of wood with steel bands reinforcing it.  Stronger than a simple wooden shield, but also more encumbering.",
+    "name": {
+      "str": "大型钢纹木盾"
+    },
+    "description": "用钢带加固的木质大盾。 比简单的木盾更坚固，但也更笨重。",
     "volume": "5 L",
     "weight": "5400 g",
     "price": "120 USD",
     "price_postapoc": "14 USD",
-    "melee_damage": { "bash": 10 },
-    "techniques": [ "WBLOCK_3" ],
-    "extend": { "flags": [ "STURDY" ] },
-    "armor": [ { "encumbrance": 30, "coverage": 90, "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ] } ]
+    "melee_damage": {
+      "bash": 10
+    },
+    "techniques": [
+      "WBLOCK_3"
+    ],
+    "extend": {
+      "flags": [
+        "STURDY"
+      ]
+    },
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 90,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   },
   {
     "id": "shield_hoplon",
     "type": "ARMOR",
-    "name": { "str": "hoplon" },
+    "name": {
+      "str": "希腊圆盾"
+    },
     "category": "armor",
-    "description": "A convex round shield from ancient Greece, made of wood reinforced with bronze.  Heavy but effective.",
+    "description": "一件凸起的圆盾，源自古希腊，由木头制成，并由青铜加固。笨重但有效。",
     "weight": "5 kg",
     "volume": "4500 ml",
     "price": "750 USD",
     "price_postapoc": "20 USD",
     "to_hit": -1,
-    "melee_damage": { "bash": 11 },
-    "material": [ "wood", "wood_breathable", "bronze", "bronze_breathable" ],
+    "melee_damage": {
+      "bash": 11
+    },
+    "material": [
+      "wood",
+      "wood_breathable",
+      "bronze",
+      "bronze_breathable"
+    ],
     "symbol": "[",
     "color": "yellow",
     "looks_like": "shield_wooden",
     "sided": true,
     "material_thickness": 4,
-    "techniques": [ "WBLOCK_2" ],
-    "flags": [ "OVERSIZE", "BELTED", "RESTRICT_HANDS", "BLOCK_WHILE_WORN" ],
-    "armor": [ { "encumbrance": 20, "coverage": 100, "covers": [ "arm_l", "arm_r", "hand_l", "hand_r" ] } ]
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "BELTED",
+      "RESTRICT_HANDS",
+      "BLOCK_WHILE_WORN"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 100,
+        "covers": [
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   },
   {
     "id": "shield_buckler",
     "type": "ARMOR",
-    "name": { "str": "buckler" },
+    "name": {
+      "str": "小圆盾"
+    },
     "category": "armor",
-    "description": "A small metal shield historically used for dueling rather than protection from arrows.  It's small and light enough to not hinder the use of your hands.",
+    "description": "一种小型金属盾牌，历史上曾用于决斗而非防箭。 它小巧轻便，不会妨碍双手的使用。",
     "volume": "1 L",
     "weight": "1400 g",
     "price": "120 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 8 },
-    "material": [ "steel", "steel_breathable" ],
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "steel",
+      "steel_breathable"
+    ],
     "symbol": "[",
     "color": "dark_gray",
     "looks_like": "shield_wooden",
     "sided": true,
     "material_thickness": 3,
-    "techniques": [ "WBLOCK_2" ],
-    "flags": [ "OVERSIZE", "STURDY", "BELTED", "ONLY_ONE", "BLOCK_WHILE_WORN" ],
-    "armor": [ { "encumbrance": 10, "coverage": 50, "covers": [ "arm_l", "arm_r" ] } ]
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "OVERSIZE",
+      "STURDY",
+      "BELTED",
+      "ONLY_ONE",
+      "BLOCK_WHILE_WORN"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 50,
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ]
   },
   {
     "id": "helmet_szyszak",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "szyszak", "str_pl": "szyszaki" },
-    "description": "A post-Renaissance type of lobster-tailed helmet with an ornate crest, short brim, and well-decorated protection for the eyes and nose.",
+    "name": {
+      "str": "契斯卡格盔",
+      "str_pl": "契斯卡格盔"
+    },
+    "description": "一种文艺复兴后的龙虾尾式头盔，有华丽的帽顶、短帽檐和装饰精美的眼睛和鼻子保护装置。",
     "weight": "966 g",
     "volume": "2500 ml",
     "price": "400 USD",
     "price_postapoc": "40 USD",
-    "melee_damage": { "bash": 10 },
-    "material": [ "steel", "leather" ],
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "steel",
+      "leather"
+    ],
     "symbol": "[",
     "color": "light_gray",
     "warmth": 10,
     "material_thickness": 4,
-    "techniques": [ "WBLOCK_2" ],
-    "flags": [ "FANCY", "VARSIZE", "STURDY", "SUN_GLASSES" ],
-    "armor": [ { "encumbrance": 30, "coverage": 80, "covers": [ "head", "eyes" ] } ]
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "FANCY",
+      "VARSIZE",
+      "STURDY",
+      "SUN_GLASSES"
+    ],
+    "armor": [
+      {
+        "encumbrance": 30,
+        "coverage": 80,
+        "covers": [
+          "head",
+          "eyes"
+        ]
+      }
+    ]
   },
   {
     "id": "wings_ornamental",
     "type": "ARMOR",
-    "name": { "str": "ornamental wings", "str_pl": "ornamental wings" },
-    "description": "A wooden frame richly decorated with feathers, with harness securing them at the waist.  Looks badass and provides minor protection, but not very practical overall.",
+    "name": {
+      "str": "装饰性翅膀",
+      "str_pl": "装饰性翅膀"
+    },
+    "description": "用羽毛装饰的木制框架，腰部有固定羽毛的背带。看起来很糟糕，提供轻微的保护，总体而言没有太大的实际作用。",
     "weight": "933 g",
     "volume": "6 L",
     "price": "420 USD",
     "price_postapoc": "5 USD",
-    "material": [ "wood", "cotton" ],
+    "material": [
+      "wood",
+      "cotton"
+    ],
     "symbol": "[",
     "color": "white",
     "warmth": 5,
     "material_thickness": 2,
-    "flags": [ "BELTED", "SUPER_FANCY", "BLOCK_WHILE_WORN" ],
-    "armor": [ { "encumbrance": 10, "coverage": 20, "covers": [ "head", "torso" ], "specifically_covers": [ "torso_waist" ] } ]
+    "flags": [
+      "BELTED",
+      "SUPER_FANCY",
+      "BLOCK_WHILE_WORN"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 20,
+        "covers": [
+          "head",
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ]
+      }
+    ]
   },
   {
     "id": "armor_samurai_tosei",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str_sp": "Tosei-gusoku" },
-    "description": "Japanese samurai armor of the 16th Century, incorporating then-modern designs to provide greater protection.",
+    "name": {
+      "str_sp": "具足"
+    },
+    "description": "16世纪的日本武士盔甲，结合当时的现代设计，提供更大的保护。",
     "weight": "9220 g",
     "volume": "11500 ml",
     "price": "900 USD",
     "price_postapoc": "80 USD",
-    "melee_damage": { "bash": 8 },
-    "material": [ "steel", "leather" ],
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "steel",
+      "leather"
+    ],
     "symbol": "[",
     "looks_like": "armor_samurai",
     "color": "dark_gray",
     "warmth": 25,
     "material_thickness": 4,
-    "flags": [ "VARSIZE", "STURDY", "OUTER" ],
-    "armor": [ { "encumbrance": 15, "coverage": 85, "covers": [ "torso", "leg_l", "leg_r", "arm_l", "arm_r", "hand_l", "hand_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "leg_l",
+          "leg_r",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   },
   {
     "id": "sabatons_plate",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of sabatons", "str_pl": "pairs of sabatons" },
-    "description": "A Swedish power me- no, a component of medieval plate armor, covering the feet.  Can be worn over other boots.",
+    "name": {
+      "str": "钢甲靴",
+      "str_pl": "钢甲靴"
+    },
+    "description": "一个瑞典的“power me- no”，中世纪板甲的一个组成部分，覆盖脚部。可以穿在其他靴子外边。",
     "weight": "1700 g",
     "volume": "2800 ml",
     "price": "500 USD",
     "price_postapoc": "60 USD",
     "to_hit": -2,
-    "melee_damage": { "bash": 7 },
-    "material": [ "steel", "leather" ],
+    "melee_damage": {
+      "bash": 7
+    },
+    "material": [
+      "steel",
+      "leather"
+    ],
     "symbol": "[",
     "looks_like": "boots_plate",
     "color": "light_gray",
     "warmth": 5,
     "material_thickness": 4,
-    "flags": [ "VARSIZE", "STURDY", "BELTED" ],
-    "armor": [ { "encumbrance": 25, "coverage": 90, "covers": [ "foot_l", "foot_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "BELTED"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 90,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
   },
   {
     "id": "demigloves_plate",
     "type": "ARMOR",
     "category": "armor",
-    "name": { "str": "pair of armored demi-gauntlets", "str_pl": "pairs of armored demi-gauntlets" },
-    "description": "A robust set of fingerless armor-plated gloves, offering less coverage in exchange for solid construction and greater dexterity.",
+    "name": {
+      "str": "一对半甲护手",
+      "str_pl": "多对的半甲护手"
+    },
+    "description": "一套坚固的半甲护手，提供较少的覆盖，以换取坚固的结构和更大的灵活性。",
     "weight": "1240 g",
     "volume": "1500 ml",
     "price": "400 USD",
     "price_postapoc": "30 USD",
     "to_hit": -2,
-    "melee_damage": { "bash": 7 },
-    "material": [ "steel", "leather" ],
+    "melee_damage": {
+      "bash": 7
+    },
+    "material": [
+      "steel",
+      "leather"
+    ],
     "symbol": "[",
     "looks_like": "gloves_plate",
     "color": "light_gray",
     "warmth": 15,
     "material_thickness": 4,
     "environmental_protection": 1,
-    "flags": [ "VARSIZE", "STURDY", "ALLOWS_NATURAL_ATTACKS" ],
-    "armor": [ { "encumbrance": 15, "coverage": 75, "covers": [ "hand_l", "hand_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "STURDY",
+      "ALLOWS_NATURAL_ATTACKS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 75,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ]
   }
 ]

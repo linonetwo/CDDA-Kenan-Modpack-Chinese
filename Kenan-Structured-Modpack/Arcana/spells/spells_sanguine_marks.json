@@ -2,16 +2,34 @@
   {
     "id": "arcana_mark_destructive_absorption",
     "type": "SPELL",
-    "name": { "str": "Mark: Destructive Absorption" },
-    "description": "Sanguine Mark\nUsing this spell will drain energy from your surroundings, creating a void in reality that will heavily damage a single target, rapidly restoring your stamina afterward.  Beware the risk of tearing the fabric of reality.",
-    "message": "With a strange gesture, the fabric of the Veil warps and decays.  %s!",
+    "name": {
+      "str": "印记：破坏性吸收"
+    },
+    "description": "猩红印记\n使用这个法术会消耗你周围的能量，在现实中创造一个虚空，会严重伤害一个目标，然后迅速恢复你的耐力。当心撕裂现实结构的风险。",
+    "message": "以一种奇怪的姿态，帷幕的织物扭曲和腐烂。%s ！",
     "effect": "attack",
     "shape": "blast",
-    "valid_targets": [ "ally", "hostile" ],
-    "flags": [ "SILENT", "SOMATIC", "NO_HANDS", "NO_FAIL" ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
     "extra_effects": [
-      { "id": "arcana_aftermath_destructive_absorption_side_effects", "hit_self": true, "max_level": 5 },
-      { "id": "arcana_aftermath_sanguine_mark_burnout_10", "hit_self": true, "max_level": 5 }
+      {
+        "id": "arcana_aftermath_destructive_absorption_side_effects",
+        "hit_self": true,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_10",
+        "hit_self": true,
+        "max_level": 5
+      }
     ],
     "//": "Full damage with no spike effect, for single-target and line spells.",
     "min_damage": 200,
@@ -39,14 +57,32 @@
   {
     "id": "arcana_mark_displacing_slash",
     "type": "SPELL",
-    "name": { "str": "Mark: Displacing Slash" },
-    "description": "Magic Sign\nUsing this spell will swap your position with a hostile target of your choosing.  While it won't directly damage your chosen target, anything caught in the bloody swath around where you emerge will be severely injured.",
-    "message": "You lunge forward, arm outstretched toward your target.  %s!",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "SOMATIC", "NO_HANDS", "NO_FAIL", "SWAP_POS" ],
+    "name": {
+      "str": "Sign: Displacing Slash"
+    },
+    "description": "魔符\n将与你选择的敌对目标交换位置。虽然它不会直接伤害你选择的目标，但任何被你发现的血腥地带中的东西都会受到严重伤害。",
+    "message": "你向前冲，手臂伸向目标。%s ！",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL",
+      "SWAP_POS"
+    ],
     "extra_effects": [
-      { "id": "arcana_aftermath_displacing_slash_aoe", "hit_self": false, "max_level": 5 },
-      { "id": "arcana_aftermath_sanguine_mark_burnout_4", "hit_self": true, "max_level": 5 }
+      {
+        "id": "arcana_aftermath_displacing_slash_aoe",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_4",
+        "hit_self": true,
+        "max_level": 5
+      }
     ],
     "effect": "attack",
     "shape": "blast",
@@ -77,12 +113,26 @@
   {
     "id": "arcana_mark_drain_life",
     "type": "SPELL",
-    "name": { "str": "Mark: Drain Life" },
-    "description": "Sanguine Mark\nUsing this spell will anoint you with a horned halo, granting a life-draining effect.",
-    "valid_targets": [ "self" ],
-    "message": "You gesture, and are filled with a yearning for the hunt.  %s!",
-    "flags": [ "SOMATIC", "NO_HANDS", "NO_FAIL" ],
-    "extra_effects": [ { "id": "arcana_aftermath_sanguine_mark_burnout_6", "hit_self": true, "max_level": 5 } ],
+    "name": {
+      "str": "印记：吸取生命"
+    },
+    "description": "猩红印记\n使用这个法术会给你一个带角的光环，造成一个消耗生命的效果。",
+    "valid_targets": [
+      "self"
+    ],
+    "message": "你的手势，充满了对狩猎的渴望。%s ！",
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_6",
+        "hit_self": true,
+        "max_level": 5
+      }
+    ],
     "effect": "spawn_item",
     "shape": "blast",
     "effect_str": "halo_drainlife",
@@ -105,16 +155,39 @@
   {
     "id": "arcana_mark_elemental_sign",
     "type": "SPELL",
-    "name": { "str": "Mark: Elemental Sign" },
-    "description": "Sanguine Mark\nUsing this spell will grant complete immunity to fire, spreading a deathly chill and driving away flames from your immediate area.",
-    "message": "With a gesture, your inner fire flares up.  %s!",
-    "valid_targets": [ "self" ],
-    "flags": [ "SOMATIC", "NO_HANDS", "NO_FAIL" ],
+    "name": {
+      "str": "印记：元素符号"
+    },
+    "description": "猩红印记\n使用此法术将获得对火的完全免疫，传播致命寒意并将火焰从你的附近区域赶走。",
+    "message": "只要一个手势，你的心灵之火就会燃烧起来。%s ！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
     "extra_effects": [
-      { "id": "arcana_aftermath_brief_cold_ward", "hit_self": true },
-      { "id": "arcana_aftermath_elemental_coldness", "hit_self": false, "max_level": 5 },
-      { "id": "arcana_aftermath_elemental_field_effect", "hit_self": false, "max_level": 5 },
-      { "id": "arcana_aftermath_sanguine_mark_burnout_5", "hit_self": true, "max_level": 5 }
+      {
+        "id": "arcana_aftermath_brief_cold_ward",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_aftermath_elemental_coldness",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_elemental_field_effect",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_5",
+        "hit_self": true,
+        "max_level": 5
+      }
     ],
     "effect": "attack",
     "shape": "blast",
@@ -136,19 +209,49 @@
   {
     "id": "arcana_mark_infernal_flame",
     "type": "SPELL",
-    "name": { "str": "Mark: Infernal Breath" },
-    "description": "Sanguine Mark\nUsing this spell will channel your inner fire into a devastating blast, inflicting horrific burns and leaving a permanent scar upon the land.  Be careful using it around allies, and beware the risk of damaging the fabric of reality.",
-    "message": "A bolt of flame leaps from your mouth, shaped into unholy fire with a wave of the hand.  %s!",
+    "name": {
+      "str": "印记：地狱之气"
+    },
+    "description": "猩红印记\n使用此法术将引导你的内心之火进入毁灭性爆炸，造成可怕的烧伤，并在土地上留下永久的疤痕。在盟友周围小心使用它，并小心破坏现实结构的风险。",
+    "message": "一道火焰从你的嘴中喷出，用手一挥就变成了邪恶之火。%s ！",
     "effect": "attack",
     "shape": "line",
-    "valid_targets": [ "ally", "hostile", "ground" ],
-    "flags": [ "SILENT", "SOMATIC", "NO_HANDS", "NO_FAIL" ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
     "extra_effects": [
-      { "id": "arcana_aftermath_brief_fire_ward", "hit_self": true },
-      { "id": "arcana_aftermath_infernal_flame_corruption", "hit_self": false, "max_level": 5 },
-      { "id": "arcana_aftermath_infernal_flame_field", "hit_self": false, "max_level": 5 },
-      { "id": "arcana_aftermath_infernal_flame_noise", "hit_self": false, "max_level": 5 },
-      { "id": "arcana_aftermath_sanguine_mark_burnout_7", "hit_self": true, "max_level": 5 }
+      {
+        "id": "arcana_aftermath_brief_fire_ward",
+        "hit_self": true
+      },
+      {
+        "id": "arcana_aftermath_infernal_flame_corruption",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_infernal_flame_field",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_infernal_flame_noise",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_7",
+        "hit_self": true,
+        "max_level": 5
+      }
     ],
     "//": "Full damage with no spike effect, for single-target and line spells.",
     "min_damage": 140,
@@ -182,16 +285,34 @@
   {
     "id": "arcana_mark_malevolent_gaze",
     "type": "SPELL",
-    "name": { "str": "Mark: Malevolent Gaze" },
-    "description": "Sanguine Mark\nUsing this spell will strike a single target with a powerful temporal effect.  It won't deal any damage, but it will freeze your prey in place momentarily, leaving them slowed for a while afterward.",
-    "message": "Your pupils briefly narrow into thin slits as you focus your hatred.  %s!",
+    "name": {
+      "str": "印记：恶意的凝视"
+    },
+    "description": "猩红印记\n使用此咒语将打击一个具有强大时间效果的目标。它不会造成任何伤害，但它会暂时冻结你的猎物，让它们在随后的一段时间内减速。",
+    "message": "当你集中你的仇恨时，你的瞳孔会短暂地缩小成细缝。%s ！",
     "effect": "mod_moves",
     "shape": "blast",
-    "valid_targets": [ "ally", "hostile" ],
-    "flags": [ "SILENT", "SOMATIC", "NO_HANDS", "NO_FAIL" ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
     "extra_effects": [
-      { "id": "arcana_aftermath_malevolent_gaze_slowdown", "hit_self": false, "max_level": 5 },
-      { "id": "arcana_aftermath_sanguine_mark_burnout_5", "hit_self": true, "max_level": 5 }
+      {
+        "id": "arcana_aftermath_malevolent_gaze_slowdown",
+        "hit_self": false,
+        "max_level": 5
+      },
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_5",
+        "hit_self": true,
+        "max_level": 5
+      }
     ],
     "min_damage": -1000,
     "max_damage": -2500,
@@ -214,11 +335,25 @@
     "id": "arcana_mark_might",
     "//": "ID retained for save compatibility reasons.",
     "type": "SPELL",
-    "name": { "str": "Mark: Manifestation of Strength" },
-    "description": "Sanguine Mark\nUsing this spell will imbue your body with an unnatural aura, greatly increasing your strength and damage resistance.  It can only be used on yourself.",
-    "valid_targets": [ "self" ],
-    "flags": [ "SOMATIC", "NO_HANDS", "NO_FAIL" ],
-    "extra_effects": [ { "id": "arcana_aftermath_sanguine_mark_burnout_5", "hit_self": true, "max_level": 5 } ],
+    "name": {
+      "str": "印记：力量表现"
+    },
+    "description": "猩红印记\n使用这个法术会让你的身体充满不自然的光环，大大增加你的力量和抗伤害能力。只能用在自己身上。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_5",
+        "hit_self": true,
+        "max_level": 5
+      }
+    ],
     "effect": "spawn_item",
     "shape": "blast",
     "effect_str": "halo_draconic_might",
@@ -241,12 +376,26 @@
   {
     "id": "arcana_mark_revenant_blood",
     "type": "SPELL",
-    "name": { "str": "Mark: Revenant Blood" },
-    "description": "Sanguine Mark\nUsing this spell will guard against poison, protect against pestilence in food and water, and burn out fungal influences or other parasites.",
-    "message": "With a sign, you feel your blood burning with magical power.  %s!",
-    "valid_targets": [ "self" ],
-    "flags": [ "SOMATIC", "NO_HANDS", "NO_FAIL" ],
-    "extra_effects": [ { "id": "arcana_aftermath_sanguine_mark_burnout_4", "hit_self": true, "max_level": 5 } ],
+    "name": {
+      "str": "印记：复仇之血"
+    },
+    "description": "猩红印记\n使用此法术可以防毒，防止食物和水中的瘟疫，并烧掉真菌或其他寄生虫。",
+    "message": "有了一个标志，你会感到你的血液燃烧着神奇的力量。%s ！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_4",
+        "hit_self": true,
+        "max_level": 5
+      }
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "dragonblood_clarity",
@@ -267,12 +416,27 @@
   {
     "id": "arcana_mark_summon_dark_wyrm",
     "type": "SPELL",
-    "name": { "str": "Mark: Summon Dark Wyrm" },
-    "description": "Sanguine Mark\nUsing this spell will summon a dark wyrm.  Whether it will obey you is completely up to chance.",
-    "message": "Your gesture causes the ground to shift and flow, a pitch-black form slithering out of the earth itself.  %s!",
-    "valid_targets": [ "ground" ],
-    "flags": [ "SOMATIC", "NO_HANDS", "HOSTILE_50", "NO_FAIL" ],
-    "extra_effects": [ { "id": "arcana_aftermath_sanguine_mark_burnout_5", "hit_self": true, "max_level": 5 } ],
+    "name": {
+      "str": "印记：召唤黑暗之龙"
+    },
+    "description": "猩红印记\n使用这个咒语将召唤一个黑暗的幽灵。它是否会服从你完全取决于机会。",
+    "message": "你的手势使地面移动流动，一个漆黑的形体从地球上滑出。%s ！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "HOSTILE_50",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_5",
+        "hit_self": true,
+        "max_level": 5
+      }
+    ],
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_dark_wyrm_summoned",
@@ -298,12 +462,27 @@
   {
     "id": "arcana_mark_summon_fiend",
     "type": "SPELL",
-    "name": { "str": "Mark: Summon Fiend" },
-    "description": "Sanguine Mark\nUsing this spell will summon an ashen revenant.  Whether it will obey you is completely up to chance.",
-    "message": "With a hand sign, a plume of living flame erupts from the ground, solidifying into a scorched humanoid form.  %s!",
-    "valid_targets": [ "ground" ],
-    "flags": [ "SOMATIC", "NO_HANDS", "HOSTILE_50", "NO_FAIL" ],
-    "extra_effects": [ { "id": "arcana_aftermath_sanguine_mark_burnout_4", "hit_self": true, "max_level": 5 } ],
+    "name": {
+      "str": "印记：召唤恶魔"
+    },
+    "description": "使用此咒语的猩红印记\n将召唤一个灰白的复仇者。它是否会服从你完全取决于机会。",
+    "message": "随着手语，一股鲜活的火焰从地面喷发出来，凝固成一个烧焦的人形。%s ！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "HOSTILE_50",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_4",
+        "hit_self": true,
+        "max_level": 5
+      }
+    ],
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_zombie_fiend_summoned",
@@ -329,12 +508,27 @@
   {
     "id": "arcana_mark_summon_jabberwock",
     "type": "SPELL",
-    "name": { "str": "Mark: Summon Jabberwock" },
-    "description": "Sanguine Mark\nUsing this spell will summon a golem woven of flesh.  Whether it will obey you is completely up to chance.",
-    "message": "The ground warps at your command, a host of rotting bodies emerging from the disturbance, forms fusing together into an abomination.  %s!",
-    "valid_targets": [ "ground" ],
-    "flags": [ "SOMATIC", "NO_HANDS", "HOSTILE_50", "NO_FAIL" ],
-    "extra_effects": [ { "id": "arcana_aftermath_sanguine_mark_burnout_6", "hit_self": true, "max_level": 5 } ],
+    "name": {
+      "str": "印记：召唤贾伯沃克"
+    },
+    "description": "猩红印记\n使用这个法术将召唤一个肉身的傀儡。它是否会服从你完全取决于机会。",
+    "message": "大地在你的命令下扭曲，一大群腐烂的尸体从混乱中出现，融合在一起变成了一个可憎的东西。%s ！",
+    "valid_targets": [
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "HOSTILE_50",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_6",
+        "hit_self": true,
+        "max_level": 5
+      }
+    ],
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_jabberwock_summoned",
@@ -360,12 +554,26 @@
   {
     "id": "arcana_mark_surge_adrenaline",
     "type": "SPELL",
-    "name": { "str": "Mark: Surge of Fury" },
-    "description": "Sanguine Mark\nUsing this spell will provoke a rush of adrenaline for urgent situations, with none of the normal drawbacks.  It can only be used on yourself.",
-    "message": "Your gesture provokes a rush of instinct, urging you to kill.  %s!",
-    "valid_targets": [ "self" ],
-    "flags": [ "SOMATIC", "NO_HANDS", "NO_FAIL" ],
-    "extra_effects": [ { "id": "arcana_aftermath_sanguine_mark_burnout_2", "hit_self": true, "max_level": 5 } ],
+    "name": {
+      "str": "印记：愤怒涌动"
+    },
+    "description": "猩红印记\n使用这个法术会在紧急情况下激发肾上腺素，没有任何正常的缺点。只能用在自己身上。",
+    "message": "你的手势激起了本能的冲动，促使你去杀戮。%s ！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_HANDS",
+      "NO_FAIL"
+    ],
+    "extra_effects": [
+      {
+        "id": "arcana_aftermath_sanguine_mark_burnout_2",
+        "hit_self": true,
+        "max_level": 5
+      }
+    ],
     "effect_str": "adrenaline_arcana",
     "max_level": 5,
     "effect": "attack",

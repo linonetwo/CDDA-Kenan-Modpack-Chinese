@@ -2,46 +2,62 @@
   {
     "type": "terrain",
     "id": "t_blood_sh",
-    "description": "A shallow blood residue. It's light, crimson hue denotes intense desaturation from aging.",
-    "name": "shallow blood",
+    "description": "浅浅的血迹。它的光，深红色调表示从老化强烈去饱和。",
+    "name": "稀薄的血迹",
     "symbol": "~",
     "color": "light_red",
     "move_cost": 5,
-    "flags": [ "TRANSPARENT", "LIQUID", "SWIMMABLE" ],
+    "flags": [
+      "TRANSPARENT",
+      "LIQUID",
+      "SWIMMABLE"
+    ],
     "connects_to": "WATER"
   },
   {
     "type": "terrain",
     "id": "t_blood_dp",
-    "description": "A deep blood residue. It's light, crimson hue denotes intense desaturation from aging.",
-    "name": "deep blood",
+    "description": "血迹很深。它的光，深红色调表示从老化强烈去饱和。",
+    "name": "深沉的血液",
     "symbol": "~",
     "color": "red",
     "move_cost": 8,
-    "flags": [ "TRANSPARENT", "LIQUID", "SWIMMABLE", "DEEP_WATER" ],
+    "flags": [
+      "TRANSPARENT",
+      "LIQUID",
+      "SWIMMABLE",
+      "DEEP_WATER"
+    ],
     "connects_to": "WATER"
   },
   {
     "type": "terrain",
     "id": "t_vamp_seal",
-    "name": "seal",
-    "description": "An invincible force field. A spell could let you go through it, even if its active.",
+    "name": "封印",
+    "description": "一个无敌的力场。你可以用法术通过它，即使它处于活跃状态。",
     "looks_like": "t_slope_down",
     "symbol": "0",
     "color": "white",
     "move_cost": 2,
-    "flags": [ "TRANSPARENT", "PLACE_ITEM" ]
+    "flags": [
+      "TRANSPARENT",
+      "PLACE_ITEM"
+    ]
   },
   {
     "type": "furniture",
     "id": "f_slope_down_vamp",
-    "name": "downward slope",
-    "description": "A downward facing slope.",
+    "name": "向下斜坡",
+    "description": "向下的斜坡。",
     "symbol": ">",
     "looks_like": "t_slope_down",
     "color": "brown",
     "move_cost_mod": 0,
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "NOCOLLIDE", "GOES_DOWN" ]
+    "flags": [
+      "TRANSPARENT",
+      "NOCOLLIDE",
+      "GOES_DOWN"
+    ]
   }
 ]

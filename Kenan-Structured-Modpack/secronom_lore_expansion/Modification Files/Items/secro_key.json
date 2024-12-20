@@ -2,23 +2,44 @@
   {
     "type": "ter_furn_transform",
     "id": "secro_fvvault",
-    "terrain": [ { "result": "t_door_metal_c", "valid_terrain": [ "t_secro_door_metal_secrofv" ], "message": "The door has opened." } ]
+    "terrain": [
+      {
+        "result": "t_door_metal_c",
+        "valid_terrain": [
+          "t_secro_door_metal_secrofv"
+        ],
+        "message": "门开了。"
+      }
+    ]
   },
   {
     "type": "ter_furn_transform",
     "id": "secro_frroom",
     "terrain": [
-      { "result": "t_door_metal_c", "valid_terrain": [ "t_secro_door_metal_secrofrr" ], "message": "The door has opened." }
+      {
+        "result": "t_door_metal_c",
+        "valid_terrain": [
+          "t_secro_door_metal_secrofrr"
+        ],
+        "message": "门开了。"
+      }
     ]
   },
   {
     "id": "secro_id_fvvault_open",
     "type": "SPELL",
-    "name": { "str": "Identify" },
-    "description": "Item is swapped to the door's card reader. If successful, opens specific doors.",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "name": {
+      "str": "认出"
+    },
+    "description": "物品被交换到门的读卡器。如果成功，打开特定的门。",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "message": "",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "ter_transform",
     "shape": "blast",
     "effect_str": "secro_fvvault",
@@ -29,11 +50,18 @@
   {
     "id": "secro_id_frroom_open",
     "type": "SPELL",
-    "name": { "str": "Identify" },
-    "description": "Item is swapped to the door's card reader. If successful, opens specific doors.",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "name": {
+      "str": "认出"
+    },
+    "description": "物品被交换到门的读卡器。如果成功，打开特定的门。",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "message": "",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "ter_transform",
     "shape": "blast",
     "effect_str": "secro_frroom",
@@ -47,14 +75,24 @@
     "looks_like": "id_science",
     "symbol": ",",
     "color": "red",
-    "name": { "str": "Secronom ID card" },
-    "description": "This ID card once belonged to a secronom researcher. One side shows the information about the owner, the other describes the use for it. \"Level 2 clearance\".",
+    "name": {
+      "str": "Secronom身份证"
+    },
+    "description": "这张身份证曾经属于一位Secronom项目的研究员。一面显示有关所有者的信息，另一面描述其用途：“2级许可”。",
     "price": "180 USD",
     "price_postapoc": "1 USD",
-    "material": [ "plastic" ],
+    "material": [
+      "plastic"
+    ],
     "weight": "6 g",
     "volume": "5 ml",
-    "use_action": { "type": "cast_spell", "spell_id": "secro_id_fvvault_open", "no_fail": true, "level": 0 }
+    "to_hit": -3,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "secro_id_fvvault_open",
+      "no_fail": true,
+      "level": 0
+    }
   },
   {
     "type": "GENERIC",
@@ -62,13 +100,23 @@
     "looks_like": "id_science",
     "symbol": ",",
     "color": "red",
-    "name": { "str": "Secronom ID card" },
-    "description": "This ID card once belonged to a secronom researcher. One side shows the information about the owner, the other describes the use for it. \"Level 1 clearance\".",
+    "name": {
+      "str": "Secronom身份证"
+    },
+    "description": "这张身份证曾经属于一位Secronom项目的研究员。一面显示有关所有者的信息，另一面描述其用途：“1级许可”。",
     "price": "90 USD",
     "price_postapoc": "1 USD",
-    "material": [ "plastic" ],
+    "material": [
+      "plastic"
+    ],
     "weight": "6 g",
     "volume": "5 ml",
-    "use_action": { "type": "cast_spell", "spell_id": "secro_id_frroom_open", "no_fail": true, "level": 0 }
+    "to_hit": -3,
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "secro_id_frroom_open",
+      "no_fail": true,
+      "level": 0
+    }
   }
 ]

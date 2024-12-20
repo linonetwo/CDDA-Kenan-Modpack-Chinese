@@ -3,42 +3,90 @@
     "type": "item_group",
     "subtype": "collection",
     "id": "quiver_bow_medievalmod",
-    "entries": [ { "item": "arrow_wood", "charges": 20 } ]
+    "entries": [
+      {
+        "item": "arrow_wood",
+        "charges": 20
+      }
+    ]
   },
   {
     "type": "profession",
-    "id": "brave_of_the_king",
-    "name": "Brave of the King",
-    "description": "Elite infantry of ancient Egypt and bodyguards of the Pharaoh.  While armor was uncommon due to desert conditions, such equipment did see increased usage during the New Kingdom period.",
+    "ident": "brave_of_the_king",
+    "name": "王的女勇士",
+    "description": "古埃及的法老的保镖及精英步兵。虽然由于沙漠条件穿盔甲并不常见，但在新王国时期这种装备使用增加了。",
     "points": 4,
     "skills": [
-      { "level": 2, "name": "survival" },
-      { "level": 3, "name": "cutting" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "dodge" }
+      {
+        "level": 2,
+        "name": "survival"
+      },
+      {
+        "level": 3,
+        "name": "cutting"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 3,
+        "name": "dodge"
+      }
     ],
     "items": {
       "both": {
-        "items": [ "leathersandals", "helmet_larmor", "backpack", "shield_wooden_large", "waterskin" ],
-        "entries": [ { "item": "khopesh", "custom-flags": [ "auto_wield" ] } ]
+        "items": [
+          "leathersandals",
+          "helmet_larmor",
+          "backpack",
+          "shield_wooden_large",
+          "waterskin"
+        ],
+        "entries": [
+          {
+            "item": "khopesh",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          }
+        ]
       },
-      "male": [ "sleeveless_tunic" ],
-      "female": [ "sundress" ]
+      "male": [
+        "sleeveless_tunic"
+      ],
+      "female": [
+        "sundress"
+      ]
     }
   },
   {
     "type": "profession",
-    "id": "hoplite",
-    "name": "Hoplite",
-    "description": "Heavy infantry of the ancient Greek city-states, before the shift towards the Macedonean phalanx.  Well-trained for combat in formation, but less effective when outmaneuvered or on broken ground.",
+    "ident": "hoplite",
+    "name": "方阵女兵",
+    "description": "方阵兵起源于古希腊城邦，擅长马其顿方阵。他们受过良好的方阵战训练，但是被突破后的单打上比较不利。",
     "points": 5,
     "skills": [
-      { "level": 2, "name": "cutting" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 2, "name": "unarmed" }
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 3,
+        "name": "stabbing"
+      },
+      {
+        "level": 2,
+        "name": "unarmed"
+      }
     ],
-    "traits": [ "PROF_HOPLITE" ],
+    "traits": [
+      "PROF_HOPLITE"
+    ],
     "items": {
       "both": {
         "items": [
@@ -51,25 +99,59 @@
           "shield_hoplon",
           "waterskin"
         ],
-        "entries": [ { "item": "spear_dory", "custom-flags": [ "auto_wield" ] }, { "item": "sword_xiphos", "container-item": "baldric" } ]
+        "entries": [
+          {
+            "item": "spear_dory",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          },
+          {
+            "item": "sword_xiphos",
+            "container-item": "baldric"
+          }
+        ]
       },
-      "male": [ "loincloth" ],
-      "female": [ "loincloth", "bikini_top_leather" ]
+      "male": [
+        "loincloth"
+      ],
+      "female": [
+        "loincloth",
+        "bikini_top_leather"
+      ]
     }
   },
   {
     "type": "profession",
-    "id": "legionary",
-    "name": "Legionary",
-    "description": "Roman heavy infantry, after the military reforms that standardized the legion's equipment.  Trained to act in formation with javelin and sword, well-known for their field fortifications as well.",
+    "ident": "legionary",
+    "name": "军团女兵",
+    "description": "罗马重装兵，在经过训练后会配发标准的装备。擅长使用飞矛跟剑，他们也因擅长战地工事而出名。",
     "points": 5,
     "skills": [
-      { "level": 1, "name": "fabrication" },
-      { "level": 1, "name": "cooking" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 2, "name": "gun" },
-      { "level": 3, "name": "melee" },
-      { "level": 2, "name": "throw" }
+      {
+        "level": 1,
+        "name": "fabrication"
+      },
+      {
+        "level": 1,
+        "name": "cooking"
+      },
+      {
+        "level": 3,
+        "name": "stabbing"
+      },
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 2,
+        "name": "throw"
+      }
     ],
     "items": {
       "both": {
@@ -86,24 +168,49 @@
           "javelin_iron",
           "javelin_iron"
         ],
-        "entries": [ { "item": "sword_gladius", "container-item": "scabbard" } ]
+        "entries": [
+          {
+            "item": "sword_gladius",
+            "container-item": "scabbard"
+          }
+        ]
       },
-      "male": [ "loincloth" ],
-      "female": [ "loincloth", "bikini_top_leather" ]
+      "male": [
+        "loincloth"
+      ],
+      "female": [
+        "loincloth",
+        "bikini_top_leather"
+      ]
     }
   },
   {
     "type": "profession",
-    "id": "viking",
-    "name": "Viking",
-    "description": "The infamous pirates of the early medieval period, raiders and explorers from various Scandinavian countries.",
+    "ident": "viking",
+    "name": "维京女人",
+    "description": "这些中世纪早期臭名昭彰的海盗、掠夺者以及探险家，来自斯堪地那维亚诸国。",
     "points": 4,
     "skills": [
-      { "level": 2, "name": "survival" },
-      { "level": 3, "name": "swimming" },
-      { "level": 2, "name": "cutting" },
-      { "level": 1, "name": "dodge" },
-      { "level": 3, "name": "melee" }
+      {
+        "level": 2,
+        "name": "survival"
+      },
+      {
+        "level": 3,
+        "name": "swimming"
+      },
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      }
     ],
     "items": {
       "both": {
@@ -119,27 +226,68 @@
           "shield_banded",
           "waterskin"
         ],
-        "entries": [ { "item": "battleaxe", "custom-flags": [ "auto_wield" ] }, { "item": "knife_hunting", "container-item": "sheath" } ]
+        "entries": [
+          {
+            "item": "battleaxe",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          },
+          {
+            "item": "knife_hunting",
+            "container-item": "sheath"
+          }
+        ]
       },
-      "male": [ "loincloth" ],
-      "female": [ "loincloth", "undershirt" ]
+      "male": [
+        "loincloth"
+      ],
+      "female": [
+        "loincloth",
+        "undershirt"
+      ]
     }
   },
   {
     "type": "profession",
-    "id": "man_at_arms",
-    "name": { "male": "Man-at-Arms", "female": "Woman-at-Arms" },
+    "ident": "man_at_arms",
+    "name": {
+      "male": "中世纪重骑兵",
+      "female": "中世纪女重骑兵"
+    },
     "description": "Early medieval heavy cavalry of various countries in Europe, whether noble-born or of common blood.  While knights traditionally were men-at-arms, not every man-at-arms was a knight.",
     "points": 7,
     "skills": [
-      { "level": 1, "name": "survival" },
-      { "level": 1, "name": "firstaid" },
-      { "level": 1, "name": "speech" },
-      { "level": 3, "name": "cutting" },
-      { "level": 3, "name": "melee" }
+      {
+        "level": 1,
+        "name": "survival"
+      },
+      {
+        "level": 1,
+        "name": "firstaid"
+      },
+      {
+        "level": 1,
+        "name": "speech"
+      },
+      {
+        "level": 3,
+        "name": "cutting"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      }
     ],
-    "traits": [ "PROF_MAN_AT_ARMS" ],
-    "pets": [ { "name": "mon_horse_courser", "amount": 1 } ],
+    "traits": [
+      "PROF_MAN_AT_ARMS"
+    ],
+    "pets": [
+      {
+        "name": "mon_horse_courser",
+        "amount": 1
+      }
+    ],
     "items": {
       "both": {
         "items": [
@@ -155,27 +303,60 @@
           "shield_leather",
           "waterskin"
         ],
-        "entries": [ { "item": "arming_sword", "container-item": "scabbard" } ]
+        "entries": [
+          {
+            "item": "arming_sword",
+            "container-item": "scabbard"
+          }
+        ]
       },
-      "male": [ "loincloth" ],
-      "female": [ "loincloth", "undershirt" ]
+      "male": [
+        "loincloth"
+      ],
+      "female": [
+        "loincloth",
+        "undershirt"
+      ]
     }
   },
   {
     "type": "profession",
-    "id": "horse_archer",
-    "name": "Horse Archer",
-    "description": "The famed light cavalry of the Mongol Empire.  Best known for their skill as mounted archers.",
+    "ident": "horse_archer",
+    "name": "女骑射手",
+    "description": "蒙古帝国的著名的轻骑兵。最有名的是骑射技能。",
     "points": 6,
     "skills": [
-      { "level": 2, "name": "survival" },
-      { "level": 4, "name": "archery" },
-      { "level": 1, "name": "cutting" },
-      { "level": 2, "name": "dodge" },
-      { "level": 3, "name": "gun" },
-      { "level": 1, "name": "melee" }
+      {
+        "level": 2,
+        "name": "survival"
+      },
+      {
+        "level": 4,
+        "name": "archery"
+      },
+      {
+        "level": 1,
+        "name": "cutting"
+      },
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 3,
+        "name": "gun"
+      },
+      {
+        "level": 1,
+        "name": "melee"
+      }
     ],
-    "pets": [ { "name": "mon_horse_courser", "amount": 1 } ],
+    "pets": [
+      {
+        "name": "mon_horse_courser",
+        "amount": 1
+      }
+    ],
     "items": {
       "both": {
         "items": [
@@ -192,31 +373,73 @@
           "horse_tack"
         ],
         "entries": [
-          { "item": "recurbow", "custom-flags": [ "auto_wield" ] },
-          { "item": "scimitar", "container-item": "scabbard" },
-          { "item": "quiver", "contents-group": "quiver_bow_medievalmod" }
+          {
+            "item": "recurbow",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          },
+          {
+            "item": "scimitar",
+            "container-item": "scabbard"
+          },
+          {
+            "item": "quiver",
+            "contents-group": "quiver_bow_medievalmod"
+          }
         ]
       }
     }
   },
   {
     "type": "profession",
-    "id": "samurai",
-    "name": "Samurai",
-    "description": "Warrior nobility of feudal Japan.  Known originally as masters of the horse and bow, they become famous for their swordsmanship in later eras.",
+    "ident": "samurai",
+    "name": "女武士",
+    "description": "日本封建时代的武士贵族。初期的武士是马术和弓术大师，到了后来以剑术闻名于世。",
     "points": 7,
     "skills": [
-      { "level": 1, "name": "survival" },
-      { "level": 1, "name": "firstaid" },
-      { "level": 2, "name": "speech" },
-      { "level": 2, "name": "archery" },
-      { "level": 2, "name": "cutting" },
-      { "level": 1, "name": "dodge" },
-      { "level": 2, "name": "gun" },
-      { "level": 2, "name": "melee" }
+      {
+        "level": 1,
+        "name": "survival"
+      },
+      {
+        "level": 1,
+        "name": "firstaid"
+      },
+      {
+        "level": 2,
+        "name": "speech"
+      },
+      {
+        "level": 2,
+        "name": "archery"
+      },
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 1,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 2,
+        "name": "melee"
+      }
     ],
-    "traits": [ "PROF_SAMURAI" ],
-    "pets": [ { "name": "mon_horse_courser", "amount": 1 } ],
+    "traits": [
+      "PROF_SAMURAI"
+    ],
+    "pets": [
+      {
+        "name": "mon_horse_courser",
+        "amount": 1
+      }
+    ],
     "//": "All this work just to avoid layering oddities? Madness.",
     "items": {
       "male": {
@@ -232,7 +455,18 @@
           "waterskin",
           "horse_tack"
         ],
-        "entries": [ { "item": "katana", "container-item": "scabbard" }, { "item": "compositebow", "custom-flags": [ "auto_wield" ] } ]
+        "entries": [
+          {
+            "item": "katana",
+            "container-item": "scabbard"
+          },
+          {
+            "item": "compositebow",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          }
+        ]
       },
       "female": {
         "items": [
@@ -249,24 +483,52 @@
           "compositebow",
           "horse_tack"
         ],
-        "entries": [ { "item": "naginata", "custom-flags": [ "auto_wield" ] } ]
+        "entries": [
+          {
+            "item": "naginata",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          }
+        ]
       },
       "both": {
-        "entries": [ { "item": "tanto", "container-item": "sheath" }, { "item": "quiver", "contents-group": "quiver_bow_medievalmod" } ]
+        "entries": [
+          {
+            "item": "tanto",
+            "container-item": "sheath"
+          },
+          {
+            "item": "quiver",
+            "contents-group": "quiver_bow_medievalmod"
+          }
+        ]
       }
     }
   },
   {
     "type": "profession",
-    "id": "karoliner",
-    "name": "Carolean",
-    "description": "Soldiers of the Swedish Empire during the reign of king Charles XII.  Units included musketeers in addition to cavalry, pikemen, and grendadiers.",
+    "ident": "karoliner",
+    "name": "卡洛林步兵",
+    "description": "查理十二世统治时期瑞典帝国的士兵。部队除了骑兵、枪兵和掷弹兵外，还包括火枪手。",
     "points": 4,
     "skills": [
-      { "level": 2, "name": "melee" },
-      { "level": 1, "name": "stabbing" },
-      { "level": 2, "name": "gun" },
-      { "level": 1, "name": "rifle" }
+      {
+        "level": 2,
+        "name": "melee"
+      },
+      {
+        "level": 1,
+        "name": "stabbing"
+      },
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 1,
+        "name": "rifle"
+      }
     ],
     "items": {
       "both": {
@@ -283,34 +545,65 @@
           "waterskin"
         ],
         "entries": [
-          { "item": "rapier", "container-item": "scabbard" },
+          {
+            "item": "rapier",
+            "container-item": "scabbard"
+          },
           {
             "item": "rifle_flintlock",
             "ammo-item": "flintlock_ammo",
             "charges": 1,
             "contents-item": "shoulder_strap"
           },
-          { "item": "flintlock_pouch", "contents-group": "flintlock_pouch_reenactor" },
-          { "item": "flintlock_ammo", "charges": 15 }
+          {
+            "item": "flintlock_pouch",
+            "contents-group": "flintlock_pouch_reenactor"
+          },
+          {
+            "item": "flintlock_ammo",
+            "charges": 15
+          }
         ]
       }
     }
   },
   {
     "type": "profession",
-    "id": "husaria",
-    "name": "Winged Hussar",
-    "description": "Heavy cavalry associated with the Polish-Lithanian Commonwealth during the 16th to 18th centuries.  Known for their ornate armor including decorative wings, making any arrival a fashionable one.",
+    "ident": "husaria",
+    "name": "翼骑兵",
+    "description": "16至18世纪波兰-立陶宛联邦的重骑兵。他们以华丽的盔甲和装饰性的翅膀而闻名，所到之处都成为一种时尚。",
     "points": 7,
     "skills": [
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "cutting" },
-      { "level": 3, "name": "stabbing" },
-      { "level": 2, "name": "gun" },
-      { "level": 2, "name": "survival" }
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 3,
+        "name": "cutting"
+      },
+      {
+        "level": 3,
+        "name": "stabbing"
+      },
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 2,
+        "name": "survival"
+      }
     ],
-    "traits": [ "PROF_HUSARIA" ],
-    "pets": [ { "name": "mon_horse_courser", "amount": 1 } ],
+    "traits": [
+      "PROF_HUSARIA"
+    ],
+    "pets": [
+      {
+        "name": "mon_horse_courser",
+        "amount": 1
+      }
+    ],
     "items": {
       "both": {
         "ammo": 100,
@@ -329,28 +622,64 @@
           "horse_tack"
         ],
         "entries": [
-          { "item": "spear_steel", "custom-flags": [ "auto_wield" ] },
-          { "item": "cavalry_sabre", "container-item": "scabbard" }
+          {
+            "item": "spear_steel",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          },
+          {
+            "item": "cavalry_sabre",
+            "container-item": "scabbard"
+          }
         ]
       }
     }
   },
   {
     "type": "profession",
-    "id": "chevalier",
-    "name": { "male": "Chevalier", "female": "Chevalière" },
+    "ident": "chevalier",
+    "name": {
+      "male": "骑士",
+      "female": "女骑士"
+    },
     "description": "European heavy cavalry of the late medieval period, by which time plate armor had reached its battlefield peak.  The importance of knights as heavy cavalry would persist until professional armies became predominant in Europe.",
     "points": 8,
     "skills": [
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "cutting" },
-      { "level": 2, "name": "stabbing" },
-      { "level": 1, "name": "firstaid" },
-      { "level": 2, "name": "speech" },
-      { "level": 1, "name": "survival" }
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 3,
+        "name": "cutting"
+      },
+      {
+        "level": 2,
+        "name": "stabbing"
+      },
+      {
+        "level": 1,
+        "name": "firstaid"
+      },
+      {
+        "level": 2,
+        "name": "speech"
+      },
+      {
+        "level": 1,
+        "name": "survival"
+      }
     ],
-    "traits": [ "PROF_CHEVALIER" ],
-    "pets": [ { "name": "mon_horse_courser", "amount": 1 } ],
+    "traits": [
+      "PROF_CHEVALIER"
+    ],
+    "pets": [
+      {
+        "name": "mon_horse_courser",
+        "amount": 1
+      }
+    ],
     "items": {
       "both": {
         "items": [
@@ -368,9 +697,20 @@
           "horse_tack"
         ],
         "entries": [
-          { "item": "halberd", "custom-flags": [ "auto_wield" ] },
-          { "item": "longsword", "container-item": "baldric" },
-          { "item": "knife_baselard", "container-item": "sheath" }
+          {
+            "item": "halberd",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          },
+          {
+            "item": "longsword",
+            "container-item": "baldric"
+          },
+          {
+            "item": "knife_baselard",
+            "container-item": "sheath"
+          }
         ]
       }
     }

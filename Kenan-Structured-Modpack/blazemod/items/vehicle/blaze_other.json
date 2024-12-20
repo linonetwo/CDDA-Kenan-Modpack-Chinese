@@ -3,27 +3,43 @@
     "id": "space_anomaly",
     "type": "GENERIC",
     "category": "veh_parts",
-    "name": { "str": "stabilized portal" },
-    "description": "As you gaze into the seemingly infinite depths of this portable hole in reality, a phrase from a time forever gone echoes in your mind.  \"There are two things that are infinite: the universe and human kleptomania.\"",
+    "name": {
+      "str": "稳定传送门"
+    },
+    "description": "当你看从这一在现实中可延展的洞口中看进去里面这样无限深的空洞时，一句远古的话语在你的脑中回想：它的意思是：“只有两种东西是无边际的：宇宙和人类的盗窃癖。”",
     "weight": "22813 g",
     "volume": "50 L",
     "price": "15 kUSD",
-    "melee_damage": { "bash": 2 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -4,
+    "melee_damage": {
+      "bash": 2
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "]",
     "color": "cyan"
   },
   {
     "id": "vehicle_shelving",
     "type": "GENERIC",
-    "name": { "str": "vehicle shelving" },
-    "description": "Several heavy frames retrofitted to be installed together which are outfitted with tie-downs and attachment points gallore for carrying an extended amount of cargo.",
+    "name": {
+      "str": "载具架"
+    },
+    "description": "几个重型车架经过改装被固定在一起，配备有系紧装置和连接点，以承载大量货物。",
     "weight": "350000 g",
+    "to_hit": -4,
     "color": "cyan",
     "symbol": "]",
-    "material": [ "steel", "plastic" ],
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "volume": "200 L",
-    "melee_damage": { "bash": 2 },
+    "melee_damage": {
+      "bash": 2
+    },
     "category": "veh_parts",
     "price": "800 USD",
     "price_postapoc": "10 USD"
@@ -32,47 +48,66 @@
     "id": "afs_fridge",
     "category": "veh_parts",
     "type": "GENERIC",
-    "name": { "str": "vehicle refrigerator" },
-    "description": "A household refrigerator with impressive capacity.  Its power connection has been refurbished, and it can be mounted onto a vehicle to draw from its power.",
+    "name": {
+      "str": "车载冰箱"
+    },
+    "description": "一台家用冰箱，容量十分可观。它的供能模块已被改造，可以安装在车辆上使用。",
     "symbol": "{",
     "color": "white",
     "weight": "142882 g",
     "volume": "300 L",
     "price": "400 USD",
     "price_postapoc": "100 USD",
-    "material": [ "steel" ],
-    "melee_damage": { "bash": 8 },
-    "flags": [ "DURABLE_MELEE" ],
+    "material": [
+      "steel"
+    ],
+    "to_hit": -4,
+    "melee_damage": {
+      "bash": 8
+    },
+    "flags": [
+      "DURABLE_MELEE"
+    ],
     "looks_like": "minifridge"
   },
   {
     "id": "afs_freezer",
     "category": "veh_parts",
     "type": "GENERIC",
-    "name": { "str": "vehicle freezer" },
+    "name": {
+      "str": "车载冰柜"
+    },
     "copy-from": "afs_fridge",
-    "description": "This refurbished refrigerator has been stripped of much of its internal components and converted to run at a much lower temperature, causing it to serve as a freezer for more power.  Like its predecessor, it runs on vehicle power.",
+    "description": "这台冰柜已被精简了许多内部部件，经过改造后它的制冷温度更低，功率更大。与前代一样，它依靠车载电源运行。",
     "color": "light_blue"
   },
   {
     "type": "GENERIC",
     "id": "afs_metal_rig",
     "copy-from": "vehicle_rig",
-    "name": { "str": "MetalMaster forge buddy", "str_pl": "MetalMaster forge buddies" },
-    "description": "From the makers of the best-selling* FOODCO kitchen buddy comes the MetalMaster forge buddy, for all your metalworking, firing, and welding needs!  It's just as clunky and awkward as the thing it's spinning off, and still requires a vehicle battery to function."
+    "name": {
+      "str": "名匠锻造伴侣",
+      "str_pl": "名匠锻造伴侣"
+    },
+    "description": "由最畅销的“伙夫牌厨房加工伴侣\"的制造商出品的\"名匠锻造伴侣”，能满足您所有金属加工、点火和焊接的需求！它和它的加工物一样沉重笨拙，需要连接到车载电源后才能工作。"
   },
   {
     "type": "GENERIC",
     "id": "afs_kitchen_rig",
     "copy-from": "vehicle_rig",
-    "name": { "str": "KitchenMaster cooking buddy", "str_pl": "KitchenMaster cooking buddies" },
-    "description": "Because it *clearly* needed one, this large all-in-one station provides the functions of FOODCO's kitchen buddy, now with complementary fume hoods and chemistry materials.  Why a chef would need a chemical rig is anyone's guess, but you can mount it on a vehicle to make use of it."
+    "name": {
+      "str": "名厨烹饪伴侣",
+      "str_pl": "名厨烹饪伴侣"
+    },
+    "description": "这个大型的一体式工作站拥有“伙夫牌厨房加工伴侣”的全部功能，还额外配备了通风橱和化学材料。你可以把它安装在车辆上使用。\n“不想当化学家的厨师不是好厨师！”"
   },
   {
     "type": "GENERIC",
     "id": "afs_cooking_rig",
     "copy-from": "vehicle_rig",
-    "name": { "str": "cooking rig" },
-    "description": "Skillet, pot, hotplate, and chemistry set; everything you need to cook food and chemicals.  Includes proper fume vents and a separator, so you don't contaminate your food with toxic chemicals."
+    "name": {
+      "str": "厨化机"
+    },
+    "description": "锅碗瓢盆，试管烧杯……所有烹饪和化学所需的工具都在这里了。分离式的通风孔和隔离装置，使得你不用担心有毒的化学物质会污染你的食物。"
   }
 ]

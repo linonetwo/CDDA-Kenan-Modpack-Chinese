@@ -4,13 +4,29 @@
     "id": "TALK_REFUGEE_John_Situation",
     "responses": [
       {
-        "text": "Do you think they'd be willing to help out with another settlement, if that's what they need?",
+        "text": "如果他们需要的话，你是否认为他们愿意帮助其他解决方案？",
         "topic": "TALK_REFUGEE_John_CF_REP_MISSION_4",
         "condition": {
           "and": [
-            { "not": { "compare_string": [ "yes", { "u_val": "sofia_allies_secured" } ] } },
-            { "not": { "compare_string": [ "yes", { "npc_val": "sofia_refugee_convinced" } ] } },
-            { "u_has_mission": "MISSION_CF_REP_4" }
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "npc_has_var": "sofia_refugee_convinced",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
           ]
         }
       }
@@ -19,33 +35,47 @@
   {
     "type": "talk_topic",
     "id": "TALK_REFUGEE_John_CF_REP_MISSION_4",
-    "dynamic_line": "Can't hurt none to ask, I reckon.  Course, way it is out there ain't much better.  Folks stop by every now an' then, drifters who can take of themselves.",
+    "dynamic_line": "我想问，不会伤害任何人。当然，那里的状况不会好得多。人们现在每时每刻都会停下来，然后流浪者可以自拔。",
     "responses": [
-      { "text": "Think you could help direct visitors there?", "topic": "TALK_REFUGEE_John_CF_REP_MISSION_4_OFFER" },
-      { "text": "I'll see if I can ask someone else.", "topic": "TALK_DONE" }
+      {
+        "text": "认为你可以帮助将访客带到那里吗？",
+        "topic": "TALK_REFUGEE_John_CF_REP_MISSION_4_OFFER"
+      },
+      {
+        "text": "我看看是否可以问别人。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_REFUGEE_John_CF_REP_MISSION_4_OFFER",
-    "dynamic_line": "I might could help you with that.  What's it like?  Can't tell them to hit the trail if I don't know where they're going.",
+    "dynamic_line": "我可能会帮助你。这是什么？如果我不知道他们要去哪里，就不能告诉他们走这条路。",
     "responses": [
       {
-        "text": "A local group of monster hunters operating out of a roadside parish church, that they've started fortifying and building additional buildings near.",
+        "text": "当地一群在路边教区教堂外活动的怪物猎人，他们已经开始在附近筑筑和建造更多建筑物。",
         "topic": "TALK_REFUGEE_John_CF_REP_MISSION_4_DEAL"
       },
-      { "text": "On second thought, I might be able to work something else out.", "topic": "TALK_REFUGEE_John_1" }
+      {
+        "text": "再三考虑，我也许可以解决其他问题。",
+        "topic": "TALK_REFUGEE_John_1"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_REFUGEE_John_CF_REP_MISSION_4_DEAL",
-    "dynamic_line": "Sounds like a boom town in the making, pardner.  I'll see what gossip I can pass down the trail.  Take care now, y'hear?",
+    "dynamic_line": "声音就像正在兴旺的小镇，伙伴。我会看看我能从小径上走过的八卦。现在保重，听到了吗？",
     "responses": [
       {
-        "text": "You too.  I should probably check on the outpost, talked to a couple others earlier.",
+        "text": "你也是。我可能应该检查一下哨所，早些时候和其他人谈过。",
         "effect": [
-          { "u_add_var": "sofia_allies_secured", "value": "yes" },
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
           {
             "mapgen_update": "arcana_cf_4_wasteland_scavengers_1",
             "om_terrain": "cf_church_1",
@@ -75,25 +105,55 @@
             "search_range": 256
           }
         ],
-        "condition": { "compare_string": [ "yes", { "u_val": "sofia_ally_seeking_2" } ] },
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_2",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
         "switch": true,
         "topic": "TALK_DONE"
       },
       {
-        "text": "You too.  I'll keep at it for now.",
+        "text": "你也是。我现在就坚持下去。",
         "effect": [
-          { "u_add_var": "sofia_ally_seeking_2", "value": "yes" },
-          { "npc_add_var": "sofia_refugee_convinced", "value": "yes" }
+          {
+            "u_add_var": "sofia_ally_seeking_2",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
-        "condition": { "compare_string": [ "yes", { "u_val": "sofia_ally_seeking_1" } ] },
+        "condition": {
+          "u_has_var": "sofia_ally_seeking_1",
+          "type": "mission",
+          "context": "flag",
+          "value": "yes"
+        },
         "switch": true,
         "topic": "TALK_DONE"
       },
       {
-        "text": "You too.  I'll ask around a bit more, get a couple more people helping with that.",
+        "text": "你也是。我会提出更多要求，请更多的人帮助。",
         "effect": [
-          { "u_add_var": "sofia_ally_seeking_1", "value": "yes" },
-          { "npc_add_var": "sofia_refugee_convinced", "value": "yes" }
+          {
+            "u_add_var": "sofia_ally_seeking_1",
+            "type": "mission",
+            "context": "flag",
+            "value": "yes"
+          },
+          {
+            "npc_add_var": "sofia_refugee_convinced",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          }
         ],
         "switch": true,
         "default": true,

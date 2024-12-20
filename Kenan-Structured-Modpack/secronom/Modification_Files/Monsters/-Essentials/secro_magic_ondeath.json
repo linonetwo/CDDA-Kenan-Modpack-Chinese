@@ -2,15 +2,26 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_grubby_death",
-    "name": { "str": "Spawn Parasite Swarms" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spawns parasitic swarms on-death.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "RANDOM_DAMAGE", "SPAWN_GROUP" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "产卵寄生虫群"
+    },
+    "description": "怪物施放的咒语。如果你看到了这个，那就读读这个:\n“施法者在死亡时会产生寄生蜂。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "RANDOM_DAMAGE",
+      "SPAWN_GROUP"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 2,
     "max_damage": 3,
     "min_aoe": 3,
     "max_aoe": 3,
-	"message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "GROUP_GRUBBYWORMZ"
@@ -18,28 +29,56 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_glut_death",
-    "name": { "str": "Spawn Parasite Swarms (Glut)" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spawns alot of parasitic swarms on-death, followed by a gas explosion.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "RANDOM_DAMAGE", "SPAWN_GROUP" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": "产卵寄生虫群(过剩)"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者在死亡时会产生大量寄生蜂群，然后是气体爆炸。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "RANDOM_DAMAGE",
+      "SPAWN_GROUP"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 5,
     "max_damage": 7,
     "min_aoe": 4,
     "max_aoe": 4,
-	"message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "GROUP_GRUBBYWORMZ",
-    "extra_effects": [ { "id": "death_gas" } ]
+    "extra_effects": [
+      {
+        "id": "death_gas"
+      }
+    ]
   },
   {
     "id": "mon_zombie_bloodvessel_explo",
     "type": "SPELL",
-    "name": { "str": "Explode" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster explodes, dealing bashing damage and applying bloodbath to all affected creatures.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE", "RANDOM_DURATION" ],
-    "valid_targets": [ "self", "hostile", "ally", "ground" ],
-	"message": "",
+    "name": {
+      "str": "爆炸"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n“施法者爆炸，对所有受影响的生物造成重击伤害和血洗。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "self",
+      "hostile",
+      "ally",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "unity_bloodslow",
@@ -58,11 +97,24 @@
   {
     "id": "mon_zombie_bloodfiend_explo",
     "type": "SPELL",
-    "name": { "str": "Explode" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster violently explodes, dealing bashing damage and applying bloodbath to all affected creatures.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE", "RANDOM_DURATION" ],
-    "valid_targets": [ "self", "hostile", "ally", "ground" ],
-	"message": "",
+    "name": {
+      "str": "爆炸"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者猛烈爆炸，对所有受影响的生物造成重击伤害和血洗。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "self",
+      "hostile",
+      "ally",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "unity_bloodslow",
@@ -81,11 +133,24 @@
   {
     "id": "mon_zombie_leptiosa_death",
     "type": "SPELL",
-    "name": { "str": "Lepotitsa Death" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's accumulated noxious gas explodes violently.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_AOE", "RANDOM_DURATION" ],
-    "valid_targets": [ "self", "hostile", "ally", "ground" ],
-	"message": "",
+    "name": {
+      "str": "勒波蒂察死亡"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么改读这一条：\n“施法者积累的有毒气体剧烈爆炸。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_AOE",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "self",
+      "hostile",
+      "ally",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_aoe": 4,
@@ -98,12 +163,24 @@
   {
     "id": "mon_zombie_tentawraith_death",
     "type": "SPELL",
-    "name": { "str": "Wraith Death" },
-    "description": "Spell casted by an item. If you're seeing this, then read this one instead:\n'Caster's death removes their minions in the field.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "IGNORE_WALLS" ],
-    "valid_targets": [ "ally", "hostile" ],
-    "targeted_monster_ids": [ "mon_zombie_tentawraith_tent" ],
-	"message": "",
+    "name": {
+      "str": "幽灵之死"
+    },
+    "description": "由物品施放的法术。如果你看到了这个，那么读读这个:\n“施法者的死亡移除了他们在战场上的爪牙。”",
+    "message": "",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "IGNORE_WALLS"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
+    "targeted_monster_ids": [
+      "mon_zombie_tentawraith_tent"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "secro_sacrifice_effect",
@@ -115,13 +192,23 @@
   {
     "type": "SPELL",
     "id": "mon_saddler_infected_death",
-    "name": { "str": "Abandon" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster disconnects itself from the dead body.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT" ],
-    "valid_targets": [ "self", "ground" ],
+    "name": {
+      "str": "放弃"
+    },
+    "description": "怪物施放的咒语。如果你看到了这个，那就读读这个吧：\n《施法者与尸体分离》",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT"
+    ],
+    "valid_targets": [
+      "self",
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
-	"message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_insect_saddler"
@@ -129,13 +216,23 @@
   {
     "type": "SPELL",
     "id": "mon_saddler_brute_infected_death",
-    "name": { "str": "Abandon" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster disconnects itself from the dead body.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT" ],
-    "valid_targets": [ "self", "ground" ],
+    "name": {
+      "str": "放弃"
+    },
+    "description": "怪物施放的咒语。如果你看到了这个，那就读读这个吧：\n《施法者与尸体分离》",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT"
+    ],
+    "valid_targets": [
+      "self",
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
-	"message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_insect_saddler_brute"
@@ -143,155 +240,47 @@
   {
     "type": "SPELL",
     "id": "mon_saddler_scout_infected_death",
-    "name": { "str": "Abandon" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster disconnects itself from the dead body.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT" ],
-    "valid_targets": [ "self", "ground" ],
+    "name": {
+      "str": "放弃"
+    },
+    "description": "怪物施放的咒语。如果你看到了这个，那就读读这个吧：\n《施法者与尸体分离》",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT"
+    ],
+    "valid_targets": [
+      "self",
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
-	"message": "",
     "effect": "summon",
     "shape": "blast",
     "effect_str": "mon_insect_saddler_scout"
   },
   {
-    "type": "SPELL",
-    "id": "mon_sflesh_death",
-    "name": { "str": "Spawn Takens" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spawns a crimson horror on-death.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "SPAWN_GROUP" ],
-    "valid_targets": [ "ground" ],
-    "min_damage": 1,
-    "max_damage": 1,
-    "min_aoe": 1,
-    "max_aoe": 1,
-	"message": "",
-    "effect": "summon",
-    "shape": "blast",
-    "effect_str": "GROUP_FLESH"
-  },
-  {
-    "type": "SPELL",
-    "id": "mon_sflesh_sack_death",
-    "name": { "str": "Spawn Parasytes" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spawns a crimson horror on-death.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "RANDOM_DAMAGE" ],
-    "valid_targets": [ "ground" ],
-    "min_damage": 1,
-    "max_damage": 2,
-    "min_aoe": 2,
-    "max_aoe": 2,
-	"message": "",
-    "effect": "summon",
-    "shape": "blast",
-    "effect_str": "mon_sflesh_parasyte"
-  },
-  {
-    "id": "death_mon_zombie_nightwail",
-    "type": "SPELL",
-    "name": { "str": "Disperse" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's death removes all remaining shadows.'",
-    "valid_targets": [ "hostile", "ally" ],
-	"message": "",
-    "effect": "attack",
-    "shape": "blast",
-    "targeted_monster_ids": [ "mon_zombie_nightwail_shadow" ],
-    "effect_str": "secro_sacrifice_effect",
-    "min_aoe": 30,
-    "max_aoe": 30,
-    "flags": [ "SILENT" ]
-  },
-  {
-    "id": "mon_zombie_gorepit_deathmore",
-    "type": "SPELL",
-    "name": { "str": "Tendril Collapse" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster removes all tendrils.'",
-    "valid_targets": [ "hostile", "ally" ],
-	"message": "",
-    "effect": "attack",
-    "shape": "blast",
-    "targeted_monster_ids": [ "mon_zombie_gorepit_tent", "mon_zombie_gorepit_tent_massive" ],
-    "effect_str": "secro_sacrifice_effect",
-    "min_aoe": 40,
-    "max_aoe": 40,
-    "flags": [ "SILENT", "IGNORE_WALLS" ],
-    "min_duration": 200,
-    "max_duration": 200
-  },
-  {
-    "id": "mon_zombie_gorepit_death",
-    "type": "SPELL",
-    "name": { "str": "Collapse" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's death removes all of its minions on the fields, and stops further spawning.'",
-    "flags": [ "SILENT", "IGNORE_WALLS" ],
-    "valid_targets": [ "hostile" ],
-	"message": "",
-    "effect": "attack",
-    "shape": "blast",
-    "effect_str": "eff_zombie_gorepit_spawnmore_stop",
-    "extra_effects": [ { "id": "mon_zombie_gorepit_deathmore", "hit_self": true } ],
-    "min_aoe": 40,
-    "max_aoe": 40,
-    "min_duration": 1500,
-    "max_duration": 1500
-  },
-  {
-    "id": "mon_zombie_akin_death",
-    "type": "SPELL",
-    "name": { "str": "Visceral Collapse" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's death removes its debuffs from the targets.'",
-    "flags": [ "SILENT", "IGNORE_WALLS" ],
-    "valid_targets": [ "hostile" ],
-	"message": "",
-    "effect": "attack",
-    "shape": "blast",
-    "effect_str": "secro_akin_death",
-    "min_aoe": 40,
-    "max_aoe": 40,
-    "min_duration": 100,
-    "max_duration": 100
-  },
-  {
-    "type": "SPELL",
-    "id": "mon_sflesh_zombie_turret_death",
-    "name": { "str": "Spawn Fleshlings" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spawns parasitic swarms on-death.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "RANDOM_DAMAGE", "SPAWN_GROUP", "NO_EXPLOSION_SFX" ],
-    "extra_effects": [ { "id": "mon_sflesh_zombie_turret_death_extra", "hit_self": true } ],
-    "valid_targets": [ "ground" ],
-    "min_damage": 3,
-    "max_damage": 5,
-    "min_aoe": 4,
-    "max_aoe": 4,
-	"message": "",
-    "effect": "summon",
-    "shape": "blast",
-    "effect_str": "GROUP_FLESHHEAP_DEATH"
-  },
-  {
-    "type": "SPELL",
-    "id": "mon_sflesh_zombie_turret_death_extra",
-    "name": { "str": "Spawn Flesh Zombies" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spawns parasitic swarms on-death.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "PERMANENT", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ground" ],
-    "min_damage": 1,
-    "max_damage": 2,
-    "min_aoe": 4,
-    "max_aoe": 4,
-	"message": "",
-    "effect": "summon",
-    "shape": "blast",
-    "effect_str": "mon_sflesh_zombie"
-  },
-  {
     "id": "mon_sflesh_entrance_open",
     "type": "SPELL",
-    "name": { "str": "Veinhole Death" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's death leaves a hole that serves as an entrance to the innards of the flesh.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "IGNORE_WALLS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "message": "<color_light_green>The veinhole leaves a gap upon its death.</color>",
-    "valid_targets": [ "ally", "hostile", "ground" ],
+    "name": {
+      "str": "脉孔死亡"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者的死亡留下了一个洞，作为进入肉体内部的入口。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "message": "<color_light_green>脉孔在死亡时留下了一个缺口。</color>",
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "ter_transform",
     "shape": "blast",
     "effect_str": "veinhole_open",
@@ -301,16 +290,180 @@
   {
     "id": "mon_sflesh_flesh_bio_death",
     "type": "SPELL",
-    "name": { "str": "Fleshed Collapse" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster's death causes all traps to neutralize, becoming inactive and out of view.'",
-    "message": "<color_light_green>As the flesh melts away, the surrounding biohazards has reverted back to normal…</color>\n<color_dark_gray>The flesh is alive, but its prevalent domination hampers to a great extent.</color>",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "IGNORE_WALLS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
+    "name": {
+      "str": "肉质崩塌"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这篇：\n“施法者之死导致所有陷阱失效，变得不活跃和看不见。”",
+    "message": "<color_light_green>随着血肉的融化，附近的生物危害已经恢复正常……</color>\n<color_dark_gray>血肉还活着，但它的控制力受到了很大的限制。</color>",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "effect": "ter_transform",
     "shape": "blast",
     "effect_str": "sflesh_flesh_biohazard_dead",
     "min_aoe": 50,
     "max_aoe": 50,
     "base_casting_time": 1
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_death",
+    "name": {
+      "str": "产卵塔肯"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n“施法者在死亡时产生深红恐怖。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "SPAWN_GROUP"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "min_damage": 1,
+    "max_damage": 1,
+    "min_aoe": 1,
+    "max_aoe": 1,
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "GROUP_FLESH"
+  },
+  {
+    "type": "SPELL",
+    "id": "mon_sflesh_sack_death",
+    "name": {
+      "str": "繁殖副细胞"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这篇：\n“施法者在死亡时产生深红恐怖。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "PERMANENT",
+      "RANDOM_DAMAGE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
+    "min_damage": 1,
+    "max_damage": 2,
+    "min_aoe": 2,
+    "max_aoe": 2,
+    "effect": "summon",
+    "shape": "blast",
+    "effect_str": "mon_sflesh_parasyte"
+  },
+  {
+    "id": "death_mon_zombie_nightwail",
+    "type": "SPELL",
+    "name": {
+      "str": "分散的"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么请阅读这一条：\n“施法者之死移除了所有剩余的阴影。”",
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "targeted_monster_ids": [
+      "mon_zombie_nightwail_shadow"
+    ],
+    "effect_str": "secro_sacrifice_effect",
+    "min_aoe": 30,
+    "max_aoe": 30,
+    "flags": [
+      "SILENT"
+    ]
+  },
+  {
+    "id": "mon_zombie_gorepit_deathmore",
+    "type": "SPELL",
+    "name": {
+      "str": "卷须塌陷"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，请阅读这一条：\n“施法者移除所有卷须。”",
+    "valid_targets": [
+      "hostile",
+      "ally"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "targeted_monster_ids": [
+      "mon_zombie_gorepit_tent",
+      "mon_zombie_gorepit_tent_massive"
+    ],
+    "effect_str": "secro_sacrifice_effect",
+    "min_aoe": 40,
+    "max_aoe": 40,
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS"
+    ],
+    "min_duration": 200,
+    "max_duration": 200
+  },
+  {
+    "id": "mon_zombie_gorepit_death",
+    "type": "SPELL",
+    "name": {
+      "str": "折叠"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么请阅读这一条：\n“施法者之死将移除其在战场上的所有仆从，并停止进一步繁殖。”",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "eff_zombie_gorepit_spawnmore_stop",
+    "extra_effects": [
+      {
+        "id": "mon_zombie_gorepit_deathmore",
+        "hit_self": true
+      }
+    ],
+    "min_aoe": 40,
+    "max_aoe": 40,
+    "min_duration": 1500,
+    "max_duration": 1500
+  },
+  {
+    "id": "mon_zombie_akin_death",
+    "type": "SPELL",
+    "name": {
+      "str": "脏腑崩溃"
+    },
+    "description": "怪物施法。如果你看到了这一点，那么请阅读这一条：\n“施法者之死消除了其对目标的减益。”",
+    "flags": [
+      "SILENT",
+      "IGNORE_WALLS"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "effect": "attack",
+    "shape": "blast",
+    "effect_str": "secro_akin_death",
+    "min_aoe": 40,
+    "max_aoe": 40,
+    "min_duration": 100,
+    "max_duration": 100
   }
 ]

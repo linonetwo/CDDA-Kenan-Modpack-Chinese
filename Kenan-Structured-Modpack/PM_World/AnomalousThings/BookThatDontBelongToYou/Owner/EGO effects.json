@@ -3,8 +3,8 @@
     "type": "effect_on_condition",
     "id": "EOC_location_test",
     "effect": [
-      { "set_string_var": { "mutator": "u_loc_relative", "target": "(0,0,0)" }, "target_var": { "context_val": "u_loc" } },
-      { "u_location_variable": { "context_val": "u_search_loc" }, "field": "fd_fire", "target_max_radius": 1 }
+      { "set_string_var": { "mutator": "loc_relative_u", "target": "(0,0,0)" }, "target_var": { "context_val": "loc" } },
+      { "u_location_variable": { "context_val": "u_search_loc" }, "terrain": "fd_fire", "target_max_radius": 1 }
     ]
   },
   {
@@ -14,10 +14,10 @@
     "condition": { "u_has_trait": "EGO_92_mutation_stage_3" },
     "deactivate_condition": { "not": { "u_has_trait": "EGO_92_mutation_stage_3" } },
     "effect": [
-      { "u_location_variable": { "context_val": "fire_place" }, "field": "fd_fire", "target_max_radius": 25 },
+      { "u_location_variable": { "context_val": "fire_place" }, "terrain": "fd_fire", "target_max_radius": 25 },
       { "math": [ "u_fire_stamina_boost", "=", "field_strength('fd_fire', 'location': fire_place)" ] },
       {
-        "if": { "map_field_id": "fd_fire", "loc": { "context_val": "fire_place" } },
+        "if": { "map_terrain_with_flag": "FLAMING", "loc": { "context_val": "fire_place" } },
         "then": { "u_add_effect": "stamina_regen_boost_small", "duration": "2 s", "intensity": "u_fire_stamina_boost" }
       }
     ]
@@ -40,10 +40,10 @@
     "condition": { "u_has_trait": "EGO_92_mutation_stage_4" },
     "deactivate_condition": { "not": { "u_has_trait": "EGO_92_mutation_stage_4" } },
     "effect": [
-      { "u_location_variable": { "context_val": "fire_place" }, "field": "fd_fire", "target_max_radius": 25 },
+      { "u_location_variable": { "context_val": "fire_place" }, "terrain": "fd_fire", "target_max_radius": 25 },
       { "math": [ "u_fire_stamina_boost", "=", "field_strength('fd_fire', 'location': fire_place)" ] },
       {
-        "if": { "map_field_id": "fd_fire", "loc": { "context_val": "fire_place" } },
+        "if": { "map_terrain_with_flag": "FLAMING", "loc": { "context_val": "fire_place" } },
         "then": { "u_add_effect": "stamina_regen_boost_big", "duration": "2 s", "intensity": "u_fire_stamina_boost" }
       }
     ]

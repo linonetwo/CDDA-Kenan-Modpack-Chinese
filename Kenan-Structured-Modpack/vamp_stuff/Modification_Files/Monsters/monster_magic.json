@@ -2,10 +2,20 @@
   {
     "id": "v_sacrifice_spell",
     "type": "SPELL",
-    "name": { "str": "Sacrifice" },
-    "description": "Instant death damage is dealt.",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ally", "hostile", "ground", "self" ],
+    "name": {
+      "str": "牺牲"
+    },
+    "description": "立即造成死亡伤害。",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground",
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 9999999,
@@ -17,10 +27,18 @@
   {
     "id": "v_sink_tp",
     "type": "SPELL",
-    "name": { "str": "Teleport" },
-    "description": "Combined with blind strike spell.",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground", "ally" ],
+    "name": {
+      "str": "传送"
+    },
+    "description": "与盲目打击法术相结合",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground",
+      "ally"
+    ],
     "min_aoe": 8,
     "max_aoe": 8,
     "effect": "short_range_teleport",
@@ -29,10 +47,18 @@
   {
     "id": "v_sink_conceal",
     "type": "SPELL",
-    "name": { "str": "Concealment" },
-    "description": "Combined with blind strike spell.",
-    "valid_targets": [ "ground", "ally" ],
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "name": {
+      "str": "隐匿"
+    },
+    "description": "与盲目打击法术相结合",
+    "valid_targets": [
+      "ground",
+      "ally"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "vamp_conceal",
@@ -43,11 +69,28 @@
   {
     "id": "v_sink_bstrike",
     "type": "SPELL",
-    "name": { "str": "Blind Strike" },
-    "description": "Caster teleports and quickly strikes the target, dealing moderate cutting damage, then turns invisible while retreating to a random spot.",
-    "valid_targets": [ "ground", "hostile" ],
-    "extra_effects": [ { "id": "v_sink_conceal", "hit_self": true }, { "id": "v_sink_tp", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "name": {
+      "str": "盲目打击"
+    },
+    "description": "施法者传送并快速打击目标，造成中等的切割伤害，然后再传送到一个随机点后变为隐形。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
+    "extra_effects": [
+      {
+        "id": "v_sink_conceal",
+        "hit_self": true
+      },
+      {
+        "id": "v_sink_tp",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "min_damage": 16,
     "max_damage": 16,
     "min_range": 10,
@@ -59,12 +102,20 @@
   {
     "id": "v_warlock_innate_strike",
     "type": "SPELL",
-    "name": { "str": "Innate Strike" },
-    "description": "A quick surge of mana blast strikes the target, dealing bash damage.",
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "先天打击"
+    },
+    "description": "一个快速的法力冲击攻击目标，造成钝击伤害。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "min_damage": 14,
     "max_damage": 14,
     "min_range": 15,
@@ -74,12 +125,20 @@
   {
     "id": "v_warlock_stun",
     "type": "SPELL",
-    "name": { "str": "Stun" },
-    "description": "Caster channels its mind to its target, eventually renders them unconscious for a few turns.",
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "心乱身术"
+    },
+    "description": "施法者将自己的思想引导到目标身上，使他们昏迷数轮。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "effect_str": "stunned",
     "base_casting_time": 500,
     "min_range": 15,
@@ -90,12 +149,20 @@
   {
     "id": "v_profane_fire",
     "type": "SPELL",
-    "name": { "str": "Dark Fireblast" },
-    "description": "Fire infused with black magic engulfs the target, inflicting them with profane curse.",
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "暗火流星"
+    },
+    "description": "用灌输了黑魔法的火焰吞噬目标，让他们受到亵渎的诅咒。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "effect_str": "profane_curse",
     "min_damage": 5,
     "max_damage": 5,
@@ -108,10 +175,18 @@
   {
     "id": "v_profane_hellfire",
     "type": "SPELL",
-    "name": { "str": "Desecrate" },
-    "description": "Caster channels the underworld for a very long time to desecrate the targets with pillars of hellish flames.",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "亵渎"
+    },
+    "description": "施法者引导冥界很长时间，用地狱般的火焰柱亵渎目标。",
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "profane_curse",
@@ -129,11 +204,19 @@
   {
     "id": "v_hemo_heal",
     "type": "SPELL",
-    "name": { "str": "Heal" },
-    "description": "Combined with transfusion spell.",
-    "valid_targets": [ "ground", "ally" ],
+    "name": {
+      "str": "治愈"
+    },
+    "description": "加上输血咒语。",
+    "valid_targets": [
+      "ground",
+      "ally"
+    ],
     "//": "3x healing for the damage.",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "min_damage": -21,
     "max_damage": -21,
     "effect": "attack",
@@ -142,16 +225,34 @@
   {
     "id": "v_hemo_transfusion",
     "type": "SPELL",
-    "name": { "str": "Transfusion" },
-    "description": "Drains life force from the target, may be it an ally or a foe.",
-    "valid_targets": [ "ground", "hostile", "ally" ],
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "name": {
+      "str": "血液吸取"
+    },
+    "description": "消耗目标的生命力，可能是盟友或敌人。",
+    "valid_targets": [
+      "ground",
+      "hostile",
+      "ally"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "effect": "attack",
     "shape": "blast",
     "extra_effects": [
-      { "id": "v_hemo_heal", "hit_self": true },
-      { "id": "v_hemo_surge", "hit_self": true },
-      { "id": "v_hemo_share", "hit_self": true }
+      {
+        "id": "v_hemo_heal",
+        "hit_self": true
+      },
+      {
+        "id": "v_hemo_surge",
+        "hit_self": true
+      },
+      {
+        "id": "v_hemo_share",
+        "hit_self": true
+      }
     ],
     "base_casting_time": 300,
     "min_damage": 7,
@@ -163,12 +264,20 @@
   {
     "id": "v_hemo_bloodrip",
     "type": "SPELL",
-    "name": { "str": "Blood Ripple" },
-    "description": "Combined with blood surge spell.",
-    "valid_targets": [ "ground", "hostile" ],
+    "name": {
+      "str": "血脉"
+    },
+    "description": "加上血涌咒语。",
+    "valid_targets": [
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "min_damage": 6,
     "max_damage": 6,
     "min_range": 12,
@@ -178,13 +287,27 @@
   {
     "id": "v_hemo_surge",
     "type": "SPELL",
-    "name": { "str": "Blood Surge" },
-    "description": "A wave of blood is drawn out from the caster, dealing bio damage to the main target and bash to the surrounding targets.",
-    "valid_targets": [ "hostile", "ground", "self" ],
+    "name": {
+      "str": "血涌"
+    },
+    "description": "一股血波从施法者身上抽出，对主要目标造成生物伤害，并对周围目标造成重击。",
+    "valid_targets": [
+      "hostile",
+      "ground",
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
-    "extra_effects": [ { "id": "v_hemo_bloodrip", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
+    "extra_effects": [
+      {
+        "id": "v_hemo_bloodrip",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
     "base_casting_time": 500,
     "min_damage": 12,
     "max_damage": 12,
@@ -195,11 +318,25 @@
   {
     "id": "v_hemo_share",
     "type": "SPELL",
-    "name": { "str": "Share" },
-    "description": "Caster sends out blood tentacles that attaches to nearby allies, regaining large portion of health while damaging the caster.",
-    "extra_effects": [ { "id": "v_hemo_shareblood", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground", "ally", "self" ],
+    "name": {
+      "str": "分享"
+    },
+    "description": "施法者放出附在附近盟友身上的血触手，在伤害施法者的同时恢复大部分生命值。",
+    "extra_effects": [
+      {
+        "id": "v_hemo_shareblood",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground",
+      "ally",
+      "self"
+    ],
     "min_damage": 60,
     "max_damage": 60,
     "effect": "attack",
@@ -208,10 +345,19 @@
   {
     "id": "v_hemo_shareblood",
     "type": "SPELL",
-    "flags": [ "SILENT", "NO_PROJECTILE" ],
-    "name": { "str": "Share Blood" },
-    "description": "Combined with share spell.",
-    "valid_targets": [ "ground", "self", "ally" ],
+    "flags": [
+      "SILENT",
+      "NO_PROJECTILE"
+    ],
+    "name": {
+      "str": "分享鲜血"
+    },
+    "description": "加上共享咒语。",
+    "valid_targets": [
+      "ground",
+      "self",
+      "ally"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": -30,

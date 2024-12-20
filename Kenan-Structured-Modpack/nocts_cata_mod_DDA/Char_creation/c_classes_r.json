@@ -3,36 +3,74 @@
     "type": "item_group",
     "subtype": "collection",
     "id": "flintlock_pouch_surv_drifter",
-    "entries": [ { "item": "36navy_makeshift_magnum", "charges": 14 } ]
+    "entries": [
+      {
+        "item": "36navy_makeshift_magnum",
+        "charges": 14
+      }
+    ]
   },
   {
     "type": "item_group",
     "subtype": "collection",
     "id": "cowboy_hat_surv_surv_drifter",
-    "entries": [ { "item": "44army_makeshift_magnum", "charges": 12 } ]
+    "entries": [
+      {
+        "item": "44army_makeshift_magnum",
+        "charges": 12
+      }
+    ]
   },
   {
     "type": "item_group",
     "subtype": "collection",
     "id": "legrig_surv_surv_drifter",
     "entries": [
-      { "item": "colt_navy", "ammo-item": "36navy_makeshift_magnum", "charges": 6 },
-      { "item": "colt_army", "ammo-item": "44army_makeshift_magnum", "charges": 6 },
-      { "item": "knife_hunting" }
+      {
+        "item": "colt_navy",
+        "ammo-item": "36navy_makeshift_magnum",
+        "charges": 6
+      },
+      {
+        "item": "colt_army",
+        "ammo-item": "44army_makeshift_magnum",
+        "charges": 6
+      },
+      {
+        "item": "knife_hunting"
+      }
     ]
   },
   {
     "type": "profession",
     "id": "prepper",
-    "name": "Prepper",
-    "description": "You were paranoid about the world ending so you jumped on the prepper bandwagon.  You read a book on survival and got yourself a gun pack and some gear.  The cataclysm was not what you expected.",
+    "name": "末日准备者",
+    "description": "你相信世界末日并不是杞人忧天，所以早早的就加入了末日准备者的行列。你阅览了一本关于生存的书，买了一把趁手的枪和一些精良的装备。但这场大灾难并不在你的预料之内。",
     "points": 5,
-    "skills": [ { "level": 3, "name": "rifle" }, { "level": 2, "name": "gun" }, { "level": 1, "name": "survival" } ],
-    "proficiencies": [ "prof_fibers", "prof_fibers_rope", "prof_lockpicking" ],
+    "skills": [
+      {
+        "level": 3,
+        "name": "rifle"
+      },
+      {
+        "level": 2,
+        "name": "gun"
+      },
+      {
+        "level": 1,
+        "name": "survival"
+      }
+    ],
+    "proficiencies": [
+      "prof_fibers",
+      "prof_fibers_rope",
+      "prof_lockpicking"
+    ],
     "items": {
       "both": {
         "items": [
           "socks",
+          "army_top",
           "hat_boonie",
           "wearable_light",
           "balclava",
@@ -47,38 +85,73 @@
           "mil_surp_pack_2"
         ],
         "entries": [
-          { "item": "tank_top", "variant": "tank_top_camo" },
-          { "item": "knife_rambo", "container-item": "scabbard" },
           {
-            "item": "medium_battery_cell",
+            "item": "knife_rambo",
+            "container-item": "scabbard"
+          },
+          {
+            "item": "light_disposable_cell",
             "ammo-item": "battery",
-            "charges": 56,
+            "charges": 300,
             "container-item": "wearable_light"
           },
-          { "group": "charged_ref_lighter" }
+          {
+            "group": "charged_ref_lighter"
+          }
         ]
       },
-      "male": [ "boxer_shorts" ],
-      "female": [ "sports_bra", "boxer_shorts" ]
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "sports_bra",
+        "boxer_shorts"
+      ]
     }
   },
   {
     "type": "profession",
     "id": "surv_drifter",
-    "name": "Wasteland Drifter",
-    "description": "With the end of the world, you found yourself wandering from town to town, scavenging and learning as you go.  Sleeping under the stars, scraping by one meal and one bullet at a time, you've taken to this new life like a duck takes to water.",
+    "name": "废土流浪者",
+    "description": "世界末日的到来的时候，你被迫从一个城镇流浪到另一个城镇搜刮食物与子弹。你边捡垃圾边学习，苟延残喘在星空下，而今你已经适应了这种新生活，如鱼得水。",
     "points": 8,
     "skills": [
-      { "level": 4, "name": "gun" },
-      { "level": 3, "name": "pistol" },
-      { "level": 3, "name": "melee" },
-      { "level": 2, "name": "cutting" },
-      { "level": 2, "name": "dodge" },
-      { "level": 4, "name": "tailor" },
-      { "level": 3, "name": "cooking" },
-      { "level": 3, "name": "fabrication" },
-      { "level": 2, "name": "survival" },
-      { "level": 1, "name": "mechanics" }
+      {
+        "level": 4,
+        "name": "gun"
+      },
+      {
+        "level": 3,
+        "name": "pistol"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 2,
+        "name": "dodge"
+      },
+      {
+        "level": 4,
+        "name": "tailor"
+      },
+      {
+        "level": 3,
+        "name": "cooking"
+      },
+      {
+        "level": 3,
+        "name": "fabrication"
+      },
+      {
+        "level": 2,
+        "name": "survival"
+      }
     ],
     "proficiencies": [
       "prof_handloading",
@@ -86,8 +159,7 @@
       "prof_leatherworking",
       "prof_millinery",
       "prof_furriery",
-      "prof_closures",
-      "prof_gun_cleaning"
+      "prof_closures"
     ],
     "items": {
       "both": {
@@ -110,37 +182,95 @@
           "pocketwatch"
         ],
         "entries": [
-          { "item": "cowboy_hat_surv", "contents-group": "cowboy_hat_surv_surv_drifter" },
-          { "item": "legrig_surv", "contents-group": "legrig_surv_surv_drifter" },
-          { "item": "flintlock_pouch", "contents-group": "flintlock_pouch_surv_drifter" },
-          { "item": "ear_plugs", "custom-flags": [ "no_auto_equip" ] },
-          { "item": "vinegar", "container-item": "bottle_plastic_small" },
-          { "item": "lamp_oil", "container-item": "bottle_plastic_small" },
-          { "item": "36navy_makeshift_magnum", "charges": 5 },
-          { "item": "44army_makeshift_magnum", "charges": 7 },
-          { "group": "charged_ref_lighter" }
+          {
+            "item": "cowboy_hat_surv",
+            "contents-group": "cowboy_hat_surv_surv_drifter"
+          },
+          {
+            "item": "legrig_surv",
+            "contents-group": "legrig_surv_surv_drifter"
+          },
+          {
+            "item": "flintlock_pouch",
+            "contents-group": "flintlock_pouch_surv_drifter"
+          },
+          {
+            "item": "ear_plugs",
+            "custom-flags": [
+              "no_auto_equip"
+            ]
+          },
+          {
+            "item": "vinegar",
+            "container-item": "bottle_plastic_small"
+          },
+          {
+            "item": "lamp_oil",
+            "container-item": "bottle_plastic_small"
+          },
+          {
+            "item": "36navy_makeshift_magnum",
+            "charges": 5
+          },
+          {
+            "item": "44army_makeshift_magnum",
+            "charges": 7
+          },
+          {
+            "group": "charged_ref_lighter"
+          }
         ]
       },
-      "male": [ "boxer_shorts" ],
-      "female": [ "sports_bra", "panties" ]
+      "male": [
+        "boxer_shorts"
+      ],
+      "female": [
+        "sports_bra",
+        "panties"
+      ]
     },
-    "flags": [ "SCEN_ONLY" ]
+    "flags": [
+      "SCEN_ONLY"
+    ]
   },
   {
     "type": "profession",
     "id": "surv_knight_errant",
-    "name": "Wasteland Knight-Errant",
-    "description": "When the world ended, you decided you would live by the sword.  By good fortune or by dedication, you lived long enough to earn your steel.",
+    "name": "荒野游侠",
+    "description": "世界末日时，你决定以剑为生。或是由于好运傍身，或是因为拼尽全力，你活了很久并成为了铁器大师。",
     "points": 9,
     "skills": [
-      { "level": 5, "name": "fabrication" },
-      { "level": 4, "name": "tailor" },
-      { "level": 3, "name": "survival" },
-      { "level": 2, "name": "bashing" },
-      { "level": 2, "name": "cutting" },
-      { "level": 3, "name": "melee" }
+      {
+        "level": 5,
+        "name": "fabrication"
+      },
+      {
+        "level": 4,
+        "name": "tailor"
+      },
+      {
+        "level": 3,
+        "name": "survival"
+      },
+      {
+        "level": 2,
+        "name": "bashing"
+      },
+      {
+        "level": 2,
+        "name": "cutting"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      }
     ],
-    "proficiencies": [ "prof_metalworking", "prof_blacksmithing", "prof_bladesmith", "prof_carving" ],
+    "proficiencies": [
+      "prof_metalworking",
+      "prof_blacksmithing",
+      "prof_bladesmith",
+      "prof_carving"
+    ],
     "items": {
       "both": {
         "ammo": 100,
@@ -158,12 +288,24 @@
           "can_forge",
           "hammer_multitool"
         ],
-        "entries": [ { "item": "sword_metal", "container-item": "scabbard" } ]
+        "entries": [
+          {
+            "item": "sword_metal",
+            "container-item": "scabbard"
+          }
+        ]
       },
-      "male": [ "boxer_briefs" ],
-      "female": [ "bra", "panties" ]
+      "male": [
+        "boxer_briefs"
+      ],
+      "female": [
+        "bra",
+        "panties"
+      ]
     },
-    "flags": [ "SCEN_ONLY" ]
+    "flags": [
+      "SCEN_ONLY"
+    ]
   },
   {
     "type": "profession",
@@ -172,35 +314,85 @@
     "description": "The end of the world brings out the best and worst in everyone.  For you, it was a chance to channel your pre-Cataclysm expertise into something more primal.  Whether you have the might to use such armament remains to be seen.",
     "points": 12,
     "skills": [
-      { "level": 6, "name": "fabrication" },
-      { "level": 4, "name": "mechanics" },
-      { "level": 2, "name": "electronics" },
-      { "level": 2, "name": "cooking" },
-      { "level": 3, "name": "survival" },
-      { "level": 1, "name": "melee" },
-      { "level": 1, "name": "bashing" },
-      { "level": 1, "name": "cutting" }
+      {
+        "level": 6,
+        "name": "fabrication"
+      },
+      {
+        "level": 4,
+        "name": "mechanics"
+      },
+      {
+        "level": 2,
+        "name": "electronics"
+      },
+      {
+        "level": 2,
+        "name": "cooking"
+      },
+      {
+        "level": 3,
+        "name": "survival"
+      },
+      {
+        "level": 1,
+        "name": "melee"
+      },
+      {
+        "level": 1,
+        "name": "bashing"
+      },
+      {
+        "level": 1,
+        "name": "cutting"
+      }
     ],
-    "proficiencies": [ "prof_metalworking", "prof_intro_chemistry" ],
+    "proficiencies": [
+      "prof_metalworking",
+      "prof_intro_chemistry"
+    ],
     "items": {
       "both": {
         "ammo": 100,
-        "items": [ "loincloth", "footrags", "c_power_armor_surv", "backpack", "waterskin", "flint_steel", "clay_pot" ],
+        "items": [
+          "loincloth",
+          "footrags",
+          "backpack",
+          "waterskin",
+          "flint_steel",
+          "clay_pot"
+        ],
         "entries": [
-          { "item": "lamp_oil", "container-item": "metal_tank_little" },
-          { "item": "greatsword_makeshift", "custom-flags": [ "auto_wield" ] },
-          { "item": "makeshift_knife", "container-item": "sheath" }
+          {
+            "item": "c_power_armor_surv",
+            "contents-item": "lamp_oil",
+            "charges": 2000
+          },
+          {
+            "item": "greatsword_makeshift",
+            "custom-flags": [
+              "auto_wield"
+            ]
+          },
+          {
+            "item": "makeshift_knife",
+            "container-item": "sheath"
+          }
         ]
       },
-      "female": [ "chestwrap" ]
+      "female": [
+        "chestwrap"
+      ]
     },
-    "flags": [ "SCEN_ONLY" ]
+    "flags": [
+      "SCEN_ONLY"
+    ]
   },
   {
     "type": "profession",
     "id": "bionic_silencer",
-    "name": "Bionic Silencer",
-    "description": "You were trained and equipped for infiltrating secure facilities for your mysterious backers, to secure specific objects of interest and silence high-value targets.  Now that they've gone silent themselves, you'll have to use your gifts for simple survival.",
+    "name": "生化潜刺者",
+    "description": "你受过训练，装备精良，为你的幕后支持者潜入安全设施，保护特定目标的安全，消灭高价值目标。现在他们自己也沉默了，你必须用你的天赋来生存。",
     "points": 12,
     "CBMs": [
       "bio_adrenaline",
@@ -208,6 +400,7 @@
       "bio_alarm",
       "bio_cloak",
       "bio_atomic_battery",
+      "bio_cloak",
       "bio_fingerhack",
       "bio_lockpick",
       "bio_metabolics",
@@ -220,24 +413,77 @@
       "bio_power_storage_mkII"
     ],
     "skills": [
-      { "level": 2, "name": "cooking" },
-      { "level": 2, "name": "computer" },
-      { "level": 3, "name": "dodge" },
-      { "level": 2, "name": "mechanics" },
-      { "level": 3, "name": "melee" },
-      { "level": 3, "name": "cutting" },
-      { "level": 2, "name": "survival" },
-      { "level": 3, "name": "unarmed" },
-      { "level": 2, "name": "speech" }
+      {
+        "level": 2,
+        "name": "cooking"
+      },
+      {
+        "level": 2,
+        "name": "computer"
+      },
+      {
+        "level": 3,
+        "name": "dodge"
+      },
+      {
+        "level": 2,
+        "name": "mechanics"
+      },
+      {
+        "level": 3,
+        "name": "melee"
+      },
+      {
+        "level": 3,
+        "name": "cutting"
+      },
+      {
+        "level": 2,
+        "name": "survival"
+      },
+      {
+        "level": 3,
+        "name": "unarmed"
+      },
+      {
+        "level": 2,
+        "name": "speech"
+      }
     ],
-    "proficiencies": [ "prof_lockpicking" ],
+    "proficiencies": [
+      "prof_lockpicking"
+    ],
     "items": {
       "both": {
-        "items": [ "socks", "dress_shoes", "kevlar", "dress_shirt", "knit_scarf", "mbag", "multitool", "bottle_metal" ],
-        "entries": [ { "group": "charged_smart_phone" }, { "group": "charged_matches" } ]
+        "items": [
+          "socks",
+          "dress_shoes",
+          "kevlar",
+          "dress_shirt",
+          "knit_scarf",
+          "mbag",
+          "gold_watch",
+          "multitool",
+          "bottle_metal"
+        ],
+        "entries": [
+          {
+            "group": "charged_smart_phone"
+          },
+          {
+            "group": "charged_matches"
+          }
+        ]
       },
-      "male": [ "fancy_briefs", "pants" ],
-      "female": [ "fancy_bra", "fancy_panties", "dress_skirt" ]
+      "male": [
+        "fancy_briefs",
+        "pants"
+      ],
+      "female": [
+        "fancy_bra",
+        "fancy_panties",
+        "dress_skirt"
+      ]
     }
   }
 ]

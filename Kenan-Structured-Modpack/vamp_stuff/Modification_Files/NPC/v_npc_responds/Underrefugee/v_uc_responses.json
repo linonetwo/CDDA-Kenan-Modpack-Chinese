@@ -3,23 +3,71 @@
     "id": "TALK_MISSION_INQUIRE",
     "responses": [
       {
-        "condition": { "and": [ { "u_has_items": { "item": "blood", "count": 30 } }, { "u_has_mission": "VAMP_UNDERCOMMANDO_quest1" } ] },
-        "effect": [ "mission_success", { "u_consume_item": "blood", "count": 30 } ],
-        "text": "Here's your blood.",
+        "condition": {
+          "and": [
+            {
+              "u_has_items": {
+                "item": "blood",
+                "count": 30
+              }
+            },
+            {
+              "u_has_mission": "VAMP_UNDERCOMMANDO_quest1"
+            }
+          ]
+        },
+        "effect": [
+          "mission_success",
+          {
+            "u_consume_item": "blood",
+            "count": 30
+          }
+        ],
+        "text": "这是你要的血液",
         "topic": "TALK_MISSION_SUCCESS"
       },
       {
         "condition": {
-          "and": [ { "u_has_items": { "item": "smallleechteeth", "count": 15 } }, { "u_has_mission": "VAMP_UNDERCOMMANDO_quest2" } ]
+          "and": [
+            {
+              "u_has_items": {
+                "item": "smallleechteeth",
+                "count": 15
+              }
+            },
+            {
+              "u_has_mission": "VAMP_UNDERCOMMANDO_quest2"
+            }
+          ]
         },
-        "effect": [ "mission_success", { "u_consume_item": "smallleechteeth", "count": 15 } ],
-        "text": "Here's your small leech teeth.",
+        "effect": [
+          "mission_success",
+          {
+            "u_consume_item": "smallleechteeth",
+            "count": 15
+          }
+        ],
+        "text": "这是你要的小吸血牙",
         "topic": "TALK_MISSION_SUCCESS"
       },
       {
-        "condition": { "and": [ { "u_has_item": "bloodsac" }, { "u_has_mission": "VAMP_UNDERCOMMANDO_quest3" } ] },
-        "effect": [ "mission_success", { "u_consume_item": "bloodsac" } ],
-        "text": "Here's your blood sac.",
+        "condition": {
+          "and": [
+            {
+              "u_has_item": "bloodsac"
+            },
+            {
+              "u_has_mission": "VAMP_UNDERCOMMANDO_quest3"
+            }
+          ]
+        },
+        "effect": [
+          "mission_success",
+          {
+            "u_consume_item": "bloodsac"
+          }
+        ],
+        "text": "这是你要的血囊。",
         "topic": "TALK_MISSION_SUCCESS"
       }
     ],
@@ -27,156 +75,266 @@
   },
   {
     "dynamic_line": {
-      "no": "Mortal descendant... What do I expect from you?",
+      "no": "人类的后裔，我对你有什么期望？",
       "u_is_wearing": "blood_necklace",
-      "yes": "You got something to say, descendant?."
+      "yes": "你有话要说吗，后裔？"
     },
     "id": "TALK_VAMP_UNDERCOMMANDO",
     "responses": [
-      { "text": "I want to talk with you.", "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk" },
       {
-        "condition": { "or": [ { "not": { "u_has_trait": "commandovampmark" } }, { "not": "has_no_available_mission" } ] },
-        "text": "Any work can I do?.",
+        "text": "我想和你谈谈。",
+        "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk"
+      },
+      {
+        "condition": {
+          "or": [
+            {
+              "not": {
+                "u_has_trait": "commandovampmark"
+              }
+            },
+            {
+              "not": "has_no_available_mission"
+            }
+          ]
+        },
+        "text": "有什么我能做的吗？",
         "topic": "TALK_MISSION_LIST"
       },
       {
-        "condition": { "and": [ { "not": { "u_has_trait": "commandovampmark" } }, { "npc_has_trait": "commandotestdone" } ] },
-        "text": "I've done the final test... So, what now?",
+        "condition": {
+          "and": [
+            {
+              "not": {
+                "u_has_trait": "commandovampmark"
+              }
+            },
+            {
+              "npc_has_trait": "commandotestdone"
+            }
+          ]
+        },
+        "text": "我已经通过了最终测试，那么接下来呢？",
         "topic": "TALK_VAMP_UNDERCOMMANDO_testsdone"
       },
-      { "condition": "has_assigned_mission", "text": "About your command...", "topic": "TALK_MISSION_INQUIRE" },
-      { "text": "I should go now.", "topic": "TALK_DONE" }
+      {
+        "condition": "has_assigned_mission",
+        "text": "关于你的命令...",
+        "topic": "TALK_MISSION_INQUIRE"
+      },
+      {
+        "text": "我现在得走了。",
+        "topic": "TALK_DONE"
+      }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": { "no": "Topic?", "u_is_wearing": "blood_necklace", "yes": "So descendant... What should we talk about?" },
+    "dynamic_line": {
+      "no": "话题？",
+      "u_is_wearing": "blood_necklace",
+      "yes": "所以后代…我们应该谈什么？"
+    },
     "id": "TALK_VAMP_UNDERCOMMANDO_maintalk",
     "responses": [
       {
-        "text": "Who are you?",
+        "text": "你是谁？",
         "topic": "TALK_VAMP_UNDERCOMMANDO_introduce",
-        "condition": { "not": { "npc_has_trait": "commandotalkedhim" } }
+        "condition": {
+          "not": {
+            "npc_has_trait": "commandotalkedhim"
+          }
+        }
       },
       {
-        "text": "Wait... Vampire with a gun?",
+        "text": "等等，一个拿着枪的吸血鬼？",
         "topic": "TALK_VAMP_UNDERCOMMANDO_gun",
-        "condition": { "not": { "npc_has_trait": "commandotalkedgun" } }
+        "condition": {
+          "not": {
+            "npc_has_trait": "commandotalkedgun"
+          }
+        }
       },
       {
-        "text": "News about the outside world, sir?",
+        "text": "有没有什么关于外界的消息？",
         "topic": "TALK_VAMP_UNDERCOMMANDO_world",
-        "condition": { "not": { "npc_has_trait": "commandotalkedworld" } }
+        "condition": {
+          "not": {
+            "npc_has_trait": "commandotalkedworld"
+          }
+        }
       },
       {
-        "text": "Do you offer your guns in trading?",
+        "text": "你能在交易里提供枪支吗？",
         "topic": "TALK_VAMP_UNDERCOMMANDO_tradegun",
-        "condition": { "not": { "npc_has_trait": "commandotalkedgunshop" } }
+        "condition": {
+          "not": {
+            "npc_has_trait": "commandotalkedgunshop"
+          }
+        }
       },
       {
         "condition": {
           "and": [
-            { "not": { "npc_has_trait": "commandotalkedhim" } },
-            { "not": { "npc_has_trait": "commandotalkedgun" } },
-            { "not": { "npc_has_trait": "commandotalkedworld" } },
-            { "not": { "npc_has_trait": "commandotalkedgunshop" } }
+            {
+              "not": {
+                "npc_has_trait": "commandotalkedhim"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "commandotalkedgun"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "commandotalkedworld"
+              }
+            },
+            {
+              "not": {
+                "npc_has_trait": "commandotalkedgunshop"
+              }
+            }
           ]
         },
-        "text": "Let's talk later.",
+        "text": "我们下次再聊。",
         "topic": "TALK_DONE"
       },
       {
         "condition": {
           "and": [
-            { "npc_has_trait": "commandotalkedhim" },
-            { "npc_has_trait": "commandotalkedgun" },
-            { "npc_has_trait": "commandotalkedworld" },
-            { "npc_has_trait": "commandotalkedgunshop" }
+            {
+              "npc_has_trait": "commandotalkedhim"
+            },
+            {
+              "npc_has_trait": "commandotalkedgun"
+            },
+            {
+              "npc_has_trait": "commandotalkedworld"
+            },
+            {
+              "npc_has_trait": "commandotalkedgunshop"
+            }
           ]
         },
-        "text": "I guess I've asked everything...",
+        "text": "我已经问完了...",
         "topic": "TALK_DONE"
       }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "I am a vampire, guarding this place from any kinds of threat.",
+    "dynamic_line": "我是一个吸血鬼，正守在这里以应对各种威胁。",
     "id": "TALK_VAMP_UNDERCOMMANDO_introduce",
     "responses": [
-      { "text": "So, are you the owner of this refugee?", "topic": "TALK_VAMP_UNDERCOMMANDO_owner" },
-      { "text": "Sorry about it...", "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk" }
+      {
+        "text": "所以你是这个难民营的所有者吗？",
+        "topic": "TALK_VAMP_UNDERCOMMANDO_owner"
+      },
+      {
+        "text": "我很抱歉...",
+        "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk"
+      }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "You thought we can't use this things? You are wrong, descendant!",
+    "dynamic_line": "你觉得我们不会用这玩意？你错了，人类！",
     "id": "TALK_VAMP_UNDERCOMMANDO_gun",
     "responses": [
       {
-        "text": "Umm... Okay.",
+        "text": "额...好吧。",
         "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk",
-        "effect": { "npc_add_trait": "commandotalkedgun" }
+        "effect": {
+          "npc_add_trait": "commandotalkedgun"
+        }
       }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "I have no idea. Its been decades since I traveled into this cove.",
+    "dynamic_line": "我不知道，我到这里来已经有近百年了。",
     "id": "TALK_VAMP_UNDERCOMMANDO_world",
     "responses": [
       {
-        "text": "Oh. Okay.",
+        "text": "哦...好吧",
         "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk",
-        "effect": { "npc_add_trait": "commandotalkedworld" }
+        "effect": {
+          "npc_add_trait": "commandotalkedworld"
+        }
       }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "Nope. To trade a gun like this, you better find a gunshop.",
+    "dynamic_line": "不，如果你想交易一把像这样的枪械，你最好找个枪械商店。",
     "id": "TALK_VAMP_UNDERCOMMANDO_tradegun",
-    "responses": [ { "text": "A gunshop?", "topic": "TALK_VAMP_UNDERCOMMANDO_gunshop" } ],
+    "responses": [
+      {
+        "text": "枪械商店？",
+        "topic": "TALK_VAMP_UNDERCOMMANDO_gunshop"
+      }
+    ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "No. This is owned and built by HIM.",
+    "dynamic_line": "不，这里由HIM建造，也属于HIM。",
     "id": "TALK_VAMP_UNDERCOMMANDO_owner",
     "responses": [
-      { "text": "Okay.", "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk" },
       {
-        "text": "Who is HIM?",
+        "text": "好的。",
+        "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk"
+      },
+      {
+        "text": "HIM是谁？",
         "topic": "TALK_VAMP_UNDERCOMMANDO_him",
-        "effect": { "npc_add_trait": "commandotalkedhim" }
+        "effect": {
+          "npc_add_trait": "commandotalkedhim"
+        }
       }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "She's at the wasteland outskirts, a place where vampires freely communicate with you all. Sounds wonderful, right?",
+    "dynamic_line": "她在荒地郊区，是一个吸血鬼和你们人类可以自由交流之处。听起来不错，对吧？",
     "id": "TALK_VAMP_UNDERCOMMANDO_gunshop",
     "responses": [
       {
-        "text": "Wonderful? I don't even know where it is!",
+        "text": "听不起来不错？ 我甚至不知道你说的是哪里。",
         "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk",
-        "effect": { "npc_add_trait": "commandotalkedgunshop" }
+        "effect": {
+          "npc_add_trait": "commandotalkedgunshop"
+        }
       }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "HIM is our master, our lord, the almighty one. HE brought us into existence, and we owe our life serving HIS will.",
+    "dynamic_line": "HIM是我们的大师，我们的领主，一位全能者。他把赋予我们“生”，而我们则为他的意志而活。",
     "id": "TALK_VAMP_UNDERCOMMANDO_him",
-    "responses": [ { "text": "I'd wish to meet HIM...", "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk" } ],
+    "responses": [
+      {
+        "text": "我想见一下HIM...",
+        "topic": "TALK_VAMP_UNDERCOMMANDO_maintalk"
+      }
+    ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "\"What now\" you say? The tests I have given you has to proven yourself worthy to push forward the boundary between this cave and the outskirt. Now, take this ring and tell the seeker about the outskirts, she'll talk about and guide you to its coordinates. The gunshop has something to give when you arrive, so make sure you wear the ring before speaking to her.",
+    "dynamic_line": "你现在在说什么？我给你的测试必须要能够证明，你有能力推进这个洞穴和郊区之间的边界范围，现在拿着这个戒指，告诉探索者关于郊区的事，她会告诉并引导你找到它对应的坐标。到了枪店它们一定会让你提供一些证明，所以在和她说话之前你一定要戴着戒指。",
     "id": "TALK_VAMP_UNDERCOMMANDO_testsdone",
     "responses": [
       {
-        "effect": [ { "u_spawn_item": "blood_cring" }, { "u_add_trait": "commandovampmark" } ],
-        "text": "Yes. I'll do as you say and thank you for this ring.",
+        "effect": [
+          {
+            "u_spawn_item": "blood_cring"
+          },
+          {
+            "u_add_trait": "commandovampmark"
+          }
+        ],
+        "text": "好，我会按照你说的来做，谢谢你的戒指。",
         "topic": "TALK_DONE"
       }
     ],

@@ -3,8 +3,10 @@
     "id": "kawaii_maid_dress",
     "copy-from": "maid_dress_short",
     "type": "ARMOR",
-    "name": { "str": "Cute Maid Clothes" },
-    "description": "Made out of the hopes and dreams of men.",
+    "name": {
+      "str": "女仆装"
+    },
+    "description": "饱含绅士们的希望与梦想。",
     "weight": "200 g",
     "pocket_data": [
       {
@@ -15,35 +17,73 @@
         "moves": 80
       }
     ],
-    "flags": [ "VARSIZE", "FANCY" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
     "armor": [
       {
-        "covers": [ "torso" ],
-        "specifically_covers": [ "torso_lower" ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
         "coverage": 100,
-        "encumbrance": [ 4, 5 ]
+        "encumbrance": [
+          4,
+          5
+        ]
       },
       {
-        "covers": [ "torso" ],
-        "specifically_covers": [ "torso_upper" ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
         "coverage": 30
       },
       {
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
         "coverage": 100,
-        "encumbrance": [ 2, 2 ]
+        "encumbrance": [
+          2,
+          2
+        ]
       },
       {
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_upper_l", "leg_upper_r" ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
         "coverage": 50
       },
       {
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
         "coverage": 30,
-        "encumbrance": [ 2, 2 ]
+        "encumbrance": [
+          2,
+          2
+        ]
       }
     ]
   },
@@ -51,19 +91,27 @@
     "id": "kawaii_maid_dress_ex",
     "looks_like": "kawaii_maid_dress",
     "type": "ARMOR",
-    "name": { "str": "Cute Maid Adv. Uniform (summer form)" },
-    "description": "Centuries of maid sewing techniques have culminated in this pinnacle of maid outfit technology: a year-round outfit that can be transformed to fit any weather or season.",
+    "name": {
+      "str": "精致女仆装（夏季版）"
+    },
+    "description": "数百年的缝纫技术被荟萃到了这件女仆装之中：一套允许你根据不同的季节来改变样式的服装，全年通用。",
     "weight": "830 g",
     "volume": "4250 ml",
     "price": 15500,
     "price_postapoc": 500,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.3,
     "symbol": "[",
     "color": "dark_gray",
     "environmental_protection": 1,
     "warmth": 2,
-    "flags": [ "VARSIZE", "POCKETS", "FANCY" ],
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "FANCY"
+    ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -96,25 +144,73 @@
     ],
     "use_action": {
       "type": "transform",
-      "msg": "You modify the maid outfit to better protect against the cold.",
+      "msg": "你修改了女仆装的构成，以更好地抵御寒冷。",
       "target": "kawaii_maid_dress_ex2",
-      "menu_text": "Add thermal lining"
+      "menu_text": "添加防寒衬里"
     },
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 8, 16 ] },
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 30 },
       {
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
         "coverage": 100,
-        "encumbrance": [ 8, 8 ]
+        "encumbrance": [
+          8,
+          16
+        ]
       },
-      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 50 },
       {
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 30
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          8,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 50
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
         "coverage": 30,
-        "encumbrance": [ 8, 8 ]
+        "encumbrance": [
+          8,
+          8
+        ]
       }
     ]
   },
@@ -124,19 +220,50 @@
     "looks_like": "kawaii_maid_dress_long",
     "repairs_like": "kawaii_maid_dress_ex",
     "type": "ARMOR",
-    "name": { "str": "Cute Maid Adv. Uniform (winter form)" },
-    "description": "Centuries of maid sewing techniques have culminated in this pinnacle of maid outfit technology: a year-round outfit that can be transformed to fit any weather or season.",
+    "name": {
+      "str": "精致女仆装（冬季版）"
+    },
+    "description": "数百年的缝纫技术被荟萃到了这件女仆装之中：一套允许你根据不同的季节来改变样式的服装，全年通用。",
     "warmth": 40,
     "use_action": {
       "type": "transform",
-      "msg": "You modify the maid outfit to better protect against the heat.",
+      "msg": "你修改了女仆装的构成，以更好地抵御炎热。",
       "target": "kawaii_maid_dress_ex",
-      "menu_text": "Remove thermal lining"
+      "menu_text": "移除防寒衬里"
     },
     "armor": [
-      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 8, 16 ] },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": [ 8, 8 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 8, 8 ] }
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          8,
+          16
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          8
+        ]
+      }
     ]
   },
   {
@@ -144,13 +271,18 @@
     "looks_like": "kawaii_maid_dress",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Cute Maid Uniform LSS-PRO" },
-    "description": "The standard maid uniform may not be enough to survive in this dangerous new world. This improved version, while still appearing cute and frilly on the outside, actually conceals an advanced armor liner and climate control systems to better endure even the harshest environments.",
+    "name": {
+      "str": "战斗女仆制服LSS-PRO（关）"
+    },
+    "description": "普通的女仆装可能不足以让人在这个危险的新世界生存。这个改良版虽然外表看起来可爱而蓬松，但实际上却隐藏着先进的装甲内衬和气温控制系统，以更好地抵御恶劣环境。",
     "weight": "5100 g",
     "volume": "10500 ml",
     "price": 110000,
     "price_postapoc": 5000,
-    "material": [ "kevlar_layered", "cotton" ],
+    "material": [
+      "kevlar_layered",
+      "cotton"
+    ],
     "material_thickness": 4,
     "symbol": "[",
     "color": "green",
@@ -158,7 +290,14 @@
     "ammo": "battery",
     "environmental_protection": 3,
     "warmth": 10,
-    "flags": [ "VARSIZE", "WATERPROOF", "POCKETS", "RAINPROOF", "STURDY", "FANCY" ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "POCKETS",
+      "RAINPROOF",
+      "STURDY",
+      "FANCY"
+    ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -191,22 +330,54 @@
       {
         "pocket_type": "MAGAZINE_WELL",
         "rigid": true,
-        "flag_restriction": [ "BATTERY_LIGHT", "BATTERY_MEDIUM" ],
+        "flag_restriction": [
+          "BATTERY_LIGHT",
+          "BATTERY_MEDIUM"
+        ],
         "default_magazine": "medium_battery_cell"
       }
     ],
     "use_action": {
       "type": "transform",
-      "msg": "You activate the uniform's climate control.",
+      "msg": "你激活了制服的恒温系统。",
       "target": "kawaii_maid_dress_lss_on",
       "active": true,
       "need_charges": 1,
-      "need_charges_msg": "The uniform does not have enough power left."
+      "need_charges_msg": "制服没有足够的能量了。"
     },
     "armor": [
-      { "covers": [ "torso" ], "coverage": 100, "encumbrance": [ 7, 15 ] },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 100, "encumbrance": [ 7, 7 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 100, "encumbrance": [ 7, 7 ] }
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          7,
+          15
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          7,
+          7
+        ]
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          7,
+          7
+        ]
+      }
     ]
   },
   {
@@ -214,34 +385,55 @@
     "copy-from": "kawaii_maid_dress_lss",
     "repairs_like": "kawaii_maid_dress_lss",
     "type": "TOOL_ARMOR",
-    "name": { "str": "Cute Maid Uniform LSS-PRO (on)" },
-    "description": "The standard maid uniform may not be enough to survive in this dangerous new world. This improved version, while still appearing cute and frilly on the outside, actually conceals an advanced armor liner and climate control systems to better endure even the harshest environments.",
-    "power_draw": "100 mW",
+    "name": {
+      "str": "战斗女仆制服LSS-PRO（开）"
+    },
+    "description": "普通的女仆装可能不足以让人在这个危险的新世界生存。这个改良版虽然外表看起来可爱而蓬松，但实际上却隐藏着先进的装甲内衬和气温控制系统，以更好地抵御恶劣环境。",
+    "power_draw": "1 kW",
     "revert_to": "kawaii_maid_dress_lss",
-    "flags": [ "VARSIZE", "WATERPROOF", "POCKETS", "RAINPROOF", "STURDY", "FANCY", "TRADER_AVOID" ],
+    "flags": [
+      "VARSIZE",
+      "WATERPROOF",
+      "POCKETS",
+      "RAINPROOF",
+      "STURDY",
+      "FANCY",
+      "TRADER_AVOID"
+    ],
     "relic_data": {
       "passive_effects": [
         {
           "has": "WORN",
           "condition": "ACTIVE",
-          "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 50 }, { "value": "CLIMATE_CONTROL_CHILL", "add": 50 } ]
+          "values": [
+            {
+              "value": "CLIMATE_CONTROL_HEAT",
+              "add": 50
+            },
+            {
+              "value": "CLIMATE_CONTROL_CHILL",
+              "add": 50
+            }
+          ]
         }
       ]
     },
     "use_action": {
       "ammo_scale": 0,
       "type": "transform",
-      "msg": "You turn off the uniform's climate control systems.",
+      "msg": "你关闭了制服的恒温系统。",
       "target": "kawaii_maid_dress_lss",
-      "menu_text": "Turn off"
+      "menu_text": "关闭"
     }
   },
   {
     "id": "kawaii_maid_dress_long",
     "copy-from": "maid_dress",
     "type": "ARMOR",
-    "name": { "str": "Cute Victorian Maid Clothes" },
-    "description": "A uniform with longer sleeves and skirt, better suited for winter.",
+    "name": {
+      "str": "维多利亚女仆装"
+    },
+    "description": "一件维多利亚风格的女仆装，袖子和裙摆较长，更适合冬天穿。其营造了女仆典雅、整齐和端庄的形象。",
     "weight": "350 g",
     "price": 8000,
     "price_postapoc": 80,
@@ -256,30 +448,59 @@
       }
     ],
     "warmth": 40,
-    "flags": [ "VARSIZE", "FANCY" ]
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ]
   },
   {
     "id": "kawaii_wedding_dress",
     "copy-from": "dress_wedding",
     "type": "ARMOR",
-    "name": { "str": "Cute Wedding Dress" },
-    "description": "A pure white wedding dress.",
+    "name": {
+      "str": "婚纱"
+    },
+    "description": "一套纯白色的婚纱。",
     "armor": [
-      { "covers": [ "torso" ], "coverage": 100, "encumbrance": 15 },
-      { "covers": [ "leg_l", "leg_r" ], "coverage": 95, "encumbrance": 15 },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": 15 }
+      {
+        "covers": [
+          "torso"
+        ],
+        "coverage": 100,
+        "encumbrance": 15
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "coverage": 95,
+        "encumbrance": 15
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 95,
+        "encumbrance": 15
+      }
     ]
   },
   {
     "id": "kawaii_sister_dress",
     "type": "ARMOR",
-    "name": { "str": "Cute Nun Habit" },
-    "description": "A nun's habit for serving God that gives off a sacred aura.",
+    "name": {
+      "str": "修女服"
+    },
+    "description": "一件散发着神圣气息的修女服，用于侍奉上帝。",
     "weight": "800 g",
     "volume": "3500 ml",
     "price": 18000,
     "price_postapoc": 60,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.4,
     "symbol": "[",
     "color": "blue",
@@ -301,106 +522,272 @@
       }
     ],
     "warmth": 15,
-    "flags": [ "VARSIZE", "FANCY" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
     "armor": [
-      { "covers": [ "torso" ], "coverage": 95, "encumbrance": [ 10, 12 ] },
-      { "covers": [ "arm_l", "arm_r" ], "coverage": 95, "encumbrance": [ 8, 8 ] },
       {
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
-        "coverage": 100,
-        "encumbrance": [ 5, 7 ]
+        "covers": [
+          "torso"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          10,
+          12
+        ]
       },
-      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 50 }
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          8
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          5,
+          7
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 50
+      }
     ]
   },
   {
     "id": "kawaii_raincoat",
     "type": "ARMOR",
-    "name": { "str": "Cute Transparent Raincoat (hood on)" },
-    "description": "A transparent raincoat made from very thin vinyl, very popular with maids who want to be fashionable in rainy weather. The material is thin enough that the entire coat can fold away into a pocket when not in use.",
+    "name": {
+      "str": "透明雨衣（已戴雨帽）"
+    },
+    "description": "一件由乙烯基材料制成的雨衣。这种材料很薄，以致整个雨衣都可以折叠收纳在口袋中。这雨衣还是透明的，即便雨天也能展露你的优雅与端庄，很受女仆们的欢迎。",
     "weight": "120 g",
     "volume": "750 ml",
     "price": 5000,
     "price_postapoc": 50,
-    "material": [ "plastic", "cotton" ],
+    "material": [
+      "plastic",
+      "cotton"
+    ],
     "material_thickness": 1,
     "symbol": "[",
     "color": "blue",
-    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "RAINPROOF", "HOOD", "OUTER", "FANCY", "SOFT" ],
-    "use_action": { "type": "transform", "msg": "You take off the hood.", "target": "kawaii_raincoat_off", "menu_text": "Toggle hood" },
-    "armor": [ { "encumbrance": 10, "coverage": 95, "covers": [ "torso", "arm_l", "arm_r", "head" ] } ]
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "WATERPROOF",
+      "RAINPROOF",
+      "HOOD",
+      "OUTER",
+      "FANCY",
+      "SOFT"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你摘下了雨衣帽。",
+      "target": "kawaii_raincoat_off",
+      "menu_text": "切换雨帽"
+    },
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 95,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "head"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_raincoat_off",
     "copy-from": "kawaii_raincoat",
     "repairs_like": "kawaii_raincoat",
     "type": "ARMOR",
-    "name": { "str": "Cute Transparent Raincoat (hood off)" },
-    "flags": [ "VARSIZE", "POCKETS", "WATERPROOF", "RAINPROOF", "OUTER", "FANCY", "SOFT" ],
-    "use_action": { "type": "transform", "msg": "You put on the hood.", "target": "kawaii_raincoat", "menu_text": "Toggle hood" },
-    "armor": [ { "encumbrance": 7, "coverage": 85, "covers": [ "torso", "arm_l", "arm_r" ] } ]
+    "name": {
+      "str": "透明雨衣（未戴雨帽）"
+    },
+    "flags": [
+      "VARSIZE",
+      "POCKETS",
+      "WATERPROOF",
+      "RAINPROOF",
+      "OUTER",
+      "FANCY",
+      "SOFT"
+    ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你戴上了雨衣帽。",
+      "target": "kawaii_raincoat",
+      "menu_text": "切换雨帽"
+    },
+    "armor": [
+      {
+        "encumbrance": 7,
+        "coverage": 85,
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_sailor_fuku",
     "copy-from": "kawaii_sister_dress",
     "type": "ARMOR",
-    "name": { "str": "Cute School Girl Uniform" },
-    "description": "A school uniform worn by female students."
+    "name": {
+      "str": "JK制服"
+    },
+    "description": "一件学校为女高中生设计的制服。"
   },
   {
     "id": "kawaii_sukumizu_kon",
     "type": "ARMOR",
-    "name": "Cute Navy Blue Swimsuit",
-    "description": "A swimming suit worn by female students.",
+    "name": "蓝色死库水",
+    "description": "一件女学生们穿的泳衣。",
     "weight": "200g",
     "volume": "1 L",
     "price": 5250,
     "price_postapoc": 100,
-    "material": [ "neoprene", "cotton" ],
+    "material": [
+      "neoprene",
+      "cotton"
+    ],
     "symbol": "[",
     "color": "blue",
     "armor": [
-      { "coverage": 90, "covers": [ "torso" ], "encumbrance": 6 },
+      {
+        "coverage": 90,
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 6
+      },
       {
         "coverage": 75,
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
         "encumbrance": 0
       }
     ],
     "warmth": 30,
     "material_thickness": 2,
-    "flags": [ "VARSIZE", "SKINTIGHT", "FANCY", "WATER_FRIENDLY" ]
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY",
+      "WATER_FRIENDLY"
+    ]
   },
   {
     "id": "kawaii_sukumizu_siro",
     "copy-from": "kawaii_sukumizu_kon",
     "type": "ARMOR",
-    "name": "Cute White Swimsuit",
+    "name": "白色死库水",
     "color": "white"
   },
   {
     "id": "kawaii_nurse",
     "copy-from": "kawaii_sister_dress",
     "type": "ARMOR",
-    "name": "Cute Nurse Uniform",
-    "description": "A nurse's uniform.",
+    "name": "护士制服",
+    "description": "一套护士的制服。",
     "armor": [
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ], "coverage": 100, "encumbrance": [ 4, 6 ] },
-      { "covers": [ "torso" ], "specifically_covers": [ "torso_upper" ], "coverage": 30 },
       {
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_hip_l", "leg_hip_r" ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
         "coverage": 100,
-        "encumbrance": [ 2, 4 ]
+        "encumbrance": [
+          4,
+          6
+        ]
       },
-      { "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ], "coverage": 50 },
       {
-        "covers": [ "arm_l", "arm_r" ],
-        "specifically_covers": [ "arm_shoulder_l", "arm_shoulder_r" ],
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 30
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 50
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
         "coverage": 30,
-        "encumbrance": [ 2, 2 ]
+        "encumbrance": [
+          2,
+          2
+        ]
       }
     ]
   },
@@ -408,123 +795,195 @@
     "id": "kawaii_maid_panties",
     "copy-from": "kawaii_panties_base",
     "type": "ARMOR",
-    "name": { "str": "Cute White Panties" },
-    "description": "Pure white panties, very breathable and comfortable even in summer."
+    "name": {
+      "str": "纯白内裤"
+    },
+    "description": "纯白色的内裤，即便在夏天也非常透气和舒适。"
   },
   {
     "id": "kawaii_maid_bra",
     "copy-from": "kawaii_bra_base",
     "type": "ARMOR",
-    "name": { "str": "Cute White Bra" },
-    "description": "Pure white bra, very breathable and comfortable even in summer."
+    "name": {
+      "str": "纯白胸罩"
+    },
+    "description": "纯白色的胸罩，即使是在夏天也非常透气和舒适。"
   },
   {
     "id": "kawaii_maid_simapan_pink",
     "copy-from": "kawaii_panties_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Pink Striped Panties" },
-    "description": "Panties with pink stripes."
+    "name": {
+      "str": "条纹内裤（粉色）"
+    },
+    "description": "有着粉色条纹的内裤。"
   },
   {
     "id": "kawaii_maid_simabura_pink",
     "copy-from": "kawaii_bra_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Pink Striped Bra" },
-    "description": "A bra with pink stripes."
+    "name": {
+      "str": "条纹胸罩（粉色）"
+    },
+    "description": "一款有着粉色条纹的胸罩。"
   },
   {
     "id": "kawaii_maid_simapan_green",
     "copy-from": "kawaii_panties_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Green Striped Panties" },
-    "description": "Panties with green stripes."
+    "name": {
+      "str": "条纹内裤（绿色）"
+    },
+    "description": "有着绿色条纹的内裤。"
   },
   {
     "id": "kawaii_maid_simabura_green",
     "copy-from": "kawaii_bra_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Green Striped Bra" },
-    "description": "A bra with green stripes."
+    "name": {
+      "str": "条纹胸罩（绿色）"
+    },
+    "description": "一款有着绿色条纹的胸罩。"
   },
   {
     "id": "kawaii_bikini_bottom_black",
     "copy-from": "kawaii_panties_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Black Bikini Bottom" },
-    "description": "A simple black bikini bottom.",
+    "name": {
+      "str": "比基尼内裤（黑色）"
+    },
+    "description": "一件黑色比基尼内裤。",
     "color": "light_red",
-    "extend": { "flags": [ "WATER_FRIENDLY" ] }
+    "extend": {
+      "flags": [
+        "WATER_FRIENDLY"
+      ]
+    }
   },
   {
     "id": "kawaii_bikini_top_black",
     "copy-from": "kawaii_bra_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Black Bikini Top" },
-    "description": "A simple black bikini top.",
+    "name": {
+      "str": "比基尼文胸（黑色）"
+    },
+    "description": "一件黑色比基尼内裤。",
     "color": "light_red",
-    "extend": { "flags": [ "WATER_FRIENDLY" ] }
+    "extend": {
+      "flags": [
+        "WATER_FRIENDLY"
+      ]
+    }
   },
   {
     "id": "kawaii_tailskirt_mini",
     "type": "ARMOR",
-    "name": { "str": "Cute Fishtail Miniskirt" },
-    "description": "A flared miniskirt that is longer in the back.",
+    "name": {
+      "str": "鱼尾迷你裙"
+    },
+    "description": "一件喇叭形迷你裙，背面裙裾稍长。",
     "weight": "11 g",
     "volume": "250 ml",
     "price": 6500,
     "price_postapoc": 50,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
     "symbol": "[",
     "color": "pink",
-    "flags": [ "VARSIZE", "FANCY" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
     "armor": [
-      { "coverage": 100, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_hip_l", "leg_hip_r" ] },
-      { "coverage": 25, "covers": [ "leg_l", "leg_r" ], "specifically_covers": [ "leg_upper_l", "leg_upper_r" ] }
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ]
+      },
+      {
+        "coverage": 25,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ]
+      }
     ]
   },
   {
     "id": "kawaii_vest",
     "copy-from": "vest",
     "type": "ARMOR",
-    "name": { "str": "Cute Utility Vest" },
-    "description": "A modified utility vest with many pockets."
+    "name": {
+      "str": "工具背心"
+    },
+    "description": "一件有许多口袋的改良型工具背心，能装下少女的化妆品。"
   },
   {
     "id": "kawaii_maid_hat",
     "type": "ARMOR",
-    "name": { "str": "Cute Maid headdress" },
-    "description": "One of the most important parts of the maid uniform. It is forbidden for maids to take it off, regardless of weather. Trained maids can channel their spirit into it to keep their heads warm during winter. (Toggle to change warmth)",
+    "name": {
+      "str": "女仆头饰"
+    },
+    "description": "女仆装中最重要的部分之一。无论是什么样的天气，女仆都不能把它脱下来。熟练的女仆可以将她们的意志注入其中，使她们的头部在冬天保持温暖。（使用以更改温度）",
     "weight": "10 g",
     "volume": "250 ml",
     "price": 2500,
     "price_postapoc": 50,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
     "symbol": "[",
     "color": "white",
     "warmth": 0,
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
     "use_action": {
       "type": "transform",
-      "msg": "Your pride as a maid prevents the cold from bothering your head.",
+      "msg": "身为女仆的骄傲可以防止寒冷困扰你的头部。",
       "target": "kawaii_maid_hat_kiai",
-      "menu_text": "Channel spirit"
+      "menu_text": "意志注入"
     },
-    "armor": [ { "encumbrance": 3, "coverage": 25, "covers": [ "head" ] } ]
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 25,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_maid_hat_kiai",
     "copy-from": "kawaii_maid_hat",
     "repairs_like": "kawaii_maid_hat",
     "type": "ARMOR",
-    "name": { "str": "Cute Maid headdress" },
+    "name": {
+      "str": "女仆头饰"
+    },
     "warmth": 30,
     "use_action": {
       "type": "transform",
-      "msg": "You stop channeling your spirit into te headpiece",
+      "msg": "你停止将你的精神力注入头环。",
       "target": "kawaii_maid_hat",
-      "menu_text": "Stop channeling spirit"
+      "menu_text": "停止注入意志"
     }
   },
   {
@@ -532,23 +991,35 @@
     "looks_like": "kawaii_maid_hat",
     "type": "TOOL_ARMOR",
     "category": "clothing",
-    "name": { "str": "Cute Thermal Maid headdress" },
-    "description": "One of the most important parts of the maid unifrom is the headdress. This one contains an electrical thermal system powedered using batteries. It lets you feel like a maid despite how it looks.",
+    "name": {
+      "str": "保暖女仆头饰"
+    },
+    "description": "女仆头饰是女仆装中最重要的部分之一。这个头饰内含电热系统，使用电池供电。不管你外观如何，戴上它会让你有个女仆的样子",
     "weight": "15 g",
     "volume": "250 ml",
     "price": 5000,
     "price_postapoc": 250,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
     "symbol": "[",
     "color": "white",
     "warmth": 10,
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF"
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
         "rigid": true,
-        "flag_restriction": [ "BATTERY_LIGHT", "BATTERY_ULTRA_LIGHT" ],
+        "flag_restriction": [
+          "BATTERY_LIGHT",
+          "BATTERY_ULTRA_LIGHT"
+        ],
         "default_magazine": "light_battery_cell"
       }
     ],
@@ -556,31 +1027,47 @@
     "ammo": "battery",
     "use_action": {
       "type": "transform",
-      "msg": "You activate the headdress' heating systems",
+      "msg": "你激活了头饰的保暖系统。",
       "target": "kawaii_maid_hat_thermal_on",
       "active": true,
-      "menu_text": "Activate heater",
+      "menu_text": "激活保暖系统",
       "need_charges": 1,
-      "need_charges_msg": "%s does not have enough power left."
+      "need_charges_msg": "%s没有足够的能量。"
     },
-    "armor": [ { "encumbrance": 3, "coverage": 25, "covers": [ "head" ] } ]
+    "armor": [
+      {
+        "encumbrance": 3,
+        "coverage": 25,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_maid_hat_thermal_on",
     "copy-from": "kawaii_maid_hat_thermal_off",
     "repairs_like": "kawaii_maid_hat_thermal_off",
     "type": "TOOL_ARMOR",
-    "name": { "str": "Cute Thermal Maid headdress (on)" },
+    "name": {
+      "str": "保暖女仆头饰（开）"
+    },
     "warmth": 80,
-    "power_draw": "7500 mW",
+    "power_draw": "75 W",
     "revert_to": "kawaii_maid_hat_thermal_off",
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "TRADER_AVOID" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF",
+      "TRADER_AVOID"
+    ],
     "use_action": {
       "ammo_scale": 0,
       "type": "transform",
-      "msg": "You deactivate the headdress' heating systems",
+      "msg": "你关闭了头饰的保暖系统。",
       "target": "kawaii_maid_hat_thermal_off",
-      "menu_text": "Deactivate heater"
+      "menu_text": "关闭保暖系统"
     }
   },
   {
@@ -588,26 +1075,42 @@
     "looks_like": "kawaii_maid_hat",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Cute Maid headdress LSS-PRO" },
-    "description": "A maid must maintain her pride and attends to her duties, no matter how harsh the situation or environment. The headdress is not just a piece of the uniform, it's a symbol of a maid's pride.",
+    "name": {
+      "str": "女仆头饰 LSS-PRO"
+    },
+    "description": "无论环境多么恶劣，女仆都必须保持她们身为女仆的自尊，尽职尽责。女仆的头饰不只是制服的一部分，它更是女仆骄傲的象征。",
     "weight": "628 g",
     "volume": "500 ml",
     "price": 58000,
     "price_postapoc": 3000,
-    "material": [ "kevlar_layered", "cotton" ],
+    "material": [
+      "kevlar_layered",
+      "cotton"
+    ],
     "material_thickness": 4,
     "symbol": "[",
     "color": "white",
     "to_hit": -1,
-    "melee_damage": { "bash": 10 },
+    "melee_damage": {
+      "bash": 10
+    },
     "environmental_protection": 3,
     "warmth": 20,
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "STURDY" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY"
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
         "rigid": true,
-        "flag_restriction": [ "BATTERY_LIGHT", "BATTERY_ULTRA_LIGHT" ],
+        "flag_restriction": [
+          "BATTERY_LIGHT",
+          "BATTERY_ULTRA_LIGHT"
+        ],
         "default_magazine": "light_battery_cell"
       }
     ],
@@ -615,33 +1118,50 @@
     "ammo": "battery",
     "use_action": {
       "type": "transform",
-      "msg": "You activate the headdress' heating mode.",
+      "msg": "你激活了头饰的保暖模式。",
       "target": "kawaii_maid_hat_lss1",
       "active": true,
-      "menu_text": "Change climate control settings",
+      "menu_text": "更改恒温系统设置",
       "need_charges": 1,
-      "need_charges_msg": "%s does not have enough power left."
+      "need_charges_msg": "%s没有足够的能量。"
     },
-    "armor": [ { "encumbrance": 10, "coverage": 100, "covers": [ "head" ] } ]
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 100,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_maid_hat_lss1",
     "copy-from": "kawaii_maid_hat_lss",
     "repairs_like": "kawaii_maid_hat_lss",
     "type": "TOOL_ARMOR",
-    "name": { "str": "Cute Maid headdress LSS-PRO (warming)" },
+    "name": {
+      "str": "女仆头饰 LSS-PRO（保暖）"
+    },
     "warmth": 65,
-    "power_draw": "7500 mW",
+    "power_draw": "75 W",
     "revert_to": "kawaii_maid_hat_lss",
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "STURDY", "TRADER_AVOID" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "TRADER_AVOID"
+    ],
     "use_action": {
       "type": "transform",
-      "msg": "You activate the headdress' cooling mode.",
+      "msg": "你激活了头饰的降温模式。",
       "target": "kawaii_maid_hat_lss2",
       "active": true,
-      "menu_text": "Change climate control settings",
+      "menu_text": "更改恒温系统设置",
       "need_charges": 1,
-      "need_charges_msg": "%s does not have enough power left."
+      "need_charges_msg": "%s没有足够的能量。"
     }
   },
   {
@@ -649,17 +1169,26 @@
     "copy-from": "kawaii_maid_hat_lss",
     "repairs_like": "kawaii_maid_hat_lss",
     "type": "TOOL_ARMOR",
-    "name": { "str": "Cute Maid headdress LSS-PRO (cooling)" },
+    "name": {
+      "str": "女仆头饰 LSS-PRO（凉爽）"
+    },
     "warmth": 0,
-    "power_draw": "7500 mW",
+    "power_draw": "75 W",
     "revert_to": "kawaii_maid_hat_lss",
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF", "RAINPROOF", "STURDY", "TRADER_AVOID" ],
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "RAINPROOF",
+      "STURDY",
+      "TRADER_AVOID"
+    ],
     "use_action": {
       "ammo_scale": 0,
       "type": "transform",
-      "msg": "You deactivate the headdress' climate control.",
+      "msg": "你关闭了头饰的温度控制系统。",
       "target": "kawaii_maid_hat_lss",
-      "menu_text": "Change climate control settings"
+      "menu_text": "更改恒温系统设置"
     }
   },
   {
@@ -667,35 +1196,57 @@
     "copy-from": "kawaii_glasses_base",
     "type": "TOOL_ARMOR",
     "category": "clothing",
-    "name": { "str": "Cute High-Tech Glasses (off)" },
-    "description": "These advanced glasses are not only capable of functioning as night vision or infared scanners, but protects against bright flashes, can withstand chemical corrosion, and can even completely block light for sleeping in bright places.",
+    "name": {
+      "str": "高科技眼镜（关）"
+    },
+    "description": "这些先进的眼镜不仅可以作为夜视仪或红外线扫描仪使用，还可以防护强光炫目，抵御化学腐蚀，并且在光线明亮的环境中甚至可以完全阻挡光线，让人可以在明亮的场所入睡。",
     "weight": "90 g",
     "price": 92000,
     "price_postapoc": 3500,
     "looks_like": "kawaii_maid_megane_02",
-    "qualities": [ [ "GLARE", 1 ] ],
-    "flags": [ "WATER_FRIENDLY", "FIRESTARTER", "FANCY", "FIX_NEARSIGHT", "FIX_FARSIGHT", "SUN_GLASSES", "FLASH_PROTECTION" ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ]
+    ],
+    "flags": [
+      "WATER_FRIENDLY",
+      "FIRESTARTER",
+      "FANCY",
+      "FIX_NEARSIGHT",
+      "FIX_FARSIGHT",
+      "SUN_GLASSES",
+      "FLASH_PROTECTION"
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
         "rigid": true,
-        "flag_restriction": [ "BATTERY_ULTRA_LIGHT" ],
+        "flag_restriction": [
+          "BATTERY_ULTRA_LIGHT"
+        ],
         "default_magazine": "light_minus_battery_cell"
       }
     ],
-    "charges_per_use": 0,
+    "charges_per_use": 1,
     "ammo": "battery",
     "use_action": [
       {
         "type": "transform",
-        "menu_text": "Toggle vision mode",
-        "msg": "You switch the glasses to night vision mode.",
+        "menu_text": "切换视觉模式",
+        "msg": "你把眼镜切换成夜视模式。",
         "target": "kawaii_hitec_megane_nv",
         "active": true,
         "need_charges": 1,
-        "need_charges_msg": "%s does not have enough power left."
+        "need_charges_msg": "%s没有足够的能量。"
       },
-      { "type": "firestarter", "moves": 1000, "moves_slow": 25000, "need_sunlight": true }
+      {
+        "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true
+      }
     ]
   },
   {
@@ -703,18 +1254,27 @@
     "copy-from": "kawaii_hitec_megane",
     "repairs_like": "kawaii_hitec_megane",
     "type": "TOOL_ARMOR",
-    "name": { "str": "Cute High-Tech Glasses (NV)" },
-    "flags": [ "WATER_FRIENDLY", "FANCY", "FIX_NEARSIGHT", "FIX_FARSIGHT", "GNV_EFFECT", "TRADER_AVOID" ],
-    "power_draw": "100 mW",
+    "name": {
+      "str": "高科技眼镜（夜视）"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "FANCY",
+      "FIX_NEARSIGHT",
+      "FIX_FARSIGHT",
+      "GNV_EFFECT",
+      "TRADER_AVOID"
+    ],
+    "power_draw": "10 W",
     "revert_to": "kawaii_hitec_megane",
     "use_action": {
       "type": "transform",
-      "menu_text": "Toggle vision mode",
-      "msg": "You switch the glasses to infrared mode.",
+      "menu_text": "切换视觉模式",
+      "msg": "你把眼镜切换成红外模式。",
       "target": "kawaii_hitec_megane_ir",
       "active": true,
-      "need_charges": 0,
-      "need_charges_msg": "%s does not have enough power left."
+      "need_charges": 1,
+      "need_charges_msg": "%s没有足够的能量。"
     }
   },
   {
@@ -722,15 +1282,24 @@
     "copy-from": "kawaii_hitec_megane",
     "repairs_like": "kawaii_hitec_megane",
     "type": "TOOL_ARMOR",
-    "name": { "str": "Cute High-Tech Glasses (IR)" },
-    "flags": [ "WATER_FRIENDLY", "FANCY", "FIX_NEARSIGHT", "FIX_FARSIGHT", "IR_EFFECT", "TRADER_AVOID" ],
-    "power_draw": "1 W",
+    "name": {
+      "str": "高科技眼镜（红外）"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "FANCY",
+      "FIX_NEARSIGHT",
+      "FIX_FARSIGHT",
+      "IR_EFFECT",
+      "TRADER_AVOID"
+    ],
+    "power_draw": "10 W",
     "revert_to": "kawaii_hitec_megane",
     "use_action": {
       "ammo_scale": 0,
       "type": "transform",
-      "menu_text": "Toggle vision mode",
-      "msg": "You switch the glasses to blinder mode.",
+      "menu_text": "切换视觉模式",
+      "msg": "你把眼镜切换成遮光模式。",
       "target": "kawaii_hitec_megane_blind"
     }
   },
@@ -739,13 +1308,22 @@
     "copy-from": "kawaii_hitec_megane",
     "repairs_like": "kawaii_hitec_megane",
     "type": "TOOL_ARMOR",
-    "name": { "str": "Cute High-Tech Glasses (Blind)" },
-    "flags": [ "WATER_FRIENDLY", "FANCY", "FIX_NEARSIGHT", "FIX_FARSIGHT", "BLIND", "TRADER_AVOID" ],
+    "name": {
+      "str": "高科技眼镜（遮光）"
+    },
+    "flags": [
+      "WATER_FRIENDLY",
+      "FANCY",
+      "FIX_NEARSIGHT",
+      "FIX_FARSIGHT",
+      "BLIND",
+      "TRADER_AVOID"
+    ],
     "use_action": {
       "ammo_scale": 0,
       "type": "transform",
-      "menu_text": "Toggle vision mode",
-      "msg": "You return the glasses to its default mode.",
+      "menu_text": "切换视觉模式",
+      "msg": "你将眼镜恢复到了默认位置。",
       "target": "kawaii_hitec_megane"
     }
   },
@@ -753,381 +1331,471 @@
     "id": "kawaii_maid_megane_01",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Black Half-Rim Glasses" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health. (Toggle to adjust position)",
+    "name": {
+      "str": "黑色半框眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”（使用以调整位置）",
     "use_action": [
       {
         "type": "transform",
-        "msg": "You lower the glasses",
+        "msg": "你放低了眼镜的位置。",
         "target": "kawaii_maid_megane_02",
-        "menu_text": "Adjust the glasses"
+        "menu_text": "调整眼镜"
       },
-      { "type": "firestarter", "moves": 1000, "moves_slow": 25000, "need_sunlight": true }
+      {
+        "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true
+      }
     ]
   },
   {
     "id": "kawaii_maid_megane_02",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Black Half-Rim Glasses" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health. (Toggle to adjust position)",
+    "name": {
+      "str": "黑色半框眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”（使用以调整位置）",
     "use_action": [
       {
         "type": "transform",
-        "msg": "You raise the glasses",
+        "msg": "你抬高了眼镜的位置。",
         "target": "kawaii_maid_megane_01",
-        "menu_text": "Adjust the glasses"
+        "menu_text": "调整眼镜"
       },
-      { "type": "firestarter", "moves": 1000, "moves_slow": 25000, "need_sunlight": true }
+      {
+        "type": "firestarter",
+        "moves": 1000,
+        "moves_slow": 25000,
+        "need_sunlight": true
+      }
     ]
   },
   {
     "id": "kawaii_maid_megane_03",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Red Half-Rim Glasses" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health. (Toggle to adjust position)",
+    "name": {
+      "str": "红色半框眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”（使用以调整位置）",
     "use_action": {
       "type": "transform",
-      "msg": "You lower the glasses",
+      "msg": "你放低了眼镜的位置。",
       "target": "kawaii_maid_megane_04",
-      "menu_text": "Adjust the glasses"
+      "menu_text": "调整眼镜"
     }
   },
   {
     "id": "kawaii_maid_megane_04",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Red Half-Rim Glasses" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health. (Toggle to adjust position)",
+    "name": {
+      "str": "红色半框眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”（使用以调整位置）",
     "use_action": {
       "type": "transform",
-      "msg": "You raise the glasses",
+      "msg": "你抬高了眼镜的位置。",
       "target": "kawaii_maid_megane_03",
-      "menu_text": "Adjust the glasses"
+      "menu_text": "调整眼镜"
     }
   },
   {
     "id": "kawaii_maid_megane_05",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Black Large Half-Rim Glasses" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health."
+    "name": {
+      "str": "大号红色半框眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”"
   },
   {
     "id": "kawaii_maid_megane_06",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Brass Monocle" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health."
+    "name": {
+      "str": "黄铜单片眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”"
   },
   {
     "id": "kawaii_maid_megane_07",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Brass Monocle with Chain" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health."
+    "name": {
+      "str": "带链黄铜单片眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”"
   },
   {
     "id": "kawaii_maid_megane_08",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Black Fullframe Glasses" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health."
+    "name": {
+      "str": "黑色全框眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”"
   },
   {
     "id": "kawaii_maid_megane_09",
     "copy-from": "kawaii_glasses_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Red Fullframe Glasses" },
-    "description": "A maid wearing these will never miss the smallest speck of dust, nor signs of their master's health."
+    "name": {
+      "str": "红色全框眼镜"
+    },
+    "description": "戴上这种眼镜的女仆决不会错过一点灰尘，也不会忽略任何主人健康上的迹象。“啊啊，眼镜娘…”"
   },
   {
     "id": "kawaii_hat_cotton",
     "type": "ARMOR",
-    "name": { "str": "Cute White Cotton Hat" },
-    "description": "It's a warm hat made of cotton, coloured white to better match a maid uniform.",
+    "name": {
+      "str": "纯白棉帽"
+    },
+    "description": "这是一顶由棉制成的保暖帽子，颜色为白色，以更好地搭配女仆装。",
     "weight": "78 g",
     "volume": "250 ml",
     "price": 2000,
     "price_postapoc": 50,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 20,
-    "flags": [ "VARSIZE" ],
-    "armor": [ { "coverage": 65, "covers": [ "head" ] } ]
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "coverage": 65,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_balclava",
     "copy-from": "balclava",
     "type": "ARMOR",
-    "name": { "str": "Cute Balaclava" },
-    "description": "'I refuse to cover up my cute face!' It's not as good against the cold as a normal balaclava, but it's a sacrifice necessary for the sake of fashion.",
+    "name": {
+      "str": "面罩"
+    },
+    "description": "“我才不要遮住我可爱的脸！”这只面罩的抗寒能力不如恐怖分子或者匪徒所使用的那种，但这是为了美而必须做出的牺牲。",
     "warmth": 25
   },
   {
     "id": "kawaii_wedding_veil_a",
     "copy-from": "veil_wedding",
     "type": "ARMOR",
-    "name": { "str": "Cute Wedding Veil" },
-    "description": "A beautiful but simple wedding veil.",
+    "name": {
+      "str": "婚礼头纱"
+    },
+    "description": "一顶既美丽又简约的婚礼面纱。",
     "weight": "10 g",
     "volume": "250 ml",
     "price": 9500,
     "price_postapoc": 50,
     "warmth": 15,
-    "armor": [ { "encumbrance": 5, "coverage": 70, "covers": [ "head" ] } ]
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 70,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_wedding_veil_b",
     "copy-from": "kawaii_wedding_veil_a",
     "type": "ARMOR",
-    "name": { "str": "Cute Decorated Wedding Veil" },
-    "description": "A beautiful wedding veil with additional adornments."
+    "name": {
+      "str": "带饰婚礼头纱"
+    },
+    "description": "一顶有着额外装饰的婚礼面纱。"
   },
   {
     "id": "kawaii_sister_veil",
     "type": "ARMOR",
-    "name": { "str": "Cute Nun's headpiece" },
-    "description": "A veil worn by those devoted to serving God.",
+    "name": {
+      "str": "修女帽"
+    },
+    "description": "这是修女所戴的面纱，它散发着神圣的光辉。",
     "weight": "10 g",
     "volume": "250 ml",
     "price": 9500,
     "price_postapoc": 50,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
     "symbol": "[",
     "color": "white",
     "warmth": 5,
-    "flags": [ "VARSIZE", "FANCY" ],
-    "armor": [ { "encumbrance": 5, "coverage": 95, "covers": [ "head" ] } ]
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_nurse_cap",
     "type": "ARMOR",
-    "name": "Cute Nurse Hat",
-    "description": "A hat that symbolizes the nurse.",
+    "name": "护士帽",
+    "description": "一顶护士的帽子。",
     "weight": "10 g",
     "volume": "250 ml",
     "price": 9500,
     "price_postapoc": 50,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
     "symbol": "[",
     "color": "white",
     "warmth": 5,
-    "flags": [ "VARSIZE", "FANCY" ],
-    "armor": [ { "encumbrance": 5, "coverage": 95, "covers": [ "head" ] } ]
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_wig_01",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": { "str": "Cute Long Wavy Pink Wig" },
-    "description": "A wig with long, wavy pink hair."
+    "name": {
+      "str": "粉色波浪长假发"
+    },
+    "description": "一个假发，发型是粉色的波浪长发。"
   },
   {
     "id": "kawaii_acc_hobeni",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Rouge",
-    "description": "It's the maiden's heart that makes the blush."
+    "name": "可爱腮红",
+    "description": "少女心让人脸红。"
   },
   {
     "id": "kawaii_acc_eye_light",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Shiny eye",
-    "description": "The eye glistens with life. (For adding highlight on eyes that don't have it)"
+    "name": "可爱星星眼",
+    "description": "眼睛闪烁着生命的光芒。（用于为没有亮点的眼睛添加高光）"
   },
   {
     "id": "kawaii_wig_02",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Blond Pigtail Extension",
-    "description": "A decorative hair extension with a white ribbon that raises your elder sisterly power."
+    "name": "金色马尾接发",
+    "description": "一根装饰性的接发，配一条白色的缎带，可以提升你的姐力。"
   },
   {
     "id": "kawaii_acc_darkface",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Dark Face",
-    "description": "The face you wear when you plan evil deeds."
+    "name": "黝黑脸",
+    "description": "当你计划做坏事时的表情。"
   },
   {
     "id": "kawaii_acc_headset",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute High-Tech Headset",
-    "description": "A high-tech headset packed with next-gen technology (decorative)"
+    "name": "高科技耳机",
+    "description": "采用新一代技术的高科技耳机——只是装饰性的。"
   },
   {
     "id": "kawaii_wig_03",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Long Blond Pigtail Extension",
-    "description": "A long elegant ponytail extension with white ribbons."
+    "name": "金色长马尾接发",
+    "description": "一个长而优雅的马尾接发，带有白色丝带。"
   },
   {
     "id": "kawaii_wig_04",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Blond Bob Wig",
-    "description": "It's a fluffy bob hair wig."
+    "name": "金发波波假发",
+    "description": "这是一个蓬松的波波假发。"
   },
   {
     "id": "kawaii_wig_05",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Milk Tea Bob Wig",
-    "description": "It's a fluffy bob hair wig."
+    "name": "奶茶色波波假发",
+    "description": "这是一个蓬松的波波假发。"
   },
   {
     "id": "kawaii_wig_06",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Pink Bob Wig",
-    "description": "It's a fluffy bob hair wig."
+    "name": "粉红色波波假发",
+    "description": "这是一个蓬松的波波假发。"
   },
   {
     "id": "kawaii_wig_07",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Blue One-eyed Bob Wig",
-    "description": "A hairstyle that covers one eye."
+    "name": "蓝色遮眼波波假发",
+    "description": "一个遮住了只眼睛的发型。"
   },
   {
     "id": "kawaii_wig_08",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Pink One-eyed Bob Wig",
-    "description": "A hairstyle that covers one eye."
+    "name": "粉红色遮眼波波假发",
+    "description": "一个遮住了只眼睛的发型。"
   },
   {
     "id": "kawaii_wig_09",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Silver One-eyed Bob Wig",
-    "description": "A hairstyle that covers one eye."
+    "name": "银色遮眼波波假发",
+    "description": "一个遮住了只眼睛的发型。"
   },
   {
     "id": "kawaii_wig_10",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Light Green Elf Wig",
-    "description": "A hairstyle designed after an elf."
+    "name": "浅绿色精灵假发",
+    "description": "一个模仿精灵设计的发型。"
   },
   {
     "id": "kawaii_wig_11",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Blond Elf Wig",
-    "description": "A hairstyle designed after an elf."
+    "name": "金色精灵假发",
+    "description": "一个模仿精灵设计的发型。"
   },
   {
     "id": "kawaii_wig_12",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Blond Semi-long Wig",
-    "description": "A calm semi-long hair."
+    "name": "金发中长假发",
+    "description": "一个放松的中长发。"
   },
   {
     "id": "kawaii_wig_13",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Milk Tea Semi-long Wig",
-    "description": "A calm semi-long hair."
+    "name": "奶茶色中长假发",
+    "description": "一个放松的中长发。"
   },
   {
     "id": "kawaii_wig_14",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Black Semi-long Wig",
-    "description": "A calm semi-long hair."
+    "name": "黑色中长假发",
+    "description": "一个放松的中长发。"
   },
   {
     "id": "kawaii_wig_15",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Silver Semi-long Wig",
-    "description": "A calm semi-long hair."
+    "name": "银色中长假发",
+    "description": "一个放松的中长发。"
   },
   {
     "id": "kawaii_wig_16",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Blond Long Ponytail Wig",
-    "description": "Long hair lightly tied together."
+    "name": "金色长马尾假发",
+    "description": "长发轻轻地扎在一起。"
   },
   {
     "id": "kawaii_wig_17",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Milk Tea Long Ponytail Wig",
-    "description": "Long hair lightly tied together."
+    "name": "奶茶色长马尾假发",
+    "description": "长发轻轻地扎在一起。"
   },
   {
     "id": "kawaii_wig_18",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Ice Blue Long Ponytail Wig",
-    "description": "Long hair lightly tied together."
+    "name": "冰蓝长马尾假发",
+    "description": "长发轻轻地扎在一起。"
   },
   {
     "id": "kawaii_eff_heart",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Heart Effect",
-    "description": "A heart effect."
+    "name": "爱心气泡特效",
+    "description": "爱心气泡特效。"
   },
   {
     "id": "kawaii_eff_hatena",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute ? Bubble Effect",
-    "description": "A ? bubble."
+    "name": "？气泡特效",
+    "description": "一个 ？气泡。"
   },
   {
     "id": "kawaii_eff_bikkuri",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute ! Bubble Effect",
-    "description": "A ! bubble."
+    "name": "！气泡特效",
+    "description": "一个 ！气泡。"
   },
   {
     "id": "kawaii_eff_ase",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Sweat Bubble Effect",
-    "description": "A sweat droplet bubble."
+    "name": "流汗气泡特效",
+    "description": "流汗气泡特效。"
   },
   {
     "id": "kawaii_eff_tere",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute /// Bubble Effect",
-    "description": "An embarassed blushing bubble effect."
+    "name": "///气泡特效",
+    "description": "这是个尴尬脸红气泡特效。"
   },
   {
     "id": "kawaii_acc_angelring",
     "copy-from": "kawaii_acc_base",
     "type": "ARMOR",
-    "name": "Cute Angel Halo",
-    "description": "It's not a frisbee ring."
+    "name": "天使光环",
+    "description": "这不是飞环，谢谢。"
   },
   {
     "id": "kawaii_maid_hardcase",
     "type": "ARMOR",
-    "name": { "str": "Cute Hardcase" },
-    "description": "A huge rectangular hardcase. Normally used for carrying large musical instruments, guns, or sensitive electrical equipment.",
+    "name": {
+      "str": "硬壳箱"
+    },
+    "description": "一个巨大的长方形硬盒，通常用于携带大型乐器、狙击步枪或敏感电子设备。当然，也可用作少女的衣柜。",
     "weight": "3500 g",
     "volume": "38 L",
     "longest_side": "105 cm",
     "price": 9000,
     "price_postapoc": 3000,
-    "material": [ "leather", "steel" ],
+    "material": [
+      "leather",
+      "steel"
+    ],
     "material_thickness": 2,
     "symbol": "[",
     "color": "dark_gray",
@@ -1142,20 +1810,40 @@
       }
     ],
     "warmth": 0,
-    "flags": [ "BELTED", "WATER_FRIENDLY", "STURDY" ],
-    "armor": [ { "encumbrance": 25, "coverage": 100, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ]
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 25,
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_maid_hardcase_mini",
     "type": "ARMOR",
-    "name": { "str": "Cute Mini-Hardcase" },
-    "description": "A smaller version of the standard hardcase.",
+    "name": {
+      "str": "迷你硬壳箱"
+    },
+    "description": "一个相对较小的硬壳箱。",
     "weight": "2500 g",
     "volume": "28 L",
     "longest_side": "95 cm",
     "price": 8100,
     "price_postapoc": 250,
-    "material": [ "leather", "steel" ],
+    "material": [
+      "leather",
+      "steel"
+    ],
     "material_thickness": 2,
     "symbol": "[",
     "color": "dark_gray",
@@ -1170,20 +1858,40 @@
       }
     ],
     "warmth": 0,
-    "flags": [ "BELTED", "WATER_FRIENDLY", "STURDY" ],
-    "armor": [ { "encumbrance": 15, "coverage": 80, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ]
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 80,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_maid_hardcase_slim",
     "type": "ARMOR",
-    "name": { "str": "Cute Slim Hardcase" },
-    "description": "A slimmer version of the hardcase.",
+    "name": {
+      "str": "细长硬壳箱"
+    },
+    "description": "一个细长版的硬壳箱。",
     "weight": "1500 g",
     "volume": "18 L",
     "longest_side": "75 cm",
     "price": 6700,
     "price_postapoc": 210,
-    "material": [ "leather", "steel" ],
+    "material": [
+      "leather",
+      "steel"
+    ],
     "material_thickness": 2,
     "symbol": "[",
     "color": "dark_gray",
@@ -1198,19 +1906,36 @@
       }
     ],
     "warmth": 0,
-    "flags": [ "BELTED", "WATER_FRIENDLY", "STURDY" ],
-    "armor": [ { "encumbrance": 8, "coverage": 60, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] } ]
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 8,
+        "coverage": 60,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_angel_wing_bag",
     "type": "ARMOR",
-    "name": "Cute Angel Wings",
-    "description": "Possession is not a big deal if you have the heart of an angel.",
+    "name": "天使翅膀",
+    "description": "如果你有一颗天使般的心，拥有它并不是什么大不了的事。",
     "weight": "20 g",
     "volume": "2 L",
     "price": 6700,
     "price_postapoc": 210,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.2,
     "symbol": "[",
     "color": "dark_gray",
@@ -1225,20 +1950,40 @@
       }
     ],
     "warmth": 0,
-    "flags": [ "BELTED", "WATER_FRIENDLY", "STURDY" ],
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY",
+      "STURDY"
+    ],
     "armor": [
-      { "encumbrance": [ 5, 30 ], "coverage": 100, "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ] }
+      {
+        "encumbrance": [
+          5,
+          30
+        ],
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
     ]
   },
   {
     "id": "kawaii_secretpouch",
     "type": "ARMOR",
-    "name": { "str": "Cute Garter Purse" },
-    "description": "A small storage purse that can be consealed beneath a skirt, held up using a garter band.",
+    "name": {
+      "str": "裙底包"
+    },
+    "description": "一个需要用吊袜带固定以此隐藏在裙底的小储物袋。不过很可惜，它不能像美少女的四次元裙底那样塞下枪炮。",
     "weight": "250 g",
     "volume": "500 ml",
     "price": 3500,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.2,
     "symbol": "[",
     "color": "dark_gray",
@@ -1251,247 +1996,477 @@
         "moves": 150
       }
     ],
-    "flags": [ "BELTED", "WATER_FRIENDLY" ],
-    "armor": [ { "encumbrance": [ 1, 2 ], "coverage": 13, "covers": [ "leg_l" ], "specifically_covers": [ "leg_upper_l" ] } ]
+    "flags": [
+      "BELTED",
+      "WATER_FRIENDLY"
+    ],
+    "armor": [
+      {
+        "encumbrance": [
+          1,
+          2
+        ],
+        "coverage": 13,
+        "covers": [
+          "leg_l"
+        ],
+        "specifically_covers": [
+          "leg_upper_l"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_maid_niso_thick",
     "type": "ARMOR",
-    "name": { "str": "Cute Thick Thigh High Socks" },
-    "description": "A pair of frilly thigh high socks. Its thick material keeps the wearer's legs warm.",
+    "name": {
+      "str": "厚及膝长袜"
+    },
+    "description": "一双厚及膝长袜。厚厚的，能让穿着它的人的腿部保持温暖。",
     "weight": "90 g",
     "volume": "250 ml",
     "price": 500,
     "price_postapoc": 250,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.2,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 35,
-    "flags": [ "VARSIZE", "SKINTIGHT", "FANCY" ],
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY"
+    ],
     "armor": [
-      { "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
       {
         "coverage": 100,
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r" ]
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      },
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r",
+          "leg_knee_l",
+          "leg_knee_r"
+        ]
       }
     ]
   },
   {
     "id": "kawaii_maid_niso_thin",
     "type": "ARMOR",
-    "name": { "str": "Cute Thin Thigh High Socks" },
-    "description": "A pair of frilly thigh high socks. Its thin enough to be slightly transparent when worn.",
+    "name": {
+      "str": "薄及膝长袜"
+    },
+    "description": "一双薄及膝长袜。它很薄，穿上后会有点透明。",
     "weight": "40 g",
     "volume": "250 ml",
     "price": 500,
     "price_postapoc": 250,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.1,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 2,
-    "flags": [ "VARSIZE", "SKINTIGHT", "FANCY" ],
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY"
+    ],
     "armor": [
-      { "coverage": 100, "covers": [ "foot_l", "foot_r" ] },
       {
         "coverage": 100,
-        "covers": [ "leg_l", "leg_r" ],
-        "specifically_covers": [ "leg_lower_l", "leg_lower_r", "leg_knee_l", "leg_knee_r" ]
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      },
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r",
+          "leg_knee_l",
+          "leg_knee_r"
+        ]
       }
     ]
   },
   {
     "id": "kawaii_tights_black",
     "type": "ARMOR",
-    "name": { "str": "Cute Black Tights" },
-    "description": "A pair of warm tights.",
+    "name": {
+      "str": "黑色连裤袜"
+    },
+    "description": "一双纯白的连裤袜，穿着十分暖和。",
     "weight": "100 g",
     "volume": "250 ml",
     "price": 500,
     "price_postapoc": 250,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.1,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 10,
-    "flags": [ "VARSIZE", "SKINTIGHT", "FANCY" ],
-    "armor": [ { "encumbrance": 0, "coverage": 100, "covers": [ "foot_l", "foot_r", "leg_l", "leg_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_tights_white",
     "copy-from": "kawaii_tights_black",
     "type": "ARMOR",
-    "name": { "str": "Cute White Tights" },
-    "description": "A pair of warm tights."
+    "name": {
+      "str": "白色连裤袜"
+    },
+    "description": "一双纯白的连裤袜，穿着十分暖和。"
   },
   {
     "id": "kawaii_socks_white",
     "type": "ARMOR",
-    "name": { "str": "Cute White Socks" },
-    "description": "A pair of white socks normally worn by students.",
+    "name": {
+      "str": "白色袜子"
+    },
+    "description": "一双白色短袜，一般学生们常穿。",
     "weight": "10 g",
     "volume": "250 ml",
     "price": 100,
     "price_postapoc": 50,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.2,
     "symbol": "[",
     "color": "white",
     "warmth": 5,
-    "flags": [ "VARSIZE", "SKINTIGHT" ],
-    "armor": [ { "encumbrance": 0, "coverage": 100, "covers": [ "foot_l", "foot_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 0,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_maid_garter",
     "type": "ARMOR",
-    "name": { "str": "Cute Garter Belt" },
-    "description": "A black garter belt, designed to be worn with stockings.",
+    "name": {
+      "str": "吊袜带"
+    },
+    "description": "一个黑色吊袜带，用于防止丝袜滑落。",
     "weight": "10 g",
     "volume": "250 ml",
     "price": 500,
     "price_postapoc": 250,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.1,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 0,
-    "flags": [ "VARSIZE", "SKINTIGHT" ],
-    "armor": [ { "encumbrance": 1, "coverage": 38, "covers": [ "torso" ], "specifically_covers": [ "torso_lower" ] } ]
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
+    "armor": [
+      {
+        "encumbrance": 1,
+        "coverage": 38,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_dress_shoes",
     "type": "ARMOR",
-    "name": { "str": "Cute Dress Shoes" },
-    "description": "Leather shoes designed to be worn with a maid uniform.",
+    "name": {
+      "str": "正装皮鞋"
+    },
+    "description": "一双设计用于搭配女仆装的皮鞋。",
     "weight": "500 g",
     "volume": "1250 ml",
     "price": 12000,
     "price_postapoc": 250,
-    "material": [ "leather" ],
+    "material": [
+      "leather"
+    ],
     "material_thickness": 2,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 10,
-    "flags": [ "VARSIZE", "FANCY" ],
-    "armor": [ { "encumbrance": 5, "coverage": 60, "covers": [ "foot_l", "foot_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "FANCY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 60,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_loafer",
     "copy-from": "kawaii_dress_shoes",
     "type": "ARMOR",
-    "name": { "str": "Cute Brown Loafers" },
-    "description": "A pair of brown loafers normally worn by students.",
+    "name": {
+      "str": "棕色休闲鞋"
+    },
+    "description": "一双通常由学生穿着的棕色便鞋。",
     "weight": "400 g"
   },
   {
     "id": "kawaii_boots",
     "type": "ARMOR",
-    "name": { "str": "Cute Boots" },
-    "description": "Leather boots that can be worn with a wide range of outfits.",
+    "name": {
+      "str": "皮靴"
+    },
+    "description": "一双皮革靴子，可与各种服装搭配穿着。",
     "weight": "800 g",
     "volume": "2 L",
     "price": 20000,
     "price_postapoc": 750,
-    "material": [ "leather" ],
+    "material": [
+      "leather"
+    ],
     "material_thickness": 2.5,
     "environmental_protection": 2,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 20,
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF" ],
-    "armor": [ { "encumbrance": 12, "coverage": 90, "covers": [ "foot_l", "foot_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF"
+    ],
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 90,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_boots_hi",
     "type": "ARMOR",
-    "name": { "str": "Cute Maid Heeled Boots" },
-    "description": "Pure white boots that only chosen maids are allowed to wear. They give the wearer a feeling of majesty.",
+    "name": {
+      "str": "女仆高跟靴"
+    },
+    "description": "只有被选中的女仆才允许穿的纯白高跟靴。它们给穿戴者一种威严的感觉。",
     "weight": "1000 g",
     "volume": "2 L",
     "price": 24000,
     "price_postapoc": 5000,
-    "material": [ "kevlar", "nomex" ],
+    "material": [
+      "kevlar",
+      "nomex"
+    ],
     "material_thickness": 2.5,
     "environmental_protection": 3,
     "symbol": "[",
     "color": "white",
     "warmth": 25,
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF", "STURDY" ],
-    "armor": [ { "encumbrance": 12, "coverage": 100, "covers": [ "foot_l", "foot_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 12,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_shoes_hi",
     "type": "ARMOR",
-    "name": { "str": "Cute Maid Heels" },
-    "description": "Pure white heels that only chosen maids are allowed to wear. They give the wearer a feeling of majesty.",
+    "name": {
+      "str": "女仆高跟鞋"
+    },
+    "description": "只有被选中的女仆才允许穿的纯白高跟鞋。它们给穿戴者一种威严的感觉。",
     "weight": "600 g",
     "volume": "1250 ml",
     "price": 20000,
     "price_postapoc": 4000,
-    "material": [ "kevlar", "nomex" ],
+    "material": [
+      "kevlar",
+      "nomex"
+    ],
     "material_thickness": 2.5,
     "environmental_protection": 3,
     "symbol": "[",
     "color": "white",
     "warmth": 10,
-    "flags": [ "VARSIZE", "FANCY", "WATERPROOF", "STURDY" ],
-    "armor": [ { "encumbrance": 10, "coverage": 90, "covers": [ "foot_l", "foot_r" ] } ]
+    "flags": [
+      "VARSIZE",
+      "FANCY",
+      "WATERPROOF",
+      "STURDY"
+    ],
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 90,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_scarf",
     "type": "TOOL_ARMOR",
     "category": "clothing",
-    "name": { "str": "Cute Fashionable Scarf" },
-    "description": "A scarf with a cute pattern.",
+    "name": {
+      "str": "时尚围巾"
+    },
+    "description": "一条有着可爱图案的围巾。",
     "price": 2000,
     "price_postapoc": 100,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
     "symbol": "[",
     "color": "light_gray",
     "environmental_protection": 3,
     "weight": "60 g",
     "volume": "500 ml",
-    "use_action": { "type": "transform", "msg": "You loosen your %s.", "target": "kawaii_scarf_loose", "menu_text": "Loosen" },
-    "flags": [ "OUTER", "FANCY" ],
+    "use_action": {
+      "type": "transform",
+      "msg": "你放宽你的%s。",
+      "target": "kawaii_scarf_loose",
+      "menu_text": "围松"
+    },
+    "flags": [
+      "OUTER",
+      "FANCY"
+    ],
     "warmth": 60,
-    "armor": [ { "encumbrance": 15, "coverage": 85, "covers": [ "mouth" ] } ]
+    "armor": [
+      {
+        "encumbrance": 15,
+        "coverage": 85,
+        "covers": [
+          "mouth"
+        ]
+      }
+    ]
   },
   {
     "id": "kawaii_scarf_loose",
     "copy-from": "kawaii_scarf",
     "repairs_like": "kawaii_scarf",
     "type": "TOOL_ARMOR",
-    "name": { "str": "Cute Fashionable Scarf (loose)" },
+    "name": {
+      "str": "时尚围巾（松）"
+    },
     "symbol": "[",
     "color": "light_gray",
     "use_action": {
       "type": "transform",
-      "msg": "You wrap your scarf a bit tighter.",
+      "msg": "你稍稍裹紧你的 %s。",
       "target": "kawaii_scarf",
-      "menu_text": "Wrap tighter"
+      "menu_text": "围紧"
     },
-    "flags": [ "OUTER", "ALLOWS_NATURAL_ATTACKS", "FANCY" ],
+    "flags": [
+      "OUTER",
+      "ALLOWS_NATURAL_ATTACKS",
+      "FANCY"
+    ],
     "warmth": 20
   },
   {
     "id": "kawaii_gloves_light",
     "type": "ARMOR",
-    "name": "Cute Maid Gloves",
-    "description": "A pair of gloves modestly decorated with lace.",
+    "name": "女仆手套",
+    "description": "一副用蕾丝装饰的手套。",
     "weight": "63 g",
     "volume": "250 ml",
     "price": 1100,
     "price_postapoc": 250,
     "to_hit": 1,
-    "material": [ "cotton" ],
+    "material": [
+      "cotton"
+    ],
     "symbol": "[",
     "color": "light_blue",
     "warmth": 20,
     "material_thickness": 0.2,
-    "armor": [ { "encumbrance": 2, "coverage": 95, "covers": [ "hand_l", "hand_r" ] } ],
-    "flags": [ "VARSIZE", "WATER_FRIENDLY", "FANCY" ]
+    "armor": [
+      {
+        "encumbrance": 2,
+        "coverage": 95,
+        "covers": [
+          "hand_l",
+          "hand_r"
+        ]
+      }
+    ],
+    "flags": [
+      "VARSIZE",
+      "WATER_FRIENDLY",
+      "FANCY"
+    ]
   }
 ]

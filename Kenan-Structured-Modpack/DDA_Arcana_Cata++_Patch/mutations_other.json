@@ -1,0 +1,69 @@
+[
+  {
+    "type": "mutation",
+    "id": "ANOMALY_BIOWEAPON",
+    "name": {
+      "str": "异常气质"
+    },
+    "points": 0,
+    "description": "你的身体以一种大灾变前的科学难以理解的方式发生了变化，并留下了痕迹。异界和超自然生物对你更具敌意。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "anger_relations": [
+      [
+        "ARCANA_SUMMONED",
+        15
+      ],
+      [
+        "NETHER",
+        15
+      ],
+      [
+        "SLIME",
+        15
+      ],
+      [
+        "HORROR",
+        15
+      ],
+      [
+        "ABERRATION",
+        15
+      ],
+      [
+        "FUNGUS",
+        15
+      ],
+      [
+        "LEECH_PLANT",
+        15
+      ],
+      [
+        "MUTANT",
+        15
+      ],
+      [
+        "UNKNOWN",
+        15
+      ]
+    ]
+  },
+  {
+    "type": "mutation",
+    "id": "BIO_WEAPON_EPSILON",
+    "name": {
+      "str": "生物武器-ε"
+    },
+    "points": 0,
+    "description": "你的基因组是独一无二的，这是一个将你识别为ε型生化武器的DNA标记。它可能会在某个时刻发挥作用。",
+    "valid": false,
+    "purifiable": false,
+    "profession": true,
+    "flags": [
+      "BIO_WEAPON_SCEN",
+      "BIO_WEAPON_SERIES_1",
+      "BIO_WEAPON_ANY"
+    ]
+  }
+]

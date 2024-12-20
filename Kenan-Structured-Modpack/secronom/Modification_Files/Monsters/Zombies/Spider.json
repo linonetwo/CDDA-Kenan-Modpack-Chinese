@@ -3,17 +3,25 @@
     "//": "Low hp, although it was supremely tough on Dead Frontier.",
     "id": "mon_zombie_spoder",
     "type": "MONSTER",
-    "name": { "str": "spider zombie" },
-    "description": "In its fearsome appearance, this vile abomination skitters on its 4 pair of limbs, as its nimble motion has gone beyond limitation.",
+    "name": {
+      "str": "蜘蛛丧尸"
+    },
+    "description": "在它可怕的外观下，这邪恶的恶心的怪物用它的四对肢体飞速掠行，它的灵活动作已经超出了人体的限制。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_1", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 55,
     "speed": 110,
     "diff": 1,
-    "material": [ "flesh" ],
-    "harvest": "zombie_humanoid",
+    "material": [
+      "flesh"
+    ],
+    "harvest": "zombie",
     "symbol": "⩆",
     "color": "light_green",
     "aggression": 100,
@@ -22,27 +30,61 @@
     "melee_dice": 2,
     "melee_dice_sides": 4,
     "dodge": 2,
-    "melee_damage": [ { "damage_type": "bash", "amount": 3 }, { "damage_type": "cut", "amount": 5 } ],
-    "armor": { "bash": 2, "cut": 3, "bullet": 3, "acid": 2, "heat": 1 },
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 3
+      },
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "armor": {
+      "bash": 2,
+      "cut": 3,
+      "bullet": 3,
+      "acid": 2,
+      "heat": 1
+    },
     "weakpoints": [
       {
         "name": "one of its legs",
         "coverage": 3,
-        "damage_mult": { "all": 0.9 },
+        "damage_mult": {
+          "all": 0.9
+        },
         "effects": [
           {
             "effect": "secro_zombie_spider_cripple",
             "intensity": 1,
             "permanent": true,
-            "damage_required": [ 10, 100 ],
+            "damage_required": [
+              10,
+              100
+            ],
             "message": "A leg of the %s breaks!"
           }
         ]
       }
     ],
-    "special_attacks": [ { "type": "leap", "cooldown": 14, "min_range": 2, "max_range": 5 }, { "type": "bite", "cooldown": 10 } ],
+    "special_attacks": [
+      {
+        "type": "leap",
+        "cooldown": 14,
+        "min_range": 2,
+        "max_range": 5
+      },
+      {
+        "type": "bite",
+        "cooldown": 10
+      }
+    ],
     "death_drops": "default_zombie_death_drops",
-    "upgrades": { "half_life": 12, "into_group": "GROUP_ZSPIDER_UPGRADE" },
+    "upgrades": {
+      "half_life": 12,
+      "into_group": "GROUP_ZSPIDER_UPGRADE"
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -60,18 +102,26 @@
   {
     "id": "mon_zombie_spoderhug",
     "type": "MONSTER",
-    "name": { "str": "spider zombie" },
-    "description": "A longer set of arms struggles this zombie to walk nor run, but now it is used to jump and taking down the unexpecting target from afar.",
+    "name": {
+      "str": "蜘蛛丧尸"
+    },
+    "description": "一组较长的手臂会让这个丧尸的行走或奔跑有些吃力，但现在它被用来从远距离跳跃并击倒毫无察觉的目标。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_1", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 85,
     "speed": 60,
     "diff": 5,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⩈",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "color": "green",
     "aggression": 100,
     "morale": 100,
@@ -79,32 +129,75 @@
     "melee_dice": 1,
     "melee_dice_sides": 6,
     "dodge": 1,
-    "melee_damage": [ { "damage_type": "cut", "amount": 1 }, { "damage_type": "bash", "amount": 6 }, { "damage_type": "stab", "amount": 3 } ],
-    "armor": { "bash": 2, "cut": 5, "bullet": 3, "acid": 1, "heat": 1 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      },
+      {
+        "damage_type": "bash",
+        "amount": 6
+      },
+      {
+        "damage_type": "stab",
+        "amount": 3
+      }
+    ],
+    "armor": {
+      "bash": 2,
+      "cut": 5,
+      "bullet": 3,
+      "acid": 1,
+      "heat": 1
+    },
     "weakpoints": [
       {
         "name": "one of its legs",
         "coverage": 4,
-        "damage_mult": { "all": 0.9 },
+        "damage_mult": {
+          "all": 0.9
+        },
         "effects": [
           {
             "effect": "secro_zombie_spider_cripple",
             "intensity": 1,
             "permanent": true,
-            "damage_required": [ 15, 100 ],
+            "damage_required": [
+              15,
+              100
+            ],
             "message": "A leg of the %s breaks!"
           }
         ]
       }
     ],
     "special_attacks": [
-      { "type": "leap", "cooldown": 16, "min_range": 5, "max_range": 15, "allow_no_target": false },
-      [ "LUNGE", 16 ],
-      [ "secro_spiderbodyhug", 35 ],
-      { "type": "bite", "cooldown": 7, "min_mul": 0.3 }
+      {
+        "type": "leap",
+        "cooldown": 16,
+        "min_range": 5,
+        "max_range": 15,
+        "allow_no_target": false
+      },
+      [
+        "LUNGE",
+        16
+      ],
+      [
+        "secro_spiderbodyhug",
+        35
+      ],
+      {
+        "type": "bite",
+        "cooldown": 7,
+        "min_mul": 0.3
+      }
     ],
     "death_drops": "default_zombie_death_drops",
-    "upgrades": { "half_life": 16, "into_group": "GROUP_ZSPIDER_UPGRADEX" },
+    "upgrades": {
+      "half_life": 16,
+      "into_group": "GROUP_ZSPIDER_UPGRADEX"
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -122,50 +215,93 @@
   {
     "id": "mon_zombie_spodertickle",
     "type": "MONSTER",
-    "name": { "str": "spider zombie" },
-    "description": "This arachnid's symmetric arms has mutated, causing its already deformed nails curve into unearthly sharpened filth.",
+    "name": {
+      "str": "蜘蛛丧尸"
+    },
+    "description": "这种蛛形纲动物对称的手臂已经变异变形的钉子弯曲成了不可见的锋利的污垢。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_1", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 70,
     "speed": 100,
     "diff": 5,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⩈",
     "color": "green_white",
     "aggression": 100,
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "morale": 100,
     "melee_skill": 4,
     "melee_dice": 1,
     "melee_dice_sides": 4,
     "dodge": 3,
-    "melee_damage": [ { "damage_type": "stab", "amount": 1 }, { "damage_type": "cut", "amount": 5 } ],
-    "armor": { "bash": 4, "cut": 3, "bullet": 3, "acid": 1, "heat": 1 },
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 1
+      },
+      {
+        "damage_type": "cut",
+        "amount": 5
+      }
+    ],
+    "armor": {
+      "bash": 4,
+      "cut": 3,
+      "bullet": 3,
+      "acid": 1,
+      "heat": 1
+    },
     "weakpoints": [
       {
         "name": "one of its legs",
         "coverage": 3,
-        "damage_mult": { "all": 0.9 },
+        "damage_mult": {
+          "all": 0.9
+        },
         "effects": [
           {
             "effect": "secro_zombie_spider_cripple",
             "intensity": 1,
             "permanent": true,
-            "damage_required": [ 15, 100 ],
+            "damage_required": [
+              15,
+              100
+            ],
             "message": "A leg of the %s breaks!"
           }
         ]
       }
     ],
     "special_attacks": [
-      { "type": "leap", "cooldown": 10, "min_range": 2, "max_range": 3 },
-      { "type": "bite", "cooldown": 21, "min_mul": 0.5 },
-      [ "scratch", 6 ]
+      {
+        "type": "leap",
+        "cooldown": 10,
+        "min_range": 2,
+        "max_range": 3
+      },
+      {
+        "type": "bite",
+        "cooldown": 21,
+        "min_mul": 0.5
+      },
+      [
+        "scratch",
+        6
+      ]
     ],
     "death_drops": "default_zombie_death_drops",
-    "upgrades": { "half_life": 16, "into_group": "GROUP_ZSPIDER_UPGRADEX" },
+    "upgrades": {
+      "half_life": 16,
+      "into_group": "GROUP_ZSPIDER_UPGRADEX"
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -183,56 +319,100 @@
   {
     "id": "mon_zombie_arachnia",
     "type": "MONSTER",
-    "name": { "str": "arachnia" },
-    "description": "Several protrusion of calcified materials cover this 8-legged abomination, as its visage have become more sinister, revealing a set of long, dagger-like mandibles along with several eyes poking around its necrotic skin. Apart from its terrifying features, its movements seem to have become more fluent.",
+    "name": {
+      "str": "八脚丧尸"
+    },
+    "description": "这只8条腿的可憎动物有着一张更为不详的脸，这张脸上露出一副匕首般的长下颚，还有几只眼睛在它坏死的皮肤周围戳来戳去。除了可怕的特征，它的动作似乎变得更加流畅。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_3", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_3",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 225,
     "speed": 110,
     "diff": 50,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⩈",
     "color": "red_white",
     "aggression": 100,
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "morale": 100,
     "melee_skill": 8,
     "melee_dice": 2,
     "melee_dice_sides": 4,
     "dodge": 4,
-    "melee_damage": [ { "damage_type": "stab", "amount": 2 }, { "damage_type": "cut", "amount": 8 } ],
-    "armor": { "bash": 8, "cut": 4, "bullet": 4, "acid": 3, "heat": 1 },
+    "melee_damage": [
+      {
+        "damage_type": "stab",
+        "amount": 2
+      },
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "armor": {
+      "bash": 8,
+      "cut": 4,
+      "bullet": 4,
+      "acid": 3,
+      "heat": 1
+    },
     "vision_night": 12,
     "vision_day": 32,
     "weakpoints": [
       {
         "name": "one of its legs",
         "coverage": 2,
-        "damage_mult": { "all": 0.9 },
+        "damage_mult": {
+          "all": 0.9
+        },
         "effects": [
           {
             "effect": "secro_zombie_spider_cripple",
             "intensity": 1,
             "permanent": true,
-            "damage_required": [ 20, 100 ],
+            "damage_required": [
+              20,
+              100
+            ],
             "message": "A leg of the %s breaks!"
           }
         ]
       }
     ],
     "special_attacks": [
-      { "type": "leap", "cooldown": 15, "min_range": 2, "max_range": 5 },
+      {
+        "type": "leap",
+        "cooldown": 15,
+        "min_range": 2,
+        "max_range": 5
+      },
       {
         "cooldown": 15,
         "damage_max_instance": [
-          { "amount": 6, "armor_multiplier": 0.75, "damage_type": "cut" },
-          { "amount": 12, "armor_multiplier": 0.5, "damage_type": "stab" }
+          {
+            "amount": 6,
+            "armor_multiplier": 0.75,
+            "damage_type": "cut"
+          },
+          {
+            "amount": 12,
+            "armor_multiplier": 0.5,
+            "damage_type": "stab"
+          }
         ],
         "type": "bite"
       },
-      [ "scratch", 4 ]
+      [
+        "scratch",
+        4
+      ]
     ],
     "death_drops": "default_zombie_death_drops",
     "flags": [

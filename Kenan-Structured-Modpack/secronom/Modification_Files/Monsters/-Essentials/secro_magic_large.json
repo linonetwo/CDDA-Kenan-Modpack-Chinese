@@ -2,10 +2,17 @@
   {
     "id": "mon_zombie_tentawraith_summon_check",
     "type": "SPELL",
-    "name": { "str": "Wraith - Tentacle" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'2/3 chance to spawn a tentacle at the target. 5 attempts.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "幽灵触手"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么请阅读这一条：\n'有2/3的几率在目标处产卵。5次尝试。”",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_EXPLOSION_SFX"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -18,10 +25,17 @@
   {
     "id": "mon_zombie_tentawraith_summonself_check",
     "type": "SPELL",
-    "name": { "str": "Wraith - Tentacle" },
+    "name": {
+      "str": "幽灵触手"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'2/3 chance to spawn a tentacle around the caster. 2 attempts.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_EXPLOSION_SFX"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -34,19 +48,43 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_tentawraith_summon_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_zombie_tentawraith_summon_check" },
-      { "id": "mon_zombie_tentawraith_summon_check" },
-      { "id": "mon_zombie_tentawraith_summon_check" },
-      { "id": "mon_zombie_tentawraith_summon_check" },
-      { "id": "mon_zombie_tentawraith_summon_check" },
-      { "id": "mon_zombie_tentawraith_summonself_check" },
-      { "id": "mon_zombie_tentawraith_summonself_check" }
+      {
+        "id": "mon_zombie_tentawraith_summon_check"
+      },
+      {
+        "id": "mon_zombie_tentawraith_summon_check"
+      },
+      {
+        "id": "mon_zombie_tentawraith_summon_check"
+      },
+      {
+        "id": "mon_zombie_tentawraith_summon_check"
+      },
+      {
+        "id": "mon_zombie_tentawraith_summon_check"
+      },
+      {
+        "id": "mon_zombie_tentawraith_summonself_check"
+      },
+      {
+        "id": "mon_zombie_tentawraith_summonself_check"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 6,
@@ -55,10 +93,16 @@
   {
     "id": "mon_zombie_tentawraith_tentgrasp_check",
     "type": "SPELL",
-    "name": { "str": "Wraith - Tentacle Grasp" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Conditional checks for the target. If conditions fail, extends stunned effect for 3 turns.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "幽灵触手抓"
+    },
+    "description": "怪物施法的咒语。如果您看到了这一点，请阅读以下内容：\n'目标的条件检查。如果条件失败，将眩晕效果延长3圈",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -71,11 +115,19 @@
   {
     "id": "mon_shifter_teleport",
     "type": "SPELL",
-    "name": { "str": "Teleport" },
-    "description": "Spell casted by an monster. If you're seeing this, then read this one instead:\n'Caster teleports away.'",
+    "name": {
+      "str": "传送"
+    },
+    "description": "怪物施放的咒语。如果你看到了这个，则改读这个：\n“施法者传送离开”",
     "message": "",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "ground" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "short_range_teleport",
     "shape": "blast",
     "min_aoe": 3,
@@ -84,23 +136,46 @@
   {
     "id": "mon_shifter_spawn_illu_push",
     "type": "SPELL",
-    "name": { "str": "Spread" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sends it out farther.'",
+    "name": {
+      "str": "散布"
+    },
+    "description": "怪物施法的。如果你看到这个，那就读这个：\n‘施法者把它发射得更远。’",
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "ally", "ground" ],
-    "targeted_monster_ids": [ "mon_shifter_illu" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ally",
+      "ground"
+    ],
+    "targeted_monster_ids": [
+      "mon_shifter_illu"
+    ],
     "min_aoe": 2,
     "max_aoe": 2
   },
   {
     "type": "SPELL",
     "id": "mon_shifter_spawn_illu",
-    "name": { "str": "" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster splits out black fogs.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "HOSTILE_SUMMON", "RANDOM_DURATION", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground" ],
+    "name": {
+      "str": ""
+    },
+    "description": "怪物施放的咒语。如果你看到了这个，则改读这个：\n“施法者驱散黑雾”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "HOSTILE_SUMMON",
+      "RANDOM_DURATION",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "min_aoe": 2,
@@ -114,26 +189,61 @@
   {
     "type": "SPELL",
     "id": "mon_shifter_spawn_illu_random_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
     "extra_effects": [
-      { "id": "mon_shifter_teleport", "hit_self": true },
-      { "id": "mon_shifter_spawn_illu", "hit_self": true },
-      { "id": "mon_shifter_spawn_illu_push", "hit_self": true }
+      {
+        "id": "mon_shifter_teleport",
+        "hit_self": true
+      },
+      {
+        "id": "mon_shifter_spawn_illu",
+        "hit_self": true
+      },
+      {
+        "id": "mon_shifter_spawn_illu_push",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast"
   },
   {
     "type": "SPELL",
     "id": "mon_shifter_spawn_illu_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_shifter_spawn_illu_random_target", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
+    "extra_effects": [
+      {
+        "id": "mon_shifter_spawn_illu_random_target",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 3,
@@ -142,11 +252,25 @@
   {
     "type": "SPELL",
     "id": "mon_shifter_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_shifter_spawn_illu_random" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_shifter_spawn_illu_random"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 12,
@@ -155,16 +279,34 @@
   {
     "type": "SPELL",
     "id": "mon_shifter_illu_target_atk_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then randomly casts one of the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后随机施放一个法术。'",
     "extra_effects": [
-      { "id": "mon_shifter_teleport" },
-      { "id": "secro_spell_null" },
-      { "id": "secro_spell_null" },
-      { "id": "secro_spell_null" }
+      {
+        "id": "mon_shifter_teleport"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      },
+      {
+        "id": "secro_spell_null"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "NO_PROJECTILE" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 1,
@@ -175,11 +317,25 @@
   {
     "type": "SPELL",
     "id": "mon_shifter_illu_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_shifter_illu_target_atk_random" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_shifter_illu_target_atk_random"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 10,
@@ -188,10 +344,20 @@
   {
     "id": "mon_zombie_charger_initialcheck",
     "type": "SPELL",
-    "name": { "str": "Charge Check" },
+    "name": {
+      "str": "Charge Check"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'An applied effect alongside the caster's charge.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "charge_momentum_initialcheck",
@@ -201,10 +367,21 @@
   {
     "id": "mon_zombie_charger_initial",
     "type": "SPELL",
-    "name": { "str": "Charge." },
+    "name": {
+      "str": "Charge."
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster prepares for a charge, applying slowness that decays over 3-4 seconds.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "RANDOM_DURATION" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "charge_momentum_initial",
@@ -214,14 +391,30 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_charger_initial_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_zombie_charger_initial", "hit_self": true },
-      { "id": "mon_zombie_charger_initialcheck", "hit_self": true }
+      {
+        "id": "mon_zombie_charger_initial",
+        "hit_self": true
+      },
+      {
+        "id": "mon_zombie_charger_initialcheck",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 13,
@@ -230,10 +423,19 @@
   {
     "id": "mon_zombie_charger_charge",
     "type": "SPELL",
-    "name": { "str": "Charge!" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster gains momentum, increasing their movement speed.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "冲啊！"
+    },
+    "description": "Spell casted by a monster. If you're seeing this，then read this one instead：\n'Caster gains momentum，increasing their movement speed.'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "charge_momentum",
@@ -243,14 +445,25 @@
     "max_duration": 600
   },
   {
+    "//": "Let's push the charger back from the player. This does work SOMETIMES, and this'll prevent the glitch to occur.",
     "id": "mon_zombie_charger_charge_push",
     "type": "SPELL",
-    "name": { "str": "Stop" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster stops by the target.'",
+    "name": {
+      "str": "住手"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n‘施法者停在目标旁边。’",
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "min_aoe": 1,
     "max_aoe": 1
   },
@@ -258,52 +471,110 @@
     "//": "Try to push aside everything in its path. Destination is the target's position (will not follow the target)",
     "id": "mon_zombie_charger_charge_pushy",
     "type": "SPELL",
-    "name": { "str": "Push" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster pushes its path.'",
+    "name": {
+      "str": "推开"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n‘施法者推动它的路径。’",
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "min_aoe": 2,
     "max_aoe": 2
   },
   {
     "id": "mon_zombie_charger_vanguard_charge_pushy",
     "type": "SPELL",
-    "name": { "str": "Push" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster pushes its path.'",
+    "name": {
+      "str": "推开"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就改读这个：\n‘施法者推动它的路径。’",
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "min_aoe": 3,
     "max_aoe": 3
   },
   {
     "id": "mon_zombie_charger_charge_pull",
     "type": "SPELL",
-    "name": { "str": "Charge" },
+    "name": {
+      "str": "冲锋"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sprints toward the target. This is casted randomly between 9 to 13 times.'",
     "effect": "area_pull",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "extra_effects": [
-      { "id": "mon_zombie_charger_charge" },
-      { "id": "mon_zombie_charger_charge_push" },
-      { "id": "mon_zombie_charger_charge_pushy", "hit_self": true }
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
     ],
-    "valid_targets": [ "self" ],
+    "extra_effects": [
+      {
+        "id": "mon_zombie_charger_charge"
+      },
+      {
+        "id": "mon_zombie_charger_charge_push"
+      },
+      {
+        "id": "mon_zombie_charger_charge_pushy",
+        "hit_self": true
+      }
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "min_aoe": 13,
     "max_aoe": 13
   },
   {
     "type": "SPELL",
     "id": "mon_zombie_charger_charge_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_zombie_charger_charge_pull" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施放一个法术",
+    "extra_effects": [
+      {
+        "id": "mon_zombie_charger_charge_pull"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 9,
@@ -314,10 +585,19 @@
   {
     "id": "mon_zombie_charger_spike_charge",
     "type": "SPELL",
-    "name": { "str": "Charge!" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster gains momentum, increasing their movement speed.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "冲啊！"
+    },
+    "description": "Spell casted by a monster. If you're seeing this，then read this one instead：\n'Caster gains momentum，increasing their movement speed.'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "charge_momentum",
@@ -329,16 +609,33 @@
   {
     "id": "mon_zombie_charger_spike_charge_pull",
     "type": "SPELL",
-    "name": { "str": "Charge" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sprints toward the target. This is casted randomly between 10 to 15 times.'",
+    "name": {
+      "str": "冲锋"
+    },
+    "description": "怪物施法的。如果你看到了这个，那就读这个：\n'施法者冲向目标。这是随机铸造10至15次",
     "effect": "area_pull",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "extra_effects": [
-      { "id": "mon_zombie_charger_spike_charge" },
-      { "id": "mon_zombie_charger_charge_push" },
-      { "id": "mon_zombie_charger_charge_pushy", "hit_self": true }
+      {
+        "id": "mon_zombie_charger_spike_charge"
+      },
+      {
+        "id": "mon_zombie_charger_charge_push"
+      },
+      {
+        "id": "mon_zombie_charger_charge_pushy",
+        "hit_self": true
+      }
     ],
     "min_aoe": 15,
     "max_aoe": 15
@@ -346,11 +643,26 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_charger_spike_charge_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_zombie_charger_spike_charge_pull" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施放一个法术",
+    "extra_effects": [
+      {
+        "id": "mon_zombie_charger_spike_charge_pull"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 10,
@@ -361,10 +673,19 @@
   {
     "id": "mon_zombie_charger_plate_charge",
     "type": "SPELL",
-    "name": { "str": "Charge!" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster gains momentum, increasing their movement speed.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "冲啊！"
+    },
+    "description": "Spell casted by a monster. If you're seeing this，then read this one instead：\n'Caster gains momentum，increasing their movement speed.'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "charge_momentum",
@@ -376,16 +697,33 @@
   {
     "id": "mon_zombie_charger_plate_charge_pull",
     "type": "SPELL",
-    "name": { "str": "Charge" },
+    "name": {
+      "str": "冲锋"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sprints toward the target. This is casted randomly between 5 to 8 times.'",
     "effect": "area_pull",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "extra_effects": [
-      { "id": "mon_zombie_charger_plate_charge" },
-      { "id": "mon_zombie_charger_charge_push" },
-      { "id": "mon_zombie_charger_charge_pushy", "hit_self": true }
+      {
+        "id": "mon_zombie_charger_plate_charge"
+      },
+      {
+        "id": "mon_zombie_charger_charge_push"
+      },
+      {
+        "id": "mon_zombie_charger_charge_pushy",
+        "hit_self": true
+      }
     ],
     "min_aoe": 8,
     "max_aoe": 8
@@ -393,11 +731,26 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_charger_plate_charge_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_zombie_charger_plate_charge_pull" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施放一个法术",
+    "extra_effects": [
+      {
+        "id": "mon_zombie_charger_plate_charge_pull"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 5,
@@ -408,10 +761,19 @@
   {
     "id": "mon_zombie_charger_vanguard_charge",
     "type": "SPELL",
-    "name": { "str": "Charge!" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster gains momentum, increasing their movement speed.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "冲啊！"
+    },
+    "description": "Spell casted by a monster. If you're seeing this，then read this one instead：\n'Caster gains momentum，increasing their movement speed.'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "charge_momentum",
@@ -423,16 +785,33 @@
   {
     "id": "mon_zombie_charger_vanguard_charge_pull",
     "type": "SPELL",
-    "name": { "str": "Charge" },
+    "name": {
+      "str": "冲锋"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster sprints toward the target. This is casted randomly between 13 to 20 times.'",
     "effect": "area_pull",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "extra_effects": [
-      { "id": "mon_zombie_charger_vanguard_charge" },
-      { "id": "mon_zombie_charger_charge_push" },
-      { "id": "mon_zombie_charger_vanguard_charge_pushy", "hit_self": true }
+      {
+        "id": "mon_zombie_charger_vanguard_charge"
+      },
+      {
+        "id": "mon_zombie_charger_charge_push"
+      },
+      {
+        "id": "mon_zombie_charger_vanguard_charge_pushy",
+        "hit_self": true
+      }
     ],
     "min_aoe": 20,
     "max_aoe": 20
@@ -440,11 +819,26 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_charger_vanguard_charge_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_zombie_charger_vanguard_charge_pull" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施放一个法术",
+    "extra_effects": [
+      {
+        "id": "mon_zombie_charger_vanguard_charge_pull"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 13,
@@ -455,10 +849,16 @@
   {
     "id": "mon_zombie_fleshmonger_refleshing",
     "type": "SPELL",
-    "name": { "str": "Refleshing" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster cannot act for set period of time.'",
-    "valid_targets": [ "self" ],
-    "flags": [ "SILENT" ],
+    "name": {
+      "str": "再流化"
+    },
+    "description": "怪物施法。如果你看到了这一点，那么请阅读这一条：\n“施法者不能在设定的时间段内行动。”",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "min_damage": -1000,
     "max_damage": -1000,
     "shape": "blast",
@@ -467,10 +867,22 @@
   {
     "id": "mon_zombie_fleshmonger_reflesh_bleed",
     "type": "SPELL",
-    "name": { "str": "Reflesh Bleed" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Creates blood field around the caster if condition fails.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ground", "self", "hostile", "ally" ],
+    "name": {
+      "str": "回流引气"
+    },
+    "description": "怪物施法。如果你看到了这一点，那么请阅读这一条：\n“如果条件失败，会在施法者周围产生血场”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "ground",
+      "self",
+      "hostile",
+      "ally"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_aoe": 3,
@@ -483,10 +895,18 @@
   {
     "id": "mon_zombie_fleshmonger_reflesh",
     "type": "SPELL",
-    "name": { "str": "Fleshmonger - Reflesh" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster shoots out tendrils that pierces nearby allies and injecting them with extra flesh, healing a moderate amount of health and removes/blocks bleeding.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS" ],
-    "valid_targets": [ "ally" ],
+    "name": {
+      "str": "肉商-刷新"
+    },
+    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster shoots out tendrils that pierces nearby allies then injecting them with extra flesh, healing a moderate amount of health and removes/blocks bleeding.'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
+    "valid_targets": [
+      "ally"
+    ],
     "effect": "attack",
     "effect_str": "secro_fleshmonger_fleshed",
     "shape": "blast",
@@ -500,10 +920,19 @@
   {
     "id": "mon_zombie_fleshmonger_fchunk",
     "type": "SPELL",
-    "name": { "str": "Fleshmonger - Flesh Chunk" },
+    "name": {
+      "str": "Fleshmonger - Flesh Chunk"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster takes a chunk of its own flesh, dealing massive damage to itself.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 125,
     "max_damage": 125,
     "effect": "attack",
@@ -513,10 +942,17 @@
   {
     "id": "mon_zombie_fleshmonger_reflesh_check",
     "type": "SPELL",
-    "name": { "str": "Fleshmonger - Reflesh Check" },
+    "name": {
+      "str": "Fleshmonger - Reflesh Check"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster takes damage and heals its nearby allies.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT",
+      "NO_EXPLOSION_SFX"
+    ],
     "min_range": 7,
     "max_range": 7,
     "shape": "line",
@@ -526,10 +962,20 @@
   {
     "id": "mon_zombie_fleshmonger_absorption",
     "type": "SPELL",
-    "name": { "str": "Absorption" },
+    "name": {
+      "str": "Absorption"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster gains health overtime.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_duration": 300,
@@ -538,10 +984,21 @@
   {
     "id": "mon_zombie_fleshmonger_absorb",
     "type": "SPELL",
-    "name": { "str": "Absorb" },
+    "name": {
+      "str": "Absorb"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster clears the gore.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "IGNORE_WALLS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "remove_field",
     "shape": "blast",
     "min_range": 1,
@@ -551,55 +1008,121 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_fleshmonger_abs1_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_zombie_fleshmonger_absorb", "hit_self": true },
-      { "id": "mon_zombie_fleshmonger_absorption", "hit_self": true }
+      {
+        "id": "mon_zombie_fleshmonger_absorb",
+        "hit_self": true
+      },
+      {
+        "id": "mon_zombie_fleshmonger_absorption",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast"
   },
   {
     "type": "SPELL",
     "id": "mon_zombie_fleshmonger_abs2_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_zombie_fleshmonger_absorb", "hit_self": true },
-      { "id": "mon_zombie_fleshmonger_absorption", "hit_self": true },
-      { "id": "mon_zombie_fleshmonger_absorption", "hit_self": true }
+      {
+        "id": "mon_zombie_fleshmonger_absorb",
+        "hit_self": true
+      },
+      {
+        "id": "mon_zombie_fleshmonger_absorption",
+        "hit_self": true
+      },
+      {
+        "id": "mon_zombie_fleshmonger_absorption",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast"
   },
   {
     "type": "SPELL",
     "id": "mon_zombie_fleshmonger_abs3_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_zombie_fleshmonger_absorb", "hit_self": true },
-      { "id": "mon_zombie_fleshmonger_absorption", "hit_self": true },
-      { "id": "mon_zombie_fleshmonger_absorption", "hit_self": true },
-      { "id": "mon_zombie_fleshmonger_absorption", "hit_self": true }
+      {
+        "id": "mon_zombie_fleshmonger_absorb",
+        "hit_self": true
+      },
+      {
+        "id": "mon_zombie_fleshmonger_absorption",
+        "hit_self": true
+      },
+      {
+        "id": "mon_zombie_fleshmonger_absorption",
+        "hit_self": true
+      },
+      {
+        "id": "mon_zombie_fleshmonger_absorption",
+        "hit_self": true
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast"
   },
   {
     "id": "mon_zombie_gorepit_abs",
     "type": "SPELL",
-    "name": { "str": "Gorepit - Absorption" },
+    "name": {
+      "str": "Gorepit - Absorption"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster gains massive health regeneration.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "effect_str": "secro_gorepit_absorption",
     "shape": "blast",
@@ -611,22 +1134,40 @@
   {
     "id": "mon_zombie_gorepit_rage",
     "type": "SPELL",
-    "name": { "str": "Gorepit - Rage" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster pushes nearby creatures.'",
+    "name": {
+      "str": "Gorepit - Rage"
+    },
+    "description": "怪物施放的咒语。如果你看到了这个，那么读读这个：\n“施法者推附近的生物。”",
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "ground" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground"
+    ],
     "min_aoe": 4,
     "max_aoe": 4
   },
   {
     "id": "mon_zombie_gorepit_tent_massive_check",
     "type": "SPELL",
-    "name": { "str": "Gorepit - Spawn Massive Tendril" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Enraged caster spawns a destructive minion near itself. Has 3 minute cooldown.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "戈雷皮-产卵大量卷须"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，请阅读这一条：\n'愤怒的施法者在其附近产生了一个破坏性的仆从。有3分钟的冷却时间。”",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -639,10 +1180,16 @@
   {
     "id": "mon_zombie_gorepit_spawnmorer_check",
     "type": "SPELL",
-    "name": { "str": "Gorepit - Spawnmorer" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'50% chance to spawn another tendril. If caster is enraged, chance become 100%.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "戈雷皮-皮恩莫尔"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么请阅读这一条：\n'50%的几率繁殖另一根卷须。若施法者被激怒，几率变为100%。'",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -655,12 +1202,25 @@
   {
     "id": "mon_zombie_gorepit_spawnmore_check",
     "type": "SPELL",
-    "name": { "str": "Gorepit - Spawnmoore" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster summons 2 giant tendrils on the target and 1 nearby for the caster.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "戈雷皮-普恩摩尔"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么改为阅读这一条：\n“施法者召唤2根巨大的卷须在目标上，1根在施法者附近。”",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
-    "extra_effects": [ { "id": "mon_zombie_gorepit_spawnmorer_check" }, { "id": "mon_zombie_gorepit_tent_massive_check" } ],
+    "extra_effects": [
+      {
+        "id": "mon_zombie_gorepit_spawnmorer_check"
+      },
+      {
+        "id": "mon_zombie_gorepit_tent_massive_check"
+      }
+    ],
     "min_damage": 10000,
     "max_damage": 10000,
     "min_range": 25,
@@ -672,10 +1232,21 @@
   {
     "id": "mon_zombie_gorepit_tdestruct",
     "type": "SPELL",
-    "name": { "str": "Terrestrial Destruction" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster takes down adjacent terrains, destroying them which results into a deep pit.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "IGNORE_WALLS", "NO_PROJECTILE" ],
-    "valid_targets": [ "ground", "self" ],
+    "name": {
+      "str": "陆地破坏"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那就改读这一条：\n“施法者摧毁邻近的地形，摧毁它们，导致深坑。”",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "ground",
+      "self"
+    ],
     "effect": "ter_transform",
     "shape": "blast",
     "effect_str": "gorepit_pit",
@@ -685,11 +1256,29 @@
   {
     "type": "SPELL",
     "id": "mon_zombie_gorepit_spawn_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_zombie_gorepit_tdestruct", "hit_self": true }, { "id": "mon_zombie_gorepit_spawnmore_check" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_zombie_gorepit_tdestruct",
+        "hit_self": true
+      },
+      {
+        "id": "mon_zombie_gorepit_spawnmore_check"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 40,
@@ -698,10 +1287,16 @@
   {
     "id": "mon_sflesh_flesh_trap_check",
     "type": "SPELL",
-    "name": { "str": "Flesh - Trap" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'This'll create several effects to the flesh terrain.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "陷阱"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，请阅读这一条：\n“这将对肉身地形产生多种效果。”",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -714,10 +1309,16 @@
   {
     "id": "mon_sflesh_flesh_check",
     "type": "SPELL",
-    "name": { "str": "Flesh - Taken" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'1/2 chance to spawn a potent taken near the target.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "肉身"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么请阅读这一条：\n“有1/2的几率在目标附近产生一个强效。”",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -730,10 +1331,20 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_flesh_convert_initial",
-    "name": { "str": "Morph" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Target is converted into its flesh variant'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "变形"
+    },
+    "description": "Spell casted by a monster. If you're seeing this，then read this one instead：\n'Target is converted into its flesh variant'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": 999999,
     "max_damage": 999999,
     "effect": "targeted_polymorph",
@@ -743,14 +1354,37 @@
   {
     "id": "mon_sflesh_flesh_convert_terrain",
     "type": "SPELL",
-    "name": { "str": "Flesh - Convert" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster converts the surrounding terrain into flesh.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "IGNORE_WALLS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "ground", "self" ],
+    "name": {
+      "str": "Flesh - Convert"
+    },
+    "description": "Spell casted by a monster. If you're seeing this，then read this one instead：\n'Caster converts the surrounding terrain into flesh.'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground",
+      "self"
+    ],
     "extra_effects": [
-      { "id": "secro_flesh_infect_huge_target", "hit_self": true },
-      { "id": "mon_sflesh_flesh_convert_terrain2", "hit_self": true },
-      { "id": "mon_sflesh_flesh_convert_initial", "hit_self": true }
+      {
+        "id": "secro_flesh_infect_huge_target",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_flesh_convert_terrain2",
+        "hit_self": true
+      },
+      {
+        "id": "mon_sflesh_flesh_convert_initial",
+        "hit_self": true
+      }
     ],
     "effect": "ter_transform",
     "shape": "blast",
@@ -761,10 +1395,24 @@
   {
     "id": "mon_sflesh_flesh_convert_terrain2",
     "type": "SPELL",
-    "name": { "str": "Flesh - Convert" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster converts the surrounding terrain into flesh.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "IGNORE_WALLS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "ally", "hostile", "ground", "self" ],
+    "name": {
+      "str": "Flesh - Convert"
+    },
+    "description": "Spell casted by a monster. If you're seeing this，then read this one instead：\n'Caster converts the surrounding terrain into flesh.'",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "IGNORE_WALLS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "ally",
+      "hostile",
+      "ground",
+      "self"
+    ],
     "effect": "ter_transform",
     "shape": "blast",
     "effect_str": "flesh_spread",
@@ -774,11 +1422,28 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_flesh_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
-    "extra_effects": [ { "id": "mon_sflesh_flesh_trap_check" }, { "id": "mon_sflesh_flesh_check" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
+    "extra_effects": [
+      {
+        "id": "mon_sflesh_flesh_trap_check"
+      },
+      {
+        "id": "mon_sflesh_flesh_check"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 30,
@@ -787,10 +1452,16 @@
   {
     "id": "mon_sflesh_flesh_city_wallmore_check",
     "type": "SPELL",
-    "name": { "str": "Flesh - Wallmore" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'1/2 chance to spawn another flesh wall.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "沃莫尔"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么请阅读这一条：\n“有1/2的机会产生另一道肉墙。”",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -803,10 +1474,16 @@
   {
     "id": "mon_sflesh_flesh_city_wall_check",
     "type": "SPELL",
-    "name": { "str": "Flesh - Wall" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster spawns a flesh wall.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "name": {
+      "str": "肉壁"
+    },
+    "description": "怪物施法的咒语。如果你看到了这一点，那么改为阅读这一条：\n“施法者产生了一道肉墙。”",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -819,15 +1496,31 @@
   {
     "type": "SPELL",
     "id": "mon_sflesh_flesh_city_target",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts the Spell(s).'",
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施法",
     "extra_effects": [
-      { "id": "mon_sflesh_flesh_city_wall_check" },
-      { "id": "mon_sflesh_flesh_city_wallmore_check" },
-      { "id": "mon_sflesh_flesh_trap_check" }
+      {
+        "id": "mon_sflesh_flesh_city_wall_check"
+      },
+      {
+        "id": "mon_sflesh_flesh_city_wallmore_check"
+      },
+      {
+        "id": "mon_sflesh_flesh_trap_check"
+      }
     ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_range": 10,
@@ -836,23 +1529,47 @@
   {
     "id": "mon_secrodragon_barrier",
     "type": "SPELL",
-    "name": { "str": "Barrier" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster creates an innate force field, pushing nearby hostiles. This is casted 5 times.'",
+    "name": {
+      "str": "屏障"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'施法者创造了一个天生的力场，推动附近的敌人。这是铸造5次",
     "effect": "area_push",
     "shape": "blast",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ],
-    "valid_targets": [ "hostile" ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ],
+    "valid_targets": [
+      "hostile"
+    ],
     "min_aoe": 3,
     "max_aoe": 3
   },
   {
     "type": "SPELL",
     "id": "mon_secrodragon_barrier_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_secrodragon_barrier", "hit_self": true } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施放一个法术",
+    "extra_effects": [
+      {
+        "id": "mon_secrodragon_barrier",
+        "hit_self": true
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 5,
@@ -861,13 +1578,32 @@
   {
     "id": "mon_secrodragon_edischarge",
     "type": "SPELL",
-    "name": { "str": "Electric Discharge" },
-    "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster generates an electric current that sparks randomly, creating a line that deals electric damage to all creatures that gets hit. This is casted randomly between 6 to 12 times.'",
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "RANDOM_TARGET" ],
-    "valid_targets": [ "hostile", "ally", "ground" ],
+    "name": {
+      "str": "放电"
+    },
+    "description": "怪物施法的。如果你看到了这一点，那么请阅读这一条：\n'的施法者产生一个电流，随机产生火花，产生一条线，对所有被击中的生物造成电伤害。这是随机铸造6至12次",
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "RANDOM_TARGET"
+    ],
+    "valid_targets": [
+      "hostile",
+      "ally",
+      "ground"
+    ],
     "effect": "attack",
     "shape": "line",
-    "affected_body_parts": [ "head", "torso", "arm_r", "arm_l", "leg_r", "leg_l" ],
+    "affected_body_parts": [
+      "head",
+      "torso",
+      "arm_r",
+      "arm_l",
+      "leg_r",
+      "leg_l"
+    ],
     "min_damage": 3,
     "max_damage": 6,
     "max_range": 8,
@@ -882,11 +1618,26 @@
   {
     "type": "SPELL",
     "id": "mon_secrodragon_edischarge_target_random",
-    "name": { "str": "a spell" },
-    "description": "Target spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster locks its line of sight onto the target, then casts one of the Spell(s).'",
-    "extra_effects": [ { "id": "mon_secrodragon_edischarge" } ],
-    "flags": [ "SILENT", "NO_HANDS", "NO_LEGS", "WONDER", "RANDOM_DAMAGE", "NO_EXPLOSION_SFX" ],
-    "valid_targets": [ "none" ],
+    "name": {
+      "str": "一个法术"
+    },
+    "description": "怪物施法的目标。如果你看到了这个，那么改读这个：\n'施法者将视线锁定在目标上，然后施放一个法术",
+    "extra_effects": [
+      {
+        "id": "mon_secrodragon_edischarge"
+      }
+    ],
+    "flags": [
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "WONDER",
+      "RANDOM_DAMAGE",
+      "NO_EXPLOSION_SFX"
+    ],
+    "valid_targets": [
+      "none"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 6,
@@ -895,10 +1646,16 @@
   {
     "id": "mon_secrodragon_woke_barrier_check",
     "type": "SPELL",
-    "name": { "str": "Secronom Dragon - Barrier" },
+    "name": {
+      "str": "Secronom Dragon - Barrier"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster generates a forcefield that pushes nearby creatures.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,
@@ -911,10 +1668,16 @@
   {
     "id": "mon_secrodragon_woke_elec_check",
     "type": "SPELL",
-    "name": { "str": "Secronom Dragon - Electricity" },
+    "name": {
+      "str": "Secronom Dragon - Electricity"
+    },
     "description": "Spell casted by a monster. If you're seeing this, then read this one instead:\n'Caster discharges arcs of electricity.'",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SILENT", "NO_EXPLOSION_SFX" ],
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SILENT"
+    ],
     "message": "",
     "min_damage": 10000,
     "max_damage": 10000,

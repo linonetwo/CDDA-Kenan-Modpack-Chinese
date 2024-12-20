@@ -6,65 +6,164 @@
     "price": "0 cent",
     "price_postapoc": "0 cent",
     "color": "red",
-    "name": { "str": "Invynel's bow" },
-    "description": "A heavy, steel bow. Its serrated, blade handle makes it available for melee, but unwieldy. Well trained archers find this useful for long to mid range combats greatly.",
-    "material": [ "steel" ],
-    "techniques": [ "BOW_VAMP_SWEEP", "BOW_VAMP_THRUST" ],
-    "flags": [ "FIRE_TWOHAND", "STR_DRAW", "RELOAD_AND_SHOOT", "PRIMITIVE_RANGED_WEAPON" ],
+    "name": {
+      "str": "因维内尔之弓"
+    },
+    "description": "沉重的钢弓。它锯齿状的刀柄使它可以进行近战，但不易操作。训练有素的弓箭手会发现这对中远程作战非常有用。",
+    "material": [
+      "steel"
+    ],
+    "techniques": [
+      "BOW_VAMP_SWEEP",
+      "BOW_VAMP_THRUST"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON"
+    ],
     "skill": "archery",
     "min_strength": 10,
     "weight": "1225 g",
-    "ammo": [ "arrow" ],
+    "ammo": [
+      "arrow"
+    ],
     "volume": "3 L",
     "longest_side": "1020 mm",
-    "melee_damage": { "bash": 4, "cut": 14 },
-    "armor_data": {
-      "armor": [ { "encumbrance": 27, "coverage": 15, "covers": [ "torso" ], "material_thickness": 1, "material": [ "steel" ] } ]
+    "melee_damage": {
+      "bash": 4,
+      "cut": 14
     },
-    "ranged_damage": { "damage_type": "stab", "amount": 16 },
+    "armor_data": {
+      "armor": [
+        {
+          "encumbrance": 27,
+          "coverage": 15,
+          "covers": [
+            "torso"
+          ],
+          "material_thickness": 1,
+          "material": [
+            "steel"
+          ]
+        }
+      ]
+    },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 16
+    },
     "range": 21,
     "dispersion": 185,
     "durability": 8,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "arrow": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
     "reload": 135,
-    "valid_mod_locations": [ [ "sights", 1 ] ]
+    "valid_mod_locations": [
+      [
+        "sights",
+        1
+      ]
+    ]
   },
   {
     "id": "b11_striker",
     "type": "GUN",
     "symbol": "(",
     "color": "red",
-    "name": { "str": "blood striker" },
-    "description": "A modified and beautifully designed striker shotgun created by vampires. Unlike human's, it has a bigger revolving wheel, which occupies additional bullets and a 3-shot burst mode for barraging shots with its improved accuracy.",
+    "name": {
+      "str": "鲜血打击者"
+    },
+    "description": "一种由吸血鬼制造的改良的、设计精美的霰弹枪。与人类造的枪械不同的是，它有一个更大的转轮可以容纳额外的子弹。它拥有3连发射击模式以提供高精度的弹幕射击。",
     "price_postapoc": "13185 USD",
     "price": "0 cent",
-    "material": [ "steel", "compactblood" ],
-    "flags": [ "RELOAD_ONE" ],
+    "material": [
+      "steel",
+      "compactblood"
+    ],
+    "flags": [
+      "RELOAD_ONE"
+    ],
     "skill": "shotgun",
     "weight": "3620 g",
-    "ammo": [ "bloodshot" ],
+    "ammo": [
+      "bloodshot"
+    ],
     "volume": "2500 ml",
     "longest_side": "920 mm",
-    "melee_damage": { "bash": 8 },
+    "melee_damage": {
+      "bash": 8
+    },
+    "to_hit": 0,
     "dispersion": 205,
     "sight_dispersion": 190,
     "recoil": 40,
     "durability": 7,
-    "modes": [ [ "DEFAULT", "semi auto", 1 ], [ "BURST", "burst", 3 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi auto",
+        1
+      ],
+      [
+        "BURST",
+        "burst",
+        3
+      ]
+    ],
     "clip_size": 16,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "bloodshot": 16 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bloodshot": 16
+        }
+      }
+    ],
     "reload": 80,
     "loudness": 155,
     "valid_mod_locations": [
-      [ "barrel", 1 ],
-      [ "grip", 1 ],
-      [ "mechanism", 4 ],
-      [ "muzzle", 1 ],
-      [ "rail", 1 ],
-      [ "sights", 1 ],
-      [ "stock", 1 ],
-      [ "underbarrel", 1 ]
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
     ]
   },
   {
@@ -72,35 +171,77 @@
     "type": "GUN",
     "symbol": "(",
     "color": "red",
-    "name": { "str": "blood slinger" },
-    "description": "A lightweight vampiric gun with special mounted blood-fed container. It uses thickened blood as the primary ammunition, and shoots at high velocity, regardless of its small size.",
+    "name": {
+      "str": "鲜血斯林格"
+    },
+    "description": "轻量吸血鬼手枪，装有特殊的供血容器。它使用粘稠血液作为主要弹药，虽然大小不大，但是可以高速射击。",
     "price_postapoc": "225 USD",
     "price": "0 cent",
-    "material": [ "steel", "compactblood" ],
-    "flags": [ "NEVER_JAMS" ],
+    "material": [
+      "steel",
+      "compactblood"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
     "skill": "pistol",
     "weight": "1428 g",
-    "ammo": [ "ammoblood" ],
+    "ammo": [
+      "ammoblood"
+    ],
     "volume": "1500 ml",
     "longest_side": "200 mm",
-    "melee_damage": { "bash": 8 },
+    "melee_damage": {
+      "bash": 8
+    },
+    "to_hit": 0,
     "dispersion": 150,
     "sight_dispersion": 105,
     "recoil": 12,
     "durability": 6,
     "clip_size": 12,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "watertight": true, "rigid": true, "ammo_restriction": { "ammoblood": 12 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ammoblood": 12
+        }
+      }
+    ],
     "reload": 100,
     "loudness": 3,
     "range": 10,
-    "ranged_damage": { "damage_type": "stab", "amount": 2 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 2
+    },
     "valid_mod_locations": [
-      [ "grip", 1 ],
-      [ "mechanism", 4 ],
-      [ "muzzle", 1 ],
-      [ "rail", 1 ],
-      [ "sights", 1 ],
-      [ "stock", 1 ]
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ]
     ]
   },
   {
@@ -108,39 +249,89 @@
     "type": "GUN",
     "symbol": "(",
     "color": "red",
-    "name": { "str": "blood stinger" },
-    "description": "A unique vampiric gun with specially designed barrel and a built-in blood-feed container input method. It uses thickened blood as the primary ammunition, and shoots at extremely high velocity, dealing damage nearly the same to high caliber firearms.",
+    "name": {
+      "str": "血螫步枪"
+    },
+    "description": "一种独特的吸血鬼步枪枪，拥有特别设计的枪管和内置的供血容器输入模式。它使用粘稠血液作为主要弹药，可以以极高的速度射击，造成的伤害几乎与大口径枪支相同。",
     "price_postapoc": "7305 USD",
     "price": "0 cent",
-    "material": [ "steel", "compactblood" ],
-    "flags": [ "NEVER_JAMS" ],
+    "material": [
+      "steel",
+      "compactblood"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
     "skill": "rifle",
     "weight": "3420 g",
-    "ammo": [ "ammoblood" ],
+    "ammo": [
+      "ammoblood"
+    ],
     "volume": "2500 ml",
     "longest_side": "340 mm",
-    "melee_damage": { "bash": 8 },
+    "melee_damage": {
+      "bash": 8
+    },
+    "to_hit": 0,
     "dispersion": 170,
     "sight_dispersion": 100,
     "recoil": 20,
     "durability": 8,
     "clip_size": 10,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "watertight": true, "rigid": true, "ammo_restriction": { "ammoblood": 10 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ammoblood": 10
+        }
+      }
+    ],
     "reload": 100,
     "loudness": 3,
     "range": 20,
-    "ranged_damage": { "damage_type": "stab", "amount": 15 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 15
+    },
     "barrel_volume": "750 ml",
-    "built_in_mods": [ "bloodstinger_barrel" ],
+    "built_in_mods": [
+      "bloodstinger_barrel"
+    ],
     "valid_mod_locations": [
-      [ "barrel", 1 ],
-      [ "grip", 1 ],
-      [ "mechanism", 4 ],
-      [ "muzzle", 1 ],
-      [ "rail", 1 ],
-      [ "sights", 1 ],
-      [ "stock", 1 ],
-      [ "underbarrel", 1 ]
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
     ]
   },
   {
@@ -148,35 +339,93 @@
     "type": "GUN",
     "symbol": "(",
     "color": "red",
-    "name": { "str": "blood stream shooter" },
-    "description": "A heavy vampiric gun with very large, built-in blood-feed container input method and a trio-rotational barrel chambers. It uses thickened blood as the primary ammunition, and shoots at maximum firing rate without generating disrupting sounds.",
+    "name": {
+      "str": "血流 冲锋枪"
+    },
+    "description": "一种重型吸血鬼枪，内置了巨大的供血容器输入模式和三个旋转枪管腔。它使用粘稠血液作为主要弹药，以最大的射速射击但又可以不产生巨大的噪音。",
     "price_postapoc": "11829 USD",
     "price": "0 cent",
-    "material": [ "steel", "compactblood" ],
-    "flags": [ "NEVER_JAMS" ],
+    "material": [
+      "steel",
+      "compactblood"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
     "skill": "smg",
     "weight": "3855 g",
-    "ammo": [ "ammoblood" ],
+    "ammo": [
+      "ammoblood"
+    ],
     "volume": "2500 ml",
     "longest_side": "680 mm",
-    "melee_damage": { "bash": 4 },
-    "modes": [ [ "DEFAULT", "semi-auto", 3 ], [ "BURST", "5 rd.", 9 ], [ "AUTO", "auto", 60 ] ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "to_hit": 0,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        3
+      ],
+      [
+        "BURST",
+        "5 rd.",
+        9
+      ],
+      [
+        "AUTO",
+        "auto",
+        60
+      ]
+    ],
     "dispersion": 180,
     "sight_dispersion": 100,
     "recoil": 30,
     "durability": 8,
     "clip_size": 400,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "watertight": true, "rigid": true, "ammo_restriction": { "ammoblood": 400 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ammoblood": 400
+        }
+      }
+    ],
     "reload": 175,
     "loudness": 3,
-    "ranged_damage": { "damage_type": "stab", "amount": 5 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 5
+    },
     "valid_mod_locations": [
-      [ "grip", 1 ],
-      [ "rail", 1 ],
-      [ "mechanism", 4 ],
-      [ "sights", 1 ],
-      [ "stock", 1 ],
-      [ "underbarrel", 1 ]
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
     ]
   },
   {
@@ -184,36 +433,97 @@
     "type": "GUN",
     "symbol": "(",
     "color": "red",
-    "name": { "str": "blood sprayer" },
-    "description": "A lightweight vampiric gun with large, built-in blood-feed container input method. It uses thickened blood as the primary ammunition, and shoots at high firing rate without generating disrupting sounds.",
+    "name": {
+      "str": "“血喷”冲锋枪"
+    },
+    "description": "一种重型吸血鬼枪，内置了巨大的供血容器输入模式和三个旋转枪管腔。它使用粘稠血液作为主要弹药，以最大的射速射击但又可以不产生巨大的噪音。",
     "price_postapoc": "4235 USD",
     "price": "0 cent",
-    "material": [ "steel", "compactblood" ],
-    "flags": [ "NEVER_JAMS" ],
+    "material": [
+      "steel",
+      "compactblood"
+    ],
+    "flags": [
+      "NEVER_JAMS"
+    ],
     "skill": "smg",
     "weight": "1805 g",
-    "ammo": [ "ammoblood" ],
+    "ammo": [
+      "ammoblood"
+    ],
     "volume": "1500 ml",
     "longest_side": "680 mm",
-    "melee_damage": { "bash": 4 },
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "BURST", "5 rd.", 5 ], [ "AUTO", "auto", 20 ] ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "to_hit": 0,
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "BURST",
+        "5 rd.",
+        5
+      ],
+      [
+        "AUTO",
+        "auto",
+        20
+      ]
+    ],
     "dispersion": 185,
     "sight_dispersion": 95,
     "recoil": 10,
     "durability": 8,
     "clip_size": 100,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "watertight": true, "rigid": true, "ammo_restriction": { "ammoblood": 100 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "watertight": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ammoblood": 100
+        }
+      }
+    ],
     "reload": 75,
     "loudness": 3,
-    "ranged_damage": { "damage_type": "stab", "amount": 3 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 3
+    },
     "valid_mod_locations": [
-      [ "grip", 1 ],
-      [ "mechanism", 4 ],
-      [ "muzzle", 1 ],
-      [ "rail", 1 ],
-      [ "sights", 1 ],
-      [ "stock", 1 ],
-      [ "underbarrel", 1 ]
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
     ]
   }
 ]

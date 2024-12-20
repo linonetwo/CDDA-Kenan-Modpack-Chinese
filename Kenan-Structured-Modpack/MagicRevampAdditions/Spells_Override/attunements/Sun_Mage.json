@@ -2,10 +2,17 @@
   {
     "id": "solar_beam",
     "type": "SPELL",
-    "name": { "str": "Solar Beam" },
-    "description": "Fire a blast of sunlight in a wide beam, blinding everything in its path and leaving it bright enough for you to see for a few seconds.",
-    "valid_targets": [ "hostile", "ground" ],
-    "flags": [ "SOMATIC" ],
+    "name": {
+      "str": "日光束"
+    },
+    "description": "发射一束阳光，使其路径上的所有生物都失明，并在几秒钟内保持明亮状态。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC"
+    ],
     "effect": "attack",
     "shape": "line",
     "effect_str": "blind",
@@ -33,10 +40,19 @@
   {
     "id": "sunmage_pocket_sun",
     "type": "SPELL",
-    "name": { "str": "Pocket Sun" },
-    "description": "You create a stable portal in the fabric of reality to the sun, through which you can draw on its light and temperature.",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_LEGS", "CONCENTRATE", "VERBAL", "NO_PROJECTILE" ],
+    "name": {
+      "str": "口袋太阳"
+    },
+    "description": "你在客观现实的构架上创造出一个通往太阳的稳定传送门，通过它你可以利用太阳的光照和温度。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_LEGS",
+      "CONCENTRATE",
+      "VERBAL",
+      "NO_PROJECTILE"
+    ],
     "min_damage": 1,
     "max_damage": 1,
     "effect": "spawn_item",

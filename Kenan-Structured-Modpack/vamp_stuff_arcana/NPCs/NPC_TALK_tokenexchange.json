@@ -4,37 +4,37 @@
     "id": "VAMP_ASEEKER_questinquire_tokenexc",
     "type": "talk_topic",
     "dynamic_line": {
-      "math": [ "time_since('cataclysm', 'unit': 'days') >= 5" ],
-      "no": "I don't know if I have something for you to exchange at this moment...",
+      "days_since_cataclysm": 5,
+      "no": "我不认为此刻我有必要和你交换东西…",
       "yes": {
-        "math": [ "time_since('cataclysm', 'unit': 'days') >= 15" ],
+        "days_since_cataclysm": 15,
         "//": "Supply related items, namely some recipe materials.",
-        "no": "Well, my ware is too small. Maybe you could be needing something at these stuff.",
+        "no": "嗯，我的餐具太小了。也许你需要一些东西。",
         "yes": {
-          "math": [ "time_since('cataclysm', 'unit': 'days') >= 30" ],
+          "days_since_cataclysm": 30,
           "//": "Tools related items, like forges.",
-          "no": "I've got some supplies for your stock...",
+          "no": "我有一些你的存货…",
           "yes": {
-            "math": [ "time_since('cataclysm', 'unit': 'days') >= 60" ],
+            "days_since_cataclysm": 60,
             "//": "Well-made items, like weapons and armors.",
-            "no": "Lets see what could we exchange for your tokens...",
+            "no": "让我们看看能用什么交换你的代币…",
             "yes": {
-              "math": [ "time_since('cataclysm', 'unit': 'days') >= 120" ],
+              "days_since_cataclysm": 120,
               "//": "High-grade items, like guns and stronger armors.",
-              "no": "Well... The gunshop is offering you with limited guns in exchange of tokens.",
+              "no": "好…枪械店为你提供有限的枪支来交换代币。",
               "yes": {
-                "math": [ "time_since('cataclysm', 'unit': 'days') >= 240" ],
+                "days_since_cataclysm": 240,
                 "//": "Exclusive items, or those you can't get from either crafting nor in the wilds.",
-                "no": "A set of items for your endeavors!",
+                "no": "一套物品奖赏你的努力！",
                 "yes": {
-                  "math": [ "time_since('cataclysm', 'unit': 'days') >= 480" ],
+                  "days_since_cataclysm": 480,
                   "//": "Exclusive items that costs more than 500 tokens... I guess.",
-                  "no": "For all of your pain, these items would help you out!",
+                  "no": "你所有的痛苦，这些东西都会帮你解决。",
                   "yes": {
-                    "math": [ "time_since('cataclysm', 'unit': 'days') >= 960" ],
+                    "days_since_cataclysm": 960,
                     "//": "Notifies player that no more stocks will be added.",
-                    "no": "This stock is at its finest!",
-                    "yes": "I guess you're waiting for more contents... Don't wait for something else."
+                    "no": "这股票是最好的！",
+                    "yes": "我猜你在等更多的东西…别再等了。"
                   }
                 }
               }
@@ -45,169 +45,406 @@
     },
     "responses": [
       {
-        "text": "(Inquire for tier 1 VS rewards)",
+        "text": "（查询1级幸存奖励）",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct1VS",
-        "condition": { "math": [ "time_since('cataclysm', 'unit': 'days') >= 5" ] }
+        "condition": {
+          "days_since_cataclysm": 5
+        }
       },
       {
-        "text": "(Inquire for tier 2 VS rewards)",
+        "text": "（查询2级幸存奖励）",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct2VS",
-        "condition": { "math": [ "time_since('cataclysm', 'unit': 'days') >= 15" ] }
+        "condition": {
+          "days_since_cataclysm": 15
+        }
       },
       {
-        "text": "(Inquire for tier 3 VS rewards)",
+        "text": "（查询3级幸存奖励）",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct3VS",
-        "condition": { "math": [ "time_since('cataclysm', 'unit': 'days') >= 30" ] }
+        "condition": {
+          "days_since_cataclysm": 30
+        }
       },
       {
-        "text": "(Inquire for tier 4 VS rewards)",
+        "text": "（查询4级幸存奖励）",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct3VS",
-        "condition": { "math": [ "time_since('cataclysm', 'unit': 'days') >= 60" ] }
+        "condition": {
+          "days_since_cataclysm": 60
+        }
       },
-      { "text": "I change my mind...", "topic": "VAMP_ASEEKER_main" }
+      {
+        "text": "我改变主意了…",
+        "topic": "VAMP_ASEEKER_main"
+      }
     ]
   },
   {
     "id": "VAMP_ASEEKER_questinquire_tokenexct1VS",
     "type": "talk_topic",
-    "dynamic_line": "Just look at this list:\n10 blood powders for 1 token\nblood draw kit with blood for 1 token\n1 blood compact sheet for 2 tokens.",
+    "dynamic_line": "看看这个清单：\n 10血粉换1个代币",
     "responses": [
       {
-        "text": "I'll exchange a token for 10 blood powders",
+        "text": "我要用一个代币换10个血粉",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct1VS",
-        "condition": { "u_has_item": "arcanetoken" },
-        "effect": [ { "u_spawn_item": "bloodpowder", "count": 10 }, { "u_sell_item": "arcanetoken" } ]
+        "condition": {
+          "u_has_item": "arcanetoken"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "bloodpowder",
+            "count": 10
+          },
+          {
+            "u_sell_item": "arcanetoken"
+          }
+        ]
       },
       {
-        "text": "I'll exchange a token for blood draw kit with blood",
+        "text": "我要用一个代币换一个带血的抽血箱",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct1VS",
-        "condition": { "u_has_item": "arcanetoken" },
-        "effect": [ { "u_spawn_item": "blood", "container": "vacutainer" }, { "u_sell_item": "arcanetoken" } ]
+        "condition": {
+          "u_has_item": "arcanetoken"
+        },
+        "effect": [
+          {
+            "u_spawn_item": "blood",
+            "container": "vacutainer"
+          },
+          {
+            "u_sell_item": "arcanetoken"
+          }
+        ]
       },
       {
-        "text": "I'll exchange 2 tokens for a blood compact sheet",
+        "text": "我要用两个代币换一张血样",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct1VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 2 } },
-        "effect": [ { "u_spawn_item": "compactsheet" }, { "u_sell_item": "arcanetoken", "count": 2 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 2
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "compactsheet"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 2
+          }
+        ]
       },
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire_tokenexc" }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire_tokenexc"
+      }
     ]
   },
   {
     "id": "VAMP_ASEEKER_questinquire_tokenexct2VS",
     "type": "talk_topic",
-    "dynamic_line": "Just look at this list:\n\"Red Velvets - The Dark Fashion\" for 10 tokens\n\"Glorious Gunnery\" for 12 tokens\n\"The Vampiric Infusion\" for 15 tokens\nblood infusing forge for 30 tokens\nblood extractor for 20 tokens\nblood compressor for 30 tokens\nblood chemistry for 25 tokens.",
+    "dynamic_line": "看看这个清单：\n“红色天鹅绒-黑暗时尚”的10个代币",
     "responses": [
       {
-        "text": "I'll exchange 10 tokens for \"Red Velvets - The Dark Fashion\"",
+        "text": "我要用10个代币换“红色天鹅绒-黑暗时尚”",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct2VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 10 } },
-        "effect": [ { "u_spawn_item": "vamp_darkfashion1" }, { "u_sell_item": "arcanetoken", "count": 10 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 10
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "vamp_darkfashion1"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 10
+          }
+        ]
       },
       {
-        "text": "I'll exchange 12 tokens for \"Glorious Gunnery\"",
+        "text": "我要把12个代币换成“光荣的射击”",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct2VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 12 } },
-        "effect": [ { "u_spawn_item": "vamp_gunner1" }, { "u_sell_item": "arcanetoken", "count": 12 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 12
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "vamp_gunner1"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 12
+          }
+        ]
       },
       {
-        "text": "I'll exchange 15 tokens for \"The Vampiric Infusion\"",
+        "text": "我要用15个代币换“吸血鬼输液”",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct2VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 15 } },
-        "effect": [ { "u_spawn_item": "vamp_upgradebook1" }, { "u_sell_item": "arcanetoken", "count": 15 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 15
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "vamp_upgradebook1"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 15
+          }
+        ]
       },
       {
-        "text": "I'll exchange 30 tokens for the blood infusing forge",
+        "text": "我要用30个代币换输血炉",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct2VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 30 } },
-        "effect": [ { "u_spawn_item": "blood_forge_infuse" }, { "u_sell_item": "arcanetoken", "count": 30 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 30
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "blood_forge_infuse"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 30
+          }
+        ]
       },
       {
-        "text": "I'll exchange 20 tokens for blood extractor",
+        "text": "我要用20个代币换采血器",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct2VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 20 } },
-        "effect": [ { "u_spawn_item": "bloodextractor" }, { "u_sell_item": "arcanetoken", "count": 20 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 20
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "bloodextractor"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 20
+          }
+        ]
       },
       {
-        "text": "I'll exchange 30 tokens for blood compressor",
+        "text": "我要用30个代币换血液压缩机",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct2VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 30 } },
-        "effect": [ { "u_spawn_item": "bloodcompressor" }, { "u_sell_item": "arcanetoken", "count": 30 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 30
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "bloodcompressor"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 30
+          }
+        ]
       },
       {
-        "text": "I'll exchange 25 tokens for the blood chemistry",
+        "text": "我用25个代币换血液化学",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct2VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 25 } },
-        "effect": [ { "u_spawn_item": "bloodchem" }, { "u_sell_item": "arcanetoken", "count": 25 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 25
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "bloodchem"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 25
+          }
+        ]
       },
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire_tokenexc" }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire_tokenexc"
+      }
     ]
   },
   {
     "id": "VAMP_ASEEKER_questinquire_tokenexct3VS",
     "type": "talk_topic",
-    "dynamic_line": "Just look at this list:\nfull bloodset armor for 40 tokens\nblood sipper for 20 tokens\nblood diver for 20 tokens\nhammerius for 25 tokens\nknuckle biters for 15 tokens",
+    "dynamic_line": "看看这张单子：\n全血护甲换40个代币",
     "responses": [
       {
-        "text": "I'll exchange 40 tokens for the full set of blood armor",
+        "text": "我要用40个代币换全套血甲",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct3VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 40 } },
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 40
+          }
+        },
         "effect": [
-          { "u_spawn_item": "blood_suit" },
-          { "u_spawn_item": "blood_hood" },
-          { "u_spawn_item": "blood_duster" },
-          { "u_spawn_item": "blood_gloves" },
-          { "u_spawn_item": "blood_pants" },
-          { "u_spawn_item": "blood_boots" },
-          { "u_sell_item": "arcanetoken", "count": 40 }
+          {
+            "u_spawn_item": "blood_suit"
+          },
+          {
+            "u_spawn_item": "blood_hood"
+          },
+          {
+            "u_spawn_item": "blood_duster"
+          },
+          {
+            "u_spawn_item": "blood_gloves"
+          },
+          {
+            "u_spawn_item": "blood_pants"
+          },
+          {
+            "u_spawn_item": "blood_boots"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 40
+          }
         ]
       },
       {
-        "text": "I'll exchange 20 tokens for the blood sipper",
+        "text": "我要用20个代币换吸血鬼",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct3VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 20 } },
-        "effect": [ { "u_spawn_item": "sword_sip" }, { "u_sell_item": "arcanetoken", "count": 20 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 20
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "sword_sip"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 20
+          }
+        ]
       },
       {
-        "text": "I'll exchange 20 tokens for the blood diver",
+        "text": "我要换20个代币给潜水员",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct3VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 20 } },
-        "effect": [ { "u_spawn_item": "sword_dive" }, { "u_sell_item": "arcanetoken", "count": 20 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 20
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "sword_dive"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 20
+          }
+        ]
       },
       {
-        "text": "I'll exchange 25 tokens for the hammerius",
+        "text": "我要用25个代币换hammerius",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct3VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 25 } },
-        "effect": [ { "u_spawn_item": "hammerius" }, { "u_sell_item": "arcanetoken", "count": 25 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 25
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "hammerius"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 25
+          }
+        ]
       },
       {
-        "text": "I'll exchange 15 tokens for the knuckle biters",
+        "text": "我要用15个代币换那些咬指节的人",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct3VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 15 } },
-        "effect": [ { "u_spawn_item": "punchie_bitie" }, { "u_sell_item": "arcanetoken", "count": 15 } ]
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 15
+          }
+        },
+        "effect": [
+          {
+            "u_spawn_item": "punchie_bitie"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 15
+          }
+        ]
       },
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire_tokenexc" }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire_tokenexc"
+      }
     ]
   },
   {
     "id": "VAMP_ASEEKER_questinquire_tokenexct4VS",
     "type": "talk_topic",
-    "dynamic_line": "Just look at this list:\nfull infused bloodset for 65 tokens",
+    "dynamic_line": "看看这张单子：\n满注血迹换65个代币",
     "responses": [
       {
-        "text": "I'll exchange 65 tokens for the full set of infused blood armor",
+        "text": "我要用65个代币换全套注入的血甲",
         "topic": "VAMP_ASEEKER_questinquire_tokenexct4VS",
-        "condition": { "u_has_items": { "item": "arcanetoken", "count": 65 } },
+        "condition": {
+          "u_has_items": {
+            "item": "arcanetoken",
+            "count": 65
+          }
+        },
         "effect": [
-          { "u_spawn_item": "bloodinfused_survivorhood" },
-          { "u_spawn_item": "bloodinfused_survivorpants" },
-          { "u_spawn_item": "bloodinfused_survivorduster" },
-          { "u_spawn_item": "bloodinfused_survivorgloves" },
-          { "u_spawn_item": "bloodinfused_survivorboots" },
-          { "u_sell_item": "arcanetoken", "count": 65 }
+          {
+            "u_spawn_item": "bloodinfused_survivorhood"
+          },
+          {
+            "u_spawn_item": "bloodinfused_survivorpants"
+          },
+          {
+            "u_spawn_item": "bloodinfused_survivorduster"
+          },
+          {
+            "u_spawn_item": "bloodinfused_survivorgloves"
+          },
+          {
+            "u_spawn_item": "bloodinfused_survivorboots"
+          },
+          {
+            "u_sell_item": "arcanetoken",
+            "count": 65
+          }
         ]
       },
-      { "text": "Okay...", "topic": "VAMP_ASEEKER_questinquire_tokenexc" }
+      {
+        "text": "好吧……",
+        "topic": "VAMP_ASEEKER_questinquire_tokenexc"
+      }
     ]
   }
 ]

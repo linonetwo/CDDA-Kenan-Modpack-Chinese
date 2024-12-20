@@ -2,143 +2,421 @@
   "id": "VAMP_ASEEKER_questinquire",
   "//": "Validate your items and tell you how much profit you'll gain from it or what item will be exchanged for that. Non collaborated players still gets a little reward. Try to bring all your Arcana related stuff here.",
   "type": "talk_topic",
-  "dynamic_line": "Mostly that are odd and exquisite objects. Just bring me something and let me validate them.",
+  "dynamic_line": "大多是些古怪精致的物品。给我带点东西，让我验证一下。",
   "responses": [
     {
-      "text": "I've got an essence here...",
+      "text": "我这里有源质…",
       "topic": "VAMP_ASEEKER_item_essence",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeriessenceval" } }, { "u_has_item": "essence" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeriessenceval"
+            }
+          },
+          {
+            "u_has_item": "essence"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a blood essence here...",
+      "text": "我这里有猩血源质...",
       "topic": "VAMP_ASEEKER_item_bloodessence",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeribloodessenceval" } }, { "u_has_item": "essence_blood" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeribloodessenceval"
+            }
+          },
+          {
+            "u_has_item": "essence_blood"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a dull essence here...",
+      "text": "我这里有一个沉闷的本质...",
       "topic": "VAMP_ASEEKER_item_dullessence",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeridullessenceval" } }, { "u_has_item": "essence_dull" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeridullessenceval"
+            }
+          },
+          {
+            "u_has_item": "essence_dull"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a crystallized essence here...",
+      "text": "我这里有璀璨源质…",
       "topic": "VAMP_ASEEKER_item_pureessence",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeripureessenceval" } }, { "u_has_item": "essence_pure" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeripureessenceval"
+            }
+          },
+          {
+            "u_has_item": "essence_pure"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a wind fragment here...",
+      "text": "我这里有风的碎片...",
       "topic": "VAMP_ASEEKER_item_windfrag",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeriwindfragmentval" } }, { "u_has_item": "vortex_shard" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeriwindfragmentval"
+            }
+          },
+          {
+            "u_has_item": "vortex_shard"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got an amorphous amber here...",
+      "text": "我这里有一个无定形的琥珀…",
       "topic": "VAMP_ASEEKER_item_blobgem",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeriblobgemval" } }, { "u_has_item": "blob_gem" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeriblobgemval"
+            }
+          },
+          {
+            "u_has_item": "blob_gem"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a crystallized tear here...",
+      "text": "我这里有一滴蓝色晶泪...",
       "topic": "VAMP_ASEEKER_item_monstertear",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekerimonstertearval" } }, { "u_has_item": "monster_tear" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekerimonstertearval"
+            }
+          },
+          {
+            "u_has_item": "monster_tear"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a shadow gem here...",
+      "text": "我这里有一块阴影宝石...",
       "topic": "VAMP_ASEEKER_item_shadowgem",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekerishadowgemval" } }, { "u_has_item": "shadow_gem" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekerishadowgemval"
+            }
+          },
+          {
+            "u_has_item": "shadow_gem"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a twisted bone here...",
+      "text": "我这里的骨头扭曲了…",
       "topic": "VAMP_ASEEKER_item_bonetwisted",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeribonetwistedval" } }, { "u_has_item": "bone_twisted" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeribonetwistedval"
+            }
+          },
+          {
+            "u_has_item": "bone_twisted"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a cracked knucklebone here...",
+      "text": "我的指关节骨折了…",
       "topic": "VAMP_ASEEKER_item_grackenknuckles",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekerigrackenknucklesval" } }, { "u_has_item": "gracken_knuckles" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekerigrackenknucklesval"
+            }
+          },
+          {
+            "u_has_item": "gracken_knuckles"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a wyrmskin fragment here...",
+      "text": "我这里有一个wyrmskin碎片...",
       "topic": "VAMP_ASEEKER_item_wyrmskinpiece",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeriwyrmskinpieceval" } }, { "u_has_item": "wyrmskin_piece" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeriwyrmskinpieceval"
+            }
+          },
+          {
+            "u_has_item": "wyrmskin_piece"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a monstrous fang here...",
+      "text": "我这里有一个可怕的牙…",
       "topic": "VAMP_ASEEKER_item_monsterfang",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekerimonsterfangval" } }, { "u_has_item": "monster_fang" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekerimonsterfangval"
+            }
+          },
+          {
+            "u_has_item": "monster_fang"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got an iridescent plate here...",
+      "text": "我这里有一个彩虹色的盘子...",
       "topic": "VAMP_ASEEKER_item_iridescentplate",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeriiridescentplateval" } }, { "u_has_item": "iridescent_plate" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeriiridescentplateval"
+            }
+          },
+          {
+            "u_has_item": "iridescent_plate"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got an engraved stone here...",
+      "text": "我这里有一块雕刻的石头...",
       "topic": "VAMP_ASEEKER_item_engravedstone",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeriengravedstoneval" } }, { "u_has_item": "engraved_stone" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeriengravedstoneval"
+            }
+          },
+          {
+            "u_has_item": "engraved_stone"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a petrified heart here...",
+      "text": "我有一颗僵硬的心…",
       "topic": "VAMP_ASEEKER_item_draconicheart",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeridraconicheartval" } }, { "u_has_item": "draconic_heart" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeridraconicheartval"
+            }
+          },
+          {
+            "u_has_item": "draconic_heart"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got an incorruptible sword here...",
+      "text": "我这里有一把不朽的剑...",
       "topic": "VAMP_ASEEKER_item_sun_sword",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekerisun_swordval" } }, { "u_has_item": "sun_sword" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekerisun_swordval"
+            }
+          },
+          {
+            "u_has_item": "sun_sword"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got hammer of the hunter here...",
+      "text": "我这里有猎人的锤子…",
       "topic": "VAMP_ASEEKER_item_hexenhammer",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekerihexenhammerval" } }, { "u_has_item": "hexenhammer" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekerihexenhammerval"
+            }
+          },
+          {
+            "u_has_item": "hexenhammer"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a spear of pestilence here...",
+      "text": "我这里有一支瘟疫之矛...",
       "topic": "VAMP_ASEEKER_item_spear_pestilence",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekerispear_pestilenceval" } }, { "u_has_item": "spear_pestilence" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekerispear_pestilenceval"
+            }
+          },
+          {
+            "u_has_item": "spear_pestilence"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a druidic staff here...",
+      "text": "我这里有一支德鲁伊教职员…",
       "topic": "VAMP_ASEEKER_item_staff_druidic",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeristaff_druidicval" } }, { "u_has_item": "staff_druidic" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeristaff_druidicval"
+            }
+          },
+          {
+            "u_has_item": "staff_druidic"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a cursed blade here...",
+      "text": "我这里有一把被诅咒的刀…",
       "topic": "VAMP_ASEEKER_item_stormbringer",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeristormbringerval" } }, { "u_has_item": "stormbringer" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeristormbringerval"
+            }
+          },
+          {
+            "u_has_item": "stormbringer"
+          }
+        ]
+      }
     },
     {
-      "text": "I've got a restored ritual blade here...",
+      "text": "我这里有一把修复过的仪式剑...",
       "topic": "VAMP_ASEEKER_item_veilblade",
-      "condition": { "and": [ { "not": { "npc_has_trait": "vaseekeriveilbladeval" } }, { "u_has_item": "veilblade" } ] }
+      "condition": {
+        "and": [
+          {
+            "not": {
+              "npc_has_trait": "vaseekeriveilbladeval"
+            }
+          },
+          {
+            "u_has_item": "veilblade"
+          }
+        ]
+      }
     },
-    { "text": "I should collect more...", "topic": "VAMP_ASEEKER_main" },
     {
-      "text": "I guess I've collected everything...",
+      "text": "我应该收集更多...",
+      "topic": "VAMP_ASEEKER_main"
+    },
+    {
+      "text": "我想我已经集齐了所有东西…",
       "topic": "VAMP_ASEEKER_main",
       "condition": {
         "and": [
-          { "npc_has_trait": "vaseekeriessenceval" },
-          { "npc_has_trait": "vaseekeribloodessenceval" },
-          { "npc_has_trait": "vaseekeridullessenceval" },
-          { "npc_has_trait": "vaseekeripureessenceval" },
-          { "npc_has_trait": "vaseekeriwindfragmentval" },
-          { "npc_has_trait": "vaseekeriblobgemval" },
-          { "npc_has_trait": "vaseekerimonstertearval" },
-          { "npc_has_trait": "vaseekerishadowgemval" },
-          { "npc_has_trait": "vaseekeribonetwistedval" },
-          { "npc_has_trait": "vaseekerigrackenknucklesval" },
-          { "npc_has_trait": "vaseekeriwyrmskinpieceval" },
-          { "npc_has_trait": "vaseekerimonsterfangval" },
-          { "npc_has_trait": "vaseekeriiridescentplateval" },
-          { "npc_has_trait": "vaseekeriengravedstoneval" },
-          { "npc_has_trait": "vaseekeridraconicheartval" },
-          { "npc_has_trait": "vaseekerisun_swordval" },
-          { "npc_has_trait": "vaseekerihexenhammerval" },
-          { "npc_has_trait": "vaseekerispear_pestilenceval" },
-          { "npc_has_trait": "vaseekeristaff_druidicval" },
-          { "npc_has_trait": "vaseekeristormbringerval" },
-          { "npc_has_trait": "vaseekeriveilbladeval" }
+          {
+            "npc_has_trait": "vaseekeriessenceval"
+          },
+          {
+            "npc_has_trait": "vaseekeribloodessenceval"
+          },
+          {
+            "npc_has_trait": "vaseekeridullessenceval"
+          },
+          {
+            "npc_has_trait": "vaseekeripureessenceval"
+          },
+          {
+            "npc_has_trait": "vaseekeriwindfragmentval"
+          },
+          {
+            "npc_has_trait": "vaseekeriblobgemval"
+          },
+          {
+            "npc_has_trait": "vaseekerimonstertearval"
+          },
+          {
+            "npc_has_trait": "vaseekerishadowgemval"
+          },
+          {
+            "npc_has_trait": "vaseekeribonetwistedval"
+          },
+          {
+            "npc_has_trait": "vaseekerigrackenknucklesval"
+          },
+          {
+            "npc_has_trait": "vaseekeriwyrmskinpieceval"
+          },
+          {
+            "npc_has_trait": "vaseekerimonsterfangval"
+          },
+          {
+            "npc_has_trait": "vaseekeriiridescentplateval"
+          },
+          {
+            "npc_has_trait": "vaseekeriengravedstoneval"
+          },
+          {
+            "npc_has_trait": "vaseekeridraconicheartval"
+          },
+          {
+            "npc_has_trait": "vaseekerisun_swordval"
+          },
+          {
+            "npc_has_trait": "vaseekerihexenhammerval"
+          },
+          {
+            "npc_has_trait": "vaseekerispear_pestilenceval"
+          },
+          {
+            "npc_has_trait": "vaseekeristaff_druidicval"
+          },
+          {
+            "npc_has_trait": "vaseekeristormbringerval"
+          },
+          {
+            "npc_has_trait": "vaseekeriveilbladeval"
+          }
         ]
       },
-      "effect": { "npc_add_trait": "vaseekerigotchaeverything" }
+      "effect": {
+        "npc_add_trait": "vaseekerigotchaeverything"
+      }
     }
   ]
 }

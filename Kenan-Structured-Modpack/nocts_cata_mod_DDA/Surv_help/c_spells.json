@@ -2,24 +2,46 @@
   {
     "id": "c_cbm_rtg_induction",
     "type": "SPELL",
-    "name": { "str": "CBM Induction" },
-    "description": "Charges the user's bionic reserves via induction.",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "NO_HANDS", "NO_LEGS" ],
+    "name": {
+      "str": "CBM感应"
+    },
+    "description": "通过感应给使用者的储能插件充电。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
     "min_damage": 50,
     "max_damage": 50,
     "base_casting_time": 200,
     "effect": "recover_energy",
     "shape": "blast",
     "effect_str": "BIONIC",
-    "extra_effects": [ { "id": "c_cbm_rtg_induction_2", "hit_self": true }, { "id": "c_cbm_rtg_induction_3", "hit_self": true } ]
+    "extra_effects": [
+      {
+        "id": "c_cbm_rtg_induction_2",
+        "hit_self": true
+      },
+      {
+        "id": "c_cbm_rtg_induction_3",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "c_cbm_rtg_induction_2",
     "type": "SPELL",
-    "name": { "str": "CBM Induction Heat" },
-    "description": "Vented waste heat.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "CBM感应废热"
+    },
+    "description": "排出废热。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "field_id": "fd_hot_air3",
@@ -30,10 +52,17 @@
   {
     "id": "c_cbm_rtg_induction_3",
     "type": "SPELL",
-    "name": { "str": "CBM Induction Rads" },
-    "description": "Radiation!",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION" ],
+    "name": {
+      "str": "CBM感应辐射"
+    },
+    "description": "辐射！",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION"
+    ],
     "effect": "attack",
     "shape": "blast",
     "effect_str": "rtg_induction_radiation",
@@ -43,11 +72,19 @@
   {
     "id": "c_flesh_hit_effect",
     "type": "SPELL",
-    "name": { "str": "Biological Weapon Adrenaline" },
+    "name": {
+      "str": "生物武器肾上腺素"
+    },
     "message": "",
-    "description": "Otherworldly adrenaline.  Keep the pressure up and you should be fine.",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "RANDOM_DURATION" ],
+    "description": "异界肾上腺素。保持血压，你会没事的。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "RANDOM_DURATION"
+    ],
     "min_duration": 18500,
     "max_duration": 19500,
     "effect": "attack",
@@ -57,10 +94,17 @@
   {
     "type": "SPELL",
     "id": "c_dummy_effect",
-    "name": { "str": "Sorry, Nothing" },
-    "description": "Dirty hack to add RNG to spell effects.",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
+    "name": {
+      "str": "抱歉，没东西"
+    },
+    "description": "糟糕的魔法实现。",
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
     "message": "",
     "effect": "attack",
     "shape": "blast"
@@ -70,37 +114,65 @@
     "id": "c_topographical_scan",
     "effect": "map",
     "shape": "blast",
-    "name": { "str": "Topographical Scan" },
-    "description": "Reveals an area around you on the overmap.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "地形扫描"
+    },
+    "description": "获得你附近的大地图视野。",
+    "valid_targets": [
+      "self"
+    ],
     "min_aoe": 12,
     "max_aoe": 12,
-    "message": "You hold the scout's tool up, and what appears to be a bolt of plasma fires upwards like a flare, the device's display soon displaying information on the surrounding area.",
+    "message": "你举起侦察工具，一束等离子体像耀斑一样向上发射，设备的显示器很快就显示出周围区域的信息。",
     "base_casting_time": 100
   },
   {
     "id": "c_biostim",
     "type": "SPELL",
-    "name": { "str": "Biostim" },
-    "description": "Surge of adrenaline with side effects.  The effects granted will give adequate information, so no cast message.",
+    "name": {
+      "str": "生化物质注射"
+    },
+    "description": "肾上腺素激增伴随副作用。将在效果上显示信息，因此没有施法信息。",
     "message": "",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DURATION", "SILENT" ],
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DURATION",
+      "SILENT"
+    ],
     "min_duration": 90000,
     "max_duration": 180000,
     "effect": "attack",
     "shape": "blast",
     "effect_str": "adrenaline",
-    "extra_effects": [ { "id": "c_biostim_side_effects", "hit_self": true }, { "id": "c_biostim_pain", "hit_self": true } ]
+    "extra_effects": [
+      {
+        "id": "c_biostim_side_effects",
+        "hit_self": true
+      },
+      {
+        "id": "c_biostim_pain",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "c_biostim_side_effects",
     "type": "SPELL",
-    "name": { "str": "Biostim Side Effects" },
-    "description": "Primary side effect to Biostim.  Lasts an hour, and will escalate to a more dangerous effect if you escalate its intensity.",
+    "name": {
+      "str": "生化物质注射副作用"
+    },
+    "description": "生化物质产生的副作用。持续一个小时，如果你再次注射将会提高它的强度并升级为更危险的效果。",
     "message": "",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
     "min_duration": 720000,
     "max_duration": 720000,
     "effect": "attack",
@@ -110,13 +182,21 @@
   {
     "type": "SPELL",
     "id": "c_biostim_pain",
-    "name": { "str": "Biostim Pain" },
-    "description": "Similar to AEA_PAIN except message is suppressed.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "生化物质注射疼痛"
+    },
+    "description": "与AEA_PAIN类似除了消息被隐藏了。",
+    "valid_targets": [
+      "self"
+    ],
     "effect": "recover_energy",
     "shape": "blast",
     "effect_str": "PAIN",
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DAMAGE", "SILENT" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DAMAGE",
+      "SILENT"
+    ],
     "min_damage": -5,
     "max_damage": -15,
     "message": ""
@@ -124,27 +204,53 @@
   {
     "id": "c_infusion",
     "type": "SPELL",
-    "name": { "str": "Hemocatalyzed Infusion" },
-    "description": "Creates a bio-ampoule filled with mutagen, adds additional side effects.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "血液诱变剂"
+    },
+    "description": "生成一个装满了诱变剂的生物安瓿，但是有额外的副作用。",
+    "valid_targets": [
+      "self"
+    ],
     "message": "",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "PERMANENT", "NO_HANDS", "NO_LEGS" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "PERMANENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
     "effect": "spawn_item",
     "shape": "blast",
     "effect_str": "mutagenic_ampoule",
     "//": "Reuses the pain effect Biostim calls for.",
-    "extra_effects": [ { "id": "c_biostim_pain", "hit_self": true }, { "id": "c_hemo_damage", "hit_self": true } ],
+    "extra_effects": [
+      {
+        "id": "c_biostim_pain",
+        "hit_self": true
+      },
+      {
+        "id": "c_hemo_damage",
+        "hit_self": true
+      }
+    ],
     "min_duration": 1,
     "max_duration": 1
   },
   {
     "id": "c_hemo_damage",
     "type": "SPELL",
-    "name": { "str": "Hemocatalyst Damage" },
-    "description": "Adds the damaging side effect to the infuser and defuser.",
+    "name": {
+      "str": "血液催化剂伤害"
+    },
+    "description": "给诱变和净化增加了有害的副作用。",
     "message": "",
-    "valid_targets": [ "self" ],
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
+    "valid_targets": [
+      "self"
+    ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": 10,
@@ -154,82 +260,161 @@
   {
     "id": "c_defusion",
     "type": "SPELL",
-    "name": { "str": "Hemocatalyzed Defusion" },
-    "description": "Creates a bio-ampoule filled with purifer, adds additional side effects.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "血液净化剂"
+    },
+    "description": "生成一个装满了净化剂的生物安瓿，但是有额外的副作用。",
+    "valid_targets": [
+      "self"
+    ],
     "message": "",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "PERMANENT", "NO_HANDS", "NO_LEGS" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "PERMANENT",
+      "NO_HANDS",
+      "NO_LEGS"
+    ],
     "effect": "spawn_item",
     "shape": "blast",
     "effect_str": "purified_ampoule",
-    "extra_effects": [ { "id": "c_biostim_pain", "hit_self": true }, { "id": "c_hemo_damage", "hit_self": true } ],
+    "extra_effects": [
+      {
+        "id": "c_biostim_pain",
+        "hit_self": true
+      },
+      {
+        "id": "c_hemo_damage",
+        "hit_self": true
+      }
+    ],
     "min_duration": 1,
     "max_duration": 1
   },
   {
     "type": "SPELL",
     "id": "c_lifedrain_1",
-    "name": { "str": "Life Drain Shell" },
-    "description": "This exists only to trigger on-self effects from an on-hit action.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "生命汲取护盾"
+    },
+    "description": "这只存在于触发自身效果的被命中行为中。",
+    "valid_targets": [
+      "hostile"
+    ],
     "message": "",
     "min_range": 1,
     "max_range": 1,
     "effect": "attack",
     "shape": "blast",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
-    "extra_effects": [ { "id": "c_lifedrain_2", "hit_self": true } ]
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
+    "extra_effects": [
+      {
+        "id": "c_lifedrain_2",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "c_lifedrain_2",
     "type": "SPELL",
-    "name": { "str": "Life Drain Effect" },
-    "description": "This creates the effect that heals the caster.",
+    "name": {
+      "str": "生命汲取效果"
+    },
+    "description": "这会产生治疗施法者的效果。",
     "message": "",
-    "valid_targets": [ "self" ],
+    "valid_targets": [
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "min_damage": -2,
     "max_damage": -5,
-    "flags": [ "NO_EXPLOSION_SFX", "RANDOM_DAMAGE", "SILENT" ]
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "RANDOM_DAMAGE",
+      "SILENT"
+    ]
   },
   {
     "id": "c_death_explosion_hulk_weapon",
     "type": "SPELL",
-    "name": { "str": "Death Explosion Plus Acid" },
-    "valid_targets": [ "self", "ally", "hostile", "ground" ],
-    "description": "Small explosion plus acid effect, used by Apophis.",
+    "name": {
+      "str": "死亡酸液爆炸"
+    },
+    "valid_targets": [
+      "self",
+      "ally",
+      "hostile",
+      "ground"
+    ],
+    "description": "小型酸液爆炸效果，阿波菲斯使用。",
     "min_aoe": 8,
     "max_aoe": 8,
     "min_damage": 8,
     "max_damage": 8,
     "effect": "explosion",
     "shape": "blast",
-    "extra_effects": [ { "id": "death_acid", "hit_self": true } ]
+    "extra_effects": [
+      {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "c_death_explosion_mon_fungus_failed_weapon",
     "type": "SPELL",
-    "name": { "str": "Pouf plus Acid Effect" },
-    "description": "Fungal pouf plus acid effect, used by fungal augmented abominations.",
-    "valid_targets": [ "ground", "self" ],
+    "name": {
+      "str": "孢子酸液效果"
+    },
+    "description": "喷出真菌和酸液效果，真菌生物武器使用。",
+    "valid_targets": [
+      "ground",
+      "self"
+    ],
     "effect": "fungalize",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ],
     "min_damage": 2500,
     "max_damage": 2500,
     "min_aoe": 1,
     "max_aoe": 1,
     "shape": "blast",
-    "extra_effects": [ { "id": "death_pouf", "hit_self": true }, { "id": "death_acid", "hit_self": true } ]
+    "extra_effects": [
+      {
+        "id": "death_pouf",
+        "hit_self": true
+      },
+      {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    ]
   },
   {
     "id": "c_resin_create",
     "type": "SPELL",
-    "name": { "str": "Extrude Resin" },
-    "description": "Creates a random number of alien resin chunks.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "挤出树脂"
+    },
+    "description": "制造随机数量的异界树脂块。",
+    "valid_targets": [
+      "self"
+    ],
     "message": "",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT", "PERMANENT", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT",
+      "PERMANENT",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
     "effect": "spawn_item",
     "shape": "blast",
     "effect_str": "resin_chunk",

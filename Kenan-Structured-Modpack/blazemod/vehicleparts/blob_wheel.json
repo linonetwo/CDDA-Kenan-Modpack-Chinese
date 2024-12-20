@@ -2,7 +2,9 @@
   {
     "id": "frostie_wheel",
     "type": "vehicle_part",
-    "name": { "str": "snow slider" },
+    "name": {
+      "str": "变形怪冰川滑板"
+    },
     "item": "frostie_wheel",
     "location": "under",
     "color": "light_blue",
@@ -10,19 +12,55 @@
     "durability": 500,
     "damage_modifier": 200,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "frostiegrow" } ],
-    "description": "A living blob, existing in a super-cooled state.  It acts as a wheel.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的车轮。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
     "rolling_resistance": 1.5,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 4 ], "ROAD": [ 0, 2 ] },
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        4
+      ],
+      "ROAD": [
+        0,
+        2
+      ]
+    },
     "contact_area": 153,
-    "flags": [ "WHEEL", "UNSTABLE_WHEEL", "EXTRA_DRAG", "SHARP", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "flags": [
+      "WHEEL",
+      "UNSTABLE_WHEEL",
+      "EXTRA_DRAG",
+      "SHARP",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   },
   {
     "id": "frostie_wheel_sea",
     "type": "vehicle_part",
-    "name": { "str": "icy sea skimmer" },
+    "name": {
+      "str": "变形怪冰川冲浪板"
+    },
     "item": "frostie_hull",
     "location": "under",
     "color": "light_blue",
@@ -30,16 +68,42 @@
     "durability": 500,
     "damage_modifier": 200,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "frostiegrow" } ],
-    "description": "A living blob, existing in a super-cooled state.  It acts as a boat hull.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "FLOATS", "EXTRA_DRAG", "SHARP", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "breaks_into": [
+      {
+        "item": "frostiegrow"
+      }
+    ],
+    "description": "一只活的处于极寒状态的变形怪变成的船壳。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "FLOATS",
+      "EXTRA_DRAG",
+      "SHARP",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   },
   {
     "id": "gloople_wheel",
     "type": "vehicle_part",
-    "name": { "str": "gelatinous wheel" },
+    "name": {
+      "str": "凝胶车轮"
+    },
     "item": "gloople_wheel",
     "location": "under",
     "color": "light_green",
@@ -47,19 +111,60 @@
     "durability": 250,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "description": "A living blob.  It acts as a wheel.",
-    "breaks_into": [ { "item": "glooplegrow" }, { "item": "water", "count": [ 50, 100 ] } ],
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
+    "description": "一只活的变形怪变成的车轮。",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      },
+      {
+        "item": "water",
+        "count": [
+          50,
+          100
+        ]
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
     "rolling_resistance": 1.75,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 4 ], "ROAD": [ 0, 2 ] },
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        4
+      ],
+      "ROAD": [
+        0,
+        2
+      ]
+    },
     "contact_area": 153,
-    "flags": [ "WHEEL", "UNSTABLE_WHEEL", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "flags": [
+      "WHEEL",
+      "UNSTABLE_WHEEL",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   },
   {
     "id": "gray_wheel",
     "type": "vehicle_part",
-    "name": { "str": "gray wheel" },
+    "name": {
+      "str": "灰色车轮"
+    },
     "item": "gray_wheel",
     "location": "under",
     "color": "light_gray",
@@ -67,39 +172,115 @@
     "durability": 1000,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "description": "A living blob.  It acts as a wheel.",
-    "breaks_into": [ { "item": "graygrow" }, { "item": "water", "count": [ 100, 200 ] } ],
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
+    "description": "一只活的变形怪变成的车轮。",
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      },
+      {
+        "item": "water",
+        "count": [
+          100,
+          200
+        ]
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
     "rolling_resistance": 1.25,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 4 ], "ROAD": [ 0, 2 ] },
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        4
+      ],
+      "ROAD": [
+        0,
+        2
+      ]
+    },
     "contact_area": 153,
-    "flags": [ "WHEEL", "UNSTABLE_WHEEL", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "flags": [
+      "WHEEL",
+      "UNSTABLE_WHEEL",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   },
   {
     "id": "grinder",
     "type": "vehicle_part",
-    "name": { "str": "earthen roller" },
+    "name": {
+      "str": "变形怪压路机"
+    },
     "item": "grinder",
     "location": "structure",
-    "variants": [ { "symbols": "O", "symbols_broken": "#" } ],
+    "variants": [
+      {
+        "symbols": "O",
+        "symbols_broken": "#"
+      }
+    ],
     "color": "brown",
     "broken_color": "brown",
     "durability": 2500,
     "damage_modifier": 250,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "gray" } ],
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
+    "breaks_into": [
+      {
+        "item": "gray"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
     "rolling_resistance": 6,
     "wheel_offroad_rating": 0.1,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 6 ], "ROAD": [ 0, 3 ] },
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        6
+      ],
+      "ROAD": [
+        0,
+        3
+      ]
+    },
     "contact_area": 500,
-    "flags": [ "WHEEL", "PROTRUSION", "STABLE", "TRACKED" ]
+    "flags": [
+      "WHEEL",
+      "PROTRUSION",
+      "STABLE",
+      "TRACKED"
+    ]
   },
   {
     "id": "oozle_wheel",
     "type": "vehicle_part",
-    "name": { "str": "oozing wheel" },
+    "name": {
+      "str": "软泥车轮"
+    },
     "item": "oozle_wheel",
     "location": "under",
     "color": "green",
@@ -107,12 +288,51 @@
     "durability": 500,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "oozlegrow" }, { "item": "water", "count": [ 100, 200 ] } ],
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      },
+      {
+        "item": "water",
+        "count": [
+          100,
+          200
+        ]
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
     "rolling_resistance": 1.5,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 4 ], "ROAD": [ 0, 2 ] },
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        4
+      ],
+      "ROAD": [
+        0,
+        2
+      ]
+    },
     "contact_area": 153,
-    "flags": [ "WHEEL", "UNSTABLE_WHEEL", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "flags": [
+      "WHEEL",
+      "UNSTABLE_WHEEL",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   }
 ]

@@ -2,7 +2,9 @@
   {
     "type": "TOOL_ARMOR",
     "id": "side_drum_makeshift",
-    "name": { "str": "side drum" },
+    "name": {
+      "str": "小鼓"
+    },
     "category": "tools",
     "weight": "1800 g",
     "color": "brown",
@@ -25,58 +27,112 @@
       ]
     },
     "symbol": "-",
-    "description": "A handmade side drum with a shoulder strap, allowing you to wear it while playing.",
+    "description": "一个带肩带的手工侧鼓，可以在穿戴时演奏。",
     "price": "5 USD",
-    "material": [ "wood", "leather" ],
+    "material": [
+      "wood",
+      "leather"
+    ],
     "volume": "2500 ml",
-    "melee_damage": { "bash": 4 },
-    "flags": [ "BELTED" ],
+    "melee_damage": {
+      "bash": 4
+    },
+    "flags": [
+      "BELTED"
+    ],
     "material_thickness": 2,
-    "armor": [ { "encumbrance": 10, "coverage": 10, "covers": [ "torso" ], "specifically_covers": [ "torso_waist" ] } ]
+    "armor": [
+      {
+        "encumbrance": 10,
+        "coverage": 10,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_waist"
+        ]
+      }
+    ]
   },
   {
     "id": "mask_gas_makeshift",
     "type": "TOOL_ARMOR",
-    "name": { "str": "makeshift gas hood" },
+    "name": {
+      "str": "简易防毒面罩"
+    },
     "looks_like": "balclava",
     "category": "clothing",
     "//": "Realistically it would be always on, but there's no way to make it only deplete charges in gas without the use action.",
-    "description": "A hood with added lenses and pockets for filter material sewn between layers of fabric, similar to designs common in WWI.  It is designed to be worn over a helmet.  It must be prepared before use.",
+    "description": "一种源自一战的防毒面具，类似于在织物层缝上了两个镜片和滤袋的头罩，能直接套在头盔上。透气性很好，但也导致效果不如现代防毒面具，配套过滤器需要准备一下才能使用。",
     "weight": "850 g",
     "volume": "1500 ml",
     "price": "40 USD",
     "to_hit": -1,
-    "material": [ "cotton", "plastic" ],
+    "material": [
+      "cotton",
+      "plastic"
+    ],
     "symbol": "[",
     "color": "light_gray",
     "warmth": 15,
     "material_thickness": 2,
     "environmental_protection": 1,
     "environmental_protection_with_filter": 15,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "gasfilter_m": 100 } } ],
-    "ammo": [ "gasfilter_m" ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "gasfilter_m": 100
+        }
+      }
+    ],
+    "ammo": [
+      "gasfilter_m"
+    ],
     "use_action": "GASMASK_ACTIVATE",
-    "flags": [ "OUTER" ],
-    "armor": [ { "encumbrance": 20, "coverage": 100, "covers": [ "head", "mouth", "eyes" ] } ]
+    "flags": [
+      "OUTER"
+    ],
+    "armor": [
+      {
+        "encumbrance": 20,
+        "coverage": 100,
+        "covers": [
+          "head",
+          "mouth",
+          "eyes"
+        ]
+      }
+    ]
   },
   {
     "id": "straw_bed_rollmat",
     "type": "TOOL_ARMOR",
-    "name": { "str_sp": "woven straw bedding" },
-    "description": "A thick mat of tightly-woven straw or pine boughs.  It could be worn as a thick blanket, or used to deploy it as a mat to sleep on.",
+    "name": {
+      "str_sp": "编织草垫"
+    },
+    "description": "由厚密的桦树皮和松枝编织而成的草毯。可以像厚毯子那样披在身上，或者在睡觉时铺在地上。",
     "weight": "1500 g",
     "volume": "3 L",
     "price": "20 USD",
     "price_postapoc": "50 cent",
     "to_hit": -1,
-    "material": [ "paper" ],
+    "material": [
+      "paper"
+    ],
     "symbol": "[",
     "looks_like": "fiber_mat",
     "color": "white",
     "warmth": 30,
     "material_thickness": 1,
     "environmental_protection": 1,
-    "flags": [ "OVERSIZE", "OUTER", "ALLOWS_NATURAL_ATTACKS", "SINGLE_USE" ],
+    "flags": [
+      "OVERSIZE",
+      "OUTER",
+      "ALLOWS_NATURAL_ATTACKS",
+      "SINGLE_USE"
+    ],
     "use_action": {
       "type": "place_trap",
       "allow_under_player": true,
@@ -89,7 +145,17 @@
       {
         "encumbrance": 45,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r" ]
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r"
+        ]
       }
     ]
   }

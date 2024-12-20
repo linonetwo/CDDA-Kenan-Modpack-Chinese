@@ -3,14 +3,21 @@
     "id": "solar_array",
     "type": "GENERIC",
     "category": "veh_parts",
-    "name": { "str": "solar array" },
-    "description": "A vertical array of three solar panels set on a chassis rising above one another on a metal pole with rudimentary tracking and motors.  Due to the flimsy nature of the hydraulics and high surface area profile to maximize sunlight, they can't really be installed onto an existing vehicle.  Requires a jumper cable or similar to pull power from.",
+    "name": {
+      "str": "太阳能板阵列"
+    },
+    "description": "一个由三块太阳能板所组成的垂直阵列，安装在同一根金属底座上，在金属杆上依次排开，带有基础的跟踪装置和马达。由于液压系统的脆弱性和为了最大限度利用阳光所导致的高覆盖面积，它们真没法被安装在现有的载具上。需要一根跨接电缆或类似电缆才能从中导出电源。",
     "weight": "50000 g",
     "volume": "10000 ml",
     "price": "1200 USD",
     "price_postapoc": "10 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "glass" ],
+    "to_hit": -4,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "glass"
+    ],
     "symbol": "]",
     "color": "yellow"
   },
@@ -18,19 +25,26 @@
     "id": "reinforced_solar_array",
     "type": "GENERIC",
     "copy-from": "solar_array",
-    "name": { "str": "reinforced solar array" },
-    "description": "A vertical array of three reinforced solar panels set on a chassis rising above one another on a metal pole with rudimentary tracking and motors.  Due to the flimsy nature of the hydraulics and high surface area profile to maximize sunlight, they can't really be installed onto an existing vehicle.  Requires a jumper cable or similar to pull power from.",
+    "name": {
+      "str": "太阳能板阵列（强化）"
+    },
+    "description": "一个由三块强化太阳能板所组成的垂直阵列，安装在同一根金属底座上，在金属杆上依次排开，带有基础的跟踪装置和马达。由于液压系统的脆弱性和为了最大限度利用阳光所导致的高覆盖面积，它们真没法被安装在现有的载具上。需要一根跨接电缆或类似电缆才能从中导出电源。",
     "weight": "80459 g",
     "volume": "20500 ml",
-    "material": [ "glass", "steel" ],
+    "material": [
+      "glass",
+      "steel"
+    ],
     "color": "light_blue"
   },
   {
     "id": "solar_array_v2",
     "type": "GENERIC",
     "copy-from": "solar_array",
-    "name": { "str": "upgraded solar array" },
-    "description": "A vertical array of three upgraded solar panels set on a chassis rising above one another on a metal pole with rudimentary tracking and motors.  Due to the flimsy nature of the hydraulics and high surface area profile to maximize sunlight, they can't really be installed onto an existing vehicle.  Requires a jumper cable or similar to pull power from.",
+    "name": {
+      "str": "太阳能板阵列（高能）"
+    },
+    "description": "一个由三块高能太阳能板所组成的垂直阵列，安装在同一根金属底座上，在金属杆上依次排开，带有基础的跟踪装置和马达。由于液压系统的脆弱性和为了最大限度利用阳光所导致的高覆盖面积，它们真没法被安装在现有的载具上。需要一根跨接电缆或类似电缆才能从中导出电源。",
     "weight": "63482 g",
     "volume": "14500 ml"
   },
@@ -38,8 +52,10 @@
     "id": "reinforced_solar_array_v2",
     "type": "GENERIC",
     "copy-from": "reinforced_solar_array",
-    "name": { "str": "upgraded reinforced solar array" },
-    "description": "A vertical array of three upgraded reinforced solar panels set on a chassis rising above one another on a metal pole with rudimentary tracking and motors.  Due to the flimsy nature of the hydraulics and high surface area profile to maximize sunlight, they can't really be installed onto an existing vehicle.  Requires a jumper cable or similar to pull power from.",
+    "name": {
+      "str": "太阳能板阵列（强化高能）"
+    },
+    "description": "一个由三块强化高能太阳能板所组成的垂直阵列，安装在同一根金属底座上，在金属杆上依次排开，带有基础的跟踪装置和马达。由于液压系统的脆弱性和为了最大限度利用阳光所导致的高覆盖面积，它们真没法被安装在现有的载具上。需要一根跨接电缆或类似电缆才能从中导出电源。",
     "weight": "95186 g",
     "volume": "23500 ml"
   }

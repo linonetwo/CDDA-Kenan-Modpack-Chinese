@@ -2,16 +2,24 @@
   {
     "id": "mon_zombie_translucent",
     "type": "MONSTER",
-    "name": { "str": "translucent zombie" },
-    "description": "With acid covering its whole body, this raging corpse sways in every step, vomiting filthy waste as its green, tinted eyes stare submissively out of nowhere.",
+    "name": {
+      "str": "半透明丧尸"
+    },
+    "description": "这具狂暴的尸体浑身都是酸液，每走一步都摇摆不定，喷吐着和它身体一样绿的肮脏废渣，淡色的眼睛不知从哪里顺从地凝视着你。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_1", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 70,
     "diff": 1,
     "speed": 100,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⩀",
     "color": "green",
     "aggression": 100,
@@ -20,14 +28,43 @@
     "melee_dice": 1,
     "melee_dice_sides": 2,
     "luminance": 2,
-    "harvest": "zombie_humanoid",
-    "melee_damage": [ { "damage_type": "cut", "amount": 1 }, { "damage_type": "acid", "amount": 2 } ],
-    "armor": { "bash": 2, "cut": 1, "heat": 1 },
-    "special_attacks": [ [ "ACID_BARF", 30 ] ],
+    "harvest": "zombie",
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      },
+      {
+        "damage_type": "acid",
+        "amount": 2
+      }
+    ],
+    "armor": {
+      "bash": 2,
+      "cut": 1,
+      "heat": 1
+    },
+    "special_attacks": [
+      [
+        "ACID_BARF",
+        30
+      ]
+    ],
     "death_drops": "default_zombie_death_drops",
-    "upgrades": { "half_life": 14, "into": "mon_zombie_pellucid" },
-    "anger_triggers": [ "PLAYER_CLOSE" ],
-    "death_function": { "message": "The %s's body leaks acid.", "effect": { "id": "death_acid", "hit_self": true } },
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_zombie_pellucid"
+    },
+    "anger_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "death_function": {
+      "message": "The %s's body leaks acid.",
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      }
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -46,16 +83,24 @@
   {
     "id": "mon_zombie_pellucid",
     "type": "MONSTER",
-    "name": { "str": "pellucid zombie" },
-    "description": "Unrecognizable face dribbles with unfriendly liquid. This zombie's skin thinned into a diversion of light, supposably an effect from producing too much acid. Within a closer look, the veins are composed mostly of green-ish glows.",
+    "name": {
+      "str": "透明丧尸"
+    },
+    "description": "无法辨认的脸上滴着不友好的液体。这只丧尸的皮肤变薄了，使得光线发生了偏移，这可能是由于时间进一步增长而产生的酸反流效应。细看之下，这些纹路主要由浅绿色的光晕组成。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_1", "HUMAN" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "HUMAN"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
     "hp": 90,
     "speed": 100,
     "diff": 5,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⩃",
     "color": "blue_green",
     "aggression": 100,
@@ -64,30 +109,74 @@
     "melee_dice": 1,
     "melee_dice_sides": 3,
     "dodge": 1,
-    "harvest": "zombie_humanoid",
-    "melee_damage": [ { "damage_type": "cut", "amount": 1 }, { "damage_type": "acid", "amount": 5 } ],
+    "harvest": "zombie",
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 1
+      },
+      {
+        "damage_type": "acid",
+        "amount": 5
+      }
+    ],
     "luminance": 1,
-    "armor": { "bash": 6, "heat": 2 },
+    "armor": {
+      "bash": 6,
+      "heat": 2
+    },
     "special_attacks": [
-      [ "ACID_BARF", 30 ],
-      [ "ACID", 40 ],
+      [
+        "ACID_BARF",
+        30
+      ],
+      [
+        "ACID",
+        40
+      ],
       {
         "type": "gun",
         "cooldown": 40,
         "move_cost": 150,
         "gun_type": "pellucid_mouth",
-        "fake_skills": [ [ "gun", 3 ], [ "rifle", 6 ] ],
-        "ranges": [ [ 0, 8, "DEFAULT" ] ],
+        "fake_skills": [
+          [
+            "gun",
+            3
+          ],
+          [
+            "rifle",
+            6
+          ]
+        ],
+        "ranges": [
+          [
+            0,
+            8,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_player": false,
         "require_targeting_npc": false,
         "require_targeting_monster": false,
-        "description": "The pellucid zombie spits a concentrated glob of acid!"
+        "description": "透明的丧尸吐出一团浓缩的酸！"
       }
     ],
-    "special_when_hit": [ "ACIDSPLASH", 25 ],
+    "special_when_hit": [
+      "ACIDSPLASH",
+      25
+    ],
     "death_drops": "default_zombie_death_drops",
-    "anger_triggers": [ "PLAYER_CLOSE" ],
-    "death_function": { "effect": { "id": "death_acid", "hit_self": true }, "message": "The %s's body leaks acid." },
+    "anger_triggers": [
+      "PLAYER_CLOSE"
+    ],
+    "death_function": {
+      "effect": {
+        "id": "death_acid",
+        "hit_self": true
+      },
+      "message": "The %s's body leaks acid."
+    },
     "flags": [
       "SEES",
       "HEARS",

@@ -4,23 +4,36 @@
     "id": "TALK_BIO_1",
     "dynamic_line": {
       "u_is_wearing": "badge_bio_weapon",
-      "yes": "I really hope that badge belongs to you…",
-      "no": "Hey visitor, anything exciting out there?"
+      "yes": "我真的希望这个徽章是属于你的……",
+      "no": "嘿，客人，外面有什么刺激的事吗？"
     },
     "responses": [
-      { "text": "It says you're a Bio-Weapon?", "topic": "TALK_BIO_1_U_BIO" },
-      { "text": "Kinda boring here huh?", "topic": "TALK_BIO_1_BORING" },
       {
-        "text": "[MISSION] Router suggested that I talk to you about joining the hunt for Apophis.",
+        "text": "这上面说你是生物武器？",
+        "topic": "TALK_BIO_1_U_BIO"
+      },
+      {
+        "text": "哈，这里有点无聊吧？",
+        "topic": "TALK_BIO_1_BORING"
+      },
+      {
+        "text": "[任务]露特尔建议我和你谈谈加入追捕阿波菲斯的行动。",
         "topic": "TALK_BIO_1_APOPHIS",
-        "condition": { "u_has_mission": "MISSION_PROOF_APOPHIS_DEAD" }
+        "condition": {
+          "u_has_mission": "MISSION_PROOF_APOPHIS_DEAD"
+        }
       },
       {
-        "text": "How are you holding up?  Router asked that I check on you.",
+        "text": "你还好吗？露特尔让我去看看你。",
         "topic": "TALK_BIO_1_ROUTER",
-        "condition": { "u_has_effect": "router_suggestion" }
+        "condition": {
+          "u_has_effect": "router_suggestion"
+        }
       },
-      { "text": "Well, bye.", "topic": "TALK_DONE" }
+      {
+        "text": "好的，再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
@@ -28,12 +41,12 @@
     "id": "TALK_BIO_1_U_BIO",
     "dynamic_line": {
       "u_is_wearing": "badge_bio_weapon",
-      "yes": "Yeah, same augmentation project your badge labels you as, assuming that belongs to you.  Router found me passed out and told me about everything.  I don't remember anything before that.  Guess I just have to trust him for now.",
-      "no": "That's what the label says, it's a sorta augmentation project.  You seem to know your stuff, guess one doesn't simply find this place by accident.  Router told me what I am.  I am stuck here until further notice."
+      "yes": "没错，假设那个徽章标识属于你，它标识了你同样也是改造项目中的一员。露特尔发现了昏迷不醒的我，并且告诉我了一切。在那之前，我什么也不记得了，现在我只能暂时信任他。",
+      "no": "标签上是这么写的，这是一个人体增强计划。你看起来很懂行，看来不是偶然找到这里的。露特尔告诉我我是什么。我待在这里等待进一步通知。"
     },
     "responses": [
       {
-        "text": "I'm in the same boat, it seems.",
+        "text": "看起来我们处境相同。",
         "topic": "TALK_BIO_1_IAM_BIO",
         "condition": {
           "u_has_any_trait": [
@@ -46,13 +59,16 @@
         }
       },
       {
-        "text": "I'm one of the super soldiers, in fact.",
+        "text": "事实上，我是超级战士的一员。",
         "topic": "TALK_BIO_1_IAM_SOLDAT",
         "condition": {
           "u_has_trait": "SUPER_SOLDIER_MARKER"
         }
       },
-      { "text": "Well, damn.", "topic": "TALK_BIO_1" }
+      {
+        "text": "操！真他妈的。",
+        "topic": "TALK_BIO_1"
+      }
     ]
   },
   {
@@ -60,74 +76,130 @@
     "id": "TALK_BIO_1_IAM_BIO",
     "dynamic_line": {
       "u_is_wearing": "badge_bio_weapon",
-      "yes": "Looks about right.  Can be hard to tell for sure if that's your badge or not, but they contracted the work out to all sorts of weirdos, and they made all sorts of crazy shit.  They could slap the Bio-Weapon label on a zombie swinging around a sword and it still wouldn't be the strangest thing out there.",
-      "no": "I'm not sure whether to believe you or not, without the badge and all.  But whatever, no telling whether you lost yours or maybe you decided on not advertising it for everyone to see.  Given those bastards cranked out everything from super soldiers to a giant cat Bio-Weapon to fucking Apophis, nothing would surprise me at this point."
+      "yes": "看起来差不多。很难确定那是不是你的徽章，但是他们把工作承包给了各种各样的怪人，制造了各种各样的疯狂的东西。他们可以制造出挥舞着剑的丧尸生物武器，这仍然不是最奇怪的事情。",
+      "no": "我不知道是否相信你，没有徽章什么的。但不管怎样，不知道你是丢失了你的徽章还是决定不让所有人看到。考虑到那些混蛋制造了各种东西从超级士兵到巨型猫科生物武器再到他妈的阿波菲斯，现在没有什么能让我感到惊讶。"
     },
-    "responses": [ { "text": "…", "topic": "TALK_BIO_1" } ]
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_BIO_1"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_IAM_SOLDAT",
     "dynamic_line": {
       "u_is_wearing": "badge_bio_weapon",
-      "yes": "Heh, they started passing out the badges to you kids too?  I'm guessing you got your hands on it the hard way, from one of the bastards hunting us down.  We're in the same boat, like it or not.",
-      "no": "If that's true, pleasant surprise to see another of you stopping by.  I'm willing to bet Router needs all the help he can get, might be useful working together.  We'll see, I guess…"
+      "yes": "嘿，他们也开始把徽章发给你们了？我猜你是好不容易从一个追捕我们的混蛋手里拿到的。不管你喜不喜欢，我们现在都在同一条船上了。",
+      "no": "如果你认真的话，希望能看到你们回来。我敢打赌露特尔需要尽可能多的帮助，也许合作会有用。我们拭目以待，我想……"
     },
-    "responses": [ { "text": "…", "topic": "TALK_BIO_1" } ]
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_BIO_1"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_APOPHIS",
     "dynamic_line": {
       "u_is_wearing": "badge_bio_weapon",
-      "yes": "Well I'll be damned.  At this rate I was starting to think we'd just wait for that thing to come find us.  And with one of ours leading the charge, even.  Assuming you've earned that badge, at least.  I'm with you.",
-      "no": "Well, I was starting to think I'd never get to join the hunt.  If you've got what it takes, we might come out of it in one piece.  I'm with you."
+      "yes": "喔，好家伙。照这样下去，不如就等着那东西来找我们吧。至少有我们的人带头冲锋。假设你获得了那个徽章。我支持你。",
+      "no": "好吧，我还以为我再也不能加入狩猎了呢。如果你能做到的话，我们可能会安然无恙。我支持你。"
     },
-    "responses": [ { "text": "Let's go, then.", "topic": "TALK_DONE", "effect": "follow" } ]
+    "responses": [
+      {
+        "text": "我们出发吧。",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_BORING",
     "dynamic_line": {
       "u_has_effect": "router_suggestion",
-      "yes": "Tell me about it.  I am a weapon, made to kill and destroy.  I'm stuck here, nothing left to kill or destroy.  Wish there was something I could do…",
-      "no": "Tell me about it.  I am a weapon, made to kill and destroy.  I am stuck here, hiding from something I can't kill or destroy.  Wish there was something I could do…"
+      "yes": "可不是吗。我是一件武器，用来杀人和毁灭。我被困在这里，没有什么可以杀死或摧毁的。真希望我能做点什么……",
+      "no": "可不是吗。我是一件武器，用来杀人和毁灭。我被困在这里，躲着我无法杀死或摧毁的东西。真希望我能做点什么……"
     },
-    "responses": [ { "text": "Must be tough…", "topic": "TALK_BIO_1" } ]
+    "responses": [
+      {
+        "text": "一定很艰难……",
+        "topic": "TALK_BIO_1"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_ROUTER",
-    "dynamic_line": "Router gets worried about stuff too easily.  He's like an overprotective parent.  Though I guess he sorta IS that, since he was the project lead for our batch.  Aside from dying of boredom, I think I'll be alright.",
+    "dynamic_line": "露特尔太容易担心事情。他就像个过度保护的家长。虽然我猜他是这样的，因为他是我们这批人的项目负责人。除了无聊得要死，我想我会没事的。",
     "responses": [
       {
-        "text": "Could be out there doing what we do best.  What do you say?  It's what we were made for.",
+        "text": "可以去做我们最擅长的事。你说呢?这是我们被造出来的目的。",
         "topic": "TALK_BIO_1_RECRUIT_BIO",
-        "condition": { "u_has_any_trait": [ "BIO_WEAPON_ALPHA", "BIO_WEAPON_BETA", "BIO_WEAPON_GAMMA", "BIO_WEAPON_DELTA" ] }
+        "condition": {
+          "u_has_any_trait": [
+            "BIO_WEAPON_ALPHA",
+            "BIO_WEAPON_BETA",
+            "BIO_WEAPON_GAMMA",
+            "BIO_WEAPON_DELTA"
+          ]
+        }
       },
       {
-        "text": "If a bionic reject like me can find a purpose out there, so can you.  How about it?",
+        "text": "如果像我这样的改造人能找到目标，你也能。怎么样？",
         "topic": "TALK_BIO_1_RECRUIT_FAILED",
-        "condition": { "u_has_any_trait": [ "BIO_WEAPON_FAILED" ] }
+        "condition": {
+          "u_has_any_trait": [
+            "BIO_WEAPON_FAILED"
+          ]
+        }
       },
       {
-        "text": "I wouldn't mind having one of the original models fighting alongside me.",
+        "text": "我不介意有个原型和我并肩作战。",
         "topic": "TALK_BIO_1_RECRUIT_SOLDIER",
-        "condition": { "u_has_any_trait": [ "SUPER_SOLDIER_MARKER" ] }
+        "condition": {
+          "u_has_any_trait": [
+            "SUPER_SOLDIER_MARKER"
+          ]
+        }
       },
       {
-        "text": "Why not join me?",
-        "condition": { "not": { "u_has_effect": "sigma_asked_recently" } },
-        "trial": { "type": "PERSUADE", "difficulty": 2 },
-        "success": { "topic": "TALK_BIO_1_RECRUIT_SUCCESS" },
-        "failure": { "topic": "TALK_BIO_1_RECRUIT_FAILURE", "effect": { "u_add_effect": "sigma_asked_recently", "duration": 1800 } }
+        "text": "你为什么不加入我？",
+        "condition": {
+          "not": {
+            "u_has_effect": "sigma_asked_recently"
+          }
+        },
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 2
+        },
+        "success": {
+          "topic": "TALK_BIO_1_RECRUIT_SUCCESS"
+        },
+        "failure": {
+          "topic": "TALK_BIO_1_RECRUIT_FAILURE",
+          "effect": {
+            "u_add_effect": "sigma_asked_recently",
+            "duration": 1800
+          }
+        }
       },
       {
-        "text": "Why not join me?",
-        "condition": { "u_has_effect": "sigma_asked_recently" },
+        "text": "你为什么不加入我？",
+        "condition": {
+          "u_has_effect": "sigma_asked_recently"
+        },
         "topic": "TALK_BIO_1_RECRUIT_DELAY"
       },
-      { "text": "I see.", "topic": "TALK_BIO_1" }
+      {
+        "text": "我懂了。",
+        "topic": "TALK_BIO_1"
+      }
     ]
   },
   {
@@ -135,43 +207,77 @@
     "id": "TALK_BIO_1_RECRUIT_BIO",
     "dynamic_line": {
       "u_is_wearing": "badge_bio_weapon",
-      "yes": "You know, I like the sound of that.  This is what we were made for.  Lead the way.",
-      "no": "Heh, badge or no badge, I can tell in your voice you're one of them.  Just like me.  Got that same fighting spirit too.  Alright, take the lead."
+      "yes": "你知道吗，我喜欢你这么说。这就是我们的使命。带路吧。",
+      "no": "嘿，不管有没有徽章，我都能从你的声音听出来你是他们中的一员。就像我一样。也有同样的斗志。好吧，带路吧。"
     },
-    "responses": [ { "text": "Let's go.", "topic": "TALK_DONE", "effect": "follow" } ]
+    "responses": [
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_RECRUIT_FAILED",
     "dynamic_line": {
       "u_is_wearing": "badge_bio_weapon",
-      "yes": "What, like going out there, killing zombies, protecting the innocent?  Is that what the sappy motivational speech is for?  Well, reject or not, I see that same fire in your eye that any bio-weapon has.  I think you've got a point.  Let's see where this goes.",
-      "no": "Eh?  Wait, I get it now.  So that's what you're on about.  I would've mistaken you for just some civilian cyberjunkie, but you're one of us.  And you just might have a point.  We'll see how it goes."
+      "yes": "什么，比如出去，杀丧尸，保护无辜？这就是愚蠢的动机演讲的目的吗？不管你拒绝与否，我在你眼中看到的火焰和任何生物武器都是一样的。我想你说得有道理。让我们看看这是怎么回事。",
+      "no": "嗯？等等，我现在明白了，原来这就是你要说的。我本来以为你只是个普通的生化迷，但你和我们一样。你也许有些主意，我们拭目以待。"
     },
-    "responses": [ { "text": "Let's go.", "topic": "TALK_DONE", "effect": "follow" } ]
+    "responses": [
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_RECRUIT_SOLDIER",
-    "dynamic_line": "One of the diluted batches, right?  No mutagenic package, probably recruited from the army kids assigned to guard the labs… still one of us, close enough at least.  You want the real deal, then so be it.  I'll follow your lead.",
-    "responses": [ { "text": "Let's go.", "topic": "TALK_DONE", "effect": "follow" } ]
+    "dynamic_line": "其中一个稀释批次之一，对吗？没有变异特征，可能是从军队里招募来的被派去守卫实验室的年轻人……还是我们中的一员，至少差不多。你想要真刀真枪的，那就这样吧。我会听你的。",
+    "responses": [
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_RECRUIT_SUCCESS",
-    "dynamic_line": "Sure, why not.  I have nothing better to do anyway, and if I'm lucky I can trust you not to get us both killed.",
-    "responses": [ { "text": "Let's go.", "topic": "TALK_DONE", "effect": "follow" } ]
+    "dynamic_line": "当然，为什么不呢。反正我也没别的事可做，我相信你不会害死我们俩如果运气好的话。",
+    "responses": [
+      {
+        "text": "一起走吧。",
+        "topic": "TALK_DONE",
+        "effect": "follow"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_RECRUIT_FAILURE",
-    "dynamic_line": "I'm not so sure that'd be the best way to put my skills to use…",
-    "responses": [ { "text": "…", "topic": "TALK_BIO_1" } ]
+    "dynamic_line": "我不确定这是否是发挥我技能的最佳方式……",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_BIO_1"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_BIO_1_RECRUIT_DELAY",
-    "dynamic_line": "You just asked me not that long ago.  I'd rather not deal with this at the moment.",
-    "responses": [ { "text": "…", "topic": "TALK_BIO_1" } ]
+    "dynamic_line": "你不久前才问过我。我现在不想处理这个问题。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_BIO_1"
+      }
+    ]
   }
 ]

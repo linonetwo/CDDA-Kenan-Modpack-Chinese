@@ -2,9 +2,13 @@
   {
     "id": "t4_elem_firewall",
     "type": "SPELL",
-    "name": { "str": "Fire Wall" },
-    "description": "Surrounds the foe inside a blazing wall of flames.\n* Creates fire fields outside the aoe range.\n\nThis is a <color_light_red>tier 4</color> spell.",
-    "valid_targets": [ "hostile" ],
+    "name": {
+      "str": "火焰之墙"
+    },
+    "description": "围绕在燃烧的火焰墙内的敌人。\n *在aoe范围外制造火场。\n\n这是一个<color_light_red>四级</color>法术。",
+    "valid_targets": [
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "base_energy_cost": 500,
@@ -21,7 +25,11 @@
     "field_id": "fd_firewall",
     "min_field_intensity": 1,
     "max_field_intensity": 1,
-    "flags": [ "SOMATIC", "VERBAL", "NO_LEGS" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS"
+    ],
     "base_casting_time": 250,
     "damage_type": "heat"
   }

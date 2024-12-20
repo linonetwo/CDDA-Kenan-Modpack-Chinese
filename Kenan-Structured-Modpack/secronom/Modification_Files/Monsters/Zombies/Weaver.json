@@ -3,16 +3,24 @@
     "//": "Support-type zed who assists allies by healing them.",
     "id": "mon_zombie_skittyweavy",
     "type": "MONSTER",
-    "name": { "str": "skittering weaver" },
-    "description": "A mutated creature, the size of a cat with hybrid appearance of a tick and a beetle. Its forelimbs form a pair of oddly curved needles, tipped with a vented gap and saliva-drooling mandibles.",
+    "name": {
+      "str": "迅捷织工"
+    },
+    "description": "一种变异的生物，大小像猫，外表像虱子和甲虫的杂交体。它的前肢形成了一对奇怪的弯曲针头，针尖上有一个开口，下颚流着口水。",
     "default_faction": "zombie_weaver",
-    "species": [ "ZOMBIE", "SECROZED_1", "INSECT" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "INSECT"
+    ],
     "volume": "4000 ml",
     "weight": "4000 g",
     "harvest": "arachnid_tainted",
     "hp": 30,
     "speed": 110,
-    "material": [ "iflesh" ],
+    "material": [
+      "iflesh"
+    ],
     "symbol": "⚚",
     "color": "light_green",
     "attack_cost": 225,
@@ -22,16 +30,26 @@
     "melee_dice": 1,
     "melee_dice_sides": 1,
     "dodge": 5,
-    "armor": { "bash": 1, "cut": 4, "bullet": 2, "stab": 2 },
+    "armor": {
+      "bash": 1,
+      "cut": 4,
+      "bullet": 2,
+      "stab": 2
+    },
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_skittyweavy_target" },
+        "spell_data": {
+          "id": "mon_zombie_skittyweavy_target"
+        },
         "cooldown": 5,
-        "monster_message": "<color_yellow>%1$s injects %3$s!</color>"
+        "monster_message": "<color_yellow>%1$s注射了%3$s！</color>"
       }
     ],
-    "upgrades": { "half_life": 12, "into_group": "GROUP_SKITTYWEAVY_UPGRADE" },
+    "upgrades": {
+      "half_life": 12,
+      "into_group": "GROUP_SKITTYWEAVY_UPGRADE"
+    },
     "flags": [
       "SEES",
       "HEARS",
@@ -49,31 +67,43 @@
     "id": "mon_zombie_skittyweavy_idle",
     "copy-from": "mon_zombie_skittyweavy",
     "type": "MONSTER",
-    "name": { "str": "skittering weaver" },
-    "description": "A mutated creature, the size of a cat with hybrid appearance of a tick and a beetle. Its forelimbs form a pair of oddly curved needles, tipped with a vented gap and saliva-drooling mandibles.",
+    "name": {
+      "str": "迅捷织工"
+    },
+    "description": "一种变异的生物，大小像猫，外表像虱子和甲虫的杂交体。它的前肢形成了一对奇怪的弯曲针头，针尖上有一个开口，下颚流着口水。",
     "default_faction": "zombie",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_skittyweavy_idle_target" },
+        "spell_data": {
+          "id": "mon_zombie_skittyweavy_idle_target"
+        },
         "cooldown": 1,
-        "monster_message": "<color_dark_gray>%1$s skitters.</color>"
+        "monster_message": "<color_dark_gray>%1$s跳了起来。</color>"
       }
     ]
   },
   {
     "id": "mon_zombie_skittyweavy_repleshy",
     "type": "MONSTER",
-    "name": { "str": "replenishing weaver" },
-    "description": "A vile insect, protected beneath a membranous shelling. Shares similar traits to its predecessor, except the fact that it has grown larger in size.",
+    "name": {
+      "str": "重补织工"
+    },
+    "description": "一种卑鄙的昆虫，被膜壳保护着。它和它的前身有相似的特点，只是它的体积变大了。",
     "default_faction": "zombie_weaver",
-    "species": [ "ZOMBIE", "SECROZED_1", "INSECT" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "INSECT"
+    ],
     "volume": "12000 ml",
     "weight": "8000 g",
     "harvest": "arachnid_tainted",
     "hp": 75,
     "speed": 90,
-    "material": [ "iflesh" ],
+    "material": [
+      "iflesh"
+    ],
     "symbol": "⚚",
     "color": "green",
     "aggression": 100,
@@ -83,13 +113,20 @@
     "melee_dice": 1,
     "melee_dice_sides": 1,
     "dodge": 4,
-    "armor": { "bash": 5, "cut": 15, "bullet": 7, "stab": 7 },
+    "armor": {
+      "bash": 5,
+      "cut": 15,
+      "bullet": 7,
+      "stab": 7
+    },
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_skittyweavy_repleshy_target" },
+        "spell_data": {
+          "id": "mon_zombie_skittyweavy_repleshy_target"
+        },
         "cooldown": 6,
-        "monster_message": "<color_yellow>%1$s injects %3$s!</color>"
+        "monster_message": "<color_yellow>%1$s注射了%3$s！</color>"
       }
     ],
     "flags": [
@@ -109,31 +146,43 @@
     "id": "mon_zombie_skittyweavy_repleshy_idle",
     "copy-from": "mon_zombie_skittyweavy_repleshy",
     "type": "MONSTER",
-    "name": { "str": "replenishing weaver" },
-    "description": "A vile insect, protected beneath a membranous shelling. Shares similar traits to its predecessor, except the fact that it has grown larger in size.",
+    "name": {
+      "str": "重补织工"
+    },
+    "description": "一种卑鄙的昆虫，被膜壳保护着。它和它的前身有相似的特点，只是它的体积变大了。",
     "default_faction": "zombie",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_skittyweavy_repleshy_idle_target" },
+        "spell_data": {
+          "id": "mon_zombie_skittyweavy_repleshy_idle_target"
+        },
         "cooldown": 1,
-        "monster_message": "<color_dark_gray>%1$s skitters.</color>"
+        "monster_message": "<color_dark_gray>%1$s跳了起来。</color>"
       }
     ]
   },
   {
     "id": "mon_zombie_skittyweavy_sickly",
     "type": "MONSTER",
-    "name": { "str": "plague weaver" },
-    "description": "A heavily mutated insect, with several spindly limbs stretching outwards from its membranous beetle shell. Deformed in every angle, a distinctive proboscis drips an intoxicating substance.",
+    "name": {
+      "str": "扭曲织工"
+    },
+    "description": "甲壳虫一种变异严重的昆虫，有几条细长的四肢从其膜状甲壳虫壳向外伸展。在每个角度都变形了，一个独特的长鼻滴下了一种令人陶醉的物质。",
     "default_faction": "zombie_weaver",
-    "species": [ "ZOMBIE", "SECROZED_1", "INSECT" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_1",
+      "INSECT"
+    ],
     "volume": "10000 ml",
     "weight": "7200 g",
     "harvest": "arachnid_tainted",
     "hp": 55,
     "speed": 120,
-    "material": [ "iflesh" ],
+    "material": [
+      "iflesh"
+    ],
     "symbol": "⚚",
     "color": "red",
     "aggression": 100,
@@ -143,13 +192,20 @@
     "melee_dice": 1,
     "melee_dice_sides": 1,
     "dodge": 5,
-    "armor": { "bash": 3, "cut": 12, "bullet": 8, "stab": 5 },
+    "armor": {
+      "bash": 3,
+      "cut": 12,
+      "bullet": 8,
+      "stab": 5
+    },
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_skittyweavy_sickly_target" },
+        "spell_data": {
+          "id": "mon_zombie_skittyweavy_sickly_target"
+        },
         "cooldown": 6,
-        "monster_message": "<color_yellow>%1$s injects %3$s!</color>"
+        "monster_message": "<color_yellow>%1$s注射了%3$s！</color>"
       }
     ],
     "flags": [
@@ -169,15 +225,19 @@
     "id": "mon_zombie_skittyweavy_sickly_idle",
     "copy-from": "mon_zombie_skittyweavy_sickly",
     "type": "MONSTER",
-    "name": { "str": "plague weaver" },
-    "description": "A heavily mutated insect, with several spindly limbs stretching outwards from its membranous beetle shell. Deformed in every angle, a distinctive proboscis drips an intoxicating substance.",
+    "name": {
+      "str": "扭曲织工"
+    },
+    "description": "甲壳虫一种变异严重的昆虫，有几条细长的四肢从其膜状甲壳虫壳向外伸展。在每个角度都变形了，一个独特的长鼻滴下了一种令人陶醉的物质。",
     "default_faction": "zombie",
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_skittyweavy_sickly_idle_target" },
+        "spell_data": {
+          "id": "mon_zombie_skittyweavy_sickly_idle_target"
+        },
         "cooldown": 1,
-        "monster_message": "<color_dark_gray>%1$s skitters.</color>"
+        "monster_message": "<color_dark_gray>%1$s跳了起来。</color>"
       }
     ]
   }

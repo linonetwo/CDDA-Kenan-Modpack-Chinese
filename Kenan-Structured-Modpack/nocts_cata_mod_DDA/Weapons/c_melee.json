@@ -2,10 +2,16 @@
   {
     "type": "TOOL",
     "id": "unbio_bladed_weapon",
-    "name": { "str": "repurposed monomolecular knife" },
+    "name": {
+      "str": "改装单分子刀"
+    },
     "category": "weapons",
-    "weapon_category": [ "KNIVES", "BIONIC_WEAPONRY", "BIONIC_SWORDS" ],
-    "description": "A foot-long knife made from high-tech alloy and edged with bonded nanocrystals, salvaged from a CBM.  A welded metal handle and handguard allow you to hold it without slicing your hand open.",
+    "weapon_category": [
+      "KNIVES",
+      "BIONIC_WEAPONRY",
+      "BIONIC_SWORDS"
+    ],
+    "description": "使用尖端科技打造的约一英尺长的合金短剑，号称只有一个分子宽的纳米晶体组成了它的锋刃。改装自CBM。焊接的金属手柄和护手可以让你握住它而不会切开你的手。",
     "weight": "250 g",
     "volume": "1 L",
     "longest_side": "30 cm",
@@ -14,26 +20,69 @@
     "color": "dark_gray",
     "symbol": "{",
     "looks_like": "bio_blade_weapon",
-    "material": [ "superalloy", "steel" ],
-    "techniques": [ "WBLOCK_2" ],
-    "melee_damage": { "bash": 4, "cut": 32 },
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "techniques": [
+      "WBLOCK_2"
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "cut": 32
+    },
     "to_hit": 2,
-    "flags": [ "UNBREAKABLE_MELEE", "SHEATH_KNIFE" ],
-    "qualities": [ [ "CUT", 2 ], [ "BUTCHER", 22 ] ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "SHEATH_KNIFE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        2
+      ],
+      [
+        "BUTCHER",
+        22
+      ]
+    ],
     "gunmod_data": {
       "location": "underbarrel",
-      "mod_targets": [ "shotgun", "rifle", "smg", "crossbow" ],
-      "mode_modifier": [ [ "REACH", "bayonet", 2, [ "MELEE", "REACH_ATTACK" ] ] ],
+      "mod_targets": [
+        "shotgun",
+        "rifle",
+        "smg",
+        "crossbow"
+      ],
+      "mode_modifier": [
+        [
+          "REACH",
+          "bayonet",
+          2,
+          [
+            "MELEE",
+            "REACH_ATTACK"
+          ]
+        ]
+      ],
       "install_time": "20 m"
     }
   },
   {
     "type": "TOOL",
     "id": "unbio_sword_weapon",
-    "name": { "str": "repurposed monomolecular sword" },
+    "name": {
+      "str": "改装单分子剑"
+    },
     "category": "weapons",
-    "weapon_category": [ "MEDIUM_SWORDS", "MEDIEVAL_SWORDS", "FENCING_WEAPONRY", "BIONIC_WEAPONRY", "BIONIC_SWORDS" ],
-    "description": "A yard-long sword made from high-tech alloy and edged with bonded nanocrystals, salvaged from a CBM.  A welded metal handle and handguard allow you to hold it without slicing your hand open.",
+    "weapon_category": [
+      "MEDIUM_SWORDS",
+      "MEDIEVAL_SWORDS",
+      "FENCING_WEAPONRY",
+      "BIONIC_WEAPONRY",
+      "BIONIC_SWORDS"
+    ],
+    "description": "使用尖端科技打造的约一码长的合金剑，号称只有一个分子宽的纳米晶体组成了它的锋刃。改装自CBM。焊接的金属手柄和护手可以让你握住它而不会切开你的手。",
     "weight": "450 g",
     "volume": "2500 ml",
     "longest_side": "91 cm",
@@ -42,16 +91,52 @@
     "color": "dark_gray",
     "symbol": "{",
     "looks_like": "bio_sword_weapon",
-    "material": [ "superalloy", "steel" ],
-    "techniques": [ "RAPID", "WBLOCK_2" ],
-    "melee_damage": { "bash": 4, "cut": 44 },
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "techniques": [
+      "RAPID",
+      "WBLOCK_2"
+    ],
+    "melee_damage": {
+      "bash": 4,
+      "cut": 44
+    },
     "to_hit": 2,
-    "flags": [ "UNBREAKABLE_MELEE", "SHEATH_SWORD" ],
-    "qualities": [ [ "CUT", 2 ], [ "BUTCHER", 20 ] ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "SHEATH_SWORD"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        2
+      ],
+      [
+        "BUTCHER",
+        20
+      ]
+    ],
     "gunmod_data": {
       "location": "underbarrel",
-      "mod_targets": [ "shotgun", "rifle", "smg", "crossbow" ],
-      "mode_modifier": [ [ "REACH", "bayonet", 2, [ "MELEE", "REACH_ATTACK" ] ] ],
+      "mod_targets": [
+        "shotgun",
+        "rifle",
+        "smg",
+        "crossbow"
+      ],
+      "mode_modifier": [
+        [
+          "REACH",
+          "bayonet",
+          2,
+          [
+            "MELEE",
+            "REACH_ATTACK"
+          ]
+        ]
+      ],
       "install_time": "20 m"
     }
   },
@@ -59,9 +144,14 @@
     "type": "TOOL",
     "id": "unbio_claws_weapon",
     "category": "weapons",
-    "weapon_category": [ "CLAWS", "BIONIC_WEAPONRY" ],
-    "name": { "str_sp": "repurposed bionic claws" },
-    "description": "Short and sharp claws made from a high-tech metal welded to metal knuckles, salvaged from a CBM.  Lightweight and fast, wielding them feels as if you were bare-handed.",
+    "weapon_category": [
+      "CLAWS",
+      "BIONIC_WEAPONRY"
+    ],
+    "name": {
+      "str_sp": "改装合金爪"
+    },
+    "description": "使用尖端科技打造的短而锋利的合金爪，焊接在金属指虎上。改装自CBM。轻巧而快速，挥舞它们的感觉就像赤手空拳。",
     "weight": "200 g",
     "volume": "750 ml",
     "longest_side": "10 cm",
@@ -70,18 +160,41 @@
     "color": "light_gray",
     "symbol": "{",
     "looks_like": "bio_claws_weapon",
-    "material": [ "superalloy", "steel" ],
-    "melee_damage": { "bash": 12, "stab": 14 },
-    "flags": [ "UNBREAKABLE_MELEE" ],
-    "qualities": [ [ "CUT", 2 ], [ "BUTCHER", 12 ] ]
+    "material": [
+      "superalloy",
+      "steel"
+    ],
+    "melee_damage": {
+      "bash": 12,
+      "stab": 14
+    },
+    "flags": [
+      "UNBREAKABLE_MELEE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        2
+      ],
+      [
+        "BUTCHER",
+        12
+      ]
+    ]
   },
   {
     "type": "TOOL",
     "id": "flesh_knife",
     "category": "weapons",
-    "weapon_category": [ "KNIVES", "BIONIC_WEAPONRY", "BIONIC_SWORDS" ],
-    "name": { "str": "biological blade" },
-    "description": "A foot-long knife made from metal enclosed with flesh and bone.  Its blade consists of razor sharp saw-like protrusions, with a bone handle that fits well in the hand.  Holding it brings strange whispers to the back of your mind, as though it has a will of its own.",
+    "weapon_category": [
+      "KNIVES",
+      "BIONIC_WEAPONRY",
+      "BIONIC_SWORDS"
+    ],
+    "name": {
+      "str": "生物刀刃"
+    },
+    "description": "用金属制成的一英尺长的刀，内有肉和骨头。它的刀片由剃刀般锋利的锯齿状突起组成，骨柄很合手。握着它会在你的脑海里带来奇怪的耳语，仿佛它有自己的意志。",
     "weight": "220 g",
     "volume": "500 ml",
     "longest_side": "30 cm",
@@ -90,24 +203,51 @@
     "color": "red",
     "symbol": "/",
     "looks_like": "flesh_blade",
-    "material": [ "flesh", "superalloy" ],
-    "techniques": [ "WBLOCK_1", "PRECISE", "RAPID" ],
-    "melee_damage": { "bash": 2, "cut": 18 },
+    "material": [
+      "flesh",
+      "superalloy"
+    ],
+    "techniques": [
+      "WBLOCK_1",
+      "PRECISE",
+      "RAPID"
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "cut": 18
+    },
     "to_hit": 3,
-    "flags": [ "UNBREAKABLE_MELEE", "MAGIC_FOCUS", "SHEATH_KNIFE" ],
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 10 ] ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "MAGIC_FOCUS",
+      "SHEATH_KNIFE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        10
+      ]
+    ],
     "relic_data": {
       "passive_effects": [
         {
           "has": "WIELD",
           "condition": "ALWAYS",
-          "mutations": [ "SCHIZOPHRENIC", "ROT1", "PRED1" ],
+          "mutations": [
+            "SCHIZOPHRENIC",
+            "ROT1",
+            "PRED1"
+          ],
           "hit_you_effect": [
             {
               "id": "c_lifedrain_1",
               "once_in": 10,
-              "message": "A strange mist covers %2$s in the wake of your swing.",
-              "npc_message": "A strange mist covers %2$s as %1$s swings at them."
+              "message": "在你挥动之后，一股奇怪的雾气笼罩了%2$s。",
+              "npc_message": "当%1$s向%2$s挥击时，一团奇怪的薄雾笼罩了他。"
             }
           ]
         }
@@ -118,9 +258,17 @@
     "type": "TOOL",
     "id": "flesh_blade",
     "category": "weapons",
-    "name": { "str": "biological sword" },
-    "weapon_category": [ "MEDIUM_SWORDS", "MEDIEVAL_SWORDS", "FENCING_WEAPONRY", "BIONIC_WEAPONRY", "BIONIC_SWORDS" ],
-    "description": "A yard-long sword of metal, enclosed in flesh and bone, including a protective hilt framed with tough sinews.  Grown from a smaller sample, holding it brings a strange sense of power beyond what it used to.  It feels almost like a living being with a mind of its own, one that lusts for blood.",
+    "name": {
+      "str": "生物长剑"
+    },
+    "weapon_category": [
+      "MEDIUM_SWORDS",
+      "MEDIEVAL_SWORDS",
+      "FENCING_WEAPONRY",
+      "BIONIC_WEAPONRY",
+      "BIONIC_SWORDS"
+    ],
+    "description": "用金属制成的一码长的剑，内有肉和骨头，包括一个用坚韧的筋架起来的保护柄。从一个较小的样本中生长出来，拿着它带来了一种超越过去的奇怪的力量感。它感觉就像一个有着自己思想的生物，一个渴望鲜血的生物。",
     "weight": "680 g",
     "volume": "1500 ml",
     "longest_side": "91 cm",
@@ -129,37 +277,82 @@
     "color": "red",
     "symbol": "/",
     "looks_like": "bio_blade_weapon",
-    "material": [ "flesh", "superalloy" ],
-    "techniques": [ "WBLOCK_2", "PRECISE", "RAPID" ],
-    "melee_damage": { "bash": 2, "cut": 25 },
+    "material": [
+      "flesh",
+      "superalloy"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "PRECISE",
+      "RAPID"
+    ],
+    "melee_damage": {
+      "bash": 2,
+      "cut": 25
+    },
     "to_hit": 2,
-    "flags": [ "UNBREAKABLE_MELEE", "MAGIC_FOCUS", "SHEATH_SWORD" ],
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", 10 ] ],
+    "flags": [
+      "UNBREAKABLE_MELEE",
+      "MAGIC_FOCUS",
+      "SHEATH_SWORD"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        10
+      ]
+    ],
     "relic_data": {
       "passive_effects": [
         {
           "has": "WIELD",
           "condition": "ALWAYS",
           "values": [
-            { "value": "STRENGTH", "add": 2 },
-            { "value": "DEXTERITY", "add": 2 },
-            { "value": "INTELLIGENCE", "add": -2 },
-            { "value": "PERCEPTION", "add": -2 },
-            { "value": "SPEED", "add": 20 }
+            {
+              "value": "STRENGTH",
+              "add": 2
+            },
+            {
+              "value": "DEXTERITY",
+              "add": 2
+            },
+            {
+              "value": "INTELLIGENCE",
+              "add": -2
+            },
+            {
+              "value": "PERCEPTION",
+              "add": -2
+            },
+            {
+              "value": "SPEED",
+              "add": 20
+            }
           ],
-          "mutations": [ "SCHIZOPHRENIC", "ROT3", "KILLER", "PRED2", "HUNGER2", "CHAOTIC" ],
+          "mutations": [
+            "SCHIZOPHRENIC",
+            "ROT3",
+            "KILLER",
+            "PRED2",
+            "HUNGER2",
+            "CHAOTIC"
+          ],
           "hit_you_effect": [
             {
               "id": "c_lifedrain_1",
               "once_in": 3,
-              "message": "A strange mist covers %2$s in the wake of your swing.",
-              "npc_message": "A strange mist covers %2$s as %1$s swings at them."
+              "message": "在你挥动之后，一股奇怪的雾气笼罩了%2$s。",
+              "npc_message": "当%1$s向%2$s挥击时，一团奇怪的薄雾笼罩了他。"
             },
             {
               "id": "c_flesh_hit_effect",
               "once_in": 3,
-              "message": "A surge of energy courses from your weapon, empowering you further!",
-              "npc_message": "A jolt of strange energy envelops %1$s!"
+              "message": "一股能量从你的武器涌出，进一步增强了你的力量！",
+              "npc_message": "一股奇怪的能量包围了%1$s！"
             }
           ]
         }
@@ -172,40 +365,91 @@
     "looks_like": "unbio_blade_weapon",
     "symbol": ";",
     "color": "green",
-    "weapon_category": [ "CLAWS" ],
-    "name": { "str": "salvaged claw blade" },
-    "description": "A mesh of steel and alien resin gripped in the palm, from which juts a razor-sharp eighteen-inch blade.  The exotic green glass-like material fades into a hardened edge of some off-white synthetic material.  Wielded similar to tiger claws, with its single blade between two fingers.  Salvaged using pre-cataclysm research into other living weaponry, it now works as well for dissection (or vivisection) in human hands as it once did in the clutches of the mi-go.",
+    "weapon_category": [
+      "CLAWS"
+    ],
+    "name": {
+      "str": "改装米·戈爪刃"
+    },
+    "description": "掌心握着一团由钢铁和异界树脂组成的网状物，从里面突出一把18英寸长的锋利刀片。 中心是奇异的绿色玻璃状材料，过渡到边缘时，变成了一些硬质灰白色合成材料。其挥舞起来类似于虎爪，在每两个手指之间都有锋利的刀刃。 它是利用大灾变前对其他生物武器的研究改造成的，现在它在人类手中用于解剖，或活体解剖的效果和它曾经在米·戈手中的效果一样出色。",
     "category": "other",
-    "material": [ "alien_resin", "flesh", "steel" ],
+    "material": [
+      "alien_resin",
+      "flesh",
+      "steel"
+    ],
     "weight": "750 g",
     "longest_side": "45 cm",
     "volume": "1 L",
     "price_postapoc": "15 USD",
     "to_hit": 1,
-    "melee_damage": { "bash": 2, "cut": 20 },
-    "flags": [ "DURABLE_MELEE", "SHEATH_KNIFE" ],
-    "qualities": [ [ "CUT", 2 ], [ "CUT_FINE", 4 ], [ "BUTCHER", 25 ] ]
+    "melee_damage": {
+      "bash": 2,
+      "cut": 20
+    },
+    "flags": [
+      "DURABLE_MELEE",
+      "SHEATH_KNIFE"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        2
+      ],
+      [
+        "CUT_FINE",
+        4
+      ],
+      [
+        "BUTCHER",
+        25
+      ]
+    ]
   },
   {
     "id": "greatsword_makeshift",
     "looks_like": "zweihander",
     "type": "GENERIC",
     "category": "weapons",
-    "weapon_category": [ "MEDIEVAL_SWORDS", "GREAT_SWORDS" ],
-    "name": { "str": "makeshift greatsword" },
-    "description": "A heavy blade made from part of a vehicle frame, sawed down to a single long piece of steel that's been bent to shape and sharpened.  While crude and too bulky to fit in a scabbard, it packs one hell of a punch, and offers decent reach.",
+    "weapon_category": [
+      "MEDIEVAL_SWORDS",
+      "GREAT_SWORDS"
+    ],
+    "name": {
+      "str": "自制巨剑"
+    },
+    "description": "一个沉重的刀刃，由车架的一部分锯成一根长钢，然后弯曲成型并磨尖制作而成。虽然粗糙又笨重而且无法装进剑鞘，但它能造成大量伤害，而且攻击范围很广。",
     "weight": "5500 g",
     "volume": "4 L",
     "longest_side": "213 cm",
     "price": "55 USD",
     "price_postapoc": "20 USD",
     "to_hit": -1,
-    "melee_damage": { "bash": 20, "cut": 45 },
+    "melee_damage": {
+      "bash": 20,
+      "cut": 45
+    },
     "material": "steel",
     "symbol": "/",
     "color": "light_gray",
-    "techniques": [ "WBLOCK_1", "WIDE", "BRUTAL" ],
-    "qualities": [ [ "CUT", 1 ], [ "BUTCHER", -30 ] ],
-    "flags": [ "REACH_ATTACK", "ALWAYS_TWOHAND" ]
+    "techniques": [
+      "WBLOCK_1",
+      "WIDE",
+      "BRUTAL"
+    ],
+    "qualities": [
+      [
+        "CUT",
+        1
+      ],
+      [
+        "BUTCHER",
+        -30
+      ]
+    ],
+    "flags": [
+      "REACH_ATTACK",
+      "ALWAYS_TWOHAND"
+    ]
   }
 ]

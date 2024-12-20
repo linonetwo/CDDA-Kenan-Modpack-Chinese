@@ -3,7 +3,9 @@
     "id": "gloople_frame",
     "copy-from": "frame_abstract",
     "type": "vehicle_part",
-    "name": { "str": "gel framework" },
+    "name": {
+      "str": "凝胶车架"
+    },
     "item": "gloople",
     "location": "structure",
     "color": "light_green",
@@ -11,16 +13,35 @@
     "durability": 250,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "glooplegrow" } ],
-    "description": "A living blob, shaped to provide attachment points for other blobs.  Other vehicle components and blobs can be mounted on it.  If all the frames and components of a vehicle are foldable or made from blobs, the vehicle can be folding into a small package and picked up as a normal item.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "MOUNTABLE", "INITIAL_PART" ]
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一只活的变形怪变成车辆框架，其他变形怪和载具部件能够安装在它上面。如果构成载具的所有框架和部件都可折叠（变形怪可以），那么这辆载具能够被打包折叠并可像普通物品一样被拾取带走。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "MOUNTABLE",
+      "INITIAL_PART"
+    ]
   },
   {
     "id": "gray_frame",
     "copy-from": "frame_abstract",
     "type": "vehicle_part",
-    "name": { "str": "gray frame" },
+    "name": {
+      "str": "灰色车架"
+    },
     "item": "gray",
     "location": "structure",
     "color": "light_gray",
@@ -28,16 +49,35 @@
     "durability": 1000,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "graygrow" } ],
-    "description": "A living blob, shaped to provide attachment points for other blobs.  Other vehicle components and blobs can be mounted on it.  If all the frames and components of a vehicle are foldable or made from blobs, the vehicle can be folding into a small package and picked up as a normal item.",
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "flags": [ "MOUNTABLE", "INITIAL_PART" ]
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ],
+    "description": "一只活的变形怪变成车辆框架，其他变形怪和载具部件能够安装在它上面。如果构成载具的所有框架和部件都可折叠（变形怪可以），那么这辆载具能够被打包折叠并可像普通物品一样被拾取带走。",
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "MOUNTABLE",
+      "INITIAL_PART"
+    ]
   },
   {
     "id": "oozle_frame",
     "copy-from": "frame_abstract",
     "type": "vehicle_part",
-    "name": { "str": "ooze chassis" },
+    "name": {
+      "str": "软泥底盘"
+    },
     "item": "oozle",
     "location": "structure",
     "color": "green",
@@ -45,9 +85,26 @@
     "durability": 500,
     "damage_modifier": 10,
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "oozlegrow" } ],
-    "requirements": { "repair": { "time": "5 m", "using": [ [ "blobrep", 1 ] ] } },
-    "description": "A living blob, shaped to provide attachment points for other blobs.  Other vehicle components and blobs can be mounted on it.  If all the frames and components of a vehicle are foldable or made from blobs, the vehicle can be folding into a small package and picked up as a normal item.",
-    "flags": [ "MOUNTABLE", "INITIAL_PART" ]
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ],
+    "requirements": {
+      "repair": {
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
+    },
+    "description": "一只活的变形怪变成车辆框架，其他变形怪和载具部件能够安装在它上面。如果构成载具的所有框架和部件都可折叠（变形怪可以），那么这辆载具能够被打包折叠并可像普通物品一样被拾取带走。",
+    "flags": [
+      "MOUNTABLE",
+      "INITIAL_PART"
+    ]
   }
 ]

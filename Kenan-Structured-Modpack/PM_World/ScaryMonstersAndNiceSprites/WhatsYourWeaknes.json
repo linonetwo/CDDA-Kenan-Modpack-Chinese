@@ -80,7 +80,6 @@
         "coverage": 2,
         "crit_mult": { "all": 1.25 },
         "difficulty": { "ranged": 7, "melee": 6 },
-        "condition": { "npc_has_any_effect": [ "staggered" ] },
         "effects": [
           { "effect": "blind", "duration": [ 1, 2 ], "chance": 60, "message": "The %s is blinded!", "damage_required": [ 1, 40 ] },
           {
@@ -106,7 +105,6 @@
         "coverage_mult": { "point": 1.45, "broad": 0.7 },
         "crit_mult": { "all": 1.35 },
         "difficulty": { "ranged": 7, "melee": 5 },
-        "condition": { "npc_has_any_effect": [ "staggered" ] },
         "effects": [
           { "effect": "blind", "duration": [ 1, 2 ], "chance": 60, "message": "The %s is blinded!", "damage_required": [ 1, 40 ] },
           {
@@ -171,7 +169,6 @@
         "coverage_mult": { "point": 1.45, "broad": 0.3 },
         "crit_mult": { "all": 1.55 },
         "difficulty": { "ranged": 7, "melee": 5 },
-        "condition": { "npc_has_any_effect": [ "downed" ] },
         "effects": [
           { "effect": "blind", "duration": [ 1, 2 ], "chance": 30, "message": "The %s is blinded!", "damage_required": [ 1, 40 ] },
           {

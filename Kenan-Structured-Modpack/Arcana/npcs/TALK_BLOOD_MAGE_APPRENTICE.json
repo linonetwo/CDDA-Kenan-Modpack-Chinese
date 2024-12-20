@@ -2,39 +2,98 @@
   {
     "type": "talk_topic",
     "id": "TALK_BLOOD_MAGE_APPRENTICE",
-    "dynamic_line": "What the hell?  What are you doing here?",
+    "dynamic_line": "我勒个去？你在这里干什么？",
     "responses": [
       {
-        "text": "\"The moonlit sky anoints the worthy, who seek The Path home.\"",
-        "condition": { "compare_string": [ "yes", { "u_val": "horace_password_known" } ] },
+        "text": "\"月光照耀着寻找回家之路的人们。\"",
+        "condition": {
+          "u_has_var": "horace_password_known",
+          "type": "flag",
+          "context": "shrike",
+          "value": "yes"
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD"
       },
       {
-        "text": "Who are you?",
-        "condition": { "not": { "u_has_any_trait": [ "PROF_CLEANSINGFLAME", "PROF_CLEANSINGFLAME2", "PROF_SANGUINE" ] } },
+        "text": "你是谁？",
+        "condition": {
+          "not": {
+            "u_has_any_trait": [
+              "PROF_CLEANSINGFLAME",
+              "PROF_CLEANSINGFLAME2",
+              "PROF_SANGUINE"
+            ]
+          }
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_GET_OUT"
       },
       {
-        "text": "What can you tell me about this place?",
-        "condition": { "not": { "u_has_any_trait": [ "PROF_CLEANSINGFLAME", "PROF_CLEANSINGFLAME2", "PROF_SANGUINE" ] } },
+        "text": "你能告诉我这是个什么地方？",
+        "condition": {
+          "not": {
+            "u_has_any_trait": [
+              "PROF_CLEANSINGFLAME",
+              "PROF_CLEANSINGFLAME2",
+              "PROF_SANGUINE"
+            ]
+          }
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_GET_OUT"
       },
       {
-        "text": "You are not alone in following The Path.",
-        "condition": { "u_has_trait": "PROF_SANGUINE" },
+        "text": "走这条路的并不是你一个人。",
+        "condition": {
+          "u_has_trait": "PROF_SANGUINE"
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_SANGUINE"
       },
       {
-        "text": "Ecce, sanguinem magum!  Impium profligatum!",
-        "condition": { "u_has_any_trait": [ "PROF_CLEANSINGFLAME", "PROF_CLEANSINGFLAME2" ] },
-        "trial": { "type": "INTIMIDATE", "difficulty": 75 },
-        "success": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_INTIMIDATE", "opinion": { "anger": 1, "fear": 2 } },
-        "failure": { "topic": "TALK_DONE", "opinion": { "anger": 1 }, "effect": [ { "u_faction_rep": -30 }, "insult_combat" ] }
+        "text": "幼儿保育和教育，圣洁的玛格姆！挥金如土！",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CLEANSINGFLAME",
+            "PROF_CLEANSINGFLAME2"
+          ]
+        },
+        "trial": {
+          "type": "INTIMIDATE",
+          "difficulty": 75
+        },
+        "success": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_INTIMIDATE",
+          "opinion": {
+            "anger": 1,
+            "fear": 2
+          }
+        },
+        "failure": {
+          "topic": "TALK_DONE",
+          "opinion": {
+            "anger": 1
+          },
+          "effect": [
+            {
+              "u_faction_rep": -30
+            },
+            "insult_combat"
+          ]
+        }
       },
-      { "text": "[ATTACK] I'm here to kill you.", "effect": "insult_combat", "topic": "TALK_DONE" },
       {
-        "text": "Er, I'll just be going.",
-        "condition": { "not": { "u_has_any_trait": [ "PROF_CLEANSINGFLAME", "PROF_CLEANSINGFLAME2" ] } },
+        "text": "[攻击]我是来杀你的。",
+        "effect": "insult_combat",
+        "topic": "TALK_DONE"
+      },
+      {
+        "text": "呃，我要走了。",
+        "condition": {
+          "not": {
+            "u_has_any_trait": [
+              "PROF_CLEANSINGFLAME",
+              "PROF_CLEANSINGFLAME2"
+            ]
+          }
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_NICE_TRY"
       }
     ]
@@ -44,49 +103,69 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_trait": "THRESH_DRAGONBLOOD",
-      "yes": "Oh!  Sorry, didn't recognize you at fi- wait a minute…",
-      "no": "Eh?  How did you…"
+      "yes": "哦！抱歉，我刚没认出你——等一下…",
+      "no": "呃？你是怎么…"
     },
     "responses": [
       {
-        "text": "A former enemy taught me this secret.  We need not be enemies either.",
-        "condition": { "u_has_any_trait": [ "PROF_CLEANSINGFLAME", "PROF_CLEANSINGFLAME2" ] },
+        "text": "一个以前的敌人教会了我这个秘密。我们也不必成为敌人。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CLEANSINGFLAME",
+            "PROF_CLEANSINGFLAME2"
+          ]
+        },
         "switch": true,
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_FLAME"
       },
       {
-        "text": "There are many followers of The Path who still live.",
-        "condition": { "u_has_trait": "PROF_SANGUINE" },
+        "text": "《正道》的许多追随者仍然活着。",
+        "condition": {
+          "u_has_trait": "PROF_SANGUINE"
+        },
         "switch": true,
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_SANGUINE"
       },
       {
-        "text": "We are not enemies.  Some of your own have joined us.",
+        "text": "我们不是敌人。你们中的一些人加入了我们。",
         "switch": true,
         "default": true,
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_NORMAL"
       },
-      { "text": "[ATTACK] …", "topic": "TALK_DONE", "effect": "player_leaving" }
+      {
+        "text": "[攻击]…",
+        "topic": "TALK_DONE",
+        "effect": "player_leaving"
+      }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_FLAME",
     "type": "talk_topic",
-    "dynamic_line": "What, you expect us to just give up and join you, hunter?  When The Path has prepared us to survive in this ruined world, why would one of the shrikes defect to your cause?",
+    "dynamic_line": "什么，你希望我们放弃加入你吗，亨特？当这条路为我们在这个毁灭的世界中生存做好准备时，为什么有一只伯劳会背叛你的事业？",
     "responses": [
       {
-        "text": "And why would a hunter complete the Dragonblood Sacrament?  We must all do what is necessary for humanity to survive.",
-        "condition": { "u_has_trait": "THRESH_DRAGONBLOOD" },
+        "text": "为什么猎人要完成龙血圣礼？我们都必须为人类的生存做出必要的努力。",
+        "condition": {
+          "u_has_trait": "THRESH_DRAGONBLOOD"
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_DRAGONBLOOD"
       },
       {
-        "text": "They have seen that the error is not in The Path, but in using it for self-destructive reasons.",
-        "trial": { "type": "PERSUADE", "difficulty": 50 },
-        "success": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_FLAME_SUCCESS" },
-        "failure": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_FLAME_FAIL" }
+        "text": "他们已经看到错误不在路径中，而是出于自我毁灭的原因使用它。",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 50
+        },
+        "success": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_FLAME_SUCCESS"
+        },
+        "failure": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_FLAME_FAIL"
+        }
       },
       {
-        "text": "[ATTACK] I expect nothing but a quick death from you, sanguinist.",
+        "text": "[攻击]我只希望你能快点去死，猩红教徒。",
         "topic": "TALK_DONE",
         "effect": "insult_combat"
       }
@@ -95,181 +174,339 @@
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_FLAME_SUCCESS",
     "type": "talk_topic",
-    "dynamic_line": "As the shrikes have always done, seeking to defend our order.  But to join you?  I don't know what to think.  None of this has felt right, ever since the world ended.",
+    "dynamic_line": "就像屠猎者一直在做的那样，试图捍卫我们的秩序。但加入你们？我不知道该怎么想。自从世界末日以来，所有这些都让人感觉不对劲。",
     "responses": [
       {
-        "text": "They entrusted us with knowledge collected by the other shrikes.  Come with me, and use what you've learned to make things right.",
+        "text": "他们把其他伯劳鸟收集的知识托付给我们。跟我来，用你学到的东西去做正确的事。",
         "topic": "TALK_AGREE_FOLLOW",
         "effect": "follow",
-        "opinion": { "trust": 2, "fear": -1, "value": 2, "anger": -1 }
+        "opinion": {
+          "trust": 2,
+          "fear": -1,
+          "value": 2,
+          "anger": -1
+        }
       },
       {
-        "text": "These people are beyond saving.  Find your own path, but leave this place.  Flee, and do not return.",
+        "text": "这些人无法挽救。找到自己的路，但要离开这个地方。逃吧，不要回来。",
         "topic": "TALK_DONE",
         "effect": "flee",
-        "opinion": { "trust": 1, "fear": 5, "value": 1, "anger": -2 }
+        "opinion": {
+          "trust": 1,
+          "fear": 5,
+          "value": 1,
+          "anger": -2
+        }
       }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_FLAME_FAIL",
     "type": "talk_topic",
-    "dynamic_line": "Bullshit.  You interrogated one of them to get that old code phrase, didn't you?  Probably killed them afterwards too.  Die, hunter!",
-    "responses": [ { "text": "…", "topic": "TALK_DONE", "effect": "insult_combat" } ]
+    "dynamic_line": "扯淡。你审问其中一个人是为了得到那个旧的暗语，是吗？可能后来也杀了他们。去死吧，猎人！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
+    ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_NORMAL",
     "type": "talk_topic",
-    "dynamic_line": "So one of the shrikes sent you?  Have they strayed from The Path?  What is the meaning of this?",
+    "dynamic_line": "一只伯劳鸟派你来的？他们已经偏离正道了吗？这是什么意思？",
     "responses": [
       {
-        "text": "Why not ask yourself why I'm standing here, having completed what your master is still trying to recreate?",
-        "condition": { "u_has_trait": "THRESH_DRAGONBLOOD" },
+        "text": "为什么不问问你自己，为什么我站在这里，完成了你的主人仍在试图重建的东西？",
+        "condition": {
+          "u_has_trait": "THRESH_DRAGONBLOOD"
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_DRAGONBLOOD"
       },
       {
-        "text": "They've saved valuable knowledge from destruction, and have made amends with the Cleaning Flame.  We don't have to fight either.",
-        "trial": { "type": "PERSUADE", "difficulty": 60 },
-        "success": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_NORMAL_SUCCESS" },
-        "failure": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_GET_OUT" }
+        "text": "他们从毁灭中拯救了宝贵的知识，并用清洁的火焰进行了弥补。我们也不必战斗。",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 60
+        },
+        "success": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_NORMAL_SUCCESS"
+        },
+        "failure": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_GET_OUT"
+        }
       },
-      { "text": "[ATTACK] …", "topic": "TALK_DONE", "effect": "player_leaving" }
+      {
+        "text": "[攻击]…",
+        "topic": "TALK_DONE",
+        "effect": "player_leaving"
+      }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_NORMAL_SUCCESS",
     "type": "talk_topic",
-    "dynamic_line": "You're speaking of madness.  The Sanguine Order, and the Cleansing Flame, working together?  What common ground could we have, when their very existence is our anathema?",
+    "dynamic_line": "你说的是疯狂。乐观秩序和净化火焰，一起工作？当他们的存在是我们深恶痛绝的时候，我们能有什么共同点呢？",
     "responses": [
       {
         "text": "They're found a way to work together.  You could too, make something better out of all this.",
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_NORMAL_SUCCESS_2"
       },
-      { "text": "[ATTACK] Enough.  Time to die.", "topic": "TALK_DONE", "effect": "insult_combat" }
+      {
+        "text": "[攻击]够了。该去死了。",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_PASSWORD_NORMAL_SUCCESS_2",
     "type": "talk_topic",
-    "dynamic_line": "Alright.  I believe you, it feels like we've been aimless ever since the apocalypse started.  But what could I even do?",
+    "dynamic_line": "好吧我相信你，从世界末日开始，我们就好像漫无目的。但我还能做什么呢？",
     "responses": [
       {
-        "text": "They sent me, come with me.  We can help you put what you've learned to good use.",
+        "text": "他们派我来的，跟我来。我们可以帮助你充分利用你所学到的东西。",
         "topic": "TALK_AGREE_FOLLOW",
         "effect": "follow",
-        "opinion": { "trust": 2, "fear": -1, "value": 2, "anger": -1 }
+        "opinion": {
+          "trust": 2,
+          "fear": -1,
+          "value": 2,
+          "anger": -1
+        }
       },
       {
-        "text": "Leave this place, find your own path, and don't look back.  Run.",
+        "text": "离开这里，自己想办法，不要回头。快跑。",
         "topic": "TALK_DONE",
         "effect": "flee",
-        "opinion": { "trust": 1, "fear": 5, "value": 1, "anger": -2 }
+        "opinion": {
+          "trust": 1,
+          "fear": 5,
+          "value": 1,
+          "anger": -2
+        }
       }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_GET_OUT",
     "type": "talk_topic",
-    "dynamic_line": "You must be either lost or crazy.  This place isn't safe, and you're not welcome here.  Leave, and forget this place even exists.",
+    "dynamic_line": "你要么迷路了，要么疯了。这地方不安全，你不受欢迎。离开，忘了这个地方的存在。",
     "responses": [
       {
-        "text": "I am a servant of He From Beyond The Veil.  We are not enemies.",
-        "condition": { "u_has_any_trait": [ "PROF_CHALICE", "PROF_CHALICE2", "THRESH_VEIL" ] },
+        "text": "我是帷幕彼端古神的仆人。我们不是敌人。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CHALICE",
+            "PROF_CHALICE2",
+            "THRESH_VEIL"
+          ]
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_VEIL"
       },
       {
-        "text": "You would not welcome a student of the arcane?",
-        "condition": { "u_has_any_trait": [ "PROF_ARCANIST", "PROF_ARCANIST2" ] },
+        "text": "你不欢迎学奥术的学生吗？",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_ARCANIST",
+            "PROF_ARCANIST2"
+          ]
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_MISTAKE"
       },
       {
-        "text": "I can see you dabble in what I have already achieved.",
-        "condition": { "u_has_trait": "THRESH_DRAGONBLOOD" },
+        "text": "我可以看到你涉足我已经取得的成就。",
+        "condition": {
+          "u_has_trait": "THRESH_DRAGONBLOOD"
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_DRAGONBLOOD"
       },
-      { "text": "[ATTACK] Try and stop me.", "topic": "TALK_DONE", "effect": "insult_combat" },
-      { "text": "Okay, I'm going.", "topic": "TALK_DONE", "effect": "player_leaving", "opinion": { "fear": -1 } }
+      {
+        "text": "[攻击]试着阻止我吧。",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      },
+      {
+        "text": "好好，我现在就走。",
+        "topic": "TALK_DONE",
+        "effect": "player_leaving",
+        "opinion": {
+          "fear": -1
+        }
+      }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_VEIL",
     "type": "talk_topic",
-    "dynamic_line": "Whatever old truce my masters had with yours, it died with the end of the world.  I'll let you go just this once.  Leave, and don't come back.  If the others found out I'm doing this, they'd kill me.",
+    "dynamic_line": "无论我的主人和你们的休战协议是什么，它都会随着世界末日而消亡。我就放你走一次。离开，不要回来。如果其他人发现是我干的，他们会杀了我。",
     "responses": [
-      { "text": "[ATTACK] Then you'll die with them.", "topic": "TALK_DONE", "effect": "insult_combat" },
       {
-        "text": "His will is greater than those you serve.  Stand aside.",
-        "trial": { "type": "PERSUADE", "difficulty": 20 },
-        "success": { "topic": "TALK_DONE", "opinion": { "fear": 2 }, "effect": "flee" },
-        "failure": { "topic": "TALK_DONE", "opinion": { "anger": 1, "fear": -1 }, "effect": "insult_combat" }
+        "text": "[攻击]那你就和他们一起死。",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
       },
       {
-        "text": "Very well then.  Goodbye.",
+        "text": "他的意志比你所服侍的人更伟大。站在一边。",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 20
+        },
+        "success": {
+          "topic": "TALK_DONE",
+          "opinion": {
+            "fear": 2
+          },
+          "effect": "flee"
+        },
+        "failure": {
+          "topic": "TALK_DONE",
+          "opinion": {
+            "anger": 1,
+            "fear": -1
+          },
+          "effect": "insult_combat"
+        }
+      },
+      {
+        "text": "那好吧。再见。",
         "topic": "TALK_DONE",
         "effect": "player_leaving",
-        "opinion": { "fear": -1, "anger": -1, "trust": 1 }
+        "opinion": {
+          "fear": -1,
+          "anger": -1,
+          "trust": 1
+        }
       }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_MISTAKE",
     "type": "talk_topic",
-    "dynamic_line": "Actually, my masters might find you useful, as a sacrifice if nothing else.  Die!",
-    "responses": [ { "text": "…", "topic": "TALK_DONE", "effect": "insult_combat" } ]
+    "dynamic_line": "事实上，我的主人可能会发现你很有用，如果没有其他的牺牲的话。去死吧！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
+    ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_DRAGONBLOOD",
     "type": "talk_topic",
-    "dynamic_line": "So you found what we seek?  My masters would be pleased to make use of your work, and your blood might make a useful sacrifice.",
+    "dynamic_line": "你找到我们要找的东西了？我的主人会很乐意利用你的工作，你的血可能会成为一个有用的牺牲。",
     "responses": [
       {
-        "text": "If you turn me over to your master, what promise do you have that they'll share what they learn with you?",
-        "trial": { "type": "PERSUADE", "difficulty": 25 },
-        "success": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_PROMISE" },
-        "failure": { "topic": "TALK_DONE", "opinion": { "anger": 1, "trust": -1 }, "effect": "insult_combat" }
+        "text": "如果你把我交给你的主人，你能保证他们会和你分享他们学到的东西吗？",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 25
+        },
+        "success": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_PROMISE"
+        },
+        "failure": {
+          "topic": "TALK_DONE",
+          "opinion": {
+            "anger": 1,
+            "trust": -1
+          },
+          "effect": "insult_combat"
+        }
       },
       {
-        "text": "Consider your words more carefully.  You really think you can take me?",
-        "trial": { "type": "INTIMIDATE", "difficulty": 25 },
-        "success": { "topic": "TALK_DONE", "opinion": { "fear": 2 }, "effect": "flee" },
-        "failure": { "topic": "TALK_DONE", "opinion": { "anger": 1 }, "effect": [ { "u_faction_rep": -30 }, "insult_combat" ] }
+        "text": "仔细考虑你的话。你真的认为你能带走我吗？",
+        "trial": {
+          "type": "INTIMIDATE",
+          "difficulty": 25
+        },
+        "success": {
+          "topic": "TALK_DONE",
+          "opinion": {
+            "fear": 2
+          },
+          "effect": "flee"
+        },
+        "failure": {
+          "topic": "TALK_DONE",
+          "opinion": {
+            "anger": 1
+          },
+          "effect": [
+            {
+              "u_faction_rep": -30
+            },
+            "insult_combat"
+          ]
+        }
       },
-      { "text": "…", "topic": "TALK_DONE", "effect": "insult_combat" }
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_PROMISE",
     "type": "talk_topic",
-    "dynamic_line": "I, well.  We've already benefited a bit from our own research.  Even if the master has practically bled us dry for every fragment of knowledge we earn.  This hasn't felt right anymore, ever since it all ended.  But what the hell am I supposed to do?  What are you even suggesting I do?",
+    "dynamic_line": "一、 嗯。我们已经从我们自己的研究中受益匪浅。即使大师几乎把我们所获得的每一个知识片段都榨干了。自从这一切结束后，我再也感觉不对劲了。但我到底该怎么办？你还建议我做什么？",
     "responses": [
       {
-        "text": "Let them squabble and stab each other in the back, until they destroy themselves over scraps of arcane knowledge.  Join me and live.",
+        "text": "让他们在背后争吵和刺伤对方，直到他们在奥术知识的碎片上毁灭自己。加入我的生活。",
         "topic": "TALK_AGREE_FOLLOW",
         "effect": "follow",
-        "opinion": { "trust": 2, "fear": -1, "value": 2, "anger": -1 }
+        "opinion": {
+          "trust": 2,
+          "fear": -1,
+          "value": 2,
+          "anger": -1
+        }
       },
       {
-        "text": "They will simply kill you when you cease to be useful to them.  I'll at least let you escape with your life.  Go on, whelp.  Flee.",
+        "text": "当你不再对他们有用时，他们会杀了你。我至少会让你用你的生命逃走。去吧，小鬼。逃走。",
         "topic": "TALK_DONE",
         "effect": "flee",
-        "opinion": { "trust": 1, "fear": 5, "value": 1, "anger": -2 }
+        "opinion": {
+          "trust": 1,
+          "fear": 5,
+          "value": 1,
+          "anger": -2
+        }
       },
       {
-        "text": "[ATTACK] You're pathetic.  You don't deserve to live.",
+        "text": "[攻击]你真可怜。你不配活下去。",
         "topic": "TALK_DONE",
         "effect": "insult_combat",
-        "opinion": { "trust": -3, "fear": 1, "value": -1, "anger": 3 }
+        "opinion": {
+          "trust": -3,
+          "fear": 1,
+          "value": -1,
+          "anger": 3
+        }
       }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_SANGUINE",
     "type": "talk_topic",
-    "dynamic_line": "Maybe that's true.  But our unity under The Path has been broken.  It's survival of the strongest now, isn't it?  The magus here won't welcome another into the fold, you'll only be seen as a rival.",
+    "dynamic_line": "也许这是真的。但我们在这条道路下的团结被打破了。现在是最强者的生存，不是吗？这里的法师不会欢迎其他人加入，你只会被视为对手。",
     "responses": [
-      { "text": "Why are you here?", "topic": "TALK_BLOOD_MAGE_APPRENTICE_WHY" },
-      { "text": "We don't have to fight.", "topic": "TALK_BLOOD_MAGE_APPRENTICE_PEACE" },
-      { "text": "[ATTACK] Then let the strong rule.  Die.", "topic": "TALK_DONE", "effect": "insult_combat" }
+      {
+        "text": "你为什么在这里？",
+        "topic": "TALK_BLOOD_MAGE_APPRENTICE_WHY"
+      },
+      {
+        "text": "我们不需要战斗。",
+        "topic": "TALK_BLOOD_MAGE_APPRENTICE_PEACE"
+      },
+      {
+        "text": "[攻击]那就让强者统治。死吧。",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
     ]
   },
   {
@@ -277,24 +514,26 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_trait": "THRESH_DRAGONBLOOD",
-      "yes": "We continue our studies, in pursuit of survival.  The magus here is one of those who heard of the Dragonblood Sacrament, and decided that it was one valid option to draw power from Beyond and use it to survive.  And looking at you, it seems that method is indeed a valid one, isn't it?",
-      "no": "We continue our studies, in pursuit of survival.  There are many routes to it, and my master still believes that harnessing the power from Beyond might permit us to adapt to this world."
+      "yes": "为了生存，我们继续学习。这里的法师是听说过龙血圣礼的人之一，并认为这是一个有效的选择，从帷幕之外汲取力量并使用它来生存。看看你，似乎这个方法确实是有效的，不是吗？",
+      "no": "为了生存，我们继续学习。通往这个世界的道路有很多，我的主人仍然相信，利用来自远方的力量也许可以让我们适应这个世界。"
     },
     "responses": [
       {
-        "text": "And your master wants to recreate it?  We don't have to fight.",
+        "text": "你的主人想重现它吗？但我们不想要战斗。",
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_QUERY_DRAGONBLOOD",
-        "condition": { "u_has_trait": "THRESH_DRAGONBLOOD" },
+        "condition": {
+          "u_has_trait": "THRESH_DRAGONBLOOD"
+        },
         "switch": true
       },
       {
-        "text": "There are many ways to pursue The Path.  It doesn't have to end in us coming to blows.",
+        "text": "这条路有很多种方法。我们不一定非要以打架告终。",
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_PEACE",
         "switch": true,
         "default": true
       },
       {
-        "text": "[ATTACK] This must end, no matter our history.  Stand and fight.",
+        "text": "[攻击]不管我们的历史如何，这都必须结束。站起来战斗。",
         "topic": "TALK_DONE",
         "effect": "insult_combat"
       }
@@ -303,14 +542,14 @@
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_QUERY_DRAGONBLOOD",
     "type": "talk_topic",
-    "dynamic_line": "Indeed, I wish the magus would permit us to work together instead.  My master would greatly value what you've learned.  But you'd be considered a threat.",
+    "dynamic_line": "事实上，我希望法师允许我们一起工作。我的主人会非常重视你所学的。但你会被认为是个威胁。",
     "responses": [
       {
-        "text": "Can you trust that your master will share the fruit of these studies with you?",
+        "text": "你能相信你的主人会和你分享这些研究的成果吗？",
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_PROMISE"
       },
       {
-        "text": "[ATTACK] I'll show you and the others just how much of a threat I am.",
+        "text": "[攻击]我会让你和其他人知道我有多大的威胁。",
         "topic": "TALK_DONE",
         "effect": "insult_combat"
       }
@@ -321,26 +560,35 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_trait": "THRESH_DRAGONBLOOD",
-      "yes": "I would rather we work together, use what you have learned for us to become stronger, together.  But my master will accept no rival in these trying times.  What am I to do?",
-      "no": "We shouldn't have to fight, ideally we would stand together in times like these.  Were we not destined to rule over the weak and undeserving?  But if my master will accept no rival, and better to stand with them than alone."
+      "yes": "我宁愿我们一起工作，用你学到的东西让我们变得更强大，一起。但我的主人不会接受任何对手在这艰难的时刻。我该怎么办？",
+      "no": "我们不应该吵架，理想情况下我们会在这样的时候站在一起。难道我们不是注定要统治弱者和不配吗？但如果我的主人不接受任何对手，与其独自一人，不如与他们站在一起。"
     },
     "responses": [
       {
-        "text": "I have succeeded where others have failed, pursuing the same method that your master seeks.  Can you really trust your master?.",
+        "text": "我在别人失败的地方取得了成功，追求着你主人所追求的同样的方法。你真的能相信你的主人吗？。",
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_PROMISE",
-        "condition": { "u_has_trait": "THRESH_DRAGONBLOOD" },
+        "condition": {
+          "u_has_trait": "THRESH_DRAGONBLOOD"
+        },
         "switch": true
       },
       {
-        "text": "Your master has erred in judgment.  They are not worthy of being followed.",
+        "text": "你的主人判断错了。他们不值得被追随。",
         "switch": true,
         "default": true,
-        "trial": { "type": "PERSUADE", "difficulty": 50 },
-        "success": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_CONVINCE" },
-        "failure": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_NOPE" }
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 50
+        },
+        "success": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_CONVINCE"
+        },
+        "failure": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_NOPE"
+        }
       },
       {
-        "text": "[ATTACK] Then die, defending your misguided fool of a master.",
+        "text": "[攻击] 那么去死吧，为你的主人的愚昧辩护。",
         "topic": "TALK_DONE",
         "effect": "insult_combat"
       }
@@ -349,16 +597,21 @@
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_CONVINCE",
     "type": "talk_topic",
-    "dynamic_line": "You're right.  This isn't the right way to follow The Path.  Would you take me in as an apprentice?",
+    "dynamic_line": "你说得对。这行不通。你愿意收留我当学徒吗？",
     "responses": [
       {
-        "text": "Yes, join me.",
+        "text": "是的，跟我来。",
         "topic": "TALK_AGREE_FOLLOW",
         "effect": "follow",
-        "opinion": { "trust": 2, "fear": -1, "value": 1, "anger": -3 }
+        "opinion": {
+          "trust": 2,
+          "fear": -1,
+          "value": 1,
+          "anger": -3
+        }
       },
       {
-        "text": "[ATTACK] No.  You will face the same judgment as your master.",
+        "text": "[攻击]不，你将面临和你主人一样的审判。",
         "topic": "TALK_DONE",
         "effect": "flee"
       }
@@ -367,62 +620,116 @@
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_NOPE",
     "type": "talk_topic",
-    "dynamic_line": "And you think you're any more fit to rule in this dying world?  \"Even those of great power, if laid low, may serve to better the victor.\"  Die!",
-    "responses": [ { "text": "…", "topic": "TALK_DONE", "effect": "insult_combat" } ]
+    "dynamic_line": "你觉得你更适合在这个垂死的世界里统治世界吗？”即使是那些有权势的人，如果被放低，也会使胜利者变得更好！",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
+    ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_INTIMIDATE",
     "type": "talk_topic",
-    "dynamic_line": "What?  Oh shit…  no, not you!  Leave us alone, hunter!",
+    "dynamic_line": "什么？哦，妈的…不，不是你！别烦我们，猎人！",
     "responses": [
       {
-        "text": "[ATTACK] Subire mortem tuam, sub malleo deorum!",
+        "text": "[攻击]你死定了，你死定了！",
         "topic": "TALK_DONE",
-        "effect": [ { "u_faction_rep": -30 }, "flee" ]
+        "effect": [
+          {
+            "u_faction_rep": -30
+          },
+          "flee"
+        ]
       }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_NICE_TRY",
     "type": "talk_topic",
-    "dynamic_line": "You don't just barge in here and expect to walk out without explaining yourself.  Why should I let you leave?",
+    "dynamic_line": "你不只是闯进这里，希望自己不做解释就走了。我为什么要让你离开？",
     "responses": [
       {
-        "text": "I am a servant of He From Beyond The Veil.  There is no need for quarrel.",
-        "condition": { "u_has_any_trait": [ "PROF_CHALICE", "PROF_CHALICE2", "THRESH_VEIL" ] },
+        "text": "我是帷幕彼端古神的仆人。没有必要争吵。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CHALICE",
+            "PROF_CHALICE2",
+            "THRESH_VEIL"
+          ]
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_VEIL"
       },
       {
-        "text": "I am just a student of the arcane, seeking further knowledge.  I'll leave peacefully, honest.",
-        "condition": { "u_has_any_trait": [ "PROF_ARCANIST", "PROF_ARCANIST2" ] },
+        "text": "我只是一个神秘的学生，寻求更多的知识。我会平静地，诚实地离开。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_ARCANIST",
+            "PROF_ARCANIST2"
+          ]
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_MISTAKE"
       },
       {
-        "text": "Look at me.  I'm like you, there's no need for us to fight.",
-        "condition": { "u_has_trait": "THRESH_DRAGONBLOOD" },
+        "text": "看看我。我和你一样，我们没必要打架。",
+        "condition": {
+          "u_has_trait": "THRESH_DRAGONBLOOD"
+        },
         "topic": "TALK_BLOOD_MAGE_APPRENTICE_DRAGONBLOOD"
       },
       {
-        "text": "I didn't mean to intrude.  Sorry.  I'll just be going.",
-        "trial": { "type": "PERSUADE", "difficulty": 5 },
-        "success": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_BEGONE" },
-        "failure": { "topic": "TALK_BLOOD_MAGE_APPRENTICE_PATHETIC" }
+        "text": "我不是故意打扰的。对不起的。我就走。",
+        "trial": {
+          "type": "PERSUADE",
+          "difficulty": 5
+        },
+        "success": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_BEGONE"
+        },
+        "failure": {
+          "topic": "TALK_BLOOD_MAGE_APPRENTICE_PATHETIC"
+        }
       },
-      { "text": "[ATTACK] Fuck you, I do what I want.", "topic": "TALK_DONE", "effect": "insult_combat" }
+      {
+        "text": "[攻击]去你妈的，我做我想做的。",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat"
+      }
     ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_BEGONE",
     "type": "talk_topic",
-    "dynamic_line": "Forget you ever saw anything here.  Before I change my mind.",
-    "responses": [ { "text": "…", "topic": "TALK_DONE", "effect": "player_leaving", "opinion": { "fear": -1, "value": -1 } } ]
+    "dynamic_line": "忘了你在这里见过什么。在我改变主意之前。",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "player_leaving",
+        "opinion": {
+          "fear": -1,
+          "value": -1
+        }
+      }
+    ]
   },
   {
     "id": "TALK_BLOOD_MAGE_APPRENTICE_PATHETIC",
     "type": "talk_topic",
-    "dynamic_line": "Really?  How pathetic.  Your very presence endangers what we're working on.  I can't let you leave alive.",
+    "dynamic_line": "真正地？真可怜。你的出现危及我们的工作。我不能让你活着离开。",
     "responses": [
-      { "text": "…", "topic": "TALK_DONE", "effect": "insult_combat", "opinion": { "fear": -5, "value": -5, "anger": 3 } }
+      {
+        "text": "…",
+        "topic": "TALK_DONE",
+        "effect": "insult_combat",
+        "opinion": {
+          "fear": -5,
+          "value": -5,
+          "anger": 3
+        }
+      }
     ]
   },
   {
@@ -432,12 +739,16 @@
       {
         "text": "<CWH_intro_question>",
         "topic": "BGSS_BLOOD_MAGE_1_IDEAS1",
-        "condition": { "npc_has_trait": "BGSS_BLOOD_MAGE_1" }
+        "condition": {
+          "npc_has_trait": "BGSS_BLOOD_MAGE_1"
+        }
       },
       {
         "text": "<BGSS_intro_question>",
         "topic": "BGSS_BLOOD_MAGE_1_STORY1",
-        "condition": { "npc_has_trait": "BGSS_BLOOD_MAGE_1" },
+        "condition": {
+          "npc_has_trait": "BGSS_BLOOD_MAGE_1"
+        },
         "switch": true
       }
     ]
@@ -445,54 +756,111 @@
   {
     "id": "BGSS_BLOOD_MAGE_1_IDEAS1",
     "type": "talk_topic",
-    "dynamic_line": "It started in the cities, that much is clear.  That's why probably caught so many students of the Beyond off-guard.  Something in the water evidently, and my rough guess is that caused the rioting and undead at minimum.  No guesses beyond that, though.  I only knew a bit of the news due to having been fairly new to the Order.",
+    "dynamic_line": "它始于城市，这点很明显。这就是为什么会有那么多的学生措手不及。水里显然有什么东西，我粗略地猜测，这至少引起了暴乱和亡灵。不过，除此之外没有任何猜测。我只知道一点消息，因为我对订单相当陌生。",
     "responses": [
-      { "text": "What does the Sanguine Order have to do with it?", "topic": "BGSS_BLOOD_MAGE_1_IDEAS2" },
-      { "text": "<done_conversation_section>", "topic": "TALK_NONE" },
-      { "text": "<end_talking>", "topic": "TALK_DONE" }
+      {
+        "text": "“猩红教派”跟它有什么关系？",
+        "topic": "BGSS_BLOOD_MAGE_1_IDEAS2"
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "BGSS_BLOOD_MAGE_1_IDEAS2",
     "type": "talk_topic",
-    "dynamic_line": "The magi liked to isolate us from civilization at large.  Typical cult stuff now that I think about it, plus made it easier to cover our tracks.  But, for all the talk of preparation and adaptation, I don't know if they really predicted this, but our isolation kept us from suffering the same fate as those in the cities.  Now it's just a matter of surviving, I guess.",
-    "responses": [ { "text": "<done_conversation_section>", "topic": "TALK_NONE" }, { "text": "<end_talking>", "topic": "TALK_DONE" } ]
+    "dynamic_line": "魔奇们喜欢把我们与整个文明隔离开来。典型的邪教的东西，现在我想，加上更容易掩盖我们的踪迹。但是，对于所有关于准备和适应的讨论，我不知道他们是否真的预测到了这一点，但是我们的与世隔绝使我们免于遭受和城市里那些人一样的命运。我想现在只是生存的问题了。",
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_NONE"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
   },
   {
     "id": "BGSS_BLOOD_MAGE_1_STORY1",
     "type": "talk_topic",
-    "dynamic_line": "I hadn't been in the Order for very long when one of the magi had everyone gathered up.  We were in this other place at the time with a couple others, and initially I thought she was preparing another lesson.",
+    "dynamic_line": "我没等多久，就有一个魔奇叫大家集合起来。当时我们和其他几个人在另一个地方，起初我以为她在准备另一节课。",
     "responses": [
-      { "text": "Magi?", "topic": "BGSS_BLOOD_MAGE_1_STORY2" },
-      { "text": "What happened?", "topic": "BGSS_CF_1_STORY3" },
-      { "text": "<done_conversation_section>", "topic": "TALK_FRIEND" },
-      { "text": "<end_talking>", "topic": "TALK_DONE" }
+      {
+        "text": "Magi？",
+        "topic": "BGSS_BLOOD_MAGE_1_STORY2"
+      },
+      {
+        "text": "发生什么了？",
+        "topic": "BGSS_CF_1_STORY3"
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "BGSS_BLOOD_MAGE_1_STORY2",
     "type": "talk_topic",
-    "dynamic_line": "There were a few, yeah.  The higher-rank blood mages, basically.  This was before the one at the hideout split off from the others, and led us into trying to scrounge up some old research.  Things were tense back then, but at least I felt like I could trust those higher up in rank to reward fair study…",
+    "dynamic_line": "有一些，是的。基本上是高级血法师。这是在那个藏身处的人和其他人分开之前，我们试图搜集一些旧的研究成果。当时的情况很紧张，但至少我觉得我可以信任那些级别较高的人来奖励公平学习…",
     "responses": [
-      { "text": "So what happened?", "topic": "BGSS_CF_1_STORY3" },
-      { "text": "<done_conversation_section>", "topic": "TALK_FRIEND" },
-      { "text": "<end_talking>", "topic": "TALK_DONE" }
+      {
+        "text": "怎么了？",
+        "topic": "BGSS_CF_1_STORY3"
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "BGSS_BLOOD_MAGE_1_STORY3",
     "type": "talk_topic",
-    "dynamic_line": "There was a shrike there, those were rather rare by the time I joined.  That's what they call the guys that specialize in killing mage hunters.  They'd passed a message of some sort to the lead magus, whatever it was got her all agitated.  Started ranting and raving about the end of the world and the dead coming back to life.  They'd talk about stuff like that before, but it seemed different this time.",
+    "dynamic_line": "那里有一个屠猎者，在我加入的时候已经很少见了。这就是他们所说的那些专门杀法师猎人的人。他们把某种信息传给了领头的玛格斯，不管是什么让她很不安。开始大喊大叫世界末日和死人复活。他们以前也会谈论这样的事情，但这次似乎不同了。",
     "responses": [
-      { "text": "What seemed different about it?", "topic": "BGSS_CF_1_STORY4" },
-      { "text": "<done_conversation_section>", "topic": "TALK_FRIEND" },
-      { "text": "<end_talking>", "topic": "TALK_DONE" }
+      {
+        "text": "有什么不同？",
+        "topic": "BGSS_CF_1_STORY4"
+      },
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "BGSS_BLOOD_MAGE_1_STORY4",
     "type": "talk_topic",
-    "dynamic_line": "At first it was just the same shit, only thing that seemed strange was talking about it like it had already happened.  Before they'd be all vague, talking about portents and omens of doom, but it wasn't until we moved on to the next hideout that most of us at the bottom of the totem pole figured out something went down…",
-    "responses": [ { "text": "<done_conversation_section>", "topic": "TALK_FRIEND" }, { "text": "<end_talking>", "topic": "TALK_DONE" } ]
+    "dynamic_line": "一开始只是一样的狗屎，唯一让人觉得奇怪的是谈论它好像已经发生了。他们还没来得及含糊其辞地谈论着厄运的预兆，但直到我们转移到下一个藏身之处，我们图腾柱底部的大多数人才发现有什么东西发生了…",
+    "responses": [
+      {
+        "text": "<done_conversation_section>",
+        "topic": "TALK_FRIEND"
+      },
+      {
+        "text": "<end_talking>",
+        "topic": "TALK_DONE"
+      }
+    ]
   }
 ]

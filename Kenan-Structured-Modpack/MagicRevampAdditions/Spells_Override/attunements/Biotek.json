@@ -2,15 +2,20 @@
   {
     "type": "SPELL",
     "id": "nitro_boost",
-    "name": { "str": "Nitro Boost" },
-    "description": "You overclock your flesh and bionics, charging so fast the friction can ignite the air, to wind up for a skull-cracking punch.",
-    "valid_targets": [ "hostile", "ground" ],
+    "name": {
+      "str": "氮气加速"
+    },
+    "description": "你将自身肉体和生化插件超频，充能速度如此之快，以至于摩擦都能点燃四周的空气，给对方来一记碎骨拳。",
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "effect": "dash",
     "effect_str": "downed",
     "shape": "cone",
     "min_damage": 0,
     "max_damage": 430,
-    "damage_increment": 10.0,
+    "damage_increment": 10,
     "damage_type": "bash",
     "min_range": 8,
     "max_range": 8,
@@ -26,17 +31,32 @@
   {
     "id": "jury_rig",
     "type": "requirement",
-    "components": [ [ [ "e_scrap", 2 ], [ "scrap", 1 ] ] ]
+    "components": [
+      [
+        [
+          "e_scrap",
+          2
+        ],
+        [
+          "scrap",
+          1
+        ]
+      ]
+    ]
   },
   {
     "id": "biotek_healing",
     "type": "SPELL",
-    "name": { "str": "Jury Rig" },
-    "description": "Heals a little bit of damage on the target.",
-    "valid_targets": [ "self" ],
+    "name": {
+      "str": "紧急损管"
+    },
+    "description": "治疗一点点目标所受的伤害。",
+    "valid_targets": [
+      "self"
+    ],
     "min_damage": -5,
     "max_damage": -48,
-    "damage_increment": -1.0,
+    "damage_increment": -1,
     "max_level": 43,
     "effect": "attack",
     "shape": "blast",
@@ -45,7 +65,12 @@
     "energy_increment": -20,
     "final_energy_cost": 100,
     "components": "jury_rig",
-    "flags": [ "SOMATIC", "VERBAL", "NO_LEGS", "CONCENTRATE" ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL",
+      "NO_LEGS",
+      "CONCENTRATE"
+    ],
     "spell_class": "BIOTEK",
     "difficulty": 2,
     "energy_source": "BIONIC"

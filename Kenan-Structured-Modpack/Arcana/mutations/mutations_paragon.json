@@ -2,798 +2,1326 @@
   {
     "type": "mutation",
     "id": "THRESH_VEIL",
-    "name": { "str": "Paragon of The Veil" },
+    "name": {
+      "str": "帷幕的典范"
+    },
     "points": 1,
-    "description": "You have gazed deeper into The Beyond than anyone that still lives.  It has gazed back, and found greater purpose in you.  The living wind it calls its herald, and you its knight under oath.  You will unable to mutate beyond your current state by mundane means, as this would tie you to intruders that must be cast out…",
+    "description": "你比任何一个依然还活着的人都眺望着更远的彼方。它回首凝视于你，于你的身上发现了更大的目标。它们称你为使者，而你是它宣誓的骑士。你无法用普通的手段变异成位面的存在，因为这会将你与那些必须被驱赶出去的事物捆绑一体。",
     "valid": false,
     "purifiable": false,
     "threshold": true,
     "//": "The good news, you regen mana faster and vortices are friendly.  The bad news, HFBTV doesn't want you getting any more dependent on the blob (or worse, the Mycus) than you already are.",
-    "ignored_by": [ "UNKNOWN" ],
-    "anger_relations": [
-      [ "ARCANA_SUMMONED", -95 ],
-      [ "NETHER", 20 ],
-      [ "SLIME", 20 ],
-      [ "HORROR", 15 ],
-      [ "ABERRATION", 15 ],
-      [ "FUNGUS", 10 ],
-      [ "LEECH_PLANT", 10 ],
-      [ "MUTANT", 5 ]
+    "ignored_by": [
+      "UNKNOWN"
     ],
-    "allowed_category": [ "VEIL" ]
+    "anger_relations": [
+      [
+        "ARCANA_SUMMONED",
+        -95
+      ],
+      [
+        "NETHER",
+        20
+      ],
+      [
+        "SLIME",
+        20
+      ],
+      [
+        "HORROR",
+        15
+      ],
+      [
+        "ABERRATION",
+        15
+      ],
+      [
+        "FUNGUS",
+        10
+      ],
+      [
+        "LEECH_PLANT",
+        10
+      ],
+      [
+        "MUTANT",
+        5
+      ]
+    ],
+    "allowed_category": [
+      "VEIL"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_SMOKE",
     "//": "IDs for Arcane Blessings are reused to reduce the amount of obsolete JSON.",
-    "name": { "str": "Sign of Alteration I" },
+    "name": {
+      "str": "改变标志I"
+    },
     "points": 1,
-    "description": "\"You must learn to shape your surroundings to serve your purpose.  In time, you will find your purpose as well.\"\nUnknowable forces have given you a gift, that can conjure a shroud of darkness to conceal you.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“予以形以应汝许。觅汝所望期或时。”\n不可知的力量赠予你一份礼物，它可以召唤一层黑暗的帷幕来遮掩你。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "changes_to": [ "SPELL_LIGHT2" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 100 }
-        ]
-      }
+    "changes_to": [
+      "SPELL_LIGHT2"
     ],
-    "spells_learned": [ [ "arcana_blessing_conjure_shadow_field", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_ALTERATION" ]
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 100,
+    "spells_learned": [
+      [
+        "arcana_blessing_conjure_shadow_field",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_ALTERATION"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_LIGHT2",
-    "name": { "str": "Sign of Alteration II" },
+    "name": {
+      "str": "改变标志II"
+    },
     "points": 2,
-    "description": "\"You will carry my torch, exert my influence to serve our mutual goals.\"\nUnknowable forces have given you a gift, that can conjure an aura of illumination.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“尔将持吾之火，传吾所唤，侍吾所望。”\n不可知的力量赠予你第二份礼物，让你可以召唤出一个照明光环。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_SMOKE" ],
-    "changes_to": [ "SPELL_LOCKPICK2" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 200 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_SMOKE"
     ],
-    "spells_learned": [ [ "arcana_blessing_conjure_shadow_field", 1 ], [ "arcana_blessing_conjure_lightburst", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_ALTERATION" ]
+    "changes_to": [
+      "SPELL_LOCKPICK2"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 200,
+    "spells_learned": [
+      [
+        "arcana_blessing_conjure_shadow_field",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_lightburst",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_ALTERATION"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_LOCKPICK2",
-    "name": { "str": "Sign of Alteration III" },
+    "name": {
+      "str": "改变标志III"
+    },
     "points": 3,
-    "description": "\"You will move unbidden, no artifice will obstruct one who follows my command.\"\nUnknowable forces have given you a third gift, that can open locks and barricades.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“汝所行锐不可当，吾之言无可违抗。”\n不可知的力量赠予你第三份礼物，可以打开上锁的门。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_LIGHT2" ],
-    "changes_to": [ "SPELL_TELEPORT" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 300 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_LIGHT2"
     ],
+    "changes_to": [
+      "SPELL_TELEPORT"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 300,
     "spells_learned": [
-      [ "arcana_blessing_conjure_shadow_field", 1 ],
-      [ "arcana_blessing_conjure_lightburst", 1 ],
-      [ "arcana_blessing_open_lock", 1 ]
+      [
+        "arcana_blessing_conjure_shadow_field",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_lightburst",
+        1
+      ],
+      [
+        "arcana_blessing_open_lock",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "//": "ID retained, effect changed as teleport is of more limited use.",
     "id": "SPELL_TELEPORT",
-    "name": { "str": "Sign of Alteration IV" },
+    "name": {
+      "str": "改变标志IV"
+    },
     "points": 4,
-    "description": "\"If your enemy seeks escape or refuge, you will learn to halt them.\"\nUnknowable forces have given you a fourth gift, that can allow you to conjure barriers of light.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“如果你的敌人想要逃跑或避难，你将学会阻止他们。”\n不可知的力量给了你第四个礼物，它可以让你召唤光障。（记得绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_LOCKPICK2" ],
-    "changes_to": [ "SPELL_PACIFY" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 400 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_LOCKPICK2"
     ],
+    "changes_to": [
+      "SPELL_PACIFY"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 400,
     "spells_learned": [
-      [ "arcana_blessing_conjure_shadow_field", 1 ],
-      [ "arcana_blessing_conjure_lightburst", 1 ],
-      [ "arcana_blessing_open_lock", 1 ],
-      [ "arcana_blessing_wall_force", 1 ]
+      [
+        "arcana_blessing_conjure_shadow_field",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_lightburst",
+        1
+      ],
+      [
+        "arcana_blessing_open_lock",
+        1
+      ],
+      [
+        "arcana_blessing_wall_force",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_PACIFY",
-    "name": { "str": "Sign of Alteration V" },
+    "name": {
+      "str": "改变标志V"
+    },
     "points": 5,
-    "description": "\"And if a foe would block your way, my messages can soothe what cannot be destroyed.\"\nUnknowable forces have given you a fifth gift, that can allow you to pacify monsters.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“如果敌人挡住了你的路，我的意志可以安抚那些无法被你摧毁的东西。”\n不可知力量给了你第五个礼物，可以让你安抚怪物。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_TELEPORT" ],
-    "changes_to": [ "SPELL_CONSECRATE" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 500 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_TELEPORT"
     ],
+    "changes_to": [
+      "SPELL_CONSECRATE"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 500,
     "spells_learned": [
-      [ "arcana_blessing_conjure_shadow_field", 1 ],
-      [ "arcana_blessing_conjure_lightburst", 1 ],
-      [ "arcana_blessing_open_lock", 1 ],
-      [ "arcana_blessing_wall_force", 1 ],
-      [ "arcana_blessing_pacify_monsters", 1 ]
+      [
+        "arcana_blessing_conjure_shadow_field",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_lightburst",
+        1
+      ],
+      [
+        "arcana_blessing_open_lock",
+        1
+      ],
+      [
+        "arcana_blessing_wall_force",
+        1
+      ],
+      [
+        "arcana_blessing_pacify_monsters",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_CONSECRATE",
-    "name": { "str": "Sign of Alteration VI" },
+    "name": {
+      "str": "改变标志VI"
+    },
     "points": 6,
-    "description": "\"In time, you will play but one part in preserving this world, by driving off these intrusions.  It is my will.\"\nUnknowable forces have given you a sixth gift, that can allow you to subvert otherworldly alterations afflicting the environment.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“随着时间的推移，你保护这个世界只有一条策略，那就是赶走这些入侵者。这是我的意愿。”\n不可知的力量给了你第六个礼物，它可以让你恢复因超自然的影响而改变的环境。（记得绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_PACIFY" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 600 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_PACIFY"
     ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 600,
     "spells_learned": [
-      [ "arcana_blessing_conjure_shadow_field", 1 ],
-      [ "arcana_blessing_conjure_lightburst", 1 ],
-      [ "arcana_blessing_open_lock", 1 ],
-      [ "arcana_blessing_wall_force", 1 ],
-      [ "arcana_blessing_pacify_monsters", 1 ],
-      [ "arcana_blessing_consecrate", 1 ]
+      [
+        "arcana_blessing_conjure_shadow_field",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_lightburst",
+        1
+      ],
+      [
+        "arcana_blessing_open_lock",
+        1
+      ],
+      [
+        "arcana_blessing_wall_force",
+        1
+      ],
+      [
+        "arcana_blessing_pacify_monsters",
+        1
+      ],
+      [
+        "arcana_blessing_consecrate",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_STRENGTH2",
-    "name": { "str": "Sign of Augmentation I" },
+    "name": {
+      "str": "增强标志I"
+    },
     "points": 1,
-    "description": "\"You must be strong, not just in body but especially in spirit.  In time, you will be strong enough to face the end of all.\"\nUnknowable forces have given you a gift, that can grant a strength-enhancing effect.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“你要变得更强大，不仅是身体，还有精神。总有一天，你会强大到足以面对一切的终结。”\n不可知的力量给了你一个礼物，可以赋予你力量提升的效果。（记得绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "changes_to": [ "SPELL_CLAIRVOYANCE2" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 100 }
-        ]
-      }
+    "changes_to": [
+      "SPELL_CLAIRVOYANCE2"
     ],
-    "spells_learned": [ [ "arcana_blessing_might", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_AUGMENTATION" ]
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 100,
+    "spells_learned": [
+      [
+        "arcana_blessing_might",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_AUGMENTATION"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_CLAIRVOYANCE2",
-    "name": { "str": "Sign of Augmentation II" },
+    "name": {
+      "str": "增强标志II"
+    },
     "points": 2,
-    "description": "\"You will face truths mortals are not meant to bear.\"\nUnknowable forces have given you a second gift, that can grant sight beyond sight.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“注目凝视，你将直面凡人惧于窥逾的真实。”\n不可知的力量赠予你第二个礼物，可以使你所视凡人能及之外。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_STRENGTH2" ],
-    "changes_to": [ "SPELL_AGILE2" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 200 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_STRENGTH2"
     ],
-    "spells_learned": [ [ "arcana_blessing_might", 1 ], [ "arcana_blessing_clairvoyance", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_AUGMENTATION" ]
+    "changes_to": [
+      "SPELL_AGILE2"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 200,
+    "spells_learned": [
+      [
+        "arcana_blessing_might",
+        1
+      ],
+      [
+        "arcana_blessing_clairvoyance",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_AUGMENTATION"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_AGILE2",
-    "name": { "str": "Sign of Augmentation III" },
+    "name": {
+      "str": "增强标志III"
+    },
     "points": 3,
-    "description": "\"You will learn to act without hesitation, to do what is needed for the sake of this world.\"\nUnknowable forces have given you a third gift, that can grant a speed and agility-enhancing effect.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“毫不犹豫，这个世界不需要你的迟疑。”\n不可知的力量赠予你第三份礼物，可以带来速度和敏捷增强效果。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_CLAIRVOYANCE2" ],
-    "changes_to": [ "SPELL_DAYLIGHT2" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 300 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_CLAIRVOYANCE2"
     ],
-    "spells_learned": [ [ "arcana_blessing_might", 1 ], [ "arcana_blessing_clairvoyance", 1 ], [ "arcana_blessing_agility", 1 ] ],
-    "flags": [ "explorer_of_the_veil" ]
+    "changes_to": [
+      "SPELL_DAYLIGHT2"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 300,
+    "spells_learned": [
+      [
+        "arcana_blessing_might",
+        1
+      ],
+      [
+        "arcana_blessing_clairvoyance",
+        1
+      ],
+      [
+        "arcana_blessing_agility",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_DAYLIGHT2",
-    "name": { "str": "Sign of Augmentation IV" },
+    "name": {
+      "str": "增强标志IV"
+    },
     "points": 4,
-    "description": "\"Persevere and you shall carry my banner to the highest peaks of your realm, even through greatest hardship.\"\nUnknowable forces have given you a fourth gift, that can trigger an uplifting rush through the body.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“持之以恒，你将把我的印记带到你升华之路的最高峰，即使经历最艰难的磨难。”\n不可知的力量给了你第四个礼物，它可以触发一个令你振奋的加速咒文。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_AGILE2" ],
-    "changes_to": [ "SPELL_DRAINLIFE" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 400 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_AGILE2"
     ],
+    "changes_to": [
+      "SPELL_DRAINLIFE"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 400,
     "spells_learned": [
-      [ "arcana_blessing_might", 1 ],
-      [ "arcana_blessing_clairvoyance", 1 ],
-      [ "arcana_blessing_agility", 1 ],
-      [ "arcana_blessing_surge_adrenaline", 1 ]
+      [
+        "arcana_blessing_might",
+        1
+      ],
+      [
+        "arcana_blessing_clairvoyance",
+        1
+      ],
+      [
+        "arcana_blessing_agility",
+        1
+      ],
+      [
+        "arcana_blessing_surge_adrenaline",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_DRAINLIFE",
-    "name": { "str": "Sign of Augmentation V" },
+    "name": {
+      "str": "增强标志V"
+    },
     "points": 5,
-    "description": "\"Take no pleasure in what you must do, but always find purpose in each act.\"\nUnknowable forces have given you a fifth gift, that can grant a temporary life-draining effect.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“不要为你必须做的事情感到高兴，但要在每一个行动中找到目标。”\n不可知力量给了你第五个礼物，它可以给予你暂时的生命消耗效果。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_DAYLIGHT2" ],
-    "changes_to": [ "SPELL_INVIS" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 500 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_DAYLIGHT2"
     ],
+    "changes_to": [
+      "SPELL_INVIS"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 500,
     "spells_learned": [
-      [ "arcana_blessing_might", 1 ],
-      [ "arcana_blessing_clairvoyance", 1 ],
-      [ "arcana_blessing_agility", 1 ],
-      [ "arcana_blessing_surge_adrenaline", 1 ],
-      [ "arcana_blessing_drain_life", 1 ]
+      [
+        "arcana_blessing_might",
+        1
+      ],
+      [
+        "arcana_blessing_clairvoyance",
+        1
+      ],
+      [
+        "arcana_blessing_agility",
+        1
+      ],
+      [
+        "arcana_blessing_surge_adrenaline",
+        1
+      ],
+      [
+        "arcana_blessing_drain_life",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_INVIS",
-    "name": { "str": "Sign of Augmentation VI" },
+    "name": {
+      "str": "增强标志VI"
+    },
     "points": 6,
-    "description": "\"In time, you will be strong in spirit, and never need to hide from that which mortals fear.  It is my will.\"\nUnknowable forces have given you a sixth gift, that can grant temporary invisibility.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“总有一天，你的精神会强大起来，而不必逃避凡人所惧怕的。这是我的意愿。”\n不可知的力量给了你第六个礼物，可以让你暂时隐身。（记得绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_DRAINLIFE" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 600 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_DRAINLIFE"
     ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 600,
     "spells_learned": [
-      [ "arcana_blessing_might", 1 ],
-      [ "arcana_blessing_clairvoyance", 1 ],
-      [ "arcana_blessing_agility", 1 ],
-      [ "arcana_blessing_surge_adrenaline", 1 ],
-      [ "arcana_blessing_drain_life", 1 ],
-      [ "arcana_blessing_illusion_cloak", 1 ]
+      [
+        "arcana_blessing_might",
+        1
+      ],
+      [
+        "arcana_blessing_clairvoyance",
+        1
+      ],
+      [
+        "arcana_blessing_agility",
+        1
+      ],
+      [
+        "arcana_blessing_surge_adrenaline",
+        1
+      ],
+      [
+        "arcana_blessing_drain_life",
+        1
+      ],
+      [
+        "arcana_blessing_illusion_cloak",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_CONFUSE2",
-    "name": { "str": "Sign of Destruction I" },
+    "name": {
+      "str": "破坏标志I"
+    },
     "points": 1,
-    "description": "\"You will face many threats.  In time, they will be made to kneel.\"\nUnknowable forces have given you a gift, that can stun monsters in an area around you.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“直视敌寇，向你屈膝！”\n不可知的力量赠予的礼物，击晕你周围的怪物。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "changes_to": [ "SPELL_CLOUD" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 100 }
-        ]
-      }
+    "changes_to": [
+      "SPELL_CLOUD"
     ],
-    "spells_learned": [ [ "arcana_blessing_confuse_monster", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_DESTRUCTION" ]
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 100,
+    "spells_learned": [
+      [
+        "arcana_blessing_confuse_monster",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_DESTRUCTION"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_CLOUD",
-    "name": { "str": "Sign of Destruction II" },
+    "name": {
+      "str": "破坏标志II"
+    },
     "points": 2,
-    "description": "\"Your enemies will suffer all the same evils they have visited upon this realm.\"\nUnknowable forces have given you a second gift, that can conjure toxic gases at a desired location.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“施与同罚，判以同刑！”\n不可知的力量赠予了你第二个礼物，可以在所需的位置产生有毒气体。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_CONFUSE2" ],
-    "changes_to": [ "SPELL_LIGHTNING2" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 200 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_CONFUSE2"
     ],
-    "spells_learned": [ [ "arcana_blessing_confuse_monster", 1 ], [ "arcana_blessing_conjure_miasma", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_DESTRUCTION" ]
+    "changes_to": [
+      "SPELL_LIGHTNING2"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 200,
+    "spells_learned": [
+      [
+        "arcana_blessing_confuse_monster",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_miasma",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_DESTRUCTION"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_LIGHTNING2",
-    "name": { "str": "Sign of Destruction III" },
+    "name": {
+      "str": "破坏标志III"
+    },
     "points": 3,
-    "description": "\"You will use my gifts with caution, for each is a weapon to set right what has turned wrong.\"\nUnknowable forces have given you a third gift, that can invoke a storm of divine lightning.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“慎用所赋，器以正轨！。”\n不可知的力量赠予你第三次礼物，可以唤起神圣的闪电风暴。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_CLOUD" ],
-    "changes_to": [ "SPELL_FIRE2" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 300 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_CLOUD"
     ],
+    "changes_to": [
+      "SPELL_FIRE2"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 300,
     "spells_learned": [
-      [ "arcana_blessing_confuse_monster", 1 ],
-      [ "arcana_blessing_conjure_miasma", 1 ],
-      [ "arcana_blessing_divine_storm", 1 ]
+      [
+        "arcana_blessing_confuse_monster",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_miasma",
+        1
+      ],
+      [
+        "arcana_blessing_divine_storm",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_FIRE2",
-    "name": { "str": "Sign of Destruction IV" },
+    "name": {
+      "str": "破坏标志IV"
+    },
     "points": 4,
-    "description": "\"Bring judgment to our enemies, for they bring only suffering.\"\nUnknowable forces have given you a fourth gift, that can blast an area with divine flames.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“审判我们的敌人，因为他们只会带来痛苦。”\n不可知的力量给了你第四份礼物，以倾泻净化的烈焰（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_LIGHTNING2" ],
-    "changes_to": [ "SPELL_LIGHTNINGFIELD" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 400 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_LIGHTNING2"
     ],
+    "changes_to": [
+      "SPELL_LIGHTNINGFIELD"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 400,
     "spells_learned": [
-      [ "arcana_blessing_confuse_monster", 1 ],
-      [ "arcana_blessing_conjure_miasma", 1 ],
-      [ "arcana_blessing_divine_storm", 1 ],
-      [ "arcana_blessing_holy_flare", 1 ]
+      [
+        "arcana_blessing_confuse_monster",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_miasma",
+        1
+      ],
+      [
+        "arcana_blessing_divine_storm",
+        1
+      ],
+      [
+        "arcana_blessing_holy_flare",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_LIGHTNINGFIELD",
-    "name": { "str": "Sign of Destruction V" },
+    "name": {
+      "str": "破坏标志V"
+    },
     "points": 5,
-    "description": "\"With a steady hand, you will strike true.\"\nUnknowable forces have given you a fifth gift, that can bathe your enemies in bolts of lightning.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“稳定地进行，你会成功的。”\n不可知力量给了你第五个礼物，它可以让你的敌人沐浴在闪电中。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_FIRE2" ],
-    "changes_to": [ "SPELL_PULSE" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 500 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_FIRE2"
     ],
+    "changes_to": [
+      "SPELL_PULSE"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 500,
     "spells_learned": [
-      [ "arcana_blessing_confuse_monster", 1 ],
-      [ "arcana_blessing_conjure_miasma", 1 ],
-      [ "arcana_blessing_divine_storm", 1 ],
-      [ "arcana_blessing_holy_flare", 1 ],
-      [ "arcana_blessing_radiant_burst", 1 ]
+      [
+        "arcana_blessing_confuse_monster",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_miasma",
+        1
+      ],
+      [
+        "arcana_blessing_divine_storm",
+        1
+      ],
+      [
+        "arcana_blessing_holy_flare",
+        1
+      ],
+      [
+        "arcana_blessing_radiant_burst",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_PULSE",
-    "name": { "str": "Sign of Destruction VI" },
+    "name": {
+      "str": "破坏标志VI"
+    },
     "points": 6,
-    "description": "\"In time, you will play a part in avenging these evils.  It is my will.\"\nUnknowable forces have given you a sixth gift, that can unleash a blast of destructive energy.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“总有一天，你会为这些罪恶复仇的。这是我的意志。”\n不可知的力量给了你第六个礼物，可以释放出一股毁灭性的能量。（记得绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "category": [ "VEIL" ],
-    "prereqs": [ "SPELL_LIGHTNINGFIELD" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 600 }
-        ]
-      }
+    "category": [
+      "VEIL"
     ],
+    "prereqs": [
+      "SPELL_LIGHTNINGFIELD"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 600,
     "spells_learned": [
-      [ "arcana_blessing_confuse_monster", 1 ],
-      [ "arcana_blessing_conjure_miasma", 1 ],
-      [ "arcana_blessing_divine_storm", 1 ],
-      [ "arcana_blessing_holy_flare", 1 ],
-      [ "arcana_blessing_radiant_burst", 1 ],
-      [ "arcana_blessing_wave_destruction", 1 ]
+      [
+        "arcana_blessing_confuse_monster",
+        1
+      ],
+      [
+        "arcana_blessing_conjure_miasma",
+        1
+      ],
+      [
+        "arcana_blessing_divine_storm",
+        1
+      ],
+      [
+        "arcana_blessing_holy_flare",
+        1
+      ],
+      [
+        "arcana_blessing_radiant_burst",
+        1
+      ],
+      [
+        "arcana_blessing_wave_destruction",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_ACIDARMOR",
-    "name": { "str": "Sign of Protection I" },
+    "name": {
+      "str": "保护标志I"
+    },
     "points": 1,
-    "description": "\"To serve me, you must learn to guard against many threats.  In time, you will have nothing to fear.\"\nUnknowable forces have given you a gift, that can grant temporary resistance to corrosive effects.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“为我服务，你必须学会防范许多威胁。\n不可知的力量给了你一份礼物，可以让你暂时抵抗腐蚀性的影响。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "changes_to": [ "SPELL_POISONARMOR2" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 100 }
-        ]
-      }
+    "changes_to": [
+      "SPELL_POISONARMOR2"
     ],
-    "spells_learned": [ [ "arcana_blessing_ward_acid", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_PROTECTION" ]
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 100,
+    "spells_learned": [
+      [
+        "arcana_blessing_ward_acid",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_PROTECTION"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_POISONARMOR2",
-    "name": { "str": "Sign of Protection II" },
+    "name": {
+      "str": "保护标志II"
+    },
     "points": 2,
-    "description": "\"You will bear my mark of protection, for your body is a frail and transient thing.\"\nUnknowable forces have given you a second gift, that can grant temporary protection from toxic gas and other poisons.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“您会得到我的庇佑，因为您的身体不可及永恒，无以媲磐石。”\n不可知的力量赠予你第二个礼物，可以暂时保护你免受有毒气体和其他有毒物质的伤害。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_ACIDARMOR" ],
-    "changes_to": [ "SPELL_ELECRESIST2" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 200 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_ACIDARMOR"
     ],
-    "spells_learned": [ [ "arcana_blessing_ward_acid", 1 ], [ "arcana_blessing_ward_poison", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_PROTECTION" ]
+    "changes_to": [
+      "SPELL_ELECRESIST2"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 200,
+    "spells_learned": [
+      [
+        "arcana_blessing_ward_acid",
+        1
+      ],
+      [
+        "arcana_blessing_ward_poison",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_PROTECTION"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_ELECRESIST2",
-    "name": { "str": "Sign of Protection III" },
+    "name": {
+      "str": "保护标志III"
+    },
     "points": 3,
-    "description": "\"You will face storms that would sweep away all you hold dear.\"\nUnknowable forces have given you a third gift, that can grant temporary protection against electricity.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“您将面临的风暴会卷走你所珍视的一切。”\n不可知的力量赠予你第三个礼物，可授予对电力临时保护。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_POISONARMOR2" ],
-    "changes_to": [ "SPELL_FLAMEARMOR2" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 300 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_POISONARMOR2"
     ],
-    "spells_learned": [ [ "arcana_blessing_ward_acid", 1 ], [ "arcana_blessing_ward_poison", 1 ], [ "arcana_blessing_ward_lightning", 1 ] ],
-    "flags": [ "explorer_of_the_veil" ]
+    "changes_to": [
+      "SPELL_FLAMEARMOR2"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 300,
+    "spells_learned": [
+      [
+        "arcana_blessing_ward_acid",
+        1
+      ],
+      [
+        "arcana_blessing_ward_poison",
+        1
+      ],
+      [
+        "arcana_blessing_ward_lightning",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_FLAMEARMOR2",
-    "name": { "str": "Sign of Protection IV" },
+    "name": {
+      "str": "保护标志IV"
+    },
     "points": 4,
-    "description": "\"But your spirit shall face these trials as stone faces the flame, unyielding to the inferno.\"\nUnknowable forces have given you a fourth gift, that can grant resistance to fire and smoke.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“你的灵魂面临考验，如同石头面对烈火，不要屈服于地狱。”\n不可知的力量给了你第四个礼物，帮助你抵御烈火和浓烟。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_ELECRESIST2" ],
-    "changes_to": [ "SPELL_FROSTARMOR" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 400 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_ELECRESIST2"
     ],
+    "changes_to": [
+      "SPELL_FROSTARMOR"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 400,
     "spells_learned": [
-      [ "arcana_blessing_ward_acid", 1 ],
-      [ "arcana_blessing_ward_poison", 1 ],
-      [ "arcana_blessing_ward_lightning", 1 ],
-      [ "arcana_blessing_ward_flame", 1 ]
+      [
+        "arcana_blessing_ward_acid",
+        1
+      ],
+      [
+        "arcana_blessing_ward_poison",
+        1
+      ],
+      [
+        "arcana_blessing_ward_lightning",
+        1
+      ],
+      [
+        "arcana_blessing_ward_flame",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_FROSTARMOR",
-    "name": { "str": "Sign of Protection V" },
+    "name": {
+      "str": "保护标志V"
+    },
     "points": 5,
-    "description": "\"There will be no storm, no blizzard, nothing will deter you when you heed my call.\"\nUnknowable forces have given you a fifth gift, that can protect against cold.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“不管是暴风雨还是暴风雪，无论什么都不能阻止你听从我的召唤。”\n不可知力量给了你第五个礼物，可以抵御寒冷。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_FLAMEARMOR2" ],
-    "changes_to": [ "SPELL_PSYSHIELD" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 500 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_FLAMEARMOR2"
     ],
+    "changes_to": [
+      "SPELL_PSYSHIELD"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 500,
     "spells_learned": [
-      [ "arcana_blessing_ward_acid", 1 ],
-      [ "arcana_blessing_ward_poison", 1 ],
-      [ "arcana_blessing_ward_lightning", 1 ],
-      [ "arcana_blessing_ward_flame", 1 ],
-      [ "arcana_blessing_ward_cold", 1 ]
+      [
+        "arcana_blessing_ward_acid",
+        1
+      ],
+      [
+        "arcana_blessing_ward_poison",
+        1
+      ],
+      [
+        "arcana_blessing_ward_lightning",
+        1
+      ],
+      [
+        "arcana_blessing_ward_flame",
+        1
+      ],
+      [
+        "arcana_blessing_ward_cold",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_PSYSHIELD",
-    "name": { "str": "Sign of Protection VI" },
+    "name": {
+      "str": "保护标志VI"
+    },
     "points": 6,
-    "description": "\"In time, your service to me will see you safely through death itself.  It is my will.\"\nUnknowable forces have given you a sixth gift, that can project a powerful protective force.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“总有一天，你对我的服侍会让你安然度过死亡。“这是我的意愿。”\n不可知的力量给了你第六个礼物，它可以投射出强大的保护力量。（记得绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_FROSTARMOR" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 600 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_FROSTARMOR"
     ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 600,
     "spells_learned": [
-      [ "arcana_blessing_ward_acid", 1 ],
-      [ "arcana_blessing_ward_poison", 1 ],
-      [ "arcana_blessing_ward_lightning", 1 ],
-      [ "arcana_blessing_ward_flame", 1 ],
-      [ "arcana_blessing_ward_cold", 1 ],
-      [ "arcana_blessing_holy_ward", 1 ]
+      [
+        "arcana_blessing_ward_acid",
+        1
+      ],
+      [
+        "arcana_blessing_ward_poison",
+        1
+      ],
+      [
+        "arcana_blessing_ward_lightning",
+        1
+      ],
+      [
+        "arcana_blessing_ward_flame",
+        1
+      ],
+      [
+        "arcana_blessing_ward_cold",
+        1
+      ],
+      [
+        "arcana_blessing_holy_ward",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_SUMMONDOG2",
-    "name": { "str": "Sign of Summoning I" },
+    "name": {
+      "str": "召唤标志I"
+    },
     "points": 1,
-    "description": "\"This is a sign of the fate that awaits your world.  In time, you must learn what will help avert this omen.\"\nUnknowable forces have given you a gift, that can summon skeletal dogs.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“这是等待你们世界的命运的征兆。“\n不可知的力量给了你一个礼物，可以召唤骷髅狗。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "changes_to": [ "SPELL_SUMMONSKEL" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 100 }
-        ]
-      }
+    "changes_to": [
+      "SPELL_SUMMONSKEL"
     ],
-    "spells_learned": [ [ "arcana_blessing_summon_skeletal_dog", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_SUMMONING" ]
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 100,
+    "spells_learned": [
+      [
+        "arcana_blessing_summon_skeletal_dog",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_SUMMONING"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_SUMMONSKEL",
-    "name": { "str": "Sign of Summoning II" },
+    "name": {
+      "str": "召唤标志II"
+    },
     "points": 2,
-    "description": "\"You will witness more dire omens, foretelling your fate.  Do not fear them.\"\nUnknowable forces have given you a second gift, that can summon a skeleton.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“汝将所视更多噩兆，水晶球中沉浮着你的命运。但无需恐惧。”\n不可知的力量赠予你第二个礼物，可以召唤骷髅。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_SUMMONDOG2" ],
-    "changes_to": [ "SPELL_SUMMONCULUS" ],
-    "category": [ "VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 200 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_SUMMONDOG2"
     ],
-    "spells_learned": [ [ "arcana_blessing_summon_skeletal_dog", 1 ], [ "arcana_blessing_summon_skeleton", 1 ] ],
-    "flags": [ "explorer_of_the_veil", "ARCANA_VEIL_MARKER_SUMMONING" ]
+    "changes_to": [
+      "SPELL_SUMMONCULUS"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 200,
+    "spells_learned": [
+      [
+        "arcana_blessing_summon_skeletal_dog",
+        1
+      ],
+      [
+        "arcana_blessing_summon_skeleton",
+        1
+      ]
+    ],
+    "flags": [
+      "explorer_of_the_veil",
+      "ARCANA_VEIL_MARKER_SUMMONING"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_SUMMONCULUS",
-    "name": { "str": "Sign of Summoning III" },
+    "name": {
+      "str": "召唤标志III"
+    },
     "points": 3,
-    "description": "\"You will witness other interlopers, promising different paths to your world's survival.  They are false omens.\"\nUnknowable forces have given you a third gift, that can summon a homunculus.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“还有巫婆携苹果邀汝食之，但且铭记，只有我为汝带来真正启示。”\n不可知的力量赠予你第三份礼物，召唤何蒙库鲁兹。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_SUMMONSKEL" ],
-    "changes_to": [ "SPELL_SUMMONTHING" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 300 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_SUMMONSKEL"
     ],
+    "changes_to": [
+      "SPELL_SUMMONTHING"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 300,
     "spells_learned": [
-      [ "arcana_blessing_summon_skeletal_dog", 1 ],
-      [ "arcana_blessing_summon_skeleton", 1 ],
-      [ "arcana_blessing_summon_homunculus", 1 ]
+      [
+        "arcana_blessing_summon_skeletal_dog",
+        1
+      ],
+      [
+        "arcana_blessing_summon_skeleton",
+        1
+      ],
+      [
+        "arcana_blessing_summon_homunculus",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_SUMMONTHING",
-    "name": { "str": "Sign of Summoning IV" },
+    "name": {
+      "str": "召唤标志IV"
+    },
     "points": 4,
-    "description": "\"With caution you will learn to read these signs, and call forth beings to answer their false promises.\"\nUnknowable forces have given you a fourth gift, that can summon a horrifying thing.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“小心地研究，你将学会阅读这些迹象，并召唤众生去回应他们的虚假承诺。”\n不可知力量给了你第四个礼物，它可以召唤出一个可怕的东西。（记住绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_SUMMONCULUS" ],
-    "changes_to": [ "SPELL_BUGS" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 400 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_SUMMONCULUS"
     ],
+    "changes_to": [
+      "SPELL_BUGS"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 400,
     "spells_learned": [
-      [ "arcana_blessing_summon_skeletal_dog", 1 ],
-      [ "arcana_blessing_summon_skeleton", 1 ],
-      [ "arcana_blessing_summon_homunculus", 1 ],
-      [ "arcana_blessing_summon_thing", 1 ]
+      [
+        "arcana_blessing_summon_skeletal_dog",
+        1
+      ],
+      [
+        "arcana_blessing_summon_skeleton",
+        1
+      ],
+      [
+        "arcana_blessing_summon_homunculus",
+        1
+      ],
+      [
+        "arcana_blessing_summon_thing",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_BUGS",
-    "name": { "str": "Sign of Summoning V" },
+    "name": {
+      "str": "召唤标志V"
+    },
     "points": 5,
-    "description": "\"Your omens will avert theirs, and your signs will reveal our enemies for what they truly are.\"\nUnknowable forces have given you a fifth gift, that can summon giant centipedes.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“谨慎绕过魔镜的预示，汝之预兆将揭露我们敌人的面目。”\n不可知的力量赠予你第五个礼物，可以召唤巨型蜈蚣。（（记住绑定“施法”键！））",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_SUMMONTHING" ],
-    "changes_to": [ "SPELL_SUMMONVORTEX" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 500 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_SUMMONTHING"
     ],
+    "changes_to": [
+      "SPELL_SUMMONVORTEX"
+    ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 500,
     "spells_learned": [
-      [ "arcana_blessing_summon_skeletal_dog", 1 ],
-      [ "arcana_blessing_summon_skeleton", 1 ],
-      [ "arcana_blessing_summon_homunculus", 1 ],
-      [ "arcana_blessing_summon_thing", 1 ],
-      [ "arcana_blessing_summon_giant_centipedes", 1 ]
+      [
+        "arcana_blessing_summon_skeletal_dog",
+        1
+      ],
+      [
+        "arcana_blessing_summon_skeleton",
+        1
+      ],
+      [
+        "arcana_blessing_summon_homunculus",
+        1
+      ],
+      [
+        "arcana_blessing_summon_thing",
+        1
+      ],
+      [
+        "arcana_blessing_summon_giant_centipedes",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   },
   {
     "type": "mutation",
     "id": "SPELL_SUMMONVORTEX",
-    "name": { "str": "Sign of Summoning VI" },
+    "name": {
+      "str": "召唤标志VI"
+    },
     "points": 6,
-    "description": "\"In time, you will bear my messages, and call forth heralds to guide others.  It is my will.\"\nUnknowable forces have given you a sixth gift, that can summon vortices.  (( Remember to bind the \"spellcasting\" key! ))",
+    "description": "“到时候，你会接受我的信息，召唤传令来指导别人。这是我的意愿。“\n不可知的力量给了你第六个礼物，可以召唤漩涡。（记得绑定“施法”键！）",
     "valid": false,
     "purifiable": false,
-    "prereqs": [ "SPELL_BUGS" ],
-    "category": [ "VEIL" ],
-    "threshreq": [ "THRESH_VEIL" ],
-    "enchantments": [
-      {
-        "values": [
-          { "value": "BIONIC_MANA_PENALTY", "multiply": -1.0 },
-          { "value": "MAX_MANA", "add": 600 }
-        ]
-      }
+    "prereqs": [
+      "SPELL_BUGS"
     ],
+    "category": [
+      "VEIL"
+    ],
+    "threshreq": [
+      "THRESH_VEIL"
+    ],
+    "bionic_mana_penalty": 0,
+    "mana_modifier": 600,
     "spells_learned": [
-      [ "arcana_blessing_summon_skeletal_dog", 1 ],
-      [ "arcana_blessing_summon_skeleton", 1 ],
-      [ "arcana_blessing_summon_homunculus", 1 ],
-      [ "arcana_blessing_summon_thing", 1 ],
-      [ "arcana_blessing_summon_giant_centipedes", 1 ],
-      [ "arcana_blessing_summon_vortices", 1 ]
+      [
+        "arcana_blessing_summon_skeletal_dog",
+        1
+      ],
+      [
+        "arcana_blessing_summon_skeleton",
+        1
+      ],
+      [
+        "arcana_blessing_summon_homunculus",
+        1
+      ],
+      [
+        "arcana_blessing_summon_thing",
+        1
+      ],
+      [
+        "arcana_blessing_summon_giant_centipedes",
+        1
+      ],
+      [
+        "arcana_blessing_summon_vortices",
+        1
+      ]
     ],
-    "flags": [ "explorer_of_the_veil" ]
+    "flags": [
+      "explorer_of_the_veil"
+    ]
   }
 ]

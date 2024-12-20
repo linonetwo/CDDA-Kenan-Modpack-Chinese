@@ -1,12 +1,16 @@
 [
   {
     "abstract": "v_spell_scroll",
-    "name": { "str": "Spell Scroll" },
+    "name": {
+      "str": "法术卷轴"
+    },
     "type": "GENERIC",
     "weight": "475 g",
     "volume": "500 ml",
     "price": "40 USD",
-    "material": [ "paper" ],
+    "material": [
+      "paper"
+    ],
     "symbol": "?",
     "color": "light_red"
   },
@@ -14,8 +18,10 @@
     "type": "GENERIC",
     "copy-from": "v_spell_scroll",
     "id": "v_spell_scroll_VAMPIRIC_DEBUG",
-    "name": { "str": "scroll of ancient vampiric wisdom" },
-    "description": "Written in an unreadable language. With just a glimpse, you learn how to cast all vampiric spells!",
+    "name": {
+      "str": "古吸血鬼的智慧卷轴"
+    },
+    "description": "用一种无法阅读的语言写的卷轴。但是只需一瞥，你就能学会如何施展所有吸血鬼咒语！",
     "use_action": {
       "type": "learn_spell",
       "spells": [

@@ -2,53 +2,109 @@
   {
     "id": "TALK_BFF",
     "type": "talk_topic",
+    "//": "Excludes most professions, at least in vanilla and Cata++, that don't deserve friends.  :3",
     "dynamic_line": {
-      "u_has_trait": "PROF_PREPPER_HOLDOUT",
-      "yes": {
-        "compare_string": [ "yes", { "npc_val": "c_var_prepper_met" } ],
-        "yes": "What's up?  Whenever you feel like hitting the road, I'm with you.",
-        "no": {
-          "u_male": true,
-          "yes": "Holy shit man, you're still alive?!  I'm glad, I thought I was going to have to deal with all this alone.  We've got shelter and supplies at least.  Whenever you want to head out, I'll follow your lead.",
-          "no": "Holy shit girl, you're still alive?!  I'm glad, I thought I was going to have to deal with all this alone.  We've got shelter and supplies at least.  Whenever you want to head out, I'll follow your lead."
-        }
-      },
-      "no": "Greetings.  Damn, I was hoping to run into somebody else… at least we're both still in one piece, I guess."
-    },
-    "speaker_effect": {
-      "condition": {
-        "and": [
-          { "u_has_trait": "PROF_PREPPER_HOLDOUT" },
-          { "not": { "compare_string": [ "yes", { "npc_val": "c_var_prepper_met" } ] } }
-        ]
-      },
-      "effect": { "npc_add_var": "c_var_prepper_met", "value": "yes" },
-      "opinion": { "trust": 8, "value": 8, "anger": -4, "fear": -4 }
+      "u_has_any_trait": [
+        "PROF_CHURL",
+        "BIO_WEAPON_ALPHA",
+        "BIO_WEAPON_BETA",
+        "BIO_WEAPON_GAMMA",
+        "BIO_WEAPON_DELTA",
+        "BIO_WEAPON_FAILED"
+      ],
+      "yes": "该死，我还希望能碰上别人呢……至少我们都还毫发无损，我猜。",
+      "no": {
+        "u_male": true,
+        "yes": "天哪，你还活着？！我很高兴，我以为我要独自处理这一切。这个地方离得比较远，现在暂时是安全的。现在就像过去一样有人作伴了！",
+        "no": "天哪，你还活着？！我很高兴，我以为我要独自处理这一切。我们到了很远的地方，现在安全了。现在是你和我，就像过去一样！"
+      }
     },
     "responses": [
       {
-        "text": "Another survivor!  We should travel together.",
-        "condition": { "not": { "u_has_trait": "PROF_PREPPER_HOLDOUT" } },
+        "text": "[组队]另一名幸存者！让我们组队行动吧。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CHURL",
+            "BIO_WEAPON_ALPHA",
+            "BIO_WEAPON_BETA",
+            "BIO_WEAPON_GAMMA",
+            "BIO_WEAPON_DELTA",
+            "BIO_WEAPON_FAILED"
+          ]
+        },
         "topic": "TALK_SUGGEST_FOLLOW"
       },
       {
-        "text": "What are you doing?",
-        "condition": { "not": { "u_has_trait": "PROF_PREPPER_HOLDOUT" } },
+        "text": "[询问]你在做些什么？",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CHURL",
+            "BIO_WEAPON_ALPHA",
+            "BIO_WEAPON_BETA",
+            "BIO_WEAPON_GAMMA",
+            "BIO_WEAPON_DELTA",
+            "BIO_WEAPON_FAILED"
+          ]
+        },
         "topic": "TALK_DESCRIBE_MISSION"
       },
       {
-        "text": "Care to trade?",
+        "text": "[交易]你想要交易吗？",
         "topic": "TALK_DONE",
-        "condition": { "not": { "u_has_trait": "PROF_PREPPER_HOLDOUT" } },
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CHURL",
+            "BIO_WEAPON_ALPHA",
+            "BIO_WEAPON_BETA",
+            "BIO_WEAPON_GAMMA",
+            "BIO_WEAPON_DELTA",
+            "BIO_WEAPON_FAILED"
+          ]
+        },
         "effect": "start_trade"
       },
       {
-        "text": "Sure, let's head out!",
-        "condition": { "u_has_trait": "PROF_PREPPER_HOLDOUT" },
-        "effect": "follow",
-        "topic": "TALK_DONE"
+        "text": "我也很高兴见到你，伙计，我们走吧！",
+        "trial": {
+          "type": "NONE"
+        },
+        "condition": {
+          "not": {
+            "u_has_any_trait": [
+              "PROF_CHURL",
+              "BIO_WEAPON_ALPHA",
+              "BIO_WEAPON_BETA",
+              "BIO_WEAPON_GAMMA",
+              "BIO_WEAPON_DELTA",
+              "BIO_WEAPON_FAILED"
+            ]
+          }
+        },
+        "success": {
+          "effect": "follow",
+          "opinion": {
+            "trust": 8,
+            "fear": 0,
+            "value": 8,
+            "anger": -2
+          },
+          "topic": "TALK_DONE"
+        }
       },
-      { "text": "See you later.", "topic": "TALK_DONE" }
+      {
+        "text": "再见。",
+        "condition": {
+          "u_has_any_trait": [
+            "PROF_CHURL",
+            "BIO_WEAPON_ALPHA",
+            "BIO_WEAPON_BETA",
+            "BIO_WEAPON_GAMMA",
+            "BIO_WEAPON_DELTA",
+            "BIO_WEAPON_FAILED"
+          ]
+        },
+        "topic": "TALK_DONE"
+      }
     ]
   }
 ]

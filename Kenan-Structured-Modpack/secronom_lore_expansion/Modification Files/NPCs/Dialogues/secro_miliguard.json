@@ -2,30 +2,61 @@
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_MILIGUARD_main",
-    "dynamic_line": "What do you want?",
+    "dynamic_line": "你想要什么？",
     "responses": [
-      { "text": "What is this place?", "topic": "TALK_SECRO_MILIGUARD_where" },
-      { "text": "What are you doing?", "topic": "TALK_SECRO_MILIGUARD_job" },
-      { "text": "Who are you?", "topic": "TALK_SECRO_MILIGUARD_me" },
-      { "text": "Bye.", "topic": "TALK_DONE" }
+      {
+        "text": "这是哪里？",
+        "topic": "TALK_SECRO_MILIGUARD_where"
+      },
+      {
+        "text": "[询问]你在做些什么？",
+        "topic": "TALK_SECRO_MILIGUARD_job"
+      },
+      {
+        "text": "你是谁？",
+        "topic": "TALK_SECRO_MILIGUARD_me"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_MILIGUARD_where",
-    "dynamic_line": "Currently this building is military outpost. M1 might give you more specific information.",
-    "responses": [ { "text": "Okay\u2026", "topic": "TALK_SECRO_MILIGUARD_main" } ]
+    "dynamic_line": "目前这座建筑是军事前哨。M1可能会给你提供更具体的信息。",
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "TALK_SECRO_MILIGUARD_main"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_MILIGUARD_job",
-    "dynamic_line": "I just clean here. Go talk with M1.",
-    "responses": [ { "text": "Will do.", "topic": "TALK_SECRO_MILIGUARD_main" }, { "text": "Will do. Bye.", "topic": "TALK_DONE" } ]
+    "dynamic_line": "我只是个做清洁工作的。去和M1谈谈。",
+    "responses": [
+      {
+        "text": "会的。",
+        "topic": "TALK_SECRO_MILIGUARD_main"
+      },
+      {
+        "text": "我会的。拜拜。",
+        "topic": "TALK_DONE"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_SECRO_MILIGUARD_me",
-    "dynamic_line": "I'm security of this area. I serving under Sgt M1.",
-    "responses": [ { "text": "I see.", "topic": "TALK_SECRO_MILIGUARD_main" } ]
+    "dynamic_line": "我是这个地区的守卫。我听命于M1中士。",
+    "responses": [
+      {
+        "text": "我懂了。",
+        "topic": "TALK_SECRO_MILIGUARD_main"
+      }
+    ]
   }
 ]

@@ -3,16 +3,24 @@
     "//": "A jabberwock, much like that.",
     "id": "mon_ayenel",
     "type": "MONSTER",
-    "name": { "str": "ayenel" },
-    "description": "A walking flesh sentinel, with huge, sharp blade hanging from its predominant eye. Its extra appendages hang without a certain function.",
+    "name": {
+      "str": "肢解者"
+    },
+    "description": "一个行走的肉身哨兵，其主要的眼睛上悬挂着巨大而锋利的刀刃。它额外的附属物挂起来没有特定的功能。",
     "default_faction": "ayenel",
-    "species": [ "ABERRATION", "SECROSPEC" ],
+    "species": [
+      "ABERRATION",
+      "SECROSPEC"
+    ],
     "diff": 10,
     "volume": "875000 ml",
     "weight": "200000 g",
     "hp": 535,
     "speed": 75,
-    "material": [ "flesh", "bone" ],
+    "material": [
+      "flesh",
+      "bone"
+    ],
     "symbol": "⒪",
     "color": "light_red",
     "aggression": 100,
@@ -22,23 +30,48 @@
     "melee_dice_sides": 8,
     "attack_cost": 200,
     "dodge": 2,
-    "harvest": "zombie_humanoid",
-    "melee_damage": [ { "damage_type": "cut", "amount": 15 } ],
-    "armor": { "bash": 8, "cut": 13, "bullet": 13, "stab": 13, "acid": 1 },
+    "harvest": "zombie",
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 15
+      }
+    ],
+    "armor": {
+      "bash": 8,
+      "cut": 14,
+      "bullet": 10,
+      "acid": 1
+    },
     "vision_day": 42,
     "vision_night": 16,
     "special_attacks": [
-      [ "secro_ayenel_swing", 18 ],
-      [ "secro_ayenel_bitedown", 26 ],
+      [
+        "secro_ayenel_swing",
+        18
+      ],
+      [
+        "secro_ayenel_bitedown",
+        26
+      ],
       {
-		"id": "monspell_ayenel_lockon_check",
         "type": "spell",
-        "spell_data": { "id": "mon_ayenel_lockon_check" },
+        "spell_data": {
+          "id": "mon_ayenel_lockon_check"
+        },
         "cooldown": 80,
-		"condition": { "math": [ "distance('u', 'npc')", ">=", "5" ] },
-        "monster_message": "<color_yellow>%1$s glares at %3$s!</color>"
+        "monster_message": "<color_yellow>%1$s瞪着%3$s！</color>"
       }
     ],
-    "flags": [ "SEES", "WARM", "BASHES", "POISON", "ATTACKMON", "NO_BREATHE", "PUSH_MON" ]
+    "flags": [
+      "SEES",
+      "STUMBLES",
+      "WARM",
+      "BASHES",
+      "POISON",
+      "ATTACKMON",
+      "NO_BREATHE",
+      "PUSH_MON"
+    ]
   }
 ]

@@ -2,14 +2,25 @@
   {
     "type": "furniture",
     "id": "f_flower_fungal",
-    "name": "fungal flower",
+    "name": "真菌花",
     "description": "",
     "symbol": "f",
     "color": "dark_gray",
     "move_cost_mod": 1,
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "FLOWER", "FUNGUS", "TINY", "FLAMMABLE_ASH" ],
-    "bash": { "str_min": 2, "str_max": 6, "sound": "poof.", "sound_fail": "poof." }
+    "flags": [
+      "TRANSPARENT",
+      "FLOWER",
+      "FUNGUS",
+      "TINY",
+      "FLAMMABLE_ASH"
+    ],
+    "bash": {
+      "str_min": 2,
+      "str_max": 6,
+      "sound": "poof.",
+      "sound_fail": "poof."
+    }
   },
   {
     "type": "furniture",
@@ -20,31 +31,68 @@
     "color": "cyan",
     "move_cost_mod": 1,
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "FLAMMABLE_ASH", "FUNGUS", "TINY" ],
-    "bash": { "str_min": 2, "str_max": 6, "sound": "poof.", "sound_fail": "poof." }
+    "flags": [
+      "TRANSPARENT",
+      "FLAMMABLE_ASH",
+      "FUNGUS",
+      "TINY"
+    ],
+    "bash": {
+      "str_min": 2,
+      "str_max": 6,
+      "sound": "poof.",
+      "sound_fail": "poof."
+    }
   },
   {
     "type": "furniture",
     "id": "f_fungal_mass",
-    "name": "fungal mass",
+    "name": "真菌团",
     "description": "Thick ropes of Mycal matter have covered the ground here completely.  It's soft to the touch, but you sink into it, making moving across it difficult.",
     "symbol": "O",
     "bgcolor": "dark_gray",
     "move_cost_mod": -10,
     "required_str": -1,
-    "flags": [ "CONTAINER", "SEALED", "ALLOW_FIELD_EFFECT", "FLAMMABLE_ASH", "FUNGUS", "MOUNTABLE", "SHORT" ],
-    "bash": { "str_min": 6, "str_max": 30, "sound": "poof.", "sound_fail": "poof." }
+    "flags": [
+      "CONTAINER",
+      "SEALED",
+      "ALLOW_FIELD_EFFECT",
+      "FLAMMABLE_ASH",
+      "FUNGUS",
+      "MOUNTABLE",
+      "SHORT"
+    ],
+    "bash": {
+      "str_min": 6,
+      "str_max": 30,
+      "sound": "poof.",
+      "sound_fail": "poof."
+    }
   },
   {
     "type": "furniture",
     "id": "f_fungal_clump",
-    "name": "fungal clump",
-    "description": "Alien mold and stems mingle tightly here, creating a sort of fungal bush.",
+    "name": "真菌灌丛",
+    "description": "畸形的霉菌和茎在这里紧密缠绕，形成了一种真菌丛。",
     "symbol": "#",
     "bgcolor": "light_gray",
     "move_cost_mod": 3,
     "required_str": -1,
-    "flags": [ "TRANSPARENT", "CONTAINER", "SEALED", "ALLOW_FIELD_EFFECT", "FLAMMABLE_ASH", "FUNGUS", "MOUNTABLE", "SHORT" ],
-    "bash": { "str_min": 6, "str_max": 20, "sound": "poof.", "sound_fail": "poof." }
+    "flags": [
+      "TRANSPARENT",
+      "CONTAINER",
+      "SEALED",
+      "ALLOW_FIELD_EFFECT",
+      "FLAMMABLE_ASH",
+      "FUNGUS",
+      "MOUNTABLE",
+      "SHORT"
+    ],
+    "bash": {
+      "str_min": 6,
+      "str_max": 20,
+      "sound": "poof.",
+      "sound_fail": "poof."
+    }
   }
 ]

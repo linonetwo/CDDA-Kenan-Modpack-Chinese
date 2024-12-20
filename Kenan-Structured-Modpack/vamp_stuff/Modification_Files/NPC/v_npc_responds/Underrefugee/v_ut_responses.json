@@ -4,11 +4,27 @@
     "type": "talk_topic",
     "responses": [
       {
-        "text": "Here's your corrupted bloodrune stones.",
+        "text": "这是你要的腐化的血符文石。",
         "topic": "TALK_MISSION_SUCCESS",
-        "effect": [ "mission_success", { "u_consume_item": "corruptbloodrune", "count": 2 } ],
+        "effect": [
+          "mission_success",
+          {
+            "u_consume_item": "corruptbloodrune",
+            "count": 2
+          }
+        ],
         "condition": {
-          "and": [ { "u_has_items": { "item": "corruptbloodrune", "count": 2 } }, { "u_has_mission": "VAMP_UNDERTRADER_quest" } ]
+          "and": [
+            {
+              "u_has_items": {
+                "item": "corruptbloodrune",
+                "count": 2
+              }
+            },
+            {
+              "u_has_mission": "VAMP_UNDERTRADER_quest"
+            }
+          ]
         }
       }
     ]
@@ -16,110 +32,209 @@
   {
     "id": "TALK_VAMP_UNDERTRADER",
     "type": "talk_topic",
-    "dynamic_line": { "u_is_wearing": "blood_necklace", "yes": "Do you need something, mortal?.", "no": "Want something?" },
+    "dynamic_line": {
+      "u_is_wearing": "blood_necklace",
+      "yes": "你需要什么？。",
+      "no": "想要什么？"
+    },
     "responses": [
       {
-        "condition": { "not": { "npc_has_trait": "undertradertalkedhim" } },
-        "text": "Who are you?",
+        "condition": {
+          "not": {
+            "npc_has_trait": "undertradertalkedhim"
+          }
+        },
+        "text": "你是谁？",
         "topic": "TALK_VAMP_UNDERTRADER_introduce"
       },
       {
-        "condition": { "not": { "npc_has_trait": "undertradertalkedhappened" } },
-        "text": "Tell me what happened outside.",
+        "condition": {
+          "not": {
+            "npc_has_trait": "undertradertalkedhappened"
+          }
+        },
+        "text": "告诉我外面发生了什么。",
         "topic": "TALK_VAMP_UNDERTRADER_happened"
       },
-      { "text": "I'll trade with ya...", "effect": "start_trade", "topic": "TALK_VAMP_UNDERTRADER" },
       {
-        "text": "You need help? I'm here to do it.",
+        "text": "来做交易吧...",
+        "effect": "start_trade",
+        "topic": "TALK_VAMP_UNDERTRADER"
+      },
+      {
+        "text": "你需要帮忙？ 我来帮你吧。",
         "topic": "TALK_MISSION_LIST",
-        "condition": { "and": [ "has_available_mission", { "not": { "u_has_trait": "undertradervampmark" } } ] }
+        "condition": {
+          "and": [
+            "has_available_mission",
+            {
+              "not": {
+                "u_has_trait": "undertradervampmark"
+              }
+            }
+          ]
+        }
       },
       {
-        "text": "You need help? I'm here to do it.",
+        "text": "你需要帮忙？ 我来帮你吧。",
         "topic": "TALK_VAMP_UNDERTRADER_testsdone",
-        "condition": { "and": [ { "npc_has_trait": "undertradertestsdone" }, { "not": { "u_has_trait": "undertradervampmark" } } ] }
+        "condition": {
+          "and": [
+            {
+              "npc_has_trait": "undertradertestsdone"
+            },
+            {
+              "not": {
+                "u_has_trait": "undertradervampmark"
+              }
+            }
+          ]
+        }
       },
-      { "text": "About your quest...", "topic": "TALK_MISSION_INQUIRE", "condition": "has_assigned_mission" },
-      { "text": "Bye, see you later.", "topic": "TALK_DONE" }
+      {
+        "text": "关于你的任务...",
+        "topic": "TALK_MISSION_INQUIRE",
+        "condition": "has_assigned_mission"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERTRADER_introduce",
     "type": "talk_topic",
-    "dynamic_line": "I am assigned as a trader by my master. I sell our artifact materials used in forging vampiric stuff. Or buy an already forged ones for a higher trade value.",
+    "dynamic_line": "我被大师指派为商人。我在这里贩卖用来锻造吸血鬼人工制品的素材。或者以更高的交易价值购买一个已经锻造好的。",
     "responses": [
-      { "text": "Wait. Why are you selling artifacts?", "topic": "TALK_VAMP_UNDERTRADER_artifact" },
-      { "text": "Why the hell are you accepting human stuff in trading?", "topic": "TALK_VAMP_UNDERTRADER_trading" },
-      { "text": "Okay!.", "topic": "TALK_VAMP_UNDERTRADER" }
+      {
+        "text": "等等，你为什么要卖人工制品？",
+        "topic": "TALK_VAMP_UNDERTRADER_artifact"
+      },
+      {
+        "text": "为什么你可以在交易中接受人类的东西？",
+        "topic": "TALK_VAMP_UNDERTRADER_trading"
+      },
+      {
+        "text": "好的！。",
+        "topic": "TALK_VAMP_UNDERTRADER"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERTRADER_happened",
     "type": "talk_topic",
-    "dynamic_line": "I have no idea what's happening outside right now. I came here without sunburn after taking orders from HIM.",
+    "dynamic_line": "我完全不知道外面发生了什么。我听了HIM的命令就来了，这个没有晒伤的地方。",
     "responses": [
       {
-        "text": "Well, I expected nothing...",
+        "text": "好吧，我没想到这点...",
         "topic": "TALK_VAMP_UNDERTRADER",
-        "effect": { "npc_add_trait": "undertradertalkedhappened" }
+        "effect": {
+          "npc_add_trait": "undertradertalkedhappened"
+        }
       }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERTRADER_artifact",
     "type": "talk_topic",
-    "dynamic_line": "Our master wants to help the last, surviving humans in our utmost solution... Share our power with you all. But he still wants an official trading, so you need lots of valuables or cash buying our items.",
-    "responses": [ { "text": "Oh... Just great.", "topic": "TALK_VAMP_UNDERTRADER" } ]
+    "dynamic_line": "在我们最终解决方案中，我们的大师想要帮助最后的，幸存的人类... 我们可以和你们分享我们的力量。但还是需要一种正式的交易，所以你需要大量的贵重物品或现金来购买我们的商品。",
+    "responses": [
+      {
+        "text": "哦，这不错。",
+        "topic": "TALK_VAMP_UNDERTRADER"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_UNDERTRADER_trading",
     "type": "talk_topic",
-    "dynamic_line": "I don't know. Our master said we have to accept any valuables you humans got in your trip.",
+    "dynamic_line": "我不知道。但我们的大师说我们可以接受你们在旅途中得到的任何贵重物品。",
     "responses": [
       {
-        "text": "Master? Could you tell me anything about this HIM?",
+        "text": "大师？ 能告诉我更多关于HIM的事情吗？",
         "topic": "TALK_VAMP_UNDERTRADER_himdetail",
-        "condition": { "u_is_wearing": "blood_necklace" },
-        "effect": { "npc_add_trait": "undertradertalkedhim" }
+        "condition": {
+          "u_is_wearing": "blood_necklace"
+        },
+        "effect": {
+          "npc_add_trait": "undertradertalkedhim"
+        }
       },
       {
-        "text": "Master? Could you tell me anything about this HIM?",
+        "text": "大师？ 能告诉我更多关于HIM的事情吗？",
         "topic": "TALK_VAMP_UNDERTRADER_him",
-        "condition": { "not": { "u_is_wearing": "blood_necklace" } },
-        "effect": { "npc_add_trait": "undertradertalkedhim" }
+        "condition": {
+          "not": {
+            "u_is_wearing": "blood_necklace"
+          }
+        },
+        "effect": {
+          "npc_add_trait": "undertradertalkedhim"
+        }
       },
-      { "text": "Okay...", "topic": "TALK_VAMP_UNDERTRADER" }
+      {
+        "text": "好吧……",
+        "topic": "TALK_VAMP_UNDERTRADER"
+      }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERTRADER_him",
     "type": "talk_topic",
-    "dynamic_line": "Nope. HE remains a mystery to all of you.",
-    "responses": [ { "text": "Damn... You can't tell even HIS face.", "topic": "TALK_VAMP_UNDERTRADER" } ]
+    "dynamic_line": "不，大师对于你们来说就是神秘。",
+    "responses": [
+      {
+        "text": "额... 你连大师长什么样子都不告诉。",
+        "topic": "TALK_VAMP_UNDERTRADER"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_UNDERTRADER_himdetail",
     "type": "talk_topic",
-    "dynamic_line": "HIM is our master, the reason of our immortality and existence in this damned world.",
+    "dynamic_line": "HIM是我们的大师，是让我们不朽，并存在在这个操蛋的世界上的原因。",
     "responses": [
-      { "text": "Okay...", "topic": "TALK_VAMP_UNDERTRADER" },
       {
-        "text": "So, where is HE?",
+        "text": "好吧……",
+        "topic": "TALK_VAMP_UNDERTRADER"
+      },
+      {
+        "text": "所以，HE在哪里？",
         "topic": "TALK_VAMP_UNDERTRADER_himwhere",
-        "effect": [ { "u_add_trait": "undertradertalkedhim" } ]
+        "effect": [
+          {
+            "u_add_trait": "undertradertalkedhim"
+          }
+        ]
       }
     ]
   },
   {
     "id": "TALK_VAMP_UNDERTRADER_himwhere",
     "type": "talk_topic",
-    "dynamic_line": "Don't even try to know...",
-    "responses": [ { "text": "...", "topic": "TALK_VAMP_UNDERTRADER" } ]
+    "dynamic_line": "不要尝试去知道这件事情...",
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_VAMP_UNDERTRADER"
+      }
+    ]
   },
   {
     "id": "TALK_VAMP_UNDERTRADER_testsdone",
     "type": "talk_topic",
-    "dynamic_line": "No. I guess those problems are enough to help us out...",
-    "responses": [ { "text": "Okay...", "topic": "TALK_VAMP_UNDERTRADER", "effect": [ { "u_add_trait": "undertradervampmark" } ] } ]
+    "dynamic_line": "不，我想这些问题足够帮助我们了...",
+    "responses": [
+      {
+        "text": "好吧……",
+        "topic": "TALK_VAMP_UNDERTRADER",
+        "effect": [
+          {
+            "u_add_trait": "undertradervampmark"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -3,16 +3,23 @@
     "//": "Support zed that immobilizes targets from far ranges with precise accuracy.",
     "id": "mon_zombie_bootlegsmoker",
     "type": "MONSTER",
-    "name": { "str": "snatcher zombie" },
-    "description": "A writhing corpse with an unnervingly sly and cautious nature. Its pair of menacingly black eyes greedily seek the living with a predominant set of four protruding fangs. These inhumane teeth furiously gnash away while idle, creating a maddening and repetitive \"clack\".",
+    "name": {
+      "str": "掠夺丧尸"
+    },
+    "description": "一具扭动的尸体，具有令人不安的狡猾和谨慎的本性。它那一双凶恶的黑眼睛贪婪地寻找着四颗突出的尖牙。这些不人道的牙齿在空闲时疯狂地咬掉，发出令人发狂的重复“咔哒”声。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROZED_2" ],
+    "species": [
+      "ZOMBIE",
+      "SECROZED_2"
+    ],
     "volume": "62500 ml",
     "weight": "81500 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 100,
     "speed": 70,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "✑",
     "color": "light_red",
     "aggression": 100,
@@ -20,34 +27,64 @@
     "melee_skill": 6,
     "melee_dice": 6,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
     "dodge": 2,
     "vision_day": 35,
     "vision_night": 10,
-    "path_settings": { "max_dist": 8 },
+    "path_settings": {
+      "max_dist": 8
+    },
     "tracking_distance": 10,
     "special_attacks": [
-      [ "SHRIEK_ALERT", 10 ],
+      [
+        "SHRIEK_ALERT",
+        10
+      ],
       {
         "type": "gun",
         "cooldown": 150,
         "move_cost": 100,
         "gun_type": "snatcher_mouth",
-        "fake_skills": [ [ "gun", 10 ], [ "rifle", 10 ] ],
-        "ranges": [ [ 0, 25, "DEFAULT" ] ],
+        "fake_skills": [
+          [
+            "gun",
+            10
+          ],
+          [
+            "rifle",
+            10
+          ]
+        ],
+        "ranges": [
+          [
+            0,
+            25,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_player": false,
         "require_targeting_npc": false,
         "require_targeting_monster": false,
-        "description": "The snatcher zombie sends off its tongue!"
+        "description": "这只抢夺者丧尸伸出了它的舌头！"
       },
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_bootlegsmoker_snatch_check" },
+        "spell_data": {
+          "id": "mon_zombie_bootlegsmoker_snatch_check"
+        },
         "cooldown": 70,
-        "monster_message": "<color_yellow>The snatcher zombie launches its tongue at %3$s!</color>"
+        "monster_message": "<color_yellow>抢夺者僵尸在%3$s点发出舌头！</color>"
       }
     ],
-    "upgrades": { "half_life": 14, "into": "mon_zombie_bootlegsmoker_mode" },
+    "upgrades": {
+      "half_life": 14,
+      "into": "mon_zombie_bootlegsmoker_mode"
+    },
     "death_drops": "default_zombie_clothes",
     "flags": [
       "SEES",
@@ -60,7 +97,7 @@
       "POISON",
       "NO_BREATHE",
       "REVIVES",
-      "PATH_AVOID_DANGER_1",
+      "PATH_AVOID_DANGER_2",
       "KEEP_DISTANCE",
       "RANGED_ATTACKER"
     ]
@@ -69,32 +106,54 @@
     "id": "mon_zombie_bootlegsmoker_mode",
     "copy-from": "mon_zombie_bootlegsmoker",
     "type": "MONSTER",
-    "name": { "str": "snatcher zombie" },
-    "description": "A writhing corpse with an unnervingly sly and cautious nature. Its pair of menacingly black eyes greedily seek the living with a predominant set of four protruding fangs. These inhumane teeth furiously gnash away while idle, creating a maddening and repetitive \"clack\".",
+    "name": {
+      "str": "掠夺丧尸"
+    },
+    "description": "一具扭动的尸体，具有令人不安的狡猾和谨慎的本性。它那一双凶恶的黑眼睛贪婪地寻找着四颗突出的尖牙。这些不人道的牙齿在空闲时疯狂地咬掉，发出令人发狂的重复“咔哒”声。",
     "hp": 125,
     "speed": 75,
     "color": "red",
     "special_attacks": [
-      [ "SHRIEK_ALERT", 10 ],
+      [
+        "SHRIEK_ALERT",
+        10
+      ],
       {
         "type": "gun",
         "cooldown": 110,
         "move_cost": 100,
         "gun_type": "snatcher_mouth",
-        "fake_skills": [ [ "gun", 10 ], [ "rifle", 10 ] ],
-        "ranges": [ [ 0, 25, "DEFAULT" ] ],
+        "fake_skills": [
+          [
+            "gun",
+            10
+          ],
+          [
+            "rifle",
+            10
+          ]
+        ],
+        "ranges": [
+          [
+            0,
+            25,
+            "DEFAULT"
+          ]
+        ],
         "require_targeting_player": false,
         "require_targeting_npc": false,
         "require_targeting_monster": false,
-        "description": "The snatcher zombie sends off its tongue!"
+        "description": "这只抢夺者丧尸伸出了它的舌头！"
       },
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombie_bootlegsmoker_snatch_check" },
+        "spell_data": {
+          "id": "mon_zombie_bootlegsmoker_snatch_check"
+        },
         "cooldown": 66,
-        "monster_message": "<color_yellow>The snatcher zombie launches its tongue at %3$s</color>"
+        "monster_message": "<color_yellow>抢夺者僵尸在%3$s </color>发出舌头"
       }
     ],
-    "upgrades": {  }
+    "upgrades": {}
   }
 ]

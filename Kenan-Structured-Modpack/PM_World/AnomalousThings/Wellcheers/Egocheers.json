@@ -197,33 +197,7 @@
     "damage": { "damage_type": "bullet", "amount": 25, "armor_penetration": 4, "armor_multiplier": 0.3 },
     "dispersion": 100,
     "recoil": 400,
-    "effects": [ "soda_slow_ammo" ]
-  },
-  {
-    "id": "soda_slow_ammo",
-    "type": "ammo_effect",
-    "eoc": [ "EOC_soda_slow" ]
-  },
-  {
-    "type": "effect_on_condition",
-    "id": "EOC_soda_slow",
-    "condition": "has_beta",
-    "effect": {
-      "npc_add_effect": "soda_slowed",
-      "intensity": { "math": [ "1 + u_effect_intensity('soda_slowed')" ] },
-      "duration": 30
-    }
-  },
-  {
-    "type": "effect_type",
-    "id": "soda_slowed",
-    "name": [ "Slowed", "Realy slowed", "Snail speed", "Extraslow" ],
-    "max_intensity": 8,
-    "int_decay_tick": 30,
-    "show_in_info": true,
-    "apply_message": "",
-    "int_add_val": 1,
-    "scaling_mods": { "speed_mod": [ -15, -100 ] }
+    "effects": [ "PARALYZEPOISON" ]
   },
   {
     "type": "ammunition_type",

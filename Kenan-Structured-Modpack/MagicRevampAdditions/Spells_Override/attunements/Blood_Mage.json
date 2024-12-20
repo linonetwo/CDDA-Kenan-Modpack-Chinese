@@ -2,14 +2,21 @@
   {
     "id": "banishment_greater",
     "type": "SPELL",
-    "name": { "str": "Greater Banishment" },
-    "description": "A more advanced version of Banishment, which is a ritual spell that attempts to banish a monster.  Being closely related to blood magic, the Blood Mage is much more specialized to use a spell like this.",
-    "valid_targets": [ "hostile" ],
-    "flags": [ "SOMATIC", "VERBAL" ],
+    "name": {
+      "str": "高等放逐术"
+    },
+    "description": "放逐术的更高级版本，它是一种试图驱逐怪物的仪式法术。由于与血魔法联系紧密，所以血法师更擅长使用这样的法术。",
+    "valid_targets": [
+      "hostile"
+    ],
+    "flags": [
+      "SOMATIC",
+      "VERBAL"
+    ],
     "effect": "banishment",
     "shape": "blast",
     "min_damage": 120,
-    "damage_increment": 15.0,
+    "damage_increment": 15,
     "max_damage": 760,
     "min_range": 6,
     "max_range": 6,
@@ -26,13 +33,23 @@
   {
     "id": "demon_possession_aura",
     "type": "ARMOR",
-    "name": { "str": "Ixythyug the Destroyer's soul" },
-    "description": "RIP AND TEAR",
+    "name": {
+      "str": "伊克斯蒂赫“毁灭者”之魂"
+    },
+    "description": "撕碎万物！",
     "weight": "1 g",
     "volume": "1 ml",
     "symbol": "o",
     "color": "white",
-    "flags": [ "PERSONAL", "SEMITANGIBLE", "OVERSIZE", "ONLY_ONE", "TRADER_AVOID", "NO_TAKEOFF", "NONCONDUCTIVE" ],
+    "flags": [
+      "PERSONAL",
+      "SEMITANGIBLE",
+      "OVERSIZE",
+      "ONLY_ONE",
+      "TRADER_AVOID",
+      "NO_TAKEOFF",
+      "NONCONDUCTIVE"
+    ],
     "relic_data": {
       "passive_effects": [
         {
@@ -56,10 +73,17 @@
   {
     "id": "demonic_possession",
     "type": "SPELL",
-    "name": { "str": "Demonic Possession" },
-    "description": "You allow a demon to possess your body for a short time, giving you great combat abilities.  You still retain control, though lose your spellcasting abilities temporariliy.",
-    "valid_targets": [ "none" ],
-    "flags": [ "SOMATIC", "NO_LEGS" ],
+    "name": {
+      "str": "恶魔附身"
+    },
+    "description": "你让恶魔短时间占有你的身体，赋予你强大的战斗能力。你仍然保持控制，不过你会暂时失去施法能力。",
+    "valid_targets": [
+      "none"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS"
+    ],
     "effect": "spawn_item",
     "shape": "blast",
     "effect_str": "demon_possession_aura",

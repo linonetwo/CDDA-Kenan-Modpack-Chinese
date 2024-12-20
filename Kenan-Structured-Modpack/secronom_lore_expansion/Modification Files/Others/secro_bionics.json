@@ -2,9 +2,20 @@
   {
     "id": "bio_secro_fv",
     "type": "bionic",
-    "name": { "str": "Bio-organic Exoskeleton Interface" },
-    "description": "The command center of your flesh vessel. This allows one to activate its suit to morph their gear into various armaments.",
-    "occupied_bodyparts": [ [ "torso", 2 ], [ "head", 3 ] ],
+    "name": {
+      "str": "生物有机外骨骼界面"
+    },
+    "description": "你肉身的指挥中心。这允许一个人激活它的套装，把他们的装备变成各种武器。",
+    "occupied_bodyparts": [
+      [
+        "torso",
+        2
+      ],
+      [
+        "head",
+        3
+      ]
+    ],
     "included_bionics": [
       "bio_secro_fv_link",
       "bio_secro_fv_morph_blades",
@@ -26,172 +37,290 @@
   {
     "id": "bio_secro_fv_link",
     "type": "bionic",
-    "name": { "str": "Bio-organic Neural Link" },
-    "description": "An intricate transmission device implanted on your head. Grants full control over the experimental bio-organic exoskeleton worn by its user.",
+    "name": {
+      "str": "生物有机神经链条"
+    },
+    "description": "一个复杂的传输装置植入你的头上。授予用户对实验生物有机外骨骼的完全控制权。",
     "included": true
   },
   {
     "id": "bio_secro_fv_core",
     "type": "bionic",
-    "name": { "str": "Artificial Flesh Core" },
-    "description": "A prototype version of the flesh has been infused on your chest with its veins creeping towards every parts of your body. It allows one to consume specialized, artificial flesh and convert it into bionic power. The process is slow, but highly renewable.",
+    "name": {
+      "str": "人造血肉核心"
+    },
+    "description": "一个原型的血肉核心已被植入你的胸腔，其血管已经爬满你身体的每个部分。它可以让其寄生的人食用专门的人造肉，并将其转化为仿生能量。这个过程很慢，但利用率很高。",
     "capacity": "1000 kJ",
-    "occupied_bodyparts": [ [ "head", 1 ], [ "torso", 10 ], [ "arm_l", 1 ], [ "arm_r", 1 ], [ "leg_l", 1 ], [ "leg_r", 1 ] ],
-    "fuel_options": [ "secro_flesh_fuel" ],
+    "occupied_bodyparts": [
+      [
+        "head",
+        1
+      ],
+      [
+        "torso",
+        10
+      ],
+      [
+        "arm_l",
+        1
+      ],
+      [
+        "arm_r",
+        1
+      ],
+      [
+        "leg_l",
+        1
+      ],
+      [
+        "leg_r",
+        1
+      ]
+    ],
+    "fuel_options": [
+      "secro_flesh_fuel"
+    ],
     "fuel_efficiency": 25,
-    "passive_pseudo_items": [ "internal_secro_fv_core" ],
+    "passive_pseudo_items": [
+      "internal_secro_fv_core"
+    ],
     "time": "20 s",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE" ],
-    "included_bionics": [ "bio_secro_fv_core_meta" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_POWER_SOURCE",
+      "BIONIC_NPC_USABLE"
+    ],
+    "included_bionics": [
+      "bio_secro_fv_core_meta"
+    ]
   },
   {
     "id": "bio_secro_fv_core_meta",
     "type": "bionic",
-    "name": { "str": "Artificial Metabolic Interchange" },
-    "description": "As it is interconnected to your stomach, the core can convert its content into bionic power. Can be toggled on and off anytime.",
+    "name": {
+      "str": "人造代谢交换"
+    },
+    "description": "由于血肉核心与你的胃相连，它可以将你胃中的内容物转化为仿生能量。你可以随时打开和关闭它。",
     "included": true,
-    "fuel_options": [ "metabolism" ],
+    "fuel_options": [
+      "metabolism"
+    ],
     "fuel_efficiency": 0.225,
     "time": "1 s",
-    "flags": [ "BIONIC_POWER_SOURCE", "BIONIC_NPC_USABLE", "BIONIC_TOGGLED" ]
+    "flags": [
+      "BIONIC_POWER_SOURCE",
+      "BIONIC_NPC_USABLE",
+      "BIONIC_TOGGLED"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_blades",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_light_red>Bone Blades</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_light_red>fighter armament</color> - <color_white>bone blades</color>\n\"Protruding on your joints are sharp and deadly curved blades composed of flesh and bones.\"",
+    "name": {
+      "str": "<color_white>变形：<color_light_red>骨刀</color></color>"
+    },
+    "description": "命令脉管装甲变形为:\n <color_light_red>战士武装</color> - <color_white>骨刃</color> \n“你的指关节上伸出了由肉和骨头组成的锋利而致命的刀刃。 ”",
     "included": true,
     "act_cost": "3 kJ",
     "react_cost": "500 J",
     "time": "1 s",
     "fake_weapon": "secro_power_armor_flesh_morphed_fite_blades",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "BIONIC_NPC_USABLE", "USES_BIONIC_POWER" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_WEAPON",
+      "BIONIC_NPC_USABLE",
+      "USES_BIONIC_POWER"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_tentacles",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_light_red>Twisted Veins</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_light_red>fighter armament</color> - <color_white>twisted veins</color>\n\"Your hands have bursted into several slender tentacle outgrowths, each tipped with a barbed stinger.\"",
+    "name": {
+      "str": "<color_white>变形：<color_light_red>扭曲触手</color></color>"
+    },
+    "description": "命令脉管装甲变形为:\n <color_light_red>战士武装</color> - <color_white>扭曲脉管</color> \n“你的双手长出了几条细长的触手，每条触手的顶端都有一个含有毒素的尖刺。”",
     "included": true,
     "act_cost": "3 kJ",
     "react_cost": "500 J",
     "time": "1 s",
     "fake_weapon": "secro_power_armor_flesh_morphed_fite_tentacles",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "USES_BIONIC_POWER" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_WEAPON",
+      "USES_BIONIC_POWER"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_fleshpound",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_light_red>Fleshpounds</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_light_red>fighter armament</color> - <color_white>fleshpound</color>\n\"With compact mass of flesh covering your arms, every whack packs a wallop!\"",
+    "name": {
+      "str": "<color_white>变形：<color_light_red>血肉重臂 </color></color>"
+    },
+    "description": "命令脉管装甲变形为：\n<color_light_red>战士武装</color>-<color_white>血肉重臂</color>\n“紧实的血肉覆盖在你的双臂上，每一次重击都会产生巨大的冲击力！”",
     "included": true,
     "act_cost": "3 kJ",
     "react_cost": "500 J",
     "time": "1 s",
     "fake_weapon": "secro_power_armor_flesh_morphed_fite_fleshpound",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "USES_BIONIC_POWER" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_WEAPON",
+      "USES_BIONIC_POWER"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_jawarms",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_light_red>Jawed Biters</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_light_red>fighter armament</color> - <color_white>jawed biters</color>\n\"Large gaping orifices emerge from both of your hands, eager to nibble on anything.\"",
+    "name": {
+      "str": "<color_white>变形：<color_light_red>颚咬</color></color>"
+    },
+    "description": "命令脉管装甲变形为:\n <color_light_red>战士武装</color> - <color_white>颚咬者</color> \n“你的双手裂开成了两张带着锯齿的大口，渴望啃咬任何其接触的东西。 ”",
     "included": true,
     "act_cost": "3 kJ",
     "react_cost": "500 J",
     "time": "1 s",
     "fake_weapon": "secro_power_armor_flesh_morphed_fite_jawarms",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "USES_BIONIC_POWER" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_WEAPON",
+      "USES_BIONIC_POWER"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_shield",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_yellow>Meat Shield</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_yellow>juggernaut armament</color> - <color_white>meat shield</color>\n\"Your hands have fused together to form a meaty shield. It significantly hampers your movement, but has great blocking ability.\"",
+    "name": {
+      "str": "<color_white>变形：<color_yellow>肉盾</color></color>"
+    },
+    "description": "命令脉管装甲变形为:\n <color_yellow>巨像武装</color> - <color_white>肉盾</color> \n“你的双手融合在一起形成了一个肉盾。显著阻碍你的运动，但有强大的格挡能力。”",
     "included": true,
     "act_cost": "5 kJ",
     "react_cost": "2 kJ",
     "time": "1 s",
     "fake_weapon": "secro_power_armor_flesh_morphed_jugg_shield",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "USES_BIONIC_POWER" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_WEAPON",
+      "USES_BIONIC_POWER"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_bonespikes",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_yellow>Bone Spikes</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_yellow>juggernaut armament</color> - <color_white>bone spikes</color>\n\"Sharp bone outgrowths emerges from your suit and cover most of your fatal extremeties. Grants great protection against impact, at a cost of mobility.\"",
+    "name": {
+      "str": "<color_white>变形：<color_yellow>骨钉</color> </color>"
+    },
+    "description": "命令血肉脉管装甲变形为：\n <color_yellow>巨像武装</color>-<color_white>骨钉</color> \n“尖锐的骨突起从你的衣服中出现并覆盖你大部分致命的四肢。以牺牲机动性为代价，提供强大的钝击防护。”",
     "included": true,
     "act_cost": "5 kJ",
     "react_cost": "1500 J",
     "time": "1 s",
-    "enchantments": [ "ench_bio_secro_fv_morph_bonespikes" ],
-    "flags": [ "BIONIC_TOGGLED" ]
+    "enchantments": [
+      "ench_bio_secro_fv_morph_bonespikes"
+    ],
+    "flags": [
+      "BIONIC_TOGGLED"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_hardening",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_yellow>Crystalline Hardening</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_yellow>juggernaut armament</color> - <color_white>crystalline hardening</color>\n\"Your suit's surface hardens into crystal-like material, granting extreme damage reduction against all types but makes movement nearly impossible.\"",
+    "name": {
+      "str": "<color_white>变形：<color_yellow>结晶硬化</color> </color>"
+    },
+    "description": "命令血肉脉管装甲变形为:\n <color_yellow>巨像武装</color> - <color_white>水晶硬化</color> \n“你的套装表面硬化成水晶一样的材料，对受到的所有类型的伤害大幅度降低，但使移动几乎不可能。”",
     "included": true,
     "act_cost": "250 kJ",
     "react_cost": "50 kJ",
     "time": "1 s",
-    "enchantments": [ "ench_bio_secro_fv_morph_hardening" ],
-    "flags": [ "BIONIC_TOGGLED" ]
+    "enchantments": [
+      "ench_bio_secro_fv_morph_hardening"
+    ],
+    "flags": [
+      "BIONIC_TOGGLED"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_spit",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_light_blue>Spitter</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_light_blue>gunner armament</color> - <color_white>spitter</color>\n\"An acid-spitting elongated proboscis-like limb that morph and protrude from one's shoulder. Consumes flesh to produce globs of blood acid.\"",
+    "name": {
+      "str": "<color_white>变形：<color_light_blue>喷吐器</color></color>"
+    },
+    "description": "命令脉管装甲变形为:\n <color_light_blue>神枪手武装</color> - <color_white>喷吐器</color> \n“一个吐酸的细长长鼻状肢，变形并从你的肩膀处伸出。消耗肉产生血酸球。”",
     "included": true,
     "act_cost": "3 kJ",
     "react_cost": "100 J",
     "time": "1 s",
     "fake_weapon": "secro_power_armor_flesh_morphed_gun_spit",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "USES_BIONIC_POWER" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_WEAPON",
+      "USES_BIONIC_POWER"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_bonelance",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_light_blue>Bone Lancer</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_light_blue>gunner armament</color> - <color_white>bone lancer</color>\n\"One of your arms have swollen into a mass of flesh, with half of its proportion imitates that of a gun barrel. If fed, lines of strangely-shaped teeth will grow from it and these can be launched with great power.\"",
+    "name": {
+      "str": "<color_white>变形：<color_light_blue>骨枪</color></color>"
+    },
+    "description": "命令血肉脉管装甲变形为：\n<color_light_blue>神枪手武装</color>-<color_white>骨枪</color>\n“你的一只手臂已经肿成一团血肉，一半比例模仿橙了枪管。如果进行喂食，就会长出一排形状奇特的牙齿，这些牙齿可以以巨大的力量发射出去。”",
     "included": true,
     "act_cost": "3 kJ",
     "react_cost": "100 J",
     "time": "1 s",
     "fake_weapon": "secro_power_armor_flesh_morphed_gun_bonelance",
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_WEAPON", "USES_BIONIC_POWER" ]
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_WEAPON",
+      "USES_BIONIC_POWER"
+    ]
   },
   {
     "id": "bio_secro_fv_morph_powerlegs",
     "type": "bionic",
-    "name": { "str": "<color_white>Morph: <color_light_green>Powerlegs</color></color>" },
-    "description": "Command the flesh vessel to morph with:\n<color_light_green>agility armament</color> - <color_white>powerlegs</color>\n\"Formed on the vessel's knee joints are strong, elastic muscle fibers. It allows the user to move quicker and exert greater strength in performing acrobatic feats.\"",
+    "name": {
+      "str": "<color_white>变形：<color_light_green>动力下肢</color> </color>"
+    },
+    "description": "命令脉管装甲变形为：\n <color_light_green>灵敏武装</color>-<color_white>动力下肢</color> \n“强大的弹性肌肉纤维在血脉装甲的膝关节上形成。它可以让使用者在翻越障碍时能更快地移动并使出更大的力量。”",
     "included": true,
     "act_cost": "5 kJ",
     "react_cost": "500 J",
     "time": "1 s",
-    "enchantments": [ "ench_bio_secro_fv_morph_powerlegs" ],
-    "flags": [ "BIONIC_TOGGLED" ]
+    "enchantments": [
+      "ench_bio_secro_fv_morph_powerlegs"
+    ],
+    "flags": [
+      "BIONIC_TOGGLED"
+    ]
   },
   {
     "id": "bio_secro_fv_extra_biolight",
     "type": "bionic",
-    "name": { "str": "Bioluminescent Frond" },
-    "description": "Creates small, oddly-shaped and short-lived frond emitting strong light.",
+    "name": {
+      "str": "生物发光复叶"
+    },
+    "description": "形成一个小的、形状奇特的、寿命很短的叶片，可以发出强光。",
     "included": true,
     "act_cost": "10 kJ",
-    "spell_on_activation": { "id": "secro_power_armor_flesh_biolight_give" }
+    "spell_on_activation": {
+      "id": "secro_power_armor_flesh_biolight_give"
+    }
   },
   {
     "id": "bio_secro_fv_extra_nightvision",
     "type": "bionic",
-    "name": { "str": "Artificial Night Vision" },
-    "description": "Increases your vision through dark areas by generating dim, bioluminescent light around your cornea.",
+    "name": {
+      "str": "人造夜视"
+    },
+    "description": "通过在你的角膜周围产生暗淡的生物荧光，增加你在黑暗中的视力。",
     "included": true,
-    "flags": [ "BIONIC_TOGGLED" ],
-    "active_flags": [ "NIGHT_VISION" ],
+    "flags": [
+      "BIONIC_TOGGLED"
+    ],
+    "active_flags": [
+      "NIGHT_VISION"
+    ],
     "act_cost": "2 kJ",
     "react_cost": "75 J",
     "time": "1 s"
@@ -199,28 +328,47 @@
   {
     "id": "bio_secro_fv_extra_shockresist",
     "type": "bionic",
-    "name": { "str": "Artificial Dielectric Capacitor System" },
-    "description": "Networks of the flesh vessel's vein emerges from your suit. They attract external electrical discharges and redirect them out from your body, minimizing the damage dealt.",
+    "name": {
+      "str": "人造介质电容器系统"
+    },
+    "description": "脉管装甲的血管网络从你的装甲中显露出来。它们吸收外部的电流，并将其从你的身体中转移出来，将造成的伤害降至最低。",
     "included": true,
-    "flags": [ "BIONIC_TOGGLED", "BIONIC_NPC_USABLE" ],
+    "flags": [
+      "BIONIC_TOGGLED",
+      "BIONIC_NPC_USABLE"
+    ],
     "act_cost": "5 kJ",
     "react_cost": "250 J",
     "time": "1 s",
-    "enchantments": [ "ench_bio_secro_fv_extra_shockresist" ]
+    "enchantments": [
+      "ench_bio_secro_fv_extra_shockresist"
+    ]
   },
   {
     "id": "internal_secro_fv_core",
     "type": "GENERIC",
     "category": "container",
-    "name": { "str": "flesh core" },
+    "name": {
+      "str": "flesh core"
+    },
     "description": "Internal storage for articifial flesh.",
     "volume": "100 ml",
     "weight": "1 g",
     "price": "0 cent",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "(",
     "color": "red",
-    "flags": [ "INTEGRATED", "UNBREAKABLE", "PERSONAL", "NO_REPAIR", "ALLOWS_NATURAL_ATTACKS", "BIONIC_FUEL_SOURCE", "TARDIS" ],
+    "flags": [
+      "INTEGRATED",
+      "UNBREAKABLE",
+      "PERSONAL",
+      "NO_REPAIR",
+      "ALLOWS_NATURAL_ATTACKS",
+      "BIONIC_FUEL_SOURCE",
+      "TARDIS"
+    ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -229,7 +377,9 @@
         "max_contains_volume": "2000 ml",
         "max_item_volume": "100 ml",
         "max_contains_weight": "3 kg",
-        "material_restriction": [ "secro_flesh_fuel" ]
+        "material_restriction": [
+          "secro_flesh_fuel"
+        ]
       }
     ]
   }

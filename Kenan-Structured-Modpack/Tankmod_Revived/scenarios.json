@@ -2,15 +2,30 @@
   {
     "type": "scenario",
     "id": "tankmod_armored_warfare",
-    "name": "Armored Apocalypse",
+    "name": "装甲启示录",
     "points": 0,
-    "description": "Wandering in search of any other survivors after a disastrous mobilization, your tank and its crew have slowly been worn down by attrition.  After trying to establish communications using an old radio tower, the only other surviving crew member went off in search of supplies and fuel a few days ago.  Now something's stirred up the undead, several are converging on your position.",
+    "description": "在灾难性的动员后四处寻找其他幸存者，你的坦克和它的船员已经慢慢被磨损了。几天前，在试图用一个旧的无线电塔建立通信后，唯一幸存的机组人员去寻找补给和燃料。现在有东西激起了不死生物，几个正在向你的位置靠拢。",
     "vehicle": "tank_m1_abrams",
-    "professions": [ "tankmod_driver", "tankmod_gunner", "tankmod_loader", "tankmod_commander" ],
-    "start_name": "Radio Tower",
-    "allowed_locs": [ "sloc_tankmod_radio_tower" ],
-    "missions": [ "MISSION_TANK_SUPPLY_RUN" ],
-    "start_of_game": { "season": "summer" },
-    "flags": [ "CITY_START", "LONE_START", "SUR_START" ]
+    "professions": [
+      "tankmod_driver",
+      "tankmod_gunner",
+      "tankmod_loader",
+      "tankmod_commander"
+    ],
+    "start_name": "无线电塔",
+    "allowed_locs": [
+      "sloc_tankmod_radio_tower"
+    ],
+    "missions": [
+      "MISSION_TANK_SUPPLY_RUN"
+    ],
+    "start_of_game": {
+      "season": "summer"
+    },
+    "flags": [
+      "CITY_START",
+      "LONE_START",
+      "SUR_START"
+    ]
   }
 ]

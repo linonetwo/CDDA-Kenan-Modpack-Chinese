@@ -3,7 +3,9 @@
     "id": "welder",
     "copy-from": "welder",
     "type": "TOOL",
-    "name": { "str": "arc welder" },
+    "name": {
+      "str": "电弧焊枪"
+    },
     "extend": {
       "use_action": [
         {
@@ -26,7 +28,10 @@
           "cost_scaling": 0.1,
           "move_cost": 500
         },
-        { "flame": false, "type": "cauterize" }
+        {
+          "flame": false,
+          "type": "cauterize"
+        }
       ]
     }
   }

@@ -4,24 +4,53 @@
     "type": "ARMOR",
     "symbol": "?",
     "color": "red",
-    "name": { "str": "tendril whip" },
-    "description": "Your tendril in its swollen, fleshy form, throbbing at unstable rate. You feel its power flowing through you.\n<color_white>Strength: <color_light_green>+2</color>\nBlock: <color_light_green>+2</color>\nAttack speed: <color_red>-5%</color></color>",
+    "name": {
+      "str": "触手鞭"
+    },
+    "description": "你的卷须以其肿胀、多肉的形式，以不稳定的速度跳动着。你感觉到它的力量在你体内流动。\n <color_white>强度：<color_light_green> +2 </color>\n阻挡：<color_light_green>+2 </color>\n攻击速度：<color_red> -5%",
     "weight": "3328 g",
     "volume": "1500 ml",
     "price": "0 cent",
-    "material": [ "flesh" ],
-    "flags": [ "REACH_ATTACK", "UNBREAKABLE_MELEE", "NO_DROP", "NO_UNWIELD" ],
-    "armor": [ { "encumbrance": 5, "coverage": 100, "covers": [ "hand_r" ] } ],
-    "melee_damage": { "bash": 12 },
+    "material": [
+      "flesh"
+    ],
+    "flags": [
+      "REACH_ATTACK",
+      "UNBREAKABLE_MELEE",
+      "NO_DROP",
+      "NO_UNWIELD"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 100,
+        "covers": [
+          "hand_r"
+        ]
+      }
+    ],
+    "melee_damage": {
+      "bash": 12
+    },
     "relic_data": {
       "passive_effects": [
         {
           "has": "WORN",
           "condition": "ALWAYS",
           "values": [
-            { "value": "STRENGTH", "add": 1, "//": "Multiply by 2, and we'll get the result." },
-            { "value": "BONUS_BLOCK", "add": 1 },
-            { "value": "ATTACK_SPEED", "multiply": -0.025 }
+            {
+              "value": "STRENGTH",
+              "add": 1,
+              "//": "Multiply by 2, and we'll get the result."
+            },
+            {
+              "value": "BONUS_BLOCK",
+              "add": 1
+            },
+            {
+              "value": "ATTACK_SPEED",
+              "multiply": -0.025
+            }
           ]
         }
       ]
@@ -32,12 +61,16 @@
     "id": "SECRO_BLADE_SHARP_THRESHOLD_item",
     "type": "GENERIC",
     "category": "secro_cores",
-    "name": { "str": "<color_light_green>blade core</color>" },
-    "description": "This core provides temporary passive effects. Stacks with other cores.\n<color_white>Attack speed: <color_light_green>+3%</color>\nDamage: <color_light_green>+2%</color></color>",
+    "name": {
+      "str": "<color_light_green> 刀锋核心</color>"
+    },
+    "description": "这个核心提供暂时的被动效果。可与其他内核堆叠。\n <color_white>攻击速度：<color_light_green> +3% </color>\n伤害：<color_light_green>+2% </color>",
     "weight": "3 g",
     "volume": "3 ml",
     "price": "0 cent",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Q",
     "color": "red",
     "relic_data": {
@@ -45,26 +78,44 @@
         {
           "condition": "ALWAYS",
           "values": [
-            { "value": "ATTACK_SPEED", "multiply": 0.015 },
-            { "value": "ITEM_DAMAGE_CUT", "multiply": 0.003 },
-            { "value": "ITEM_DAMAGE_STAB", "multiply": 0.003 },
-            { "value": "ITEM_DAMAGE_BASH", "multiply": 0.003 }
+            {
+              "value": "ATTACK_SPEED",
+              "multiply": 0.015
+            },
+            {
+              "value": "ITEM_DAMAGE_CUT",
+              "multiply": 0.003
+            },
+            {
+              "value": "ITEM_DAMAGE_STAB",
+              "multiply": 0.003
+            },
+            {
+              "value": "ITEM_DAMAGE_BASH",
+              "multiply": 0.003
+            }
           ]
         }
       ]
     },
-    "flags": [ "NO_DROP" ]
+    "flags": [
+      "NO_DROP"
+    ]
   },
   {
     "id": "SECRO_BLADE_SERRATED_THRESHOLD_item",
     "type": "GENERIC",
     "category": "secro_cores",
-    "name": { "str": "<color_light_green>blade core</color>" },
-    "description": "This core provides temporary passive effects. Stacks with other cores.\n<color_white>Attack speed: <color_red>-3%</color>\nSpeed: <color_red>-2%</color>\nDodge: <color_red>-2</color>\nBlock: <color_light_green>2</color></color>",
+    "name": {
+      "str": "<color_light_green> 刀锋核心</color>"
+    },
+    "description": "这个核心提供了暂时的被动效果。与其他核心堆叠。\n<color_white>攻击速度：<color_red>-3%</color>\n速度：<color_red>-2%</color>\n闪避：<color_red>-</color>\n阻挡：<color_light_green></color>222",
     "weight": "3 g",
     "volume": "3 ml",
     "price": "0 cent",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "Q",
     "color": "red",
     "relic_data": {
@@ -72,14 +123,28 @@
         {
           "condition": "ALWAYS",
           "values": [
-            { "value": "SPEED", "multiply": -0.01 },
-            { "value": "ATTACK_SPEED", "multiply": -0.015 },
-            { "value": "BONUS_DODGE", "add": -1 },
-            { "value": "BONUS_BLOCK", "add": 1 }
+            {
+              "value": "SPEED",
+              "multiply": -0.01
+            },
+            {
+              "value": "ATTACK_SPEED",
+              "multiply": -0.015
+            },
+            {
+              "value": "BONUS_DODGE",
+              "add": -1
+            },
+            {
+              "value": "BONUS_BLOCK",
+              "add": 1
+            }
           ]
         }
       ]
     },
-    "flags": [ "NO_DROP" ]
+    "flags": [
+      "NO_DROP"
+    ]
   }
 ]

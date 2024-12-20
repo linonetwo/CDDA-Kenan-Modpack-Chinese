@@ -3,22 +3,46 @@
     "id": "bolter",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "storm bolter" },
-    "description": "This pneumatic bolt thrower has been greatly enhanced, allowing multiple bolts to be launched accurately and in quick succession.  It requires a support of some sort in order to be operated.",
+    "name": {
+      "str": "暴雨箭发射器"
+    },
+    "description": "这把气动弩箭发射器已经被各种改造强化，可以装填并连射发射多条弩箭。它需要一个特制的底盘来运作。",
     "weight": "7110 g",
     "volume": "3750 ml",
     "price": "3500 USD",
-    "melee_damage": { "bash": 6 },
-    "material": [ "steel" ],
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "(",
     "color": "dark_gray",
-    "ammo": [ "bolt" ],
+    "ammo": [
+      "bolt"
+    ],
     "skill": "rifle",
     "range": 30,
-    "ranged_damage": { "damage_type": "stab", "amount": 35, "armor_penetration": 20 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 35,
+      "armor_penetration": 20
+    },
     "sight_dispersion": 150,
     "durability": 9,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 3 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
     "reload": 150,
     "pocket_data": [
       {
@@ -27,32 +51,50 @@
         "max_contains_volume": "20 L",
         "magazine_well": "250 ml",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "bolt_hopper" ]
+        "item_restriction": [
+          "bolt_hopper"
+        ]
       }
     ],
-    "flags": [ "NEVER_JAMS", "MOUNTED_GUN" ]
+    "flags": [
+      "NEVER_JAMS",
+      "MOUNTED_GUN"
+    ]
   },
   {
     "id": "cangun",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "slingshot cannon" },
-    "description": "Essentially several long drawstrings held by two long, reinforced sides and a mechanism attached to a crank to draw and fire it.  It's deceptively powerful and surprisingly accurate, but far too large to be used without some sort of stable platform.",
+    "name": {
+      "str": "弹弓炮"
+    },
+    "description": "用机械结构控制的由两条强化长轨道和几条长弦组合的巨型弹弓。有一个曲臂帮助拉弦和发射。别看它结构简单，它有着超乎想像的威力和不俗的准确度。它的结构庞大，需要安装到一个稳定的平台上使用。",
     "weight": "12359 g",
     "volume": "5500 ml",
     "price": "600 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "light_gray",
-    "ammo": [ "h_projectile" ],
+    "ammo": [
+      "h_projectile"
+    ],
     "skill": "launcher",
     "range": 50,
-    "ranged_damage": { "damage_type": "stab", "amount": 60 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 60
+    },
     "sight_dispersion": 150,
     "durability": 8,
     "reload": 750,
-    "valid_mod_locations": [  ],
+    "valid_mod_locations": [],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -60,205 +102,442 @@
         "max_contains_volume": "30 L",
         "magazine_well": "250 ml",
         "max_contains_weight": "45 kg",
-        "item_restriction": [ "cannister_rack" ]
+        "item_restriction": [
+          "cannister_rack"
+        ]
       }
     ],
-    "ammo_effects": [ "WIDE" ],
-    "flags": [ "NEVER_JAMS", "MOUNTED_GUN", "NON_FOULING" ]
+    "ammo_effects": [
+      "WIDE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MOUNTED_GUN",
+      "NON_FOULING"
+    ]
   },
   {
     "id": "cutter",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "lacerator" },
-    "description": "This weapon launches serrated metal disks at nearby enemies.  It draws its power from a vehicle's engines, and thus must be mounted on such in order to be operated.",
+    "name": {
+      "str": "圆盘加速器"
+    },
+    "description": "这件武器朝着附近的敌人发射锋利的金属大圆盘。该武器的动力源自载具引擎，因此需要一副特制的炮塔底盘来发挥其功能。",
     "weight": "4624 g",
     "volume": "2 L",
     "price": "100 USD",
-    "melee_damage": { "bash": 10 },
-    "material": [ "steel", "wood" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "steel",
+      "wood"
+    ],
     "symbol": "(",
     "color": "white",
-    "ammo": [ "ripdisk" ],
+    "ammo": [
+      "ripdisk"
+    ],
     "skill": "pistol",
     "range": 20,
-    "ranged_damage": { "damage_type": "stab", "amount": 60 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 60
+    },
     "durability": 6,
     "loudness": 150,
     "clip_size": 5,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "ripdisk": 5 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ripdisk": 5
+        }
+      }
+    ],
     "reload": 1250,
-    "valid_mod_locations": [  ],
-    "flags": [ "MOUNTED_GUN", "NEVER_JAMS", "NON_FOULING" ]
+    "valid_mod_locations": [],
+    "flags": [
+      "MOUNTED_GUN",
+      "NEVER_JAMS",
+      "NON_FOULING"
+    ]
   },
   {
     "id": "gattler",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "rotary cannon" },
-    "description": "This fearsome weapon sports 3 barrels in a cyclic configuration.  A specialized mechanism loads the otherwise troublesome rounds; allowing it to be fired in quick succession.  However, this renders it incredibly unwieldy, and it must be mounted on a support structure in order to be fired.",
+    "name": {
+      "str": "转轮式加农炮"
+    },
+    "description": "这把可怖的武器有3条绕轴旋转炮管。还有特制的供弹仓以装填各种意义上都很令人头大的弹药，整个装置提供了它快速射击的能力。但是，这让整个武器变得很难操作，所以需要安装到炮塔底盘上使用。",
     "weight": "11713 g",
     "volume": "3750 ml",
     "price": "800 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "light_gray",
-    "ammo": [ "flintlock" ],
+    "ammo": [
+      "flintlock"
+    ],
     "skill": "launcher",
     "range": 25,
-    "ranged_damage": { "damage_type": "stab", "amount": 60 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 60
+    },
     "sight_dispersion": 150,
     "durability": 8,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 3 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
     "clip_size": 12,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "flintlock": 12 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "flintlock": 12
+        }
+      }
+    ],
     "reload": 750,
-    "valid_mod_locations": [  ],
-    "flags": [ "NEVER_JAMS", "MOUNTED_GUN" ]
+    "valid_mod_locations": [],
+    "flags": [
+      "NEVER_JAMS",
+      "MOUNTED_GUN"
+    ]
   },
   {
     "id": "lasgun",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "laser cannon" },
-    "description": "This enhanced laser cannon sacrifices efficiency for destructive power.  The increased power requirements require a significant power source and the size of the firing mechanism also requires support.",
+    "name": {
+      "str": "激光炮"
+    },
+    "description": "这把增强型激光炮牺牲效率以换取毁灭性的威力。它需要超大功率电源以满足高功率需求，发射机构也需要安装到一个专用的底座来使用。",
     "weight": "6650 g",
     "volume": "3 L",
     "price": "2700 USD",
-    "melee_damage": { "bash": 8 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "blue",
     "skill": "rifle",
     "range": 30,
-    "ranged_damage": { "damage_type": "heat", "amount": 150, "armor_penetration": 100 },
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 150,
+      "armor_penetration": 100
+    },
     "sight_dispersion": 150,
     "durability": 8,
     "energy_drain": "249 kJ",
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "LASER", "WIDE" ],
-    "flags": [ "NEVER_JAMS", "NO_UNLOAD", "MOUNTED_GUN", "USE_UPS" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "LASER",
+      "WIDE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "MOUNTED_GUN",
+      "USE_UPS"
+    ]
   },
   {
     "id": "lasgunp",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "pulse laser" },
-    "description": "Augmented damage capability and rapid bursts make this a powerful weapon.  The increased power requirements require a significant power source and the firing mechanism also requires a specialized chassis.",
+    "name": {
+      "str": "脉冲激光炮"
+    },
+    "description": "增强的伤害和快速的连发能力使它成为一件威力强大的武器。它改进的高能耗发射机构需要匹配一个超大功率电源，发射机构也需要安装到一个专用的底座来使用。",
     "weight": "4825 g",
     "volume": "3 L",
     "price": "7500 USD",
-    "melee_damage": { "bash": 8 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "blue",
     "skill": "rifle",
     "range": 25,
-    "ranged_damage": { "damage_type": "heat", "amount": 50, "armor_penetration": 20 },
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 50,
+      "armor_penetration": 20
+    },
     "sight_dispersion": 150,
     "durability": 8,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 5 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
     "energy_drain": "29 kJ",
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "LASER", "WIDE" ],
-    "flags": [ "NEVER_JAMS", "NO_UNLOAD", "MOUNTED_GUN", "USE_UPS" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "LASER",
+      "WIDE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "MOUNTED_GUN",
+      "USE_UPS"
+    ]
   },
   {
     "id": "lasgunx",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "turbolaser cannon" },
-    "description": "With an augmented emitter and capacitor, this mounted laser is capable of superheating most materials to the point of exploding.  The firing mechanism also requires the services of a specialized chassis, and one must be wary of the prodigious power needs of such a weapon.",
+    "name": {
+      "str": "涡轮激光炮"
+    },
+    "description": "强化的发射器和电容器让这台车载激光武器能在瞬间过燃任何物体直到它的爆炸极限温度。它的发射机构需要装载到一个专用的底盘上，而且使用时必须注意它极为庞大的耗能。",
     "weight": "9500 g",
     "volume": "4500 ml",
     "price": "7500 USD",
-    "melee_damage": { "bash": 8 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "magenta",
     "skill": "rifle",
     "range": 30,
-    "ranged_damage": { "damage_type": "heat", "amount": 200, "armor_penetration": 100 },
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 200,
+      "armor_penetration": 100
+    },
     "sight_dispersion": 150,
     "durability": 8,
     "energy_drain": "499 kJ",
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "EXPLOSIVE", "LASER", "WIDE" ],
-    "flags": [ "NEVER_JAMS", "NO_UNLOAD", "MOUNTED_GUN", "NON_FOULING", "USE_UPS" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "EXPLOSIVE",
+      "LASER",
+      "WIDE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "MOUNTED_GUN",
+      "NON_FOULING",
+      "USE_UPS"
+    ]
   },
   {
     "id": "nailmag",
     "looks_like": "stanag30",
     "type": "MAGAZINE",
-    "name": { "str": "nail rifle magazine" },
-    "description": "An improvised magazine for use with a nail rifle.  Little more than a tin can, spring and some duct tape it is awkward to reload and not especially reliable.",
+    "name": {
+      "str": "射钉步枪弹匣"
+    },
+    "description": "一个可用于射钉步枪的自制弹匣。由锡罐、弹簧和一些胶带制成，有点难装填，而且也不是特别可靠。",
     "weight": "60 g",
     "volume": "250 ml",
     "price": "19 USD",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": "#",
     "color": "light_gray",
-    "ammo_type": [ "nail" ],
+    "ammo_type": [
+      "nail"
+    ],
     "capacity": 10,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "nail": 10 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "nail": 10
+        }
+      }
+    ],
     "reload_time": 100,
-    "flags": [ "MAG_BULKY" ]
+    "flags": [
+      "MAG_BULKY"
+    ]
   },
   {
     "id": "coilgun",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
-    "name": { "str": "coilgun" },
+    "name": {
+      "str": "自制线圈枪"
+    },
     "//": "Hard to make, plentiful and cheap ammo, and silent - people will want this thing.",
-    "description": "A homemade gun, using electromagnets to accelerate a ferromagnetic projectile to high velocity.  Powered by UPS.",
+    "description": "一把自制的枪，灵感来源于炮姐，利用电磁铁来加速铁磁弹丸从而射出。采用UPS供电。",
     "weight": "3341 g",
     "volume": "2750 ml",
     "longest_side": "1020 mm",
     "price": "750 USD",
     "price_postapoc": "50 USD",
-    "melee_damage": { "bash": 10 },
-    "material": [ "copper", "steel" ],
+    "to_hit": -2,
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "copper",
+      "steel"
+    ],
     "symbol": "(",
     "ammo": "nail",
     "skill": "rifle",
     "range": 12,
-    "ranged_damage": { "damage_type": "stab", "amount": 4, "armor_penetration": 20 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4,
+      "armor_penetration": 20
+    },
     "dispersion": 180,
     "durability": 5,
     "energy_drain": "5 kJ",
-    "valid_mod_locations": [ [ "grip", 1 ], [ "sights", 1 ], [ "sling", 1 ], [ "stock", 1 ], [ "rail mount", 1 ], [ "underbarrel mount", 1 ] ],
+    "valid_mod_locations": [
+      [
+        "grip",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
         "holster": true,
         "max_contains_volume": "20 L",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "nailmag" ]
+        "item_restriction": [
+          "nailmag"
+        ]
       }
     ],
-    "flags": [ "USE_UPS" ]
+    "flags": [
+      "USE_UPS"
+    ]
   },
   {
     "id": "nailrifle",
     "copy-from": "nailgun",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
-    "name": { "str": "nail rifle" },
-    "description": "This is a nailgun that has been extensively modified with the addition of a short barrel, stock and hand guard.  It can be reloaded using detachable magazines and is an overall much more effective weapon.",
-    "melee_damage": { "bash": 12 },
+    "name": {
+      "str": "射钉步枪"
+    },
+    "description": "这是一把射钉枪，被改造的面目全非，增加了一个短枪管，枪托和护木。它可以使用可拆卸弹匣装填，总体上说是更为有效的武器。",
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
     "price_postapoc": "7 USD",
     "skill": "rifle",
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 3 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
     "clip_size": 0,
     "valid_mod_locations": [
-      [ "barrel", 1 ],
-      [ "grip", 1 ],
-      [ "sights", 1 ],
-      [ "sling", 1 ],
-      [ "stock", 1 ],
-      [ "rail mount", 1 ],
-      [ "underbarrel mount", 1 ]
+      [
+        "barrel",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
     ],
     "pocket_data": [
       {
@@ -266,40 +545,72 @@
         "holster": true,
         "max_contains_volume": "20 L",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "nailmag" ]
+        "item_restriction": [
+          "nailmag"
+        ]
       }
     ],
-    "relative": { "weight": "1000 g", "volume": "1500 ml", "range": 3, "ranged_damage": { "damage_type": "stab", "amount": 4 } },
-    "proportional": { "price": 3, "dispersion": 0.5 }
+    "relative": {
+      "weight": "1000 g",
+      "volume": "1500 ml",
+      "range": 3,
+      "ranged_damage": {
+        "damage_type": "stab",
+        "amount": 4
+      }
+    },
+    "proportional": {
+      "price": 3,
+      "dispersion": 0.5
+    }
   },
   {
     "type": "item_group",
     "id": "mags_other_makeshift",
     "//": "Makeshift or otherwise poor quality magazines that have no better category.",
-    "items": [ [ "nailmag", 20 ] ]
+    "items": [
+      [
+        "nailmag",
+        20
+      ]
+    ]
   },
   {
     "id": "nailer",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "perforator" },
-    "description": "A coilgun with improved electromagnetic circuits to be able to propel a metallic projectile at high speed and with great accuracy.  Capable of piercing armor with little issue, though the projectile itself lacks damage due to its small size.  It must be mounted on a specialized chassis in order to be fired.",
+    "name": {
+      "str": "大型穿孔机"
+    },
+    "description": "一把电磁线路改良了的电磁线圈枪，可以装填一块金属弹丸并高速而精准地发射出去。穿甲能力优秀，但由于弹丸太小，伤害有限。需要安装到一个专用的底盘来发射。",
     "weight": "6152 g",
     "volume": "2500 ml",
     "price": "500 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "light_blue",
-    "ammo": [ "nail" ],
+    "ammo": [
+      "nail"
+    ],
     "skill": "rifle",
     "range": 35,
-    "ranged_damage": { "damage_type": "stab", "amount": 25, "armor_penetration": 30 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 25,
+      "armor_penetration": 30
+    },
     "sight_dispersion": 150,
     "durability": 5,
     "energy_drain": "9 kJ",
     "reload": 150,
-    "valid_mod_locations": [  ],
+    "valid_mod_locations": [],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -307,33 +618,65 @@
         "max_contains_volume": "20 L",
         "magazine_well": "250 ml",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "nailmag" ]
+        "item_restriction": [
+          "nailmag"
+        ]
       }
     ],
-    "flags": [ "MOUNTED_GUN", "NEVER_JAMS", "NON_FOULING", "USE_UPS" ]
+    "flags": [
+      "MOUNTED_GUN",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "USE_UPS"
+    ]
   },
   {
     "id": "needler",
     "reload_noise_volume": 10,
     "type": "GUN",
-    "name": { "str": "needler" },
-    "description": "This improved nailgun features a special firing mechanism that is set to fire a spread of up to 5 nails at once; sure to drop the hammer on its unfortunate targets.  However, these features render it incredibly unwieldy, and it must be mounted on a supporting frame in order to be fired.",
+    "name": {
+      "str": "刺针枪"
+    },
+    "description": "这把改进版射钉枪的主要特点为一个可以连发5颗小钉子的发射机构，可给予被击中的目标铁锤般的重击。但是，这种武器十分难以携带，所以它必须要装载到一个炮塔底盘上才能发射。",
     "weight": "7827 g",
     "volume": "3750 ml",
     "price": "1100 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "dark_gray",
-    "ammo": [ "nail" ],
+    "ammo": [
+      "nail"
+    ],
     "skill": "rifle",
     "range": 25,
-    "ranged_damage": { "damage_type": "stab", "amount": 20, "armor_penetration": 15 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 20,
+      "armor_penetration": 15
+    },
     "sight_dispersion": 150,
     "durability": 8,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 5 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
     "reload": 150,
-    "valid_mod_locations": [  ],
+    "valid_mod_locations": [],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -341,217 +684,479 @@
         "max_contains_volume": "20 L",
         "magazine_well": "250 ml",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "nailmag" ]
+        "item_restriction": [
+          "nailmag"
+        ]
       }
     ],
-    "flags": [ "MOUNTED_GUN", "NEVER_JAMS" ]
+    "flags": [
+      "MOUNTED_GUN",
+      "NEVER_JAMS"
+    ]
   },
   {
     "id": "heavy_rail_rifle",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "heavy rail rifle" },
-    "description": "This overpowered and overengineered variant of the ferromagnetic rail rifle was designed to deliver electromagnetically-driven obliteration right through whatever obstacles that lies in front of it, be it buildings, vehicles or hordes of walking dead.  However, the hefty bulk and weight of this weapon compared to most contemporary rifles makes it somewhat cumbersome to wield; not to mention that it consumes UPS charges at a tremendous rate, making it impractical for use in prolonged engagements.",
+    "name": {
+      "str": "重型轨道步枪"
+    },
+    "description": "这种性能和设计严重过剩的铁磁轨道枪主要被设计为给目标带来电磁驱动的毁灭，不管目标是建筑、载具还是尸潮。但是，这把武器异常庞大而沉重，使得它比其他的步枪更要难以携带，更别说它极差的续航能力了。它需要统一标准供电装备，即UPS，来供给大量的能量。",
     "weight": "11500 g",
     "volume": "4500 ml",
     "longest_side": "1170 mm",
     "price": "9000 USD",
     "price_postapoc": "90 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "dark_gray",
-    "ammo": [ "metal_rail" ],
+    "ammo": [
+      "metal_rail"
+    ],
     "skill": "rifle",
     "range": 40,
-    "ranged_damage": { "damage_type": "stab", "amount": 45, "armor_penetration": 15 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 45,
+      "armor_penetration": 15
+    },
     "dispersion": 100,
     "durability": 7,
     "clip_size": 10,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "metal_rail": 10 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "metal_rail": 10
+        }
+      }
+    ],
     "energy_drain": "100 kJ",
     "reload": 200,
     "valid_mod_locations": [
-      [ "emitter", 1 ],
-      [ "grip", 1 ],
-      [ "rail", 1 ],
-      [ "sights", 1 ],
-      [ "sling", 1 ],
-      [ "stock", 1 ],
-      [ "underbarrel", 1 ]
+      [
+        "emitter",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "rail",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ]
     ],
-    "ammo_effects": [ "INCENDIARY", "TRAIL" ],
-    "flags": [ "RELOAD_ONE", "USE_UPS" ]
+    "ammo_effects": [
+      "INCENDIARY",
+      "TRAIL"
+    ],
+    "flags": [
+      "RELOAD_ONE",
+      "USE_UPS"
+    ]
   },
   {
     "id": "rebar_rifle",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "ferromagnetic rail rifle" },
-    "description": "A single-shot, electrically propelled, steel rail launcher handcrafted from scrap.  The hypervelocity metal stake that it fires is accelerated to the point of spontaneous combustion by a Lorentz force generated by electromagnetic induction, powered by a standard UPS.",
+    "name": {
+      "str": "电磁轨道步枪"
+    },
+    "description": "一把电力驱动的单发电磁轨道枪，采用废金属自制而成。它通过电磁感应所产生洛仑兹力将发射的金属棒加速到超高速，同时加热棒体至接近自燃的温度，该武器采用标准UPS供电。",
     "weight": "4213 g",
     "volume": "2500 ml",
     "longest_side": "1020 mm",
     "price": "5500 USD",
     "price_postapoc": "60 USD",
-    "melee_damage": { "bash": 10 },
-    "material": [ "steel", "wood" ],
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "steel",
+      "wood"
+    ],
     "symbol": "(",
     "color": "brown",
-    "ammo": [ "metal_rail" ],
+    "ammo": [
+      "metal_rail"
+    ],
     "skill": "rifle",
     "dispersion": 90,
-    "ranged_damage": { "damage_type": "stab", "amount": 25, "armor_penetration": 10 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 25,
+      "armor_penetration": 10
+    },
     "durability": 6,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "metal_rail": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "metal_rail": 1
+        }
+      }
+    ],
     "energy_drain": "40 kJ",
     "reload": 200,
     "valid_mod_locations": [
-      [ "emitter", 1 ],
-      [ "grip", 1 ],
-      [ "sling", 1 ],
-      [ "stock", 1 ],
-      [ "sights", 1 ],
-      [ "rail mount", 1 ],
-      [ "underbarrel mount", 1 ]
+      [
+        "emitter",
+        1
+      ],
+      [
+        "grip",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
     ],
-    "ammo_effects": [ "INCENDIARY", "TRAIL" ],
-    "flags": [ "USE_UPS" ]
+    "ammo_effects": [
+      "INCENDIARY",
+      "TRAIL"
+    ],
+    "flags": [
+      "USE_UPS"
+    ]
   },
   {
     "id": "railturret",
     "reload_noise_volume": 10,
     "type": "GUN",
-    "name": { "str": "hypervelocity driver" },
-    "description": "A single-shot, electrically propelled, steel rail launcher.  The powerful, and frankly dangerous, improvements made to the power systems of this weapon is capable imbuing a massive charge into a single-rail; so much that it often shatters into deadly fragments on impact.  It's capabilities are limited by its prodigious power requirements however, and its large size necessitates an appropriately-equipped vehicle.",
+    "name": {
+      "str": "电磁轨道炮"
+    },
+    "description": "电力驱动的单发钢轨投射器。该武器经过强劲而……坦白说，很危险的改造，让动力系统能够一口气将巨大的电荷导入一道钢轨中；以至于其弹药常在命中瞬间碎裂成许多致命的破片。然而，该武器的性能受限于其惊人的功率需求，且庞大的体积让所以它必须要装载到一个炮塔底盘上才能发射。",
     "weight": "10135 g",
     "volume": "4 L",
     "price": "5500 USD",
-    "melee_damage": { "bash": 10 },
-    "material": [ "steel", "wood" ],
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "steel",
+      "wood"
+    ],
     "symbol": "(",
     "color": "magenta",
-    "ammo": [ "metal_rail" ],
+    "ammo": [
+      "metal_rail"
+    ],
     "skill": "rifle",
     "range": 40,
-    "ranged_damage": { "damage_type": "stab", "amount": 250, "armor_penetration": 100 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 250,
+      "armor_penetration": 100
+    },
     "sight_dispersion": 150,
     "durability": 6,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "metal_rail": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "metal_rail": 1
+        }
+      }
+    ],
     "energy_drain": "249 kJ",
     "reload": 200,
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "EXPLOSIVE_GRENADE", "TRAIL", "WIDE" ],
-    "flags": [ "USE_UPS" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "FRAG",
+      "TRAIL",
+      "WIDE"
+    ],
+    "flags": [
+      "USE_UPS"
+    ]
   },
   {
     "id": "ripper",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "ripper" },
-    "description": "This menacing weapon rapidly launches bladed disks that rips through enemies with devastating effect.  It draws its power from a vehicle's engines, and thus must be mounted on such in order to be operated.",
+    "name": {
+      "str": "撕裂者"
+    },
+    "description": "这件威势惊人的武器快速连续发射出来的锋利大圆盘，能在切过敌人时造成毁灭性的效果。该武器的动力源自载具引擎，因此需要装载到一个炮塔底盘上才能发射。",
     "weight": "12952 g",
     "volume": "3750 ml",
     "price": "950 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "(",
     "color": "dark_gray",
-    "ammo": [ "ripdisk" ],
+    "ammo": [
+      "ripdisk"
+    ],
     "skill": "launcher",
     "range": 20,
-    "ranged_damage": { "damage_type": "stab", "amount": 60, "armor_penetration": 5 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 60,
+      "armor_penetration": 5
+    },
     "sight_dispersion": 150,
     "durability": 8,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 5 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
     "clip_size": 15,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "ripdisk": 15 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "ripdisk": 15
+        }
+      }
+    ],
     "reload": 750,
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "WIDE" ],
-    "flags": [ "NEVER_JAMS", "MOUNTED_GUN", "NON_FOULING" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "WIDE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MOUNTED_GUN",
+      "NON_FOULING"
+    ]
   },
   {
     "id": "rslauncher",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "rotary speargun" },
-    "description": "This pneumatic speargun features a revolving barrel behind its launcher, allowing projectiles to be rapidly loaded and fired.    However, the weight requires an external support measure.",
+    "name": {
+      "str": "转轮式矛枪"
+    },
+    "description": "这把气动矛枪发射装置的弹射轨旁边有一个左轮式旋转弹仓，让其弹药能快速装填并发射出去。然而，其重量让它需要装载到一个炮塔底盘上才能发射。",
     "weight": "17308 g",
     "volume": "4500 ml",
     "price": "2800 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "light_gray",
-    "ammo": [ "harpoon" ],
+    "ammo": [
+      "harpoon"
+    ],
     "skill": "launcher",
     "range": 30,
-    "ranged_damage": { "damage_type": "stab", "amount": 40 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 40
+    },
     "sight_dispersion": 150,
     "durability": 8,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 3 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
     "clip_size": 12,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "harpoon": 12 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "harpoon": 12
+        }
+      }
+    ],
     "reload": 2500,
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "WIDE" ],
-    "flags": [ "NEVER_JAMS", "MOUNTED_GUN", "NON_FOULING" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "WIDE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MOUNTED_GUN",
+      "NON_FOULING"
+    ]
   },
   {
     "id": "scorpion",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "scorpion ballista", "str_pl": "scorpion ballistae" },
-    "description": "A massive tension-operated crossbow.  The hand-crank allows one to draw it without the need for heavy labor.  It's far too massive to be used on foot, and thus needs to be mounted on a vehicle in order to be operated.",
+    "name": {
+      "str": "毒蝎型弩炮",
+      "str_pl": "毒蝎型弩炮"
+    },
+    "description": "这把大型弩机装载在一个可旋转结构上。弩机上有手摇曲柄让你能够不用太大的力来拉开弩弓。弩机体积太大，你手脚并用都不能正常地使用它，所以它需要装载到一个炮塔底盘上才能发射。",
     "weight": "18308 g",
     "volume": "5 L",
     "price": "1500 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "wood", "steel" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "wood",
+      "steel"
+    ],
     "symbol": "(",
     "color": "dark_gray",
-    "ammo": [ "hbolt" ],
+    "ammo": [
+      "hbolt"
+    ],
     "skill": "rifle",
     "range": 50,
-    "ranged_damage": { "damage_type": "stab", "amount": 150 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 150
+    },
     "sight_dispersion": 150,
     "durability": 8,
     "clip_size": 12,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "hbolt": 12 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "hbolt": 12
+        }
+      }
+    ],
     "reload": 750,
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "WIDE" ],
-    "flags": [ "NEVER_JAMS", "MOUNTED_GUN", "NON_FOULING" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "WIDE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MOUNTED_GUN",
+      "NON_FOULING"
+    ]
   },
   {
     "id": "shardgun",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "splintergun" },
-    "description": "A heavily modified coilgun that fires tiny fragments of metal at high speeds extremely quickly.  The resulting barrage is highly inaccurate, but can turn unarmored targets into pulp.  It must be mounted on a specialized chassis in order to be fired.",
+    "name": {
+      "str": "破片弹幕炮"
+    },
+    "description": "一个重型魔改电磁加速线圈炮，可以高速发射大量的小型金属破片。这些破片的弹幕式攻击非常不准，但能轻易将无装甲目标变成肉酱。这个武器需要安装到一个专用的底座来发射。",
     "weight": "5852 g",
     "volume": "3500 ml",
     "price": "500 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "light_blue",
-    "ammo": [ "BB" ],
+    "ammo": [
+      "BB"
+    ],
     "skill": "rifle",
     "range": 8,
-    "ranged_damage": { "damage_type": "stab", "amount": 20 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 20
+    },
     "dispersion": 1300,
     "sight_dispersion": 150,
     "durability": 5,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 25 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        25
+      ]
+    ],
     "energy_drain": "1 kJ",
     "reload": 150,
-    "valid_mod_locations": [  ],
+    "valid_mod_locations": [],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -559,133 +1164,306 @@
         "max_contains_volume": "20 L",
         "magazine_well": "250 ml",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "bb_hopper" ]
+        "item_restriction": [
+          "bb_hopper"
+        ]
       }
     ],
-    "flags": [ "MOUNTED_GUN", "NEVER_JAMS", "NON_FOULING", "USE_UPS" ]
+    "flags": [
+      "MOUNTED_GUN",
+      "NEVER_JAMS",
+      "NON_FOULING",
+      "USE_UPS"
+    ]
   },
   {
     "id": "slauncher",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "harpoon gun" },
-    "description": "A tension-operated speargun.  A hand-crank lets one draw the strings quickly, but it's too unwieldy to handle without a support of some sort.",
+    "name": {
+      "str": "鱼叉炮"
+    },
+    "description": "安装在可旋转支架上的奇想产物，一支簇状五连装发射管单发/连发式矛枪。有一个手摇曲柄来帮助拉弦装填。弩机体积太大，你手脚并用都不能正常地使用它，所以它需要装载到一个炮塔底盘上才能发射。",
     "weight": "18500 g",
     "volume": "4 L",
     "price": "1100 USD",
-    "melee_damage": { "bash": 12 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 12
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "light_gray",
-    "ammo": [ "harpoon" ],
+    "ammo": [
+      "harpoon"
+    ],
     "skill": "rifle",
     "range": 30,
-    "ranged_damage": { "damage_type": "stab", "amount": 50, "armor_penetration": 15 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 50,
+      "armor_penetration": 15
+    },
     "sight_dispersion": 150,
     "durability": 8,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 3 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        3
+      ]
+    ],
     "clip_size": 12,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "holster": true, "rigid": true, "ammo_restriction": { "harpoon": 12 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "holster": true,
+        "rigid": true,
+        "ammo_restriction": {
+          "harpoon": 12
+        }
+      }
+    ],
     "reload": 750,
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "WIDE" ],
-    "flags": [ "NEVER_JAMS", "MOUNTED_GUN", "NON_FOULING" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "WIDE"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "MOUNTED_GUN",
+      "NON_FOULING"
+    ]
   },
   {
     "id": "teslagun",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "tesla cannon" },
-    "description": "This alteration of the Chain Lightning bionic fires artificial lightning bolts that arc to nearby enemies.  It must be attached to a large power source, but it allows for much more powerful bolts.",
+    "name": {
+      "str": "特斯拉加农炮"
+    },
+    "description": "一个经过改造的连锁闪电生化插件，能够发射人造闪电球来触发电弧攻击附近的敌人。它必须由强大能源支撑，而更强的能源可以给它更大的威力。",
     "weight": "5141 g",
     "volume": "3750 ml",
     "price": "2800 USD",
-    "melee_damage": { "bash": 8 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 8
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "blue",
     "skill": "rifle",
     "range": 20,
-    "ranged_damage": { "damage_type": "electric", "amount": 30, "armor_penetration": 10 },
+    "ranged_damage": {
+      "damage_type": "electric",
+      "amount": 30,
+      "armor_penetration": 10
+    },
     "durability": 8,
     "energy_drain": "249 kJ",
-    "valid_mod_locations": [  ],
-    "ammo_effects": [ "BOUNCE", "LIGHTNING" ],
-    "flags": [ "NEVER_JAMS", "NO_UNLOAD", "NON_FOULING", "MOUNTED_GUN", "USE_UPS" ]
+    "valid_mod_locations": [],
+    "ammo_effects": [
+      "BOUNCE",
+      "LIGHTNING"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "NO_UNLOAD",
+      "NON_FOULING",
+      "MOUNTED_GUN",
+      "USE_UPS"
+    ]
   },
   {
     "id": "tihar",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "symbol": "(",
     "color": "light_gray",
-    "name": { "str": "pneumatic assault rifle" },
-    "description": "A multistroke pneumatic rifle handcrafted from scrap.  It is very quiet and deadly.",
+    "name": {
+      "str": "气动突击步枪"
+    },
+    "description": "一把可以连续发射的气动突击步枪，采用废料自制而成。极度安静而致命。",
     "price": "2400 USD",
     "price_postapoc": "120 USD",
-    "material": [ "steel", "wood" ],
-    "flags": [ "STR_RELOAD", "NON_FOULING", "NEEDS_NO_LUBE" ],
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "flags": [
+      "STR_RELOAD",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE"
+    ],
     "skill": "rifle",
-    "ammo": [ "pebble" ],
+    "ammo": [
+      "pebble"
+    ],
     "weight": "4211 g",
     "volume": "2750 ml",
     "longest_side": "1020 mm",
-    "melee_damage": { "bash": 8 },
-    "ranged_damage": { "damage_type": "stab", "amount": 15, "armor_penetration": 4 },
+    "melee_damage": {
+      "bash": 8
+    },
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 15,
+      "armor_penetration": 4
+    },
     "range": 15,
     "dispersion": 75,
     "durability": 7,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 4 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        4
+      ]
+    ],
     "clip_size": 24,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "pebble": 24 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "pebble": 24
+        }
+      }
+    ],
     "reload": 6000,
     "loudness": 18,
     "valid_mod_locations": [
-      [ "grip", 1 ],
-      [ "mechanism", 4 ],
-      [ "sights", 1 ],
-      [ "sling", 1 ],
-      [ "stock", 1 ],
-      [ "rail mount", 1 ],
-      [ "underbarrel mount", 1 ]
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
     ]
   },
   {
     "id": "helsing",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
     "symbol": "(",
     "color": "dark_gray",
-    "name": { "str": "pneumatic bolt driver" },
-    "description": "An eight-shot, revolving barrel, pneumatic bolt driver handcrafted from scrap.  It is very quiet and deadly.",
+    "name": {
+      "str": "气动弩矢射枪"
+    },
+    "description": "一把八发连射的转管气动弩矢射枪，采用废料自制而成。极度安静而致命。",
     "price": "2900 USD",
     "price_postapoc": "120 USD",
-    "material": [ "steel", "wood" ],
-    "flags": [ "STR_RELOAD", "NON_FOULING", "NEEDS_NO_LUBE" ],
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "flags": [
+      "STR_RELOAD",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE"
+    ],
     "skill": "rifle",
-    "ammo": [ "bolt" ],
+    "ammo": [
+      "bolt"
+    ],
     "weight": "3110 g",
     "volume": "3 L",
     "longest_side": "1020 mm",
-    "melee_damage": { "bash": 12 },
-    "ranged_damage": { "damage_type": "stab", "amount": 20, "armor_penetration": 7 },
+    "melee_damage": {
+      "bash": 12
+    },
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 20,
+      "armor_penetration": 7
+    },
     "range": 20,
     "dispersion": 30,
     "durability": 7,
     "clip_size": 8,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "bolt": 8 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "bolt": 8
+        }
+      }
+    ],
     "reload": 6000,
     "loudness": 22,
     "valid_mod_locations": [
-      [ "grip", 1 ],
-      [ "mechanism", 4 ],
-      [ "sights", 1 ],
-      [ "sling", 1 ],
-      [ "stock", 1 ],
-      [ "rail mount", 1 ],
-      [ "underbarrel mount", 1 ]
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
     ]
   },
   {
@@ -695,57 +1473,139 @@
     "reload_noise_volume": 10,
     "symbol": "(",
     "color": "dark_gray",
-    "name": { "str": "pneumatic shotgun" },
-    "description": "A double-barreled pneumatic air shotgun handcrafted from scrap.  Though it's firepower is lacking compared to more conventional shotguns, this thing can still pack quite a punch.  That is, if your target is directly in front of you.",
+    "name": {
+      "str": "气动双管霰弹枪"
+    },
+    "description": "一把双管气动霰弹枪，由废料纯手工制造。虽然和传统霰弹枪相比更弱一些，但是它的威力仍然不错。当然，前提是你的目标离你不远。",
     "price": "2200 USD",
-    "material": [ "steel", "wood" ],
-    "flags": [ "RELOAD_ONE", "STR_RELOAD", "NON_FOULING", "NEEDS_NO_LUBE" ],
+    "material": [
+      "steel",
+      "wood"
+    ],
+    "flags": [
+      "RELOAD_ONE",
+      "STR_RELOAD",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE"
+    ],
     "skill": "shotgun",
-    "ammo": [ "shotcanister" ],
+    "ammo": [
+      "shotcanister"
+    ],
     "weight": "3410 g",
     "volume": "2500 ml",
     "longest_side": "920 mm",
     "price_postapoc": "120 USD",
-    "melee_damage": { "bash": 8 },
-    "ranged_damage": { "damage_type": "stab", "amount": 15, "armor_penetration": 10 },
+    "melee_damage": {
+      "bash": 8
+    },
+    "to_hit": -1,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 15,
+      "armor_penetration": 10
+    },
     "range": 3,
     "dispersion": 350,
     "durability": 7,
-    "modes": [ [ "DEFAULT", "single", 1 ], [ "DOUBLE", "double", 2 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "single",
+        1
+      ],
+      [
+        "DOUBLE",
+        "double",
+        2
+      ]
+    ],
     "clip_size": 2,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "shotcanister": 2 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "shotcanister": 2
+        }
+      }
+    ],
     "reload": 6000,
     "loudness": 22,
     "valid_mod_locations": [
-      [ "grip", 1 ],
-      [ "mechanism", 4 ],
-      [ "sights", 1 ],
-      [ "sling", 1 ],
-      [ "stock", 1 ],
-      [ "rail mount", 1 ],
-      [ "underbarrel mount", 1 ]
+      [
+        "grip",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
     ]
   },
   {
     "id": "tiharturret",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "avalanche rifle" },
-    "description": "This pneumatic assault rifle has been greatly enhanced, firing projectiles faster and with higher velocity.  However, these features render it incredibly unwieldy, and it must be mounted on a supporting platform in order to be fired.",
+    "name": {
+      "str": "雪崩步枪"
+    },
+    "description": "这把气动突击步枪已经经过大幅强化，使其能够更快速地连发和提供更高的发射初速。它装载在炮塔上，如果提供一些额外的输入的话，它就能够自动瞄准目标。这把武器需要安装到炮塔底盘上使用。",
     "weight": "7311 g",
     "volume": "3750 ml",
     "price": "1550 USD",
-    "melee_damage": { "bash": 6 },
-    "material": [ "steel" ],
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 6
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "(",
     "color": "light_gray",
-    "ammo": [ "pebble" ],
+    "ammo": [
+      "pebble"
+    ],
     "skill": "rifle",
     "range": 20,
-    "ranged_damage": { "damage_type": "stab", "amount": 25 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 25
+    },
     "sight_dispersion": 150,
     "durability": 9,
-    "modes": [ [ "DEFAULT", "semi-auto", 1 ], [ "AUTO", "auto", 5 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "semi-auto",
+        1
+      ],
+      [
+        "AUTO",
+        "auto",
+        5
+      ]
+    ],
     "pocket_data": [
       {
         "pocket_type": "MAGAZINE_WELL",
@@ -753,148 +1613,304 @@
         "max_contains_volume": "20 L",
         "magazine_well": "250 ml",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "pebble_hopper" ]
+        "item_restriction": [
+          "pebble_hopper"
+        ]
       }
     ],
     "reload": 150,
-    "flags": [ "NEVER_JAMS", "MOUNTED_GUN", "NON_FOULING" ]
+    "flags": [
+      "NEVER_JAMS",
+      "MOUNTED_GUN",
+      "NON_FOULING"
+    ]
   },
   {
     "id": "laser_cannon",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
     "reload_noise_volume": 10,
-    "name": { "str": "handheld laser cannon" },
-    "description": "This is a laser cannon stripped from the barrel of a TX-5LR Cerberus laser turret that has been modified to use UPS power for firing.",
+    "name": {
+      "str": "手持TX-5LR 激光加农炮"
+    },
+    "description": "一个从TX-5LR “地狱犬”型激光炮塔上拆下的激光炮。被修改成使用UPS供电。",
     "weight": "5140 g",
     "volume": "1500 ml",
     "price": "4000 USD",
     "price_postapoc": "80 USD",
-    "melee_damage": { "bash": 4 },
-    "material": [ "steel", "plastic" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 4
+    },
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "magenta",
     "skill": "rifle",
     "range": 30,
-    "ranged_damage": { "damage_type": "heat", "amount": 15, "armor_penetration": 10 },
+    "ranged_damage": {
+      "damage_type": "heat",
+      "amount": 15,
+      "armor_penetration": 10
+    },
     "dispersion": 90,
     "durability": 7,
     "loudness": 8,
     "energy_drain": "25 kJ",
     "reload": 200,
     "valid_mod_locations": [
-      [ "emitter", 1 ],
-      [ "lens", 1 ],
-      [ "sling", 1 ],
-      [ "grip mount", 1 ],
-      [ "rail mount", 1 ],
-      [ "sights mount", 1 ],
-      [ "stock mount", 1 ],
-      [ "underbarrel mount", 1 ]
+      [
+        "emitter",
+        1
+      ],
+      [
+        "lens",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ],
+      [
+        "stock mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
     ],
-    "ammo_effects": [ "LASER", "INCENDIARY" ],
-    "flags": [ "NO_UNLOAD", "NON_FOULING", "NEEDS_NO_LUBE", "USE_UPS" ]
+    "ammo_effects": [
+      "LASER",
+      "INCENDIARY"
+    ],
+    "flags": [
+      "NO_UNLOAD",
+      "NON_FOULING",
+      "NEEDS_NO_LUBE",
+      "USE_UPS"
+    ]
   },
   {
     "id": "bio_blaster",
     "copy-from": "bionic_general",
     "type": "BIONIC_ITEM",
-    "name": { "str": "Fusion Blaster Arm CBM" },
-    "description": "Your left arm has been replaced by a heavy-duty fusion blaster!  You may use your energy banks to fire a damaging heat ray.  However, you are unable to use or carry two-handed items, and your strength limits what you can use with your one hand.",
+    "name": {
+      "str": "核聚变臂炮CBM"
+    },
+    "description": "你的左手臂被改造成了一只重型核聚变炮！你可以消耗部分能量，释放高温毁灭射线攻击敌人！作为代价，你将无法使用或搬运需要使用双手的物品，并且只能使用单手枪械。\n“爆符「千兆耀斑」”",
     "price": "2200 USD",
     "difficulty": 3
   },
   {
     "id": "bio_blaster",
     "type": "bionic",
-    "name": { "str": "Fusion Blaster Arm" },
-    "description": "Your left arm has been surgically replaced by a heavy-duty fusion blaster!  You may use your energy banks to fire a damaging heat ray.  However, you are unable to use or carry two-handed items, and your strength limits what you can use with your one hand.",
-    "occupied_bodyparts": [ [ "arm_l", 20 ], [ "hand_l", 5 ] ],
+    "name": {
+      "str": "核聚变臂炮"
+    },
+    "description": "你的左臂经过手术被改造成了一只重型核聚变炮！你可以消耗部分能量，释放高温毁灭射线来攻击敌人！\n* 装备该CBM将切除你的左臂，从此将无法再使用或搬运需要使用双手的物品，并且只能使用单手枪械，请慎重考虑。\n“爆符「千兆耀斑」”",
+    "occupied_bodyparts": [
+      [
+        "arm_l",
+        20
+      ],
+      [
+        "hand_l",
+        5
+      ]
+    ],
     "fake_weapon": "bio_blaster_gun",
-    "flags": [ "BIONIC_GUN" ],
+    "flags": [
+      "BIONIC_GUN"
+    ],
     "cant_remove_reason": "Removing %1$s Fusion Blaster Arm would leave %2$s with a useless stump."
   },
   {
     "id": "bio_powershot",
     "type": "GUNMOD",
-    "name": { "str": "Power shot" },
-    "description": "This is a pseudo item -- the builtin part of a fusion blaster for the maximum power firing mode.",
+    "name": {
+      "str": "强力射击"
+    },
+    "description": "这是一个伪物品——核聚变爆破器的内置部分，用于最大功率的发射模式。",
     "weight": "1 g",
     "volume": "0 ml",
-    "mod_targets": [ "rifle" ],
+    "mod_targets": [
+      "rifle"
+    ],
     "price": "850 USD",
     "price_postapoc": "0 cent",
     "install_time": "0 s",
-    "material": [ "steel" ],
+    "material": [
+      "steel"
+    ],
     "symbol": ":",
     "color": "light_red",
     "location": "underbarrel",
     "gun_data": {
       "skill": "rifle",
       "range": 30,
-      "ranged_damage": { "damage_type": "stab", "amount": 1 },
-      "ammo_effects": [ "PLASMA", "EXPLOSIVE", "FLAME", "NPC_AVOID" ],
+      "ranged_damage": {
+        "damage_type": "stab",
+        "amount": 1
+      },
+      "ammo_effects": [
+        "PLASMA",
+        "EXPLOSIVE",
+        "FLAME",
+        "NPC_AVOID"
+      ],
       "durability": 10
     },
-    "flags": [ "IRREMOVABLE" ]
+    "flags": [
+      "IRREMOVABLE"
+    ]
   },
   {
     "id": "bio_blaster_gun",
     "type": "GUN",
-    "name": { "str": "fusion blaster" },
-    "description": "this a pseudo item",
+    "name": {
+      "str": "热熔炮"
+    },
+    "description": "这是一个假的道具",
     "volume": "3 L",
     "price": "0 cent",
-    "material": [ "steel", "plastic" ],
+    "material": [
+      "steel",
+      "plastic"
+    ],
     "symbol": "(",
     "color": "magenta",
     "skill": "rifle",
     "range": 30,
-    "ranged_damage": { "damage_type": "stab", "amount": 22, "armor_penetration": 15 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 22,
+      "armor_penetration": 15
+    },
     "dispersion": 30,
     "durability": 10,
     "loudness": 12,
     "energy_drain": "50 kJ",
-    "modes": [ [ "DEFAULT", "single shot", 1 ], [ "burst", "triple shot", 3 ] ],
+    "modes": [
+      [
+        "DEFAULT",
+        "single shot",
+        1
+      ],
+      [
+        "burst",
+        "triple shot",
+        3
+      ]
+    ],
     "reload": 500,
-    "built_in_mods": [ "bio_powershot" ],
-    "ammo_effects": [ "PLASMA" ],
-    "flags": [ "NEVER_JAMS", "TRADER_AVOID", "ZERO_WEIGHT", "USES_BIONIC_POWER" ]
+    "built_in_mods": [
+      "bio_powershot"
+    ],
+    "ammo_effects": [
+      "PLASMA"
+    ],
+    "flags": [
+      "NEVER_JAMS",
+      "TRADER_AVOID",
+      "ZERO_WEIGHT",
+      "USES_BIONIC_POWER"
+    ]
   },
   {
     "id": "rifle_308",
     "copy-from": "rifle_manual",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
-    "name": { "str": "handmade heavy carbine" },
+    "name": {
+      "str": "自制重型卡宾枪"
+    },
     "//": "It's amongst the smallest of the .308 firearms, and a scrap weapon as well. This means a short handmade barrel, and considerable loss of energy.",
-    "description": "A homemade lever-action magazine-fed smoothbore rifle.  While still a primitive pipe and 2x4 design, some minor improvements have been made, such as being able to accept G3 compatible magazines, and chambering the more powerful .308 rounds.",
+    "description": "一把自制的杠杆式滑膛步枪。尽管还是用的一条钢管和一条2x4制式木料，在细节方面已经是做了不少改进了，比如能够兼容 G3 步枪弹匣和能使用威力更大的.308子弹的弹仓。",
     "weight": "2311 g",
     "volume": "2 L",
     "price": "100 USD",
-    "melee_damage": { "bash": 10 },
-    "material": [ "steel", "wood" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "steel",
+      "wood"
+    ],
     "symbol": "(",
     "color": "brown",
-    "ammo": [ "308" ],
-    "ranged_damage": { "damage_type": "bullet", "amount": -5 },
+    "ammo": [
+      "308"
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -5
+    },
     "dispersion": 550,
     "durability": 6,
     "blackpowder_tolerance": 60,
     "reload": 200,
     "barrel_volume": "500 ml",
     "valid_mod_locations": [
-      [ "barrel", 1 ],
-      [ "bore", 1 ],
-      [ "brass catcher", 1 ],
-      [ "muzzle", 1 ],
-      [ "stock", 1 ],
-      [ "mechanism", 4 ],
-      [ "sights", 1 ],
-      [ "sling", 1 ],
-      [ "grip mount", 1 ],
-      [ "rail mount", 1 ],
-      [ "underbarrel mount", 1 ]
+      [
+        "barrel",
+        1
+      ],
+      [
+        "bore",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "mechanism",
+        4
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "underbarrel mount",
+        1
+      ]
     ],
     "pocket_data": [
       {
@@ -903,42 +1919,86 @@
         "max_contains_volume": "20 L",
         "magazine_well": "250 ml",
         "max_contains_weight": "20 kg",
-        "item_restriction": [ "g3_makeshiftmag", "g3mag", "g3bigmag" ]
+        "item_restriction": [
+          "g3_makeshiftmag",
+          "g3mag",
+          "g3bigmag"
+        ]
       }
     ]
   },
   {
     "id": "surv_carbine_223",
     "copy-from": "rifle_manual",
-    "looks_like": "modular_ar15",
+    "looks_like": "ar15",
     "type": "GUN",
-    "name": { "str": "handmade carbine" },
+    "name": {
+      "str": "自制卡宾枪"
+    },
     "//": "It's smaller than an M4A1, plus it's a homemade firearm.",
-    "description": "A well-designed improvised lever-action carbine with a shortened barrel.  Accepting crude detachable magazines or STANAG magazines, this is one of the better homemade weapons.",
+    "description": "一把设计精良的自制卡宾枪，已经锯短枪管。支持原始的可拆卸弹匣或STANAG北约制式弹匣，算是把比较好的自制武器。",
     "weight": "1950 g",
     "volume": "1500 ml",
     "price": "100 USD",
-    "melee_damage": { "bash": 6 },
-    "material": [ "steel", "wood" ],
+    "to_hit": -1,
+    "melee_damage": {
+      "bash": 6
+    },
+    "material": [
+      "steel",
+      "wood"
+    ],
     "symbol": "(",
     "color": "brown",
-    "ammo": [ "223" ],
-    "ranged_damage": { "damage_type": "bullet", "amount": -4 },
+    "ammo": [
+      "223"
+    ],
+    "ranged_damage": {
+      "damage_type": "bullet",
+      "amount": -4
+    },
     "dispersion": 550,
     "durability": 6,
     "blackpowder_tolerance": 32,
     "loudness": 25,
     "reload": 200,
     "valid_mod_locations": [
-      [ "barrel", 1 ],
-      [ "brass catcher", 1 ],
-      [ "muzzle", 1 ],
-      [ "sling", 1 ],
-      [ "stock", 1 ],
-      [ "underbarrel", 1 ],
-      [ "grip mount", 1 ],
-      [ "rail mount", 1 ],
-      [ "sights mount", 1 ]
+      [
+        "barrel",
+        1
+      ],
+      [
+        "brass catcher",
+        1
+      ],
+      [
+        "muzzle",
+        1
+      ],
+      [
+        "sling",
+        1
+      ],
+      [
+        "stock",
+        1
+      ],
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "grip mount",
+        1
+      ],
+      [
+        "rail mount",
+        1
+      ],
+      [
+        "sights mount",
+        1
+      ]
     ],
     "pocket_data": [
       {

@@ -8,11 +8,29 @@
     "int_decay_step": -1,
     "int_decay_tick": 15,
     "rating": "bad",
-    "name": [ "Bloodcoated" ],
-    "desc": [ "Blood splattered.", "Drastically slowed.", "Moderately slowed.", "Severely slowed.", "Extremely slowed." ],
-    "apply_message": "You've been blood coated!",
-    "remove_message": "The sticky blood leaves your body.",
-    "scaling_mods": { "speed_mod": [ -3.2 ], "dex_mod": [ -0.3 ] }
+    "name": [
+      "血淋淋的"
+    ],
+    "desc": [
+      "鲜血四溅。",
+      "速度急剧减慢。",
+      "适度减速。",
+      "严重减速。",
+      "速度极慢。"
+    ],
+    "reduced_desc": [
+      "Your blood coat dries a bit."
+    ],
+    "apply_message": "你全身都是血！",
+    "remove_message": "血衣离开你的身体！",
+    "scaling_mods": {
+      "speed_mod": [
+        -3.2
+      ],
+      "dex_mod": [
+        -0.3
+      ]
+    }
   },
   {
     "type": "effect_type",
@@ -23,40 +41,61 @@
     "int_decay_step": -1,
     "int_decay_tick": 15,
     "rating": "bad",
-    "name": [ "Bloodbathed" ],
-    "desc": [
-      "Blood splattered.",
-      "Slightly slowed.",
-      "Slightly slowed.",
-      "Slightly slowed.",
-      "Drastically slowed.",
-      "Drastically slowed.",
-      "Drastically slowed.",
-      "Drastically slowed.",
-      "Moderately slowed.",
-      "Moderately slowed.",
-      "Moderately slowed.",
-      "Moderately slowed.",
-      "Severely slowed.",
-      "Severely slowed.",
-      "Severely slowed.",
-      "Severely slowed.",
-      "Extremely slowed.",
-      "Extremely slowed.",
-      "Extremely slowed.",
-      "Extremely slowed."
+    "name": [
+      "血淋淋的"
     ],
-    "apply_message": "You've been blood coated!",
-    "remove_message": "The sticky blood leaves your body!",
-    "removes_effects": [ "unify_bloodslow" ],
-    "blocks_effects": [ "unify_bloodslow" ],
-    "scaling_mods": { "speed_mod": [ -2.2 ], "dex_mod": [ -0.3 ] }
+    "desc": [
+      "鲜血四溅。",
+      "稍微慢了点。",
+      "稍微慢了点。",
+      "稍微慢了点。",
+      "速度急剧减慢。",
+      "速度急剧减慢。",
+      "速度急剧减慢。",
+      "速度急剧减慢。",
+      "适度减速。",
+      "适度减速。",
+      "适度减速。",
+      "适度减速。",
+      "严重减速。",
+      "严重减速。",
+      "严重减速。",
+      "严重减速。",
+      "速度极慢。",
+      "速度极慢。",
+      "速度极慢。",
+      "速度极慢。"
+    ],
+    "reduced_desc": [
+      "Your thick blood coat dries a bit."
+    ],
+    "apply_message": "你全身都是血！",
+    "remove_message": "厚厚的血衣离开你的身体！",
+    "removes_effects": [
+      "unify_bloodslow"
+    ],
+    "blocks_effects": [
+      "unify_bloodslow"
+    ],
+    "scaling_mods": {
+      "speed_mod": [
+        -2.2
+      ],
+      "dex_mod": [
+        -0.3
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "parasiteworm_pain",
     "apply_message": "You feel a burning sensation from your wound!",
-    "miss_messages": [ [ "You feel bad inside.", 2 ] ],
+    "miss_messages": [
+      [
+        "你感觉到身体很难受。",
+        2
+      ]
+    ],
     "blood_analysis_description": "Unknown Parasites",
     "int_add_val": 1,
     "max_intensity": 3,
@@ -64,17 +103,35 @@
     "int_decay_tick": 100,
     "max_duration": 300,
     "rating": "bad",
-    "resist_traits": [ "POISRESIST" ],
+    "resist_traits": [
+      "POISRESIST"
+    ],
     "pain_sizing": true,
     "main_parts_only": true,
-    "base_mods": { "pain_min": [ 1 ], "pain_chance": [ 50 ] },
-    "scaling_mods": { "pain_min": [ 1.25 ] }
+    "base_mods": {
+      "pain_min": [
+        1
+      ],
+      "pain_chance": [
+        50
+      ]
+    },
+    "scaling_mods": {
+      "pain_min": [
+        1.25
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "parasiteworm_move",
     "apply_message": "Your movement suddenly felt stiff!",
-    "miss_messages": [ [ "You feel bad inside.", 2 ] ],
+    "miss_messages": [
+      [
+        "你感觉到身体很难受。",
+        2
+      ]
+    ],
     "blood_analysis_description": "Unknown Parasites",
     "int_add_val": 1,
     "max_intensity": 3,
@@ -82,14 +139,35 @@
     "int_decay_tick": 100,
     "max_duration": 300,
     "rating": "bad",
-    "resist_traits": [ "POISRESIST" ],
-    "base_mods": { "dex_mod": [ -1.55 ], "speed_mod": [ -1.15 ] },
-    "scaling_mods": { "dex_mod": [ -1.55 ], "speed_mod": [ -1.15 ] }
+    "resist_traits": [
+      "POISRESIST"
+    ],
+    "base_mods": {
+      "dex_mod": [
+        -1.55
+      ],
+      "speed_mod": [
+        -1.15
+      ]
+    },
+    "scaling_mods": {
+      "dex_mod": [
+        -1.55
+      ],
+      "speed_mod": [
+        -1.15
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "parasiteworm_int",
-    "miss_messages": [ [ "You feel bad inside.", 2 ] ],
+    "miss_messages": [
+      [
+        "你感觉到身体很难受。",
+        2
+      ]
+    ],
     "blood_analysis_description": "Unknown Parasites",
     "int_add_val": 1,
     "max_intensity": 3,
@@ -97,14 +175,31 @@
     "int_decay_tick": 100,
     "max_duration": 300,
     "rating": "bad",
-    "resist_traits": [ "POISRESIST" ],
-    "base_mods": { "int_mod": [ -2, -1.25 ] },
-    "scaling_mods": { "int_mod": [ -2, -1.25 ] }
+    "resist_traits": [
+      "POISRESIST"
+    ],
+    "base_mods": {
+      "int_mod": [
+        -2,
+        -1.25
+      ]
+    },
+    "scaling_mods": {
+      "int_mod": [
+        -2,
+        -1.25
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "parasiteworm_stomach",
-    "miss_messages": [ [ "You feel bad inside.", 2 ] ],
+    "miss_messages": [
+      [
+        "你感觉到身体很难受。",
+        2
+      ]
+    ],
     "blood_analysis_description": "Unknown Parasites",
     "int_add_val": 1,
     "max_intensity": 3,
@@ -112,15 +207,44 @@
     "int_decay_tick": 100,
     "max_duration": 300,
     "rating": "bad",
-    "resist_traits": [ "POISRESIST" ],
-    "base_mods": { "hunger_min": [ 2, 1 ], "hunger_chance": [ 275 ], "thirst_min": [ 3, 1 ], "thirst_chance": [ 325 ] },
-    "scaling_mods": { "hunger_chance": [ -1.1 ], "thirst_chance": [ -1.1 ] }
+    "resist_traits": [
+      "POISRESIST"
+    ],
+    "base_mods": {
+      "hunger_min": [
+        2,
+        1
+      ],
+      "hunger_chance": [
+        275
+      ],
+      "thirst_min": [
+        3,
+        1
+      ],
+      "thirst_chance": [
+        325
+      ]
+    },
+    "scaling_mods": {
+      "hunger_chance": [
+        -1.1
+      ],
+      "thirst_chance": [
+        -1.1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "parasiteworm_weaken",
     "apply_message": "You feel weakened.",
-    "miss_messages": [ [ "You feel bad inside.", 2 ] ],
+    "miss_messages": [
+      [
+        "你感觉到身体很难受。",
+        2
+      ]
+    ],
     "blood_analysis_description": "Unknown Parasites",
     "int_add_val": 1,
     "max_intensity": 3,
@@ -128,36 +252,88 @@
     "int_decay_tick": 100,
     "max_duration": 300,
     "rating": "bad",
-    "resist_traits": [ "POISRESIST" ],
-    "base_mods": { "str_mod": [ -1 ] },
-    "scaling_mods": { "str_mod": [ -1 ] },
-    "enchantments": [ { "values": [ { "value": "MELEE_DAMAGE", "add": -3 } ] } ]
+    "resist_traits": [
+      "POISRESIST"
+    ],
+    "base_mods": {
+      "str_mod": [
+        -1
+      ]
+    },
+    "scaling_mods": {
+      "str_mod": [
+        -1
+      ]
+    },
+    "enchantments": [
+      {
+        "values": [
+          {
+            "value": "MELEE_DAMAGE",
+            "add": -3
+          }
+        ]
+      }
+    ]
   },
   {
     "type": "effect_type",
     "id": "nightwail_shadow",
-    "name": [ "Enshrouded" ],
-    "apply_message": "You've been enshrouded in shadows!",
-    "desc": [ "Thick shadow lingers around your body." ],
-    "decay_messages": [ [ "The thick shadow disperses!", "good" ] ],
-    "remove_message": "The shadow vanishes away!",
+    "name": [
+      "掩蔽"
+    ],
+    "apply_message": "你被藏在阴影里了！",
+    "desc": [
+      "浓重的阴影萦绕在你的身体周围。"
+    ],
+    "decay_messages": [
+      [
+        "浓浓的阴影散去了！",
+        "good"
+      ]
+    ],
+    "remove_message": "阴影消失了！",
     "int_add_val": 1,
     "max_intensity": 5,
     "int_decay_step": -3,
     "int_decay_tick": 45,
     "max_duration": 180,
     "rating": "bad",
-    "scaling_mods": { "int_mod": [ -0.66 ], "dex_mod": [ -0.33 ], "speed_mod": [ -2 ] }
+    "scaling_mods": {
+      "int_mod": [
+        -0.66
+      ],
+      "dex_mod": [
+        -0.33
+      ],
+      "speed_mod": [
+        -2
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "pedo_restraint",
-    "name": [ "Nautilus Restraint" ],
-    "apply_message": "A nautilus torpedo latches onto you!",
-    "desc": [ "You are being held in place by nautilus torpedo(s)" ],
-    "miss_messages": [ [ "You feel your limbs stiffen.", 2 ] ],
-    "decay_messages": [ [ "You're feeling free again!", "good" ] ],
-    "remove_message": "You are free from nautilus restraint!",
+    "name": [
+      "螺母抑制"
+    ],
+    "apply_message": "一枚鹦鹉螺鱼雷缠住了你！",
+    "desc": [
+      "你被鹦鹉螺鱼雷固定在原地"
+    ],
+    "miss_messages": [
+      [
+        "你感到四肢僵硬。",
+        2
+      ]
+    ],
+    "decay_messages": [
+      [
+        "你感觉重获自由了！",
+        "good"
+      ]
+    ],
+    "remove_message": "你摆脱了螺母束缚 ！",
     "int_add_val": 1,
     "max_intensity": 10,
     "int_decay_step": -2,
@@ -165,61 +341,181 @@
     "max_duration": 300,
     "rating": "bad",
     "show_in_info": true,
-    "scaling_mods": { "dex_mod": [ -0.25 ], "speed_mod": [ -2.5 ] }
+    "scaling_mods": {
+      "dex_mod": [
+        -0.25
+      ],
+      "speed_mod": [
+        -2.5
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "rooty_grasp",
-    "name": [ "Nature's Grasp" ],
-    "desc": [ "Thick strands of roots and vines take hold of you!" ],
-    "apply_message": "Roots and vines entangle your limbs!",
-    "remove_message": "The roots and vines wither up and die.",
+    "name": [
+      "自然的掌握"
+    ],
+    "desc": [
+      "浓密的根和藤蔓缠绕着你"
+    ],
+    "apply_message": "树根和藤蔓缠绕着你你的四肢。",
+    "remove_message": "树根和藤蔓枯萎死亡。",
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -75 ] }
+    "base_mods": {
+      "speed_mod": [
+        -75
+      ]
+    }
   },
   {
-    "//": "Unlike fungal infection, this will deal damage you instead of instant death if left alone…",
+    "//": "Unlike fungal infection, this will deal damage you instead of instant death if left alone...",
     "type": "effect_type",
     "show_in_info": true,
     "id": "vector_infect",
-    "miss_messages": [ [ "You feel something sink deep within you.", 1 ] ],
+    "miss_messages": [
+      [
+        "你感觉到有东西深深地沉入你的内心。",
+        1
+      ]
+    ],
     "blood_analysis_description": "Vector Infection",
     "rating": "bad",
     "max_intensity": 3,
     "max_duration": 9600,
-    "resist_traits": [ "POISRESIST" ],
-    "base_mods": { "hurt_min": [ 1 ], "hurt_max": [ 2 ], "hurt_chance": [ 21 ], "hurt_tick": [ 6 ] },
-    "scaling_mods": { "str_mod": [ -0.9 ], "per_mod": [ -0.82 ], "dex_mod": [ -1.3 ], "int_mod": [ -1.65 ] }
+    "resist_traits": [
+      "POISRESIST"
+    ],
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        2
+      ],
+      "hurt_chance": [
+        21
+      ],
+      "hurt_tick": [
+        6
+      ]
+    },
+    "scaling_mods": {
+      "str_mod": [
+        -0.9
+      ],
+      "per_mod": [
+        -0.82
+      ],
+      "dex_mod": [
+        -1.3
+      ],
+      "int_mod": [
+        -1.65
+      ]
+    }
+  },
+  {
+    "//": "Screamer uses invisible fields to apply this to players with no head protection. As it is a field, it can't go through closed windows and such.",
+    "type": "effect_type",
+    "id": "secro_dissed",
+    "name": [
+      "眼花缭乱"
+    ],
+    "apply_message": "共鸣的声音让你发呆！",
+    "desc": [
+      "你对周围的环境感到焦虑！"
+    ],
+    "miss_messages": [
+      [
+        "你无法专注于你的行动！",
+        3
+      ]
+    ],
+    "remove_message": "你不再迷茫了。",
+    "int_add_val": 2,
+    "int_dur_factor": "3 seconds",
+    "max_intensity": 100,
+    "int_decay_step": -5,
+    "int_decay_tick": 10,
+    "max_duration": 300,
+    "rating": "bad",
+    "base_mods": {
+      "pain_min": [
+        1
+      ],
+      "pain_max": [
+        2
+      ],
+      "pain_chance": [
+        30
+      ]
+    },
+    "scaling_mods": {
+      "per_mod": [
+        -0.04
+      ],
+      "dex_mod": [
+        -0.08
+      ],
+      "speed_mod": [
+        -0.16
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_fleshmonger_abs",
-    "name": [ "Absorption" ],
+    "name": [
+      "Absorption"
+    ],
     "show_in_info": true,
-    "enchantments": [ { "values": [ { "value": "REGEN_HP", "add": 10 } ] } ]
+    "base_mods": {
+      "hurt_min": [
+        -10
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_fleshmonger_fleshed",
-    "name": [ "Reflesh" ],
+    "name": [
+      "刷新"
+    ],
     "rating": "good",
     "show_in_info": true,
-    "removes_effects": [ "bleed" ],
-    "blocks_effects": [ "bleed" ]
+    "removes_effects": [
+      "bleed"
+    ],
+    "blocks_effects": [
+      "bleed"
+    ]
   },
   {
     "type": "effect_type",
     "id": "secro_fleshmonger_fleshed_penalty",
     "max_intensity": 40,
-    "scaling_mods": { "hurt_min": [ 1.33 ] }
+    "scaling_mods": {
+      "hurt_min": [
+        1.33
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_nix_fear",
-    "name": [ "Afraid", "Scared", "Frightened", "Terrified", "Horrified" ],
-    "desc": [ "The dreadful pressence of the nix leaves your body shaking." ],
-    "apply_message": "The nix eats away your mental stability!",
-    "remove_message": "You withdraw from fear.",
+    "name": [
+      "畏惧",
+      "惊恐",
+      "受惊",
+      "十分惊恐",
+      "惊骇"
+    ],
+    "desc": [
+      "尼克斯可怕的压力使你的身体颤抖。"
+    ],
+    "apply_message": "尼克斯侵蚀了你的精神稳定性！",
+    "remove_message": "你恐惧消退了。",
     "int_add_val": 1,
     "int_dur_factor": "12 seconds",
     "max_intensity": 5,
@@ -227,40 +523,99 @@
     "int_decay_tick": 24,
     "max_duration": 120,
     "rating": "bad",
-    "scaling_mods": { "per_mod": [ -0.5 ], "dex_mod": [ -0.25 ], "speed_mod": [ -1.5 ] }
+    "scaling_mods": {
+      "per_mod": [
+        -0.5
+      ],
+      "dex_mod": [
+        -0.25
+      ],
+      "speed_mod": [
+        -1.5
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_gorepit_wall_dmg",
-    "name": [ "unstable footing" ],
-    "desc": [ "You're standing on a dangerous terrain." ],
+    "name": [
+      "不稳定的步伐"
+    ],
+    "desc": [
+      "你正站在危险的地形。"
+    ],
     "rating": "bad",
     "max_duration": 1,
-    "base_mods": { "hurt_min": [ 3 ], "hurt_max": [ 3 ], "speed_mod": [ -30 ], "dex_mod": [ -2 ] }
+    "base_mods": {
+      "hurt_min": [
+        3
+      ],
+      "hurt_max": [
+        3
+      ],
+      "speed_mod": [
+        -30
+      ],
+      "dex_mod": [
+        -2
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_cordev_corrupt",
-    "name": [ "Corrupted" ],
-    "desc": [ "Sizzling corrupt acid takes a firm hold while burning you!" ],
+    "name": [
+      "被腐化"
+    ],
+    "desc": [
+      "灼烧你的时候，嘶嘶作响的腐朽酸会牢牢抓住你！"
+    ],
     "rating": "bad",
     "max_duration": 10,
-    "base_mods": { "hurt_min": [ 1 ], "hurt_max": [ 2 ], "hurt_tick": [ 2 ], "speed_mod": [ -20 ], "dex_mod": [ -1 ] }
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        2
+      ],
+      "hurt_tick": [
+        2
+      ],
+      "speed_mod": [
+        -20
+      ],
+      "dex_mod": [
+        -1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_cordev_cripple",
-    "name": [ "Crippled" ],
-    "desc": [ "You suffer from the great explosion you've just did!" ],
+    "name": [
+      "老弱病残"
+    ],
+    "desc": [
+      "你刚刚遭受了巨大的爆炸！"
+    ],
     "rating": "bad",
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ -1000 ] }
+    "base_mods": {
+      "speed_mod": [
+        -1000
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_fleshysnaky_enrage",
-    "name": [ "Enraged" ],
-    "desc": [ "Feels like you want to vore someone!" ],
+    "name": [
+      "愤怒"
+    ],
+    "desc": [
+      "感觉你想找人吃！"
+    ],
     "show_in_info": true,
     "rating": "good",
     "int_add_val": 1,
@@ -269,39 +624,88 @@
     "int_decay_step": -30,
     "int_decay_tick": 120,
     "max_duration": 900,
-    "base_mods": { "hurt_min": [ -1 ], "hurt_max": [ -1 ], "speed_mod": [ 1 ] },
-    "scaling_mods": { "speed_mod": [ 1.15 ] }
+    "base_mods": {
+      "hurt_min": [
+        -1
+      ],
+      "hurt_max": [
+        -1
+      ],
+      "speed_mod": [
+        1
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        1.15
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_akin_siphon_foe",
-    "name": [ "Siphoned" ],
-    "desc": [ "The visceral tendril's influence renders you weakened!" ],
+    "name": [
+      "虹吸"
+    ],
+    "desc": [
+      "内脏触手让你变得更虚弱了！"
+    ],
     "show_in_info": true,
     "rating": "bad",
-    "miss_messages": [ [ "You feel dizzy…", 2 ] ],
-    "remove_message": "The siphoning tendril falls off.",
+    "miss_messages": [
+      [
+        "你感到头晕目眩...",
+        2
+      ]
+    ],
+    "remove_message": "虹吸触手脱落了。",
     "int_add_val": 1,
     "int_dur_factor": "20 seconds",
     "max_intensity": 5,
     "int_decay_step": -5,
     "int_decay_tick": 25,
     "max_duration": "180 s",
-    "base_mods": { "hurt_min": [ 1 ], "hurt_tick": [ 15 ], "speed_mod": [ -1 ] },
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_tick": [
+        15
+      ],
+      "speed_mod": [
+        -1
+      ]
+    },
     "scaling_mods": {
-      "speed_mod": [ -1 ],
-      "str_mod": [ -0.99 ],
-      "dex_mod": [ -0.66 ],
-      "per_mod": [ -0.33 ],
-      "int_mod": [ -0.33 ],
-      "hurt_tick": [ -1 ]
+      "speed_mod": [
+        -1
+      ],
+      "str_mod": [
+        -0.99
+      ],
+      "dex_mod": [
+        -0.66
+      ],
+      "per_mod": [
+        -0.33
+      ],
+      "int_mod": [
+        -0.33
+      ],
+      "hurt_tick": [
+        -1
+      ]
     }
   },
   {
     "type": "effect_type",
     "id": "secro_akin_siphon_ally",
-    "name": [ "Empowered by Akin" ],
-    "desc": [ "The visceral tendril's influence strengthens you!" ],
+    "name": [
+      "由Akin授权"
+    ],
+    "desc": [
+      "内脏触手强化了你！"
+    ],
     "show_in_info": true,
     "rating": "good",
     "int_add_val": 1,
@@ -310,15 +714,36 @@
     "int_decay_step": -5,
     "int_decay_tick": 25,
     "max_duration": "180 s",
-    "base_mods": { "hurt_min": [ -2 ], "hurt_tick": [ 10 ], "speed_mod": [ 3 ] },
-    "scaling_mods": { "speed_mod": [ 3 ], "hurt_tick": [ -1 ] }
+    "base_mods": {
+      "hurt_min": [
+        -2
+      ],
+      "hurt_tick": [
+        10
+      ],
+      "speed_mod": [
+        3
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        3
+      ],
+      "hurt_tick": [
+        -1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_akin_constrict",
-    "name": [ "Constricted" ],
-    "desc": [ "The visceral tendrils are holding you down!" ],
-    "remove_message": "You shrug off the visceral tendrils.",
+    "name": [
+      "收缩的"
+    ],
+    "desc": [
+      "内脏的卷须把你往下压！"
+    ],
+    "remove_message": "你摆脱了内脏的卷须。",
     "rating": "bad",
     "max_duration": "180 s",
     "max_intensity": 3,
@@ -326,32 +751,54 @@
     "int_dur_factor": "20 seconds",
     "int_decay_step": -3,
     "int_decay_tick": 25,
-    "base_mods": { "dex_mod": [ -0.2 ] },
-    "scaling_mods": { "speed_mod": [ -5 ], "dex_mod": [ -0.2 ] },
+    "base_mods": {
+      "dex_mod": [
+        -0.2
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -5
+      ],
+      "dex_mod": [
+        -0.2
+      ]
+    },
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "secro_necros_para",
     "name": [
-      "Neural Disorder",
-      "Neural Disorder",
-      "Neural Disorder",
-      "Neural Disorder",
-      "Neural Disorder",
-      "Neural Paralysis",
-      "Neural Paralysis",
-      "Neural Paralysis",
-      "Neural Paralysis",
-      "Neural Collapse"
+      "神经紊乱",
+      "神经紊乱",
+      "神经紊乱",
+      "神经紊乱",
+      "神经紊乱",
+      "神经麻痹",
+      "神经麻痹",
+      "神经麻痹",
+      "神经麻痹",
+      "神经崩溃"
     ],
-    "desc": [ "You're suffering from a neurotoxin!" ],
+    "desc": [
+      "你中了神经毒素！"
+    ],
     "show_in_info": true,
-    "apply_message": "Your skin felt numb all of a sudden…",
-    "miss_messages": [ [ "You feel very stiff…", 3 ] ],
-    "remove_message": "The effect of the paralysing toxin leaves your body.",
-    "removes_effects": [ "paralyzepoison" ],
-    "blocks_effects": [ "paralyzepoison" ],
+    "apply_message": "你的皮肤突然感到麻木...",
+    "miss_messages": [
+      [
+        "你感到非常僵硬...",
+        3
+      ]
+    ],
+    "remove_message": "麻痹毒素的作用会离开你的身体。",
+    "removes_effects": [
+      "paralyzepoison"
+    ],
+    "blocks_effects": [
+      "paralyzepoison"
+    ],
     "rating": "bad",
     "int_add_val": 1,
     "int_dur_factor": "30 seconds",
@@ -359,13 +806,29 @@
     "int_decay_step": -3,
     "int_decay_tick": 50,
     "max_duration": 330,
-    "base_mods": { "speed_mod": [ -7.5 ], "dex_mod": [ -1 ] },
-    "scaling_mods": { "speed_mod": [ -7.5 ], "dex_mod": [ -1 ] }
+    "base_mods": {
+      "speed_mod": [
+        -7.5
+      ],
+      "dex_mod": [
+        -1
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -7.5
+      ],
+      "dex_mod": [
+        -1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "charge_momentum",
-    "name": [ "on Momentum" ],
+    "name": [
+      "冲击状态"
+    ],
     "int_add_val": 1,
     "int_dur_factor": "1 seconds",
     "max_intensity": 6,
@@ -374,21 +837,18 @@
     "max_duration": 6,
     "rating": "good",
     "show_in_info": true,
-    "scaling_mods": { "speed_mod": [ 10 ] },
-    "enchantments": [
-      {
-        "values": [
-          { "value": "ARMOR_BASH", "multiply": -0.33 },
-          { "value": "ARMOR_CUT", "multiply": -0.33 },
-          { "value": "ARMOR_STAB", "multiply": -0.33 }
-        ]
-      }
-    ]
+    "scaling_mods": {
+      "speed_mod": [
+        10
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "charge_momentum_initial",
-    "name": [ "Gaining Momentum" ],
+    "name": [
+      "Gaining Momentum"
+    ],
     "int_add_val": 1,
     "int_dur_factor": "1 seconds",
     "max_intensity": 4,
@@ -397,16 +857,11 @@
     "max_duration": 4,
     "rating": "bad",
     "show_in_info": true,
-    "scaling_mods": { "speed_mod": [ -15 ] },
-    "enchantments": [
-      {
-        "values": [
-          { "value": "ARMOR_BASH", "multiply": -0.1 },
-          { "value": "ARMOR_CUT", "multiply": -0.1 },
-          { "value": "ARMOR_STAB", "multiply": -0.1 }
-        ]
-      }
-    ]
+    "scaling_mods": {
+      "speed_mod": [
+        -15
+      ]
+    }
   },
   {
     "type": "effect_type",
@@ -415,64 +870,166 @@
   {
     "type": "effect_type",
     "id": "secro_mawy_web",
-    "name": [ "Webbed", "Webbed", "Webbed", "Webbed", "Webbed", "Ensnared" ],
-    "desc": [ "The flesh webs sticks firmly on you!" ],
+    "name": [
+      "被网住",
+      "被网住",
+      "被网住",
+      "被网住",
+      "被网住",
+      "诱捕"
+    ],
+    "desc": [
+      "肉网紧紧地粘在你身上！"
+    ],
     "show_in_info": true,
-    "apply_message": "You've been covered in flesh webs!",
-    "miss_messages": [ [ "You can't move well with this sticky webs…", 1 ] ],
-    "remove_message": "You've got rid of the webs!",
+    "apply_message": "你被肉网覆盖了！",
+    "miss_messages": [
+      [
+        "有这些黏糊糊的网在身上，你不能很好地移动...",
+        1
+      ]
+    ],
+    "remove_message": "你已经从网中挣脱出来了！",
     "rating": "bad",
     "int_add_val": 1,
     "int_dur_factor": "20 seconds",
     "max_intensity": 6,
     "int_decay_step": -1,
     "int_decay_tick": 5,
-    "base_mods": { "speed_mod": [ -20 ], "dex_mod": [ -2 ] },
-    "scaling_mods": { "speed_mod": [ -10 ], "dex_mod": [ -1 ] }
+    "base_mods": {
+      "speed_mod": [
+        -20
+      ],
+      "dex_mod": [
+        -2
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -10
+      ],
+      "dex_mod": [
+        -1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_glut_dismember",
-    "name": [ "Dismembered" ],
-    "desc": [ "You suffer from the great explosion you've just did!" ],
+    "name": [
+      "肢解"
+    ],
+    "desc": [
+      "你刚刚遭受了巨大的爆炸！"
+    ],
     "rating": "bad",
     "show_in_info": true,
     "int_add_val": 1,
     "int_dur_factor": "300 turns",
-    "base_mods": { "speed_mod": [ -10 ], "size_mod": [ -0.3 ] },
-    "scaling_mods": { "speed_mod": [ -10 ], "size_mod": [ -0.3 ] }
+    "base_mods": {
+      "speed_mod": [
+        -10
+      ],
+      "size_mod": [
+        -0.3
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -10
+      ],
+      "size_mod": [
+        -0.3
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_swarmer_savage_tension",
-    "name": [ "on Tension" ],
-    "desc": [ "From an ongoing lust for flesh, your muscles mutate!" ],
+    "name": [
+      "躁动状态"
+    ],
+    "desc": [
+      "从持续的肉欲，你的肌肉变异！"
+    ],
     "rating": "good",
     "int_add_val": 1,
     "int_dur_factor": "200 turns",
     "max_intensity": 5,
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ 0.2 ], "size_mod": [ 0.05 ], "bash_mod": [ 0.55 ], "hit_mod": [ 0.1 ] },
-    "scaling_mods": { "speed_mod": [ 0.2 ], "size_mod": [ 0.05 ], "bash_mod": [ 0.55 ], "hit_mod": [ 0.1 ] }
+    "base_mods": {
+      "speed_mod": [
+        0.2
+      ],
+      "size_mod": [
+        0.05
+      ],
+      "bash_mod": [
+        0.55
+      ],
+      "hit_mod": [
+        0.1
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        0.2
+      ],
+      "size_mod": [
+        0.05
+      ],
+      "bash_mod": [
+        0.55
+      ],
+      "hit_mod": [
+        0.1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_swarmer_virulent_precise",
-    "name": [ "on Precision" ],
-    "desc": [ "You feel your senses sharpen!" ],
+    "name": [
+      "精准状态"
+    ],
+    "desc": [
+      "你感觉到你的感官锐利了！"
+    ],
     "rating": "good",
     "int_add_val": 1,
     "int_dur_factor": "30 turns",
     "max_intensity": 20,
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ 0.12 ], "hit_mod": [ 0.08 ] },
-    "scaling_mods": { "speed_mod": [ 0.12 ], "hit_mod": [ 0.08 ] }
+    "base_mods": {
+      "speed_mod": [
+        0.12
+      ],
+      "hit_mod": [
+        0.08
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        0.12
+      ],
+      "hit_mod": [
+        0.08
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_revenant_trigger",
-    "name": [ "Triggered", "Triggered", "Triggered", "Triggered", "Triggered Potency" ],
-    "desc": [ "Your hidden potential prevails!" ],
+    "name": [
+      "触发",
+      "触发",
+      "触发",
+      "触发",
+      "触发效力"
+    ],
+    "desc": [
+      "你隐藏的潜力占上风！"
+    ],
     "rating": "good",
     "int_add_val": 1,
     "int_dur_factor": "20 turns",
@@ -480,15 +1037,43 @@
     "int_decay_tick": 20,
     "max_intensity": 5,
     "show_in_info": true,
-    "base_mods": { "bash_mod": [ 0.25 ], "cut_mod": [ 0.25 ], "hit_mod": [ 0.15 ] },
-    "scaling_mods": { "bash_mod": [ 0.25 ], "cut_mod": [ 0.25 ], "hit_mod": [ 0.15 ] }
+    "base_mods": {
+      "bash_mod": [
+        0.25
+      ],
+      "cut_mod": [
+        0.25
+      ],
+      "hit_mod": [
+        0.15
+      ]
+    },
+    "scaling_mods": {
+      "bash_mod": [
+        0.25
+      ],
+      "cut_mod": [
+        0.25
+      ],
+      "hit_mod": [
+        0.15
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_revenant_forsaken_dilute",
-    "name": [ "Weakened", "Weakened", "Weakened", "Weakened", "Severely Weakened" ],
-    "apply_message": "You feel like you've loosen the grip of fighting.",
-    "desc": [ "You feel your attacks becoming exhausted." ],
+    "name": [
+      "削弱",
+      "削弱",
+      "削弱",
+      "削弱",
+      "严重削弱"
+    ],
+    "apply_message": "你觉得你已经放松了战斗的控制。",
+    "desc": [
+      "你觉得你的攻击力变弱了。"
+    ],
     "rating": "bad",
     "int_add_val": 1,
     "int_dur_factor": "30 turns",
@@ -496,14 +1081,54 @@
     "int_decay_tick": 20,
     "max_intensity": 5,
     "show_in_info": true,
-    "base_mods": { "bash_mod": [ -0.2 ], "cut_mod": [ -0.2 ], "hit_mod": [ -0.1 ], "dex_mod": [ -0.6 ], "str_mod": [ -1.2 ] },
-    "scaling_mods": { "bash_mod": [ -0.2 ], "cut_mod": [ -0.2 ], "hit_mod": [ -0.1 ], "dex_mod": [ -0.2 ], "str_mod": [ -0.4 ] }
+    "base_mods": {
+      "bash_mod": [
+        -0.2
+      ],
+      "cut_mod": [
+        -0.2
+      ],
+      "hit_mod": [
+        -0.1
+      ],
+      "dex_mod": [
+        -0.6
+      ],
+      "str_mod": [
+        -1.2
+      ]
+    },
+    "scaling_mods": {
+      "bash_mod": [
+        -0.2
+      ],
+      "cut_mod": [
+        -0.2
+      ],
+      "hit_mod": [
+        -0.1
+      ],
+      "dex_mod": [
+        -0.2
+      ],
+      "str_mod": [
+        -0.4
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_revenant_allure_induce",
-    "name": [ "Induced", "Induced", "Induced", "Induced", "Incited" ],
-    "desc": [ "Your mass increases, but makes you unstable and causes the blob to overwhelm you." ],
+    "name": [
+      "诱导",
+      "诱导",
+      "诱导",
+      "诱导",
+      "煽动"
+    ],
+    "desc": [
+      "你的体重大增，但这使你很不稳定，一滴水都可以压倒你。"
+    ],
     "rating": "mixed",
     "int_add_val": 1,
     "int_dur_factor": "25 turns",
@@ -511,30 +1136,74 @@
     "int_decay_tick": 10,
     "max_intensity": 5,
     "show_in_info": true,
-    "base_mods": { "hurt_min": [ 1 ], "hurt_tick": [ 20 ], "size_mod": [ 0.3 ], "hit_mod": [ 0.5 ] },
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_tick": [
+        20
+      ],
+      "size_mod": [
+        0.3
+      ],
+      "hit_mod": [
+        0.5
+      ]
+    },
     "//": "At max intensity, deals 1 hp per 10 turns.",
-    "scaling_mods": { "hurt_tick": [ -2.5 ], "size_mod": [ 0.3 ], "hit_mod": [ 0.5 ] }
+    "scaling_mods": {
+      "hurt_tick": [
+        -2.5
+      ],
+      "size_mod": [
+        0.3
+      ],
+      "hit_mod": [
+        0.5
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_tendril_sprint",
-    "name": [ "Sprinting" ],
+    "name": [
+      "疾跑"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ 90 ] }
+    "base_mods": {
+      "speed_mod": [
+        90
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_skittyweavy_skit",
-    "name": [ "Fleeing" ],
-    "desc": [ "Your body felt a sharp warning!" ],
+    "name": [
+      "逃跑中"
+    ],
+    "desc": [
+      "你的身体感觉到了一个尖锐的警告！"
+    ],
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ 150 ], "dodge_mod": [ 3 ] }
+    "base_mods": {
+      "speed_mod": [
+        150
+      ],
+      "dodge_mod": [
+        3
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "mon_zombie_skittyweavy_sickly_toxin",
-    "name": [ "Intoxicated" ],
-    "desc": [ "The toxin flows through you and hastens your reflexes!" ],
+    "name": [
+      "陶醉"
+    ],
+    "desc": [
+      "毒素流经你的身体，加速了你的反射神经！"
+    ],
     "int_add_val": 1,
     "int_dur_factor": "4 turns",
     "int_decay_step": -2,
@@ -542,52 +1211,77 @@
     "max_intensity": 5,
     "max_duration": 30,
     "show_in_info": true,
-    "base_mods": { "speed_mod": [ 5 ] },
-    "scaling_mods": { "speed_mod": [ 5 ] },
-    "removes_effects": [ "bleed" ],
-    "blocks_effects": [ "bleed" ]
+    "base_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        5
+      ]
+    },
+    "removes_effects": [
+      "bleed"
+    ],
+    "blocks_effects": [
+      "bleed"
+    ]
   },
   {
     "type": "effect_type",
     "id": "mon_zombie_skittyweavy_repair",
-    "removes_effects": [ "bleed" ],
-    "blocks_effects": [ "bleed" ]
+    "removes_effects": [
+      "bleed"
+    ],
+    "blocks_effects": [
+      "bleed"
+    ]
   },
   {
     "type": "effect_type",
     "id": "secro_fleshknot_poison",
     "name": [
-      "Mildly Poisoned",
-      "Mildly Poisoned",
-      "Mildly Poisoned",
-      "Mildly Poisoned",
-      "Mildly Poisoned",
-      "Poisoned",
-      "Poisoned",
-      "Poisoned",
-      "Poisoned",
-      "Poisoned",
-      "Badly Poisoned",
-      "Badly Poisoned",
-      "Badly Poisoned",
-      "Badly Poisoned",
-      "Badly Poisoned",
-      "Severely Poisoned",
-      "Severely Poisoned",
-      "Severely Poisoned",
-      "Severely Poisoned",
-      "Severely Poisoned",
-      "Extremely Poisoned",
-      "Extremely Poisoned",
-      "Extremely Poisoned",
-      "Extremely Poisoned",
-      "Extremely Poisoned",
-      "Exceedingly Poisoned"
+      "轻度中毒",
+      "轻度中毒",
+      "轻度中毒",
+      "轻度中毒",
+      "轻度中毒",
+      "中毒",
+      "中毒",
+      "中毒",
+      "中毒",
+      "中毒",
+      "严重中毒",
+      "严重中毒",
+      "严重中毒",
+      "严重中毒",
+      "严重中毒",
+      "严重中毒",
+      "严重中毒",
+      "严重中毒",
+      "严重中毒",
+      "严重中毒",
+      "剧毒",
+      "剧毒",
+      "剧毒",
+      "剧毒",
+      "剧毒",
+      "剧毒的"
     ],
-    "desc": [ "You have been poisoned!" ],
+    "desc": [
+      "你中毒了！"
+    ],
     "rating": "bad",
-    "miss_messages": [ [ "You feel bad inside.", 1 ] ],
-    "resist_traits": [ "POISRESIST" ],
+    "miss_messages": [
+      [
+        "你感觉到身体很难受。",
+        1
+      ]
+    ],
+    "resist_traits": [
+      "POISRESIST"
+    ],
     "int_add_val": 1,
     "int_dur_factor": "60 turns",
     "int_decay_step": -1,
@@ -598,109 +1292,218 @@
     "pain_sizing": true,
     "hurt_sizing": true,
     "base_mods": {
-      "hurt_min": [ 1 ],
-      "hurt_tick": [ 100 ],
-      "hurt_chance": [ 100 ],
-      "pain_min": [ 1 ],
-      "pain_tick": [ 100 ],
-      "pain_chance": [ 100 ],
-      "per_mod": [ -0.25 ],
-      "dex_mod": [ -0.4 ],
-      "str_mod": [ -0.75 ]
+      "hurt_min": [
+        1
+      ],
+      "hurt_tick": [
+        100
+      ],
+      "hurt_chance": [
+        100
+      ],
+      "pain_min": [
+        1
+      ],
+      "pain_tick": [
+        100
+      ],
+      "pain_chance": [
+        100
+      ],
+      "per_mod": [
+        -0.25
+      ],
+      "dex_mod": [
+        -0.4
+      ],
+      "str_mod": [
+        -0.75
+      ]
     },
     "scaling_mods": {
-      "hurt_min": [ 0.1 ],
-      "hurt_tick": [ -2 ],
-      "hurt_chance": [ -4 ],
-      "pain_min": [ 0.25 ],
-      "pain_tick": [ -3 ],
-      "pain_chance": [ -5 ],
-      "per_mod": [ -0.07 ],
-      "dex_mod": [ -0.12 ],
-      "str_mod": [ -0.2 ]
+      "hurt_min": [
+        0.1
+      ],
+      "hurt_tick": [
+        -2
+      ],
+      "hurt_chance": [
+        -4
+      ],
+      "pain_min": [
+        0.25
+      ],
+      "pain_tick": [
+        -3
+      ],
+      "pain_chance": [
+        -5
+      ],
+      "per_mod": [
+        -0.07
+      ],
+      "dex_mod": [
+        -0.12
+      ],
+      "str_mod": [
+        -0.2
+      ]
     }
   },
   {
     "type": "effect_type",
     "id": "secro_resolute_grow",
-    "name": [ "Developed" ],
-    "desc": [ "You are growing! Living for too much also increases you that amount!" ],
+    "name": [
+      "发达的"
+    ],
+    "desc": [
+      "你在成长！为太多而活也会增加你的数量！"
+    ],
     "show_in_info": true,
     "int_add_val": 1,
     "int_dur_factor": "20 seconds",
     "//": "Maximum at 50, for balancing purposes",
     "max_intensity": 50,
-    "base_mods": { "hurt_min": [ -0.2 ], "bash_mod": [ 0.075 ], "hit_mod": [ 0.01 ], "size_mod": [ 0.05 ] },
-    "scaling_mods": { "hurt_min": [ -0.2 ], "bash_mod": [ 0.075 ], "hit_mod": [ 0.01 ], "size_mod": [ 0.05 ] }
+    "base_mods": {
+      "hurt_min": [
+        -0.2
+      ],
+      "bash_mod": [
+        0.075
+      ],
+      "hit_mod": [
+        0.01
+      ],
+      "size_mod": [
+        0.05
+      ]
+    },
+    "scaling_mods": {
+      "hurt_min": [
+        -0.2
+      ],
+      "bash_mod": [
+        0.075
+      ],
+      "hit_mod": [
+        0.01
+      ],
+      "size_mod": [
+        0.05
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_flesh_tree_grab",
-    "name": [ "Grabbed" ],
-    "desc": [ "You have been grabbed by an attack.\nYou are being held in place, and dodging and blocking are very difficult." ],
-    "apply_message": "You've been grabbed!",
+    "name": [
+      "被抓住"
+    ],
+    "desc": [
+      "你被攻击者抓住了。\n你被困在原地，无法闪避，同时也很难格挡。"
+    ],
+    "apply_message": "你被抓住了！",
     "rating": "bad",
     "max_duration": "2 s",
     "max_intensity": 5,
-    "base_mods": { "speed_mod": [ -30 ] },
-    "scaling_mods": { "speed_mod": [ -10 ] },
+    "base_mods": {
+      "speed_mod": [
+        -30
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -10
+      ]
+    },
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "secro_flesh_bones",
-    "name": [ "unstable footing" ],
-    "desc": [ "You feel the bones sink deeper from underneath as you stand on it!" ],
-    "show_in_info": true,
-    "rating": "bad",
-    "max_duration": 1,
-    "base_mods": { "hurt_min": [ 1, 4 ], "hurt_tick": [ 3 ], "speed_mod": [ -4 ] }
-  },
-  {
-    "type": "effect_type",
-    "id": "secro_flesh_tendrils",
-    "name": [ "unstable footing" ],
+    "name": [
+      "不稳定的步伐"
+    ],
     "desc": [
-      "The tendril outgrowths has constricted your feet!\nYou are being held in place, and dodging and blocking are extremely difficult!"
+      "当你站在上面的时候，你会感觉到骨头从下面往下沉得更深！"
     ],
     "show_in_info": true,
     "rating": "bad",
     "max_duration": 1,
-    "base_mods": { "dodge_mod": [ -1 ], "speed_mod": [ -10 ] }
+    "base_mods": {
+      "hurt_min": [
+        1,
+        4
+      ],
+      "hurt_tick": [
+        3
+      ],
+      "speed_mod": [
+        -4
+      ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "secro_flesh_tendrils",
+    "name": [
+      "不稳定的步伐"
+    ],
+    "desc": [
+      "长出的触手把你的脚缠住了！\n你被缠在原地，躲避和格挡都极为困难！"
+    ],
+    "show_in_info": true,
+    "rating": "bad",
+    "max_duration": 1,
+    "base_mods": {
+      "dodge_mod": [
+        -1
+      ],
+      "speed_mod": [
+        -10
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_flesh_biome",
     "name": [
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving",
-      "Dissolving"
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解",
+      "溶解"
     ],
-    "desc": [ "This body part is being devoured by the flesh!" ],
+    "desc": [
+      "这个肢体正在被血肉所吞噬！！"
+    ],
     "rating": "bad",
-    "miss_messages": [ [ "You feel your body succumbing to the flesh.", 1 ] ],
+    "miss_messages": [
+      [
+        "你感觉你的身体正屈从于血肉。",
+        1
+      ]
+    ],
     "int_add_val": 1,
     "int_dur_factor": "2 turns",
     "int_decay_step": -1,
@@ -710,136 +1513,295 @@
     "show_in_info": true,
     "pain_sizing": true,
     "hurt_sizing": true,
-    "base_mods": { "hurt_min": [ 1 ], "hurt_tick": [ 10 ], "dex_mod": [ -0.3 ], "str_mod": [ -0.85 ] },
-    "scaling_mods": { "hurt_min": [ 0.1 ], "hurt_tick": [ -0.25 ], "dex_mod": [ -0.2 ], "str_mod": [ -0.1 ] }
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_tick": [
+        10
+      ],
+      "dex_mod": [
+        -0.3
+      ],
+      "str_mod": [
+        -0.85
+      ]
+    },
+    "scaling_mods": {
+      "hurt_min": [
+        0.1
+      ],
+      "hurt_tick": [
+        -0.25
+      ],
+      "dex_mod": [
+        -0.2
+      ],
+      "str_mod": [
+        -0.1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_flesh_wall_limit",
-    "name": [ "Melting" ],
-    "desc": [ "You are melting as you move!" ],
+    "name": [
+      "熔化"
+    ],
+    "desc": [
+      "你在移动中融化！"
+    ],
     "show_in_info": true,
     "rating": "bad",
     "max_duration": 1,
-    "base_mods": { "hurt_min": [ 5, 10 ], "hurt_tick": [ 1 ] }
+    "base_mods": {
+      "hurt_min": [
+        5,
+        10
+      ],
+      "hurt_tick": [
+        1
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_flesh_bio_limb",
-    "name": [ "Mending" ],
-    "desc": [ "Your broken limbs are mending!" ],
+    "name": [
+      "修复"
+    ],
+    "desc": [
+      "你的断肢正在愈合！"
+    ],
     "max_duration": 10,
     "main_parts_only": true,
     "rating": "good",
-    "removes_effects": [ "disabled" ],
+    "removes_effects": [
+      "disabled"
+    ],
     "//": "Due to the disabled effect being hardcode, we force the broken limb to block the effect.",
-    "blocks_effects": [ "disabled" ]
+    "blocks_effects": [
+      "disabled"
+    ]
   },
   {
     "type": "effect_type",
     "id": "secro_flesh_bio_heal",
-    "name": [ "Regenerating" ],
+    "name": [
+      "再生"
+    ],
     "desc": [
-      "Your wounds are mending at an incredible rate and causes your body to grow exponentially, surpassing the average health cap temporarily!"
+      "你的伤口正在以难以置信的速度愈合，并导致你的身体呈指数级增长，暂时超过平均健康上限！"
     ],
     "max_duration": 240,
     "main_parts_only": true,
     "rating": "good",
-    "base_mods": { "hurt_min": [ -1 ], "hurt_tick": [ 5 ] }
+    "base_mods": {
+      "hurt_min": [
+        -1
+      ],
+      "hurt_tick": [
+        5
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_blood_acid",
-    "name": [ "Corroding" ],
-    "desc": [ "Sizzling blood acid is burning you!" ],
+    "name": [
+      "被腐蚀"
+    ],
+    "desc": [
+      "嘶嘶的血酸在燃烧你！"
+    ],
     "rating": "bad",
     "max_duration": 10,
-    "base_mods": { "hurt_min": [ 1 ], "hurt_max": [ 2 ], "hurt_tick": [ 3 ], "speed_mod": [ -3 ] }
+    "base_mods": {
+      "hurt_min": [
+        1
+      ],
+      "hurt_max": [
+        2
+      ],
+      "hurt_tick": [
+        3
+      ],
+      "speed_mod": [
+        -3
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_gravtur_magnet",
-    "name": [ "Magnetized" ],
-    "desc": [ "Your movements were hampered." ],
-    "apply_message": "You were magnetized!",
+    "name": [
+      "被磁化"
+    ],
+    "desc": [
+      "你的行动受阻了。"
+    ],
+    "apply_message": "你被磁化了！",
     "rating": "bad",
     "max_duration": "3 s",
-    "base_mods": { "dex_mod": [ -100 ], "speed_mod": [ -10000 ] },
+    "base_mods": {
+      "dex_mod": [
+        -100
+      ],
+      "speed_mod": [
+        -10000
+      ]
+    },
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "secro_power_armor_flesh_devouring_note",
-    "name": [ "Vessel Consumption" ],
-    "desc": [ "You had no artificial flesh in hand, now it feeds on your flesh as alternative." ],
-    "apply_message": "You body fills in with distress!",
-    "remove_message": "The vessel was satisfied\u2024",
+    "name": [
+      "船舶消耗"
+    ],
+    "desc": [
+      "你手上没有人造肉，现在它用你的肉作为替代品。"
+    ],
+    "apply_message": "你的身体充满了痛苦！",
+    "remove_message": "这艘船很满意\"",
     "rating": "bad"
   },
   {
     "type": "effect_type",
     "id": "secro_power_armor_flesh_linked",
-    "name": [ "", "Engorged" ],
-    "desc": [ "", "Your vessel is already full!" ],
+    "name": [
+      "",
+      "饱食超量"
+    ],
+    "desc": [
+      "",
+      "你的脉管装甲已经被喂饱了！"
+    ],
     "max_duration": "49 hours",
     "max_intensity": 2,
     "int_add_val": 1,
     "int_dur_factor": "48 hours",
     "main_parts_only": true,
     "rating": "good",
-    "remove_message": "You felt a sudden tremble.",
-    "removes_effects": [ "secro_power_armor_flesh_devouring_note", "secro_power_armor_flesh_devouring" ],
-    "blocks_effects": [ "secro_power_armor_flesh_devouring_note", "secro_power_armor_flesh_devouring" ],
-    "scaling_mods": { "dex_mod": [ -1 ], "speed_mod": [ -5 ] }
+    "remove_message": "你突然感到一阵颤抖。",
+    "removes_effects": [
+      "secro_power_armor_flesh_devouring_note",
+      "secro_power_armor_flesh_devouring"
+    ],
+    "blocks_effects": [
+      "secro_power_armor_flesh_devouring_note",
+      "secro_power_armor_flesh_devouring"
+    ],
+    "scaling_mods": {
+      "dex_mod": [
+        -1
+      ],
+      "speed_mod": [
+        -5
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_power_armor_flesh_morphed_fite_tentacles_eff",
-    "name": [ "Injected" ],
-    "desc": [ "You have been injected with a paralyzing chemical!" ],
-    "apply_message": "You felt numb all of a sudden!",
+    "name": [
+      "注入"
+    ],
+    "desc": [
+      "你被注射了麻痹性化学物质！"
+    ],
+    "apply_message": "你突然感到一阵麻痹。",
     "rating": "bad",
     "max_duration": "20 s",
     "max_intensity": 5,
-    "base_mods": { "speed_mod": [ -25 ] },
-    "scaling_mods": { "speed_mod": [ -10 ] },
+    "base_mods": {
+      "speed_mod": [
+        -25
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -10
+      ]
+    },
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "secro_flesh_growth",
-    "name": [ "Growing" ],
-    "desc": [ "You are growing!" ],
+    "name": [
+      "增长的"
+    ],
+    "desc": [
+      "你在成长！"
+    ],
     "show_in_info": true,
     "int_add_val": 1,
     "int_dur_factor": "1 minutes",
     "max_intensity": 100,
-    "base_mods": { "size_mod": [ 0.05 ] },
-    "scaling_mods": { "size_mod": [ 0.05 ] }
+    "base_mods": {
+      "size_mod": [
+        0.05
+      ]
+    },
+    "scaling_mods": {
+      "size_mod": [
+        0.05
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "secro_flesh_satisfy",
-    "name": [ "Satisfied" ],
-    "desc": [ "You've devoured something earlier." ],
+    "name": [
+      "满足"
+    ],
+    "desc": [
+      "你刚才吃了点东西。"
+    ],
     "max_duration": "2 minutes",
     "rating": "good",
-    "base_mods": { "speed_mod": [ -50 ] }
+    "base_mods": {
+      "speed_mod": [
+        -50
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "mon_shifter_onslaught_dmgpure_dmg",
-    "base_mods": { "hurt_min": [ 8 ], "hurt_max": [ 16 ] }
+    "base_mods": {
+      "hurt_min": [
+        8
+      ],
+      "hurt_max": [
+        16
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "mon_sflesh_fleshling_scavengy_sticky_stick",
-    "name": [ "Fleshed" ],
-    "apply_message": "A fleshling sticks to you!",
-    "desc": [ "Fleshling(s) hamper your movement!" ],
-    "miss_messages": [ [ "You feel your limbs sticky.", 3 ] ],
-    "decay_messages": [ [ "You're feeling free again!", "good" ] ],
-    "remove_message": "Fleshlings have melted!",
+    "name": [
+      "血肉纠缠"
+    ],
+    "apply_message": "一个血肉生物粘在了你的身上！",
+    "desc": [
+      "肉身阻碍你的行动！"
+    ],
+    "miss_messages": [
+      [
+        "你觉得四肢黏糊糊的。",
+        3
+      ]
+    ],
+    "decay_messages": [
+      [
+        "你感觉重获自由了！",
+        "good"
+      ]
+    ],
+    "remove_message": "肉都融化了！",
     "int_add_val": 1,
     "max_intensity": 15,
     "int_decay_step": -5,
@@ -847,152 +1809,244 @@
     "max_duration": 150,
     "rating": "bad",
     "show_in_info": true,
-    "scaling_mods": { "dex_mod": [ -0.075 ], "speed_mod": [ -0.75 ] }
+    "scaling_mods": {
+      "dex_mod": [
+        -0.075
+      ],
+      "speed_mod": [
+        -0.75
+      ]
+    }
   },
   {
     "type": "effect_type",
     "id": "mon_szombie_vessel_arma_biters",
-    "name": [ "Armament - Biters" ],
+    "name": [
+      "武装 - 啃咬者"
+    ],
     "show_in_info": true,
     "max_duration": 20,
-    "base_mods": { "bash_mod": [ 8.0 ], "cut_mod": [ 8.0 ], "speed_mod": [ -15 ] },
-    "removes_effects": [ "mon_szombie_vessel_arma_tents", "mon_szombie_vessel_arma_blades" ]
+    "base_mods": {
+      "bash_mod": [
+        8
+      ],
+      "cut_mod": [
+        8
+      ],
+      "speed_mod": [
+        -15
+      ]
+    },
+    "removes_effects": [
+      "mon_szombie_vessel_arma_tents",
+      "mon_szombie_vessel_arma_blades"
+    ]
   },
   {
     "type": "effect_type",
     "id": "mon_szombie_vessel_arma_tents",
-    "name": [ "Armament - Tentacles" ],
+    "name": [
+      "武装 - 触手"
+    ],
     "show_in_info": true,
     "max_duration": 20,
-    "base_mods": { "hit_mod": [ 3.0 ], "bash_mod": [ 4.0 ], "speed_mod": [ 15 ] },
-    "removes_effects": [ "mon_szombie_vessel_arma_biters", "mon_szombie_vessel_arma_blades" ]
+    "base_mods": {
+      "hit_mod": [
+        3
+      ],
+      "bash_mod": [
+        4
+      ],
+      "speed_mod": [
+        15
+      ]
+    },
+    "removes_effects": [
+      "mon_szombie_vessel_arma_biters",
+      "mon_szombie_vessel_arma_blades"
+    ]
   },
   {
     "type": "effect_type",
     "id": "mon_szombie_vessel_arma_blades",
-    "name": [ "Armament - Blades" ],
+    "name": [
+      "武装 - 刀刃"
+    ],
     "show_in_info": true,
     "max_duration": 20,
-    "base_mods": { "hit_mod": [ 2.0 ], "cut_mod": [ 10 ], "speed_mod": [ -5 ] },
-    "removes_effects": [ "mon_szombie_vessel_arma_biters", "mon_szombie_vessel_arma_tents" ]
+    "base_mods": {
+      "hit_mod": [
+        2
+      ],
+      "cut_mod": [
+        10
+      ],
+      "speed_mod": [
+        -5
+      ]
+    },
+    "removes_effects": [
+      "mon_szombie_vessel_arma_biters",
+      "mon_szombie_vessel_arma_tents"
+    ]
   },
   {
     "type": "effect_type",
     "id": "eff_fleshknot_tent",
-    "name": [ "Grasped", "Grasped", "Grasped", "Overrun By Tentacles" ],
-    "desc": [
-      "Tentacles are holding you down!",
-      "Tentacles are holding you down!",
-      "Tentacles are holding you down!",
-      "Tentacles are holding you down and can't move very well!"
+    "name": [
+      "抓住",
+      "抓住",
+      "抓住",
+      "触须泛滥成灾"
     ],
-    "apply_message": "Membranous tentacles grasped at your leg!",
-    "remove_message": "You rid yourself of the tentacles.",
+    "desc": [
+      "触手压住你了！",
+      "触手压住你了！",
+      "触手压住你了！",
+      "触手抓住了你，让你动弹不得！"
+    ],
+    "apply_message": "膜状触手缠在了你的腿上！",
+    "remove_message": "你摆脱了触手。",
     "rating": "bad",
     "max_duration": "4 s",
     "max_intensity": 4,
     "int_dur_factor": "1 s",
     "int_add_val": 1,
-    "base_mods": { "speed_mod": [ -25 ] },
-    "scaling_mods": { "speed_mod": [ -25 ], "dex_mod": [ -1 ] },
+    "base_mods": {
+      "speed_mod": [
+        -25
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -25
+      ],
+      "dex_mod": [
+        -1
+      ]
+    },
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "secro_gorepit_absorb",
-    "name": [ "Absorbing" ],
+    "name": [
+      "吸收"
+    ],
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "secro_gorepit_absorption",
-    "removes_effects": [ "bleed" ],
-    "blocks_effects": [ "bleed" ]
+    "removes_effects": [
+      "bleed"
+    ],
+    "blocks_effects": [
+      "bleed"
+    ]
   },
   {
     "type": "effect_type",
     "id": "secro_gorepit_explode",
-    "name": [ "Falling Apart" ],
-    "base_mods": { "hurt_min": [ 155 ] },
-    "removes_effects": [ "secro_gorepit_absorb" ],
-    "blocks_effects": [ "secro_gorepit_absorb" ],
-    "flags": [ "BLIND" ],
+    "name": [
+      "分崩离析"
+    ],
+    "base_mods": {
+      "hurt_min": [
+        155
+      ]
+    },
+    "removes_effects": [
+      "secro_gorepit_absorb"
+    ],
+    "blocks_effects": [
+      "secro_gorepit_absorb"
+    ],
+    "flags": [
+      "BLIND"
+    ],
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "eff_snatcher_snatch",
-    "name": [ "Snatched", "Snatched" ],
-    "desc": [ "A tongue clings and is holding you down!", "A tongue clings and is holding you down!" ],
-    "remove_message": "The tongue lost its grasp.",
+    "name": [
+      "抓住",
+      "抓住"
+    ],
+    "desc": [
+      "一条舌头粘着你，把你压在下面！",
+      "一条舌头粘着你，把你压在下面！"
+    ],
+    "remove_message": "舌头抓不住了。",
     "rating": "bad",
     "max_duration": "10 s",
     "max_intensity": 2,
     "int_dur_factor": "5 s",
     "int_add_val": 1,
-    "base_mods": { "speed_mod": [ -150 ], "dex_mod": [ -2.5 ] },
-    "scaling_mods": { "speed_mod": [ -150 ], "dex_mod": [ -2.5 ] },
+    "base_mods": {
+      "speed_mod": [
+        -150
+      ],
+      "dex_mod": [
+        -2.5
+      ]
+    },
+    "scaling_mods": {
+      "speed_mod": [
+        -150
+      ],
+      "dex_mod": [
+        -2.5
+      ]
+    },
     "show_in_info": true
   },
   {
     "type": "effect_type",
     "id": "eff_fleshweaver_healing",
-    "base_mods": { "pain_min": [ 1 ], "pain_chance": [ 2 ], "pain_tick": [ 8 ] },
-    "rating": "bad",
-    "remove_message": "The flesh weaver finishes its operation."
-  },
-  {
-    "type": "effect_type",
-    "id": "sflesh_fleshling_meld",
-    "name": [ "Melding Flesh" ],
-    "desc": [ "The flesh seeps and burn under your skin!" ],
-    "remove_message": "The flesh melts away.",
-    "rating": "bad",
-    "max_duration": "1000 s",
-    "max_intensity": 50,
-    "int_dur_factor": "10 s",
-    "int_add_val": 1,
-    "int_decay_step": -20,
-    "int_decay_tick": 3,
     "base_mods": {
-      "speed_mod": [ -3 ],
-      "hurt_min": [ 1 ],
-      "hurt_tick": [ 30 ],
-      "pain_min": [ 1 ],
-      "pain_chance": [ 30 ],
-      "pain_tick": [ 10 ]
+      "pain_min": [
+        1
+      ],
+      "pain_chance": [
+        2
+      ],
+      "pain_tick": [
+        8
+      ]
     },
-    "scaling_mods": { "speed_mod": [ -1 ], "hurt_min": [ 0.05 ], "hurt_tick": [ -0.5 ], "pain_chance": [ -0.2 ] },
-    "show_in_info": true
+    "rating": "bad",
+    "remove_message": "肉织工完成了作业。"
   },
   {
     "type": "effect_type",
     "id": "mon_szombie_vessel_biters_YES",
-    "apply_message": "<color_pink>Large gaping biters were formed in both of the vessel experimental's arms!</color>",
+    "apply_message": "脉管装甲的实验性双臂形成了<color_pink>一对裂开的尖齿大嘴！</color>",
     "rating": "mixed"
   },
   {
     "type": "effect_type",
     "id": "mon_szombie_vessel_tents_YES",
-    "apply_message": "<color_pink>Slender tentacles burst out of the vessel experimental's body!</color>",
+    "apply_message": "<color_pink>细长的触手从实验性脉管装甲的身体中爆了出来！</color>",
     "rating": "mixed"
   },
   {
     "type": "effect_type",
     "id": "mon_szombie_vessel_blades_YES",
-    "apply_message": "<color_pink>Bone blades protrudes from the vessel experimental arms!</color>",
+    "apply_message": "<color_pink>从脉管装甲的实验性双臂中伸出了一对骨刃！</color>",
     "rating": "mixed"
   },
   {
     "type": "effect_type",
     "id": "mon_szombie_vessel_spitter_YES",
-    "apply_message": "<color_light_red>Its spitter armament shoots a glob of blood acid!</color>",
+    "apply_message": "<color_light_red>它的喷吐器武装喷射出一团血酸！</color>",
     "rating": "mixed"
   },
   {
     "type": "effect_type",
     "id": "mon_szombie_vessel_spitter_cs_YES",
-    "apply_message": "<color_red>Its spitter armament showers blood acid!</color>",
+    "apply_message": "<color_red>它的喷吐器武装喷泼出了血酸！</color>",
     "rating": "mixed"
   }
 ]

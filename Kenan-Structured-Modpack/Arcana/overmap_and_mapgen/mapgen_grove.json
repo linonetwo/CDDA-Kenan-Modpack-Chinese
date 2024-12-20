@@ -2,7 +2,9 @@
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "strange_grove" ],
+    "om_terrain": [
+      "strange_grove"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -31,20 +33,58 @@
         ",``````````,,``````````,",
         ",``````````,,``````````,"
       ],
-      "palettes": [ "arcana_palette" ],
-      "set": [ { "point": "trap", "id": "tr_portal", "x": 10, "y": 15 } ],
+      "palettes": [
+        "arcana_palette"
+      ],
+      "set": [
+        {
+          "point": "trap",
+          "id": "tr_portal",
+          "x": 10,
+          "y": 15
+        }
+      ],
       "terrain": {
-        "|": [ "t_wall_log_half", "t_wall_log_chipped", "t_wall_log_broken", "t_region_groundcover" ],
+        "|": [
+          "t_wall_log_half",
+          "t_wall_log_chipped",
+          "t_wall_log_broken",
+          "t_region_groundcover"
+        ],
         ".": "t_rock_floor_no_roof"
       },
-      "furniture": { ".": [ "f_boulder_small", "f_boulder_medium", "f_boulder_large" ] },
-      "place_monster": [ { "group": "GROUP_GROVESURFACE", "x": [ 0, 23 ], "y": [ 0, 23 ], "repeat": [ 3, 6 ] } ]
+      "furniture": {
+        ".": [
+          "f_boulder_small",
+          "f_boulder_medium",
+          "f_boulder_large"
+        ]
+      },
+      "place_monster": [
+        {
+          "group": "GROUP_GROVESURFACE",
+          "x": [
+            0,
+            23
+          ],
+          "y": [
+            0,
+            23
+          ],
+          "repeat": [
+            3,
+            6
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "strange_grove_2" ],
+    "om_terrain": [
+      "strange_grove_2"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -73,16 +113,52 @@
         ",,,TTTTTTTTTTTTTTTTTT,,,",
         ",,,,,,,,,,,,,,,,,,,,,,,,"
       ],
-      "palettes": [ "arcana_palette" ],
-      "set": [ { "point": "trap", "id": "tr_portal", "x": 7, "y": 4 }, { "point": "trap", "id": "tr_portal", "x": 16, "y": 19 } ],
-      "terrain": { ">": "t_slope_down", "#": "t_rock" },
-      "place_monster": [ { "group": "GROUP_GROVESURFACE", "x": [ 0, 23 ], "y": [ 0, 23 ], "repeat": [ 3, 6 ] } ]
+      "palettes": [
+        "arcana_palette"
+      ],
+      "set": [
+        {
+          "point": "trap",
+          "id": "tr_portal",
+          "x": 7,
+          "y": 4
+        },
+        {
+          "point": "trap",
+          "id": "tr_portal",
+          "x": 16,
+          "y": 19
+        }
+      ],
+      "terrain": {
+        ">": "t_slope_down",
+        "#": "t_rock"
+      },
+      "place_monster": [
+        {
+          "group": "GROUP_GROVESURFACE",
+          "x": [
+            0,
+            23
+          ],
+          "y": [
+            0,
+            23
+          ],
+          "repeat": [
+            3,
+            6
+          ]
+        }
+      ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "grove_ruins" ],
+    "om_terrain": [
+      "grove_ruins"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -111,31 +187,145 @@
         "#||||||RRRR~..RR~.~~RRR#",
         "###########R..#~...#R###"
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "|": "t_concrete_wall", "%": "t_rock_floor", "R": "t_root_wall_arcana", "=": "t_rock" },
-      "furniture": { "%": "f_rubble_rock" },
-      "mapping": { "%": { "item": [ { "item": "rock", "repeat": [ 5, 10 ] } ] } },
+      "palettes": [
+        "arcana_palette"
+      ],
+      "terrain": {
+        "|": "t_concrete_wall",
+        "%": "t_rock_floor",
+        "R": "t_root_wall_arcana",
+        "=": "t_rock"
+      },
+      "furniture": {
+        "%": "f_rubble_rock"
+      },
+      "mapping": {
+        "%": {
+          "item": [
+            {
+              "item": "rock",
+              "repeat": [
+                5,
+                10
+              ]
+            }
+          ]
+        }
+      },
       "items": {
-        "{": [ { "item": "magic_crafting", "chance": 75 }, { "item": "magic_consumables", "chance": 40 } ],
-        "]": [ { "item": "unaligned_arcanist_books", "chance": 50, "repeat": 3 } ]
+        "{": [
+          {
+            "item": "magic_crafting",
+            "chance": 75
+          },
+          {
+            "item": "magic_consumables",
+            "chance": 40
+          }
+        ],
+        "]": [
+          {
+            "item": "unaligned_arcanist_books",
+            "chance": 50,
+            "repeat": 3
+          }
+        ]
       },
       "place_loot": [
-        { "group": "summoner_casualties", "x": [ 12, 21 ], "y": [ 9, 11 ], "repeat": [ 1, 2 ] },
-        { "group": "summoner_casualties", "x": [ 2, 6 ], "y": [ 9, 11 ], "repeat": [ 1, 2 ] },
-        { "group": "summoner_casualties", "x": [ 3, 6 ], "y": [ 15, 18 ], "repeat": [ 1, 2 ] },
-        { "item": "arcanemap", "x": [ 7, 8 ], "y": 4 },
-        { "group": "unaligned_arcanist_spells", "x": [ 16, 18 ], "y": 2, "chance": 10, "repeat": 3 }
+        {
+          "group": "summoner_casualties",
+          "x": [
+            12,
+            21
+          ],
+          "y": [
+            9,
+            11
+          ],
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        {
+          "group": "summoner_casualties",
+          "x": [
+            2,
+            6
+          ],
+          "y": [
+            9,
+            11
+          ],
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        {
+          "group": "summoner_casualties",
+          "x": [
+            3,
+            6
+          ],
+          "y": [
+            15,
+            18
+          ],
+          "repeat": [
+            1,
+            2
+          ]
+        },
+        {
+          "item": "arcanemap",
+          "x": [
+            7,
+            8
+          ],
+          "y": 4
+        },
+        {
+          "group": "unaligned_arcanist_spells",
+          "x": [
+            16,
+            18
+          ],
+          "y": 2,
+          "chance": 10,
+          "repeat": 3
+        }
       ],
       "place_monster": [
-        { "group": "GROUP_GROVEBASEMENT", "x": [ 2, 22 ], "y": [ 2, 22 ], "repeat": [ 5, 10 ] },
-        { "monster": "mon_moruboru", "x": 3, "y": 4 }
+        {
+          "group": "GROUP_GROVEBASEMENT",
+          "x": [
+            2,
+            22
+          ],
+          "y": [
+            2,
+            22
+          ],
+          "repeat": [
+            5,
+            10
+          ]
+        },
+        {
+          "monster": "mon_moruboru",
+          "x": 3,
+          "y": 4
+        }
       ]
     }
   },
   {
     "type": "mapgen",
     "method": "json",
-    "om_terrain": [ "grove_ruins_2" ],
+    "om_terrain": [
+      "grove_ruins_2"
+    ],
     "weight": 300,
     "object": {
       "rows": [
@@ -164,13 +354,55 @@
         "#R...####.RRR.###R######",
         "########################"
       ],
-      "palettes": [ "arcana_palette" ],
-      "terrain": { "<": "t_slope_up", "R": "t_root_wall_arcana" },
-      "place_loot": [
-        { "group": "summoner_casualties_fresh", "x": [ 8, 15 ], "y": [ 10, 13 ], "repeat": [ 1, 3 ] },
-        { "item": "note_grove", "x": [ 11, 14 ], "y": 16 }
+      "palettes": [
+        "arcana_palette"
       ],
-      "place_monster": [ { "group": "GROUP_GROVEBASEMENT", "x": [ 2, 22 ], "y": [ 2, 22 ], "repeat": [ 5, 10 ] } ]
+      "terrain": {
+        "<": "t_slope_up",
+        "R": "t_root_wall_arcana"
+      },
+      "place_loot": [
+        {
+          "group": "summoner_casualties_fresh",
+          "x": [
+            8,
+            15
+          ],
+          "y": [
+            10,
+            13
+          ],
+          "repeat": [
+            1,
+            3
+          ]
+        },
+        {
+          "item": "note_grove",
+          "x": [
+            11,
+            14
+          ],
+          "y": 16
+        }
+      ],
+      "place_monster": [
+        {
+          "group": "GROUP_GROVEBASEMENT",
+          "x": [
+            2,
+            22
+          ],
+          "y": [
+            2,
+            22
+          ],
+          "repeat": [
+            5,
+            10
+          ]
+        }
+      ]
     }
   }
 ]

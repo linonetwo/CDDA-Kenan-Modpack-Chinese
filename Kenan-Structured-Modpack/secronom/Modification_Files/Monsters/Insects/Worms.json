@@ -2,17 +2,25 @@
   {
     "id": "mon_zombieworm_noxeater",
     "type": "MONSTER",
-    "name": { "str": "noxious eater" },
-    "description": "A large, flabby worm with hundreds of dreadful teeth aligned inside its little mouth. It has grown fond of eating necrotic flesh.",
+    "name": {
+      "str": "食腐蛆"
+    },
+    "description": "一种大而松弛的蠕虫，在它的小嘴里有成百上千颗可怕的牙齿。它开始喜欢吃坏死的肉。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "WORM", "SECROZED_1" ],
+    "species": [
+      "ZOMBIE",
+      "WORM",
+      "SECROZED_1"
+    ],
     "bodytype": "snake",
     "volume": "30000 ml",
     "weight": "40750 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 40,
     "speed": 60,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⟆",
     "color": "pink",
     "aggression": 50,
@@ -20,7 +28,12 @@
     "melee_skill": 4,
     "melee_dice": 1,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "cut", "amount": 2 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 2
+      }
+    ],
     "dodge": 1,
     "special_attacks": [
       {
@@ -28,30 +41,55 @@
         "cooldown": 12,
         "accuracy": 4,
         "damage_max_instance": [
-          { "damage_type": "stab", "amount": 8, "armor_multiplier": 0.3 },
-          { "damage_type": "bash", "amount": 8, "armor_multiplier": 0.3 }
+          {
+            "damage_type": "stab",
+            "amount": 8,
+            "armor_multiplier": 0.3
+          },
+          {
+            "damage_type": "bash",
+            "amount": 8,
+            "armor_multiplier": 0.3
+          }
         ]
       }
     ],
-    "anger_triggers": [ "HURT" ],
-    "upgrades": { "half_life": 30, "into_group": "GROUP_NOX_UPGRADE" },
-    "flags": [ "CAN_DIG", "HEARS", "GOODHEARING", "WARM" ]
+    "anger_triggers": [
+      "HURT"
+    ],
+    "upgrades": {
+      "half_life": 30,
+      "into_group": "GROUP_NOX_UPGRADE"
+    },
+    "flags": [
+      "CAN_DIG",
+      "HEARS",
+      "GOODHEARING",
+      "WARM"
+    ]
   },
   {
     "//": "More on dealing bite damage.",
     "id": "mon_zombieworm_gravedigger",
     "type": "MONSTER",
-    "name": { "str": "grave digger" },
-    "description": "A huge, crimson worm with its thick skin formed like a tough rubber. Under its quad-interloping fangs hinder thousands of ravenous teeth.",
+    "name": {
+      "str": "变异食腐蛆"
+    },
+    "description": "一种巨大的，深红色的蠕虫，它的厚皮像一块坚硬的橡胶。它的尖牙下有成千上万的尖牙。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROWORM" ],
+    "species": [
+      "ZOMBIE",
+      "SECROWORM"
+    ],
     "bodytype": "snake",
     "volume": "875000 ml",
     "weight": "200000 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 525,
     "speed": 30,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⚕",
     "color": "red",
     "aggression": 50,
@@ -59,47 +97,90 @@
     "melee_skill": 8,
     "melee_dice": 2,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 6 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 6
+      }
+    ],
     "dodge": 1,
-    "armor": { "bash": 18, "cut": 4, "bullet": 1, "stab": 1 },
+    "armor": {
+      "bash": 18,
+      "cut": 4,
+      "bullet": 1,
+      "stab": 1
+    },
     "vision_day": 10,
     "vision_night": 2,
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombieworm_destroy_check" },
+        "spell_data": {
+          "id": "mon_zombieworm_destroy_check"
+        },
         "cooldown": 35,
-        "monster_message": "<color_yellow>%1$s ravages its surroundings!</color>"
+        "monster_message": "<color_yellow>%1$s破坏了它的周围环境！</color>"
       },
       {
         "type": "bite",
         "cooldown": 27,
         "accuracy": 8,
         "damage_max_instance": [
-          { "damage_type": "stab", "amount": 30, "armor_multiplier": 0.4 },
-          { "damage_type": "bash", "amount": 30, "armor_multiplier": 0.4 }
+          {
+            "damage_type": "stab",
+            "amount": 30,
+            "armor_multiplier": 0.4
+          },
+          {
+            "damage_type": "bash",
+            "amount": 30,
+            "armor_multiplier": 0.4
+          }
         ]
       }
     ],
-    "anger_triggers": [ "HURT" ],
-    "upgrades": { "half_life": 20, "into_group": "GROUP_GRAVEDIGGER_UPGRADEX" },
-    "flags": [ "DIGS", "CAN_DIG", "SEES", "HEARS", "GOODHEARING", "SMELLS", "WARM", "PLASTIC", "BASHES", "DESTROYS" ]
+    "anger_triggers": [
+      "HURT"
+    ],
+    "upgrades": {
+      "half_life": 20,
+      "into_group": "GROUP_GRAVEDIGGER_UPGRADEX"
+    },
+    "flags": [
+      "DIGS",
+      "CAN_DIG",
+      "SEES",
+      "HEARS",
+      "GOODHEARING",
+      "SMELLS",
+      "WARM",
+      "PLASTIC",
+      "BASHES",
+      "DESTROYS"
+    ]
   },
   {
     "//": "More on dealing ranged damage.",
     "id": "mon_zombieworm_wriggly",
     "type": "MONSTER",
-    "name": { "str": "writhing horror" },
-    "description": "A massive worm with hundreds of tentacle outgrowths twisting incessantly from its sickly pale red skin. Under its flabby head reveals a row of sinister teeth, deeply accompanied by compact tendrils.",
+    "name": {
+      "str": "深渊食腐蛆"
+    },
+    "description": "一种巨大的蠕虫，有成百上千的触须，不断地从它病态的淡红色皮肤上扭来扭去。松软的头下露出一排凶恶的牙齿，深深地伴随着紧密的触手。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROWORM" ],
+    "species": [
+      "ZOMBIE",
+      "SECROWORM"
+    ],
     "bodytype": "snake",
     "volume": "875000 ml",
     "weight": "200000 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 480,
     "speed": 20,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "☤",
     "color": "light_red",
     "aggression": 50,
@@ -108,23 +189,38 @@
     "melee_skill": 10,
     "melee_dice": 2,
     "melee_dice_sides": 8,
-    "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
     "vision_day": 16,
     "vision_night": 4,
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombieworm_destroy_check" },
+        "spell_data": {
+          "id": "mon_zombieworm_destroy_check"
+        },
         "cooldown": 40,
-        "monster_message": "<color_yellow>%1$s ravages its surroundings!</color>"
+        "monster_message": "<color_yellow>%1$s破坏了它的周围环境！</color>"
       },
       {
         "type": "bite",
         "cooldown": 20,
         "accuracy": 7,
         "damage_max_instance": [
-          { "damage_type": "stab", "amount": 23, "armor_multiplier": 0.5 },
-          { "damage_type": "bash", "amount": 23, "armor_multiplier": 0.2 }
+          {
+            "damage_type": "stab",
+            "amount": 23,
+            "armor_multiplier": 0.5
+          },
+          {
+            "damage_type": "bash",
+            "amount": 23,
+            "armor_multiplier": 0.2
+          }
         ]
       },
       {
@@ -132,33 +228,77 @@
         "cooldown": 25,
         "move_cost": 300,
         "gun_type": "wriggly_tentacle",
-        "fake_skills": [ [ "gun", 4 ], [ "rifle", 4 ] ],
-        "ranges": [ [ 1, 3, "N" ], [ 4, 10, "M" ] ],
+        "fake_skills": [
+          [
+            "gun",
+            4
+          ],
+          [
+            "rifle",
+            4
+          ]
+        ],
+        "ranges": [
+          [
+            1,
+            3,
+            "N"
+          ],
+          [
+            4,
+            10,
+            "M"
+          ]
+        ],
         "require_targeting_player": false,
         "require_targeting_npc": false,
         "require_targeting_monster": false,
-        "description": "Tentacles reach out of the writhing horror!"
+        "description": "触手伸出来，摆脱了扭曲的恐惧！"
       }
     ],
-    "armor": { "bash": 8, "cut": 1, "bullet": 1, "stab": 1 },
-    "anger_triggers": [ "HURT" ],
-    "flags": [ "DIGS", "CAN_DIG", "SEES", "HEARS", "SMELLS", "GOODHEARING", "WARM", "BASHES", "DESTROYS" ]
+    "armor": {
+      "bash": 8,
+      "cut": 1,
+      "bullet": 1,
+      "stab": 1
+    },
+    "anger_triggers": [
+      "HURT"
+    ],
+    "flags": [
+      "DIGS",
+      "CAN_DIG",
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "GOODHEARING",
+      "WARM",
+      "BASHES",
+      "DESTROYS"
+    ]
   },
   {
     "//": "Both deals damage and inflicts debuff.",
     "id": "mon_zombieworm_mawy",
     "type": "MONSTER",
-    "name": { "str": "sinister maw" },
-    "description": "A colossal worm, mysterious to its origin. Its mouth drips of gooey red substance",
+    "name": {
+      "str": "远古食腐蛆"
+    },
+    "description": "一种巨大的蠕虫，其起源神秘莫测。它的嘴里滴着粘红色的物质",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROWORM" ],
+    "species": [
+      "ZOMBIE",
+      "SECROWORM"
+    ],
     "bodytype": "snake",
     "volume": "875000 ml",
     "weight": "200000 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 410,
     "speed": 35,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⨛",
     "color": "white",
     "aggression": 50,
@@ -166,23 +306,39 @@
     "melee_skill": 10,
     "melee_dice": 4,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "cut", "amount": 4 } ],
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 4
+      }
+    ],
     "vision_day": 16,
     "vision_night": 4,
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombieworm_destroy_check" },
+        "spell_data": {
+          "id": "mon_zombieworm_destroy_check"
+        },
         "cooldown": 40,
-        "monster_message": "<color_yellow>%1$s ravages its surroundings!</color>"
+        "monster_message": "<color_yellow>%1$s破坏了它的周围环境！</color>"
       },
       {
         "type": "bite",
         "cooldown": 16,
         "accuracy": 5,
         "damage_max_instance": [
-          { "damage_type": "stab", "amount": 20, "armor_multiplier": 0.75, "damage_multiplier": 0.75 },
-          { "damage_type": "bash", "amount": 20, "armor_multiplier": 0.5 }
+          {
+            "damage_type": "stab",
+            "amount": 20,
+            "armor_multiplier": 0.75,
+            "damage_multiplier": 0.75
+          },
+          {
+            "damage_type": "bash",
+            "amount": 20,
+            "armor_multiplier": 0.5
+          }
         ]
       },
       {
@@ -190,35 +346,79 @@
         "cooldown": 43,
         "move_cost": 333,
         "gun_type": "mawy_mouth",
-        "fake_skills": [ [ "gun", 4 ], [ "rifle", 1 ] ],
-        "ranges": [ [ 1, 4, "N" ], [ 5, 13, "M" ] ],
+        "fake_skills": [
+          [
+            "gun",
+            4
+          ],
+          [
+            "rifle",
+            1
+          ]
+        ],
+        "ranges": [
+          [
+            1,
+            4,
+            "N"
+          ],
+          [
+            5,
+            13,
+            "M"
+          ]
+        ],
         "require_targeting_player": false,
         "require_targeting_npc": false,
         "require_targeting_monster": false,
-        "description": "The sinister maw spews out strands of fleshy webbings!"
+        "description": "邪恶的胃吐出一串串肉质的蹼！"
       }
     ],
-    "armor": { "bash": 12, "cut": 2, "bullet": 2, "stab": 2 },
+    "armor": {
+      "bash": 12,
+      "cut": 2,
+      "bullet": 2,
+      "stab": 2
+    },
     "dodge": 2,
-    "anger_triggers": [ "HURT" ],
-    "flags": [ "DIGS", "CAN_DIG", "SEES", "HEARS", "SMELLS", "WEBWALK", "WARM", "BASHES", "DESTROYS" ]
+    "anger_triggers": [
+      "HURT"
+    ],
+    "flags": [
+      "DIGS",
+      "CAN_DIG",
+      "SEES",
+      "HEARS",
+      "SMELLS",
+      "WEBWALK",
+      "WARM",
+      "BASHES",
+      "DESTROYS"
+    ]
   },
   {
     "//": "Only evolves from grave digger.",
     "id": "mon_zombieworm_onger",
     "looks_like": "mon_yugg",
     "type": "MONSTER",
-    "name": { "str": "wormonger" },
-    "description": "A catastrophic worm as wide as a car, with the rest of its body hidden underneath. Its overconsumption of dead bodies must've caused it to suffer from further mutations.",
+    "name": {
+      "str": "巨虫泰坦"
+    },
+    "description": "一种像汽车一样宽的灾难性蠕虫，其身体的其余部分隐藏在地下。它对尸体的巨量消耗让它进一步的变异着。",
     "default_faction": "zombie",
-    "species": [ "ZOMBIE", "SECROWORM" ],
+    "species": [
+      "ZOMBIE",
+      "SECROWORM"
+    ],
     "bodytype": "snake",
     "volume": "1000000 ml",
     "weight": "375000 g",
-    "harvest": "zombie_humanoid",
+    "harvest": "zombie",
     "hp": 775,
     "speed": 20,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "⚕",
     "color": "white_red",
     "aggression": 50,
@@ -226,26 +426,48 @@
     "melee_skill": 10,
     "melee_dice": 4,
     "melee_dice_sides": 8,
-    "melee_damage": [ { "damage_type": "cut", "amount": 8 } ],
-    "armor": { "bash": 24, "cut": 10, "bullet": 6, "stab": 6 },
+    "melee_damage": [
+      {
+        "damage_type": "cut",
+        "amount": 8
+      }
+    ],
+    "armor": {
+      "bash": 24,
+      "cut": 10,
+      "bullet": 6,
+      "stab": 6
+    },
     "special_attacks": [
       {
         "type": "spell",
-        "spell_data": { "id": "mon_zombieworm_onger_destroy_check" },
+        "spell_data": {
+          "id": "mon_zombieworm_onger_destroy_check"
+        },
         "cooldown": 55,
-        "monster_message": "<color_light_red>%1$s destroys its surroundings!</color>"
+        "monster_message": "<color_light_red>%1$s破坏了它的周围环境！</color>"
       },
       {
         "type": "bite",
         "cooldown": 50,
         "accuracy": 5,
         "damage_max_instance": [
-          { "damage_type": "stab", "amount": 40, "armor_multiplier": 0.5 },
-          { "damage_type": "bash", "amount": 40, "armor_multiplier": 0.4 }
+          {
+            "damage_type": "stab",
+            "amount": 40,
+            "armor_multiplier": 0.5
+          },
+          {
+            "damage_type": "bash",
+            "amount": 40,
+            "armor_multiplier": 0.4
+          }
         ]
       }
     ],
-    "anger_triggers": [ "HURT" ],
+    "anger_triggers": [
+      "HURT"
+    ],
     "vision_day": 24,
     "vision_night": 4,
     "flags": [

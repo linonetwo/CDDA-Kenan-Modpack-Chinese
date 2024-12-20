@@ -2,196 +2,418 @@
   {
     "id": "MISSION_SECRO_SCIENTIST_REACH_SECRO_BOWCHAMBER",
     "type": "mission_definition",
-    "name": { "str": "Reach the BOW Chamber" },
+    "name": {
+      "str": "抵达生物武器实验室。"
+    },
     "goal": "MGOAL_GO_TO_TYPE",
     "difficulty": 6,
     "value": 10000,
     "has_generic_rewards": false,
-    "start": { "effect": [ { "duration": "PERMANENT", "u_add_effect": "secro_scientist_mission1_progress" }, "follow_only" ] },
+    "start": {
+      "effect": [
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_mission1_progress"
+        },
+        "follow_only"
+      ]
+    },
     "end": {
-      "effect": [ { "duration": "PERMANENT", "u_add_effect": "secro_scientist_partake_mission1" }, "stop_following" ],
+      "effect": [
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_partake_mission1"
+        },
+        "stop_following"
+      ],
       "update_mapgen": {
         "om_terrain": "SecronomSSLab_bowspecs",
         "place_zones": [
-          { "type": "NPC_NO_INVESTIGATE", "faction": "secro_faction", "x": [ 0, 23 ], "y": [ 0, 23 ] },
-          { "type": "NPC_RETREAT", "faction": "secro_faction", "x": [ 5, 19 ], "y": [ 4, 5 ] }
+          {
+            "type": "NPC_NO_INVESTIGATE",
+            "faction": "secro_faction",
+            "x": [
+              0,
+              23
+            ],
+            "y": [
+              0,
+              23
+            ]
+          },
+          {
+            "type": "NPC_RETREAT",
+            "faction": "secro_faction",
+            "x": [
+              5,
+              19
+            ],
+            "y": [
+              4,
+              5
+            ]
+          }
         ]
       }
     },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "followup": "MISSION_SECRO_SCIENTIST_GET_TURRET_PARTS",
     "destination": "SecronomSSLab_bowspecs",
     "dialogue": {
       "describe": "…",
-      "offer": "You've heard the plan. Ask the other survivors for our short, bloody travel once you have accepted my request.",
-      "accepted": "Good. Now go, we can't waste time in our current situation.",
-      "rejected": "Well then... Lets talk about it again later.",
-      "advice": "Those specimens are nasty in close range.",
-      "inquire": "We've got to get going.",
-      "success": "Thank you. Now we've got more spaces to move around. That being said, tell the others to stay put in this area... they also need your assistance.",
-      "success_lie": "...",
-      "failure": "..."
+      "offer": "你已经听说了我的计划。如果你接受了我的请求，就告诉其他的幸存者一起来参加我们短暂而又血腥的旅行吧。",
+      "accepted": "好，我们现在出发，时间不等人，特别是现在。",
+      "rejected": "好吧，以后再说吧。",
+      "advice": "和这些样本保持距离，它们在近距离相当的恶心",
+      "inquire": "我们得走了。",
+      "success": "非常感谢。现在我们有了更大的活动空间了。你去看看其他人…他们同样需要你的帮助。",
+      "success_lie": "…",
+      "failure": "…"
     }
   },
   {
     "id": "MISSION_SECRO_SCIENTIST_GET_TURRET_PARTS",
     "type": "mission_definition",
-    "name": { "str": "Gather materials for SDP-L1 turret" },
-    "description": "Collect <color_light_green>4 chunks of steel</color>, <color_light_green>18 scrap metals</color>, <color_light_green>9 electronic scraps</color>, <color_light_green>9 power converters</color>, <color_light_green>5 copper wires</color> and <color_light_green>a broken laser beam turret</color>.",
+    "name": {
+      "str": "为SDP-L1炮台收集材料"
+    },
+    "description": "收集<color_light_green> 4块</color>号钢，<color_light_green>18个废金属，<color_light_green>9个电子废料，<color_light_green>9个电源转换器，<color_light_green>5根铜线，<color_light_green>和一个损坏的激光光束转台。",
     "goal": "MGOAL_CONDITION",
     "goal_condition": {
       "and": [
-        { "u_has_items": { "item": "steel_chunk", "count": 4 } },
-        { "u_has_items": { "item": "scrap", "count": 18 } },
-        { "u_has_items": { "item": "e_scrap", "count": 9 } },
-        { "u_has_items": { "item": "power_supply", "count": 9 } },
-        { "u_has_items": { "item": "cable", "count": 5 } },
-        { "u_has_item": "broken_secro_laserturret" }
+        {
+          "u_has_items": {
+            "item": "steel_chunk",
+            "count": 4
+          }
+        },
+        {
+          "u_has_items": {
+            "item": "scrap",
+            "count": 18
+          }
+        },
+        {
+          "u_has_items": {
+            "item": "e_scrap",
+            "count": 9
+          }
+        },
+        {
+          "u_has_items": {
+            "item": "power_supply",
+            "count": 9
+          }
+        },
+        {
+          "u_has_items": {
+            "item": "cable",
+            "count": 5
+          }
+        },
+        {
+          "u_has_item": "broken_secro_laserturret"
+        }
       ]
     },
     "difficulty": 1,
     "value": 10000,
     "has_generic_rewards": false,
-    "origins": [ "ORIGIN_SECONDARY" ],
-    "start": { "effect": { "duration": "PERMANENT", "u_add_effect": "secro_scientist_mission2_progress" } },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
+    "start": {
+      "effect": {
+        "duration": "PERMANENT",
+        "u_add_effect": "secro_scientist_mission2_progress"
+      }
+    },
     "end": {
       "effect": [
-        { "u_sell_item": "steel_chunk", "count": 4 },
-        { "u_sell_item": "scrap", "count": 18 },
-        { "u_sell_item": "e_scrap", "count": 9 },
-        { "u_sell_item": "power_supply", "count": 9 },
-        { "u_sell_item": "cable", "count": 5 },
-        { "u_sell_item": "broken_secro_laserturret" },
-        { "npc_consume_item": "steel_chunk", "count": 4 },
-        { "npc_consume_item": "scrap", "count": 18 },
-        { "npc_consume_item": "e_scrap", "count": 9 },
-        { "npc_consume_item": "power_supply", "count": 9 },
-        { "npc_consume_item": "cable", "count": 5 },
-        { "npc_consume_item": "broken_secro_laserturret" },
-        { "duration": "PERMANENT", "u_add_effect": "secro_scientist_partake_mission2" },
-        { "npc_add_effect": "secro_scientist_repairing_laserturret", "duration": 3700 },
-        { "duration": "PERMANENT", "u_add_effect": "secro_scientist_repairing" },
-        { "duration": "PERMANENT", "u_add_effect": "secro_scientist_repair_laserturret" }
+        {
+          "u_sell_item": "steel_chunk",
+          "count": 4
+        },
+        {
+          "u_sell_item": "scrap",
+          "count": 18
+        },
+        {
+          "u_sell_item": "e_scrap",
+          "count": 9
+        },
+        {
+          "u_sell_item": "power_supply",
+          "count": 9
+        },
+        {
+          "u_sell_item": "cable",
+          "count": 5
+        },
+        {
+          "u_sell_item": "broken_secro_laserturret"
+        },
+        {
+          "npc_consume_item": "steel_chunk",
+          "count": 4
+        },
+        {
+          "npc_consume_item": "scrap",
+          "count": 18
+        },
+        {
+          "npc_consume_item": "e_scrap",
+          "count": 9
+        },
+        {
+          "npc_consume_item": "power_supply",
+          "count": 9
+        },
+        {
+          "npc_consume_item": "cable",
+          "count": 5
+        },
+        {
+          "npc_consume_item": "broken_secro_laserturret"
+        },
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_partake_mission2"
+        },
+        {
+          "npc_add_effect": "secro_scientist_repairing_laserturret",
+          "duration": 3700
+        },
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_repairing"
+        },
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_scientist_repair_laserturret"
+        }
       ]
     },
     "dialogue": {
       "describe": "…",
-      "offer": "I'd like you to retrieve a broken SDP-L1 from the bunker and other essential parts for me to fully repair the turret.",
-      "accepted": "Then go, give them all to me afterwards.",
-      "rejected": "Well then... Lets talk about it again later.",
-      "advice": "If it's too heavy, haul it.",
-      "inquire": "We've got to get going.",
-      "success": "Good. The process may take an hour. While I'm repairing it, you should talk to others if they need your assistance.",
-      "success_lie": "...",
-      "failure": "..."
+      "offer": "我想让你从地堡里取回一个坏掉的SDP-L1炮台以及一些其他必要的部件，以便我把这个炮塔修好。",
+      "accepted": "很好，出发吧，记得别忘了给我。",
+      "rejected": "好吧，以后再说吧。",
+      "advice": "如果这些东西太重了，就拖着它们走。",
+      "inquire": "我们得走了。",
+      "success": "太棒了，这大概会花我一小时的时间。我修好之后你可以问问其他人有什么需要帮忙的地方。",
+      "success_lie": "…",
+      "failure": "…"
     }
   },
   {
     "id": "MISSION_SECRO_GUARD_KILL_ENIGMA",
     "type": "mission_definition",
-    "name": { "str": "Clear the enigma chamber" },
+    "name": {
+      "str": "清除密室之谜"
+    },
     "goal": "MGOAL_KILL_MONSTER",
     "difficulty": 5,
     "value": 200000,
     "start": {
-      "effect": [ { "duration": "PERMANENT", "u_add_effect": "secro_guard_mission1_progress" }, "follow_only" ],
-      "assign_mission_target": { "om_terrain": "SecronomSSLab_enigmaspecs", "reveal_radius": 1, "search_range": 10, "z": -2 },
+      "effect": [
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_guard_mission1_progress"
+        },
+        "follow_only"
+      ],
+      "assign_mission_target": {
+        "om_terrain": "SecronomSSLab_enigmaspecs",
+        "reveal_radius": 1,
+        "search_range": 10,
+        "z": -2
+      },
       "update_mapgen": {
         "place_monster": [
-          { "monster": "mon_ayenel", "x": 16, "y": 10, "target": true },
-          { "monster": "mon_maneater", "x": 9, "y": 22, "target": true }
+          {
+            "monster": "mon_ayenel",
+            "x": 16,
+            "y": 10,
+            "target": true
+          },
+          {
+            "monster": "mon_maneater",
+            "x": 9,
+            "y": 22,
+            "target": true
+          }
         ],
-        "place_nested": [ { "chunks": [ "secro_guard_mission1_opendadoor" ], "x": 0, "y": 0 } ]
+        "place_nested": [
+          {
+            "chunks": [
+              "secro_guard_mission1_opendadoor"
+            ],
+            "x": 0,
+            "y": 0
+          }
+        ]
       }
     },
-    "end": { "effect": { "duration": "PERMANENT", "u_add_effect": "secro_guard_partake_mission1" } },
+    "end": {
+      "effect": {
+        "duration": "PERMANENT",
+        "u_add_effect": "secro_guard_partake_mission1"
+      }
+    },
     "followup": "MISSION_SECRO_GUARD_HELP_SHAPESHIFTER",
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "dialogue": {
       "describe": "…",
-      "offer": "So she wants you to clear out the enigma chamber, and you need my help to access that room. But are you ready? You can refuse if it felt like a deathwish.",
-      "accepted": "Let's head to that chamber real quick!",
-      "rejected": "Just ask me again once you're ready to take on.",
-      "advice": "Since this facility have come into chaos, we might see creatures other than them.",
-      "inquire": "Did you killed them?",
-      "success": "Great! Lets head back to others and see if they need anything else. Enigma chamber is pretty messed up anyway.",
-      "success_lie": "Really? I've come alongside you and yet you lied to something you obviously didn't do?",
-      "failure": "..."
+      "offer": "所以她想让你清理神秘密室，你需要我的帮助才能进入那个房间。但你准备好了吗？你可以拒绝，如果它感觉像死亡之翼。",
+      "accepted": "我们赶快去那个房间！",
+      "rejected": "等你准备好了再问我一次。",
+      "advice": "既然这个设施已经陷入混乱，我们可能会看到其他的生物。",
+      "inquire": "你杀了他们吗？",
+      "success": "太好了！让我们回头看看其他人是否还需要什么。不管怎样，神秘密室还是一团糟。",
+      "success_lie": "真正地？我和你并肩作战，但你却对你明明没做的事撒谎？",
+      "failure": "…"
     }
   },
   {
     "id": "MISSION_SECRO_RESEARCHER_GET_SHAPESHIFTER_SAMPLE",
     "type": "mission_definition",
-    "name": { "str": "Obtain a sample from the shapeshifter" },
-    "description": "Collect a <color_light_green>desaturated resin</color> from a <color_light_red>shapeshifter</color>. Use the tool provided to obtain the required item then bring it back once you've complete the task.",
+    "name": {
+      "str": "从变形者那里获得一个样本"
+    },
+    "description": "从<color_light_red>变形器收集<color_light_green>去饱和树脂</color>。使用提供的工具获取所需项目，然后在完成任务后将其带回。",
     "goal": "MGOAL_CONDITION",
-    "goal_condition": { "and": [ { "u_has_item": "secro_sample_shifter" }, { "u_has_item": "secro_missionkey_sampler_enigma" } ] },
+    "goal_condition": {
+      "and": [
+        {
+          "u_has_item": "secro_sample_shifter"
+        },
+        {
+          "u_has_item": "secro_missionkey_sampler_enigma"
+        }
+      ]
+    },
     "difficulty": 6,
     "value": 10000,
     "has_generic_rewards": false,
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "start": {
       "effect": [
-        { "duration": "PERMANENT", "u_add_effect": "secro_researcher_mission1_progress" },
-        { "u_spawn_item": "secro_missionkey_sampler_enigma" }
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_researcher_mission1_progress"
+        },
+        {
+          "u_spawn_item": "secro_missionkey_sampler_enigma"
+        }
       ]
     },
     "end": {
       "effect": [
-        { "u_sell_item": "secro_missionkey_sampler_enigma" },
-        { "npc_consume_item": "secro_missionkey_sampler_enigma" },
-        { "u_sell_item": "secro_sample_shifter" },
-        { "npc_consume_item": "secro_sample_shifter" },
-        { "duration": "PERMANENT", "u_add_effect": "secro_researcher_partake_mission1" }
+        {
+          "u_sell_item": "secro_missionkey_sampler_enigma"
+        },
+        {
+          "npc_consume_item": "secro_missionkey_sampler_enigma"
+        },
+        {
+          "u_sell_item": "secro_sample_shifter"
+        },
+        {
+          "npc_consume_item": "secro_sample_shifter"
+        },
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_researcher_partake_mission1"
+        }
       ]
     },
     "dialogue": {
       "describe": "…",
-      "offer": "You must obtain a sample from that creature using a sampler kit I'm about to provide once you're ready.",
-      "accepted": "Okay, here's the kit. It is set to scan for an enigma specimen. I've sent the coordinates to our guard and talk to him about this, he'll show you the way. But remember, this creature uses deception to hide itself.",
-      "rejected": "Well then... Lets talk about it again later.",
-      "advice": "Be cautious on using the sampler kit, as it scans only the enigma, otherwise you'll waste batteries.",
-      "inquire": "How's the sample?",
-      "success": "Well done, survivor. I'll start to identify this resin, and hope it can of good use.",
-      "success_lie": "...",
-      "failure": "..."
+      "offer": "一旦你准备好了，你必须用我提供的采样器工具从那个生物身上取一个样本。",
+      "accepted": "好的，这是工具箱。它被设置为扫描一个神秘的标本。我已经把坐标发给了我们的警卫，跟他谈谈，他会给你带路的。但是记住，这个生物用欺骗来隐藏自己。",
+      "rejected": "好吧，以后再说吧。",
+      "advice": "小心使用采样器套件，因为它只扫描谜，否则你会浪费电池。",
+      "inquire": "样品怎么样？",
+      "success": "干得好，幸存者。我将开始鉴定这种树脂，希望它能有很好的用途。",
+      "success_lie": "…",
+      "failure": "…"
     }
   },
   {
     "id": "MISSION_SECRO_GUARD_HELP_SHAPESHIFTER",
     "type": "mission_definition",
-    "name": { "str": "Slay the shapeshifter?" },
+    "name": {
+      "str": "杀死变形者？"
+    },
     "goal": "MGOAL_KILL_MONSTER",
     "difficulty": 5,
     "value": 200000,
     "start": {
-      "effect": [ { "duration": "PERMANENT", "u_add_effect": "secro_guard_mission2_progress" }, "follow_only" ],
-      "assign_mission_target": { "om_terrain": "forest", "reveal_radius": 1, "search_range": 15, "z": 0 },
-      "update_mapgen": { "place_monster": [ { "monster": "mon_shifter_zombie", "x": 11, "y": 11, "target": true } ] }
+      "effect": [
+        {
+          "duration": "PERMANENT",
+          "u_add_effect": "secro_guard_mission2_progress"
+        },
+        "follow_only"
+      ],
+      "assign_mission_target": {
+        "om_terrain": "forest",
+        "reveal_radius": 1,
+        "search_range": 15,
+        "z": 0
+      },
+      "update_mapgen": {
+        "place_monster": [
+          {
+            "monster": "mon_shifter_zombie",
+            "x": 11,
+            "y": 11,
+            "target": true
+          }
+        ]
+      }
     },
-    "end": { "effect": { "duration": "PERMANENT", "u_add_effect": "secro_guard_partake_mission2" } },
-    "origins": [ "ORIGIN_SECONDARY" ],
+    "end": {
+      "effect": {
+        "duration": "PERMANENT",
+        "u_add_effect": "secro_guard_partake_mission2"
+      }
+    },
+    "origins": [
+      "ORIGIN_SECONDARY"
+    ],
     "dialogue": {
       "describe": "…",
-      "offer": "She gave me the coordinates as soon as the drone reported her. I'll help you out collecting the sample, and fend off this creature from you. So, are you ready?",
-      "accepted": "Good. The target is not far from here.",
-      "rejected": "Just ask me again once you're ready to take on.",
-      "advice": "I never encountered this creature...",
-      "inquire": "Did you killed them?",
-      "success": "Wait. It's not the right one... I guess we lost it.",
-      "success_lie": "Really? I've come alongside you and yet you lied to something you obviously didn't do?",
-      "failure": "..."
+      "offer": "无人机一报告她就给了我坐标。我会帮你采集样本，把这个生物从你身边赶走。你准备好了吗？",
+      "accepted": "很好。目标离这里不远。",
+      "rejected": "等你准备好了再问我一次。",
+      "advice": "我从没见过这种生物…",
+      "inquire": "你杀了他们吗？",
+      "success": "等待。不是那个合适的…我想我们输了。",
+      "success_lie": "真正地？我和你并肩作战，但你却对你明明没做的事撒谎？",
+      "failure": "…"
     }
   },
   {
     "id": "MISSION_SECRO_FV_TUTORIAL",
     "type": "mission_definition",
-    "name": { "str": "Feed your flesh" },
+    "name": {
+      "str": "喂饱你的肉"
+    },
     "description": "Your bio-organic exoskeleton needs a constant supply of artificial flesh in your inventory to remain functional.\n\nTo complete this mission, obtain a <color_light_green>blob glob</color>.",
     "goal": "MGOAL_FIND_ITEM",
     "item": "slime_scrap",
     "difficulty": 1,
     "value": 0,
-    "origins": [ "ORIGIN_GAME_START" ]
+    "origins": [
+      "ORIGIN_GAME_START"
+    ]
   }
 ]

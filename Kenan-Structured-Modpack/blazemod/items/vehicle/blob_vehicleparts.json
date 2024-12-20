@@ -2,12 +2,19 @@
   {
     "id": "frostie_hull",
     "type": "GENERIC",
-    "name": { "str": "gelacier boat hull" },
-    "description": "A biological mystery, this blob's internal structures exist in within a pool of low-density fluid that remains liquid despite being in a super-cooled state; yet possesses all the malleability of its former self.  Fragments of frost continually flake off it.  It has formed itself into a wide boat frame.",
+    "name": {
+      "str": "变形怪冰川船体"
+    },
+    "description": "一件生物学之谜，这只变形怪的内部结构存在着一滩低密度流体，尽管已经处在过冷状态但仍然保留液体形态；但仍然保持着其之前所具有的柔韧性。冰霜形成的碎片不断从它身上剥落。这只变形怪的形状如同船体一般。",
     "weight": "6112 g",
     "volume": "5 L",
-    "melee_damage": { "bash": 9 },
-    "material": [ "flesh" ],
+    "to_hit": -3,
+    "melee_damage": {
+      "bash": 9
+    },
+    "material": [
+      "flesh"
+    ],
     "symbol": "o",
     "color": "light_blue",
     "category": "veh_parts"
@@ -16,12 +23,19 @@
     "id": "queen",
     "type": "GENERIC",
     "category": "veh_parts",
-    "name": { "str": "amorphous heart" },
-    "description": "This amorphous mass seems to have finished developing; its advanced internal structures testifying to that.  It is capable of locomotion through internal hydraulic pressure, capable of moving substantial loads, and, in an astounding display of intelligence, is capable of manipulating anything it's attached to, whether blob-based or otherwise, through extended pseudopods.  You think you might be able to manipulate it, and through it, all its attached parts.  Though to do so you'll have to position yourself to be in contact with it; and it appears unnervingly willing to accommodate you…",
+    "name": {
+      "str": "无定形核心"
+    },
+    "description": "这滩无定形物质似乎已经成长完成；其先进的内部结构就能够证明。它能够通过调整体内液压进行移动，同时能够承担大量负载，并且显示出惊人的智力，能够通过伸长的伪足操纵连接着的任何东西，无论是变形怪部件还是其他载具部件。你认为你可能能够控制它，并通过它，控制所有连接的载具部件。然而这需要你和它亲密接触一番；让人更加不安的是，它看起来十分愿意容纳你……",
     "weight": "21331 g",
     "volume": "20 L",
-    "melee_damage": { "bash": 10 },
-    "material": [ "flesh" ],
+    "to_hit": -5,
+    "melee_damage": {
+      "bash": 10
+    },
+    "material": [
+      "flesh"
+    ],
     "symbol": ")",
     "color": "red"
   }

@@ -3,30 +3,54 @@
     "id": "secro_power_armor_atk",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom exoskeleton \"O\"" },
-    "description": "A fully modified military power armor suitable for human... and the likes. Made especially for Secronom project's BOW specimens, but later on redesigned to fit the wearer's anatomy. Augmented by internal nerve stimulators, the Secronom exoskeleton type \"O\" is a lightweight and highly resistant suit that can deflects most projectile and impacts.\n\nSecronom exoskeleton type \"O\" provides:\n<color_white>Dexterity: <color_light_green>+2</color>\nDodge: <color_light_green>+2</color>\nAttack speed: <color_light_green>+5%</color></color>",
+    "name": {
+      "str": "Secronom外骨骼“O”"
+    },
+    "description": "一种完全改装的适合人类的军用动力装甲...诸如此类。专为Secronom项目的BOW标本制作，但后来进行了重新设计，以适应佩戴者的解剖结构。由内部神经刺激器增强的Secronom”型外骨骼是一种重量轻、高度抵抗的服装，可以偏转大多数投射物和撞击。\n\n Secronom外骨骼“O”型提供：\n <color_white>灵巧度：<color_light_green> +2 </color> \n躲闪：<color_light_green> +2 </color> \n攻击速度：<color_light_green> +5% </color> </color>",
     "weight": "12670 g",
     "volume": "15 L",
     "price": "115000 USD",
     "price_postapoc": "400 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy", "plastic" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "light_red",
     "pocket_data": [
-      { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "2 L", "max_contains_weight": "4 kg", "moves": 75 },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "2 L", "max_contains_weight": "4 kg", "moves": 75 }
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "4 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "4 kg",
+        "moves": 75
+      }
     ],
     "warmth": 60,
     "power_armor": true,
     "use_action": {
       "target": "secro_power_armor_atk_on",
-      "msg": "\"Vessel\" module - <color_light_green>online",
+      "msg": "“船舶”模块-<color_light_green>在线",
       "type": "transform",
       "active": true,
-      "menu_text": "Activate \"Vessel\" module"
+      "menu_text": "激活“容器”模块"
     },
     "ammo": "battery",
     "relic_data": {
@@ -35,20 +59,54 @@
           "has": "WORN",
           "condition": "ALWAYS",
           "values": [
-            { "value": "DEXTERITY", "add": 2 },
-            { "value": "BONUS_DODGE", "add": 2 },
-            { "value": "ATTACK_SPEED", "multiply": 0.05 }
+            {
+              "value": "DEXTERITY",
+              "add": 2
+            },
+            {
+              "value": "BONUS_DODGE",
+              "add": 2
+            },
+            {
+              "value": "ATTACK_SPEED",
+              "multiply": 0.05
+            }
           ]
         }
       ]
     },
-    "flags": [ "WATERPROOF", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "WATCH", "THERMOMETER", "SUN_GLASSES", "OVERSIZE" ],
+    "flags": [
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "WATCH",
+      "THERMOMETER",
+      "SUN_GLASSES",
+      "OVERSIZE"
+    ],
     "armor": [
       {
         "encumbrance": 40,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ],
-        "material": [ "superalloy", "plastic" ],
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "material": [
+          "superalloy",
+          "plastic"
+        ],
         "material_thickness": 10,
         "environmental_protection": 16
       }
@@ -58,29 +116,53 @@
     "id": "secro_power_armor_atk_on",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "Secronom exoskeleton \"O\"" },
-    "description": "A fully modified military power armor suitable for human... and the likes. Made especially for Secronom project's BOW specimens, but later on redesigned to fit the wearer's anatomy. Augmented by internal nerve stimulators, the Secronom exoskeleton type \"O\" is a lightweight and highly resistant suit that can deflects most projectile and impacts.\n\nSecronom exoskeleton type \"O\" provides:\n<color_white>Dexterity: <color_light_green>+2</color>\nDodge: <color_light_green>+2</color>\nAttack speed: <color_light_green>+5%</color></color>",
+    "name": {
+      "str": "Secronom外骨骼“O”"
+    },
+    "description": "一种完全改装的适合人类的军用动力装甲...诸如此类。专为Secronom项目的BOW标本制作，但后来进行了重新设计，以适应佩戴者的解剖结构。由内部神经刺激器增强的Secronom”型外骨骼是一种重量轻、高度抵抗的服装，可以偏转大多数投射物和撞击。\n\n Secronom外骨骼“O”型提供：\n <color_white>灵巧度：<color_light_green> +2 </color> \n躲闪：<color_light_green> +2 </color> \n攻击速度：<color_light_green> +5% </color> </color>",
     "weight": "12670 g",
     "volume": "15 L",
     "price": "115000 USD",
     "price_postapoc": "400 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "superalloy", "plastic" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "superalloy",
+      "plastic"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "light_red",
     "pocket_data": [
-      { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "battery": 500 } },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "2 L", "max_contains_weight": "4 kg", "moves": 75 },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "2 L", "max_contains_weight": "4 kg", "moves": 75 }
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "battery": 500
+        }
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "4 kg",
+        "moves": 75
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "2 L",
+        "max_contains_weight": "4 kg",
+        "moves": 75
+      }
     ],
     "warmth": 60,
     "power_armor": true,
     "use_action": {
       "target": "secro_power_armor_atk",
-      "msg": "\"Vessel\" module - <color_red>offline",
+      "msg": "“船只”模块- <color_red>离线",
       "type": "transform",
-      "menu_text": "Deactivate \"Vessel\" module"
+      "menu_text": "停用“容器”模块"
     },
     "ammo": "battery",
     "relic_data": {
@@ -89,20 +171,54 @@
           "has": "WORN",
           "condition": "ALWAYS",
           "values": [
-            { "value": "DEXTERITY", "add": 2 },
-            { "value": "BONUS_DODGE", "add": 2 },
-            { "value": "ATTACK_SPEED", "multiply": 0.05 }
+            {
+              "value": "DEXTERITY",
+              "add": 2
+            },
+            {
+              "value": "BONUS_DODGE",
+              "add": 2
+            },
+            {
+              "value": "ATTACK_SPEED",
+              "multiply": 0.05
+            }
           ]
         }
       ]
     },
-    "flags": [ "WATERPROOF", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "WATCH", "THERMOMETER", "SUN_GLASSES", "OVERSIZE" ],
+    "flags": [
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "WATCH",
+      "THERMOMETER",
+      "SUN_GLASSES",
+      "OVERSIZE"
+    ],
     "armor": [
       {
         "encumbrance": 40,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ],
-        "material": [ "superalloy", "plastic" ],
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "material": [
+          "superalloy",
+          "plastic"
+        ],
         "material_thickness": 10,
         "environmental_protection": 16
       }
@@ -112,21 +228,44 @@
     "id": "secro_power_armor_flesh_fite",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel \"Warrior\"" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel (Warrior)\" were developed using potent mutagens, and so far, its efficiency on combat has significantly improved. Although its morphing and forming capability have become limited, it has an outstanding performance in battles. Like any other vessel types, it requires the wearer to feed it with flesh.\n\nSecronom exoskeleton type \"Vessel (Warrior)\" provides:\n<color_white>Strength: <color_light_green>+2</color>\nAttack speed: <color_light_green>+5%</color>\nMaximum health: <color_light_green>+7.5%</color>\nMetabolism: <color_light_green>-10%</color></color>",
+    "name": {
+      "str": "脉管装甲-“战士型”"
+    },
+    "description": "一种利用最新研究成果制造出来的合成战斗服。Secronom外骨骼型号“脉管（战士型）”是使用强效诱变剂开发的，到目前为止，它的战斗效率已经有了显著提高。虽然它的变形和形成能力变得有限，但它在战斗中有着突出的表现。像所有其他脉管装甲一样，它需要佩戴者用血肉来喂养它。\n\n Secronom外骨骼型号“脉管 （战士型）”提供：\n <color_white>力量：<color_light_green> +2 </color>\n攻击速度：<color_light_green>+5%</color>\n最大生命值：<color_light_green>+7.5%</color>\n新陈代谢：<color_light_green>-10% </color> </color>",
     "weight": "19900 g",
     "volume": "22 L",
     "price": "323000 USD",
     "price_postapoc": "3000 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "secro_flesh_reinforced" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "light_red_red",
     "pocket_data": [
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh": 100 } }
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh": 100
+        }
+      }
     ],
     "warmth": 30,
     "power_armor": true,
@@ -137,22 +276,70 @@
           "has": "WORN",
           "condition": "ALWAYS",
           "values": [
-            { "value": "STRENGTH", "add": 2 },
-            { "value": "ATTACK_SPEED", "multiply": 0.03 },
-            { "value": "MAX_HP", "multiply": 0.075 },
-            { "value": "METABOLISM", "multiply": -0.1 }
+            {
+              "value": "STRENGTH",
+              "add": 2
+            },
+            {
+              "value": "ATTACK_SPEED",
+              "multiply": 0.03
+            },
+            {
+              "value": "MAX_HP",
+              "multiply": 0.075
+            },
+            {
+              "value": "METABOLISM",
+              "multiply": -0.1
+            }
           ]
         }
       ]
     },
-    "qualities": [ [ "GLARE", 1 ], [ "SECRO_FLESH_MORPHING", 1 ], [ "SECRO_FLESH_REFORMING", 1 ] ],
-    "flags": [ "NO_TAKEOFF", "WATERPROOF", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "SUN_GLASSES", "OVERSIZE" ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ],
+      [
+        "SECRO_FLESH_MORPHING",
+        1
+      ],
+      [
+        "SECRO_FLESH_REFORMING",
+        1
+      ]
+    ],
+    "flags": [
+      "NO_TAKEOFF",
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "SUN_GLASSES",
+      "OVERSIZE"
+    ],
     "armor": [
       {
         "encumbrance": 50,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ],
-        "material": [ "secro_flesh_reinforced" ],
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "material": [
+          "secro_flesh_reinforced"
+        ],
         "material_thickness": 9,
         "environmental_protection": 8
       }
@@ -162,21 +349,44 @@
     "id": "secro_power_armor_flesh_tank",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel \"Juggernaut\"" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel (Juggernaut)\" is a conglomeration of bones and flesh, and an outcome of prolonged mutations. With bone plates covering the entirety of its surface, it is suited for frontline assaults. Like any other vessel types, it requires the wearer to feed it with flesh.\n\nSecronom exoskeleton type \"Vessel (Juggernaut)\" provides:\n<color_white>Strength: <color_light_green>+4</color>\nMaximum health: <color_light_green>+12.5%</color>\nSpeed: <color_red>-5%</color>\nMovecost: <color_red>+7.5%</color>\nMetabolism: <color_light_green>-7.5%</color></color>",
+    "name": {
+      "str": "脉管装甲-“巨像型”"
+    },
+    "description": "一种利用最新研究成果制造出来的合成战斗服。Secronom外骨骼型号“脉管（巨像型）”是一个血肉与骨骼的集合体，是一种长期变异的结果。骨板覆盖了它整个表面，也因而非常适用于前线冲锋。像所有其他脉管装甲一样，它需要佩戴者用血肉来喂养它。\n\n Secronom外骨骼类型“脉管 （巨像型）”提供：\n <color_white>力量：<color_light_green> +4 </color>\n最大生命值：<color_light_green>+12.5% </color>\n速度：<color_red> -5%</color>\n移动消耗：<color_red>+7.5%</color>\n新陈代谢：<color_light_green>-7.5% </color> </color>",
     "weight": "26400 g",
     "volume": "30 L",
     "price": "323000 USD",
     "price_postapoc": "3000 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "secro_flesh_reinforced" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "light_red_yellow",
     "pocket_data": [
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh": 100 } }
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh": 100
+        }
+      }
     ],
     "warmth": 30,
     "power_armor": true,
@@ -187,23 +397,74 @@
           "has": "WORN",
           "condition": "ALWAYS",
           "values": [
-            { "value": "STRENGTH", "add": 4 },
-            { "value": "MOVE_COST", "multiply": 0.075 },
-            { "value": "SPEED", "multiply": -0.05 },
-            { "value": "MAX_HP", "multiply": 0.125 },
-            { "value": "METABOLISM", "multiply": -0.075 }
+            {
+              "value": "STRENGTH",
+              "add": 4
+            },
+            {
+              "value": "MOVE_COST",
+              "multiply": 0.075
+            },
+            {
+              "value": "SPEED",
+              "multiply": -0.05
+            },
+            {
+              "value": "MAX_HP",
+              "multiply": 0.125
+            },
+            {
+              "value": "METABOLISM",
+              "multiply": -0.075
+            }
           ]
         }
       ]
     },
-    "qualities": [ [ "GLARE", 1 ], [ "SECRO_FLESH_MORPHING", 1 ], [ "SECRO_FLESH_REFORMING", 1 ] ],
-    "flags": [ "NO_TAKEOFF", "WATERPROOF", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "SUN_GLASSES", "OVERSIZE" ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ],
+      [
+        "SECRO_FLESH_MORPHING",
+        1
+      ],
+      [
+        "SECRO_FLESH_REFORMING",
+        1
+      ]
+    ],
+    "flags": [
+      "NO_TAKEOFF",
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "SUN_GLASSES",
+      "OVERSIZE"
+    ],
     "armor": [
       {
         "encumbrance": 60,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ],
-        "material": [ "secro_flesh_reinforced" ],
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "material": [
+          "secro_flesh_reinforced"
+        ],
         "material_thickness": 13,
         "environmental_protection": 8
       }
@@ -213,21 +474,44 @@
     "id": "secro_power_armor_flesh_coward",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel \"Agile\"" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel (Agile)\" is an outcome of mutagenic devolution, having thinner fibers and flesh webbings. Its greatly reduced physical protection has also made it extremely lighter than any other types; the vessel focuses on bringing the wearer's speed in order to outrun its foe. Like all other flesh vessels, it requires the wearer to feed it with flesh.\n\nSecronom exoskeleton type \"Vessel (Agile)\" provides:\n<color_white>Speed: <color_light_green>+10%</color>\nAttack speed: <color_light_green>+10%</color>\nMovecost: <color_light_green>-5%</color>\nStamina regeneration: <color_light_green>20%</color></color>",
+    "name": {
+      "str": "脉管装甲-“灵敏型”"
+    },
+    "description": "一种利用最新研究成果制造出来的合成战斗服。Secronom外骨骼型号“脉管（敏捷型）”，是诱变的成果，具有更细的纤维和血肉织带。大大减少的物理保护也使得它比任何其他型号都要轻；这种脉管专注于提高佩戴者的速度，以超越敌人。像所有其他血肉脉管一样，它需要佩戴者用血肉来喂养它。\n\n Secronom外骨骼型号“脉管（敏捷型）”提供：\n<color_white>速度：<color_light_green>+10%</color>\n攻击速度： <color_light_green>+10%</color>\n移动消耗： <color_light_green>-5%</color>\n耐力恢复： <color_light_green>20%</color></color>",
     "weight": "12450 g",
     "volume": "13 L",
     "price": "323000 USD",
     "price_postapoc": "3000 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "secro_flesh_reinforced" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "light_red_green",
     "pocket_data": [
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh": 100 } }
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh": 100
+        }
+      }
     ],
     "warmth": 30,
     "power_armor": true,
@@ -238,22 +522,70 @@
           "has": "WORN",
           "condition": "ALWAYS",
           "values": [
-            { "value": "SPEED", "multiply": 0.1 },
-            { "value": "ATTACK_SPEED", "multiply": 0.1 },
-            { "value": "MOVE_COST", "multiply": -0.05 },
-            { "value": "REGEN_STAMINA", "multiply": 0.2 }
+            {
+              "value": "SPEED",
+              "multiply": 0.1
+            },
+            {
+              "value": "ATTACK_SPEED",
+              "multiply": 0.1
+            },
+            {
+              "value": "MOVE_COST",
+              "multiply": -0.05
+            },
+            {
+              "value": "REGEN_STAMINA",
+              "multiply": 0.2
+            }
           ]
         }
       ]
     },
-    "qualities": [ [ "GLARE", 1 ], [ "SECRO_FLESH_MORPHING", 1 ], [ "SECRO_FLESH_REFORMING", 1 ] ],
-    "flags": [ "NO_TAKEOFF", "WATERPROOF", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "SUN_GLASSES", "OVERSIZE" ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ],
+      [
+        "SECRO_FLESH_MORPHING",
+        1
+      ],
+      [
+        "SECRO_FLESH_REFORMING",
+        1
+      ]
+    ],
+    "flags": [
+      "NO_TAKEOFF",
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "SUN_GLASSES",
+      "OVERSIZE"
+    ],
     "armor": [
       {
         "encumbrance": 40,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ],
-        "material": [ "secro_flesh_reinforced" ],
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "material": [
+          "secro_flesh_reinforced"
+        ],
         "material_thickness": 5,
         "environmental_protection": 8
       }
@@ -263,21 +595,44 @@
     "id": "secro_power_armor_flesh_range",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel \"Gunner\"" },
+    "name": {
+      "str": "脉管装甲-“神枪手型”"
+    },
     "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel (Gunner)\" is an offbranch mutation of a standard vessel, having lesser flesh membranes and webbings in exchange for greater perception. Its body orientation is built to handle several projectile-shooting armaments and to quickly form a gunner creation. Thus, it is ideal for long- to mid-ranged combats. Like all other flesh vessels, it requires the wearer to feed it with flesh.\n\nSecronom exoskeleton type \"Vessel (Gunner)\" provides:\n<color_white>Perception: <color_light_green>+4</color>\nMetabolism: <color_light_green>-5%</color></color>",
     "weight": "15325 g",
     "volume": "16 L",
     "price": "323000 USD",
     "price_postapoc": "3000 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "secro_flesh_reinforced" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "light_red_cyan",
     "pocket_data": [
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh": 100 } }
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh": 100
+        }
+      }
     ],
     "warmth": 30,
     "power_armor": true,
@@ -288,20 +643,62 @@
           "has": "WORN",
           "condition": "ALWAYS",
           "values": [
-            { "value": "PERCEPTION", "add": 4 },
-            { "value": "METABOLISM", "multiply": -0.05 }
+            {
+              "value": "PERCEPTION",
+              "add": 4
+            },
+            {
+              "value": "METABOLISM",
+              "multiply": -0.05
+            }
           ]
         }
       ]
     },
-    "qualities": [ [ "GLARE", 1 ], [ "SECRO_FLESH_MORPHING", 1 ], [ "SECRO_FLESH_REFORMING", 1 ] ],
-    "flags": [ "NO_TAKEOFF", "WATERPROOF", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "SUN_GLASSES", "OVERSIZE" ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ],
+      [
+        "SECRO_FLESH_MORPHING",
+        1
+      ],
+      [
+        "SECRO_FLESH_REFORMING",
+        1
+      ]
+    ],
+    "flags": [
+      "NO_TAKEOFF",
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "SUN_GLASSES",
+      "OVERSIZE"
+    ],
     "armor": [
       {
         "encumbrance": 45,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ],
-        "material": [ "secro_flesh_reinforced" ],
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "material": [
+          "secro_flesh_reinforced"
+        ],
         "material_thickness": 6,
         "environmental_protection": 8
       }
@@ -311,21 +708,44 @@
     "id": "secro_power_armor_flesh_infect",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "flesh vessel \"Pathogen\"" },
-    "description": "A complex battle suit brought to existence using the latest technological advancements. Secronom exoskeleton type \"Vessel (Pathogen)\" is the result of prolonged research for augmentation using mutagens. Its cell structure is much more intricate than the other vessel types. Yet due to its extreme need of flesh, users may not last long wearing the suit.\n\nSecronom exoskeleton type \"Vessel (Pathogen)\" provides:\n<color_white>Maximum health: <color_light_green>+5%</color>\nBiological armor: <color_light_green>+1</color>\nMetabolism: <color_light_green>-20%</color></color>\n\nActivate to perform:\n<color_cyan><color_pink>[FORM]</color> Hivemind</color> - <color_yellow>500 movecost</color>/<color_red>50 flesh</color>\n<color_white>* Your flesh vessel forms a sentient flesh hivemind. This hivemind starts off as an overseer, and will eventually die if left inactive. Interact for additional commands.</color>",
+    "name": {
+      "str": "脉管装甲-“病原体型”"
+    },
+    "description": "一种利用最新研究成果制造出来的合成战斗服。Secronom外骨骼型号“脉管（病原型）”是长期使用诱变剂增强研究的结果。它的细胞结构比其他脉管装甲复杂得多。然而，由于它对血肉的极度需求，使用者恐怕不能长时间地穿着它。\n\n Secronom外骨骼型号“脉管（病原型）”提供：\n<color_white>最大生命值：<color_light_green>+5%</color> \n生物护甲：<color_light_green>+1 </color> \n新陈代谢：<color_light_green>-20%</color> </color> \n\n激活使用：\n<color_cyan> <color_pink>[形成]</color> 主巢心智 </color>-<color_yellow> 500移动消耗</color>/<color_red> 50血肉</color>\n <color_white>*你的脉管装甲会形成一个新的自律主巢心智。这个主巢心智一开始是作为一个监督者，如果不活动的话，最终会死去。交互以添加命令。</color>",
     "weight": "17600 g",
     "volume": "19 L",
     "price": "323000 USD",
     "price_postapoc": "3000 USD",
-    "melee_damage": { "bash": 1 },
-    "material": [ "secro_flesh_reinforced" ],
+    "to_hit": 1,
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "secro_flesh_reinforced"
+    ],
     "symbol": "[",
     "looks_like": "power_armor_light",
     "color": "light_red_white",
     "pocket_data": [
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "CONTAINER", "max_contains_volume": "5 L", "max_contains_weight": "10 kg", "moves": 85 },
-      { "pocket_type": "MAGAZINE", "rigid": true, "ammo_restriction": { "secro_flesh": 200 } }
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "CONTAINER",
+        "max_contains_volume": "5 L",
+        "max_contains_weight": "10 kg",
+        "moves": 85
+      },
+      {
+        "pocket_type": "MAGAZINE",
+        "rigid": true,
+        "ammo_restriction": {
+          "secro_flesh": 200
+        }
+      }
     ],
     "warmth": 30,
     "power_armor": true,
@@ -345,30 +765,75 @@
           "has": "WORN",
           "condition": "ALWAYS",
           "values": [
-            { "value": "ARMOR_BIO", "add": -1 },
-            { "value": "MAX_HP", "multiply": 0.05 },
-            { "value": "METABOLISM", "multiply": -0.2 }
+            {
+              "value": "ARMOR_BIO",
+              "add": -1
+            },
+            {
+              "value": "MAX_HP",
+              "multiply": 0.05
+            },
+            {
+              "value": "METABOLISM",
+              "multiply": -0.2
+            }
           ],
           "hit_you_effect": [
             {
               "id": "mon_flesh_infect_target",
               "hit_self": false,
               "once_in": 5,
-              "message": "Your vessel infects %2$s!",
-              "npc_message": "%1$s's vessel infects %2$s!"
+              "message": "你的血管感染了%2$s！",
+              "npc_message": "%1$s的血管感染%2$s！"
             }
           ]
         }
       ]
     },
-    "qualities": [ [ "GLARE", 1 ], [ "SECRO_FLESH_MORPHING", 2 ], [ "SECRO_FLESH_REFORMING", 2 ] ],
-    "flags": [ "NO_TAKEOFF", "WATERPROOF", "STURDY", "ELECTRIC_IMMUNE", "NO_UNLOAD", "SUN_GLASSES", "OVERSIZE" ],
+    "qualities": [
+      [
+        "GLARE",
+        1
+      ],
+      [
+        "SECRO_FLESH_MORPHING",
+        2
+      ],
+      [
+        "SECRO_FLESH_REFORMING",
+        2
+      ]
+    ],
+    "flags": [
+      "NO_TAKEOFF",
+      "WATERPROOF",
+      "STURDY",
+      "ELECTRIC_IMMUNE",
+      "NO_UNLOAD",
+      "SUN_GLASSES",
+      "OVERSIZE"
+    ],
     "armor": [
       {
         "encumbrance": 50,
         "coverage": 100,
-        "covers": [ "torso", "arm_l", "arm_r", "hand_l", "hand_r", "leg_l", "leg_r", "foot_l", "foot_r", "head", "eyes", "mouth" ],
-        "material": [ "secro_flesh_reinforced" ],
+        "covers": [
+          "torso",
+          "arm_l",
+          "arm_r",
+          "hand_l",
+          "hand_r",
+          "leg_l",
+          "leg_r",
+          "foot_l",
+          "foot_r",
+          "head",
+          "eyes",
+          "mouth"
+        ],
+        "material": [
+          "secro_flesh_reinforced"
+        ],
         "material_thickness": 7,
         "environmental_protection": 12
       }
@@ -378,18 +843,43 @@
     "id": "secro_power_armor_feed_item",
     "type": "TOOL_ARMOR",
     "category": "armor",
-    "name": { "str": "<color_red>[FEED]</color> consume flesh" },
-    "description": "Activate this to command the flesh vessel to consume your flesh. Failing to do so won't revoke flesh consumption.",
+    "name": {
+      "str": "<color_red>[喂食]</color>消耗血肉"
+    },
+    "description": "激活它来命令肉身血管消耗你的肉。如果不这样做，将不会取消肉类消费。",
     "weight": "250 g",
     "volume": "250 ml",
     "price": "0 cent",
     "price_postapoc": "0 cent",
-    "material": [ "secro_null" ],
+    "material": [
+      "secro_null"
+    ],
     "symbol": "%",
     "color": "red",
     "power_armor": true,
-    "use_action": { "type": "cast_spell", "spell_id": "secro_power_armor_feed", "no_fail": true, "need_worn": true, "level": 0 },
-    "flags": [ "NO_TAKEOFF", "POWERARMOR_COMPATIBLE" ],
-    "armor": [ { "covers": [ "torso" ], "encumbrance": 0, "coverage": 0, "material": [ "secro_null" ], "material_thickness": 1 } ]
+    "use_action": {
+      "type": "cast_spell",
+      "spell_id": "secro_power_armor_feed",
+      "no_fail": true,
+      "need_worn": true,
+      "level": 0
+    },
+    "flags": [
+      "NO_TAKEOFF",
+      "POWERARMOR_COMPATIBLE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "torso"
+        ],
+        "encumbrance": 0,
+        "coverage": 0,
+        "material": [
+          "secro_null"
+        ],
+        "material_thickness": 1
+      }
+    ]
   }
 ]

@@ -2,16 +2,24 @@
   {
     "type": "MOD_INFO",
     "id": "No_Fungi",
-    "name": "No Fungal Monsters",
-    "authors": [ "Chaosvolt" ],
-    "description": "Removes fungal monsters and regions from the game.",
+    "name": "移除真菌类怪物",
+    "authors": [
+      "Chaosvolt"
+    ],
+    "description": "移除游戏中的真菌类怪物和地区。",
     "category": "monster_exclude",
-    "dependencies": [ "dda" ],
+    "dependencies": [
+      "dda"
+    ],
     "obsolete": true
   },
   {
     "type": "MONSTER_BLACKLIST",
-    "categories": [ "GROUP_FUNGI", "GROUP_FUNGI_TOWER", "GROUP_FUNGI_FLOWERS" ]
+    "categories": [
+      "GROUP_FUNGI",
+      "GROUP_FUNGI_TOWER",
+      "GROUP_FUNGI_FLOWERS"
+    ]
   },
   {
     "type": "MONSTER_BLACKLIST",
@@ -33,7 +41,13 @@
   },
   {
     "type": "region_overlay",
-    "regions": [ "all" ],
-    "overmap_feature_flag_settings": { "blacklist": [ "FUNGAL" ] }
+    "regions": [
+      "all"
+    ],
+    "overmap_feature_flag_settings": {
+      "blacklist": [
+        "FUNGAL"
+      ]
+    }
   }
 ]

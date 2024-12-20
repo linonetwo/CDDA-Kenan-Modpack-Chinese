@@ -2,9 +2,13 @@
   {
     "type": "vehicle_part",
     "id": "cargo_rack_extended",
-    "name": { "str": "cargo shelving" },
+    "name": {
+      "str": "载具架"
+    },
     "looks_like": "box",
-    "categories": [ "cargo" ],
+    "categories": [
+      "cargo"
+    ],
     "color": "light_gray",
     "broken_color": "dark_gray",
     "durability": 250,
@@ -12,213 +16,1111 @@
     "item": "vehicle_shelving",
     "location": "center",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "120 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "60 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "120 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "120 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "120 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "OBSTACLE", "CARGO", "COVERED" ],
-    "breaks_into": [
-      { "item": "steel_lump", "count": [ 6, 16 ] },
-      { "item": "steel_chunk", "count": [ 6, 16 ] },
-      { "item": "scrap", "count": [ 6, 16 ] }
+    "flags": [
+      "OBSTACLE",
+      "CARGO",
+      "COVERED"
     ],
-    "damage_reduction": { "all": 28 },
-    "variants": [ { "symbols": "=", "symbols_broken": "#" } ]
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          6,
+          16
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          6,
+          16
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          6,
+          16
+        ]
+      }
+    ],
+    "damage_reduction": {
+      "all": 28
+    },
+    "variants": [
+      {
+        "symbols": "=",
+        "symbols_broken": "#"
+      }
+    ]
   },
   {
     "id": "solar_array_part",
     "type": "vehicle_part",
-    "name": { "str": "solar array" },
+    "name": {
+      "str": "太阳能板阵列"
+    },
     "item": "solar_array",
     "location": "structure",
-    "variants": [ { "symbols": "#", "symbols_broken": "x" } ],
-    "categories": [ "energy" ],
+    "variants": [
+      {
+        "symbols": "#",
+        "symbols_broken": "x"
+      }
+    ],
+    "categories": [
+      "energy"
+    ],
     "color": "yellow",
     "broken_color": "yellow",
     "durability": 20,
     "epower": "145 W",
     "damage_modifier": 10,
     "folded_volume": "10 L",
-    "description": "A vertical array of three solar panels set on a chassis rising above one another on a metal pole with rudimentary tracking and motors.  Due to the flimsy nature of the hydraulics and high surface area profile to maximize sunlight, they can't really be installed onto an existing vehicle.  Requires a jumper cable or similar to pull power from.",
+    "description": "一个由三块太阳能板所组成的垂直阵列，安装在同一根金属底座上，在金属杆上依次排开，带有基础的跟踪装置和马达。由于液压系统的脆弱性和为了最大限度利用阳光所导致的高覆盖面积，它们真没法被安装在现有的载具上。需要一根跨接电缆或类似电缆才能从中导出电源。",
     "breaks_into": [
-      { "item": "steel_lump", "count": [ 2, 12 ] },
-      { "item": "steel_chunk", "count": [ 2, 12 ] },
-      { "item": "scrap", "count": [ 2, 12 ] },
-      { "item": "solar_cell", "count": [ 4, 12 ] }
+      {
+        "item": "steel_lump",
+        "count": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "solar_cell",
+        "count": [
+          4,
+          12
+        ]
+      }
     ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 6 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "10 m" },
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "10 m"
+      },
       "repair": {
-        "skills": [ [ "electronics", 6 ] ],
+        "skills": [
+          [
+            "electronics",
+            6
+          ]
+        ],
         "time": "150 m",
-        "using": [ [ "vehicle_screw", 1 ], [ "solar_panel", 3 ], [ "soldering_standard", 8 ] ]
+        "using": [
+          [
+            "vehicle_screw",
+            1
+          ],
+          [
+            "solar_panel",
+            3
+          ],
+          [
+            "soldering_standard",
+            8
+          ]
+        ]
       }
     },
-    "flags": [ "SOLAR_PANEL", "OBSTACLE", "INITIAL_PART", "PROTRUSION", "EXTRA_DRAG" ]
+    "flags": [
+      "SOLAR_PANEL",
+      "OBSTACLE",
+      "INITIAL_PART",
+      "PROTRUSION",
+      "EXTRA_DRAG"
+    ]
   },
   {
     "id": "reinforced_solar_array_part",
     "type": "vehicle_part",
     "copy-from": "solar_array_part",
-    "name": { "str": "reinforced solar array" },
+    "name": {
+      "str": "太阳能板阵列（强化）"
+    },
     "item": "reinforced_solar_array",
-    "categories": [ "energy" ],
+    "categories": [
+      "energy"
+    ],
     "color": "light_blue",
     "broken_color": "light_gray",
     "durability": 300,
-    "proportional": { "epower": 0.9 },
+    "proportional": {
+      "epower": 0.9
+    },
     "folded_volume": "14 L",
-    "description": "A vertical array of three reinforced solar panels set on a chassis rising above one another on a metal pole with rudimentary tracking and motors.  Due to the flimsy nature of the hydraulics and high surface area profile to maximize sunlight, they can't really be installed onto an existing vehicle.  Requires a jumper cable or similar to pull power from.",
+    "description": "一个由三块强化太阳能板所组成的垂直阵列，安装在同一根金属底座上，在金属杆上依次排开，带有基础的跟踪装置和马达。由于液压系统的脆弱性和为了最大限度利用阳光所导致的高覆盖面积，它们真没法被安装在现有的载具上。需要一根跨接电缆或类似电缆才能从中导出电源。",
     "breaks_into": [
-      { "item": "steel_lump", "count": [ 2, 21 ] },
-      { "item": "steel_chunk", "count": [ 2, 21 ] },
-      { "item": "scrap", "count": [ 2, 21 ] },
-      { "item": "solar_cell", "count": [ 4, 12 ] }
+      {
+        "item": "steel_lump",
+        "count": [
+          2,
+          21
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          2,
+          21
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          2,
+          21
+        ]
+      },
+      {
+        "item": "solar_cell",
+        "count": [
+          4,
+          12
+        ]
+      }
     ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 8 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "10 m" },
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            8
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "10 m"
+      },
       "repair": {
-        "skills": [ [ "electronics", 6 ] ],
+        "skills": [
+          [
+            "electronics",
+            6
+          ]
+        ],
         "time": "150 m",
-        "using": [ [ "vehicle_screw", 1 ], [ "solar_panel", 3 ], [ "soldering_standard", 8 ] ]
+        "using": [
+          [
+            "vehicle_screw",
+            1
+          ],
+          [
+            "solar_panel",
+            3
+          ],
+          [
+            "soldering_standard",
+            8
+          ]
+        ]
       }
     },
-    "flags": [ "SOLAR_PANEL", "OBSTACLE", "INITIAL_PART", "PROTRUSION", "EXTRA_DRAG" ]
+    "flags": [
+      "SOLAR_PANEL",
+      "OBSTACLE",
+      "INITIAL_PART",
+      "PROTRUSION",
+      "EXTRA_DRAG"
+    ]
   },
   {
     "id": "solar_array_v2_part",
     "type": "vehicle_part",
-    "categories": [ "energy" ],
+    "categories": [
+      "energy"
+    ],
     "copy-from": "solar_array_part",
-    "name": { "str": "upgraded solar array" },
+    "name": {
+      "str": "太阳能板阵列（高能）"
+    },
     "item": "solar_array_v2",
-    "proportional": { "epower": 2.0 },
+    "proportional": {
+      "epower": 2
+    },
     "folded_volume": "12 L",
-    "description": "A vertical array of three upgraded solar panels set on a chassis rising above one another on a metal pole with rudimentary tracking and motors.  Due to the flimsy nature of the hydraulics and high surface area profile to maximize sunlight, they can't really be installed onto an existing vehicle.  Requires a jumper cable or similar to pull power from.",
+    "description": "一个由三块高能太阳能板所组成的垂直阵列，安装在同一根金属底座上，在金属杆上依次排开，带有基础的跟踪装置和马达。由于液压系统的脆弱性和为了最大限度利用阳光所导致的高覆盖面积，它们真没法被安装在现有的载具上。需要一根跨接电缆或类似电缆才能从中导出电源。",
     "breaks_into": [
-      { "item": "steel_lump", "count": [ 2, 12 ] },
-      { "item": "steel_chunk", "count": [ 2, 12 ] },
-      { "item": "scrap", "count": [ 2, 12 ] },
-      { "item": "solar_cell", "count": [ 4, 18 ] }
+      {
+        "item": "steel_lump",
+        "count": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          2,
+          12
+        ]
+      },
+      {
+        "item": "solar_cell",
+        "count": [
+          4,
+          18
+        ]
+      }
     ],
     "requirements": {
       "repair": {
-        "skills": [ [ "electronics", 6 ] ],
+        "skills": [
+          [
+            "electronics",
+            6
+          ]
+        ],
         "time": "150 m",
-        "using": [ [ "vehicle_screw", 1 ], [ "solar_panel_v2", 3 ], [ "soldering_standard", 8 ] ]
+        "using": [
+          [
+            "vehicle_screw",
+            1
+          ],
+          [
+            "solar_panel_v2",
+            3
+          ],
+          [
+            "soldering_standard",
+            8
+          ]
+        ]
       }
     },
-    "flags": [ "SOLAR_PANEL", "OBSTACLE", "INITIAL_PART", "PROTRUSION", "EXTRA_DRAG" ]
+    "flags": [
+      "SOLAR_PANEL",
+      "OBSTACLE",
+      "INITIAL_PART",
+      "PROTRUSION",
+      "EXTRA_DRAG"
+    ]
   },
   {
     "id": "reinforced_solar_array_v2_part",
     "type": "vehicle_part",
     "copy-from": "solar_array_v2_part",
-    "name": { "str": "upgraded reinforced solar array" },
+    "name": {
+      "str": "太阳能板阵列（强化高能）"
+    },
     "item": "reinforced_solar_array_v2",
-    "categories": [ "energy" ],
+    "categories": [
+      "energy"
+    ],
     "color": "light_blue",
     "broken_color": "light_gray",
     "durability": 300,
-    "proportional": { "epower": 0.9 },
+    "proportional": {
+      "epower": 0.9
+    },
     "folded_volume": "15 L",
-    "description": "A vertical array of three upgraded reinforced solar panels set on a chassis rising above one another on a metal pole with rudimentary tracking and motors.  Due to the flimsy nature of the hydraulics and high surface area profile to maximize sunlight, they can't really be installed onto an existing vehicle.  Requires a jumper cable or similar to pull power from.",
+    "description": "一个由三块强化高能太阳能板所组成的垂直阵列，安装在同一根金属底座上，在金属杆上依次排开，带有基础的跟踪装置和马达。由于液压系统的脆弱性和为了最大限度利用阳光所导致的高覆盖面积，它们真没法被安装在现有的载具上。需要一根跨接电缆或类似电缆才能从中导出电源。",
     "breaks_into": [
-      { "item": "steel_lump", "count": [ 2, 21 ] },
-      { "item": "steel_chunk", "count": [ 2, 21 ] },
-      { "item": "scrap", "count": [ 2, 21 ] },
-      { "item": "solar_cell", "count": [ 4, 18 ] }
+      {
+        "item": "steel_lump",
+        "count": [
+          2,
+          21
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          2,
+          21
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          2,
+          21
+        ]
+      },
+      {
+        "item": "solar_cell",
+        "count": [
+          4,
+          18
+        ]
+      }
     ],
     "requirements": {
       "repair": {
-        "skills": [ [ "electronics", 6 ] ],
+        "skills": [
+          [
+            "electronics",
+            6
+          ]
+        ],
         "time": "150 m",
-        "using": [ [ "vehicle_screw", 1 ], [ "solar_panel_v2", 3 ], [ "soldering_standard", 8 ] ]
+        "using": [
+          [
+            "vehicle_screw",
+            1
+          ],
+          [
+            "solar_panel_v2",
+            3
+          ],
+          [
+            "soldering_standard",
+            8
+          ]
+        ]
       }
     },
-    "flags": [ "SOLAR_PANEL", "OBSTACLE", "INITIAL_PART", "PROTRUSION", "EXTRA_DRAG" ]
+    "flags": [
+      "SOLAR_PANEL",
+      "OBSTACLE",
+      "INITIAL_PART",
+      "PROTRUSION",
+      "EXTRA_DRAG"
+    ]
   },
   {
     "id": "wiring",
     "type": "vehicle_part",
-    "name": { "str": "wiring" },
+    "name": {
+      "str": "电线"
+    },
     "item": "wire",
     "location": "structure",
-    "variants": [ { "symbols": ".", "symbols_broken": "#" } ],
-    "categories": [ "hull", "energy" ],
+    "variants": [
+      {
+        "symbols": ".",
+        "symbols_broken": "#"
+      }
+    ],
+    "categories": [
+      "hull",
+      "energy"
+    ],
     "color": "white",
     "broken_color": "white",
     "durability": 10,
-    "description": "A length of heavy duty copper wire, useful for routing power from one part of a vehicle to another part.",
+    "description": "一条重型铜制电缆的一段，可以在载具不同部件间传输电力。",
     "folded_volume": "250 ml",
-    "breaks_into": [ { "item": "wire", "prob": 50 } ],
+    "breaks_into": [
+      {
+        "item": "wire",
+        "prob": 50
+      }
+    ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "60 s" },
-      "removal": { "skills": [ [ "mechanics", 2 ] ], "time": "30 s" },
-      "repair": { "skills": [ [ "mechanics", 2 ] ], "time": "60 s" }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "60 s"
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 s"
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "60 s"
+      }
     },
-    "flags": [ "INITIAL_PART", "AISLE" ]
+    "flags": [
+      "INITIAL_PART",
+      "AISLE"
+    ]
   },
   {
     "id": "stabilized_cargo_portal",
     "type": "vehicle_part",
-    "name": { "str": "pocket dimension cargo" },
+    "name": {
+      "str": "次元货仓"
+    },
     "//": "Keep away from Svarog detectors!",
     "item": "space_anomaly",
     "location": "center",
-    "variants": [ { "symbols": "O", "symbols_broken": "O" } ],
+    "variants": [
+      {
+        "symbols": "O",
+        "symbols_broken": "O"
+      }
+    ],
     "color": "magenta",
     "broken_color": "magenta",
     "durability": 400,
     "size": "1500 L",
     "cargo_weight_modifier": 0,
-    "breaks_into": [ { "item": "cargo_rack", "prob": 50 } ],
+    "breaks_into": [
+      {
+        "item": "cargo_rack",
+        "prob": 50
+      }
+    ],
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 8 ] ], "time": "60 m", "using": [ [ "welding_standard", 5 ] ] },
-      "removal": { "skills": [ [ "mechanics", 6 ] ], "time": "45 m", "using": [ [ "vehicle_weld_removal", 1 ] ] },
-      "repair": { "skills": [ [ "mechanics", 9 ] ], "time": "25 m", "using": [ [ "welding_standard", 5 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            8
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            6
+          ]
+        ],
+        "time": "45 m",
+        "using": [
+          [
+            "vehicle_weld_removal",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            9
+          ]
+        ],
+        "time": "25 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
     },
-    "flags": [ "CARGO", "COVERED" ]
-  },
-  {
-    "type": "vehicle_part",
-    "id": "veh_tools_workshop",
-    "copy-from": "veh_tools_workshop",
-    "looks_like": "welding_rig",
-    "extend": { "allowed_tools": [ "forge", "kiln" ] }
+    "flags": [
+      "CARGO",
+      "COVERED"
+    ]
   },
   {
     "type": "vehicle_part",
     "id": "afs_fridge",
     "copy-from": "minifridge",
-    "name": { "str": "refrigerator" },
-    "categories": [ "cargo" ],
+    "name": {
+      "str": "冰箱"
+    },
+    "categories": [
+      "cargo"
+    ],
     "color": "white",
     "broken_color": "white",
     "looks_like": "minifridge",
     "durability": 400,
-    "description": "A medium-sized household refrigerator, converted to utilize vehicle power.  When turned on, food inside will be cooled, extending the time it has before spoiling.",
+    "description": "一台中型家用冰箱，经过改装，由车载电源供电。开启后，存放在里面的食物会被冷却，延长保质期。",
     "epower": "-100 W",
     "size": "300 L",
     "item": "afs_fridge",
-    "variants": [ { "symbols": "{", "symbols_broken": "#" } ]
+    "variants": [
+      {
+        "symbols": "{",
+        "symbols_broken": "#"
+      }
+    ]
   },
   {
     "type": "vehicle_part",
     "id": "afs_freezer",
     "copy-from": "minifreezer",
-    "name": { "str": "freezer" },
-    "categories": [ "cargo" ],
+    "name": {
+      "str": "冰柜"
+    },
+    "categories": [
+      "cargo"
+    ],
     "color": "light_blue",
     "broken_color": "light_blue",
     "looks_like": "minifridge",
     "durability": 400,
-    "description": "A household fridge, converted to run at a much lower temperature and on vehicle power.  When turned on, food inside will be frozen, completely stopping it from spoiling.",
+    "description": "一台家用冰箱，经过改装能够以更低温度运行，由车载电源供电。开启后，存放在里面的食物会被冷冻，完全阻止食物变质。",
     "epower": "-120 W",
     "size": "300 L",
     "item": "afs_freezer",
-    "variants": [ { "symbols": "{", "symbols_broken": "#" } ]
+    "variants": [
+      {
+        "symbols": "{",
+        "symbols_broken": "#"
+      }
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "afs_metal_rig",
+    "name": {
+      "str": "名匠锻造伴侣"
+    },
+    "categories": [
+      "utility"
+    ],
+    "color": "red",
+    "broken_color": "red",
+    "looks_like": "welding_rig",
+    "damage_modifier": 10,
+    "durability": 200,
+    "description": "一套焊接台和金属锻造台，由车载电源供电。按“E”可焊接或使用电烙铁，但你仍然需要防眩光保护。",
+    "size": "50 L",
+    "item": "afs_metal_rig",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "OBSTACLE",
+      "COVERED"
+    ],
+    "pseudo_tools": [
+      {
+        "id": "welder",
+        "hotkey": "w"
+      },
+      {
+        "id": "soldering_iron",
+        "hotkey": "s"
+      },
+      {
+        "id": "forge"
+      },
+      {
+        "id": "kiln"
+      }
+    ],
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          3,
+          6
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          3,
+          6
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          3,
+          6
+        ]
+      },
+      {
+        "item": "welder",
+        "prob": 50
+      },
+      {
+        "item": "forge",
+        "prob": 50
+      },
+      {
+        "item": "kiln",
+        "prob": 50
+      }
+    ],
+    "variants": [
+      {
+        "symbols": "&",
+        "symbols_broken": "x"
+      }
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "afs_cooking_rig",
+    "name": {
+      "str": "厨化机"
+    },
+    "categories": [
+      "utility"
+    ],
+    "color": "blue",
+    "broken_color": "blue",
+    "looks_like": "kitchen_unit",
+    "damage_modifier": 10,
+    "durability": 125,
+    "description": "一个一体化厨房和化学实验室，按“E”可使用电炉加热食物或饮料。",
+    "size": "50 L",
+    "item": "afs_cooking_rig",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "OBSTACLE",
+      "COVERED",
+      "FLAT_SURF"
+    ],
+    "pseudo_tools": [
+      {
+        "id": "water_faucet"
+      },
+      {
+        "id": "hotplate",
+        "hotkey": "h"
+      },
+      {
+        "id": "pot"
+      },
+      {
+        "id": "pan"
+      },
+      {
+        "id": "chemistry_set"
+      },
+      {
+        "id": "electrolysis_kit"
+      }
+    ],
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          6,
+          9
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          6,
+          9
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          6,
+          9
+        ]
+      },
+      {
+        "item": "pot",
+        "prob": 50
+      },
+      {
+        "item": "pan",
+        "prob": 50
+      },
+      {
+        "item": "chemistry_set",
+        "prob": 50
+      },
+      {
+        "item": "electrolysis_kit",
+        "charges": 0,
+        "prob": 50
+      },
+      {
+        "item": "hotplate",
+        "prob": 50
+      }
+    ],
+    "variants": [
+      {
+        "symbols": "&",
+        "symbols_broken": "x"
+      }
+    ]
+  },
+  {
+    "type": "vehicle_part",
+    "id": "afs_kitchen_rig",
+    "name": {
+      "str": "名厨烹饪伴侣"
+    },
+    "categories": [
+      "utility"
+    ],
+    "color": "yellow",
+    "broken_color": "yellow",
+    "looks_like": "kitchen_unit",
+    "damage_modifier": 10,
+    "durability": 200,
+    "description": "一个一体化厨房和化学实验室以及食物准备区，按“E”可使用电炉加热食物或饮料。",
+    "size": "50 L",
+    "item": "afs_kitchen_rig",
+    "location": "center",
+    "requirements": {
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            3
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            2
+          ]
+        ],
+        "time": "30 m",
+        "using": [
+          [
+            "vehicle_wrench_2",
+            1
+          ]
+        ]
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            4
+          ]
+        ],
+        "time": "60 m",
+        "using": [
+          [
+            "welding_standard",
+            5
+          ]
+        ]
+      }
+    },
+    "flags": [
+      "CARGO",
+      "OBSTACLE",
+      "COVERED",
+      "FLAT_SURF"
+    ],
+    "pseudo_tools": [
+      {
+        "id": "water_faucet"
+      },
+      {
+        "id": "vac_sealer"
+      },
+      {
+        "id": "dehydrator"
+      },
+      {
+        "id": "food_processor"
+      },
+      {
+        "id": "press"
+      },
+      {
+        "id": "puller"
+      },
+      {
+        "id": "hotplate",
+        "hotkey": "h"
+      },
+      {
+        "id": "pot"
+      },
+      {
+        "id": "pan"
+      },
+      {
+        "id": "chemistry_set"
+      },
+      {
+        "id": "electrolysis_kit"
+      },
+      {
+        "id": "water_purifier",
+        "hotkey": "p"
+      }
+    ],
+    "breaks_into": [
+      {
+        "item": "steel_lump",
+        "count": [
+          9,
+          18
+        ]
+      },
+      {
+        "item": "steel_chunk",
+        "count": [
+          9,
+          18
+        ]
+      },
+      {
+        "item": "scrap",
+        "count": [
+          9,
+          18
+        ]
+      },
+      {
+        "item": "pot",
+        "prob": 50
+      },
+      {
+        "item": "pan",
+        "prob": 50
+      },
+      {
+        "item": "chemistry_set",
+        "prob": 50
+      },
+      {
+        "item": "electrolysis_kit",
+        "charges": 0,
+        "prob": 50
+      },
+      {
+        "item": "hotplate",
+        "prob": 50
+      },
+      {
+        "item": "water_purifier",
+        "charges": 0,
+        "prob": 50
+      },
+      {
+        "item": "vac_sealer",
+        "prob": 50
+      },
+      {
+        "item": "dehydrator",
+        "prob": 50
+      },
+      {
+        "item": "food_processor",
+        "prob": 50
+      },
+      {
+        "item": "press",
+        "prob": 50
+      }
+    ],
+    "variants": [
+      {
+        "symbols": "&",
+        "symbols_broken": "x"
+      }
+    ]
   }
 ]

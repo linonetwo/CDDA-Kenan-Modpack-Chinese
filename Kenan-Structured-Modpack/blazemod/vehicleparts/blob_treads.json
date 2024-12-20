@@ -2,7 +2,9 @@
   {
     "id": "gloopletread",
     "type": "vehicle_part",
-    "name": { "str": "Gelatinous tracks" },
+    "name": {
+      "str": "凝胶履带"
+    },
     "item": "gloopletread",
     "location": "under",
     "color": "light_green",
@@ -10,36 +12,98 @@
     "durability": 250,
     "damage_modifier": 10,
     "folded_volume": "2500 ml",
-    "breaks_into": [ { "item": "glooplegrow" } ],
-    "description": "A set of continuous, interlocking tracks made out of blob.  They can be used in place of wheels, and provide good traction and off-road performance.",
+    "breaks_into": [
+      {
+        "item": "glooplegrow"
+      }
+    ],
+    "description": "一条由变形怪环环相扣而成的履带。它可以替代轮胎，提供了更好抓地和越野性能。",
     "requirements": {
-      "install": { "skills": [ [ "mechanics", 1 ] ], "time": "20 m" },
-      "removal": { "skills": [ [ "mechanics", 1 ] ], "time": "10 m" },
-      "repair": { "skills": [ [ "mechanics", 1 ] ], "time": "5 m", "using": [ [ "blobrep", 1 ] ] }
+      "install": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "20 m"
+      },
+      "removal": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "10 m"
+      },
+      "repair": {
+        "skills": [
+          [
+            "mechanics",
+            1
+          ]
+        ],
+        "time": "5 m",
+        "using": [
+          [
+            "blobrep",
+            1
+          ]
+        ]
+      }
     },
     "wheel_offroad_rating": 0.9,
-    "wheel_terrain_modifiers": { "FLAT": [ 0, 3 ] },
+    "wheel_terrain_modifiers": {
+      "FLAT": [
+        0,
+        3
+      ]
+    },
     "contact_area": 2500,
     "rolling_resistance": 6,
-    "flags": [ "WHEEL", "UNSTABLE_WHEEL", "VARIABLE_SIZE", "MULTISQUARE", "TRACKED" ],
-    "variants": [ { "symbols": "|", "symbols_broken": "x" } ]
+    "flags": [
+      "WHEEL",
+      "UNSTABLE_WHEEL",
+      "VARIABLE_SIZE",
+      "MULTISQUARE",
+      "TRACKED"
+    ],
+    "variants": [
+      {
+        "symbols": "|",
+        "symbols_broken": "x"
+      }
+    ]
   },
   {
     "id": "oozletread",
     "type": "vehicle_part",
     "copy-from": "gloopletread",
-    "name": { "str": "Oozing tracks" },
+    "name": {
+      "str": "软泥履带"
+    },
     "item": "oozletread",
     "durability": 500,
-    "breaks_into": [ { "item": "oozlegrow" } ]
+    "breaks_into": [
+      {
+        "item": "oozlegrow"
+      }
+    ]
   },
   {
     "id": "graytread",
     "type": "vehicle_part",
     "copy-from": "gloopletread",
-    "name": { "str": "Gray track" },
+    "name": {
+      "str": "灰色履带"
+    },
     "item": "graytread",
     "durability": 1000,
-    "breaks_into": [ { "item": "graygrow" } ]
+    "breaks_into": [
+      {
+        "item": "graygrow"
+      }
+    ]
   }
 ]

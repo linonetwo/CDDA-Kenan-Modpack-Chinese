@@ -4,37 +4,87 @@
     "type": "ARMOR",
     "symbol": "/",
     "color": "light_red",
-    "name": { "str": "leech's whip" },
-    "description": "Viscious dire whip, serving its owner with an unbreakable loyalty. Throbs as if it is alive, its bloodlust flows through its wielder who radiates in faint, velvety aura.\n* 10% chance to perform Sweeping Strike while attacking. Sweeping Strike deals <color_light_red>16 cutting damage</color> to foes in a very wide cone.\n* 20% chance to drain life force from an adjacent foe when hit, dealing up to <color_green>2 biological damage</color> and heals you by <color_green>1</color>.",
+    "name": {
+      "str": "水蛭鞭"
+    },
+    "description": "贪婪的可怕鞭子，以牢不可破的忠诚为它的主人服务。它跳动着，仿佛它是活着的，它的嗜血流经它的持用者，而持用者散发出微弱的天鹅绒般的光环。\n *攻击时有10%几率进行横扫打击。横扫打击在一个非常宽的圆锥体中对敌人造成<color_light_red>点16点切割伤害</color>点。\n*受到攻击时，有20%的几率消耗邻近敌人的生命值，造成<color_green>点生物伤害，并治疗你1点。",
     "weight": "2110 g",
     "volume": "1500 ml",
-    "material": [ "flesh" ],
-    "techniques": [ "PRECISE", "RAPID", "WBLOCK_2" ],
-    "flags": [ "REACH_ATTACK", "REACH3", "WHIP", "TRADER_AVOID", "UNBREAKABLE_MELEE", "MAGIC_FOCUS" ],
-    "armor": [ { "encumbrance": 5, "coverage": 100, "covers": [ "hand_r" ] } ],
+    "material": [
+      "flesh"
+    ],
+    "techniques": [
+      "PRECISE",
+      "RAPID",
+      "WBLOCK_2"
+    ],
+    "flags": [
+      "REACH_ATTACK",
+      "REACH3",
+      "WHIP",
+      "TRADER_AVOID",
+      "UNBREAKABLE_MELEE",
+      "MAGIC_FOCUS"
+    ],
+    "armor": [
+      {
+        "encumbrance": 5,
+        "coverage": 100,
+        "covers": [
+          "hand_r"
+        ]
+      }
+    ],
     "relic_data": {
       "passive_effects": [
         {
           "has": "WORN",
           "condition": "ALWAYS",
-          "hit_you_effect": [ { "id": "v_hemo_whip_spell_ss_maybe" } ],
-          "hit_me_effect": [ { "id": "v_hemo_whip_spell_d_maybe" } ],
-          "values": [ { "value": "STRENGTH", "add": 1 }, { "value": "SPEED", "add": 5 }, { "value": "MAX_HP", "add": 10 } ]
+          "hit_you_effect": [
+            {
+              "id": "v_hemo_whip_spell_ss_maybe"
+            }
+          ],
+          "hit_me_effect": [
+            {
+              "id": "v_hemo_whip_spell_d_maybe"
+            }
+          ],
+          "values": [
+            {
+              "value": "STRENGTH",
+              "add": 1
+            },
+            {
+              "value": "SPEED",
+              "add": 5
+            },
+            {
+              "value": "MAX_HP",
+              "add": 10
+            }
+          ]
         }
       ]
     },
-    "melee_damage": { "cut": 22 },
+    "melee_damage": {
+      "cut": 22
+    },
     "category": "weapons"
   },
   {
     "id": "v_hemo_crimsoncoat_coat",
     "type": "ARMOR",
-    "name": { "str": "crimson coat" },
-    "description": "A thick layer of blood, protecting your body from harm. 'Break' the barrier by dropping it.\n* 75% chance for the coat to react, immediately piercing the attacker when hit that deals <color_green>12 stabbing damage</color> and renders them <color_yellow>unconscious</color> for 1-3 turns.",
+    "name": {
+      "str": "深红色外套"
+    },
+    "description": "一层浓厚的血液，使你的身体免受伤害。丢下它即可“破除”这层护盾。\n*这层护盾有75%的概率，在被命中时瞬间刺穿攻击者，造成<color_green>12点刺击伤害</color>，并使其<color_yellow>失去知觉</color>，持续1-3回合。",
     "weight": "3 g",
     "volume": "3 ml",
     "price": "0 cent",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "0",
     "color": "red",
     "relic_data": {
@@ -42,23 +92,65 @@
         {
           "has": "WORN",
           "condition": "ALWAYS",
-          "hit_me_effect": [ { "id": "v_hemo_crimsoncoat_coat_pr_maybe" } ],
-          "values": [ { "value": "ARMOR_BASH", "add": -70 }, { "value": "ARMOR_CUT", "add": -70 }, { "value": "ARMOR_STAB", "add": -70 } ]
+          "hit_me_effect": [
+            {
+              "id": "v_hemo_crimsoncoat_coat_pr_maybe"
+            }
+          ],
+          "values": [
+            {
+              "value": "ARMOR_BASH",
+              "add": -70
+            },
+            {
+              "value": "ARMOR_CUT",
+              "add": -70
+            },
+            {
+              "value": "ARMOR_STAB",
+              "add": -70
+            }
+          ]
         }
       ]
     },
-    "flags": [ "PERSONAL", "OVERSIZE", "BLOCK_WHILE_WORN", "SEMITANGIBLE", "NO_DROP" ],
-    "armor": [ { "coverage": 100, "covers": [ "head", "torso", "arm_r", "arm_l", "leg_r", "leg_l" ], "material": [ "flesh" ] } ]
+    "flags": [
+      "PERSONAL",
+      "OVERSIZE",
+      "BLOCK_WHILE_WORN",
+      "SEMITANGIBLE",
+      "NO_DROP"
+    ],
+    "armor": [
+      {
+        "coverage": 100,
+        "covers": [
+          "head",
+          "torso",
+          "arm_r",
+          "arm_l",
+          "leg_r",
+          "leg_l"
+        ],
+        "material": [
+          "flesh"
+        ]
+      }
+    ]
   },
   {
     "id": "v_hemo_form_orus",
     "type": "GENERIC",
-    "name": { "str": "<color_red>Orus</color>" },
-    "description": "Hemomancer form:\n<color_red>Orus</color>, the zealous manipulator.\n* 10% chance to summon a <color_light_blue>bloodling</color> near a blood field within 10 tiles for every 20 seconds.\n* 10% chance to summon a <color_light_blue>bloodling</color> when hit.\n* 20% chance to summon a <color_light_blue>bloodling</color> and 5% chance to summon a <color_light_blue>bloodling predecessor</color> while attacking.",
+    "name": {
+      "str": "<color_red>奥卢斯</color>"
+    },
+    "description": "血魔形态:\n <color_red> Orus </color>，热心操纵者。\n*每20秒有10%的几率在10个方格内的血场附近召唤<color_light_blue>血光</color>。\n*被击中时，有10%的几率召唤一次 <color_light_blue>血光</color> 。\n*攻击时有20%几率召唤一个<color_light_blue>血光</color>，有5%几率召唤一个<color_light_blue>血腥亡者</color>。",
     "weight": "3 g",
     "volume": "3 ml",
     "price": "0 cent",
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "0",
     "color": "red",
     "relic_data": {
@@ -66,24 +158,54 @@
         {
           "has": "HELD",
           "condition": "ALWAYS",
-          "hit_me_effect": [ { "id": "v_hemo_crimsoncoat_coat_pr_maybe" } ],
-          "values": [ { "value": "MAX_HP", "add": 50 }, { "value": "SPEED", "add": -15 } ],
-          "intermittent_activation": { "effects": [ { "frequency": "30 seconds", "spell_effects": [ { "id": "v_hemo_orusform_bloodling" } ] } ] }
+          "hit_me_effect": [
+            {
+              "id": "v_hemo_crimsoncoat_coat_pr_maybe"
+            }
+          ],
+          "values": [
+            {
+              "value": "MAX_HP",
+              "add": 50
+            },
+            {
+              "value": "SPEED",
+              "add": -15
+            }
+          ],
+          "intermittent_activation": {
+            "effects": [
+              {
+                "frequency": "30 seconds",
+                "spell_effects": [
+                  {
+                    "id": "v_hemo_orusform_bloodling"
+                  }
+                ]
+              }
+            ]
+          }
         }
       ]
     },
-    "flags": [ "NO_DROP" ],
+    "flags": [
+      "NO_DROP"
+    ],
     "category": "v_form"
   },
   {
     "id": "v_war_etherealenchant",
     "type": "ARMOR",
-    "name": { "str": "ethereal enchantment" },
-    "description": "Enshrouds your wielded weapon (or even bare fists) in ghastly mists.\n* 5% to summon an <color_light_blue>etherean silhouette</color> for 15-25 turns while attacking.",
+    "name": {
+      "str": "以太附魔"
+    },
+    "description": "把你挥舞的武器（甚至是赤裸的拳头）藏在可怕的雾中。\n*5%召唤一个<color_light_blue>以太轮廓</color>，在攻击时转15-25圈。",
     "weight": "3 g",
     "volume": "3 ml",
     "price": "0 cent",
-    "material": [ "ethereal" ],
+    "material": [
+      "ethereal"
+    ],
     "symbol": "0",
     "color": "red",
     "relic_data": {
@@ -91,17 +213,49 @@
         {
           "has": "WORN",
           "condition": "ALWAYS",
-          "hit_you_effect": [ { "id": "v_war_etherealenchant_ss_maybe" } ],
+          "hit_you_effect": [
+            {
+              "id": "v_war_etherealenchant_ss_maybe"
+            }
+          ],
           "values": [
-            { "value": "ITEM_DAMAGE_CUT", "add": 6 },
-            { "value": "ITEM_DAMAGE_STAB", "add": 7 },
-            { "value": "ITEM_DAMAGE_BASH", "add": 8 },
-            { "value": "ATTACK_SPEED", "add": 15 }
+            {
+              "value": "ITEM_DAMAGE_CUT",
+              "add": 6
+            },
+            {
+              "value": "ITEM_DAMAGE_STAB",
+              "add": 7
+            },
+            {
+              "value": "ITEM_DAMAGE_BASH",
+              "add": 8
+            },
+            {
+              "value": "ATTACK_SPEED",
+              "add": 15
+            }
           ]
         }
       ]
     },
-    "flags": [ "AURA", "ONLY_ONE", "SEMITANGIBLE", "NO_DROP" ],
-    "armor": [ { "coverage": 0, "covers": [ "arm_r", "arm_l" ], "material": [ "ethereal" ] } ]
+    "flags": [
+      "AURA",
+      "ONLY_ONE",
+      "SEMITANGIBLE",
+      "NO_DROP"
+    ],
+    "armor": [
+      {
+        "coverage": 0,
+        "covers": [
+          "arm_r",
+          "arm_l"
+        ],
+        "material": [
+          "ethereal"
+        ]
+      }
+    ]
   }
 ]

@@ -2,16 +2,28 @@
   {
     "type": "SPELL",
     "id": "ice_clave",
-    "name": { "str": "Ice Clave" },
-    "description": "Use the unstoppable force from a glacier to cause severe damage.",
+    "name": {
+      "str": "寒冰之钥"
+    },
+    "description": "驭使源于冰川的万夫莫当之力造成严重的破坏。",
     "effect": "attack",
     "shape": "cone",
-    "valid_targets": [ "hostile", "ground" ],
-    "extra_effects": [ { "id": "ice_clave_blunt" } ],
-    "flags": [ "LOUD", "NO_HANDS" ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "extra_effects": [
+      {
+        "id": "ice_clave_blunt"
+      }
+    ],
+    "flags": [
+      "LOUD",
+      "NO_HANDS"
+    ],
     "min_damage": 30,
     "max_damage": 116,
-    "damage_increment": 2.0,
+    "damage_increment": 2,
     "min_range": 3,
     "max_range": 8,
     "range_increment": 0.12,
@@ -29,14 +41,19 @@
   {
     "type": "SPELL",
     "id": "ice_clave_blunt",
-    "name": { "str": "Ice Clave" },
-    "description": "This is the blunt damage portion of the Ice Clave spell",
+    "name": {
+      "str": "寒冰之钥"
+    },
+    "description": "寒冰之钥法术的钝击伤害效果",
     "effect": "attack",
     "shape": "cone",
-    "valid_targets": [ "hostile", "ground" ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "min_damage": 30,
     "max_damage": 116,
-    "damage_increment": 2.0,
+    "damage_increment": 2,
     "min_range": 3,
     "max_range": 8,
     "range_increment": 0.12,
@@ -51,13 +68,27 @@
   {
     "id": "frozen_winds",
     "type": "SPELL",
-    "name": { "str": "Frozen Winds" } ,
-    "description": "A gust of wind, colder than any Earthly mountaintop, spirals from your fingers, damaging and pushing anything in its path.",
+    "name": {
+      "str": "凛冽狂风"
+    },
+    "description": "一阵比大地上任何山顶的都冷的风，从你指间盘旋而出，破坏、推动着途径的一切。",
     "effect": "attack",
     "shape": "line",
-    "valid_targets": [ "hostile", "ground" ],
-    "flags": [ "SOMATIC", "NO_LEGS", "LOUD", "MUST_HAVE_CLASS_TO_LEARN" ],
-    "extra_effects": [ { "id": "frozen_winds_push" } ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
+    "flags": [
+      "SOMATIC",
+      "NO_LEGS",
+      "LOUD",
+      "MUST_HAVE_CLASS_TO_LEARN"
+    ],
+    "extra_effects": [
+      {
+        "id": "frozen_winds_push"
+      }
+    ],
     "max_level": 43,
     "min_damage": 25,
     "max_damage": 116,
@@ -79,11 +110,16 @@
   {
     "id": "frozen_winds_push",
     "type": "SPELL",
-    "name": { "str": "Frozen Winds push effect" },
-    "description": "This is the push effect portion of the Frozen Winds spell.",
+    "name": {
+      "str": "凛冽狂风击退效果"
+    },
+    "description": "这是凛冽狂风法术的击退效果。",
     "effect": "directed_push",
     "shape": "line",
-    "valid_targets": [ "hostile", "ground" ],
+    "valid_targets": [
+      "hostile",
+      "ground"
+    ],
     "max_level": 43,
     "min_damage": 3,
     "max_damage": 6,

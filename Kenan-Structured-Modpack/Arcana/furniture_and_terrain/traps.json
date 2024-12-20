@@ -2,7 +2,7 @@
   {
     "type": "trap",
     "id": "tr_archon_map_regen_underground_1",
-    "name": "anomalous structure maze alteration",
+    "name": "异常结构迷宫改变",
     "color": "brown",
     "symbol": ".",
     "visibility": 99,
@@ -14,7 +14,7 @@
   {
     "type": "trap",
     "id": "tr_archon_map_regen_underground_2",
-    "name": "anomalous structure maze alteration",
+    "name": "异常结构迷宫改变",
     "color": "brown",
     "symbol": ".",
     "visibility": 99,
@@ -26,7 +26,7 @@
   {
     "type": "trap",
     "id": "tr_archon_map_regen_finale",
-    "name": "anomalous structure finale",
+    "name": "异常结构结局",
     "color": "brown",
     "symbol": ".",
     "visibility": 99,
@@ -38,7 +38,7 @@
   {
     "type": "trap",
     "id": "tr_archon_map_regen_hall_1",
-    "name": "anomalous structure hallway alteration",
+    "name": "异常结构走廊改造",
     "color": "brown",
     "symbol": ".",
     "visibility": 99,
@@ -50,7 +50,7 @@
   {
     "type": "trap",
     "id": "tr_archon_map_regen_hall_2",
-    "name": "anomalous structure hallway alteration",
+    "name": "异常结构走廊改造",
     "color": "brown",
     "symbol": ".",
     "visibility": 99,
@@ -62,46 +62,67 @@
   {
     "type": "trap",
     "id": "tr_archon_shadow_trap",
-    "name": "shadowy heptagram",
+    "name": "阴影七芒星",
     "color": "dark_gray",
     "symbol": "^",
     "action": "spell",
     "visibility": 10,
     "avoidance": 99,
     "difficulty": 20,
-    "drops": [ { "item": "essence", "quantity": 1 } ],
-    "spell_data": { "id": "arcana_trap_archon_shadows" }
+    "drops": [
+      {
+        "item": "essence",
+        "quantity": 1
+      }
+    ],
+    "spell_data": {
+      "id": "arcana_trap_archon_shadows"
+    }
   },
   {
     "type": "trap",
     "id": "tr_archon_hallu_trap",
-    "name": "shadowy heptagram",
+    "name": "阴影七芒星",
     "color": "magenta",
     "symbol": "^",
     "action": "spell",
     "visibility": 10,
     "avoidance": 99,
     "difficulty": 20,
-    "drops": [ { "item": "essence", "quantity": 1 } ],
-    "spell_data": { "id": "arcana_trap_archon_hallu" }
+    "drops": [
+      {
+        "item": "essence",
+        "quantity": 1
+      }
+    ],
+    "spell_data": {
+      "id": "arcana_trap_archon_hallu"
+    }
   },
   {
     "type": "trap",
     "id": "tr_archon_chill_trap",
-    "name": "shadowy heptagram",
+    "name": "阴影七芒星",
     "color": "blue",
     "symbol": "^",
     "action": "spell",
     "visibility": 10,
     "avoidance": 99,
     "difficulty": 20,
-    "drops": [ { "item": "essence", "quantity": 1 } ],
-    "spell_data": { "id": "arcana_trap_archon_chill" }
+    "drops": [
+      {
+        "item": "essence",
+        "quantity": 1
+      }
+    ],
+    "spell_data": {
+      "id": "arcana_trap_archon_chill"
+    }
   },
   {
     "type": "trap",
     "id": "tr_arcane_lab_map_regen_1",
-    "name": "security sensor",
+    "name": "安全传感器",
     "color": "brown",
     "symbol": ".",
     "visibility": 99,
@@ -113,7 +134,7 @@
   {
     "type": "trap",
     "id": "tr_arcane_lab_map_regen_2",
-    "name": "dimensional lens",
+    "name": "空间透镜",
     "color": "brown",
     "symbol": ".",
     "visibility": 99,
@@ -125,14 +146,19 @@
   {
     "type": "trap",
     "id": "tr_portal_crystallized",
-    "name": "crystallized portal",
+    "name": "结晶传送门",
     "color": "cyan",
     "symbol": "=",
     "visibility": -1,
     "avoidance": 0,
     "difficulty": 0,
     "action": "none",
-    "drops": [ { "item": "essence_pure", "quantity": 1 } ],
+    "drops": [
+      {
+        "item": "essence_pure",
+        "quantity": 1
+      }
+    ],
     "benign": true
   },
   {
@@ -145,8 +171,15 @@
     "visibility": -1,
     "avoidance": 99,
     "difficulty": 0,
-    "drops": [ { "item": "blast_canister_arcana_flame", "quantity": 1 } ],
-    "spell_data": { "id": "arcana_trap_canister_flame" }
+    "drops": [
+      {
+        "item": "blast_canister_arcana_flame",
+        "quantity": 1
+      }
+    ],
+    "spell_data": {
+      "id": "arcana_trap_canister_flame"
+    }
   },
   {
     "type": "trap",
@@ -158,8 +191,15 @@
     "visibility": -1,
     "avoidance": 99,
     "difficulty": 0,
-    "drops": [ { "item": "blast_canister_arcana_water", "quantity": 1 } ],
-    "spell_data": { "id": "arcana_trap_canister_water" }
+    "drops": [
+      {
+        "item": "blast_canister_arcana_water",
+        "quantity": 1
+      }
+    ],
+    "spell_data": {
+      "id": "arcana_trap_canister_water"
+    }
   },
   {
     "type": "trap",
@@ -171,8 +211,15 @@
     "visibility": -1,
     "avoidance": 99,
     "difficulty": 0,
-    "drops": [ { "item": "blast_canister_arcana_earth", "quantity": 1 } ],
-    "spell_data": { "id": "arcana_trap_canister_earth" }
+    "drops": [
+      {
+        "item": "blast_canister_arcana_earth",
+        "quantity": 1
+      }
+    ],
+    "spell_data": {
+      "id": "arcana_trap_canister_earth"
+    }
   },
   {
     "type": "trap",
@@ -184,7 +231,14 @@
     "visibility": -1,
     "avoidance": 99,
     "difficulty": 0,
-    "drops": [ { "item": "blast_canister_arcana_air", "quantity": 1 } ],
-    "spell_data": { "id": "arcana_trap_canister_air" }
+    "drops": [
+      {
+        "item": "blast_canister_arcana_air",
+        "quantity": 1
+      }
+    ],
+    "spell_data": {
+      "id": "arcana_trap_canister_air"
+    }
   }
 ]

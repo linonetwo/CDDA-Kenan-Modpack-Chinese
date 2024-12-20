@@ -4,21 +4,52 @@
     "type": "talk_topic",
     "responses": [
       {
-        "text": "I've been sent to ask about recent attacks on survivors by anomalous creatures.  Know anything about that?",
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
         "condition": {
           "and": [
-            { "compare_string": [ "yes", { "u_val": "johnathan_prelude_mid" } ] },
-            { "not": { "compare_string": [ "yes", { "npc_val": "johnathan_prelude_mid" } ] } },
-            { "not": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_5" } ] } }
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            }
           ]
         },
         "topic": "TALK_RANCH_CROP_OVERSEER_GM_PRELUDE"
       },
       {
-        "text": "[MISSION] I've been asked to help attract work for another community of survivors.  Know anyone who could help?",
+        "text": "[任务]我被要求帮助另一个幸存者社区吸引工作。有谁能帮上忙吗？",
         "topic": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4",
         "condition": {
-          "and": [ { "not": { "compare_string": [ "yes", { "u_val": "sofia_allies_secured" } ] } }, { "u_has_mission": "MISSION_CF_REP_4" } ]
+          "and": [
+            {
+              "not": {
+                "u_has_var": "sofia_allies_secured",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "u_has_mission": "MISSION_CF_REP_4"
+            }
+          ]
         }
       }
     ]
@@ -26,56 +57,70 @@
   {
     "id": "TALK_RANCH_CROP_OVERSEER_GM_PRELUDE",
     "type": "talk_topic",
-    "dynamic_line": "One of the traders stopped by telling stories like that, mentioned an old town a few days travel down the road.  He said not to travel through the outer edges of the residential section at night, mentioned some strange goings-on there.  Personally I don't believe it's anything more than the usual freaks, but he was convinced it was something else.  Hope that's what you're looking for."
+    "dynamic_line": "其中一个交易者停下来讲了这样的故事，提到一个老城在路上旅行了几天。他说晚上不要穿过住宅区的外缘，还提到那里发生了一些奇怪的事情。就我个人而言，我不相信这是正常的怪胎，但他确信这是另外一回事。希望这就是你要找的。"
   },
   {
     "type": "talk_topic",
     "id": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4",
-    "dynamic_line": "We're already struggling to make up for demand as it is.  Lots of people coming in and not enough food to go around.",
+    "dynamic_line": "我们已经在努力弥补目前的需求。很多人进来了，食物不够吃。",
     "responses": [
       {
-        "text": "They're mainly interested in trade and labor, actually.",
+        "text": "实际上，他们主要对贸易和劳动感兴趣。",
         "topic": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_LABOR"
       },
       {
-        "text": "They can take care of themselves, if you think you can work something out?",
+        "text": "他们能照顾好自己，如果你认为你能解决问题的话？",
         "topic": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_CARE"
       },
-      { "text": "I'll keep asking around.", "topic": "TALK_RANCH_CROP_OVERSEER" }
+      {
+        "text": "我会四处打听。",
+        "topic": "TALK_RANCH_CROP_OVERSEER"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_LABOR",
-    "dynamic_line": "Well, if they can think of something and are willing to provide a stable supply of food in exchange, I guess that works.  Labor is about all we have, and even then I'm reluctant to commit any people to an unknown settlement.",
+    "dynamic_line": "好吧，如果他们能想出办法，愿意提供稳定的食物作为交换，我想这是可行的。劳动是我们仅有的一切，即便如此，我也不愿意让任何人接受未知的解决方案。",
     "responses": [
       {
-        "text": "Having another contact with other survivors is useful too.",
+        "text": "与其他生还者再次接触也很有用。",
         "topic": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_CONTACT"
       },
-      { "text": "Nevermind, maybe another time.", "topic": "TALK_RANCH_CROP_OVERSEER" }
+      {
+        "text": "别担心，也许下次吧。",
+        "topic": "TALK_RANCH_CROP_OVERSEER"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_CONTACT",
-    "dynamic_line": "I suppose you have a point there.  New people come in every so often, giving them details on another place to go must ease a bit of burden here.  I'll see what I can do, what can you tell me about them?",
+    "dynamic_line": "我想你说得有道理。新来的人经常来，给他们提供另一个地方的详细信息，一定能减轻这里的负担。我看看我能做些什么，你能告诉我些什么？",
     "responses": [
       {
-        "text": "A local settlement in a fortified roadside church.  It's not too far from the refugee center.",
+        "text": "在一个有防御工事的路边教堂里的当地居民点。离难民中心不远。",
         "topic": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_DEAL"
       },
-      { "text": "Maybe later.", "topic": "TALK_RANCH_CROP_OVERSEER" }
+      {
+        "text": "下次再说吧。",
+        "topic": "TALK_RANCH_CROP_OVERSEER"
+      }
     ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_DEAL",
-    "dynamic_line": "Alright.  I'll have someone set up and see if they can finalize this deal with the people that run the place.  Here's hoping it goes well…",
+    "dynamic_line": "好吧。我会找人来，看看他们能不能和经营这个地方的人敲定这笔交易。希望一切顺利…",
     "speaker_effect": [
       {
         "effect": [
-          { "u_add_var": "sofia_allies_secured", "value": "yes" },
+          {
+            "u_add_var": "sofia_allies_secured",
+            "type": "mission",
+            "context": "rural_church",
+            "value": "yes"
+          },
           {
             "mapgen_update": "arcana_cf_4_tacoma_commune_1",
             "om_terrain": "cf_church_1",
@@ -107,18 +152,26 @@
         ]
       }
     ],
-    "responses": [ { "text": "Thank you.  I should go check on them.", "topic": "TALK_DONE" } ]
+    "responses": [
+      {
+        "text": "非常感谢。我应该去看看。",
+        "topic": "TALK_DONE"
+      }
+    ]
   },
   {
     "type": "talk_topic",
     "id": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_CARE",
-    "dynamic_line": "Well good.  I dunno what they could be asking for in that case.  Supplies and labor, especially skilled labor, are still important here.",
+    "dynamic_line": "很好。我不知道在那种情况下他们会要求什么。物资和劳动力，特别是熟练劳动力，在这里仍然很重要。",
     "responses": [
       {
-        "text": "They seem more interested in having another point of contact with other settlements.  Would be useful, right?",
+        "text": "他们似乎对与其他定居点有另一个接触点更感兴趣。会有用的，对吧？",
         "topic": "TALK_RANCH_CROP_OVERSEER_CF_REP_MISSION_4_CONTACT"
       },
-      { "text": "I'll look around elsewhere.", "topic": "TALK_RANCH_CROP_OVERSEER" }
+      {
+        "text": "我去别处看看。",
+        "topic": "TALK_RANCH_CROP_OVERSEER"
+      }
     ]
   }
 ]

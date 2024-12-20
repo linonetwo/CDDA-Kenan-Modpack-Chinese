@@ -1,47 +1,73 @@
 [
   {
-    "dynamic_line": "Hey, what's up?",
+    "dynamic_line": "嘿，怎么了？",
     "id": "TALK_HUMAN_WASTELAND1_maintalk",
     "responses": [
-      { "text": "What's happening here?.", "topic": "TALK_HUMAN_WASTELAND1_here" },
-      { "text": "Want to come along?.", "topic": "TALK_HUMAN_WASTELAND1_come" },
-      { "text": "Bye.", "topic": "TALK_DONE" }
+      {
+        "text": "这里发生了什么？。",
+        "topic": "TALK_HUMAN_WASTELAND1_here"
+      },
+      {
+        "text": "要一起来吗？。",
+        "topic": "TALK_HUMAN_WASTELAND1_come"
+      },
+      {
+        "text": "再见。",
+        "topic": "TALK_DONE"
+      }
     ],
     "type": "talk_topic"
   },
   {
-    "dynamic_line": "As usual. Repairs, gatherings, carnages... ",
+    "dynamic_line": "像往常一样。修理，采集，杀戮 ",
     "id": "TALK_HUMAN_WASTELAND1_here",
-    "responses": [ { "text": "Oh, okay...", "topic": "TALK_HUMAN_WASTELAND1_maintalk" } ],
+    "responses": [
+      {
+        "text": "哦，好吧...",
+        "topic": "TALK_HUMAN_WASTELAND1_maintalk"
+      }
+    ],
     "type": "talk_topic"
   },
   {
     "dynamic_line": {
-      "no": "I don't say I don't trust you, but no.",
+      "no": "并不是说我不信任你，但是我拒绝",
       "u_has_trait": "wastehumanassociatemark",
-      "yes": "Are you sure about this? I could be a burden in your travels?"
+      "yes": "你确定吗？你觉得我会成为你旅行的负担？"
     },
     "id": "TALK_HUMAN_WASTELAND1_come",
     "responses": [
       {
-        "condition": { "u_has_trait": "wastehumanassociatemark" },
+        "condition": {
+          "u_has_trait": "wastehumanassociatemark"
+        },
         "effect": "follow",
-        "text": "Just follow me and we'll be fine.",
+        "text": "跟我来就好了。",
         "topic": "TALK_DONE"
       },
       {
-        "condition": { "u_has_trait": "wastehumanassociatemark" },
-        "text": "Just kiddin'.",
+        "condition": {
+          "u_has_trait": "wastehumanassociatemark"
+        },
+        "text": "开个玩笑而已",
         "topic": "TALK_HUMAN_WASTELAND1_maintalk"
       },
       {
-        "condition": { "not": { "u_has_trait": "wastehumanassociatemark" } },
-        "text": "Okay...",
+        "condition": {
+          "not": {
+            "u_has_trait": "wastehumanassociatemark"
+          }
+        },
+        "text": "好吧……",
         "topic": "TALK_HUMAN_WASTELAND1_maintalk"
       },
       {
-        "condition": { "not": { "u_has_trait": "wastehumanassociatemark" } },
-        "text": "Bye then...",
+        "condition": {
+          "not": {
+            "u_has_trait": "wastehumanassociatemark"
+          }
+        },
+        "text": "再见...",
         "topic": "TALK_DONE"
       }
     ],

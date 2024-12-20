@@ -3,52 +3,102 @@
     "type": "talk_topic",
     "id": "TALK_SHRIKE_MERCHANT",
     "dynamic_line": {
-      "u_has_any_trait": [ "PROF_CLEANSINGFLAME", "PROF_CLEANSINGFLAME2" ],
-      "yes": "…hunter.  Greetings.",
-      "no": "Greetings."
+      "u_has_any_trait": [
+        "PROF_CLEANSINGFLAME",
+        "PROF_CLEANSINGFLAME2"
+      ],
+      "yes": "…猎人，向你致敬。",
+      "no": "你好。"
     },
     "responses": [
       {
-        "text": "I've been sent to ask about recent attacks on survivors by anomalous creatures.  Know anything about that?",
+        "text": "我被派去询问最近有什么异常生物袭击幸存者。知道吗？",
         "condition": {
           "and": [
-            { "compare_string": [ "yes", { "u_val": "johnathan_prelude_mid" } ] },
-            { "not": { "compare_string": [ "yes", { "npc_val": "johnathan_prelude_mid" } ] } },
-            { "not": { "compare_string": [ "yes", { "u_val": "johnathan_prelude_data_5" } ] } }
+            {
+              "u_has_var": "johnathan_prelude_mid",
+              "type": "mission",
+              "context": "rural_church",
+              "value": "yes"
+            },
+            {
+              "not": {
+                "npc_has_var": "johnathan_prelude_mid",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            },
+            {
+              "not": {
+                "u_has_var": "johnathan_prelude_data_5",
+                "type": "mission",
+                "context": "rural_church",
+                "value": "yes"
+              }
+            }
           ]
         },
         "topic": "TALK_SHRIKE_MERCHANT_GM_PRELUDE"
       },
       {
-        "text": "[MISSION] I've been tasked with hunting down a different sanguinist sect, think you could help out?",
-        "condition": { "u_has_mission": "MISSION_CF_GM_3" },
+        "text": "[任务]我的任务是追捕一个不同的血统主义教派，你能帮忙吗？",
+        "condition": {
+          "u_has_mission": "MISSION_CF_GM_3"
+        },
         "topic": "TALK_SHRIKE_MERCHANT_GM_3"
       },
-      { "text": "Who are you?", "topic": "TALK_SHRIKE_MERCHANT_WHO" },
-      { "text": "What can you tell me about this place?", "topic": "TALK_SHRIKE_MERCHANT_WHERE" },
-      { "text": "What do you do here?", "topic": "TALK_SHRIKE_MERCHANT_DO" },
       {
-        "text": "Do you have anything to trade?",
+        "text": "你是谁？",
+        "topic": "TALK_SHRIKE_MERCHANT_WHO"
+      },
+      {
+        "text": "你能告诉我这是个什么地方？",
+        "topic": "TALK_SHRIKE_MERCHANT_WHERE"
+      },
+      {
+        "text": "你在这里做什么？",
+        "topic": "TALK_SHRIKE_MERCHANT_DO"
+      },
+      {
+        "text": "你有什么要交易的？",
         "effect": "start_trade",
-        "condition": { "compare_string": [ "yes", { "u_val": "cf_horace_traded" } ] },
+        "condition": {
+          "u_has_var": "cf_horace_traded",
+          "type": "flag",
+          "context": "knowledge",
+          "value": "yes"
+        },
         "topic": "TALK_SHRIKE_MERCHANT"
       },
-      { "text": "Well, bye.", "topic": "TALK_DONE" }
+      {
+        "text": "好的，再见。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_GM_PRELUDE",
     "type": "talk_topic",
-    "dynamic_line": "One of the other shrikes ran into those things during a hunt.  Not far from Elena's hideout, half a mile northeast at most."
+    "dynamic_line": "另一位屠猎者在一次狩猎中撞上了那些东西。离埃琳娜的藏身处不远，最多东北半英里。"
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_GM_3",
     "type": "talk_topic",
-    "dynamic_line": "Well you have terrible timing.  I'm not going to have free time to go on a proper hunt anytime soon.  I prefer to hunt alone these days, but it would've been tempting to join in and see how it goes.  I guess I can give some advice so you come back with all your limbs still attached.",
+    "dynamic_line": "你选了个坏时机。我近期没有空闲时间去进行一场真正的狩猎，这些天我更喜欢独自狩猎，但加入并注视它将会怎样发展会很诱人。我想我可以给你一些建议，这样你回来时四肢仍然相连。",
     "responses": [
-      { "text": "Is there any chance of talking them out of a fight?", "topic": "TALK_SHRIKE_MERCHANT_GM_3_CHANCE" },
-      { "text": "What should I expect to encounter?", "topic": "TALK_SHRIKE_MERCHANT_GM_3_THREAT" },
-      { "text": "Nevermind.  I think I'll manage.", "topic": "TALK_SHRIKE_MERCHANT" }
+      {
+        "text": "有没有可能说服他们不要打架？",
+        "topic": "TALK_SHRIKE_MERCHANT_GM_3_CHANCE"
+      },
+      {
+        "text": "我应该期待遇到什么？",
+        "topic": "TALK_SHRIKE_MERCHANT_GM_3_THREAT"
+      },
+      {
+        "text": "没关系。我想我能行。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
     ]
   },
   {
@@ -56,22 +106,41 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_trait": "PROF_SANGUINIST",
-      "yes": "Chances are a magus is leading them, and I doubt they'll stand down even for you.  You might be able to talk their shrike into defecting, if they have one.  I could try giving you one of the code phrases used to identify yourself to whoever's on watch, might buy you enough time to drop them before they alert the others.  Tell me what the hunters know about your target.",
-      "no": "A proper sanguinist sect isn't like Elena's group.  They'll likely be led by a magus, and there's no way you'll talk any sense into them.  If they have a shrike, you might be able to talk them into defecting.  We had a handful of trust passwords used when returning from a scouting run.  Tell me what the hunters have said about your target and maybe I can give you one that'll keep whoever's on watch off your back long enough to silence them.  Better than letting them alert the rest."
+      "yes": "很有可能是一位法师在领导他们，我怀疑就算是你，他们也不会停手。你或许可以说服他们的屠猎者叛变，如果他们中有屠猎者的话。我可以试着给你一个口令，用来向看守者表明你的身份，这样你就有足够的时间在他们通知其他人之前放下它们。告诉我猎人们对你的目标了解多少。",
+      "no": "一个真正的猩红教派不像艾琳娜的组织。他们很可能会被法师领导，你不可能说服他们。如果他们有屠猎者，你也许可以说服他们叛变。我们在侦查回来的时候用了一些能够证明自己的口令。 告诉我猎手们对你的目标说了些什么，也许我能给你一个能让监视你的人保持沉默的口令。 总比让他们惊动其他人要好。"
     },
     "responses": [
-      { "text": "Johnathan said they were one of the transhumanist sects.", "topic": "TALK_SHRIKE_MERCHANT_GM_3_SECT" },
-      { "text": "I'll ask around, and might return later.", "topic": "TALK_SHRIKE_MERCHANT" }
+      {
+        "text": "约翰纳森说他们是一个跨人文主义教派。",
+        "topic": "TALK_SHRIKE_MERCHANT_GM_3_SECT"
+      },
+      {
+        "text": "我会去四处打听，可能会晚点回来。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
     ]
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_GM_3_SECT",
     "type": "talk_topic",
-    "dynamic_line": "Good, that narrows it down.  They're a division of the Order responsible for this nonsense about what they called the Dragonnblood Sacrament.  Dragged half the other magi into that tangle and cost us our best-defended safehouse.  Not many sects dabbling in mutation survived this long.  Try the phrase, \"The moonlit sky anoints the worthy, who seek The Path home.\"  It's an old pass phrase, but to my knowledge it was still in use up until they lost the hideout. That might give them pause long enough to catch them off guard.",
-    "speaker_effect": { "effect": { "u_add_var": "horace_password_known", "value": "yes" } },
+    "dynamic_line": "很好，这就缩小了范围。他们是圣职会的一个分支，对他们所谓的龙血圣礼负有责任。把另外一半的三博士拖进了那场混乱，我们失去了最好的安全屋。没有多少涉足变异的教派存活了这么长时间。试试这句话，“月光下的天空为有价值的人涂油，他们寻找回家的路。”这是一句古老的口头禅，但据我所知，直到他们失去了藏身之处，这句口头禅还在使用。这可能会让他们停顿足够长的时间，让他们措手不及。",
+    "speaker_effect": {
+      "effect": {
+        "u_add_var": "horace_password_known",
+        "type": "flag",
+        "context": "shrike",
+        "value": "yes"
+      }
+    },
     "responses": [
-      { "text": "Thanks.  One more thing before I go.", "topic": "TALK_SHRIKE_MERCHANT" },
-      { "text": "Worth a shot  I'll be on my way.", "topic": "TALK_DONE" }
+      {
+        "text": "谢谢，在我走之前我还有一件事。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      },
+      {
+        "text": "值得一试，我马上就来。",
+        "topic": "TALK_DONE"
+      }
     ]
   },
   {
@@ -79,82 +148,159 @@
     "type": "talk_topic",
     "dynamic_line": {
       "u_has_trait": "PROF_SANGUINIST",
-      "yes": "Rarely more than one experienced magus per sect, they'll be the priority threat.  You should know how it works among those who follow The Path, only gathering multiple magi together for something big.  Try to drop whoever's keeping watch before they can sound the alarm.",
+      "yes": "每个门派很少有超过一个有经验的法师，他们将是优先威胁。你应该知道它是如何在那些遵循这条道路的人中起作用的，他们只是为了一件大事而聚集了多个博士。在警报响起之前，试着把守望的人赶出去。",
       "no": {
-        "u_has_any_trait": [ "PROF_CLEANSINGFLAME", "PROF_CLEANSINGFLAME2" ],
-        "yes": "Shock and awe is how your people did this sort of thing, and I'm betting you don't have the raw numbers you did back in the old days.  They've likely suffered attrition too, so it might even out.  Probably have guns scavenged from victims if they're still active, otherwise the magus and the shrike will be the biggest threats.  Single out the shrike first if they have one, you let them go on the offensive and you'll probably lose whatever help you brought along.",
-        "no": "Most of them will be fresh meat, armed with whatever weapons they were able to scavenge.  Their leader will be dangerous, single them out and pick them off if you get a chance.  Try to drop whoever's keeping watch before they can raise the alarm.  And if you see one of them geared up like they were actually prepared for a proper fight, focus on them immediately.  That's most likely a sanguine shrike."
+        "u_has_any_trait": [
+          "PROF_CLEANSINGFLAME",
+          "PROF_CLEANSINGFLAME2"
+        ],
+        "yes": "震惊和敬畏是你的人民是如何做这种事情的，我敢打赌你没有你在过去做的原始数据。他们很可能也遭受了减员，所以可能会平手。如果受害者仍然活跃的话，可能会从他们身上搜出枪支，否则法师和伯劳鸟将是最大的威胁。先挑出伯劳如果它们有，你让它们去进攻，你可能会失去你带来的任何帮助。",
+        "no": "他们中的大多数将是新鲜的肉，装备着他们能够清除的任何武器。他们的领导人会很危险，如果你有机会，把他们挑出来，把他们干掉。在他们发出警报之前，试着把看守的人放下。如果你看到他们中的一个准备好了，好像他们真的准备好了一场正式的战斗，那么立刻关注他们。那很可能是一只乐观的伯劳鸟。"
       }
     },
     "responses": [
-      { "text": "Any chance I could talk any of them into defecting?", "topic": "TALK_SHRIKE_MERCHANT_GM_3_CHANCE" },
-      { "text": "That's all for now, thanks.", "topic": "TALK_SHRIKE_MERCHANT" }
+      {
+        "text": "我能说服他们中的任何一个叛逃吗？",
+        "topic": "TALK_SHRIKE_MERCHANT_GM_3_CHANCE"
+      },
+      {
+        "text": "现在就这些，谢谢。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
     ]
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_WHO",
     "type": "talk_topic",
-    "dynamic_line": "A shrike, hunter of hunters.  Now I hunt whatever else causes trouble.  Something constructive to do, I suppose.",
+    "dynamic_line": "屠猎者，猎人中的猎人。现在我会去寻找任何造成麻烦的东西。我想应该做些建设性的事情。",
     "responses": [
-      { "text": "What kind of trouble?", "topic": "TALK_SHRIKE_MERCHANT_TROUBLE" },
       {
-        "text": "Can I do anything for you?",
-        "condition": { "not": { "compare_string": [ "yes", { "u_val": "cf_horace_mission" } ] } },
+        "text": "什么样的麻烦？",
+        "topic": "TALK_SHRIKE_MERCHANT_TROUBLE"
+      },
+      {
+        "text": "[任务]我能为你做些什么？",
+        "condition": {
+          "not": {
+            "u_has_var": "cf_horace_mission",
+            "type": "flag",
+            "context": "knowledge",
+            "value": "yes"
+          }
+        },
         "topic": "TALK_SHRIKE_MERCHANT_HELP"
       },
-      { "text": "I see.", "topic": "TALK_SHRIKE_MERCHANT" }
+      {
+        "text": "我懂了。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
     ]
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_TROUBLE",
     "type": "talk_topic",
-    "dynamic_line": "Monsters, usually.  Bandits if they're foolish enough.  If we ever hear about another blood mage still out there practicing the old ways, that should get blood pumping…",
+    "dynamic_line": "通常是怪物。如果他们够蠢的话。如果我们听说另一个血法师仍然在那里练习旧的方法，那应该可以让血泵…",
     "responses": [
       {
-        "text": "I could help with that, if you'd like.",
-        "condition": { "not": { "compare_string": [ "yes", { "u_val": "cf_horace_mission" } ] } },
+        "text": "如果你愿意，我可以帮你。",
+        "condition": {
+          "not": {
+            "u_has_var": "cf_horace_mission",
+            "type": "flag",
+            "context": "knowledge",
+            "value": "yes"
+          }
+        },
         "topic": "TALK_SHRIKE_MERCHANT_HELP"
       },
-      { "text": "Oh, okay.", "topic": "TALK_SHRIKE_MERCHANT" }
+      {
+        "text": "哦，好的。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
     ]
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_HELP",
     "type": "talk_topic",
     "dynamic_line": {
-      "u_has_any_trait": [ "PROF_CLEANSINGFLAME", "PROF_CLEANSINGFLAME2" ],
-      "yes": "Hah.  That is your job, isn't it?  Hunting the wicked and otherworldly.  No offense, but I prefer to deal with such matters myself.  It's a rare chance to put my talents to good use, without harming the innocent.  Feels like it brings purpose to what we called The Path.",
-      "no": "For now, I'd rather have this task all to myself.  There are few joys in this new world to be had, and these hunts of mine are a rare chance to cut loose in a way that lets me do some good for once."
+      "u_has_any_trait": [
+        "PROF_CLEANSINGFLAME",
+        "PROF_CLEANSINGFLAME2"
+      ],
+      "yes": "哈。那是你的工作，不是吗？追捕邪恶和超自然的人。无意冒犯，但我更喜欢自己处理这些事情。这是一个难得的机会，在不伤害无辜的情况下，充分发挥我的才能。感觉它给我们所谓的道路带来了目标。",
+      "no": "现在，我宁愿把这件事全交给我自己。在这个新的世界里，几乎没有什么乐趣可以享受，而我的这些狩猎活动是一个难得的机会，让我可以做一些有益的事情。"
     },
-    "speaker_effect": { "effect": { "u_add_var": "cf_horace_mission", "value": "yes" } },
-    "responses": [ { "text": "…", "topic": "TALK_SHRIKE_MERCHANT" } ]
+    "speaker_effect": {
+      "effect": {
+        "u_add_var": "cf_horace_mission",
+        "type": "flag",
+        "context": "knowledge",
+        "value": "yes"
+      }
+    },
+    "responses": [
+      {
+        "text": "…",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
+    ]
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_WHERE",
     "type": "talk_topic",
-    "dynamic_line": "It's a nice place.  Quiet, but not too vulnerable to attack.  It seems the priestess, Sofia if I recall, keeps the others hunters in line.  Never thought I'd be working with mage hunters…",
+    "dynamic_line": "这是个好地方。安静，但不太容易受到攻击。似乎女祭司，索菲亚，如果我记得，保持其他猎人排队。从没想过我会和法师猎人一起工作…",
     "responses": [
-      { "text": "Any others come along with you?", "topic": "TALK_SHRIKE_MERCHANT_SURVIVORS" },
-      { "text": "Right, got it.", "topic": "TALK_SHRIKE_MERCHANT" }
+      {
+        "text": "其他人跟你一起去吗？",
+        "topic": "TALK_SHRIKE_MERCHANT_SURVIVORS"
+      },
+      {
+        "text": "好的，明白了。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
     ]
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_SURVIVORS",
     "type": "talk_topic",
-    "dynamic_line": "One of the shrikes visited to discuss things with Sofia.  She ran off, I'm the only one that decided to stay.",
-    "responses": [ { "text": "I see.", "topic": "TALK_SHRIKE_MERCHANT" } ]
+    "dynamic_line": "一个屠猎者来找索菲亚讨论事情。她跑了，我是唯一决定留下来的人。",
+    "responses": [
+      {
+        "text": "我懂了。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
+    ]
   },
   {
     "id": "TALK_SHRIKE_MERCHANT_DO",
     "type": "talk_topic",
-    "dynamic_line": "Hunting, mainly.  Monsters instead of people now, usually.  More productive these days.  I also have a few items I could trade around if you want.",
+    "dynamic_line": "主要是打猎。现在通常是怪物而不是人。现在效率更高。如果你愿意的话，我还有一些可以交换的东西。",
     "speaker_effect": {
-      "condition": { "not": { "compare_string": [ "yes", { "u_val": "cf_horace_traded" } ] } },
-      "effect": { "u_add_var": "cf_horace_traded", "value": "yes" }
+      "condition": {
+        "not": {
+          "u_has_var": "cf_horace_traded",
+          "type": "flag",
+          "context": "knowledge",
+          "value": "yes"
+        }
+      },
+      "effect": {
+        "u_add_var": "cf_horace_traded",
+        "type": "flag",
+        "context": "knowledge",
+        "value": "yes"
+      }
     },
     "responses": [
-      { "text": "Sure, let's see what you have.", "effect": "start_trade", "topic": "TALK_SHRIKE_MERCHANT" },
-      { "text": "Maybe another time, thank you.", "topic": "TALK_SHRIKE_MERCHANT" }
+      {
+        "text": "当然，让我们看看你有什么。",
+        "effect": "start_trade",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      },
+      {
+        "text": "也许下次吧，谢谢。",
+        "topic": "TALK_SHRIKE_MERCHANT"
+      }
     ]
   }
 ]
