@@ -936,7 +936,6 @@
     "id": "howitzer_gun",
     "type": "ITEM",
     "subtypes": ["GUN"],
-	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "M284 howitzer" },
@@ -965,7 +964,6 @@
     "id": "howitzer_gun_crude",
     "type": "ITEM",
     "subtypes": ["GUN"],
-	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "makeshift 155mm howitzer" },
@@ -993,11 +991,9 @@
   },
   {
     "id": "atgm_turret",
-    "copy-from": "gun_base",
     "looks_like": "atgm_launcher",
     "type": "ITEM",
     "subtypes": ["GUN"],
-	
     "name": { "str_sp": "BGM-71F TOW Under Armor" },
     "description": "A twin-tube launcher for anti-tank guided missiles, specifically designed for vehicle use.  While fairly accurate, it isn't fire-and-forget.  Obviously it needs to be mounted on a vehicle to fire.",
     "weight": "200 kg",
@@ -1036,8 +1032,8 @@
     "volume": "1000 ml",
     "melee_damage": { "bash": 8 },
     "time": "30 m",
-    "fun": 0,
-    "skill": "launcher",
+    "read_fun": 0,
+    "read_skill": "launcher",
     "price": "60 USD",
     "price_postapoc": "25 USD",
     "required_level": 3
