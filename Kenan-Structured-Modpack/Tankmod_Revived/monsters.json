@@ -9,7 +9,7 @@
     "species": [ "ROBOT" ],
     "diff": 45,
     "//": "If it were possible, volume would ideally be ten times this.",
-    "volume": "1000 L",
+    "volume": "1000000 ml",
     "weight": "45000 kg",
     "hp": 400,
     "speed": 30,
@@ -26,8 +26,7 @@
     "special_attacks": [
       [ "PARROT", 20 ],
       {
-        "type": "ITEM",
-        "subtypes": [ "GUN" ],
+        "type": "gun",
         "cooldown": 5,
         "move_cost": 300,
         "gun_type": "tank_gun_auto_monster",
