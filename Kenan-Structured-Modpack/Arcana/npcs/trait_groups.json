@@ -3,7 +3,7 @@
     "//": "This skews appearances towards the demographics most common in the founding orders of the Cleansing Flame, with remainder following normal demographics for the region.",
     "type": "trait_group",
     "id": "Appearance_cleansingflame",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "traits": [
       { "group": "Appearance_Irish", "prob": 13 },
       { "group": "Appearance_Germanic", "prob": 12 },
@@ -16,7 +16,7 @@
     "//": "More narrow mix of starting traits, mostly excludes traits that would've consigned someone to non-combatant roles, and a few flavor things.",
     "type": "trait_group",
     "id": "Arcanist_starting_traits",
-    "subtypes": "collection",
+    "subtype": "collection",
     "traits": [
       { "group": "trait_group_NONADDICTIVE", "prob": 10 },
       { "group": "trait_group_EASYSLEEPER", "prob": 10 },
@@ -50,7 +50,7 @@
     "//": "This group picks out background traits for mage hunters, due to being able to potentially recruit a couple during missions.  A few of these have some modifiers that change the story a bit depending on if that NPC was one of the initial spawns, or if they arrived with the second group to rendezvous at the holdout.",
     "type": "trait_group",
     "id": "BG_survival_story_MAGE_HUNTER",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "traits": [
       { "trait": "BGSS_CF_1" },
       { "trait": "BGSS_CF_2" },
@@ -62,7 +62,7 @@
   {
     "type": "trait_group",
     "id": "Sanguine_aspirant_traits",
-    "subtypes": "collection",
+    "subtype": "collection",
     "traits": [
       { "group": "trait_group_FLEET", "prob": 15 },
       { "group": "trait_group_GOODHEARING", "prob": 10 },

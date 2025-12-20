@@ -2,7 +2,7 @@
   {
     "type": "item_group",
     "id": "military",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "entries": [
       { "group": "mil_food", "prob": 1251 },
       { "group": "mil_armor", "prob": 575 },
@@ -178,7 +178,7 @@
   },
   {
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "id": "caveyot_miners",
     "entries": [
       { "item": "corpse", "damage": 3 },
@@ -196,7 +196,7 @@
   },
   {
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "id": "caveyot_survivors",
     "entries": [
       { "item": "corpse", "damage": 3 },
@@ -256,7 +256,7 @@
   {
     "type": "item_group",
     "id": "cavern_cabin",
-    "subtypes": "collection",
+    "subtype": "collection",
     "magazine": 100,
     "ammo": 100,
     "entries": [
@@ -281,7 +281,7 @@
   },
   {
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "id": "cavern_shrine",
     "entries": [
       { "item": "bone_human", "count": [ 4, 9 ] },
@@ -339,7 +339,7 @@
   {
     "type": "item_group",
     "id": "cavern_dungeon",
-    "subtypes": "collection",
+    "subtype": "collection",
     "entries": [ { "group": "cavern_dungeon_2", "count": [ 1, 3 ] }, { "group": "cavern_dungeon_1", "prob": 50, "count": [ 1, 4 ] } ]
   },
   {
@@ -369,7 +369,7 @@
   },
   {
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "id": "caveyot_forge_tools",
     "entries": [
       { "item": "crucible_clay", "prob": 90 },
@@ -383,7 +383,7 @@
     "type": "item_group",
     "id": "caveyot_minetown_general",
     "//": "Random mishmash of shit.",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "items": [
       { "group": "museum_melee", "prob": 10 },
       { "group": "museum_armor", "prob": 10 },
@@ -431,7 +431,7 @@
     "type": "item_group",
     "id": "caveyot_minetown_wands",
     "//": "Garbage-tier hack for Nethack wand shop, using guns in place of wands.",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "magazine": 100,
     "ammo": 75,
     "items": [ { "group": "homeguns", "prob": 90 }, [ "gloves_leather", 5 ], [ "jedi_cloak", 5 ] ]
@@ -440,7 +440,7 @@
     "type": "item_group",
     "id": "caveyot_minetown_food",
     "//": "Mimics food spawns in Nethack delicatessens, except food spawns are more CDDA-flavored instead of Nethack-specific.",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "items": [
       { "group": "cannedfood", "prob": 83 },
       { "item": "juice", "prob": 5, "charges": 2, "container-item": "can_drink" },

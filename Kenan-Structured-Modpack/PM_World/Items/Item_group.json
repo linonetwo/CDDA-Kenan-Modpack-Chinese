@@ -2,7 +2,7 @@
   {
     "id": "training_weapon",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "entries": [
       { "item": "stick", "count": [ 1, 8 ], "prob": 45 },
       { "item": "sword_wood", "count": [ 1, 8 ], "prob": 45 },
@@ -14,7 +14,7 @@
   {
     "id": "training_equipment",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "entries": [
       { "item": "armguard_paper", "count": [ 1, 8 ], "prob": 45 },
       { "item": "armguard_tire", "count": [ 1, 8 ], "prob": 45 },
@@ -25,7 +25,7 @@
   {
     "id": "starter_room",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "entries": [
       { "item": "pillow", "count": 1 },
       { "item": "blanket", "count": 1 },
@@ -47,7 +47,7 @@
   {
     "id": "drug_table",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "entries": [
       { "item": "lighter", "prob": 60, "charges-min": 8, "charges-max": 52 },
       { "item": "handrolled_cig", "count-min": 0, "count-max": 6, "prob": 85 },
@@ -65,7 +65,7 @@
   {
     "type": "item_group",
     "id": "softdrinks_canned",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "copy-from": "softdrinks_canned",
     "extend": {
       "entries": [
@@ -84,7 +84,7 @@
   {
     "type": "item_group",
     "id": "default_zombie_items_bags",
-    "subtypes": "collection",
+    "subtype": "collection",
     "copy-from": "default_zombie_items_bags",
     "extend": {
       "entries": [
@@ -102,7 +102,7 @@
   {
     "id": "skin_book_placement",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "entries": [ { "item": "skin_prophecy", "prob": 100 } ]
   },
   {
@@ -134,40 +134,40 @@
   {
     "id": "shrimp_drop",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "entries": [ { "item": "prawn_wellcheers", "count": [ 1, 1 ], "prob": 20 } ]
   },
   {
     "id": "doubt_drop",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "entries": [ { "item": "rustedlance_item", "count": [ 1, 1 ], "prob": 40 } ]
   },
   {
     "id": "SUS_junk_drawer",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "copy-from": "SUS_junk_drawer",
     "extend": { "entries": [ { "item": "zweiflyer_item", "prob": 12 } ] }
   },
   {
     "id": "SUS_office_desk",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "copy-from": "SUS_office_desk",
     "extend": { "entries": [ { "item": "internet_sim_card", "prob": 5 } ] }
   },
   {
     "id": "SUS_science_personal_effects",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "copy-from": "SUS_science_personal_effects",
     "extend": { "entries": [ { "item": "internet_sim_card", "prob": 3 } ] }
   },
   {
     "id": "supplies_electronics",
     "type": "item_group",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "copy-from": "supplies_electronics",
     "extend": { "entries": [ { "item": "internet_sim_card", "prob": 7 } ] }
   }

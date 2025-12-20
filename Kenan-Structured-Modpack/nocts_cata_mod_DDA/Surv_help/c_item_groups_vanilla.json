@@ -95,7 +95,7 @@
     "id": "clothing_soldier_set",
     "copy-from": "clothing_soldier_set",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "extend": { "items": [ { "group": "c_military_spawn_special", "prob": 250 } ] }
   },
   {
@@ -126,7 +126,7 @@
     "id": "mansion_bookcase",
     "copy-from": "mansion_bookcase",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "extend": { "groups": [ [ "encylopedias_rare", 5 ] ] }
   },
   {
@@ -134,7 +134,7 @@
     "id": "book_gunref",
     "copy-from": "book_gunref",
     "//": "Reference books about guns",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": { "entries": [ { "group": "encylopedias_military", "prob": 5 } ] }
   },
   {
@@ -142,7 +142,7 @@
     "id": "book_survival",
     "copy-from": "book_survival",
     "//": "Survival skill books weighted according to level",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": { "entries": [ { "group": "encylopedias_survalist", "prob": 5 } ] }
   },
   {
@@ -150,7 +150,7 @@
     "id": "hardware_books",
     "copy-from": "hardware_books",
     "//": "texts and magazines likely to be found in hardware stores and other blue collar places.",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": { "entries": [ { "group": "encylopedias_industrial", "prob": 5 } ] }
   },
   {
@@ -158,21 +158,21 @@
     "copy-from": "lab_bookshelves",
     "type": "item_group",
     "//": "Books you might find on personal or library bookshelves in a secret lab.",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": { "entries": [ { "group": "encylopedias_lab", "prob": 10 } ] }
   },
   {
     "id": "doctors_books",
     "copy-from": "doctors_books",
     "type": "item_group",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": { "entries": [ { "item": "encyclopedia_firstaid", "prob": 5 } ] }
   },
   {
     "id": "tailorbooks",
     "copy-from": "tailorbooks",
     "type": "item_group",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": { "entries": [ { "item": "encyclopedia_tailor", "prob": 5 } ] }
   },
   {
@@ -361,7 +361,7 @@
     "copy-from": "underwear_womens",
     "type": "item_group",
     "//": "womens underwear.",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": {
       "items": [
         { "item": "bikini_bottom", "prob": 15 },
@@ -477,7 +477,7 @@
     "type": "item_group",
     "id": "cyborg_harvest",
     "copy-from": "cyborg_harvest",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": { "entries": [ { "group": "bionics_experimental_cataplus", "prob": 1 } ] }
   },
   {
@@ -535,7 +535,7 @@
   {
     "id": "on_hand_flintlock",
     "type": "item_group",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "extend": { "entries": [ { "item": "flintlock_ammo_mine", "prob": 50, "charges": [ 15, 30 ] } ] }
   }
 ]

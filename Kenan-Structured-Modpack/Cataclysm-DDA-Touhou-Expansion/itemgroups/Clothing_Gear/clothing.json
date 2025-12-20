@@ -2,7 +2,7 @@
   {
     "id": "allclothes",
     "type": "item_group",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "copy-from": "allclothes",
     "extend": {
       "entries": [
@@ -26,7 +26,7 @@
   {
     "id": "donated_clothes",
     "type": "item_group",
-    "subtypes": "collection",
+    "subtype": "collection",
     "copy-from": "donated_clothes",
     "extend": { "items": [ { "item": "socks_long" } ] }
   },
@@ -64,7 +64,7 @@
   {
     "id": "dresses_womens",
     "type": "item_group",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "copy-from": "dresses_womens",
     "extend": { "items": [ [ "cheongsam", 5 ], [ "cheongsam_medium", 4 ], [ "cheongsam_short", 3 ] ] }
   },
@@ -110,7 +110,7 @@
     "id": "socks_unisex",
     "type": "item_group",
     "//": "unisex socks",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "copy-from": "socks_unisex",
     "extend": { "items": [ { "item": "socks_long", "prob": 35 } ] }
   },
@@ -118,7 +118,7 @@
     "id": "suits_womens",
     "type": "item_group",
     "//": "suits/dresses, full body coverage for women.",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "copy-from": "suits_womens",
     "extend": { "items": [ [ "cheongsam", 25 ], [ "cheongsam_medium", 20 ], [ "cheongsam_short", 15 ] ] }
   },
@@ -126,7 +126,7 @@
     "id": "underwear_womens",
     "type": "item_group",
     "//": "womens underwear.",
-    "subtypes": "distribution",
+    "subtype": "distribution",
     "copy-from": "underwear_womens",
     "extend": { "items": [ { "item": "bloomers", "prob": 35 } ] }
   },
