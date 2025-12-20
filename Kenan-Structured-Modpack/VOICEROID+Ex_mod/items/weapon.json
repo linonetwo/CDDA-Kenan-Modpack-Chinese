@@ -193,7 +193,6 @@
       "type": "transform",
       "msg": "ステッキの電源を入れました。",
       "target": "voiro_stick_on_seika",
-      "active": true,
       "need_charges": 0,
       "need_charges_msg": "ステッキの電池が切れています。"
     },
@@ -276,7 +275,7 @@
     "//1": "薙刀+日本刀+野太刀+フォークスピアを足して割った性能。威力的にも性能違いの小型ハルバードといった感じ。",
     "//2": "盾持ちを再現する為、片手持ち可。コストがネックになるので立ち回り方が重要になる武器。",
     "id": "voiro_halberd_tuina",
-    "type": "GENERIC",
+    "type": "ITEM",
     "copy-from": "spear_forked",
     "name": "三叉の矛(役ついな)[voiro]",
     "description": "方相氏の用いる長柄武器です。かなりの重量と大きさを誇ります。地域によっては一方の刃が短い三叉の矛もあり、役追儺は両方を使い分けます。",
@@ -515,7 +514,7 @@
     "//1": "強そうに見えるけどガラスなので一瞬で割れる。",
     "//2": "中身が入っている場合、「使用する」ではなくて「使う」を選ぶと中身を飲んでしまう。",
     "id": "voiro_bottle_sake",
-    "type": "GENERIC",
+    "type": "ITEM",
     "category": "other",
     "name": "一升瓶[voiro]",
     "description": "日本酒の容器に用いられるガラス製の一升瓶です。1800mlの容量があります。使用する事で長ネギに変化します。",
@@ -600,7 +599,7 @@
     ]
   },
   {
-    "type": "GENERIC",
+    "type": "ITEM",
     "id": "voiro_spear_pipe_metan",
     "name": {
       "str": "『天恵』のハイド"

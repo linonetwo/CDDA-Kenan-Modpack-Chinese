@@ -1,8 +1,8 @@
 [
   {
     "id": "heavy_snare_kit",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "heavy snare kit" },
     "description": "This is a kit for a simple trap consisting of a rope noose and a snare trigger.  It requires a tree nearby.  It is effective at trapping monsters.",
     "weight": "1066 g",
@@ -23,8 +23,8 @@
   },
   {
     "id": "light_snare_kit",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "light snare kit" },
     "description": "This is a kit for a simple trap consisting of a string noose and a snare trigger.  It requires a young tree nearby.  It is effective at trapping and killing some small animals.",
     "weight": "886 g",
@@ -45,8 +45,8 @@
   },
   {
     "id": "snare_trigger",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "snare trigger" },
     "description": "This is a stick that has been cut into a trigger mechanism for a snare trap.",
     "weight": "850 g",
@@ -57,8 +57,8 @@
   },
   {
     "id": "primitive_hoe",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "stone hoe" },
     "description": "This is a farming implement made with a broad stone blade, that can be used to till earth.",
     "weight": "1300 g",
@@ -74,8 +74,8 @@
   },
   {
     "id": "makeshift_sled_item",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "symbol": "0",
     "color": "light_gray",
     "name": { "str": "makeshift sled" },
@@ -94,8 +94,8 @@
   },
   {
     "id": "log_canoe_item",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "symbol": "0",
     "color": "brown",
     "name": { "str": "log canoe" },
@@ -114,8 +114,8 @@
   },
   {
     "id": "mound_distillation",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "copy-from": "fake_item",
     "name": { "str_sp": "makeshift distillation" },
     "weight": "1 g",
@@ -125,8 +125,8 @@
   },
   {
     "id": "pulley lifting",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "copy-from": "fake_item",
     "name": { "str_sp": "pulley lifting" },
     "weight": "1 g",
@@ -135,8 +135,8 @@
     "qualities": [ [ "LIFT", 1 ], [ "JACK", 1 ] ]
   },
   {
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "id": "tarp_raincatcher_leather",
     "copy-from": "tarp_raincatcher",
     "name": { "str": "leather tarp raincatcher" },
@@ -156,8 +156,8 @@
   {
     "id": "tanning_hide_small",
     "copy-from": "tanning_hide",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "scrap of tanning leather", "str_pl": "scraps of tanning leather" },
     "description": "A small piece of treated animal hide, undergoing the chemical processes required to become leather.  You will be able to activate it to unroll and make use of it when it is done.",
     "weight": "80 g",
@@ -175,8 +175,8 @@
   {
     "id": "tanning_pelt_small",
     "copy-from": "tanning_pelt",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "scrap of tanning fur", "str_pl": "scraps of tanning fur" },
     "description": "A small piece of treated animal pelt, undergoing the chemical processes required to become fur.  You will be able to activate it to unroll and make use of it when it is done.",
     "weight": "80 g",
@@ -195,8 +195,8 @@
     "id": "tinderbox_clay",
     "copy-from": "tinderbox",
     "sub": "tinderbox",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "clay ember carrier" },
     "description": "This is a small ceramic fire pot, with a lid and small holes for controlled airflow.  It can nurture a smoldering ember for a long time, to start fires without modern tools.",
     "material": "clay",
@@ -205,7 +205,6 @@
     "use_action": {
       "target": "tinderbox_clay_on",
       "msg": "You light the tinder.",
-      "active": true,
       "need_fire": 1,
       "need_fire_msg": "You need a lighter or fire to light this.",
       "need_charges": 1,
@@ -217,8 +216,8 @@
     "id": "tinderbox_clay_on",
     "copy-from": "tinderbox_on",
     "sub": "tinderbox_on",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "clay ember carrier (lit)", "str_pl": "clay ember carriers (lit)" },
     "description": "This is a small ceramic fire pot, with a lid and small holes for controlled airflow.  An ember is smoldering inside it, and can be used to start a campfire.",
     "material": "clay",
@@ -229,7 +228,6 @@
       {
         "target": "tinderbox_clay",
         "msg": "The ember is extinguished.",
-        "active": false,
         "menu_text": "Extinguish",
         "type": "transform",
         "ammo_scale": 0
@@ -239,8 +237,8 @@
   {
     "id": "hobo_stove_clay",
     "looks_like": "clay_pot",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "clay oven" },
     "description": "This is a ancient style of portable ceramic oven.  Use it to place on the ground, allowing you to keep a small fire safe from wind and rain.",
     "weight": "2500 g",
@@ -256,8 +254,8 @@
   {
     "id": "misc_repairkit_makeshift",
     "looks_like": "misc_repairkit",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "makeshift repair kit" },
     "description": "This is a portable toolkit, consisting of a primitive knife for carving replacement parts, an adze for more heavy-duty wood cutting, and a patch of soft material for cleaning surfaces.  It can be used to repair certain items if supplied with pitch, though it isn't ideal for complex work.",
     "weight": "1800 g",
@@ -288,8 +286,8 @@
   {
     "id": "hand_drill_makeshift",
     "copy-from": "hand_drill",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "flint drill" },
     "description": "A prehistoric woodworking tool, little more than a fine sharp blade tipping a makeshift bow drill.  It's rather limited in usage, primarily meant to be used on wood.",
     "price": "2 USD",
@@ -298,8 +296,8 @@
   },
   {
     "id": "fire_plough",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "fire plough" },
     "description": "A simple form of primitive firemaking, little more than two pieces of wood with a groove worn into one of them, to light an ember through friction.  Starting a fire with this will be laborious and slow, but it's better than nothing.",
     "weight": "1040 g",
@@ -316,8 +314,8 @@
   },
   {
     "id": "char_purifier_fake",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "makeshift water purifier" },
     "description": "This is a pseudo item.",
     "material": [ "wood", "cotton" ],
@@ -333,8 +331,8 @@
   },
   {
     "id": "pot_canning_clay",
-    "type": "ITEM",
-	"subtype": ["TOOL"],
+    "type": "TOOL",
+	
     "name": { "str": "clay canning pot" },
     "sub": "pot_canning",
     "looks_like": "pot_canning",

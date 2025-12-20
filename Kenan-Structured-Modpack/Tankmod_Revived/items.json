@@ -13,8 +13,8 @@
   {
     "id": "belt25mm",
     "copy-from": "magazine_belt",
-    "type": "ITEM",
-	"subtype": ["MAGAZINE"],
+    "type": "MAGAZINE",
+	
     "name": { "str": "25x137mm ammo belt" },
     "ammo_type": "25mm",
     "default_ammo": "25mm_hei",
@@ -34,8 +34,8 @@
     "use_action": { "type": "ammobelt", "belt": "belt25mm" }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "25mm_hei",
     "price": "98 USD",
     "price_postapoc": "15 USD",
@@ -60,8 +60,8 @@
     "explode_in_fire": true
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "25mm_apds",
     "price": "49 USD",
     "price_postapoc": "10 USD",
@@ -85,8 +85,8 @@
     "effects": [ "COOKOFF" ]
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "25mm_slug",
     "price_postapoc": "10 USD",
     "name": { "str_sp": "reloaded 25x137mm" },
@@ -110,8 +110,8 @@
   {
     "id": "bp_25mm_slug",
     "copy-from": "25mm_slug",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 25x137mm, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
@@ -119,8 +119,8 @@
   {
     "id": "25mm_he_reloaded",
     "copy-from": "25mm_slug",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 25x137mm HE" },
     "description": "A 25x137mm autocannon round with its primer replaced, loaded with a homemade explosive round.  Useful against lightly armored targets, though not as effective as the real thing.",
     "proportional": {
@@ -137,15 +137,15 @@
   {
     "id": "bp_25mm_he_reloaded",
     "copy-from": "25mm_he_reloaded",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 25x137mm HE, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "105mm_heat",
     "looks_like": "120mm_usable_heat",
     "price": "1000 USD",
@@ -172,8 +172,8 @@
     "explosion": { "power": 1000, "distance_factor": 0.4 }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "105mm_ap",
     "looks_like": "120mm_usable_ap",
     "price": "1200 USD",
@@ -198,8 +198,8 @@
     "effects": [ "COOKOFF", "INCENDIARY" ]
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "105mm_slug",
     "price_postapoc": "10 USD",
     "name": { "str_sp": "makeshift 105mm slug" },
@@ -223,8 +223,8 @@
   {
     "id": "bp_105mm_slug",
     "copy-from": "105mm_slug",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "makeshift 105mm slug, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
@@ -232,8 +232,8 @@
   {
     "id": "105mm_he_reloaded",
     "copy-from": "105mm_slug",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 105mm HE" },
     "description": "A 105mm shell with a new electric primer installed, loaded with a homemade explosive round.  Obsolete or not, it packs quite a punch.",
     "proportional": {
@@ -250,15 +250,15 @@
   {
     "id": "bp_105mm_he_reloaded",
     "copy-from": "105mm_he_reloaded",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 105mm HE, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "120mm_usable_heat",
     "price": "1000 USD",
     "price_postapoc": "20 USD",
@@ -284,8 +284,8 @@
     "explosion": { "power": 1250, "distance_factor": 0.4 }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "120mm_usable_ap",
     "price": "1200 USD",
     "price_postapoc": "24 USD",
@@ -309,8 +309,8 @@
     "effects": [ "COOKOFF", "INCENDIARY" ]
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "120mm_usable_shot",
     "price_postapoc": "10 USD",
     "name": { "str_sp": "reloaded 120mm shot" },
@@ -334,15 +334,15 @@
   {
     "id": "bp_120mm_usable_shot",
     "copy-from": "120mm_usable_shot",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "makeshift 120mm shot, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "120mm_usable_slug",
     "price_postapoc": "10 USD",
     "name": { "str_sp": "reloaded 120mm slug" },
@@ -366,8 +366,8 @@
   {
     "id": "bp_120mm_usable_slug",
     "copy-from": "120mm_usable_slug",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "makeshift 120mm slug, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
@@ -375,8 +375,8 @@
   {
     "id": "120mm_usable_he_reloaded",
     "copy-from": "120mm_usable_slug",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 120mm HE" },
     "description": "A makeshift, rebuilt 120mm shell with a new electric primer installed, loaded with a homemade explosive round.  Packs an explosive punch that could ruin anyone's whole day.",
     "proportional": {
@@ -393,15 +393,15 @@
   {
     "id": "bp_120mm_usable_he_reloaded",
     "copy-from": "120mm_usable_he_reloaded",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 120mm HE, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "155mm_heat",
     "price": "1400 USD",
     "price_postapoc": "28 USD",
@@ -425,8 +425,8 @@
     "explosion": { "power": 7500, "distance_factor": 0.4 }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "155mm_frag",
     "price": "1400 USD",
     "price_postapoc": "28 USD",
@@ -449,8 +449,8 @@
     "explode_in_fire": true
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "155mm_shot",
     "price_postapoc": "12 USD",
     "name": { "str_sp": "makeshift 155mm shot" },
@@ -472,15 +472,15 @@
   {
     "id": "bp_155mm_shot",
     "copy-from": "155mm_shot",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "makeshift 155mm shot, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "155mm_slug",
     "price_postapoc": "12 USD",
     "name": { "str_sp": "makeshift 155mm slug" },
@@ -502,8 +502,8 @@
   {
     "id": "bp_155mm_slug",
     "copy-from": "155mm_slug",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "makeshift 155mm slug, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
@@ -511,8 +511,8 @@
   {
     "id": "155mm_he_reloaded",
     "copy-from": "155mm_slug",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 155mm HE" },
     "description": "A makeshift separate-loading HE round for 155mm.  Consists of a homemade explosive shell with fuze installed, a bag of propellant, and a replacement primer.  Using it for direct-fire isn't ideal, but it should be more than enough to ruin anyone's day.",
     "proportional": {
@@ -529,15 +529,15 @@
   {
     "id": "bp_155mm_he_reloaded",
     "copy-from": "155mm_he_reloaded",
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "name": { "str_sp": "reloaded 155mm HE, black powder" },
     "proportional": { "damage": { "damage_type": "bullet", "amount": 0.76, "armor_penetration": 0.5 }, "recoil": 0.76, "dispersion": 1.2 },
     "extend": { "effects": [ "BLACKPOWDER", "MUZZLE_SMOKE" ] }
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "155mm_nuke",
     "price_postapoc": "24 USD",
     "name": { "str_sp": "155mm nuclear shell" },
@@ -608,8 +608,8 @@
     "longest_side": "65 cm"
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "electric_primer_120mm",
     "//": "I'm not sure if 105mm and 120mm electric primers are interchangeable, but as with most in-game primers they're represented in abstract.",
     "category": "spare_parts",
@@ -627,8 +627,8 @@
     "effects": [ "COOKOFF" ]
   },
   {
-    "type": "ITEM",
-	"subtype": ["AMMO"],
+    "type": "AMMO",
+	
     "id": "primer_155mm",
     "category": "spare_parts",
     "price": "30 USD",
@@ -646,8 +646,8 @@
   },
   {
     "id": "25mm_autocannon",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "reload_noise_volume": 10,
     "symbol": "(",
     "color": "dark_gray",
@@ -681,8 +681,8 @@
   },
   {
     "id": "25mm_autocannon_sawn",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "reload_noise_volume": 10,
     "symbol": "(",
     "color": "dark_gray",
@@ -717,8 +717,8 @@
   },
   {
     "id": "25mm_cannon_crude",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "reload_noise_volume": 20,
     "symbol": "(",
     "color": "dark_gray",
@@ -747,8 +747,8 @@
   },
   {
     "id": "tank_gun_manual",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "M246 120mm tank gun" },
@@ -776,8 +776,8 @@
   },
   {
     "id": "tank_gun_auto",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "XM246E1 autoloading tank gun" },
@@ -804,8 +804,8 @@
   },
   {
     "id": "tank_gun_crude",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "makeshift 120mm tank gun" },
@@ -835,8 +835,8 @@
   {
     "id": "tank_gun_manual_105mm",
     "looks_like": "tank_gun_manual",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "M68 105mm tank gun" },
@@ -864,8 +864,8 @@
   },
   {
     "id": "tank_gun_crude_105mm",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "makeshift 105mm tank gun" },
@@ -894,8 +894,8 @@
   },
   {
     "id": "howitzer_gun",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "M284 howitzer" },
@@ -922,8 +922,8 @@
   },
   {
     "id": "howitzer_gun_crude",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "symbol": "(",
     "color": "green",
     "name": { "str_sp": "makeshift 155mm howitzer" },
@@ -953,8 +953,8 @@
     "id": "atgm_turret",
     "copy-from": "gun_base",
     "looks_like": "atgm_launcher",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "name": { "str_sp": "BGM-71F TOW Under Armor" },
     "description": "A twin-tube launcher for anti-tank guided missiles, specifically designed for vehicle use.  While fairly accurate, it isn't fire-and-forget.  Obviously it needs to be mounted on a vehicle to fire.",
     "weight": "200 kg",
@@ -977,8 +977,8 @@
     "flags": [ "MOUNTED_GUN", "NEVER_JAMS", "NO_RELOAD", "RELOAD_EJECT", "RELOAD_ONE", "USE_UPS" ]
   },
   {
-    "type": "ITEM",
-	"subtype": ["BOOK"],
+    "type": "BOOK",
+	
     "id": "textbook_launcher",
     "category": "manuals",
     "name": { "str": "Artillery and Field Gunnery", "str_pl": "copies of Artillery and Field Gunnery" },
@@ -1000,8 +1000,8 @@
   },
   {
     "id": "tank_gun_auto_monster",
-    "type": "ITEM",
-	"subtype": ["GUN"],
+    "type": "GUN",
+	
     "symbol": "(",
     "color": "green",
     "name": { "str": "XM246E1 monster tank gun" },
@@ -1039,8 +1039,8 @@
   },
   {
     "id": "tread1",
-    "type": "ITEM",
-	"subtype": ["WHEEL"],
+    "type": "WHEEL",
+	
     "category": "veh_parts",
     "name": { "str": "rubber caterpillar track" },
     "description": "A short, interlocking set of hard rubber tracks reinforced by stiff wire held in place by a set of smaller wheels.  Similar with what you might see used on light construction vehicles.  It's significantly stronger than regular tires due to not being at risk of bursting; but is quite heavy.",
@@ -1058,8 +1058,8 @@
   },
   {
     "id": "tread2",
-    "type": "ITEM",
-	"subtype": ["WHEEL"],
+    "type": "WHEEL",
+	
     "category": "veh_parts",
     "name": { "str": "steel caterpillar track" },
     "description": "A short, interlocking set of shaped steel tracks held in place by a set of smaller wheels.  Similar with what you might see used on large construction vehicles.  It's significantly stronger than regular tires due to not being at risk of bursting; but is very heavy.",
@@ -1077,8 +1077,8 @@
   },
   {
     "id": "tread3",
-    "type": "ITEM",
-	"subtype": ["WHEEL"],
+    "type": "WHEEL",
+	
     "category": "veh_parts",
     "name": { "str": "reinforced caterpillar track" },
     "description": "A short, interlocking set of shaped steel tracks held in place by a set of smaller wheels.  Similar with what you might see used on APCs and armored vehicles.  It's significantly stronger than regular tires due to not being at risk of bursting; but is extremely heavy.",
