@@ -228,7 +228,8 @@
     "special_attacks": [
       {
         "gun_type": "fairy_pistol",
-        "type": "gun",
+        "type": "ITEM",
+        "subtypes": [ "GUN" ],
         "description": "The %s shoots!",
         "condition": { "and": [ { "not": { "u_has_effect": "maimed_arm" } }, { "not": { "u_has_effect": "disarmed" } } ] },
         "ammo_type": "9mmfairy",

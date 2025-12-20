@@ -266,7 +266,8 @@
     "special_attacks": [
       {
         "gun_type": "water_mp5",
-        "type": "gun",
+        "type": "ITEM",
+        "subtypes": [ "GUN" ],
         "ammo_type": "water",
         "cooldown": 2,
         "fake_dex": 10,
@@ -391,7 +392,8 @@
     "special_attacks": [
       {
         "gun_type": "alternate_knife_gun",
-        "type": "gun",
+        "type": "ITEM",
+        "subtypes": [ "GUN" ],
         "description": "The maid throws a knife!",
         "ammo_type": "alternate_knife_knife",
         "cooldown": { "math": [ "2 + rand(1)" ] },
@@ -445,7 +447,8 @@
     "special_attacks": [
       {
         "gun_type": "lunatic_pistol2_illusionary",
-        "type": "gun",
+        "type": "ITEM",
+        "subtypes": [ "GUN" ],
         "description": "",
         "ammo_type": "ammo_lunar_small_1_illusionary",
         "cooldown": 1,
@@ -572,7 +575,8 @@
       [ "PARROT_AT_DANGER", { "math": [ "10 + rand(10)" ] } ],
       {
         "gun_type": "chasm_gun",
-        "type": "gun",
+        "type": "ITEM",
+        "subtypes": [ "GUN" ],
         "description": "",
         "ammo_type": "chasm_ammo_ammo",
         "cooldown": { "math": [ "3 + rand(3)" ] },
@@ -866,7 +870,8 @@
       },
       {
         "gun_type": "myon_gun",
-        "type": "gun",
+        "type": "ITEM",
+        "subtypes": [ "GUN" ],
         "description": "",
         "ammo_type": "myon_bullet_bullet",
         "cooldown": { "math": [ "2 + rand(2)" ] },

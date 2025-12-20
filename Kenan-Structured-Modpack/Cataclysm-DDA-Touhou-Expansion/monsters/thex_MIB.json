@@ -36,7 +36,8 @@
       [ "PARROT_AT_DANGER", { "math": [ "13 + rand(11)" ] } ],
       {
         "gun_type": "glock_17",
-        "type": "gun",
+        "type": "ITEM",
+        "subtypes": [ "GUN" ],
         "description": "The %s shoots!",
         "condition": { "and": [ { "not": { "u_has_effect": "maimed_arm" } }, { "not": { "u_has_effect": "disarmed" } } ] },
         "ammo_type": "9mmfmj",
@@ -251,7 +252,8 @@
       [ "PARROT_AT_DANGER", { "math": [ "13 + rand(11)" ] } ],
       {
         "gun_type": "glock_17",
-        "type": "gun",
+        "type": "ITEM",
+        "subtypes": [ "GUN" ],
         "description": "The %s shoots!",
         "condition": { "and": [ { "not": { "u_has_effect": "maimed_arm" } }, { "not": { "u_has_effect": "disarmed" } } ] },
         "ammo_type": "9mmfmj",
