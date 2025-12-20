@@ -27,7 +27,8 @@
   
   {
     "id": "npc_随身女仆",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": ["AMMO"],
     "ammo_type": "NULL",
     "name": { "str": "随身女仆" },
     "description": "生成随身女仆",
@@ -63,7 +64,7 @@
   {
     "id": "mon_npc",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [
       { "item": "npc_随身女仆", "prob": 50 , "count": [ 1, 1 ] },
       { "item": "npc_随身女仆", "prob": 50 , "count": [ 1, 1 ] }

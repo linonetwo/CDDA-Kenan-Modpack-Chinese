@@ -106,7 +106,8 @@
   },
   {
     "id": "pickaxe_copper",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": { "str": "copper pickaxe" },
     "description": "This is a handmade copper pickaxe, suitable for breaking up hard things or (with enough skill) hard targets.  Strike the earth!",
     "sub": "pickaxe",
@@ -123,7 +124,8 @@
   },
   {
     "id": "pickaxe_bone",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": { "str": "bone pickaxe" },
     "description": "This is a primitive pickaxe, traditionally made from antler or bone, and fire-hardened for greater hardness.  Less than ideal, but still suitable for striking the earth.",
     "sub": "pickaxe",
@@ -140,13 +142,15 @@
   },
   {
     "id": "boulder_anvil_leveled",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "copy-from": "fake_item",
     "name": { "str": "leveled boulder anvil" },
     "qualities": [ [ "ANVIL", 3 ] ]
   },
   {
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": ["AMMO"],
     "id": "material_sand_black",
     "category": "spare_parts",
     "name": { "str_sp": "black sand" },

@@ -2,13 +2,13 @@
   {
     "id": "cult_sacrifice",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [ { "item": "essence_blood", "prob": 25 }, { "item": "bone_human", "prob": 100, "count": [ 3, 9 ] } ]
   },
   {
     "id": "summoner_casualties",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "clothing_outdoor_set", "damage": [ 1, 4 ] },
       { "group": "unaligned_arcanist_books", "prob": 50 },
@@ -20,7 +20,7 @@
   {
     "id": "summoner_casualties_fresh",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "clothing_outdoor_set", "damage": [ 1, 4 ] },
       { "group": "unaligned_arcanist_books_postapoc", "prob": 50 },
@@ -381,7 +381,7 @@
   },
   {
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "id": "autodoc_installation_magitech",
     "items": [
       { "item": "AID_bio_electrothermal_arc_projector", "prob": 20 },
@@ -412,7 +412,7 @@
   {
     "id": "arcana_mansion_art",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "groups": [
       { "group": "art", "prob": 40 },
       { "group": "magic_books", "prob": 30 },
@@ -446,7 +446,7 @@
   {
     "id": "sewing_room",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [
       { "group": "suits", "prob": 50, "damage": [ 0, 2 ] },
       [ "scissors", 50 ],

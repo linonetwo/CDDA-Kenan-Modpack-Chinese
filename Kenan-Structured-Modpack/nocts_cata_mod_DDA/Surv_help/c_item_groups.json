@@ -95,7 +95,7 @@
   {
     "id": "dead_slave_fighters",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       {
         "distribution": [
@@ -111,7 +111,7 @@
     "type": "item_group",
     "magazine": 100,
     "ammo": 100,
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [
       { "group": "survivor_knife", "prob": 10 },
       { "group": "survivor_melee", "prob": 40 },
@@ -147,7 +147,7 @@
   {
     "type": "item_group",
     "id": "bionics_failed_bio",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "//": "Intact bionics from failed bio-weapons, excluding broken bionics.  Weight is inverse of install difficulty, capped at 10.  Any CBMs of difficulty 11+ will use a weight of 1.  Additionally includes potentially having power-generation CBMs specific to the successful bio-weapons, rather than just what the profession version starts with.",
     "items": [
       [ "bio_armor_arms", 8 ],
@@ -174,7 +174,7 @@
   {
     "type": "item_group",
     "id": "bionics_apophis_off",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "//": "Bionics for Bio-Weapon Apophis divided into three categories.  Roughly mocked up from what bionics might fit his in-game properties.",
     "items": [
       [ "bio_laser_armgun", 7 ],
@@ -189,7 +189,7 @@
   {
     "type": "item_group",
     "id": "bionics_apophis_def",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [
       [ "bio_armor_arms", 8 ],
       [ "bio_armor_eyes", 6 ],
@@ -208,13 +208,13 @@
   {
     "type": "item_group",
     "id": "bionics_apophis_util",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [ [ "bio_metabolics", 7 ], [ "bio_plasma_cell", 3 ], [ "bio_torsionratchet", 7 ], [ "bio_weight", 8 ] ]
   },
   {
     "type": "item_group",
     "id": "bionics_soldat_zombie",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "//": "Bionics for zombie super soldiers.  First instance of CBMs with weight of 1 due to higher-than-10 difficulty.",
     "items": [
       [ "bio_adrenaline", 5 ],
@@ -233,7 +233,7 @@
   {
     "type": "item_group",
     "id": "bionics_soldat_knight_zombie",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "//": "Bionics for zombie super juggernauts.",
     "items": [
       [ "bio_armor_arms", 8 ],
@@ -257,7 +257,7 @@
   {
     "type": "item_group",
     "id": "bionics_soldat_sniper_zombie",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "//": "Bionics for zombie super scouts.",
     "items": [
       [ "bio_climate", 8 ],
@@ -277,7 +277,7 @@
   {
     "type": "item_group",
     "id": "bionics_soldat_tool_zombie",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "//": "Bionics for zombie super B.A.M.R.U.",
     "items": [
       [ "bio_batteries", 6 ],
@@ -298,7 +298,7 @@
   {
     "type": "item_group",
     "id": "bionics_soldat_zombie_generic",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "//": "Bionics for unevolved zombie super soldiers and knife boys, random smattering of bionics shared by two or more super soldiers, and also adds their powergen options.",
     "items": [
       [ "bio_batteries", 6 ],
@@ -319,7 +319,7 @@
   {
     "id": "tachanka_loot",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "items": [
       {
         "distribution": [
@@ -354,55 +354,55 @@
   {
     "id": "lmil_armor_collection",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [ { "item": "lmil_armor" }, { "item": "lmil_helm", "prob": 90 } ]
   },
   {
     "id": "mil_armor_collection",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [ { "item": "mil_armor" }, { "item": "mil_helm", "prob": 90 } ]
   },
   {
     "id": "hmil_armor_collection",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [ { "item": "hmil_armor" }, { "item": "hmil_helm", "prob": 90 } ]
   },
   {
     "type": "item_group",
     "id": "c_mi_go_advanced_dissection_worker",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [ [ "c_mi_go_extruder_broken", 1 ], [ "c_mi_go_wings_broken", 1 ] ]
   },
   {
     "type": "item_group",
     "id": "c_mi_go_advanced_dissection_slaver",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [ [ "c_mi_go_beam_broken", 4 ], [ "c_mi_go_wings_broken", 1 ] ]
   },
   {
     "type": "item_group",
     "id": "c_mi_go_advanced_dissection_surgeon",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [ [ "c_mi_go_claw_broken", 4 ], [ "c_mi_go_wings_broken", 1 ] ]
   },
   {
     "type": "item_group",
     "id": "c_mi_go_advanced_dissection_guard",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [ [ "c_mi_go_carapace_broken", 3 ], [ "c_mi_go_beam_broken", 2 ] ]
   },
   {
     "type": "item_group",
     "id": "c_mi_go_advanced_dissection_myrmidon",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [ [ "c_mi_go_carapace_broken", 3 ], [ "c_mi_go_beam_broken", 1 ], [ "c_mi_go_claw_broken", 1 ] ]
   },
   {
     "type": "item_group",
     "id": "c_mi_go_advanced_dissection_scout",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "items": [ [ "c_mi_go_rifle_broken", 3 ], [ "c_mi_go_wings_broken", 1 ] ]
   },
   {

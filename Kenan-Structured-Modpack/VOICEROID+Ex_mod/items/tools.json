@@ -4,7 +4,8 @@
     "//2": "MP3はハードコーティングされているらしく機能しなかったので破棄。変わりに説明通り地図を入れた。",
     "id": "voiro_poipon8",
     "copy-from": "smart_phone",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": {
       "str": "ポイポン8",
       "str_pl": "ポイポン8"
@@ -31,7 +32,8 @@
   {
     "id": "voiro_poipon8_music",
     "copy-from": "voiro_poipon8",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": {
       "str": "ポイポン8(音楽)[voiro]",
       "str_pl": "ポイポン8(音楽)[voiro]"
@@ -68,7 +70,8 @@
   {
     "id": "voiro_poipon8_flashlight",
     "copy-from": "voiro_poipon8",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": "ポイポン8(ライト)[voiro]",
     "power_draw": "1500 mW",
     "revert_to": "voiro_poipon8",
@@ -108,7 +111,8 @@
   },
   {
     "id": "voiro_mic",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": "マイク[voiro]",
     "description": "一般的な市販のマイクです。伴奏者は消えようとも歌は文化です。世界にあなたの声を響かせましょう。鈍器の様に扱うことも出来ますが、対した脅威にはならないでしょう。",
     "weight": "280 g",
@@ -148,7 +152,8 @@
   {
     "id": "voiro_mic_una_spicy",
     "copy-from": "voiro_mic",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": "マイク(音街ウナSpicy)[voiro]",
     "description": "雷模様が入ったマイクです。伴奏者は消えようとも歌は文化です。世界にあなたの声を響かせましょう。鈍器の様に扱うことも出来ますが、対した脅威にはならないでしょう。"
   },
@@ -177,7 +182,8 @@
   },
   {
     "id": "voiro_majorbaton",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "category": "weapons",
     "name": "メジャーバトン(音街ウナSugar)[voiro]",
     "description": "マーチングバンドにおけるドラムメジャー(指揮者)が持つ指揮棒です。音街ウナの物はティップ、ボールと呼ばれる両端が宝石の様になっています。",
@@ -200,21 +206,24 @@
   },
   {
     "id": "voiro_solar_sora",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": ["ARMOR"],
     "copy-from": "solarpack",
     "name": "折り畳みソーラーパネル(九州そら)[voiro]",
     "description": "発電用のソーラーパネルです。使用することでケーブルを自身に刺し、充電できます。噂では翼の代わりになったりするようです。"
   },
   {
     "id": "voiro_solar_sora_on",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": ["ARMOR"],
     "copy-from": "solarpack_on",
     "name": "折り畳みソーラーパネル(九州そら)(展開)[voiro]",
     "description": "発電用のソーラーパネルです。使用することでケーブルを自身に刺し、充電できます。噂では翼の代わりになったりするようです。"
   },
   {
     "id": "voiro_atomic_poipon_u92",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": {
       "str": "ポイポンU92 Pro [voiro]",
       "str_pl": "ポイポンU92 Pro [voiro]"
@@ -253,7 +262,8 @@
   {
     "id": "voiro_atomic_poipon_u92_music",
     "copy-from": "voiro_atomic_poipon_u92",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "name": {
       "str": "ポイポンU92 Pro (音楽)[voiro]",
       "str_pl": "ポイポンU92 Pro (音楽)[voiro]"
@@ -282,7 +292,8 @@
   {
     "id": "voiro_atomic_poipon_u92_flashlight",
     "copy-from": "voiro_atomic_poipon_u92",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
     "looks_like": "voiro_poipon8_flashlight",
     "name": {
       "str": "ポイポンU92 Pro (ライト)[voiro]",

@@ -1,7 +1,8 @@
 [
   {
     "id": "armor_yy",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": ["ARMOR"],
     "name": {"str": "透明雨衣（风帽）"},
     "description": "一种透明的雨衣，由非常薄的乙烯基制成，非常受想要在雨天时髦的女仆们的欢迎。这种材料很薄，因此不用的时候整个雨衣可以折叠起来放进口袋里。",
     "weight": "120 g","volume": "750 ml",
@@ -26,7 +27,8 @@
   {
     "id": "armor_yyoff",
     "copy-from": "armor_yy",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": ["ARMOR"],
     "name": {"str": "透明雨衣（无帽）"},
     "flags": ["VARSIZE", "POCKETS", "WATERPROOF", "RAINPROOF", "OUTER", "FANCY", "SOFT"],
     "use_action": {
@@ -44,7 +46,8 @@
   
   {
     "id": "armor_yy1",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": ["ARMOR"],
     "name": {"str": "战斗雨衣(风帽)"},
     "description": "透明的战斗雨衣，增加了多层凯夫拉以及负重结构，内侧带有枪套",
     "weight": "2120 g","volume": "1500 ml",
@@ -91,7 +94,8 @@
   {
     "id": "armor_yy1off",
     "copy-from": "armor_yy1",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": ["ARMOR"],
     "name": {"str": "战斗雨衣(无帽)"},
     "flags": ["VARSIZE", "STURDY", "POCKETS", "WATERPROOF", "RAINPROOF", "OUTER", "FANCY", "SOFT"],
     "use_action": {

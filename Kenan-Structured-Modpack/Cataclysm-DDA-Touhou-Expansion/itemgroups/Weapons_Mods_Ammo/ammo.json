@@ -2,50 +2,50 @@
   {
     "id": "thex_ammo_20mm50",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [ { "item": "20mm50", "prob": 100 }, { "item": "20mm_v", "prob": 100 } ]
   },
   {
     "id": "thex_ammo_792x33",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [ { "item": "792x33_me", "prob": 100 }, { "item": "792x33_prvi", "prob": 200 } ]
   },
   {
     "id": "thex_ammo_792x57",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [ { "item": "792x57_m75", "prob": 200 }, { "item": "792x57_sme", "prob": 100 } ]
   },
   {
     "id": "thex_ammo_9x39",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [ { "item": "9x39_sp5", "prob": 200 }, { "item": "9x39_sp6", "prob": 100 } ]
   },
   {
     "id": "thex_ammo_792x33_reloaded",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [ { "item": "reloaded_792x33_me", "prob": 100 }, { "item": "reloaded_792x33_prvi", "prob": 100 } ]
   },
   {
     "id": "thex_ammo_792x57_reloaded",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [ { "item": "reloaded_792x57_m75", "prob": 100 }, { "item": "reloaded_792x57_sme", "prob": 100 } ]
   },
   {
     "id": "thex_ammo_9x39_reloaded",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [ { "item": "reloaded_9x39_sp5", "prob": 100 }, { "item": "reloaded_9x39_sp6", "prob": 100 } ]
   },
   {
     "type": "item_group",
     "id": "ammo_rifle_common",
     "//": "Rifle ammo commonly owned by citizens and found in many locations.",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "copy-from": "ammo_rifle_common",
     "extend": { 
       "entries": [ 
@@ -58,7 +58,7 @@
     "type": "item_group",
     "id": "ammo_rifle_common_collection",
     "//": "Rifle ammo commonly owned by citizens and found in many locations.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "copy-from": "ammo_rifle_common_collection",
     "extend": { 
       "entries": [ 
@@ -71,7 +71,7 @@
     "type": "item_group",
     "id": "ammo_rifle_common_loose",
     "//": "Loose rifle ammo commonly owned by citizens and found in many locations.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "copy-from": "ammo_rifle_common_loose",
     "extend": { 
       "entries": [ 
@@ -84,7 +84,7 @@
     "id": "ammo_rifle_rare",
     "type": "item_group",
     "//": "Less common rifle ammo including that only used by police/paramilitary forces.",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "copy-from": "ammo_rifle_rare",
     "extend": { 
       "entries": [ 
@@ -99,7 +99,7 @@
     "type": "item_group",
     "id": "ammo_rifle_rare_collection",
     "//": "Less common rifle ammo including that only used by police/paramilitary forces.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "copy-from": "ammo_rifle_rare_collection",
     "extend": { 
       "entries": [ 
@@ -114,7 +114,7 @@
     "type": "item_group",
     "id": "ammo_rifle_hunting",
     "//": "Ammo for hunting rifles found within hunting supply stores and related locations.",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "copy-from": "ammo_rifle_hunting",
     "extend": { 
       "entries": [ 
@@ -129,7 +129,7 @@
     "id": "ammo_rifle_milspec",
     "type": "item_group",
     "//": "Military specification rifle ammo found at military sites.",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "copy-from": "ammo_rifle_milspec",
     "extend": { 
       "entries": [ 
@@ -144,7 +144,7 @@
     "id": "ammo_rifle_obscure",
     "type": "item_group",
     "//": "Imported or otherwise very obscure rifle ammo.",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "copy-from": "ammo_rifle_obscure",
     "extend": {
       "entries": [
@@ -161,7 +161,7 @@
     "id": "ammo_rifle_obscure_collection",
     "type": "item_group",
     "//": "Imported or otherwise very obscure rifle ammo.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "copy-from": "ammo_rifle_obscure_collection",
     "extend": {
       "entries": [
@@ -178,7 +178,7 @@
     "id": "ammo_rifle_reloaded",
     "type": "item_group",
     "//": "Reloaded rifle ammo balanced according to rarity.",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "copy-from": "ammo_rifle_reloaded",
     "extend": {
       "entries": [
@@ -195,7 +195,7 @@
     "id": "ammo_obscure_collection",
     "type": "item_group",
     "//": "Imported or otherwise very obscure ammo.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "ammo_pistol_obscure_collection", "prob": 65 },
       { "group": "ammo_rifle_obscure_collection", "prob": 45 },
@@ -206,7 +206,7 @@
   {
     "id": "ammo_casings",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "copy-from": "ammo_casings",
     "extend": {
       "entries": [
@@ -222,13 +222,13 @@
   {
     "id": "touhou_792x33_casing",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [ { "item": "792x33_casing_brass", "prob": 100 }, { "item": "792x33_casing_steel", "prob": 100 } ]
   },
   {
     "id": "touhou_792x57_casing",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [ { "item": "792x57_casing_brass", "prob": 100 }, { "item": "792x57_casing_steel", "prob": 100 } ]
   }
 ]

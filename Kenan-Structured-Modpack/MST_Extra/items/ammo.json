@@ -1,7 +1,8 @@
 [
   {
     "id": "bearing_lead",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": ["AMMO"],
 	
     "name": { "str": "lead pellet" },
     "description": "Hefty round projectiles cast from lead, useful as ammunition for slings.",
@@ -23,7 +24,8 @@
   {
     "id": "atlatl_dart_wood",
     "looks_like": "javelin",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": ["AMMO"],
 	
     "name": { "str": "wooden atlatl dart" },
     "description": "A long, flexible dart for a spear-thrower, with a fire-hardened sharpened point.",
@@ -50,7 +52,8 @@
     "id": "atlatl_dart_iron",
     "copy-from": "atlatl_dart_wood",
     "looks_like": "javelin_iron",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": ["AMMO"],
 	
     "name": { "str": "iron atlatl dart" },
     "description": "A long, flexible dart for a spear-thrower, with an iron spear point.",
@@ -67,7 +70,8 @@
     "id": "atlatl_dart_stone",
     "copy-from": "atlatl_dart_wood",
     "looks_like": "javelin_stone",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": ["AMMO"],
 	
     "name": { "str": "stone atlatl dart" },
     "description": "A long, flexible dart for a spear-thrower, with a small stone spearhead.",
@@ -84,7 +88,8 @@
     "id": "atlatl_dart_copper",
     "copy-from": "atlatl_dart_wood",
     "looks_like": "javelin_copper",
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": ["AMMO"],
 	
     "name": { "str": "copper atlatl dart" },
     "description": "A long, flexible dart for a spear-thrower, with a copper spear point.",
@@ -98,7 +103,8 @@
     "effects": [ "RECOVER_35" ]
   },
   {
-    "type": "AMMO",
+    "type": "ITEM",
+    "subtypes": ["AMMO"],
 	
     "id": "pitch_wood",
     "category": "spare_parts",

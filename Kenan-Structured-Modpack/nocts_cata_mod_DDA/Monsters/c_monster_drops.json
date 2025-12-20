@@ -3,7 +3,7 @@
     "id": "wild_bio_weapom_item",
     "type": "item_group",
     "//": "items of the wild bio-weapons",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "weapon_hat", "damage": [ 1, 4 ] },
       { "group": "weapon_suit", "damage": [ 1, 4 ] },
@@ -20,7 +20,7 @@
     "id": "mon_fungus_failed_weapon_death_drops",
     "type": "item_group",
     "//": "Drops for fungal augmented abominations, secondary source of Marloss items.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "weapon_hat", "damage": [ 1, 4 ] },
       { "group": "weapon_suit", "damage": [ 1, 4 ] },
@@ -45,7 +45,7 @@
     "id": "apophis_bio_weapom_item",
     "type": "item_group",
     "//": "items of bio-weapon apophis",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "weapon_hat", "damage": [ 1, 4 ] },
       { "group": "weapon_suit", "damage": [ 1, 4 ] },
@@ -100,7 +100,7 @@
     "id": "wild_bio_infantry_rifle",
     "type": "item_group",
     "//": "items of the super soldier",
-    "subtype": "collection",
+    "subtypes": "collection",
     "ammo": 100,
     "entries": [
       { "group": "mon_zombie_bio_common" },
@@ -146,7 +146,7 @@
     "id": "wild_bio_infantry_shotgun",
     "type": "item_group",
     "//": "items of the super soldier",
-    "subtype": "collection",
+    "subtypes": "collection",
     "ammo": 100,
     "entries": [
       { "group": "mon_zombie_bio_common" },
@@ -193,7 +193,7 @@
     "type": "item_group",
     "//": "items of the super scout",
     "ammo": 100,
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "mon_zombie_bio_common" },
       { "item": "lmil_armor", "damage": [ 1, 4 ], "prob": 75 },
@@ -246,7 +246,7 @@
     "id": "wild_bio_knight_lmg",
     "type": "item_group",
     "//": "items of the super juggernaut",
-    "subtype": "collection",
+    "subtypes": "collection",
     "ammo": 100,
     "entries": [
       { "group": "mon_zombie_bio_common" },
@@ -292,7 +292,7 @@
     "id": "wild_bio_knight_launcher",
     "type": "item_group",
     "//": "items of the super juggernaut",
-    "subtype": "collection",
+    "subtypes": "collection",
     "ammo": 100,
     "entries": [
       { "group": "mon_zombie_bio_common" },
@@ -318,7 +318,7 @@
     "id": "wild_bio_tool_pistol",
     "type": "item_group",
     "//": "items of the super tool",
-    "subtype": "collection",
+    "subtypes": "collection",
     "ammo": 100,
     "entries": [
       { "group": "mon_zombie_bio_common" },
@@ -370,7 +370,7 @@
     "id": "wild_bio_tool_smg",
     "type": "item_group",
     "//": "items of the super tool",
-    "subtype": "collection",
+    "subtypes": "collection",
     "ammo": 100,
     "entries": [
       { "group": "mon_zombie_bio_common" },
@@ -420,7 +420,7 @@
   },
   {
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "//": "Picks the normal death drops for a super soldier at random.",
     "id": "mon_zombie_bio_dormant_armed_death_drops",
     "groups": [
@@ -436,7 +436,7 @@
   {
     "id": "mon_zombie_bio_dormant_unarmed_death_drops",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "mon_zombie_bio_unarmed_generic" },
       {
@@ -450,7 +450,7 @@
   {
     "id": "mon_zombie_bio_knife_death_drops",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "mon_zombie_bio_unarmed_generic" },
       {
@@ -463,7 +463,7 @@
     "id": "mon_zombie_bio_unarmed_generic",
     "type": "item_group",
     "//": "This makes unarmed super soldiers pick gear lists based on the standard versions, but minus the ranged weapon, with the knife always spawning, and with reduced chance of spawning their unique ammo or tools.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "group": "mon_zombie_bio_common" },
       {
@@ -561,7 +561,7 @@
     "id": "mon_zombie_bio_common",
     "type": "item_group",
     "//": "This makes unarmed super soldiers pick gear lists based on the standard versions, but minus the ranged weapon, with the knife always spawning, and with reduced chance of spawning their unique ammo or tools.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "helmet_liner", "damage": [ 1, 4 ] },
       { "item": "thermal_shirt", "damage": [ 1, 4 ] },

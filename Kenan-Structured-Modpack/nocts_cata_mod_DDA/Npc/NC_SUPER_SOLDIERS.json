@@ -3,7 +3,7 @@
     "id": "NC_SUPER_SOLDIER_worn",
     "type": "item_group",
     "//": "Generic super soldier kit, unisex.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "helmet_liner" },
       { "item": "thermal_shirt" },
@@ -26,7 +26,7 @@
   {
     "id": "NC_SUPER_SOLDIER_carry",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "ammo": 100,
     "entries": [
       { "item": "protein_bar_evac", "count": [ 4, 8 ] },
@@ -38,7 +38,7 @@
   {
     "id": "NC_SUPER_SOLDIER_weapon",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "magazine": 100,
     "ammo": 100,
     "//": "Randomly picks any of the medium-power super soldier energy weapons.",
@@ -56,7 +56,7 @@
     "id": "NC_BIO_HUNTER_E_worn",
     "type": "item_group",
     "//": "Evelynn Rose's kit, mimics dummied-out player version somewhat.  Main change is a MOLLE pack to ensure she can carry items as quest fodder, instead of handing you her weapon.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "bra" },
       { "item": "panties" },
@@ -73,7 +73,7 @@
   {
     "id": "NC_BIO_HUNTER_E_carry",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "badge_bio_weapon_evy" },
       { "group": "mre_full_pack" },
@@ -87,7 +87,7 @@
   {
     "id": "NC_BIO_HUNTER_E_battery",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [
       { "item": "light_atomic_battery_cell_rechargeable", "prob": 50 },
       { "item": "light_atomic_battery_cell_rechargeable", "prob": 50 }
@@ -97,7 +97,7 @@
     "id": "NC_BIO_HUNTER_E_weapon",
     "type": "item_group",
     "//": "Evelynn Rose's weapon, don't think you can define weapon overrides any other way.",
-    "subtype": "collection",
+    "subtypes": "collection",
     "magazine": 100,
     "ammo": 100,
     "entries": [ { "item": "akro_laser_smg" } ]

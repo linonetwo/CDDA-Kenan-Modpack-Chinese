@@ -1,7 +1,8 @@
 [
   {
     "id": "heavy_snare_kit",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "heavy snare kit" },
     "description": "This is a kit for a simple trap consisting of a rope noose and a snare trigger.  It requires a tree nearby.  It is effective at trapping monsters.",
@@ -23,7 +24,8 @@
   },
   {
     "id": "light_snare_kit",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "light snare kit" },
     "description": "This is a kit for a simple trap consisting of a string noose and a snare trigger.  It requires a young tree nearby.  It is effective at trapping and killing some small animals.",
@@ -45,7 +47,8 @@
   },
   {
     "id": "snare_trigger",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "snare trigger" },
     "description": "This is a stick that has been cut into a trigger mechanism for a snare trap.",
@@ -57,7 +60,8 @@
   },
   {
     "id": "primitive_hoe",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "stone hoe" },
     "description": "This is a farming implement made with a broad stone blade, that can be used to till earth.",
@@ -74,7 +78,8 @@
   },
   {
     "id": "makeshift_sled_item",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "symbol": "0",
     "color": "light_gray",
@@ -94,7 +99,8 @@
   },
   {
     "id": "log_canoe_item",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "symbol": "0",
     "color": "brown",
@@ -114,7 +120,8 @@
   },
   {
     "id": "mound_distillation",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "copy-from": "fake_item",
     "name": { "str_sp": "makeshift distillation" },
@@ -125,7 +132,8 @@
   },
   {
     "id": "pulley lifting",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "copy-from": "fake_item",
     "name": { "str_sp": "pulley lifting" },
@@ -135,7 +143,8 @@
     "qualities": [ [ "LIFT", 1 ], [ "JACK", 1 ] ]
   },
   {
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "id": "tarp_raincatcher_leather",
     "copy-from": "tarp_raincatcher",
@@ -156,7 +165,8 @@
   {
     "id": "tanning_hide_small",
     "copy-from": "tanning_hide",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "scrap of tanning leather", "str_pl": "scraps of tanning leather" },
     "description": "A small piece of treated animal hide, undergoing the chemical processes required to become leather.  You will be able to activate it to unroll and make use of it when it is done.",
@@ -175,7 +185,8 @@
   {
     "id": "tanning_pelt_small",
     "copy-from": "tanning_pelt",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "scrap of tanning fur", "str_pl": "scraps of tanning fur" },
     "description": "A small piece of treated animal pelt, undergoing the chemical processes required to become fur.  You will be able to activate it to unroll and make use of it when it is done.",
@@ -195,7 +206,8 @@
     "id": "tinderbox_clay",
     "copy-from": "tinderbox",
     "sub": "tinderbox",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "clay ember carrier" },
     "description": "This is a small ceramic fire pot, with a lid and small holes for controlled airflow.  It can nurture a smoldering ember for a long time, to start fires without modern tools.",
@@ -216,7 +228,8 @@
     "id": "tinderbox_clay_on",
     "copy-from": "tinderbox_on",
     "sub": "tinderbox_on",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "clay ember carrier (lit)", "str_pl": "clay ember carriers (lit)" },
     "description": "This is a small ceramic fire pot, with a lid and small holes for controlled airflow.  An ember is smoldering inside it, and can be used to start a campfire.",
@@ -237,7 +250,8 @@
   {
     "id": "hobo_stove_clay",
     "looks_like": "clay_pot",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "clay oven" },
     "description": "This is a ancient style of portable ceramic oven.  Use it to place on the ground, allowing you to keep a small fire safe from wind and rain.",
@@ -254,7 +268,8 @@
   {
     "id": "misc_repairkit_makeshift",
     "looks_like": "misc_repairkit",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "makeshift repair kit" },
     "description": "This is a portable toolkit, consisting of a primitive knife for carving replacement parts, an adze for more heavy-duty wood cutting, and a patch of soft material for cleaning surfaces.  It can be used to repair certain items if supplied with pitch, though it isn't ideal for complex work.",
@@ -286,7 +301,8 @@
   {
     "id": "hand_drill_makeshift",
     "copy-from": "hand_drill",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "flint drill" },
     "description": "A prehistoric woodworking tool, little more than a fine sharp blade tipping a makeshift bow drill.  It's rather limited in usage, primarily meant to be used on wood.",
@@ -296,7 +312,8 @@
   },
   {
     "id": "fire_plough",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "fire plough" },
     "description": "A simple form of primitive firemaking, little more than two pieces of wood with a groove worn into one of them, to light an ember through friction.  Starting a fire with this will be laborious and slow, but it's better than nothing.",
@@ -314,7 +331,8 @@
   },
   {
     "id": "char_purifier_fake",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "makeshift water purifier" },
     "description": "This is a pseudo item.",
@@ -331,7 +349,8 @@
   },
   {
     "id": "pot_canning_clay",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": ["TOOL"],
 	
     "name": { "str": "clay canning pot" },
     "sub": "pot_canning",

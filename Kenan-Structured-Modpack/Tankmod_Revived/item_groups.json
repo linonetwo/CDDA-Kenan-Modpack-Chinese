@@ -129,14 +129,14 @@
     "type": "item_group",
     "id": "manuals",
     "copy-from": "manuals",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "extend": { "entries": [ { "item": "textbook_launcher", "prob": 1 } ] }
   },
   {
     "type": "item_group",
     "id": "book_gunref",
     "copy-from": "book_gunref",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "extend": { "entries": [ { "item": "textbook_launcher", "prob": 5 } ] }
   },
   {
@@ -149,33 +149,33 @@
     "type": "item_group",
     "id": "book_military",
     "copy-from": "book_military",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "extend": { "entries": [ { "item": "textbook_launcher", "prob": 20 } ] }
   },
   {
     "type": "item_group",
     "id": "textbooks",
     "copy-from": "textbooks",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "extend": { "entries": [ { "item": "textbook_launcher", "prob": 5 } ] }
   },
   {
     "type": "item_group",
     "id": "cop_evidence",
     "copy-from": "cop_evidence",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "extend": { "entries": [ { "item": "textbook_launcher", "prob": 3 } ] }
   },
   {
     "type": "item_group",
     "id": "vfw_books",
     "copy-from": "vfw_books",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "extend": { "entries": [ { "item": "textbook_launcher", "prob": 5 } ] }
   },
   {
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "id": "map_extra_casings",
     "copy-from": "map_extra_casings",
     "extend": { "entries": [ { "group": "map_extra_casings_tank" }, { "group": "map_extra_casings_tank_dummy" } ] }
@@ -187,7 +187,7 @@
   },
   {
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "id": "map_extra_casings_tank_dummy",
     "//": "reproduces the normal results of map_extra_casings itemgroup, since the contents lack weights, the list is short, and the desired chance of spawning artillery casings is low.",
     "entries": [
@@ -200,7 +200,7 @@
   {
     "id": "m1_abrams_ammo_rack",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "120mm_usable_heat", "count": [ 1, 6 ], "prob": 75 },
       { "item": "120mm_usable_ap", "count": [ 1, 6 ], "prob": 75 },
@@ -211,7 +211,7 @@
   {
     "id": "m109_ammo_rack",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "155mm_frag", "count": [ 1, 6 ], "prob": 75 },
       { "item": "155mm_heat", "count": [ 1, 2 ], "prob": 75 },
@@ -221,7 +221,7 @@
   {
     "id": "m2_bradley_ammo_rack",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "atgm_heat", "count": [ 1, 2 ], "prob": 30 },
       { "item": "belt25mm", "contents-group": "25mm_ammo", "prob": 50 },
@@ -239,7 +239,7 @@
   {
     "id": "m60_patton_ammo_rack",
     "type": "item_group",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "105mm_heat", "count": [ 1, 6 ], "prob": 75 },
       { "item": "105mm_ap", "count": [ 1, 6 ], "prob": 75 },
@@ -250,13 +250,13 @@
   {
     "id": "fuel_barrel_diesel_only",
     "type": "item_group",
-    "subtype": "distribution",
+    "subtypes": "distribution",
     "entries": [ { "item": "diesel", "charges": [ 0, 50000 ], "container-item": "30gal_drum", "prob": 100 } ]
   },
   {
     "type": "item_group",
     "id": "killdozer_ammo_shot",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       { "item": "shotbelt_20", "contents-group": "killdozer_shells", "prob": 75 },
       { "item": "shotbelt_20", "contents-group": "killdozer_shells", "prob": 75 },
@@ -275,7 +275,7 @@
   {
     "type": "item_group",
     "id": "killdozer_ammo_cannon",
-    "subtype": "collection",
+    "subtypes": "collection",
     "entries": [
       {
         "distribution": [
