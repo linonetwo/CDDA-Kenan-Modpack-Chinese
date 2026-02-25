@@ -831,5 +831,28 @@
     "name": { "str": "小春六花" },
     "worn_override": "NC_RIKKA_worn",
     "traits": [ { "group": "BG_survival_story_RURAL" }, { "trait": "VOIRO_BODY_RIKKA", "prob": 100 },{ "group": "NPC_starting_traits_voiro" } ]
+  },
+  {
+    "type": "npc",
+    "id": "mochiko",
+    "//": "VOIRO mod用のモチノ・キョウコクラスの定義",
+    "name_unique": "モチノ・キョウコ",
+    "name_suffix": "",
+    "gender": "female",
+    "age": 15,
+    "height": 142,
+    "class": "NC_VOIRO_MOCHIKO",
+    "attitude": 0,
+    "mission": 8,
+    "chat": "TALK_MOCHIKO_SAN_1",
+    "faction": "no_faction"
+  },
+  {
+    "type": "npc_class",
+    "id": "NC_VOIRO_MOCHIKO",
+    "copy-from": "NC_VOIRO_AI",
+    "name": { "str": "モチノ・キョウコ" },
+    "worn_override": "NC_MOCHIKO_worn",
+    "traits": [ { "group": "BG_survival_story_RURAL" }, { "trait": "VOIRO_BODY_MOCHIKO", "prob": 100 },{ "group": "NPC_starting_traits_voiro" } ]
   }
 ]

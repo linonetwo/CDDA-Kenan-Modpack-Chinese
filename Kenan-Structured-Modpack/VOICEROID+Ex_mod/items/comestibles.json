@@ -1,6 +1,7 @@
 [
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE"],
     "id": "voiro_zunda",
     "name": "ずんだ[voiro]",
     "comestible_type": "FOOD",
@@ -12,14 +13,15 @@
     "spoils_in": "3 days",
     "calories": 56,
     "description": "枝豆をすり潰してペースト状にしたものです。砂糖や塩などを加える前の状態の為、そのまま食べても美味しくありません。",
-    "price": "2 USD 50 cent",
+    "price": "2 USD 5 cent",
     "stack_size": 100,
     "material": "veggy",
     "vitamins": [ [ "iron", 27 ], [ "vitC", 16 ], [ "calcium", 6 ] ],
     "flags": "NUTRIENT_OVERRIDE"
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE"],
     "id": "voiro_zundamochi",
     "name": "ずんだ餅[voiro]",
     "copy-from": "dry_rice",
@@ -32,13 +34,13 @@
     "description": "宮城県を中心にした東北地方のローカルフードです。ずんだ餡とお餅のハーモニーによる美味しさはあなたの人生を狂わすでしょう！",
     "price": "3 USD",
     "fun": 10,
-    "milling": { "into": "null", "recipe": "" },
     "vitamins": [ [ "iron", 30 ], [ "vitC", 17 ], [ "calcium", 16 ] ],
     "flags": [ "EDIBLE_FROZEN" ]
   },
   {
     "//1": "deep_fried_shrimpだとニュアンスが異なるのでebi_fly。本当はビタミンEが多く含まれるんだけど魚介系って事でビタミンBを多くした。",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE"],
     "id": "voiro_ebi_fly",
     "name": "エビフライ[voiro]",
     "comestible_type": "FOOD",
@@ -59,7 +61,8 @@
   },
   {
     "//1": "deep_fried_shrimpだとニュアンスが異なるのでebi_fly。本当はビタミンEが多く含まれるんだけど魚介系って事でビタミンBを多くした。",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE"],
     "id": "voiro_jumbo_ebi_fly",
     "copy-from": "voiro_ebi_fly",
     "name": "ジャンボエビフライ[voiro]",

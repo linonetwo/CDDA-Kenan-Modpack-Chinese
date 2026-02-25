@@ -4,11 +4,9 @@
     "//2": "MP3はハードコーティングされているらしく機能しなかったので破棄。変わりに説明通り地図を入れた。",
     "id": "voiro_poipon8",
     "copy-from": "smart_phone",
-    "type": "TOOL",
-    "name": {
-      "str": "ポイポン8",
-      "str_pl": "ポイポン8"
-    },
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "ポイポン8", "str_pl": "ポイポン8" },
     "description": "薄くて軽い、洗練されたデザイン。超高速ワイヤレス接続。そして豊富に揃ったアプリケーション。精細な地図の表示、苦しい家計の計算、そして世界征服。あなたがしたいと思うすべてのことを、驚くほどのスピードで、思いのままに。ポイポン8は、最高のパートナーです。",
     "use_action": [
       {
@@ -22,21 +20,15 @@
       "CAMERA",
       "CALORIES_INTAKE_TRACKER",
       "PORTABLE_GAME",
-      {
-        "type": "link_up",
-        "cable_length": 3,
-        "charge_rate": "20 W"
-      }
+      { "type": "link_up", "cable_length": 3, "charge_rate": "20 W" }
     ]
   },
   {
     "id": "voiro_poipon8_music",
     "copy-from": "voiro_poipon8",
-    "type": "TOOL",
-    "name": {
-      "str": "ポイポン8(音楽)[voiro]",
-      "str_pl": "ポイポン8(音楽)[voiro]"
-    },
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "ポイポン8(音楽)[voiro]", "str_pl": "ポイポン8(音楽)[voiro]" },
     "description": "This phone is playing music, steadily raising your morale.  You can't hear anything else while you're listening.",
     "power_draw": "300 mW",
     "revert_to": "voiro_poipon8",
@@ -52,40 +44,32 @@
       "CAMERA",
       "CALORIES_INTAKE_TRACKER",
       "PORTABLE_GAME",
-      {
-        "type": "link_up",
-        "cable_length": 3,
-        "charge_rate": "20 W"
-      }
+      { "type": "link_up", "cable_length": 3, "charge_rate": "20 W" }
     ],
-    "tick_action": [
-      "MP3_ON"
-    ],
-    "extend": {
-      "flags": [
-        "TRADER_AVOID"
-      ]
-    }
+    "tick_action": [ "MP3_ON" ],
+    "extend": { "flags": [ "TRADER_AVOID" ] }
   },
   {
     "id": "voiro_poipon8_flashlight",
     "copy-from": "voiro_poipon8",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": "ポイポン8(ライト)[voiro]",
     "power_draw": "1500 mW",
     "revert_to": "voiro_poipon8",
     "use_action": [
-      "PORTABLE_GAME",
-      "EBOOKSAVE",
       "E_FILE_DEVICE",
+      "EBOOKSAVE",
+      "CAMERA",
+      "MP3",
+      "CALORIES_INTAKE_TRACKER",
+      "PORTABLE_GAME",
       {
         "type": "effect_on_conditions",
         "menu_text": "Dig into local files and logs",
         "description": "You can take a look at the local files stored on this smartphone.",
         "//need_charges_msg": "The smartphone's charge is too low.",
-        "effect_on_conditions": [
-          "EOC_READ_LOCAL_FILES"
-        ]
+        "effect_on_conditions": [ "EOC_READ_LOCAL_FILES" ]
       },
       {
         "ammo_scale": 0,
@@ -94,35 +78,21 @@
         "menu_text": "Turn off flashlight",
         "type": "transform"
       },
-      {
-        "type": "link_up",
-        "cable_length": 3,
-        "charge_rate": "20 W"
-      }
+      { "type": "link_up", "cable_length": 3, "charge_rate": "20 W" }
     ],
-    "extend": {
-      "flags": [
-        "LIGHT_20",
-        "CHARGEDIM",
-        "TRADER_AVOID"
-      ]
-    }
+    "extend": { "flags": [ "LIGHT_20", "CHARGEDIM", "TRADER_AVOID" ] }
   },
   {
     "id": "voiro_mic",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": "マイク[voiro]",
     "description": "一般的な市販のマイクです。伴奏者は消えようとも歌は文化です。世界にあなたの声を響かせましょう。鈍器の様に扱うことも出来ますが、対した脅威にはならないでしょう。",
     "weight": "280 g",
     "volume": "250 ml",
     "price": "100 USD",
-    "melee_damage": {
-      "bash": 6
-    },
-    "material": [
-      "plastic",
-      "iron"
-    ],
+    "melee_damage": { "bash": 6 },
+    "material": [ "plastic", "iron" ],
     "symbol": "-",
     "color": "dark_gray",
     "max_charges": 1,
@@ -150,13 +120,15 @@
   {
     "id": "voiro_mic_una_spicy",
     "copy-from": "voiro_mic",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "name": "マイク(音街ウナSpicy)[voiro]",
     "description": "雷模様が入ったマイクです。伴奏者は消えようとも歌は文化です。世界にあなたの声を響かせましょう。鈍器の様に扱うことも出来ますが、対した脅威にはならないでしょう。"
   },
   {
     "id": "band_aid",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "comestible_type": "MED",
     "name": "絆創膏[voiro]",
     "description": "ちょっとした怪我のお供に絆創膏。ダメージをわずかに回復します。",
@@ -167,19 +139,13 @@
     "symbol": "!",
     "color": "white",
     "stack_size": 5,
-    "flags": [
-      "NO_INGEST"
-    ],
-    "use_action": {
-      "type": "heal",
-      "bandages_power": 2,
-      "bleed": 2,
-      "move_cost": 100
-    }
+    "flags": [ "NO_INGEST" ],
+    "use_action": { "type": "heal", "bandages_power": 2, "bleed": 2, "move_cost": 100 }
   },
   {
     "id": "voiro_majorbaton",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "category": "weapons",
     "name": "メジャーバトン(音街ウナSugar)[voiro]",
     "description": "マーチングバンドにおけるドラムメジャー(指揮者)が持つ指揮棒です。音街ウナの物はティップ、ボールと呼ばれる両端が宝石の様になっています。",
@@ -187,49 +153,39 @@
     "volume": "1250 ml",
     "price": "200 USD",
     "to_hit": 2,
-    "melee_damage": {
-      "bash": 6
-    },
-    "material": [
-      "plastic",
-      "aluminum"
-    ],
+    "melee_damage": { "bash": 6 },
+    "material": [ "plastic", "aluminum" ],
     "symbol": "/",
     "color": "blue",
-    "flags": [
-      "NONCONDUCTIVE"
-    ]
+    "flags": [ "NONCONDUCTIVE" ]
   },
   {
     "id": "voiro_solar_sora",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "TOOL","ARMOR" ],
     "copy-from": "solarpack",
     "name": "折り畳みソーラーパネル(九州そら)[voiro]",
     "description": "発電用のソーラーパネルです。使用することでケーブルを自身に刺し、充電できます。噂では翼の代わりになったりするようです。"
   },
   {
     "id": "voiro_solar_sora_on",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [ "TOOL","ARMOR" ],
     "copy-from": "solarpack_on",
     "name": "折り畳みソーラーパネル(九州そら)(展開)[voiro]",
     "description": "発電用のソーラーパネルです。使用することでケーブルを自身に刺し、充電できます。噂では翼の代わりになったりするようです。"
   },
   {
     "id": "voiro_atomic_poipon_u92",
-    "type": "TOOL",
-    "name": {
-      "str": "ポイポンU92 Pro [voiro]",
-      "str_pl": "ポイポンU92 Pro [voiro]"
-    },
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "ポイポンU92 Pro [voiro]", "str_pl": "ポイポンU92 Pro [voiro]" },
     "description": "大変動前日にリリースが発表された人類の英知が詰まった最高のガジェットです。カロリー計算機能、音楽再生機能、目覚まし時計、高性能カメラ、ゲームアプリ、明るい懐中電灯に加えて、完全防水、EMPへの耐性など、およそ日常生活では必要ない機能まで備え、これを手に入れた幸運な生存者に快適な生活を約束します。",
     "weight": "300 g",
     "volume": "50 ml",
     "price": "2000 USD",
     "price_postapoc": "25 USD",
-    "material": [
-      "plastic",
-      "aluminum"
-    ],
+    "material": [ "plastic", "aluminum" ],
     "looks_like": "voiro_poipon8",
     "symbol": ";",
     "color": "light_green",
@@ -245,22 +201,14 @@
       "CALORIES_INTAKE_TRACKER",
       "PORTABLE_GAME"
     ],
-    "flags": [
-      "WATCH",
-      "ALARMCLOCK",
-      "NO_UNLOAD",
-      "NO_RELOAD",
-      "CALORIES_INTAKE"
-    ]
+    "flags": [ "WATCH", "ALARMCLOCK", "NO_UNLOAD", "NO_RELOAD", "CALORIES_INTAKE" ]
   },
   {
     "id": "voiro_atomic_poipon_u92_music",
     "copy-from": "voiro_atomic_poipon_u92",
-    "type": "TOOL",
-    "name": {
-      "str": "ポイポンU92 Pro (音楽)[voiro]",
-      "str_pl": "ポイポンU92 Pro (音楽)[voiro]"
-    },
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
+    "name": { "str": "ポイポンU92 Pro (音楽)[voiro]", "str_pl": "ポイポンU92 Pro (音楽)[voiro]" },
     "description": "大変動前日にリリースが発表された人類の英知が詰まった最高のガジェットです。カロリー計算機能、音楽再生機能、目覚まし時計、高性能カメラ、ゲームアプリ、明るい懐中電灯に加えて、完全防水、EMPへの耐性など、およそ日常生活では必要ない機能まで備え、これを手に入れた幸運な生存者に快適な生活を約束します。",
     "use_action": [
       {
@@ -272,26 +220,21 @@
       },
       "CAMERA",
       "CALORIES_INTAKE_TRACKER",
+      "E_FILE_DEVICE",
+      "EBOOKSAVE",
+      "MP3",
       "PORTABLE_GAME"
     ],
-    "tick_action": [
-      "MP3_ON"
-    ],
-    "extend": {
-      "flags": [
-        "TRADER_AVOID"
-      ]
-    }
+    "tick_action": [ "MP3_ON" ],
+    "extend": { "flags": [ "TRADER_AVOID" ] }
   },
   {
     "id": "voiro_atomic_poipon_u92_flashlight",
     "copy-from": "voiro_atomic_poipon_u92",
-    "type": "TOOL",
+    "type": "ITEM",
+    "subtypes": [ "TOOL" ],
     "looks_like": "voiro_poipon8_flashlight",
-    "name": {
-      "str": "ポイポンU92 Pro (ライト)[voiro]",
-      "str_pl": "ポイポンU92 Pro (ライト)[voiro]"
-    },
+    "name": { "str": "ポイポンU92 Pro (ライト)[voiro]", "str_pl": "ポイポンU92 Pro (ライト)[voiro]" },
     "revert_to": "voiro_atomic_poipon_u92",
     "use_action": [
       "PORTABLE_GAME",
@@ -304,14 +247,7 @@
         "type": "transform"
       }
     ],
-    "tick_action": [
-      "MP3_ON"
-    ],
-    "extend": {
-      "flags": [
-        "TRADER_AVOID",
-        "LIGHT_25"
-      ]
-    }
+    "tick_action": [ "MP3_ON" ],
+    "extend": { "flags": [ "TRADER_AVOID", "LIGHT_25" ] }
   }
 ]
