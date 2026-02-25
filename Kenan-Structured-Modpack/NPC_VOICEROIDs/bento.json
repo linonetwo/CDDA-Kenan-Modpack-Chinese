@@ -1,7 +1,8 @@
 [
   {
     "id": "bento_friend",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "name": "手作り弁当",
     "description": "手間暇かけて作られた手作りの日の丸弁当です。この時代に誰かの手作りを食べられるのは奇跡です。手と手を合わせていただきます！",
     "symbol": "%",
@@ -13,7 +14,7 @@
     "quench": 30,
     "healthy": 1,
     "calories": 600,
-    "price_postapoc": 100,
+    "price_postapoc": "100 cent",
     "parasites": 0,
     "fun": 50,
     "flags": [ "EATEN_HOT", "EATEN_COLD" ],
@@ -22,7 +23,8 @@
   },
   {
     "id": "bento_lovers",
-    "type": "COMESTIBLE",
+    "type": "ITEM",
+    "subtypes": [ "COMESTIBLE" ],
     "name": "愛情手作り弁当",
     "description": "食べる人のことを第一に考え、手間暇かけて作られた手作りの弁当です。この時代に誰かの手作り(しかも美味しい！)を食べられるのは奇跡です。\nあっ！このハート、ハムで出来てる！",
     "symbol": "%",
@@ -34,7 +36,7 @@
     "quench": 50,
     "healthy": 15,
     "calories": 800,
-    "price_postapoc": 100,
+    "price_postapoc": "100 cent",
     "parasites": 0,
     "fun": 80,
     "flags": [ "EATEN_HOT", "EATEN_COLD" ],

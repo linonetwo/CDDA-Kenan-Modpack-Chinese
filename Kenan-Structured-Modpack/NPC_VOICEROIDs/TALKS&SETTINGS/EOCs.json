@@ -22,7 +22,7 @@
     "required_event": "character_dies",
     "condition": {
       "and": [
-        { "u_has_var": "lovers", "type": "flag", "context": "guts", "value": "yes" },
+        { "compare_string": [ "yes", { "u_val": "guts_lovers" } ] },
         { "math": [ "u_counter_var_love_points_love_point", ">=", "30" ] }
       ]
     },
@@ -58,7 +58,7 @@
     "type": "effect_on_condition",
     "id": "EOC_FRIENDS_HELP_SET",
     "eoc_type": "ACTIVATION",
-    "effect": [ { "queue_eocs": "EOC_FRIENDS_HELP_DEL", "time_in_future": "8 hours" }, { "u_add_trait": "band_help_friends" } ]
+    "effect": [ { "run_eocs": "EOC_FRIENDS_HELP_DEL", "time_in_future": "8 hours" }, { "u_add_trait": "band_help_friends" } ]
   },
   {
     "type": "effect_on_condition",
@@ -71,7 +71,7 @@
     "id": "EOC_event_eat_items_love",
     "eoc_type": "EVENT",
     "required_event": "character_eats_item",
-    "condition": { "and": [ { "u_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" }, "u_is_npc" ] },
+    "condition": { "and": [ { "compare_string": [ "yes", { "u_val": "band_flag_friends" } ] }, "u_is_npc" ] },
     "effect": [ { "math": [ "u_counter_var_love_points_love_point", "+=", "rand(4) + 1" ] } ]
   },
   {
@@ -81,7 +81,7 @@
     "required_event": "character_finished_activity",
     "condition": {
       "and": [
-        { "u_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
+        { "compare_string": [ "yes", { "u_val": "band_flag_friends" } ] },
         "u_is_npc",
         {
           "or": [

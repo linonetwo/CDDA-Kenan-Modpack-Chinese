@@ -2,7 +2,7 @@
   {
     "id": "TALK_STRANGER_KIRITAN",
     "type": "talk_topic",
-    "dynamic_line": "<youname_kiritan>腐ってない？話できる？やったー！久しぶりの人間だ！\nあの、良ければわたしも一緒に行動していいですか！？",
+    "dynamic_line": "<u_name>腐ってない？話できる？やったー！久しぶりの人間だ！\nあの、良ければわたしも一緒に行動していいですか！？",
     "responses": [
       {
         "text": "子供でも特別扱いは出来ないぞ。\nそれでも良ければ一緒に来るといい。",
@@ -21,8 +21,8 @@
         "effect": [
           "follow",
           { "math": [ "n_counter_var_love_points_love_point", "+=", "3" ] },
-          { "math": [ "n_val('stored_kcal')", "=", "60000" ] },
-          { "npc_add_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" }
+
+          { "npc_add_var": "voiro_flag_uniqe_friend", "value": "yes" }
         ],
         "opinion": { "trust": 1, "value": 1, "fear": -1, "anger": -1 },
         "topic": "TALK_DONE"

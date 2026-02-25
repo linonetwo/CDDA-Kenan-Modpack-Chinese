@@ -8,8 +8,8 @@
         "topic": "TALK_INTERCTION_IA",
         "condition": {
           "and": [
-            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] },
+            { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] },
             { "npc_has_trait": "VOIRO_BODY_IA" }
           ]
         }
@@ -19,8 +19,8 @@
         "topic": "TALK_INTERCTION_KIRITAN",
         "condition": {
           "and": [
-            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] },
+            { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] },
             { "npc_has_trait": "VOIRO_BODY_KIRITAN" }
           ]
         }
@@ -30,8 +30,8 @@
         "topic": "TALK_INTERCTION_AKARI",
         "condition": {
           "and": [
-            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] },
+            { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] },
             { "npc_has_trait": "VOIRO_BODY_AKARI" }
           ]
         }
@@ -41,8 +41,8 @@
         "topic": "TALK_INTERCTION_YUKARI",
         "condition": {
           "and": [
-            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] },
+            { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] },
             { "npc_has_trait": "VOIRO_BODY_YUKARI" }
           ]
         }
@@ -52,8 +52,8 @@
         "topic": "TALK_INTERCTION_AKANE",
         "condition": {
           "and": [
-            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] },
+            { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] },
             { "npc_has_trait": "VOIRO_BODY_AKANE" }
           ]
         }
@@ -63,8 +63,8 @@
         "topic": "TALK_INTERCTION_AOI",
         "condition": {
           "and": [
-            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] },
+            { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] },
             { "npc_has_trait": "VOIRO_BODY_AOI" }
           ]
         }
@@ -74,8 +74,8 @@
         "topic": "TALK_INTERCTION_TUMUGI",
         "condition": {
           "and": [
-            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] },
+            { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] },
             { "npc_has_trait": "VOIRO_BODY_TUMUGI" }
           ]
         }
@@ -85,18 +85,18 @@
         "topic": "TALK_INTERCTION_GENERIC",
         "condition": {
           "and": [
-            { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
-            { "not": { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" } }
+            { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] },
+            { "not": { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] } }
           ]
         }
       },
       {
         "text": "絆を結ぶ",
         "topic": "TALK_ALLY_SOCIAL",
-        "condition": { "not": { "npc_has_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" } },
+        "condition": { "not": { "compare_string": [ "yes", { "npc_val": "band_flag_friends" } ] } },
         "effect": [
           { "npc_add_trait": "band_lv0" },
-          { "npc_add_var": "friends", "type": "flag", "context": "band_flag", "value": "yes" },
+          { "npc_add_var": "band_flag_friends", "value": "yes" },
           {
             "u_message": "<npc_name>と絆を結びました。\nまずは顔見知りから始めましょう！",
             "popup": true
@@ -151,7 +151,7 @@
         "effect": [
           { "npc_lose_trait": "band_lv2" },
           { "npc_add_trait": "band_lv3" },
-          { "npc_add_var": "lovers", "type": "flag", "context": "guts", "value": "yes" },
+          { "npc_add_var": "guts_lovers", "value": "yes" },
           {
             "u_message": "<npc_name>との絆が深まりました！\n<npc_name>はこの世界で最も得難い宝と言えます！",
             "popup": true
@@ -182,7 +182,7 @@
         "condition": {
           "and": [
             { "math": [ "n_counter_var_love_points_love_point", ">=", "150" ] },
-            { "npc_has_var": "uniqe_friend", "type": "flag", "context": "voiro_flag", "value": "yes" },
+            { "compare_string": [ "yes", { "npc_val": "voiro_flag_uniqe_friend" } ] },
             { "npc_has_trait": "band_lv4" }
           ]
         }

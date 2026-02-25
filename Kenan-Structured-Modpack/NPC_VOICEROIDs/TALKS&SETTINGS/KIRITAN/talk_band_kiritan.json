@@ -69,14 +69,14 @@
         "topic": "TALK_DONE",
         "condition": {
           "and": [
-            { "not": { "npc_has_var": "already_shot", "type": "flag", "context": "photographed", "value": "yes" } },
+            { "not": { "compare_string": [ "yes", { "npc_val": "photographed_already_shot" } ] } },
             { "npc_has_any_trait": [ "band_lv4", "band_lv5" ] },
             { "or": [ { "u_has_item": "camera" }, { "u_has_item": "camera_pro" } ] }
           ]
         },
         "effect": [
           { "u_spawn_item": "lovers_photo_kiritan", "count": 1 },
-          { "npc_add_var": "already_shot", "type": "flag", "context": "photographed", "value": "yes" },
+          { "npc_add_var": "photographed_already_shot", "value": "yes" },
           {
             "u_message": "あなたがおもむろにカメラを向けると、<npc_name>は慌ててポーズを取ってくれました！",
             "popup": true
