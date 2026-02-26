@@ -1,116 +1,215 @@
 [
   {
     "id": "armor_qb",
-    "type": "ARMOR",
-    "name": { "str": "吊袜带钱包" },
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "吊袜带钱包"
+    },
     "description": "一个小储物袋，可以放在裙子下面，用吊袜带托起。",
-    "weight": "250 g", "volume": "500 ml",
-    "price": "35 USD", "price_postapoc": "50 cent",
-    "material": ["cotton"],
+    "weight": "250 g",
+    "volume": "500 ml",
+    "price": "35 USD",
+    "price_postapoc": "50 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.2,
-    "symbol": "[","color": "dark_gray",
+    "symbol": "[",
+    "color": "dark_gray",
     "pocket_data": [
-      { "pocket_type": "CONTAINER",
+      {
+        "pocket_type": "CONTAINER",
         "max_contains_volume": "1500 ml",
         "max_contains_weight": "2 kg",
         "max_item_length": "15 cm",
         "moves": 150
-      } ],
-    "flags": ["SKINTIGHT","WATER_FRIENDLY"],
+      }
+    ],
+    "flags": [
+      "SKINTIGHT"
+    ],
     "armor": [
-      { "encumbrance": [1,2],"coverage": 13,
-        "covers": ["leg_l"],
-        "specifically_covers": ["leg_upper_l"]
-      } ]
+      {
+        "encumbrance": [
+          1,
+          2
+        ],
+        "coverage": 13,
+        "covers": [
+          "leg_l"
+        ],
+        "specifically_covers": [
+          "leg_upper_l"
+        ]
+      }
+    ]
   },
-  
   {
     "id": "armor_ykx3",
-    "type": "ARMOR",
-    "name": { "str": "硬壳箱" },
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "硬壳箱"
+    },
     "description": "一个巨大的长方形硬盒。通常用于携带大型乐器、枪支或敏感的电气设备。",
-    "weight": "3500 g","volume": "38 L","longest_side": "105 cm",
-    "price": "90 USD","price_postapoc": "30 USD",
-    "material": ["leather","steel"],
+    "weight": "3500 g",
+    "volume": "38 L",
+    "longest_side": "105 cm",
+    "price": "90 USD",
+    "price_postapoc": "30 USD",
+    "material": [
+      "leather",
+      "steel"
+    ],
     "material_thickness": 2,
-    "symbol": "[","color": "dark_gray",
+    "symbol": "[",
+    "color": "dark_gray",
     "pocket_data": [
-      { "pocket_type": "CONTAINER",
+      {
+        "pocket_type": "CONTAINER",
         "rigid": true,
         "max_contains_volume": "35 L",
         "max_contains_weight": "40 kg",
         "max_item_length": "100 cm",
         "moves": 300
-      } ],
+      }
+    ],
     "warmth": 0,
-    "flags": ["BELTED","WATER_FRIENDLY","STURDY"],
+    "flags": [
+      "BELTED",
+      "STURDY"
+    ],
     "armor": [
-      { "encumbrance": 25,"coverage": 100,
-        "covers": ["torso"],"specifically_covers": ["torso_hanging_back"]
-      } ]
+      {
+        "encumbrance": 25,
+        "coverage": 100,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
-  
   {
     "id": "armor_ykx2",
-    "type": "ARMOR",
-    "name": { "str": "迷你硬壳箱" },
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "迷你硬壳箱"
+    },
     "description": "一个相对普通版小一点的硬壳箱。",
-    "weight": "2500 g","volume": "28 L","longest_side": "95 cm",
-    "price": "70 USD","price_postapoc": "20 USD",
-    "material": ["leather","steel"],
+    "weight": "2500 g",
+    "volume": "28 L",
+    "longest_side": "95 cm",
+    "price": "70 USD",
+    "price_postapoc": "20 USD",
+    "material": [
+      "leather",
+      "steel"
+    ],
     "material_thickness": 2,
-    "symbol": "[","color": "dark_gray",
+    "symbol": "[",
+    "color": "dark_gray",
     "pocket_data": [
-      { "pocket_type": "CONTAINER",
+      {
+        "pocket_type": "CONTAINER",
         "rigid": true,
         "max_contains_volume": "25 L",
         "max_contains_weight": "30 kg",
         "max_item_length": "90 cm",
         "moves": 300
-      } ],
+      }
+    ],
     "warmth": 0,
-    "flags": ["BELTED","WATER_FRIENDLY","STURDY"],
+    "flags": [
+      "BELTED",
+      "STURDY"
+    ],
     "armor": [
-      { "encumbrance": 15,"coverage": 80,
-        "covers": ["torso"],"specifically_covers": ["torso_hanging_back"]
-      } ]
+      {
+        "encumbrance": 15,
+        "coverage": 80,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
-  
   {
     "id": "armor_ykx1",
-    "type": "ARMOR",
-    "name": {"str": "细长硬壳箱"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "细长硬壳箱"
+    },
     "description": "一个细长版的硬壳箱。",
-    "weight": "1500 g","volume": "18 L","longest_side": "75 cm",
-    "price": "50 USD","price_postapoc": "10 USD",
-    "material": ["leather","steel"],
+    "weight": "1500 g",
+    "volume": "18 L",
+    "longest_side": "75 cm",
+    "price": "50 USD",
+    "price_postapoc": "10 USD",
+    "material": [
+      "leather",
+      "steel"
+    ],
     "material_thickness": 2,
-    "symbol": "[","color": "dark_gray",
+    "symbol": "[",
+    "color": "dark_gray",
     "pocket_data": [
-      { "pocket_type": "CONTAINER",
+      {
+        "pocket_type": "CONTAINER",
         "rigid": true,
         "max_contains_volume": "15 L",
         "max_contains_weight": "20 kg",
         "max_item_length": "70 cm",
         "moves": 300
-      } ],
+      }
+    ],
     "warmth": 0,
-    "flags": ["BELTED","WATER_FRIENDLY","STURDY"],
+    "flags": [
+      "BELTED",
+      "STURDY"
+    ],
     "armor": [
-      { "encumbrance": 8,"coverage": 60,
-        "covers": ["torso"],"specifically_covers": ["torso_hanging_back"]
-      } ]
+      {
+        "encumbrance": 8,
+        "coverage": 60,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
-  
   {
     "id": "背包",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化", "subcategory": "CSC_萌化_衣服",
+    "category": "CC_萌化",
+    "subcategory": "CSC_萌化_衣服",
     "name": "背包",
     "description": "背包",
     "skill_used": "tailor",
-    "nested_category_data": [ "xl_ykx", "armor_qb" ],
+    "nested_category_data": [
+      "xl_ykx",
+      "armor_qb"
+    ],
     "difficulty": 0
   },
   {
@@ -122,43 +221,78 @@
     "name": "硬壳箱",
     "description": "硬壳箱",
     "skill_used": "tailor",
-    "nested_category_data": [ "armor_ykx1", "armor_ykx2", "armor_ykx3" ],
+    "nested_category_data": [
+      "armor_ykx1",
+      "armor_ykx2",
+      "armor_ykx3"
+    ],
     "difficulty": 0
   },
   {
     "result": "armor_qb",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "50 m",
     "autolearn": true,
-    "using": [["tailoring_cotton_patchwork",2]]
+    "using": [
+      [
+        "tailoring_cotton_patchwork",
+        2
+      ]
+    ]
   },
-  
   {
     "result": "armor_ykx3",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 4,
     "time": "10 h",
     "autolearn": true,
     "using": [
-      ["tailoring_leather",4],
-      ["fastener_large",2]
+      [
+        "tailoring_leather",
+        4
+      ],
+      [
+        "fastener_large",
+        2
+      ]
     ],
     "proficiencies": [
-      {"proficiency": "prof_closures"},
-      {"proficiency": "prof_closures_waterproofing"},
-      {"proficiency": "prof_leatherworking"},
-      {"proficiency": "prof_leatherworking_basic"}
+      {
+        "proficiency": "prof_closures"
+      },
+      {
+        "proficiency": "prof_closures_waterproofing"
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      },
+      {
+        "proficiency": "prof_leatherworking_basic"
+      }
     ],
     "components": [
-      [["strap_large",1,"LIST"]],
-      [["plastic_sheet",2]]
+      [
+        [
+          "strap_large",
+          1,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "plastic_sheet",
+          2
+        ]
+      ]
     ]
   },
   {
@@ -168,12 +302,29 @@
     "copy-from": "armor_ykx3",
     "time": "8 h",
     "using": [
-      ["tailoring_leather",3],
-      ["fastener_large",2]
+      [
+        "tailoring_leather",
+        3
+      ],
+      [
+        "fastener_large",
+        2
+      ]
     ],
     "components": [
-      [["strap_large",1,"LIST"]],
-      [["plastic_sheet",2]]
+      [
+        [
+          "strap_large",
+          1,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "plastic_sheet",
+          2
+        ]
+      ]
     ]
   },
   {
@@ -183,12 +334,29 @@
     "copy-from": "armor_ykx3",
     "time": "6 h",
     "using": [
-      ["tailoring_leather",2],
-      ["fastener_large",2]
+      [
+        "tailoring_leather",
+        2
+      ],
+      [
+        "fastener_large",
+        2
+      ]
     ],
     "components": [
-      [["strap_large",1,"LIST"]],
-      [["plastic_sheet",2]]
+      [
+        [
+          "strap_large",
+          1,
+          "LIST"
+        ]
+      ],
+      [
+        [
+          "plastic_sheet",
+          2
+        ]
+      ]
     ]
   }
 ]

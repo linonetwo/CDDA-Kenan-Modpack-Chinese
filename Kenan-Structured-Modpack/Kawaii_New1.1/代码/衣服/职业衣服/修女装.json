@@ -1,32 +1,58 @@
 [
   {
     "id": "armor_xnm",
-    "type": "ARMOR",
-    "name": {"str": "修女头纱[kawaii]"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "修女头纱[kawaii]"
+    },
     "description": "一层侍奉神的修女的面纱。",
-    "weight": "10 g","volume": "250 ml",
-    "price": "95 USD","price_postapoc": "50 cent",
-    "material": ["cotton"],
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": "95 USD",
+    "price_postapoc": "50 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
-    "symbol": "[","color": "white",
+    "symbol": "[",
+    "color": "white",
     "warmth": 5,
-    "flags": ["VARSIZE","FANCY"],
+    "flags": [
+      "VARSIZE"
+    ],
     "armor": [
-      { "encumbrance": 5,"coverage": 95,
-        "covers": ["head"] }
+      {
+        "encumbrance": 5,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
     ]
   },
-  
   {
     "id": "armor_xnlf",
-    "type": "ARMOR",
-    "name": {"str": "修女礼服[kawaii]"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "修女礼服[kawaii]"
+    },
     "description": "一套用来服侍上帝的修女服, 散发出神圣的气息。",
-    "weight": "800 g","volume": "3500 ml",
-    "price": "180 USD","price_postapoc": "60 cent",
-    "material": ["cotton"],
+    "weight": "800 g",
+    "volume": "3500 ml",
+    "price": "180 USD",
+    "price_postapoc": "60 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.4,
-    "symbol": "[","color": "blue",
+    "symbol": "[",
+    "color": "blue",
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -42,36 +68,74 @@
       }
     ],
     "warmth": 15,
-    "flags": ["VARSIZE","FANCY"],
+    "flags": [
+      "VARSIZE"
+    ],
     "armor": [
-      { "covers": ["torso"],
+      {
+        "covers": [
+          "torso"
+        ],
         "coverage": 95,
-        "encumbrance": [10,12]
+        "encumbrance": [
+          10,
+          12
+        ]
       },
-      { "covers": ["arm_l","arm_r"],
-        "coverage": 95,"encumbrance": [8,8]
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "coverage": 95,
+        "encumbrance": [
+          8,
+          8
+        ]
       },
-      { "covers": ["leg_l","leg_r"],"specifically_covers": ["leg_hip_l","leg_hip_r"],
-        "coverage": 100,"encumbrance": [5,7]
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          5,
+          7
+        ]
       },
-      { "covers": ["leg_l","leg_r"],"specifically_covers": ["leg_upper_l","leg_upper_r"],
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
         "coverage": 50
       }
     ]
   },
-  
   {
     "id": "职业修女",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "name": "修女",
     "description": "修女",
     "skill_used": "tailor",
-    "nested_category_data": [ "armor_xnm", "armor_xnlf" ],
+    "nested_category_data": [
+      "armor_xnm",
+      "armor_xnlf"
+    ],
     "difficulty": 0
   },
-  
   {
     "result": "armor_xnm",
     "type": "recipe",
@@ -79,23 +143,35 @@
     "copy-from": "armor_npts",
     "time": "2 h",
     "using": [
-      ["sewing_standard",15],
-      ["fabric_standard_nostretch",5]
+      [
+        "sewing_standard",
+        15
+      ],
+      [
+        "fabric_standard_nostretch",
+        5
+      ]
     ]
   },
-  
   {
     "result": "armor_xnlf",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "6 h",
     "autolearn": true,
     "using": [
-      ["sewing_standard",15],
-      ["fabric_standard_nostretch",15]
+      [
+        "sewing_standard",
+        15
+      ],
+      [
+        "fabric_standard_nostretch",
+        15
+      ]
     ]
   }
 ]

@@ -1,193 +1,343 @@
 [
   {
     "id": "armor_hjjcw",
-    "type": "ARMOR",
-    "name": {"str": "厚及膝长袜"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "厚及膝长袜"
+    },
     "description": "一双厚及膝长袜。厚厚的, 能让穿着它的人的腿部保持温暖。",
-    "weight": "90 g","volume": "250 ml",
-    "price": "5 USD","price_postapoc": "2 USD 50 cent",
-    "material": ["cotton"],
+    "weight": "90 g",
+    "volume": "250 ml",
+    "price": "5 USD",
+    "price_postapoc": "2 USD 50 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.2,
-    "symbol": "[","color": "dark_gray",
+    "symbol": "[",
+    "color": "dark_gray",
     "warmth": 35,
-    "flags": ["VARSIZE","SKINTIGHT","FANCY"],
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
     "armor": [
-      { "coverage": 100,
-        "covers": ["foot_l","foot_r"]
+      {
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
       },
-      { "coverage": 100,
-        "covers": ["leg_l","leg_r"],
-        "specifically_covers": ["leg_lower_l","leg_lower_r","leg_knee_l","leg_knee_r"]
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r",
+          "leg_knee_l",
+          "leg_knee_r"
+        ]
       }
     ]
   },
-  
   {
     "id": "armor_bjjcw",
-    "type": "ARMOR",
-    "name": {"str": "薄及膝长袜"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "薄及膝长袜"
+    },
     "description": "一双薄及膝长袜。它很薄，穿上后会有点透明。",
-    "weight": "40 g","volume": "250 ml",
-    "price": "5 USD","price_postapoc": "2 USD 50 cent",
-    "material": ["cotton"],
+    "weight": "40 g",
+    "volume": "250 ml",
+    "price": "5 USD",
+    "price_postapoc": "2 USD 50 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.1,
     "symbol": "[",
     "color": "dark_gray",
     "warmth": 2,
-    "flags": ["VARSIZE","SKINTIGHT","FANCY"],
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
     "armor": [
-      { "coverage": 100,
-        "covers": ["foot_l","foot_r"] },
-      { "coverage": 100,
-        "covers": ["leg_l","leg_r"],
-        "specifically_covers": ["leg_lower_l","leg_lower_r","leg_knee_l","leg_knee_r"] }
+      {
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      },
+      {
+        "coverage": 100,
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_lower_l",
+          "leg_lower_r",
+          "leg_knee_l",
+          "leg_knee_r"
+        ]
+      }
     ]
   },
-  
   {
     "id": "armor_lkw_hei",
-    "type": "ARMOR",
-    "name": {"str": "黑色连裤袜"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "黑色连裤袜"
+    },
     "description": "温暖的连裤丝袜。",
-    "weight": "100 g","volume": "250 ml",
-    "price": "5 USD","price_postapoc": "2 USD 50 cent",
-    "material": ["cotton"],
+    "weight": "100 g",
+    "volume": "250 ml",
+    "price": "5 USD",
+    "price_postapoc": "2 USD 50 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.1,
-    "symbol": "[","color": "dark_gray",
+    "symbol": "[",
+    "color": "dark_gray",
     "warmth": 10,
-    "flags": ["VARSIZE","SKINTIGHT","FANCY"],
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
     "armor": [
-      { "encumbrance": 0,
+      {
+        "encumbrance": 0,
         "coverage": 100,
-        "covers": ["foot_l","foot_r","leg_l","leg_r"] }
+        "covers": [
+          "foot_l",
+          "foot_r",
+          "leg_l",
+          "leg_r"
+        ]
+      }
     ]
   },
-  
   {
     "id": "armor_lkw_bai",
     "copy-from": "armor_lkw_hei",
-    "type": "ARMOR",
-    "name": {"str": "白色连裤袜"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "白色连裤袜"
+    },
     "description": "温暖的连裤丝袜。"
   },
-  
   {
     "id": "armor_bai",
-    "type": "ARMOR",
-    "name": {"str": "白袜子"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "白袜子"
+    },
     "description": "一对学生们经常穿的白色袜子。",
-    "weight": "10 g","volume": "250 ml",
-    "price": "1 USD","price_postapoc": "50 cent",
-    "material": ["cotton"],
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": "1 USD",
+    "price_postapoc": "50 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.2,
-    "symbol": "[","color": "white",
+    "symbol": "[",
+    "color": "white",
     "warmth": 5,
-    "flags": ["VARSIZE","SKINTIGHT"],
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
     "armor": [
-      { "encumbrance": 0,"coverage": 100,
-        "covers": ["foot_l","foot_r"] }
+      {
+        "encumbrance": 0,
+        "coverage": 100,
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ]
+      }
     ]
   },
-  
   {
     "id": "armor_dwd",
-    "type": "ARMOR",
-    "name": {"str": "吊袜带"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "吊袜带"
+    },
     "description": "一种黑色吊袜带，从设计上一般和长筒丝袜一起穿。",
-    "weight": "10 g","volume": "250 ml",
-    "price": "5 USD","price_postapoc": "2 USD 50 cent",
-    "material": ["cotton"],
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": "5 USD",
+    "price_postapoc": "2 USD 50 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 0.1,
-    "symbol": "[","color": "dark_gray",
+    "symbol": "[",
+    "color": "dark_gray",
     "warmth": 0,
-    "flags": ["VARSIZE","SKINTIGHT"],
+    "flags": [
+      "VARSIZE",
+      "SKINTIGHT"
+    ],
     "armor": [
-      { "encumbrance": 1,"coverage": 38,
-        "covers": ["torso"],
-        "specifically_covers": ["torso_lower"] }
+      {
+        "encumbrance": 1,
+        "coverage": 38,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ]
+      }
     ]
   },
-  
   {
     "id": "袜子",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化", "subcategory": "CSC_萌化_衣服",
+    "category": "CC_萌化",
+    "subcategory": "CSC_萌化_衣服",
     "name": "袜子",
     "description": "袜子",
     "skill_used": "tailor",
-    "nested_category_data": [ "armor_dwd", "armor_hjjcw", "armor_bjjcw", "armor_lkw_hei", "armor_lkw_bai", "armor_bai" ],
+    "nested_category_data": [
+      "armor_dwd",
+      "armor_hjjcw",
+      "armor_bjjcw",
+      "armor_lkw_hei",
+      "armor_lkw_bai",
+      "armor_bai"
+    ],
     "difficulty": 0
   },
   {
     "result": "armor_dwd",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "30 m",
     "autolearn": true,
-    "using": [["tailoring_cotton",1]]
+    "using": [
+      [
+        "tailoring_cotton",
+        1
+      ]
+    ]
   },
-  
   {
     "result": "armor_hjjcw",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 2,
     "time": "1 h 40 m",
     "autolearn": true,
-    "using": [["tailoring_cotton",2]]
+    "using": [
+      [
+        "tailoring_cotton",
+        2
+      ]
+    ]
   },
-  
   {
     "result": "armor_bjjcw",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 2,
     "time": "1 h 30 m",
     "autolearn": true,
-    "using": [["tailoring_cotton",1]]
+    "using": [
+      [
+        "tailoring_cotton",
+        1
+      ]
+    ]
   },
-  
   {
     "result": "armor_lkw_hei",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "2 h",
     "autolearn": true,
-    "using": [["tailoring_cotton",2]]
+    "using": [
+      [
+        "tailoring_cotton",
+        2
+      ]
+    ]
   },
-  
   {
     "result": "armor_lkw_bai",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "2 h",
     "autolearn": true,
-    "using": [["tailoring_cotton",2]]
+    "using": [
+      [
+        "tailoring_cotton",
+        2
+      ]
+    ]
   },
-  
   {
     "result": "armor_bai",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 0,
     "time": "30 m",
     "autolearn": true,
-    "using": [["tailoring_cotton",1]]
+    "using": [
+      [
+        "tailoring_cotton",
+        1
+      ]
+    ]
   }
 ]

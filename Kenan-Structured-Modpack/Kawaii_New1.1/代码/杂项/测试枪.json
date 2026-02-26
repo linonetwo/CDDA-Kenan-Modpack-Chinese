@@ -2,7 +2,7 @@
   {
     "id": "gun_csq",
     "copy-from": "m1903",
-    "type": "GUN",
+    "type": "ITEM", "subtypes": [ "GUN" ],
     "name": { "str": "测试枪" },
     "description": "测试用的枪",
     "valid_mod_locations": [
@@ -21,7 +21,7 @@
   },
   {
     "id": "sights_cs",
-    "type": "GUNMOD",
+    "type": "ITEM", "subtypes": [ "GUNMOD" ],
     "name": { "str": "测试瞄准镜" },
     "//": "Leupold Mark 6",
     "description": "A 3-18x44 rifle scope.  It is adjustable for windage and elevation in 1/10th mrad increments and is remarkably small and light for its magnification.",
@@ -36,7 +36,7 @@
   },
   {
     "id": "grip_cs",
-    "type": "GUNMOD",
+    "type": "ITEM", "subtypes": [ "GUNMOD" ],
     "name": { "str": "测试握把" },
     "description": "A set of ergonomic replacement furniture for a firearm improving handling.",
     "weight": "125 g", "volume": "250 ml",
@@ -51,7 +51,7 @@
   },
   {
     "id": "stock_cs",
-    "type": "GUNMOD",
+    "type": "ITEM", "subtypes": [ "GUNMOD" ],
     "name": { "str": "测试枪托" },
     "description": "A replacement stock designed to absorb perceived recoil.",
     "weight": "960 g", "volume": "500 ml",
@@ -83,7 +83,7 @@
     "name": { "str": "测试枪"}, "description": "测试枪", "points": 0,
     "integrated_armor": [ "pj_csq" ]
   },
-  { "type": "ARMOR", "category": "armor", "id": "pj_csq",
+  { "type": "ITEM", "subtypes": [ "ARMOR" ], "category": "armor", "id": "pj_csq",
     "name": { "str": "测试枪" }, "description": "测试枪",
     "weight": "1 g", "volume": "1 ml",
     "price": "0 cent", "price_postapoc": "0 cent",
@@ -112,7 +112,7 @@
     "name": { "str": "测试瞄准镜"}, "description": "测试瞄准镜", "points": 0,
     "integrated_armor": [ "pj_sights_cs" ]
   },
-  { "type": "ARMOR", "category": "armor",
+  { "type": "ITEM", "subtypes": [ "ARMOR" ], "category": "armor",
     "id": "pj_sights_cs",
     "name": { "str": "测试瞄准镜" }, "description": "测试瞄准镜",
     "weight": "1 g", "volume": "1 ml",
@@ -142,7 +142,7 @@
     "name": { "str": "测试握把"}, "description": "测试握把", "points": 0,
     "integrated_armor": [ "pj_grip_cs" ]
   },
-  { "type": "ARMOR", "category": "armor",
+  { "type": "ITEM", "subtypes": [ "ARMOR" ], "category": "armor",
     "id": "pj_grip_cs",
     "name": { "str": "测试握把" }, "description": "测试握把",
     "weight": "1 g", "volume": "1 ml",
@@ -172,7 +172,7 @@
     "name": { "str": "测试枪托"}, "description": "测试枪托", "points": 0,
     "integrated_armor": [ "pj_stock_cs" ]
   },
-  { "type": "ARMOR", "category": "armor",
+  { "type": "ITEM", "subtypes": [ "ARMOR" ], "category": "armor",
     "id": "pj_stock_cs",
     "name": { "str": "测试枪托" }, "description": "测试枪托",
     "weight": "1 g", "volume": "1 ml",

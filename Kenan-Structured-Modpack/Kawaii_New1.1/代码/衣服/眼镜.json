@@ -1,7 +1,11 @@
 [
   {
     "id": "armor_gkj",
-    "type": "TOOL_ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL",
+      "ARMOR"
+    ],
     "name": {
       "str": "高科技眼镜 （关）"
     },
@@ -26,9 +30,7 @@
       ]
     ],
     "flags": [
-      "WATER_FRIENDLY",
       "FIRESTARTER",
-      "FANCY",
       "FIX_NEARSIGHT",
       "FIX_FARSIGHT",
       "SUN_GLASSES",
@@ -76,17 +78,18 @@
   {
     "id": "armor_gkj1",
     "copy-from": "armor_gkj",
-    "type": "TOOL_ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL",
+      "ARMOR"
+    ],
     "name": {
       "str": "高科技眼镜 （夜视）"
     },
     "flags": [
-      "WATER_FRIENDLY",
-      "FANCY",
       "FIX_NEARSIGHT",
       "FIX_FARSIGHT",
-      "GNV_EFFECT",
-      "TRADER_AVOID"
+      "GNV_EFFECT"
     ],
     "power_draw": "10 W",
     "revert_to": "armor_gkj",
@@ -104,24 +107,23 @@
     "id": "armor_gkj2",
     "copy-from": "armor_gkj",
     "repairs_like": "armor_gkj",
-    "type": "TOOL_ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL",
+      "ARMOR"
+    ],
     "name": {
       "str": "高科技眼镜 （红外）"
     },
     "flags": [
-      "WATER_FRIENDLY",
-      "FANCY",
       "FIX_NEARSIGHT",
-      "FIX_FARSIGHT",
-      "TRADER_AVOID"
+      "FIX_FARSIGHT"
     ],
-    "relic_data": {
-      "passive_effects": [
-        {
-          "id": "THERMAL_VISION_GOOD"
-        }
-      ]
-    },
+    "passive_effects": [
+      {
+        "id": "THERMAL_VISION_GOOD"
+      }
+    ],
     "power_draw": "10 W",
     "revert_to": "armor_gkj",
     "use_action": {
@@ -136,17 +138,18 @@
     "id": "armor_gkj3",
     "copy-from": "armor_gkj",
     "repairs_like": "armor_gkj",
-    "type": "TOOL_ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL",
+      "ARMOR"
+    ],
     "name": {
       "str": "高科技眼镜 （目盲）"
     },
     "flags": [
-      "WATER_FRIENDLY",
-      "FANCY",
       "FIX_NEARSIGHT",
       "FIX_FARSIGHT",
-      "BLIND",
-      "TRADER_AVOID"
+      "BLIND"
     ],
     "use_action": {
       "ammo_scale": 0,
@@ -158,7 +161,10 @@
   },
   {
     "id": "armor_hei",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "黑色半框眼镜"
     },
@@ -191,9 +197,7 @@
       }
     ],
     "flags": [
-      "WATER_FRIENDLY",
       "FIRESTARTER",
-      "FANCY",
       "FIX_NEARSIGHT",
       "FIX_FARSIGHT",
       "SKINTIGHT"
@@ -211,7 +215,10 @@
   {
     "id": "armor_hei1",
     "copy-from": "armor_hei",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "黑色半框眼镜"
     },
@@ -234,7 +241,10 @@
   {
     "id": "armor_q_hei",
     "copy-from": "armor_hei",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "黑色全框眼镜"
     },
@@ -244,7 +254,10 @@
   {
     "id": "armor_ho",
     "copy-from": "armor_hei",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "红色半框眼镜"
     },
@@ -259,7 +272,10 @@
   {
     "id": "armor_ho1",
     "copy-from": "armor_hei",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "红色半框眼镜"
     },
@@ -274,7 +290,10 @@
   {
     "id": "armor_q_ho",
     "copy-from": "armor_hei",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "红色全框眼镜"
     },
@@ -284,7 +303,10 @@
   {
     "id": "armor_huang",
     "copy-from": "armor_hei",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "可爱的黄铜单片眼镜"
     },
@@ -294,7 +316,10 @@
   {
     "id": "armor_huang1",
     "copy-from": "armor_hei",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "可爱的带链黄铜单片眼镜"
     },

@@ -1,7 +1,10 @@
 [
   {
     "id": "armor_jxpx",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "及膝皮靴"
     },
@@ -20,7 +23,6 @@
     "warmth": 20,
     "flags": [
       "VARSIZE",
-      "FANCY",
       "WATERPROOF"
     ],
     "armor": [
@@ -88,7 +90,11 @@
   },
   {
     "id": "armor_wj",
-    "type": "TOOL_ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL",
+      "ARMOR"
+    ],
     "category": "clothing",
     "symbol": "[",
     "color": "light_gray",
@@ -112,8 +118,7 @@
       "menu_text": "围松"
     },
     "flags": [
-      "OUTER",
-      "FANCY"
+      "OUTER"
     ],
     "warmth": 60,
     "armor": [
@@ -130,7 +135,11 @@
     "id": "armor_wj1",
     "copy-from": "armor_wj",
     "repairs_like": "kawaii_scarf",
-    "type": "TOOL_ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "TOOL",
+      "ARMOR"
+    ],
     "symbol": "[",
     "color": "light_gray",
     "name": {
@@ -144,14 +153,16 @@
     },
     "flags": [
       "OUTER",
-      "ALLOWS_NATURAL_ATTACKS",
-      "FANCY"
+      "ALLOWS_NATURAL_ATTACKS"
     ],
     "warmth": 20
   },
   {
     "id": "armor_bsmm",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "白色棉帽"
     },
@@ -182,7 +193,10 @@
   {
     "id": "armor_ssblkfm",
     "copy-from": "balclava",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": {
       "str": "时尚巴拉克拉法帽 "
     },
@@ -191,7 +205,10 @@
   },
   {
     "id": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "等待气泡",
     "description": "一个等待气泡。",
     "symbol": "[",
@@ -222,7 +239,10 @@
   {
     "id": "qp_wh",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "？气泡特效",
     "description": "一个？气泡。",
     "use_action": [
@@ -237,7 +257,10 @@
   {
     "id": "qp_gth",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "！气泡特效",
     "description": "一个！气泡。",
     "use_action": [
@@ -252,7 +275,10 @@
   {
     "id": "qp_lh",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "流汗气泡特效",
     "description": "流汗气泡特效。",
     "use_action": [
@@ -267,7 +293,10 @@
   {
     "id": "qp_gglh",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "脸红气泡特效",
     "description": "尴尬脸红气泡特效。",
     "use_action": [
@@ -282,7 +311,10 @@
   {
     "id": "qp_ax",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "爱心气泡特效",
     "description": "爱心气泡特效。",
     "use_action": [
@@ -297,7 +329,10 @@
   {
     "id": "qp_tsgh",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "天使光环",
     "description": "这不是飞环。",
     "use_action": []
@@ -305,7 +340,10 @@
   {
     "id": "qp_kash",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "可爱腮红",
     "use_action": [],
     "description": "少女心让人脸红。"
@@ -313,7 +351,10 @@
   {
     "id": "qp_kaxxy",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "可爱星星眼",
     "use_action": [],
     "description": "眼睛闪烁着生命的光芒。（用于为没有亮点的眼睛添加高光）"
@@ -321,7 +362,10 @@
   {
     "id": "qp_kahl",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "可爱的黑脸",
     "use_action": [],
     "description": "当你计划做坏事时的表情。"
@@ -329,7 +373,10 @@
   {
     "id": "qp_gkjej",
     "copy-from": "qp_dd",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "高科技耳机",
     "use_action": [],
     "description": "采用下一代技术的高科技耳机（装饰性）"

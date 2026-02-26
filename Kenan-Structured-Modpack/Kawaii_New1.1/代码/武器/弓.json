@@ -1,258 +1,603 @@
 [
   {
     "id": "gun_rsdg",
-    "type": "GUN",
-    "symbol": "(", "color": "yellow",
-    "name": { "str": "日式大弓" },
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "日式大弓"
+    },
     "description": "大弓是一种日本传统的长弓。这是一种很难掌握的复杂武器，但是其威力足够穿透哪怕是最厚重的盔甲。",
     "price": "500 USD",
-    "material": [ "wood" ],
-    "flags": ["FIRE_TWOHAND","STR_DRAW","RELOAD_AND_SHOOT","PRIMITIVE_RANGED_WEAPON","BELTED","SHEATH_BOW",
-      "WATER_FRIENDLY","WATERPROOF_GUN","NEVER_JAMS"],
-    "ammo_effects": [ "NEVER_MISFIRES" ],
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 8,
     "skill": "archery",
     "min_strength": 7,
-    "ammo": ["arrow"],
-    "weight": "950 g", "volume": "4500 ml", "longest_side": "220 cm",
-    "melee_damage": { "bash": 10 }, "to_hit": 3,
-    "armor_data": {
-      "armor": [
-        { "material": [ { "type": "wood", "covered_by_mat": 100, "thickness": 1 } ],
-          "encumbrance": 20, "coverage": 5,
-          "covers": [ "torso" ],
-          "specifically_covers": [ "torso_hanging_back" ]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "950 g",
+    "volume": "4500 ml",
+    "longest_side": "220 cm",
+    "melee_damage": {
+      "bash": 10
     },
-    "ranged_damage": { "damage_type": "stab","amount": 11,"armor_penetration": 2 },
+    "to_hit": 3,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 11,
+      "armor_penetration": 2
+    },
     "range": 25,
     "dispersion": 1250,
     "sight_dispersion": 3000,
     "durability": 10,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE","ammo_restriction": {"arrow": 1} } ],
-    "reload": 500
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 500,
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "wood",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "gun_jycg",
-    "type": "GUN",
-    "symbol": "(","color": "yellow",
-    "name": {"str": "简易长弓"},
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "简易长弓"
+    },
     "description": "一种手工制作, 经过非常细致的装饰和喷漆的短弓，与其说是一个致命的武器, 不如说是一件精致的装饰。",
     "price": "100 USD",
-    "material": ["wood"],
-    "flags": ["FIRE_TWOHAND","RELOAD_AND_SHOOT","PRIMITIVE_RANGED_WEAPON","FANCY",
-      "BELTED","WATER_FRIENDLY","WATERPROOF_GUN","NEVER_JAMS"],
-    "ammo_effects": ["NEVER_MISFIRES"],
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 8,
     "skill": "archery",
-    "ammo": ["arrow"],
-    "weight": "1000 g","volume": "2500 ml","longest_side": "140 cm",
-    "melee_damage": { "bash": 6 },
-    "armor_data": {
-      "armor": [
-        { "material": [
-            { "type": "wood",
-              "covered_by_mat": 100, "thickness": 1
-            } ],
-          "encumbrance": 20,"coverage": 5,
-          "covers": ["torso"],"specifically_covers": ["torso_hanging_back"]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "1000 g",
+    "volume": "2500 ml",
+    "longest_side": "140 cm",
+    "melee_damage": {
+      "bash": 6
     },
-    "ranged_damage": {"damage_type": "stab","amount": 1},
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 1
+    },
     "range": 5,
     "dispersion": 1250,
     "sight_dispersion": 3000,
     "durability": 6,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": {"arrow": 1} } ],
-    "reload": 50
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 50,
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "wood",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "gun_mk1",
-    "type": "GUN",
-    "symbol": "(","color": "yellow",
-    "name": {"str": "定制长弓 Mk1"},
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "定制长弓 Mk1"
+    },
     "description": "有经验的人用一堆拾荒捡到的材料组装的定制弓。",
     "price": "200 USD",
-    "material": ["wood"],
-    "flags": ["FIRE_TWOHAND","STR_DRAW","RELOAD_AND_SHOOT","PRIMITIVE_RANGED_WEAPON",
-      "BELTED","SHEATH_BOW","WATER_FRIENDLY","WATERPROOF_GUN","NEVER_JAMS"],
-    "ammo_effects": ["NEVER_MISFIRES"],
+    "material": [
+      "wood"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 6,
     "skill": "archery",
     "min_strength": 3,
-    "ammo": ["arrow"],
-    "weight": "500 g","volume": "3 L","longest_side": "140 cm",
-    "melee_damage": { "bash": 8 },
-    "armor_data": {
-      "armor": [
-        { "material": [ { "type": "wood", "covered_by_mat": 100, "thickness": 1 } ],
-          "encumbrance": 20, "coverage": 5,
-          "covers": ["torso"], "specifically_covers": ["torso_hanging_back"]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "500 g",
+    "volume": "3 L",
+    "longest_side": "140 cm",
+    "melee_damage": {
+      "bash": 8
     },
-    "ranged_damage": {"damage_type": "stab","amount": 4},
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 4
+    },
     "range": 8,
     "dispersion": 1000,
     "sight_dispersion": 3000,
     "durability": 8,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "arrow": 1 } } ],
-    "reload": 120
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "reload": 120,
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "wood",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "gun_mk2",
-    "type": "GUN",
-    "symbol": "(","color": "yellow",
-    "name": {"str": "定制长弓 Mk2"},
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "定制长弓 Mk2"
+    },
     "description": "定制弓Mk1的改进版本。用钢来加固弓的框架, 其性能大大提高。但也因此比以前要更大, 更重。",
     "price": "250 USD",
-    "material": ["wood","steel"],
-    "flags": ["FIRE_TWOHAND","STR_DRAW","RELOAD_AND_SHOOT","PRIMITIVE_RANGED_WEAPON",
-      "BELTED","SHEATH_BOW","WATER_FRIENDLY","WATERPROOF_GUN","NEVER_JAMS"],
-    "ammo_effects": ["NEVER_MISFIRES"],
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 8,
     "skill": "archery",
     "min_strength": 4,
-    "ammo": ["arrow"],
-    "weight": "700 g","volume": "3 L","longest_side": "150 cm",
-    "melee_damage": { "bash": 11 },
-    "armor_data": {
-      "armor": [
-        { "material": [
-            { "type": "wood", "covered_by_mat": 100, "thickness": 1},
-            { "type": "steel", "covered_by_mat": 100, "thickness": 1 } ],
-          "encumbrance": 20, "coverage": 5,
-          "covers": ["torso"],"specifically_covers": ["torso_hanging_back"]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "700 g",
+    "volume": "3 L",
+    "longest_side": "150 cm",
+    "melee_damage": {
+      "bash": 11
     },
-    "ranged_damage": {"damage_type": "stab","amount": 7},
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 7
+    },
     "range": 12,
     "dispersion": 950,
     "sight_dispersion": 3000,
     "durability": 10,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "arrow": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
     "reload": 110,
-    "valid_mod_locations": [ [ "underbarrel", 1 ], [ "sights", 1 ], [ "accessories", 2] ]
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ]
+    ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "wood",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "gun_mk3",
-    "type": "GUN",
-    "symbol": "(","color": "yellow",
-    "name": { "str": "定制长弓 Mk3"},
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "定制长弓 Mk3"
+    },
     "description": "定制长弓 Mk2的改进版本。整体框架被做的更大, 并使用了比前身更高质量的材料。因此, 这把弓看起来像是一把由大师级工艺制作而成的杰出产品。",
     "price": "550 USD",
-    "material": ["steel","plastic"],
-    "flags": ["FIRE_TWOHAND","STR_DRAW","RELOAD_AND_SHOOT","PRIMITIVE_RANGED_WEAPON",
-      "BELTED","SHEATH_BOW","WATER_FRIENDLY","WATERPROOF_GUN","NEVER_JAMS"],
-    "ammo_effects": ["NEVER_MISFIRES"],
+    "material": [
+      "steel",
+      "plastic"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 10,
     "skill": "archery",
     "min_strength": 4,
-    "ammo": ["arrow"],
-    "weight": "850 g","volume": "3500 ml","longest_side": "183 cm",
-    "melee_damage": { "bash": 15 },
-    "armor_data": {
-      "armor": [
-        { "material": [
-            { "type": "steel", "covered_by_mat": 100, "thickness": 1 },
-            { "type": "plastic", "covered_by_mat": 100, "thickness": 1 } ],
-          "encumbrance": 20, "coverage": 5,
-          "covers": [ "torso" ], "specifically_covers": [ "torso_hanging_back" ]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "850 g",
+    "volume": "3500 ml",
+    "longest_side": "183 cm",
+    "melee_damage": {
+      "bash": 15
     },
-    "ranged_damage": { "damage_type": "stab", "amount": 11 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 11
+    },
     "range": 16,
     "dispersion": 850,
     "sight_dispersion": 3000,
     "durability": 10,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "arrow": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
     "reload": 100,
     "to_hit": 1,
-    "valid_mod_locations": [ [ "underbarrel", 1 ], [ "sights", 1 ], [ "accessories", 2 ], [ "limbs", 1 ], [ "string", 1 ], [ "riser", 1 ], [ "stabilizer", 1 ], [ "dampening", 1 ] ]
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "plastic",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "gun_dg",
-    "type": "GUN",
-    "symbol": "(", "color": "yellow",
-    "name": { "str": "盾弓" },
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "盾弓"
+    },
     "description": "这是一个非常沉重的弓，有一个尖锐的钢钉从前方突起。用这把弓来进行精确射击会很困难，但是比普通弓箭更能够接受近距离的战斗。",
     "price": "250 USD",
-    "material": [ "wood","steel" ],
-    "flags": [ "FIRE_TWOHAND","RELOAD_AND_SHOOT","PRIMITIVE_RANGED_WEAPON","BELTED","SHEATH_BOW",
-      "WATER_FRIENDLY","WATERPROOF_GUN","NEVER_JAMS" ],
-    "ammo_effects": [ "NEVER_MISFIRES" ],
+    "material": [
+      "wood",
+      "steel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 8,
     "skill": "archery",
-    "techniques": [ "WBLOCK_2","DEF_DISARM" ],
+    "techniques": [
+      "WBLOCK_2",
+      "DEF_DISARM"
+    ],
     "min_strength": 6,
-    "ammo": [ "arrow" ],
-    "weight": "1500 g", "volume": "3 L", "longest_side": "150 cm",
-    "melee_damage": { "bash": 35, "cut": 15 },
-    "armor_data": {
-      "armor": [
-        { "material": [
-            { "type": "wood", "covered_by_mat": 100, "thickness": 1 },
-            { "type": "steel", "covered_by_mat": 100, "thickness": 1 }
-          ],
-          "encumbrance": 20, "coverage": 5,
-          "covers": [ "torso" ],
-          "specifically_covers": [ "torso_hanging_back" ]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "1500 g",
+    "volume": "3 L",
+    "longest_side": "150 cm",
+    "melee_damage": {
+      "bash": 35,
+      "cut": 15
     },
-    "ranged_damage": { "damage_type": "stab","amount": 9 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 9
+    },
     "range": 6,
     "dispersion": 200,
     "durability": 10,
     "clip_size": 1,
     "pocket_data": [
-      { "pocket_type": "MAGAZINE","ammo_restriction": {"arrow": 1} }
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
     ],
-    "reload": 600
+    "reload": 600,
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "wood",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "gun_tzcg_xly",
-    "type": "GENERIC",
+    "type": "ITEM",
+    "subtypes": [
+      "GUN"
+    ],
     "symbol": "(",
     "color": "yellow",
-    "name": { "str": "特制长弓-谢莉亚 （刀形态）" },
+    "name": {
+      "str": "特制长弓-谢莉亚 （刀形态）"
+    },
     "description": "这是一个复杂的变型武器，可以变型为一个刀刃型的近战武器，也可以变型为一把强大的弓。这是世界著名女仆时尚品牌Alice&Maria推出的[可爱·战斗]系列时尚防护装备的首次公开亮相。事实证明，这种武器非常理想，因为它可以在远距离和近距离战斗中按照需求切换成适合与敌人交战的武器。然而，由于其过于复杂的设计使得它的价格极为昂贵, 不适合大众市场，最终得到了一个“Nighmarish Shelia”的绰号，并使其设计师破产了。",
     "price": "99 USD",
-    "material": [ "steel" ],
-    "flags": [ "BELTED","FANCY" ],
-    "techniques": [ "WBLOCK_2","DEF_DISARM" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "BELTED"
+    ],
+    "techniques": [
+      "WBLOCK_2",
+      "DEF_DISARM"
+    ],
     "min_strength": 99,
-    "weight": "250 g", "volume": "500 ml", "longest_side": "100 cm",
-    "melee_damage": { "bash": 15, "cut": 35 },
-    "pocket_data": [ { "pocket_type": "MAGAZINE","ammo_restriction": {"arrow": 1} } ],
-    "to_hit": 5,
-    "weapon_category": [ "MEDIUM_SWORDS","FENCING_WEAPONRY" ],
-    "gun_data": {
-      "skill": "archery",
-      "ammo": ["arrow"],
-      "ranged_damage": { "damage_type": "stab","amount": -12 },
-      "range": 0,
-      "clip_size": 1,
-      "valid_mod_locations": [
-        ["underbarrel",1], ["sights",1], ["accessories",2], ["limbs",1],
-        ["string",1], ["riser",1], ["stabilizer",1], ["dampening",1]
-      ]
+    "weight": "250 g",
+    "volume": "500 ml",
+    "longest_side": "100 cm",
+    "melee_damage": {
+      "bash": 15,
+      "cut": 35
     },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
+    "to_hit": 5,
+    "weapon_category": [
+      "MEDIUM_SWORDS",
+      "FENCING_WEAPONRY"
+    ],
     "use_action": {
       "ammo_scale": 0,
       "type": "transform",
@@ -261,53 +606,146 @@
       "active": false,
       "moves": 200,
       "menu_text": "变换武器"
-    }
+    },
+    "skill": "archery",
+    "ammo": [
+      "arrow"
+    ],
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": -12
+    },
+    "range": 0,
+    "clip_size": 1,
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ]
   },
   {
     "id": "gun_tzcg_xly_on",
-    "type": "GUN",
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
     "symbol": "(",
     "color": "yellow",
-    "name": { "str": "特制长弓-谢莉亚 （弓形态）" },
+    "name": {
+      "str": "特制长弓-谢莉亚 （弓形态）"
+    },
     "description": "这是一个复杂的变型武器，可以变型为一个刀刃型的近战武器，也可以变型为一把强大的弓。这是世界著名女仆时尚品牌Alice&Maria推出的[可爱·战斗]系列时尚防护装备的首次公开亮相。事实证明，这种武器非常理想，因为它可以在远距离和近距离战斗中按照需求切换成适合与敌人交战的武器。然而，由于其过于复杂的设计使得它的价格极为昂贵, 不适合大众市场，最终得到了一个“Nighmarish Shelia”的绰号，并使其设计师破产了。",
     "price": "99 USD",
-    "material": [ "steel" ],
-    "flags": [ "FIRE_TWOHAND","STR_DRAW","RELOAD_AND_SHOOT","PRIMITIVE_RANGED_WEAPON","BELTED",
-      "SHEATH_BOW","WATER_FRIENDLY","WATERPROOF_GUN","NEVER_JAMS" ],
-    "ammo_effects": [ "NEVER_MISFIRES" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 8,
     "skill": "archery",
     "min_strength": 5,
-    "ammo": [ "arrow" ],
-    "weight": "250 g", "volume": "1750 ml", "longest_side": "180 cm",
-    "melee_damage": { "bash": 15 },
-    "armor_data": {
-      "armor": [
-        { "material": [ { "type": "steel","covered_by_mat": 100,"thickness": 1 } ],
-          "encumbrance": 20, "coverage": 5,
-          "covers": [ "torso" ],
-          "specifically_covers": [ "torso_hanging_back" ]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "250 g",
+    "volume": "1750 ml",
+    "longest_side": "180 cm",
+    "melee_damage": {
+      "bash": 15
     },
-    "ranged_damage": { "damage_type": "stab","amount": 8 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 8
+    },
     "range": 18,
     "dispersion": 650,
     "durability": 10,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE","ammo_restriction": {"arrow": 1} } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
     "reload": 100,
     "to_hit": 5,
     "valid_mod_locations": [
-      ["underbarrel",1],
-      ["sights",1],
-      ["accessories",2],
-      ["limbs",1],
-      ["string",1],
-      ["riser",1],
-      ["stabilizer",1],
-      ["dampening",1]
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
     ],
     "use_action": {
       "ammo_scale": 0,
@@ -317,92 +755,260 @@
       "active": false,
       "moves": 200,
       "menu_text": "变换武器"
-    }
+    },
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
+    ]
   },
   {
     "id": "gun_lly",
-    "type": "GUN",
-    "symbol": "(", "color": "yellow",
-    "name": { "str": "特制长弓-莱利娅" },
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "特制长弓-莱利娅"
+    },
     "description": "一种优雅的特制长弓，两端饰有天使般的羽毛，由一个坚固的金属护手控制弓身。这是全球著名女仆时尚品牌Alice&Maria推出的时尚自卫工具[可爱格斗]系列中的第二款产品。这个产品所用的金属板的材料与它同时公布，预计将是下一代的合金，重量轻, 具有优秀的灵活性和耐用性，但成本太高，无法批量生产。因此这种武器限量发售。",
     "price": "300 USD",
-    "material": [ "steel" ],
-    "flags": [ "FIRE_TWOHAND", "STR_DRAW", "RELOAD_AND_SHOOT", "PRIMITIVE_RANGED_WEAPON","BELTED",
-      "SHEATH_BOW", "WATER_FRIENDLY", "WATERPROOF_GUN", "NEVER_JAMS" ],
-    "ammo_effects": [ "NEVER_MISFIRES" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 8,
     "skill": "archery",
     "min_strength": 5,
-    "ammo": [ "arrow" ],
-    "weight": "450 g", "volume": "1500 ml", "longest_side": "180 cm",
-    "melee_damage": { "bash": 15 },
-    "armor_data": {
-      "armor": [
-        { "material": [ { "type": "steel","covered_by_mat": 100,"thickness": 1 } ],
-          "encumbrance": 20, "coverage": 5,
-          "covers": [ "torso" ],
-          "specifically_covers": [ "torso_hanging_back" ]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "450 g",
+    "volume": "1500 ml",
+    "longest_side": "180 cm",
+    "melee_damage": {
+      "bash": 15
     },
-    "ranged_damage": { "damage_type": "stab", "amount": 12 },
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 12
+    },
     "range": 20,
     "dispersion": 850,
     "durability": 10,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "arrow": 1 } } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
     "reload": 120,
     "to_hit": 3,
-    "valid_mod_locations": [ [ "underbarrel",1 ], [ "sights",1 ], [ "accessories",2], [ "limbs",1], [ "string",1 ], [ "riser",1 ], [ "stabilizer",1 ], [ "dampening",1 ]
+    "valid_mod_locations": [
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 5,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
     ]
   },
   {
     "id": "gun_blg",
-    "type": "GUN",
-    "symbol": "(", "color": "yellow",
-    "name": { "str": "玻璃弓" },
+    "type": "ITEM",
+    "subtypes": [
+      "GUN",
+      "ARMOR"
+    ],
+    "symbol": "(",
+    "color": "yellow",
+    "name": {
+      "str": "玻璃弓"
+    },
     "description": "一种半透明的玻璃弓，它的结构中整合了碳纳米管素材。",
     "price": "500 USD",
-    "material": [ "steel" ],
-    "flags": [ "FIRE_TWOHAND","STR_DRAW","RELOAD_AND_SHOOT","PRIMITIVE_RANGED_WEAPON","BELTED",
-      "SHEATH_BOW","WATER_FRIENDLY","WATERPROOF_GUN","NEVER_JAMS" ],
-    "ammo_effects": [ "NEVER_MISFIRES" ],
+    "material": [
+      "steel"
+    ],
+    "flags": [
+      "FIRE_TWOHAND",
+      "STR_DRAW",
+      "RELOAD_AND_SHOOT",
+      "PRIMITIVE_RANGED_WEAPON",
+      "BELTED",
+      "SHEATH_BOW",
+      "WATERPROOF_GUN",
+      "NEVER_JAMS"
+    ],
+    "ammo_effects": [
+      "NEVER_MISFIRES"
+    ],
     "reload_noise_volume": 3,
     "loudness": 8,
     "skill": "archery",
     "min_strength": 3,
-    "ammo": [ "arrow" ],
-    "weight": "1200 g","volume": "2500 ml","longest_side": "150 cm",
-    "melee_damage": { "bash": 1 }, "to_hit": 1,
-    "armor_data": {
-      "armor": [
-        { "material": [
-            { "type": "steel","covered_by_mat": 100,"thickness": 1 },
-            { "type": "kevlar","covered_by_mat": 100,"thickness": 1 }
-          ],
-          "encumbrance": 20, "coverage": 10,
-          "covers": [ "torso" ],
-          "specifically_covers": [ "torso_hanging_back" ]
-        }
-      ]
+    "ammo": [
+      "arrow"
+    ],
+    "weight": "1200 g",
+    "volume": "2500 ml",
+    "longest_side": "150 cm",
+    "melee_damage": {
+      "bash": 1
     },
-    "ranged_damage": { "damage_type": "stab", "amount": 11 },
+    "to_hit": 1,
+    "ranged_damage": {
+      "damage_type": "stab",
+      "amount": 11
+    },
     "range": 15,
     "dispersion": 850,
     "durability": 1,
     "clip_size": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE","ammo_restriction": {"arrow": 1} } ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "arrow": 1
+        }
+      }
+    ],
     "reload": 100,
     "valid_mod_locations": [
-      ["underbarrel",1],
-      ["sights",1],
-      ["accessories",2],
-      ["limbs",1],
-      ["string",1],
-      ["riser",1],
-      ["stabilizer",1],
-      ["dampening",1]
+      [
+        "underbarrel",
+        1
+      ],
+      [
+        "sights",
+        1
+      ],
+      [
+        "accessories",
+        2
+      ],
+      [
+        "limbs",
+        1
+      ],
+      [
+        "string",
+        1
+      ],
+      [
+        "riser",
+        1
+      ],
+      [
+        "stabilizer",
+        1
+      ],
+      [
+        "dampening",
+        1
+      ]
+    ],
+    "armor": [
+      {
+        "material": [
+          {
+            "type": "steel",
+            "covered_by_mat": 100,
+            "thickness": 1
+          },
+          {
+            "type": "kevlar",
+            "covered_by_mat": 100,
+            "thickness": 1
+          }
+        ],
+        "encumbrance": 20,
+        "coverage": 10,
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_hanging_back"
+        ]
+      }
     ]
   }
 ]

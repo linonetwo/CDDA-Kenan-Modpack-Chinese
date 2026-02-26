@@ -1,57 +1,126 @@
 [
   {
     "id": "armor_hsm",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "护士帽",
     "description": "护士的帽子。",
-    "weight": "10 g","volume": "250 ml",
-    "price": "95 USD","price_postapoc": "50 cent",
-    "material": ["cotton"],
+    "weight": "10 g",
+    "volume": "250 ml",
+    "price": "95 USD",
+    "price_postapoc": "50 cent",
+    "material": [
+      "cotton"
+    ],
     "material_thickness": 1,
-    "symbol": "[","color": "white",
+    "symbol": "[",
+    "color": "white",
     "warmth": 5,
-    "flags": ["VARSIZE","FANCY"],
+    "flags": [
+      "VARSIZE"
+    ],
     "armor": [
-      {"encumbrance": 5,"coverage": 95,
-        "covers": ["head"]
-      } ]
+      {
+        "encumbrance": 5,
+        "coverage": 95,
+        "covers": [
+          "head"
+        ]
+      }
+    ]
   },
-  
   {
     "id": "armor_hszf",
     "copy-from": "armor_npz",
-    "type": "ARMOR",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
     "name": "护士制服",
     "description": "护士的制服。",
     "armor": [
-      { "covers": ["torso"],"specifically_covers": ["torso_lower"],
-        "coverage": 100,"encumbrance": [4,6] },
-      { "covers": ["torso"],"specifically_covers": ["torso_upper"],
-        "coverage": 30 },
-      { "covers": ["leg_l","leg_r"],
-        "specifically_covers": ["leg_hip_l","leg_hip_r"],
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
         "coverage": 100,
-        "encumbrance": [2,4] },
-      { "covers": ["leg_l","leg_r"],"specifically_covers": ["leg_upper_l","leg_upper_r"],
-        "coverage": 50 },
-      { "covers": ["arm_l","arm_r"],
-        "specifically_covers": ["arm_shoulder_l","arm_shoulder_r"],
-        "coverage": 30,"encumbrance": [2,2] }
+        "encumbrance": [
+          4,
+          6
+        ]
+      },
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 30
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          4
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 50
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 30,
+        "encumbrance": [
+          2,
+          2
+        ]
+      }
     ]
   },
-  
   {
     "id": "职业护士",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "name": "护士",
     "description": "护士",
     "skill_used": "tailor",
-    "nested_category_data": [ "armor_hsm", "armor_hszf" ],
+    "nested_category_data": [
+      "armor_hsm",
+      "armor_hszf"
+    ],
     "difficulty": 0
   },
-  
   {
     "result": "armor_hsm",
     "type": "recipe",
@@ -59,13 +128,20 @@
     "copy-from": "armor_npts",
     "time": "2 h",
     "using": [
-      ["sewing_standard",8]
+      [
+        "sewing_standard",
+        8
+      ]
     ],
     "components": [
-      [["rag",5]]
+      [
+        [
+          "rag",
+          5
+        ]
+      ]
     ]
   },
-  
   {
     "result": "armor_hszf",
     "type": "recipe",
@@ -73,8 +149,14 @@
     "copy-from": "armor_npz",
     "time": "6 h",
     "using": [
-      ["sewing_standard",15],
-      ["fabric_standard_nostretch",15]
+      [
+        "sewing_standard",
+        15
+      ],
+      [
+        "fabric_standard_nostretch",
+        15
+      ]
     ]
   }
 ]

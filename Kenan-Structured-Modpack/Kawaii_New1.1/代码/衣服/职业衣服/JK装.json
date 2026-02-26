@@ -1,34 +1,69 @@
 [
-{
+  {
     "id": "armor_jkm",
-    "type": "ARMOR",
-    "name": {"str": "JK帽"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "JK帽"
+    },
     "description": "学校为女子高中生设计的帽子。",
-    "weight": "30 g", "volume": "300 ml",
-    "price": "45 USD", "price_postapoc": "120 cent",
-    "material": ["cotton"],
-    "symbol": "[", "color": "white",
+    "weight": "30 g",
+    "volume": "300 ml",
+    "price": "45 USD",
+    "price_postapoc": "120 cent",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "white",
     "warmth": 15,
     "material_thickness": 0.2,
-    "flags": ["VARSIZE", "FANCY"],
+    "flags": [
+      "VARSIZE"
+    ],
     "armor": [
-      { "covers": [ "head"],"specifically_covers": [ "head_crown", "head_ear_r", "head_ear_l" ],
-        "coverage": 80,"encumbrance_modifiers": [ "NONE" ]
-      } ]
+      {
+        "covers": [
+          "head"
+        ],
+        "specifically_covers": [
+          "head_crown",
+          "head_ear_r",
+          "head_ear_l"
+        ],
+        "coverage": 80,
+        "encumbrance_modifiers": [
+          "NONE"
+        ]
+      }
+    ]
   },
-  
   {
     "id": "armor_jkzf",
-    "type": "ARMOR",
-    "name": {"str": "JK制服"},
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "JK制服"
+    },
     "description": "学校为女子高中生设计的制服。",
-    "weight": "200 g", "volume": "500 ml",
-    "price": "100 USD", "price_postapoc": "5 USD",
-    "material": [ "cotton" ],
-    "symbol": "[", "color": "dark_gray",
+    "weight": "200 g",
+    "volume": "500 ml",
+    "price": "100 USD",
+    "price_postapoc": "5 USD",
+    "material": [
+      "cotton"
+    ],
+    "symbol": "[",
+    "color": "dark_gray",
     "warmth": 10,
     "material_thickness": 0.1,
-    "flags": [ "VARSIZE", "FANCY" ],
+    "flags": [
+      "VARSIZE"
+    ],
     "pocket_data": [
       {
         "pocket_type": "CONTAINER",
@@ -48,114 +83,245 @@
       }
     ],
     "armor": [
-      { "covers": ["torso"],"specifically_covers": ["torso_lower"],
-        "coverage": 100,"encumbrance": [ 4, 5 ]
-      },
-      { "covers": ["torso"],"specifically_covers": ["torso_upper"],
-        "coverage": 90
-      },
-      { "covers": ["leg_l", "leg_r"],"specifically_covers": ["leg_hip_l", "leg_hip_r"],
-        "coverage": 100,"encumbrance": [2, 2]
-      },
-      { "covers": ["leg_l", "leg_r"],"specifically_covers": ["leg_upper_l","leg_upper_r"],
-        "coverage": 80
-      },
-      { "covers": ["arm_l", "arm_r"],"specifically_covers": ["arm_shoulder_l", "arm_shoulder_r"],
-        "coverage": 30,"encumbrance": [2, 2]
-      } ]
-  },
-  
-  {
-    "id": "armor_zsxxx",
-    "type": "ARMOR",
-    "name": { "str": "棕色休闲鞋" },
-    "description": "一双学生们经常穿棕色便鞋。",
-    "weight": "280 g", "volume": "800 ml",
-    "price": "90 USD", "price_postapoc": "130 cent",
-    "material": [ "leather" ],
-    "material_thickness": 2,
-    "symbol": "[", "color": "dark_gray",
-    "warmth": 10,
-    "flags": [ "VARSIZE", "FANCY" ],
-        "armor": [
-      { "covers": [ "foot_l", "foot_r" ],"specifically_covers": [ "foot_sole_r", "foot_sole_l" ],
-        "material": [
-          { "type": "leather", "covered_by_mat": 100, "thickness": 0.1 },
-          { "type": "rubber", "covered_by_mat": 100, "thickness": 4.0 } ],
-        "coverage": 100,"encumbrance": 5
+      {
+        "covers": [
+          "torso"
+        ],
+        "specifically_covers": [
+          "torso_lower"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          4,
+          5
+        ]
       },
       {
-        "covers": [ "foot_l", "foot_r" ],
-        "specifically_covers": [
-          "foot_heel_r","foot_heel_l","foot_arch_r","foot_arch_l",
-          "foot_toes_r","foot_toes_l","foot_ankle_l","foot_ankle_r"
+        "covers": [
+          "torso"
         ],
-        "material": [ { "type": "leather", "covered_by_mat": 100, "thickness": 2 } ],
-        "coverage": 60
-      } ]
+        "specifically_covers": [
+          "torso_upper"
+        ],
+        "coverage": 90
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_hip_l",
+          "leg_hip_r"
+        ],
+        "coverage": 100,
+        "encumbrance": [
+          2,
+          2
+        ]
+      },
+      {
+        "covers": [
+          "leg_l",
+          "leg_r"
+        ],
+        "specifically_covers": [
+          "leg_upper_l",
+          "leg_upper_r"
+        ],
+        "coverage": 80
+      },
+      {
+        "covers": [
+          "arm_l",
+          "arm_r"
+        ],
+        "specifically_covers": [
+          "arm_shoulder_l",
+          "arm_shoulder_r"
+        ],
+        "coverage": 30,
+        "encumbrance": [
+          2,
+          2
+        ]
+      }
+    ]
   },
-  
+  {
+    "id": "armor_zsxxx",
+    "type": "ITEM",
+    "subtypes": [
+      "ARMOR"
+    ],
+    "name": {
+      "str": "棕色休闲鞋"
+    },
+    "description": "一双学生们经常穿棕色便鞋。",
+    "weight": "280 g",
+    "volume": "800 ml",
+    "price": "90 USD",
+    "price_postapoc": "130 cent",
+    "material": [
+      "leather"
+    ],
+    "material_thickness": 2,
+    "symbol": "[",
+    "color": "dark_gray",
+    "warmth": 10,
+    "flags": [
+      "VARSIZE"
+    ],
+    "armor": [
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_sole_r",
+          "foot_sole_l"
+        ],
+        "material": [
+          {
+            "type": "leather",
+            "covered_by_mat": 100,
+            "thickness": 0.1
+          },
+          {
+            "type": "rubber",
+            "covered_by_mat": 100,
+            "thickness": 4.0
+          }
+        ],
+        "coverage": 100,
+        "encumbrance": 5
+      },
+      {
+        "covers": [
+          "foot_l",
+          "foot_r"
+        ],
+        "specifically_covers": [
+          "foot_heel_r",
+          "foot_heel_l",
+          "foot_arch_r",
+          "foot_arch_l",
+          "foot_toes_r",
+          "foot_toes_l",
+          "foot_ankle_l",
+          "foot_ankle_r"
+        ],
+        "material": [
+          {
+            "type": "leather",
+            "covered_by_mat": 100,
+            "thickness": 2
+          }
+        ],
+        "coverage": 60
+      }
+    ]
+  },
   {
     "id": "职业JK",
     "type": "nested_category",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化", "subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "name": "JK",
     "description": "JK",
     "skill_used": "tailor",
-    "nested_category_data": [ "armor_jkm", "armor_jkzf", "armor_zsxxx" ],
+    "nested_category_data": [
+      "armor_jkm",
+      "armor_jkzf",
+      "armor_zsxxx"
+    ],
     "difficulty": 0
   },
-  
   {
     "result": "armor_jkm",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 0,
     "time": "10 m",
     "autolearn": true,
-    "flags": ["NO_RESIZE"],
+    "flags": [
+      "NO_RESIZE"
+    ],
     "components": [
-      [["rag",5]]
+      [
+        [
+          "rag",
+          5
+        ]
+      ]
     ]
   },
   {
     "result": "armor_jkzf",
     "type": "recipe",
     "activity_level": "LIGHT_EXERCISE",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 3,
     "time": "3 h",
     "autolearn": true,
     "reversible": true,
     "using": [
-      ["sewing_standard",15],
-      ["fabric_standard_nostretch",6]
+      [
+        "sewing_standard",
+        15
+      ],
+      [
+        "fabric_standard_nostretch",
+        6
+      ]
     ]
   },
   {
     "result": "armor_zsxxx",
     "activity_level": "LIGHT_EXERCISE",
     "type": "recipe",
-    "category": "CC_萌化","subcategory": "CSC_ALL",
+    "category": "CC_萌化",
+    "subcategory": "CSC_ALL",
     "skill_used": "tailor",
     "difficulty": 0,
     "time": "8 h",
     "autolearn": true,
     "reversible": true,
     "using": [
-      ["tailoring_leather_small",12],
-      ["fastener_shoes",2],
-      [ "shoe_rubber", 1 ],
-      [ "adhesive_rubber", 1 ]
+      [
+        "tailoring_leather_small",
+        12
+      ],
+      [
+        "fastener_shoes",
+        2
+      ],
+      [
+        "shoe_rubber",
+        1
+      ],
+      [
+        "adhesive_rubber",
+        1
+      ]
     ],
     "proficiencies": [
-      {"proficiency": "prof_cobbling"},
-      {"proficiency": "prof_leatherworking_basic"},
-      {"proficiency": "prof_leatherworking"}
+      {
+        "proficiency": "prof_cobbling"
+      },
+      {
+        "proficiency": "prof_leatherworking_basic"
+      },
+      {
+        "proficiency": "prof_leatherworking"
+      }
     ]
   }
 ]
