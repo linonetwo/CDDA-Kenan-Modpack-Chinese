@@ -1,35 +1,67 @@
 [
   {
     "id": "lavender_grimoire",
-    "type": "TOOL",
-    "name": { "str": "lavender grimoire", "str_pl": "lavender grimoires" },
+    "type": "ITEM",
+    "name": {
+      "str": "lavender grimoire",
+      "str_pl": "lavender grimoires"
+    },
     "copy-from": "paperback_occult",
     "description": "A magical book, written in what looks like East Asian characters.  You can't really tell, as the text changes just before you're able to finish reading them, making it impossible to say.  The cover features an octogonal magic sign, without a title.",
     "volume": "1800 ml",
     "weight": "2000 g",
-    "price_postapoc": 25000,
+    "price_postapoc": "25000 cent",
     "symbol": "⯄",
     "color": "light_red",
     "charges_per_use": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 2 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "4 m" } },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 2
+        }
+      }
+    ],
     "use_action": [
       {
         "type": "effect_on_conditions",
         "menu_text": "Cast spell",
         "description": "Use the grimoire to cast a spell.",
-        "effect_on_conditions": [ "lavender_grimoire_eoc" ]
+        "effect_on_conditions": [
+          "lavender_grimoire_eoc"
+        ]
       }
     ],
-    "flags": [ "MAGIC_FOCUS", "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
+    "flags": [
+      "MAGIC_FOCUS",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TRADER_AVOID",
+      "UNBREAKABLE"
+    ],
+    "subtypes": [
+      "TOOL",
+      "ARTIFACT"
+    ],
+    "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "4 m"
+    }
   },
   {
     "id": "lavender_grimoire_laser",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "damage_type": "pure",
@@ -43,15 +75,26 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "lavender_grimoire_laser_fat",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "damage_type": "pure",
@@ -67,15 +110,26 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "lavender_grimoire_firebolt",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "heat",
@@ -89,15 +143,26 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "lavender_grimoire_firebolt_big",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "heat",
@@ -113,15 +178,27 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "lavender_grimoire_fireball",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile", "self" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile",
+      "self"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "heat",
@@ -137,16 +214,27 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
     "//": "Based on Magiclysm's fireball "
   },
   {
     "id": "lavender_grimoire_waterjet",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "damage_type": "cold",
@@ -160,17 +248,34 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "lavender_grimoire_airpush",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "field", "ground", "hostile", "item" ],
+    "valid_targets": [
+      "ally",
+      "field",
+      "ground",
+      "hostile",
+      "item"
+    ],
     "effect": "directed_push",
-    "extra_effects": [ { "id": "lavender_grimoire_airpush2" } ],
+    "extra_effects": [
+      {
+        "id": "lavender_grimoire_airpush2"
+      }
+    ],
     "shape": "cone",
     "min_damage": 6,
     "max_damage": 16,
@@ -184,17 +289,34 @@
     "base_casting_time": 0,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "lavender_grimoire_airpush2",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "Stun component for lavender_grimoire_airpush . This is a qol buff so the targets don't immediately move again after the knockback",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "field", "ground", "hostile", "item" ],
+    "valid_targets": [
+      "ally",
+      "field",
+      "ground",
+      "hostile",
+      "item"
+    ],
     "effect": "mod_moves",
-    "extra_effects": [ { "id": "aya_stormgust3" } ],
+    "extra_effects": [
+      {
+        "id": "aya_stormgust3"
+      }
+    ],
     "shape": "cone",
     "damage_type": "pure",
     "min_damage": -100,
@@ -206,15 +328,26 @@
     "max_level": 1,
     "difficulty": -50,
     "message": "",
-    "flags": [ "NO_EXPLOSION_SFX", "NO_HANDS", "NO_LEGS", "SILENT" ]
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "NO_HANDS",
+      "NO_LEGS",
+      "SILENT"
+    ]
   },
   {
     "id": "lavender_grimoire_crystalshard",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "cone",
     "damage_type": "cut",
@@ -230,15 +363,24 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "lavender_grimoire_earthbarrier",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "ter_transform",
     "effect_str": "lavender_grimoire_earthbarrier_fur",
     "shape": "blast",
@@ -250,15 +392,25 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
   },
   {
     "id": "lavender_grimoire_bullet",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "damage_type": "bullet",
@@ -272,16 +424,27 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ],
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ],
     "//note": "Should instead shoot a 45_acp with increased dmg (x2 - x3), leave a casing, etc"
   },
   {
     "id": "lavender_grimoire_saw",
     "type": "SPELL",
-    "name": { "str": "" },
+    "name": {
+      "str": ""
+    },
     "description": "",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "damage_type": "cut",
@@ -297,6 +460,11 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   }
 ]

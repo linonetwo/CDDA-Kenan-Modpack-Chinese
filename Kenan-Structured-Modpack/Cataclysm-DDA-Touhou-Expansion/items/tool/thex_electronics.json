@@ -1,21 +1,34 @@
 [
   {
     "id": "ibm5100",
-    "type": "TOOL",
+    "type": "ITEM",
     "category": "tools",
-    "name": { "str": "IBM 5100", "str_pl": "IBMs 5100" },
+    "name": {
+      "str": "IBM 5100",
+      "str_pl": "IBMs 5100"
+    },
     "description": "Now, if you only had a time machine…",
     "volume": "99 L",
     "weight": "25000 g",
     "longest_side": "61 cm",
     "//": "Estimated size from pictures: 21 x 12 x 24 inches",
-    "price": 500000,
-    "price_postapoc": 5000,
-    "to_hit": { "balance": "clumsy", "grip": "none", "length": "short", "surface": "any" },
-    "material": [ "plastic", "aluminum" ],
+    "price": "500000 cent",
+    "price_postapoc": "5000 cent",
+    "to_hit": {
+      "balance": "clumsy",
+      "grip": "none",
+      "length": "short",
+      "surface": "any"
+    },
+    "material": [
+      "plastic",
+      "aluminum"
+    ],
     "symbol": ",",
     "color": "light_gray",
-    "melee_damage": { "bash": 8 },
+    "melee_damage": {
+      "bash": 8
+    },
     "use_action": [
       {
         "type": "transform",
@@ -25,15 +38,39 @@
         "active": true
       }
     ],
-    "flags": [ "WATCH", "WATER_BREAK" ]
+    "flags": [
+      "WATCH",
+      "WATER_BREAK"
+    ],
+    "subtypes": [
+      "TOOL"
+    ]
   },
   {
     "id": "ibm5100_lit",
-    "type": "TOOL",
-    "name": { "str": "IBM 5100 (ON)", "str_pl": "IBM 5100 (ON)" },
+    "type": "ITEM",
+    "name": {
+      "str": "IBM 5100 (ON)",
+      "str_pl": "IBM 5100 (ON)"
+    },
     "copy-from": "ibm5100",
     "description": "Despite not being connected to a power outlet, this device can be turned on.  Strange…",
-    "use_action": [ { "type": "transform", "target": "ibm5100", "menu_text": "Turn off", "msg": "You turn off the computer." } ],
-    "flags": [ "LIGHT_20", "TRADER_AVOID", "WATCH", "WATER_BREAK" ]
+    "use_action": [
+      {
+        "type": "transform",
+        "target": "ibm5100",
+        "menu_text": "Turn off",
+        "msg": "You turn off the computer."
+      }
+    ],
+    "flags": [
+      "LIGHT_20",
+      "TRADER_AVOID",
+      "WATCH",
+      "WATER_BREAK"
+    ],
+    "subtypes": [
+      "TOOL"
+    ]
   }
 ]

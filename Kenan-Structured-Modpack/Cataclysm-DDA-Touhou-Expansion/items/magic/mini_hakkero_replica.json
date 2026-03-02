@@ -1,22 +1,46 @@
 [
   {
     "id": "mini_hakkero_replica",
-    "type": "TOOL",
-    "name": { "str": "mini hakkero (replica)" },
+    "type": "ITEM",
+    "name": {
+      "str": "mini hakkero (replica)"
+    },
     "description": "A small wooden magical furnace.  This one's evidently a replica though, \"improved\" with modern materials.",
     "volume": "500 ml",
     "weight": "500 g",
     "longest_side": "12 cm",
-    "price_postapoc": 25000,
-    "to_hit": { "balance": "neutral", "grip": "none", "length": "hand", "surface": "any" },
-    "melee_damage": { "bash": 1 },
-	"material": [ "plastic", "steel", "wood" ],
+    "price_postapoc": "25000 cent",
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "plastic",
+      "steel",
+      "wood"
+    ],
     "symbol": "☲",
     "color": "light_blue",
     "charges_per_use": 1,
-    "qualities": [ [ "COOK", 1 ] ],
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 3 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "60 m" } },
+    "qualities": [
+      [
+        "COOK",
+        1
+      ]
+    ],
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 3
+        }
+      }
+    ],
     "use_action": [
       "HOTPLATE",
       {
@@ -31,16 +55,36 @@
         "type": "effect_on_conditions",
         "menu_text": "Cast spell",
         "description": "Use the mini hakkero to cast a spell.",
-        "effect_on_conditions": [ "mini_hakkero_replica_eoc" ]
+        "effect_on_conditions": [
+          "mini_hakkero_replica_eoc"
+        ]
       }
     ],
-    "flags": [ "BELT_CLIP", "MAGIC_FOCUS", "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ],
-    "//": "#28975 prevents it from casting more than one spell, so a run_eoc_selector is required as repeater"
+    "flags": [
+      "BELT_CLIP",
+      "MAGIC_FOCUS",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TRADER_AVOID",
+      "UNBREAKABLE"
+    ],
+    "//": "#28975 prevents it from casting more than one spell, so a run_eoc_selector is required as repeater",
+    "subtypes": [
+      "TOOL",
+      "ARTIFACT"
+    ],
+    "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "60 m"
+    }
   },
   {
     "id": "mini_hakkero_replica_on",
-    "type": "TOOL",
-    "name": { "str": "mini hakkero (replica) (ON)" },
+    "type": "ITEM",
+    "name": {
+      "str": "mini hakkero (replica) (ON)"
+    },
     "copy-from": "mini_hakkero_replica",
     "description": "A small wooden magical furnace.  This one's evidently a replica though, \"improved\" with modern materials.  It's currently working as a light source.",
     "power_draw": "600 mW",
@@ -54,17 +98,28 @@
         "ammo_scale": 0
       }
     ],
-    "extend": { "flags": [ "LIGHT_32" ] },
+    "extend": {
+      "flags": [
+        "LIGHT_32"
+      ]
+    },
     "//": "1 battery = 1000 J. (1000 J / 0.277 W) = ~3600 s",
-    "//2": "Buuut it recharges. 600 mW with (60 * 60) / 2 = 1800 s recharge time equals ~1 h and 15 min or so of light"
+    "//2": "Buuut it recharges. 600 mW with (60 * 60) / 2 = 1800 s recharge time equals ~1 h and 15 min or so of light",
+    "subtypes": [
+      "TOOL"
+    ]
   },
   {
     "id": "mspark_misfire",
     "type": "SPELL",
-    "name": { "str": "Spell misfire" },
+    "name": {
+      "str": "Spell misfire"
+    },
     "description": "Spell failure",
     "spell_class": "NONE",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "electric",
@@ -76,15 +131,25 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
   },
   {
     "id": "minispark_replica",
     "type": "SPELL",
-    "name": { "str": "Mini spark replica" },
+    "name": {
+      "str": "Mini spark replica"
+    },
     "description": "Shoot a very small, somewhat weak laser.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "damage_type": "bash",
@@ -100,15 +165,25 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "mspark_cold",
     "type": "SPELL",
-    "name": { "str": "Master Spark (replica)" },
+    "name": {
+      "str": "Master Spark (replica)"
+    },
     "description": "Shoot a very large, very strong laser.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "damage_type": "cold",
@@ -124,15 +199,25 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "mspark_electric",
     "type": "SPELL",
-    "name": { "str": "Master Spark (replica)" },
+    "name": {
+      "str": "Master Spark (replica)"
+    },
     "description": "Shoot a very large, very strong laser.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "line",
     "damage_type": "electric",
@@ -148,15 +233,23 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "mmissile_misfire",
     "type": "SPELL",
-    "name": { "str": "Spell misfire" },
+    "name": {
+      "str": "Spell misfire"
+    },
     "description": "Spell failure",
     "spell_class": "NONE",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "electric",
@@ -168,17 +261,31 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_FAIL", "NO_HANDS", "NO_LEGS" ]
+    "flags": [
+      "NO_FAIL",
+      "NO_HANDS",
+      "NO_LEGS"
+    ]
   },
   {
     "id": "mmissile_cold",
     "type": "SPELL",
-    "name": { "str": "Magic missile (replica)" },
+    "name": {
+      "str": "Magic missile (replica)"
+    },
     "description": "Shoot several magic proyectiles that look like missiles.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
-    "extra_effects": [ { "id": "mmissile_cold2" } ],
+    "extra_effects": [
+      {
+        "id": "mmissile_cold2"
+      }
+    ],
     "shape": "blast",
     "min_damage": 4,
     "max_damage": 5,
@@ -190,15 +297,26 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER" ]
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER"
+    ]
   },
   {
     "id": "mmissile_cold2",
     "type": "SPELL",
-    "name": { "str": "Magic missile (replica)" },
+    "name": {
+      "str": "Magic missile (replica)"
+    },
     "description": "Shoot several magic proyectiles that look like missiles.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "cold",
@@ -212,17 +330,29 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "RANDOM_DAMAGE" ]
+    "flags": [
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "mmissile_flame",
     "type": "SPELL",
-    "name": { "str": "Magic missile (replica)" },
+    "name": {
+      "str": "Magic missile (replica)"
+    },
     "description": "Shoot several magic proyectiles that look like missiles.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
-    "extra_effects": [ { "id": "mmissile_flame2" } ],
+    "extra_effects": [
+      {
+        "id": "mmissile_flame2"
+      }
+    ],
     "shape": "blast",
     "min_damage": 4,
     "max_damage": 5,
@@ -234,15 +364,26 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER" ]
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER"
+    ]
   },
   {
     "id": "mmissile_flame2",
     "type": "SPELL",
-    "name": { "str": "Magic missile (replica)" },
+    "name": {
+      "str": "Magic missile (replica)"
+    },
     "description": "Shoot several magic proyectiles that look like missiles.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "heat",
@@ -256,17 +397,30 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "IGNITE_FLAMMABLE", "RANDOM_DAMAGE" ]
+    "flags": [
+      "IGNITE_FLAMMABLE",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "mmissile_electric",
     "type": "SPELL",
-    "name": { "str": "Magic missile (replica)" },
+    "name": {
+      "str": "Magic missile (replica)"
+    },
     "description": "Shoot several magic proyectiles that look like missiles.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
-    "extra_effects": [ { "id": "mmissile_electric2" } ],
+    "extra_effects": [
+      {
+        "id": "mmissile_electric2"
+      }
+    ],
     "shape": "blast",
     "min_damage": 4,
     "max_damage": 5,
@@ -278,15 +432,26 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "RANDOM_DAMAGE", "WONDER" ]
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "RANDOM_DAMAGE",
+      "WONDER"
+    ]
   },
   {
     "id": "mmissile_electric2",
     "type": "SPELL",
-    "name": { "str": "Magic missile (replica)" },
+    "name": {
+      "str": "Magic missile (replica)"
+    },
     "description": "Shoot several magic proyectiles that look like missiles.",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "attack",
     "shape": "blast",
     "damage_type": "electric",
@@ -300,6 +465,10 @@
     "base_casting_time": 100,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "LOUD", "NO_LEGS", "RANDOM_DAMAGE" ]
+    "flags": [
+      "LOUD",
+      "NO_LEGS",
+      "RANDOM_DAMAGE"
+    ]
   }
 ]

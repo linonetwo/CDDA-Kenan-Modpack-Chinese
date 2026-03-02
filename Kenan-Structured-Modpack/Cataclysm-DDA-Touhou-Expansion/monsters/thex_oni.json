@@ -2,18 +2,26 @@
   {
     "abstract": "mon_oni_base",
     "type": "MONSTER",
-    "name": { "str": "oni (template)" },
+    "name": {
+      "str": "oni (template)"
+    },
     "description": "A Japanese goblin, ogre version with a touch of devil plus a dash of chtonic, vampiric prison guard.",
     "volume": "80 L",
     "weight": "90 kg",
     "default_faction": "touhou_oni",
     "bodytype": "human",
-    "categories": [ "NULL" ],
-    "species": [ "ONI_TOUHOU" ],
+    "categories": [
+      "NULL"
+    ],
+    "species": [
+      "ONI_TOUHOU"
+    ],
     "harvest": "oni_harvest",
     "hp": 100,
     "speed": 135,
-    "material": [ "flesh" ],
+    "material": [
+      "flesh"
+    ],
     "symbol": "ō",
     "looks_like": "human",
     "color": "red",
@@ -22,28 +30,92 @@
     "melee_skill": 4,
     "melee_dice": 6,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "bash", "amount": 7 } ],
-    "dodge": 2,
-    "armor": { "bash": 2, "cut": 2, "stab": 2, "bullet": 2, "acid": 4, "biological": 4, "cold": 4, "electric": 4, "heat": 4 },
-    "families": [ "prof_gross_anatomy", "prof_intro_biology", "prof_physiology", "prof_wp_youkai" ],
-    "weakpoint_sets": [ "wps_oni_body" ],
-    "stomach_size": 10000,
-    "vision_night": 16,
-    "path_settings": { "max_dist": 24 },
-    "anger_triggers": [ "FRIEND_ATTACKED", "HURT" ],
-    "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "oni_SMASH_46", { "math": [ "2 + rand(11)" ] } ] 
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 7
+      }
     ],
-    "death_drops": [ { "group": "oni_drops", "prob": 100 } ],
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "SWARMS", "WARM" ],
+    "dodge": 2,
+    "armor": {
+      "bash": 2,
+      "cut": 2,
+      "stab": 2,
+      "bullet": 2,
+      "acid": 4,
+      "biological": 4,
+      "cold": 4,
+      "electric": 4,
+      "heat": 4
+    },
+    "families": [
+      "prof_gross_anatomy",
+      "prof_intro_biology",
+      "prof_physiology",
+      "prof_wp_youkai"
+    ],
+    "weakpoint_sets": [
+      "wps_oni_body"
+    ],
+    "vision_night": 16,
+    "path_settings": {
+      "max_dist": 24
+    },
+    "anger_triggers": [
+      "FRIEND_ATTACKED",
+      "HURT"
+    ],
+    "special_attacks": [
+      [
+        "EAT_CARRION",
+        {
+          "math": [
+            "40 + rand(20)"
+          ]
+        }
+      ],
+      [
+        "EAT_FOOD",
+        {
+          "math": [
+            "40 + rand(20)"
+          ]
+        }
+      ],
+      [
+        "oni_SMASH_46",
+        {
+          "math": [
+            "2 + rand(11)"
+          ]
+        }
+      ]
+    ],
+    "death_drops": [
+      {
+        "group": "oni_drops",
+        "prob": 100
+      }
+    ],
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "EATS",
+      "HEARS",
+      "PATH_AVOID_DANGER",
+      "SEES",
+      "SMELLS",
+      "SWARMS",
+      "WARM"
+    ],
     "//": "Template only"
   },
   {
     "id": "mon_oni_lesser_1",
     "type": "MONSTER",
-    "name": { "str": "oni (lesser)" },
+    "name": {
+      "str": "oni (lesser)"
+    },
     "copy-from": "mon_oni_base",
     "description": "A small, hunch-backed being vaguely reminiscent of a human.  Horned and red-skinned, it's not as weak as it looks, demonstrated by its crude behavior, smashing anything that comes close.",
     "volume": "55 L",
@@ -55,23 +127,69 @@
     "morale": 20,
     "melee_dice": 3,
     "melee_dice_sides": 6,
-    "melee_damage": [ { "damage_type": "bash", "amount": 6 } ],
-    "stomach_size": 5000,
-    "anger_triggers": [ "HURT" ],
-    "fear_triggers": [ "FRIEND_DIED", "FRIEND_ATTACKED" ],
-    "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "oni_SMASH_36", { "math": [ "2 + rand(11)" ] } ] 
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 6
+      }
     ],
-    "death_drops": [ { "group": "oni_drops", "prob": 100 } ],
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "EATS", "HEARS", "SEES", "SMELLS", "SWARMS", "WARM" ],
+    "anger_triggers": [
+      "HURT"
+    ],
+    "fear_triggers": [
+      "FRIEND_DIED",
+      "FRIEND_ATTACKED"
+    ],
+    "special_attacks": [
+      [
+        "EAT_CARRION",
+        {
+          "math": [
+            "40 + rand(20)"
+          ]
+        }
+      ],
+      [
+        "EAT_FOOD",
+        {
+          "math": [
+            "40 + rand(20)"
+          ]
+        }
+      ],
+      [
+        "oni_SMASH_36",
+        {
+          "math": [
+            "2 + rand(11)"
+          ]
+        }
+      ]
+    ],
+    "death_drops": [
+      {
+        "group": "oni_drops",
+        "prob": 100
+      }
+    ],
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "EATS",
+      "HEARS",
+      "SEES",
+      "SMELLS",
+      "SWARMS",
+      "WARM"
+    ],
     "//": "These should be dumb, cowardly, weak-ish to physical attacks, and hit hard"
   },
   {
     "id": "mon_oni_lesser_2",
     "type": "MONSTER",
-    "name": { "str": "oni (lesser)" },
+    "name": {
+      "str": "oni (lesser)"
+    },
     "copy-from": "mon_oni_lesser_1",
     "description": "A small, hunch-backed being vaguely reminiscent of a human.  Horned and blue-skinned, it's not as weak as it looks, demonstrated by the  crude behavior, smashing everything that comes close.",
     "color": "blue"
@@ -79,7 +197,9 @@
   {
     "id": "mon_oni_lesser_3",
     "type": "MONSTER",
-    "name": { "str": "oni (lesser)" },
+    "name": {
+      "str": "oni (lesser)"
+    },
     "copy-from": "mon_oni_lesser_1",
     "description": "A small, hunch-backed being vaguely reminiscent of a human.  Horned and black-skinned, it's not as weak as it looks, demonstrated by the  crude behavior, smashing anything that comes close.",
     "color": "black"
@@ -87,7 +207,9 @@
   {
     "id": "mon_oni_lesser_4",
     "type": "MONSTER",
-    "name": { "str": "oni (lesser)" },
+    "name": {
+      "str": "oni (lesser)"
+    },
     "copy-from": "mon_oni_lesser_1",
     "description": "A small, hunch-backed being vaguely reminiscent of a human.  Horned and brown-skinned, it's not as weak as it looks, demonstrated by the  crude behavior, smashing anything that comes close.",
     "color": "brown"
@@ -95,7 +217,9 @@
   {
     "id": "mon_oni_medium_1",
     "type": "MONSTER",
-    "name": { "str": "oni" },
+    "name": {
+      "str": "oni"
+    },
     "copy-from": "mon_oni_base",
     "description": "A big, muscular creature in the shape of a human.  Horned, red-skinned and bruttish-looking, you really don't want to get in their path.",
     "color": "red"
@@ -103,7 +227,9 @@
   {
     "id": "mon_oni_medium_2",
     "type": "MONSTER",
-    "name": { "str": "oni" },
+    "name": {
+      "str": "oni"
+    },
     "copy-from": "mon_oni_medium_1",
     "description": "A big, muscular creature in the shape of a human.  Horned, blue-skinned and bruttish-looking, you really don't want to get in their path.",
     "color": "blue"
@@ -111,7 +237,9 @@
   {
     "id": "mon_oni_medium_3",
     "type": "MONSTER",
-    "name": { "str": "oni" },
+    "name": {
+      "str": "oni"
+    },
     "copy-from": "mon_oni_medium_1",
     "description": "A big, muscular creature in the shape of a human.  Horned, black-skinned and bruttish-looking, you really don't want to get in their path.",
     "color": "black"
@@ -119,7 +247,9 @@
   {
     "id": "mon_oni_medium_4",
     "type": "MONSTER",
-    "name": { "str": "oni" },
+    "name": {
+      "str": "oni"
+    },
     "copy-from": "mon_oni_medium_1",
     "description": "A big, muscular creature in the shape of a human.  Horned, brown-skinned and bruttish-looking, you really don't want to get in their path.",
     "color": "brown"
@@ -127,7 +257,9 @@
   {
     "id": "mon_oni_medium_5",
     "type": "MONSTER",
-    "name": { "str": "oni" },
+    "name": {
+      "str": "oni"
+    },
     "copy-from": "mon_oni_medium_1",
     "description": "A big, muscular creature in the shape of a human.  Horned, green-skinned and bruttish-looking, you really don't want to get in their path.",
     "color": "green"
@@ -135,7 +267,9 @@
   {
     "id": "mon_oni_humanoid_1",
     "type": "MONSTER",
-    "name": { "str": "oni" },
+    "name": {
+      "str": "oni"
+    },
     "copy-from": "mon_oni_base",
     "description": "A big, muscular creature in the shape of a human.  Horned, red-skinned and bruttish-looking, you really don't want to get in their path.",
     "volume": "75 L",
@@ -147,25 +281,71 @@
     "melee_skill": 6,
     "melee_dice": 6,
     "melee_dice_sides": 4,
-    "melee_damage": [ { "damage_type": "bash", "amount": 5 } ],
-    "dodge": 4,
-    "stomach_size": 5000,
-    "anger_triggers": [ "HURT" ],
-    "vision_night": 12,
-    "path_settings": { "avoid_traps": true, "avoid_dangerous_fields": true },
-    "special_attacks": [ 
-      [ "EAT_CARRION", { "math": [ "40 + rand(20)" ] } ], 
-      [ "EAT_FOOD", { "math": [ "40 + rand(20)" ] } ], 
-      [ "oni_SMASH_46", { "math": [ "3 + rand(9)" ] } ] 
+    "melee_damage": [
+      {
+        "damage_type": "bash",
+        "amount": 5
+      }
     ],
-    "death_drops": [ { "group": "oni_humanoid_drops", "prob": 100 } ],
-    "flags": [ "BASHES", "CAN_OPEN_DOORS", "EATS", "HEARS", "PATH_AVOID_DANGER", "SEES", "SMELLS", "WARM" ],
+    "dodge": 4,
+    "anger_triggers": [
+      "HURT"
+    ],
+    "vision_night": 12,
+    "path_settings": {
+      "avoid_traps": true,
+      "avoid_dangerous_fields": true
+    },
+    "special_attacks": [
+      [
+        "EAT_CARRION",
+        {
+          "math": [
+            "40 + rand(20)"
+          ]
+        }
+      ],
+      [
+        "EAT_FOOD",
+        {
+          "math": [
+            "40 + rand(20)"
+          ]
+        }
+      ],
+      [
+        "oni_SMASH_46",
+        {
+          "math": [
+            "3 + rand(9)"
+          ]
+        }
+      ]
+    ],
+    "death_drops": [
+      {
+        "group": "oni_humanoid_drops",
+        "prob": 100
+      }
+    ],
+    "flags": [
+      "BASHES",
+      "CAN_OPEN_DOORS",
+      "EATS",
+      "HEARS",
+      "PATH_AVOID_DANGER",
+      "SEES",
+      "SMELLS",
+      "WARM"
+    ],
     "//": "Human-oni hybrid"
   },
   {
     "id": "mon_oni_humanoid_2",
     "type": "MONSTER",
-    "name": { "str": "oni" },
+    "name": {
+      "str": "oni"
+    },
     "copy-from": "mon_oni_humanoid_1",
     "description": "A big, muscular creature in the shape of a human.  Horned, blue-skinned and bruttish-looking, you really don't want to get in their path.",
     "color": "blue"

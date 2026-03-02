@@ -1,39 +1,77 @@
 [
   {
     "id": "gap_generator",
-    "type": "TOOL",
-    "name": { "str": "gap generator", "str_pl": "gap generators" },
+    "type": "ITEM",
+    "name": {
+      "str": "gap generator",
+      "str_pl": "gap generators"
+    },
     "description": "A translucent… black blob that bends light inside it.  You feel weirder by having it around.",
     "volume": "900 ml",
     "weight": "900 g",
     "longest_side": "6 cm",
-    "price_postapoc": 25000,
-    "to_hit": { "balance": "neutral", "grip": "none", "length": "hand", "surface": "any" },
-    "melee_damage": { "bash": 1 },
-    "material": [ "steel" ],
+    "price_postapoc": "25000 cent",
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "/",
     "looks_like": "slime_scrap",
     "color": "black",
     "charges_per_use": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 3 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "8 h" } },
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 3
+        }
+      }
+    ],
     "use_action": [
       {
         "type": "effect_on_conditions",
         "menu_text": "Turn inside out",
         "description": "Manipulate the gap generator.",
-        "effect_on_conditions": [ "gap_generator_eoc" ]
+        "effect_on_conditions": [
+          "gap_generator_eoc"
+        ]
       }
     ],
-    "flags": [ "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
+    "flags": [
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TRADER_AVOID",
+      "UNBREAKABLE"
+    ],
+    "subtypes": [
+      "TOOL",
+      "ARTIFACT"
+    ],
+    "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "8 h"
+    }
   },
   {
     "id": "gap_place",
     "type": "SPELL",
-    "name": { "str": "Gap" },
+    "name": {
+      "str": "Gap"
+    },
     "description": "Open a gap.",
     "spell_class": "NONE",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "ter_transform",
     "effect_str": "gap_fur",
     "shape": "blast",
@@ -44,15 +82,23 @@
     "base_casting_time": 300,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ]
+    "flags": [
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
   },
   {
     "id": "gap_remove",
     "type": "SPELL",
-    "name": { "str": "Gap" },
+    "name": {
+      "str": "Gap"
+    },
     "description": "Remove a gap.",
     "spell_class": "NONE",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "ter_transform",
     "effect_str": "gap_dismiss_fur",
     "shape": "blast",
@@ -63,6 +109,11 @@
     "base_casting_time": 0,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "IGNORE_WALLS", "NO_HANDS", "NO_LEGS", "NO_PROJECTILE" ]
+    "flags": [
+      "IGNORE_WALLS",
+      "NO_HANDS",
+      "NO_LEGS",
+      "NO_PROJECTILE"
+    ]
   }
 ]

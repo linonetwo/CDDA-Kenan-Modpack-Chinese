@@ -35,20 +35,15 @@
     "type": "effect_on_condition",
     "effect": [
       {
-        "if": {
-          "message": "Select gap:", 
-          "u_query_tile": "around",
-          "target_var": { "global_val": "var_gap_generator_move_loc" }
-        },
-        "then": [
+        "message": "Select gap:", 
+        "u_query_tile": "around",
+        "target_var": { "global_val": "var_gap_generator_move_loc" }
+      },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_move_loc" } },
             "then": [ { "run_eocs": [ "gap_generator_move_tag_1_eoc" ] } ],
             "else": { "u_message": "There is no gap at the location.", "type": "mixed" }
           }
-        ],
-        "else": { "u_message": "Canceled" }
-      }
     ],
     "//": "This just checks if any f_gap has been placed at the selected location, if true it 'tags' it (required down the line)"
   },
@@ -349,13 +344,15 @@
     "condition": { "math": [ "var_gap_generator_placed_1", "==", "0" ] },
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 12,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_loc_1" }
-        },
+        "message": "Select target", 
+        "range": 12,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_loc_1 = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_loc_1" } },
             "then": [ { "u_message": "There's already a gap at the location.", "type": "mixed" } ],
@@ -378,7 +375,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "run_eocs": [ "gap_generator_place_2_eoc" ] } ],
@@ -396,13 +393,15 @@
     "condition": { "math": [ "var_gap_generator_placed_2", "==", "0" ] },
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 12,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_loc_2" }
-        },
+        "message": "Select target", 
+        "range": 12,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_loc_2 = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_loc_2" } },
             "then": [ { "u_message": "There's already a gap at the location.", "type": "mixed" } ],
@@ -425,7 +424,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "run_eocs": [ "gap_generator_place_3_eoc" ] } ]
@@ -436,13 +435,15 @@
     "condition": { "math": [ "var_gap_generator_placed_3", "==", "0" ] },
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 12,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_loc_3" }
-        },
+        "message": "Select target", 
+        "range": 12,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_loc_3 = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_loc_3" } },
             "then": [ { "u_message": "There's already a gap at the location.", "type": "mixed" } ],
@@ -465,7 +466,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "run_eocs": [ "gap_generator_place_4_eoc" ] } ]
@@ -476,13 +477,15 @@
     "condition": { "math": [ "var_gap_generator_placed_4", "==", "0" ] },
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 12,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_loc_4" }
-        },
+        "message": "Select target", 
+        "range": 12,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_loc_4 = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_loc_4" } },
             "then": [ { "u_message": "There's already a gap at the location.", "type": "mixed" } ],
@@ -505,7 +508,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "run_eocs": [ "gap_generator_place_5_eoc" ] } ]
@@ -516,13 +519,15 @@
     "condition": { "math": [ "var_gap_generator_placed_5", "==", "0" ] },
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 12,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_loc_5" }
-        },
+        "message": "Select target", 
+        "range": 12,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_loc_5 = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_loc_5" } },
             "then": [ { "u_message": "There's already a gap at the location.", "type": "mixed" } ],
@@ -545,7 +550,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "run_eocs": [ "gap_generator_place_6_eoc" ] } ]
@@ -556,13 +561,15 @@
     "condition": { "math": [ "var_gap_generator_placed_6", "==", "0" ] },
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 12,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_loc_6" }
-        },
+        "message": "Select target", 
+        "range": 12,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_loc_6 = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_loc_6" } },
             "then": [ { "u_message": "There's already a gap at the location.", "type": "mixed" } ],
@@ -585,7 +592,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "run_eocs": [ "gap_generator_place_7_eoc" ] } ]
@@ -596,13 +603,15 @@
     "condition": { "math": [ "var_gap_generator_placed_7", "==", "0" ] },
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 12,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_loc_7" }
-        },
+        "message": "Select target", 
+        "range": 12,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_loc_7 = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_loc_7" } },
             "then": [ { "u_message": "There's already a gap at the location.", "type": "mixed" } ],
@@ -625,7 +634,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "run_eocs": [ "gap_generator_place_8_eoc" ] } ]
@@ -636,13 +645,15 @@
     "condition": { "math": [ "var_gap_generator_placed_8", "==", "0" ] },
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 12,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_loc_8" }
-        },
+        "message": "Select target", 
+        "range": 12,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_loc_8 = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_loc_8" } },
             "then": [ { "u_message": "There's already a gap at the location.", "type": "mixed" } ],
@@ -665,7 +676,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "u_message": "The gap generator does nothing.", "type": "mixed" } ]
@@ -675,20 +686,22 @@
     "type": "effect_on_condition",
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 20,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_gap_generator_remove" }
-        },
+        "message": "Select target", 
+        "range": 20,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_gap_generator_remove = _temp_loc" ] },
           {
             "if": { "map_furniture_with_flag": "GAP_FLAG", "loc": { "global_val": "var_gap_generator_remove" } },
             "then": [ { "run_eocs": [ "gap_generator_remove_1_eoc" ] } ],
             "else": [ { "u_message": "There is no gap at the location.", "type": "mixed" } ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "//": "This is the last component. It checks if there's a f_gap at the location, and then checks which one is present there"

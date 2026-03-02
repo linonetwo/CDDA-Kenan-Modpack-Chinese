@@ -1,35 +1,65 @@
 [
   {
     "id": "egg_aegirocassis",
-    "type": "COMESTIBLE",
-    "name": { "str": "aegirocassis egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "aegirocassis egg"
+    },
     "copy-from": "egg_anomalocaris",
     "description": "A clump of Aegirocassis eggs.",
     "color": "pink",
-    "rot_spawn": { "group": "GROUP_EGG_AEGIROCASSIS" },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_AEGIROCASSIS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_anatosuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "anatosuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "anatosuchus egg"
+    },
     "copy-from": "egg_carnufex",
     "description": "An Anatosuchus egg.",
-    "proportional": { "volume": 0.25, "weight": 0.25, "quench": 0.25, "calories": 0.25 },
-    "rot_spawn": { "group": "GROUP_EGG_ANATOSUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "proportional": {
+      "volume": 0.25,
+      "weight": 0.25,
+      "quench": 0.25,
+      "calories": 0.25
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_ANATOSUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_anomalocaris",
-    "type": "COMESTIBLE",
-    "name": { "str": "anomalocaris egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "anomalocaris egg"
+    },
     "description": "A clump of Anomalocaris eggs.",
     "comestible_type": "FOOD",
     "volume": "250 ml",
     "weight": "275 g",
-    "price_postapoc": 50,
+    "price_postapoc": "50 cent",
     "spoils_in": "7 days",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "symbol": "o",
     "looks_like": "razorclaw_roe",
     "color": "white",
@@ -37,78 +67,171 @@
     "healthy": 0,
     "calories": 240,
     "fun": -20,
-    "rot_spawn": { "group": "GROUP_EGG_ANOMALOCARIS", "chance": 66 },
-    "vitamins": [ [ "calcium", 5 ], [ "iron", 12 ], [ "vitA", 12 ], [ "vitB", 42 ] ],
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ],
-    "//": "Based on egg_insect but reduced"
+    "rot_spawn": {
+      "group": "GROUP_EGG_ANOMALOCARIS",
+      "chance": 66
+    },
+    "vitamins": [
+      [
+        "calcium",
+        5
+      ],
+      [
+        "iron",
+        12
+      ],
+      [
+        "vitA",
+        12
+      ],
+      [
+        "vitB",
+        42
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "//": "Based on egg_insect but reduced",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_arthropleura",
-    "type": "COMESTIBLE",
-    "name": { "str": "arthropleura egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "arthropleura egg"
+    },
     "copy-from": "egg_anomalocaris",
     "description": "A clump of Arthropleura eggs.",
     "color": "brown",
-    "rot_spawn": { "group": "GROUP_EGG_ARTHROPLEURA" },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_ARTHROPLEURA"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_arthropod_aquatic_small",
-    "type": "COMESTIBLE",
-    "name": { "str": "ancient arthropod eggs" },
+    "type": "ITEM",
+    "name": {
+      "str": "ancient arthropod eggs"
+    },
     "copy-from": "egg_anomalocaris",
     "description": "A clump of ancient arthropod eggs.",
-    "rot_spawn": { "group": "GROUP_EGG_ARTHROPODAQUATIC_SMALL" },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_ARTHROPODAQUATIC_SMALL"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_barinasuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "barinasuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "barinasuchus egg"
+    },
     "copy-from": "egg_erythrosuchus",
     "description": "A Barinasuchus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_BARINASUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_BARINASUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_belodon",
-    "type": "COMESTIBLE",
-    "name": { "str": "belodon egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "belodon egg"
+    },
     "copy-from": "egg_carnufex",
     "description": "A Belodon egg.",
-    "rot_spawn": { "group": "GROUP_EGG_BELODON" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_BELODON"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_boverisuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "boverisuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "boverisuchus egg"
+    },
     "copy-from": "egg_carnufex",
     "description": "A Boverisuchus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_BOVERISUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_BOVERISUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_carbonemys",
-    "type": "COMESTIBLE",
-    "name": { "str": "carbonemys egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "carbonemys egg"
+    },
     "copy-from": "egg_erythrosuchus",
     "description": "A Carbonemys egg.",
     "comestible_type": "FOOD",
-    "rot_spawn": { "group": "GROUP_EGG_CARBONEMYS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_CARBONEMYS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_carnufex",
-    "type": "COMESTIBLE",
-    "name": { "str": "carnufex egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "carnufex egg"
+    },
     "description": "A Carnufex egg.",
     "comestible_type": "FOOD",
     "volume": "105 ml",
     "weight": "120 g",
-    "price_postapoc": 20,
+    "price_postapoc": "20 cent",
     "spoils_in": "28 days",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "symbol": "o",
     "looks_like": "egg_reptile",
     "color": "white",
@@ -116,32 +239,60 @@
     "healthy": 1,
     "calories": 180,
     "fun": -12,
-    "rot_spawn": { "group": "GROUP_EGG_CARNUFEX", "chance": 90 },
-    "vitamins": [ [ "egg_allergen", 1 ] ],
-    "flags": [ "FREEZERBURN", "RAW" ],
+    "rot_spawn": {
+      "group": "GROUP_EGG_CARNUFEX",
+      "chance": 90
+    },
+    "vitamins": [
+      [
+        "egg_allergen",
+        1
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
     "//": "Stats from egg_reptile ",
-    "//2": "Base egg for most if not all of the mod's reptile eggs. Based on 10.1371/journal.pone.0100276 , density ~1.125, mostly rounded to zeroes. Can't find nutritional data for saltwater croc eggs"
+    "//2": "Base egg for most if not all of the mod's reptile eggs. Based on 10.1371/journal.pone.0100276 , density ~1.125, mostly rounded to zeroes. Can't find nutritional data for saltwater croc eggs",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_cotylorhynchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "cotylorhynchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "cotylorhynchus egg"
+    },
     "copy-from": "egg_dimetrodon",
     "description": "A Cotylorhynchus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_COTYLORHYNCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_COTYLORHYNCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_dimetrodon",
-    "type": "COMESTIBLE",
-    "name": { "str": "dimetrodon egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "dimetrodon egg"
+    },
     "description": "A Dimetrodon egg.",
     "comestible_type": "FOOD",
     "volume": "215 ml",
     "weight": "240 g",
-    "price_postapoc": 25,
+    "price_postapoc": "25 cent",
     "spoils_in": "28 days",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "symbol": "o",
     "looks_like": "egg_reptile",
     "color": "brown",
@@ -149,43 +300,113 @@
     "healthy": 1,
     "calories": 360,
     "fun": -16,
-    "rot_spawn": { "group": "GROUP_EGG_DIMETRODON", "chance": 90 },
-    "vitamins": [ [ "calcium", "56 mg" ], [ "iron", "1800 μg" ], [ "egg_allergen", 1 ] ],
-    "flags": [ "FREEZERBURN", "RAW" ],
-    "//": "Based on scaling up egg_carnufex , nutritional facts from egg_chicken x2 "
+    "rot_spawn": {
+      "group": "GROUP_EGG_DIMETRODON",
+      "chance": 90
+    },
+    "vitamins": [
+      [
+        "calcium",
+        "56 mg"
+      ],
+      [
+        "iron",
+        "1800 μg"
+      ],
+      [
+        "egg_allergen",
+        1
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "//": "Based on scaling up egg_carnufex , nutritional facts from egg_chicken x2 ",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_diplocaulus",
-    "type": "COMESTIBLE",
-    "name": { "str": "diplocaulus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "diplocaulus egg"
+    },
     "copy-from": "egg_proxy_frog",
     "description": "A clump of Diplocaulus eggs.",
     "comestible_type": "FOOD",
-    "price_postapoc": 25,
+    "price_postapoc": "25 cent",
     "spoils_in": "7 days",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "symbol": "o",
     "looks_like": "egg_proxy_frog",
     "color": "brown",
     "fun": -16,
     "healthy": 4,
     "stack_size": 12,
-    "proportional": { "volume": 2, "weight": 2, "quench": 2, "calories": 2 },
-    "rot_spawn": { "group": "GROUP_EGG_DIPLOCAULUS", "chance": 90 },
-    "vitamins": [ [ "calcium", 2 ], [ "iron", 4 ], [ "vitA", 2 ], [ "vitB", 12 ], [ "vitC", 1 ], [ "egg_allergen", 1 ] ],
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "proportional": {
+      "volume": 2,
+      "weight": 2,
+      "quench": 2,
+      "calories": 2
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_DIPLOCAULUS",
+      "chance": 90
+    },
+    "vitamins": [
+      [
+        "calcium",
+        2
+      ],
+      [
+        "iron",
+        4
+      ],
+      [
+        "vitA",
+        2
+      ],
+      [
+        "vitB",
+        12
+      ],
+      [
+        "vitC",
+        1
+      ],
+      [
+        "egg_allergen",
+        1
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_dodo",
-    "type": "COMESTIBLE",
-    "name": { "str": "dodo egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "dodo egg"
+    },
     "description": "A dodo egg.",
     "comestible_type": "FOOD",
     "volume": "120 ml",
     "weight": "120 g",
-    "price_postapoc": 50,
+    "price_postapoc": "50 cent",
     "spoils_in": "7 days",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "symbol": "o",
     "looks_like": "egg_turkey",
     "color": "light_gray",
@@ -194,30 +415,64 @@
     "healthy": 2,
     "quench": 6,
     "stack_size": 1,
-    "rot_spawn": { "group": "GROUP_EGG_DODO", "chance": 75 },
-    "vitamins": [ [ "calcium", "117 mg" ], [ "iron", "6 mg" ], [ "egg_allergen", 1 ] ],
-    "flags": [ "FREEZERBURN", "RAW" ],
-    "//": "Based on egg_turkey x2. There's no confirmed data about dodo eggs."
+    "rot_spawn": {
+      "group": "GROUP_EGG_DODO",
+      "chance": 75
+    },
+    "vitamins": [
+      [
+        "calcium",
+        "117 mg"
+      ],
+      [
+        "iron",
+        "6 mg"
+      ],
+      [
+        "egg_allergen",
+        1
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "//": "Based on egg_turkey x2. There's no confirmed data about dodo eggs.",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_ectopistes",
-    "type": "COMESTIBLE",
-    "name": { "str": "ectopistes egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "ectopistes egg"
+    },
     "copy-from": "egg_pigeon",
     "description": "An Ectopistes egg.",
-    "rot_spawn": { "group": "GROUP_EGG_ECTOPISTES", "chance": 90 }
+    "rot_spawn": {
+      "group": "GROUP_EGG_ECTOPISTES",
+      "chance": 90
+    },
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_eryops",
-    "type": "COMESTIBLE",
-    "name": { "str": "eryops egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "eryops egg"
+    },
     "description": "An Eryops egg.",
     "comestible_type": "FOOD",
     "volume": "215 ml",
     "weight": "240 g",
-    "price_postapoc": 25,
+    "price_postapoc": "25 cent",
     "spoils_in": "28 days",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "symbol": "o",
     "looks_like": "egg_reptile",
     "color": "yellow",
@@ -225,107 +480,224 @@
     "healthy": 1,
     "calories": 360,
     "fun": -20,
-    "rot_spawn": { "group": "GROUP_EGG_ERYOPS", "chance": 90 },
-    "vitamins": [ [ "egg_allergen", 1 ] ],
-    "flags": [ "FREEZERBURN", "RAW" ],
-    "//": "Based on scaling up egg_carnufex , nutritional facts from egg_chicken x2 "
+    "rot_spawn": {
+      "group": "GROUP_EGG_ERYOPS",
+      "chance": 90
+    },
+    "vitamins": [
+      [
+        "egg_allergen",
+        1
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "//": "Based on scaling up egg_carnufex , nutritional facts from egg_chicken x2 ",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_erythrosuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "erythrosuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "erythrosuchus egg"
+    },
     "copy-from": "egg_smilosuchus",
     "description": "An Erythrosuchus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_ERYTHROSUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_ERYTHROSUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_eurypterid",
-    "type": "COMESTIBLE",
-    "name": { "str": "eurypterid egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "eurypterid egg"
+    },
     "copy-from": "egg_anomalocaris",
     "description": "A bunch of Eurypterid egg.",
     "comestible_type": "FOOD",
     "color": "cyan",
     "looks_like": "spider_egg",
-    "rot_spawn": { "group": "GROUP_EGG_EURYPTERID", "chance": 66 },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_EURYPTERID",
+      "chance": 66
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_eurypterid_small",
-    "type": "COMESTIBLE",
-    "name": { "str": "eurypterid eggs" },
+    "type": "ITEM",
+    "name": {
+      "str": "eurypterid eggs"
+    },
     "copy-from": "egg_eurypterid",
     "description": "A clump of Eurypterid eggs.",
-    "proportional": { "volume": 0.1, "weight": 0.1, "calories": 0.2 },
-    "rot_spawn": { "group": "GROUP_EGG_EURYPTERID_SMALL" },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "proportional": {
+      "volume": 0.1,
+      "weight": 0.1,
+      "calories": 0.2
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_EURYPTERID_SMALL"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_fasolasuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "fasolasuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "fasolasuchus egg"
+    },
     "copy-from": "egg_erythrosuchus",
     "description": "A Fasolasuchus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_FASOLASUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_FASOLASUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_fishancient_medium",
-    "type": "COMESTIBLE",
-    "name": { "str": "ancient roe" },
+    "type": "ITEM",
+    "name": {
+      "str": "ancient roe"
+    },
     "copy-from": "egg_fish",
     "description": "Common roe from an unknown ancient fish.",
-    "rot_spawn": { "group": "GROUP_EGG_FISHANCIENT_MEDIUM", "chance": 80 },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_FISHANCIENT_MEDIUM",
+      "chance": 80
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_fishancient_small",
-    "type": "COMESTIBLE",
-    "name": { "str": "ancient roe" },
+    "type": "ITEM",
+    "name": {
+      "str": "ancient roe"
+    },
     "copy-from": "egg_fish",
     "description": "Common roe from an unknown ancient fish.",
-    "rot_spawn": { "group": "GROUP_EGG_FISHANCIENT_SMALL", "chance": 80 },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_FISHANCIENT_SMALL",
+      "chance": 80
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_garganornis",
-    "type": "COMESTIBLE",
-    "name": { "str": "garganornis egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "garganornis egg"
+    },
     "copy-from": "egg_dodo",
     "description": "A Garganornis egg.",
-    "rot_spawn": { "group": "GROUP_EGG_GARGANORNIS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_GARGANORNIS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_hesperosuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "hesperosuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "hesperosuchus egg"
+    },
     "copy-from": "egg_anatosuchus",
     "description": "A Hesperosuchus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_HESPEROSUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_HESPEROSUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_icadyptes",
-    "type": "COMESTIBLE",
-    "name": { "str": "icadyptes egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "icadyptes egg"
+    },
     "copy-from": "egg_dodo",
     "description": "An Icadyptes egg.",
-    "rot_spawn": { "group": "GROUP_EGG_ICADYPTES" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_ICADYPTES"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_inostrancevia",
-    "type": "COMESTIBLE",
-    "name": { "str": "inostrancevia egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "inostrancevia egg"
+    },
     "description": "An Inostrancevia egg.",
     "comestible_type": "FOOD",
     "volume": "215 ml",
     "weight": "240 g",
-    "price_postapoc": 50,
+    "price_postapoc": "50 cent",
     "spoils_in": "28 days",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "symbol": "o",
     "looks_like": "egg_reptile",
     "color": "brown",
@@ -333,61 +705,135 @@
     "healthy": 1,
     "calories": 360,
     "fun": -16,
-    "rot_spawn": { "group": "GROUP_EGG_INOSTRANCEVIA", "chance": 90 },
-    "vitamins": [ [ "calcium", "56 mg" ], [ "iron", "1800 μg" ], [ "egg_allergen", 1 ] ],
-    "flags": [ "FREEZERBURN", "RAW" ],
-    "//": "Mostly the same as egg_dimetrodon values"
+    "rot_spawn": {
+      "group": "GROUP_EGG_INOSTRANCEVIA",
+      "chance": 90
+    },
+    "vitamins": [
+      [
+        "calcium",
+        "56 mg"
+      ],
+      [
+        "iron",
+        "1800 μg"
+      ],
+      [
+        "egg_allergen",
+        1
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "//": "Mostly the same as egg_dimetrodon values",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_lotosaurus",
-    "type": "COMESTIBLE",
-    "name": { "str": "lotosaurus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "lotosaurus egg"
+    },
     "copy-from": "egg_carnufex",
     "description": "A Lotosaurus egg.",
     "comestible_type": "FOOD",
-    "rot_spawn": { "group": "GROUP_EGG_LOTOSAURUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_LOTOSAURUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_lystrosaurus",
-    "type": "COMESTIBLE",
-    "name": { "str": "lystrosaurus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "lystrosaurus egg"
+    },
     "copy-from": "egg_dimetrodon",
     "description": "A Lystrosaurus egg.",
-    "proportional": { "volume": 0.5, "weight": 0.5, "calories": 0.5 },
-    "rot_spawn": { "group": "GROUP_EGG_LYSTROSAURUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "proportional": {
+      "volume": 0.5,
+      "weight": 0.5,
+      "calories": 0.5
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_LYSTROSAURUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_mazothairos",
-    "type": "COMESTIBLE",
-    "name": { "str": "mazothairos egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "mazothairos egg"
+    },
     "copy-from": "egg_meganeura",
     "description": "A clump of Mazothairos eggs.",
-    "rot_spawn": { "group": "GROUP_EGG_MAZOTHAIROS", "chance": 50 },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_MAZOTHAIROS",
+      "chance": 50
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_meganeura",
-    "type": "COMESTIBLE",
-    "name": { "str": "meganeura egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "meganeura egg"
+    },
     "copy-from": "egg_anomalocaris",
     "description": "A clump of Meganeura eggs.",
     "color": "green",
-    "rot_spawn": { "group": "GROUP_EGG_MEGANEURA", "chance": 50 },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_MEGANEURA",
+      "chance": 50
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_moa",
-    "type": "COMESTIBLE",
-    "name": { "str": "moa egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "moa egg"
+    },
     "description": "A moa egg.",
     "comestible_type": "FOOD",
     "volume": "1370 ml",
     "weight": "1580 g",
-    "price_postapoc": 100,
+    "price_postapoc": "100 cent",
     "spoils_in": "7 days",
-    "material": [ "egg" ],
+    "material": [
+      "egg"
+    ],
     "symbol": "o",
     "looks_like": "egg_turkey",
     "color": "light_gray",
@@ -395,190 +841,434 @@
     "quench": 80,
     "healthy": 4,
     "fun": -20,
-    "rot_spawn": { "group": "GROUP_EGG_MOA", "chance": 90 },
-    "vitamins": [ [ "iron", "60 mg" ], [ "calcium", "1560 mg" ], [ "egg_allergen", 1 ] ],
-    "flags": [ "FREEZERBURN", "RAW" ],
-    "//": "Based on ostrich egg data from 10.3923/jas.2010.1405.1412 , otherwise x20 egg_turkey values due weight proportionality"
+    "rot_spawn": {
+      "group": "GROUP_EGG_MOA",
+      "chance": 90
+    },
+    "vitamins": [
+      [
+        "iron",
+        "60 mg"
+      ],
+      [
+        "calcium",
+        "1560 mg"
+      ],
+      [
+        "egg_allergen",
+        1
+      ]
+    ],
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "//": "Based on ostrich egg data from 10.3923/jas.2010.1405.1412 , otherwise x20 egg_turkey values due weight proportionality",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_mollusk_large",
-    "type": "COMESTIBLE",
-    "name": { "str": "ancient mollusk eggs" },
+    "type": "ITEM",
+    "name": {
+      "str": "ancient mollusk eggs"
+    },
     "copy-from": "egg_mollusk_small",
     "description": "A clump of ancient mollusk eggs.",
-    "rot_spawn": { "group": "GROUP_EGG_MOLLUSK_LARGE" },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_MOLLUSK_LARGE"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_mollusk_small",
-    "type": "COMESTIBLE",
-    "name": { "str": "ancient mollusk eggs" },
+    "type": "ITEM",
+    "name": {
+      "str": "ancient mollusk eggs"
+    },
     "copy-from": "egg_anomalocaris",
     "description": "A clump of ancient mollusk eggs.",
     "color": "light_gray",
-    "rot_spawn": { "group": "GROUP_EGG_MOLLUSK_SMALL" },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_MOLLUSK_SMALL"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_moschorhinus",
-    "type": "COMESTIBLE",
-    "name": { "str": "moschorhinus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "moschorhinus egg"
+    },
     "copy-from": "egg_pristerognathus",
     "description": "A Moschorhinus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_MOSCHORHINUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_MOSCHORHINUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_nochnitsa",
-    "type": "COMESTIBLE",
-    "name": { "str": "nochnitsa egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "nochnitsa egg"
+    },
     "copy-from": "egg_pristerognathus",
     "description": "A Nochnitsa egg.",
-    "rot_spawn": { "group": "GROUP_EGG_NOCHNITSA" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_NOCHNITSA"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_pampaphoneus",
-    "type": "COMESTIBLE",
-    "name": { "str": "pampaphoneus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "pampaphoneus egg"
+    },
     "copy-from": "egg_inostrancevia",
     "description": "A Pampaphoneus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_PAMPAPHONEUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_PAMPAPHONEUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_pederpes",
-    "type": "COMESTIBLE",
-    "name": { "str": "pederpes egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "pederpes egg"
+    },
     "copy-from": "egg_eryops",
     "description": "A clump of Pederpes eggs.",
-    "proportional": { "volume": 0.1, "weight": 0.1, "calories": 0.1 },
-    "rot_spawn": { "group": "GROUP_EGG_PEDERPES", "chance": 66 },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "proportional": {
+      "volume": 0.1,
+      "weight": 0.1,
+      "calories": 0.1
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_PEDERPES",
+      "chance": 66
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_pholiderpeton",
-    "type": "COMESTIBLE",
-    "name": { "str": "pholiderpeton egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "pholiderpeton egg"
+    },
     "copy-from": "egg_prionosuchus",
     "description": "A clump of Pholiderpeton eggs.",
-    "rot_spawn": { "group": "GROUP_EGG_PHOLIDERPETON" },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_PHOLIDERPETON"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_phytosaurus",
-    "type": "COMESTIBLE",
-    "name": { "str": "phytosaurus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "phytosaurus egg"
+    },
     "copy-from": "egg_carnufex",
     "description": "A Phytosaurus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_PHYTOSAURUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_PHYTOSAURUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_platyoposaurus",
-    "type": "COMESTIBLE",
-    "name": { "str": "platyoposaurus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "platyoposaurus egg"
+    },
     "copy-from": "egg_prionosuchus",
     "description": "A clump of Platyoposaurus eggs.",
-    "rot_spawn": { "group": "GROUP_EGG_PLATYOPOSAURUS" },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_PLATYOPOSAURUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_prestosuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "prestosuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "prestosuchus egg"
+    },
     "copy-from": "egg_carnufex",
     "description": "A Prestosuchus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_PRESTOSUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_PRESTOSUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_prionosuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "prionosuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "prionosuchus egg"
+    },
     "copy-from": "egg_eryops",
     "description": "A clump of Prionosuchus eggs.",
-    "rot_spawn": { "group": "GROUP_EGG_PRIONOSUCHUS", "chance": 80 },
-    "flags": [ "FREEZERBURN", "NO_AUTO_CONSUME", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_PRIONOSUCHUS",
+      "chance": 80
+    },
+    "flags": [
+      "FREEZERBURN",
+      "NO_AUTO_CONSUME",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_pristerognathus",
-    "type": "COMESTIBLE",
-    "name": { "str": "pristerognathus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "pristerognathus egg"
+    },
     "copy-from": "egg_dimetrodon",
     "description": "A Pristerognathus egg.",
-    "proportional": { "volume": 0.5, "weight": 0.5, "quench": 0.5, "calories": 0.5 },
-    "rot_spawn": { "group": "GROUP_EGG_PRISTEROGNATHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "proportional": {
+      "volume": 0.5,
+      "weight": 0.5,
+      "quench": 0.5,
+      "calories": 0.5
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_PRISTEROGNATHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_redondasaurus",
-    "type": "COMESTIBLE",
-    "name": { "str": "redondasaurus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "redondasaurus egg"
+    },
     "copy-from": "egg_smilosuchus",
     "description": "A Redondasaurus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_REDONDASAURUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_REDONDASAURUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_scutosaurus",
-    "type": "COMESTIBLE",
-    "name": { "str": "scutosaurus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "scutosaurus egg"
+    },
     "copy-from": "egg_erythrosuchus",
     "description": "A Scutosaurus egg.",
     "healthy": 1,
-    "proportional": { "volume": 0.5, "weight": 0.5, "quench": 0.5, "calories": 0.5 },
-    "rot_spawn": { "group": "GROUP_EGG_SCUTOSAURUS" },
-    "flags": [ "FREEZERBURN", "RAW" ],
-    "//": "Proportional end values of egg_carnufex "
+    "proportional": {
+      "volume": 0.5,
+      "weight": 0.5,
+      "quench": 0.5,
+      "calories": 0.5
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_SCUTOSAURUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "//": "Proportional end values of egg_carnufex ",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_simosuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "simosuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "simosuchus egg"
+    },
     "copy-from": "egg_anatosuchus",
     "description": "A Simosuchus egg.",
-    "rot_spawn": { "group": "GROUP_EGG_SIMOSUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_SIMOSUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_smilosuchus",
-    "type": "COMESTIBLE",
-    "name": { "str": "smilosuchus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "smilosuchus egg"
+    },
     "copy-from": "egg_carnufex",
     "description": "A Smilosuchus egg.",
-    "price_postapoc": 35,
+    "price_postapoc": "35 cent",
     "healthy": 2,
-    "proportional": { "volume": 2, "weight": 2, "quench": 2, "calories": 2 },
-    "rot_spawn": { "group": "GROUP_EGG_SMILOSUCHUS" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "proportional": {
+      "volume": 2,
+      "weight": 2,
+      "quench": 2,
+      "calories": 2
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_SMILOSUCHUS"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_typothorax",
-    "type": "COMESTIBLE",
-    "name": { "str": "typothorax egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "typothorax egg"
+    },
     "copy-from": "egg_carnufex",
     "description": "A Typothorax egg.",
-    "rot_spawn": { "group": "GROUP_EGG_TYPOTHORAX" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_TYPOTHORAX"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_viatkogorgon",
-    "type": "COMESTIBLE",
-    "name": { "str": "viatkogorgon egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "viatkogorgon egg"
+    },
     "copy-from": "egg_pristerognathus",
     "description": "A Viatkogorgon egg.",
-    "rot_spawn": { "group": "GROUP_EGG_VIATKOGORGON" },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "rot_spawn": {
+      "group": "GROUP_EGG_VIATKOGORGON"
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   },
   {
     "id": "egg_weigeltisaurus",
-    "type": "COMESTIBLE",
-    "name": { "str": "weigeltisaurus egg" },
+    "type": "ITEM",
+    "name": {
+      "str": "weigeltisaurus egg"
+    },
     "copy-from": "egg_chicken",
     "description": "A Weigeltisaurus egg.",
-    "proportional": { "volume": 0.17, "weight": 0.17, "calories": 0.17 },
-    "rot_spawn": { "group": "GROUP_EGG_WEIGELTISAURUS", "chance": 75 },
-    "flags": [ "FREEZERBURN", "RAW" ]
+    "proportional": {
+      "volume": 0.17,
+      "weight": 0.17,
+      "calories": 0.17
+    },
+    "rot_spawn": {
+      "group": "GROUP_EGG_WEIGELTISAURUS",
+      "chance": 75
+    },
+    "flags": [
+      "FREEZERBURN",
+      "RAW"
+    ],
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   }
 ]

@@ -1,21 +1,44 @@
 [
   {
     "id": "spider_charm",
-    "type": "TOOL",
-    "name": { "str": "spider charm", "str_pl": "spider charms" },
+    "type": "ITEM",
+    "name": {
+      "str": "spider charm",
+      "str_pl": "spider charms"
+    },
     "description": "A spider-shaped charm.  You feel… healthier just by having it around.",
     "volume": "5 ml",
     "weight": "10 g",
     "longest_side": "3 cm",
-    "price_postapoc": 25000,
-    "to_hit": { "balance": "neutral", "grip": "none", "length": "hand", "surface": "any" },
-    "melee_damage": { "bash": 1 },
-    "material": [ "steel" ],
+    "price_postapoc": "25000 cent",
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "🕷",
     "looks_like": "mon_spider_cellar_small",
     "color": "brown",
-    "relic_data": { "passive_effects": [ { "id": "ench_spider_charm" } ] },
-    "flags": [ "TRADER_AVOID", "UNBREAKABLE" ],
-    "//": "The ench grants the effect, so a condition can be used, else it's more complex to do"
+    "flags": [
+      "TRADER_AVOID",
+      "UNBREAKABLE"
+    ],
+    "//": "The ench grants the effect, so a condition can be used, else it's more complex to do",
+    "subtypes": [
+      "TOOL",
+      "ARTIFACT"
+    ],
+    "passive_effects": [
+      {
+        "id": "ench_spider_charm"
+      }
+    ]
   }
 ]

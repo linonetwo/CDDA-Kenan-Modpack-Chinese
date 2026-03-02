@@ -1,24 +1,63 @@
 [
   {
     "id": "neuralyser",
-    "type": "TOOL",
+    "type": "ITEM",
     "category": "tools",
-    "name": { "str": "neuralyser", "str_pl": "neuralyser" },
+    "name": {
+      "str": "neuralyser",
+      "str_pl": "neuralyser"
+    },
     "description": "A cigar-shaped, metal thing.  It has two buttons, one of which seems to prepare the instrument for activation, and the second which emits a flash of light.  Maybe you shouldn't look at it.",
     "volume": "150 ml",
     "weight": "300 g",
     "longest_side": "30 cm",
-    "price_postapoc": 2000,
-    "to_hit": { "balance": "neutral", "grip": "solid", "length": "hand", "surface": "any" },
-    "material": [ "aluminum" ],
+    "price_postapoc": "2000 cent",
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "hand",
+      "surface": "any"
+    },
+    "material": [
+      "aluminum"
+    ],
     "symbol": ",",
     "color": "light_gray",
-    "melee_damage": { "bash": 2 },
+    "melee_damage": {
+      "bash": 2
+    },
     "charges_per_use": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 3 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "40 s" } },
-    "use_action": [ { "type": "cast_spell", "spell_id": "neuralyser_flash", "no_fail": true, "level": 1 } ],
-    "flags": [ "BELT_CLIP", "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID" ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 3
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "neuralyser_flash",
+        "no_fail": true,
+        "level": 1
+      }
+    ],
+    "flags": [
+      "BELT_CLIP",
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TRADER_AVOID"
+    ],
+    "subtypes": [
+      "TOOL",
+      "ARTIFACT"
+    ],
+    "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "40 s"
+    }
   },
   {
     "id": "neuralyser_flash",
@@ -26,9 +65,17 @@
     "name": "Neuralyser flashbang",
     "description": "Flashbang effect for neuralyser ",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "flashbang",
-    "extra_effects": [ { "id": "neuralyser_stun" } ],
+    "extra_effects": [
+      {
+        "id": "neuralyser_stun"
+      }
+    ],
     "shape": "cone",
     "min_damage": 16,
     "max_damage": 24,
@@ -36,7 +83,12 @@
     "max_range": 3,
     "min_aoe": 90,
     "max_aoe": 90,
-    "flags": [ "NO_LEGS", "NO_HANDS", "NO_PROJECTILE", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE"
+    ]
   },
   {
     "id": "neuralyser_stun",
@@ -44,7 +96,11 @@
     "name": "Neuralyser cc",
     "description": "stun component for neuralyser ",
     "spell_class": "NONE",
-    "valid_targets": [ "ally", "ground", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "ground",
+      "hostile"
+    ],
     "effect": "mod_moves",
     "shape": "cone",
     "damage_type": "pure",
@@ -54,6 +110,12 @@
     "max_range": 3,
     "min_aoe": 90,
     "max_aoe": 90,
-    "flags": [ "NO_EXPLOSION_SFX", "NO_LEGS", "NO_HANDS", "NO_PROJECTILE", "RANDOM_DAMAGE" ]
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "NO_LEGS",
+      "NO_HANDS",
+      "NO_PROJECTILE",
+      "RANDOM_DAMAGE"
+    ]
   }
 ]

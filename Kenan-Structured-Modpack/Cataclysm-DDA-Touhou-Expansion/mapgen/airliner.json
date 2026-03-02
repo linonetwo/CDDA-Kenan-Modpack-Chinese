@@ -1,7 +1,6 @@
 [
   {
     "type": "mapgen",
-    "method": "json",
     "om_terrain": [
       [ "airliner_1a", "airliner_2a", "airliner_3a" ],
       [ "airliner_1b", "airliner_2b", "airliner_3b" ],
@@ -268,9 +267,9 @@
       },
       "place_loot": [
         { "group": "airliner_cockpit", "x": 35, "y": 8 },
-        { "group": "office_supplies", "repeat": [ 3, 5 ], "x": 39, "y": 8 },
+        { "group": "SUS_office_supplies", "repeat": [ 3, 5 ], "x": 39, "y": 8 },
         { "group": "airliner_galley", "x": 38, "y": 56 },
-        { "group": "office_supplies", "repeat": [ 3, 5 ], "x": 38, "y": 57 },
+        { "group": "SUS_office_supplies", "repeat": [ 3, 5 ], "x": 38, "y": 57 },
         { "group": "snacks", "repeat": [ 10, 15 ], "x": 38, "y": 58 }
       ],
       "place_monsters": [
@@ -284,7 +283,6 @@
   },
   {
     "type": "mapgen",
-    "method": "json",
     "om_terrain": [ [ "airliner_2a_1" ], [ "airliner_2b_1" ], [ "airliner_2c_1" ] ],
     "weight": 250,
     "object": {
@@ -367,7 +365,6 @@
   },
   {
     "type": "mapgen",
-    "method": "json",
     "om_terrain": [ [ "airliner_2b_-1" ], [ "airliner_2c_-1" ] ],
     "weight": 250,
     "object": {

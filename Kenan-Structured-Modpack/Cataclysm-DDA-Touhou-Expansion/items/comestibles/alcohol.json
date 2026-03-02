@@ -1,18 +1,30 @@
 [
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
     "id": "sake_filtered",
     "looks_like": "vodka",
-    "name": { "str_sp": "sake" },
+    "name": {
+      "str_sp": "sake"
+    },
     "copy-from": "sake_filtered",
-    "ammo_data": { "ammo_type": "touhou_sake_ammo" }
+    "ammo_type": "touhou_sake_ammo",
+    "subtypes": [
+      "COMESTIBLE",
+      "AMMO"
+    ]
   },
   {
-    "type": "COMESTIBLE",
+    "type": "ITEM",
     "id": "sake_unfiltered",
     "looks_like": "vodka",
-    "name": { "str_sp": "nigori sake" },
+    "name": {
+      "str_sp": "nigori sake"
+    },
     "copy-from": "sake_unfiltered",
-    "ammo_data": { "ammo_type": "touhou_sake_ammo" }
+    "ammo_type": "touhou_sake_ammo",
+    "subtypes": [
+      "COMESTIBLE",
+      "AMMO"
+    ]
   }
 ]

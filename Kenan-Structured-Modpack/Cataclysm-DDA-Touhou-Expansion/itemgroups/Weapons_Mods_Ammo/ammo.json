@@ -43,71 +43,61 @@
   },
   {
     "type": "item_group",
-    "id": "ammo_rifle_common",
-    "//": "Rifle ammo commonly owned by citizens and found in many locations.",
+    "id": "ammo_rifle_milspec",
+    "//": "Replaced deprecated ammo_rifle_common with ammo_rifle_milspec",
     "subtype": "distribution",
-    "copy-from": "ammo_rifle_common",
-    "extend": { 
-      "entries": [ 
-        { "group": "thex_ammo_792x57", "prob": 28 } 
-      ] 
-    },
+    "entries": [ 
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "group": "thex_ammo_792x57", "prob": 28 } 
+    ],
     "//2": "Total weight 395 / 14 = 28.21 ~ 28"
   },
   {
     "type": "item_group",
-    "id": "ammo_rifle_common_collection",
-    "//": "Rifle ammo commonly owned by citizens and found in many locations.",
+    "id": "ammo_rifle_milspec_collection",
+    "//": "Replaced deprecated ammo_rifle_common_collection",
     "subtype": "collection",
-    "copy-from": "ammo_rifle_common_collection",
-    "extend": { 
-      "entries": [ 
-        { "group": "thex_ammo_792x57", "prob": 29 } 
-      ] 
-    },
+    "entries": [ 
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "group": "thex_ammo_792x57", "prob": 29 } 
+    ],
     "//2": "Total weight 286 / 10 = 28.6 ~ 29"
   },
   {
     "type": "item_group",
-    "id": "ammo_rifle_common_loose",
-    "//": "Loose rifle ammo commonly owned by citizens and found in many locations.",
+    "id": "ammo_rifle_milspec_loose",
+    "//": "Replaced deprecated ammo_rifle_common_loose",
     "subtype": "collection",
-    "copy-from": "ammo_rifle_common_loose",
-    "extend": { 
-      "entries": [ 
-        { "group": "thex_ammo_792x57", "prob": 9, "charges": [ 0, 5 ] } 
-      ] 
-    },
+    "entries": [ 
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "group": "thex_ammo_792x57", "prob": 9, "charges": [ 0, 5 ] } 
+    ],
     "//2": "Total weight 99 / 11 = 9"
   },
   {
-    "id": "ammo_rifle_rare",
+    "id": "ammo_rifle_milspec_rare",
     "type": "item_group",
-    "//": "Less common rifle ammo including that only used by police/paramilitary forces.",
+    "//": "Replaced deprecated ammo_rifle_rare",
     "subtype": "distribution",
-    "copy-from": "ammo_rifle_rare",
-    "extend": { 
-      "entries": [ 
-        { "item": "765x53_arg", "prob": 22 }, 
-        { "group": "thex_ammo_792x57", "prob": 22 }, 
-        { "group": "thex_ammo_9x39", "prob": 22 } 
-      ] 
-    },
+    "entries": [ 
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "item": "765x53_arg", "prob": 22 }, 
+      { "group": "thex_ammo_792x57", "prob": 22 }, 
+      { "group": "thex_ammo_9x39", "prob": 22 } 
+    ],
     "//2": "Total weight 564 / 26 = 21.69 ~ 22"
   },
   {
     "type": "item_group",
-    "id": "ammo_rifle_rare_collection",
-    "//": "Less common rifle ammo including that only used by police/paramilitary forces.",
+    "id": "ammo_rifle_milspec_rare_collection",
+    "//": "Replaced deprecated ammo_rifle_rare_collection",
     "subtype": "collection",
-    "copy-from": "ammo_rifle_rare_collection",
-    "extend": { 
-      "entries": [ 
-        { "item": "765x53_arg", "prob": 28 }, 
-        { "group": "thex_ammo_792x57", "prob": 28 }, 
-        { "group": "thex_ammo_9x39", "prob": 28 } 
-      ] 
-    },
+    "entries": [ 
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "item": "765x53_arg", "prob": 28 }, 
+      { "group": "thex_ammo_792x57", "prob": 28 }, 
+      { "group": "thex_ammo_9x39", "prob": 28 } 
+    ],
     "//2": "Total weight 735 / 26 = 28.27 ~ 28"
   },
   {
@@ -115,14 +105,12 @@
     "id": "ammo_rifle_hunting",
     "//": "Ammo for hunting rifles found within hunting supply stores and related locations.",
     "subtype": "distribution",
-    "copy-from": "ammo_rifle_hunting",
-    "extend": { 
-      "entries": [ 
-        { "item": "765x53_arg", "prob": 25 }, 
-        { "group": "thex_ammo_792x33", "prob": 25 }, 
-        { "group": "thex_ammo_792x57", "prob": 25 } 
-      ] 
-    },
+    "entries": [ 
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "item": "765x53_arg", "prob": 25 }, 
+      { "group": "thex_ammo_792x33", "prob": 25 }, 
+      { "group": "thex_ammo_792x57", "prob": 25 } 
+    ],
     "//2": "Total weight 425 / 17 = 25"
   },
   {
@@ -130,14 +118,11 @@
     "type": "item_group",
     "//": "Military specification rifle ammo found at military sites.",
     "subtype": "distribution",
-    "copy-from": "ammo_rifle_milspec",
-    "extend": { 
-      "entries": [ 
-        { "item": "473x33_dm11", "prob": 28 }, 
-        { "group": "thex_ammo_792x57", "prob": 28 }, 
-        { "group": "thex_ammo_9x39", "prob": 28 } 
-      ] 
-    },
+    "entries": [ 
+      { "item": "473x33_dm11", "prob": 28 }, 
+      { "group": "thex_ammo_792x57", "prob": 28 }, 
+      { "group": "thex_ammo_9x39", "prob": 28 } 
+    ],
     "//2": "Total weight 735 / 26 = 28.27 ~ 28"
   },
   {
@@ -145,16 +130,14 @@
     "type": "item_group",
     "//": "Imported or otherwise very obscure rifle ammo.",
     "subtype": "distribution",
-    "copy-from": "ammo_rifle_obscure",
-    "extend": {
-      "entries": [
-        { "item": "473x33_dm11", "prob": 107 },
-        { "item": "765x53_arg", "prob": 107 },
-        { "group": "thex_ammo_792x33", "prob": 107 },
-        { "group": "thex_ammo_792x57", "prob": 107 },
-        { "group": "thex_ammo_9x39", "prob": 107 }
-      ]
-    },
+    "entries": [
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "item": "473x33_dm11", "prob": 107 },
+      { "item": "765x53_arg", "prob": 107 },
+      { "group": "thex_ammo_792x33", "prob": 107 },
+      { "group": "thex_ammo_792x57", "prob": 107 },
+      { "group": "thex_ammo_9x39", "prob": 107 }
+    ],
     "//2": "Total weight 320 / 3 = 106.66 ~ 107"
   },
   {
@@ -162,16 +145,14 @@
     "type": "item_group",
     "//": "Imported or otherwise very obscure rifle ammo.",
     "subtype": "collection",
-    "copy-from": "ammo_rifle_obscure_collection",
-    "extend": {
-      "entries": [
-        { "item": "473x33_dm11", "prob": 53 },
-        { "item": "765x53_arg", "prob": 53 },
-        { "group": "thex_ammo_792x33", "prob": 53 },
-        { "group": "thex_ammo_792x57", "prob": 53 },
-        { "group": "thex_ammo_9x39", "prob": 53 }
-      ]
-    },
+    "entries": [
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "item": "473x33_dm11", "prob": 53 },
+      { "item": "765x53_arg", "prob": 53 },
+      { "group": "thex_ammo_792x33", "prob": 53 },
+      { "group": "thex_ammo_792x57", "prob": 53 },
+      { "group": "thex_ammo_9x39", "prob": 53 }
+    ],
     "//2": "Total weight 160 / 3 = 53.33 ~ 53"
   },
   {
@@ -179,16 +160,14 @@
     "type": "item_group",
     "//": "Reloaded rifle ammo balanced according to rarity.",
     "subtype": "distribution",
-    "copy-from": "ammo_rifle_reloaded",
-    "extend": {
-      "entries": [
-        { "item": "bootleg_473x33_dm11", "prob": 18 },
-        { "item": "reloaded_765x53_arg", "prob": 18 },
-        { "group": "thex_ammo_792x33_reloaded", "prob": 18 },
-        { "group": "thex_ammo_792x57_reloaded", "prob": 18 },
-        { "group": "thex_ammo_9x39_reloaded", "prob": 18 }
-      ]
-    },
+    "entries": [
+      { "group": "ammo_rifle_milspec", "prob": 100 },
+      { "item": "bootleg_473x33_dm11", "prob": 18 },
+      { "item": "reloaded_765x53_arg", "prob": 18 },
+      { "group": "thex_ammo_792x33_reloaded", "prob": 18 },
+      { "group": "thex_ammo_792x57_reloaded", "prob": 18 },
+      { "group": "thex_ammo_9x39_reloaded", "prob": 18 }
+    ],
     "//2": "Total weight 527 / 29 = 18.17 ~ 18"
   },
   {
@@ -197,7 +176,7 @@
     "//": "Imported or otherwise very obscure ammo.",
     "subtype": "collection",
     "entries": [
-      { "group": "ammo_pistol_obscure_collection", "prob": 65 },
+      { "group": "ammo_pistol_milspec", "prob": 65 },
       { "group": "ammo_rifle_obscure_collection", "prob": 45 },
       { "group": "ammo_launcher_grenade_adapter", "prob": 1 }
     ],

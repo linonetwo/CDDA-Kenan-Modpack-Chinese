@@ -2,7 +2,6 @@
   {
     "type": "mapgen",
     "om_terrain": [ "cs_tire_shop" ],
-    "method": "json",
     "weight": 1000,
     "object": {
       "fill_ter": "t_thconc_floor",
@@ -85,14 +84,13 @@
         { "monster": "GROUP_YOUKAI_TSUKUMOGAMI_SEAT_CHAIRS", "x": [ 6, 20 ], "y": [ 7, 20 ], "chance": 2 },
         { "monster": "GROUP_YOUKAI_TSUKUMOGAMI_TABLES", "x": [ 6, 20 ], "y": [ 7, 20 ], "chance": 2 }
       ],
-      "add": [ { "item": "microwave", "x": 16, "y": 18, "chance": 2 }, { "item": "coffeemaker", "x": 16, "y": 19, "chance": 2 } ],
+      "place_item": [ { "item": "microwave", "x": 16, "y": 18, "chance": 2 }, { "item": "coffeemaker", "x": 16, "y": 19, "chance": 2 } ],
       "toilets": { "T": {  } },
       "place_signs": [ { "signage": "Discount Tires", "x": 22, "y": 1 } ]
     }
   },
   {
     "type": "mapgen",
-    "method": "json",
     "om_terrain": "cs_tire_shop_roof",
     "object": {
       "fill_ter": "t_flat_roof",

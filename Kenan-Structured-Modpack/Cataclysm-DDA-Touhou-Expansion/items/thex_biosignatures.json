@@ -1,9 +1,14 @@
 [
   {
     "id": "feces_thylacine",
-    "type": "COMESTIBLE",
-    "name": { "str": "thylacine dung" },
+    "type": "ITEM",
+    "name": {
+      "str": "thylacine dung"
+    },
     "copy-from": "feces_manure",
-    "description": "Droppings from a thylacine."
+    "description": "Droppings from a thylacine.",
+    "subtypes": [
+      "COMESTIBLE"
+    ]
   }
 ]

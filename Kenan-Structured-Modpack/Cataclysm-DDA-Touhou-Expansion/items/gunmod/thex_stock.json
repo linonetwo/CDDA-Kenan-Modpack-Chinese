@@ -1,39 +1,60 @@
 [
   {
     "id": "cheek_pad_ots-48",
-    "type": "GUNMOD",
-    "name": { "str": "OTs-48 cheek pad" },
+    "type": "ITEM",
+    "name": {
+      "str": "OTs-48 cheek pad"
+    },
     "description": "An wooden cheek pad for the OTs-48 and OTs-48K.  It prevents slipping, and reduces recoil to the neck and cheek.",
     "volume": "250 ml",
     "weight": "300 g",
     "integral_volume": "0 ml",
     "integral_weight": "300 g",
-    "price": 4500,
-    "price_postapoc": 500,
+    "price": "4500 cent",
+    "price_postapoc": "500 cent",
     "to_hit": 1,
-    "melee_damage": { "bash": 2 },
-    "material": [ "plastic", "steel" ],
+    "melee_damage": {
+      "bash": 2
+    },
+    "material": [
+      "plastic",
+      "steel"
+    ],
     "symbol": ":",
     "color": "dark_gray",
     "install_time": "3 m",
     "dispersion_modifier": -1,
     "handling_modifier": 2,
     "location": "stock accessory",
-    "min_skills": [ [ "weapon", 2 ] ],
-    "mod_targets": [ "rifle" ]
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ]
+    ],
+    "mod_targets": [
+      "rifle"
+    ],
+    "subtypes": [
+      "GUNMOD"
+    ]
   },
   {
     "id": "stock_asval_unfolded",
-    "type": "GUNMOD",
-    "name": { "str": "AS Val stock" },
+    "type": "ITEM",
+    "name": {
+      "str": "AS Val stock"
+    },
     "description": "A folding, tubular stock, tailored for the AS Val but also usable for other similar weapons.  Currently unfolded.",
     "volume": "600 ml",
     "weight": "300 g",
     "longest_side": "260 mm",
     "integral_volume": "400 ml",
-    "price": 185000,
-    "price_postapoc": 300,
-    "material": [ "steel" ],
+    "price": "185000 cent",
+    "price_postapoc": "300 cent",
+    "material": [
+      "steel"
+    ],
     "symbol": ":",
     "color": "black",
     "install_time": "10 m",
@@ -41,14 +62,34 @@
     "dispersion_modifier": -10,
     "handling_modifier": 2,
     "location": "stock",
-    "min_skills": [ [ "weapon", 2 ] ],
-    "mod_targets": [ "rifle", "smg" ],
-    "use_action": { "type": "transform", "target": "stock_asval_folded", "msg": "You fold the stock.", "menu_text": "Fold", "moves": 200 }
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ]
+    ],
+    "mod_targets": [
+      "rifle",
+      "smg"
+    ],
+    "use_action": {
+      "type": "transform",
+      "target": "stock_asval_folded",
+      "msg": "You fold the stock.",
+      "menu_text": "Fold",
+      "moves": 200
+    },
+    "subtypes": [
+      "GUNMOD"
+    ]
   },
   {
     "id": "stock_asval_folded",
-    "type": "GUNMOD",
-    "name": { "str": "AS Val stock (folded)", "str_pl": "AS Val stocks (folded)" },
+    "type": "ITEM",
+    "name": {
+      "str": "AS Val stock (folded)",
+      "str_pl": "AS Val stocks (folded)"
+    },
     "copy-from": "stock_asval_unfolded",
     "description": "A folded AS Val stock.  Currently folded, reducing the size, at the cost of also reducing handling.",
     "handling_modifier": -10,
@@ -59,27 +100,44 @@
       "msg": "You unfold the stock.",
       "moves": 200
     },
-    "flags": [ "FOLDED_STOCK" ]
+    "flags": [
+      "FOLDED_STOCK"
+    ],
+    "subtypes": [
+      "GUNMOD"
+    ]
   },
   {
     "id": "stock_ceamm1_unfolded",
-    "type": "GUNMOD",
-    "name": { "str": "CEAM Mòdele 1 stock" },
+    "type": "ITEM",
+    "name": {
+      "str": "CEAM Mòdele 1 stock"
+    },
     "description": "A folding, wooden stock.  Currently unfolded.",
     "volume": "600 ml",
     "weight": "300 g",
     "longest_side": "260 mm",
     "integral_volume": "0 ml",
     "integral_weight": "0 g",
-    "price": 42000,
-    "price_postapoc": 250,
-    "material": [ "steel", "wood" ],
+    "price": "42000 cent",
+    "price_postapoc": "250 cent",
+    "material": [
+      "steel",
+      "wood"
+    ],
     "symbol": ":",
     "color": "brown",
     "install_time": "5 m",
     "location": "stock",
-    "min_skills": [ [ "weapon", 3 ] ],
-    "mod_targets": [ "rifle" ],
+    "min_skills": [
+      [
+        "weapon",
+        3
+      ]
+    ],
+    "mod_targets": [
+      "rifle"
+    ],
     "use_action": {
       "type": "transform",
       "target": "stock_ceamm1_folded",
@@ -87,12 +145,20 @@
       "msg": "You fold the stock.",
       "moves": 200
     },
-    "flags": [ "IRREMOVABLE" ]
+    "flags": [
+      "IRREMOVABLE"
+    ],
+    "subtypes": [
+      "GUNMOD"
+    ]
   },
   {
     "id": "stock_ceamm1_folded",
-    "type": "GUNMOD",
-    "name": { "str": "CEAM Mòdele 1 stock (folded)", "str_pl": "CEAM Mòdele 1 stocks (folded)" },
+    "type": "ITEM",
+    "name": {
+      "str": "CEAM Mòdele 1 stock (folded)",
+      "str_pl": "CEAM Mòdele 1 stocks (folded)"
+    },
     "copy-from": "stock_ceamm1_unfolded",
     "description": "A folded wooden stock.  Currently folded, reducing the size, at the cost of also reducing handling.",
     "handling_modifier": -10,
@@ -103,21 +169,31 @@
       "msg": "You unfold the stock.",
       "moves": 200
     },
-    "flags": [ "FOLDED_STOCK", "IRREMOVABLE" ]
+    "flags": [
+      "FOLDED_STOCK",
+      "IRREMOVABLE"
+    ],
+    "subtypes": [
+      "GUNMOD"
+    ]
   },
   {
     "id": "stock_idw_unfolded",
-    "type": "GUNMOD",
-    "name": { "str": "IDW stock" },
+    "type": "ITEM",
+    "name": {
+      "str": "IDW stock"
+    },
     "description": "A retractable stock, tailored for the IDW but also usable for other small weapons.  Due the IDW's length, or rather its shortness, this stock increases the overall handling.",
     "//": "This should give the following bonuses to the IDW and reduced bonuses to other weapons",
     "volume": "250 ml",
     "weight": "250 g",
     "integral_volume": "200 ml",
     "integral_weight": "0 g",
-    "price": 30000,
-    "price_postapoc": 250,
-    "material": [ "steel" ],
+    "price": "30000 cent",
+    "price_postapoc": "250 cent",
+    "material": [
+      "steel"
+    ],
     "symbol": ":",
     "color": "dark_gray",
     "install_time": "15 m",
@@ -125,20 +201,34 @@
     "dispersion_modifier": -10,
     "handling_modifier": 2,
     "location": "stock",
-    "min_skills": [ [ "weapon", 2 ] ],
-    "mod_targets": [ "pistol", "smg" ],
+    "min_skills": [
+      [
+        "weapon",
+        2
+      ]
+    ],
+    "mod_targets": [
+      "pistol",
+      "smg"
+    ],
     "use_action": {
       "type": "transform",
       "target": "stock_idw_folded",
       "menu_text": "Unfold",
       "msg": "You unfold the stock.",
       "moves": 150
-    }
+    },
+    "subtypes": [
+      "GUNMOD"
+    ]
   },
   {
     "id": "stock_idw_folded",
-    "type": "GUNMOD",
-    "name": { "str": "IDW stock (folded)", "str_pl": "IDW stocks (folded)" },
+    "type": "ITEM",
+    "name": {
+      "str": "IDW stock (folded)",
+      "str_pl": "IDW stocks (folded)"
+    },
     "copy-from": "stock_idw_unfolded",
     "description": "A retracted IDW stock.  Currently folded, reducing size but also overall handling.",
     "aim_speed_modifier": -4,
@@ -151,40 +241,63 @@
       "msg": "You unfold the stock.",
       "moves": 150
     },
-    "flags": [ "FOLDED_STOCK" ]
+    "flags": [
+      "FOLDED_STOCK"
+    ],
+    "subtypes": [
+      "GUNMOD"
+    ]
   },
   {
     "id": "stock_mib_smg_7_unfolded",
-    "type": "GUNMOD",
-    "name": { "str": "series 7 de-scatterer stock" },
+    "type": "ITEM",
+    "name": {
+      "str": "series 7 de-scatterer stock"
+    },
     "description": "A folding stock for the series 7 de-scatterer.  Currently unfolded.",
     "volume": "600 ml",
     "weight": "300 g",
     "longest_side": "260 mm",
     "integral_volume": "0 ml",
     "integral_weight": "0 g",
-    "price_postapoc": 300,
-    "material": [ "aluminum", "steel" ],
+    "price_postapoc": "300 cent",
+    "material": [
+      "aluminum",
+      "steel"
+    ],
     "symbol": ":",
     "color": "light_gray",
     "install_time": "10 m",
     "dispersion_modifier": -2,
     "handling_modifier": 2,
     "location": "stock",
-    "min_skills": [ [ "weapon", 3 ] ],
-    "mod_targets": [ "smg" ],
+    "min_skills": [
+      [
+        "weapon",
+        3
+      ]
+    ],
+    "mod_targets": [
+      "smg"
+    ],
     "use_action": {
       "type": "transform",
       "target": "stock_mib_smg_7_folded",
       "menu_text": "Fold",
       "msg": "You fold the stock.",
       "moves": 150
-    }
+    },
+    "subtypes": [
+      "GUNMOD"
+    ]
   },
   {
     "id": "stock_mib_smg_7_folded",
-    "type": "GUNMOD",
-    "name": { "str": "series 7 de-scatterer stock (folded)", "str_pl": "series 7 de-scatterer stocks (folded)" },
+    "type": "ITEM",
+    "name": {
+      "str": "series 7 de-scatterer stock (folded)",
+      "str_pl": "series 7 de-scatterer stocks (folded)"
+    },
     "copy-from": "stock_mib_smg_7_unfolded",
     "description": "A folding stock for the series 7 de-scatterer.  Currently folded, reducing the size, at the cost of also reducing handling.",
     "handling_modifier": -8,
@@ -195,6 +308,11 @@
       "msg": "You unfold the stock.",
       "moves": 150
     },
-    "flags": [ "FOLDED_STOCK" ]
+    "flags": [
+      "FOLDED_STOCK"
+    ],
+    "subtypes": [
+      "GUNMOD"
+    ]
   }
 ]

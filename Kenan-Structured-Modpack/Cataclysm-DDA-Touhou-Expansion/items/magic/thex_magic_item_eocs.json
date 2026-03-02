@@ -35,14 +35,18 @@
     "type": "effect_on_condition",
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 16,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_lavender_grimoire_loc" }
-        },
-        "then": [ { "run_eocs": [ "lavender_grimoire_cast_eoc" ] } ],
-        "else": { "u_message": "Canceled" }
+        "message": "Select target", 
+        "range": 16,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
+        "then": [
+          { "math": [ "var_lavender_grimoire_loc = _temp_loc" ] },
+          { "run_eocs": [ "lavender_grimoire_cast_eoc" ] }
+        ],
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "//": "This is so the player can select a target without knowing which spell will be casted"
@@ -176,13 +180,15 @@
     "type": "effect_on_condition",
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 32,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_mini_hakkero_replica_loc" }
-        },
+        "message": "Select target", 
+        "range": 32,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_mini_hakkero_replica_loc = _temp_loc" ] },
           { "math": [ "var_mini_hakkero_replica_rand", "=", "rand(19) + 1" ] },
           {
             "switch": { "math": [ "var_mini_hakkero_replica_rand" ] },
@@ -214,7 +220,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "u_message": " ", "type": "mixed" } ],
@@ -225,13 +231,15 @@
     "type": "effect_on_condition",
     "effect": [
       {
-        "if": {
-          "message": "Select target", 
-          "range": 32,
-          "u_query_tile": "line_of_sight",
-          "target_var": { "global_val": "var_mini_hakkero_replica_loc" }
-        },
+        "message": "Select target", 
+        "range": 32,
+        "u_query_tile": "line_of_sight",
+        "target_var": { "context_val": "temp_loc" }
+      },
+      {
+        "if": { "math": [ "has_var(_temp_loc)" ] },
         "then": [
+          { "math": [ "var_mini_hakkero_replica_loc = _temp_loc" ] },
           { "math": [ "var_mini_hakkero_replica_rand", "=", "rand(19) + 1" ] },
           {
             "switch": { "math": [ "var_mini_hakkero_replica_rand" ] },
@@ -263,7 +271,7 @@
             ]
           }
         ],
-        "else": { "u_message": "Canceled" }
+        "else": [ { "u_message": "Canceled.", "type": "mixed" } ]
       }
     ],
     "false_effect": [ { "u_message": " ", "type": "mixed" } ],

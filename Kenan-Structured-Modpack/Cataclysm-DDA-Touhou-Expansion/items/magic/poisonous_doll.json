@@ -1,34 +1,81 @@
 [
   {
     "id": "poisonous_doll",
-    "type": "TOOL",
-    "name": { "str": "doll", "str_pl": "doll" },
+    "type": "ITEM",
+    "name": {
+      "str": "doll",
+      "str_pl": "doll"
+    },
     "description": "An old-fashioned doll.  It looks worn, perhaps due its age, perhaps due being left to the elements.",
     "volume": "750 ml",
     "weight": "1500 g",
     "longest_side": "22 cm",
-    "price_postapoc": 25000,
-    "to_hit": { "balance": "neutral", "grip": "none", "length": "hand", "surface": "any" },
-    "melee_damage": { "bash": 1 },
-    "material": [ "wood" ],
+    "price_postapoc": "25000 cent",
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "none",
+      "length": "hand",
+      "surface": "any"
+    },
+    "melee_damage": {
+      "bash": 1
+    },
+    "material": [
+      "wood"
+    ],
     "symbol": "|",
     "looks_like": "talking_doll",
     "color": "red",
     "charges_per_use": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 1 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "10 m" } },
-    "use_action": [ { "type": "cast_spell", "spell_id": "poisonous_doll_spell", "no_fail": true, "level": 1 } ],
-    "flags": [ "NO_RELOAD", "TRADER_AVOID", "UNBREAKABLE" ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 1
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "poisonous_doll_spell",
+        "no_fail": true,
+        "level": 1
+      }
+    ],
+    "flags": [
+      "NO_RELOAD",
+      "TRADER_AVOID",
+      "UNBREAKABLE"
+    ],
+    "subtypes": [
+      "TOOL",
+      "ARTIFACT"
+    ],
+    "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "10 m"
+    }
   },
   {
     "id": "poisonous_doll_spell",
     "type": "SPELL",
-    "name": { "str": " " },
+    "name": {
+      "str": " "
+    },
     "description": " ",
     "spell_class": "NONE",
-    "valid_targets": [ "ground", "self" ],
+    "valid_targets": [
+      "ground",
+      "self"
+    ],
     "effect": "attack",
-    "extra_effects": [ { "id": "poisonous_doll_spell2" } ],
+    "extra_effects": [
+      {
+        "id": "poisonous_doll_spell2"
+      }
+    ],
     "shape": "blast",
     "min_aoe": 4,
     "max_aoe": 6,
@@ -42,15 +89,22 @@
     "base_casting_time": 0,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_LEGS", "RANDOM_AOE" ]
+    "flags": [
+      "NO_LEGS",
+      "RANDOM_AOE"
+    ]
   },
   {
     "id": "poisonous_doll_spell2",
     "type": "SPELL",
-    "name": { "str": " " },
+    "name": {
+      "str": " "
+    },
     "description": " ",
     "spell_class": "NONE",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "effect": "ter_transform",
     "effect_str": "poisonous_doll_terfur",
     "shape": "blast",
@@ -61,6 +115,9 @@
     "base_casting_time": 0,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_LEGS", "RANDOM_AOE" ]
+    "flags": [
+      "NO_LEGS",
+      "RANDOM_AOE"
+    ]
   }
 ]

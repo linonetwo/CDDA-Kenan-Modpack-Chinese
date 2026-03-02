@@ -1,32 +1,76 @@
 [
   {
     "id": "fan_death",
-    "type": "TOOL",
-    "name": { "str": "fan of death", "str_pl": "fans of death" },
+    "type": "ITEM",
+    "name": {
+      "str": "fan of death",
+      "str_pl": "fans of death"
+    },
     "description": "An Oriental-style, purple fan with butterfly motiffs.  It feels ominous just having it in your hand.",
     "volume": "500 ml",
     "weight": "500 g",
     "longest_side": "30 cm",
-    "price_postapoc": 25000,
-    "to_hit": { "balance": "neutral", "grip": "solid", "length": "short", "surface": "any" },
-    "melee_damage": { "soul": 7 },
-    "material": [ "wood" ],
+    "price_postapoc": "25000 cent",
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "solid",
+      "length": "short",
+      "surface": "any"
+    },
+    "melee_damage": {
+      "soul": 7
+    },
+    "material": [
+      "wood"
+    ],
     "symbol": "/",
     "looks_like": "stick",
     "color": "magenta",
-    "techniques": [ "WBLOCK_1" ],
+    "techniques": [
+      "WBLOCK_1"
+    ],
     "charges_per_use": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 1 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "2 h" } },
-    "use_action": [ { "type": "cast_spell", "spell_id": "fan_instakill", "no_fail": true, "level": 1 } ],
-    "flags": [ "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 1
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "fan_instakill",
+        "no_fail": true,
+        "level": 1
+      }
+    ],
+    "flags": [
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TRADER_AVOID",
+      "UNBREAKABLE"
+    ],
+    "subtypes": [
+      "TOOL",
+      "ARTIFACT"
+    ],
+    "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "2 h"
+    }
   },
   {
     "id": "fan_instakill",
     "type": "SPELL",
     "name": "Fan instakill",
     "description": "Instakill",
-    "valid_targets": [ "ally", "hostile" ],
+    "valid_targets": [
+      "ally",
+      "hostile"
+    ],
     "spell_class": "NONE",
     "effect": "banishment",
     "shape": "blast",
@@ -39,6 +83,9 @@
     "base_casting_time": 105,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_LEGS", "SOMATIC" ]
+    "flags": [
+      "NO_LEGS",
+      "SOMATIC"
+    ]
   }
 ]

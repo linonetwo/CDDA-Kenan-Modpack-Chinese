@@ -1,31 +1,73 @@
 [
   {
     "id": "sunflower_pin",
-    "type": "TOOL",
-    "name": { "str": "sunflower pin", "str_pl": "sunflower pins" },
+    "type": "ITEM",
+    "name": {
+      "str": "sunflower pin",
+      "str_pl": "sunflower pins"
+    },
     "description": "A small, sunflower-shaped metal pin.  Touching it makes you focus on the surrounding soil.",
     "volume": "5 ml",
     "weight": "10 g",
     "longest_side": "3 cm",
-    "price_postapoc": 25000,
-    "to_hit": { "balance": "neutral", "grip": "bad", "length": "short", "surface": "any" },
-    "melee_damage": { "bash": 1, "cut": 1 },
-    "material": [ "steel" ],
+    "price_postapoc": "25000 cent",
+    "to_hit": {
+      "balance": "neutral",
+      "grip": "bad",
+      "length": "short",
+      "surface": "any"
+    },
+    "melee_damage": {
+      "bash": 1,
+      "cut": 1
+    },
+    "material": [
+      "steel"
+    ],
     "symbol": "*",
     "looks_like": "f_sunflower",
     "color": "yellow",
     "charges_per_use": 1,
-    "pocket_data": [ { "pocket_type": "MAGAZINE", "ammo_restriction": { "battery": 6 } } ],
-    "relic_data": { "charge_info": { "regenerate_ammo": true, "recharge_type": "periodic", "time": "10 m" } },
-    "use_action": [ { "type": "cast_spell", "spell_id": "sunflower_spam", "no_fail": true, "level": 1 } ],
-    "flags": [ "NO_RELOAD", "NO_UNLOAD", "TRADER_AVOID", "UNBREAKABLE" ]
+    "pocket_data": [
+      {
+        "pocket_type": "MAGAZINE",
+        "ammo_restriction": {
+          "battery": 6
+        }
+      }
+    ],
+    "use_action": [
+      {
+        "type": "cast_spell",
+        "spell_id": "sunflower_spam",
+        "no_fail": true,
+        "level": 1
+      }
+    ],
+    "flags": [
+      "NO_RELOAD",
+      "NO_UNLOAD",
+      "TRADER_AVOID",
+      "UNBREAKABLE"
+    ],
+    "subtypes": [
+      "TOOL",
+      "ARTIFACT"
+    ],
+    "charge_info": {
+      "regenerate_ammo": true,
+      "recharge_type": "periodic",
+      "time": "10 m"
+    }
   },
   {
     "id": "sunflower_spam",
     "type": "SPELL",
     "name": "Spam sunflower",
     "description": "Spams sunflowers",
-    "valid_targets": [ "ground" ],
+    "valid_targets": [
+      "ground"
+    ],
     "spell_class": "NONE",
     "effect": "ter_transform",
     "effect_str": "sunflower_spam_fur",
@@ -37,6 +79,9 @@
     "base_casting_time": 105,
     "base_energy_cost": 0,
     "energy_source": "MANA",
-    "flags": [ "NO_EXPLOSION_SFX", "SILENT" ]
+    "flags": [
+      "NO_EXPLOSION_SFX",
+      "SILENT"
+    ]
   }
 ]
