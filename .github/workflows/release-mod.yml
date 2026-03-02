@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - update
+      - 0.I
   # schedule:
     # * is a special character in YAML so you have to quote this string
     # - cron:  '0 0 * * *'
@@ -68,7 +68,7 @@ jobs:
           prerelease: true
           files: |
             Kenan-Modpack-Mod汉化版.zip
-          name: 'CDDA-Kenan-Mod合集汉化版 ${{ steps.get-timestamp.outputs.time }} 测试包'
+          name: 'CDDA-Kenan-Mod合集汉化版 ${{ steps.get-timestamp.outputs.time }} 0.I测试包'
           tag_name: ${{ steps.get-timestamp.outputs.time }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
